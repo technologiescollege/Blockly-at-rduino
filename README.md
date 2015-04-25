@@ -29,11 +29,11 @@ Cette version a été réorganisée et améliorée pour la faire utiliser au mie
 ## Démos
 
 Blockly@rduino est un outil web, un webware par référence aux software, hardware, etc. Vous pouvez le tester/utiliser à l'adresse suivante :
-[Technologies/BlocklyDuino](http://www.technologiescollege.fr/blocklyduino/apps/blocklyduino/index.html) 
+[Technologies/Blockly@rduino](http://www.technologiescollege.fr/blockly@rduino) 
 
 Vous pouvez donc aussi lier directement l'ouverture de la page à l'ouverture d'un fichier XML hébergé (_ou tout en local_) :
-* [démo 1 : faire clignoter une diode](http://www.technologiescollege.fr/blocklyduino/apps/blocklyduino/index.html?url=/blocklyduino/apps/blocklyduino/exemples/blink.xml)
-* [démo 2 : faire varier un servo-moteur proportionnellement à une consigne de potentiomètre](http://www.technologiescollege.fr/blocklyduino/apps/blocklyduino/index.html?url=/blocklyduino/apps/blocklyduino/exemples/servo_potentio.xml)
+* [démo 1 : faire clignoter une diode](http://www.technologiescollege.fr/blockly@rduino/index.html?url=/examples/blink.xml)
+* [démo 2 : faire varier un servo-moteur proportionnellement à une consigne de potentiomètre](http://www.technologiescollege.fr/blockly@rduino/index.html?url=/examples/servo_potentio.xml)
 
 
 ## Utiliser en local dans son navigateur web
