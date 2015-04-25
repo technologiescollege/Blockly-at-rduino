@@ -1,0 +1,297 @@
+@CHARSET "UTF-8";
+
+html,body {
+	height: 100%;
+}
+
+body {
+	background-color: #fff;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+	margin: 0;
+}
+
+.rotate180 {
+	-webkit-transform: rotate(180deg);
+	-moz-transform: rotate(180deg);
+	-o-transform: rotate(180deg);
+	-ms-transform: rotate(180deg);
+}
+
+.rotate90 {
+	-webkit-transform: rotate(90deg);
+	-moz-transform: rotate(90deg);
+	-o-transform: rotate(90deg);
+	-ms-transform: rotate(90deg);
+}
+
+#divTitre {
+	height: 76px;
+	vertical-align: middle;
+	position: absolute;
+	width: 100%;
+}
+
+#divTitre p {
+	font-size: 25px;
+}
+
+#divBody {
+    position: absolute;
+    top: 80px;
+    bottom: 5px;
+    width: 100%;
+}
+
+.menuPanel-ver {
+	clear: both;
+	float: left;
+	width: 200px;
+    padding-left: 10px;
+	position: absolute;
+}
+
+.btn_config-ver,.btn_saveXML-ver {
+	margin: 5px 0;
+}
+
+.divTabpanel-ver {
+    height: 100%;
+    margin-left:200px;
+}
+
+.menuPanelCenter-hor {
+	clear:both;
+	float: left;
+	padding-left: 10px;
+}
+
+.menuPanelRight-hor {
+	float: right;
+	padding-right: 10px;
+}
+
+.divTabpanel-hor {
+    position: absolute;
+	top: 80px;
+	bottom: 0px;
+	right: 0px;
+	left: 0px;
+    margin-left: 10px;
+}
+
+.divSwitch-hor {
+    float: left;
+    padding-left: 10px;
+}
+
+.divCard-hor {
+    float: left;
+    padding-left: 10px;
+}
+
+.divConfig-hor {
+    float: left;
+    padding-left: 10px;
+}
+
+#btn_about {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+}
+
+#languageMenu {
+	position: absolute;
+	top: 35px;
+	right: 15px;
+}
+
+html[dir="RTL"] #languageMenu {
+	left: 10px;
+	right: auto;
+}
+
+html[dir="RTL"] #menuPanel {
+	float: right;
+}
+
+html[dir="RTL"] #divTabpanel {
+	float: right;
+	padding-right: 0px;
+}
+
+#content_area,#content_blocks,#content_term,#content_xml {
+	height: 100%;
+	width: 100%;
+	padding-right: 5px;
+}
+
+#btn_size {
+	position: absolute;
+	right: 15px;
+	top: 0px;
+}
+
+#btn_preview {
+	position: absolute;
+	right: 60px;
+	top: 0px;
+}
+
+#toggle {
+	width: 25%;
+	position: absolute;
+	right: 25px;
+	top: 50px;
+	bottom: 100px;
+}
+
+#toggle pre {
+	height: 100%;
+}
+
+#btn_delete {
+	position: absolute;
+	right: 100px;
+	bottom: 40px;
+}
+
+#pre_xml {
+	height: 85%;
+	width: 100%;
+}
+
+#pre_arduino {
+    height: 65%;
+    width: 100%;
+}
+
+#modal-body {
+	-webkit-column-count: 3;
+	-moz-column-count: 3;
+	column-count: 3;
+}
+
+#select_all {
+	margin-left: 15px;
+}
+
+#span_select_all {
+	font-weight: bold;
+}
+
+.nav-tabs {
+	border-bottom: none !important;
+}
+
+.blocklySvg {
+	border-top: none !important;
+}
+
+#debug_arduino {
+	height: 25%;
+	border-width: 2px;
+	border-color: black;
+	background-color: rgba(8, 8, 8, 1);
+	color: rgba(29, 147, 47, 1);
+	overflow: auto;
+	word-break: break-all;
+	word-wrap: break-word;
+	white-space: pre-wrap;
+}
+
+.blocklyToolboxDiv {
+	background-color: #e9f9f9 !important;
+}
+
+.blocklyFlyoutBackground {
+	fill: #e9f9f9 !important;
+}
+
+.blocklyTreeRoot {
+	padding: 0 !important;
+}
+
+.blocklyToolboxDiv .blocklyTreeRoot [role="treeitem"] {
+	position: relative;
+}
+
+.blocklyToolboxDiv .blocklyTreeRoot [role="treeitem"]	.blocklyTreeRow {
+	line-height: normal !important;
+	padding: 6px 50px 6px 12px !important;
+}
+
+.blocklyTreeRow {
+	height: 30px !important;
+	line-height: 30px !important;
+}
+
+.blocklyTreeRow:hover {
+	background-color: #90e8e8 !important;
+}
+
+.blocklyTreeSelected {
+	background-color: #11c6c6 !important;
+}
+
+.blocklyTreeSeparator {
+	background: none repeat scroll 0 0 #e9f9f9 !important;
+	border-bottom: none !important;
+	height: 10px !important;
+}
+
+.colors_category {
+	height: 100%;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 8px;
+}
+
+.color_cat_loops {
+	background-color: #5ba55b;
+}
+
+.color_cat_logic,.color_cat_if,.color_cat_bool {
+	background-color: #8ca6c0;
+}
+
+.color_cat_math {
+	background-color: #8c95c0;
+}
+
+.color_cat_list {
+	background-color: #9e8cc0;
+}
+
+.color_cat_variables {
+	background-color: #c08ca6;
+}
+
+.color_cat_functions {
+	background-color: #b88cc0;
+}
+
+.color_cat_color {
+	background-color: #c09e8c;
+}
+
+.color_cat_text {
+	background-color: #8cc0af;
+}
+
+.color_cat_arduino,.color_cat_arduino_in,.color_cat_arduino_out {
+	background-color: #8c95c0;
+}
+
+.color_cat_arduino_servo {
+	background-color: #8cb8c0;
+}
+
+.color_cat_grove {
+	background-color: #8cb8c0;
+}
+
+.color_cat_technozone {
+	background-color: #8cb8c0;
+}
