@@ -11,7 +11,7 @@ Blockly@rduino est basé sur [Blockly](https://developers.google.com/blockly/), 
 
 Blockly@rduino possède une bibliothèque de blocs pour les modules [Grove](http://www.seeedstudio.com/wiki/GROVE_System), particulièrement adaptée à la découverte des micro-contrôleurs et aux expérimentations de systèmes mécatroniques.
 
-Libre à vous d'en rajouter autant que voulu grâce à cette notice explicative : [http://tic.technologiescollege.fr/wiki/doku.php/fr/arduino/blocklyduino/creerblocsmulti](http://tic.technologiescollege.fr/wiki/doku.php/fr/arduino/blocklyduino/creerblocsmulti)
+Libre à vous d'en rajouter autant que voulu grâce à cette notice explicative : [http://tic.technologiescollege.fr/wiki/doku.php/fr/arduino/blockly_rduino/creerblocsmulti](http://tic.technologiescollege.fr/wiki/doku.php/fr/arduino/blockly_rduino/creerblocsmulti)
 
 Cette version a été réorganisée et améliorée pour la faire utiliser au mieux par des élèves débutants dans le code.
 
