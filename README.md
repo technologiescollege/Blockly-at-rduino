@@ -5,7 +5,7 @@
 
 Blockly@rduino est un programme web, un **webware graphique permettant la programmation graphique pour [Arduino](http://www.arduino.cc/) et sa _traduction en code_**.
 
-![](https://raw.githubusercontent.com/technologiescollege/BlocklyDuino_tests/master/documentation/CaptureEN.JPG)
+![](https://github.com/technologiescollege/Blockly-at-rduino/blob/master/documentation/CaptureEN.JPG)
 
 Blockly@rduino est basé sur [Blockly](https://developers.google.com/blockly/), un éditeur de programme graphique par une interface web. Il fournit un seul type de traduction de la programmation graphique _(contrairement à Blockly qui traduit en Python, en JavaScript, etc et permet de le simuler en ligne : [exemple](http://www.technologiescollege.fr/blockly/apps/code/index.html))_, pour générer du code à copier coller dans l'IDE Arduino.
 
