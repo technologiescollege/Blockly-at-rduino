@@ -21,7 +21,7 @@ Cette version a été réorganisée et améliorée pour la faire utiliser au mie
 
 * programmation pour Arduino en drag'n'drop graphique,
 * génère un code totalement compatible avec le code Arduino,
-* interaction des cartes Arduino grâce aux modules rajoutés : plus de 10 blocs spécifiques à des capteurs/actionneurs Grove, ainsi que ce xu de TechnoZone51, Bitbloq, et ...
+* interaction des cartes Arduino grâce aux modules rajoutés : plus de 10 blocs spécifiques à des capteurs/actionneurs Grove, ainsi que ceux de TechnoZone51, Bitbloq, et ...
 * possibilité de charger automatiquement des fichiers sur le site grâce aux paramètres de l'adresse URL _(voir les démos ci-dessous)._
 * téléversement et console série depuis l'interface web,
 * sauvegarde/lecture de fichiers INO et XML
@@ -46,7 +46,7 @@ Pour le téléversement et la console série, vous devez disposer d'un accès we
 
 ## Utilisation en 4 temps
 
-1. utiliser votre navigateur pour ouvrir BlocklyDuino grâce au fichier 'index.html'
+1. utiliser votre navigateur pour ouvrir Blockly@rduino grâce au fichier 'index.html'
 2. créer son programme Arduino par drag'n'drop (_cliqué-déplacé_) des blocs
 3. sélectionner l'onglet 'Arduino' pour en vérifier le code grâce à CodeBender
 4. presser le bouton 'Téléverser' pour transférer le code dans la mémoire de la carte Arduino
