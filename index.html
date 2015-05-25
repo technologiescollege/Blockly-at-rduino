@@ -42,6 +42,8 @@ contient la liste des blocs de Blockly ci-dessous en compressé-->
 <script type="text/javascript" src="utils/prettify.js"></script>
 <script type="text/javascript" src="lang/code.js"></script>
 
+<script type="text/javascript" src="utils/svg-pan-zoom.min.js"></script>
+
 <link rel="stylesheet" type="text/css" href="css/prettify.css">
 <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="css/blocklyDuino.css">
@@ -68,24 +70,24 @@ contient la liste des blocs de Blockly ci-dessous en compressé-->
     <div id="divBody">
     <div id="menuPanel">
     <div id="menuPanelLeft">
-    <div id="divSwitch">
-            <button id="btn_switch" class="btn btn-default">
-                <span class="glyphicon glyphicon-retweet"> </span>
-            </button>
-     </div>
-    <div id="divCard">
-            <label id="labelArduinoCard"></label> 
-            <select id="pinout">
-                <option value="arduino_uno">UNO</option>
-                <option value="arduino_mega">MEGA</option>
-            </select>
-    </div>
-    <div id="divConfig">
-            <button id="btn_config" class="btn btn-warning" data-toggle="modal" data-target="#configModal">
-                <span class="glyphicon glyphicon-cog"> </span>
-                <span id="span_config"> </span>
-            </button>
-    </div>
+	    <div id="divSwitch">
+	            <button id="btn_switch" class="btn btn-default">
+	                <span class="glyphicon glyphicon-retweet"> </span>
+	            </button>
+	     </div>
+	    <div id="divCard">
+	            <label id="labelArduinoCard"></label> 
+	            <select id="pinout">
+	                <option value="arduino_uno">UNO</option>
+	                <option value="arduino_mega">MEGA</option>
+	            </select>
+	    </div>
+	    <div id="divConfig">
+	            <button id="btn_config" class="btn btn-warning" data-toggle="modal" data-target="#configModal">
+	                <span class="glyphicon glyphicon-cog"> </span>
+	                <span id="span_config"> </span>
+	            </button>
+	    </div>
     </div>
     <div id="menuPanelCenter">
             <ul id="ul_nav" role="tablist">
@@ -115,17 +117,17 @@ contient la liste des blocs de Blockly ci-dessous en compressé-->
              </li>
         </ul>
         </div>
-            <div id="menuPanelRight">
-        <a id="btn_saveXML" class='btn btn-success' href="#" role='button'>
-          <span class="glyphicon glyphicon-floppy-save"></span>
-          <span id="span_saveXML"> </span>
-         </a>
-        <button id="btn_fakeload" class="btn btn-success">
-            <span class="glyphicon glyphicon-floppy-open"></span>
-            <span   id="span_fakeload"> </span>
-        </button>
-        <input type="file" id="load" style="display: none;" />
-</div>        
+        <div id="menuPanelRight">
+	        <a id="btn_saveXML" class='btn btn-success' href="#" role='button'>
+	          <span class="glyphicon glyphicon-floppy-save"></span>
+	          <span id="span_saveXML"> </span>
+	         </a>
+	        <button id="btn_fakeload" class="btn btn-success">
+	            <span class="glyphicon glyphicon-floppy-open"></span>
+	            <span   id="span_fakeload"> </span>
+	        </button>
+	        <input type="file" id="load" style="display: none;" />
+        </div>        
     </div>
     
     <!-- Nav tabs -->
@@ -138,6 +140,15 @@ contient la liste des blocs de Blockly ci-dessous en compressé-->
                         <span class="glyphicon glyphicon-erase"> </span>
                         <span id="span_delete"> </span>
                     </button>
+                    <button id="btn_zoomout" class="btn btn-default" title="zoom -">
+                        <span id="icon_btn_zoormout" class="glyphicon glyphicon-zoom-out"></span>
+                    </button>
+					<button id="btn_zoomreset" class="btn btn-default" title="zoom 0">
+						<span id="icon_btn_zoomreset" class="glyphicon glyphicon-screenshot"></span>
+					</button>
+					<button id="btn_zoomin" class="btn btn-default" title="zoom +">
+						<span id="icon_btn_zoomin" class="glyphicon glyphicon-zoom-in"></span>
+					</button>
 					<button id="btn_size" class="btn btn-default" title="">
 						<span id="icon_btn_size" class="glyphicon glyphicon-new-window"> </span>
 					</button>

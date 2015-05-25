@@ -122,6 +122,8 @@ Code.changeLanguage = function() {
     search = search.replace(/\?/, '?lang=' + newLang + '&');
   }
 
+  search = search.replace(/([?&]url=)[^&]*/, '');
+
   window.location = window.location.protocol + '//' +
       window.location.host + window.location.pathname + search;
 };
