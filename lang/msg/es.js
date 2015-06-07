@@ -40,5 +40,12 @@ var MSG = {
   arduino_card:"suprimir todo y seleccionar una tarjeta",
   span_about:"A propósito",
   aboutModalLabel:"A propósito ...",
-  aboutBody:"- Traducciones y adaptaciones Sébastien Canet, integración CodeBender por Julien Rata, impulsado por el increíble trabajo de Olivier Metayer !"
+  aboutBody:"<br />- Traducciones y adaptaciones Sébastien Canet, integración CodeBender por Julien Rata, impulsado por el increíble trabajo de Olivier Metayer !"
+	  + "<br />"
+	  + "<br />Contributions :"
+	  + "<br /> - Blockly (https://developers.google.com/blockly)"
+	  + "<br /> - CompilerFlasher (https://codebender.cc)"
+	  + "<br /> - JQuerry (https://jquery.com)"
+	  + "<br /> - Bootstrap (http://getbootstrap.com)"
+	  + "<br /> - svg-pan-zoom (https://github.com/ariutta/svg-pan-zoom)"
 };

@@ -40,5 +40,12 @@ var MSG = {
   arduino_card:"delete all and select a card",
   span_about:"about",
   aboutModalLabel:"about ...",
-  aboutBody:"- translations and adaptations Sébastien Canet, integration CodeBender by Julien Rat, CSS and multilingual by Olivier Metayer."
+  aboutBody:"<br />- translations and adaptations Sébastien Canet, integration CodeBender by Julien Rat, CSS and multilingual by Olivier Metayer."
+		  + "<br />"
+		  + "<br />Contributions :"
+		  + "<br /> - Blockly (https://developers.google.com/blockly)"
+		  + "<br /> - CompilerFlasher (https://codebender.cc)"
+		  + "<br /> - JQuerry (https://jquery.com)"
+		  + "<br /> - Bootstrap (http://getbootstrap.com)"
+		  + "<br /> - svg-pan-zoom (https://github.com/ariutta/svg-pan-zoom)"
 };

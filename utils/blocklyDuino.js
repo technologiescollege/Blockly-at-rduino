@@ -634,7 +634,7 @@ BlocklyDuino.init = function() {
 
 	document.getElementById('btn_zoomout').addEventListener('click', function() {panZoom.zoomOut();	});
 
-	document.getElementById('btn_zoomreset').addEventListener('click', function() {panZoom.resetZoom(); });
+	document.getElementById('btn_zoomreset').addEventListener('click', function() {location.reload(); });
 
 };
 

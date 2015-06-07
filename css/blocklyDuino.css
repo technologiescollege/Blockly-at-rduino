@@ -403,10 +403,18 @@ html[dir="RTL"] .colors_category {
 	background-color: #8cb8c0;
 }
 
-.color_cat_grove {
+.color_cat_robots, .color_cat_robots_motors, .color_cat_robot_misc {
+    background-color: #5b99a5;
+}
+
+.color_cat_grove, .color_cat_grove_in, .color_cat_grove_out, .color_cat_grove_lcd, .color_cat_grove_comm {
 	background-color: #8cb8c0;
 }
 
-.color_cat_technozone {
+.color_cat_technozone, .color_cat_technozone_out, .color_cat_technozone_motors, .color_cat_technozone_servo, .color_cat_technozone_lcd {
 	background-color: #8cb8c0;
+}
+
+.color_cat_technozone_in, .color_cat_technozone_telec {
+	background-color: #5ba55b;
 }

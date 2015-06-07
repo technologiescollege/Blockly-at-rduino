@@ -71,24 +71,59 @@ Blockly.Arduino.ORDER_NONE = 99;          // (...)
  * Arduino Board profiles
  *
  */
+
 var profile = {
 	arduino_uno: {
 	    description: "Arduino Uno",
-	    digital: [["1", "1"], ["2", "2"], ["3", "3"], ["4", "4"], ["5", "5"], ["6", "6"], ["7", "7"], ["8", "8"], ["9", "9"], ["10", "10"], ["11", "11"], ["12", "12"], ["13", "13"]],
-		PWM : [["3", "3"], ["5", "5"], ["6", "6"], ["9", "9"], ["10", "10"], ["11", "11"]],
-		analog : [["A0", "A0"], ["A1", "A1"], ["A2", "A2"], ["A3", "A3"], ["A4", "A4"], ["A5", "A5"]],
+	    digital: ["1",  "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13"],
+		PWM : ["3", "5", "6", "9", "10", "11"],
+		analog : ["A0", "A1", "A2", "A3", "A4", "A5"],
 	    serial : 9600,
 	},
 	arduino_mega:{
 		description: "Arduino Mega",
-		digital : [["0", "0"],["1", "1"], ["2", "2"], ["3", "3"], ["4", "4"], ["5", "5"], ["6", "6"], ["7", "7"], ["8", "8"], ["9", "9"], ["10", "10"], ["11", "11"], ["12", "12"], ["13", "13"], ["14", "14"],["15", "15"], ["16", "16"], ["17", "17"], ["18", "18"], ["19", "19"], ["20", "20"], ["21", "21"], ["22", "22"], ["23", "23"], ["24", "24"], ["25", "25"], ["26", "26"], ["27", "27"], ["28", "28"],["29", "29"], ["30", "30"], ["31", "31"], ["32", "32"], ["33", "33"], ["34", "34"], ["35", "35"], ["36", "36"], ["37", "37"], ["38", "38"], ["39", "39"], ["40", "40"], ["41", "41"], ["42", "42"],["43", "43"], ["44", "44"], ["45", "45"], ["46", "46"], ["47", "47"], ["48", "48"], ["49", "49"], ["50", "50"], ["51", "51"], ["52", "52"]],
-		PWM : [["2", "2"], ["3", "3"], ["4", "4"], ["5", "5"], ["6", "6"], ["7", "7"], ["8", "8"], ["9", "9"], ["10", "10"], ["11", "11"], ["12", "12"], ["13", "13"]],
-		analog : [["A0", "A0"], ["A1", "A1"], ["A2", "A2"], ["A3", "A3"], ["A4", "A4"], ["A5", "A5"], ["A6", "A6"], ["A7", "A7"], ["A8", "A8"], ["A9", "A9"], ["A10", "A10"], ["A11", "A11"], ["A12", "A12"], ["A13", "A13"], ["A14", "A14"], ["A15", "A15"]],
+		digital : ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "33", "34", "35", "36", "37", "38", "39", "40", "41", "42", "43", "44", "45", "46", "47", "48", "49", "50", "51", "52"],
+		PWM : ["2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13"],
+		analog : ["A0", "A1", "A2", "A3", "A4", "A5", "A6", "A7", "A8", "A9", "A10", "A11", "A12", "A13", "A14", "A15"],
         serial : 9600,
 	},
-}
+};
+
 //set default profile to arduino standard-compatible board
-profile["default"] = profile["arduino_uno"];
+profile.defaultBoard = profile["arduino_uno"];
+
+/**
+ * Ensure that PIN number exists in Digital array.
+ * @param {string} text The user's text.
+ * @return {?string} A string representing a valid PIN number, or null if invalid.
+ */
+Blockly.Arduino.pinDigitalValidator = function(text) {
+	var pos = profile.defaultBoard.digital.indexOf(text);
+		
+	return (pos < 0) ? null : text;
+};
+
+/**
+ * Ensure that PIN number exists in PWM array.
+ * @param {string} text The user's text.
+ * @return {?string} A string representing a valid PIN number, or null if invalid.
+ */
+Blockly.Arduino.pinPWMValidator = function(text) {
+	var pos = profile.defaultBoard.PWM.indexOf(text);
+
+	return (pos < 0) ? null : text;
+};
+
+/**
+ * Ensure that PIN number exists in Analog array.
+ * @param {string} text The user's text.
+ * @return {?string} A string representing a valid PIN number, or null if invalid.
+ */
+Blockly.Arduino.pinAnalogValidator = function(text) {
+	var pos = profile.defaultBoard.analog.indexOf(text);
+
+	return (pos < 0) ? null : text;
+};
 
 /**
  * Initialise the database of variable names.

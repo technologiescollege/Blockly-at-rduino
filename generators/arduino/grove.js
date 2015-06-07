@@ -118,14 +118,8 @@ var _get_next_pin = function(dropdown_pin) {
     NextPIN = 'A'+(parseInt(NextPIN.slice(1,NextPIN.length))+1);
   }
   //check if NextPIN in bound
-  var pinlen = profile.default.digital.length;
-  var notExist=true;
-  for(var i=0;i<pinlen;i++){
-    if(profile.default.digital[i][1] == NextPIN){
-      notExist=false;
-    }
-  }
-  if(notExist){
+  var pos = profile.defaultBoard.digital.indexOf(String(NextPIN));
+  if(pos < 0){
     alert("Grove Sensor needs PIN#+1 port, current setting is out of bound.");
     return null;
   } else {

@@ -37,7 +37,7 @@ Blockly.Blocks['setup_button_wait_il'] = {
         .appendField("1 time wait - Gen")
         //.appendField(new Blockly.FieldImage("http://", 64, 64))
         .appendField("PIN#")
-        .appendField(new Blockly.FieldDropdown(profile.default.digital), "PIN");
+        .appendField(new Blockly.FieldDropdown(profile.defaultBoard.digital), "PIN");
     this.setTooltip('1 time wait button in setup) - INPUT & wait for HIGH');
  this.setPreviousStatement(false, null);
     this.setNextStatement(true, null);
@@ -52,7 +52,7 @@ Blockly.Blocks['setup_button_wait_iph'] = {
         .appendField("1 Time wait - Zumo")
         //.appendField(new Blockly.FieldImage("http://", 64, 64))
         .appendField("PIN#")
-        .appendField(new Blockly.FieldDropdown(profile.default.digital), "PIN");
+        .appendField(new Blockly.FieldDropdown(profile.defaultBoard.digital), "PIN");
     this.setTooltip('1 time wait button (in setup) - INPUT_PULLUP & wait for LOW)');
  this.setPreviousStatement(false, null);
     this.setNextStatement(true, null);
@@ -66,12 +66,12 @@ Blockly.Blocks['fourpin_ranger'] = {
 	this.appendDummyInput()
 	    .appendField("Four Pin Ranger")
 		.appendField("Trigger_Pin#")
-        .appendField(new Blockly.FieldDropdown(profile.default.digital), "PIN")
+        .appendField(new Blockly.FieldDropdown(profile.defaultBoard.digital), "PIN")
 		this.setInputsInline(false);
 	this.appendDummyInput()
 		.appendField(new Blockly.FieldImage("../../media/fourpin_range.jpg", 40, 40))
        .appendField("Echo_Pin#")
-       .appendField(new Blockly.FieldDropdown(profile.default.digital), "PIN2")
+       .appendField(new Blockly.FieldDropdown(profile.defaultBoard.digital), "PIN2")
 	   .setAlign(Blockly.ALIGN_RIGHT)
 	this.setOutput(true, 'Number');
     this.setTooltip('4Pin Sonic - Provides distance in inches');

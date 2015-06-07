@@ -40,5 +40,12 @@ var MSG = {
   arduino_card:"supprimer tout et sélectionner une carte",
   span_about:"à propos",
   aboutModalLabel:"à propos ...",
-  aboutBody:"- traductions et adaptations Sébastien Canet, intégration CodeBender par Julien Rat, intégration multilingue et CSS par Olivier Métayer."
+  aboutBody:"<br />- traductions et adaptations Sébastien Canet, intégration CodeBender par Julien Rat, intégration multilingue et CSS par Olivier Métayer." 
+	  + "<br />"
+	  + "<br />Contributions :"
+	  + "<br /> - Blockly (https://developers.google.com/blockly)"
+	  + "<br /> - CompilerFlasher (https://codebender.cc)"
+	  + "<br /> - JQuerry (https://jquery.com)"
+	  + "<br /> - Bootstrap (http://getbootstrap.com)"
+	  + "<br /> - svg-pan-zoom (https://github.com/ariutta/svg-pan-zoom)"
 };
