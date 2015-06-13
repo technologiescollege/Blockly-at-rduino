@@ -220,7 +220,7 @@ Blockly.Blocks['grove_serial_lcd_print'] = {
         .appendField(Blockly.Msg.GROVE_INOUT_LCD_PRINT_TEXT)
         .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/grove/400px-LCD1.jpg', 64, 64))
         .appendField(Blockly.Msg.GROVE_INOUT_LCD_PRINT_INPUT1)
-        .appendField(new Blockly.FieldTextInput('1',  Blockly.Arduino.pinDigitalValidator), 'PIN');
+        .appendField(new Blockly.FieldTextInput('1',  Blockly.Arduino.pinGroveDigitalValidator), 'PIN');
     this.appendValueInput("TEXT", 'String')
         .setCheck('String')
         .setAlign(Blockly.ALIGN_RIGHT)
@@ -248,7 +248,7 @@ Blockly.Blocks['grove_serial_lcd_power'] = {
         .appendField(Blockly.Msg.GROVE_INOUT_LCD_POWER_TEXT)
         .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/grove/400px-LCD1.jpg', 64, 64))
         .appendField(Blockly.Msg.GROVE_INOUT_LCD_POWER_INPUT)
-        .appendField(new Blockly.FieldTextInput('1',  Blockly.Arduino.pinDigitalValidator), 'PIN');
+        .appendField(new Blockly.FieldTextInput('1',  Blockly.Arduino.pinGroveDigitalValidator), 'PIN');
     this.appendDummyInput()
         .setAlign(Blockly.ALIGN_RIGHT)
         .appendField(Blockly.Msg.GROVE_INOUT_LCD_POWER_STATE)
@@ -268,7 +268,7 @@ Blockly.Blocks['grove_serial_lcd_effect'] = {
         .appendField(Blockly.Msg.GROVE_INOUT_LCD_EFFECT_TEXT)
         .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/grove/400px-LCD1.jpg', 64, 64))
         .appendField(Blockly.Msg.GROVE_INOUT_LCD_EFFECT_INPUT)
-        .appendField(new Blockly.FieldTextInput('1',  Blockly.Arduino.pinDigitalValidator), 'PIN');
+        .appendField(new Blockly.FieldTextInput('1',  Blockly.Arduino.pinGroveDigitalValidator), 'PIN');
     this.appendDummyInput()
         .setAlign(Blockly.ALIGN_RIGHT)
         .appendField(Blockly.Msg.GROVE_INOUT_LCD_EFFECT_EFFECT)
@@ -363,7 +363,7 @@ Blockly.Blocks['grove_thumb_joystick'] = {
 		.appendField(Blockly.Msg.GROVE_INOUT_JOYSTICK_TEXT1)
         .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/grove/200px-Twig_-_Thumb_Joystick_v0.9b.jpg', 64, 64))
 		.appendField(Blockly.Msg.GROVE_INOUT_JOYSTICK_INPUT)
-        .appendField(new Blockly.FieldTextInput('',  Blockly.Arduino.pinAnalogValidator), 'PIN')
+        .appendField(new Blockly.FieldTextInput('',  Blockly.Arduino.pinGroveAnalogValidator), 'PIN')
         .appendField(Blockly.Msg.GROVE_INOUT_JOYSTICK_TEXT2)
         .appendField(new Blockly.FieldDropdown(Blockly.Msg.GROVE_INOUT_JOYSTICK_AXES), "AXIS");
     this.setOutput(true, 'Number');
@@ -379,7 +379,7 @@ Blockly.Blocks['grove_bluetooth_slave'] = {
       .appendField(Blockly.Msg.GROVE_INOUT_BT_COMM1)
       .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/grove/Twigbt00.jpg', 64, 64))
       .appendField(Blockly.Msg.GROVE_INOUT_BT_COMM2)
-      .appendField(new Blockly.FieldTextInput('1',  Blockly.Arduino.pinDigitalValidator), 'PIN');
+      .appendField(new Blockly.FieldTextInput('1',  Blockly.Arduino.pinGroveDigitalValidator), 'PIN');
     this.appendDummyInput()
       .setAlign(Blockly.ALIGN_RIGHT)
       .appendField(Blockly.Msg.GROVE_INOUT_BT_COMM3)

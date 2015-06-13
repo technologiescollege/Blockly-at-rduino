@@ -104,6 +104,21 @@ Blockly.Arduino.pinDigitalValidator = function(text) {
 };
 
 /**
+ * Ensure that PIN and next PIN numbers exists in Digital array.
+ * @param {string} text The user's text.
+ * @return {?string} A string representing a valid PIN number, or null if invalid.
+ */
+Blockly.Arduino.pinGroveDigitalValidator = function(text) {
+	var pos = profile.defaultBoard.digital.indexOf(text);
+	if (pos >= 0) {
+		var NextPIN = parseInt(text) + 1;
+		// check if NextPIN in bound
+		pos = profile.defaultBoard.digital.indexOf(String(NextPIN));
+	}
+	return (pos < 0) ? null : text;
+};
+
+/**
  * Ensure that PIN number exists in PWM array.
  * @param {string} text The user's text.
  * @return {?string} A string representing a valid PIN number, or null if invalid.
@@ -122,6 +137,21 @@ Blockly.Arduino.pinPWMValidator = function(text) {
 Blockly.Arduino.pinAnalogValidator = function(text) {
 	var pos = profile.defaultBoard.analog.indexOf(text);
 
+	return (pos < 0) ? null : text;
+};
+
+/**
+ * Ensure that PIN and next PIN numbers exists in Digital array.
+ * @param {string} text The user's text.
+ * @return {?string} A string representing a valid PIN number, or null if invalid.
+ */
+Blockly.Arduino.pinGroveAnalogValidator = function(text) {
+	var pos = profile.defaultBoard.analog.indexOf(text);
+	if (pos >= 0) {
+	    var NextPIN = 'A'+(parseInt(text.slice(1,text.length))+1);
+		// check if NextPIN in bound
+		pos = profile.defaultBoard.analog.indexOf(String(NextPIN));
+	}
 	return (pos < 0) ? null : text;
 };
 
