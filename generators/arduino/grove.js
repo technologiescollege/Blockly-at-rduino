@@ -35,7 +35,7 @@ Blockly.Arduino.grove_led = function() {
   var dropdown_pin = Blockly.Arduino.valueToCode(this, 'NUM', Blockly.Arduino.ORDER_ATOMIC);
   var dropdown_stat = this.getFieldValue('STAT');
   Blockly.Arduino.setups_['setup_green_led_'+dropdown_pin] = 'pinMode('+dropdown_pin+', OUTPUT);';
-  var code = 'digitalWrite('+dropdown_pin+','+dropdown_stat+');\n'
+  var code = 'digitalWrite('+dropdown_pin+','+dropdown_stat+');\n';
   return code;
 };
 
@@ -63,7 +63,7 @@ Blockly.Arduino.grove_piezo_buzzer = function() {
   var dropdown_pin = this.getFieldValue('PIN');
   var dropdown_stat = this.getFieldValue('STAT');
   Blockly.Arduino.setups_['setup_piezo_buzzer_'+dropdown_pin] = 'pinMode('+dropdown_pin+', OUTPUT);';
-  var code = 'digitalWrite('+dropdown_pin+','+dropdown_stat+');\n'
+  var code = 'digitalWrite('+dropdown_pin+','+dropdown_stat+');\n';
   return code;
 };
 
@@ -71,7 +71,7 @@ Blockly.Arduino.grove_relay = function() {
   var dropdown_pin = this.getFieldValue('PIN');
   var dropdown_stat = this.getFieldValue('STAT');
   Blockly.Arduino.setups_['setup_relay_'+dropdown_pin] = 'pinMode('+dropdown_pin+', OUTPUT);';
-  var code = 'digitalWrite('+dropdown_pin+','+dropdown_stat+');\n'
+  var code = 'digitalWrite('+dropdown_pin+','+dropdown_stat+');\n';
   return code;
 };
 
@@ -111,27 +111,22 @@ void loop()
 */
 
 var _get_next_pin = function(dropdown_pin) {
-  var NextPIN = dropdown_pin;
-  if(parseInt(NextPIN)){
-    NextPIN = parseInt(dropdown_pin)+1;
+  var pos = -1;
+    //check if NextPIN in bound
+  if(parseInt(dropdown_pin)){
+    var NextPIN = parseInt(dropdown_pin)+1;
+    pos = profile.defaultBoard.digital.indexOf(String(NextPIN));
   } else {
-    NextPIN = 'A'+(parseInt(NextPIN.slice(1,NextPIN.length))+1);
+    var NextPIN = 'A'+(parseInt(dropdown_pin.slice(1,dropdown_pin.length))+1);
+    pos = profile.defaultBoard.analog.indexOf(String(NextPIN));
   }
-  //check if NextPIN in bound
-  var pinlen = profile.default.digital.length;
-  var notExist=true;
-  for(var i=0;i<pinlen;i++){
-    if(profile.default.digital[i][1] == NextPIN){
-      notExist=false;
-    }
-  }
-  if(notExist){
-    alert("Grove Sensor needs PIN#+1 port, current setting is out of bound.");
+  if(pos < 0){
+//    alert("Grove Sensor needs PIN#+1 port, current setting is out of bound.");
     return null;
   } else {
     return NextPIN;
   }
-}
+};
 
 Blockly.Arduino.grove_serial_lcd_print = function() {
   var dropdown_pin = this.getFieldValue('PIN');
@@ -296,7 +291,7 @@ Blockly.Arduino.grove_motor_shield = function() {
      "digitalWrite(9,LOW);// Unenble the pin, to stop the motor. this should be done to avid damaging the motor.\n"+
      "digitalWrite(10,LOW);\n"+
      "delay(1000);\n"+
-"}\n\n"
+"}\n\n";
     code="stop();\n";
   }
   return code;
@@ -305,26 +300,26 @@ Blockly.Arduino.grove_motor_shield = function() {
 Blockly.Arduino.grove_thumb_joystick =  function() {
   var dropdown_pin = this.getFieldValue('PIN');
   var dropdown_axis = this.getFieldValue('AXIS');
-  var stickPIN = "0"
+  var stickPIN = "0";
   if(dropdown_axis==="y"){
     stickPIN = _get_next_pin(dropdown_pin);
   } else {
-    stickPIN = dropdown_pin
+    stickPIN = dropdown_pin;
   }
   var code = 'analogRead('+stickPIN+')';
   return [code, Blockly.Arduino.ORDER_ATOMIC];
 };
 
-function hexToR(h) {return parseInt((cutHex(h)).substring(0,2),16)}
-function hexToG(h) {return parseInt((cutHex(h)).substring(2,4),16)}
-function hexToB(h) {return parseInt((cutHex(h)).substring(4,6),16)}
-function cutHex(h) {return (h.charAt(0)=="#") ? h.substring(1,7):h}
+function hexToR(h) {return parseInt((cutHex(h)).substring(0,2),16);};
+function hexToG(h) {return parseInt((cutHex(h)).substring(2,4),16);};
+function hexToB(h) {return parseInt((cutHex(h)).substring(4,6),16);};
+function cutHex(h) {return (h.charAt(0)=="#") ? h.substring(1,7):h;};
 
 Blockly.Arduino.grove_rgb_led = function() {
   var dropdown_pin = Blockly.Arduino.valueToCode(this, 'NUM', Blockly.Arduino.ORDER_ATOMIC);
   var dropdown_stat = this.getFieldValue('STAT');
   Blockly.Arduino.setups_['setup_green_led_'+dropdown_pin] = 'pinMode('+dropdown_pin+', OUTPUT);';
-  var code = 'digitalWrite('+dropdown_pin+','+dropdown_stat+');\n'
+  var code = 'digitalWrite('+dropdown_pin+','+dropdown_stat+');\n';
   return code;
 };
 
@@ -418,10 +413,10 @@ Blockly.Arduino.grove_rgb_led = function() {
 Blockly.Arduino.grove_bluetooth_slave = function() {
   var dropdown_pin = this.getFieldValue('PIN');
   var NextPIN = _get_next_pin(dropdown_pin);
-  var name = this.getFieldValue('NAME')
-  var pincode = this.getFieldValue('PINCODE');
-  var statement_receive = Blockly.Arduino.statementToCode(this, "RCV")
-  var statement_send = Blockly.Arduino.statementToCode(this, "SNT")
+  var name = this.getFieldValue('NAME');
+//  var pincode = this.getFieldValue('PINCODE');
+  var statement_receive = Blockly.Arduino.statementToCode(this, "RCV");
+  var statement_send = Blockly.Arduino.statementToCode(this, "SNT");
   /* if(pincode.length != 4){
     alert("pincode length should be 4");
   } */

@@ -595,6 +595,8 @@ Blockly.Msg.GROVE_INOUT_BT_COMM3 = "name";
 Blockly.Msg.GROVE_INOUT_BT_COMM4 = "pin code";
 Blockly.Msg.GROVE_INOUT_BT_COMM5 = "send";
 Blockly.Msg.GROVE_INOUT_BT_COMM6 = "receive";
+Blockly.Msg.GROVE_INOUT_BT_TOOLTIP = "Bluetooth V2.0+EDR slave. Support single slave per board";
+
 //added April 3rd 2015 ESK
 Blockly.Msg.ROBOTS_MOTORS_FORWARD = "Forward";
 Blockly.Msg.ROBOTS_MOTORS_BACKWARD = "Backward";

@@ -39,8 +39,15 @@ Blockly.Blocks['zumo_motors_FN'] = {
     this.setColour(190);
     this.appendDummyInput()
         .appendField(Blockly.Msg.ROBOTS_MOTORS_ZUMO_FN_TITLE)
-        .appendField(new Blockly.FieldImage("https://a.pololu-files.com/picture/0J4110.250.jpg", 64, 64))
-        .appendField(new Blockly.FieldDropdown([[Blockly.Msg.ROBOTS_MOTORS_STOP, "stop"], [Blockly.Msg.ROBOTS_MOTORS_FORWARD, "forward"], [Blockly.Msg.ROBOTS_MOTORS_RIGHT, "right"], [Blockly.Msg.ROBOTS_MOTORS_LEFT, "left"], [Blockly.Msg.ROBOTS_MOTORS_BACKWARD, "backward"]]), "DIRECTION");
+        .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/robots/0J4110.250.jpg', 64, 64))
+        .appendField(
+				new Blockly.FieldDropdown([
+						[ Blockly.Msg.ROBOTS_MOTORS_STOP, "stop" ],
+						[ Blockly.Msg.ROBOTS_MOTORS_FORWARD, "forward" ],
+						[ Blockly.Msg.ROBOTS_MOTORS_RIGHT, "right" ],
+						[ Blockly.Msg.ROBOTS_MOTORS_LEFT, "left" ],
+						[ Blockly.Msg.ROBOTS_MOTORS_BACKWARD, "backward" ] ]),
+				"DIRECTION");
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setTooltip(Blockly.Msg.ROBOTS_MOTORS_ZUMO_FN_TOOLTIP);
@@ -54,18 +61,25 @@ Blockly.Blocks['zumo_motors_FNs'] = {
 	this.setInputsInline(false) ; 
     this.appendDummyInput()
         .appendField(Blockly.Msg.ROBOTS_MOTORS_ZUMO_FNS_TITLE)
-        .appendField(new Blockly.FieldImage("https://a.pololu-files.com/picture/0J4110.250.jpg", 64, 64))
+        .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/robots/0J4110.250.jpg', 64, 64));
 	this.appendDummyInput()
-        .appendField(new Blockly.FieldDropdown([[Blockly.Msg.ROBOTS_MOTORS_STOP, "stop"], [Blockly.Msg.ROBOTS_MOTORS_FORWARD, "forward"], [Blockly.Msg.ROBOTS_MOTORS_RIGHT, "right"], [Blockly.Msg.ROBOTS_MOTORS_LEFT, "left"], [Blockly.Msg.ROBOTS_MOTORS_BACKWARD, "backward"]]), "DIRECTION");
+        .appendField(
+				new Blockly.FieldDropdown([
+						[ Blockly.Msg.ROBOTS_MOTORS_STOP, "stop" ],
+						[ Blockly.Msg.ROBOTS_MOTORS_FORWARD, "forward" ],
+						[ Blockly.Msg.ROBOTS_MOTORS_RIGHT, "right" ],
+						[ Blockly.Msg.ROBOTS_MOTORS_LEFT, "left" ],
+						[ Blockly.Msg.ROBOTS_MOTORS_BACKWARD, "backward" ] ]),
+				"DIRECTION");
    this.setInputsInline(true) ;
    this.appendValueInput("SPEEDA", 'Number')
        .setCheck('Number')
         .setAlign(Blockly.ALIGN_RIGHT)
-        .appendField(Blockly.Msg.ROBOTS_MOTORS_SPEEDL)
+        .appendField(Blockly.Msg.ROBOTS_MOTORS_SPEEDL);
 	this.appendValueInput("SPEEDB", 'Number')
         .setCheck('Number')
         .setAlign(Blockly.ALIGN_RIGHT)
-        .appendField(Blockly.Msg.ROBOTS_MOTORS_SPEEDR)
+        .appendField(Blockly.Msg.ROBOTS_MOTORS_SPEEDR);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setTooltip(Blockly.Msg.ROBOTS_MOTORS_ZUMO_FNS_TOOLTIP);
@@ -78,8 +92,15 @@ Blockly.Blocks['zumo_motors_FR'] = {
     this.setColour(190);
     this.appendDummyInput()
         .appendField(Blockly.Msg.ROBOTS_MOTORS_ZUMO_FR_TITLE)
-        .appendField(new Blockly.FieldImage("https://a.pololu-files.com/picture/0J4110.250.jpg", 64, 64))
-        .appendField(new Blockly.FieldDropdown([[Blockly.Msg.ROBOTS_MOTORS_STOP, "stop"], [Blockly.Msg.ROBOTS_MOTORS_FORWARD, "forward"], [Blockly.Msg.ROBOTS_MOTORS_RIGHT, "right"], [Blockly.Msg.ROBOTS_MOTORS_LEFT, "left"], [Blockly.Msg.ROBOTS_MOTORS_BACKWARD, "backward"]]), "DIRECTION");
+        .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/robots/0J4110.250.jpg', 64, 64))
+        .appendField(
+				new Blockly.FieldDropdown([
+						[ Blockly.Msg.ROBOTS_MOTORS_STOP, "stop" ],
+						[ Blockly.Msg.ROBOTS_MOTORS_FORWARD, "forward" ],
+						[ Blockly.Msg.ROBOTS_MOTORS_RIGHT, "right" ],
+						[ Blockly.Msg.ROBOTS_MOTORS_LEFT, "left" ],
+						[ Blockly.Msg.ROBOTS_MOTORS_BACKWARD, "backward" ] ]),
+				"DIRECTION");
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setTooltip(Blockly.Msg.ROBOTS_MOTORS_ZUMO_FR_TOOLTIP);
@@ -93,18 +114,25 @@ Blockly.Blocks['zumo_motors_FRs'] = {
 	this.setInputsInline(false) ; 
     this.appendDummyInput()
         .appendField(Blockly.Msg.ROBOTS_MOTORS_ZUMO_FRS_TITLE)
-        .appendField(new Blockly.FieldImage("https://a.pololu-files.com/picture/0J4110.250.jpg", 64, 64))
+        .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/robots/0J4110.250.jpg', 64, 64));
     this.appendDummyInput()    
-		.appendField(new Blockly.FieldDropdown([[Blockly.Msg.ROBOTS_MOTORS_STOP, "stop"], [Blockly.Msg.ROBOTS_MOTORS_FORWARD, "forward"], [Blockly.Msg.ROBOTS_MOTORS_RIGHT, "right"], [Blockly.Msg.ROBOTS_MOTORS_LEFT, "left"], [Blockly.Msg.ROBOTS_MOTORS_BACKWARD, "backward"]]), "DIRECTION");
+		.appendField(
+				new Blockly.FieldDropdown([
+						[ Blockly.Msg.ROBOTS_MOTORS_STOP, "stop" ],
+						[ Blockly.Msg.ROBOTS_MOTORS_FORWARD, "forward" ],
+						[ Blockly.Msg.ROBOTS_MOTORS_RIGHT, "right" ],
+						[ Blockly.Msg.ROBOTS_MOTORS_LEFT, "left" ],
+						[ Blockly.Msg.ROBOTS_MOTORS_BACKWARD, "backward" ] ]),
+				"DIRECTION");
 	this.setInputsInline(true) ;   
   this.appendValueInput("SPEEDA", 'Number')
        .setCheck('Number')
         .setAlign(Blockly.ALIGN_RIGHT)
-        .appendField(Blockly.Msg.ROBOTS_MOTORS_SPEEDL)
+        .appendField(Blockly.Msg.ROBOTS_MOTORS_SPEEDL);
 	this.appendValueInput("SPEEDB", 'Number')
         .setCheck('Number')
         .setAlign(Blockly.ALIGN_RIGHT)
-        .appendField(Blockly.Msg.ROBOTS_MOTORS_SPEEDR)
+        .appendField(Blockly.Msg.ROBOTS_MOTORS_SPEEDR);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setTooltip(Blockly.Msg.ROBOTS_MOTORS_ZUMO_FRS_TOOLTIP);
@@ -117,8 +145,15 @@ Blockly.Blocks['zumo_motors_FL'] = {
     this.setColour(190);
     this.appendDummyInput()
         .appendField(Blockly.Msg.ROBOTS_MOTORS_ZUMO_FL_TITLE)
-        .appendField(new Blockly.FieldImage("https://a.pololu-files.com/picture/0J4110.250.jpg", 64, 64))
-        .appendField(new Blockly.FieldDropdown([[Blockly.Msg.ROBOTS_MOTORS_STOP, "stop"], [Blockly.Msg.ROBOTS_MOTORS_FORWARD, "forward"], [Blockly.Msg.ROBOTS_MOTORS_RIGHT, "right"], [Blockly.Msg.ROBOTS_MOTORS_LEFT, "left"], [Blockly.Msg.ROBOTS_MOTORS_BACKWARD, "backward"]]), "DIRECTION");
+        .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/robots/0J4110.250.jpg', 64, 64))
+        .appendField(
+				new Blockly.FieldDropdown([
+						[ Blockly.Msg.ROBOTS_MOTORS_STOP, "stop" ],
+						[ Blockly.Msg.ROBOTS_MOTORS_FORWARD, "forward" ],
+						[ Blockly.Msg.ROBOTS_MOTORS_RIGHT, "right" ],
+						[ Blockly.Msg.ROBOTS_MOTORS_LEFT, "left" ],
+						[ Blockly.Msg.ROBOTS_MOTORS_BACKWARD, "backward" ] ]),
+				"DIRECTION");
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setTooltip(Blockly.Msg.ROBOTS_MOTORS_ZUMO_FL_TOOLTIP);
@@ -132,18 +167,25 @@ init: function() {
 	this.setInputsInline(false) ; 
     this.appendDummyInput()
         .appendField(Blockly.Msg.ROBOTS_MOTORS_ZUMO_FLS_TITLE)
-        .appendField(new Blockly.FieldImage("https://a.pololu-files.com/picture/0J4110.250.jpg", 64, 64))
+        .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/robots/0J4110.250.jpg', 64, 64));
      this.appendDummyInput()    
-		.appendField(new Blockly.FieldDropdown([[Blockly.Msg.ROBOTS_MOTORS_STOP, "stop"], [Blockly.Msg.ROBOTS_MOTORS_FORWARD, "forward"], [Blockly.Msg.ROBOTS_MOTORS_RIGHT, "right"], [Blockly.Msg.ROBOTS_MOTORS_LEFT, "left"], [Blockly.Msg.ROBOTS_MOTORS_BACKWARD, "backward"]]), "DIRECTION");
+		.appendField(
+				new Blockly.FieldDropdown([
+						[ Blockly.Msg.ROBOTS_MOTORS_STOP, "stop" ],
+						[ Blockly.Msg.ROBOTS_MOTORS_FORWARD, "forward" ],
+						[ Blockly.Msg.ROBOTS_MOTORS_RIGHT, "right" ],
+						[ Blockly.Msg.ROBOTS_MOTORS_LEFT, "left" ],
+						[ Blockly.Msg.ROBOTS_MOTORS_BACKWARD, "backward" ] ]),
+				"DIRECTION");
    this.setInputsInline(true) ; 
    this.appendValueInput("SPEEDA", 'Number')
        .setCheck('Number')
         .setAlign(Blockly.ALIGN_RIGHT)
-        .appendField(Blockly.Msg.ROBOTS_MOTORS_SPEEDL)
+        .appendField(Blockly.Msg.ROBOTS_MOTORS_SPEEDL);
 	this.appendValueInput("SPEEDB", 'Number')
         .setCheck('Number')
         .setAlign(Blockly.ALIGN_RIGHT)
-        .appendField(Blockly.Msg.ROBOTS_MOTORS_SPEEDR)
+        .appendField(Blockly.Msg.ROBOTS_MOTORS_SPEEDR);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setTooltip(Blockly.Msg.ROBOTS_MOTORS_ZUMO_FLS_TOOLTIP);
@@ -156,18 +198,25 @@ Blockly.Blocks['zumo_motors_FBs'] = {
     this.setColour(190);
     this.appendDummyInput()
         .appendField(Blockly.Msg.ROBOTS_MOTORS_ZUMO_FBS_TITLE)
-        .appendField(new Blockly.FieldImage("https://a.pololu-files.com/picture/0J4110.250.jpg", 64, 64))
+        .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/robots/0J4110.250.jpg', 64, 64));
      this.appendDummyInput()    
-		.appendField(new Blockly.FieldDropdown([[Blockly.Msg.ROBOTS_MOTORS_STOP, "stop"], [Blockly.Msg.ROBOTS_MOTORS_FORWARD, "forward"], [Blockly.Msg.ROBOTS_MOTORS_RIGHT, "right"], [Blockly.Msg.ROBOTS_MOTORS_LEFT, "left"], [Blockly.Msg.ROBOTS_MOTORS_BACKWARD, "backward"]]), "DIRECTION");
+		.appendField(
+				new Blockly.FieldDropdown([
+						[ Blockly.Msg.ROBOTS_MOTORS_STOP, "stop" ],
+						[ Blockly.Msg.ROBOTS_MOTORS_FORWARD, "forward" ],
+						[ Blockly.Msg.ROBOTS_MOTORS_RIGHT, "right" ],
+						[ Blockly.Msg.ROBOTS_MOTORS_LEFT, "left" ],
+						[ Blockly.Msg.ROBOTS_MOTORS_BACKWARD, "backward" ] ]),
+				"DIRECTION");
    this.setInputsInline(true) ; 
    this.appendValueInput("SPEEDA", 'Number')
        .setCheck('Number')
         .setAlign(Blockly.ALIGN_RIGHT)
-        .appendField(Blockly.Msg.ROBOTS_MOTORS_SPEEDL)
+        .appendField(Blockly.Msg.ROBOTS_MOTORS_SPEEDL);
 	this.appendValueInput("SPEEDB", 'Number')
         .setCheck('Number')
         .setAlign(Blockly.ALIGN_RIGHT)
-        .appendField(Blockly.Msg.ROBOTS_MOTORS_SPEEDR)
+        .appendField(Blockly.Msg.ROBOTS_MOTORS_SPEEDR);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setTooltip(Blockly.Msg.ROBOTS_MOTORS_ZUMO_FBS_TOOLTIP);
@@ -180,8 +229,15 @@ Blockly.Blocks['zumo_motors_FB'] = {
     this.setColour(190);
     this.appendDummyInput()
         .appendField(Blockly.Msg.ROBOTS_MOTORS_ZUMO_FB_TITLE)
-        .appendField(new Blockly.FieldImage("https://a.pololu-files.com/picture/0J4110.250.jpg", 64, 64))
-        .appendField(new Blockly.FieldDropdown([[Blockly.Msg.ROBOTS_MOTORS_STOP, "stop"], [Blockly.Msg.ROBOTS_MOTORS_FORWARD, "forward"], [Blockly.Msg.ROBOTS_MOTORS_RIGHT, "right"], [Blockly.Msg.ROBOTS_MOTORS_LEFT, "left"], [Blockly.Msg.ROBOTS_MOTORS_BACKWARD, "backward"]]), "DIRECTION");
+        .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/robots/0J4110.250.jpg', 64, 64))
+        .appendField(
+				new Blockly.FieldDropdown([
+						[ Blockly.Msg.ROBOTS_MOTORS_STOP, "stop" ],
+						[ Blockly.Msg.ROBOTS_MOTORS_FORWARD, "forward" ],
+						[ Blockly.Msg.ROBOTS_MOTORS_RIGHT, "right" ],
+						[ Blockly.Msg.ROBOTS_MOTORS_LEFT, "left" ],
+						[ Blockly.Msg.ROBOTS_MOTORS_BACKWARD, "backward" ] ]),
+				"DIRECTION");
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setTooltip(Blockly.Msg.ROBOTS_MOTORS_ZUMO_FB_TOOLTIP);
@@ -194,7 +250,7 @@ Blockly.Blocks['ardu_motor'] = {
     this.setColour(190);
     this.appendDummyInput()
         .appendField(Blockly.Msg.ROBOTS_MOTORS_ARDUMOTOR_TITLE )
-        .appendField(new Blockly.FieldImage("https://cdn.sparkfun.com//assets/parts/3/8/4/9/09815-01.jpg", 64, 64))
+        .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/robots/09815-01.jpg', 64, 64))
         .appendField(new Blockly.FieldDropdown([[Blockly.Msg.ROBOTS_MOTORS_STOP, "stop"], [Blockly.Msg.ROBOTS_MOTORS_FORWARD, "forward"], [Blockly.Msg.ROBOTS_MOTORS_RIGHT, "right"], [Blockly.Msg.ROBOTS_MOTORS_LEFT, "left"], [Blockly.Msg.ROBOTS_MOTORS_BACKWARD, "backward"]]), "DIRECTION");
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
@@ -209,18 +265,25 @@ Blockly.Blocks['ardu_motor_s'] = {
 	this.setInputsInline(false) ; 
 	this.appendDummyInput()
 		.appendField(Blockly.Msg.ROBOTS_MOTORS_ARDUMOTOR_S_TITLE )
-        .appendField(new Blockly.FieldDropdown([[Blockly.Msg.ROBOTS_MOTORS_STOP, "stop"], [Blockly.Msg.ROBOTS_MOTORS_FORWARD, "forward"], [Blockly.Msg.ROBOTS_MOTORS_RIGHT, "right"], [Blockly.Msg.ROBOTS_MOTORS_LEFT, "left"], [Blockly.Msg.ROBOTS_MOTORS_BACKWARD, "backward"]]), "DIRECTION")
+        .appendField(
+				new Blockly.FieldDropdown([
+						[ Blockly.Msg.ROBOTS_MOTORS_STOP, "stop" ],
+						[ Blockly.Msg.ROBOTS_MOTORS_FORWARD, "forward" ],
+						[ Blockly.Msg.ROBOTS_MOTORS_RIGHT, "right" ],
+						[ Blockly.Msg.ROBOTS_MOTORS_LEFT, "left" ],
+						[ Blockly.Msg.ROBOTS_MOTORS_BACKWARD, "backward" ] ]),
+				"DIRECTION");
     this.appendDummyInput()
-        .appendField(new Blockly.FieldImage("https://cdn.sparkfun.com//assets/parts/3/8/4/9/09815-01.jpg", 40,40));
+        .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/robots/09815-01.jpg', 64, 64));
    this.setInputsInline(true) ; 
    this.appendValueInput("SPEEDA", 'Number')
        .setCheck('Number')
         .setAlign(Blockly.ALIGN_RIGHT)
-        .appendField(Blockly.Msg.ROBOTS_MOTORS_SPEEDL)
+        .appendField(Blockly.Msg.ROBOTS_MOTORS_SPEEDL);
 	this.appendValueInput("SPEEDB", 'Number')
         .setCheck('Number')
         .setAlign(Blockly.ALIGN_RIGHT)
-        .appendField(Blockly.Msg.ROBOTS_MOTORS_SPEEDR)
+        .appendField(Blockly.Msg.ROBOTS_MOTORS_SPEEDR);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setTooltip(Blockly.Msg.ROBOTS_MOTORS_ARDUMOTOR_TOOLTIP);
@@ -234,18 +297,25 @@ Blockly.Blocks['arduino_s'] = {
 	this.setInputsInline(false) ; 
 	this.appendDummyInput()
 		.appendField(Blockly.Msg.ROBOTS_MOTORS_ARDUNIO_S_TITLE)
-        .appendField(new Blockly.FieldDropdown([[Blockly.Msg.ROBOTS_MOTORS_STOP, "stop"], [Blockly.Msg.ROBOTS_MOTORS_FORWARD, "forward"], [Blockly.Msg.ROBOTS_MOTORS_RIGHT, "right"], [Blockly.Msg.ROBOTS_MOTORS_LEFT, "left"], [Blockly.Msg.ROBOTS_MOTORS_BACKWARD, "backward"]]), "DIRECTION")
+        .appendField(
+				new Blockly.FieldDropdown([
+						[ Blockly.Msg.ROBOTS_MOTORS_STOP, "stop" ],
+						[ Blockly.Msg.ROBOTS_MOTORS_FORWARD, "forward" ],
+						[ Blockly.Msg.ROBOTS_MOTORS_RIGHT, "right" ],
+						[ Blockly.Msg.ROBOTS_MOTORS_LEFT, "left" ],
+						[ Blockly.Msg.ROBOTS_MOTORS_BACKWARD, "backward" ] ]),
+				"DIRECTION");
     this.appendDummyInput()
-        .appendField(new Blockly.FieldImage("http://arduino.cc/en/uploads/Main/MotorShield_R3_Front.jpg.jpg", 40,40));
+        .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/robots/MotorShield_R3_Front.jpg', 64, 64));
    this.setInputsInline(true) ; 
    this.appendValueInput("SPEEDA", 'Number')
        .setCheck('Number')
         .setAlign(Blockly.ALIGN_RIGHT)
-        .appendField(Blockly.Msg.ROBOTS_MOTORS_SPEEDL)
+        .appendField(Blockly.Msg.ROBOTS_MOTORS_SPEEDL);
 	this.appendValueInput("SPEEDB", 'Number')
         .setCheck('Number')
         .setAlign(Blockly.ALIGN_RIGHT)
-        .appendField(Blockly.Msg.ROBOTS_MOTORS_SPEEDR)
+        .appendField(Blockly.Msg.ROBOTS_MOTORS_SPEEDR);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setTooltip(Blockly.Msg.ROBOTS_MOTORS_ARDUNIO_S_TOOLTIP);
@@ -259,18 +329,25 @@ Blockly.Blocks['pololu_drv8835_s'] = {
 	this.setInputsInline(false) ; 
     this.appendDummyInput()
         .appendField(Blockly.Msg.ROBOTS_MOTORS_POLOLU8835_S_TITLE)
-        .appendField(new Blockly.FieldImage("https://a.pololu-files.com/picture/0J5705.1200.jpg", 64, 64))
+        .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/robots/0J5705.1200.jpg', 64, 64));
 	this.appendDummyInput()
-        .appendField(new Blockly.FieldDropdown([[Blockly.Msg.ROBOTS_MOTORS_STOP, "stop"], [Blockly.Msg.ROBOTS_MOTORS_FORWARD, "forward"], [Blockly.Msg.ROBOTS_MOTORS_RIGHT, "right"], [Blockly.Msg.ROBOTS_MOTORS_LEFT, "left"], [Blockly.Msg.ROBOTS_MOTORS_BACKWARD, "backward"]]), "DIRECTION");
+        .appendField(
+				new Blockly.FieldDropdown([
+						[ Blockly.Msg.ROBOTS_MOTORS_STOP, "stop" ],
+						[ Blockly.Msg.ROBOTS_MOTORS_FORWARD, "forward" ],
+						[ Blockly.Msg.ROBOTS_MOTORS_RIGHT, "right" ],
+						[ Blockly.Msg.ROBOTS_MOTORS_LEFT, "left" ],
+						[ Blockly.Msg.ROBOTS_MOTORS_BACKWARD, "backward" ] ]),
+				"DIRECTION");
    this.setInputsInline(true) ;
    this.appendValueInput("SPEEDA", 'Number')
        .setCheck('Number')
         .setAlign(Blockly.ALIGN_RIGHT)
-        .appendField(Blockly.Msg.ROBOTS_MOTORS_SPEEDL)
+        .appendField(Blockly.Msg.ROBOTS_MOTORS_SPEEDL);
 	this.appendValueInput("SPEEDB", 'Number')
         .setCheck('Number')
         .setAlign(Blockly.ALIGN_RIGHT)
-        .appendField(Blockly.Msg.ROBOTS_MOTORS_SPEEDR)
+        .appendField(Blockly.Msg.ROBOTS_MOTORS_SPEEDR);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setTooltip(Blockly.Msg.ROBOTS_MOTORS_POLOLU8835_S_TOOLTIP);
@@ -285,18 +362,25 @@ Blockly.Blocks['radio_shack_s'] = {
 	this.setInputsInline(false) ; 
     this.appendDummyInput()
         .appendField(Blockly.Msg.ROBOTS_MOTORS_RADIOSHACK_S_TITLE )
-        .appendField(new Blockly.FieldImage("http://demandware.edgesuite.net/sits_pod26/dw/image/v2/AASR_PRD/on/demandware.static/Sites-radioshack-Site/Sites-master-catalog/default/v1427306427938/images/02770168_00.jpg", 64, 64))
+        .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/robots/02770168_00.jpg', 64, 64));
 	this.appendDummyInput()
-        .appendField(new Blockly.FieldDropdown([[Blockly.Msg.ROBOTS_MOTORS_STOP, "stop"], [Blockly.Msg.ROBOTS_MOTORS_FORWARD, "forward"], [Blockly.Msg.ROBOTS_MOTORS_RIGHT, "right"], [Blockly.Msg.ROBOTS_MOTORS_LEFT, "left"], [Blockly.Msg.ROBOTS_MOTORS_BACKWARD, "backward"]]), "DIRECTION");
+        .appendField(
+				new Blockly.FieldDropdown([
+						[ Blockly.Msg.ROBOTS_MOTORS_STOP, "stop" ],
+						[ Blockly.Msg.ROBOTS_MOTORS_FORWARD, "forward" ],
+						[ Blockly.Msg.ROBOTS_MOTORS_RIGHT, "right" ],
+						[ Blockly.Msg.ROBOTS_MOTORS_LEFT, "left" ],
+						[ Blockly.Msg.ROBOTS_MOTORS_BACKWARD, "backward" ] ]),
+				"DIRECTION");
    this.setInputsInline(true) ;
    this.appendValueInput("SPEEDA", 'Number')
        .setCheck('Number')
         .setAlign(Blockly.ALIGN_RIGHT)
-        .appendField(Blockly.Msg.ROBOTS_MOTORS_SPEEDL)
+        .appendField(Blockly.Msg.ROBOTS_MOTORS_SPEEDL);
 	this.appendValueInput("SPEEDB", 'Number')
         .setCheck('Number')
         .setAlign(Blockly.ALIGN_RIGHT)
-        .appendField(Blockly.Msg.ROBOTS_MOTORS_SPEEDR)
+        .appendField(Blockly.Msg.ROBOTS_MOTORS_SPEEDR);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setTooltip(Blockly.Msg.ROBOTS_MOTORS_RADIOSHACK_S_TOOLTIP);
@@ -310,18 +394,25 @@ Blockly.Blocks['dfrobot_s'] = {
 	this.setInputsInline(false) ; 
     this.appendDummyInput()
         .appendField(Blockly.Msg.ROBOTS_MOTORS_DFROBOT_S_TITLE)
-        .appendField(new Blockly.FieldImage("http://image.dfrobot.com/image/cache/data/DRI0009/53AU4096-900x600.jpg", 64, 64))
+        .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/robots/53AU4096-900x600.jpg', 64, 64));
 	this.appendDummyInput()
-        .appendField(new Blockly.FieldDropdown([[Blockly.Msg.ROBOTS_MOTORS_STOP, "stop"], [Blockly.Msg.ROBOTS_MOTORS_FORWARD, "forward"], [Blockly.Msg.ROBOTS_MOTORS_RIGHT, "right"], [Blockly.Msg.ROBOTS_MOTORS_LEFT, "left"], [Blockly.Msg.ROBOTS_MOTORS_BACKWARD, "backward"]]), "DIRECTION");
+        .appendField(
+				new Blockly.FieldDropdown([
+						[ Blockly.Msg.ROBOTS_MOTORS_STOP, "stop" ],
+						[ Blockly.Msg.ROBOTS_MOTORS_FORWARD, "forward" ],
+						[ Blockly.Msg.ROBOTS_MOTORS_RIGHT, "right" ],
+						[ Blockly.Msg.ROBOTS_MOTORS_LEFT, "left" ],
+						[ Blockly.Msg.ROBOTS_MOTORS_BACKWARD, "backward" ] ]),
+				"DIRECTION");
    this.setInputsInline(true) ;
    this.appendValueInput("SPEEDA", 'Number')
        .setCheck('Number')
         .setAlign(Blockly.ALIGN_RIGHT)
-        .appendField(Blockly.Msg.ROBOTS_MOTORS_SPEEDL)
+        .appendField(Blockly.Msg.ROBOTS_MOTORS_SPEEDL);
 	this.appendValueInput("SPEEDB", 'Number')
         .setCheck('Number')
         .setAlign(Blockly.ALIGN_RIGHT)
-        .appendField(Blockly.Msg.ROBOTS_MOTORS_SPEEDR)
+        .appendField(Blockly.Msg.ROBOTS_MOTORS_SPEEDR);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setTooltip(Blockly.Msg.ROBOTS_MOTORS_DFROBOT_S_TOOLTIP);
@@ -333,30 +424,37 @@ Blockly.Blocks.generic_motor = {
     this.setColour(190);
 	this.appendDummyInput()
 		.appendField(Blockly.Msg.ROBOTS_MOTORS_GENERIC_MOTOR_TITLE)
-		.appendField(new Blockly.FieldDropdown([[Blockly.Msg.ROBOTS_MOTORS_STOP, "stop"], [Blockly.Msg.ROBOTS_MOTORS_FORWARD, "forward"], [Blockly.Msg.ROBOTS_MOTORS_RIGHT, "right"], [Blockly.Msg.ROBOTS_MOTORS_LEFT, "left"], [Blockly.Msg.ROBOTS_MOTORS_BACKWARD, "backward"]]), "DIRECTION")
+		.appendField(
+				new Blockly.FieldDropdown([
+						[ Blockly.Msg.ROBOTS_MOTORS_STOP, "stop" ],
+						[ Blockly.Msg.ROBOTS_MOTORS_FORWARD, "forward" ],
+						[ Blockly.Msg.ROBOTS_MOTORS_RIGHT, "right" ],
+						[ Blockly.Msg.ROBOTS_MOTORS_LEFT, "left" ],
+						[ Blockly.Msg.ROBOTS_MOTORS_BACKWARD, "backward" ] ]),
+				"DIRECTION");
 	//this.setInputsInline(true);
    this.appendValueInput("SPEEDA", 'Number')
        .setCheck('Number')
         .setAlign(Blockly.ALIGN_RIGHT)
-        .appendField(Blockly.Msg.ROBOTS_MOTORS_GENERIC_MOTOR_SPEED_A)
+        .appendField(Blockly.Msg.ROBOTS_MOTORS_GENERIC_MOTOR_SPEED_A);
 	this.appendValueInput("SPEEDB", 'Number')
         .setCheck('Number')
         .setAlign(Blockly.ALIGN_RIGHT)
-        .appendField(Blockly.Msg.ROBOTS_MOTORS_GENERIC_MOTOR_SPEED_B)
+        .appendField(Blockly.Msg.ROBOTS_MOTORS_GENERIC_MOTOR_SPEED_B);
 	this.appendDummyInput()
 		.appendField(Blockly.Msg.ROBOTS_MOTORS_GENERIC_MOTOR_DIR_PIN_A)
-        .appendField(new Blockly.FieldDropdown(profile.default.digital), "PIN-AD")
+        .appendField(new Blockly.FieldTextInput('',  Blockly.Arduino.pinDigitalValidator), 'PIN-AD')
 		.appendField(Blockly.Msg.ROBOTS_MOTORS_GENERIC_MOTOR_DIR_PIN_B)
-        .appendField(new Blockly.FieldDropdown(profile.default.digital), "PIN-BD")
+        .appendField(new Blockly.FieldTextInput('',  Blockly.Arduino.pinDigitalValidator), 'PIN-BD');
 	this.setInputsInline(false);
 	this.appendDummyInput()
 		//.appendField(new Blockly.FieldImage("../../media/fourpin_range.jpg", 40, 40))
        .appendField(Blockly.Msg.ROBOTS_MOTORS_GENERIC_MOTOR_PWM_PIN_A)
-       .appendField(new Blockly.FieldDropdown(profile.default.digital), "PIN-AS")
+       .appendField(new Blockly.FieldTextInput('',  Blockly.Arduino.pinDigitalValidator), 'PIN-AS')
 	   .setAlign(Blockly.ALIGN_RIGHT)
-	    .appendField(Blockly.Msg.ROBOTS_MOTORS_GENERIC_MOTOR_PWM_PIN_B)
-       .appendField(new Blockly.FieldDropdown(profile.default.digital), "PIN-BS")
-	   .setAlign(Blockly.ALIGN_RIGHT)
+	   .appendField(Blockly.Msg.ROBOTS_MOTORS_GENERIC_MOTOR_PWM_PIN_B)
+       .appendField(new Blockly.FieldTextInput('',  Blockly.Arduino.pinDigitalValidator), 'PIN-BS')
+	   .setAlign(Blockly.ALIGN_RIGHT);
 	//   this.setInputsInline(false);
 	//	this.setInputsInline(true);
 	this.setPreviousStatement(true, null);
@@ -371,8 +469,15 @@ Blockly.Blocks['zumo_motors_FUs'] = {
     this.setColour(190);
     this.appendDummyInput()
         .appendField(Blockly.Msg.ROBOTS_MOTORS_ZUMO_FUS_TITLE)
-        .appendField(new Blockly.FieldImage("https://a.pololu-files.com/picture/0J4110.250.jpg", 64, 64))
-        .appendField(new Blockly.FieldDropdown([[Blockly.Msg.ROBOTS_MOTORS_STOP, "stop"], [Blockly.Msg.ROBOTS_MOTORS_FORWARD, "forward"], [Blockly.Msg.ROBOTS_MOTORS_RIGHT, "right"], [Blockly.Msg.ROBOTS_MOTORS_LEFT, "left"], [Blockly.Msg.ROBOTS_MOTORS_BACKWARD, "backward"]]), "DIRECTION");
+        .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/robots/0J4110.250.jpg', 64, 64))
+        .appendField(
+				new Blockly.FieldDropdown([
+						[ Blockly.Msg.ROBOTS_MOTORS_STOP, "stop" ],
+						[ Blockly.Msg.ROBOTS_MOTORS_FORWARD, "forward" ],
+						[ Blockly.Msg.ROBOTS_MOTORS_RIGHT, "right" ],
+						[ Blockly.Msg.ROBOTS_MOTORS_LEFT, "left" ],
+						[ Blockly.Msg.ROBOTS_MOTORS_BACKWARD, "backward" ] ]),
+				"DIRECTION");
        this.appendValueInput("SPEEDA", 'Number')
        .setCheck('Number')
         .setAlign(Blockly.ALIGN_RIGHT)

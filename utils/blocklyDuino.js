@@ -9,6 +9,8 @@
  */
 var BlocklyDuino = {};
 Blockly.pathToBlockly = './';
+Blockly.ajax = null;
+
 /**
  * List of tab names.
  * @private
@@ -113,27 +115,88 @@ BlocklyDuino.getStringParamFromUrl = function(name, defaultValue) {
 };
 
 /**
+ * Create AJAX request
+ *
+ * @return {request} The AJAX request
+ */
+BlocklyDuino.createAJAX = function() {
+	var request;
+	try {
+		// Firefox, Chrome, IE7+, Opera, Safari
+		request = new XMLHttpRequest();
+	} catch (e) {
+		try {
+			// IE6 and earlier
+			request = new ActiveXObject("Msxml2.XMLHTTP");
+		} catch (e) {
+			try {
+				request = new ActiveXObject("Microsoft.XMLHTTP");
+			} catch (e) {
+				request = null;
+			}
+		}
+	}
+	return request;
+};
+
+/**
+ * Load blocks from AJAX load
+ */
+BlocklyDuino.onSuccess = function() {
+	if (BlocklyDuino.ajax.readyState == 4) {
+		if (BlocklyDuino.ajax.status == 200) {
+			try {
+				BlocklyDuino.loadBlocks(BlocklyDuino.ajax.responseText);
+			} catch (e) {
+				alert(e);
+			}
+		}
+	}
+};
+
+/**
+ * Load blocks from URL file using AJAX request
+ */
+BlocklyDuino.load_by_url = function(uri) {
+	BlocklyDuino.ajax = BlocklyDuino.createAJAX();
+	if (!BlocklyDuino.ajax) {
+		return 0;
+	}
+	if (BlocklyDuino.ajax.overrideMimeType) {
+		BlocklyDuino.ajax.overrideMimeType('text/xml');
+	}
+	BlocklyDuino.ajax.onreadystatechange = BlocklyDuino.onSuccess;
+	BlocklyDuino.ajax.open("GET", uri, true);
+	BlocklyDuino.ajax.send("");
+	
+};
+
+/**
  * Load blocks saved on App Engine Storage or in session/local storage.
- * @param {string} defaultXml Text representation of default blocks.
+ * 
+ * @param {string}
+ *            defaultXml Text representation of default blocks.
  */
 BlocklyDuino.loadBlocks = function(defaultXml) {
-	  try {
-		var loadOnce = window.sessionStorage.loadOnceBlocks;
-	} catch (e) {
-		// Firefox sometimes throws a SecurityError when accessing
-		// sessionStorage.
-		// Restarting Firefox fixes this, so it looks like a bug.
-		var loadOnce = null;
-	}
-	if (loadOnce) {
-		// Language switching stores the blocks during the reload.
-		delete window.localStorage.loadOnceBlocks;
-		var xml = Blockly.Xml.textToDom(loadOnce);
-		Blockly.Xml.domToWorkspace(Blockly.mainWorkspace, xml);
-	} else if (defaultXml) {
+	if (defaultXml) {
 		// Load the editor with default starting blocks.
 		var xml = Blockly.Xml.textToDom(defaultXml);
 		Blockly.Xml.domToWorkspace(Blockly.mainWorkspace, xml);
+	} else {
+		try {
+			var loadOnce = window.localStorage.loadOnceBlocks;
+		} catch (e) {
+			// Firefox sometimes throws a SecurityError when accessing
+			// localStorage.
+			// Restarting Firefox fixes this, so it looks like a bug.
+			var loadOnce = null;
+		}
+		if (loadOnce) {
+			// Language switching stores the blocks during the reload.
+			delete window.localStorage.loadOnceBlocks;
+			var xml = Blockly.Xml.textToDom(loadOnce);
+			Blockly.Xml.domToWorkspace(Blockly.mainWorkspace, xml);
+		}
 	}
 };
 
@@ -146,7 +209,7 @@ BlocklyDuino.backupBlocks = function () {
     var text = Blockly.Xml.domToText(xml);
     window.localStorage.loadOnceBlocks = text;
   }
-}
+};
 
 /**
  * Choose Arduino card : UNO or MEGA
@@ -163,7 +226,7 @@ BlocklyDuino.arduinoCard =  function (){
     BlocklyDuino.renderContent();
 	}
   }
-}  
+}; 
 
 /**
  * Creates an XML file containing the blocks from the Blockly workspace and
@@ -194,7 +257,7 @@ BlocklyDuino.saveArduinoFile = function () {
 	                'href': uri,
 	                'target': '_blank'
 	        });
-}
+};
 
 /**
  * Load Arduino code from component pre_arduino
@@ -203,7 +266,7 @@ BlocklyDuino.getFiles = function (){
     var code = document.getElementById('pre_arduino').textContent;
     code=code.replace(/</g, '&lt;').replace(/>/g, '&gt;');
     return {"sketch.ino": code }
-}
+};
 
 /**
  * Load blocks from local file.
@@ -238,7 +301,7 @@ BlocklyDuino.load = function (event) {
     document.getElementById('load').value = '';
   };
   reader.readAsText(files[0]);
-}
+};
 
 /**
  * Discard all blocks from the workspace.
@@ -249,7 +312,7 @@ BlocklyDuino.discard = function () {
     Blockly.mainWorkspace.clear();
     BlocklyDuino.renderContent();
   }
-}
+};
 
 /**
  * Bind an event to a function call.
@@ -265,7 +328,7 @@ BlocklyDuino.bindEvent = function (element, name, func) {
   } else if (element.attachEvent) {  // IE
     element.attachEvent('on' + name, func);
   }
-}
+};
 
 /**
  * Bind a function to a button's click event.
@@ -338,7 +401,7 @@ BlocklyDuino.checkAll = function () {
             this.checked = false;
         });
     }
-}
+};
 
 /**
  * Build modal to configure ToolBox
@@ -348,7 +411,7 @@ BlocklyDuino.openConfigToolbox = function () {
 	// load all xml toolboxes
 	var xmls = document.getElementsByTagName("xml");
 	// load the toolboxes id's stored in session
-	var loadIds = window.sessionStorage.toolboxids;
+	var loadIds = window.localStorage.toolboxids;
 	
 	if (loadIds === undefined) {
 		loadIds = "CAT_LOGIC";
@@ -378,7 +441,7 @@ BlocklyDuino.openConfigToolbox = function () {
 	if (n >= 0) {
 		document.getElementById("select_all").checked = true;
 	}
-}
+};
 
 /**
  * Change the ToolBox following the chosen configuration
@@ -401,22 +464,22 @@ BlocklyDuino.changeToolbox = function () {
 		}
 
 	// store id's in session
-	window.sessionStorage.toolboxids = toolboxIds;
+	window.localStorage.toolboxids = toolboxIds;
 
 	// reload ...
 	location.reload();
-}
+};
 
 /**
  * Build the xml using toolboxes checked in config modal and stored in session 
  */
 BlocklyDuino.buildToolbox = function() {
-	var loadIds = window.sessionStorage.toolboxids;
+	var loadIds = window.localStorage.toolboxids;
 
 	// set the default toolbox if none in session
 	if (loadIds === undefined || loadIds === "") {
 		loadIds = "CAT_LOGIC,CAT_LOOPS,CAT_VARIABLES,CAT_FUNCTIONS";
-		window.sessionStorage.toolboxids = loadIds;
+		window.localStorage.toolboxids = loadIds;
 	}
 	
 	var xmlValue = '<xml>';
@@ -463,6 +526,9 @@ BlocklyDuino.changeSize = function() {
     search = search.replace(/\?/, '?size=max&');
   }
 
+  // remove url file
+  search = search.replace(/([?&]url=)[^&]*/, '');
+
   window.location = window.location.protocol + '//' +
       window.location.host + window.location.pathname + search;
 };
@@ -496,10 +562,18 @@ BlocklyDuino.init = function() {
 		// change maximize to minimize
 		var icon_btn_size = document.getElementById("icon_btn_size");
 		icon_btn_size.className += " rotate180";
+		if (Code.isRtl()) {
+			icon_btn_size.className += " rotate90";
+		}
 
 		document.getElementById('btn_size').title = MSG['btn_size_min'];
 	} else {
 		document.getElementById('btn_size').title = MSG['btn_size_max'];
+		if (Code.isRtl()) {
+			var icon_btn_size = document.getElementById("icon_btn_size");
+			icon_btn_size.className += " rotate270";
+		}
+
 	}
 
 	// build Blockly ...
@@ -514,9 +588,14 @@ BlocklyDuino.init = function() {
 	// set the tab
 	BlocklyDuino.tabClick(BlocklyDuino.selectedTab);
 
-	// load blocks stored in session
-	BlocklyDuino.loadBlocks('');
+	// load blocks stored in session or passed by url
+	var urlFile = BlocklyDuino.getStringParamFromUrl('url', '');
 
+	if (urlFile) {
+		BlocklyDuino.load_by_url(urlFile);
+	} else {
+		BlocklyDuino.loadBlocks(urlFile);
+	}
     // Hook a save function onto unload.
 	window.addEventListener('unload', BlocklyDuino.backupBlocks, false);
 
@@ -541,6 +620,22 @@ BlocklyDuino.init = function() {
 									MSG['verification_failed'] + error_output);
 						});
 			});
+	
+	// Init zoom on Block's SVG
+	var panZoom = svgPanZoom('#IdBlocklySVG', 
+			{viewportSelector: '.svg-pan-zoom_viewport', 
+				center:false, 
+				fit:false,
+				panEnabled: true, 
+				zoomEnabled: false}
+	);
+
+	document.getElementById('btn_zoomin').addEventListener('click', function() {panZoom.zoomIn(); });
+
+	document.getElementById('btn_zoomout').addEventListener('click', function() {panZoom.zoomOut();	});
+
+	document.getElementById('btn_zoomreset').addEventListener('click', function() {location.reload(); });
+
 };
 
 /**
@@ -570,11 +665,16 @@ BlocklyDuino.setOrientation = function() {
 	} else {
 		var ulNav = document.getElementById("ul_nav");
 		var menuPanel = document.getElementById("menuPanel");
+		var menuPanelCenter = document.getElementById("menuPanelCenter");
 		var btn_config = document.getElementById("btn_config");
 		var btn_saveXML = document.getElementById("btn_saveXML");
 		var divTabpanel = document.getElementById("divTabpanel");
 		
         ulNav.className = "nav nav-pills nav-stacked";
+		if (Code.isRtl()) {
+	        ulNav.className += " navbar-right";
+	        menuPanelCenter.className += " menuPanelCenter-ver";
+		}
         menuPanel.className += " menuPanel-ver";
         btn_config.className += " btn_config-ver";
         btn_saveXML.className += " btn_saveXML-ver";
@@ -589,8 +689,6 @@ BlocklyDuino.switchOrientation = function() {
   // Store the blocks for the duration of the reload.
 	BlocklyDuino.backupBlocks();
 
-	var curOrientation = BlocklyDuino.getStringParamFromUrl('ort', '');
-
   var search = window.location.search;
   if (search.length <= 1) {
 	    search = '?ort=hor';
@@ -601,7 +699,10 @@ BlocklyDuino.switchOrientation = function() {
 	    search = search.replace(/\?/, '?ort=hor&');
 	  }
 
-	  window.location = window.location.protocol + '//' +
+  	// remove url file
+  	search = search.replace(/([?&]url=)[^&]*/, '');
+
+	window.location = window.location.protocol + '//' +
 	      window.location.host + window.location.pathname + search;
 };
 

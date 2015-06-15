@@ -1780,7 +1780,7 @@ function logging()
 }
 window.flashing_errors =
 {
-	"-1": "Couldn’t find an Arduino on the selected port. If you are using Leonardo check that you have the correct port selected. If it is correct, try pressing the board’s reset button after initiating the upload.",
+	"-1": "Couldnâ€™t find an Arduino on the selected port. If you are using Leonardo check that you have the correct port selected. If it is correct, try pressing the boardâ€™s reset button after initiating the upload.",
 	"-2": "There was a problem programming your Arduino. If you are using a non-English Windows version, or username please contact us.",
 	"-22": "The selected port seems to be in use. Please check your board connection, and make sure that you are not using it from some other application or you don't have an open serial monitor.",
 	"-23": "Another flashing process is still active. Please wait until it is done and try again.",

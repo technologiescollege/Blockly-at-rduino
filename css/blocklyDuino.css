@@ -17,6 +17,13 @@ body {
 	-ms-transform: rotate(180deg);
 }
 
+.rotate270 {
+    -webkit-transform: rotate(270deg);
+    -moz-transform: rotate(270deg);
+    -o-transform: rotate(270deg);
+    -ms-transform: rotate(270deg);
+}
+
 .rotate90 {
 	-webkit-transform: rotate(90deg);
 	-moz-transform: rotate(90deg);
@@ -50,6 +57,20 @@ body {
 	position: absolute;
 }
 
+html[dir="RTL"] .menuPanel-ver {
+    clear: both;
+    float: right;
+    width: 200px;
+    padding-left: 0px;
+    padding-right: 10px;
+    position: absolute;
+}
+
+html[dir="RTL"] .navbar-right {
+    margin-right: -50px;
+    width: 225px;
+}
+
 .btn_config-ver,.btn_saveXML-ver {
 	margin: 5px 0;
 }
@@ -59,15 +80,34 @@ body {
     margin-left:200px;
 }
 
+html[dir="RTL"] .divTabpanel-ver {
+    margin-left:0px;
+    margin-right:200px;
+}
+
+html[dir="RTL"] #menuPanelLeft {
+    float: right;
+}
+
 .menuPanelCenter-hor {
 	clear:both;
 	float: left;
 	padding-left: 10px;
 }
 
+html[dir="RTL"] .menuPanelCenter-hor, html[dir="RTL"] .menuPanelCenter-ver {
+    float: right;
+    padding-right: 10px;
+}
+
 .menuPanelRight-hor {
 	float: right;
 	padding-right: 10px;
+}
+
+html[dir="RTL"] .menuPanelRight-hor {
+    float: left;
+    padding-left: 10px;
 }
 
 .divTabpanel-hor {
@@ -79,9 +119,18 @@ body {
     margin-left: 10px;
 }
 
+html[dir="RTL"] .divTabpanel-hor {
+    margin-left: 0px;
+}
+
 .divSwitch-hor {
     float: left;
     padding-left: 10px;
+}
+
+html[dir="RTL"] .divSwitch-hor {
+    float: right;
+    padding-right: 10px;
 }
 
 .divCard-hor {
@@ -89,15 +138,32 @@ body {
     padding-left: 10px;
 }
 
+html[dir="RTL"] .divCard-hor {
+    float: right;
+    padding-right: 10px;
+}
+
 .divConfig-hor {
     float: left;
     padding-left: 10px;
 }
 
+html[dir="RTL"] .divConfig-hor {
+    float: right;
+    padding-right: 10px;
+}
+
 #btn_about {
     position: absolute;
     top: 10px;
+}
+
+html[dir="LTR"] #btn_about {
     right: 15px;
+}
+ 
+html[dir="RTL"] #btn_about {
+	left: 15px;
 }
 
 #languageMenu {
@@ -109,15 +175,6 @@ body {
 html[dir="RTL"] #languageMenu {
 	left: 10px;
 	right: auto;
-}
-
-html[dir="RTL"] #menuPanel {
-	float: right;
-}
-
-html[dir="RTL"] #divTabpanel {
-	float: right;
-	padding-right: 0px;
 }
 
 #content_area,#content_blocks,#content_term,#content_xml {
@@ -132,10 +189,48 @@ html[dir="RTL"] #divTabpanel {
 	top: 0px;
 }
 
+html[dir="RTL"] #btn_size {
+	left: 15px;
+}
+
 #btn_preview {
 	position: absolute;
 	right: 60px;
 	top: 0px;
+}
+
+html[dir="RTL"] #btn_preview {
+    left: 60px;
+}
+
+#btn_zoomin {
+    position: absolute;
+    right: 105px;
+    top: 0px;
+}
+
+html[dir="RTL"] #btn_zoomin {
+    left: 105px;
+}
+
+#btn_zoomreset {
+    position: absolute;
+    right: 150px;
+    top: 0px;
+}
+
+html[dir="RTL"] #btn_zoomreset {
+    left: 150px;
+}
+
+#btn_zoomout {
+    position: absolute;
+    right: 195px;
+    top: 0px;
+}
+
+html[dir="RTL"] #btn_zoomout {
+    left: 195px;
 }
 
 #toggle {
@@ -146,6 +241,10 @@ html[dir="RTL"] #divTabpanel {
 	bottom: 100px;
 }
 
+html[dir="RTL"] #toggle {
+    left: 25px;
+}
+
 #toggle pre {
 	height: 100%;
 }
@@ -154,6 +253,10 @@ html[dir="RTL"] #divTabpanel {
 	position: absolute;
 	right: 100px;
 	bottom: 40px;
+}
+
+html[dir="RTL"] #btn_delete {
+    left: 100px;
 }
 
 #pre_xml {
@@ -174,6 +277,10 @@ html[dir="RTL"] #divTabpanel {
 
 #select_all {
 	margin-left: 15px;
+}
+
+html[dir="RTL"] #select_all {
+    margin-right: 15px;
 }
 
 #span_select_all {
@@ -221,6 +328,10 @@ html[dir="RTL"] #divTabpanel {
 	padding: 6px 50px 6px 12px !important;
 }
 
+html[dir="RTL"] .blocklyToolboxDiv .blocklyTreeRoot [role="treeitem"]   .blocklyTreeRow {
+    padding: 6px 12px 6px 50px !important;
+}
+
 .blocklyTreeRow {
 	height: 30px !important;
 	line-height: 30px !important;
@@ -246,6 +357,10 @@ html[dir="RTL"] #divTabpanel {
 	position: absolute;
 	top: 0;
 	width: 8px;
+}
+
+html[dir="RTL"] .colors_category {
+    right: 0;
 }
 
 .color_cat_loops {
@@ -288,10 +403,18 @@ html[dir="RTL"] #divTabpanel {
 	background-color: #8cb8c0;
 }
 
-.color_cat_grove {
+.color_cat_robots, .color_cat_robots_motors, .color_cat_robot_misc {
+    background-color: #5b99a5;
+}
+
+.color_cat_grove, .color_cat_grove_in, .color_cat_grove_out, .color_cat_grove_lcd, .color_cat_grove_comm {
 	background-color: #8cb8c0;
 }
 
-.color_cat_technozone {
+.color_cat_technozone, .color_cat_technozone_out, .color_cat_technozone_motors, .color_cat_technozone_servo, .color_cat_technozone_lcd {
 	background-color: #8cb8c0;
+}
+
+.color_cat_technozone_in, .color_cat_technozone_telec {
+	background-color: #5ba55b;
 }

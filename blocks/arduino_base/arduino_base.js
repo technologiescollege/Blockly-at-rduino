@@ -74,10 +74,9 @@ Blockly.Blocks.inout_digital_write = {
   init: function() {
     this.setColour(230);
     this.setHelpUrl(Blockly.Msg.ARDUINO_INOUT_DIGITAL_WRITE_HELPURL);
-    this.appendDummyInput("")
-	    .appendField(Blockly.Msg.ARDUINO_INOUT_DIGITAL_WRITE_INPUT1);
-	this.appendValueInput("NUM", 'Number')
-        .setCheck('Number');
+    this.appendDummyInput()
+    .appendField(Blockly.Msg.ARDUINO_INOUT_DIGITAL_WRITE_INPUT1)
+    .appendField(new Blockly.FieldTextInput('',  Blockly.Arduino.pinDigitalValidator), 'PIN');
     this.setInputsInline(true);
 	this.appendDummyInput("")
       	.appendField(Blockly.Msg.ARDUINO_INOUT_DIGITAL_WRITE_INPUT2)
@@ -93,9 +92,8 @@ Blockly.Blocks.inout_digital_read = {
     this.setColour(230);
     this.setHelpUrl(Blockly.Msg.ARDUINO_INOUT_DIGITAL_READ_HELPURL);
     this.appendDummyInput()
-	    .appendField(Blockly.Msg.ARDUINO_INOUT_DIGITAL_READ_INPUT)
-	this.appendValueInput("PIN", 'Number')
-        .setCheck('Number');
+    .appendField(Blockly.Msg.ARDUINO_INOUT_DIGITAL_READ_INPUT)
+    .appendField(new Blockly.FieldTextInput('',  Blockly.Arduino.pinDigitalValidator), 'PIN');
 	this.setInputsInline(true);
     this.setOutput(true,'Boolean');
     this.setTooltip(Blockly.Msg.ARDUINO_INOUT_DIGITAL_READ_TOOLTIP);
@@ -108,7 +106,7 @@ Blockly.Blocks.inout_PWM_write = {
     this.setHelpUrl(Blockly.Msg.ARDUINO_INOUT_PWM_WRITE_HELPURL);
     this.appendDummyInput("")
         .appendField(Blockly.Msg.ARDUINO_INOUT_PWM_WRITE_INPUT1)
-        .appendField(new Blockly.FieldDropdown(profile.default.PWM), "PIN");
+        .appendField(new Blockly.FieldTextInput('',  Blockly.Arduino.pinPWMValidator), 'PIN');
     this.appendValueInput("NUM", 'Number')
         .appendField(Blockly.Msg.ARDUINO_INOUT_PWM_WRITE_INPUT2)
         .setCheck('Number');
@@ -125,7 +123,7 @@ Blockly.Blocks.inout_analog_write = {
     this.setHelpUrl(Blockly.Msg.ARDUINO_INOUT_ANALOG_WRITE_HELPURL);
     this.appendDummyInput("")
         .appendField(Blockly.Msg.ARDUINO_INOUT_ANALOG_WRITE_INPUT1)
-        .appendField(new Blockly.FieldDropdown(profile.default.analog), "PIN");
+        .appendField(new Blockly.FieldTextInput('',  Blockly.Arduino.pinAnalogValidator), 'PIN');
     this.appendValueInput("NUM", 'Number')
         .appendField(Blockly.Msg.ARDUINO_INOUT_ANALOG_WRITE_INPUT2)
         .setCheck('Number');
@@ -142,7 +140,7 @@ Blockly.Blocks.tone = {
     this.setHelpUrl(Blockly.Msg.ARDUINO_TONE_HELPURL);
     this.appendDummyInput("")
         .appendField(Blockly.Msg.ARDUINO_TONE_INPUT1)
-        .appendField(new Blockly.FieldDropdown(profile.default.digital), "PIN")
+        .appendField(new Blockly.FieldTextInput('',  Blockly.Arduino.pinDigitalValidator), 'PIN');
     this.appendValueInput("NUM", 'Number')
         .appendField(Blockly.Msg.ARDUINO_TONE_INPUT2)
         .setCheck('Number');
@@ -162,7 +160,7 @@ Blockly.Blocks.notone = {
 	this.setHelpUrl(Blockly.Msg.ARDUINO_NOTONE_HELPURL);
     this.appendDummyInput("")
         .appendField(Blockly.Msg.ARDUINO_NOTONE_INPUT)
-        .appendField(new Blockly.FieldDropdown(profile.default.digital), "PIN")      
+        .appendField(new Blockly.FieldTextInput('',  Blockly.Arduino.pinDigitalValidator), 'PIN');
     this.setInputsInline(true);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
@@ -176,7 +174,7 @@ Blockly.Blocks.inout_analog_read = {
 	this.setHelpUrl(Blockly.Msg.ARDUINO_INOUT_ANALOG_READ_HELPURL);
     this.appendDummyInput()
         .appendField(Blockly.Msg.ARDUINO_INOUT_ANALOG_READ_INPUT)
-        .appendField(new Blockly.FieldDropdown(profile.default.analog), "PIN");
+        .appendField(new Blockly.FieldTextInput('',  Blockly.Arduino.pinAnalogValidator), 'PIN');
     this.setOutput(true, 'Number');
     this.setTooltip(Blockly.Msg.ARDUINO_INOUT_ANALOG_READ_TOOLTIP);
   }
@@ -187,7 +185,7 @@ Blockly.Blocks.inout_onoff = {
     this.setColour(230);
 	this.setHelpUrl(Blockly.Msg.ARDUINO_INOUT_ONOFF_HELPURL);
     this.appendDummyInput("")
-        .appendField(new Blockly.FieldDropdown(Blockly.Msg.FIELDDROPDOWN), 'BOOL')
+        .appendField(new Blockly.FieldDropdown(Blockly.Msg.FIELDDROPDOWN), 'BOOL');
     this.setOutput(true,'Boolean');
     this.setTooltip(Blockly.Msg.LOGIC_BOOLEAN_TOOLTIP);
   }
@@ -201,11 +199,11 @@ Blockly.Blocks.servo_move = {
 	this.setHelpUrl(Blockly.Msg.ARDUINO_SERVO_MOVE_HELPURL);
     this.appendDummyInput("")
         .appendField(Blockly.Msg.ARDUINO_SERVO_MOVE_INPUT1)
-        .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/arduino_base/servomoteur.jpg', 64, 64))
+        .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/arduino_base/servomoteur.jpg', 64, 64));
     this.appendDummyInput("")
 		.setAlign(Blockly.ALIGN_RIGHT)
 		.appendField(Blockly.Msg.ARDUINO_SERVO_MOVE_INPUT2)
-        .appendField(new Blockly.FieldDropdown(profile.default.PWM), "PIN")
+        .appendField(new Blockly.FieldTextInput('',  Blockly.Arduino.pinPWMValidator), 'PIN');
     this.appendValueInput("DEGREE", 'Number')
         .setCheck('Number')
         .setAlign(Blockly.ALIGN_RIGHT)
@@ -226,11 +224,11 @@ Blockly.Blocks.servo_read_degrees = {
 	this.setHelpUrl(Blockly.Msg.ARDUINO_SERVO_READ_DEGREES_HELPURL);
     this.appendDummyInput("")
         .appendField(Blockly.Msg.ARDUINO_SERVO_READ_DEGREES_INPUT1)
-        .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/arduino_base/servomoteur.jpg', 64, 64))
+        .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/arduino_base/servomoteur.jpg', 64, 64));
 	this.appendDummyInput("")	
         .setAlign(Blockly.ALIGN_RIGHT)
         .appendField(Blockly.Msg.ARDUINO_SERVO_READ_DEGREES_INPUT2)
-        .appendField(new Blockly.FieldDropdown(profile.default.PWM), "PIN");
+        .appendField(new Blockly.FieldTextInput('',  Blockly.Arduino.pinPWMValidator), 'PIN');
     this.setOutput(true, 'Number');
     this.setTooltip(Blockly.Msg.ARDUINO_SERVO_READ_DEGREES_TOOLTIP);
   }

@@ -122,6 +122,8 @@ Code.changeLanguage = function() {
     search = search.replace(/\?/, '?lang=' + newLang + '&');
   }
 
+  search = search.replace(/([?&]url=)[^&]*/, '');
+
   window.location = window.location.protocol + '//' +
       window.location.host + window.location.pathname + search;
 };
@@ -174,7 +176,7 @@ Code.initLanguage = function() {
   document.getElementById('title').textContent = MSG['title'];
   document.getElementById('span_about').textContent = MSG['span_about'];
   document.getElementById('aboutModalLabel').textContent = MSG['aboutModalLabel'];
-  document.getElementById('aboutBody').textContent = MSG['aboutBody'];
+  document.getElementById('aboutBody').innerHTML = MSG['aboutBody'];
   
   document.getElementById('btn_switch').title = MSG['btn_switch'];
 
