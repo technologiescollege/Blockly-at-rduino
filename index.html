@@ -77,7 +77,8 @@ contient la liste des blocs de Blockly ci-dessous en compressé-->
             <label id="labelArduinoCard"></label> 
             <select id="pinout">
                 <option value="arduino_uno">UNO</option>
-                <option value="arduino_mega">MEGA</option>
+				<option value="arduino_mega">MEGA</option>
+				<option value="arduino_uno_a">UNO+a</option>
             </select>
     </div>
     <div id="divConfig">
@@ -232,6 +233,7 @@ contient la liste des blocs de Blockly ci-dessous en compressé-->
 <xml id="CAT_LOGIC" style="display: none">
     <category name="CAT_LOGIC">
         <block type="controls_if"></block>
+		<block type="controls_switch"></block>
         <block type="logic_compare"></block>
         <block type="logic_operation"></block>
         <block type="logic_negate"></block>
@@ -639,6 +641,9 @@ contient la liste des blocs de Blockly ci-dessous en compressé-->
 			<block type="setup_button_wait_iph"></block>
 			<block type="fourpin_ranger"></block>
 			<block type="play_notes_z"></block>
+			<block type="IR_serial_decoder"></block>
+			<block type="IR_get_blink"></block>
+			<block type="IR_get"></block>
         </category>
     </category>
 </xml>

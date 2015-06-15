@@ -102,5 +102,55 @@ Blockly.Blocks['play_notes_z'] = {
   }
 };
 
+Blockly.Blocks['IR_serial_decoder'] = {
+  init: function() {
+    this.setColour(190);
+    this.appendDummyInput()
+        .appendField(Blockly.Msg.ROBOTS_MISC_IR_DECODE_TITLE)
+        .appendField(Blockly.Msg.ROBOTS_MISC_IR_SENSOR_PIN)
+        .appendField(new Blockly.FieldDropdown(profile.default.digital), "PIN");
+    this.setTooltip(Blockly.Msg.ROBOTS_MISC_IR_DECODE_TOOLTIP);
+ this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+ }
+};
+Blockly.Blocks['IR_get_blink'] = {
+  init: function() {
+    this.setColour(190);
+	this.appendValueInput("IR_NUM", 'Number')
+       .setCheck('Number')
+        .appendField(Blockly.Msg.ROBOTS_MISC_IR_GET_BLINK_TITLE)
+		.setAlign(Blockly.ALIGN_RIGHT)
+        .appendField(Blockly.Msg.ROBOTS_MISC_IR_CODE)
+	this.appendDummyInput()
+	    .appendField(Blockly.Msg.ROBOTS_MISC_IR_SENSOR_PIN)
+        .appendField(new Blockly.FieldDropdown(profile.default.digital), "PIN")
+		.setAlign(Blockly.ALIGN_RIGHT)
+		this.setInputsInline(false);
+	this.appendDummyInput()
+		.appendField(Blockly.Msg.ROBOTS_MISC_LED_PIN )
+       .appendField(new Blockly.FieldDropdown(profile.default.digital), "PIN2")
+	   .setAlign(Blockly.ALIGN_RIGHT)
+	this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setTooltip(Blockly.Msg.ROBOTS_MISC_IR_GET_BLINK_TOOLTIP);
+  }
+};
+
+Blockly.Blocks['IR_get'] = {
+  init: function() {
+    this.setColour(190);
+	this.appendDummyInput()
+		.appendField(Blockly.Msg.ROBOTS_MISC_IR_GET_TITLE)
+	    .appendField(Blockly.Msg.ROBOTS_MISC_IR_SENSOR_PIN)
+        .appendField(new Blockly.FieldDropdown(profile.default.digital), "PIN")
+		.setAlign(Blockly.ALIGN_RIGHT)
+		this.setInputsInline(false);
+	this.setOutput(true, 'Number');
+    this.setTooltip(Blockly.Msg.ROBOTS_MISC_IR_GET_TOOLTIP);
+  }
+};
+
+
 
 

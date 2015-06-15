@@ -29,8 +29,9 @@ goog.provide('Blockly.Blocks.motors');
 
 goog.require('Blockly.Blocks');
 
-
-
+//To do later
+//Blockly.Blocks.robots.HUE = 210;
+//this.setColour(Blockly.Blocks.logic.HUE);
 
 Blockly.Blocks['zumo_motors_FN'] = {
   init: function() {
