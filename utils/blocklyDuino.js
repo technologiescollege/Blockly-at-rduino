@@ -634,7 +634,7 @@ BlocklyDuino.init = function() {
 
 	document.getElementById('btn_zoomout').addEventListener('click', function() {panZoom.zoomOut();	});
 
-	document.getElementById('btn_zoomreset').addEventListener('click', function() {panZoom.resetZoom(); });
+	document.getElementById('btn_zoomreset').addEventListener('click', function() {location.reload(); });
 
 };
 
@@ -705,4 +705,3 @@ BlocklyDuino.switchOrientation = function() {
 	window.location = window.location.protocol + '//' +
 	      window.location.host + window.location.pathname + search;
 };
-

@@ -1,4 +1,4 @@
-﻿<html>
+<html>
 <head>
 <link rel="icon" type="image/png" href="favicon.bmp" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -38,7 +38,7 @@ contient la liste des blocs de Blockly ci-dessous en compressé-->
 <script type="text/javascript" src="utils/blocklyDuino.js"></script>
 <script type="text/javascript" src="utils/jquery-2.1.3.min.js"></script>
 <script type="text/javascript" src="utils/bootstrap.min.js"></script>
-<script type="text/javascript" src="utils/compilerflasher.js"></script>
+<script type="text/javascript" src="http://codebender.cc/embed/compilerflasher.js"></script>
 <script type="text/javascript" src="utils/prettify.js"></script>
 <script type="text/javascript" src="lang/code.js"></script>
 
@@ -80,8 +80,6 @@ contient la liste des blocs de Blockly ci-dessous en compressé-->
 	            <select id="pinout">
 	                <option value="arduino_uno">UNO</option>
 	                <option value="arduino_mega">MEGA</option>
-					<option value="arduino_uno_a">UNO+</option>
-			<!--	<option value="arduino_uno_a">UNO+</option> -->
 	            </select>
 	    </div>
 	    <div id="divConfig">
@@ -189,15 +187,14 @@ contient la liste des blocs de Blockly ci-dessous en compressé-->
 <!-- Modals -->
 <!-- about modal -->
 <div class="modal fade bs-example-modal-sm" id="aboutModal" tabindex="-1" role="dialog" aria-labelledby="aboutModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-sm">
+  <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
         <h4 class="modal-title" id="aboutModalLabel"></h4>
       </div>
       <div class="modal-body">
-        <a href="https://github.com/technologiescollege/Blockly-rduino">
-              <i>Github Blockly@rduino</i></a> 
+              <span>Github : </span><a href="https://github.com/technologiescollege/Blockly-rduino"> <i>Blockly@rduino</i></a> 
               <span id="aboutBody" style="font-style: italic;"> </span>
       </div>
     </div>
@@ -250,8 +247,7 @@ contient la liste des blocs de Blockly ci-dessous en compressé-->
         <block type="logic_operation"></block>
         <block type="logic_negate"></block>
         <block type="logic_boolean"></block>
-        <block type="logic_null"></block>
-				
+        <block type="logic_null"></block>  
     </category>
 </xml>
 <xml id="CAT_LOOPS" style="display: none">
@@ -452,8 +448,25 @@ contient la liste des blocs de Blockly ci-dessous en compressé-->
 					</block>
 				</value>
 			</block>
-            <block type="base_map"></block>
-            <block type="inout_PWM_write"></block>
+            <block type="base_map">
+                <value name="NUM">
+                    <block type="math_number">
+                    <field name="NUM">0</field>
+                    </block>
+                </value>
+                <value name="DMAX">
+                    <block type="math_number">
+                    <field name="NUM">0</field>
+                    </block>
+                </value>
+            </block>
+            <block type="inout_PWM_write">
+                <value name="NUM">
+                    <block type="math_number">
+                    <field name="NUM">0</field>
+                    </block>
+                </value>
+            </block>
             <block type="inout_analog_write">
 				<value name="NUM">
 				<block type="math_number">
@@ -464,7 +477,18 @@ contient la liste des blocs de Blockly ci-dessous en compressé-->
             <block type="inout_buildin_led"></block>
             <block type="inout_digital_write"></block>
             <block type="inout_onoff"></block>
-            <block type="tone"></block>
+            <block type="tone">
+                <value name="NUM">
+                    <block type="math_number">
+                    <field name="NUM">0</field>
+                    </block>
+                </value>
+                <value name="TPS">
+                    <block type="math_number">
+                    <field name="NUM">0</field>
+                    </block>
+                </value>
+            </block>
             <block type="notone"></block>
             <block type="serial_print">
 				<value name="CONTENT">
@@ -652,11 +676,23 @@ contient la liste des blocs de Blockly ci-dessous en compressé-->
         <category name="CAT_ROBOT_MISC">
 			<block type="setup_button_wait_il"></block>
 			<block type="setup_button_wait_iph"></block>
-			<block type="fourpin_ranger"></block>
-			<block type="play_notes_z"></block>
 			<block type="IR_serial_decoder"></block>
 			<block type="IR_get_blink"></block>
 			<block type="IR_get"></block>
+			<block type="fourpin_ranger"></block>
+			<block type="play_notes_z">
+                <value name="DUR">
+                    <block type="math_number">
+                    <field name="NUM">0</field>
+                    </block>
+                </value>
+                <value name="VOL">
+                    <block type="math_number">
+                    <field name="NUM">0</field>
+                    </block>
+                </value>
+				
+			</block>
         </category>
     </category>
 </xml>
@@ -683,7 +719,18 @@ contient la liste des blocs de Blockly ci-dessous en compressé-->
             <block type="technozone_led1green"></block>
             <block type="technozone_led1yellow"></block>
             <block type="technozone_relay1"></block>
-            <block type="technozone_buzzer1"></block>
+            <block type="technozone_buzzer1">
+                <value name="NUM">
+                    <block type="math_number">
+                    <field name="NUM">0</field>
+                    </block>
+                </value>
+                <value name="TPS">
+                    <block type="math_number">
+                    <field name="NUM">0</field>
+                    </block>
+                </value>
+            </block>
             <block type="technozone_sonar1"></block>
         </category>
         <category name="CAT_TECHNOZONE_MOTORS">
