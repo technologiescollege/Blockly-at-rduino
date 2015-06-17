@@ -119,12 +119,13 @@ Blockly.Blocks['IR_serial_decoder'] = {
     this.appendDummyInput()
         .appendField(Blockly.Msg.ROBOTS_MISC_IR_DECODE_TITLE)
         .appendField(Blockly.Msg.ROBOTS_MISC_IR_SENSOR_PIN)
-        .appendField(new Blockly.FieldDropdown(profile.default.digital), "PIN");
+		.appendField(new Blockly.FieldTextInput('',  Blockly.Arduino.pinDigitalValidator), 'PIN')
     this.setTooltip(Blockly.Msg.ROBOTS_MISC_IR_DECODE_TOOLTIP);
  this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
  }
 };
+
 Blockly.Blocks['IR_get_blink'] = {
   init: function() {
     this.setColour(190);
@@ -135,12 +136,12 @@ Blockly.Blocks['IR_get_blink'] = {
         .appendField(Blockly.Msg.ROBOTS_MISC_IR_CODE)
 	this.appendDummyInput()
 	    .appendField(Blockly.Msg.ROBOTS_MISC_IR_SENSOR_PIN)
-        .appendField(new Blockly.FieldDropdown(profile.default.digital), "PIN")
+		.appendField(new Blockly.FieldTextInput('',  Blockly.Arduino.pinDigitalValidator), 'PIN')
 		.setAlign(Blockly.ALIGN_RIGHT)
 		this.setInputsInline(false);
 	this.appendDummyInput()
 		.appendField(Blockly.Msg.ROBOTS_MISC_LED_PIN )
-       .appendField(new Blockly.FieldDropdown(profile.default.digital), "PIN2")
+       .appendField(new Blockly.FieldTextInput('',  Blockly.Arduino.pinDigitalValidator), 'PIN2')
 	   .setAlign(Blockly.ALIGN_RIGHT)
 	this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
@@ -154,7 +155,7 @@ Blockly.Blocks['IR_get'] = {
 	this.appendDummyInput()
 		.appendField(Blockly.Msg.ROBOTS_MISC_IR_GET_TITLE)
 	    .appendField(Blockly.Msg.ROBOTS_MISC_IR_SENSOR_PIN)
-        .appendField(new Blockly.FieldDropdown(profile.default.digital), "PIN")
+        .appendField(new Blockly.FieldTextInput('',  Blockly.Arduino.pinDigitalValidator), 'PIN')
 		.setAlign(Blockly.ALIGN_RIGHT)
 		this.setInputsInline(false);
 	this.setOutput(true, 'Number');

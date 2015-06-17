@@ -429,9 +429,8 @@ Blockly.Blocks['logic_ternary'] = {
     this.setTooltip(Blockly.Msg.LOGIC_TERNARY_TOOLTIP);
   }
 };
-//ESK 6/13/2015 Case Switch ###############################################
-//ESK 6/13/2015 Case Switch ###############################################
-//ESK 6/13/2015 Case Switch ###############################################
+//ESK 6/13/2015 Case Switch 
+
 Blockly.Blocks['controls_switch'] = {
   /**
    * Block for switch/case/default condition.
