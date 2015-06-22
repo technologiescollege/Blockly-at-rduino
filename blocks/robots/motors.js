@@ -419,11 +419,11 @@ Blockly.Blocks['dfrobot_s'] = {
   }
 };
 
-Blockly.Blocks.generic_motor = {
+Blockly.Blocks.generic_motor_s = {
   init: function() {
     this.setColour(190);
 	this.appendDummyInput()
-		.appendField(Blockly.Msg.ROBOTS_MOTORS_GENERIC_MOTOR_TITLE)
+		.appendField(Blockly.Msg.ROBOTS_MOTORS_GENERIC_MOTOR_S_TITLE)
 		.appendField(
 				new Blockly.FieldDropdown([
 						[ Blockly.Msg.ROBOTS_MOTORS_STOP, "stop" ],
@@ -497,5 +497,39 @@ Blockly.Blocks['zumo_motors_FUs'] = {
 	this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setTooltip(Blockly.Msg.ROBOTS_MOTORS_ZUMO_FUS_TOOLTIP);
+  }
+};
+
+Blockly.Blocks.generic_motor = {
+  init: function() {
+    this.setColour(190);
+	this.appendDummyInput()
+		.appendField(Blockly.Msg.ROBOTS_MOTORS_GENERIC_MOTOR_TITLE)
+		.appendField(
+				new Blockly.FieldDropdown([
+						[ Blockly.Msg.ROBOTS_MOTORS_STOP, "stop" ],
+						[ Blockly.Msg.ROBOTS_MOTORS_FORWARD, "forward" ],
+						[ Blockly.Msg.ROBOTS_MOTORS_RIGHT, "right" ],
+						[ Blockly.Msg.ROBOTS_MOTORS_LEFT, "left" ],
+						[ Blockly.Msg.ROBOTS_MOTORS_BACKWARD, "backward" ] ]),
+				"DIRECTION");
+	this.appendDummyInput()
+		.appendField(Blockly.Msg.ROBOTS_MOTORS_GENERIC_MOTOR_PIN_A1)
+        .appendField(new Blockly.FieldTextInput('',  Blockly.Arduino.pinDualValidator), 'PIN-A1')
+		.setAlign(Blockly.ALIGN_RIGHT)
+		.appendField(Blockly.Msg.ROBOTS_MOTORS_GENERIC_MOTOR_PIN_B1)
+        .appendField(new Blockly.FieldTextInput('',  Blockly.Arduino.pinDualValidator), 'PIN-B1')
+		.setAlign(Blockly.ALIGN_RIGHT)
+	this.setInputsInline(false);
+	this.appendDummyInput()
+		.appendField(Blockly.Msg.ROBOTS_MOTORS_GENERIC_MOTOR_PIN_A2)
+       .appendField(new Blockly.FieldTextInput('',  Blockly.Arduino.pinDualValidator), 'PIN-A2')
+	   .setAlign(Blockly.ALIGN_RIGHT)
+	   .appendField(Blockly.Msg.ROBOTS_MOTORS_GENERIC_MOTOR_PIN_B2)
+       .appendField(new Blockly.FieldTextInput('',  Blockly.Arduino.pinDualValidator), 'PIN-B2')
+	   .setAlign(Blockly.ALIGN_RIGHT);
+	this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+	this.setTooltip('Generic motor driver');
   }
 };

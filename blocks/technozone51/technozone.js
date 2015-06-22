@@ -177,13 +177,13 @@ Blockly.Blocks.technozone_telecsetup = {
   init: function() {
     this.setColour(62);
     this.appendDummyInput("")
-        .appendField("initialise la télécommande")
+        .appendField(Blockly.Msg.TECHNOZONE_TELECSETUP_TITLE)
         .appendField(new Blockly.FieldImage("http://www.technozone51.fr/plugins/irf1.jpg", 64, 64))
-        .appendField("sur la broche")
+        .appendField(Blockly.Msg.TECHNOZONE_TELECSETUP_PIN )
         .appendField(new Blockly.FieldTextInput('',  Blockly.Arduino.pinDigitalValidator), 'PIN');
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    this.setTooltip('Initialise la télécommande (réf : IRF1 + (TELEC1 ou TELEC2))');
+    this.setTooltip(Blockly.Msg.TECHNOZONE_TELECSETUP_TOOLTIP);
   }
 };
 
@@ -193,10 +193,10 @@ Blockly.Blocks.technozone_telecinit = {
   init: function() {
     this.setColour(120);
     this.appendDummyInput("")
-        .appendField("une touche de la télécommande a été appuyée ?")
+        .appendField(Blockly.Msg.TECHNOZONE_TELECINIT_TITLE)
         .appendField(new Blockly.FieldImage("http://www.technozone51.fr/plugins/irf1.jpg", 64, 64));
     this.setOutput(true, 'Boolean');
-    this.setTooltip('Teste si une touche de la télécommande a été appuyée (réf : IRF1)');
+    this.setTooltip(Blockly.Msg.TECHNOZONE_TELECINIT_TOOLTIP);
   }
 };
 
@@ -206,11 +206,11 @@ Blockly.Blocks.technozone_telecflush = {
   init: function() {
     this.setColour(190);
     this.appendDummyInput("")
-        .appendField("vide le tampon de réception de la télécommande")
+        .appendField(Blockly.Msg.TECHNOZONE_TELECFLUSH_TITLE)
         .appendField(new Blockly.FieldImage("http://www.technozone51.fr/plugins/irf1.jpg", 64, 64));   
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    this.setTooltip("Vide le tampon de réception de la télécommande (réf :IRF1)");
+    this.setTooltip(Blockly.Msg.TECHNOZONE_TELECFLUSH_TOOLTIP);
   }
 };
 

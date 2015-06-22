@@ -11,6 +11,7 @@
  * Also influenced by http://zovirl.com/2008/11/12/building-a-universal-remote-with-an-arduino/
  *
  * JVC and Panasonic protocol added by Kristian Lauszus (Thanks to zenwheel and other people at the original blog post)
+ * Whynter A/C ARC-110WD added by Francesco Meschia
  */
 
 #ifndef IRremoteint_h
@@ -45,6 +46,10 @@
   //#define IR_USE_TIMER1   // tx = pin 14
   //#define IR_USE_TIMER3   // tx = pin 9
   #define IR_USE_TIMER4_HS  // tx = pin 10
+
+// Teensy 3.0
+#elif defined(__MK20DX128__)
+  #define IR_USE_TIMER_CMT  // tx = pin 5
 
 // Teensy++ 1.0 & 2.0
 #elif defined(__AVR_AT90USB646__) || defined(__AVR_AT90USB1286__)
@@ -90,10 +95,18 @@
 // Pulse parms are *50-100 for the Mark and *50+100 for the space
 // First MARK is the one after the long gap
 // pulse parameters in usec
+#define WHYNTER_HDR_MARK	2850
+#define WHYNTER_HDR_SPACE	2850
+#define WHYNTER_BIT_MARK	750
+#define WHYNTER_ONE_MARK	750
+#define WHYNTER_ONE_SPACE	2150
+#define WHYNTER_ZERO_MARK	750
+#define WHYNTER_ZERO_SPACE	750
+
 #define NEC_HDR_MARK	9000
 #define NEC_HDR_SPACE	4500
 #define NEC_BIT_MARK	560
-#define NEC_ONE_SPACE	1600
+#define NEC_ONE_SPACE	1690
 #define NEC_ZERO_SPACE	560
 #define NEC_RPT_SPACE	2250
 
@@ -159,8 +172,37 @@
 #define JVC_ZERO_SPACE 550
 #define JVC_RPT_LENGTH 60000
 
+#define LG_HDR_MARK 8000
+#define LG_HDR_SPACE 4000
+#define LG_BIT_MARK 600
+#define LG_ONE_SPACE 1600
+#define LG_ZERO_SPACE 550
+#define LG_RPT_LENGTH 60000
+
+#define SAMSUNG_HDR_MARK  5000
+#define SAMSUNG_HDR_SPACE 5000
+#define SAMSUNG_BIT_MARK  560
+#define SAMSUNG_ONE_SPACE 1600
+#define SAMSUNG_ZERO_SPACE  560
+#define SAMSUNG_RPT_SPACE 2250
+
+
 #define SHARP_BITS 15
 #define DISH_BITS 16
+
+// AIWA RC T501
+// Lirc file http://lirc.sourceforge.net/remotes/aiwa/RC-T501 
+#define AIWA_RC_T501_HZ 38
+#define AIWA_RC_T501_BITS 15
+#define AIWA_RC_T501_PRE_BITS 26
+#define AIWA_RC_T501_POST_BITS 1
+#define AIWA_RC_T501_SUM_BITS AIWA_RC_T501_PRE_BITS+AIWA_RC_T501_BITS+AIWA_RC_T501_POST_BITS
+#define AIWA_RC_T501_HDR_MARK 8800
+#define AIWA_RC_T501_HDR_SPACE 4500
+#define AIWA_RC_T501_BIT_MARK 500
+#define AIWA_RC_T501_ONE_SPACE 600
+#define AIWA_RC_T501_ZERO_SPACE 1700
+
 
 #define TOLERANCE 25  // percent tolerance in measurements
 #define LTOL (1.0 - TOLERANCE/100.) 
@@ -171,13 +213,6 @@
 
 #define TICKS_LOW(us) (int) (((us)*LTOL/USECPERTICK))
 #define TICKS_HIGH(us) (int) (((us)*UTOL/USECPERTICK + 1))
-
-#ifndef DEBUG
-int MATCH(int measured, int desired) {return measured >= TICKS_LOW(desired) && measured <= TICKS_HIGH(desired);}
-int MATCH_MARK(int measured_ticks, int desired_us) {return MATCH(measured_ticks, (desired_us + MARK_EXCESS));}
-int MATCH_SPACE(int measured_ticks, int desired_us) {return MATCH(measured_ticks, (desired_us - MARK_EXCESS));}
-// Debugging versions are in IRremote.cpp
-#endif
 
 // receiver states
 #define STATE_IDLE     2
@@ -213,6 +248,9 @@ extern volatile irparams_t irparams;
 #define MIN_RC6_SAMPLES 1
 #define PANASONIC_BITS 48
 #define JVC_BITS 16
+#define LG_BITS 28
+#define SAMSUNG_BITS 32
+#define WHYNTER_BITS 32
 
 
 
@@ -265,8 +303,8 @@ extern volatile irparams_t irparams;
 #define TIMER_ENABLE_PWM     (TCCR1A |= _BV(COM1A1))
 #define TIMER_DISABLE_PWM    (TCCR1A &= ~(_BV(COM1A1)))
 #if defined(__AVR_ATmega8P__) || defined(__AVR_ATmega8__)
-  #define TIMER_ENABLE_INTR    (TIMSK = _BV(OCIE1A))
-  #define TIMER_DISABLE_INTR   (TIMSK = 0)
+  #define TIMER_ENABLE_INTR    (TIMSK |= _BV(OCIE1A))
+  #define TIMER_DISABLE_INTR   (TIMSK &= ~_BV(OCIE1A))
 #else
   #define TIMER_ENABLE_INTR    (TIMSK1 = _BV(OCIE1A))
   #define TIMER_DISABLE_INTR   (TIMSK1 = 0)
@@ -424,6 +462,54 @@ extern volatile irparams_t irparams;
 #else
 #error "Please add OC5A pin number here\n"
 #endif
+
+
+// defines for special carrier modulator timer
+#elif defined(IR_USE_TIMER_CMT)
+#define TIMER_RESET ({			\
+	uint8_t tmp = CMT_MSC;		\
+	CMT_CMD2 = 30;			\
+})
+#define TIMER_ENABLE_PWM     CORE_PIN5_CONFIG = PORT_PCR_MUX(2)|PORT_PCR_DSE|PORT_PCR_SRE
+#define TIMER_DISABLE_PWM    CORE_PIN5_CONFIG = PORT_PCR_MUX(1)|PORT_PCR_DSE|PORT_PCR_SRE
+#define TIMER_ENABLE_INTR    NVIC_ENABLE_IRQ(IRQ_CMT)
+#define TIMER_DISABLE_INTR   NVIC_DISABLE_IRQ(IRQ_CMT)
+#define TIMER_INTR_NAME      cmt_isr
+#ifdef ISR
+#undef ISR
+#endif
+#define ISR(f) void f(void)
+#if F_BUS == 48000000
+#define CMT_PPS_VAL 5
+#else
+#define CMT_PPS_VAL 2
+#endif
+#define TIMER_CONFIG_KHZ(val) ({ 	\
+	SIM_SCGC4 |= SIM_SCGC4_CMT;	\
+	SIM_SOPT2 |= SIM_SOPT2_PTD7PAD;	\
+	CMT_PPS = CMT_PPS_VAL;		\
+	CMT_CGH1 = 2667 / val;		\
+	CMT_CGL1 = 5333 / val;		\
+	CMT_CMD1 = 0;			\
+	CMT_CMD2 = 30;			\
+	CMT_CMD3 = 0;			\
+	CMT_CMD4 = 0;			\
+	CMT_OC = 0x60;			\
+	CMT_MSC = 0x01;			\
+})
+#define TIMER_CONFIG_NORMAL() ({	\
+	SIM_SCGC4 |= SIM_SCGC4_CMT;	\
+	CMT_PPS = CMT_PPS_VAL;		\
+	CMT_CGH1 = 1;			\
+	CMT_CGL1 = 1;			\
+	CMT_CMD1 = 0;			\
+	CMT_CMD2 = 30;			\
+	CMT_CMD3 = 0;			\
+	CMT_CMD4 = 19;			\
+	CMT_OC = 0;			\
+	CMT_MSC = 0x03;			\
+})
+#define TIMER_PWM_PIN        5
 
 
 #else // unknown timer
