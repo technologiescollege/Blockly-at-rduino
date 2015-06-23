@@ -29,8 +29,9 @@ goog.provide('Blockly.Blocks.motors');
 
 goog.require('Blockly.Blocks');
 
-
-
+//To do later
+//Blockly.Blocks.robots.HUE = 210;
+//this.setColour(Blockly.Blocks.logic.HUE);
 
 Blockly.Blocks['zumo_motors_FN'] = {
   init: function() {
@@ -418,11 +419,11 @@ Blockly.Blocks['dfrobot_s'] = {
   }
 };
 
-Blockly.Blocks.generic_motor = {
+Blockly.Blocks.generic_motor_s = {
   init: function() {
     this.setColour(190);
 	this.appendDummyInput()
-		.appendField(Blockly.Msg.ROBOTS_MOTORS_GENERIC_MOTOR_TITLE)
+		.appendField(Blockly.Msg.ROBOTS_MOTORS_GENERIC_MOTOR_S_TITLE)
 		.appendField(
 				new Blockly.FieldDropdown([
 						[ Blockly.Msg.ROBOTS_MOTORS_STOP, "stop" ],
@@ -442,17 +443,17 @@ Blockly.Blocks.generic_motor = {
         .appendField(Blockly.Msg.ROBOTS_MOTORS_GENERIC_MOTOR_SPEED_B);
 	this.appendDummyInput()
 		.appendField(Blockly.Msg.ROBOTS_MOTORS_GENERIC_MOTOR_DIR_PIN_A)
-        .appendField(new Blockly.FieldTextInput('',  Blockly.Arduino.pinDigitalValidator), 'PIN-AD')
+        .appendField(new Blockly.FieldTextInput('',  Blockly.Arduino.pinDualValidator), 'PIN-AD')
 		.appendField(Blockly.Msg.ROBOTS_MOTORS_GENERIC_MOTOR_DIR_PIN_B)
-        .appendField(new Blockly.FieldTextInput('',  Blockly.Arduino.pinDigitalValidator), 'PIN-BD');
+        .appendField(new Blockly.FieldTextInput('',  Blockly.Arduino.pinDualValidator), 'PIN-BD');
 	this.setInputsInline(false);
 	this.appendDummyInput()
 		//.appendField(new Blockly.FieldImage("../../media/fourpin_range.jpg", 40, 40))
        .appendField(Blockly.Msg.ROBOTS_MOTORS_GENERIC_MOTOR_PWM_PIN_A)
-       .appendField(new Blockly.FieldTextInput('',  Blockly.Arduino.pinDigitalValidator), 'PIN-AS')
+       .appendField(new Blockly.FieldTextInput('',  Blockly.Arduino.pinPWMValidator), 'PIN-AS')
 	   .setAlign(Blockly.ALIGN_RIGHT)
 	   .appendField(Blockly.Msg.ROBOTS_MOTORS_GENERIC_MOTOR_PWM_PIN_B)
-       .appendField(new Blockly.FieldTextInput('',  Blockly.Arduino.pinDigitalValidator), 'PIN-BS')
+       .appendField(new Blockly.FieldTextInput('',  Blockly.Arduino.pinPWMValidator), 'PIN-BS')
 	   .setAlign(Blockly.ALIGN_RIGHT);
 	//   this.setInputsInline(false);
 	//	this.setInputsInline(true);
@@ -496,5 +497,39 @@ Blockly.Blocks['zumo_motors_FUs'] = {
 	this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setTooltip(Blockly.Msg.ROBOTS_MOTORS_ZUMO_FUS_TOOLTIP);
+  }
+};
+
+Blockly.Blocks.generic_motor = {
+  init: function() {
+    this.setColour(190);
+	this.appendDummyInput()
+		.appendField(Blockly.Msg.ROBOTS_MOTORS_GENERIC_MOTOR_TITLE)
+		.appendField(
+				new Blockly.FieldDropdown([
+						[ Blockly.Msg.ROBOTS_MOTORS_STOP, "stop" ],
+						[ Blockly.Msg.ROBOTS_MOTORS_FORWARD, "forward" ],
+						[ Blockly.Msg.ROBOTS_MOTORS_RIGHT, "right" ],
+						[ Blockly.Msg.ROBOTS_MOTORS_LEFT, "left" ],
+						[ Blockly.Msg.ROBOTS_MOTORS_BACKWARD, "backward" ] ]),
+				"DIRECTION");
+	this.appendDummyInput()
+		.appendField(Blockly.Msg.ROBOTS_MOTORS_GENERIC_MOTOR_PIN_A1)
+        .appendField(new Blockly.FieldTextInput('',  Blockly.Arduino.pinDualValidator), 'PIN-A1')
+		.setAlign(Blockly.ALIGN_RIGHT)
+		.appendField(Blockly.Msg.ROBOTS_MOTORS_GENERIC_MOTOR_PIN_B1)
+        .appendField(new Blockly.FieldTextInput('',  Blockly.Arduino.pinDualValidator), 'PIN-B1')
+		.setAlign(Blockly.ALIGN_RIGHT)
+	this.setInputsInline(false);
+	this.appendDummyInput()
+		.appendField(Blockly.Msg.ROBOTS_MOTORS_GENERIC_MOTOR_PIN_A2)
+       .appendField(new Blockly.FieldTextInput('',  Blockly.Arduino.pinDualValidator), 'PIN-A2')
+	   .setAlign(Blockly.ALIGN_RIGHT)
+	   .appendField(Blockly.Msg.ROBOTS_MOTORS_GENERIC_MOTOR_PIN_B2)
+       .appendField(new Blockly.FieldTextInput('',  Blockly.Arduino.pinDualValidator), 'PIN-B2')
+	   .setAlign(Blockly.ALIGN_RIGHT);
+	this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+	this.setTooltip('Generic motor driver');
   }
 };

@@ -1,0 +1,2 @@
+This directory includes libraries you may need to run the blocks.  Add them to your Arduino IDE libraries folder.
+Delete RobotIRRemote if using IRRemote

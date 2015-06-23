@@ -156,6 +156,18 @@ Blockly.Arduino.pinGroveAnalogValidator = function(text) {
 };
 
 /**
+ * Ensure that PIN and next PIN numbers exists in Digital or Analog array.
+ * @param {string} text The user's text.
+ * @return {?string} A string representing a valid PIN number, or null if invalid.
+ */
+Blockly.Arduino.pinDualValidator = function(text) {
+	var posa = profile.defaultBoard.analog.indexOf(text);
+	var posd = profile.defaultBoard.digital.indexOf(text);
+	var pos = posa + posd
+	return (pos < 0) ? null : text;
+};
+
+/**
  * Initialise the database of variable names.
  * @param {!Blockly.Workspace} workspace Workspace to generate code from.
  */

@@ -804,7 +804,7 @@ Blockly.Arduino.dfrobot_s = function() {
   return code;
 };
 
-Blockly.Arduino.generic_motor = function() {
+Blockly.Arduino.generic_motor_s = function() {
   var dropdown_direction = this.getFieldValue('DIRECTION');
   var speedA = Blockly.Arduino.valueToCode(this, 'SPEEDA', Blockly.Arduino.ORDER_ATOMIC) || '127'
   var speedB = Blockly.Arduino.valueToCode(this, 'SPEEDB', Blockly.Arduino.ORDER_ATOMIC) || '127'
@@ -812,7 +812,7 @@ Blockly.Arduino.generic_motor = function() {
   var DirPinB = this.getFieldValue("PIN-BD");
   var PWMPinA = this.getFieldValue("PIN-AS");
   var PWMPinB = this.getFieldValue("PIN-BS");
-  Blockly.Arduino.setups_["setup_motor"] = "pinMode("+DirPinA+",OUTPUT);//directionPinA\n"+
+  Blockly.Arduino.setups_["setup_motor_s"] = "pinMode("+DirPinA+",OUTPUT);//directionPinA\n"+
   "  pinMode("+DirPinB+",OUTPUT);//directionPinB\n"+
   "  pinMode("+PWMPinA+",OUTPUT);//speedPinA\n"+
   "  pinMode("+PWMPinB+",OUTPUT);//speedPinB\n";
@@ -927,3 +927,62 @@ Blockly.Arduino.zumo_motors_FUs = function() {
   return code;
 };
 
+Blockly.Arduino.generic_motor = function() {
+  var dropdown_direction = this.getFieldValue('DIRECTION');
+  var PinA1 = this.getFieldValue("PIN-A1");
+  var PinB1 = this.getFieldValue("PIN-B1");
+  var PinA2 = this.getFieldValue("PIN-A2");
+  var PinB2 = this.getFieldValue("PIN-B2");
+  Blockly.Arduino.setups_["setup_motor"] = "pinMode("+PinA1+",OUTPUT);//PinA1\n"+
+  "  pinMode("+PinB1+",OUTPUT);//PinB1\n"+
+  "  pinMode("+PinA2+",OUTPUT);//PinA2\n"+
+  "  pinMode("+PinB2+",OUTPUT);//PinB2\n";
+  var code = "";
+  if(dropdown_direction==="forward"){
+    Blockly.Arduino.definitions_['define_forward'] = "void forward()\n"+
+"{\n"+
+     "  digitalWrite("+PinA1+",HIGH);//turn DC Motor A (Left) \n"+
+     "  digitalWrite("+PinB1+",HIGH);//turn DC Motor B (Right) \n"+
+     "  digitalWrite("+PinA2+",LOW);//turn DC Motor A (Left) \n"+
+     "  digitalWrite("+PinB2+",LOW);//turn DC Motor B (Right) \n"+
+"}\n";
+    code="forward();\n";
+  } else if (dropdown_direction==="right") {
+    Blockly.Arduino.definitions_['define_right'] = "void right()\n"+
+"{\n"+
+     "  digitalWrite("+PinA1+",HIGH);//turn DC Motor A (Left) \n"+
+     "  digitalWrite("+PinB1+",LOW);//turn DC Motor B (Right) \n"+
+     "  digitalWrite("+PinA2+",LOW);//turn DC Motor A (Left) \n"+
+     "  digitalWrite("+PinB2+",HIGH);//turn DC Motor B (Right) \n"+
+"}\n\n";
+    code="right();\n";
+  } else if (dropdown_direction==="left") {
+    Blockly.Arduino.definitions_['define_left'] = "void left()\n"+
+"{\n"+
+     "  digitalWrite("+PinA1+",LOW);//turn DC Motor A (Left) \n"+
+     "  digitalWrite("+PinB1+",HIGH);//turn DC Motor B (Right) \n"+
+     "  digitalWrite("+PinA2+",HIGH);//turn DC Motor A (Left) \n"+
+     "  digitalWrite("+PinB2+",LOW);//turn DC Motor B (Right) \n"+
+"}\n\n";
+    code="left();\n";
+  } else if (dropdown_direction==="backward"){
+    Blockly.Arduino.definitions_['define_backward'] = "void backward()\n"+
+"{\n"+
+     "  digitalWrite("+PinA1+",LOW);//turn DC Motor A (Left) \n"+
+     "  digitalWrite("+PinB1+",LOW);//turn DC Motor B (Right) \n"+
+     "  digitalWrite("+PinA2+",HIGH);//turn DC Motor A (Left) \n"+
+     "  digitalWrite("+PinB2+",HIGH);//turn DC Motor B (Right) \n"+
+"}\n\n";
+    code="backward();\n";
+  } else if (dropdown_direction==="stop"){
+    Blockly.Arduino.definitions_['define_stop'] = "void stop()\n"+
+"{\n"+
+     "  digitalWrite("+PinA1+",LOW);//turn DC Motor A (Left)  off\n"+
+     "  digitalWrite("+PinB1+",LOW);//turn DC Motor B (Right) off\n"+
+     "  digitalWrite("+PinA2+",LOW);//turn DC Motor A (Left) off\n"+
+     "  digitalWrite("+PinB2+",LOW);//turn DC Motor B (Right) off\n"+
+"}\n\n"
+    code="stop();\n";
+  }
+  return code;
+};

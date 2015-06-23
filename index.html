@@ -1,4 +1,4 @@
-﻿<html>
+<html>
 <head>
 <link rel="icon" type="image/png" href="favicon.bmp" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -242,6 +242,7 @@ contient la liste des blocs de Blockly ci-dessous en compressé-->
 <xml id="CAT_LOGIC" style="display: none">
     <category name="CAT_LOGIC">
         <block type="controls_if"></block>
+		<block type="controls_switch"></block> 
         <block type="logic_compare"></block>
         <block type="logic_operation"></block>
         <block type="logic_negate"></block>
@@ -601,7 +602,7 @@ contient la liste des blocs de Blockly ci-dessous en compressé-->
 					</block>
 				</value>
 			</block>
-			<block type="generic_motor">
+			<block type="generic_motor_s">
 				<value name="SPEEDA">
 					<block type="math_number">
 					<field name="NUM">175</field>
@@ -671,10 +672,14 @@ contient la liste des blocs de Blockly ci-dessous en compressé-->
 					</block>
 				</value>
 			</block>
+			<block type="generic_motor"></block>
         </category>
         <category name="CAT_ROBOT_MISC">
 			<block type="setup_button_wait_il"></block>
 			<block type="setup_button_wait_iph"></block>
+			<block type="IR_serial_decoder"></block>
+			<block type="IR_get_blink"></block>
+			<block type="IR_get"></block>
 			<block type="fourpin_ranger"></block>
 			<block type="play_notes_z">
                 <value name="DUR">
@@ -687,6 +692,7 @@ contient la liste des blocs de Blockly ci-dessous en compressé-->
                     <field name="NUM">0</field>
                     </block>
                 </value>
+				
 			</block>
         </category>
     </category>
