@@ -104,26 +104,26 @@ Blockly.Blocks.technozone_mot2 = {
   init: function() {
     this.setColour(190);
     this.appendDummyInput("")
-        .appendField("commande le")
-        .appendField(new Blockly.FieldDropdown([["moteur A", "HIGH"], ["moteur B", "LOW"]]), "MOT")
-        .appendField("de la carte MOT2")
+        .appendField(Blockly.Msg.TECHNOZONE_MOT2_CONTROLS)
+        .appendField(new Blockly.FieldDropdown(Blockly.Msg.TECHNOZONE_MOT2_DROPDOWN), "MOT")
+        .appendField(Blockly.Msg.TECHNOZONE_MOT2_FOR)
         .appendField(new Blockly.FieldImage("blocks/technozone51/mot2.jpg", 64, 64))
-        .appendField("connectér sur les broches");
+        .appendField(Blockly.Msg.TECHNOZONE_CONNECTTOPINS);
     this.appendDummyInput("")
-        .appendField("broche de commande de Direction (DIR)")
+        .appendField(Blockly.Msg.TECHNOZONE_MOT2_DIR)
         .appendField(new Blockly.FieldTextInput('',  Blockly.Arduino.pinDigitalValidator), 'PINDIR');
     this.appendDummyInput("")
-        .appendField("broche de commande de la Vitesse (PWM~)")
+        .appendField(Blockly.Msg.TECHNOZONE_MOT2_PWM)
         .appendField(new Blockly.FieldTextInput('',  Blockly.Arduino.pinPWMValidator), 'PINPWM');
     this.appendValueInput("SENS", 'Boolean')
         .setAlign(Blockly.ALIGN_RIGHT)
-        .appendField("sens horaire (VRAI ou FAUX ?)");
+        .appendField(Blockly.Msg.TECHNOZONE_MOT2_SPIN);
     this.appendValueInput("VITESSE",'Number')
         .setAlign(Blockly.ALIGN_RIGHT)
-        .appendField("vitesse [0~255]");          
+        .appendField(Blockly.Msg.TECHNOZONE_MOT2_SPEED);          
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    this.setTooltip('Carte de commande de deux moteurs CC pour EASYCON1,EASYCON2,EASYBOT1 (réf : MOT2)');
+    this.setTooltip(Blockly.Msg.TECHNOZONE_MOT2_TOOLTIP);
   }
 };
 
@@ -348,8 +348,8 @@ Blockly.Blocks.technozone_led1red = {
   init: function() {
     this.setColour(190);
     this.appendDummyInput("")
-        .appendField(new Blockly.FieldDropdown([["allume", "HIGH"], ["éteint", "LOW"]]), "STAT")
-        .appendField("la DEL")
+        .appendField(new Blockly.FieldDropdown(Blockly.Msg.FIELDDROPDOWN), "STAT")
+        .appendField(Blockly.Msg.TECHNOZONE_OFTHE)
         .appendField(new Blockly.FieldImage("blocks/technozone51/led1red.jpg", 64, 64))
         .appendField(Blockly.Msg.TECHNOZONE_PIN)
         .appendField(new Blockly.FieldTextInput('',  Blockly.Arduino.pinDigitalValidator), 'PIN');
@@ -365,8 +365,8 @@ Blockly.Blocks.technozone_led1green = {
   init: function() {
     this.setColour(190);
     this.appendDummyInput("")
-        .appendField(new Blockly.FieldDropdown([["allume", "HIGH"], ["éteint", "LOW"]]), "STAT")
-        .appendField("la DEL")
+        .appendField(new Blockly.FieldDropdown(Blockly.Msg.FIELDDROPDOWN), "STAT")
+        .appendField(Blockly.Msg.TECHNOZONE_OFTHE)
         .appendField(new Blockly.FieldImage("blocks/technozone51/led1green.jpg", 64, 64))
         .appendField(Blockly.Msg.TECHNOZONE_PIN)
         .appendField(new Blockly.FieldTextInput('',  Blockly.Arduino.pinDigitalValidator), 'PIN');
@@ -382,8 +382,8 @@ Blockly.Blocks.technozone_led1yellow = {
   init: function() {
     this.setColour(190);
     this.appendDummyInput("")
-        .appendField(new Blockly.FieldDropdown([["allume", "HIGH"], ["éteint", "LOW"]]), "STAT")
-        .appendField("la DEL")
+        .appendField(new Blockly.FieldDropdown(Blockly.Msg.FIELDDROPDOWN), "STAT")
+        .appendField(Blockly.Msg.TECHNOZONE_OFTHE)
         .appendField(new Blockly.FieldImage("blocks/technozone51/led1yellow.jpg", 64, 64))
         .appendField(Blockly.Msg.TECHNOZONE_PIN)
         .appendField(new Blockly.FieldTextInput('',  Blockly.Arduino.pinDigitalValidator), 'PIN');
@@ -463,7 +463,7 @@ Blockly.Blocks.technozone_servo1 = {
         .appendField(new Blockly.FieldImage("blocks/technozone51/servo1.jpg", 64, 64))
         .appendField(new Blockly.FieldImage("blocks/technozone51/plus.jpg", 20, 64))
         .appendField(new Blockly.FieldImage("blocks/technozone51/servomoteur1.jpg", 64, 64))
-        .appendField("de la broche")
+        .appendField(Blockly.Msg.TECHNOZONE_PIN)
         .appendField(new Blockly.FieldTextInput('',  Blockly.Arduino.pinDigitalValidator), 'PIN');
     this.appendValueInput("DEGREE",'Number')
         .setCheck(Number)
@@ -481,7 +481,7 @@ Blockly.Blocks.technozone_btn1white = {
   init: function() {
     this.setColour(120);
     this.appendDummyInput("")
-        .appendField("l'état du bouton")
+        .appendField(Blockly.Msg.TECHNOZONE_BUTTON)
         .appendField(new Blockly.FieldImage("blocks/technozone51/btn1white.jpg", 64, 64))
         .appendField(Blockly.Msg.TECHNOZONE_PIN)
         .appendField(new Blockly.FieldTextInput('',  Blockly.Arduino.pinDigitalValidator), 'PIN');
@@ -496,7 +496,7 @@ Blockly.Blocks.technozone_btn1black = {
   init: function() {
     this.setColour(120);
     this.appendDummyInput("")
-        .appendField("l'état du bouton")
+        .appendField(Blockly.Msg.TECHNOZONE_BUTTON)
         .appendField(new Blockly.FieldImage("blocks/technozone51/btn1black.jpg", 64, 64))
         .appendField(Blockly.Msg.TECHNOZONE_PIN)
         .appendField(new Blockly.FieldTextInput('',  Blockly.Arduino.pinDigitalValidator), 'PIN');
@@ -511,7 +511,7 @@ Blockly.Blocks.technozone_btn1green = {
   init: function() {
     this.setColour(120);
     this.appendDummyInput("")
-        .appendField("l'état du bouton")
+        .appendField(Blockly.Msg.TECHNOZONE_BUTTON)
         .appendField(new Blockly.FieldImage("blocks/technozone51/btn1green.jpg", 64, 64))
         .appendField(Blockly.Msg.TECHNOZONE_PIN)
         .appendField(new Blockly.FieldTextInput('',  Blockly.Arduino.pinDigitalValidator), 'PIN');
@@ -526,7 +526,7 @@ Blockly.Blocks.technozone_btn1red = {
   init: function() {
     this.setColour(120);
     this.appendDummyInput("")
-        .appendField("l'état du bouton")
+        .appendField(Blockly.Msg.TECHNOZONE_BUTTON)
         .appendField(new Blockly.FieldImage("blocks/technozone51/btn1red.jpg", 64, 64))
         .appendField(Blockly.Msg.TECHNOZONE_PIN)
         .appendField(new Blockly.FieldTextInput('',  Blockly.Arduino.pinDigitalValidator), 'PIN');
@@ -603,7 +603,7 @@ Blockly.Blocks.technozone_lig1 = {
     this.appendDummyInput("")
         .appendField("l'état du capteur")
         .appendField(new Blockly.FieldImage("blocks/technozone51/lig1.jpg", 64, 64))
-        .appendField("sur la broche ")
+        .appendField(Blockly.Msg.TECHNOZONE_PIN)
         .appendField(new Blockly.FieldTextInput('',  Blockly.Arduino.pinDigitalValidator), 'PIN')
         .appendField("de suivi de ligne");
     this.setOutput(true, 'Boolean');
@@ -636,7 +636,7 @@ Blockly.Blocks.technozone_potar1 = {
     this.appendDummyInput("")
         .appendField("la position du potentiomètre")
         .appendField(new Blockly.FieldImage("blocks/technozone51/potar1.jpg", 64, 64))
-        .appendField("sur la broche ")
+        .appendField(Blockly.Msg.TECHNOZONE_PIN)
         .appendField(new Blockly.FieldTextInput('',  Blockly.Arduino.pinAnalogValidator), 'PIN');
     this.setOutput(true, 'Number');
     this.setTooltip('Entrée potentiomètre (réf : POTAR1)');
