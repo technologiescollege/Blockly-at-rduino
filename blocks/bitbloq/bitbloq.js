@@ -1,9 +1,7 @@
 ﻿
 //www.bq.com/fr
 
-goog.provide('Blockly.Blocks.bq');
-
-goog.require('Blockly.Blocks');
+'use strict';
 
 // define blocks
 
@@ -36,12 +34,12 @@ Blockly.Blocks['bq_buzzer'] = {
         .setCheck('Number')
         .setAlign(Blockly.ALIGN_RIGHT)
         .appendField(Blockly.Msg.GROVE_INOUT_LED_INPUT2);	
-    this.appendValueInput("NUM", Number)
+    this.appendValueInput("NUM", 'Number')
         .appendField("d'une fréquence (Hz)")
         .setCheck(Number);
-    this.appendValueInput("TPS", Number)
+    this.appendValueInput("TPS", 'Number')
         .appendField("pendant une durée (ms) de")
-        .setCheck(Number);
+        .setCheck('Number');
     this.setInputsInline(true);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
@@ -66,7 +64,7 @@ Blockly.Blocks['bq_ultrason'] = {
     this.appendValueInput("DIST", 'Number')
         .setCheck('Number')
         .setAlign(Blockly.ALIGN_RIGHT);
-	this.setOutput(true, Boolean);
+	this.setOutput(true, 'Boolean');
     this.setTooltip('Entrée Ultrason (réf : ULTRASON)');
   }
 };
@@ -82,8 +80,8 @@ Blockly.Blocks['bq_servo'] = {
         .setCheck('Number')
         .setAlign(Blockly.ALIGN_RIGHT)
         .appendField(Blockly.Msg.GROVE_INOUT_LED_INPUT2);
-    this.appendValueInput("DEGREE", Number)
-        .setCheck(Number)
+    this.appendValueInput("DEGREE", 'Number')
+        .setCheck('Number')
         .setAlign(Blockly.ALIGN_RIGHT)
         .appendField("sur l'angle [0~180°]");
     this.setPreviousStatement(true, null);
@@ -103,15 +101,15 @@ Blockly.Blocks['bq_servo_rotation_continue'] = {
         .setCheck('Number')
         .setAlign(Blockly.ALIGN_RIGHT)
         .appendField(Blockly.Msg.GROVE_INOUT_LED_INPUT2);
-    this.appendValueInput("SENS", Boolean)
+    this.appendValueInput("SENS", 'Boolean')
         .setAlign(Blockly.ALIGN_RIGHT)
         .appendField("sens horaire (VRAI ou FAUX ?)");
-	this.appendValueInput("VITESSE", Number)
-        .setCheck(Number)
+	this.appendValueInput("VITESSE", 'Number')
+        .setCheck('Number')
         .setAlign(Blockly.ALIGN_RIGHT)
         .appendField("à la vitesse [0~255] de");
-    this.appendValueInput("DELAY_TIME", Number)
-        .setCheck(Number)
+    this.appendValueInput("DELAY_TIME", 'Number')
+        .setCheck('Number')
         .setAlign(Blockly.ALIGN_RIGHT)
         .appendField("pendant un délai (ms) de");
     this.setPreviousStatement(true, null);
@@ -131,7 +129,7 @@ Blockly.Blocks['bq_bouton_poussoir'] = {
         .setCheck('Number')
         .setAlign(Blockly.ALIGN_RIGHT)
         .appendField(Blockly.Msg.GROVE_INOUT_LED_INPUT2);
-    this.setOutput(true, Boolean);
+    this.setOutput(true, 'Boolean');
     this.setTooltip('Entrée bouton poussoir (réf : BOUTON-POUSSOIR)');
   }
 };
@@ -147,7 +145,7 @@ Blockly.Blocks['bq_luminosite'] = {
         .setCheck('Number')
         .setAlign(Blockly.ALIGN_RIGHT)
         .appendField(Blockly.Msg.GROVE_INOUT_LED_INPUT2);
-    this.setOutput(true, Number);
+    this.setOutput(true, 'Number');
     this.setTooltip('Entrée Capteur de Luminosité (réf : LUMINOSITE)');
   }
 };
@@ -156,14 +154,14 @@ Blockly.Blocks['bq_potentiometre'] = {
   init: function() {
     this.setColour(10);
 	this.setHelpUrl('http://www.bq.com/fr/produits/kit-robotica.html');
-    this.appendDummyInput()
+    this.appendDummyInput("")
         .appendField("la position du potentiomètre")
         .appendField(new Blockly.FieldImage("https://www-cdn.bq.com/img/web/product_images/kit-robotica/spec/bq-kit-robotica-spec08.jpg", 64, 64));
 	this.appendValueInput("PIN", 'Number')
         .setCheck('Number')
         .setAlign(Blockly.ALIGN_RIGHT)
         .appendField(Blockly.Msg.GROVE_INOUT_LED_INPUT2);
-    this.setOutput(true, Number);
+    this.setOutput(true, 'Number');
     this.setTooltip('Entrée potentiomètre (réf : POTENTIOMETRE');
   }
 };
@@ -210,7 +208,7 @@ Blockly.Blocks['bq_capteur_de_ligne'] = {
         .setCheck('Number')
         .setAlign(Blockly.ALIGN_RIGHT)
         .appendField(Blockly.Msg.GROVE_INOUT_LED_INPUT2);
-    this.setOutput(true, Boolean);
+    this.setOutput(true, 'Boolean');
     this.setTooltip('Entrée Détecteur de ligne (réf : LIG1)');
   }
 };

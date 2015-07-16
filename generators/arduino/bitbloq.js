@@ -1,10 +1,4 @@
-﻿'use strict';
-
-goog.provide('Blockly.Arduino.bq');
-
-goog.require('Blockly.Arduino');
-
-Blockly.Arduino.bq_led = function() {
+﻿Blockly.Arduino.bq_led = function() {
   var dropdown_pin = this.getTitleValue('PIN');
   var dropdown_stat = this.getTitleValue('STAT');
   Blockly.Arduino.setups_['setup_led1red_'+dropdown_pin] = 'pinMode('+dropdown_pin+', OUTPUT);';
