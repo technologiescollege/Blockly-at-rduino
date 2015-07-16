@@ -448,6 +448,11 @@ Blockly.Msg.CAT_ZUMO = "ZumoBot";	//added april 6th 2015
 Blockly.Msg.CAT_ZUMO_MOTORS = "Motors";
 Blockly.Msg.CAT_ZUMO_SENSORS = "Sensors";
 
+Blockly.Msg.CAT_BQ = "bitbloq";  //added july 14th 2015
+Blockly.Msg.CAT_BQ_IN = "In";
+Blockly.Msg.CAT_BQ_OUT = "Out";
+Blockly.Msg.CAT_BQ_COMM = "Communication";
+
 Blockly.Msg.FIELDDROPDOWN = [["HIGH", "HIGH"], ["LOW", "LOW"]];
 Blockly.Msg.FIELDDROPDOWN_ONOFF = [["ON", "ON"], ["OFF", "OFF"]];
 
