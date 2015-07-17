@@ -643,7 +643,7 @@ Blockly.Msg.ROBOTS_MISC_BUZZER_DURATION = "Durée";
 Blockly.Msg.ROBOTS_MISC_BUZZER_VOLUME = "Volume";
 Blockly.Msg.ROBOTS_MISC_BUZZER_NOTE = "Note";
 
-//added july 16th 2015
+//added july 15th 2015
 Blockly.Msg.TECHNOZONE_PIN = "sur la broche";
 Blockly.Msg.TECHNOZONE_TELECFLUSH_TITLE = "vide le tampon de réception de la télécommande";
 Blockly.Msg.TECHNOZONE_TELECFLUSH_TOOLTIP = "Vide le tampon de réception de la télécommande (réf :IRF1)";
@@ -671,3 +671,6 @@ Blockly.Msg.TECHNOZONE_ILS1_TITLE = "la détection d'un champ magnétique";
 Blockly.Msg.TECHNOZONE_ILS1_TOOLTIP = "Entrée Capteur Magnétique (réf : ILS1)";
 Blockly.Msg.TECHNOZONE_PROXI1_TITLE = "la détection d'un obstacle à proximité";
 Blockly.Msg.TECHNOZONE_PROXI1_TOOLTIP = "Entrée Détecteur de Proximité (réf : PROXI1)";
+
+//added july 17th 2015
+Blockly.Msg.BQ_PIN = "sur la broche";

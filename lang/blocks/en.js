@@ -676,7 +676,7 @@ Blockly.Msg.ROBOTS_MISC_BUZZER_DURATION = "Duration";
 Blockly.Msg.ROBOTS_MISC_BUZZER_VOLUME = "Volume";
 Blockly.Msg.ROBOTS_MISC_BUZZER_NOTE = "Note";
 
-//added july 16th 2015
+//added july 15th 2015
 Blockly.Msg.TECHNOZONE_PIN = "Pin #";
 Blockly.Msg.TECHNOZONE_TELECFLUSH_TITLE = "empty IR remote buffer";
 Blockly.Msg.TECHNOZONE_TELECFLUSH_TOOLTIP = "Empty the IR buffer";
@@ -704,3 +704,6 @@ Blockly.Msg.TECHNOZONE_ILS1_TITLE = "Detect a magnetic field";
 Blockly.Msg.TECHNOZONE_ILS1_TOOLTIP = "Magnetic field detector (ref : ILS1)";
 Blockly.Msg.TECHNOZONE_PROXI1_TITLE = "Near-range IR detector";
 Blockly.Msg.TECHNOZONE_PROXI1_TOOLTIP = "Input Proximity Sensor (ref : PROXI1)";
+
+//added july 17th 2015
+Blockly.Msg.BQ_PIN = "Pin #";

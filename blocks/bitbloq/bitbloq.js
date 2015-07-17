@@ -73,18 +73,18 @@ Blockly.Blocks['bq_servo'] = {
   init: function() {
     this.setColour(190);
 	this.setHelpUrl('http://www.bq.com/fr/produits/kit-robotica.html');
-    this.appendDummyInput()
+    this.appendDummyInput("")
         .appendField("positionne le mini servo-moteur")
         .appendField(new Blockly.FieldImage("https://static-bqreaders.s3.amazonaws.com/img/web/product_images/kit-robotica/spec/bq-kit-robotica-spec10.jpg", 64, 64));
 	this.appendValueInput("PIN", 'Number')
         .setCheck('Number')
         .setAlign(Blockly.ALIGN_RIGHT)
-        .appendField(Blockly.Msg.GROVE_INOUT_LED_INPUT2);
+        .appendField("sur la broche");
     this.appendValueInput("DEGREE", 'Number')
         .setCheck('Number')
         .setAlign(Blockly.ALIGN_RIGHT)
         .appendField("sur l'angle [0~180°]");
-    this.setPreviousStatement(true, null);
+	this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setTooltip('Sortie Servo-moteur (réf : MINI-SERVO)');
   }
