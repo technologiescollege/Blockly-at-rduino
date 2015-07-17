@@ -1,5 +1,3 @@
-// This file was automatically generated.  Do not modify.
-
 'use strict';
 
 goog.provide('Blockly.Msg.en');
@@ -677,14 +675,16 @@ Blockly.Msg.ROBOTS_MISC_ZUMO_BUZZER_TOOLTIP = "Volume = 1-15 Duration = 100-4000
 Blockly.Msg.ROBOTS_MISC_BUZZER_DURATION = "Duration";
 Blockly.Msg.ROBOTS_MISC_BUZZER_VOLUME = "Volume";
 Blockly.Msg.ROBOTS_MISC_BUZZER_NOTE = "Note";
-Blockly.Msg.TECHNOZONE_TELECFLUSH_TITLE = "Get next IR button";
+
+//added july 16th 2015
+Blockly.Msg.TECHNOZONE_PIN = "Pin #";
+Blockly.Msg.TECHNOZONE_TELECFLUSH_TITLE = "empty IR remote buffer";
 Blockly.Msg.TECHNOZONE_TELECFLUSH_TOOLTIP = "Empty the IR buffer";
-Blockly.Msg.TECHNOZONE_TELECINIT_TITLE = "IR Button Get";
+Blockly.Msg.TECHNOZONE_TELECINIT_TITLE = "an IR Button pressed?";
 Blockly.Msg.TECHNOZONE_TELECINIT_TOOLTIP = "Tests if a remote button was pressed";
 Blockly.Msg.TECHNOZONE_TELECSETUP_TITLE = "Initialize IR Remote";
-Blockly.Msg.TECHNOZONE_PIN = "Pin #";
-Blockly.Msg.TECHNOZONE_TELECSETUP_TOOLTIP = "Required to use IR Button Get";
-Blockly.Msg.TECHNOZONE_TELEC12_TITLEA = "The key";
+Blockly.Msg.TECHNOZONE_TELECSETUP_TOOLTIP = "Init remote, required to use IR Button";
+Blockly.Msg.TECHNOZONE_TELEC12_TITLEA = "the key";
 Blockly.Msg.TECHNOZONE_TELEC12_TITLEB = "on the remote";
 Blockly.Msg.TECHNOZONE_TELEC12_TITLEC = "that was pressed";
 Blockly.Msg.TECHNOZONE_TELEC12_TOOLTIP = "Provides the IR code for a specific remote button";
@@ -701,6 +701,6 @@ Blockly.Msg.TECHNOZONE_SWITCH1_TOOLTIP = "Limit switch - impact sensor";
 Blockly.Msg.TECHNOZONE_CMOUV1_TITLE = "IR Motion detector";
 Blockly.Msg.TECHNOZONE_CMOUV1_TOOLTIP = "Motion detector - dome type (ref : SERVO1 + CMOUV1)";
 Blockly.Msg.TECHNOZONE_ILS1_TITLE = "Detect a magnetic field";
-Blockly.Msg.TECHNOZONE_ILS1_TOOLTIP = "Magnetic field detector(ref : ILS1)";
+Blockly.Msg.TECHNOZONE_ILS1_TOOLTIP = "Magnetic field detector (ref : ILS1)";
 Blockly.Msg.TECHNOZONE_PROXI1_TITLE = "Near-range IR detector";
 Blockly.Msg.TECHNOZONE_PROXI1_TOOLTIP = "Input Proximity Sensor (ref : PROXI1)";

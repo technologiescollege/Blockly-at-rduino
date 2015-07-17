@@ -642,12 +642,14 @@ Blockly.Msg.ROBOTS_MISC_ZUMO_BUZZER_TOOLTIP = "Volume = 1-15 durée = 100-4000";
 Blockly.Msg.ROBOTS_MISC_BUZZER_DURATION = "Durée";
 Blockly.Msg.ROBOTS_MISC_BUZZER_VOLUME = "Volume";
 Blockly.Msg.ROBOTS_MISC_BUZZER_NOTE = "Note";
+
+//added july 16th 2015
+Blockly.Msg.TECHNOZONE_PIN = "sur la broche";
 Blockly.Msg.TECHNOZONE_TELECFLUSH_TITLE = "vide le tampon de réception de la télécommande";
 Blockly.Msg.TECHNOZONE_TELECFLUSH_TOOLTIP = "Vide le tampon de réception de la télécommande (réf :IRF1)";
 Blockly.Msg.TECHNOZONE_TELECINIT_TITLE = "une touche de la télécommande a été appuyée ?";
 Blockly.Msg.TECHNOZONE_TELECINIT_TOOLTIP = "Teste si une touche de la télécommande a été appuyée (réf : IRF1)";
 Blockly.Msg.TECHNOZONE_TELECSETUP_TITLE = "initialise la télécommande";
-Blockly.Msg.TECHNOZONE_PIN = "sur la broche";
 Blockly.Msg.TECHNOZONE_TELECSETUP_TOOLTIP = "Initialise la télécommande (réf : IRF1 + (TELEC1 ou TELEC2))";
 Blockly.Msg.TECHNOZONE_TELEC12_TITLEA = "la touche";
 Blockly.Msg.TECHNOZONE_TELEC12_TITLEB = "de la télécommande";
