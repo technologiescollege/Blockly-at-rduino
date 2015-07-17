@@ -10,19 +10,19 @@ Blockly.Blocks.technozone_pap1cc = {
     this.setColour(190);
     this.appendDummyInput("")
         .appendField("mettre en mouvement continu le")
-        .appendField(new Blockly.FieldDropdown([["moteur A", "HIGH"], ["moteur B", "LOW"]]), "MOT")
+        .appendField(new Blockly.FieldDropdown(Blockly.Msg.TECHNOZONE_DROPDOWN), "MOT")
         .appendField("de la carte PAP1")
         .appendField(new Blockly.FieldImage("blocks/technozone51/pap1.jpg", 64, 64))
-        .appendField("sur le bus I2C");
+        .appendField(Blockly.Msg.TECHNOZONE_I2CBUS);
     this.appendDummyInput("")
-        .appendField("à l'adresse")
+        .appendField(Blockly.Msg.TECHNOZONE_ADDRESS)
         .appendField(new Blockly.FieldDropdown([["16", "16"], ["17", "17"], ["18", "18"], ["19", "19"], ["20", "20"], ["21", "21"], ["22", "22"], ["23", "23"]]), "I2CADD");
     this.appendValueInput("SENS", 'Boolean')
         .setAlign(Blockly.ALIGN_RIGHT)
-        .appendField("sens horaire ( VRAI ou FAUX ? )");
+        .appendField(Blockly.Msg.TECHNOZONE_SPIN );
     this.appendValueInput("VITESSE",'Number')
         .setAlign(Blockly.ALIGN_RIGHT)
-        .appendField("vitesse [0~255]");          
+        .appendField(Blockly.Msg.TECHNOZONE_SPEED);          
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setTooltip('Carte de commande de deux moteurs Pas à Pas pour EASYCON1,EASYCON2,EASYBOT1 (réf : PAP1)');
@@ -36,19 +36,19 @@ Blockly.Blocks.technozone_pap1relatif = {
     this.setColour(190);
     this.appendDummyInput("")
         .appendField("mettre en mouvement relatif le")
-        .appendField(new Blockly.FieldDropdown([["moteur A", "HIGH"], ["moteur B", "LOW"]]), "MOT")
+        .appendField(new Blockly.FieldDropdown(Blockly.Msg.TECHNOZONE_DROPDOWN), "MOT")
         .appendField("de la carte PAP1")
         .appendField(new Blockly.FieldImage("blocks/technozone51/pap1.jpg", 64, 64))
-        .appendField("sur le bus I2C");
+        .appendField(Blockly.Msg.TECHNOZONE_I2CBUS);
     this.appendDummyInput("")
-        .appendField("à l'adresse")
+        .appendField(Blockly.Msg.TECHNOZONE_ADDRESS)
         .appendField(new Blockly.FieldDropdown([["16", "16"], ["17", "17"], ["18", "18"], ["19", "19"], ["20", "20"], ["21", "21"], ["22", "22"], ["23", "23"]]), "I2CADD");
     this.appendValueInput("SENS", 'Boolean')
         .setAlign(Blockly.ALIGN_RIGHT)
-        .appendField("sens horaire ( VRAI ou FAUX ? )");
+        .appendField(Blockly.Msg.TECHNOZONE_SPIN );
     this.appendValueInput("VITESSE",'Number')
         .setAlign(Blockly.ALIGN_RIGHT)
-        .appendField("vitesse [0~255]");
+        .appendField(Blockly.Msg.TECHNOZONE_SPEED);
     this.appendValueInput("PAS",'Number')
         .setAlign(Blockly.ALIGN_RIGHT)
         .appendField("nombre de pas");               
@@ -66,9 +66,9 @@ Blockly.Blocks.technozone_pap1init = {
     this.appendDummyInput("")
         .appendField("initialiser la carte PAP1")
         .appendField(new Blockly.FieldImage("blocks/technozone51/pap1.jpg", 64, 64))
-        .appendField("sur le bus I2C");
+        .appendField(Blockly.Msg.TECHNOZONE_I2CBUS);
     this.appendDummyInput("")
-        .appendField("à l'adresse")
+        .appendField(Blockly.Msg.TECHNOZONE_ADDRESS)
         .appendField(new Blockly.FieldDropdown([["16", "16"], ["17", "17"], ["18", "18"], ["19", "19"], ["20", "20"], ["21", "21"], ["22", "22"], ["23", "23"]]), "I2CADD");         
     this.appendDummyInput("")
         .appendField("le mode de commande des moteurs est")
@@ -104,8 +104,8 @@ Blockly.Blocks.technozone_mot2 = {
   init: function() {
     this.setColour(190);
     this.appendDummyInput("")
-        .appendField(Blockly.Msg.TECHNOZONE_MOT2_CONTROLS)
-        .appendField(new Blockly.FieldDropdown(Blockly.Msg.TECHNOZONE_MOT2_DROPDOWN), "MOT")
+        .appendField(Blockly.Msg.TECHNOZONE_CONTROLS)
+        .appendField(new Blockly.FieldDropdown(Blockly.Msg.TECHNOZONE_DROPDOWN), "MOT")
         .appendField(Blockly.Msg.TECHNOZONE_MOT2_FOR)
         .appendField(new Blockly.FieldImage("blocks/technozone51/mot2.jpg", 64, 64))
         .appendField(Blockly.Msg.TECHNOZONE_CONNECTTOPINS);
@@ -117,10 +117,10 @@ Blockly.Blocks.technozone_mot2 = {
         .appendField(new Blockly.FieldTextInput('',  Blockly.Arduino.pinPWMValidator), 'PINPWM');
     this.appendValueInput("SENS", 'Boolean')
         .setAlign(Blockly.ALIGN_RIGHT)
-        .appendField(Blockly.Msg.TECHNOZONE_MOT2_SPIN);
+        .appendField(Blockly.Msg.TECHNOZONE_SPIN);
     this.appendValueInput("VITESSE",'Number')
         .setAlign(Blockly.ALIGN_RIGHT)
-        .appendField(Blockly.Msg.TECHNOZONE_MOT2_SPEED);          
+        .appendField(Blockly.Msg.TECHNOZONE_SPEED);          
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setTooltip(Blockly.Msg.TECHNOZONE_MOT2_TOOLTIP);
@@ -216,18 +216,18 @@ Blockly.Blocks.technozone_mot1easybot1 = {
   init: function() {
     this.setColour(190);
     this.appendDummyInput("")
-        .appendField("commande le")
-        .appendField(new Blockly.FieldDropdown([["moteur A", "HIGH"], ["moteur B", "LOW"]]), "MOT")
+        .appendField(Blockly.Msg.TECHNOZONE_CONTROLS)
+        .appendField(new Blockly.FieldDropdown(Blockly.Msg.TECHNOZONE_DROPDOWN), "MOT")
         .appendField("sur la carte EASYBOT1")
         .appendField(new Blockly.FieldImage("blocks/technozone51/easybot.jpg", 64, 64))
         .appendField(new Blockly.FieldImage("blocks/technozone51/plus.jpg", 20, 64))
         .appendField(new Blockly.FieldImage("blocks/technozone51/kitmot1.jpg", 64, 64));
     this.appendValueInput("SENS", 'Boolean')
         .setAlign(Blockly.ALIGN_RIGHT)
-        .appendField("sens horaire (VRAI ou FAUX ?)");
+        .appendField(Blockly.Msg.TECHNOZONE_SPIN);
     this.appendValueInput("VITESSE",'Number')
         .setAlign(Blockly.ALIGN_RIGHT)
-        .appendField("vitesse [0~255]");          
+        .appendField(Blockly.Msg.TECHNOZONE_SPEED);          
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setTooltip('Commande de deux moteurs CC sur EASYBOT1 (réf : EASYBOT1 + KIT-MOT1)');
@@ -240,18 +240,18 @@ Blockly.Blocks.technozone_mot1easycon1 = {
   init: function() {
     this.setColour(190);
     this.appendDummyInput("")
-        .appendField("commande le")
-        .appendField(new Blockly.FieldDropdown([["moteur A", "HIGH"], ["moteur B", "LOW"]]), "MOT")
+        .appendField(Blockly.Msg.TECHNOZONE_CONTROLS)
+        .appendField(new Blockly.FieldDropdown(Blockly.Msg.TECHNOZONE_DROPDOWN), "MOT")
         .appendField("sur la carte EASYCON1")
         .appendField(new Blockly.FieldImage("blocks/technozone51/easycon1.jpg", 64, 64))
         .appendField(new Blockly.FieldImage("blocks/technozone51/plus.jpg", 20, 64))
         .appendField(new Blockly.FieldImage("blocks/technozone51/kitmot1.jpg", 64, 64));
     this.appendValueInput("SENS", 'Boolean')
         .setAlign(Blockly.ALIGN_RIGHT)
-        .appendField("sens horaire (VRAI ou FAUX ?)");
+        .appendField(Blockly.Msg.TECHNOZONE_SPIN);
     this.appendValueInput("VITESSE",'Number')
         .setAlign(Blockly.ALIGN_RIGHT)
-        .appendField("vitesse [0~255]");          
+        .appendField(Blockly.Msg.TECHNOZONE_SPEED);          
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setTooltip('Commande de deux moteurs CC sur EASYCON1 (réf : EASYCON1 + KIT-MOT1)');
