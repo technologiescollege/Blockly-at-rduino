@@ -94,7 +94,7 @@ contient la liste des blocs de Blockly ci-dessous en compressé-->
     <div id="menuPanelCenter">
             <ul id="ul_nav" role="tablist">
             <li role="presentation" id="tab_blocks" class="active">
-                 <a href="#content_blocks" aria-controls="content_blocks" role="tab"    data-toggle="tab">
+                 <a href="#content_blocks" aria-controls="content_blocks" role="tab" data-toggle="tab">
                      <span class="glyphicon glyphicon-home"></span>
                      <span id="a_blocks"> </span>
                  </a>
@@ -522,20 +522,114 @@ contient la liste des blocs de Blockly ci-dessous en compressé-->
     <sep></sep>
     <category name="CAT_BQ">
         <category name="CAT_BQ_IN">
-            <block type="bq_ultrason"></block>
-            <block type="bq_bouton_poussoir"></block>
-            <block type="bq_luminosite"></block>
-            <block type="bq_potentiometre"></block>
-			<block type="bq_capteur_de_ligne"></block>
+            <block type="bq_ultrason">
+				<value name="TRIGER">
+				<block type="math_number">
+				<field name="NUM">0</field>
+				</block>
+				</value>
+				<value name="DIST">
+				<block type="math_number">
+				<field name="NUM">1</field>
+				</block>
+				</value>
+			</block>
+            <block type="bq_bouton_poussoir">
+				<value name="PIN">
+				<block type="math_number">
+				<field name="NUM">1</field>
+				</block>
+				</value>
+			</block>
+            <block type="bq_luminosite">
+				<value name="PIN">
+				<block type="math_number">
+				<field name="NUM">1</field>
+				</block>
+				</value>
+			</block>
+            <block type="bq_potentiometre">
+				<value name="PIN">
+				<block type="math_number">
+				<field name="NUM">1</field>
+				</block>
+				</value>
+			</block>
+			<block type="bq_capteur_de_ligne">
+				<value name="PIN">
+				<block type="math_number">
+				<field name="NUM">1</field>
+				</block>
+				</value>
+			</block>
         </category>
         <category name="CAT_BQ_OUT">
-            <block type="bq_led"></block>
-            <block type="bq_buzzer"></block>
-            <block type="bq_servo"></block>
-            <block type="bq_servo_rotation_continue"></block>
+            <block type="bq_led">
+				<value name="PIN">
+				<block type="math_number">
+				<field name="NUM">1</field>
+				</block>
+				</value>
+			</block>
+            <block type="bq_buzzer">
+				<value name="PIN">
+				<block type="math_number">
+				<field name="NUM">1</field>
+				</block>
+				</value>
+				<value name="NUM">
+				<block type="math_number">
+				<field name="NUM">1000</field>
+				</block>
+				</value>
+				<value name="TPS">
+				<block type="math_number">
+				<field name="NUM">500</field>
+				</block>
+				</value>
+			</block>
+            <block type="bq_servo">
+				<value name="PIN">
+				<block type="math_number">
+				<field name="NUM">3</field>
+				</block>
+				</value>
+				<value name="DEGREE">
+				<block type="math_number">
+				<field name="NUM">90</field>
+				</block>
+				</value>
+			</block>
+            <block type="bq_servo_rotation_continue">
+				<value name="PIN">
+				<block type="math_number">
+				<field name="NUM">3</field>
+				</block>
+				</value>
+				<value name="SENS">
+				<block type="logic_boolean">
+				<field name="BOOL">True</field>
+				</block>
+				</value>
+				<value name="VITESSE">
+				<block type="math_number">
+				<field name="NUM">127</field>
+				</block>
+				</value>
+				<value name="DELAY_TIME">
+				<block type="math_number">
+				<field name="NUM">500</field>
+				</block>
+				</value>				
+			</block>
         </category>
         <category name="CAT_BQ_COMM">
-            <block type="bq_bluetooth_slave"></block>
+            <block type="bq_bluetooth_slave">
+				<value name="PIN">
+				<block type="math_number">
+				<field name="NUM">3</field>
+				</block>
+			</block>
         </category>
     </category>
 </xml>

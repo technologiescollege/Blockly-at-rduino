@@ -674,3 +674,27 @@ Blockly.Msg.TECHNOZONE_PROXI1_TOOLTIP = "Entrée Détecteur de Proximité (réf 
 
 //added july 17th 2015
 Blockly.Msg.BQ_PIN = "sur la broche";
+Blockly.Msg.BQ_PIN_DIGITAL = "sur la broche Numérique";
+Blockly.Msg.BQ_PIN_PWM = "sur la broche PWM~";
+Blockly.Msg.BQ_PIN_ANALOG = "sur la broche Analogique";
+Blockly.Msg.BQ_HELPURL = "http://www.bq.com/fr/produits/kit-robotica.html";
+Blockly.Msg.BQ_LED1_TOOLTIP = "Sortie led (réf : LED)";
+Blockly.Msg.BQ_BUZZER1_TOOLTIP = "Sortie Buzzer (réf : BUZZER)";
+Blockly.Msg.BQ_SONAR1_TOOLTIP = "Entrée Ultrason (réf : ULTRASON)";
+Blockly.Msg.BQ_SERVO1_TITLEA = "positionne le mini servo-moteur";
+Blockly.Msg.BQ_SERVO1_TITLEB = "sur l'angle [0~180°]";
+Blockly.Msg.BQ_SERVO1_TOOLTIP = "Sortie Servo-moteur (réf : MINI-SERVO)";
+Blockly.Msg.BQ_SERVO2_TITLEA = "faire tourner le servo-moteur à rotation continue";
+Blockly.Msg.BQ_SERVO2_TITLEB = "sens horaire (VRAI ou FAUX ?)";
+Blockly.Msg.BQ_SERVO2_TITLEC = "à la vitesse [0~255] de";
+Blockly.Msg.BQ_SERVO2_TITLED = "pendant un délai (ms) de";
+Blockly.Msg.BQ_SERVO2_TOOLTIP = "rotation possible entre 0~180 degrés : 0~90 puissance variable dans un sens ; 90~180 puissance variable dans l'autre sens";
+Blockly.Msg.BQ_BP_TOOLTIP = 'Entrée bouton poussoir (réf : BOUTON-POUSSOIR)';
+Blockly.Msg.BQ_LUX_TITLE = "la luminosité (en Lux) lue";
+Blockly.Msg.BQ_LUX_TOOLTIP = 'Entrée Capteur de Luminosité (réf : LUMINOSITE)';
+Blockly.Msg.BQ_POT_TITLE = "la position du potentiomètre";
+Blockly.Msg.BQ_POT_TOOLTIP = 'Entrée potentiomètre (réf : POTENTIOMETRE';
+Blockly.Msg.BQ_IR_TITLE = "l'état du suiveur de ligne";
+Blockly.Msg.BQ_IR_TOOLTIP = 'Entrée Détecteur de ligne (réf : LIG1)';
+Blockly.Msg.BQ_BT_TITLE = "Bluetooth en mode esclave";
+Blockly.Msg.BQ_BT_TOOLTIP = 'Bluetooth V2.0+EDR esclave. Seulement 1 esclave par carte.';

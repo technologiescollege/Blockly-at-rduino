@@ -124,10 +124,7 @@ Blockly.Blocks['math_trig'] = {
     var OPERATORS =
         [[Blockly.Msg.MATH_TRIG_SIN, 'SIN'],
          [Blockly.Msg.MATH_TRIG_COS, 'COS'],
-         [Blockly.Msg.MATH_TRIG_TAN, 'TAN'],
-         [Blockly.Msg.MATH_TRIG_ASIN, 'ASIN'],
-         [Blockly.Msg.MATH_TRIG_ACOS, 'ACOS'],
-         [Blockly.Msg.MATH_TRIG_ATAN, 'ATAN']];
+         [Blockly.Msg.MATH_TRIG_TAN, 'TAN']];
     this.setHelpUrl(Blockly.Msg.MATH_TRIG_HELPURL);
     this.setColour(Blockly.Blocks.math.HUE);
     this.setOutput(true, 'Number');
@@ -141,10 +138,7 @@ Blockly.Blocks['math_trig'] = {
       var TOOLTIPS = {
         'SIN': Blockly.Msg.MATH_TRIG_TOOLTIP_SIN,
         'COS': Blockly.Msg.MATH_TRIG_TOOLTIP_COS,
-        'TAN': Blockly.Msg.MATH_TRIG_TOOLTIP_TAN,
-        'ASIN': Blockly.Msg.MATH_TRIG_TOOLTIP_ASIN,
-        'ACOS': Blockly.Msg.MATH_TRIG_TOOLTIP_ACOS,
-        'ATAN': Blockly.Msg.MATH_TRIG_TOOLTIP_ATAN
+        'TAN': Blockly.Msg.MATH_TRIG_TOOLTIP_TAN
       };
       return TOOLTIPS[mode];
     });

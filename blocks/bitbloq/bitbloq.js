@@ -8,171 +8,173 @@
 Blockly.Blocks['bq_led'] = {
   init: function() {
     this.setColour(190);
-	this.setHelpUrl('http://www.bq.com/fr/produits/kit-robotica.html');
-    this.appendDummyInput()
-        .appendField(new Blockly.FieldDropdown([["allume", "HIGH"], ["éteint", "LOW"]]), "STAT")
-        .appendField("la DEL")
-        .appendField(new Blockly.FieldImage("https://www-cdn.bq.com/img/web/product_images/kit-robotica/spec/bq-kit-robotica-spec09.jpg", 64, 64));
-	this.appendValueInput("PIN", 'Number')
+	this.setHelpUrl(Blockly.Msg.BQ_HELPURL);
+	this.appendDummyInput()
+        .appendField(Blockly.Msg.GROVE_INOUT_LED_INPUT1)
+        .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/bitbloq/LED.jpg', 64, 64));
+    this.appendValueInput("PIN", 'Number')
         .setCheck('Number')
         .setAlign(Blockly.ALIGN_RIGHT)
-        .appendField(Blockly.Msg.GROVE_INOUT_LED_INPUT2);
+        .appendField(Blockly.Msg.GROVE_INOUT_LED_INPUT2);		
+    //this.setInputsInline(true);
+	this.appendDummyInput("")
+		.setAlign(Blockly.ALIGN_RIGHT)
+        .appendField(Blockly.Msg.GROVE_INOUT_LED_INPUT3)
+        .appendField(new Blockly.FieldDropdown(Blockly.Msg.FIELDDROPDOWN), "STAT");
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    this.setTooltip('Sortie led (réf : LED)');
+    this.setTooltip(Blockly.Msg.BQ_LED1_TOOLTIP);
   }
 };
 
 Blockly.Blocks['bq_buzzer'] = {
   init: function() {
     this.setColour(190);	
-	this.setHelpUrl('http://www.bq.com/fr/produits/kit-robotica.html');
+	this.setHelpUrl(Blockly.Msg.BQ_HELPURL);
     this.appendDummyInput()
-		.appendField("émettre un son du buzzer")
-        .appendField(new Blockly.FieldImage("https://www-cdn.bq.com/img/web/product_images/kit-robotica/spec/bq-kit-robotica-spec06.jpg", 64, 64));
+		.appendField(Blockly.Msg.TECHNOZONE_BUZZER1_TITLE)
+        .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/bitbloq/buzzer.jpg', 64, 64));
 	this.appendValueInput("PIN", 'Number')
         .setCheck('Number')
         .setAlign(Blockly.ALIGN_RIGHT)
-        .appendField(Blockly.Msg.GROVE_INOUT_LED_INPUT2);	
+        .appendField(Blockly.Msg.BQ_PIN);	
     this.appendValueInput("NUM", 'Number')
-        .appendField("d'une fréquence (Hz)")
+        .appendField(Blockly.Msg.TECHNOZONE_BUZZER1_FREQ)
         .setCheck(Number);
     this.appendValueInput("TPS", 'Number')
-        .appendField("pendant une durée (ms) de")
+        .appendField(Blockly.Msg.TECHNOZONE_BUZZER1_DUR)
         .setCheck('Number');
     this.setInputsInline(true);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    this.setTooltip('Sortie Buzzer (réf : BUZZER)');
+    this.setTooltip(Blockly.Msg.BQ_BUZZER1_TOOLTIP);
   }
 };
 
 Blockly.Blocks['bq_ultrason'] = {
   init: function() {
     this.setColour(10);
-	this.setHelpUrl('http://www.bq.com/fr/produits/kit-robotica.html');
+	this.setHelpUrl(Blockly.Msg.BQ_HELPURL);
     this.appendDummyInput()
-	    .appendField("la distance mesurée (cm)")
-        .appendField(new Blockly.FieldImage("http://d7smofq56tu69.cloudfront.net/media/catalog/product/cache/9/thumbnail/72x64/9df78eab33525d08d6e5fb8d27136e95/i/m/img_4643.jpg", 64, 64));
-    this.appendDummyInput()
-	    .appendField("TRIG est sur la broche");
+	    .appendField(Blockly.Msg.TECHNOZONE_SONAR1_TITLE)
+        .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/bitbloq/ranger.jpg', 64, 64));
     this.appendValueInput("TRIGER", 'Number')
         .setCheck('Number')
-        .setAlign(Blockly.ALIGN_RIGHT);
-	this.appendDummyInput()
-        .appendField("DIST est sur la broche");
+        .setAlign(Blockly.ALIGN_RIGHT)
+		.appendField(Blockly.Msg.TECHNOZONE_SONAR1_TRIG);
     this.appendValueInput("DIST", 'Number')
         .setCheck('Number')
-        .setAlign(Blockly.ALIGN_RIGHT);
+        .setAlign(Blockly.ALIGN_RIGHT)
+		.appendField(Blockly.Msg.TECHNOZONE_SONAR1_DIST);
 	this.setOutput(true, 'Boolean');
-    this.setTooltip('Entrée Ultrason (réf : ULTRASON)');
+    this.setTooltip(Blockly.Msg.BQ_SONAR1_TOOLTIP);
   }
 };
 
 Blockly.Blocks['bq_servo'] = {
   init: function() {
     this.setColour(190);
-	this.setHelpUrl('http://www.bq.com/fr/produits/kit-robotica.html');
+	this.setHelpUrl(Blockly.Msg.BQ_HELPURL);
     this.appendDummyInput("")
-        .appendField("positionne le mini servo-moteur")
-        .appendField(new Blockly.FieldImage("https://static-bqreaders.s3.amazonaws.com/img/web/product_images/kit-robotica/spec/bq-kit-robotica-spec10.jpg", 64, 64));
+        .appendField(Blockly.Msg.BQ_SERVO1_TITLEA)
+        .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/bitbloq/mini-servo.jpg', 64, 64));
 	this.appendValueInput("PIN", 'Number')
         .setCheck('Number')
         .setAlign(Blockly.ALIGN_RIGHT)
-        .appendField("sur la broche");
+        .appendField(Blockly.Msg.BQ_PIN_PWM);
     this.appendValueInput("DEGREE", 'Number')
         .setCheck('Number')
         .setAlign(Blockly.ALIGN_RIGHT)
-        .appendField("sur l'angle [0~180°]");
+        .appendField(Blockly.Msg.BQ_SERVO1_TITLEB);
 	this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    this.setTooltip('Sortie Servo-moteur (réf : MINI-SERVO)');
+    this.setTooltip(Blockly.Msg.BQ_SERVO1_TOOLTIP);
   }
 };
 
 Blockly.Blocks['bq_servo_rotation_continue'] = {
   init: function() {
     this.setColour(190);
-	this.setHelpUrl('http://www.bq.com/fr/produits/kit-robotica.html');
+	this.setHelpUrl(Blockly.Msg.BQ_HELPURL);
     this.appendDummyInput()
-        .appendField("faire tourner le servo-moteur à rotation continue")
-        .appendField(new Blockly.FieldImage("https://www-cdn.bq.com/img/web/product_images/kit-robotica/spec/bq-kit-robotica-spec11.jpg", 64, 64));
+        .appendField(Blockly.Msg.BQ_SERVO2_TITLEA)
+        .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/bitbloq/servo-continu.jpg', 64, 64));
 	this.appendValueInput("PIN", 'Number')
         .setCheck('Number')
         .setAlign(Blockly.ALIGN_RIGHT)
-        .appendField(Blockly.Msg.GROVE_INOUT_LED_INPUT2);
+        .appendField(Blockly.Msg.BQ_PIN_PWM);
     this.appendValueInput("SENS", 'Boolean')
         .setAlign(Blockly.ALIGN_RIGHT)
-        .appendField("sens horaire (VRAI ou FAUX ?)");
+        .appendField(Blockly.Msg.BQ_SERVO2_TITLEB);
 	this.appendValueInput("VITESSE", 'Number')
         .setCheck('Number')
         .setAlign(Blockly.ALIGN_RIGHT)
-        .appendField("à la vitesse [0~255] de");
+        .appendField(Blockly.Msg.BQ_SERVO2_TITLEC);
     this.appendValueInput("DELAY_TIME", 'Number')
         .setCheck('Number')
         .setAlign(Blockly.ALIGN_RIGHT)
-        .appendField("pendant un délai (ms) de");
+        .appendField(Blockly.Msg.BQ_SERVO2_TITLED);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    this.setTooltip("rotation possible entre 0~180 degrés : 0~90 puissance variable dans un sens ; 90~180 puissance variable dans l'autre sens");
+    this.setTooltip(Blockly.Msg.BQ_SERVO2_TOOLTIP);
   }
 };
 
 Blockly.Blocks['bq_bouton_poussoir'] = {
   init: function() {
     this.setColour(120);
-	this.setHelpUrl('http://www.bq.com/fr/produits/kit-robotica.html');
+	this.setHelpUrl(Blockly.Msg.BQ_HELPURL);
     this.appendDummyInput()
-        .appendField("l'état du bouton")
-        .appendField(new Blockly.FieldImage("https://www-cdn.bq.com/img/web/product_images/kit-robotica/spec/bq-kit-robotica-spec04.jpg", 64, 64));
+        .appendField(Blockly.Msg.GROVE_INOUT_BUTTON_TEXT)
+        .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/bitbloq/BP.jpg', 64, 64));
 	this.appendValueInput("PIN", 'Number')
         .setCheck('Number')
         .setAlign(Blockly.ALIGN_RIGHT)
-        .appendField(Blockly.Msg.GROVE_INOUT_LED_INPUT2);
+        .appendField(Blockly.Msg.BQ_PIN_DIGITAL);
     this.setOutput(true, 'Boolean');
-    this.setTooltip('Entrée bouton poussoir (réf : BOUTON-POUSSOIR)');
+    this.setTooltip(Blockly.Msg.BQ_BP_TOOLTIP);
   }
 };
 
 Blockly.Blocks['bq_luminosite'] = {
   init: function() {
     this.setColour(10);
-	this.setHelpUrl('http://www.bq.com/fr/produits/kit-robotica.html');
+	this.setHelpUrl(Blockly.Msg.BQ_HELPURL);
     this.appendDummyInput()
-        .appendField("la luminosité (Lux) lue")
-        .appendField(new Blockly.FieldImage("https://www-cdn.bq.com/img/web/product_images/kit-robotica/spec/bq-kit-robotica-spec05.jpg", 64, 64));
+        .appendField(Blockly.Msg.BQ_LUX_TITLE)
+        .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/bitbloq/LDR.jpg', 64, 64));
 	this.appendValueInput("PIN", 'Number')
         .setCheck('Number')
         .setAlign(Blockly.ALIGN_RIGHT)
-        .appendField(Blockly.Msg.GROVE_INOUT_LED_INPUT2);
+        .appendField(Blockly.Msg.BQ_PIN_ANALOG);
     this.setOutput(true, 'Number');
-    this.setTooltip('Entrée Capteur de Luminosité (réf : LUMINOSITE)');
+    this.setTooltip(Blockly.Msg.BQ_LUX_TOOLTIP);
   }
 };
 
 Blockly.Blocks['bq_potentiometre'] = {
   init: function() {
     this.setColour(10);
-	this.setHelpUrl('http://www.bq.com/fr/produits/kit-robotica.html');
+	this.setHelpUrl(Blockly.Msg.BQ_HELPURL);
     this.appendDummyInput("")
-        .appendField("la position du potentiomètre")
-        .appendField(new Blockly.FieldImage("https://www-cdn.bq.com/img/web/product_images/kit-robotica/spec/bq-kit-robotica-spec08.jpg", 64, 64));
+        .appendField(Blockly.Msg.BQ_POT_TITLE)
+        .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/bitbloq/potentiometre.jpg', 64, 64));
 	this.appendValueInput("PIN", 'Number')
         .setCheck('Number')
         .setAlign(Blockly.ALIGN_RIGHT)
-        .appendField(Blockly.Msg.GROVE_INOUT_LED_INPUT2);
+        .appendField(Blockly.Msg.BQ_PIN_ANALOG);
     this.setOutput(true, 'Number');
-    this.setTooltip('Entrée potentiomètre (réf : POTENTIOMETRE');
+    this.setTooltip(Blockly.Msg.BQ_POT_TOOLTIP);
   }
 };
 
 Blockly.Blocks['bq_bluetooth_slave'] = {
   init: function() {
     this.setColour(190);
-	this.setHelpUrl('http://www.bq.com/fr/produits/kit-robotica.html');
+	this.setHelpUrl(Blockly.Msg.BQ_HELPURL);
     this.appendDummyInput()
-      .appendField("Bluetooth en mode esclave")
-      .appendField(new Blockly.FieldImage("https://www-cdn.bq.com/img/web/product_images/kit-robotica/spec/bq-kit-robotica-spec07.jpg", 64, 64));
+      .appendField(Blockly.Msg.BQ_BT_TITLE)
+      .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/bitbloq/bluetooth.jpg', 64, 64));
 	this.appendValueInput("PIN", 'Number')
         .setCheck('Number')
         .setAlign(Blockly.ALIGN_RIGHT)
@@ -193,22 +195,22 @@ Blockly.Blocks['bq_bluetooth_slave'] = {
       .appendField("envoyer");
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    this.setTooltip('Bluetooth V2.0+EDR esclave. Seulement 1 esclave par carte.');
+    this.setTooltip(Blockly.Msg.BQ_BT_TOOLTIP);
   }
 };
 
 Blockly.Blocks['bq_capteur_de_ligne'] = {
   init: function() {
     this.setColour(120);
-	this.setHelpUrl('http://www.bq.com/fr/produits/kit-robotica.html');
+	this.setHelpUrl(Blockly.Msg.BQ_HELPURL);
     this.appendDummyInput()
-        .appendField("l'état du capteur")
-        .appendField(new Blockly.FieldImage("https://www-cdn.bq.com/img/web/product_images/kit-robotica/spec/bq-kit-robotica-spec03.jpg", 64, 64));
+        .appendField(Blockly.Msg.BQ_IR_TITLE)
+        .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/bitbloq/IR.jpg', 64, 64));
 	this.appendValueInput("PIN", 'Number')
         .setCheck('Number')
         .setAlign(Blockly.ALIGN_RIGHT)
-        .appendField(Blockly.Msg.GROVE_INOUT_LED_INPUT2);
+        .appendField(Blockly.Msg.BQ_PIN_DIGITAL);
     this.setOutput(true, 'Boolean');
-    this.setTooltip('Entrée Détecteur de ligne (réf : LIG1)');
+    this.setTooltip(Blockly.Msg.BQ_IR_TOOLTIP);
   }
 };
