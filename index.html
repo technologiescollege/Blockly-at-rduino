@@ -16,6 +16,7 @@ contient la liste des blocs de Blockly ci-dessous en compressé-->
 <script type="text/javascript" src="blocks/blockly/variables.js"></script>
 
 <script type="text/javascript" src="blocks/arduino_base/arduino_base.js"></script>
+<script type="text/javascript" src="blocks/bitbloq/bitbloq.js"></script>
 <script type="text/javascript" src="blocks/grove/grove.js"></script>
 <script type="text/javascript" src="blocks/robots/motors.js"></script>
 <script type="text/javascript" src="blocks/robots/robotmisc.js"></script>
@@ -23,6 +24,7 @@ contient la liste des blocs de Blockly ci-dessous en compressé-->
 
 <script type="text/javascript" src="generators/arduino/blocklyduino.js"></script>
 <script type="text/javascript" src="generators/arduino/arduino_base.js"></script>
+<script type="text/javascript" src="generators/arduino/bitbloq.js"></script>
 <script type="text/javascript" src="generators/arduino/control.js"></script>
 <script type="text/javascript" src="generators/arduino/grove.js"></script>
 <script type="text/javascript" src="generators/arduino/logic.js"></script>
@@ -92,7 +94,7 @@ contient la liste des blocs de Blockly ci-dessous en compressé-->
     <div id="menuPanelCenter">
             <ul id="ul_nav" role="tablist">
             <li role="presentation" id="tab_blocks" class="active">
-                 <a href="#content_blocks" aria-controls="content_blocks" role="tab"    data-toggle="tab">
+                 <a href="#content_blocks" aria-controls="content_blocks" role="tab" data-toggle="tab">
                      <span class="glyphicon glyphicon-home"></span>
                      <span id="a_blocks"> </span>
                  </a>
@@ -194,7 +196,10 @@ contient la liste des blocs de Blockly ci-dessous en compressé-->
         <h4 class="modal-title" id="aboutModalLabel"></h4>
       </div>
       <div class="modal-body">
-              <span>Github : </span><a href="https://github.com/technologiescollege/Blockly-rduino"> <i>Blockly@rduino</i></a> 
+              <span><b>Documentation :</b></span> <a href="http://tic.technologiescollege.fr/wiki/doku.php">Wiki</a>
+			  <br />
+			  <br />
+			  <span><b>Blockly@rduino</b></span> (<a href="https://github.com/technologiescollege/Blockly-at-rduino">Github</a>)
               <span id="aboutBody" style="font-style: italic;"> </span>
       </div>
     </div>
@@ -433,6 +438,7 @@ contient la liste des blocs de Blockly ci-dessous en compressé-->
 <xml id="CAT_FUNCTIONS" style="display: none">
     <category name="CAT_FUNCTIONS" custom="PROCEDURE"></category>
 </xml>
+<sep></sep>
 <xml id="CAT_ARDUINO" style="display: none">
     <sep></sep>
     <category name="CAT_ARDUINO">
@@ -512,6 +518,121 @@ contient la liste des blocs de Blockly ci-dessous en compressé-->
 				</value>
 			</block>
             <block type="servo_read_degrees"></block>
+        </category>
+    </category>
+</xml>
+<xml id="CAT_BQ" style="display: none">
+    <sep></sep>
+    <category name="CAT_BQ">
+        <category name="CAT_BQ_IN">
+            <block type="bq_ultrason">
+				<value name="TRIGER">
+				<block type="math_number">
+				<field name="NUM">0</field>
+				</block>
+				</value>
+				<value name="DIST">
+				<block type="math_number">
+				<field name="NUM">1</field>
+				</block>
+				</value>
+			</block>
+            <block type="bq_bouton_poussoir">
+				<value name="PIN">
+				<block type="math_number">
+				<field name="NUM">1</field>
+				</block>
+				</value>
+			</block>
+            <block type="bq_luminosite">
+				<value name="PIN">
+				<block type="math_number">
+				<field name="NUM">1</field>
+				</block>
+				</value>
+			</block>
+            <block type="bq_potentiometre">
+				<value name="PIN">
+				<block type="math_number">
+				<field name="NUM">1</field>
+				</block>
+				</value>
+			</block>
+			<block type="bq_capteur_de_ligne">
+				<value name="PIN">
+				<block type="math_number">
+				<field name="NUM">1</field>
+				</block>
+				</value>
+			</block>
+        </category>
+        <category name="CAT_BQ_OUT">
+            <block type="bq_led">
+				<value name="PIN">
+				<block type="math_number">
+				<field name="NUM">1</field>
+				</block>
+				</value>
+			</block>
+            <block type="bq_buzzer">
+				<value name="PIN">
+				<block type="math_number">
+				<field name="NUM">1</field>
+				</block>
+				</value>
+				<value name="NUM">
+				<block type="math_number">
+				<field name="NUM">1000</field>
+				</block>
+				</value>
+				<value name="TPS">
+				<block type="math_number">
+				<field name="NUM">500</field>
+				</block>
+				</value>
+			</block>
+            <block type="bq_servo">
+				<value name="PIN">
+				<block type="math_number">
+				<field name="NUM">3</field>
+				</block>
+				</value>
+				<value name="DEGREE">
+				<block type="math_number">
+				<field name="NUM">90</field>
+				</block>
+				</value>
+			</block>
+            <block type="bq_servo_rotation_continue">
+				<value name="PIN">
+				<block type="math_number">
+				<field name="NUM">3</field>
+				</block>
+				</value>
+				<value name="SENS">
+				<block type="logic_boolean">
+				<field name="BOOL">True</field>
+				</block>
+				</value>
+				<value name="VITESSE">
+				<block type="math_number">
+				<field name="NUM">127</field>
+				</block>
+				</value>
+				<value name="DELAY_TIME">
+				<block type="math_number">
+				<field name="NUM">500</field>
+				</block>
+				</value>				
+			</block>
+        </category>
+        <category name="CAT_BQ_COMM">
+            <block type="bq_bluetooth_slave">
+				<value name="PIN">
+				<block type="math_number">
+				<field name="NUM">3</field>
+				</block>
+			</block>
         </category>
     </category>
 </xml>

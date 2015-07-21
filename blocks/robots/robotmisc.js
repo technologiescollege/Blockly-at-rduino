@@ -162,7 +162,3 @@ Blockly.Blocks['IR_get'] = {
     this.setTooltip(Blockly.Msg.ROBOTS_MISC_IR_GET_TOOLTIP);
   }
 };
-
-
-
-

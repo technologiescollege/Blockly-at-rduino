@@ -112,24 +112,11 @@ Blockly.Arduino['math_single'] = function() {
     case 'TAN':
       code = 'tan(' + arg + ' / 180 * PI)';
       break;
+	default:
+      throw 'Unknown math operator: ' + operator;
   }
   if (code) {
     return [code, Blockly.Arduino.ORDER_FUNCTION_CALL];
-  }
-  // Second, handle cases which generate values that may need parentheses
-  // wrapping the code.
-  switch (operator) {
-    case 'ASIN':
-      code = 'asin(' + arg + ') / PI * 180';
-      break;
-    case 'ACOS':
-      code = 'acos(' + arg + ') / PI * 180';
-      break;
-    case 'ATAN':
-      code = 'atan(' + arg + ') / PI * 180';
-      break;
-    default:
-      throw 'Unknown math operator: ' + operator;
   }
   return [code, Blockly.Arduino.ORDER_DIVISION];
 };

@@ -40,7 +40,7 @@ var MSG = {
   arduino_card:"delete all and select a card",
   span_about:"about",
   aboutModalLabel:"about ...",
-  aboutBody:"<br />- translations and adaptations Sébastien Canet, integration CodeBender by Julien Rat, CSS and multilingual by Olivier Metayer."
+  aboutBody:"<br />- translations and adaptations Sébastien Canet, CodeBender integration by Julien Rat, CSS and multilingual by Olivier Metayer."
 		  + "<br />"
 		  + "<br />Contributions :"
 		  + "<br /> - Blockly (https://developers.google.com/blockly)"
