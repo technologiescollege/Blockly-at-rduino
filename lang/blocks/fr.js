@@ -427,6 +427,11 @@ Blockly.Msg.CAT_ZUMO = "ZumoBot";	//added april 6th 2015
 Blockly.Msg.CAT_ZUMO_MOTORS = "Moteurs";
 Blockly.Msg.CAT_ZUMO_SENSORS = "Capteurs";
 
+Blockly.Msg.CAT_BQ = "bitbloq";  //added july 14th 2015
+Blockly.Msg.CAT_BQ_IN = "capteurs";
+Blockly.Msg.CAT_BQ_OUT = "actionneurs";
+Blockly.Msg.CAT_BQ_COMM = "communication";
+
 Blockly.Msg.FIELDDROPDOWN = [["1 -> HAUT", "HIGH"], ["0 -> bas", "LOW"]];
 Blockly.Msg.FIELDDROPDOWN_ONOFF = [["marche", "ON"], ["arrêt", "OFF"]]
 
@@ -637,15 +642,14 @@ Blockly.Msg.ROBOTS_MISC_ZUMO_BUZZER_TOOLTIP = "Volume = 1-15 durée = 100-4000";
 Blockly.Msg.ROBOTS_MISC_BUZZER_DURATION = "Durée";
 Blockly.Msg.ROBOTS_MISC_BUZZER_VOLUME = "Volume";
 Blockly.Msg.ROBOTS_MISC_BUZZER_NOTE = "Note";
+
+//added july 15th 2015
+Blockly.Msg.TECHNOZONE_PIN = "sur la broche";
 Blockly.Msg.TECHNOZONE_TELECFLUSH_TITLE = "vide le tampon de réception de la télécommande";
 Blockly.Msg.TECHNOZONE_TELECFLUSH_TOOLTIP = "Vide le tampon de réception de la télécommande (réf :IRF1)";
 Blockly.Msg.TECHNOZONE_TELECINIT_TITLE = "une touche de la télécommande a été appuyée ?";
 Blockly.Msg.TECHNOZONE_TELECINIT_TOOLTIP = "Teste si une touche de la télécommande a été appuyée (réf : IRF1)";
 Blockly.Msg.TECHNOZONE_TELECSETUP_TITLE = "initialise la télécommande";
-Blockly.Msg.TECHNOZONE_PIN = "sur la broche";
-Blockly.Msg.TECHNOZONE_BUTTON = "l'état du bouton";
-Blockly.Msg.TECHNOZONE_OFTHE = "la DEL";
-Blockly.Msg.TECHNOZONE_CONNECTTOPINS = "connectér sur les broches";
 Blockly.Msg.TECHNOZONE_TELECSETUP_TOOLTIP = "Initialise la télécommande (réf : IRF1 + (TELEC1 ou TELEC2))";
 Blockly.Msg.TECHNOZONE_TELEC12_TITLEA = "la touche";
 Blockly.Msg.TECHNOZONE_TELEC12_TITLEB = "de la télécommande";
@@ -667,13 +671,30 @@ Blockly.Msg.TECHNOZONE_ILS1_TITLE = "la détection d'un champ magnétique";
 Blockly.Msg.TECHNOZONE_ILS1_TOOLTIP = "Entrée Capteur Magnétique (réf : ILS1)";
 Blockly.Msg.TECHNOZONE_PROXI1_TITLE = "la détection d'un obstacle à proximité";
 Blockly.Msg.TECHNOZONE_PROXI1_TOOLTIP = "Entrée Détecteur de Proximité (réf : PROXI1)";
-Blockly.Msg.TECHNOZONE_DROPDOWN = [["moteur A", "HIGH"], ["moteur B", "LOW"]];
-Blockly.Msg.TECHNOZONE_MOT2_DIR = "broche de commande de Direction (DIR)";
-Blockly.Msg.TECHNOZONE_MOT2_PWM = "broche de commande de la Vitesse (PWM~)";
-Blockly.Msg.TECHNOZONE_CONTROLS = "commande le";
-Blockly.Msg.TECHNOZONE_MOT2_FOR = "de la carte MOT2";
-Blockly.Msg.TECHNOZONE_SPEED = "vitesse [0~255]";
-Blockly.Msg.TECHNOZONE_MOT2_TOOLTIP = "Carte de commande de deux moteurs CC pour EASYCON1,EASYCON2,EASYBOT1 (réf : MOT2)";
-Blockly.Msg.TECHNOZONE_SPIN = "sens horaire (VRAI ou FAUX ?)";
-Blockly.Msg.TECHNOZONE_ADDRESS = "à l'adresse";
-Blockly.Msg.TECHNOZONE_ = "sur le bus I2C";
+
+//added july 17th 2015
+Blockly.Msg.BQ_PIN = "sur la broche";
+Blockly.Msg.BQ_PIN_DIGITAL = "sur la broche Numérique";
+Blockly.Msg.BQ_PIN_PWM = "sur la broche PWM~";
+Blockly.Msg.BQ_PIN_ANALOG = "sur la broche Analogique";
+Blockly.Msg.BQ_HELPURL = "http://www.bq.com/fr/produits/kit-robotica.html";
+Blockly.Msg.BQ_LED1_TOOLTIP = "Sortie led (réf : LED)";
+Blockly.Msg.BQ_BUZZER1_TOOLTIP = "Sortie Buzzer (réf : BUZZER)";
+Blockly.Msg.BQ_SONAR1_TOOLTIP = "Entrée Ultrason (réf : ULTRASON)";
+Blockly.Msg.BQ_SERVO1_TITLEA = "positionne le mini servo-moteur";
+Blockly.Msg.BQ_SERVO1_TITLEB = "sur l'angle [0~180°]";
+Blockly.Msg.BQ_SERVO1_TOOLTIP = "Sortie Servo-moteur (réf : MINI-SERVO)";
+Blockly.Msg.BQ_SERVO2_TITLEA = "faire tourner le servo-moteur à rotation continue";
+Blockly.Msg.BQ_SERVO2_TITLEB = "sens horaire (VRAI ou FAUX ?)";
+Blockly.Msg.BQ_SERVO2_TITLEC = "à la vitesse [0~255] de";
+Blockly.Msg.BQ_SERVO2_TITLED = "pendant un délai (ms) de";
+Blockly.Msg.BQ_SERVO2_TOOLTIP = "rotation possible entre 0~180 degrés : 0~90 puissance variable dans un sens ; 90~180 puissance variable dans l'autre sens";
+Blockly.Msg.BQ_BP_TOOLTIP = 'Entrée bouton poussoir (réf : BOUTON-POUSSOIR)';
+Blockly.Msg.BQ_LUX_TITLE = "la luminosité (en Lux) lue";
+Blockly.Msg.BQ_LUX_TOOLTIP = 'Entrée Capteur de Luminosité (réf : LUMINOSITE)';
+Blockly.Msg.BQ_POT_TITLE = "la position du potentiomètre";
+Blockly.Msg.BQ_POT_TOOLTIP = 'Entrée potentiomètre (réf : POTENTIOMETRE';
+Blockly.Msg.BQ_IR_TITLE = "l'état du suiveur de ligne";
+Blockly.Msg.BQ_IR_TOOLTIP = 'Entrée Détecteur de ligne (réf : LIG1)';
+Blockly.Msg.BQ_BT_TITLE = "Bluetooth en mode esclave";
+Blockly.Msg.BQ_BT_TOOLTIP = 'Bluetooth V2.0+EDR esclave. Seulement 1 esclave par carte.';

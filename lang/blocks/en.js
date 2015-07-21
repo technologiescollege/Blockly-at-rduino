@@ -1,5 +1,3 @@
-// This file was automatically generated.  Do not modify.
-
 'use strict';
 
 goog.provide('Blockly.Msg.en');
@@ -448,6 +446,11 @@ Blockly.Msg.CAT_ZUMO = "ZumoBot";	//added april 6th 2015
 Blockly.Msg.CAT_ZUMO_MOTORS = "Motors";
 Blockly.Msg.CAT_ZUMO_SENSORS = "Sensors";
 
+Blockly.Msg.CAT_BQ = "bitbloq";  //added july 14th 2015
+Blockly.Msg.CAT_BQ_IN = "In";
+Blockly.Msg.CAT_BQ_OUT = "Out";
+Blockly.Msg.CAT_BQ_COMM = "Communication";
+
 Blockly.Msg.FIELDDROPDOWN = [["HIGH", "HIGH"], ["LOW", "LOW"]];
 Blockly.Msg.FIELDDROPDOWN_ONOFF = [["ON", "ON"], ["OFF", "OFF"]];
 
@@ -672,17 +675,16 @@ Blockly.Msg.ROBOTS_MISC_ZUMO_BUZZER_TOOLTIP = "Volume = 1-15 Duration = 100-4000
 Blockly.Msg.ROBOTS_MISC_BUZZER_DURATION = "Duration";
 Blockly.Msg.ROBOTS_MISC_BUZZER_VOLUME = "Volume";
 Blockly.Msg.ROBOTS_MISC_BUZZER_NOTE = "Note";
+
+//added july 15th 2015
 Blockly.Msg.TECHNOZONE_PIN = "Pin #";
-Blockly.Msg.TECHNOZONE_BUTTON = "Button State";
-Blockly.Msg.TECHNOZONE_OFTHE = "of the";
-Blockly.Msg.TECHNOZONE_CONNECTTOPINS = "Connect to pins";
-Blockly.Msg.TECHNOZONE_TELECFLUSH_TITLE = "Get next IR button";
+Blockly.Msg.TECHNOZONE_TELECFLUSH_TITLE = "empty IR remote buffer";
 Blockly.Msg.TECHNOZONE_TELECFLUSH_TOOLTIP = "Empty the IR buffer";
-Blockly.Msg.TECHNOZONE_TELECINIT_TITLE = "IR Button Get";
+Blockly.Msg.TECHNOZONE_TELECINIT_TITLE = "an IR Button pressed?";
 Blockly.Msg.TECHNOZONE_TELECINIT_TOOLTIP = "Tests if a remote button was pressed";
 Blockly.Msg.TECHNOZONE_TELECSETUP_TITLE = "Initialize IR Remote";
-Blockly.Msg.TECHNOZONE_TELECSETUP_TOOLTIP = "Required to use IR Button Get";
-Blockly.Msg.TECHNOZONE_TELEC12_TITLEA = "The key";
+Blockly.Msg.TECHNOZONE_TELECSETUP_TOOLTIP = "Init remote, required to use IR Button";
+Blockly.Msg.TECHNOZONE_TELEC12_TITLEA = "the key";
 Blockly.Msg.TECHNOZONE_TELEC12_TITLEB = "on the remote";
 Blockly.Msg.TECHNOZONE_TELEC12_TITLEC = "that was pressed";
 Blockly.Msg.TECHNOZONE_TELEC12_TOOLTIP = "Provides the IR code for a specific remote button";
@@ -699,16 +701,33 @@ Blockly.Msg.TECHNOZONE_SWITCH1_TOOLTIP = "Limit switch - impact sensor";
 Blockly.Msg.TECHNOZONE_CMOUV1_TITLE = "IR Motion detector";
 Blockly.Msg.TECHNOZONE_CMOUV1_TOOLTIP = "Motion detector - dome type (ref : SERVO1 + CMOUV1)";
 Blockly.Msg.TECHNOZONE_ILS1_TITLE = "Detect a magnetic field";
-Blockly.Msg.TECHNOZONE_ILS1_TOOLTIP = "Magnetic field detector(ref : ILS1)";
+Blockly.Msg.TECHNOZONE_ILS1_TOOLTIP = "Magnetic field detector (ref : ILS1)";
 Blockly.Msg.TECHNOZONE_PROXI1_TITLE = "Near-range IR detector";
 Blockly.Msg.TECHNOZONE_PROXI1_TOOLTIP = "Input Proximity Sensor (ref : PROXI1)";
-Blockly.Msg.TECHNOZONE_DROPDOWN = [["Motor A", "HIGH"], ["Motor B", "LOW"]];
-Blockly.Msg.TECHNOZONE_MOT2_DIR = "Direction Pin (DIR)";
-Blockly.Msg.TECHNOZONE_MOT2_PWM = "Speed Pin (PWM~)";
-Blockly.Msg.TECHNOZONE_CONTROLS = "Controls";
-Blockly.Msg.TECHNOZONE_MOT2_FOR = "for MOT2";
-Blockly.Msg.TECHNOZONE_SPEED = "speed [0-255]";
-Blockly.Msg.TECHNOZONE_MOT2_TOOLTIP = "Two DC motors control board for EASYCON1 , EASYCON2 , EASYBOT1 (ref : MOT2 )";
-Blockly.Msg.TECHNOZONE_SPIN = "clockwise ( TRUE or FALSE? )";
-Blockly.Msg.TECHNOZONE_ADDRESS = "at address";
-Blockly.Msg.TECHNOZONE_I2CBUS = "I2C Bus";
+
+//added july 17th 2015
+Blockly.Msg.BQ_PIN = "Pin #";
+Blockly.Msg.BQ_PIN_DIGITAL = "Digital Pin#";
+Blockly.Msg.BQ_PIN_PWM = "PWM~ Pin#";
+Blockly.Msg.BQ_PIN_ANALOG = "Analog Pin#";
+Blockly.Msg.BQ_HELPURL = "http://www.bq.com/fr/produits/kit-robotica.html";
+Blockly.Msg.BQ_LED1_TOOLTIP = "Sortie led (réf : LED)";
+Blockly.Msg.BQ_BUZZER1_TOOLTIP = "Sortie Buzzer (réf : BUZZER)";
+Blockly.Msg.BQ_SONAR1_TOOLTIP = "Entrée Ultrason (réf : ULTRASON)";
+Blockly.Msg.BQ_SERVO1_TITLEA = "positionne le mini servo-moteur";
+Blockly.Msg.BQ_SERVO1_TITLEB = "sur l'angle [0~180°]";
+Blockly.Msg.BQ_SERVO1_TOOLTIP = "Sortie Servo-moteur (réf : MINI-SERVO)";
+Blockly.Msg.BQ_SERVO2_TITLEA = "faire tourner le servo-moteur à rotation continue";
+Blockly.Msg.BQ_SERVO2_TITLEB = "sens horaire (VRAI ou FAUX ?)";
+Blockly.Msg.BQ_SERVO2_TITLEC = "à la vitesse [0~255] de";
+Blockly.Msg.BQ_SERVO2_TITLED = "pendant un délai (ms) de";
+Blockly.Msg.BQ_SERVO2_TOOLTIP = "rotation possible entre 0~180 degrés : 0~90 puissance variable dans un sens ; 90~180 puissance variable dans l'autre sens";
+Blockly.Msg.BQ_BP_TOOLTIP = 'Entrée bouton poussoir (réf : BOUTON-POUSSOIR)';
+Blockly.Msg.BQ_LUX_TITLE = "la luminosité (en Lux) lue";
+Blockly.Msg.BQ_LUX_TOOLTIP = 'Entrée Capteur de Luminosité (réf : LUMINOSITE)';
+Blockly.Msg.BQ_POT_TITLE = "la position du potentiomètre";
+Blockly.Msg.BQ_POT_TOOLTIP = 'Entrée potentiomètre (réf : POTENTIOMETRE';
+Blockly.Msg.BQ_IR_TITLE = "l'état du suiveur de ligne";
+Blockly.Msg.BQ_IR_TOOLTIP = 'Entrée Détecteur de ligne (réf : LIG1)';
+Blockly.Msg.BQ_BT_TITLE = "Bluetooth en mode esclave";
+Blockly.Msg.BQ_BT_TOOLTIP = 'Bluetooth V2.0+EDR esclave. Seulement 1 esclave par carte.';
