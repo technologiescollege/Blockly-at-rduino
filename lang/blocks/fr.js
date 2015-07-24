@@ -643,13 +643,16 @@ Blockly.Msg.ROBOTS_MISC_BUZZER_DURATION = "Durée";
 Blockly.Msg.ROBOTS_MISC_BUZZER_VOLUME = "Volume";
 Blockly.Msg.ROBOTS_MISC_BUZZER_NOTE = "Note";
 
-//added july 15th 2015
-Blockly.Msg.TECHNOZONE_PIN = "sur la broche";
+//TECHNOZONE updated July 24th 2015
 Blockly.Msg.TECHNOZONE_TELECFLUSH_TITLE = "vide le tampon de réception de la télécommande";
 Blockly.Msg.TECHNOZONE_TELECFLUSH_TOOLTIP = "Vide le tampon de réception de la télécommande (réf :IRF1)";
 Blockly.Msg.TECHNOZONE_TELECINIT_TITLE = "une touche de la télécommande a été appuyée ?";
 Blockly.Msg.TECHNOZONE_TELECINIT_TOOLTIP = "Teste si une touche de la télécommande a été appuyée (réf : IRF1)";
 Blockly.Msg.TECHNOZONE_TELECSETUP_TITLE = "initialise la télécommande";
+Blockly.Msg.TECHNOZONE_PIN = "sur la broche";
+Blockly.Msg.TECHNOZONE_BUTTON = "l'état du bouton";
+Blockly.Msg.TECHNOZONE_OFTHE = "la DEL";
+Blockly.Msg.TECHNOZONE_CONNECTTOPINS = "connectér sur les broches";
 Blockly.Msg.TECHNOZONE_TELECSETUP_TOOLTIP = "Initialise la télécommande (réf : IRF1 + (TELEC1 ou TELEC2))";
 Blockly.Msg.TECHNOZONE_TELEC12_TITLEA = "la touche";
 Blockly.Msg.TECHNOZONE_TELEC12_TITLEB = "de la télécommande";
@@ -671,6 +674,16 @@ Blockly.Msg.TECHNOZONE_ILS1_TITLE = "la détection d'un champ magnétique";
 Blockly.Msg.TECHNOZONE_ILS1_TOOLTIP = "Entrée Capteur Magnétique (réf : ILS1)";
 Blockly.Msg.TECHNOZONE_PROXI1_TITLE = "la détection d'un obstacle à proximité";
 Blockly.Msg.TECHNOZONE_PROXI1_TOOLTIP = "Entrée Détecteur de Proximité (réf : PROXI1)";
+Blockly.Msg.TECHNOZONE_DROPDOWN = [["moteur A", "HIGH"], ["moteur B", "LOW"]];
+Blockly.Msg.TECHNOZONE_MOT2_DIR = "broche de commande de Direction (DIR)";
+Blockly.Msg.TECHNOZONE_MOT2_PWM = "broche de commande de la Vitesse (PWM~)";
+Blockly.Msg.TECHNOZONE_CONTROLS = "commande le";
+Blockly.Msg.TECHNOZONE_MOT2_FOR = "de la carte MOT2";
+Blockly.Msg.TECHNOZONE_SPEED = "vitesse [0~255]";
+Blockly.Msg.TECHNOZONE_MOT2_TOOLTIP = "Carte de commande de deux moteurs CC pour EASYCON1,EASYCON2,EASYBOT1 (réf : MOT2)";
+Blockly.Msg.TECHNOZONE_SPIN = "sens horaire (VRAI ou FAUX ?)";
+Blockly.Msg.TECHNOZONE_ADDRESS = "à l'adresse";
+Blockly.Msg.TECHNOZONE_ = "sur le bus I2C";
 
 //added july 17th 2015
 Blockly.Msg.BQ_PIN = "sur la broche";
@@ -698,3 +711,4 @@ Blockly.Msg.BQ_IR_TITLE = "l'état du suiveur de ligne";
 Blockly.Msg.BQ_IR_TOOLTIP = 'Entrée Détecteur de ligne (réf : LIG1)';
 Blockly.Msg.BQ_BT_TITLE = "Bluetooth en mode esclave";
 Blockly.Msg.BQ_BT_TOOLTIP = 'Bluetooth V2.0+EDR esclave. Seulement 1 esclave par carte.';
+
