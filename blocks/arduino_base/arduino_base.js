@@ -204,14 +204,18 @@ Blockly.Blocks.servo_move = {
 		.setAlign(Blockly.ALIGN_RIGHT)
 		.appendField(Blockly.Msg.ARDUINO_SERVO_MOVE_INPUT2)
         .appendField(new Blockly.FieldTextInput('',  Blockly.Arduino.pinPWMValidator), 'PIN');
-    this.appendValueInput("DEGREE", 'Number')
-        .setCheck('Number')
-        .setAlign(Blockly.ALIGN_RIGHT)
-        .appendField(Blockly.Msg.ARDUINO_SERVO_MOVE_DEGREE);
+
+	
     this.appendValueInput("DELAY_TIME", 'Number')
         .setCheck('Number')
         .setAlign(Blockly.ALIGN_RIGHT)
         .appendField(Blockly.Msg.ARDUINO_SERVO_MOVE_DELAY_TIME);
+		
+		
+    this.appendValueInput("DEGREE", 'Number')
+        .setCheck('Number')
+        .setAlign(Blockly.ALIGN_RIGHT)
+        .appendField(Blockly.Msg.ARDUINO_SERVO_MOVE_DEGREE);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setTooltip(Blockly.Msg.ARDUINO_SERVO_MOVE_TOOLTIP);
