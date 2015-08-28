@@ -24,14 +24,14 @@
  */
 'use strict';
 
-goog.provide('Blockly.Blocks.variables');
+goog.provide('Blockly.Blocks.constant');
 
 goog.require('Blockly.Blocks');
 
 
-Blockly.Blocks.variables.HUE = 330;
+Blockly.Blocks.constant.HUE = 330;
 
-Blockly.Blocks['variables_get'] = {
+Blockly.Blocks['constant_get'] = {
   /**
    * Block for variable getter.
    * @this Blockly.Block
@@ -42,12 +42,12 @@ Blockly.Blocks['variables_get'] = {
     this.appendDummyInput()
         .appendField(Blockly.Msg.VARIABLES_GET_TITLE)
         .appendField(new Blockly.FieldVariable(
-        Blockly.Msg.VARIABLES_GET_ITEM), 'VAR')
+        Blockly.Msg.VARIABLES_GET_ITEM), 'CONST')
         .appendField(Blockly.Msg.VARIABLES_GET_TAIL);
     this.setOutput(true);
     this.setTooltip(Blockly.Msg.VARIABLES_GET_TOOLTIP);
     this.contextMenuMsg_ = Blockly.Msg.VARIABLES_GET_CREATE_SET;
-    this.contextMenuType_ = 'variables_set';
+    this.contextMenuType_ = 'constant_set';
   },
   /**
    * Return all variables referenced by this block.
@@ -55,7 +55,7 @@ Blockly.Blocks['variables_get'] = {
    * @this Blockly.Block
    */
   getVars: function() {
-    return [this.getFieldValue('VAR')];
+    return [this.getFieldValue('CONST')];
   },
   /**
    * Notification that a variable is renaming.
@@ -65,8 +65,8 @@ Blockly.Blocks['variables_get'] = {
    * @this Blockly.Block
    */
   renameVar: function(oldName, newName) {
-    if (Blockly.Names.equals(oldName, this.getFieldValue('VAR'))) {
-      this.setFieldValue(newName, 'VAR');
+    if (Blockly.Names.equals(oldName, this.getFieldValue('CONST'))) {
+      this.setFieldValue(newName, 'CONST');
     }
   },
   /**
@@ -76,10 +76,10 @@ Blockly.Blocks['variables_get'] = {
    */
   customContextMenu: function(options) {
     var option = {enabled: true};
-    var name = this.getFieldValue('VAR');
+    var name = this.getFieldValue('CONST');
     option.text = this.contextMenuMsg_.replace('%1', name);
     var xmlField = goog.dom.createDom('field', null, name);
-    xmlField.setAttribute('name', 'VAR');
+    xmlField.setAttribute('name', 'CONST');
     var xmlBlock = goog.dom.createDom('block', null, xmlField);
     xmlBlock.setAttribute('type', this.contextMenuType_);
     option.callback = Blockly.ContextMenu.callbackFactory(this, xmlBlock);
@@ -87,7 +87,7 @@ Blockly.Blocks['variables_get'] = {
   }
 };
 
-Blockly.Blocks['variables_set'] = {
+Blockly.Blocks['constant_set'] = {
   /**
    * Block for variable setter.
    * @this Blockly.Block
@@ -99,14 +99,14 @@ Blockly.Blocks['variables_set'] = {
         // TODO: Combine these messages instead of using concatenation.
         Blockly.Msg.VARIABLES_SET_TITLE + ' %1 ' +
         Blockly.Msg.VARIABLES_SET_TAIL + ' %2',
-        ['VAR', new Blockly.FieldVariable(Blockly.Msg.VARIABLES_SET_ITEM)],
+        ['CONST', new Blockly.FieldVariable(Blockly.Msg.VARIABLES_SET_ITEM)],
         ['VALUE', null, Blockly.ALIGN_RIGHT],
         Blockly.ALIGN_RIGHT);
     this.setPreviousStatement(true);
     this.setNextStatement(true);
     this.setTooltip(Blockly.Msg.VARIABLES_SET_TOOLTIP);
     this.contextMenuMsg_ = Blockly.Msg.VARIABLES_SET_CREATE_GET;
-    this.contextMenuType_ = 'variables_get';
+    this.contextMenuType_ = 'constant_get';
   },
   /**
    * Return all variables referenced by this block.
@@ -114,7 +114,7 @@ Blockly.Blocks['variables_set'] = {
    * @this Blockly.Block
    */
   getVars: function() {
-    return [this.getFieldValue('VAR')];
+    return [this.getFieldValue('CONST')];
   },
   /**
    * Notification that a variable is renaming.
@@ -124,9 +124,9 @@ Blockly.Blocks['variables_set'] = {
    * @this Blockly.Block
    */
   renameVar: function(oldName, newName) {
-    if (Blockly.Names.equals(oldName, this.getFieldValue('VAR'))) {
-      this.setFieldValue(newName, 'VAR');
+    if (Blockly.Names.equals(oldName, this.getFieldValue('CONST'))) {
+      this.setFieldValue(newName, 'CONST');
     }
   },
-  customContextMenu: Blockly.Blocks['variables_get'].customContextMenu
+  customContextMenu: Blockly.Blocks['constant_get'].customContextMenu
 };

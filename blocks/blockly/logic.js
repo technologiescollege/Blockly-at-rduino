@@ -439,23 +439,23 @@ Blockly.Blocks['controls_switch'] = {
   init: function() {
     this.setHelpUrl(Blockly.Msg.CONTROLS_SWITCH_HELPURL);
     this.setColour(Blockly.Blocks.logic.HUE);
-	 this.appendDummyInput()
+	this.appendDummyInput()
         .appendField(Blockly.Msg.CONTROLS_SWITCH_VAR_TITLE)
-        .appendField(new Blockly.FieldVariable(
-        Blockly.Msg.VARIABLES_GET_ITEM), 'SWVAR')
+        .appendField(new Blockly.FieldVariable(Blockly.Msg.VARIABLES_GET_ITEM), 'SWVAR')
         .appendField(Blockly.Msg.CONTROLS_SWITCH_VAR_TAIL);
 		//this.setOutput(true);
 	this.contextMenuMsg_ = Blockly.Msg.VARIABLES_GET_CREATE_SET;
     this.contextMenuType_ = 'variables_set';
     this.appendValueInput('CASE0')
         .setCheck('Number')
-        .appendField(Blockly.Msg.CONTROLS_SWITCH_MSG_CASEBREAK);
+        .setAlign(Blockly.ALIGN_RIGHT)
+		.appendField(Blockly.Msg.CONTROLS_SWITCH_MSG_CASEBREAK);
     this.appendStatementInput('DO0')
-        .appendField(Blockly.Msg.CONTROLS_SWITCH_MSG_DO);
+        .setAlign(Blockly.ALIGN_RIGHT)
+		.appendField(Blockly.Msg.CONTROLS_SWITCH_MSG_DO);
     this.setPreviousStatement(true);
     this.setNextStatement(true);
-    this.setMutator(new Blockly.Mutator(['controls_case_break',
-                                         'controls_case_default']));
+    this.setMutator(new Blockly.Mutator(['controls_case_break','controls_case_default']));
     // Assign 'this' to a variable for use in the tooltip closure below.
     var thisBlock = this;
     this.setTooltip(function() {
@@ -523,13 +523,15 @@ Blockly.Blocks['controls_switch'] = {
     for (var i = 1; i <= this.casebreakCount_; i++) {
       this.appendValueInput('CASE' + i)
           .setCheck('Number')
-          .appendField(Blockly.Msg.CONTROLS_SWITCH_MSG_CASEBREAK);
+          .setAlign(Blockly.ALIGN_RIGHT)
+		  .appendField(Blockly.Msg.CONTROLS_SWITCH_MSG_CASEBREAK);
       this.appendStatementInput('DO' + i)
           .appendField(Blockly.Msg.CONTROLS_SWITCH_MSG_DO);
     }
     if (this.defaultCount_) {
       this.appendStatementInput('DEFAULT')
-          .appendField(Blockly.Msg.CONTROLS_SWITCH_MSG_DEFAULT);
+          .setAlign(Blockly.ALIGN_RIGHT)
+		  .appendField(Blockly.Msg.CONTROLS_SWITCH_MSG_DEFAULT);
     }
   },
   /**

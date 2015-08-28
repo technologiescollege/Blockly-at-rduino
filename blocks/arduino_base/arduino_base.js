@@ -75,8 +75,8 @@ Blockly.Blocks.inout_digital_write = {
     this.setColour(230);
     this.setHelpUrl(Blockly.Msg.ARDUINO_INOUT_DIGITAL_WRITE_HELPURL);
     this.appendDummyInput()
-    .appendField(Blockly.Msg.ARDUINO_INOUT_DIGITAL_WRITE_INPUT1)
-    .appendField(new Blockly.FieldTextInput('',  Blockly.Arduino.pinDigitalValidator), 'PIN');
+		.appendField(Blockly.Msg.ARDUINO_INOUT_DIGITAL_WRITE_INPUT1)
+		.appendField(new Blockly.FieldTextInput('',  Blockly.Arduino.pinDigitalValidator), 'PIN');
     this.setInputsInline(true);
 	this.appendDummyInput("")
       	.appendField(Blockly.Msg.ARDUINO_INOUT_DIGITAL_WRITE_INPUT2)
@@ -92,8 +92,8 @@ Blockly.Blocks.inout_digital_read = {
     this.setColour(230);
     this.setHelpUrl(Blockly.Msg.ARDUINO_INOUT_DIGITAL_READ_HELPURL);
     this.appendDummyInput()
-    .appendField(Blockly.Msg.ARDUINO_INOUT_DIGITAL_READ_INPUT)
-    .appendField(new Blockly.FieldTextInput('',  Blockly.Arduino.pinDigitalValidator), 'PIN');
+		.appendField(Blockly.Msg.ARDUINO_INOUT_DIGITAL_READ_INPUT)
+		.appendField(new Blockly.FieldTextInput('',  Blockly.Arduino.pinDigitalValidator), 'PIN');
 	this.setInputsInline(true);
     this.setOutput(true,'Boolean');
     this.setTooltip(Blockly.Msg.ARDUINO_INOUT_DIGITAL_READ_TOOLTIP);
@@ -200,18 +200,15 @@ Blockly.Blocks.servo_move = {
     this.appendDummyInput("")
         .appendField(Blockly.Msg.ARDUINO_SERVO_MOVE_INPUT1)
         .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/arduino_base/servomoteur.jpg', 64, 64));
-    this.appendDummyInput("")
+    /* old version with Digital PWM correction
+	this.appendDummyInput("")
 		.setAlign(Blockly.ALIGN_RIGHT)
 		.appendField(Blockly.Msg.ARDUINO_SERVO_MOVE_INPUT2)
-        .appendField(new Blockly.FieldTextInput('',  Blockly.Arduino.pinPWMValidator), 'PIN');
-
-	
-    this.appendValueInput("DELAY_TIME", 'Number')
+        .appendField(new Blockly.FieldTextInput('',  Blockly.Arduino.pinPWMValidator), 'PIN'); */
+	this.appendValueInput("PIN", 'Number')
         .setCheck('Number')
         .setAlign(Blockly.ALIGN_RIGHT)
-        .appendField(Blockly.Msg.ARDUINO_SERVO_MOVE_DELAY_TIME);
-		
-		
+        .appendField(Blockly.Msg.ARDUINO_SERVO_MOVE_INPUT2);
     this.appendValueInput("DEGREE", 'Number')
         .setCheck('Number')
         .setAlign(Blockly.ALIGN_RIGHT)
@@ -229,11 +226,16 @@ Blockly.Blocks.servo_read_degrees = {
     this.appendDummyInput("")
         .appendField(Blockly.Msg.ARDUINO_SERVO_READ_DEGREES_INPUT1)
         .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/arduino_base/servomoteur.jpg', 64, 64));
-	this.appendDummyInput("")	
+/* old version with Digital PWM correction
+ 	this.appendDummyInput("")	
         .setAlign(Blockly.ALIGN_RIGHT)
         .appendField(Blockly.Msg.ARDUINO_SERVO_READ_DEGREES_INPUT2)
-        .appendField(new Blockly.FieldTextInput('',  Blockly.Arduino.pinPWMValidator), 'PIN');
-    this.setOutput(true, 'Number');
+        .appendField(new Blockly.FieldTextInput('',  Blockly.Arduino.pinPWMValidator), 'PIN'); */
+	this.appendValueInput("PIN", 'Number')
+        .setCheck('Number')
+		.setAlign(Blockly.ALIGN_RIGHT)
+        .appendField(Blockly.Msg.ARDUINO_SERVO_READ_DEGREES_INPUT2);    
+	this.setOutput(true, 'Number');
     this.setTooltip(Blockly.Msg.ARDUINO_SERVO_READ_DEGREES_TOOLTIP);
   }
 };

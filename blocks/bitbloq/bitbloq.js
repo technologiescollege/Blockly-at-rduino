@@ -3,6 +3,10 @@
 
 'use strict';
 
+goog.provide('Blockly.Arduino.bq');
+
+goog.require('Blockly.Arduino');
+
 // define blocks
 
 Blockly.Blocks['bq_led'] = {
@@ -110,10 +114,6 @@ Blockly.Blocks['bq_servo_rotation_continue'] = {
         .setCheck('Number')
         .setAlign(Blockly.ALIGN_RIGHT)
         .appendField(Blockly.Msg.BQ_SERVO2_TITLEC);
-    this.appendValueInput("DELAY_TIME", 'Number')
-        .setCheck('Number')
-        .setAlign(Blockly.ALIGN_RIGHT)
-        .appendField(Blockly.Msg.BQ_SERVO2_TITLED);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setTooltip(Blockly.Msg.BQ_SERVO2_TOOLTIP);
@@ -181,7 +181,7 @@ Blockly.Blocks['bq_bluetooth_slave'] = {
         .appendField(Blockly.Msg.GROVE_INOUT_LED_INPUT2);
     this.appendDummyInput()
       .setAlign(Blockly.ALIGN_RIGHT)
-      .appendField("nom declare")
+      .appendField("nom déclaré")
       .appendField(new Blockly.FieldTextInput('bluetooth'), 'NAME');
     this.appendDummyInput()
       .setAlign(Blockly.ALIGN_RIGHT)

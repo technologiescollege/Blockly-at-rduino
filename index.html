@@ -14,6 +14,7 @@ contient la liste des blocs de Blockly ci-dessous en compressé-->
 <script type="text/javascript" src="blocks/blockly/procedures.js"></script>
 <script type="text/javascript" src="blocks/blockly/text.js"></script>
 <script type="text/javascript" src="blocks/blockly/variables.js"></script>
+<script type="text/javascript" src="blocks/blockly/constant.js"></script>
 
 <script type="text/javascript" src="blocks/arduino_base/arduino_base.js"></script>
 <script type="text/javascript" src="blocks/bitbloq/bitbloq.js"></script>
@@ -35,6 +36,7 @@ contient la liste des blocs de Blockly ci-dessous en compressé-->
 <script type="text/javascript" src="generators/arduino/technozone.js"></script>
 <script type="text/javascript" src="generators/arduino/text.js"></script>
 <script type="text/javascript" src="generators/arduino/variables.js"></script>
+<script type="text/javascript" src="generators/arduino/constant.js"></script>
 
 <script type="text/javascript" src="utils/spin.js"></script>
 <script type="text/javascript" src="utils/blocklyDuino.js"></script>
@@ -444,16 +446,8 @@ contient la liste des blocs de Blockly ci-dessous en compressé-->
     <category name="CAT_ARDUINO">
         <category name="CAT_ARDUINO_IN">
             <block type="inout_analog_read"></block>
-            <block type="inout_digital_read"></block>
-        </category>
-        <category name="CAT_ARDUINO_OUT">
-			<block type="base_delay">			
-				<value name="DELAY_TIME">
-					<block type="math_number">
-					<field name="NUM">1000</field>
-					</block>
-				</value>
-			</block>
+            <block type="inout_digital_read"></block>			
+            <block type="inout_onoff"></block>
             <block type="base_map">
                 <value name="NUM">
                     <block type="math_number">
@@ -466,6 +460,15 @@ contient la liste des blocs de Blockly ci-dessous en compressé-->
                     </block>
                 </value>
             </block>
+        </category>
+        <category name="CAT_ARDUINO_OUT">
+			<block type="base_delay">			
+				<value name="DELAY_TIME">
+					<block type="math_number">
+					<field name="NUM">1000</field>
+					</block>
+				</value>
+			</block>
             <block type="inout_PWM_write">
                 <value name="NUM">
                     <block type="math_number">
@@ -482,7 +485,6 @@ contient la liste des blocs de Blockly ci-dessous en compressé-->
 			</block>
             <block type="inout_buildin_led"></block>
             <block type="inout_digital_write"></block>
-            <block type="inout_onoff"></block>
             <block type="tone">
                 <value name="NUM">
                     <block type="math_number">
@@ -509,11 +511,6 @@ contient la liste des blocs de Blockly ci-dessous en compressé-->
 				<value name="DEGREE">
 				<block type="math_number">
 				<field name="NUM">0</field>
-				</block>
-				</value>
-				<value name="DELAY_TIME">
-				<block type="math_number">
-				<field name="NUM">1000</field>
 				</block>
 				</value>
 			</block>
@@ -611,19 +608,14 @@ contient la liste des blocs de Blockly ci-dessous en compressé-->
 				</value>
 				<value name="SENS">
 				<block type="logic_boolean">
-				<field name="BOOL">True</field>
+				<field name="BOOL">vrai</field>
 				</block>
 				</value>
 				<value name="VITESSE">
 				<block type="math_number">
 				<field name="NUM">127</field>
 				</block>
-				</value>
-				<value name="DELAY_TIME">
-				<block type="math_number">
-				<field name="NUM">500</field>
-				</block>
-				</value>				
+				</value>			
 			</block>
         </category>
         <category name="CAT_BQ_COMM">
