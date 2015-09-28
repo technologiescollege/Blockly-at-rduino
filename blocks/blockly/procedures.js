@@ -342,7 +342,7 @@ Blockly.Blocks['procedures_defreturn'] = {
     this.appendDummyInput()
         .appendField(Blockly.Msg.PROCEDURES_DEFRETURN_TITLE)
         .appendField(nameField, 'NAME')
-        .appendField('', 'PARAMS');
+		.appendField('', 'PARAMS');
     this.appendValueInput('RETURN')
         .setAlign(Blockly.ALIGN_RIGHT)
         .appendField(Blockly.Msg.PROCEDURES_DEFRETURN_RETURN);
@@ -434,7 +434,7 @@ Blockly.Blocks['procedures_callnoreturn'] = {
     this.setColour(Blockly.Blocks.procedures.HUE);
     this.appendDummyInput('TOPROW')
         .appendField(Blockly.Msg.PROCEDURES_CALLNORETURN_CALL)
-        .appendField('', 'NAME');
+		.appendField('', 'NAME');
     this.setPreviousStatement(true);
     this.setNextStatement(true);
     // Tooltip is set in domToMutation.
@@ -530,7 +530,8 @@ Blockly.Blocks['procedures_callnoreturn'] = {
     for (var i = 0; i < this.arguments_.length; i++) {
       var input = this.appendValueInput('ARG' + i)
           .setAlign(Blockly.ALIGN_RIGHT)
-          .appendField(this.arguments_[i]);
+		  .appendField(this.arguments_[i])
+		  .appendField(" = ");
       if (this.quarkArguments_) {
         // Reconnect any child blocks.
         var quarkName = this.quarkArguments_[i];

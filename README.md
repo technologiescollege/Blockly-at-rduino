@@ -26,6 +26,12 @@ Cette version a été réorganisée et améliorée pour la faire utiliser au mie
 * téléversement et console série depuis l'interface web,
 * sauvegarde/lecture de fichiers INO et XML
 
+## IMPORTANT Arduino
+
+Pour le téléversement dans la carte Arduino directement depuis le navigateur, il faut installer le plugin Codebender : [https://codebender.cc/static/plugin](https://codebender.cc/static/plugin)
+
+_For uploading in Arduino card directly from your Internet browser, you must install codebender plugin : [https://codebender.cc/static/plugin](https://codebender.cc/static/plugin)_
+
 ## Démos
 
 Blockly@rduino est un outil web, un webware par référence aux software, hardware, etc. Vous pouvez le tester/utiliser à l'adresse suivante :
@@ -42,7 +48,7 @@ Si vous préfréez l'utiliser en local, il vous suffit de télécharger le code 
 
 Vous pouvez l'héberger sur un serveur, et ainsi y faire accéder de nombreux postes en pointant vers ce fichier 'index.html'.
 
-Pour le téléversement et la console série, vous devez disposer d'un accès web et de filtres ne bloquant pas CodeBender.
+**Pour le téléversement et la console série**, vous devez disposer d'un accès web et de filtres ne bloquant pas CodeBender.
 
 ## Utilisation en 4 temps
 
