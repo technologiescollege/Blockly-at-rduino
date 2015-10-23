@@ -75,6 +75,10 @@ html[dir="RTL"] .navbar-right {
 	margin: 5px 0;
 }
 
+.btn_picture-ver,.btn_saveXML-ver {
+	margin: 5px 0;
+}
+
 .divTabpanel-ver {
     height: 100%;
     margin-left:200px;

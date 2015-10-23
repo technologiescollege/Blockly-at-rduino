@@ -36,6 +36,8 @@ Blockly.Arduino.controls_for = function() {
       Blockly.Arduino.ORDER_ASSIGNMENT) || '0';
   var argument1 = Blockly.Arduino.valueToCode(this, 'TO',
       Blockly.Arduino.ORDER_ASSIGNMENT) || '0';
+  var argument2 = Blockly.Arduino.valueToCode(this, 'BY',
+      Blockly.Arduino.ORDER_ASSIGNMENT) || '0';
   var branch = Blockly.Arduino.statementToCode(this, 'DO');
   if (Blockly.Arduino.INFINITE_LOOP_TRAP) {
     branch = Blockly.Arduino.INFINITE_LOOP_TRAP.replace(/%1/g,
@@ -48,7 +50,7 @@ Blockly.Arduino.controls_for = function() {
     var up = parseFloat(argument0) <= parseFloat(argument1);
     code = 'for (' + variable0 + ' = ' + argument0 + '; ' +
         variable0 + (up ? ' <= ' : ' >= ') + argument1 + '; ' +
-        variable0 + (up ? '++' : '--') + ') {\n' +
+        variable0 + '=' + variable0 + (up ? '+' : '-') + argument2 + ') {\n' +
         branch + '}\n';
   } else {
     code = '';
@@ -122,8 +124,7 @@ Blockly.Arduino.controls_repeat_ext = function() {
     branch = Blockly.Arduino.INFINITE_LOOP_TRAP.replace(/%1/g,
         '\'' + this.id + '\'') + branch;
   }
-  var loopVar = Blockly.Arduino.variableDB_.getName(
-      'count', Blockly.Variables.NAME_TYPE);
+  var loopVar = Blockly.Arduino.variableDB_.getName('count', Blockly.Variables.NAME_TYPE);
   var code = 'for (int ' + loopVar + ' = 0; ' +
       loopVar + ' < ' + repeats + '; ' +
       loopVar + '++) {\n' +
