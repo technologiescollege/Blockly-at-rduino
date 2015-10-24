@@ -65,12 +65,12 @@ Blockly.Arduino.math_arithmetic.OPERATORS = {
 
 Blockly.Arduino['math_single'] = function() {
   // Math operators with single operand.
-  var operator = block.getFieldValue('OP');
+  var operator = this.getFieldValue('OP');
   var code;
   var arg;
   if (operator == 'NEG') {
     // Negation is a special case given its different operator precedence.
-    arg = Blockly.Arduino.valueToCode(block, 'NUM',
+    arg = Blockly.Arduino.valueToCode(this, 'NUM',
         Blockly.Arduino.ORDER_UNARY_NEGATION) || '0';
     if (arg[0] == '-') {
       arg = ' ' + arg;
@@ -79,10 +79,10 @@ Blockly.Arduino['math_single'] = function() {
     return [code, Blockly.Arduino.ORDER_UNARY_NEGATION];
   }
   if (operator == 'SIN' || operator == 'COS' || operator == 'TAN') {
-    arg = Blockly.Arduino.valueToCode(block, 'NUM',
+    arg = Blockly.Arduino.valueToCode(this, 'NUM',
         Blockly.Arduino.ORDER_DIVISION) || '0';
   } else {
-    arg = Blockly.Arduino.valueToCode(block, 'NUM',
+    arg = Blockly.Arduino.valueToCode(this, 'NUM',
         Blockly.Arduino.ORDER_NONE) || '0';
   }
   // First, handle cases which generate values that don't need parentheses
@@ -132,15 +132,15 @@ Blockly.Arduino['math_constant'] = function() {
     'SQRT1_2': ['SQRT1_2', Blockly.Arduino.ORDER_MEMBER],
     'INFINITY': ['Infinity', Blockly.Arduino.ORDER_ATOMIC]
   };
-  return CONSTANTS[block.getFieldValue('CONSTANT')];
+  return CONSTANTS[this.getFieldValue('CONSTANT')];
 };
 
 Blockly.Arduino['math_number_property'] = function() {
   // Check if a number is even, odd, prime, whole, positive, or negative
   // or if it is divisible by certain number. Returns true or false.
-  var number_to_check = Blockly.Arduino.valueToCode(block, 'NUMBER_TO_CHECK',
+  var number_to_check = Blockly.Arduino.valueToCode(this, 'NUMBER_TO_CHECK',
       Blockly.Arduino.ORDER_MODULUS) || '0';
-  var dropdown_property = block.getFieldValue('PROPERTY');
+  var dropdown_property = this.getFieldValue('PROPERTY');
   var code;
   if (dropdown_property == 'PRIME') {
     // Prime is a special case as it is not a one-liner test.
@@ -185,7 +185,7 @@ Blockly.Arduino['math_number_property'] = function() {
       code = number_to_check + ' < 0';
       break;
     case 'DIVISIBLE_BY':
-      var divisor = Blockly.Arduino.valueToCode(block, 'DIVISOR',
+      var divisor = Blockly.Arduino.valueToCode(this, 'DIVISOR',
           Blockly.Arduino.ORDER_MODULUS) || '0';
       code = number_to_check + ' % ' + divisor + ' == 0';
       break;
@@ -195,12 +195,10 @@ Blockly.Arduino['math_number_property'] = function() {
 
 Blockly.Arduino['math_change'] = function() {
   // Add to a variable in place.
-  var argument0 = Blockly.Arduino.valueToCode(block, 'DELTA',
-      Blockly.Arduino.ORDER_ADDITION) || '0';
-  var varName = Blockly.Arduino.variableDB_.getName(
-      block.getFieldValue('VAR'), Blockly.Variables.NAME_TYPE);
-  return varName + ' = (typeof ' + varName + ' == \'number\' ? ' + varName +
-      ' : 0) + ' + argument0 + ';\n';
+  var argument0 = Blockly.Arduino.valueToCode(this, 'DELTA', Blockly.Arduino.ORDER_ADDITIVE) || '0';
+  var varName = Blockly.Arduino.variableDB_.getName(this.getFieldValue('VAR'), Blockly.Variables.NAME_TYPE);
+  var code = varName + ' = (typeof ' + varName + ' == \'number\' ? ' + varName + ' : 0) + ' + argument0 + ';\n'; ;
+  return [code, Blockly.Arduino.ORDER_EQUALITY];
 };
 
 // Rounding functions have a single operand.
@@ -210,21 +208,21 @@ Blockly.Arduino['math_trig'] = Blockly.Arduino['math_single'];
 
 Blockly.Arduino['math_on_list'] = function() {
   // Math functions for lists.
-  var func = block.getFieldValue('OP');
+  var func = this.getFieldValue('OP');
   var list, code;
   switch (func) {
     case 'SUM':
-      list = Blockly.Arduino.valueToCode(block, 'LIST',
+      list = Blockly.Arduino.valueToCode(this, 'LIST',
           Blockly.Arduino.ORDER_MEMBER) || '[]';
       code = list + '.reduce(function(x, y) {return x + y;})';
       break;
     case 'MIN':
-      list = Blockly.Arduino.valueToCode(block, 'LIST',
+      list = Blockly.Arduino.valueToCode(this, 'LIST',
           Blockly.Arduino.ORDER_COMMA) || '[]';
       code = 'min.apply(null, ' + list + ')';
       break;
     case 'MAX':
-      list = Blockly.Arduino.valueToCode(block, 'LIST',
+      list = Blockly.Arduino.valueToCode(this, 'LIST',
           Blockly.Arduino.ORDER_COMMA) || '[]';
       code = 'max.apply(null, ' + list + ')';
       break;
@@ -237,7 +235,7 @@ Blockly.Arduino['math_on_list'] = function() {
             '  return myList.reduce(function(x, y) {return x + y;}) / ' +
                   'myList.length;',
             '}']);
-      list = Blockly.Arduino.valueToCode(block, 'LIST',
+      list = Blockly.Arduino.valueToCode(this, 'LIST',
           Blockly.Arduino.ORDER_NONE) || '[]';
       code = functionName + '(' + list + ')';
       break;
@@ -258,7 +256,7 @@ Blockly.Arduino['math_on_list'] = function() {
             '    return localList[(localList.length - 1) / 2];',
             '  }',
             '}']);
-      list = Blockly.Arduino.valueToCode(block, 'LIST',
+      list = Blockly.Arduino.valueToCode(this, 'LIST',
           Blockly.Arduino.ORDER_NONE) || '[]';
       code = functionName + '(' + list + ')';
       break;
@@ -297,7 +295,7 @@ Blockly.Arduino['math_on_list'] = function() {
             '  }',
             '  return modes;',
             '}']);
-      list = Blockly.Arduino.valueToCode(block, 'LIST',
+      list = Blockly.Arduino.valueToCode(this, 'LIST',
           Blockly.Arduino.ORDER_NONE) || '[]';
       code = functionName + '(' + list + ')';
       break;
@@ -316,7 +314,7 @@ Blockly.Arduino['math_on_list'] = function() {
             '  variance = variance / n;',
             '  return sqrt(variance);',
             '}']);
-      list = Blockly.Arduino.valueToCode(block, 'LIST',
+      list = Blockly.Arduino.valueToCode(this, 'LIST',
           Blockly.Arduino.ORDER_NONE) || '[]';
       code = functionName + '(' + list + ')';
       break;
@@ -328,7 +326,7 @@ Blockly.Arduino['math_on_list'] = function() {
             '  var x = floor(random() * list.length);',
             '  return list[x];',
             '}']);
-      list = Blockly.Arduino.valueToCode(block, 'LIST',
+      list = Blockly.Arduino.valueToCode(this, 'LIST',
           Blockly.Arduino.ORDER_NONE) || '[]';
       code = functionName + '(' + list + ')';
       break;
@@ -340,9 +338,9 @@ Blockly.Arduino['math_on_list'] = function() {
 
 Blockly.Arduino['math_modulo'] = function() {
   // Remainder computation.
-  var argument0 = Blockly.Arduino.valueToCode(block, 'DIVIDEND',
+  var argument0 = Blockly.Arduino.valueToCode(this, 'DIVIDEND',
       Blockly.Arduino.ORDER_MODULUS) || '0';
-  var argument1 = Blockly.Arduino.valueToCode(block, 'DIVISOR',
+  var argument1 = Blockly.Arduino.valueToCode(this, 'DIVISOR',
       Blockly.Arduino.ORDER_MODULUS) || '0';
   var code = argument0 + ' % ' + argument1;
   return [code, Blockly.Arduino.ORDER_MODULUS];
@@ -350,11 +348,11 @@ Blockly.Arduino['math_modulo'] = function() {
 
 Blockly.Arduino['math_constrain'] = function() {
   // Constrain a number between two limits.
-  var argument0 = Blockly.Arduino.valueToCode(block, 'VALUE',
+  var argument0 = Blockly.Arduino.valueToCode(this, 'VALUE',
       Blockly.Arduino.ORDER_COMMA) || '0';
-  var argument1 = Blockly.Arduino.valueToCode(block, 'LOW',
+  var argument1 = Blockly.Arduino.valueToCode(this, 'LOW',
       Blockly.Arduino.ORDER_COMMA) || '0';
-  var argument2 = Blockly.Arduino.valueToCode(block, 'HIGH',
+  var argument2 = Blockly.Arduino.valueToCode(this, 'HIGH',
       Blockly.Arduino.ORDER_COMMA) || 'Infinity';
   var code = 'min(max(' + argument0 + ', ' + argument1 + '), ' +
       argument2 + ')';
@@ -363,9 +361,9 @@ Blockly.Arduino['math_constrain'] = function() {
 
 Blockly.Arduino['math_random_int'] = function() {
   // Random integer between [X] and [Y].
-  var argument0 = Blockly.Arduino.valueToCode(block, 'FROM',
+  var argument0 = Blockly.Arduino.valueToCode(this, 'FROM',
       Blockly.Arduino.ORDER_COMMA) || '0';
-  var argument1 = Blockly.Arduino.valueToCode(block, 'TO',
+  var argument1 = Blockly.Arduino.valueToCode(this, 'TO',
       Blockly.Arduino.ORDER_COMMA) || '0';
   var functionName = Blockly.Arduino.provideFunction_(
       'math_random_int',

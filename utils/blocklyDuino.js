@@ -579,7 +579,14 @@ BlocklyDuino.init = function() {
 	// build Blockly ...
 	Blockly.inject(document.getElementById('content_blocks'), {
 		media : 'media/',
+		sounds : true,
+		grid:
+         {spacing: 20,
+          length: 3,
+          colour: '#ccc',
+          snap: true},
 		rtl : Code.isRtl(),
+		maxBlocks : Infinity,
 		toolbox : BlocklyDuino.buildToolbox()
 	});
 

@@ -28,6 +28,19 @@ goog.provide('Blockly.Arduino.base');
 goog.require('Blockly.Arduino');
 
 
+Blockly.Arduino.base_setup = function () {
+    var branch = Blockly.Arduino.statementToCode(this, 'DO');
+    if (Blockly.Arduino.INFINITE_LOOP_TRAP) {
+        branch = Blockly.Arduino.INFINITE_LOOP_TRAP.replace(/%1/g,
+                '\'' + this.id + '\'') + branch;
+    }
+    var code = //'{\n' +
+            branch;// + '\n}\n';
+    var setup_key = Blockly.Arduino.variableDB_.getDistinctName('base_setup', Blockly.Variables.NAME_TYPE);
+    Blockly.Arduino.setups_[setup_key] = code;
+    return ""; //do not return any actual code
+};
+
 Blockly.Arduino.base_delay = function() {
   var delay_time = Blockly.Arduino.valueToCode(this, 'DELAY_TIME', Blockly.Arduino.ORDER_ATOMIC) || '1000'
   var code = 'delay(' + delay_time + ');\n';

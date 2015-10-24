@@ -63,8 +63,7 @@ contient la liste des blocs de Blockly ci-dessous en compressé-->
             </a> 
             <b>Blockly@rduino</b> : 
             <span id="title"></span>
-    <button id="btn_about" type="button" class="btn btn-default btn-xs"
-        data-toggle="modal" data-target="#aboutModal">
+    <button id="btn_about" type="button" class="btn btn-default btn-xs" data-toggle="modal" data-target="#aboutModal">
         <span id="span_about"> </span>
     </button>
         </p>
@@ -85,6 +84,12 @@ contient la liste des blocs de Blockly ci-dessous en compressé-->
 	                <option value="arduino_uno">UNO</option>
 	                <option value="arduino_mega">MEGA</option>
 	            </select>
+	    </div>
+	    <div id="divPicture">
+	            <button id="btn_picture" class="btn btn-warning" data-toggle="modal" data-target="#configCard">
+	                <span class="glyphicon glyphicon-cog"> </span>
+	                <span id="span_picture"> </span>
+	            </button>
 	    </div>
 	    <div id="divConfig">
 	            <button id="btn_config" class="btn btn-warning" data-toggle="modal" data-target="#configModal">
@@ -189,8 +194,22 @@ contient la liste des blocs de Blockly ci-dessous en compressé-->
     </div>
 
 <!-- Modals -->
+<!-- picture modal -->
+<div class="modal fade bs-example-modal-sm" id="configCard" tabindex="-1" role="dialog" aria-labelledby="configCardLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="configCardLabel"></h4>
+      </div>
+      <div class="modal-body">
+              <img src = "media/arduino_brochage_20_broches.png">
+      </div>
+    </div>
+  </div>
+</div>
 <!-- about modal -->
-<div class="modal fade bs-example-modal-sm" id="aboutModal" tabindex="-1" role="dialog" aria-labelledby="aboutModalLabel" aria-hidden="true">
+<div class="modal fade" id="aboutModal" tabindex="-1" role="dialog" aria-labelledby="aboutModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
@@ -444,7 +463,9 @@ contient la liste des blocs de Blockly ci-dessous en compressé-->
 <xml id="CAT_ARDUINO" style="display: none">
     <sep></sep>
     <category name="CAT_ARDUINO">
-        <category name="CAT_ARDUINO_IN">
+        <block type="base_setup">
+		</block>
+		<category name="CAT_ARDUINO_IN">
             <block type="inout_analog_read"></block>
             <block type="inout_digital_read"></block>			
             <block type="inout_onoff"></block>

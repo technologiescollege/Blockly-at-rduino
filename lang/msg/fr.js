@@ -3,6 +3,8 @@ var MSG = {
   labelArduinoCard: "carte Arduino :",
   btn_switch: " modifier orientation du menu",
   span_config: " configurer les blocs",
+  span_picture: " afficher la carte",
+  configCardLabel: " carte Arduino sélectionnée",
   span_delete: " effacer TOUS les blocs",
   span_saveXML:" sauver en fichier XML",
   span_fakeload:" charger un fichier XML",
