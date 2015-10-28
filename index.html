@@ -57,8 +57,7 @@ contient la liste des blocs de Blockly ci-dessous en compressé-->
 <body onload="BlocklyDuino.init()">
     <div id="divTitre">
         <p>
-            <a href="http://www.technologiescollege.fr/blockly@rduino/"> <img
-                src="media/Arduino-uno-perspective-transparent.png" border="0"
+            <a href="http://www.technologiescollege.fr/blockly@rduino/"> <img src="media/Arduino-uno-perspective-transparent.png" border="0"
                 height="76px">
             </a> 
             <b>Blockly@rduino</b> : 
@@ -86,13 +85,13 @@ contient la liste des blocs de Blockly ci-dessous en compressé-->
 	            </select>
 	    </div>
 	    <div id="divPicture">
-	            <button id="btn_picture" class="btn btn-warning" data-toggle="modal" data-target="#configCard">
-	                <span class="glyphicon glyphicon-cog"> </span>
+	            <button id="btn_picture" class="btn btn-danger btn-block" data-toggle="modal" data-target="#showcardModal">
+	                <span class="glyphicon glyphicon-alert"> </span>
 	                <span id="span_picture"> </span>
 	            </button>
 	    </div>
 	    <div id="divConfig">
-	            <button id="btn_config" class="btn btn-warning" data-toggle="modal" data-target="#configModal">
+	            <button id="btn_config" class="btn btn-warning btn-block" data-toggle="modal" data-target="#configModal">
 	                <span class="glyphicon glyphicon-cog"> </span>
 	                <span id="span_config"> </span>
 	            </button>
@@ -127,15 +126,21 @@ contient la liste des blocs de Blockly ci-dessous en compressé-->
         </ul>
         </div>
         <div id="menuPanelRight">
-	        <a id="btn_saveXML" class='btn btn-success' href="#" role='button'>
-	          <span class="glyphicon glyphicon-floppy-save"></span>
+	        <a id="btn_saveXML" class='btn btn-success btn-block' href="#" role='button'>
+	          <span class="glyphicon glyphicon-cloud-download"></span>
 	          <span id="span_saveXML"> </span>
 	         </a>
-	        <button id="btn_fakeload" class="btn btn-success">
-	            <span class="glyphicon glyphicon-floppy-open"></span>
-	            <span   id="span_fakeload"> </span>
+	        <button id="btn_fakeload" class="btn btn-success btn-block">
+	            <span class="glyphicon glyphicon-cloud-upload"></span>
+	            <span id="span_fakeload"> </span>
 	        </button>
 	        <input type="file" id="load" style="display: none;" />
+		    <div id="divExample">
+	            <button id="btn_example" class="btn btn-info btn-block" data-toggle="modal" data-target="#exampleModal">
+	                <span class="glyphicon glyphicon-share"> </span>
+	                <span id="span_example"> </span>
+	            </button>
+			</div>
         </div>        
     </div>
     
@@ -169,15 +174,22 @@ contient la liste des blocs de Blockly ci-dessous en compressé-->
                     </div>
 				</div>
 				<div id="content_arduino" class="tab-pane">
-                <select id="cb_cf_boards"></select>
-                <select id="cb_cf_ports"></select>
-                <button id="cb_cf_verify_btn" class="btn btn-primary"></button>
-                <button id="btn_edit_code" class="btn btn-primary" data-toggle="modal" data-target="#editModal">
-                    <span class="glyphicon glyphicon-pencil"> </span>
+					<select id="cb_cf_boards"></select>
+					<select id="cb_cf_ports"></select>
+				
+				<a id="btn_plugin_codebender" class='btn btn-danger' href="https://codebender.cc/static/plugin" target=_blank role='button'></a>
+				
+				<button id="cb_cf_verify_btn" class="btn btn-primary"><span class="glyphicon glyphicon-share"></span></button>
+								
+				<button id="btn_edit_code" class="btn btn-primary" data-toggle="modal" data-target="#editModal">
+                    <span id="icon_edit_btn" class="glyphicon glyphicon-edit"> </span>
                     <span id="span_config"> </span>
                 </button>
+				
                 <button id="cb_cf_flash_btn" class="btn btn-primary"></button>
-                <a id="btn_saveArduino" class='btn btn-primary' href="#" role='button'></a>
+				
+				<a id="btn_saveArduino" class='btn btn-primary' href="#" role='button'></a>			
+				
                 <pre id="pre_arduino"></pre>
                 <div id="debug_arduino"></div>
             </div>
@@ -194,20 +206,6 @@ contient la liste des blocs de Blockly ci-dessous en compressé-->
     </div>
 
 <!-- Modals -->
-<!-- picture modal -->
-<div class="modal fade bs-example-modal-sm" id="configCard" tabindex="-1" role="dialog" aria-labelledby="configCardLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="configCardLabel"></h4>
-      </div>
-      <div class="modal-body">
-              <img src = "media/arduino_brochage_20_broches.png">
-      </div>
-    </div>
-  </div>
-</div>
 <!-- about modal -->
 <div class="modal fade" id="aboutModal" tabindex="-1" role="dialog" aria-labelledby="aboutModalLabel" aria-hidden="true">
   <div class="modal-dialog">
@@ -222,6 +220,34 @@ contient la liste des blocs de Blockly ci-dessous en compressé-->
 			  <br />
 			  <span><b>Blockly@rduino</b></span> (<a href="https://github.com/technologiescollege/Blockly-at-rduino">Github</a>)
               <span id="aboutBody" style="font-style: italic;"> </span>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- picture modal -->
+<div class="modal fade" id="showcardModal" tabindex="-1" role="dialog" aria-labelledby="showcardLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="showcardLabel"></h4>
+      </div>
+      <div class="modal-body">
+              <img src = "media/arduino-uno-pinout.jpg">
+      </div>
+    </div>
+  </div>
+</div>
+<!-- example modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="exampleModalLabel"></h4>
+      </div>
+      <div class="modal-body">
+              <img src = "media/arduino-uno-pinout.jpg">
       </div>
     </div>
   </div>

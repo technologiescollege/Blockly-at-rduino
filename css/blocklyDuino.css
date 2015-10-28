@@ -71,11 +71,7 @@ html[dir="RTL"] .navbar-right {
     width: 225px;
 }
 
-.btn_config-ver,.btn_saveXML-ver {
-	margin: 5px 0;
-}
-
-.btn_picture-ver,.btn_saveXML-ver {
+.btn_config-ver,.btn_picture-ver,.btn_saveXML-ver {
 	margin: 5px 0;
 }
 

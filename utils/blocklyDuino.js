@@ -217,14 +217,16 @@ BlocklyDuino.backupBlocks = function () {
 BlocklyDuino.arduinoCard =  function (){
   var Cacheobj=document.getElementById("pinout");
   var count = Blockly.mainWorkspace.getAllBlocks().length;
-  if (window.profile["default"]!=window.profile[Cacheobj.options[Cacheobj.selectedIndex].value]) {
-  if (false || window.confirm(MSG['arduino_card']+' '+window.profile[Cacheobj.options[Cacheobj.selectedIndex].value].description+' ?')) {
-    window.profile["default"]=window.profile[Cacheobj.options[Cacheobj.selectedIndex].value];
-//    BlocklyDuino.backupBlocks();
-    Blockly.mainWorkspace.clear();
-//    BlocklyDuino.loadBlocks('');
-    BlocklyDuino.renderContent();
-	}
+  if (window.profile["default"]!=window.profile[Cacheobj.options[Cacheobj.selectedIndex].value])
+  {
+	  if (false || window.confirm(MSG['arduino_card']+' '+window.profile[Cacheobj.options[Cacheobj.selectedIndex].value].description+' ?'))
+		  {
+			window.profile["default"]=window.profile[Cacheobj.options[Cacheobj.selectedIndex].value];
+		//    BlocklyDuino.backupBlocks();
+			Blockly.mainWorkspace.clear();
+		//    BlocklyDuino.loadBlocks('');
+			BlocklyDuino.renderContent();
+			}
   }
 }; 
 
@@ -354,7 +356,9 @@ BlocklyDuino.bindFunctions = function () {
 	BlocklyDuino.bindClick('btn_saveArduino',  BlocklyDuino.saveArduinoFile);
 
   var pinout = document.getElementById('pinout');
+  //var picture = document.getElementById('picture');
   BlocklyDuino.bindEvent(pinout, 'change', BlocklyDuino.arduinoCard);
+  //BlocklyDuino.bindEvent(picture, 'change', BlocklyDuino.arduinoCard);
 
   var loadInput = document.getElementById('load');
   BlocklyDuino.bindEvent(loadInput, 'change', BlocklyDuino.load);
