@@ -10,6 +10,7 @@ var MSG = {
   span_fakeload:" load XML file",
   span_example: " open example",
   exampleModalLabel: "choisir un exemple",
+  btn_plugin_codebender: " if disabled...",
   cb_cf_verify_btn: "verify code",
   btn_edit_code :"edit code",
   cb_cf_flash_btn: "upload to Arduino !",

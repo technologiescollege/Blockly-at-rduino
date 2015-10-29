@@ -175,6 +175,8 @@ Code.initLanguage = function() {
   // Inject language strings.
   document.getElementById('title').textContent = MSG['title'];
   document.getElementById('span_about').textContent = MSG['span_about'];
+  document.getElementById('span_example').textContent = MSG['span_example'];
+  document.getElementById('span_picture').textContent = MSG['span_picture'];
   document.getElementById('aboutModalLabel').textContent = MSG['aboutModalLabel'];
   document.getElementById('aboutBody').innerHTML = MSG['aboutBody'];
   
@@ -198,6 +200,7 @@ Code.initLanguage = function() {
   document.getElementById('btn_edit_code').textContent = MSG['btn_edit_code'];
   document.getElementById('cb_cf_flash_btn').textContent = MSG['cb_cf_flash_btn'];
   document.getElementById('btn_saveArduino').textContent = MSG['button_saveArduino'];
+  document.getElementById('btn_plugin_codebender').textContent = MSG['btn_plugin_codebender'];
   document.getElementById('cb_cf_serial_monitor_connect').textContent = MSG['cb_cf_serial_monitor_connect'];
 
   document.getElementById('configModalLabel').textContent = MSG['configModalLabel'];
@@ -206,6 +209,8 @@ Code.initLanguage = function() {
   document.getElementById('btn_valid').textContent = MSG['btn_valid'];
 
   document.getElementById('editModalLabel').textContent = MSG['editModalLabel'];
+  document.getElementById('showcardLabel').textContent = MSG['showcardLabel'];
+  document.getElementById('exampleModalLabel').textContent = MSG['exampleModalLabel'];
   document.getElementById('btn_closeCode').textContent = MSG['btn_closeCode'];
   document.getElementById('btn_validCode').textContent = MSG['btn_validCode'];
 

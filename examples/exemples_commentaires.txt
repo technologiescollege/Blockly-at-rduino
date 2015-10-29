@@ -1,0 +1,18 @@
+<tbody>
+
+<tr>
+<td>explication</td>
+<td><a href="index.html?url=./examples/blockly_arduino_grenouille.xml"><img src="examples/IR Remote Control.jpg"></a></td>
+</tr>
+
+<tr>
+<td>blabla du prof</td>
+<td><a href="index.html?url=./examples/fichier_contenant_la_sauvegarde.xml"><img src="examples/_nom_de_l_image_miniature.jpg"></a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+</tr>
+
+</tbody>

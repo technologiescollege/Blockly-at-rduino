@@ -85,13 +85,13 @@ contient la liste des blocs de Blockly ci-dessous en compressé-->
 	            </select>
 	    </div>
 	    <div id="divPicture">
-	            <button id="btn_picture" class="btn btn-danger btn-block" data-toggle="modal" data-target="#showcardModal">
+	            <button id="btn_picture" class="btn btn-danger btn-block text-left" data-toggle="modal" data-target="#showcardModal">
 	                <span class="glyphicon glyphicon-alert"> </span>
 	                <span id="span_picture"> </span>
 	            </button>
 	    </div>
 	    <div id="divConfig">
-	            <button id="btn_config" class="btn btn-warning btn-block" data-toggle="modal" data-target="#configModal">
+	            <button id="btn_config" class="text-left btn btn-warning btn-block " data-toggle="modal" data-target="#configModal">
 	                <span class="glyphicon glyphicon-cog"> </span>
 	                <span id="span_config"> </span>
 	            </button>
@@ -126,7 +126,7 @@ contient la liste des blocs de Blockly ci-dessous en compressé-->
         </ul>
         </div>
         <div id="menuPanelRight">
-	        <a id="btn_saveXML" class='btn btn-success btn-block' href="#" role='button'>
+	        <a id="btn_saveXML" class='btn btn-success btn-block text-left' href="#" role='button'>
 	          <span class="glyphicon glyphicon-cloud-download"></span>
 	          <span id="span_saveXML"> </span>
 	         </a>
@@ -178,6 +178,7 @@ contient la liste des blocs de Blockly ci-dessous en compressé-->
 					<select id="cb_cf_ports"></select>
 				
 				<a id="btn_plugin_codebender" class='btn btn-danger' href="https://codebender.cc/static/plugin" target=_blank role='button'></a>
+				<!--<a id="btn_plugin_codebender" class='btn btn-danger' href="https://codebender.cc/static/plugin" target=_blank role='button'></a>-->
 				
 				<button id="cb_cf_verify_btn" class="btn btn-primary"><span class="glyphicon glyphicon-share"></span></button>
 								
@@ -232,22 +233,30 @@ contient la liste des blocs de Blockly ci-dessous en compressé-->
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
         <h4 class="modal-title" id="showcardLabel"></h4>
       </div>
-      <div class="modal-body">
-              <img src = "media/arduino-uno-pinout.jpg">
+      <div class="modal-body text-center">
+              <img id="arduino_card_picture">
       </div>
     </div>
   </div>
 </div>
 <!-- example modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
+  <div class="modal-dialog modal-lg">
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
         <h4 class="modal-title" id="exampleModalLabel"></h4>
       </div>
+	  			<script> 
+				$(function(){
+				  $("#includedContent").load("examples/exemples.txt"); 
+				});
+				</script> 
       <div class="modal-body">
-              <img src = "media/arduino-uno-pinout.jpg">
+		<div class="table-responsive">
+			<table class="table table-hover" id="includedContent">
+			</table>
+		</div>
       </div>
     </div>
   </div>

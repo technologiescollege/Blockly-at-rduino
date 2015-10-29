@@ -216,16 +216,17 @@ BlocklyDuino.backupBlocks = function () {
  */
 BlocklyDuino.arduinoCard =  function (){
   var Cacheobj=document.getElementById("pinout");
-  var count = Blockly.mainWorkspace.getAllBlocks().length;
-  if (window.profile["default"]!=window.profile[Cacheobj.options[Cacheobj.selectedIndex].value])
+  //var count = Blockly.mainWorkspace.getAllBlocks().length;
+  if (window.profile["defaultBoard"]!=window.profile[Cacheobj.options[Cacheobj.selectedIndex].value])
   {
 	  if (false || window.confirm(MSG['arduino_card']+' '+window.profile[Cacheobj.options[Cacheobj.selectedIndex].value].description+' ?'))
 		  {
-			window.profile["default"]=window.profile[Cacheobj.options[Cacheobj.selectedIndex].value];
+			window.profile["defaultBoard"]=window.profile[Cacheobj.options[Cacheobj.selectedIndex].value];
 		//    BlocklyDuino.backupBlocks();
 			Blockly.mainWorkspace.clear();
 		//    BlocklyDuino.loadBlocks('');
 			BlocklyDuino.renderContent();
+			$('#arduino_card_picture').attr("src", profile.defaultBoard['picture']);
 			}
   }
 }; 
@@ -580,6 +581,8 @@ BlocklyDuino.init = function() {
 
 	}
 
+	$('#arduino_card_picture').attr("src", profile.defaultBoard['picture']);
+	
 	// build Blockly ...
 	Blockly.inject(document.getElementById('content_blocks'), {
 		media : 'media/',
@@ -664,6 +667,8 @@ BlocklyDuino.setOrientation = function() {
 		var divTabpanel = document.getElementById("divTabpanel");
 		var divSwitch = document.getElementById("divSwitch");
 		var divCard = document.getElementById("divCard");
+		var divPicture = document.getElementById("divPicture");
+		var divExample = document.getElementById("divExample");
 		var divConfig = document.getElementById("divConfig");
 		
         ulNav.className = "nav nav-pills";
@@ -672,6 +677,8 @@ BlocklyDuino.setOrientation = function() {
         divTabpanel.className += " divTabpanel-hor";
         divSwitch.className += " divSwitch-hor";
         divCard.className += " divCard-hor";
+		divPicture.className += " divCard-hor";
+		divExample.className += " divCard-hor";
         divConfig.className += " divConfig-hor";
 	} else {
 		var ulNav = document.getElementById("ul_nav");
@@ -679,6 +686,10 @@ BlocklyDuino.setOrientation = function() {
 		var menuPanelCenter = document.getElementById("menuPanelCenter");
 		var btn_config = document.getElementById("btn_config");
 		var btn_saveXML = document.getElementById("btn_saveXML");
+		var btn_fakeload = document.getElementById("btn_fakeload");
+		var btn_picture = document.getElementById("btn_picture");
+		var btn_example = document.getElementById("btn_example");
+		var btn_plugin_codebender = document.getElementById("btn_plugin_codebender");
 		var divTabpanel = document.getElementById("divTabpanel");
 		
         ulNav.className = "nav nav-pills nav-stacked";
@@ -687,8 +698,12 @@ BlocklyDuino.setOrientation = function() {
 	        menuPanelCenter.className += " menuPanelCenter-ver";
 		}
         menuPanel.className += " menuPanel-ver";
-        btn_config.className += " btn_config-ver";
-        btn_saveXML.className += " btn_saveXML-ver";
+        btn_config.className += " btn_ver";
+        btn_saveXML.className += " btn_ver";
+		btn_fakeload.className += " btn_ver";
+		btn_picture.className += " btn_ver";
+        btn_example.className += " btn_ver";
+		btn_plugin_codebender.className += " btn_ver";
         divTabpanel.className += " divTabpanel-ver";
 	}
 };

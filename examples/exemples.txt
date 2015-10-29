@@ -1,0 +1,22 @@
+<tbody>
+
+<tr>
+<td>explication</td>
+<td>
+<a href="index.html?url=./examples/blockly_arduino_grenouille.xml"> <!--nom de la sauvegarde XML sans espace ni accent-->
+<img class="img-responsive" src="examples/IR Remote Control.jpg"> <!--nom de la vignette-->
+</a>
+</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+</tr>
+
+</tbody>
