@@ -670,6 +670,7 @@ BlocklyDuino.setOrientation = function() {
 		var divPicture = document.getElementById("divPicture");
 		var divExample = document.getElementById("divExample");
 		var divConfig = document.getElementById("divConfig");
+		var divSupervision = document.getElementById("divSupervision");
 		
         ulNav.className = "nav nav-pills";
         menuPanelCenter.className += " menuPanelCenter-hor";
@@ -680,11 +681,13 @@ BlocklyDuino.setOrientation = function() {
 		divPicture.className += " divCard-hor";
 		divExample.className += " divCard-hor";
         divConfig.className += " divConfig-hor";
+		divSupervision.className += " divConfig-hor";
 	} else {
 		var ulNav = document.getElementById("ul_nav");
 		var menuPanel = document.getElementById("menuPanel");
 		var menuPanelCenter = document.getElementById("menuPanelCenter");
 		var btn_config = document.getElementById("btn_config");
+		var btn_supervision = document.getElementById("btn_supervision");
 		var btn_saveXML = document.getElementById("btn_saveXML");
 		var btn_fakeload = document.getElementById("btn_fakeload");
 		var btn_picture = document.getElementById("btn_picture");
@@ -699,6 +702,7 @@ BlocklyDuino.setOrientation = function() {
 		}
         menuPanel.className += " menuPanel-ver";
         btn_config.className += " btn_ver";
+		btn_supervision += " btn_ver";
         btn_saveXML.className += " btn_ver";
 		btn_fakeload.className += " btn_ver";
 		btn_picture.className += " btn_ver";

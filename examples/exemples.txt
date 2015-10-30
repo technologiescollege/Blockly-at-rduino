@@ -1,22 +1,48 @@
-<tbody>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<tbody> <!--NE SURTOUT PAS SUPPRIMER !!!! -->
+
+<!-- 1ère ligne du tableau-->
+<tr>
+<td>nom de la sauvegarde XML sans espace ni accent</td>
+<td>photo/vignette du montage</td>
+<td>lien vers une page</td>
+</tr>
 
 <tr>
-<td>explication</td>
+<td><a href="index.html?lang=fr?url=./examples/blink/blink.xml"> <!--nom de la sauvegarde XML sans espace ni accent-->
+le tout premier exercice : faire clignoter une diode
+</a></td>
 <td>
-<a href="index.html?url=./examples/blockly_arduino_grenouille.xml"> <!--nom de la sauvegarde XML sans espace ni accent-->
-<img class="img-responsive" src="examples/IR Remote Control.jpg"> <!--nom de la vignette-->
+<a href="examples/blink/blink_fritzing.jpg" target=_blank> <!--nom de la sauvegarde XML sans espace ni accent-->
+<img class="img-responsive" src="examples/blink/blink_fritzing_redimensionner.jpg"> <!--nom de la vignette-->
 </a>
 </td>
+<td>lien vers une page</td>
 </tr>
 
 <tr>
-<td></td>
-<td></td>
+<td><a href="index.html?lang=fr?url=./examples/servo_potentio/servo_potentio.xml"> <!--nom de la sauvegarde XML sans espace ni accent-->
+faire varier l'angle d'un servomoteur proportionnellement au potentiometre
+</a></td>
+<td>
+<a href="examples/servo_potentio/servo_potentio_fritzing.jpg" target=_blank> <!--nom de la sauvegarde XML sans espace ni accent-->
+<img class="img-responsive" src="examples/servo_potentio/servo_potentio_fritzing_redimensionner.jpg"> <!--nom de la vignette-->
+</a>
+</td>
+<td>lien vers une page</td>
 </tr>
 
 <tr>
-<td></td>
-<td></td>
+<td><a href="index.html?lang=fr?url=./examples/grenouille/grenouille.xml"> <!--nom de la sauvegarde XML sans espace ni accent-->
+faire avancer un robot qui stoppe quand un objet est à moins de 10cm
+</a></td>
+<td>
+<a href="examples/servo_potentio/servo_potentio_fritzing.jpg" target=_blank> <!--nom de la sauvegarde XML sans espace ni accent-->
+<img class="img-responsive" src="examples/servo_potentio/servo_potentio_fritzing_redimensionner.jpg"> <!--nom de la vignette-->
+</a>
+</td>
+<td>
+<a href="http://fablabo.net/wiki/FablabJunior_Automne_2015/Projet4" target=_blank>sur Fablabo</a></td>
 </tr>
 
-</tbody>
+</tbody> <!--NE SURTOUT PAS SUPPRIMER !!!! -->

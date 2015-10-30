@@ -96,6 +96,12 @@ contient la liste des blocs de Blockly ci-dessous en compressé-->
 	                <span id="span_config"> </span>
 	            </button>
 	    </div>
+	    <div id="divSupervision">
+	            <button id="btn_supervision" class="text-left btn btn-primary btn-block ">
+	                <span class="glyphicon glyphicon-blackboard"> </span>
+	                <span id="span_supersivsion"> </span>
+	            </button>
+	    </div>
     </div>
     <div id="menuPanelCenter">
             <ul id="ul_nav" role="tablist">
@@ -141,7 +147,7 @@ contient la liste des blocs de Blockly ci-dessous en compressé-->
 	                <span id="span_example"> </span>
 	            </button>
 			</div>
-        </div>        
+		</div>        
     </div>
     
     <!-- Nav tabs -->
@@ -177,10 +183,12 @@ contient la liste des blocs de Blockly ci-dessous en compressé-->
 					<select id="cb_cf_boards"></select>
 					<select id="cb_cf_ports"></select>
 				
-				<a id="btn_plugin_codebender" class='btn btn-danger' href="https://codebender.cc/static/plugin" target=_blank role='button'></a>
-				<!--<a id="btn_plugin_codebender" class='btn btn-danger' href="https://codebender.cc/static/plugin" target=_blank role='button'></a>-->
+				<a id="btn_plugin_codebender" class='btn btn-danger' href="https://codebender.cc/static/plugin" target=_blank role='button'>
+					<!--<span class="glyphicon glyphicon-cloud-download"></span>
+					<span id="span_plugin_codebender"> </span>-->
+				</a>
 				
-				<button id="cb_cf_verify_btn" class="btn btn-primary"><span class="glyphicon glyphicon-share"></span></button>
+				<button id="cb_cf_verify_btn" class="btn btn-primary"><span class="glyphicon glyphicon-ok"> </span></button>
 								
 				<button id="btn_edit_code" class="btn btn-primary" data-toggle="modal" data-target="#editModal">
                     <span id="icon_edit_btn" class="glyphicon glyphicon-edit"> </span>
