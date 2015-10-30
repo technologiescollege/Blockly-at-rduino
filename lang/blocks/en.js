@@ -678,15 +678,18 @@ Blockly.Msg.ROBOTS_MISC_BUZZER_DURATION = "Duration";
 Blockly.Msg.ROBOTS_MISC_BUZZER_VOLUME = "Volume";
 Blockly.Msg.ROBOTS_MISC_BUZZER_NOTE = "Note";
 
-//added july 15th 2015
+//updated july 24th 2015
 Blockly.Msg.TECHNOZONE_PIN = "Pin #";
-Blockly.Msg.TECHNOZONE_TELECFLUSH_TITLE = "empty IR remote buffer";
+Blockly.Msg.TECHNOZONE_BUTTON = "Button State";
+Blockly.Msg.TECHNOZONE_OFTHE = "of the";
+Blockly.Msg.TECHNOZONE_CONNECTTOPINS = "Connect to pins";
+Blockly.Msg.TECHNOZONE_TELECFLUSH_TITLE = "Empty IR remote buffer";
 Blockly.Msg.TECHNOZONE_TELECFLUSH_TOOLTIP = "Empty the IR buffer";
 Blockly.Msg.TECHNOZONE_TELECINIT_TITLE = "an IR Button pressed?";
 Blockly.Msg.TECHNOZONE_TELECINIT_TOOLTIP = "Tests if a remote button was pressed";
 Blockly.Msg.TECHNOZONE_TELECSETUP_TITLE = "Initialize IR Remote";
 Blockly.Msg.TECHNOZONE_TELECSETUP_TOOLTIP = "Init remote, required to use IR Button";
-Blockly.Msg.TECHNOZONE_TELEC12_TITLEA = "the key";
+Blockly.Msg.TECHNOZONE_TELEC12_TITLEA = "The key";
 Blockly.Msg.TECHNOZONE_TELEC12_TITLEB = "on the remote";
 Blockly.Msg.TECHNOZONE_TELEC12_TITLEC = "that was pressed";
 Blockly.Msg.TECHNOZONE_TELEC12_TOOLTIP = "Provides the IR code for a specific remote button";
@@ -706,6 +709,16 @@ Blockly.Msg.TECHNOZONE_ILS1_TITLE = "Detect a magnetic field";
 Blockly.Msg.TECHNOZONE_ILS1_TOOLTIP = "Magnetic field detector (ref : ILS1)";
 Blockly.Msg.TECHNOZONE_PROXI1_TITLE = "Near-range IR detector";
 Blockly.Msg.TECHNOZONE_PROXI1_TOOLTIP = "Input Proximity Sensor (ref : PROXI1)";
+Blockly.Msg.TECHNOZONE_DROPDOWN = [["Motor A", "HIGH"], ["Motor B", "LOW"]];
+Blockly.Msg.TECHNOZONE_MOT2_DIR = "Direction Pin (DIR)";
+Blockly.Msg.TECHNOZONE_MOT2_PWM = "Speed Pin (PWM~)";
+Blockly.Msg.TECHNOZONE_CONTROLS = "Controls";
+Blockly.Msg.TECHNOZONE_MOT2_FOR = "for MOT2";
+Blockly.Msg.TECHNOZONE_SPEED = "speed [0-255]";
+Blockly.Msg.TECHNOZONE_MOT2_TOOLTIP = "Two DC motors control board for EASYCON1 , EASYCON2 , EASYBOT1 (ref : MOT2 )";
+Blockly.Msg.TECHNOZONE_SPIN = "clockwise ( TRUE or FALSE? )";
+Blockly.Msg.TECHNOZONE_ADDRESS = "at address";
+Blockly.Msg.TECHNOZONE_I2CBUS = "I2C Bus";
 
 //added july 17th 2015
 Blockly.Msg.BQ_PIN = "Pin #";
