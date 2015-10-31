@@ -177,6 +177,7 @@ Code.initLanguage = function() {
   document.getElementById('span_about').textContent = MSG['span_about'];
   document.getElementById('span_example').textContent = MSG['span_example'];
   document.getElementById('span_picture').textContent = MSG['span_picture'];
+  document.getElementById('span_supervision').textContent = MSG['span_supervision'];
   document.getElementById('aboutModalLabel').textContent = MSG['aboutModalLabel'];
   document.getElementById('aboutBody').innerHTML = MSG['aboutBody'];
   

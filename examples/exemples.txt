@@ -1,7 +1,6 @@
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<tbody> <!--NE SURTOUT PAS SUPPRIMER !!!! -->
+﻿<tbody> <!--NE SURTOUT PAS SUPPRIMER !!!! -->
 
-<!-- 1�re ligne du tableau-->
+<!-- 1ère ligne du tableau-->
 <tr>
 <td>nom de la sauvegarde XML sans espace ni accent</td>
 <td>photo/vignette du montage</td>
@@ -22,7 +21,7 @@ le tout premier exercice : faire clignoter une diode
 
 <tr>
 <td><a href="index.html?lang=fr?url=./examples/servo_potentio/servo_potentio.xml"> <!--nom de la sauvegarde XML sans espace ni accent-->
-faire varier l'angle d'un servomoteur proportionnellement au potentiometre
+faire varier l'angle d'un servomoteur proportionnellement au potentiomètre
 </a></td>
 <td>
 <a href="examples/servo_potentio/servo_potentio_fritzing.jpg" target=_blank> <!--nom de la sauvegarde XML sans espace ni accent-->
@@ -34,7 +33,7 @@ faire varier l'angle d'un servomoteur proportionnellement au potentiometre
 
 <tr>
 <td><a href="index.html?lang=fr?url=./examples/grenouille/grenouille.xml"> <!--nom de la sauvegarde XML sans espace ni accent-->
-faire avancer un robot qui stoppe quand un objet est � moins de 10cm
+faire avancer un robot qui stoppe quand un objet est à moins de 10cm
 </a></td>
 <td>
 <a href="examples/servo_potentio/servo_potentio_fritzing.jpg" target=_blank> <!--nom de la sauvegarde XML sans espace ni accent-->
