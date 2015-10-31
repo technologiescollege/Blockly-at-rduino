@@ -5,7 +5,7 @@ var MSG = {
   span_config: " configure blocks",
   span_picture: " show Arduino card",
   showcardLabel: " Arduino card details",
-  span_supervision: " card control",
+  span_supervision: " card supervision",
   span_delete: " delete ALL blocks",
   span_saveXML:" save to XML file",
   span_fakeload:" load XML file",

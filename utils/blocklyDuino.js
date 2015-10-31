@@ -357,9 +357,7 @@ BlocklyDuino.bindFunctions = function () {
 	BlocklyDuino.bindClick('btn_saveArduino',  BlocklyDuino.saveArduinoFile);
 
   var pinout = document.getElementById('pinout');
-  //var picture = document.getElementById('picture');
   BlocklyDuino.bindEvent(pinout, 'change', BlocklyDuino.arduinoCard);
-  //BlocklyDuino.bindEvent(picture, 'change', BlocklyDuino.arduinoCard);
 
   var loadInput = document.getElementById('load');
   BlocklyDuino.bindEvent(loadInput, 'change', BlocklyDuino.load);
@@ -483,7 +481,7 @@ BlocklyDuino.buildToolbox = function() {
 
 	// set the default toolbox if none in session
 	if (loadIds === undefined || loadIds === "") {
-		loadIds = "CAT_LOGIC,CAT_LOOPS,CAT_VARIABLES,CAT_FUNCTIONS";
+		loadIds = "CAT_LOGIC,CAT_LOOPS,CAT_VARIABLES,CAT_FUNCTIONS,CAT_MATHS,CAT_ARDUINO";
 		window.localStorage.toolboxids = loadIds;
 	}
 	
