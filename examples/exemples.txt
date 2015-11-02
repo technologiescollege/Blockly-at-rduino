@@ -1,6 +1,7 @@
-﻿<tbody> <!--NE SURTOUT PAS SUPPRIMER !!!! -->
+﻿<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<tbody>
 
-<!-- 1ère ligne du tableau-->
+<!-- 1�re ligne du tableau-->
 <tr>
 <td>nom de la sauvegarde XML sans espace ni accent</td>
 <td>photo/vignette du montage</td>
