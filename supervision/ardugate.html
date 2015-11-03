@@ -1,0 +1,269 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>ArduGate Demo</title>
+</head>
+<body style="font-family:Verdana" onload="Unload()">
+<center>
+  <h2>ArduGate Demo</h2>
+  <table>
+    <tr>
+      <td>Port:
+        <div id="ports">
+          <select>
+          </select>
+        </div>
+        <br />
+        Baudrate: <br />
+        <select id="listBaudrate">
+          <option value="57600">57600 bps</option>
+          <option value="38400">38400 bps</option>
+          <option value="9600">9600 bps</option>
+        </select>
+        <br />
+        <br />
+        <input type="button" id="btnConnect" value="Connect" onclick="if (value == 'Connect') Open(); else Close();" style="width:90px"/>
+        <br />
+        <input type="button" id="btnReset" value="Reset" onclick="Reset()" style="width:90px" disabled="disabled"/></td>
+      <td><img src="arduino.jpg" /></td>
+    </tr>
+  </table>
+  <div id="statusbar" style="text-align:center; width:100%" >Ready </div>
+  <hr/>
+  <table width="760">
+    <tr valign="top">
+      <td> D2:
+        <select id="MODE_D2" onchange="SetPinMode(2, parseInt(value))">
+          <option></option>
+          <option value="0">Input</option>
+          <option value="1">Output</option>
+          <option>---------</option>
+          <option value="3">Servo</option>
+          <option value="1">Light</option>
+          <option value="0">Switch</option>
+          <option value="1">Relay</option>
+        </select>
+        <input type="checkbox" id="STATE_D2" onclick="digitalWrite(2, checked ? 1 : 0)"/>
+        <input type="text" id="VALUE_D2" onkeyup="SetPinValue(2, parseInt(value))" style="width:28px" value="0"/>
+        <input type="button" value="-" onclick="SpinValue(2, -10)"/><input type="button" value="+" onclick="SpinValue(2, 10)"/>
+        <br/>
+        D3:
+        <select id="MODE_D3" onchange="SetPinMode(3, parseInt(value))">
+          <option value=""></option>
+          <option value="0">Input</option>
+          <option value="1">Output</option>
+          <option value="2">PWM</option>
+          <option>---------</option>
+          <option value="3">Servo</option>
+          <option value="1">Light</option>
+          <option value="0">Switch</option>
+          <option value="1">Relay</option>
+        </select>
+        <input type="checkbox" id="STATE_D3" onclick="digitalWrite(3, checked ? 1 : 0)"/>
+        <input type="text" id="VALUE_D3" onkeyup="SetPinValue(3, parseInt(value))" style="width:28px" value="0"/>
+        <input type="button" value="-" onclick="SpinValue(3, -10)"/><input type="button" value="+" onclick="SpinValue(3, 10)"/>
+        <br/>
+        D4:
+        <select id="MODE_D4" onchange="SetPinMode(4, parseInt(value))">
+          <option value=""></option>
+          <option value="0">Input</option>
+          <option value="1">Output</option>
+          <option>---------</option>
+          <option value="3">Servo</option>
+          <option value="1">Light</option>
+          <option value="0">Switch</option>
+          <option value="1">Relay</option>
+        </select>
+        <input type="checkbox" id="STATE_D4" onclick="digitalWrite(4, checked ? 1 : 0)"/>
+        <input type="text" id="VALUE_D4" onkeyup="SetPinValue(4, parseInt(value))" style="width:28px" value="0"/>
+        <input type="button" value="-" onclick="SpinValue(4, -10)"/><input type="button" value="+" onclick="SpinValue(4, 10)"/>
+        <br />
+        D5:
+        <select id="MODE_D5" onchange="SetPinMode(5, parseInt(value))">
+          <option value=""></option>
+          <option value="0">Input</option>
+          <option value="1">Output</option>
+          <option value="2">PWM</option>
+          <option>---------</option>
+          <option value="3">Servo</option>
+          <option value="1">Light</option>
+          <option value="0">Switch</option>
+          <option value="1">Relay</option>
+        </select>
+        <input type="checkbox" id="STATE_D5" onclick="digitalWrite(5, checked ? 1 : 0)"/>
+        <input type="text" id="VALUE_D5" onkeyup="SetPinValue(5, parseInt(value))" style="width:28px" value="0"/>
+        <input type="button" value="-" onclick="SpinValue(5, -10)"/><input type="button" value="+" onclick="SpinValue(5, 10)"/>
+      <td> D6:
+        <select id="MODE_D6" onchange="SetPinMode(6, parseInt(value))">
+          <option value=""></option>
+          <option value="0">Input</option>
+          <option value="1">Output</option>
+          <option value="2">PWM</option>
+          <option>---------</option>
+          <option value="3">Servo</option>
+          <option value="1">Light</option>
+          <option value="0">Switch</option>
+          <option value="1">Relay</option>
+        </select>
+        <input type="checkbox" id="STATE_D6" onclick="digitalWrite(6, checked ? 1 : 0)"/>
+        <input type="text" id="VALUE_D6" onkeyup="SetPinValue(6, parseInt(value))" style="width:28px" value="0"/>
+        <input type="button" value="-" onclick="SpinValue(6, -10)"/><input type="button" value="+" onclick="SpinValue(6, 10)"/>
+        <br/>
+        D7:
+        <select name="MODE_D3" id="MODE_D7" onchange="SetPinMode(7, parseInt(value))">
+          <option value=""></option>
+          <option value="0">Input</option>
+          <option value="1">Output</option>
+          <option>---------</option>
+          <option value="3">Servo</option>
+          <option value="1">Light</option>
+          <option value="0">Switch</option>
+          <option value="1">Relay</option>
+        </select>
+        <input type="checkbox" id="STATE_D7" onclick="digitalWrite(7, checked ? 1 : 0)"/>
+        <input type="text" id="VALUE_D7" onkeyup="SetPinValue(7, parseInt(value))" style="width:28px" value="0"/>
+        <input type="button" value="-" onclick="SpinValue(7, -10)"/><input type="button" value="+" onclick="SpinValue(7, 10)"/>
+        <br/>
+        D8:
+        <select id="MODE_D8" onchange="SetPinMode(8, parseInt(value))">
+          <option value=""></option>
+          <option value="0">Input</option>
+          <option value="1">Output</option>
+          <option>---------</option>
+          <option value="3">Servo</option>
+          <option value="1">Light</option>
+          <option value="0">Switch</option>
+          <option value="1">Relay</option>
+        </select>
+        <input type="checkbox" id="STATE_D8" onclick="digitalWrite(8, checked ? 1 : 0)"/>
+        <input type="text" id="VALUE_D8" onkeyup="SetPinValue(8, parseInt(value))" style="width:28px" value="0"/>
+        <input type="button" value="-" onclick="SpinValue(8, -10)"/><input type="button" value="+" onclick="SpinValue(8, 10)"/>
+        <br/>
+        D9:
+        <select name="MODE_D2" id="MODE_D9">
+          <option value=""></option>
+          <option value="0">Input</option>
+          <option value="1">Output</option>
+          <option value="2">PWM</option>
+          <option>---------</option>
+          <option value="3">Servo</option>
+          <option value="1">Light</option>
+          <option value="0">Switch</option>
+          <option value="1">Relay</option>
+        </select>
+        <input type="checkbox" id="STATE_D9" onclick="digitalWrite(9, checked ? 1 : 0)"/>
+        <input type="text" id="VALUE_D9" onkeyup="SetPinValue(9, parseInt(value))" style="width:28px" value="0"/>
+        <input type="button" value="-" onclick="SpinValue(9, -10)"/><input type="button" value="+" onclick="SpinValue(9, 10)"/></td>
+      <td> D10:
+        <select id="MODE_D10" onchange="SetPinMode(10, parseInt(value))">
+          <option value=""></option>
+          <option value="0">Input</option>
+          <option value="1">Output</option>
+          <option value="2">PWM</option>
+          <option>---------</option>
+          <option value="3">Servo</option>
+          <option value="1">Light</option>
+          <option value="0">Switch</option>
+          <option value="1">Relay</option>
+        </select>
+        <input type="checkbox" id="STATE_D10" onclick="digitalWrite(10, checked ? 1 : 0)"/>
+        <input type="text" id="VALUE_D10" onkeyup="SetPinValue(10, parseInt(value))" style="width:28px" value="0"/>
+        <input type="button" value="-" onclick="SpinValue(10, -10)"/><input type="button" value="+" onclick="SpinValue(10, 10)"/>
+        <br/>
+        D11:
+        <select id="MODE_D11" onchange="SetPinMode(11, parseInt(value))">
+          <option value=""></option>
+          <option value="0">Input</option>
+          <option value="1">Output</option>
+          <option value="2">PWM</option>
+          <option>---------</option>
+          <option value="3">Servo</option>
+          <option value="1">Light</option>
+          <option value="0">Switch</option>
+          <option value="1">Relay</option>
+        </select>
+        <input type="checkbox" id="STATE_D11" onclick="digitalWrite(11, checked ? 1 : 0)"/>
+        <input type="text" id="VALUE_D11" onkeyup="SetPinValue(11, parseInt(value))" style="width:28px" value="0"/>
+        <input type="button" value="-" onclick="SpinValue(11, -10)"/><input type="button" value="+" onclick="SpinValue(11, 10)"/>
+        <br/>
+        D12:
+        <select name="MODE_D" id="MODE_D12" onchange="SetPinMode(12, parseInt(value))">
+          <option value=""></option>
+          <option value="0">Input</option>
+          <option value="1">Output</option>
+          <option>---------</option>
+          <option value="3">Servo</option>
+          <option value="1">Light</option>
+          <option value="0">Switch</option>
+          <option value="1">Relay</option>
+        </select>
+        <input type="checkbox" id="STATE_D12" onclick="digitalWrite(12, checked ? 1 : 0)"/>
+        <input type="text" id="VALUE_D12" onkeyup="SetPinValue(12, parseInt(value))" style="width:28px" value="0"/>
+        <input type="button" value="-" onclick="SpinValue(12, -10)"/><input type="button" value="+" onclick="SpinValue(12, 10)"/>
+        <br/>
+        D13:
+        <select id="MODE_D13" onchange="SetPinMode(13, parseInt(value))">
+          <option value=""></option>
+          <option value="0">Input</option>
+          <option value="1">Output</option>
+          <option>---------</option>
+          <option value="3">Servo</option>
+          <option value="1">Light</option>
+          <option value="0">Switch</option>
+          <option value="1">Relay</option>
+        </select>
+        <input type="checkbox" id="STATE_D13" onclick="digitalWrite(13, checked ? 1 : 0)"/>
+        <input type="text" id="VALUE_D13" onkeyup="SetPinValue(13, parseInt(value))" style="width:28px" value="0"/>
+        <input type="button" value="-" onclick="SpinValue(13, -10)"/><input type="button" value="+" onclick="SpinValue(13, 10)"/></td>
+    </tr>
+  </table>
+  <hr/>
+  <table width="720">
+    <tr valign="top">
+      <td> A0:
+        <input type="checkbox" id="STATE_A0" onclick="SetPinModeAnalog(0, checked ? 1 : 0)"/><input type="text" id="VALUE_A0" readonly="readonly" size="2"/>
+      </td>
+      <td> A1:
+        <input type="checkbox" id="STATE_A1" onclick="SetPinModeAnalog(1, checked ? 1 : 0)"/><input type="text" id="VALUE_A1" readonly="readonly" size="2"/>
+      </td>
+      <td>A2:
+        <input type="checkbox" id="STATE_A2" onclick="SetPinModeAnalog(2, checked ? 1 : 0)"/><input type="text" id="VALUE_A2" readonly="readonly" size="2"/>
+      </td>
+      <td>A3:
+        <input type="checkbox" id="STATE_A3" onclick="SetPinModeAnalog(3, checked ? 1 : 0)"/><input type="text" id="VALUE_A3" readonly="readonly" size="2"/>
+      </td>
+      <td> A4:
+        <input type="checkbox" id="STATE_A4" onclick="SetPinModeAnalog(4, checked ? 1 : 0)"/><input type="text" id="VALUE_A4" readonly="readonly" size="2"/>
+      </td>
+      <td> A5:
+        <input type="checkbox" id="STATE_A5" onclick="SetPinModeAnalog(5, checked ? 1 : 0)"/><input type="text" id="VALUE_A5" readonly="readonly" size="2"/>
+      </td>
+    </tr>
+  </table>
+  <hr/>
+  <p>EEPROM: Address (HEX)
+    <input type="text" id="EEPROM_ADDR" size="4"/>
+    Data (HEX)
+    <input type="text" id="EEPROM_DATA" size="2"/>
+    <label>
+      <input type="button" id="btnEEPRead" value="Read" onclick="ReadEEP()"/>
+      <input type="button" id="btnEEPRead" value="Write" onclick="WriteEEP()" />
+    </label>
+  </p>
+  <hr/>
+  I2C:  
+  Address:<input type="text" id="i2c_addr" size="2" value="50"/> 
+  Data:<input type="text" id="i2c_data" size="2" value="FA"/>
+  <input type="button" id="btnI2CWrite" value="Write" onclick="WriteI2C()"/><input type="button" id="btnI2CRead" value="Read" onclick="ReadI2C()"/>
+  <br />
+  <label>
+    <textarea name="resultI2C" id="resultI2C" cols="80" rows="2"></textarea>
+  </label>
+</center>
+<script language="javascript" src="common.js"></script>
+<script language="javascript" src="serial.js"></script>
+<script language="javascript" src="arduino.js"></script>
+<script language="javascript" src="app.js"></script>
+</body>
+</html>

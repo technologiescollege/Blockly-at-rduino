@@ -1,0 +1,139 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>ArduGate Demo</title>
+<style type="text/css">
+*{margin:0; padding:0}
+body{ background:#000; color:#FFF}
+ul { width:100%; list-style:none;  }
+li {float:left; width:60px; height:55px; margin:5px; background:#F6F3F9;border-top:2px solid #ccc;border-left:2px solid #ccc; border-bottom:2px solid #666; border-right:2px solid #666}
+</style>
+</head>
+<body style="font-family:Verdana" onload="Unload()">
+<center>
+  <h2>ArduGate RGB LED Matrix Demo</h2>
+  <p>&nbsp;</p>
+  <table>
+    <tr>
+      <td>Port:
+        <div id="ports">
+          <select>
+          </select>
+        </div>
+        <p><br />
+          Baudrate: <br />
+          <select id="listBaudrate">
+            <option value="57600">57600 bps</option>
+            <option value="38400">38400 bps</option>
+            <option value="9600">9600 bps</option>
+          </select>
+          <br />
+          <br />
+          <input type="button" id="btnConnect" value="Connect" onclick="if (value == 'Connect') Open(); else Close();" style="width:90px"/>
+          <br />
+          <input type="button" id="btnReset" value="Reset" onclick="Reset()" style="width:90px" disabled="disabled"/>
+        </p>
+        <p>&nbsp;</p>
+        <p>Color:</p>
+        <p>
+            <select id="color">
+            <option value="FFFFFF">#FFFFFF</option>
+            <option value="00FFFF">#00FFFF</option>
+            <option value="FFFF00">#FFFF00</option>
+            <option value="FF00FF">#FF00FF</option>
+            <option value="FF0000">#FF0000</option>
+            <option value="00FF00">#00FF00</option>
+            <option value="0000FF">#0000FF</option>
+            <option value="000000">#000000</option>
+            </select>
+        </p></td>
+      <td>
+<div style="width:640px;height:580px">
+<ul>
+<li onclick="DrawPixel(this,0,0)"></li>
+<li onclick="DrawPixel(this,0,1)"></li>
+<li onclick="DrawPixel(this,0,2)"></li>
+<li onclick="DrawPixel(this,0,3)"></li>
+<li onclick="DrawPixel(this,0,4)"></li>
+<li onclick="DrawPixel(this,0,5)"></li>
+<li onclick="DrawPixel(this,0,6)"></li>
+<li onclick="DrawPixel(this,0,7)"></li>
+<li onclick="DrawPixel(this,1,0)"></li>
+<li onclick="DrawPixel(this,1,1)"></li>
+<li onclick="DrawPixel(this,1,2)"></li>
+<li onclick="DrawPixel(this,1,3)"></li>
+<li onclick="DrawPixel(this,1,4)"></li>
+<li onclick="DrawPixel(this,1,5)"></li>
+<li onclick="DrawPixel(this,1,6)"></li>
+<li onclick="DrawPixel(this,1,7)"></li>
+<li onclick="DrawPixel(this,2,0)"></li>
+<li onclick="DrawPixel(this,2,1)"></li>
+<li onclick="DrawPixel(this,2,2)"></li>
+<li onclick="DrawPixel(this,2,3)"></li>
+<li onclick="DrawPixel(this,2,4)"></li>
+<li onclick="DrawPixel(this,2,5)"></li>
+<li onclick="DrawPixel(this,2,6)"></li>
+<li onclick="DrawPixel(this,2,7)"></li>
+<li onclick="DrawPixel(this,3,0)"></li>
+<li onclick="DrawPixel(this,3,1)"></li>
+<li onclick="DrawPixel(this,3,2)"></li>
+<li onclick="DrawPixel(this,3,3)"></li>
+<li onclick="DrawPixel(this,3,4)"></li>
+<li onclick="DrawPixel(this,3,5)"></li>
+<li onclick="DrawPixel(this,3,6)"></li>
+<li onclick="DrawPixel(this,3,7)"></li>
+<li onclick="DrawPixel(this,4,0)"></li>
+<li onclick="DrawPixel(this,4,1)"></li>
+<li onclick="DrawPixel(this,4,2)"></li>
+<li onclick="DrawPixel(this,4,3)"></li>
+<li onclick="DrawPixel(this,4,4)"></li>
+<li onclick="DrawPixel(this,4,5)"></li>
+<li onclick="DrawPixel(this,4,6)"></li>
+<li onclick="DrawPixel(this,4,7)"></li>
+<li onclick="DrawPixel(this,5,0)"></li>
+<li onclick="DrawPixel(this,5,1)"></li>
+<li onclick="DrawPixel(this,5,2)"></li>
+<li onclick="DrawPixel(this,5,3)"></li>
+<li onclick="DrawPixel(this,5,4)"></li>
+<li onclick="DrawPixel(this,5,5)"></li>
+<li onclick="DrawPixel(this,5,6)"></li>
+<li onclick="DrawPixel(this,5,7)"></li>
+<li onclick="DrawPixel(this,6,0)"></li>
+<li onclick="DrawPixel(this,6,1)"></li>
+<li onclick="DrawPixel(this,6,2)"></li>
+<li onclick="DrawPixel(this,6,3)"></li>
+<li onclick="DrawPixel(this,6,4)"></li>
+<li onclick="DrawPixel(this,6,5)"></li>
+<li onclick="DrawPixel(this,6,6)"></li>
+<li onclick="DrawPixel(this,6,7)"></li>
+<li onclick="DrawPixel(this,7,0)"></li>
+<li onclick="DrawPixel(this,7,1)"></li>
+<li onclick="DrawPixel(this,7,2)"></li>
+<li onclick="DrawPixel(this,7,3)"></li>
+<li onclick="DrawPixel(this,7,4)"></li>
+<li onclick="DrawPixel(this,7,5)"></li>
+<li onclick="DrawPixel(this,7,6)"></li>
+<li onclick="DrawPixel(this,7,7)"></li>
+</ul>
+</div>
+      </td>
+    </tr>
+  </table>
+  <div id="statusbar" style="text-align:center; width:100%" >Read</div>
+</center>
+<script language="javascript" src="common.js"></script>
+<script language="javascript" src="serial.js"></script>
+<script language="javascript" src="arduino.js"></script>
+<script language="javascript" src="app.js"></script>
+<script language="javascript">
+function DrawPixel(block,x, y)
+{
+	var color = document.getElementById("color").value;
+	var args = decimalToHex(x, 2) + decimalToHex(y, 2) + color;
+	block.style.backgroundColor = "#"+color;
+	SendCommand(CMD_MATRIX_PIXEL, args);
+}
+</script>
+</body>
+</html>
