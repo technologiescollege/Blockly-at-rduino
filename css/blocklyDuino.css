@@ -75,6 +75,13 @@ html[dir="RTL"] .menuPanel-ver {
 	text-align: center;
 }
 
+.div_help_button-hor {
+    padding-left: 10px;
+	bottom: 10px;
+	position: absolute;
+	text-align: center;
+}
+
 html[dir="RTL"] .navbar-right {
     margin-right: -50px;
     width: 225px;
@@ -103,10 +110,6 @@ html[dir="RTL"] #menuPanelLeft {
 	clear:both;
 	float: left;
 	padding-left: 10px;	
-}
-
-.menuPanelCenter-ver {
-	padding-top: 5px;	
 }
 
 html[dir="RTL"] .menuPanelCenter-hor, html[dir="RTL"] .menuPanelCenter-ver {
@@ -319,6 +322,11 @@ html[dir="RTL"] #btn_delete {
 	-webkit-column-count: 3;
 	-moz-column-count: 3;
 	column-count: 3;
+}
+
+.modal-supervision {
+	height: 700px;
+	width:880px;
 }
 
 #select_all {

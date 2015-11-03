@@ -196,13 +196,13 @@ Code.initLanguage = function() {
   document.getElementById('a_arduino').textContent = MSG['a_arduino'];
   document.getElementById('a_term').textContent = MSG['a_term'];
   document.getElementById('a_xml').textContent = MSG['a_xml'];
-
-  document.getElementById('cb_cf_verify_btn').textContent = MSG['cb_cf_verify_btn'];
-  document.getElementById('btn_edit_code').textContent = MSG['btn_edit_code'];
-  document.getElementById('cb_cf_flash_btn').textContent = MSG['cb_cf_flash_btn'];
-  document.getElementById('btn_saveArduino').textContent = MSG['button_saveArduino'];
-  document.getElementById('btn_plugin_codebender').textContent = MSG['btn_plugin_codebender'];
-  document.getElementById('cb_cf_serial_monitor_connect').textContent = MSG['cb_cf_serial_monitor_connect'];
+  
+  document.getElementById('span_plugin_codebender').textContent = MSG['span_plugin_codebender'];
+  document.getElementById('span_verify_codebender').textContent = MSG['span_verify_codebender'];
+  document.getElementById('span_flash_codebender').textContent = MSG['span_flash_codebender'];
+  document.getElementById('span_saveIno').textContent = MSG['span_saveIno'];
+  document.getElementById('span_connect_serial').textContent = MSG['span_connect_serial'];
+  document.getElementById('span_edit_code').textContent = MSG['span_edit_code'];
 
   document.getElementById('configModalLabel').textContent = MSG['configModalLabel'];
   document.getElementById('span_select_all').textContent = MSG['span_select_all'];
@@ -212,7 +212,11 @@ Code.initLanguage = function() {
   document.getElementById('editModalLabel').textContent = MSG['editModalLabel'];
   document.getElementById('showcardLabel').textContent = MSG['showcardLabel'];
   document.getElementById('exampleModalLabel').textContent = MSG['exampleModalLabel'];
-  document.getElementById('span_doc').title = MSG['span_doc'];
+  //document.getElementById('span_doc').title = MSG['span_doc'];  
+  //document.getElementById('span_tuto').title = MSG['span_tuto'];
+  
+  document.getElementById('btn_doc').title = MSG['span_doc'];  
+  document.getElementById('btn_tuto').title = MSG['span_tuto'];
   document.getElementById('btn_closeCode').textContent = MSG['btn_closeCode'];
   document.getElementById('btn_validCode').textContent = MSG['btn_validCode'];
 
