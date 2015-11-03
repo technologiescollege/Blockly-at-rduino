@@ -212,6 +212,7 @@ Code.initLanguage = function() {
   document.getElementById('editModalLabel').textContent = MSG['editModalLabel'];
   document.getElementById('showcardLabel').textContent = MSG['showcardLabel'];
   document.getElementById('exampleModalLabel').textContent = MSG['exampleModalLabel'];
+  document.getElementById('span_doc').title = MSG['span_doc'];
   document.getElementById('btn_closeCode').textContent = MSG['btn_closeCode'];
   document.getElementById('btn_validCode').textContent = MSG['btn_validCode'];
 

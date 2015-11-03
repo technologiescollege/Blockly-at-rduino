@@ -130,26 +130,26 @@ contient la liste des blocs de Blockly ci-dessous en compressé-->
                  </a>
              </li>
         </ul>
-        </div>
-        <div id="menuPanelRight">
-	        <a id="btn_saveXML" class='btn btn-success btn-block text-left' href="#" role='button'>
-	          <span class="glyphicon glyphicon-cloud-download"></span>
-	          <span id="span_saveXML"> </span>
-	         </a>
-	        <button id="btn_fakeload" class="btn btn-success btn-block">
-	            <span class="glyphicon glyphicon-cloud-upload"></span>
-	            <span id="span_fakeload"> </span>
-	        </button>
-	        <input type="file" id="load" style="display: none;" />
-		    <div id="divExample">
-	            <button id="btn_example" class="btn btn-info btn-block" data-toggle="modal" data-target="#exampleModal">
-	                <span class="glyphicon glyphicon-share"> </span>
-	                <span id="span_example"> </span>
-	            </button>
-			</div>
-		</div>        
+	</div>
+	<div id="menuPanelRight">
+		<a id="btn_saveXML" class='btn btn-success btn-block text-left' href="#" role='button'>
+		  <span class="glyphicon glyphicon-cloud-download"></span>
+		  <span id="span_saveXML"> </span>
+		 </a>
+		<button id="btn_fakeload" class="btn btn-success btn-block">
+			<span class="glyphicon glyphicon-cloud-upload"></span>
+			<span id="span_fakeload"> </span>
+		</button>
+		<input type="file" id="load" style="display: none;" />
+		<div id="divExample">
+			<button id="btn_example" class="btn btn-info btn-block" data-toggle="modal" data-target="#exampleModal">
+				<span class="glyphicon glyphicon-share"> </span>
+				<span id="span_example"> </span>
+			</button>
+		</div>
+	</div> 
     </div>
-    
+
     <!-- Nav tabs -->
     <div id="divTabpanel" role="tabpanel">
         <!-- Tab panes -->
@@ -213,7 +213,16 @@ contient la liste des blocs de Blockly ci-dessous en compressé-->
         </div>
     </div>
     </div>
-
+	<div id="div_help_button">
+		<a id="btn_doc" class='btn btn-success btn-info text-left' href="http://tic.technologiescollege.fr/wiki/" target=_blank role='button'>
+			<span class="glyphicon glyphicon-info-sign"></span>
+			<span id="span_doc"> </span>
+		</a>
+		<a id="btn_tuto" class='btn btn-success btn-info text-left' href="documentation/blockly_doc.pdf" target=_blank role='button'>
+			<span class="glyphicon glyphicon-question-sign"></span>
+			<span id="span_tuto"> </span>
+		</a>		
+	</div>
 <!-- Modals -->
 <!-- about modal -->
 <div class="modal fade" id="aboutModal" tabindex="-1" role="dialog" aria-labelledby="aboutModalLabel" aria-hidden="true">

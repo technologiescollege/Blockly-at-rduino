@@ -669,6 +669,7 @@ BlocklyDuino.setOrientation = function() {
 		var divExample = document.getElementById("divExample");
 		var divConfig = document.getElementById("divConfig");
 		var divSupervision = document.getElementById("divSupervision");
+		var div_help_button = document.getElementById("div_help_button");
 		
         ulNav.className = "nav nav-pills";
         menuPanelCenter.className += " menuPanelCenter-hor";
@@ -680,10 +681,13 @@ BlocklyDuino.setOrientation = function() {
 		divExample.className += " divCard-hor";
         divConfig.className += " divConfig-hor";
 		divSupervision.className += " divConfig-hor";
+		div_help_button.className += " div_help_button-hor";	
+		
 	} else {
 		var ulNav = document.getElementById("ul_nav");
 		var menuPanel = document.getElementById("menuPanel");
 		var menuPanelCenter = document.getElementById("menuPanelCenter");
+		var menuPanelRight = document.getElementById("menuPanelRight");
 		var btn_config = document.getElementById("btn_config");
 		var btn_supervision = document.getElementById("btn_supervision");
 		var btn_saveXML = document.getElementById("btn_saveXML");
@@ -692,6 +696,7 @@ BlocklyDuino.setOrientation = function() {
 		var btn_example = document.getElementById("btn_example");
 		var btn_plugin_codebender = document.getElementById("btn_plugin_codebender");
 		var divTabpanel = document.getElementById("divTabpanel");
+		var div_help_button = document.getElementById("div_help_button");
 		
         ulNav.className = "nav nav-pills nav-stacked";
 		if (Code.isRtl()) {
@@ -699,10 +704,12 @@ BlocklyDuino.setOrientation = function() {
 	        menuPanelCenter.className += " menuPanelCenter-ver";
 		}
         menuPanel.className += " menuPanel-ver";
+		menuPanelCenter.className += " menuPanelCenter-ver";
         btn_config.className += " btn_ver";
 		btn_supervision += " btn_ver";
         btn_saveXML.className += " btn_ver";
 		btn_fakeload.className += " btn_ver";
+		div_help_button.className += " div_help_button-ver";
 		btn_picture.className += " btn_ver";
         btn_example.className += " btn_ver";
 		btn_plugin_codebender.className += " btn_ver";

@@ -54,6 +54,7 @@ body {
 	float: left;
 	width: 200px;
     padding-left: 10px;
+	padding-right: 10px;
 	position: absolute;
 }
 
@@ -64,6 +65,14 @@ html[dir="RTL"] .menuPanel-ver {
     padding-left: 0px;
     padding-right: 10px;
     position: absolute;
+}
+
+.div_help_button-ver {
+	width: 200px;
+    padding-left: 10px;
+	bottom: 10px;
+	position: absolute;
+	text-align: center;
 }
 
 html[dir="RTL"] .navbar-right {
@@ -93,12 +102,17 @@ html[dir="RTL"] #menuPanelLeft {
 .menuPanelCenter-hor {
 	clear:both;
 	float: left;
-	padding-left: 10px;
+	padding-left: 10px;	
+}
+
+.menuPanelCenter-ver {
+	padding-top: 5px;	
 }
 
 html[dir="RTL"] .menuPanelCenter-hor, html[dir="RTL"] .menuPanelCenter-ver {
     float: right;
     padding-right: 10px;
+	margin-top: 10px;
 }
 
 .menuPanelRight-hor {
@@ -157,6 +171,11 @@ html[dir="RTL"] .divConfig-hor {
 #btn_about {
     position: absolute;
     top: 10px;
+}
+
+#btn_doc-hor{
+	float : left;
+	bottom: 10px;
 }
 
 html[dir="LTR"] #btn_about {
@@ -391,15 +410,15 @@ html[dir="RTL"] .colors_category {
 }
 
 .color_cat_loops {
-	background-color: #5ba55b;
+	background-color: #C88330; /*5ba55b;*/
 }
 
 .color_cat_logic,.color_cat_if,.color_cat_bool {
-	background-color: #8ca6c0;
+	background-color: #E1A91A; /*#8ca6c0;*/
 }
 
 .color_cat_math {
-	background-color: #8c95c0;
+	background-color: #5CB712; /*00FF00;*/
 }
 
 .color_cat_list {
@@ -407,11 +426,11 @@ html[dir="RTL"] .colors_category {
 }
 
 .color_cat_variables {
-	background-color: #c08ca6;
+	background-color: #EE7D16; /*c08ca6;*/
 }
 
 .color_cat_functions {
-	background-color: #b88cc0;
+	background-color: #632D99; /*b88cc0;*/
 }
 
 .color_cat_color {
@@ -419,15 +438,15 @@ html[dir="RTL"] .colors_category {
 }
 
 .color_cat_text {
-	background-color: #8cc0af;
+	background-color: #8A55D7; /*8cc0af;*/
 }
 
-.color_cat_arduino,.color_cat_arduino_in,.color_cat_arduino_out {
-	background-color: #8c95c0;
+.color_cat_arduino,.color_cat_arduino_in,.color_cat_arduino_out,.color_cat_arduino_servo {
+	background-color: #00979D; /*8c95c0;*/
 }
 
-.color_cat_arduino_servo {
-	background-color: #8cb8c0;
+.color_cat_bq, .color_cat_bq_in, .color_cat_bq_out, .color_cat_bq_comm{
+	background-color: #FFFFFF;
 }
 
 .color_cat_robots, .color_cat_robots_motors, .color_cat_robot_misc {
@@ -435,13 +454,9 @@ html[dir="RTL"] .colors_category {
 }
 
 .color_cat_grove, .color_cat_grove_in, .color_cat_grove_out, .color_cat_grove_lcd, .color_cat_grove_comm {
-	background-color: #8cb8c0;
+	background-color: #8ec31f;
 }
 
-.color_cat_technozone, .color_cat_technozone_out, .color_cat_technozone_motors, .color_cat_technozone_servo, .color_cat_technozone_lcd {
-	background-color: #8cb8c0;
-}
-
-.color_cat_technozone_in, .color_cat_technozone_telec {
-	background-color: #5ba55b;
+.color_cat_technozone, .color_cat_technozone_out, .color_cat_technozone_motors, .color_cat_technozone_servo, .color_cat_technozone_lcd, .color_cat_technozone_telec, .color_cat_technozone_in {
+	background-color: #646464;
 }

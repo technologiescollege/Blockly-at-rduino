@@ -10,6 +10,8 @@ var MSG = {
   span_saveXML:" sauver en fichier XML",
   span_fakeload:" charger un fichier XML",
   span_example: " ouvrir un exemple",
+  span_doc: " documentation",
+  span_tuto: " tutoriel",
   exampleModalLabel: "choisir un exemple",
   btn_plugin_codebender: " si inactif...",
   cb_cf_verify_btn: "vérifier le code",
