@@ -1,0 +1,87 @@
+# depslib dependency file v1.0
+1414408656 source:e:\arduino\multilcd\microlcd\examples\lcdhello\lcdhello.ino
+	<Arduino.h>
+	<Wire.h>
+	<MicroLCD.h>
+
+1371036702 d:\apps\codeblocks\arduino\hardware\arduino\cores\arduino\arduino.h
+	<stdlib.h>
+	<string.h>
+	<math.h>
+	<avr/pgmspace.h>
+	<avr/io.h>
+	<avr/interrupt.h>
+	"binary.h"
+	"WCharacter.h"
+	"WString.h"
+	"HardwareSerial.h"
+	"pins_arduino.h"
+
+1362986950 d:\apps\codeblocks\arduino\hardware\arduino\cores\arduino\binary.h
+
+1362986950 d:\apps\codeblocks\arduino\hardware\arduino\cores\arduino\wcharacter.h
+	<ctype.h>
+
+1371036734 d:\apps\codeblocks\arduino\hardware\arduino\cores\arduino\wstring.h
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+	<avr/pgmspace.h>
+
+1362986950 d:\apps\codeblocks\arduino\hardware\arduino\cores\arduino\hardwareserial.h
+	<inttypes.h>
+	"Stream.h"
+	"USBAPI.h"
+
+1371036430 d:\apps\codeblocks\arduino\hardware\arduino\cores\arduino\stream.h
+	<inttypes.h>
+	"Print.h"
+
+1362986950 d:\apps\codeblocks\arduino\hardware\arduino\cores\arduino\print.h
+	<inttypes.h>
+	<stdio.h>
+	"WString.h"
+	"Printable.h"
+
+1362986950 d:\apps\codeblocks\arduino\hardware\arduino\cores\arduino\printable.h
+	<new.h>
+
+1362986950 d:\apps\codeblocks\arduino\hardware\arduino\cores\arduino\new.h
+	<stdlib.h>
+
+1362986950 d:\apps\codeblocks\arduino\hardware\arduino\cores\arduino\usbapi.h
+
+1362986950 d:\apps\codeblocks\arduino\hardware\arduino\variants\standard\pins_arduino.h
+	<avr/pgmspace.h>
+
+1414408656 e:\arduino\multilcd\microlcd\microlcd.h
+	<Arduino.h>
+	"SSD1306.h"
+	"PCD8544.h"
+
+1394257148 e:\arduino\multilcd\microlcd\ssd1306.h
+	"Arduino.h"
+
+1414408656 source:e:\arduino\multilcd\microlcd\microlcd.cpp
+	<Arduino.h>
+	<Wire.h>
+	"MicroLCD.h"
+
+1414408656 source:e:\arduino\multilcd\microlcd\ssd1306.cpp
+	<avr/pgmspace.h>
+	<stdlib.h>
+	<Wire.h>
+	"SSD1306.h"
+
+1414408656 source:e:\arduino\multilcd\microlcd\sh1106.cpp
+	<Arduino.h>
+	<Wire.h>
+	"MicroLCD.h"
+
+1362986950 d:\apps\codeblocks\arduino\hardware\arduino\variants\mega\pins_arduino.h
+	<avr/pgmspace.h>
+
+1414408656 e:\arduino\multilcd\microlcd\pcd8544.h
+	<WProgram.h>
+	<Arduino.h>
+

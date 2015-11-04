@@ -19,6 +19,8 @@ var MSG = {
   span_flash_codebender: " téléverser dans l'Arduino",
   span_saveIno: " sauver le code en INO",  
   span_modal_close: " fermer",
+  span_ardugate_upload: " téléverser ArduGate dans Arduino",
+  span_ardugate: " lancer le serveur ArduGate",
   exampleModalLabel: "choisir un exemple",
   btn_plugin_codebender: " si inactif...",
   cb_cf_verify_btn: "vérifier le code",
@@ -63,4 +65,5 @@ var MSG = {
 	  + "<br /> - JQuerry (https://jquery.com)"
 	  + "<br /> - Bootstrap (http://getbootstrap.com)"
 	  + "<br /> - svg-pan-zoom (https://github.com/ariutta/svg-pan-zoom)"
+	  + "<br /> - ArduGate (http://arduinodev.com/software/ardugate)"
 };

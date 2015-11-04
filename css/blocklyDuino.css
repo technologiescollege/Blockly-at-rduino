@@ -82,6 +82,18 @@ html[dir="RTL"] .menuPanel-ver {
 	text-align: center;
 }
 
+.div_close_modal {
+    padding-right: 10px;	
+    float: right;
+	bottom: 10px;
+	position: absolute;
+	text-align: center;
+}
+
+.flashModal{
+  width: 850px;
+}
+
 html[dir="RTL"] .navbar-right {
     margin-right: -50px;
     width: 225px;

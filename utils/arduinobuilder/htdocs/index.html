@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Arduino Builder</title>
+<style type="text/css">
+body {
+	margin:0;
+	padding:0;
+	color:#3f3c8e;
+	background:#dce4ed;
+}
+h1 {
+	margin:0;
+}
+</style>
+</head>
+<body onload="onLoad()">
+<div style="width:640px; height:480px; background:url(images/bg.png) no-repeat;">
+</div>
+<script language="JavaScript" src="common.js" type="text/javascript"></script>
+<script language="javascript">
+function onLoad()
+{
+	var lang = navigator.userLanguage ?  navigator.userLanguage : navigator.language;
+	var startpage = "en.html";
+	switch (lang.substr(0,2)) {
+	case "zh":
+		if (httpGet("zh.html")) startpage = "zh.html";
+		break;
+	}
+	document.location.href = startpage;
+}
+</script>
+</body>
+</html>

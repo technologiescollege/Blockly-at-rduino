@@ -187,6 +187,7 @@ Code.initLanguage = function() {
   document.getElementById('labelArduinoCard').textContent = MSG['labelArduinoCard'];
 
   document.getElementById('btn_preview').title = MSG['btn_preview'];
+  document.getElementById('closeModal').title = MSG['closeModal'];
 
   document.getElementById('span_delete').textContent = MSG['span_delete'];
   document.getElementById('span_saveXML').textContent = MSG['span_saveXML'];
@@ -212,6 +213,8 @@ Code.initLanguage = function() {
   document.getElementById('editModalLabel').textContent = MSG['editModalLabel'];
   document.getElementById('showcardLabel').textContent = MSG['showcardLabel'];
   document.getElementById('exampleModalLabel').textContent = MSG['exampleModalLabel'];
+  document.getElementById('span_ardugate_upload').textContent = MSG['span_ardugate_upload'];
+  document.getElementById('span_ardugate').textContent = MSG['span_ardugate'];
   //document.getElementById('span_doc').title = MSG['span_doc'];  
   //document.getElementById('span_tuto').title = MSG['span_tuto'];
   

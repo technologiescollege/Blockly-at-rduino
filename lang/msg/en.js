@@ -19,6 +19,8 @@ var MSG = {
   span_flash_codebender: " uload in Arduino",
   span_saveIno: " save code in INO format",
   span_modal_close: " close",
+  span_ardugate_upload: " upload ArduGate sketch",
+  span_ardugate: " launch ArduGate server",
   exampleModalLabel: "choose an example",
   btn_plugin_codebender: " if disabled...",
   cb_cf_verify_btn: "verify code",
@@ -63,4 +65,5 @@ var MSG = {
 		  + "<br /> - JQuerry (https://jquery.com)"
 		  + "<br /> - Bootstrap (http://getbootstrap.com)"
 		  + "<br /> - svg-pan-zoom (https://github.com/ariutta/svg-pan-zoom)"
+		  + "<br /> - ArduGate (http://arduinodev.com/software/ardugate)"
 };

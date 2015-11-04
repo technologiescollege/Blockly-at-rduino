@@ -1,0 +1,98 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style type="text/css">
+body{ font-family:Tahoma, Geneva, sans-serif; border:none;font-size:12px; color:#3f3c8e; margin:0}
+</style>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+<script src="js/highcharts.js"></script>
+</head>
+<body>
+<div style="margin:0 auto; width:600px; height: 260px;">
+<div id="container" style="width: 200px; height: 260px; margin: 0 auto; float:left"></div>
+<div id="container2" style="width: 200px; height: 260px; margin: 0 auto; float:left"></div>
+<div id="container3" style="width: 200px; height: 260px; margin: 0 auto; float:left"></div>
+</div>
+<div align="center" style="margin-top:25px"><a href="http://www.arduinodev.com/hardware/obd-kit/" target="_blank">Arduino OBD-II Adapter - bridging OBD-II to serial UART to give Arduino access to vehicle data</a></div>
+<div style="clear:both; float:none; height:0"/>
+<script language="javascript">
+var chart1;
+var chart2;
+var chart3;
+
+function CreateChart(container, title, val1, val2)
+{
+	var chart = new Highcharts.Chart({
+		chart: {
+			renderTo: container,
+			plotBackgroundColor: null,
+			plotBorderWidth: null,
+			plotShadow: false
+		},
+		title: {
+			text: title
+		},
+		tooltip: {
+			pointFormat: '<b>{point.percentage}%</b>',
+			percentageDecimals: 1
+		},
+		plotOptions: {
+			pie: {
+				showInLegend: true,
+				dataLabels: {
+					distance: -35,
+					color: 'white',
+					formatter: function() {
+						return this.y > 0 ? (this.point.name + ":<br/>" + this.y + ' bytes') : "";
+					}
+				}
+			}
+		},
+		series: [{
+			type: 'pie',
+			data: [
+				['Free',   val1],
+				['Used',   val2]
+			]
+		}]
+	});
+	return chart;	
+}
+
+$(document).ready(function() {
+	var idx=document.location.href.indexOf("data=");
+	if (idx<=0) return;
+	var arg=document.location.href.substring(idx + 5);
+	var d = arg.split(","); 
+	if (d.length < 6) return;
+
+	var progUsed = parseInt(d[0]);
+	var progFree = parseInt(d[1]);
+	var dataUsed = parseInt(d[2]);
+	var dataFree = parseInt(d[3]);
+	var eepUsed = parseInt(d[4]);
+	var eepFree = parseInt(d[5]);
+	CreateChart("container", "FLASH Utilization", progFree, progUsed);
+	CreateChart("container2", "SRAM Utilization", dataFree, dataUsed);
+	CreateChart("container3", "EEPROM Utilization", eepFree, eepUsed);
+});
+
+
+</script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-4676827-4']);
+  _gaq.push(['_setDomainName', 'arduinodev.com']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</body>
+</html>

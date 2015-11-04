@@ -678,7 +678,7 @@ BlocklyDuino.setOrientation = function() {
 		$("#btn_fakeload").removeClass("btn-block");
 		$("#btn_example").removeClass("btn-block");
 
-		div_help_button.className += " div_help_button-hor";	
+		div_help_button.className += " div_help_button-hor";
 		
 	} else {
 		var ulNav = document.getElementById("ul_nav");
@@ -706,7 +706,7 @@ BlocklyDuino.setOrientation = function() {
 		btn_supervision.className += " btn_ver";
         btn_saveXML.className += " btn_ver";
 		btn_fakeload.className += " btn_ver";
-		div_help_button.className += " div_help_button-ver";
+		div_help_button.className += " div_help_button-ver";	
 		btn_picture.className += " btn_ver";
         btn_example.className += " btn_ver";
 		btn_plugin_codebender.className += " btn_ver";

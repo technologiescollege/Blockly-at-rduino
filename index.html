@@ -41,12 +41,17 @@ contient la liste des blocs de Blockly ci-dessous en compressé-->
 <script type="text/javascript" src="utils/spin.js"></script>
 <script type="text/javascript" src="utils/blocklyDuino.js"></script>
 <script type="text/javascript" src="utils/jquery-2.1.3.min.js"></script>
-<script type="text/javascript" src="utils/bootstrap.min.js"></script>
+<!--<script type="text/javascript" src="utils/bootstrap.min.js"></script>-->
+<script type="text/javascript" src="utils/bootstrap.min.3.js"></script>
+<!--<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>-->
+
 <script type="text/javascript" src="http://codebender.cc/embed/compilerflasher.js"></script>
 <script type="text/javascript" src="utils/prettify.js"></script>
 <script type="text/javascript" src="lang/code.js"></script>
 
 <script type="text/javascript" src="utils/svg-pan-zoom.min.js"></script>
+
+<script type="text/javascript">var win_app = new ActiveXObject("WScript.shell");</script>
 
 <link rel="stylesheet" type="text/css" href="css/prettify.css">
 <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
@@ -234,13 +239,31 @@ contient la liste des blocs de Blockly ci-dessous en compressé-->
     <div class="modal-content">
       <div class="modal-header">
         <h4 class="modal-title" id="supervisionModalLabel">ArduGate</h4>
+		<div id="close_modal">
+			<button id="closeModal" type="button" class="btn btn-danger" data-dismiss="modal">
+				<span class="glyphicon glyphicon-remove"></span>
+				<span id="span_modal_close"> </span>
+			</button>
+		</div>
       </div>
       <div class="modal-body">
 		<!--<iframe src="supervision/ardugate.html" style="" frameborder="0" height="700px" width="860px"></iframe>-->
 		<iframe src="http://localhost:8880/" style="" frameborder="0" height="700px" width="860px"></iframe>
       </div>
 	  <div class="modal-footer">
-			<a id="btn_docArdugate" class='btn btn-success btn-info text-left' href="http://arduinodev.com/software/ardugate/#start" target=_blank role='button'>
+		  <!--<a id="btn_ardugate_upload"role="button" class="btn btn-danger text-left" href="#" onclick="open('utils/popup.html','_blank','toolbar=0, location=no, status=no, scrollbars=no, resizable=no, copyhistory=0, menuBar=no, width=870,height=520,left=100,top=100')">
+				<span class="glyphicon glyphicon-flash"></span>
+				<span id="span_ardugate_upload"> </span>
+		  </a>-->
+		  <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#flashModal">
+				<span class="glyphicon glyphicon-flash"></span>
+				<span id="span_ardugate_upload"> </span>
+		  </button>
+			<a id="btn_launch_ardugate" class="btn btn-success text-left" href="win_app.run('notepad.exe', 1, True);"  role='button'>
+				<span class="glyphicon glyphicon-random"></span>
+				<span id="span_ardugate"> </span>
+			</a>
+			<a id="btn_docArdugate" class='btn btn-info text-left' href="http://arduinodev.com/software/ardugate/#start" target=_blank role='button'>
 				<span class="glyphicon glyphicon-info-sign"></span>
 				<span id="span_docArdugate"> </span>
 			</a>
@@ -248,12 +271,25 @@ contient la liste des blocs de Blockly ci-dessous en compressé-->
 				<span class="glyphicon glyphicon-question-sign"></span>
 				<span id="span_tutoArdugate"> </span>
 			</a>	
-		  <button type="button" class="btn btn-danger" data-dismiss="modal">
-				<span class="glyphicon glyphicon-remove"></span>
-				<span id="span_modal_close"> </span>
-		  </button>
         </div>
     </div>
+  </div>
+</div>
+<!-- ArduGate flash modal -->
+<div class="modal fade" id="flashModal" data-focus-on="input:first" tabindex="-1" aria-labelledby="flashModalLabel" data-backdrop="static">
+
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="btn btn-danger" data-dismiss="modal" aria-label="Close">
+				<span class="glyphicon glyphicon-remove"></span>
+				<span id="span_modal_close"> </span>
+		</button>
+        <h4 class="modal-title" id="flashModalLabel"></h4>
+      </div>
+      <div class="modal-body">
+            <iframe style="height: 510px; width: 100%; margin: 0px 0px;" allowTransparency="true" src="https://codebender.cc/embed/sketch:179355#agent.ino" frameborder="0" scrolling="no" toolbar="no" location="no", status="no", scrollbars="no", resizable="no", copyhistory="no", menuBar="no"></iframe>
+      </div>
+
   </div>
 </div>
 <!-- about modal -->
