@@ -1,7 +1,7 @@
 ﻿<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <tbody>
 
-<!-- 1�re ligne du tableau-->
+<!-- 1�re ligne du tableau-->
 <tr>
 <td>nom de la sauvegarde XML sans espace ni accent</td>
 <td>photo/vignette du montage</td>
@@ -43,6 +43,19 @@ faire avancer un robot qui stoppe quand un objet est à moins de 10cm
 </td>
 <td>
 <a href="http://fablabo.net/wiki/FablabJunior_Automne_2015/Projet4" target=_blank>sur Fablabo</a></td>
+</tr>
+
+<tr>
+<td><a href="index.html?lang=fr?url=./examples/suiveur_de_ligne/suiveur_de_ligne.xml"> <!--nom de la sauvegarde XML sans espace ni accent-->
+les détecteurs mesurent l'intensité lumineuse renvoyée par la table de chaque côté, puis stoppent ou font tourner les servomoteurs
+</a></td>
+<td>
+<a href="examples/suiveur_de_ligne/suiveur_de_ligne_fritzing.jpg" target=_blank> <!--nom de la sauvegarde XML sans espace ni accent-->
+<img class="img-responsive" src="examples/suiveur_de_ligne/suiveur_de_ligne_fritzing_redimensionner.jpg"> <!--nom de la vignette-->
+</a>
+</td>
+<td>
+<a href="http://fablabo.net/wiki/FablabJunior_Automne_2015/Projet2" target=_blank>sur Fablabo</a></td>
 </tr>
 
 </tbody> <!--NE SURTOUT PAS SUPPRIMER !!!! -->
