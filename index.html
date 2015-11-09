@@ -41,9 +41,10 @@ contient la liste des blocs de Blockly ci-dessous en compressé-->
 <script type="text/javascript" src="utils/spin.js"></script>
 <script type="text/javascript" src="utils/blocklyDuino.js"></script>
 <script type="text/javascript" src="utils/jquery-2.1.3.min.js"></script>
-<!--<script type="text/javascript" src="utils/bootstrap.min.js"></script>-->
 <script type="text/javascript" src="utils/bootstrap.min.3.js"></script>
-<!--<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>-->
+<!--TechnoZone51-->
+<script type="text/javascript" src="utils/html2canvas.js"></script>
+<script type="text/javascript" src="utils/Canvas2Image.js"></script>
 
 <script type="text/javascript" src="http://codebender.cc/embed/compilerflasher.js"></script>
 <script type="text/javascript" src="utils/prettify.js"></script>
@@ -586,6 +587,8 @@ contient la liste des blocs de Blockly ci-dessous en compressé-->
         <block type="base_setup">
 		</block>
 		<category name="CAT_ARDUINO_IN">
+			<block type="inout_analog_read_validator"></block>
+            <block type="inout_digital_read_validator"></block>
             <block type="inout_analog_read"></block>
             <block type="inout_digital_read"></block>			
             <block type="inout_onoff"></block>
@@ -610,7 +613,28 @@ contient la liste des blocs de Blockly ci-dessous en compressé-->
 					</block>
 				</value>
 			</block>
-            <block type="inout_PWM_write">
+            <block type="inout_digital_write_validator"></block>
+            <block type="inout_PWM_write_validator">
+                <value name="NUM">
+                    <block type="math_number">
+                    <field name="NUM">0</field>
+                    </block>
+                </value>
+            </block>
+            <block type="inout_analog_write_validator">
+				<value name="NUM">
+				<block type="math_number">
+				<field name="NUM">0</field>
+				</block>
+				</value>
+			</block>
+			<block type="inout_digital_write">
+				<value name="STAT">
+				<block type="logic_boolean">
+				<field name="BOOL">vrai</field>
+				</block>
+			</block>
+			<block type="inout_PWM_write">
                 <value name="NUM">
                     <block type="math_number">
                     <field name="NUM">0</field>
@@ -625,7 +649,6 @@ contient la liste des blocs de Blockly ci-dessous en compressé-->
 				</value>
 			</block>
             <block type="inout_buildin_led"></block>
-            <block type="inout_digital_write"></block>
             <block type="tone">
                 <value name="NUM">
                     <block type="math_number">
@@ -656,6 +679,140 @@ contient la liste des blocs de Blockly ci-dessous en compressé-->
 				</value>
 			</block>
             <block type="servo_read_degrees"></block>
+        </category>
+    </category>
+</xml>
+<xml id="CAT_ROBOTS" style="display: none">
+    <sep></sep>
+    <category name="CAT_ROBOTS">
+        <category name="CAT_ROBOTS_MOTORS">
+			<block type="arduino_s">
+				<value name="SPEEDA">
+					<block type="math_number">
+					<field name="NUM">175</field>
+					</block>
+				</value>
+				<value name="SPEEDB">
+					<block type="math_number">
+					<field name="NUM">175</field>
+					</block>
+				</value>
+			</block>
+			<block type="ardu_motor_s">
+				<value name="SPEEDA">
+					<block type="math_number">
+					<field name="NUM">175</field>
+					</block>
+				</value>
+				<value name="SPEEDB">
+					<block type="math_number">
+					<field name="NUM">175</field>
+					</block>
+				</value>
+			</block>
+			<block type="dfrobot_s">
+				<value name="SPEEDA">
+					<block type="math_number">
+					<field name="NUM">175</field>
+					</block>
+				</value>
+				<value name="SPEEDB">
+					<block type="math_number">
+					<field name="NUM">175</field>
+					</block>
+				</value>
+			</block>
+			<block type="generic_motor_s">
+				<value name="SPEEDA">
+					<block type="math_number">
+					<field name="NUM">175</field>
+					</block>
+				</value>
+				<value name="SPEEDB">
+					<block type="math_number">
+					<field name="NUM">175</field>
+					</block>
+				</value>
+			</block>
+			<block type="pololu_drv8835_s">
+				<value name="SPEEDA">
+					<block type="math_number">
+					<field name="NUM">175</field>
+					</block>
+				</value>
+				<value name="SPEEDB">
+					<block type="math_number">
+					<field name="NUM">175</field>
+					</block>
+				</value>
+			</block>
+			<block type="radio_shack_s">
+				<value name="SPEEDA">
+					<block type="math_number">
+					<field name="NUM">175</field>
+					</block>
+				</value>
+				<value name="SPEEDB">
+					<block type="math_number">
+					<field name="NUM">175</field>
+					</block>
+				</value>
+			</block>
+			<block type="zumo_motors_FNs">
+				<value name="SPEEDA">
+					<block type="math_number">
+					<field name="NUM">175</field>
+					</block>
+				</value>
+				<value name="SPEEDB">
+					<block type="math_number">
+					<field name="NUM">175</field>
+					</block>
+				</value>
+			</block>
+			<block type="zumo_motors_FUs">
+				<value name="SPEEDA">
+					<block type="math_number">
+					<field name="NUM">175</field>
+					</block>
+				</value>
+				<value name="SPEEDB">
+					<block type="math_number">
+					<field name="NUM">175</field>
+					</block>
+				</value>
+				<value name="FLIPL">
+					<block type="logic_boolean">
+					<field name="BOOL">False</field>
+					</block>
+				</value>
+				<value name="FLIPR">
+					<block type="logic_boolean">
+					<field name="BOOL">False</field>
+					</block>
+				</value>
+			</block>
+			<block type="generic_motor"></block>
+        </category>
+        <category name="CAT_ROBOT_MISC">
+			<block type="setup_button_wait_il"></block>
+			<block type="setup_button_wait_iph"></block>
+			<block type="IR_serial_decoder"></block>
+			<block type="IR_get_blink"></block>
+			<block type="IR_get"></block>
+			<block type="fourpin_ranger"></block>
+			<block type="play_notes_z">
+                <value name="DUR">
+                    <block type="math_number">
+                    <field name="NUM">0</field>
+                    </block>
+                </value>
+                <value name="VOL">
+                    <block type="math_number">
+                    <field name="NUM">0</field>
+                    </block>
+                </value>				
+			</block>
         </category>
     </category>
 </xml>
@@ -816,141 +973,7 @@ contient la liste des blocs de Blockly ci-dessous en compressé-->
         </category>
     </category>
 </xml>
-<xml id="CAT_ROBOTS" style="display: none">
-    <sep></sep>
-    <category name="CAT_ROBOTS">
-        <category name="CAT_ROBOTS_MOTORS">
-			<block type="arduino_s">
-				<value name="SPEEDA">
-					<block type="math_number">
-					<field name="NUM">175</field>
-					</block>
-				</value>
-				<value name="SPEEDB">
-					<block type="math_number">
-					<field name="NUM">175</field>
-					</block>
-				</value>
-			</block>
-			<block type="ardu_motor_s">
-				<value name="SPEEDA">
-					<block type="math_number">
-					<field name="NUM">175</field>
-					</block>
-				</value>
-				<value name="SPEEDB">
-					<block type="math_number">
-					<field name="NUM">175</field>
-					</block>
-				</value>
-			</block>
-			<block type="dfrobot_s">
-				<value name="SPEEDA">
-					<block type="math_number">
-					<field name="NUM">175</field>
-					</block>
-				</value>
-				<value name="SPEEDB">
-					<block type="math_number">
-					<field name="NUM">175</field>
-					</block>
-				</value>
-			</block>
-			<block type="generic_motor_s">
-				<value name="SPEEDA">
-					<block type="math_number">
-					<field name="NUM">175</field>
-					</block>
-				</value>
-				<value name="SPEEDB">
-					<block type="math_number">
-					<field name="NUM">175</field>
-					</block>
-				</value>
-			</block>
-			<block type="pololu_drv8835_s">
-				<value name="SPEEDA">
-					<block type="math_number">
-					<field name="NUM">175</field>
-					</block>
-				</value>
-				<value name="SPEEDB">
-					<block type="math_number">
-					<field name="NUM">175</field>
-					</block>
-				</value>
-			</block>
-			<block type="radio_shack_s">
-				<value name="SPEEDA">
-					<block type="math_number">
-					<field name="NUM">175</field>
-					</block>
-				</value>
-				<value name="SPEEDB">
-					<block type="math_number">
-					<field name="NUM">175</field>
-					</block>
-				</value>
-			</block>
-			<block type="zumo_motors_FNs">
-				<value name="SPEEDA">
-					<block type="math_number">
-					<field name="NUM">175</field>
-					</block>
-				</value>
-				<value name="SPEEDB">
-					<block type="math_number">
-					<field name="NUM">175</field>
-					</block>
-				</value>
-			</block>
-			<block type="zumo_motors_FUs">
-				<value name="SPEEDA">
-					<block type="math_number">
-					<field name="NUM">175</field>
-					</block>
-				</value>
-				<value name="SPEEDB">
-					<block type="math_number">
-					<field name="NUM">175</field>
-					</block>
-				</value>
-				<value name="FLIPL">
-					<block type="logic_boolean">
-					<field name="BOOL">False</field>
-					</block>
-				</value>
-				<value name="FLIPR">
-					<block type="logic_boolean">
-					<field name="BOOL">False</field>
-					</block>
-				</value>
-			</block>
-			<block type="generic_motor"></block>
-        </category>
-        <category name="CAT_ROBOT_MISC">
-			<block type="setup_button_wait_il"></block>
-			<block type="setup_button_wait_iph"></block>
-			<block type="IR_serial_decoder"></block>
-			<block type="IR_get_blink"></block>
-			<block type="IR_get"></block>
-			<block type="fourpin_ranger"></block>
-			<block type="play_notes_z">
-                <value name="DUR">
-                    <block type="math_number">
-                    <field name="NUM">0</field>
-                    </block>
-                </value>
-                <value name="VOL">
-                    <block type="math_number">
-                    <field name="NUM">0</field>
-                    </block>
-                </value>
-				
-			</block>
-        </category>
-    </category>
-</xml>
+
 <xml id="CAT_TECHNOZONE" style="display: none">
     <sep></sep>
     <category name="CAT_TECHNOZONE">
@@ -968,54 +991,302 @@ contient la liste des blocs de Blockly ci-dessous en compressé-->
             <block type="technozone_potar1"></block>
             <block type="technozone_ctn1"></block>
             <block type="technozone_ldr1"></block>
+            <block type="technozone_sonar1"></block>
         </category>
         <category name="CAT_TECHNOZONE_OUT">
             <block type="technozone_led1red"></block>
             <block type="technozone_led1green"></block>
             <block type="technozone_led1yellow"></block>
             <block type="technozone_relay1"></block>
-            <block type="technozone_buzzer1">
-                <value name="NUM">
-                    <block type="math_number">
-                    <field name="NUM">0</field>
-                    </block>
-                </value>
-                <value name="TPS">
-                    <block type="math_number">
-                    <field name="NUM">0</field>
-                    </block>
-                </value>
-            </block>
-            <block type="technozone_sonar1"></block>
+            <block type="technozone_buzzer1"></block>   
         </category>
-        <category name="CAT_TECHNOZONE_MOTORS">
+        <category name="CAT_TECHNOZONE_MOTORS_CC">
+            <block type="technozone_mot1easycon1"></block>
+            <block type="technozone_mot1easybot1"></block>
+            <block type="technozone_mot2"></block>
+        </category>
+        <category name="CAT_TECHNOZONE_MOTORS_PAP">
+            <block type="technozone_pap1init"></block>
             <block type="technozone_pap1cc"></block>
             <block type="technozone_pap1relatif"></block>
-            <block type="technozone_pap1init"></block>
             <block type="technozone_pap1busy"></block>
-            <block type="technozone_mot2"></block>
-            <block type="technozone_mot1easybot1"></block>
-            <block type="technozone_mot1easycon1"></block>
         </category>
         <category name="CAT_TECHNOZONE_SERVO">
             <block type="technozone_servo1"></block>
-            <block type="servo_read_degrees"></block>
+            <block type="technozone_read_servo1"></block>
         </category>
         <category name="CAT_TECHNOZONE_LCD">
             <block type="technozone_lcdinit"></block>
             <block type="technozone_lcdspecial"></block>
             <block type="technozone_lcdclear"></block>
-            <block type="technozone_lcdwrite"></block>
+            <block type="technozone_lcdwrite">
+                <value name="COL">
+                    <block type="math_number">
+                    <field name="NUM">0</field>
+                    </block>
+                </value>
+                <value name="LIG">
+                    <block type="math_number">
+                    <field name="NUM">0</field>
+                    </block>
+                </value>	
+                <value name="TEXT">
+					<block type="text">
+					<field name="TEXT"></field>
+					</block>
+				</value>
+            </block>
         </category>
         <category name="CAT_TECHNOZONE_TELEC">
+            <block type="technozone_telecsetup"></block>
+            <block type="technozone_telecflush"></block>
+            <block type="technozone_telecinit"></block>
             <block type="technozone_telec2"></block>
             <block type="technozone_telec1"></block>
-            <block type="technozone_telecsetup"></block>
-            <block type="technozone_telecinit"></block>
-            <block type="technozone_telecflush"></block>
+        </category>
+        <category name="CAT_TECHNOZONE_SPEECH">
+            <block type="technozone_speech_init">
+                <value name="SPEED">
+					<block type="math_number">
+					<field name="NUM">800</field>
+					</block>
+				</value>
+                <value name="PITCH">
+					<block type="math_number">
+					<field name="NUM">700</field>
+					</block>
+				</value>
+                <value name="BENDING">
+					<block type="math_number">
+					<field name="NUM">0</field>
+					</block>
+				</value>
+            </block>
+            <block type="technozone_speech_say">
+                <value name="TEXT">
+					<block type="text">
+					<field name="TEXT"></field>
+					</block>
+				</value>
+            </block>
+        </category>
+        <category name="CAT_TECHNOZONE_BT">
+            <block type="technozone_bt_init"></block>
+            <block type="technozone_robot_bt_available"></block>
+            <block type="technozone_robot_bt_read"></block>
+            <block type="technozone_robot_bt_write"></block>
+        </category>
+        <category name="CAT_TECHNOZONE_IHM">
+            <block type="technozone_ihm_init"></block>
+            <block type="technozone_robot_ihm_available"></block>
+            <block type="technozone_robot_ihm_change"></block>
+            <block type="technozone_robot_ihm_led_def">
+                <value name="TEXT">
+					<block type="text">
+					<field name="TEXT"></field>
+					</block>
+				</value>
+            </block>
+            <block type="technozone_robot_ihm_led_on"></block>
+            <block type="technozone_robot_ihm_btn_def">
+                <value name="TEXT">
+					<block type="text">
+					<field name="TEXT"></field>
+					</block>
+				</value>
+            </block>
+            <block type="technozone_robot_ihm_btn_read"></block>
+            <block type="technozone_robot_ihm_inter_def">
+                <value name="TEXT">
+					<block type="text">
+					<field name="TEXT"></field>
+					</block>
+				</value>
+            </block>
+            <block type="technozone_robot_ihm_inter_on"></block>
+            <block type="technozone_robot_ihm_inter_read"></block>
+            <block type="technozone_robot_ihm_potar_def">
+                <value name="POTARI">
+                    <block type="math_number">
+                        <field name="NUM">0</field>
+                    </block>
+                </value>
+                <value name="POTARA">
+                    <block type="math_number">
+                        <field name="NUM">255</field>
+                    </block>
+                </value>
+                <value name="POTARP">
+                    <block type="math_number">
+                        <field name="NUM">0</field>
+                    </block>
+                </value>
+                <value name="TEXT">
+					<block type="text">
+					<field name="TEXT"></field>
+					</block>
+				</value>
+            </block>
+            <block type="technozone_robot_ihm_potar_read"></block>
+            <block type="technozone_robot_ihm_gauge_def">
+                <value name="GRADUATION">
+					<block type="text">
+					<field name="TEXT">0 5 1 10</field>
+					</block>
+				</value>
+                <value name="TITRE">
+					<block type="text">
+					<field name="TEXT">Tension;(v)</field>
+					</block>
+				</value>
+                <value name="CONTENT">
+					<block type="text">
+					<field name="TEXT"></field>
+					</block>
+				</value>
+            </block>
+            <block type="technozone_robot_ihm_gauge_write"></block>
         </category>
     </category>
 </xml>
-  
+<xml id="CAT_TECHNOZONE_ROBOT" style="display: none">
+    <sep></sep>
+    <category name="CAT_TECHNOZONE_ROBOT">
+        <category name="CAT_TECHNOZONE_ROBOT_MOT">
+            <block type="technozone_robot_move"></block>
+            <block type="technozone_robot_turn"></block>
+            <block type="technozone_robot_stop"></block>
+        </category>
+        <category name="CAT_TECHNOZONE_ROBOT_IN">
+            <block type="technozone_robot_btn"></block>
+            <block type="technozone_robot_irsend"></block>
+            <block type="technozone_robot_irleft"></block>
+            <block type="technozone_robot_ircenter"></block>
+            <block type="technozone_robot_irright"></block>
+            <block type="technozone_robot_ligleft"></block>
+            <block type="technozone_robot_ligright"></block>
+        </category>
+        <category name="CAT_TECHNOZONE_ROBOT_OUT">
+            <block type="technozone_robot_buzzer_tone"></block>
+        </category>
+        <category name="CAT_TECHNOZONE_ROBOT_LCD">
+            <block type="technozone_robot_lcdclear"></block>
+            <block type="technozone_robot_lcdwrite">
+                <value name="COL">
+                    <block type="math_number">
+                    <field name="NUM">0</field>
+                    </block>
+                </value>
+                <value name="LIG">
+                    <block type="math_number">
+                    <field name="NUM">0</field>
+                    </block>
+                </value>	
+                <value name="TEXT">
+					<block type="text">
+					<field name="TEXT"></field>
+					</block>
+				</value>
+			</block>
+            <block type="technozone_robot_lcdspecial"></block>
+        </category>
+        <category name="CAT_TECHNOZONE_ROBOT_BT">
+            <block type="technozone_bt_init"></block>
+            <block type="technozone_robot_bt_available"></block>
+            <block type="technozone_robot_bt_read"></block>
+            <block type="technozone_robot_bt_write"></block>
+        </category>
+        <category name="CAT_TECHNOZONE_ROBOT_IHM">
+            <block type="technozone_robot_ihm_init"></block>
+            <block type="technozone_robot_ihm_available"></block>
+            <block type="technozone_robot_ihm_change"></block>
+            <block type="technozone_robot_ihm_led_def">
+                <value name="TEXT">
+					<block type="text">
+					<field name="TEXT"></field>
+					</block>
+				</value>
+            </block>
+            <block type="technozone_robot_ihm_led_on"></block>
+            <block type="technozone_robot_ihm_btn_def">
+                <value name="TEXT">
+					<block type="text">
+					<field name="TEXT"></field>
+					</block>
+				</value>
+            </block>
+            <block type="technozone_robot_ihm_btn_read"></block>
+            <block type="technozone_robot_ihm_inter_def">
+                <value name="TEXT">
+					<block type="text">
+					<field name="TEXT"></field>
+					</block>
+				</value>
+            </block>
+            <block type="technozone_robot_ihm_inter_on"></block>
+            <block type="technozone_robot_ihm_inter_read"></block>
+            <block type="technozone_robot_ihm_potar_def">
+                <value name="POTARI">
+                    <block type="math_number">
+                        <field name="NUM">0</field>
+                    </block>
+                </value>
+                <value name="POTARA">
+                    <block type="math_number">
+                        <field name="NUM">255</field>
+                    </block>
+                </value>
+                <value name="POTARP">
+                    <block type="math_number">
+                        <field name="NUM">0</field>
+                    </block>
+                </value>
+                <value name="TEXT">
+					<block type="text">
+					<field name="TEXT"></field>
+					</block>
+				</value>
+            </block>
+            <block type="technozone_robot_ihm_potar_read"></block>
+            <block type="technozone_robot_ihm_gauge_def">
+                <value name="GRADUATION">
+					<block type="text">
+					<field name="TEXT">0 5 1 10</field>
+					</block>
+				</value>
+                <value name="TITRE">
+					<block type="text">
+					<field name="TEXT">Tension;(v)</field>
+					</block>
+				</value>
+                <value name="CONTENT">
+					<block type="text">
+					<field name="TEXT"></field>
+					</block>
+				</value>
+            </block>
+            <block type="technozone_robot_ihm_gauge_write"></block>
+        </category>
+    </category>
+</xml>    
+
+<xml id="CAT_ZUMO" style="display: none">
+    <sep></sep>
+    <category name="CAT_ZUMO">
+        <category name="CAT_ZUMO_MOTORS">
+            <block type="zumo_motors_FN"></block>
+            <block type="zumo_motors_FR"></block>
+            <block type="zumo_motors_FL"></block>
+            <block type="zumo_motors_FB"></block>
+            <block type="ardu_motor"></block>
+            <block type="ardu_motor_s"></block>
+        </category>
+        <category name="CAT_ZUMO_SENSORS">
+            <block type="setup_button_wait_il"></block>
+            <block type="setup_button_wait_iph"></block>
+            <block type="fourpin_ranger"></block>
+        </category>
+    </category>
+</xml>     
 </body>
 </html>

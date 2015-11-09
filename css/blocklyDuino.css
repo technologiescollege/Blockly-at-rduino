@@ -477,6 +477,10 @@ html[dir="RTL"] .colors_category {
 	background-color: #8ec31f;
 }
 
-.color_cat_technozone, .color_cat_technozone_out, .color_cat_technozone_motors, .color_cat_technozone_servo, .color_cat_technozone_lcd, .color_cat_technozone_telec, .color_cat_technozone_in {
+.color_cat_technozone, .color_cat_technozone_in, .color_cat_technozone_out, .color_cat_technozone_motors_cc, .color_cat_technozone_motors_pap, .color_cat_technozone_servo, .color_cat_technozone_lcd, .color_cat_technozone_telec, .color_cat_technozone_speech, .color_cat_technozone_bt, .color_cat_technozone_ihm, .color_cat_technozone_robot, .color_cat_technozone_robot_mot, .color_cat_technozone_robot_in, .color_cat_technozone_robot_out, .color_cat_technozone_robot_lcd, .color_cat_technozone_robot_bt, .color_cat_technozone_robot_ihm {
 	background-color: #646464;
+}
+
+.color_cat_zumo, .color_cat_zumo_motors, .color_cat_zumo_sensors {
+    background-color: #00138b;
 }
