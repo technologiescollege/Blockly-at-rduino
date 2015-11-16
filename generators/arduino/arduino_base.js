@@ -143,6 +143,14 @@ Blockly.Arduino.inout_highlow = function() {
   return [code, Blockly.Arduino.ORDER_ATOMIC];
 };
 
+Blockly.Arduino.inout_angle = function() {
+  // Just angle
+  var angle = this.getFieldValue('ANGLE');
+  // TODO: Change ORDER_NONE to the correct strength.
+  return [angle, Blockly.Arduino.ORDER_ATOMIC];
+
+};
+
 Blockly.Arduino.tone = function() {
   var value_pin = this.getTitleValue('PIN');
   var value_num = Blockly.Arduino.valueToCode(this, 'NUM', Blockly.Arduino.ORDER_ATOMIC);
