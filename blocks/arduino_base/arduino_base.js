@@ -105,6 +105,7 @@ Blockly.Blocks.inout_digital_write = {
     this.setHelpUrl(Blockly.Msg.ARDUINO_INOUT_DIGITAL_WRITE_HELPURL);
 	this.appendValueInput("PIN", 'Number')
         .setAlign(Blockly.ALIGN_RIGHT)
+		.setCheck('Number')
         .appendField(Blockly.Msg.ARDUINO_INOUT_DIGITAL_WRITE_INPUT1) 
     this.setInputsInline(true);
 	this.appendValueInput("STAT", 'Boolean')

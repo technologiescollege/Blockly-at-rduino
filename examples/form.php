@@ -14,6 +14,7 @@ if (isset($_FILES['act_XML']) AND $_FILES['act_XML']['error'] == 0)
 		// On peut valider le fichier et le stocker définitivement dans le dossier de son nom
 		$file_name_XML = basename($_FILES['act_XML']['name'], ".xml");
 		mkdir($file_name_XML, 0777);
+		// chmod($file_name_XML, 0777); si pb de droits en lecture-écriture non attribués par le mkdir
 		move_uploaded_file($_FILES['act_XML']['tmp_name'], $file_name_XML.'/'.basename($_FILES['act_XML']['name']));
 		echo "L'envoi a bien été effectué !";
 	} else echo "L'extension du fichier n'est pas correcte";  

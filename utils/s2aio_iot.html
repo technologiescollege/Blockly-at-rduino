@@ -3,42 +3,37 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>PyMata IOT Tester For Arduino Unoy</title>
+    <title>Blockly@rduino supervision</title>
     <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
     <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
     <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
     <script>
-        $(function () {
-            $("#tabs").tabs();
-        });
+        $(function () {$("#tabs").tabs();});
     </script>
 </head>
 <body>
 <form>
     <div id="tabs">
         <ul>
-            <li><a href="#tabs-1">Digital Input</a></li>
-            <li><a href="#tabs-2">Digital/PWM Output</a></li>
-            <li><a href="#tabs-3">Analog Input</a></li>
-            <li><a href="#tabs-4">Reports</a></li>
+            <li><a href="#tabs-1">Entrée numérique</a></li>
+            <li><a href="#tabs-2">Sortie numérique/PWM</a></li>
+            <li><a href="#tabs-3">Entrée Analogiques</a></li>
+            <li><a href="#tabs-4">Rappports</a></li>
             <li><a href="#tabs-5">Polled Data Retrieval</a></li>
-            <li><a href="#tabs-6">Servo</a></li>
-            <li><a href="#tabs-7">i2c</a></li>
-            <li><a href="#tabs-8">FirmataPlus Features</a></li>
+            <li><a href="#tabs-6">Servomoteur</a></li>
+            <li><a href="#tabs-7">Bus i2c</a></li>
+            <li><a href="#tabs-8">Fonctions FirmataPlus</a></li>
+			<li><a href="#tabs-9">Mode d'emploi</a></li>
         </ul>
         <div id="tabs-1">
-
-            <h1>PyMata IoT</h1>
-
-            <p id="connected"><b>You Are Not Connected To PyMata IoT</b></p>
+            <p id="connected"><b>Vous n'êtes pas connecté à PyMata-IoT</b></p>
             <input type="radio" name="e2" value="0" id="in2d" onclick="clicked(this.id);" checked>Disabled
             <input type="radio" name="e2" value="1" id="out2d" onclick="clicked(this.id);">Enabled
             <b>Pin 02:</b>
-            <input id="ip2" name="pin" class="element text medium" type="text" maxlength="255" value="0"
-                   style="width: 20px;"/>
+            <input id="ip2" name="pin" class="element text medium" type="text" maxlength="255" value="0" style="width: 20px;"/>
             &nbsp;&nbsp;&nbsp;&nbsp;
             <b>Data Latch</b>
-            <select id="dlatch2" onchange="digitalLatch('2', (this.id));">
+            <select id="dlatch3" onchange="digitalLatch('2', (this.id));">
                 <option value="1">No Latch Set</option>
                 <option value="2">Latch High</option>
                 <option value="3">Latch Low</option>
@@ -182,7 +177,7 @@
                    style="width: 20px;"/>
             &nbsp;&nbsp;&nbsp;&nbsp;
             <b>Data Latch</b>
-            <select id="dlatch10" onchange="digitalLatch('10', (this.id));">
+            <select id="dlatch30" onchange="digitalLatch('10', (this.id));">
                 <option value="1">No Latch Set</option>
                 <option value="2">Latch High</option>
                 <option value="3">Latch Low</option>
@@ -200,7 +195,7 @@
                    style="width: 20px;"/>
             &nbsp;&nbsp;&nbsp;&nbsp;
             <b>Data Latch</b>
-            <select id="dlatch11" onchange="digitalLatch('11', (this.id));">
+            <select id="dlatch31" onchange="digitalLatch('11', (this.id));">
                 <option value="1">No Latch Set</option>
                 <option value="2">Latch High</option>
                 <option value="3">Latch Low</option>
@@ -218,7 +213,7 @@
                    style="width: 20px;"/>
             &nbsp;&nbsp;&nbsp;&nbsp;
             <b>Data Latch</b>
-            <select id="dlatch12" onchange="digitalLatch('12', (this.id));">
+            <select id="dlatch32" onchange="digitalLatch('12', (this.id));">
                 <option value="1">No Latch Set</option>
                 <option value="2">Latch High</option>
                 <option value="3">Latch Low</option>
@@ -236,7 +231,7 @@
                    style="width: 20px;"/>
             &nbsp;&nbsp;&nbsp;&nbsp;
             <b>Data Latch</b>
-            <select id="dlatch13" onchange="digitalLatch('13', (this.id));">
+            <select id="dlatch33" onchange="digitalLatch('13', (this.id));">
                 <option value="1">No Latch Set</option>
                 <option value="2">Latch High</option>
                 <option value="3">Latch Low</option>
@@ -254,7 +249,7 @@
                    style="width: 20px;"/>
             &nbsp;&nbsp;&nbsp;&nbsp;
             <b>Data Latch</b>
-            <select id="dlatch14" onchange="digitalLatch('14', (this.id));">
+            <select id="dlatch34" onchange="digitalLatch('14', (this.id));">
                 <option value="1">No Latch Set</option>
                 <option value="2">Latch High</option>
                 <option value="3">Latch Low</option>
@@ -272,7 +267,7 @@
                    style="width: 20px;"/>
             &nbsp;&nbsp;&nbsp;&nbsp;
             <b>Data Latch</b>
-            <select id="dlatch15" onchange="digitalLatch('15', (this.id));">
+            <select id="dlatch35" onchange="digitalLatch('15', (this.id));">
                 <option value="1">No Latch Set</option>
                 <option value="2">Latch High</option>
                 <option value="3">Latch Low</option>
@@ -290,7 +285,7 @@
                    style="width: 20px;"/>
             &nbsp;&nbsp;&nbsp;&nbsp;
             <b>Data Latch</b>
-            <select id="dlatch16" onchange="digitalLatch('16', (this.id));">
+            <select id="dlatch36" onchange="digitalLatch('16', (this.id));">
                 <option value="1">No Latch Set</option>
                 <option value="2">Latch High</option>
                 <option value="3">Latch Low</option>
@@ -308,7 +303,7 @@
                    style="width: 20px;"/>
             &nbsp;&nbsp;&nbsp;&nbsp;
             <b>Data Latch</b>
-            <select id="dlatch17" onchange="digitalLatch('17', (this.id));">
+            <select id="dlatch37" onchange="digitalLatch('17', (this.id));">
                 <option value="1">No Latch Set</option>
                 <option value="2">Latch High</option>
                 <option value="3">Latch Low</option>
@@ -326,7 +321,7 @@
                    style="width: 20px;"/>
             &nbsp;&nbsp;&nbsp;&nbsp;
             <b>Data Latch</b>
-            <select id="dlatch18" onchange="digitalLatch('18', (this.id));">
+            <select id="dlatch38" onchange="digitalLatch('18', (this.id));">
                 <option value="1">No Latch Set</option>
                 <option value="2">Latch High</option>
                 <option value="3">Latch Low</option>
@@ -344,7 +339,7 @@
                    style="width: 20px;"/>
             &nbsp;&nbsp;&nbsp;&nbsp;
             <b>Data Latch</b>
-            <select id="dlatch19" onchange="digitalLatch('19', (this.id));">
+            <select id="dlatch39" onchange="digitalLatch('19', (this.id));">
                 <option value="1">No Latch Set</option>
                 <option value="2">Latch High</option>
                 <option value="3">Latch Low</option>
@@ -357,7 +352,7 @@
 
         </div>
         <div id="tabs-2">
-            <h1>PyMata IoT</h1>
+            
             <b>Pin 03:</b>
             <input type="radio" name="p3" value="0" id="p3low" onclick="clicked(this.id);" checked>Low
             <input type="radio" name="p3" value="1" id="p3high" onclick="clicked(this.id);">High
@@ -446,7 +441,7 @@
             <br>
         </div>
         <div id="tabs-3">
-            <h1>PyMata IoT</h1>
+            
 
             <input type="radio" name="a0" value="0" id="in0a" onclick="clicked(this.id);" checked>Disabled
             <input type="radio" name="a0" value="1" id="out0a" onclick="clicked(this.id);">Enabled
@@ -487,7 +482,7 @@
             &nbsp;
             <b>Data Latch:</b>
 
-            <select id="alatch1" onchange="analogLatch('1', (this.id));">
+            <select id="alatch3" onchange="analogLatch('1', (this.id));">
                 <option value="1">No Latch Set</option>
                 <option value="2">==</option>
                 <option value="3"><</option>
@@ -513,7 +508,7 @@
                    style="width: 80px;"/>
             &nbsp;
             <b>Data Latch:</b>
-            <select id="alatch2" onchange="analogLatch('2', (this.id));">
+            <select id="alatch3" onchange="analogLatch('2', (this.id));">
                 <option value="1">No Latch Set</option>
                 <option value="2">==</option>
                 <option value="3"><</option>
@@ -608,7 +603,7 @@
 
         </div>
         <div id="tabs-4">
-            <h1>PyMata IoT</h1>
+            
             <textarea id="reports" rows="10" cols="70"></textarea>
             <br>
             <br>
@@ -632,7 +627,7 @@
 
         </div>
         <div id="tabs-5">
-            <h1>PyMata IoT</h1>
+            
 
             <b>Digital Pin: </b>
             <INPUT TYPE="NUMBER" id="drPin" MIN="2" MAX="19" STEP="1" VALUE="2" SIZE="1">
@@ -659,7 +654,7 @@
             <b>Digital Latch Table Data: </b>
             <INPUT TYPE="NUMBER" id="dlData" MIN="2" MAX="19" STEP="1" VALUE="2" SIZE="1">
 
-            <input id="digLatch2" type="button" value="Read" onclick="digitalLatchRead(this.id);"/>
+            <input id="digLatch3" type="button" value="Read" onclick="digitalLatchRead(this.id);"/>
             &nbsp
             <input id="dlatchdata" name="pin" class="element text medium" type="text" maxlength="255" value=""
                    style="width: 500px;"/>
@@ -669,7 +664,7 @@
             <b>Analog Latch Table Data: </b>
             <INPUT TYPE="NUMBER" id="alData" MIN="0" MAX="5" STEP="1" VALUE="0" SIZE="1">
 
-            <input id="anlLatch2" type="button" value="Read" onclick="analogLatchRead(this.id);"/>
+            <input id="anlLatch3" type="button" value="Read" onclick="analogLatchRead(this.id);"/>
             &nbsp
             <input id="alatchdata" name="pin" class="element text medium" type="text" maxlength="255" value=""
                    style="width: 500px;"/>
@@ -678,7 +673,7 @@
             <br>
         </div>
         <div id="tabs-6">
-            <h1>PyMata IoT</h1>
+            
 
             <b>Servo Pin</b>
             <select id="servoPin">
@@ -697,17 +692,17 @@
             <input id="moveServo" type="button" value="Set Servo" onclick="servo();"/>
         </div>
         <div id="tabs-7">
-            <h1>PyMata IoT</h1>
+            
             <b>Default Values Are Set to Read Temperature from </b>
             <a href="https://www.sparkfun.com/products/11931" target="_blank">A Sparkfun TMP102 </a>
-            <h2>I2C Config (Use before an I2C read or write)</h2>
+            <h3>I2C Config (Use before an I2C read or write)</h3>
             <input id="configI2C" type="button" value="Configure I2C" onclick="i2cConfig();"/>
             <b>Read Delay Time</b>
             <input id="i2cDelayTime" name="pin" class="element text medium" type="text" maxlength="4" value="0"
                    style="width: 120px;"/>
 
 
-            <h2>I2C Read</h2>
+            <h3>I2C Read</h3>
             <b>Device Address</b>
             <input id="i2cReadAddress" name="pin" class="element text medium" type="text" maxlength="4" value="72"
                    style="width: 120px;"/>
@@ -741,7 +736,7 @@
                    style="width: 120px;"/>
 
             <br><br><hr size="6">
-            <h1>PyMata IoT</h1>
+            
             <b> Write Data To 8x8 BiColor LED Backpack</b>
             <a href="https://www.adafruit.com/products/902" target="_blank">Adafruit Product ID 109 </a>
             <br><br>
@@ -752,9 +747,7 @@
 
         </div>
         <div id="tabs-8">
-            <h1>PyMata IoT</h1>
-
-            <h2>Tone</h2><br>
+            <h3>Tone</h3><br>
             <b>Pin:</b>
             <select id="tonePin">
                 <option value="2">2</option>
@@ -788,7 +781,7 @@
             <input id="tone" type="button" value="Play Tone" onclick="playTone();"/>
             <br><br>
 
-            <h2>Encoder</h2>
+            <h3>Encoder</h3>
             <b>Encoder Pin A:</b>
             <select id="encoderPinA">
                 <option value="2">2</option>
@@ -843,7 +836,7 @@
                    style="width: 100px;"/>
             <br><br>
 
-            <h2>Sonar</h2>
+            <h3>Sonar</h3>
             <b>Trigger Pin:</b>
             <select id="sonarTriggerPin">
                 <option value="2">2</option>
@@ -898,7 +891,7 @@
                    style="width: 100px;"/>
             <br><br>
 
-            <h2>Stepper</h2>
+            <h3>Stepper</h3>
             <b>Pin 1:</b>
             <select id="stepperPin1">
                 <option value="2">2</option>
@@ -986,8 +979,6 @@
                 <option value="18">18</option>
                 <option value="19">19</option>
             </select>
-
-
             &nbsp
             <b>Steps/Rev (<= 21 bits)</b>
             <input id="stepRev" class="element text medium" type="text" maxlength="4" value="180"
@@ -1005,15 +996,16 @@
                         &nbsp;&nbsp;&nbsp;&nbsp;
 
             <input id="runStepper" type="button" value="Run Stepper" onclick="runStepMotor();"/>
-
         </div>
+		<div id="tabs-9">
+            <iframe src="../documentation/supervision.pdf" width="700" height="500"></iframe> 
+		</div>
     </div>
 
 
     <script>
 
         // hide all of the pwm input controls until selected
-
 
         $("#v3").hide();
         $("#v5").hide();
@@ -1038,7 +1030,7 @@
 
 
         socket.onopen = function (event) {
-            $("#connected").text('PyMata IoT Has Successfully Connected');
+            $("#connected").text('Supervision Has Successfully Connected');
 
         };
 
@@ -1989,12 +1981,7 @@
                     socket.send(msg);
                 }
             }
-
-
         }
-
-
-
     </script>
 </form>
 </body>

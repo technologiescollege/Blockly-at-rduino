@@ -52,8 +52,6 @@ contient la liste des blocs de Blockly ci-dessous en compressé-->
 
 <script type="text/javascript" src="utils/svg-pan-zoom.min.js"></script>
 
-<script type="text/javascript">var win_app = new ActiveXObject("WScript.shell");</script>
-
 <link rel="stylesheet" type="text/css" href="css/prettify.css">
 <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="css/blocklyDuino.css">
@@ -63,8 +61,7 @@ contient la liste des blocs de Blockly ci-dessous en compressé-->
 <body onload="BlocklyDuino.init()">
     <div id="divTitre">
         <p>
-            <a href="http://www.technologiescollege.fr/blockly@rduino/"> <img src="media/Arduino-uno-perspective-transparent.png" border="0"
-                height="76px">
+            <a href="http://www.technologiescollege.fr/blockly@rduino/"> <img src="media/Arduino-uno-perspective-transparent.png" border="0" height="76px">
             </a> 
             <b>Blockly@rduino</b> : 
             <span id="title"></span>
@@ -82,7 +79,6 @@ contient la liste des blocs de Blockly ci-dessous en compressé-->
 		<button id="btn_switch" class="btn btn-default">
 			<span class="glyphicon glyphicon-retweet"> </span>
 		</button>
-		<!--<label id="labelArduinoCard"></label> sinon ne s'affiche pas sur une ligne-->
 	    <div id="divCard">
 	            <label id="labelArduinoCard"></label> 
 	            <select id="pinout">
@@ -98,10 +94,10 @@ contient la liste des blocs de Blockly ci-dessous en compressé-->
 			<span class="glyphicon glyphicon-cog"> </span>
 			<span id="span_config"> </span>
 		</button>
-		<button id="btn_supervision" class="text-left btn btn-primary btn-block " data-toggle="modal" data-target="#supervisionModal" data-backdrop="static">
-			<span class="glyphicon glyphicon-blackboard"> </span>
+		<a id="btn_supervision" class='text-left btn btn-primary btn-block' href="./utils/s2aio_iot.html" target=_blank role='button'>
+			<span class="glyphicon glyphicon-blackboard"></span>
 			<span id="span_supervision"> </span>
-		</button>
+		</a>
     </div>
     <div id="menuPanelCenter">
             <ul id="ul_nav" role="tablist">
@@ -234,65 +230,6 @@ contient la liste des blocs de Blockly ci-dessous en compressé-->
 		</a>		
 	</div>
 <!-- Modals -->
-<!-- supervision modal -->
-<div class="modal fade" id="supervisionModal" tabindex="-1" role="dialog" aria-labelledby="supervisionModalLabel" aria-hidden="true" data-backdrop="static">
-  <div class="modal-dialog modal-supervision">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h4 class="modal-title" id="supervisionModalLabel">ArduGate</h4>
-		<div id="close_modal">
-			<button id="closeModal" type="button" class="btn btn-danger" data-dismiss="modal">
-				<span class="glyphicon glyphicon-remove"></span>
-				<span id="span_modal_close"> </span>
-			</button>
-		</div>
-      </div>
-      <div class="modal-body">
-		<!--<iframe src="supervision/ardugate.html" style="" frameborder="0" height="700px" width="860px"></iframe>-->
-		<iframe src="http://localhost:8880/" style="" frameborder="0" height="700px" width="860px"></iframe>
-      </div>
-	  <div class="modal-footer">
-		  <!--<a id="btn_ardugate_upload"role="button" class="btn btn-danger text-left" href="#" onclick="open('utils/popup.html','_blank','toolbar=0, location=no, status=no, scrollbars=no, resizable=no, copyhistory=0, menuBar=no, width=870,height=520,left=100,top=100')">
-				<span class="glyphicon glyphicon-flash"></span>
-				<span id="span_ardugate_upload"> </span>
-		  </a>-->
-		  <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#flashModal">
-				<span class="glyphicon glyphicon-flash"></span>
-				<span id="span_ardugate_upload"> </span>
-		  </button>
-			<a id="btn_launch_ardugate" class="btn btn-success text-left" href="win_app.run('notepad.exe', 1, True);"  role='button'>
-				<span class="glyphicon glyphicon-random"></span>
-				<span id="span_ardugate"> </span>
-			</a>
-			<a id="btn_docArdugate" class='btn btn-info text-left' href="http://arduinodev.com/software/ardugate/#start" target=_blank role='button'>
-				<span class="glyphicon glyphicon-info-sign"></span>
-				<span id="span_docArdugate"> </span>
-			</a>
-			<a id="btn_tutoArdugate" class='btn btn-success btn-info text-left' href="utils/ardugate.zip" role='button'>
-				<span class="glyphicon glyphicon-question-sign"></span>
-				<span id="span_tutoArdugate"> </span>
-			</a>	
-        </div>
-    </div>
-  </div>
-</div>
-<!-- ArduGate flash modal -->
-<div class="modal fade" id="flashModal" data-focus-on="input:first" tabindex="-1" aria-labelledby="flashModalLabel" data-backdrop="static">
-
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="btn btn-danger" data-dismiss="modal" aria-label="Close">
-				<span class="glyphicon glyphicon-remove"></span>
-				<span id="span_modal_close"> </span>
-		</button>
-        <h4 class="modal-title" id="flashModalLabel"></h4>
-      </div>
-      <div class="modal-body">
-            <iframe style="height: 510px; width: 100%; margin: 0px 0px;" allowTransparency="true" src="https://codebender.cc/embed/sketch:179355#agent.ino" frameborder="0" scrolling="no" toolbar="no" location="no", status="no", scrollbars="no", resizable="no", copyhistory="no", menuBar="no"></iframe>
-      </div>
-
-  </div>
-</div>
 <!-- about modal -->
 <div class="modal fade" id="aboutModal" tabindex="-1" role="dialog" aria-labelledby="aboutModalLabel" aria-hidden="true">
   <div class="modal-dialog">
