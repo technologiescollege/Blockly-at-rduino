@@ -29,7 +29,7 @@ goog.provide('Blockly.Arduino.motors');
 goog.require('Blockly.Arduino');
 
 Blockly.Arduino.zumo_motors_FN = function() {
-  var dropdown_direction = this.getFieldValue('DIRECTION');
+  var dropdown_direction = Blockly.Arduino.valueToCode(this, 'DIRECTION', Blockly.Arduino.ORDER_ATOMIC);
   var speed = 127;//Blockly.Arduino.valueToCode(this, 'SPEED', Blockly.Arduino.ORDER_ATOMIC) || '127';
   Blockly.Arduino.setups_["setup_motor"] = "pinMode(7,OUTPUT);//directionPinA\n"+
   "  pinMode(8,OUTPUT);//directionPinB\n"+
@@ -83,7 +83,7 @@ Blockly.Arduino.zumo_motors_FN = function() {
   return code;
 };
 Blockly.Arduino.zumo_motors_FL = function() {
-  var dropdown_direction = this.getFieldValue('DIRECTION');
+  var dropdown_direction = Blockly.Arduino.valueToCode(this, 'DIRECTION', Blockly.Arduino.ORDER_ATOMIC);
   var speed = 127;//Blockly.Arduino.valueToCode(this, 'SPEED', Blockly.Arduino.ORDER_ATOMIC) || '127';
   Blockly.Arduino.setups_["setup_motor"] = "pinMode(7,OUTPUT);//directionPinA\n"+
   "  pinMode(8,OUTPUT);//directionPinB\n"+
@@ -137,7 +137,7 @@ Blockly.Arduino.zumo_motors_FL = function() {
   return code;
 };
 Blockly.Arduino.zumo_motors_FR = function() {
-  var dropdown_direction = this.getFieldValue('DIRECTION');
+  var dropdown_direction = Blockly.Arduino.valueToCode(this, 'DIRECTION', Blockly.Arduino.ORDER_ATOMIC);
   var speed = 127;//Blockly.Arduino.valueToCode(this, 'SPEED', Blockly.Arduino.ORDER_ATOMIC) || '127';
   Blockly.Arduino.setups_["setup_motor"] = "pinMode(7,OUTPUT);//directionPinA\n"+
   "  pinMode(8,OUTPUT);//directionPinB\n"+
@@ -191,7 +191,7 @@ Blockly.Arduino.zumo_motors_FR = function() {
   return code;
 };
 Blockly.Arduino.zumo_motors_FB = function() {
-  var dropdown_direction = this.getFieldValue('DIRECTION');
+  var dropdown_direction = Blockly.Arduino.valueToCode(this, 'DIRECTION', Blockly.Arduino.ORDER_ATOMIC);
   var speed = 127;//Blockly.Arduino.valueToCode(this, 'SPEED', Blockly.Arduino.ORDER_ATOMIC) || '127';
   Blockly.Arduino.setups_["setup_motor"] = "pinMode(7,OUTPUT);//directionPinA\n"+
   "  pinMode(8,OUTPUT);//directionPinB\n"+
@@ -246,7 +246,7 @@ Blockly.Arduino.zumo_motors_FB = function() {
 };
 
 Blockly.Arduino.ardu_motor = function() {
-  var dropdown_direction = this.getFieldValue('DIRECTION');
+  var dropdown_direction = Blockly.Arduino.valueToCode(this, 'DIRECTION', Blockly.Arduino.ORDER_ATOMIC);
   var speed = 127;//Blockly.Arduino.valueToCode(this, 'SPEED', Blockly.Arduino.ORDER_ATOMIC) || '127';
   Blockly.Arduino.setups_["setup_motor"] = "pinMode(12,OUTPUT);//directionPinA\n"+
   "  pinMode(13,OUTPUT);//directionPinB\n"+
@@ -301,7 +301,7 @@ Blockly.Arduino.ardu_motor = function() {
 };
 
 Blockly.Arduino.ardu_motor_s = function() {
-  var dropdown_direction = this.getFieldValue('DIRECTION');
+  var dropdown_direction = Blockly.Arduino.valueToCode(this, 'DIRECTION', Blockly.Arduino.ORDER_ATOMIC);
   var speedA = Blockly.Arduino.valueToCode(this, 'SPEEDA', Blockly.Arduino.ORDER_ATOMIC) || '127'
   var speedB = Blockly.Arduino.valueToCode(this, 'SPEEDB', Blockly.Arduino.ORDER_ATOMIC) || '127'
   Blockly.Arduino.setups_["setup_motor"] = "pinMode(12,OUTPUT);//directionPinA\n"+
@@ -357,7 +357,7 @@ Blockly.Arduino.ardu_motor_s = function() {
 };
 
 Blockly.Arduino.zumo_motors_FNs = function() {
-  var dropdown_direction = this.getFieldValue('DIRECTION');
+  var dropdown_direction = Blockly.Arduino.valueToCode(this, 'DIRECTION', Blockly.Arduino.ORDER_ATOMIC);
   var speedA = Blockly.Arduino.valueToCode(this, 'SPEEDA', Blockly.Arduino.ORDER_ATOMIC) || '127'
   var speedB = Blockly.Arduino.valueToCode(this, 'SPEEDB', Blockly.Arduino.ORDER_ATOMIC) || '127'
   Blockly.Arduino.setups_["setup_motor"] = "pinMode(7,OUTPUT);//directionPinA\n"+
@@ -413,7 +413,7 @@ Blockly.Arduino.zumo_motors_FNs = function() {
 };
 
 Blockly.Arduino.zumo_motors_FLs = function() {
-  var dropdown_direction = this.getFieldValue('DIRECTION');
+  var dropdown_direction = Blockly.Arduino.valueToCode(this, 'DIRECTION', Blockly.Arduino.ORDER_ATOMIC);
   var speedA = Blockly.Arduino.valueToCode(this, 'SPEEDA', Blockly.Arduino.ORDER_ATOMIC) || '127'
   var speedB = Blockly.Arduino.valueToCode(this, 'SPEEDB', Blockly.Arduino.ORDER_ATOMIC) || '127'
   Blockly.Arduino.setups_["setup_motor"] = "pinMode(7,OUTPUT);//directionPinA\n"+
@@ -469,7 +469,7 @@ Blockly.Arduino.zumo_motors_FLs = function() {
 };
 
 Blockly.Arduino.zumo_motors_FRs = function() {
-  var dropdown_direction = this.getFieldValue('DIRECTION');
+  var dropdown_direction = Blockly.Arduino.valueToCode(this, 'DIRECTION', Blockly.Arduino.ORDER_ATOMIC);
   var speedA = Blockly.Arduino.valueToCode(this, 'SPEEDA', Blockly.Arduino.ORDER_ATOMIC) || '127'
   var speedB = Blockly.Arduino.valueToCode(this, 'SPEEDB', Blockly.Arduino.ORDER_ATOMIC) || '127'
   Blockly.Arduino.setups_["setup_motor"] = "pinMode(7,OUTPUT);//directionPinA\n"+
@@ -525,7 +525,7 @@ Blockly.Arduino.zumo_motors_FRs = function() {
 };
 
 Blockly.Arduino.zumo_motors_FBs = function() {
-  var dropdown_direction = this.getFieldValue('DIRECTION');
+  var dropdown_direction = Blockly.Arduino.valueToCode(this, 'DIRECTION', Blockly.Arduino.ORDER_ATOMIC);
   var speedA = Blockly.Arduino.valueToCode(this, 'SPEEDA', Blockly.Arduino.ORDER_ATOMIC) || '127'
   var speedB = Blockly.Arduino.valueToCode(this, 'SPEEDB', Blockly.Arduino.ORDER_ATOMIC) || '127'
   Blockly.Arduino.setups_["setup_motor"] = "pinMode(7,OUTPUT);//directionPinA\n"+
@@ -581,7 +581,7 @@ Blockly.Arduino.zumo_motors_FBs = function() {
 };
 
 Blockly.Arduino.radio_shack_s = function() {
-  var dropdown_direction = this.getFieldValue('DIRECTION');
+  var dropdown_direction = Blockly.Arduino.valueToCode(this, 'DIRECTION', Blockly.Arduino.ORDER_ATOMIC);
   var speedA = Blockly.Arduino.valueToCode(this, 'SPEEDA', Blockly.Arduino.ORDER_ATOMIC) || '127'
   var speedB = Blockly.Arduino.valueToCode(this, 'SPEEDB', Blockly.Arduino.ORDER_ATOMIC) || '127'
   Blockly.Arduino.setups_["setup_motor"] = "pinMode(1,OUTPUT);//directionPinA\n"+
@@ -637,7 +637,7 @@ Blockly.Arduino.radio_shack_s = function() {
 };
 
 Blockly.Arduino.pololu_drv8835_s = function() {
-  var dropdown_direction = this.getFieldValue('DIRECTION');
+  var dropdown_direction = Blockly.Arduino.valueToCode(this, 'DIRECTION', Blockly.Arduino.ORDER_ATOMIC);
   var speedA = Blockly.Arduino.valueToCode(this, 'SPEEDA', Blockly.Arduino.ORDER_ATOMIC) || '127'
   var speedB = Blockly.Arduino.valueToCode(this, 'SPEEDB', Blockly.Arduino.ORDER_ATOMIC) || '127'
   Blockly.Arduino.setups_["setup_motor"] = "pinMode(7,OUTPUT);//directionPinA\n"+
@@ -693,7 +693,7 @@ Blockly.Arduino.pololu_drv8835_s = function() {
 };
 
 Blockly.Arduino.arduino_s = function() {
-  var dropdown_direction = this.getFieldValue('DIRECTION');
+  var dropdown_direction = Blockly.Arduino.valueToCode(this, 'DIRECTION', Blockly.Arduino.ORDER_ATOMIC);
   var speedA = Blockly.Arduino.valueToCode(this, 'SPEEDA', Blockly.Arduino.ORDER_ATOMIC) || '127'
   var speedB = Blockly.Arduino.valueToCode(this, 'SPEEDB', Blockly.Arduino.ORDER_ATOMIC) || '127'
   Blockly.Arduino.setups_["setup_motor"] = "pinMode(12,OUTPUT);//directionPinA\n"+
@@ -749,7 +749,7 @@ Blockly.Arduino.arduino_s = function() {
 };
 
 Blockly.Arduino.dfrobot_s = function() {
-  var dropdown_direction = this.getFieldValue('DIRECTION');
+  var dropdown_direction = Blockly.Arduino.valueToCode(this, 'DIRECTION', Blockly.Arduino.ORDER_ATOMIC);
   var speedA = Blockly.Arduino.valueToCode(this, 'SPEEDA', Blockly.Arduino.ORDER_ATOMIC) || '127'
   var speedB = Blockly.Arduino.valueToCode(this, 'SPEEDB', Blockly.Arduino.ORDER_ATOMIC) || '127'
   Blockly.Arduino.setups_["setup_motor"] = "pinMode(4,OUTPUT);//directionPinA\n"+
@@ -805,7 +805,7 @@ Blockly.Arduino.dfrobot_s = function() {
 };
 
 Blockly.Arduino.generic_motor_s = function() {
-  var dropdown_direction = this.getFieldValue('DIRECTION');
+  var dropdown_direction = Blockly.Arduino.valueToCode(this, 'DIRECTION', Blockly.Arduino.ORDER_ATOMIC);
   var speedA = Blockly.Arduino.valueToCode(this, 'SPEEDA', Blockly.Arduino.ORDER_ATOMIC) || '127'
   var speedB = Blockly.Arduino.valueToCode(this, 'SPEEDB', Blockly.Arduino.ORDER_ATOMIC) || '127'
   var DirPinA = this.getFieldValue("PIN-AD");
@@ -865,7 +865,7 @@ Blockly.Arduino.generic_motor_s = function() {
 };
 
 Blockly.Arduino.zumo_motors_FUs = function() {
-  var dropdown_direction = this.getFieldValue('DIRECTION');
+  var dropdown_direction = Blockly.Arduino.valueToCode(this, 'DIRECTION', Blockly.Arduino.ORDER_ATOMIC);
   var speedA = Blockly.Arduino.valueToCode(this, 'SPEEDA', Blockly.Arduino.ORDER_ATOMIC);
   var speedB = Blockly.Arduino.valueToCode(this, 'SPEEDB', Blockly.Arduino.ORDER_ATOMIC);
   var flipL = Blockly.Arduino.valueToCode(this, 'FLIPL', Blockly.Arduino.ORDER_ATOMIC); 
@@ -928,7 +928,7 @@ Blockly.Arduino.zumo_motors_FUs = function() {
 };
 
 Blockly.Arduino.generic_motor = function() {
-  var dropdown_direction = this.getFieldValue('DIRECTION');
+  var dropdown_direction = Blockly.Arduino.valueToCode(this, 'DIRECTION', Blockly.Arduino.ORDER_ATOMIC);
   var PinA1 = this.getFieldValue("PIN-A1");
   var PinB1 = this.getFieldValue("PIN-B1");
   var PinA2 = this.getFieldValue("PIN-A2");
