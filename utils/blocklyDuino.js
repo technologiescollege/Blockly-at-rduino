@@ -60,7 +60,7 @@ BlocklyDuino.renderContent = function() {
 	    } catch (e) {
 	            alert(e);
 		}
-	  }
+	  } 
 };
 
 /**

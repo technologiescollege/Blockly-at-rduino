@@ -1,0 +1,3 @@
+[console_scripts]
+s2aio = s2aio.__main__:main
+

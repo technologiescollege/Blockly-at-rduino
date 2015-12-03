@@ -7,11 +7,26 @@ var outputMode = "1";
 var analogMode = "2";
 var pwmMode = "3";
 
-var socket = new WebSocket('ws://' + ipAddress + ':' + ipPort);
 var pin_mode = "";
 var pin = "";
 var outputValue = "";
 
+function WebSocketTest() {
+	  if ("WebSocket" in window)
+            {
+               alert("WebSocket is supported by your Browser!");
+               
+               // Let us open a web socket
+               var ws = new WebSocket('ws://' + ipAddress + ':' + ipPort);
+			   socket = ws;
+            }
+            
+            else
+            {
+               // The browser doesn't support WebSocket
+               alert("WebSocket NOT supported by your Browser!");
+			}
+};     
 
 socket.onopen = function (event) {
 	$("#connected").text('Supervision Has Successfully Connected');

@@ -90,8 +90,16 @@ html[dir="RTL"] .menuPanel-ver {
 	text-align: center;
 }
 
-.flashModal{
-  width: 850px;
+.modal-draggable .modal-backdrop {
+  position: fixed;
+}
+
+.modal.modal-draggable {
+    overflow: overflow-y;
+}
+
+.modal-draggable .modal-header:hover {
+  cursor: move;
 }
 
 html[dir="RTL"] .navbar-right {
@@ -334,11 +342,6 @@ html[dir="RTL"] #btn_delete {
 	-webkit-column-count: 3;
 	-moz-column-count: 3;
 	column-count: 3;
-}
-
-.modal-supervision {
-	height: 700px;
-	width:880px;
 }
 
 #select_all {
