@@ -55,13 +55,6 @@ contient la liste des blocs de Blockly ci-dessous en compressé-->
 
 <script type="text/javascript" src="http://codebender.cc/embed/compilerflasher.js"></script>
 
-<script>
-$(".modal-draggable .modal-dialog").draggable(
-	{
-		handle: ".modal-header"
-	});
-</script>
-
 <link rel="stylesheet" type="text/css" href="css/prettify.css">
 <link rel="stylesheet" type="text/css" href="css/jquery-ui.css">
 <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
@@ -252,10 +245,13 @@ $(".modal-draggable .modal-dialog").draggable(
 			<span class="glyphicon glyphicon-question-sign"></span>
 			<span id="span_tuto"> </span>
 		</a>
-		<button id="btn_videos" class="btn btn-danger text-left" data-toggle="modal" data-target="#videoModal">
+		<button id="btn_videos" class="btn btn-danger text-left" data-backdrop="static" data-toggle="modal" data-target="#videoModal">
 			<span class="glyphicon glyphicon-expand"> </span>
 			<span id="span_videos"> </span>
 		</button>		
+	</div>
+	<div id="div_miniPicture">
+		<a id="miniCard" data-toggle="modal" data-target="#showcardModal"><img id="arduino_card_miniPicture"></a>
 	</div>
 <!-- Modals -->
 <!-- about modal -->
@@ -277,7 +273,7 @@ $(".modal-draggable .modal-dialog").draggable(
   </div>
 </div>
 <!-- picture modal -->
-<div class="modal fade modal-draggable" id="showcardModal" tabindex="-1" role="dialog" aria-labelledby="showcardLabel" aria-hidden="true">
+<div class="modal fade modal-draggable" backdrop="static" id="showcardModal" tabindex="-1" role="dialog" aria-labelledby="showcardLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
@@ -362,7 +358,13 @@ $(".modal-draggable .modal-dialog").draggable(
     </div>
   </div>
 </div>
-
+<!--script for moving modal-->
+<script>
+$(".modal-draggable .modal-dialog").draggable(
+	{
+		handle: ".modal-header"
+	});
+</script>
 <!--    toolboxes definitions -->
 <xml id="CAT_LOGIC" style="display: none">
     <category name="CAT_LOGIC">

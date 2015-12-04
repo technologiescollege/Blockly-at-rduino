@@ -69,14 +69,13 @@ html[dir="RTL"] .menuPanel-ver {
 
 .div_help_button-ver {
 	width: 200px;
-    padding-left: 10px;
 	bottom: 10px;
 	position: absolute;
 	text-align: center;
 }
 
 .div_help_button-hor {
-    padding-left: 10px;
+    padding-left: 0px;
 	bottom: 10px;
 	position: absolute;
 	text-align: center;
@@ -87,6 +86,23 @@ html[dir="RTL"] .menuPanel-ver {
     float: right;
 	bottom: 10px;
 	position: absolute;
+	text-align: center;
+}
+
+.div_miniPicture-ver {
+    position: absolute;
+	float: left;
+	padding-left: 20px;
+	bottom: 45px;
+    text-align: center;
+}
+
+.div_miniPicture-hor {
+    position: absolute;
+	clear: right;
+	float: right;
+	margin: 20px;
+	bottom: 105px;
 	text-align: center;
 }
 

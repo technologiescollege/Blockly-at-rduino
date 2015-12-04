@@ -993,8 +993,8 @@
 		<br>
 		<b>Utilisation de s2aio mais surtout du module pymata intégré : <a href="https://github.com/MrYsLab/s2aio/wiki">wiki d'Alan Yorinks</a></br>
 		<br>
-		<b>Pour Windows télécharger le package suivant : <a href="https://github.com/technologiescollege/ressources/tree/master/logiciels">fichier "s2aio.7z" à dézipper</a></br>
-		<b>Téléverser FirmataPlus (depuis l'IDE Arduino TechnoNantes) dans la carte,</br>
+		<b>Pour Windows télécharger le package suivant : <a href="https://github.com/technologiescollege/ressources/blob/master/logiciels/s2aio.7z?raw=true">fichier "s2aio.7z" à dézipper</a></br>
+		<b>Téléverser FirmataPlus (depuis <a href="http://www.pedagogie.ac-nantes.fr/-814254.kjsp">l'IDE Arduino TechnoNantes</a>) dans la carte,</br>
 		<b>Ouvrir le fichier BATCH : pymata-aio.bat, remplacer le bon port COM, puis lancez le.</br>
 	</div>
 </div>
