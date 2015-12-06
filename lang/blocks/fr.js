@@ -885,4 +885,3 @@ Blockly.Msg.BQ_IR_TITLE = "l'état du suiveur de ligne";
 Blockly.Msg.BQ_IR_TOOLTIP = 'Entrée Détecteur de ligne (réf : LIG1)';
 Blockly.Msg.BQ_BT_TITLE = "Bluetooth en mode esclave";
 Blockly.Msg.BQ_BT_TOOLTIP = 'Bluetooth V2.0+EDR esclave. Seulement 1 esclave par carte.';
-

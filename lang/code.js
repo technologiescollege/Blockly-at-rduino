@@ -225,4 +225,4 @@ document.write('<script src="lang/msg/' + Code.LANG + '.js"></script>\n');
 // Load Blockly's language strings.
 document.write('<script src="lang/blocks/' + Code.LANG + '.js"></script>\n');
 // Load Supervision's language strings.
-//document.write('<script src="lang/supervision/' + Code.LANG + '.js"></script>\n');
+document.write('<script src="lang/supervision/' + Code.LANG + '.js"></script>\n');

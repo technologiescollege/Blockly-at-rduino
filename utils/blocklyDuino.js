@@ -228,6 +228,7 @@ BlocklyDuino.arduinoCard =  function (){
 			BlocklyDuino.renderContent();
 			$('#arduino_card_picture').attr("src", profile.defaultBoard['picture']);
 			$('#arduino_card_miniPicture').attr("src", profile.defaultBoard['miniPicture']);
+			$('#arduino_card_supervision').attr("src", profile.defaultBoard['supervision']);
 			}
   }
 }; 

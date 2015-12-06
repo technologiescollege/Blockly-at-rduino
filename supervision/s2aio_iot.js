@@ -14,7 +14,7 @@ var outputValue = "";
 function WebSocketTest() {
 	  if ("WebSocket" in window)
             {
-               alert("WebSocket is supported by your Browser!");
+               alert(Blockly.Msg.SV_alert);
                
                // Let us open a web socket
                var ws = new WebSocket('ws://' + ipAddress + ':' + ipPort);

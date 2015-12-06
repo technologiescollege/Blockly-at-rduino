@@ -16,7 +16,7 @@
 		<li><a href="#tabs-9">Documentation</a></li>
 	</ul>
 	<div id="tabs-1">
-		<p id="connected"><b><a href="javascript:WebSocketTest()">Connexion à Pymata</a></b></p>
+		<p id="connected"><b><a href="javascript:WebSocketTest()">Connect to Arduino/pymata</a></b></p>
 		<input type="radio" name="e2" value="0" id="in2d" onclick="clicked(this.id);" checked>Disabled
 		<input type="radio" name="e2" value="1" id="out2d" onclick="clicked(this.id);">Enabled
 		<b>Pin 02:</b>

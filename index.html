@@ -41,11 +41,11 @@ contient la liste des blocs de Blockly ci-dessous en compressé-->
 
 <script type="text/javascript" src="utils/spin.js"></script>
 <script type="text/javascript" src="utils/blocklyDuino.js"></script>
-<script type="text/javascript" src="utils/s2aio_iot.js"></script>
 <script type="text/javascript" src="utils/jquery-1.10.2.js"></script>
 <script type="text/javascript" src="utils/jquery-ui.min-1.11.4.js"></script>
 <script type="text/javascript" src="utils/bootstrap.min.3.3.6.js"></script>
 <script type="text/javascript" src="utils/prettify.js"></script>
+<script type="text/javascript" src="supervision/s2aio_iot.js"></script>
 <!--TechnoZone51-->
 <script type="text/javascript" src="utils/html2canvas.js"></script>
 <script type="text/javascript" src="utils/Canvas2Image.js"></script>
@@ -222,10 +222,10 @@ contient la liste des blocs de Blockly ci-dessous en compressé-->
 				<script> 
 				$(function(){
 				  $("#btn_supervision").on("click", function(){
-						$("#contentSupervision").load("./utils/pymata.js");
+						var SVFile = './supervision/pymata_' + document.getElementById('pinout').value + '.js';
+						$("#contentSupervision").load(SVFile);
 						}
-					);
-					
+					);					
 				});				
 				</script>
 				<div id="contentSupervision"></div>
