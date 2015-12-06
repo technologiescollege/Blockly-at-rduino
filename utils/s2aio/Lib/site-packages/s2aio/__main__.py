@@ -67,7 +67,7 @@ class S2AIO:
         # get version info if requested
         if version_request:
             print()
-            print('s2aio version 1.5 - 19 Nov 2015')
+            print('s2aio version 1.6 - 29 Nov 2015')
             print('Python path = ' + self.base_path)
             sys.exit(0)
 
@@ -305,7 +305,7 @@ class S2AIO:
 
         # send the HTTP response
         return web.Response(headers={"Access-Control-Allow-Origin": "*"},
-                            content_type="text/html; charset=ISO-8859-1", text=total_reply)
+                            content_type="text/html", charset="ISO-8859-1", text=total_reply)
 
     async def setup_digital_pin(self, request):
         """
@@ -719,7 +719,7 @@ class S2AIO:
 
         # send the HTTP response
         return web.Response(headers={"Access-Control-Allow-Origin": "*"},
-                            content_type="text/html; charset=ISO-8859-1", text=reply)
+                            content_type="text/html", charset="ISO-8859-1", text=reply)
 
     async def analog_read(self, request):
         """
@@ -757,7 +757,7 @@ class S2AIO:
 
         # send the HTTP response
         return web.Response(headers={"Access-Control-Allow-Origin": "*"},
-                            content_type="text/html; charset=ISO-8859-1", text=reply)
+                            content_type="text/html", charset="ISO-8859-1", text=reply)
 
     async def problem(self, request):
         """
@@ -770,7 +770,7 @@ class S2AIO:
         # snap can return an empty problem so we need to compensate
         try:
             return web.Response(headers={"Access-Control-Allow-Origin": "*"},
-                                content_type="text/html; charset=ISO-8859-1", text=problem[1])
+                                content_type="text/html", charset="ISO-8859-1", text=problem[1])
         except IndexError:
             return web.Response(body="ok".encode('utf-8'))
 
