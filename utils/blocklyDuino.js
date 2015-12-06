@@ -224,11 +224,11 @@ BlocklyDuino.arduinoCard =  function (){
 			window.profile["defaultBoard"]=window.profile[Cacheobj.options[Cacheobj.selectedIndex].value];
 		//    BlocklyDuino.backupBlocks();
 			Blockly.mainWorkspace.clear();
-		//    BlocklyDuino.loadBlocks('');
-			BlocklyDuino.renderContent();
 			$('#arduino_card_picture').attr("src", profile.defaultBoard['picture']);
 			$('#arduino_card_miniPicture').attr("src", profile.defaultBoard['miniPicture']);
 			$('#arduino_card_supervision').attr("src", profile.defaultBoard['supervision']);
+		//    BlocklyDuino.loadBlocks('');
+			BlocklyDuino.renderContent();
 			}
   }
 }; 

@@ -30,9 +30,9 @@ Blockly.Blocks.base_setup = {
         this.setColour(230);
 		this.setHelpUrl(Blockly.Msg.ARDUINO_BASE_SETUP_HELPURL);
         this.appendDummyInput("")
-                .appendTitle("Setup")
+            .appendTitle("Setup")
         this.appendStatementInput('DO')
-                .appendTitle(Blockly.LANG_CONTROLS_REPEAT_INPUT_DO);
+            .appendTitle(Blockly.LANG_CONTROLS_REPEAT_INPUT_DO);
         this.setTooltip("Exécuté seulement dans le 'Setup'");
     }
 };
