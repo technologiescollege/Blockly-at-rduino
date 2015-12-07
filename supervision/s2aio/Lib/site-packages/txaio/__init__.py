@@ -66,6 +66,9 @@ __all__ = (
     'config',                   # the config instance, access via attributes
 
     'create_future',   # create a Future (can be already resolved/errored)
+    'create_future_success',
+    'create_future_error',
+    'create_failure',  # return an object implementing IFailedFuture
     'as_future',       # call a method, and always return a Future
     'is_future',       # True for Deferreds in tx and Futures, @coroutines in asyncio
     'reject',          # errback a Future
@@ -88,7 +91,14 @@ __all__ = (
 )
 
 
+_explicit_framework = None
+
+
 def use_twisted():
+    global _explicit_framework
+    if _explicit_framework is not None and _explicit_framework != 'twisted':
+        raise RuntimeError("Explicitly using '{}' already".format(_explicit_framework))
+    _explicit_framework = 'twisted'
     from txaio import tx
     _use_framework(tx)
     import txaio
@@ -97,6 +107,10 @@ def use_twisted():
 
 
 def use_asyncio():
+    global _explicit_framework
+    if _explicit_framework is not None and _explicit_framework != 'asyncio':
+        raise RuntimeError("Explicitly using '{}' already".format(_explicit_framework))
+    _explicit_framework = 'asyncio'
     from txaio import aio
     _use_framework(aio)
     import txaio
@@ -117,14 +131,8 @@ def _use_framework(module):
                 getattr(module, method_name))
 
 
-try:
-    from txaio.tx import *  # noqa
-    using_twisted = True
-except ImportError:
-    try:
-        from txaio.aio import *  # noqa
-        using_asyncio = True
-    except ImportError as e:  # pragma: no cover
-        raise
-        # pragma: no cover
-        raise ImportError("Neither asyncio nor Twisted found.")
+# use the "un-framework", which is neither asyncio nor twisted and
+# just throws an exception -- this forces you to call .use_twisted()
+# or .use_asyncio() to use the library.
+from txaio import _unframework
+_use_framework(_unframework)

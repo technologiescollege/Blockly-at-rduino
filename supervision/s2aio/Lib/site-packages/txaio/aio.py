@@ -291,7 +291,7 @@ def is_future(obj):
 
 
 def call_later(delay, fun, *args, **kwargs):
-    # loop.call_later doesns't support kwargs
+    # loop.call_later doesn't support kwargs
     real_call = functools.partial(fun, *args, **kwargs)
     return config.loop.call_later(delay, real_call)
 
