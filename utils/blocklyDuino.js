@@ -227,6 +227,8 @@ BlocklyDuino.arduinoCard =  function (){
 			$('#arduino_card_picture').attr("src", profile.defaultBoard['picture']);
 			$('#arduino_card_miniPicture').attr("src", profile.defaultBoard['miniPicture']);
 			$('#arduino_card_supervision').attr("src", profile.defaultBoard['supervision']);
+			var SVFile = './supervision/pymata_' + document.getElementById('pinout').value + '.js';
+			$("#contentSupervision").load(SVFile);
 		//    BlocklyDuino.loadBlocks('');
 			BlocklyDuino.renderContent();
 			}

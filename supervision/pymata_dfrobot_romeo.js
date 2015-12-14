@@ -16,7 +16,7 @@
 		<li><a href="#tabs-9">Documentation</a></li>
 	</ul>
 	<div id="tabs-1">
-		<p id="connected"><b><a href="javascript:WebSocketTest()">Blockly.Msg.SV_connect</a></b></p>
+		<p id="connected"><b><a href="javascript:WebSocketTest()" class="btn btn-warning"><span class="glyphicon glyphicon-link"></span> Connect to Arduino/pymata</a></b></p>
 		<input type="radio" name="e2" value="0" id="in2d" onclick="clicked(this.id);" checked>Disabled
 		<input type="radio" name="e2" value="1" id="out2d" onclick="clicked(this.id);">Enabled
 		<b>Pin 02:</b>
@@ -343,7 +343,7 @@
 
 	</div>
 	<div id="tabs-2">
-		<p id="connected"><b><a href="javascript:WebSocketTest()">Connexion à Pymata</a></b></p>
+		<p id="connected"><b><a href="javascript:WebSocketTest()" class="btn btn-warning"><span class="glyphicon glyphicon-link"></span> Connect to Arduino/pymata</a></b></p>
 		<b>Pin 03:</b>
 		<input type="radio" name="p3" value="0" id="p3low" onclick="clicked(this.id);" checked>Low
 		<input type="radio" name="p3" value="1" id="p3high" onclick="clicked(this.id);">High
@@ -432,7 +432,7 @@
 		<br>
 	</div>
 	<div id="tabs-3">
-		<p id="connected"><b><a href="javascript:WebSocketTest()">Connexion à Pymata</a></b></p>
+		<p id="connected"><b><a href="javascript:WebSocketTest()" class="btn btn-warning"><span class="glyphicon glyphicon-link"></span> Connect to Arduino/pymata</a></b></p>
 		<input type="radio" name="a0" value="0" id="in0a" onclick="clicked(this.id);" checked>Disabled
 		<input type="radio" name="a0" value="1" id="out0a" onclick="clicked(this.id);">Enabled
 		<b>Pin A0:</b>
@@ -593,7 +593,7 @@
 
 	</div>
 	<div id="tabs-4">
-		<p id="connected"><b><a href="javascript:WebSocketTest()">Connexion à Pymata</a></b></p>
+		<p id="connected"><b><a href="javascript:WebSocketTest()" class="btn btn-warning"><span class="glyphicon glyphicon-link"></span> Connect to Arduino/pymata</a></b></p>
 		<textarea id="reports" rows="10" cols="70"></textarea>
 		<br>
 		<br>
@@ -617,7 +617,7 @@
 
 	</div>
 	<div id="tabs-5">
-		<p id="connected"><b><a href="javascript:WebSocketTest()">Connexion à Pymata</a></b></p>
+		<p id="connected"><b><a href="javascript:WebSocketTest()" class="btn btn-warning"><span class="glyphicon glyphicon-link"></span> Connect to Arduino/pymata</a></b></p>
 		<b>Digital Pin: </b>
 		<INPUT TYPE="NUMBER" id="drPin" MIN="2" MAX="19" STEP="1" VALUE="2" SIZE="1">
 
@@ -662,7 +662,7 @@
 		<br>
 	</div>
 	<div id="tabs-6">
-		<p id="connected"><b><a href="javascript:WebSocketTest()">Connexion à Pymata</a></b></p>
+		<p id="connected"><b><a href="javascript:WebSocketTest()" class="btn btn-warning"><span class="glyphicon glyphicon-link"></span> Connect to Arduino/pymata</a></b></p>
 		<b>Servo Pin</b>
 		<select id="servoPin">
 			<option value="3">3</option>
@@ -680,7 +680,7 @@
 		<input id="moveServo" type="button" value="Set Servo" onclick="servo();"/>
 	</div>
 	<div id="tabs-7">
-		<p id="connected"><b><a href="javascript:WebSocketTest()">Connexion à Pymata</a></b></p>
+		<p id="connected"><b><a href="javascript:WebSocketTest()" class="btn btn-warning"><span class="glyphicon glyphicon-link"></span> Connect to Arduino/pymata</a></b></p>
 		<b>Default Values Are Set to Read Temperature from </b>
 		<a href="https://www.sparkfun.com/products/11931" target="_blank">A Sparkfun TMP102 </a>
 		<h2>I2C Config (Use before an I2C read or write)</h2>
@@ -735,7 +735,7 @@
 
 	</div>
 	<div id="tabs-8">
-		<p id="connected"><b><a href="javascript:WebSocketTest()">Connexion à Pymata</a></b></p>
+		<p id="connected"><b><a href="javascript:WebSocketTest()" class="btn btn-warning"><span class="glyphicon glyphicon-link"></span> Connect to Arduino/pymata</a></b></p>
 		<h2>Tone</h2><br>
 		<b>Pin:</b>
 		<select id="tonePin">
