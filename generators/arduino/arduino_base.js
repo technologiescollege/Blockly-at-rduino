@@ -42,7 +42,7 @@ Blockly.Arduino.base_setup = function () {
 };
 
 Blockly.Arduino.base_delay = function() {
-  var delay_time = Blockly.Arduino.valueToCode(this, 'DELAY_TIME', Blockly.Arduino.ORDER_ATOMIC) || '1000'
+  var delay_time = Blockly.Arduino.valueToCode(this, 'DELAY_TIME', Blockly.Arduino.ORDER_ATOMIC)
   var code = 'delay(' + delay_time + ');\n';
   return code;
 };
