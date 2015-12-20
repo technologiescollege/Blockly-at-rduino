@@ -1,21 +1,19 @@
-﻿<script>
-        $(function () {
-            $("#tabs").tabs();
-        });
-</script>
-<div id="tabs">
-	<ul>
-		<li><a href="#tabs-1">Digital Input</a></li>
-		<li><a href="#tabs-2">Digital/PWM Output</a></li>
-		<li><a href="#tabs-3">Analog Input</a></li>
-		<li><a href="#tabs-4">Reports</a></li>
-		<li><a href="#tabs-5">Polled Data Retrieval</a></li>
-		<li><a href="#tabs-6">Servo</a></li>
-		<li><a href="#tabs-7">i2c</a></li>
-		<li><a href="#tabs-8">FirmataPlus Features</a></li>
-		<li><a href="#tabs-9">Documentation</a></li>
-	</ul>
-	<div id="tabs-1">
+﻿<ul class="nav nav-pills">
+	<li role="presentation" class="active"><a href="#tabs-1" aria-controls="tabs-1" role="tab" data-toggle="tab"><span id="span_supervision_tab1"> </span>Digital Input</a></li>
+	<li role="presentation"><a href="#tabs-2" aria-controls="tabs-2" role="tab" data-toggle="tab">Digital/PWM Output</a></li>
+	<li role="presentation"><a href="#tabs-3" aria-controls="tabs-3" role="tab" data-toggle="tab">Analog Input</a></li>
+	<li role="presentation"><a href="#tabs-4" aria-controls="tabs-4" role="tab" data-toggle="tab">Reports</a></li>
+	<li role="presentation"><a href="#tabs-5" aria-controls="tabs-5" role="tab" data-toggle="tab">Polled Data Retrieval</a></li>
+	<li role="presentation"><a href="#tabs-6" aria-controls="tabs-6" role="tab" data-toggle="tab">Servo</a></li>
+	<li role="presentation"><a href="#tabs-7" aria-controls="tabs-7" role="tab" data-toggle="tab">i2c</a></li>
+	<li role="presentation"><a href="#tabs-8" aria-controls="tabs-8" role="tab" data-toggle="tab">FirmataPlus Features</a></li>
+	<li role="presentation"><a href="#tabs-9" aria-controls="tabs-9" role="tab" data-toggle="tab">Documentation</a></li>
+</ul>
+
+<!-- Tab panes -->
+<div class="tab-content" style="margin-top: 5px;">
+
+	<div id="tabs-1" class="tab-pane active">
 		<p id="connected"><b><a href="javascript:WebSocketTest()" class="btn btn-warning"><span class="glyphicon glyphicon-link"></span> Connect to Arduino/pymata</a></b></p>
 		<input type="radio" name="e2" value="0" id="in2d" onclick="clicked(this.id);" checked>Disabled
 		<input type="radio" name="e2" value="1" id="out2d" onclick="clicked(this.id);">Enabled
@@ -319,13 +317,15 @@
 		</select>
 		&nbsp;&nbsp;&nbsp;&nbsp;
 		<b>Latch Event Occurred On:</b>
-		<input id="dlevent18" name="pin" class="element text medium" type="text" maxlength="255" value="" style="width: 500px;"/>
+		<input id="dlevent18" name="pin" class="element text medium" type="text" maxlength="255" value=""
+			   style="width: 500px;"/>
 		<br>
 
 		<input type="radio" name="e19" value="0" id="in19d" onclick="clicked(this.id);" checked>Disabled
 		<input type="radio" name="e19" value="1" id="out19d" onclick="clicked(this.id);">Enabled
 		<b>Pin 19:</b>
-		<input id="ip19" name="pin" class="element text medium" type="text" maxlength="255" value="0" style="width: 20px;"/>
+		<input id="ip19" name="pin" class="element text medium" type="text" maxlength="255" value="0"
+			   style="width: 20px;"/>
 		&nbsp;&nbsp;&nbsp;&nbsp;
 		<b>Data Latch</b>
 		<select id="dlatch19" onchange="digitalLatch('19', (this.id));">
@@ -335,43 +335,48 @@
 		</select>
 		&nbsp;&nbsp;&nbsp;&nbsp;
 		<b>Latch Event Occurred On:</b>
-		<input id="dlevent19" name="pin" class="element text medium" type="text" maxlength="255" value="" style="width: 500px;"/>
+		<input id="dlevent19" name="pin" class="element text medium" type="text" maxlength="255" value=""
+			   style="width: 500px;"/>
+        <br>
+
+<!-- Specifique MEGA -->
+<div id="specif_arduino_mega">        
+        <input type="radio" name="e20" value="0" id="in19d" onclick="clicked(this.id);" checked>Disabled
+        <input type="radio" name="e20" value="1" id="out19d" onclick="clicked(this.id);">Enabled
+        <b>Pin 20:</b>
+        <input id="ip20" name="pin" class="element text medium" type="text" maxlength="255" value="0" style="width: 20px;"/>
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        <b>Data Latch</b>
+        <select id="dlatch19" onchange="digitalLatch('20', (this.id));">
+            <option value="1">No Latch Set</option>
+            <option value="2">Latch High</option>
+            <option value="3">Latch Low</option>
+        </select>
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        <b>Latch Event Occurred On:</b>
+        <input id="dlevent20" name="pin" class="element text medium" type="text" maxlength="255" value="" style="width: 500px;"/>
+        <br>
+        
+        <input type="radio" name="e21" value="0" id="in19d" onclick="clicked(this.id);" checked>Disabled
+        <input type="radio" name="e21" value="1" id="out19d" onclick="clicked(this.id);">Enabled
+        <b>Pin 21:</b>
+        <input id="ip21" name="pin" class="element text medium" type="text" maxlength="255" value="0" style="width: 20px;"/>
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        <b>Data Latch</b>
+        <select id="dlatch21" onchange="digitalLatch('21' (this.id));">
+            <option value="1">No Latch Set</option>
+            <option value="2">Latch High</option>
+            <option value="3">Latch Low</option>
+        </select>
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        <b>Latch Event Occurred On:</b>
+        <input id="dlevent21" name="pin" class="element text medium" type="text" maxlength="255" value="" style="width: 500px;"/>
 		<br>
-		
-		<input type="radio" name="e20" value="0" id="in19d" onclick="clicked(this.id);" checked>Disabled
-		<input type="radio" name="e20" value="1" id="out19d" onclick="clicked(this.id);">Enabled
-		<b>Pin 20:</b>
-		<input id="ip20" name="pin" class="element text medium" type="text" maxlength="255" value="0" style="width: 20px;"/>
-		&nbsp;&nbsp;&nbsp;&nbsp;
-		<b>Data Latch</b>
-		<select id="dlatch19" onchange="digitalLatch('20', (this.id));">
-			<option value="1">No Latch Set</option>
-			<option value="2">Latch High</option>
-			<option value="3">Latch Low</option>
-		</select>
-		&nbsp;&nbsp;&nbsp;&nbsp;
-		<b>Latch Event Occurred On:</b>
-		<input id="dlevent20" name="pin" class="element text medium" type="text" maxlength="255" value="" style="width: 500px;"/>
-		<br>
-		
-		<input type="radio" name="e21" value="0" id="in19d" onclick="clicked(this.id);" checked>Disabled
-		<input type="radio" name="e21" value="1" id="out19d" onclick="clicked(this.id);">Enabled
-		<b>Pin 21:</b>
-		<input id="ip21" name="pin" class="element text medium" type="text" maxlength="255" value="0" style="width: 20px;"/>
-		&nbsp;&nbsp;&nbsp;&nbsp;
-		<b>Data Latch</b>
-		<select id="dlatch21" onchange="digitalLatch('21' (this.id));">
-			<option value="1">No Latch Set</option>
-			<option value="2">Latch High</option>
-			<option value="3">Latch Low</option>
-		</select>
-		&nbsp;&nbsp;&nbsp;&nbsp;
-		<b>Latch Event Occurred On:</b>
-		<input id="dlevent21" name="pin" class="element text medium" type="text" maxlength="255" value="" style="width: 500px;"/>
-		<br>
+</div>
+<!-- Specifique MEGA -->        
 
 	</div>
-	<div id="tabs-2">
+	<div id="tabs-2" class="tab-pane">
 		<p id="connected"><b><a href="javascript:WebSocketTest()" class="btn btn-warning"><span class="glyphicon glyphicon-link"></span> Connect to Arduino/pymata</a></b></p>
 		<b>Pin 03:</b>
 		<input type="radio" name="p3" value="0" id="p3low" onclick="clicked(this.id);" checked>Low
@@ -460,7 +465,7 @@
 		<input type="radio" name="p19" value="1" id="p19high" onclick="clicked(this.id);">High
 		<br>
 	</div>
-	<div id="tabs-3">
+	<div id="tabs-3" class="tab-pane">
 		<p id="connected"><b><a href="javascript:WebSocketTest()" class="btn btn-warning"><span class="glyphicon glyphicon-link"></span> Connect to Arduino/pymata</a></b></p>
 		<input type="radio" name="a0" value="0" id="in0a" onclick="clicked(this.id);" checked>Disabled
 		<input type="radio" name="a0" value="1" id="out0a" onclick="clicked(this.id);">Enabled
@@ -621,7 +626,7 @@
 		<br>
 
 	</div>
-	<div id="tabs-4">
+	<div id="tabs-4" class="tab-pane">
 		<p id="connected"><b><a href="javascript:WebSocketTest()" class="btn btn-warning"><span class="glyphicon glyphicon-link"></span> Connect to Arduino/pymata</a></b></p>
 		<textarea id="reports" rows="10" cols="70"></textarea>
 		<br>
@@ -645,7 +650,7 @@
 
 
 	</div>
-	<div id="tabs-5">
+	<div id="tabs-5" class="tab-pane">
 		<p id="connected"><b><a href="javascript:WebSocketTest()" class="btn btn-warning"><span class="glyphicon glyphicon-link"></span> Connect to Arduino/pymata</a></b></p>
 		<b>Digital Pin: </b>
 		<INPUT TYPE="NUMBER" id="drPin" MIN="2" MAX="19" STEP="1" VALUE="2" SIZE="1">
@@ -690,7 +695,7 @@
 		<br>
 		<br>
 	</div>
-	<div id="tabs-6">
+	<div id="tabs-6" class="tab-pane">
 		<p id="connected"><b><a href="javascript:WebSocketTest()" class="btn btn-warning"><span class="glyphicon glyphicon-link"></span> Connect to Arduino/pymata</a></b></p>
 		<b>Servo Pin</b>
 		<select id="servoPin">
@@ -708,7 +713,7 @@
 		&nbsp;&nbsp;&nbsp;&nbsp;
 		<input id="moveServo" type="button" value="Set Servo" onclick="servo();"/>
 	</div>
-	<div id="tabs-7">
+	<div id="tabs-7" class="tab-pane">
 		<p id="connected"><b><a href="javascript:WebSocketTest()" class="btn btn-warning"><span class="glyphicon glyphicon-link"></span> Connect to Arduino/pymata</a></b></p>
 		<b>Default Values Are Set to Read Temperature from </b>
 		<a href="https://www.sparkfun.com/products/11931" target="_blank">A Sparkfun TMP102 </a>
@@ -763,7 +768,7 @@
 
 
 	</div>
-	<div id="tabs-8">
+	<div id="tabs-8" class="tab-pane">
 		<p id="connected"><b><a href="javascript:WebSocketTest()" class="btn btn-warning"><span class="glyphicon glyphicon-link"></span> Connect to Arduino/pymata</a></b></p>
 		<h2>Tone</h2><br>
 		<b>Pin:</b>
@@ -1017,7 +1022,7 @@
 
 		<input id="runStepper" type="button" value="Run Stepper" onclick="runStepMotor();"/>
 	</div>
-	<div id="tabs-9">
+	<div id="tabs-9" class="tab-pane">
 		<b>Documentation</b><br/>
 		<br/>
 		Utilisation de s2aio mais surtout du module pymata intégré : <a href="https://github.com/MrYsLab/s2aio/wiki"><u>wiki d'Alan Yorinks</u></a>

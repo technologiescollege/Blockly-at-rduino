@@ -5,85 +5,95 @@
 'use strict';
 
 /**
+ * Override Blockly.makeColour to use Hexa or HUE
+ */
+Blockly.makeColour = function(color) {
+	if (typeof color != 'string' || color.substring(0,1) != '#') {
+		color = goog.color.hsvToHex(color, Blockly.HSV_SATURATION, Blockly.HSV_VALUE * 255);
+	}
+	return color;
+};
+
+/**
  * Create a namespace for the application.
  */
 var BlocklyDuino = {};
 Blockly.pathToBlockly = './';
-Blockly.ajax = null;
-
-/**
- * List of tab names.
- * @private
- */
-BlocklyDuino.TABS_ = ['blocks', 'arduino', 'term', 'xml'];
+Blockly.pathToMedia = './media/';
 
 BlocklyDuino.selectedTab = 'blocks';
 
 /**
- * Switch the visible pane when a tab is clicked.
- * 
- * @param {string}
- *            clickedName Name of tab clicked.
+ * Blockly's main workspace.
+ * @type {Blockly.WorkspaceSvg}
  */
-BlocklyDuino.tabClick = function(clickedName) {
-	BlocklyDuino.selectedTab = clickedName;
-
-	BlocklyDuino.renderContent();
-};
+BlocklyDuino.workspace = null;
 
 /**
  * Populate the currently selected pane with content generated from the blocks.
  */
 BlocklyDuino.renderContent = function() {
-  var content = document.getElementById('content_' + BlocklyDuino.selectedTab);
+  var content = $('#content_' + BlocklyDuino.selectedTab);
   
-  if (content.id == 'content_blocks') {
-	    // If the workspace was changed by the XML tab, Firefox will have performed
-	    // an incomplete rendering due to Blockly being invisible.  Rerender.
-	    Blockly.mainWorkspace.render();
-	  } else if (content.id == 'content_xml') {
-		var xml_content = document.getElementById('pre_xml');
-	    var xmlDom = Blockly.Xml.workspaceToDom(Blockly.mainWorkspace);
-	    xml_content.textContent = Blockly.Xml.domToPrettyText(xmlDom);
-	    if (typeof prettyPrintOne == 'function') {
-	      var code_html = prettyPrintOne(xml_content.innerHTML, 'xml');
-	      xml_content.innerHTML = code_html;
-	    }
-	  } else if (content.id == 'content_arduino') {
-	    var arduino_content = document.getElementById('pre_arduino');
-	    try {
-		    arduino_content.textContent = Blockly.Arduino.workspaceToCode();
-		    if (typeof prettyPrintOne == 'function') {
-		      var code_html = prettyPrintOne(arduino_content.innerHTML, 'cpp');
-		      arduino_content.innerHTML = code_html;
-		    }
-	    } catch (e) {
-	            alert(e);
+	if (content.prop('id') == 'content_blocks') {
+		// If the workspace was changed by the XML tab, Firefox will have
+		// performed
+		// an incomplete rendering due to Blockly being invisible. Rerender.
+		BlocklyDuino.workspace.render();
+		$(".blocklyTreeSeparator").removeAttr("style");
+//		BlocklyDuino.workspace.setVisible(true);
+		$(".blocklyToolboxDiv").show();
+	} else {
+//		BlocklyDuino.workspace.setVisible(false);
+		$(".blocklyToolboxDiv").hide();
+		switch (content.prop('id')) {
+		case 'content_xml':
+			$('#pre_xml').text(
+					Blockly.Xml.domToPrettyText(Blockly.Xml
+							.workspaceToDom(BlocklyDuino.workspace)));
+			if (typeof prettyPrintOne == 'function') {
+				$('#pre_xml').html(prettyPrintOne($('#pre_xml').html(), 'xml'));
+			}
+			break;
+
+		case 'content_arduino':
+			try {
+				$('#pre_arduino')
+						.text(
+								Blockly.Arduino
+										.workspaceToCode(BlocklyDuino.workspace));
+				if (typeof prettyPrintOne == 'function') {
+					$('#pre_arduino').html(prettyPrintOne($('#pre_arduino').html(), 'cpp'));
+				}
+			} catch (e) {
+				alert(e);
+			}
+			break;
+
+		case 'content_supervision':
+			$("#content_supervision").load('./supervision/pymata_arduino.html', function() {
+				$("div[id^=specif_arduino").hide();
+				$("div[id^=specif_" + $('#pinout').val()+"]").show();
+			});
 		}
-	  } 
+	}
 };
 
 /**
  * Populate the the edit textarea "edit_code" with the pre arduino code
  */
 BlocklyDuino.editArduinoCode = function() {
-	    var arduino_code = document.getElementById('edit_code');
-	    var arduino_content = document.getElementById('pre_arduino');
-	    
-	    arduino_code.value = arduino_content.textContent;
+	    $('#edit_code').val($('#pre_arduino').text());
 };
 
 /**
  * Populate the content arduino code pane with the edit textarea "edit_code"
  */
 BlocklyDuino.valideEditedCode = function() {
-	    var arduino_code = document.getElementById('edit_code');
-	    var arduino_content = document.getElementById('pre_arduino');
 	    try {
-		    arduino_content.textContent = arduino_code.value;
+	    	$('#pre_arduino').text($('#edit_code').val());
 		    if (typeof prettyPrintOne == 'function') {
-		      var code_html = prettyPrintOne(arduino_content.innerHTML, 'cpp');
-		      arduino_content.innerHTML = code_html;
+		    	$('#pre_arduino').html(prettyPrintOne($('#pre_arduino').html(), 'cpp'));
 		    }
 	    } catch (e) {
 	            alert(e);
@@ -94,11 +104,9 @@ BlocklyDuino.valideEditedCode = function() {
  * Render Arduino code in preview box
  */
 BlocklyDuino.renderArduinoCodePreview = function() {
-	var arduino_content = document.getElementById('pre_previewArduino');
-	arduino_content.textContent = Blockly.Arduino.workspaceToCode();
+	$('#pre_previewArduino').text(Blockly.Arduino.workspaceToCode(BlocklyDuino.workspace));
 	if (typeof prettyPrintOne == 'function') {
-		var code_html = prettyPrintOne(arduino_content.innerHTML, 'cpp');
-		arduino_content.innerHTML = code_html;
+		$('#pre_previewArduino').html(prettyPrintOne($('#pre_previewArduino').html(), 'cpp'));
 	}
 };
 
@@ -115,87 +123,31 @@ BlocklyDuino.getStringParamFromUrl = function(name, defaultValue) {
 };
 
 /**
- * Create AJAX request
- *
- * @return {request} The AJAX request
- */
-BlocklyDuino.createAJAX = function() {
-	var request;
-	try {
-		// Firefox, Chrome, IE7+, Opera, Safari
-		request = new XMLHttpRequest();
-	} catch (e) {
-		try {
-			// IE6 and earlier
-			request = new ActiveXObject("Msxml2.XMLHTTP");
-		} catch (e) {
-			try {
-				request = new ActiveXObject("Microsoft.XMLHTTP");
-			} catch (e) {
-				request = null;
-			}
-		}
-	}
-	return request;
-};
-
-/**
- * Load blocks from AJAX load
- */
-BlocklyDuino.onSuccess = function() {
-	if (BlocklyDuino.ajax.readyState == 4) {
-		if (BlocklyDuino.ajax.status == 200) {
-			try {
-				BlocklyDuino.loadBlocks(BlocklyDuino.ajax.responseText);
-			} catch (e) {
-				alert(e);
-			}
-		}
-	}
-};
-
-/**
- * Load blocks from URL file using AJAX request
- */
-BlocklyDuino.load_by_url = function(uri) {
-	BlocklyDuino.ajax = BlocklyDuino.createAJAX();
-	if (!BlocklyDuino.ajax) {
-		return 0;
-	}
-	if (BlocklyDuino.ajax.overrideMimeType) {
-		BlocklyDuino.ajax.overrideMimeType('text/xml');
-	}
-	BlocklyDuino.ajax.onreadystatechange = BlocklyDuino.onSuccess;
-	BlocklyDuino.ajax.open("GET", uri, true);
-	BlocklyDuino.ajax.send("");
-	
-};
-
-/**
  * Load blocks saved on App Engine Storage or in session/local storage.
  * 
  * @param {string}
  *            defaultXml Text representation of default blocks.
  */
 BlocklyDuino.loadBlocks = function(defaultXml) {
+	
 	if (defaultXml) {
 		// Load the editor with default starting blocks.
 		var xml = Blockly.Xml.textToDom(defaultXml);
-		Blockly.Xml.domToWorkspace(Blockly.mainWorkspace, xml);
+		Blockly.Xml.domToWorkspace(BlocklyDuino.workspace, xml);
 	} else {
+		var loadOnce = null;
 		try {
-			var loadOnce = window.localStorage.loadOnceBlocks;
+			loadOnce = window.localStorage.loadOnceBlocks;
 		} catch (e) {
 			// Firefox sometimes throws a SecurityError when accessing
 			// localStorage.
 			// Restarting Firefox fixes this, so it looks like a bug.
-			var loadOnce = null;
 		}
-		if (loadOnce) {
+		if (loadOnce != null) {
 			// Language switching stores the blocks during the reload.
 			delete window.localStorage.loadOnceBlocks;
 			var xml = Blockly.Xml.textToDom(loadOnce);
-			Blockly.Xml.domToWorkspace(Blockly.mainWorkspace, xml);
+			Blockly.Xml.domToWorkspace(BlocklyDuino.workspace, xml);
 		}
 	}
 };
@@ -205,33 +157,35 @@ BlocklyDuino.loadBlocks = function(defaultXml) {
  */
 BlocklyDuino.backupBlocks = function () {
   if (typeof Blockly != 'undefined' && window.localStorage) {
-    var xml = Blockly.Xml.workspaceToDom(Blockly.mainWorkspace);
+    var xml = Blockly.Xml.workspaceToDom(BlocklyDuino.workspace);
     var text = Blockly.Xml.domToText(xml);
     window.localStorage.loadOnceBlocks = text;
   }
 };
 
+
 /**
- * Choose Arduino card : UNO or MEGA
+ * Sets Arduino card
+ */
+BlocklyDuino.setArduinoCard =  function () {
+	window.profile["defaultBoard"]=window.profile[$("#pinout").val()];
+	$('#arduino_card_picture').attr("src", profile.defaultBoard['picture']);
+	$('#arduino_card_supervision').attr("src", profile.defaultBoard['supervision']);
+	$('#arduino_card_miniPicture').attr("src", profile.defaultBoard['miniPicture']);
+};
+
+/**
+ * Change Arduino card
  */
 BlocklyDuino.arduinoCard =  function (){
-  var Cacheobj=document.getElementById("pinout");
-  //var count = Blockly.mainWorkspace.getAllBlocks().length;
-  if (window.profile["defaultBoard"]!=window.profile[Cacheobj.options[Cacheobj.selectedIndex].value])
+  if (window.profile["defaultBoard"]!=window.profile[$("#pinout").val()])
   {
-	  if (false || window.confirm(MSG['arduino_card']+' '+window.profile[Cacheobj.options[Cacheobj.selectedIndex].value].description+' ?'))
+	  if (false || window.confirm(MSG['arduino_card']+' '+window.profile[$("#pinout").val()].description+' ?'))
 		  {
-			window.profile["defaultBoard"]=window.profile[Cacheobj.options[Cacheobj.selectedIndex].value];
-		//    BlocklyDuino.backupBlocks();
-			Blockly.mainWorkspace.clear();
-			$('#arduino_card_picture').attr("src", profile.defaultBoard['picture']);
-			$('#arduino_card_miniPicture').attr("src", profile.defaultBoard['miniPicture']);
-			$('#arduino_card_supervision').attr("src", profile.defaultBoard['supervision']);
-			var SVFile = './supervision/pymata_' + document.getElementById('pinout').value + '.js';
-			$("#contentSupervision").load(SVFile);
-		//    BlocklyDuino.loadBlocks('');
+		    BlocklyDuino.setArduinoCard();
+			BlocklyDuino.workspace.clear();
 			BlocklyDuino.renderContent();
-			}
+		}
   }
 }; 
 
@@ -240,11 +194,10 @@ BlocklyDuino.arduinoCard =  function (){
  * prompts the users to save it into their local file system.
  */
 BlocklyDuino.saveXmlFile = function () {
-	  var xml = Blockly.Xml.workspaceToDom(Blockly.mainWorkspace);
+	  var xml = Blockly.Xml.workspaceToDom(BlocklyDuino.workspace);
 	  var data = Blockly.Xml.domToPrettyText(xml);
 	  var uri = 'data:text/xml;charset=utf-8,' + encodeURIComponent(data);
-	  $(this)
-	            .attr({
+	  $(this).attr({
 	            'download': "blockly_arduino.xml",
 	                'href': uri,
 	                'target': '_blank'
@@ -256,10 +209,9 @@ BlocklyDuino.saveXmlFile = function () {
  * prompts the users to save it into their local file system.
  */
 BlocklyDuino.saveArduinoFile = function () {
-	  var data = Blockly.Arduino.workspaceToCode();
+	  var data = Blockly.Arduino.workspaceToCode(BlocklyDuino.workspace);
 	  var uri = 'data:text/plain;charset=utf-8,' + encodeURIComponent(data);
-	  $(this)
-	            .attr({
+	  $(this).attr({
 	            'download': "code_arduino.ino",
 	                'href': uri,
 	                'target': '_blank'
@@ -270,9 +222,8 @@ BlocklyDuino.saveArduinoFile = function () {
  * Load Arduino code from component pre_arduino
  */
 BlocklyDuino.getFiles = function (){
-    var code = document.getElementById('pre_arduino').textContent;
-    code=code.replace(/</g, '&lt;').replace(/>/g, '&gt;');
-    return {"sketch.ino": code }
+    var code = $('#pre_arduino').text();
+    return {"sketch.ino": code.replace(/</g, '&lt;').replace(/>/g, '&gt;') };
 };
 
 /**
@@ -297,15 +248,15 @@ BlocklyDuino.load = function (event) {
         alert(MSG['xmlError']+'\n' + e);
         return;
       }
-      var count = Blockly.mainWorkspace.getAllBlocks().length;
+      var count = BlocklyDuino.workspace.getAllBlocks().length;
       if (count && confirm(MSG['xmlLoad'])) {
-        Blockly.mainWorkspace.clear();
+    	  BlocklyDuino.workspace.clear();
       }
-      Blockly.Xml.domToWorkspace(Blockly.mainWorkspace, xml);
+      Blockly.Xml.domToWorkspace(BlocklyDuino.workspace, xml);
     }
     // Reset value of input after loading because Chrome will not fire
     // a 'change' event if the same file is loaded again.
-    document.getElementById('load').value = '';
+    $('#load').val('');
   };
   reader.readAsText(files[0]);
 };
@@ -314,82 +265,49 @@ BlocklyDuino.load = function (event) {
  * Discard all blocks from the workspace.
  */
 BlocklyDuino.discard = function () {
-  var count = Blockly.mainWorkspace.getAllBlocks().length;
+  var count = BlocklyDuino.workspace.getAllBlocks().length;
   if (count < 2 || window.confirm(MSG['discard'].replace('%1', count))) {
-    Blockly.mainWorkspace.clear();
+    BlocklyDuino.workspace.clear();
     BlocklyDuino.renderContent();
   }
-};
-
-/**
- * Bind an event to a function call.
- * @param {!Element} element Element upon which to listen.
- * @param {string} name Event name to listen to (e.g. 'mousedown').
- * @param {!Function} func Function to call when event is triggered.
- *     W3 browsers will call the function with the event object as a parameter,
- *     MSIE will not.
- */
-BlocklyDuino.bindEvent = function (element, name, func) {
-  if (element.addEventListener) {  // W3C
-    element.addEventListener(name, func, false);
-  } else if (element.attachEvent) {  // IE
-    element.attachEvent('on' + name, func);
-  }
-};
-
-/**
- * Bind a function to a button's click event.
- * On touch enabled browsers, ontouchend is treated as equivalent to onclick.
- * @param {!Element|string} el Button element or ID thereof.
- * @param {!Function} func Event handler to bind.
- */
-BlocklyDuino.bindClick = function (el, func) {
-  if (typeof el == 'string') {
-    el = document.getElementById(el);
-  }
-  el.addEventListener('click', func, true);
-  el.addEventListener('touchend', func, true);
 };
 
 /**
  * Binds functions to each of the buttons, nav links, and related.
  */
 BlocklyDuino.bindFunctions = function () {
-  // Navigation buttons
-	BlocklyDuino.bindClick('btn_delete', BlocklyDuino.discard);
-	BlocklyDuino.bindClick('btn_saveXML',  BlocklyDuino.saveXmlFile);
-	BlocklyDuino.bindClick('btn_saveArduino',  BlocklyDuino.saveArduinoFile);
+	// Navigation buttons
+	$('#btn_delete').on("click", BlocklyDuino.discard);
+	$('#btn_saveXML').on("click",  BlocklyDuino.saveXmlFile);
+	$('#btn_saveArduino').on("click",  BlocklyDuino.saveArduinoFile);
+	
+	$('#pinout').on("change", BlocklyDuino.arduinoCard);
 
-  var pinout = document.getElementById('pinout');
-  BlocklyDuino.bindEvent(pinout, 'change', BlocklyDuino.arduinoCard);
+	$('#load').on("change", BlocklyDuino.load);
+	$('#btn_fakeload').on("click", function() {$('#load').click(); });
 
-  var loadInput = document.getElementById('load');
-  BlocklyDuino.bindEvent(loadInput, 'change', BlocklyDuino.load);
-  BlocklyDuino.bindClick('btn_fakeload', function() {loadInput.click(); });
+    $('#menuPanelBlockly li[id^=tab_]').on("click", function () {
+    	BlocklyDuino.selectedTab = $(this).attr('id').substring(4);
+    	BlocklyDuino.renderContent();
+    });
 
-  for (var i = 0; i < BlocklyDuino.TABS_.length; i++) {
-	    var name = BlocklyDuino.TABS_[i];
-	    BlocklyDuino.bindClick('tab_' + name,
-		        function(name_) {return function() {BlocklyDuino.tabClick(name_);};}(name));
-  }
+  $('#btn_size').on("click",  BlocklyDuino.changeSize);
+  $('#btn_config').on("click",  BlocklyDuino.openConfigToolbox);
 
-  BlocklyDuino.bindClick('btn_size',  BlocklyDuino.changeSize);
-  BlocklyDuino.bindClick('btn_config',  BlocklyDuino.openConfigToolbox);
+  $('#btn_edit_code').on("click", BlocklyDuino.editArduinoCode);
+  $('#btn_validCode').on("click", BlocklyDuino.valideEditedCode);
 
-  BlocklyDuino.bindClick('btn_edit_code', BlocklyDuino.editArduinoCode);
-  BlocklyDuino.bindClick('btn_validCode', BlocklyDuino.valideEditedCode);
-
-  BlocklyDuino.bindClick('select_all',  BlocklyDuino.checkAll);
-  BlocklyDuino.bindClick('btn_valid',  BlocklyDuino.changeToolbox);
+  $('#select_all').on("click",  BlocklyDuino.checkAll);
+  $('#btn_valid').on("click",  BlocklyDuino.changeToolbox);
   
-  BlocklyDuino.bindClick('btn_preview', function() {
+  $('#btn_preview').on("click", function() {
 	   $( "#toggle" ).toggle( "slide" );
   });
-  BlocklyDuino.bindClick('pre_previewArduino', function() {
+  $('#pre_previewArduino').on("click", function() {
 	   $( "#toggle" ).toggle( "slide" );
  });
 
-  BlocklyDuino.bindClick('btn_switch',  BlocklyDuino.switchOrientation);
+  $('#btn_switch').on("click",  BlocklyDuino.switchOrientation);
 
 };
 
@@ -399,12 +317,12 @@ BlocklyDuino.bindFunctions = function () {
 BlocklyDuino.checkAll = function () {
     if(this.checked) {
         // Iterate each checkbox
-        $('#modal-body input:checkbox').each(function() {
+        $('#modal-body-config input:checkbox[id^=checkbox_]').each(function() {
             this.checked = true;
         });
     } 
       else {
-      $('#modal-body input:checkbox').each(function() {
+      $('#modal-body-config input:checkbox[id^=checkbox_]').each(function() {
             this.checked = false;
         });
     }
@@ -414,9 +332,11 @@ BlocklyDuino.checkAll = function () {
  * Build modal to configure ToolBox
  */
 BlocklyDuino.openConfigToolbox = function () {
-	var modalbody = document.getElementById("modal-body");
+	var modalbody = document.getElementById("modal-body-config");
+	
 	// load all xml toolboxes
 	var xmls = document.getElementsByTagName("xml");
+	
 	// load the toolboxes id's stored in session
 	var loadIds = window.localStorage.toolboxids;
 	
@@ -442,12 +362,6 @@ BlocklyDuino.openConfigToolbox = function () {
 		}
 		modalbody.innerHTML += ligne;
 	}
-
-	// checks if "selec_all" checkbox was already chosen
-	n = loadIds.search("select_all");
-	if (n >= 0) {
-		document.getElementById("select_all").checked = true;
-	}
 };
 
 /**
@@ -459,44 +373,61 @@ BlocklyDuino.changeToolbox = function () {
 	
 	// read the toolboxes id's from the checkboxes
 	var toolboxIds = [];
-	$('#modal-body input:checkbox').each(function() {
+	$('#modal-body-config input:checkbox[id^=checkbox_]').each(function() {
 		if (this.checked == true) {
 			var xmlid = this.id;
 			toolboxIds.push(xmlid.replace("checkbox_", ""));
 		}
 	});
 
-	if (document.getElementById("select_all").checked == true) {
-			toolboxIds.push("select_all");
-		}
-
 	// store id's in session
 	window.localStorage.toolboxids = toolboxIds;
+	
 
-	// reload ...
-	location.reload();
+	if ($("#put_in_url").prop('checked')) {
+		// put id's in url
+		var search = window.location.search;
+		if (search.length <= 1) {
+			search = '?toolboxids=' + toolboxIds;
+		} else {
+			search = search + '&toolboxids=' + toolboxIds;
+		}
+
+		window.location = window.location.protocol + '//'
+				+ window.location.host + window.location.pathname + search;
+	} else {
+		// remove id's from url
+		var search = window.location.search;
+		search = search.replace(/([?&]toolboxids=)[^&]*/, '');
+
+		window.location = window.location.protocol + '//'
+				+ window.location.host + window.location.pathname + search;
+	}
 };
 
 /**
- * Build the xml using toolboxes checked in config modal and stored in session 
+ * Build the xml using toolboxes checked in config modal and stored in session
  */
 BlocklyDuino.buildToolbox = function() {
-	var loadIds = window.localStorage.toolboxids;
-
-	// set the default toolbox if none in session
+	// set the toolbox from url parameters
+	var loadIds = BlocklyDuino.getStringParamFromUrl('toolboxids', '');
+	
+	// set the toolbox from local storage
 	if (loadIds === undefined || loadIds === "") {
-		loadIds = "CAT_LOGIC,CAT_LOOPS,CAT_VARIABLES,CAT_FUNCTIONS,CAT_MATHS,CAT_ARDUINO";
-		window.localStorage.toolboxids = loadIds;
+		loadIds = window.localStorage.toolboxids;
 	}
 	
-	var xmlValue = '<xml>';
+	// set the default toolbox if none
+	if (loadIds === undefined || loadIds === "") {
+		loadIds = "CAT_LOGIC,CAT_LOOPS,CAT_VARIABLES,CAT_FUNCTIONS,CAT_MATHS,CAT_ARDUINO";
+	}
+
+	window.localStorage.toolboxids = loadIds;
+	
+	var xmlValue = '<xml id="toolbox">';
 	var xmlids = loadIds.split(",");
-	var element;
 	for (var i = 0; i < xmlids.length; i++) {
-		element = document.getElementById(xmlids[i]);
-		if (element != null) {
-			xmlValue += element.innerHTML;
-		}
+		xmlValue += $('#'+xmlids[i]).html();
 	}
 	xmlValue += '</xml>';
 
@@ -551,68 +482,66 @@ BlocklyDuino.init = function() {
 
 	if (BlocklyDuino.getSize() == 'max') {
 		// place div on top
-		var divBody = document.getElementById("divBody");
-		divBody.style.top = "0px";
+		$("#divBody").css("top", "0px");
 
 		// maximize div
-		var divTabpanel = document.getElementById("divTabpanel");
-		divTabpanel.style.width = "100%";
-		divTabpanel.style.height = "100%";
-		divTabpanel.style.position = "absolute";
-		divTabpanel.style.top = "0px";
-		divTabpanel.style.marginLeft = "0px";
+		$("#divTabpanel").css( {"width" : "100%",
+										"height" : "100%",
+										"position" : "absolute",
+										"top" : "0px",
+										"marginLeft" : "0px"});
 
 		// hide Title
-		var divTitle = document.getElementById("divTitre");
-		divTitle.style.display = "none";
+		$("#divTitre").css("display", "none");
 
-		// change maximize to minimize
-		var icon_btn_size = document.getElementById("icon_btn_size");
-		icon_btn_size.className += " rotate180";
-		if (Code.isRtl()) {
-			icon_btn_size.className += " rotate90";
-		}
+//		// change maximize to minimize
+//		$("#icon_btn_size").addClass("rotate180");
+//		if (Code.isRtl()) {
+//			$("#icon_btn_size").addClass("rotate90");
+//		}
 
-		document.getElementById('btn_size').title = MSG['btn_size_min'];
+		$('#btn_size').attr("title", MSG['btn_size_min']);
 	} else {
-		document.getElementById('btn_size').title = MSG['btn_size_max'];
-		if (Code.isRtl()) {
-			var icon_btn_size = document.getElementById("icon_btn_size");
-			icon_btn_size.className += " rotate270";
-		}
+		$('#btn_size').attr("title", MSG['btn_size_max']);
+//		if (Code.isRtl()) {
+//			$("#icon_btn_size").addClass("rotate270");
+//		}
 
 	}
 
-	$('#arduino_card_picture').attr("src", profile.defaultBoard['picture']);
-	$('#arduino_card_miniPicture').attr("src", profile.defaultBoard['miniPicture']);
+	BlocklyDuino.setArduinoCard();
 	
 	// build Blockly ...
-	Blockly.inject(document.getElementById('content_blocks'), {
-		media : 'media/',
-		sounds : true,
-		grid:
-         {spacing: 20,
-          length: 3,
-          colour: '#ccc',
-          snap: true},
-		rtl : Code.isRtl(),
-		maxBlocks : Infinity,
-		toolbox : BlocklyDuino.buildToolbox()
-	});
+	BlocklyDuino.workspace = Blockly.inject('content_blocks',
+		      {grid:
+		          {spacing: 25,
+		           length: 3,
+		           colour: '#ccc',
+		           snap: true},
+		       sounds : true,
+		       media: 'media/',
+		       rtl: Code.isRtl(),
+		       toolbox: BlocklyDuino.buildToolbox(),
+		       zoom:
+		           {controls: true,
+		            wheel: true}
+		      });
 
-	Blockly.addChangeListener(BlocklyDuino.renderArduinoCodePreview);
-
-	// set the tab
-	BlocklyDuino.tabClick(BlocklyDuino.selectedTab);
+	BlocklyDuino.renderContent();
+	
+	BlocklyDuino.workspace.addChangeListener(BlocklyDuino.renderArduinoCodePreview);
 
 	// load blocks stored in session or passed by url
 	var urlFile = BlocklyDuino.getStringParamFromUrl('url', '');
 
 	if (urlFile) {
-		BlocklyDuino.load_by_url(urlFile);
+		$.get( urlFile, function( data ) {
+	        BlocklyDuino.loadBlocks(data );
+			}, 'text');
 	} else {
-		BlocklyDuino.loadBlocks(urlFile);
+		BlocklyDuino.loadBlocks();
 	}
+	
     // Hook a save function onto unload.
 	window.addEventListener('unload', BlocklyDuino.backupBlocks, false);
 
@@ -638,21 +567,6 @@ BlocklyDuino.init = function() {
 						});
 			});
 	
-	// Init zoom on Block's SVG
-	var panZoom = svgPanZoom('#IdBlocklySVG', 
-			{viewportSelector: '.svg-pan-zoom_viewport', 
-				center:false, 
-				fit:false,
-				panEnabled: true, 
-				zoomEnabled: false}
-	);
-
-	document.getElementById('btn_zoomin').addEventListener('click', function() {panZoom.zoomIn(); });
-
-	document.getElementById('btn_zoomout').addEventListener('click', function() {panZoom.zoomOut();	});
-
-	document.getElementById('btn_zoomreset').addEventListener('click', function() {location.reload(); });
-
 };
 
 /**
@@ -664,18 +578,14 @@ BlocklyDuino.setOrientation = function() {
 	
 	
 	if (newOrientation == 'hor') {
-		var ulNav = document.getElementById("ul_nav");
-		var menuPanelCenter = document.getElementById("menuPanelCenter");
-		var menuPanelRight = document.getElementById("menuPanelRight");
-		var divTabpanel = document.getElementById("divTabpanel");
-		var div_help_button = document.getElementById("div_help_button");		
-		var div_miniPicture = document.getElementById("div_miniPicture");
+		$("#ul_nav").addClass("nav nav-pills");
+		$("#menuPanelConfig").addClass("menuPanelBlockly-hor");
+		$("#menuPanelBlockly").addClass("menuPanelBlockly-hor");
+		$("#menuPanelFiles").addClass("menuPanelFiles-hor");
+		$("#divTabpanel").addClass("divTabpanel-hor");
+		$("#div_help_button").addClass("div_help_button-hor");		
+		$("#div_miniPicture").addClass("div_miniPicture-hor");
 		
-        ulNav.className = "nav nav-pills";
-        menuPanelCenter.className += " menuPanelCenter-hor";
-        menuPanelRight.className += " menuPanelRight-hor";
-        divTabpanel.className += " divTabpanel-hor";
-
 		$("#btn_picture").removeClass("btn-block");
 		$("#btn_config").removeClass("btn-block");
 		$("#btn_supervision").removeClass("btn-block");
@@ -683,43 +593,33 @@ BlocklyDuino.setOrientation = function() {
 		$("#btn_saveXML").removeClass("btn-block");
 		$("#btn_fakeload").removeClass("btn-block");
 		$("#btn_example").removeClass("btn-block");
-
-		div_help_button.className += " div_help_button-hor";
-		div_miniPicture.className = " div_miniPicture-hor";
 		
 	} else {
-		var ulNav = document.getElementById("ul_nav");
-		var menuPanel = document.getElementById("menuPanel");
-		var menuPanelCenter = document.getElementById("menuPanelCenter");
-		var menuPanelRight = document.getElementById("menuPanelRight");
-		var btn_config = document.getElementById("btn_config");
-		var btn_supervision = document.getElementById("btn_supervision");
-		var btn_saveXML = document.getElementById("btn_saveXML");
-		var btn_fakeload = document.getElementById("btn_fakeload");
-		var btn_picture = document.getElementById("btn_picture");
-		var btn_example = document.getElementById("btn_example");
-		var btn_plugin_codebender = document.getElementById("btn_plugin_codebender");
-		var divTabpanel = document.getElementById("divTabpanel");
-		var div_help_button = document.getElementById("div_help_button");	
-		var div_miniPicture = document.getElementById("div_miniPicture");
-		
-        ulNav.className = "nav nav-pills nav-stacked";
+		$("#ul_nav").addClass("nav nav-pills nav-stacked");
+		$("#menuPanelBlockly").addClass("menuPanelBlockly-ver");
 		if (Code.isRtl()) {
-	        ulNav.className += " navbar-right";
-	        menuPanelCenter.className += " menuPanelCenter-ver";
+			$("#ul_nav").addClass("navbar-right");
 		}
-        menuPanel.className += " menuPanel-ver";
-		menuPanelCenter.className += " menuPanelCenter-ver";
-        btn_config.className += " btn_ver";
-		btn_supervision.className += " btn_ver";
-        btn_saveXML.className += " btn_ver";
-		btn_fakeload.className += " btn_ver";
-		div_help_button.className += " div_help_button-ver";
-		div_miniPicture.className = " div_miniPicture-ver";	
-		btn_picture.className += " btn_ver";
-        btn_example.className += " btn_ver";
-		btn_plugin_codebender.className += " btn_ver";
-        divTabpanel.className += " divTabpanel-ver";
+		
+		$("#menuPanel").addClass("menuPanel-ver");
+//		var menuPanelFiles = document.getElementById("menuPanelFiles");
+		$("#btn_config").addClass("btn_ver");
+		$("#btn_supervision").addClass("btn_ver");
+		$("#btn_saveXML").addClass("btn_ver");
+		$("#btn_fakeload").addClass("btn_ver");
+		$("#btn_picture").addClass("btn_ver");
+		$("#btn_example").addClass("btn_ver");
+		$("#btn_plugin_codebender").addClass("btn_ver");
+		$("#divTabpanel").addClass("divTabpanel-ver");
+		$("#div_help_button").addClass("div_help_button-ver");
+		$("#div_miniPicture").addClass("div_miniPicture-ver");	
+		var div_miniPicture_height = $("#div_help_button").position().top
+												- ($("#menuPanelFiles").offset().top + $("#menuPanelFiles").outerHeight(true))
+												- 10;
+		$("#arduino_card_miniPicture").css({"max-width" : '180px',  "max-height" : div_miniPicture_height});
+		if (div_miniPicture_height < 180) {
+			$("#arduino_card_miniPicture").addClass("rotate90");
+		}
 	}
 };
 
@@ -739,9 +639,6 @@ BlocklyDuino.switchOrientation = function() {
 	  } else {
 	    search = search.replace(/\?/, '?ort=hor&');
 	  }
-
-  	// remove url file
-  	search = search.replace(/([?&]url=)[^&]*/, '');
 
 	window.location = window.location.protocol + '//' +
 	      window.location.host + window.location.pathname + search;

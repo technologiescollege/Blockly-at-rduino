@@ -194,6 +194,9 @@ Blockly.Arduino.init = function(workspace) {
   Blockly.Arduino.definitions_ = Object.create(null);
   // Create a dictionary of setups to be printed before the code.
   Blockly.Arduino.setups_ = Object.create(null);
+  // Create a dictionary mapping desired function names in definitions_
+  // to actual function names (to avoid collisions with user functions).
+  Blockly.Arduino.functionNames_ = Object.create(null);
 
   if (Blockly.Variables) {
     if (!Blockly.Arduino.variableDB_) {

@@ -31,6 +31,7 @@ var MSG = {
   a_xml:" traduction XML",
   configModalLabel:"choix des catégories de blocs",
   span_select_all:"toutes",
+  span_put_in_url:"ajouter dans l'url",
   btn_close:"fermer",
   btn_valid:"valider",
   editModalLabel:"édition du code Arduino",
@@ -57,10 +58,4 @@ var MSG = {
   aboutBody:"<br />- traductions et adaptations Sébastien Canet, intégration CodeBender par Julien Rat, intégration multilingue et CSS par Olivier Métayer." 
 	  + "<br />"
 	  + "<br />Contributions :"
-		  + "<br /> - Blockly (<a href='https://developers.google.com/blockly'>https://developers.google.com/blockly</a>)"
-		  + "<br /> - CompilerFlasher (<a href='https://codebender.cc'>https://codebender.cc</a>)"
-		  + "<br /> - JQuerry (<a href='https://jquery.com'>https://jquery.com</a>)"
-		  + "<br /> - Bootstrap (<a href='http://getbootstrap.com'>http://getbootstrap.com</a>)"
-		  + "<br /> - svg-pan-zoom (<a href='https://github.com/ariutta/svg-pan-zoom'>https://github.com/ariutta/svg-pan-zoom</a>)"
-		  + "<br /> - Alan Yorinks (<a href='http://mryslab.blogspot.fr/'>http://mryslab.blogspot.fr/</a>)"
 };

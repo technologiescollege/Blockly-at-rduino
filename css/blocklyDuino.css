@@ -56,6 +56,7 @@ body {
     padding-left: 10px;
 	padding-right: 10px;
 	position: absolute;
+	height: 100%;
 }
 
 html[dir="RTL"] .menuPanel-ver {
@@ -67,20 +68,6 @@ html[dir="RTL"] .menuPanel-ver {
     position: absolute;
 }
 
-.div_help_button-ver {
-	width: 200px;
-	bottom: 10px;
-	position: absolute;
-	text-align: center;
-}
-
-.div_help_button-hor {
-    padding-left: 0px;
-	bottom: 10px;
-	position: absolute;
-	text-align: center;
-}
-
 .div_close_modal {
     padding-right: 10px;	
     float: right;
@@ -90,13 +77,12 @@ html[dir="RTL"] .menuPanel-ver {
 }
 
 .div_miniPicture-ver {
-    position: absolute;
-	float: center;
-	display: block;
-	margin: auto;
-	width: 80px;
-	bottom: 45px;
+/*     position: absolute; */
+/* 	float: left; */
+/* 	padding-left: 20px; */
+/* 	bottom: 45px; */
     text-align: center;
+    clear: both;
 }
 
 .div_miniPicture-hor {
@@ -108,17 +94,20 @@ html[dir="RTL"] .menuPanel-ver {
 	text-align: center;
 }
 
-.modal-draggable .modal-backdrop {
-  position: fixed;
+.div_help_button-ver {
+    width: 200px;
+    bottom: 10px;
+    position: absolute;
+    text-align: center;
 }
 
-.modal.modal-draggable {
-    overflow: overflow-y;
+.div_help_button-hor {
+    padding-left: 0px;
+    bottom: 10px;
+    position: absolute;
+    text-align: center;
 }
 
-.modal-draggable .modal-header:hover {
-  cursor: move;
-}
 
 html[dir="RTL"] .navbar-right {
     margin-right: -50px;
@@ -140,28 +129,28 @@ html[dir="RTL"] .divTabpanel-ver {
     margin-right:200px;
 }
 
-html[dir="RTL"] #menuPanelLeft {
+html[dir="RTL"] #menuPanelConfig, html[dir="RTL"] #menuPanelBlockly, html[dir="RTL"] #menuPanelFiles {
     float: right;
 }
 
-.menuPanelCenter-hor {
+.menuPanelBlockly-hor {
 	clear:both;
 	float: left;
 	padding-left: 10px;	
 }
 
-html[dir="RTL"] .menuPanelCenter-hor, html[dir="RTL"] .menuPanelCenter-ver {
+html[dir="RTL"] .menuPanelBlockly-hor, html[dir="RTL"] .menuPanelBlockly-ver {
     float: right;
     padding-right: 10px;
 	margin-top: 10px;
 }
 
-.menuPanelRight-hor {
+.menuPanelFiles-hor {
 	float: right;
 	padding-right: 10px;
 }
 
-html[dir="RTL"] .menuPanelRight-hor {
+html[dir="RTL"] .menuPanelFiles-hor {
     float: left;
     padding-left: 10px;
 }
@@ -356,7 +345,7 @@ html[dir="RTL"] #btn_delete {
     margin-left: 20px;
 }
 
-#modal-body {
+#modal-body-config {
 	-webkit-column-count: 3;
 	-moz-column-count: 3;
 	column-count: 3;
@@ -374,9 +363,9 @@ html[dir="RTL"] #select_all {
 	font-weight: bold;
 }
 
-.nav-tabs {
-	border-bottom: none !important;
-}
+/* .nav-tabs { */
+/* 	border-bottom: none !important; */
+/* } */
 
 .blocklySvg {
 	border-top: none !important;
@@ -424,13 +413,13 @@ html[dir="RTL"] .blocklyToolboxDiv .blocklyTreeRoot [role="treeitem"]   .blockly
 	line-height: 30px !important;
 }
 
-.blocklyTreeRow:hover {
-	background-color: #90e8e8 !important;
-}
+/* .blocklyTreeRow:hover { */
+/* 	background-color: #90e8e8 !important; */
+/* } */
 
-.blocklyTreeSelected {
-	background-color: #11c6c6 !important;
-}
+/* .blocklyTreeSelected { */
+/* 	background-color: #11c6c6 !important; */
+/* } */
 
 .blocklyTreeSeparator {
 	background: none repeat scroll 0 0 #e9f9f9 !important;
@@ -504,4 +493,14 @@ html[dir="RTL"] .colors_category {
 
 .color_cat_zumo, .color_cat_zumo_motors, .color_cat_zumo_sensors {
     background-color: #00138b;
+}
+
+.loading {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background: url(../media/ajax-loading.gif) center no-repeat #fff;
 }

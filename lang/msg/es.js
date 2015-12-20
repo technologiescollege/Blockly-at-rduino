@@ -17,6 +17,7 @@ var MSG = {
   a_xml:" Tradución XML",
   configModalLabel:"seleccionar las categorías de bloquees",
   span_select_all:"todas",
+  span_put_in_url:"añadir en la url",
   btn_close:"Cerrar",
   btn_valid:"Validar",
   editModalLabel:"Edición del código de Arduino",
@@ -43,9 +44,4 @@ var MSG = {
   aboutBody:"<br />- Traducciones y adaptaciones Sébastien Canet, integración CodeBender por Julien Rata, impulsado por el increíble trabajo de Olivier Metayer !"
 	  + "<br />"
 	  + "<br />Contributions :"
-	  + "<br /> - Blockly (https://developers.google.com/blockly)"
-	  + "<br /> - CompilerFlasher (https://codebender.cc)"
-	  + "<br /> - JQuerry (https://jquery.com)"
-	  + "<br /> - Bootstrap (http://getbootstrap.com)"
-	  + "<br /> - svg-pan-zoom (https://github.com/ariutta/svg-pan-zoom)"
 };

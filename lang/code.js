@@ -34,48 +34,49 @@ var Code = {};
  * Lookup for names of supported languages.  Keys should be in ISO 639 format.
  */
 Code.LANGUAGE_NAME = {
-  'ar': 'العربية',
-  'be-tarask': 'Taraškievica',
-  'br': 'Brezhoneg',
-  'ca': 'Català',
-  'cs': 'Česky',
-  'da': 'Dansk',
-  'de': 'Deutsch',
-  'el': 'Ελληνικά',
-  'en': 'English',
-  'es': 'Español',
-  'fa': 'فارسی',
-  'fr': 'Français',
-  'he': 'עברית',
-  'hrx': 'Hunsrik',
-  'hu': 'Magyar',
-  'ia': 'Interlingua',
-  'is': 'Íslenska',
-  'it': 'Italiano',
-  'ja': '日本語',
-  'ko': '한국어',
-  'mk': 'Македонски',
-  'ms': 'Bahasa Melayu',
-  'nb': 'Norsk Bokmål',
-  'nl': 'Nederlands, Vlaams',
-  'oc': 'Lenga d\'òc',
-  'pl': 'Polski',
-  'pms': 'Piemontèis',
-  'pt-br': 'Português Brasileiro',
-  'ro': 'Română',
-  'ru': 'Русский',
-  'sc': 'Sardu',
-  'sk': 'Slovenčina',
-  'sr': 'Српски',
-  'sv': 'Svenska',
-  'th': 'ภาษาไทย',
-  'tlh': 'tlhIngan Hol',
-  'tr': 'Türkçe',
-  'uk': 'Українська',
-  'vi': 'Tiếng Việt',
-  'zh-hans': '簡體中文',
-  'zh-hant': '正體中文'
-};
+		  'ar': 'العربية',
+		  'be-tarask': 'Taraškievica',
+		  'br': 'Brezhoneg',
+		  'ca': 'Català',
+		  'cs': 'Česky',
+		  'da': 'Dansk',
+		  'de': 'Deutsch',
+		  'el': 'Ελληνικά',
+		  'en': 'English',
+		  'es': 'Español',
+		  'fa': 'فارسی',
+		  'fr': 'Français',
+		  'he': 'עברית',
+		  'hrx': 'Hunsrik',
+		  'hu': 'Magyar',
+		  'ia': 'Interlingua',
+		  'is': 'Íslenska',
+		  'it': 'Italiano',
+		  'ja': '日本語',
+		  'ko': '한국어',
+		  'mk': 'Македонски',
+		  'ms': 'Bahasa Melayu',
+		  'nb': 'Norsk Bokmål',
+		  'nl': 'Nederlands, Vlaams',
+		  'oc': 'Lenga d\'òc',
+		  'pl': 'Polski',
+		  'pms': 'Piemontèis',
+		  'pt-br': 'Português Brasileiro',
+		  'ro': 'Română',
+		  'ru': 'Русский',
+		  'sc': 'Sardu',
+		  'sk': 'Slovenčina',
+		  'sr': 'Српски',
+		  'sv': 'Svenska',
+		  'ta': 'தமிழ்',
+		  'th': 'ภาษาไทย',
+		  'tlh': 'tlhIngan Hol',
+		  'tr': 'Türkçe',
+		  'uk': 'Українська',
+		  'vi': 'Tiếng Việt',
+		  'zh-hans': '簡體中文',
+		  'zh-hant': '正體中文'
+		};
 
 /**
  * List of RTL languages.
@@ -110,22 +111,12 @@ Code.changeLanguage = function() {
   // Store the blocks for the duration of the reload.
 	BlocklyDuino.backupBlocks();
 
-  var languageMenu = document.getElementById('languageMenu');
-  var newLang = encodeURIComponent(
-      languageMenu.options[languageMenu.selectedIndex].value);
-  var search = window.location.search;
-  if (search.length <= 1) {
-    search = '?lang=' + newLang;
-  } else if (search.match(/[?&]lang=[^&]*/)) {
-    search = search.replace(/([?&]lang=)[^&]*/, '$1' + newLang);
-  } else {
-    search = search.replace(/\?/, '?lang=' + newLang + '&');
-  }
+  var languageMenuSelected = $('#languageMenu option:selected').val();
+  var newLang = encodeURIComponent(languageMenuSelected);
 
-  search = search.replace(/([?&]url=)[^&]*/, '');
-
+  // just keep language parameter
   window.location = window.location.protocol + '//' +
-      window.location.host + window.location.pathname + search;
+      window.location.host + window.location.pathname + '?lang=' + newLang;
 };
 
 /**
@@ -139,11 +130,9 @@ Code.LANG = Code.getLang();
  */
 Code.initLanguage = function() {
   // Set the HTML's language and direction.
-  // document.dir fails in Mozilla, use document.body.parentNode.dir instead.
-  // https://bugzilla.mozilla.org/show_bug.cgi?id=151407
   var rtl = Code.isRtl();
-  document.head.parentElement.setAttribute('dir', rtl ? 'rtl' : 'ltr');
-  document.head.parentElement.setAttribute('lang', Code.LANG);
+  $("html").attr('dir', rtl ? 'rtl' : 'ltr');
+  $("html").attr('lang', Code.LANG);
 
   // Sort languages alphabetically.
   var languages = [];
@@ -159,8 +148,8 @@ Code.initLanguage = function() {
   languages.sort(comp);
 
 // Populate the language selection menu.
-  var languageMenu = document.getElementById('languageMenu');
-  languageMenu.options.length = 0;
+  var languageMenu = $('#languageMenu');
+  languageMenu.empty();
   for (var i = 0; i < languages.length; i++) {
     var tuple = languages[i];
     var lang = tuple[tuple.length - 1];
@@ -168,55 +157,60 @@ Code.initLanguage = function() {
     if (lang == Code.LANG) {
       option.selected = true;
     }
-    languageMenu.options.add(option);
+    languageMenu.append(option);
   }
-  languageMenu.addEventListener('change', Code.changeLanguage, true);
+  languageMenu.bind('change', Code.changeLanguage);
 
   // Inject language strings.
-  document.getElementById('title').textContent = MSG['title'];
-  document.getElementById('span_about').textContent = MSG['span_about'];
-  document.getElementById('span_example').textContent = MSG['span_example'];
-  document.getElementById('span_picture').textContent = MSG['span_picture'];
-  document.getElementById('span_supervision').textContent = MSG['span_supervision'];
-  document.getElementById('aboutModalLabel').textContent = MSG['aboutModalLabel'];
-  document.getElementById('aboutBody').innerHTML = MSG['aboutBody'];
+  $('#title').text(MSG['title']);
+  $('#span_about').text(MSG['span_about']);
+  $('#span_example').text(MSG['span_example']);
+  $('#span_picture').text(MSG['span_picture']);
+  $('#aboutModalLabel').text(MSG['aboutModalLabel']);
+  $('#aboutBody').html(MSG['aboutBody']);
   
-  document.getElementById('btn_switch').title = MSG['btn_switch'];
+  $('#btn_switch').attr('title', MSG['btn_switch']);
 
-  document.getElementById('span_config').textContent = MSG['span_config'];
-  document.getElementById('labelArduinoCard').textContent = MSG['labelArduinoCard'];
+  $('#span_config').text(MSG['span_config']);
+  $('#labelArduinoCard').text(MSG['labelArduinoCard']);
 
-  document.getElementById('btn_preview').title = MSG['btn_preview'];
+  $('#btn_preview').attr('title', MSG['btn_preview']);
 
-  document.getElementById('span_delete').textContent = MSG['span_delete'];
-  document.getElementById('span_saveXML').textContent = MSG['span_saveXML'];
-  document.getElementById('span_fakeload').textContent = MSG['span_fakeload'];
+  $('#span_delete').text(MSG['span_delete']);
+  $('#span_saveXML').text(MSG['span_saveXML']);
+  $('#span_fakeload').text(MSG['span_fakeload']);
 
-  document.getElementById('a_blocks').textContent = MSG['a_blocks'];
-  document.getElementById('a_arduino').textContent = MSG['a_arduino'];
-  document.getElementById('a_term').textContent = MSG['a_term'];
-  document.getElementById('a_xml').textContent = MSG['a_xml'];
+  $('#a_supervision').text(MSG['span_supervision']);
+  $('#a_blocks').text(MSG['a_blocks']);
+  $('#a_arduino').text(MSG['a_arduino']);
+  $('#a_term').text(MSG['a_term']);
+  $('#a_xml').text(MSG['a_xml']);
   
-  document.getElementById('span_plugin_codebender').textContent = MSG['span_plugin_codebender'];
-  document.getElementById('span_verify_codebender').textContent = MSG['span_verify_codebender'];
-  document.getElementById('span_flash_codebender').textContent = MSG['span_flash_codebender'];
-  document.getElementById('span_saveIno').textContent = MSG['span_saveIno'];
-  document.getElementById('span_connect_serial').textContent = MSG['span_connect_serial'];
-  document.getElementById('span_edit_code').textContent = MSG['span_edit_code'];
+  $('#span_plugin_codebender').text(MSG['span_plugin_codebender']);
+  $('#span_verify_codebender').text(MSG['span_verify_codebender']);
+  $('#span_flash_codebender').text(MSG['span_flash_codebender']);
+  $('#span_saveIno').text(MSG['span_saveIno']);
+  $('#span_connect_serial').text(MSG['span_connect_serial']);
+  $('#span_edit_code').text(MSG['span_edit_code']);
 
-  document.getElementById('configModalLabel').textContent = MSG['configModalLabel'];
-  document.getElementById('span_select_all').textContent = MSG['span_select_all'];
-  document.getElementById('btn_close').textContent = MSG['btn_close'];
-  document.getElementById('btn_valid').textContent = MSG['btn_valid'];
+  $('#configModalLabel').text(MSG['configModalLabel']);
+  $('#span_select_all').text(MSG['span_select_all']);
+  $('#span_put_in_url').text(MSG['span_put_in_url']);
+  $('#btn_close').text(MSG['btn_close']);
+  $('#btn_valid').text(MSG['btn_valid']);
 
-  document.getElementById('editModalLabel').textContent = MSG['editModalLabel'];
-  document.getElementById('showcardLabel').textContent = MSG['showcardLabel'];
-  document.getElementById('exampleModalLabel').textContent = MSG['exampleModalLabel'];
+  $('#editModalLabel').text(MSG['editModalLabel']);
+  $('#showcardLabel').text(MSG['showcardLabel']);
+  $('#exampleModalLabel').text(MSG['exampleModalLabel']);
   
-  document.getElementById('btn_doc').title = MSG['span_doc'];  
-  document.getElementById('btn_tuto').title = MSG['span_tuto'];
-  document.getElementById('btn_closeCode').textContent = MSG['btn_closeCode'];
-  document.getElementById('btn_validCode').textContent = MSG['btn_validCode'];
+  $('#btn_doc').attr('title', MSG['span_doc']);  
+  $('#btn_tuto').attr('title', MSG['span_tuto']);
+  $('#btn_closeCode').text(MSG['btn_closeCode']);
+  $('#btn_validCode').text(MSG['btn_validCode']);
+
+  $("xml").find("category").each(function() {
+	$(this).attr('name', Blockly.Msg[$(this).attr('name')]);
+  });
 
 };
 

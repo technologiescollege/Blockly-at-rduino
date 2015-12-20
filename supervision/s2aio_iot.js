@@ -1,3 +1,5 @@
+var socket = {};
+
 // connect to the server
 var ipAddress = "localhost";
 var ipPort = "9000";

@@ -1395,7 +1395,7 @@ Blockly.Blocks['technozone_robot_ihm_init'] = {
     this.setColour(62);
 	this.setHelpUrl('http://www.techno-zone-51.fr/dokuwiki2/doku.php?id=documentation:btn1');
     this.appendDummyInput("")
-        .appendTitle("initialiser la console IHM");
+        .appendField("initialiser la console IHM");
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setTooltip('Initialise la console IHM');
