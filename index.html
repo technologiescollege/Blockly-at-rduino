@@ -95,7 +95,7 @@
 						<option value="dfrobot_romeo">DFRobot RoMeo</option>
 		            </select>
 		    </div>
-			<button id="btn_picture" class="btn btn-danger btn-block text-left" data-toggle="modal" data-target="#showcardModal">
+			<button id="btn_picture" class="btn btn-danger btn-block text-left">
 				<span class="glyphicon glyphicon-alert"> </span>
 				<span id="span_picture"> </span>
 			</button>
@@ -154,7 +154,7 @@
 			</button>
 		</div> 
 		<div id="div_miniPicture">
-		    <a id="miniCard" data-toggle="modal" data-target="#showcardModal">
+		    <a id="miniCard">
 		        <img id="arduino_card_miniPicture">
 		    </a>
 		</div>
@@ -266,12 +266,11 @@
     </div>
   </div>
 </div>
-<!-- picture modal -->
-<div class="modal fade" backdrop="static" id="showcardModal" tabindex="-1" role="dialog" aria-labelledby="showcardLabel" aria-hidden="true">
-  <div class="modal-dialog">
+<!-- picture "modal" -->
+  <div id="showcardModal" class="modal-dialog" style="display:none">
     <div class="modal-content">
       <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <button type="button" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></button>
         <h4 class="modal-title" id="showcardLabel"></h4>
       </div>
       <div class="modal-body text-center">
@@ -279,7 +278,7 @@
       </div>
     </div>
   </div>
-</div>
+
 <!-- example modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-lg">

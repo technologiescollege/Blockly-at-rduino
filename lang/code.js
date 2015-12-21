@@ -113,10 +113,17 @@ Code.changeLanguage = function() {
 
   var languageMenuSelected = $('#languageMenu option:selected').val();
   var newLang = encodeURIComponent(languageMenuSelected);
+  var search = window.location.search;
+  if (search.length <= 1) {
+    search = '?lang=' + newLang;
+  } else if (search.match(/[?&]lang=[^&]*/)) {
+    search = search.replace(/([?&]lang=)[^&]*/, '$1' + newLang);
+  } else {
+    search = search.replace(/\?/, '?lang=' + newLang + '&');
+  }
 
-  // just keep language parameter
   window.location = window.location.protocol + '//' +
-      window.location.host + window.location.pathname + '?lang=' + newLang;
+      window.location.host + window.location.pathname + search;
 };
 
 /**

@@ -108,7 +108,6 @@ html[dir="RTL"] .menuPanel-ver {
     text-align: center;
 }
 
-
 html[dir="RTL"] .navbar-right {
     margin-right: -50px;
     width: 225px;
@@ -447,4 +446,15 @@ html[dir="RTL"] .colors_category {
     height: 100%;
     z-index: 9999;
     background: url(../media/ajax-loading.gif) center no-repeat #fff;
+}
+
+#div_miniPicture:hover {
+	cursor: pointer;
+}
+
+#showcardModal .modal-content:hover {
+  cursor: move;
+}
+
+.draggable {
 }

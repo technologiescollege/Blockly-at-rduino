@@ -22,6 +22,7 @@ Blockly.pathToBlockly = './';
 Blockly.pathToMedia = './media/';
 
 BlocklyDuino.selectedTab = 'blocks';
+BlocklyDuino.selectedCard = '';
 
 /**
  * Blockly's main workspace.
@@ -71,7 +72,7 @@ BlocklyDuino.renderContent = function() {
 
 		case 'content_supervision':
 			$("#content_supervision").load('./supervision/pymata_arduino.html', function() {
-				$("div[id^=specif_arduino").hide();
+				$("div[id^=specif_arduino]").hide();
 				$("div[id^=specif_" + $('#pinout').val()+"]").show();
 			});
 		}
@@ -167,6 +168,13 @@ BlocklyDuino.backupBlocks = function () {
  * Sets Arduino card
  */
 BlocklyDuino.setArduinoCard =  function () {
+	var cardId = BlocklyDuino.getStringParamFromUrl('card', '');
+
+	if (cardId) {
+		$("#pinout").val(cardId);
+	}
+	
+	// set the card from url parameters
 	window.profile["defaultBoard"]=window.profile[$("#pinout").val()];
 	$('#arduino_card_picture').attr("src", profile.defaultBoard['picture']);
 	$('#arduino_card_supervision').attr("src", profile.defaultBoard['supervision']);
@@ -177,13 +185,25 @@ BlocklyDuino.setArduinoCard =  function () {
  * Change Arduino card
  */
 BlocklyDuino.arduinoCard =  function (){
+  $("#pinout").blur();
   if (window.profile["defaultBoard"]!=window.profile[$("#pinout").val()])
   {
-	  if (false || window.confirm(MSG['arduino_card']+' '+window.profile[$("#pinout").val()].description+' ?'))
+	  if (window.confirm(MSG['arduino_card']+' '+window.profile[$("#pinout").val()].description+' ?'))
 		  {
-		    BlocklyDuino.setArduinoCard();
 			BlocklyDuino.workspace.clear();
-			BlocklyDuino.renderContent();
+			  var search = window.location.search;
+			  if (search.length <= 1) {
+			    search = '?card=' + $("#pinout").val();
+			  } else if (search.match(/[?&]card=[^&]*/)) {
+			    search = search.replace(/([?&]card=)[^&]*/, '$1' + $("#pinout").val());
+			  } else {
+			    search = search.replace(/\?/, '?card=' + $("#pinout").val() + '&');
+			  }
+
+			  window.location = window.location.protocol + '//' +
+			      window.location.host + window.location.pathname + search;
+		} else {
+			$("#pinout").val(BlocklyDuino.selectedCard);
 		}
   }
 }; 
@@ -280,6 +300,7 @@ BlocklyDuino.bindFunctions = function () {
 	$('#btn_saveXML').on("click",  BlocklyDuino.saveXmlFile);
 	$('#btn_saveArduino').on("click",  BlocklyDuino.saveArduinoFile);
 	
+	$('#pinout').on("focus", function() {BlocklyDuino.selectedCard = $(this).val();});
 	$('#pinout').on("change", BlocklyDuino.arduinoCard);
 
 	$('#load').on("change", BlocklyDuino.load);
@@ -306,7 +327,16 @@ BlocklyDuino.bindFunctions = function () {
 	   $( "#toggle" ).toggle( "slide" );
  });
 
-  $('#btn_switch').on("click",  BlocklyDuino.switchOrientation);
+  $('#miniCard, #btn_picture').on('click', function() {
+	  $('#showcardModal').css("z-index", 1050);
+	  $('#showcardModal').show();
+  });
+  
+  $('#showcardModal button.close').on('click', function() {
+	  $('#showcardModal').css("z-index", 0);
+	  $('#showcardModal').hide();
+  });
+//  $('#btn_switch').on("click",  BlocklyDuino.switchOrientation);
 
 };
 
@@ -382,26 +412,21 @@ BlocklyDuino.changeToolbox = function () {
 	// store id's in session
 	window.localStorage.toolboxids = toolboxIds;
 	
-
+	var search = window.location.search;
 	if ($("#put_in_url").prop('checked')) {
 		// put id's in url
-		var search = window.location.search;
 		if (search.length <= 1) {
 			search = '?toolboxids=' + toolboxIds;
 		} else {
 			search = search + '&toolboxids=' + toolboxIds;
 		}
-
-		window.location = window.location.protocol + '//'
-				+ window.location.host + window.location.pathname + search;
 	} else {
 		// remove id's from url
-		var search = window.location.search;
 		search = search.replace(/([?&]toolboxids=)[^&]*/, '');
-
-		window.location = window.location.protocol + '//'
-				+ window.location.host + window.location.pathname + search;
 	}
+	
+	window.location = window.location.protocol + '//'
+	+ window.location.host + window.location.pathname + search;
 };
 
 /**
@@ -547,26 +572,40 @@ BlocklyDuino.init = function() {
 	// bind events to html elements
 	BlocklyDuino.bindFunctions();
 
-	// load the compilerflasher module
 	$(document).ready(
-			function() {
-				compilerflasher = new compilerflasher(BlocklyDuino.getFiles);
-				compilerflasher.on("pre_verify", function() {
-					$("#debug_arduino").html(MSG['pre_verify']);
-				});
-				compilerflasher.on("verification_succeed",
-						function(binary_size) {
-							$("#debug_arduino").html(
-									MSG['verification_succeed'] + binary_size);
-						});
-				compilerflasher.on("verification_failed",
-						function(error_output) {
-							$("#debug_arduino").html(
-									MSG['verification_failed'] + error_output);
-						});
+		// load the compilerflasher module
+		function() {
+			compilerflasher = new compilerflasher(BlocklyDuino.getFiles);
+			compilerflasher.on("pre_verify", function() {
+				$("#debug_arduino").html(MSG['pre_verify']);
 			});
+			compilerflasher.on("verification_succeed",
+					function(binary_size) {
+						$("#debug_arduino").html(
+								MSG['verification_succeed'] + binary_size);
+					});
+			compilerflasher.on("verification_failed",
+					function(error_output) {
+						$("#debug_arduino").html(
+								MSG['verification_failed'] + error_output);
+					});
+		});
 	
-};
+		// draggable "modal" dialog containing card image
+	    $('body').on('mousedown', '#showcardModal', function() {
+	        $(this).addClass('draggable').parents().on('mousemove', function(e) {
+	            $('.draggable').offset({
+	                top: e.pageY - $('.draggable').outerHeight() / 2,
+	                left: e.pageX - $('.draggable').outerWidth() / 2
+	            }).on('mouseup', function() {
+	                $(this).removeClass('draggable');
+	            });
+	            e.preventDefault();
+	        });
+	    }).on('mouseup', function() {
+	        $('.draggable').removeClass('draggable');
+	    });
+	};
 
 /**
  * Set menu orientation 
