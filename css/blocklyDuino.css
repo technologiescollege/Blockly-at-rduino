@@ -32,9 +32,9 @@ body {
 }
 
 #divTitre {
-	height: 76px;
-	vertical-align: middle;
-	position: absolute;
+	height: 66px;
+	vertical-align: top;
+	position: relative;
 	width: 100%;
 }
 
@@ -44,7 +44,7 @@ body {
 
 #divBody {
     position: absolute;
-    top: 80px;
+    top: 66px;
     bottom: 5px;
     width: 100%;
 }
@@ -52,9 +52,9 @@ body {
 .menuPanel-ver {
 	clear: both;
 	float: left;
-	width: 200px;
-    padding-left: 10px;
-	padding-right: 10px;
+	width: 205px;
+    padding-left: 5px;
+	padding-right: 5px;
 	position: absolute;
 	height: 100%;
 }
@@ -121,12 +121,12 @@ html[dir="RTL"] .navbar-right {
 
 .divTabpanel-ver {
     height: 100%;
-    margin-left:200px;
+    margin-left:205px;
 }
 
 html[dir="RTL"] .divTabpanel-ver {
     margin-left:0px;
-    margin-right:200px;
+    margin-right:205px;
 }
 
 html[dir="RTL"] #menuPanelConfig, html[dir="RTL"] #menuPanelBlockly, html[dir="RTL"] #menuPanelFiles {
@@ -437,62 +437,6 @@ html[dir="RTL"] .blocklyToolboxDiv .blocklyTreeRoot [role="treeitem"]   .blockly
 
 html[dir="RTL"] .colors_category {
     right: 0;
-}
-
-.color_cat_loops {
-	background-color: #C88330; /*5ba55b;*/
-}
-
-.color_cat_logic,.color_cat_if,.color_cat_bool {
-	background-color: #E1A91A; /*#8ca6c0;*/
-}
-
-.color_cat_math {
-	background-color: #5CB712; /*00FF00;*/
-}
-
-.color_cat_list {
-	background-color: #9e8cc0;
-}
-
-.color_cat_variables {
-	background-color: #EE7D16; /*c08ca6;*/
-}
-
-.color_cat_functions {
-	background-color: #632D99; /*b88cc0;*/
-}
-
-.color_cat_color {
-	background-color: #c09e8c;
-}
-
-.color_cat_text {
-	background-color: #8A55D7; /*8cc0af;*/
-}
-
-.color_cat_arduino,.color_cat_arduino_in,.color_cat_arduino_out,.color_cat_arduino_servo {
-	background-color: #00979D; /*8c95c0;*/
-}
-
-.color_cat_bq, .color_cat_bq_in, .color_cat_bq_out, .color_cat_bq_comm{
-	background-color: #FFFFFF;
-}
-
-.color_cat_robots, .color_cat_robots_motors, .color_cat_robot_misc {
-    background-color: #5b99a5;
-}
-
-.color_cat_grove, .color_cat_grove_in, .color_cat_grove_out, .color_cat_grove_lcd, .color_cat_grove_comm {
-	background-color: #8ec31f;
-}
-
-.color_cat_technozone, .color_cat_technozone_in, .color_cat_technozone_out, .color_cat_technozone_motors_cc, .color_cat_technozone_motors_pap, .color_cat_technozone_servo, .color_cat_technozone_lcd, .color_cat_technozone_telec, .color_cat_technozone_speech, .color_cat_technozone_bt, .color_cat_technozone_ihm, .color_cat_technozone_robot, .color_cat_technozone_robot_mot, .color_cat_technozone_robot_in, .color_cat_technozone_robot_out, .color_cat_technozone_robot_lcd, .color_cat_technozone_robot_bt, .color_cat_technozone_robot_ihm {
-	background-color: #646464;
-}
-
-.color_cat_zumo, .color_cat_zumo_motors, .color_cat_zumo_sensors {
-    background-color: #00138b;
 }
 
 .loading {

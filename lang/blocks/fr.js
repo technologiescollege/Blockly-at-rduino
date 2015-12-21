@@ -407,7 +407,7 @@ Blockly.Msg.CAT_GROVE_OUT = "actionneurs";
 Blockly.Msg.CAT_GROVE_LCD = "écran LCD";
 Blockly.Msg.CAT_GROVE_COMM = "communication";
 
-Blockly.Msg.CAT_ROBOTS = "Robots divers"; //Added April 7 2015 ESK
+Blockly.Msg.CAT_ROBOTS = "robots & cartes"; //Added April 7 2015 ESK
 Blockly.Msg.CAT_ROBOTS_MOTORS = "moteurs";
 Blockly.Msg.CAT_ROBOT_MISC = "divers";
 

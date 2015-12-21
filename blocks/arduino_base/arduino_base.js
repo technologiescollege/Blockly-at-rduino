@@ -27,7 +27,7 @@
 
 Blockly.Blocks.base_setup = {
   init: function () {
-        this.setColour(230);
+        this.setColour("#00979D");
 		this.setHelpUrl(Blockly.Msg.ARDUINO_BASE_SETUP_HELPURL);
         this.appendDummyInput("")
             .appendField("Setup")
@@ -39,7 +39,7 @@ Blockly.Blocks.base_setup = {
 
 Blockly.Blocks.base_delay = {
   init: function() {
-    this.setColour(230);
+    this.setColour("#00979D");
     this.setHelpUrl(Blockly.Msg.ARDUINO_BASE_DELAY_HELPURL);
     this.appendValueInput("DELAY_TIME", 'Number')
         .appendField(Blockly.Msg.ARDUINO_BASE_DELAY_DELAY_TIME)
@@ -53,7 +53,7 @@ Blockly.Blocks.base_delay = {
 
 Blockly.Blocks.base_map = {
   init: function() {
-    this.setColour(230);
+    this.setColour("#00979D");
     this.setHelpUrl(Blockly.Msg.ARDUINO_BASE_MAP_HELPURL);
     this.appendValueInput("NUM", 'Number')
         .appendField(Blockly.Msg.ARDUINO_BASE_MAP_NUM)
@@ -71,7 +71,7 @@ Blockly.Blocks.base_map = {
 
 Blockly.Blocks.inout_buildin_led = {
    init: function() {
-     this.setColour(230);
+     this.setColour("#00979D");
      this.setHelpUrl(Blockly.Msg.ARDUINO_INOUT_BUILDIN_LED_HELPURL);
      this.appendDummyInput("")
 	     .appendField(Blockly.Msg.ARDUINO_INOUT_BUILDIN_LED_INPUT)
@@ -84,7 +84,7 @@ Blockly.Blocks.inout_buildin_led = {
 
 Blockly.Blocks.inout_digital_write_validator = {
   init: function() {
-    this.setColour(230);
+    this.setColour("#00979D");
     this.setHelpUrl(Blockly.Msg.ARDUINO_INOUT_DIGITAL_WRITE_HELPURL);
     this.appendDummyInput()
 		.appendField(Blockly.Msg.ARDUINO_INOUT_DIGITAL_WRITE_INPUT1)
@@ -101,7 +101,7 @@ Blockly.Blocks.inout_digital_write_validator = {
 
 Blockly.Blocks.inout_digital_write = {
   init: function() {
-    this.setColour(230);
+    this.setColour("#00979D");
     this.setHelpUrl(Blockly.Msg.ARDUINO_INOUT_DIGITAL_WRITE_HELPURL);
 	this.appendValueInput("PIN", 'Number')
         .setAlign(Blockly.ALIGN_RIGHT)
@@ -120,7 +120,7 @@ Blockly.Blocks.inout_digital_write = {
 
 Blockly.Blocks.inout_digital_read = {
   init: function() {
-    this.setColour(230);
+    this.setColour("#00979D");
     this.setHelpUrl(Blockly.Msg.ARDUINO_INOUT_DIGITAL_READ_HELPURL);
 	this.appendValueInput("PIN", 'Number')
         .setAlign(Blockly.ALIGN_RIGHT)
@@ -132,7 +132,7 @@ Blockly.Blocks.inout_digital_read = {
 
 Blockly.Blocks.inout_digital_read_validator = {
   init: function() {
-    this.setColour(230);
+    this.setColour("#00979D");
     this.setHelpUrl(Blockly.Msg.ARDUINO_INOUT_DIGITAL_READ_HELPURL);
     this.appendDummyInput()
 		.appendField(Blockly.Msg.ARDUINO_INOUT_DIGITAL_READ_INPUT)
@@ -145,7 +145,7 @@ Blockly.Blocks.inout_digital_read_validator = {
 
 Blockly.Blocks.inout_PWM_write_validator = {
   init: function() {
-    this.setColour(230);
+    this.setColour("#00979D");
     this.setHelpUrl(Blockly.Msg.ARDUINO_INOUT_PWM_WRITE_HELPURL);
     this.appendDummyInput("")
         .appendField(Blockly.Msg.ARDUINO_INOUT_PWM_WRITE_INPUT1)
@@ -162,7 +162,7 @@ Blockly.Blocks.inout_PWM_write_validator = {
 
 Blockly.Blocks.inout_PWM_write = {
   init: function() {
-    this.setColour(230);
+    this.setColour("#00979D");
     this.setHelpUrl(Blockly.Msg.ARDUINO_INOUT_PWM_WRITE_HELPURL);
 	this.appendValueInput("PIN", 'Number')
         .setAlign(Blockly.ALIGN_RIGHT)
@@ -180,7 +180,7 @@ Blockly.Blocks.inout_PWM_write = {
 
 Blockly.Blocks.inout_analog_write = {
   init: function() {
-    this.setColour(230);
+    this.setColour("#00979D");
     this.setHelpUrl(Blockly.Msg.ARDUINO_INOUT_ANALOG_WRITE_HELPURL);
 	this.appendValueInput("PIN", 'Number')
         .setAlign(Blockly.ALIGN_RIGHT)
@@ -198,7 +198,7 @@ Blockly.Blocks.inout_analog_write = {
 
 Blockly.Blocks.inout_analog_write_validator = {
   init: function() {
-    this.setColour(230);
+    this.setColour("#00979D");
     this.setHelpUrl(Blockly.Msg.ARDUINO_INOUT_ANALOG_WRITE_HELPURL);
     this.appendDummyInput("")
         .appendField(Blockly.Msg.ARDUINO_INOUT_ANALOG_WRITE_INPUT1)
@@ -215,7 +215,7 @@ Blockly.Blocks.inout_analog_write_validator = {
 
 Blockly.Blocks.tone = {
   init: function() {
-    this.setColour(230);
+    this.setColour("#00979D");
     this.setHelpUrl(Blockly.Msg.ARDUINO_TONE_HELPURL);
 	this.appendValueInput("PIN", 'Number')
         .setAlign(Blockly.ALIGN_RIGHT)
@@ -237,7 +237,7 @@ Blockly.Blocks.tone = {
 
 Blockly.Blocks.notone = {
   init: function() {
-    this.setColour(230);
+    this.setColour("#00979D");
 	this.setHelpUrl(Blockly.Msg.ARDUINO_NOTONE_HELPURL);
 	this.appendValueInput("PIN", 'Number')
         .setAlign(Blockly.ALIGN_RIGHT)
@@ -250,7 +250,7 @@ Blockly.Blocks.notone = {
 
 Blockly.Blocks.inout_analog_read = {
   init: function() {
-    this.setColour(230);
+    this.setColour("#00979D");
 	this.setHelpUrl(Blockly.Msg.ARDUINO_INOUT_ANALOG_READ_HELPURL);
 	this.appendValueInput("PIN", 'Number')
         .setAlign(Blockly.ALIGN_RIGHT)
@@ -262,7 +262,7 @@ Blockly.Blocks.inout_analog_read = {
 
 Blockly.Blocks.inout_analog_read_validator = {
   init: function() {
-    this.setColour(230);
+    this.setColour("#00979D");
 	this.setHelpUrl(Blockly.Msg.ARDUINO_INOUT_ANALOG_READ_HELPURL);
     this.appendDummyInput()
         .appendField(Blockly.Msg.ARDUINO_INOUT_ANALOG_READ_INPUT)
@@ -274,7 +274,7 @@ Blockly.Blocks.inout_analog_read_validator = {
 
 Blockly.Blocks.inout_onoff = {
   init: function() {
-    this.setColour(230);
+    this.setColour("#00979D");
 	this.setHelpUrl(Blockly.Msg.ARDUINO_INOUT_ONOFF_HELPURL);
     this.appendDummyInput("")
         .appendField(new Blockly.FieldDropdown(Blockly.Msg.FIELDDROPDOWN), 'BOOL');
@@ -285,7 +285,7 @@ Blockly.Blocks.inout_onoff = {
 
 Blockly.Blocks.inout_angle = {
   init: function() {
-    this.setColour(230);
+    this.setColour("#00979D");
 	this.setHelpUrl('https://developers.google.com/blockly/custom-blocks/defining-blocks#appendfield');
     this.appendDummyInput("")
         .appendField("angle")
@@ -299,7 +299,7 @@ Blockly.Blocks.inout_angle = {
 //http://www.seeedstudio.com/depot/emax-9g-es08a-high-sensitive-mini-servo-p-760.html?cPath=170_171
 Blockly.Blocks.servo_move = {
   init: function() {
-    this.setColour(190);
+    this.setColour("#00979D");
 	this.setHelpUrl(Blockly.Msg.ARDUINO_SERVO_MOVE_HELPURL);
     this.appendDummyInput("")
         .appendField(Blockly.Msg.ARDUINO_SERVO_MOVE_INPUT1)
@@ -325,7 +325,7 @@ Blockly.Blocks.servo_move = {
 
 Blockly.Blocks.servo_read_degrees = {
   init: function() {
-    this.setColour(190);
+    this.setColour("#00979D");
 	this.setHelpUrl(Blockly.Msg.ARDUINO_SERVO_READ_DEGREES_HELPURL);
     this.appendDummyInput("")
         .appendField(Blockly.Msg.ARDUINO_SERVO_READ_DEGREES_INPUT1)
@@ -346,7 +346,7 @@ Blockly.Blocks.servo_read_degrees = {
 
 Blockly.Blocks.serial_print = {
   init: function() {
-    this.setColour(230);
+    this.setColour("#00979D");
 	this.setHelpUrl(Blockly.Msg.ARDUINO_SERIAL_PRINT_HELPURL);
     this.appendValueInput("CONTENT", String)
         .appendField(Blockly.Msg.ARDUINO_SERIAL_PRINT_CONTENT);

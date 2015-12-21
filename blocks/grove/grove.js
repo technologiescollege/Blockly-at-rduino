@@ -33,7 +33,7 @@ goog.require('Blockly.Blocks');
 
 Blockly.Blocks['grove_led'] = {
   init: function() {
-    this.setColour(190);
+    this.setColour("#8ec31f");
 	this.setHelpUrl(Blockly.Msg.GROVE_INOUT_LED_HELPURL);
     this.appendDummyInput()
         .appendField(Blockly.Msg.GROVE_INOUT_LED_INPUT1)
@@ -55,7 +55,7 @@ Blockly.Blocks['grove_led'] = {
 
 Blockly.Blocks['grove_piezo_buzzer'] = {
   init: function() {
-    this.setColour(190);
+    this.setColour("#8ec31f");
 	this.setHelpUrl(Blockly.Msg.GROVE_INOUT_BUZZER_HELPURL);
     this.appendDummyInput()
         .appendField(Blockly.Msg.GROVE_INOUT_BUZZER_TEXT1)
@@ -76,7 +76,7 @@ Blockly.Blocks['grove_piezo_buzzer'] = {
 
 // Blockly.Blocks['grove_rgb_led'] = {
   // init: function() {
-    // this.setColour(190);
+    // this.setColour("#8ec31f");
 	// this.setHelpUrl(Blockly.Msg.GROVE_INOUT_RGBLED_HELPURL);
     // this.appendDummyInput()
 		// .appendField(Blockly.Msg.GROVE_INOUT_RGBLED_TEXT)
@@ -113,7 +113,7 @@ Blockly.Blocks['grove_piezo_buzzer'] = {
 Blockly.Blocks['grove_rgb_led'] = {
   init: function() {
     this.setHelpUrl(Blockly.Msg.GROVE_INOUT_RGBLED_HELPURL);
-    this.setColour(190);
+    this.setColour("#8ec31f");
     this.appendDummyInput()
         .appendField(Blockly.Msg.GROVE_INOUT_RGBLED_TEXT);
     this.appendDummyInput()
@@ -145,7 +145,7 @@ Blockly.Blocks['grove_rgb_led'] = {
 
 Blockly.Blocks['grove_button'] = {
   init: function() {
-    this.setColour(190);
+    this.setColour("#8ec31f");
     this.setHelpUrl(Blockly.Msg.GROVE_INOUT_BUTTON_HELPURL);
 	this.appendDummyInput()
         .appendField(Blockly.Msg.GROVE_INOUT_BUTTON_TEXT)
@@ -159,7 +159,7 @@ Blockly.Blocks['grove_button'] = {
 
 Blockly.Blocks['grove_rotary_angle'] = {
   init: function() {
-    this.setColour(10);
+    this.setColour("#8ec31f");
 	this.setHelpUrl(Blockly.Msg.GROVE_INOUT_ROT_ANGLE_HELPURL);
     this.appendDummyInput()
         .appendField(Blockly.Msg.GROVE_INOUT_ROT_ANGLE_TEXT)
@@ -173,7 +173,7 @@ Blockly.Blocks['grove_rotary_angle'] = {
 
 Blockly.Blocks['grove_tilt_switch'] = {
   init: function() {
-    this.setColour(190);
+    this.setColour("#8ec31f");
 	this.setHelpUrl(Blockly.Msg.GROVE_INOUT_TILT_HELPURL);
     this.appendDummyInput()
         .appendField(Blockly.Msg.GROVE_INOUT_TILT_TEXT)
@@ -187,7 +187,7 @@ Blockly.Blocks['grove_tilt_switch'] = {
 
 Blockly.Blocks['grove_relay'] = {
   init: function() {
-    this.setColour(190);
+    this.setColour("#8ec31f");
 	this.setHelpUrl(Blockly.Msg.GROVE_INOUT_RELAY_HELPURL);
     this.appendDummyInput()
         .appendField(Blockly.Msg.GROVE_INOUT_RELAY_TEXT1)
@@ -204,7 +204,7 @@ Blockly.Blocks['grove_relay'] = {
 
 Blockly.Blocks['grove_temporature_sensor'] = {
   init: function() {
-    this.setColour(10);
+    this.setColour("#8ec31f");
 	this.setHelpUrl(Blockly.Msg.GROVE_INOUT_TEMP_HELPURL);
     this.appendDummyInput()
         .appendField(Blockly.Msg.GROVE_INOUT_TEMP_TEXT)
@@ -218,7 +218,7 @@ Blockly.Blocks['grove_temporature_sensor'] = {
 
 Blockly.Blocks['grove_serial_lcd_print'] = {
   init: function() {
-    this.setColour(190);
+    this.setColour("#8ec31f");
 	this.setHelpUrl(Blockly.Msg.GROVE_INOUT_LCD_PRINT_HELPURL);
     this.appendDummyInput()
         .appendField(Blockly.Msg.GROVE_INOUT_LCD_PRINT_TEXT)
@@ -246,7 +246,7 @@ Blockly.Blocks['grove_serial_lcd_print'] = {
 //grove lcd power on/off
 Blockly.Blocks['grove_serial_lcd_power'] = {
   init: function() {
-    this.setColour(190);
+    this.setColour("#8ec31f");
 	this.setHelpUrl(Blockly.Msg.GROVE_INOUT_LCD_POWER_HELPURL);
     this.appendDummyInput()
         .appendField(Blockly.Msg.GROVE_INOUT_LCD_POWER_TEXT)
@@ -266,7 +266,7 @@ Blockly.Blocks['grove_serial_lcd_power'] = {
 //scroll left/right/no scroll/blink/noblink
 Blockly.Blocks['grove_serial_lcd_effect'] = {
   init: function() {
-    this.setColour(190);
+    this.setColour("#8ec31f");
 	this.setHelpUrl(Blockly.Msg.GROVE_INOUT_LCD_EFFECT_HELPURL);
     this.appendDummyInput()
         .appendField(Blockly.Msg.GROVE_INOUT_LCD_EFFECT_TEXT)
@@ -285,7 +285,7 @@ Blockly.Blocks['grove_serial_lcd_effect'] = {
 
 Blockly.Blocks['grove_sound_sensor'] = {
   init: function() {
-    this.setColour(10);
+    this.setColour("#8ec31f");
 	this.setHelpUrl(Blockly.Msg.GROVE_INOUT_SOUND_HELPURL);
     this.appendDummyInput()
         .appendField(Blockly.Msg.GROVE_INOUT_SOUND_TEXT)
@@ -299,7 +299,7 @@ Blockly.Blocks['grove_sound_sensor'] = {
 
 Blockly.Blocks['grove_pir_motion_sensor'] = {
   init: function() {
-    this.setColour(190);
+    this.setColour("#8ec31f");
 	this.setHelpUrl(Blockly.Msg.GROVE_INOUT_PIR_HELPURL);
     this.appendDummyInput()
         .appendField(Blockly.Msg.GROVE_INOUT_PIR_TEXT)
@@ -313,7 +313,7 @@ Blockly.Blocks['grove_pir_motion_sensor'] = {
 
 Blockly.Blocks['grove_line_finder'] = {
   init: function() {
-    this.setColour(190);
+    this.setColour("#8ec31f");
 	this.setHelpUrl(Blockly.Msg.GROVE_INOUT_LINE_HELPURL);
     this.appendDummyInput()
         .appendField(Blockly.Msg.GROVE_INOUT_LINE_TEXT)
@@ -327,7 +327,7 @@ Blockly.Blocks['grove_line_finder'] = {
 
 Blockly.Blocks['grove_ultrasonic_ranger'] = {
   init: function() {
-    this.setColour(190);
+    this.setColour("#8ec31f");
 	this.setHelpUrl(Blockly.Msg.GROVE_INOUT_ULTRASONIC_HELPURL);
     this.appendDummyInput()
 	    .appendField(Blockly.Msg.GROVE_INOUT_ULTRASONIC_TEXT)
@@ -343,7 +343,7 @@ Blockly.Blocks['grove_ultrasonic_ranger'] = {
 
 Blockly.Blocks['grove_motor_shield'] = {
   init: function() {
-    this.setColour(190);
+    this.setColour("#8ec31f");
 	this.setHelpUrl(Blockly.Msg.GROVE_INOUT_MOTOR_HELPURL);
     this.appendDummyInput()
         .appendField(Blockly.Msg.GROVE_INOUT_MOTOR_TEXT)
@@ -361,7 +361,7 @@ Blockly.Blocks['grove_motor_shield'] = {
 
 Blockly.Blocks['grove_thumb_joystick'] = {
   init: function() {
-    this.setColour(10);
+    this.setColour("#8ec31f");
 	this.setHelpUrl(Blockly.Msg.GROVE_INOUT_JOYSTICK_HELPURL);
     this.appendDummyInput()
 		.appendField(Blockly.Msg.GROVE_INOUT_JOYSTICK_TEXT1)
@@ -377,7 +377,7 @@ this.setTooltip(Blockly.Msg.GROVE_INOUT_JOYSTICK_TOOLTIP);
 
 Blockly.Blocks['grove_bluetooth_slave'] = {
   init: function() {
-    this.setColour(190);
+    this.setColour("#8ec31f");
 	this.setHelpUrl(Blockly.Msg.GROVE_INOUT_BT_HELPURL);
     this.appendDummyInput()
       .appendField(Blockly.Msg.GROVE_INOUT_BT_COMM1)

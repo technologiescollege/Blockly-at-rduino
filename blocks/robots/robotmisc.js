@@ -31,7 +31,7 @@ goog.require('Blockly.Blocks');
 
 Blockly.Blocks['setup_button_wait_il'] = {
   init: function() {
-    this.setColour(190);
+    this.setColour("#5b99a5");
     this.appendDummyInput()
         .appendField(Blockly.Msg.ROBOTS_MISC_SETUP_GEN_TITLE)
         .appendField("PIN#")
@@ -45,7 +45,7 @@ Blockly.Blocks['setup_button_wait_il'] = {
 Blockly.Blocks['setup_button_wait_iph'] = {
   init: function() {
 	this.setHelpUrl(Blockly.Msg.ROBOTS_MISC_ZUMO_HELPURL);
-    this.setColour(190);
+    this.setColour("#5b99a5");
     this.appendDummyInput()
         .appendField(Blockly.Msg.ROBOTS_MISC_SETUP_ZUMO_TITLE)
         .appendField("PIN#")
@@ -58,7 +58,7 @@ Blockly.Blocks['setup_button_wait_iph'] = {
 
 Blockly.Blocks['fourpin_ranger'] = {
   init: function() {
-    this.setColour(190);
+    this.setColour("#5b99a5");
 	this.appendDummyInput()
 	    .appendField(Blockly.Msg.ROBOTS_MISC_FOUR_PIN_RANGER_TITLE)
 		.appendField(Blockly.Msg.ROBOTS_MISC_TRIGGER_PIN)
@@ -77,7 +77,7 @@ Blockly.Blocks['fourpin_ranger'] = {
 Blockly.Blocks['play_notes_z'] = {
   init: function() {
     this.setHelpUrl(Blockly.Msg.ROBOTS_MISC_ZUMO_BUZZER_HELPURL);
-    this.setColour(210);
+    this.setColour('#5b99a5');
 	this.appendDummyInput()
 	    .appendField(Blockly.Msg.ROBOTS_MISC_ZUMO_BUZZER_TITLE);
     this.appendDummyInput()
@@ -115,7 +115,7 @@ Blockly.Blocks['play_notes_z'] = {
 
 Blockly.Blocks['IR_serial_decoder'] = {
   init: function() {
-    this.setColour(190);
+    this.setColour("#5b99a5");
     this.appendDummyInput()
         .appendField(Blockly.Msg.ROBOTS_MISC_IR_DECODE_TITLE)
         .appendField(Blockly.Msg.ROBOTS_MISC_IR_SENSOR_PIN)
@@ -128,7 +128,7 @@ Blockly.Blocks['IR_serial_decoder'] = {
 
 Blockly.Blocks['IR_get_blink'] = {
   init: function() {
-    this.setColour(190);
+    this.setColour("#5b99a5");
 	this.appendValueInput("IR_NUM", 'Number')
        .setCheck('Number')
         .appendField(Blockly.Msg.ROBOTS_MISC_IR_GET_BLINK_TITLE)
@@ -151,7 +151,7 @@ Blockly.Blocks['IR_get_blink'] = {
 
 Blockly.Blocks['IR_get'] = {
   init: function() {
-    this.setColour(190);
+    this.setColour("#5b99a5");
 	this.appendDummyInput()
 		.appendField(Blockly.Msg.ROBOTS_MISC_IR_GET_TITLE)
 	    .appendField(Blockly.Msg.ROBOTS_MISC_IR_SENSOR_PIN)

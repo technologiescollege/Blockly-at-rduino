@@ -33,9 +33,8 @@ goog.require('Blockly.Blocks');
 
 
 Blockly.Blocks['zumo_motors_FN'] = {
-  helpUrl: 'https://www.pololu.com/docs/0J57/5',
   init: function() {
-    this.setColour(190);
+    this.setColour("#646464");
     this.appendDummyInput()
         .appendField("Zumo -No flip")
         .appendField(new Blockly.FieldImage("https://a.pololu-files.com/picture/0J4110.250.jpg", 64, 64))
@@ -47,12 +46,12 @@ Blockly.Blocks['zumo_motors_FN'] = {
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setTooltip('Drive Pololu Zumo (wired correctly)');
+	this.setHelpUrl('https://www.pololu.com/docs/0J57/5');
   }
 };
 Blockly.Blocks['zumo_motors_FR'] = {
-  helpUrl: 'https://www.pololu.com/docs/0J57/5',
   init: function() {
-    this.setColour(190);
+    this.setColour("#646464");
     this.appendDummyInput()
         .appendField("Zumo -Flip Right")
         .appendField(new Blockly.FieldImage("https://a.pololu-files.com/picture/0J4110.250.jpg", 64, 64))
@@ -64,12 +63,12 @@ Blockly.Blocks['zumo_motors_FR'] = {
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setTooltip('Drive Pololu Zumo (flipped right motor)');
+	this.setHelpUrl('https://www.pololu.com/docs/0J57/5');
   }
 };
 Blockly.Blocks['zumo_motors_FL'] = {
-  helpUrl: 'https://www.pololu.com/docs/0J57/5',
   init: function() {
-    this.setColour(190);
+    this.setColour("#646464");
     this.appendDummyInput()
         .appendField("Zumo -Flip Left")
         .appendField(new Blockly.FieldImage("https://a.pololu-files.com/picture/0J4110.250.jpg", 64, 64))
@@ -81,13 +80,14 @@ Blockly.Blocks['zumo_motors_FL'] = {
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setTooltip('Drive Pololu Zumo (flipped left motor)');
+	this.setHelpUrl('https://www.pololu.com/docs/0J57/5');
   }
 };
-Blockly.Blocks['zumo_motors_FB'] = {
-  helpUrl: 'https://www.pololu.com/docs/0J57/5',
+Blockly.Blocks.zumo_motors_FB = {
   init: function() {
-    this.setColour(190);
-    this.appendDummyInput()
+    this.setColour("#646464");
+	this.setHelpUrl("https://www.pololu.com/docs/0J57/5");
+    this.appendDummyInput("")
         .appendField("Zumo -Both Flipped")
         .appendField(new Blockly.FieldImage("https://a.pololu-files.com/picture/0J4110.250.jpg", 64, 64))
         .appendField(new Blockly.FieldDropdown([["Stop", "stop"], ["Forward", "forward"], ["Right", "right"], ["Left", "left"], ["Backward", "backward"]]), "DIRECTION");
@@ -101,9 +101,8 @@ Blockly.Blocks['zumo_motors_FB'] = {
   }
 };
 Blockly.Blocks['ardu_motor'] = {
-  helpUrl: 'https://www.sparkfun.com/datasheets/DevTools/Arduino/Ardumoto_v13.pdf',
   init: function() {
-    this.setColour(190);
+    this.setColour("#646464");
     this.appendDummyInput()
         .appendField("ArduMotor")
         .appendField(new Blockly.FieldImage("https://cdn.sparkfun.com//assets/parts/3/8/4/9/09815-01.jpg", 64, 64))
@@ -115,14 +114,14 @@ Blockly.Blocks['ardu_motor'] = {
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setTooltip('ArduMotor Sparkfun Shield A=left B=right');
+	this.setHelpUrl('https://www.sparkfun.com/datasheets/DevTools/Arduino/Ardumoto_v13.pdf');
   }
 };
 
 Blockly.Blocks['ardu_motor_s'] = {
-  helpUrl: 'https://www.sparkfun.com/datasheets/DevTools/Arduino/Ardumoto_v13.pdf',
   init: function() {
-    this.setColour(190);
- this.setInputsInline(false) ; 
+    this.setColour("#646464");
+	this.setInputsInline(false) ; 
 	this.appendDummyInput()
 		.appendField("ArduMotor_Speed")
         .appendField(new Blockly.FieldDropdown([["Stop", "stop"], ["Forward", "forward"], ["Right", "right"], ["Left", "left"], ["Backward", "backward"]]), "DIRECTION")
@@ -140,6 +139,6 @@ Blockly.Blocks['ardu_motor_s'] = {
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setTooltip('ArduMotor Sparkfun Shield A=left B=right');
+	this.setHelpUrl('https://www.sparkfun.com/datasheets/DevTools/Arduino/Ardumoto_v13.pdf');
   }
 };
-

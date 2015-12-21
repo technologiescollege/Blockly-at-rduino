@@ -32,7 +32,7 @@ goog.require('Blockly.Blocks');
 /**
  * Common HSV hue for all blocks in this category.
  */
-Blockly.Blocks.loops.HUE = 120;
+Blockly.Blocks.loops.HUE = "#C88330";
 
 Blockly.Blocks['controls_repeat_ext'] = {
   /**

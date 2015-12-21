@@ -32,7 +32,7 @@ goog.require('Blockly.Blocks');
 Blockly.Blocks['setup_button_wait_il'] = {
   helpUrl: 'http://arduino.cc/en/tutorial/button',
   init: function() {
-    this.setColour(190);
+    this.setColour("#646464");
     this.appendDummyInput()
         .appendField("1 time wait - Gen")
         //.appendField(new Blockly.FieldImage("http://", 64, 64))
@@ -47,7 +47,7 @@ Blockly.Blocks['setup_button_wait_il'] = {
 Blockly.Blocks['setup_button_wait_iph'] = {
   helpUrl: 'https://www.pololu.com/docs/0J57/5',
   init: function() {
-    this.setColour(190);
+    this.setColour("#646464");
     this.appendDummyInput()
         .appendField("1 Time wait - Zumo")
         //.appendField(new Blockly.FieldImage("http://", 64, 64))
@@ -62,7 +62,7 @@ Blockly.Blocks['setup_button_wait_iph'] = {
 Blockly.Blocks['fourpin_ranger'] = {
   helpUrl: 'http://unknown.com',
   init: function() {
-    this.setColour(190);
+    this.setColour("#646464");
 	this.appendDummyInput()
 	    .appendField("Four Pin Ranger")
 		.appendField("Trigger_Pin#")

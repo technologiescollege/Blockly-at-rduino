@@ -37,8 +37,7 @@ BlocklyDuino.renderContent = function() {
   
 	if (content.prop('id') == 'content_blocks') {
 		// If the workspace was changed by the XML tab, Firefox will have
-		// performed
-		// an incomplete rendering due to Blockly being invisible. Rerender.
+		// performed an incomplete rendering due to Blockly being invisible. Rerender.
 		BlocklyDuino.workspace.render();
 		$(".blocklyTreeSeparator").removeAttr("style");
 //		BlocklyDuino.workspace.setVisible(true);
@@ -514,17 +513,17 @@ BlocklyDuino.init = function() {
 	// build Blockly ...
 	BlocklyDuino.workspace = Blockly.inject('content_blocks',
 		      {grid:
-		          {spacing: 25,
-		           length: 3,
-		           colour: '#ccc',
-		           snap: true},
-		       sounds : true,
-		       media: 'media/',
-		       rtl: Code.isRtl(),
-		       toolbox: BlocklyDuino.buildToolbox(),
-		       zoom:
-		           {controls: true,
-		            wheel: true}
+		          {	spacing: 25,
+					length: 3,
+					colour: '#ccc',
+					snap: true},
+					sounds : true,
+					media: 'media/',
+					rtl: Code.isRtl(),
+					toolbox: BlocklyDuino.buildToolbox(),
+					zoom:
+						{controls: true,
+						wheel: true}
 		      });
 
 	BlocklyDuino.renderContent();
@@ -640,6 +639,5 @@ BlocklyDuino.switchOrientation = function() {
 	    search = search.replace(/\?/, '?ort=hor&');
 	  }
 
-	window.location = window.location.protocol + '//' +
-	      window.location.host + window.location.pathname + search;
+	window.location = window.location.protocol + '//' + window.location.host + window.location.pathname + search;
 };
