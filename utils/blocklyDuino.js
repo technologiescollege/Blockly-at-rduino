@@ -22,7 +22,7 @@ Blockly.pathToBlockly = './';
 Blockly.pathToMedia = './media/';
 
 BlocklyDuino.selectedTab = 'blocks';
-BlocklyDuino.selectedCard = '';
+BlocklyDuino.selectedCard = 'arduino_uno';
 
 /**
  * Blockly's main workspace.
