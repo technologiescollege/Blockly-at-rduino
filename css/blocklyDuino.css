@@ -456,6 +456,9 @@ html[dir="RTL"] .colors_category {
   cursor: move;
 }
 
+.draggable {
+}
+
 #videoModal .modal-content:hover {
   cursor: move;
 }

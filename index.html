@@ -167,7 +167,7 @@
 		       <span class="glyphicon glyphicon-question-sign"></span>
 		       <span id="span_tuto"> </span>
 		   </a>
-		   <button id="btn_videos" class="btn btn-danger text-left" data-backdrop="static" data-toggle="modal" data-target="#videoModal">
+		   <button id="btn_videos" class="btn btn-danger text-left">
 		       <span class="glyphicon glyphicon-expand"> </span>
 		       <span id="span_videos"> </span>
 		   </button>
@@ -220,8 +220,7 @@
 				<a id="btn_saveArduino" class='btn btn-primary' href="#" role='button'>
 					<span class="glyphicon glyphicon-save"> </span>
 					<span id="span_saveIno"> </span>
-				</a>			
-				
+				</a>				
                 <pre id="pre_arduino"></pre>
                 <div id="debug_arduino"></div>
             </div>
@@ -302,16 +301,16 @@
   </div>
 </div>
 <!-- videos modal -->
-<div class="modal fade" id="videoModal" tabindex="-1" role="dialog" aria-labelledby="videoModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
+<div id="videoModal" class="modal-dialog" style="display:none">
     <div class="modal-content">
       <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <button type="button" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></button>
         <h4 class="modal-title" id="videoModalLabel"></h4>
       </div>
-		<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/videoseries?list=PLwy0yw3Oq4-uFNmgedXx9_L_TJNORo-4N&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>	
+	  <div class="modal-body text-center">
+		<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/videoseries?list=PLwy0yw3Oq4-uFNmgedXx9_L_TJNORo-4N&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+		</div>
     </div>
-  </div>
 </div>
 
 <!-- toolbox config modal -->

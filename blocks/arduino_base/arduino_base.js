@@ -86,13 +86,12 @@ Blockly.Blocks.inout_digital_write_validator = {
   init: function() {
     this.setColour("#00979D");
     this.setHelpUrl(Blockly.Msg.ARDUINO_INOUT_DIGITAL_WRITE_HELPURL);
-    this.appendDummyInput()
+    this.appendValueInput("PIN",new Blockly.FieldTextInput('',  Blockly.Arduino.pinDigitalValidator))
 		.appendField(Blockly.Msg.ARDUINO_INOUT_DIGITAL_WRITE_INPUT1)
-		.appendField(new Blockly.FieldTextInput('',  Blockly.Arduino.pinDigitalValidator), 'PIN');
-    this.setInputsInline(true);
-	this.appendDummyInput("")
+	this.appendDummyInput("STAT")
       	.appendField(Blockly.Msg.ARDUINO_INOUT_DIGITAL_WRITE_INPUT2)
-      	.appendField(new Blockly.FieldDropdown(Blockly.Msg.FIELDDROPDOWN), "STAT");
+		.appendField(new Blockly.FieldDropdown(Blockly.Msg.FIELDDROPDOWN))
+    this.setInputsInline(true);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setTooltip(Blockly.Msg.ARDUINO_INOUT_DIGITAL_WRITE_TOOLTIP);

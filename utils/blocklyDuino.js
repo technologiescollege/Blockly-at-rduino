@@ -328,13 +328,23 @@ BlocklyDuino.bindFunctions = function () {
  });
 
   $('#miniCard, #btn_picture').on('click', function() {
-	  $('#showcardModal').css("z-index", 1050);
+	  $('#showcardModal').css("z-index", 1040);
 	  $('#showcardModal').show();
   });
   
   $('#showcardModal button.close').on('click', function() {
 	  $('#showcardModal').css("z-index", 0);
 	  $('#showcardModal').hide();
+  }); 
+  
+  $('#btn_videos').on('click', function() {
+	  $('#videoModal').css("z-index", 1050);
+	  $('#videoModal').show();
+  });
+  
+  $('#videoModal button.close').on('click', function() {
+	  $('#videoModal').css("z-index", 0);
+	  $('#videoModal').hide();
   });
 //  $('#btn_switch').on("click",  BlocklyDuino.switchOrientation);
 
@@ -591,12 +601,25 @@ BlocklyDuino.init = function() {
 					});
 		});
 	
-		// draggable "modal" dialog containing card image
+		// draggable "modal" dialog containing card image & videos
 	    $('body').on('mousedown', '#showcardModal', function() {
 	        $(this).addClass('draggable').parents().on('mousemove', function(e) {
 	            $('.draggable').offset({
-	                top: e.pageY - $('.draggable').outerHeight() / 2,
+	                top: e.pageY,
 	                left: e.pageX - $('.draggable').outerWidth() / 2
+	            }).on('mouseup', function() {
+	                $(this).removeClass('draggable');
+	            });
+	            e.preventDefault();
+	        });
+	    }).on('mouseup', function() {
+	        $('.draggable').removeClass('draggable');
+	    });
+		$('body').on('mousedown', '#videoModal', function() {
+	        $(this).addClass('draggable').parents().on('mousemove', function(e) {
+	            $('.draggable').offset({
+	                top: e.pageY,
+	                left: e.pageX - $('.draggable').outerWidth()/2
 	            }).on('mouseup', function() {
 	                $(this).removeClass('draggable');
 	            });
