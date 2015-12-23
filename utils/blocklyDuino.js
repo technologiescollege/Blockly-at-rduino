@@ -329,7 +329,7 @@ BlocklyDuino.bindFunctions = function () {
 
   $('#miniCard, #btn_picture').on('click', function() {
 	  $('#showcardModal').css("z-index", 1040);
-	  $('#showcardModal').show();
+	  $('#showcardModal').css("display", "inline-block");
   });
   
   $('#showcardModal button.close').on('click', function() {
@@ -339,7 +339,7 @@ BlocklyDuino.bindFunctions = function () {
   
   $('#btn_videos').on('click', function() {
 	  $('#videoModal').css("z-index", 1050);
-	  $('#videoModal').show();
+	  $('#videoModal').css("display", "inline-block");
   });
   
   $('#videoModal button.close').on('click', function() {
