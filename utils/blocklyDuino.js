@@ -628,6 +628,10 @@ BlocklyDuino.init = function() {
 	    }).on('mouseup', function() {
 	        $('.draggable').removeClass('draggable');
 	    });
+		
+		$(':f.label').click(function() {
+			$(":f.label").css('color', '#000000');
+		});
 	};
 
 /**
