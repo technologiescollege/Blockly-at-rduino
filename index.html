@@ -14,31 +14,35 @@
 <script type="text/javascript" src="blocks/blockly/procedures.js"></script>
 <script type="text/javascript" src="blocks/blockly/text.js"></script>
 <script type="text/javascript" src="blocks/blockly/variables.js"></script>
-<script type="text/javascript" src="blocks/blockly/constant.js"></script>
 
 <script type="text/javascript" src="blocks/arduino_base/arduino_base.js"></script>
+<script type="text/javascript" src="blocks/arduino_base/constant.js"></script>
 <script type="text/javascript" src="blocks/bitbloq/bitbloq.js"></script>
 <script type="text/javascript" src="blocks/grove/grove.js"></script>
 <script type="text/javascript" src="blocks/robots/motors.js"></script>
 <script type="text/javascript" src="blocks/robots/robotmisc.js"></script>
 <script type="text/javascript" src="blocks/technozone51/technozone.js"></script>
+<script type="text/javascript" src="blocks/zumobot/zumo_motors.js"></script>
+<script type="text/javascript" src="blocks/zumobot/zumo_sensors.js"></script>
 
-<script type="text/javascript" src="generators/arduino/blocklyduino.js"></script>
 <script type="text/javascript" src="generators/arduino/arduino_base.js"></script>
 <script type="text/javascript" src="generators/arduino/bitbloq.js"></script>
-<script type="text/javascript" src="generators/arduino/control.js"></script>
+<script type="text/javascript" src="generators/arduino/constant.js"></script>
 <script type="text/javascript" src="generators/arduino/grove.js"></script>
-<script type="text/javascript" src="generators/arduino/logic.js"></script>
-<script type="text/javascript" src="generators/arduino/math.js"></script>
-<script type="text/javascript" src="generators/arduino/procedures.js"></script>
 <script type="text/javascript" src="generators/arduino/motors.js"></script>
 <script type="text/javascript" src="generators/arduino/robotmisc.js"></script>
 <script type="text/javascript" src="generators/arduino/technozone.js"></script>
-<script type="text/javascript" src="generators/arduino/text.js"></script>
-<script type="text/javascript" src="generators/arduino/variables.js"></script>
-<script type="text/javascript" src="generators/arduino/constant.js"></script>
+<script type="text/javascript" src="generators/arduino/zumo_motors.js"></script>
+<script type="text/javascript" src="generators/arduino/zumo_sensors.js"></script>
+<script type="text/javascript" src="generators/blockly/control.js"></script>
+<script type="text/javascript" src="generators/blockly/logic.js"></script>
+<script type="text/javascript" src="generators/blockly/math.js"></script>
+<script type="text/javascript" src="generators/blockly/procedures.js"></script>
+<script type="text/javascript" src="generators/blockly/text.js"></script>
+<script type="text/javascript" src="generators/blockly/variables.js"></script>
 
-<script type="text/javascript" src="utils/blocklyDuino.js"></script>
+<script type="text/javascript" src="utils/blocklyduino.js"></script>
+<script type="text/javascript" src="utils/blockly@rduino.js"></script>
 <script type="text/javascript" src="utils/spin.js"></script>
 <script type="text/javascript" src="utils/jquery-2.1.3.min.js"></script>
 <script type="text/javascript" src="utils/bootstrap.min.3.3.6.js"></script>
@@ -55,7 +59,7 @@
 
 <link rel="stylesheet" type="text/css" href="css/prettify.css">
 <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-<link rel="stylesheet" type="text/css" href="css/blocklyDuino.css">
+<link rel="stylesheet" type="text/css" href="css/blockly@rduino.css">
 <link rel="stylesheet" type="text/css" href="css/s2aio.css">
 
 <script type="text/javascript">
@@ -255,12 +259,12 @@
 			  <br />
 			  <span><b>Blockly@rduino</b></span> (<a href="https://github.com/technologiescollege/Blockly-at-rduino">Github</a>)
               <span id="aboutBody" style="font-style: italic;"> </span>
-              <br /> - Blockly (<a href='https://developers.google.com/blockly' target='blank'>https://developers.google.com/blockly</a>)
-              <br /> - CompilerFlasher (<a href='https://codebender.cc' target='blank'>https://codebender.cc</a>)
-              <br /> - JQuerry (<a href='https://jquery.com' target='blank'>https://jquery.com</a>)
+              <br /> - Alan Yorinks - pymata : (<a href='http://mryslab.blogspot.fr/' target='blank'>http://mryslab.blogspot.fr/</a>)
+              <br /> - Fred Lin (@gasolin) - BlocklyDuino : (<a href='https://github.com/BlocklyDuino/BlocklyDuino' target='blank'>'https://github.com/BlocklyDuino/BlocklyDuino</a>)
+              <br /> - Blockly : (<a href='https://developers.google.com/blockly' target='blank'>https://developers.google.com/blockly</a>)
               <br /> - Bootstrap (<a href='http://getbootstrap.com' target='blank'>http://getbootstrap.com</a>)
-              <br /> - svg-pan-zoom (<a href='https://github.com/ariutta/svg-pan-zoom' target='blank'>https://github.com/ariutta/svg-pan-zoom</a>)
-              <br /> - Alan Yorinks (<a href='http://mryslab.blogspot.fr/' target='blank'>http://mryslab.blogspot.fr/</a>)
+              <br /> - Codebender - CompilerFlasher : (<a href='https://codebender.cc' target='blank'>https://codebender.cc</a>)
+              <br /> - JQuerry (<a href='https://jquery.com' target='blank'>https://jquery.com</a>)
       </div>
     </div>
   </div>
@@ -277,7 +281,6 @@
       </div>
     </div>
   </div>
-
 <!-- example modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-lg">
@@ -312,7 +315,6 @@
 		</div>
     </div>
 </div>
-
 <!-- toolbox config modal -->
 <div class="modal fade" id="configModal" tabindex="-1" role="dialog" aria-labelledby="configModalLabel" aria-hidden="true">
   <div class="modal-dialog">
@@ -322,10 +324,10 @@
         <h4 class="modal-title" id="configModalLabel"></h4>
       </div>
       
-      <input type="checkbox" name="select_all" id="select_all"/> <span id="span_select_all"> </span>
-      <div style="float : right; margin-right : 5px;">
-            <input type="checkbox" name="put_in_url" id="put_in_url"/> <span id="span_put_in_url"> </span>
-      </div>
+		  <input type="checkbox" name="select_all" id="select_all"/> <span id="span_select_all"> </span>
+		  <div style="float : right; margin-right : 5px;">
+				<input type="checkbox" name="put_in_url" id="put_in_url"/> <span id="span_put_in_url"> </span>
+		  </div>
       
       <div class="modal-body" id="modal-body-config"></div>
       <div class="modal-footer">
@@ -353,7 +355,6 @@
     </div>
   </div>
 </div>
-
 <!--    toolboxes definitions -->
 <xml id="CAT_LOGIC" style="display: none">
     <category name="CAT_LOGIC" colour="#E1A91A">
