@@ -629,9 +629,12 @@ BlocklyDuino.init = function() {
 	        $('.draggable').removeClass('draggable');
 	    });
 		
-		$(':f.label').click(function() {
-			$(":f.label").css('color', '#000000');
-		});
+/*pour changer couleur texte dans toolbox
+        $("div:contains('bitbloq').blocklyTreeRow, div:contains('bitbloq').blocklyTreeRow ~ div").on("click", function() {
+            $(this).removeClass("blocklyTreeSelected")
+            $(this).find("div.blocklyTreeSelected").removeClass("blocklyTreeSelected")
+            $(this).find("span").css("color", "#000000");
+        });*/
 	};
 
 /**

@@ -11,7 +11,7 @@ goog.require('Blockly.Arduino');
 
 Blockly.Blocks['bq_led'] = {
   init: function() {
-    this.setColour("#FFFFFF");
+    this.setColour("#608621");
 	this.setHelpUrl(Blockly.Msg.BQ_HELPURL);
 	this.appendDummyInput()
         .appendField(Blockly.Msg.GROVE_INOUT_LED_INPUT1)
@@ -21,10 +21,10 @@ Blockly.Blocks['bq_led'] = {
         .setAlign(Blockly.ALIGN_RIGHT)
         .appendField(Blockly.Msg.GROVE_INOUT_LED_INPUT2);		
     //this.setInputsInline(true);
-	this.appendDummyInput("")
+	this.appendDummyInput()
 		.setAlign(Blockly.ALIGN_RIGHT)
-        .appendField(Blockly.Msg.GROVE_INOUT_LED_INPUT3)
-        .appendField(new Blockly.FieldDropdown(Blockly.Msg.FIELDDROPDOWN), "STAT");
+      	.appendField(Blockly.Msg.GROVE_INOUT_LED_INPUT3)
+		.appendField(new Blockly.FieldDropdown(Blockly.Msg.FIELDDROPDOWN), 'STAT')
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setTooltip(Blockly.Msg.BQ_LED1_TOOLTIP);
@@ -33,7 +33,7 @@ Blockly.Blocks['bq_led'] = {
 
 Blockly.Blocks['bq_buzzer'] = {
   init: function() {
-    this.setColour("#FFFFFF");	
+    this.setColour("#608621");	
 	this.setHelpUrl(Blockly.Msg.BQ_HELPURL);
     this.appendDummyInput()
 		.appendField(Blockly.Msg.TECHNOZONE_BUZZER1_TITLE)
@@ -57,7 +57,7 @@ Blockly.Blocks['bq_buzzer'] = {
 
 Blockly.Blocks['bq_ultrason'] = {
   init: function() {
-    this.setColour("#FFFFFF");
+    this.setColour("#608621");
 	this.setHelpUrl(Blockly.Msg.BQ_HELPURL);
     this.appendDummyInput()
 	    .appendField(Blockly.Msg.TECHNOZONE_SONAR1_TITLE)
@@ -77,7 +77,7 @@ Blockly.Blocks['bq_ultrason'] = {
 
 Blockly.Blocks['bq_servo'] = {
   init: function() {
-    this.setColour("#FFFFFF");
+    this.setColour("#608621");
 	this.setHelpUrl(Blockly.Msg.BQ_HELPURL);
     this.appendDummyInput("")
         .appendField(Blockly.Msg.BQ_SERVO1_TITLEA)
@@ -98,7 +98,7 @@ Blockly.Blocks['bq_servo'] = {
 
 Blockly.Blocks['bq_servo_rotation_continue'] = {
   init: function() {
-    this.setColour("#FFFFFF");
+    this.setColour("#608621");
 	this.setHelpUrl(Blockly.Msg.BQ_HELPURL);
     this.appendDummyInput()
         .appendField(Blockly.Msg.BQ_SERVO2_TITLEA)
@@ -122,7 +122,7 @@ Blockly.Blocks['bq_servo_rotation_continue'] = {
 
 Blockly.Blocks['bq_bouton_poussoir'] = {
   init: function() {
-    this.setColour("#FFFFFF");
+    this.setColour("#608621");
 	this.setHelpUrl(Blockly.Msg.BQ_HELPURL);
     this.appendDummyInput()
         .appendField(Blockly.Msg.GROVE_INOUT_BUTTON_TEXT)
@@ -138,7 +138,7 @@ Blockly.Blocks['bq_bouton_poussoir'] = {
 
 Blockly.Blocks['bq_luminosite'] = {
   init: function() {
-    this.setColour("#FFFFFF");
+    this.setColour("#608621");
 	this.setHelpUrl(Blockly.Msg.BQ_HELPURL);
     this.appendDummyInput()
         .appendField(Blockly.Msg.BQ_LUX_TITLE)
@@ -154,7 +154,7 @@ Blockly.Blocks['bq_luminosite'] = {
 
 Blockly.Blocks['bq_potentiometre'] = {
   init: function() {
-    this.setColour("#FFFFFF");
+    this.setColour("#608621");
 	this.setHelpUrl(Blockly.Msg.BQ_HELPURL);
     this.appendDummyInput("")
         .appendField(Blockly.Msg.BQ_POT_TITLE)
@@ -170,7 +170,7 @@ Blockly.Blocks['bq_potentiometre'] = {
 
 Blockly.Blocks['bq_bluetooth_slave'] = {
   init: function() {
-    this.setColour("#FFFFFF");
+    this.setColour("#608621");
 	this.setHelpUrl(Blockly.Msg.BQ_HELPURL);
     this.appendDummyInput()
       .appendField(Blockly.Msg.BQ_BT_TITLE)
@@ -201,7 +201,7 @@ Blockly.Blocks['bq_bluetooth_slave'] = {
 
 Blockly.Blocks['bq_capteur_de_ligne'] = {
   init: function() {
-    this.setColour("#FFFFFF");
+    this.setColour("#608621");
 	this.setHelpUrl(Blockly.Msg.BQ_HELPURL);
     this.appendDummyInput()
         .appendField(Blockly.Msg.BQ_IR_TITLE)

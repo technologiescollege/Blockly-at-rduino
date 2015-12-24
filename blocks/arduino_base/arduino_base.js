@@ -73,9 +73,9 @@ Blockly.Blocks.inout_buildin_led = {
    init: function() {
      this.setColour("#00979D");
      this.setHelpUrl(Blockly.Msg.ARDUINO_INOUT_BUILDIN_LED_HELPURL);
-     this.appendDummyInput("")
-	     .appendField(Blockly.Msg.ARDUINO_INOUT_BUILDIN_LED_INPUT)
-	     .appendField(new Blockly.FieldDropdown(Blockly.Msg.FIELDDROPDOWN), "STAT");
+	this.appendDummyInput()
+      	.appendField(Blockly.Msg.ARDUINO_INOUT_BUILDIN_LED_INPUT)
+		.appendField(new Blockly.FieldDropdown(Blockly.Msg.FIELDDROPDOWN), 'STAT')
      this.setPreviousStatement(true, null);
      this.setNextStatement(true, null);
      this.setTooltip(Blockly.Msg.ARDUINO_INOUT_BUILDIN_LED_TOOLTIP);
@@ -86,11 +86,12 @@ Blockly.Blocks.inout_digital_write_validator = {
   init: function() {
     this.setColour("#00979D");
     this.setHelpUrl(Blockly.Msg.ARDUINO_INOUT_DIGITAL_WRITE_HELPURL);
-    this.appendValueInput("PIN",new Blockly.FieldTextInput('',  Blockly.Arduino.pinDigitalValidator))
+    this.appendDummyInput()
 		.appendField(Blockly.Msg.ARDUINO_INOUT_DIGITAL_WRITE_INPUT1)
-	this.appendDummyInput("STAT")
+		.appendField(new Blockly.FieldTextInput('',  Blockly.Arduino.pinDigitalValidator), 'PIN');
+	this.appendDummyInput()
       	.appendField(Blockly.Msg.ARDUINO_INOUT_DIGITAL_WRITE_INPUT2)
-		.appendField(new Blockly.FieldDropdown(Blockly.Msg.FIELDDROPDOWN))
+		.appendField(new Blockly.FieldDropdown(Blockly.Msg.FIELDDROPDOWN), 'STAT')
     this.setInputsInline(true);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
@@ -271,7 +272,7 @@ Blockly.Blocks.inout_analog_read_validator = {
   }
 };
 
-Blockly.Blocks.inout_onoff = {
+Blockly.Blocks['inout_onoff'] = {
   init: function() {
     this.setColour("#00979D");
 	this.setHelpUrl(Blockly.Msg.ARDUINO_INOUT_ONOFF_HELPURL);

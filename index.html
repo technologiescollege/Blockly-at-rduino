@@ -601,9 +601,7 @@
 			</block>
 			<block type="inout_digital_write">
 				<value name="STAT">
-				<shadow type="logic_boolean">
-				<field name="BOOL">vrai</field>
-				</shadow>
+				<shadow type="inout_onoff"></shadow>
 			</block>
 			<block type="inout_PWM_write">
                 <value name="NUM">
@@ -787,8 +785,8 @@
     </category>
 </xml>
 <xml id="CAT_BQ" style="display: none">
-    <category name="CAT_BQ" colour="#FFFFFF">
-        <category name="CAT_BQ_IN" colour="#FFFFFF">
+    <category name="CAT_BQ" colour="#608621">
+        <category name="CAT_BQ_IN" colour="#608621">
             <block type="bq_ultrason">
 				<value name="TRIGER">
 				<shadow type="math_number">
@@ -830,7 +828,7 @@
 				</value>
 			</block>
         </category>
-        <category name="CAT_BQ_OUT" colour="#FFFFFF">
+        <category name="CAT_BQ_OUT" colour="#608621">
             <block type="bq_led">
 				<value name="PIN">
 				<shadow type="math_number">
@@ -874,9 +872,7 @@
 				</shadow>
 				</value>
 				<value name="SENS">
-				<shadow type="logic_boolean">
-				<field name="BOOL">vrai</field>
-				</shadow>
+				<shadow type="inout_onoff"></shadow>
 				</value>
 				<value name="VITESSE">
 				<shadow type="inout_angle">
@@ -885,7 +881,7 @@
 				</value>			
 			</block>
         </category>
-        <category name="CAT_BQ_COMM" colour="#FFFFFF">
+        <category name="CAT_BQ_COMM" colour="#608621">
             <block type="bq_bluetooth_slave">
 				<value name="PIN">
 				<shadow type="math_number">

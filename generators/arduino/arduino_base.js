@@ -55,7 +55,7 @@ Blockly.Arduino.base_map = function() {
 };
 
 Blockly.Arduino.inout_buildin_led = function() {
-  var dropdown_stat = Blockly.Arduino.valueToCode(this, 'STAT', Blockly.Arduino.ORDER_ATOMIC);
+  var dropdown_stat = this.getFieldValue('STAT');
   Blockly.Arduino.setups_['setup_output_13'] = 'pinMode(13, OUTPUT);';
   var code = 'digitalWrite(13, ' + dropdown_stat + ');\n'
   return code;
@@ -70,8 +70,8 @@ Blockly.Arduino.inout_digital_write = function() {
 };
 
 Blockly.Arduino.inout_digital_write_validator = function() {
-  var dropdown_pin = Blockly.Arduino.valueToCode(this, 'PIN', Blockly.Arduino.ORDER_ATOMIC);
-  var dropdown_stat = Blockly.Arduino.valueToCode(this, 'STAT', Blockly.Arduino.ORDER_ATOMIC);
+  var dropdown_pin = this.getFieldValue('PIN');
+  var dropdown_stat = this.getFieldValue('STAT');
   Blockly.Arduino.setups_['setup_output_' + dropdown_pin] = 'pinMode(' + dropdown_pin + ', OUTPUT);';
   var code = 'digitalWrite(' + dropdown_pin + ', ' + dropdown_stat + ');\n'
   return code;
@@ -79,6 +79,14 @@ Blockly.Arduino.inout_digital_write_validator = function() {
 
 Blockly.Arduino.inout_PWM_write = function() {
   var dropdown_pin = Blockly.Arduino.valueToCode(this, 'PIN', Blockly.Arduino.ORDER_ATOMIC);
+  var value_num = Blockly.Arduino.valueToCode(this, 'NUM', Blockly.Arduino.ORDER_ATOMIC);
+  Blockly.Arduino.setups_['setup_output'+dropdown_pin] = 'pinMode('+dropdown_pin+', OUTPUT);';
+  var code = 'analogWrite(' + dropdown_pin + ', ' + value_num + ');\n';
+  return code;
+};
+
+Blockly.Arduino.inout_PWM_write_validator = function() {
+  var dropdown_pin = this.getFieldValue('PIN');
   var value_num = Blockly.Arduino.valueToCode(this, 'NUM', Blockly.Arduino.ORDER_ATOMIC);
   Blockly.Arduino.setups_['setup_output'+dropdown_pin] = 'pinMode('+dropdown_pin+', OUTPUT);';
   var code = 'analogWrite(' + dropdown_pin + ', ' + value_num + ');\n';
@@ -96,14 +104,6 @@ Blockly.Arduino.servo_move = function() {
   return code;
 };
 
-Blockly.Arduino.inout_PWM_write_validator = function() {
-  var dropdown_pin = Blockly.Arduino.valueToCode(this, 'PIN', Blockly.Arduino.ORDER_ATOMIC);
-  var value_num = Blockly.Arduino.valueToCode(this, 'NUM', Blockly.Arduino.ORDER_ATOMIC);
-  Blockly.Arduino.setups_['setup_output'+dropdown_pin] = 'pinMode('+dropdown_pin+', OUTPUT);';
-  var code = 'analogWrite(' + dropdown_pin + ', ' + value_num + ');\n';
-  return code;
-};
-
 Blockly.Arduino.inout_digital_read = function() {
   var dropdown_pin = Blockly.Arduino.valueToCode(this, 'PIN', Blockly.Arduino.ORDER_ATOMIC);
   Blockly.Arduino.setups_['setup_input_' + dropdown_pin] = 'pinMode(' + dropdown_pin + ', INPUT);';
@@ -112,7 +112,7 @@ Blockly.Arduino.inout_digital_read = function() {
 };
 
 Blockly.Arduino.inout_digital_read_validator = function() {
-  var dropdown_pin = Blockly.Arduino.valueToCode(this, 'PIN', Blockly.Arduino.ORDER_ATOMIC);
+  var dropdown_pin = this.getFieldValue('PIN');
   Blockly.Arduino.setups_['setup_input_' + dropdown_pin] = 'pinMode(' + dropdown_pin + ', INPUT);';
   var code = 'digitalRead(' + dropdown_pin + ')';
   return [code, Blockly.Arduino.ORDER_ATOMIC];
@@ -127,7 +127,7 @@ Blockly.Arduino.inout_analog_write = function() {
 };
 
 Blockly.Arduino.inout_analog_write_validator = function() {
-  var dropdown_pin = Blockly.Arduino.valueToCode(this, 'PIN', Blockly.Arduino.ORDER_ATOMIC);
+  var dropdown_pin = this.getFieldValue('PIN');
   var value_num = Blockly.Arduino.valueToCode(this, 'NUM', Blockly.Arduino.ORDER_ATOMIC);
   Blockly.Arduino.setups_['setup_output'+dropdown_pin] = 'pinMode('+dropdown_pin+', OUTPUT);';
   var code = 'analogWrite(' + dropdown_pin + ', ' + value_num + ');\n';
@@ -142,14 +142,14 @@ Blockly.Arduino.inout_analog_read = function() {
 };
 
 Blockly.Arduino.inout_analog_read_validator = function() {
-  var dropdown_pin = Blockly.Arduino.valueToCode(this, 'PIN', Blockly.Arduino.ORDER_ATOMIC);
+  var dropdown_pin = this.getFieldValue('PIN');
   Blockly.Arduino.setups_['setup_input_'+dropdown_pin] = 'pinMode('+dropdown_pin+', INPUT);';
   var code = 'analogRead(' + dropdown_pin + ')';
   return [code, Blockly.Arduino.ORDER_ATOMIC];
 };
 
-Blockly.Arduino.inout_highlow = function() {
-  // Boolean values HIGH and LOW.
+Blockly.Arduino.inout_onoff = function() {
+  // Boolean values HIGH and LOW. 
   var code = (this.getFieldValue('BOOL') == 'HIGH') ? 'HIGH' : 'LOW';
   return [code, Blockly.Arduino.ORDER_ATOMIC];
 };
