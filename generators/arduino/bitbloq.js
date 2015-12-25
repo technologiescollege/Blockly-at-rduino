@@ -8,10 +8,10 @@ goog.provide('Blockly.Arduino.bq');
 goog.require('Blockly.Arduino');
 
 Blockly.Arduino.bq_led = function() {
-  var dropdown_pin = Blockly.Arduino.valueToCode(this, 'PIN', Blockly.Arduino.ORDER_ATOMIC);
+	var dropdown_pin = Blockly.Arduino.valueToCode(this, 'PIN', Blockly.Arduino.ORDER_ATOMIC);
   var dropdown_stat = this.getFieldValue('STAT');
   Blockly.Arduino.setups_['setup_green_led_'+dropdown_pin] = 'pinMode('+dropdown_pin+', OUTPUT);';
-  var code = 'digitalWrite('+dropdown_pin+','+dropdown_stat+');\n'
+  var code = 'digitalWrite('+dropdown_pin+','+dropdown_stat+');\n';
   return code;
 };
 
