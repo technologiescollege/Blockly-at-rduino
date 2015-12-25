@@ -38,12 +38,12 @@ Blockly.Blocks['grove_led'] = {
     this.appendDummyInput()
         .appendField(Blockly.Msg.GROVE_INOUT_LED_INPUT1)
         .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/grove/400px-LED1.jpg', 64, 64));
-	this.appendValueInput("NUM", 'Number')
+	this.appendValueInput("PIN", 'Number')
         .setCheck('Number')
         .setAlign(Blockly.ALIGN_RIGHT)
         .appendField(Blockly.Msg.GROVE_INOUT_LED_INPUT2);		
-    //this.setInputsInline(true);
-	this.appendDummyInput("")
+    this.setInputsInline(true);
+	this.appendDummyInput()
 		.setAlign(Blockly.ALIGN_RIGHT)
         .appendField(Blockly.Msg.GROVE_INOUT_LED_INPUT3)
         .appendField(new Blockly.FieldDropdown(Blockly.Msg.FIELDDROPDOWN), "STAT");
@@ -149,9 +149,13 @@ Blockly.Blocks['grove_button'] = {
     this.setHelpUrl(Blockly.Msg.GROVE_INOUT_BUTTON_HELPURL);
 	this.appendDummyInput()
         .appendField(Blockly.Msg.GROVE_INOUT_BUTTON_TEXT)
-        .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/grove/400px-Button1.jpg', 64, 64))
-        .appendField(Blockly.Msg.GROVE_INOUT_BUTTON_INPUT)
-        .appendField(new Blockly.FieldTextInput('',  Blockly.Arduino.pinDigitalValidator), 'PIN');
+        .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/grove/400px-Button1.jpg', 64, 64));
+    this.appendDummyInput()
+		.appendField(Blockly.Msg.GROVE_INOUT_BUTTON_INPUT)
+		.appendField(new Blockly.FieldTextInput('', Blockly.Arduino.pinDigitalValidator), 'PIN');
+    this.setInputsInline(true);
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
     this.setOutput(true, 'Boolean');
     this.setTooltip(Blockly.Msg.GROVE_INOUT_BUTTON_TOOLTIP);
   }
@@ -165,7 +169,7 @@ Blockly.Blocks['grove_rotary_angle'] = {
         .appendField(Blockly.Msg.GROVE_INOUT_ROT_ANGLE_TEXT)
         .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/grove/400px-Potentiometer1.jpg', 64, 64))
         .appendField(Blockly.Msg.GROVE_INOUT_ROT_ANGLE_INPUT)
-        .appendField(new Blockly.FieldTextInput('',  Blockly.Arduino.pinDigitalValidator), 'PIN');
+        .appendField(new Blockly.FieldTextInput('',  Blockly.Arduino.pinAnalogValidator), 'PIN');
     this.setOutput(true, 'Number');
     this.setTooltip(Blockly.Msg.GROVE_INOUT_ROT_ANGLE_TOOLTIP);
   }

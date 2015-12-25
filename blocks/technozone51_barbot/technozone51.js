@@ -357,9 +357,11 @@ Blockly.Blocks['technozone_buzzer1'] = {
     this.appendValueInput("NUM",'Number')
         .setAlign(Blockly.ALIGN_RIGHT)
         .appendField(Blockly.Msg.TECHNOZONE51_TEXT44)
+        .setCheck(Number);
     this.appendValueInput("TPS",'Number')
         .setAlign(Blockly.ALIGN_RIGHT)
         .appendField(Blockly.Msg.TECHNOZONE51_TEXT45)
+        .setCheck(Number);
     this.setInputsInline(false);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
@@ -451,7 +453,7 @@ Blockly.Blocks['technozone_pap1init'] = {
 	this.setHelpUrl('http://www.techno-zone-51.fr/dokuwiki2/doku.php?id=documentation:pap1');
     this.appendDummyInput("")
         .appendField(Blockly.Msg.TECHNOZONE51_TEXT63)
-        .appendField(new Blockly.FieldImage("blocks/technozone51/pap1.jpg", 64, 64))
+        .appendField(new Blockly.FieldImage("blocks/technozone51/pap1.jpg", 64, 64))        
     this.appendDummyInput("")
 		.appendField(Blockly.Msg.TECHNOZONE51_TEXT64)
         .appendField(Blockly.Msg.TECHNOZONE51_TEXT65)

@@ -88,22 +88,22 @@ Blockly.Arduino.bq_luminosite = function() {
 };
 
 Blockly.Arduino.bq_servo_rotation_continue = function() {
-  var dropdown_pin = Blockly.Arduino.valueToCode(this, 'PIN', Blockly.Arduino.ORDER_ATOMIC); //this.getFieldValue('PIN');
+  var pin = Blockly.Arduino.valueToCode(this, 'PIN', Blockly.Arduino.ORDER_ATOMIC);
   var value_degree = Blockly.Arduino.valueToCode(this, 'VITESSE', Blockly.Arduino.ORDER_ATOMIC);
   var value_sens = Blockly.Arduino.valueToCode(this, 'SENS', Blockly.Arduino.ORDER_ATOMIC);
   
   Blockly.Arduino.definitions_['define_servo'] = '#include <Servo.h>\n';
-  Blockly.Arduino.definitions_['var_servo'+dropdown_pin] = 'Servo servo_'+dropdown_pin+';\n';
-  Blockly.Arduino.setups_['setup_servo_'+dropdown_pin] = 'servo_'+dropdown_pin+'.attach('+dropdown_pin+');\n';
+  Blockly.Arduino.definitions_['var_servo'+pin] = 'Servo servo_'+pin+';\n';
+  Blockly.Arduino.setups_['setup_servo_'+pin] = 'servo_'+pin+'.attach('+pin+');\n';
   if (value_sens =="true")
 		{
 		//value_degree = 'map(value_degree, 0, 255, 0 , 90)' ;
-		var code = 'servo_'+dropdown_pin+'.write(90 + map('+value_degree+', 0, 255, 0 , 90));\n';
+		var code = 'servo_'+pin+'.write(90 + map('+value_degree+', 0, 255, 0 , 90));\n';
 		}
 		else
 		{
 		//value_degree = '90 - map(value_degree, 0, 255, 0 , 90)' ;
-		var code = 'servo_'+dropdown_pin+'.write(90 - map('+value_degree+', 0, 255, 0 , 90));\n';
+		var code = 'servo_'+pin+'.write(90 - map('+value_degree+', 0, 255, 0 , 90));\n';
 		}
   // var code = 'servo_'+dropdown_pin+'.write('+value_degree+');\n';
   return code;

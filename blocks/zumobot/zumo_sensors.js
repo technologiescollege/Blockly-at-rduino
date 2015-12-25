@@ -66,7 +66,7 @@ Blockly.Blocks['fourpin_ranger'] = {
 	this.appendDummyInput()
 	    .appendField("Four Pin Ranger")
 		.appendField("Trigger_Pin#")
-        .appendField(new Blockly.FieldDropdown(profile.defaultBoard.digital), "PIN")
+        .appendField(new Blockly.FieldDropdown(profile.defaultBoard.digital), "PIN1")
 		this.setInputsInline(false);
 	this.appendDummyInput()
 		.appendField(new Blockly.FieldImage("../../media/fourpin_range.jpg", 40, 40))

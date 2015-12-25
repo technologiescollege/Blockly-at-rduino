@@ -36,17 +36,17 @@ Blockly.Blocks['bq_buzzer'] = {
     this.setColour("#608621");	
 	this.setHelpUrl(Blockly.Msg.BQ_HELPURL);
     this.appendDummyInput()
-		.appendField(Blockly.Msg.TECHNOZONE_BUZZER1_TITLE)
+		.appendField(Blockly.Msg.TECHNOZONE51_TEXT43)
         .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/bitbloq/buzzer.jpg', 64, 64));
 	this.appendValueInput("PIN", 'Number')
         .setCheck('Number')
         .setAlign(Blockly.ALIGN_RIGHT)
         .appendField(Blockly.Msg.BQ_PIN);	
     this.appendValueInput("NUM", 'Number')
-        .appendField(Blockly.Msg.TECHNOZONE_BUZZER1_FREQ)
+        .appendField(Blockly.Msg.TECHNOZONE51_TEXT44)
         .setCheck(Number);
     this.appendValueInput("TPS", 'Number')
-        .appendField(Blockly.Msg.TECHNOZONE_BUZZER1_DUR)
+        .appendField(Blockly.Msg.TECHNOZONE51_TEXT45)
         .setCheck('Number');
     this.setInputsInline(true);
     this.setPreviousStatement(true, null);
@@ -60,16 +60,16 @@ Blockly.Blocks['bq_ultrason'] = {
     this.setColour("#608621");
 	this.setHelpUrl(Blockly.Msg.BQ_HELPURL);
     this.appendDummyInput()
-	    .appendField(Blockly.Msg.TECHNOZONE_SONAR1_TITLE)
+	    .appendField(Blockly.Msg.TECHNOZONE51_TEXT28)
         .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/bitbloq/ranger.jpg', 64, 64));
     this.appendValueInput("TRIGER", 'Number')
         .setCheck('Number')
         .setAlign(Blockly.ALIGN_RIGHT)
-		.appendField(Blockly.Msg.TECHNOZONE_SONAR1_TRIG);
+		.appendField(Blockly.Msg.TECHNOZONE51_TEXT29);
     this.appendValueInput("DIST", 'Number')
         .setCheck('Number')
         .setAlign(Blockly.ALIGN_RIGHT)
-		.appendField(Blockly.Msg.TECHNOZONE_SONAR1_DIST);
+		.appendField(Blockly.Msg.TECHNOZONE51_TEXT30);
 	this.setOutput(true, 'Boolean');
     this.setTooltip(Blockly.Msg.BQ_SONAR1_TOOLTIP);
   }

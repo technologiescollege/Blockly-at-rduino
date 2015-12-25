@@ -30,7 +30,7 @@ goog.require('Blockly.Arduino');
 
 
 Blockly.Arduino.setup_button_wait_il = function() {
-  var wait_pin = Blockly.Arduino.valueToCode(this, 'PIN', Blockly.Arduino.ORDER_ATOMIC);;
+  var wait_pin = this.getFieldValue('PIN');
    Blockly.Arduino.definitions_["define_button_wait"] = ""+
    "   const int buttonPin = "+wait_pin+";\n"+
    "   int buttonState = 0;\n"+
@@ -44,7 +44,7 @@ Blockly.Arduino.setup_button_wait_il = function() {
 };
 
 Blockly.Arduino.setup_button_wait_iph = function() {
-  var wait_pin = Blockly.Arduino.valueToCode(this, 'PIN', Blockly.Arduino.ORDER_ATOMIC);;
+  var wait_pin = this.getFieldValue('PIN');
    Blockly.Arduino.definitions_["define_button_wait"] = ""+
    "   const int buttonPin = "+wait_pin+";\n"+
    "   int buttonState = 0;\n"+
@@ -58,10 +58,10 @@ Blockly.Arduino.setup_button_wait_iph = function() {
 };
 
 Blockly.Arduino.fourpin_ranger = function() {
-   var dropdown_tpin = Blockly.Arduino.valueToCode(this, 'PIN', Blockly.Arduino.ORDER_ATOMIC);;
-   var dropdown_epin = Blockly.Arduino.valueToCode(this, 'PIN2', Blockly.Arduino.ORDER_ATOMIC);;
-  Blockly.Arduino.definitions_["define_fourpin_"+dropdown_tpin] = "  const int pingPin"+dropdown_tpin+" = "+dropdown_tpin+";\n"+
-  "  const int sensorPin"+dropdown_epin+" = "+dropdown_epin+";\n";
+   var dropdown_tpin = this.getFieldValue('PIN1');
+   var dropdown_epin = this.getFieldValue('PIN2');
+  Blockly.Arduino.definitions_["define_fourpin_"+dropdown_tpin] = "const int pingPin"+dropdown_tpin+" = "+dropdown_tpin+";\n"+
+  "const int sensorPin"+dropdown_epin+" = "+dropdown_epin+";\n";
       Blockly.Arduino.definitions_['define_ping'] = "long Ping"+dropdown_tpin+"()\n"+
 "{\n"+
       "// The PING))) is triggered by a HIGH pulse of 2 or more microseconds.\n"+
