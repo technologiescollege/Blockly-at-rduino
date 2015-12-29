@@ -28,15 +28,15 @@ goog.provide('Blockly.Arduino.motors');
 
 goog.require('Blockly.Arduino');
 
-Blockly.Arduino.zumo_motors_FN = function() {
+Blockly.Arduino['zumo_motors_FN'] = function() {
   var dropdown_direction = this.getFieldValue('DIRECTION');
-  var speed = 127;//Blockly.Arduino.valueToCode(this, 'SPEED', Blockly.Arduino.ORDER_ATOMIC) || '127';
+  var speed = 127;
   Blockly.Arduino.setups_["setup_motor"] = "pinMode(7,OUTPUT);//directionPinA\n"+
   "  pinMode(8,OUTPUT);//directionPinB\n"+
   "  pinMode(9,OUTPUT);//speedPinA\n"+
   "  pinMode(10,OUTPUT);//speedPinB\n";
   var code = "";
-  if(dropdown_direction==="forward"){
+  if(dropdown_direction=="forward"){
     Blockly.Arduino.definitions_['define_forward'] = "void forward()\n"+
 "{\n"+
      "  analogWrite(9,"+speed+");//input a simulation value to set the speed\n"+
@@ -45,7 +45,7 @@ Blockly.Arduino.zumo_motors_FN = function() {
      "  digitalWrite(8,LOW);//turn DC Motor A move clockwise\n"+
 "}\n";
     code="forward();\n";
-  } else if (dropdown_direction==="right") {
+  } else if (dropdown_direction=="right") {
     Blockly.Arduino.definitions_['define_right'] = "void right()\n"+
 "{\n"+
      "  analogWrite(9,"+speed+");//input a simulation value to set the speed\n"+
@@ -54,7 +54,7 @@ Blockly.Arduino.zumo_motors_FN = function() {
      "  digitalWrite(8,LOW);//turn DC Motor A move anti-clockwise\n"+
 "}\n\n";
     code="right();\n";
-  } else if (dropdown_direction==="left") {
+  } else if (dropdown_direction=="left") {
     Blockly.Arduino.definitions_['define_left'] = "void left()\n"+
 "{\n"+
      "  analogWrite(9,"+speed+");//input a simulation value to set the speed\n"+
@@ -63,7 +63,7 @@ Blockly.Arduino.zumo_motors_FN = function() {
      "  digitalWrite(8,HIGH);//turn DC Motor A move clockwise\n"+
 "}\n\n";
     code="left();\n";
-  } else if (dropdown_direction==="backward"){
+  } else if (dropdown_direction=="backward"){
     Blockly.Arduino.definitions_['define_backward'] = "void backward()\n"+
 "{\n"+
      "  analogWrite(9,"+speed+");//input a simulation value to set the speed\n"+
@@ -72,7 +72,7 @@ Blockly.Arduino.zumo_motors_FN = function() {
      "  digitalWrite(8,HIGH);//turn DC Motor A move anticlockwise\n"+
 "}\n\n";
     code="backward();\n";
-  } else if (dropdown_direction==="stop"){
+  } else if (dropdown_direction=="stop"){
     Blockly.Arduino.definitions_['define_stop'] = "void stop()\n"+
 "{\n"+
      "  analogWrite(9,0);//input a simulation value to set the speed\n"+
@@ -80,7 +80,7 @@ Blockly.Arduino.zumo_motors_FN = function() {
 "}\n\n"
     code="stop();\n";
   }
-  return code;
+  return [code, Blockly.Arduino.ORDER_ATOMIC];
 };
 Blockly.Arduino.zumo_motors_FL = function() {
   var dropdown_direction = this.getFieldValue('DIRECTION');
@@ -134,8 +134,9 @@ Blockly.Arduino.zumo_motors_FL = function() {
 "}\n\n"
     code="stop();\n";
   }
-  return code;
+  return [code, Blockly.Arduino.ORDER_ATOMIC];
 };
+
 Blockly.Arduino.zumo_motors_FR = function() {
   var dropdown_direction = this.getFieldValue('DIRECTION');
   var speed = 127;//Blockly.Arduino.valueToCode(this, 'SPEED', Blockly.Arduino.ORDER_ATOMIC) || '127';
@@ -188,8 +189,9 @@ Blockly.Arduino.zumo_motors_FR = function() {
 "}\n\n"
     code="stop();\n";
   }
-  return code;
+  return [code, Blockly.Arduino.ORDER_ATOMIC];
 };
+
 Blockly.Arduino.zumo_motors_FB = function() {
   var dropdown_direction = this.getFieldValue('DIRECTION');
   var speed = 127;//Blockly.Arduino.valueToCode(this, 'SPEED', Blockly.Arduino.ORDER_ATOMIC) || '127';
@@ -242,116 +244,292 @@ Blockly.Arduino.zumo_motors_FB = function() {
 "}\n\n"
     code="stop();\n";
   }
-  return code;
-};
-Blockly.Arduino.ardu_motor = function() {
-  var dropdown_direction = this.getFieldValue('DIRECTION');
-  var speed = 127;//Blockly.Arduino.valueToCode(this, 'SPEED', Blockly.Arduino.ORDER_ATOMIC) || '127';
-  Blockly.Arduino.setups_["setup_motor"] = "pinMode(12,OUTPUT);//directionPinA\n"+
-  "  pinMode(13,OUTPUT);//directionPinB\n"+
-  "  pinMode(3,OUTPUT);//speedPinA\n"+
-  "  pinMode(11,OUTPUT);//speedPinB\n";
-  var code = "";
-  if(dropdown_direction==="forward"){
-    Blockly.Arduino.definitions_['define_forward'] = "void forward()\n"+
-"{\n"+
-     "  analogWrite(3,"+speed+");//Motor A speed\n"+
-     "  analogWrite(11,"+speed+");//Motor B speed\n"+
-     "  digitalWrite(13,HIGH);//turn DC Motor B (right) move clockwise\n"+
-     "  digitalWrite(12,LOW);//turn DC Motor A (left) move clockwise\n"+
-"}\n";
-    code="forward();\n";
-  } else if (dropdown_direction==="right") {
-    Blockly.Arduino.definitions_['define_right'] = "void right()\n"+
-"{\n"+
-     "  analogWrite(3,"+speed+");//Motor A speed\n"+
-     "  analogWrite(11,"+speed+");//Motor B speed\n"+
-     "  digitalWrite(13,LOW);//turn DC Motor B  (right) move clockwise\n"+
-     "  digitalWrite(12,LOW);//turn DC Motor A (left) move anti-clockwise\n"+
-"}\n\n";
-    code="right();\n";
-  } else if (dropdown_direction==="left") {
-    Blockly.Arduino.definitions_['define_left'] = "void left()\n"+
-"{\n"+
-     "  analogWrite(3,"+speed+");//Motor A speed\n"+
-     "  analogWrite(11,"+speed+");//Motor B speed\n"+
-     "  digitalWrite(13,HIGH);//turn DC Motor B (right) move anticlockwise\n"+
-     "  digitalWrite(12,HIGH);//turn DC Motor A (left) move clockwise\n"+
-"}\n\n";
-    code="left();\n";
-  } else if (dropdown_direction==="backward"){
-    Blockly.Arduino.definitions_['define_backward'] = "void backward()\n"+
-"{\n"+
-     "  analogWrite(3,"+speed+");//Motor A speed\n"+
-     "  analogWrite(11,"+speed+");//Motor B speed\n"+
-     "  digitalWrite(13,LOW);//turn DC Motor B(right) move anticlockwise\n"+
-     "  digitalWrite(12,HIGH);//turn DC Motor A(left) move anticlockwise\n"+
-"}\n\n";
-    code="backward();\n";
-  } else if (dropdown_direction==="stop"){
-    Blockly.Arduino.definitions_['define_stop'] = "void stop()\n"+
-"{\n"+
-     "  analogWrite(3,0);//Motor A speed\n"+
-     "  analogWrite(11,0);//Motor B speed\n"+
-"}\n\n"
-    code="stop();\n";
-  }
-  return code;
+  return [code, Blockly.Arduino.ORDER_ATOMIC];
 };
 
-Blockly.Arduino.ardu_motor_s = function() {
+Blockly.Arduino.zumo_motors_FNs = function() {
   var dropdown_direction = this.getFieldValue('DIRECTION');
   var speedA = Blockly.Arduino.valueToCode(this, 'SPEEDA', Blockly.Arduino.ORDER_ATOMIC) || '127'
   var speedB = Blockly.Arduino.valueToCode(this, 'SPEEDB', Blockly.Arduino.ORDER_ATOMIC) || '127'
-  Blockly.Arduino.setups_["setup_motor"] = "pinMode(12,OUTPUT);//directionPinA\n"+
-  "  pinMode(13,OUTPUT);//directionPinB\n"+
-  "  pinMode(3,OUTPUT);//speedPinA\n"+
-  "  pinMode(11,OUTPUT);//speedPinB\n";
+  Blockly.Arduino.setups_["setup_motor"] = "pinMode(7,OUTPUT);//directionPinA\n"+
+  "  pinMode(8,OUTPUT);//directionPinB\n"+
+  "  pinMode(9,OUTPUT);//speedPinA\n"+
+  "  pinMode(10,OUTPUT);//speedPinB\n";
   var code = "";
   if(dropdown_direction==="forward"){
     Blockly.Arduino.definitions_['define_forward'] = "void forward()\n"+
 "{\n"+
-     "  analogWrite(3,"+speedA+");//Motor A speed\n"+
-     "  analogWrite(11,"+speedB+");//Motor B speed\n"+
-     "  digitalWrite(13,HIGH);//turn DC Motor B (right) move clockwise\n"+
-     "  digitalWrite(12,LOW);//turn DC Motor A (left) move clockwise\n"+
+     "  analogWrite(9,"+speedA+");//Motor A speed\n"+
+     "  analogWrite(10,"+speedB+");//Motor B speed\n"+
+     "  digitalWrite(7,LOW);//turn DC Motor B (right) move clockwise\n"+
+     "  digitalWrite(8,LOW);//turn DC Motor A (left) move clockwise\n"+
 "}\n";
     code="forward();\n";
   } else if (dropdown_direction==="right") {
     Blockly.Arduino.definitions_['define_right'] = "void right()\n"+
 "{\n"+
-     "  analogWrite(3,"+speedA+");//Motor A speed\n"+
-     "  analogWrite(11,"+speedB+");//Motor B speed\n"+
-     "  digitalWrite(13,LOW);//turn DC Motor B (right) move clockwise\n"+
-     "  digitalWrite(12,LOW);//turn DC Motor A (left) move anti-clockwise\n"+
+     "  analogWrite(9,"+speedA+");//Motor A speed\n"+
+     "  analogWrite(10,"+speedB+");//Motor B speed\n"+
+     "  digitalWrite(7,HIGH);//turn DC Motor B (right) move clockwise\n"+
+     "  digitalWrite(8,LOW);//turn DC Motor A (left) move anti-clockwise\n"+
 "}\n\n";
     code="right();\n";
   } else if (dropdown_direction==="left") {
     Blockly.Arduino.definitions_['define_left'] = "void left()\n"+
 "{\n"+
-     "  analogWrite(3,"+speedA+");//Motor A speed\n"+
-     "  analogWrite(11,"+speedB+");//Motor B speed\n"+
-     "  digitalWrite(13,HIGH);//turn DC Motor B (right) move anticlockwise\n"+
-     "  digitalWrite(12,HIGH);//turn DC Motor A (left) move clockwise\n"+
+     "  analogWrite(9,"+speedA+");//Motor A speed\n"+
+     "  analogWrite(10,"+speedB+");//Motor B speed\n"+
+     "  digitalWrite(7,LOW);//turn DC Motor B (right) move anticlockwise\n"+
+     "  digitalWrite(8,HIGH);//turn DC Motor A (left) move clockwise\n"+
 "}\n\n";
     code="left();\n";
   } else if (dropdown_direction==="backward"){
     Blockly.Arduino.definitions_['define_backward'] = "void backward()\n"+
 "{\n"+
-     "  analogWrite(3,"+speedA+");//Motor A speed\n"+
-     "  analogWrite(11,"+speedB+");//Motor B speed\n"+
-     "  digitalWrite(13,LOW);//turn DC Motor B (right) move anticlockwise\n"+
-     "  digitalWrite(12,HIGH);//turn DC Motor A (left) move anticlockwise\n"+
+     "  analogWrite(9,"+speedA+");//Motor A speed\n"+
+     "  analogWrite(10,"+speedB+");//Motor B speed\n"+
+     "  digitalWrite(7,HIGH);//turn DC Motor B (right) move anticlockwise\n"+
+     "  digitalWrite(8,HIGH);//turn DC Motor A (left) move anticlockwise\n"+
 "}\n\n";
     code="backward();\n";
   } else if (dropdown_direction==="stop"){
     Blockly.Arduino.definitions_['define_stop'] = "void stop()\n"+
 "{\n"+
-     "  analogWrite(3,0);//Motor A speed\n"+
-     "  analogWrite(11,0);//Motor B speed\n"+
+     "  analogWrite(9,0);//Motor A speed\n"+
+     "  analogWrite(10,0);//Motor B speed\n"+
 "}\n\n"
     code="stop();\n";
   }
   return code;
 };
 
+Blockly.Arduino.zumo_motors_FLs = function() {
+  var dropdown_direction = this.getFieldValue('DIRECTION');
+  var speedA = Blockly.Arduino.valueToCode(this, 'SPEEDA', Blockly.Arduino.ORDER_ATOMIC) || '127'
+  var speedB = Blockly.Arduino.valueToCode(this, 'SPEEDB', Blockly.Arduino.ORDER_ATOMIC) || '127'
+  Blockly.Arduino.setups_["setup_motor"] = "pinMode(7,OUTPUT);//directionPinA\n"+
+  "  pinMode(8,OUTPUT);//directionPinB\n"+
+  "  pinMode(9,OUTPUT);//speedPinA\n"+
+  "  pinMode(10,OUTPUT);//speedPinB\n";
+  var code = "";
+  if(dropdown_direction==="forward"){
+    Blockly.Arduino.definitions_['define_forward'] = "void forward()\n"+
+"{\n"+
+     "  analogWrite(9,"+speedA+");//Motor A speed\n"+
+     "  analogWrite(10,"+speedB+");//Motor B speed\n"+
+     "  digitalWrite(7,HIGH);//turn DC Motor B (right) move clockwise\n"+
+     "  digitalWrite(8,LOW);//turn DC Motor A (left) move clockwise\n"+
+"}\n";
+    code="forward();\n";
+  } else if (dropdown_direction==="right") {
+    Blockly.Arduino.definitions_['define_right'] = "void right()\n"+
+"{\n"+
+     "  analogWrite(9,"+speedA+");//Motor A speed\n"+
+     "  analogWrite(10,"+speedB+");//Motor B speed\n"+
+     "  digitalWrite(7,LOW);//turn DC Motor B (right) move clockwise\n"+
+     "  digitalWrite(8,LOW);//turn DC Motor A (left) move anti-clockwise\n"+
+"}\n\n";
+    code="right();\n";
+  } else if (dropdown_direction==="left") {
+    Blockly.Arduino.definitions_['define_left'] = "void left()\n"+
+"{\n"+
+     "  analogWrite(9,"+speedA+");//Motor A speed\n"+
+     "  analogWrite(10,"+speedB+");//Motor B speed\n"+
+     "  digitalWrite(7,HIGH);//turn DC Motor B (right) move anticlockwise\n"+
+     "  digitalWrite(8,HIGH);//turn DC Motor A (left) move clockwise\n"+
+"}\n\n";
+    code="left();\n";
+  } else if (dropdown_direction==="backward"){
+    Blockly.Arduino.definitions_['define_backward'] = "void backward()\n"+
+"{\n"+
+     "  analogWrite(9,"+speedA+");//Motor A speed\n"+
+     "  analogWrite(10,"+speedB+");//Motor B speed\n"+
+     "  digitalWrite(7,LOW);//turn DC Motor B (right) move anticlockwise\n"+
+     "  digitalWrite(8,HIGH);//turn DC Motor A (left) move anticlockwise\n"+
+"}\n\n";
+    code="backward();\n";
+  } else if (dropdown_direction==="stop"){
+    Blockly.Arduino.definitions_['define_stop'] = "void stop()\n"+
+"{\n"+
+     "  analogWrite(9,0);//Motor A speed\n"+
+     "  analogWrite(10,0);//Motor B speed\n"+
+"}\n\n"
+    code="stop();\n";
+  }
+  return code;
+};
+
+Blockly.Arduino.zumo_motors_FRs = function() {
+  var dropdown_direction = this.getFieldValue('DIRECTION');
+  var speedA = Blockly.Arduino.valueToCode(this, 'SPEEDA', Blockly.Arduino.ORDER_ATOMIC) || '127'
+  var speedB = Blockly.Arduino.valueToCode(this, 'SPEEDB', Blockly.Arduino.ORDER_ATOMIC) || '127'
+  Blockly.Arduino.setups_["setup_motor"] = "pinMode(7,OUTPUT);//directionPinA\n"+
+  "  pinMode(8,OUTPUT);//directionPinB\n"+
+  "  pinMode(9,OUTPUT);//speedPinA\n"+
+  "  pinMode(10,OUTPUT);//speedPinB\n";
+  var code = "";
+  if(dropdown_direction==="forward"){
+    Blockly.Arduino.definitions_['define_forward'] = "void forward()\n"+
+"{\n"+
+     "  analogWrite(9,"+speedA+");//Motor A speed\n"+
+     "  analogWrite(10,"+speedB+");//Motor B speed\n"+
+     "  digitalWrite(7,LOW);//turn DC Motor B (right) move clockwise\n"+
+     "  digitalWrite(8,HIGH);//turn DC Motor A (left) move clockwise\n"+
+"}\n";
+    code="forward();\n";
+  } else if (dropdown_direction==="right") {
+    Blockly.Arduino.definitions_['define_right'] = "void right()\n"+
+"{\n"+
+     "  analogWrite(9,"+speedA+");//Motor A speed\n"+
+     "  analogWrite(10,"+speedB+");//Motor B speed\n"+
+     "  digitalWrite(7,HIGH);//turn DC Motor B (right) move clockwise\n"+
+     "  digitalWrite(8,HIGH);//turn DC Motor A (left) move anti-clockwise\n"+
+"}\n\n";
+    code="right();\n";
+  } else if (dropdown_direction==="left") {
+    Blockly.Arduino.definitions_['define_left'] = "void left()\n"+
+"{\n"+
+     "  analogWrite(9,"+speedA+");//Motor A speed\n"+
+     "  analogWrite(10,"+speedB+");//Motor B speed\n"+
+     "  digitalWrite(7,LOW);//turn DC Motor B (right) move anticlockwise\n"+
+     "  digitalWrite(8,LOW);//turn DC Motor A (left) move clockwise\n"+
+"}\n\n";
+    code="left();\n";
+  } else if (dropdown_direction==="backward"){
+    Blockly.Arduino.definitions_['define_backward'] = "void backward()\n"+
+"{\n"+
+     "  analogWrite(9,"+speedA+");//Motor A speed\n"+
+     "  analogWrite(10,"+speedB+");//Motor B speed\n"+
+     "  digitalWrite(7,HIGH);//turn DC Motor B (right) move anticlockwise\n"+
+     "  digitalWrite(8,LOW);//turn DC Motor A (left) move anticlockwise\n"+
+"}\n\n";
+    code="backward();\n";
+  } else if (dropdown_direction==="stop"){
+    Blockly.Arduino.definitions_['define_stop'] = "void stop()\n"+
+"{\n"+
+     "  analogWrite(9,0);//Motor A speed\n"+
+     "  analogWrite(10,0);//Motor B speed\n"+
+"}\n\n"
+    code="stop();\n";
+  }
+  return code;
+};
+
+Blockly.Arduino.zumo_motors_FBs = function() {
+  var dropdown_direction = this.getFieldValue('DIRECTION');
+  var speedA = Blockly.Arduino.valueToCode(this, 'SPEEDA', Blockly.Arduino.ORDER_ATOMIC) || '127'
+  var speedB = Blockly.Arduino.valueToCode(this, 'SPEEDB', Blockly.Arduino.ORDER_ATOMIC) || '127'
+  Blockly.Arduino.setups_["setup_motor"] = "pinMode(7,OUTPUT);//directionPinA\n"+
+  "  pinMode(8,OUTPUT);//directionPinB\n"+
+  "  pinMode(9,OUTPUT);//speedPinA\n"+
+  "  pinMode(10,OUTPUT);//speedPinB\n";
+  var code = "";
+  if(dropdown_direction==="forward"){
+    Blockly.Arduino.definitions_['define_forward'] = "void forward()\n"+
+"{\n"+
+     "  analogWrite(9,"+speedA+");//Motor A speed\n"+
+     "  analogWrite(10,"+speedB+");//Motor B speed\n"+
+     "  digitalWrite(7,HIGH);//turn DC Motor B (right) move clockwise\n"+
+     "  digitalWrite(8,HIGH);//turn DC Motor A (left) move clockwise\n"+
+"}\n";
+    code="forward();\n";
+  } else if (dropdown_direction==="right") {
+    Blockly.Arduino.definitions_['define_right'] = "void right()\n"+
+"{\n"+
+     "  analogWrite(9,"+speedA+");//Motor A speed\n"+
+     "  analogWrite(10,"+speedB+");//Motor B speed\n"+
+     "  digitalWrite(7,LOW);//turn DC Motor B (right) move clockwise\n"+
+     "  digitalWrite(8,HIGH);//turn DC Motor A (left) move anti-clockwise\n"+
+"}\n\n";
+    code="right();\n";
+  } else if (dropdown_direction==="left") {
+    Blockly.Arduino.definitions_['define_left'] = "void left()\n"+
+"{\n"+
+     "  analogWrite(9,"+speedA+");//Motor A speed\n"+
+     "  analogWrite(10,"+speedB+");//Motor B speed\n"+
+     "  digitalWrite(7,HIGH);//turn DC Motor B (right) move anticlockwise\n"+
+     "  digitalWrite(8,LOW);//turn DC Motor A (left) move clockwise\n"+
+"}\n\n";
+    code="left();\n";
+  } else if (dropdown_direction==="backward"){
+    Blockly.Arduino.definitions_['define_backward'] = "void backward()\n"+
+"{\n"+
+     "  analogWrite(9,"+speedA+");//Motor A speed\n"+
+     "  analogWrite(10,"+speedB+");//Motor B speed\n"+
+     "  digitalWrite(7,LOW);//turn DC Motor B (right) move anticlockwise\n"+
+     "  digitalWrite(8,LOW);//turn DC Motor A (left) move anticlockwise\n"+
+"}\n\n";
+    code="backward();\n";
+  } else if (dropdown_direction==="stop"){
+    Blockly.Arduino.definitions_['define_stop'] = "void stop()\n"+
+"{\n"+
+     "  analogWrite(9,0);//Motor A speed\n"+
+     "  analogWrite(10,0);//Motor B speed\n"+
+"}\n\n"
+    code="stop();\n";
+  }
+  return code;
+};
+
+Blockly.Arduino.zumo_motors_FUs = function() {
+  var dropdown_direction = this.getFieldValue('DIRECTION');
+  var speedA = Blockly.Arduino.valueToCode(this, 'SPEEDA', Blockly.Arduino.ORDER_ATOMIC);
+  var speedB = Blockly.Arduino.valueToCode(this, 'SPEEDB', Blockly.Arduino.ORDER_ATOMIC);
+  var flipL = Blockly.Arduino.valueToCode(this, 'FLIPL', Blockly.Arduino.ORDER_ATOMIC); 
+  var flipR = Blockly.Arduino.valueToCode(this, 'FLIPR', Blockly.Arduino.ORDER_ATOMIC);
+  Blockly.Arduino.definitions_['var_boolean_flip'] = ""+
+  "  boolean FRight =!"+flipR+"; //Right/B Clockwise Right/B Forward\n"+
+  "  boolean BRight ="+flipR+"; //Right/B Anti-Clockwise Right/B Backward\n"+
+  "  boolean FLeft =!"+flipL+"; //Left/A Clockwise Left/A Forward\n"+
+  "  boolean BLeft ="+flipL+"; //Left/A Anti-Clockwise Left/A Backward\n";  
+  Blockly.Arduino.setups_["setup_motor"] = "pinMode(7,OUTPUT);//directionPinA\n"+
+  "  pinMode(8,OUTPUT);//directionPinB\n"+
+  "  pinMode(9,OUTPUT);//speedPinA\n"+
+  "  pinMode(10,OUTPUT);//speedPinB\n";
+  var code = "";
+  if(dropdown_direction==="forward"){
+    Blockly.Arduino.definitions_['define_forward'] = "void forward()\n"+
+"{\n"+
+     "  analogWrite(9,"+speedA+");//Motor A speed\n"+
+     "  analogWrite(10,"+speedB+");//Motor B speed\n"+
+     "  digitalWrite(7,FRight);//turn DC Motor B (right) move clockwise\n"+
+     "  digitalWrite(8,FLeft);//turn DC Motor A (left) move clockwise\n"+
+"}\n";
+    code="forward();\n";
+  } else if (dropdown_direction=="right") {
+    Blockly.Arduino.definitions_['define_right'] = "void right()\n"+
+"{\n"+
+     "  analogWrite(9,"+speedA+");//Motor A speed\n"+
+     "  analogWrite(10,"+speedB+");//Motor B speed\n"+
+     "  digitalWrite(7,BRight);//turn DC Motor B (right) move back\n"+
+     "  digitalWrite(8,FLeft);//turn DC Motor A (left) move forward\n"+
+"}\n\n";
+    code="right();\n";
+  } else if (dropdown_direction=="left") {
+    Blockly.Arduino.definitions_['define_left'] = "void left()\n"+
+"{\n"+
+     "  analogWrite(9,"+speedA+");//Motor A speed\n"+
+     "  analogWrite(10,"+speedB+");//Motor B speed\n"+
+     "  digitalWrite(7,FRight);//turn DC Motor B (right) move forward\n"+
+     "  digitalWrite(8,BLeft);//turn DC Motor A (left) move backward\n"+
+"}\n\n";
+    code="left();\n";
+  } else if (dropdown_direction=="backward"){
+    Blockly.Arduino.definitions_['define_backward'] = "void backward()\n"+
+"{\n"+
+     "  analogWrite(9,"+speedA+");//Motor A speed\n"+
+     "  analogWrite(10,"+speedB+");//Motor B speed\n"+
+     "  digitalWrite(7,BRight);//turn DC Motor B (right) move backward\n"+
+     "  digitalWrite(8,BLeft);//turn DC Motor A (left) move backward\n"+
+"}\n\n";
+    code="backward();\n";
+  } else if (dropdown_direction=="stop"){
+    Blockly.Arduino.definitions_['define_stop'] = "void stop()\n"+
+"{\n"+
+     "  analogWrite(9,0);//Motor A speed\n"+
+     "  analogWrite(10,0);//Motor B speed\n"+
+"}\n\n"
+    code="stop();\n";
+  }
+  return code;
+};

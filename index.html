@@ -13,39 +13,41 @@
 <script type="text/javascript" src="utils/bootstrap.min.3.3.6.js"></script>
 <script type="text/javascript" src="utils/prettify.js"></script>
 
-<script type="text/javascript" src="blocks/blockly/colour.js"></script>
-<script type="text/javascript" src="blocks/blockly/lists.js"></script>
+<!--script type="text/javascript" src="blocks/blockly/colour.js"></script>
+<script type="text/javascript" src="blocks/blockly/lists.js"></script-->
 <script type="text/javascript" src="blocks/blockly/logic.js"></script>
 <script type="text/javascript" src="blocks/blockly/loops.js"></script>
 <script type="text/javascript" src="blocks/blockly/math.js"></script>
-<script type="text/javascript" src="blocks/blockly/procedures.js"></script>
 <script type="text/javascript" src="blocks/blockly/text.js"></script>
 <script type="text/javascript" src="blocks/blockly/variables.js"></script>
+<script type="text/javascript" src="blocks/blockly/procedures.js"></script>
 
 <script type="text/javascript" src="blocks/arduino_base/arduino_base.js"></script>
 <script type="text/javascript" src="blocks/bitbloq/bitbloq.js"></script>
 <script type="text/javascript" src="blocks/grove/grove.js"></script>
-<script type="text/javascript" src="blocks/robots/robot_misc.js"></script>
-<script type="text/javascript" src="blocks/robots/robot_motors.js"></script>
 <script type="text/javascript" src="blocks/technozone51/technozone51.js"></script>
+<!--script type="text/javascript" src="blocks/technozone51/technozone51_barbot.js"></script-->
 <script type="text/javascript" src="blocks/zumobot/zumo_motors.js"></script>
 <script type="text/javascript" src="blocks/zumobot/zumo_sensors.js"></script>
+<script type="text/javascript" src="blocks/robots/robot_motors.js"></script>
+<script type="text/javascript" src="blocks/robots/robot_misc.js"></script>
 
 <script type="text/javascript" src="generators/blockly/control.js"></script>
 <script type="text/javascript" src="generators/blockly/logic.js"></script>
 <script type="text/javascript" src="generators/blockly/math.js"></script>
-<script type="text/javascript" src="generators/blockly/procedures.js"></script>
 <script type="text/javascript" src="generators/blockly/text.js"></script>
 <script type="text/javascript" src="generators/blockly/variables.js"></script>
+<script type="text/javascript" src="generators/blockly/procedures.js"></script>
 
 <script type="text/javascript" src="generators/arduino/arduino_base.js"></script>
 <script type="text/javascript" src="generators/arduino/bitbloq.js"></script>
 <script type="text/javascript" src="generators/arduino/grove.js"></script>
-<script type="text/javascript" src="generators/arduino/robot_misc.js"></script>
-<script type="text/javascript" src="generators/arduino/robot_motors.js"></script>
 <script type="text/javascript" src="generators/arduino/technozone51.js"></script>
+<!--script type="text/javascript" src="generators/arduino/technozone51_barbot.js"></script-->
 <script type="text/javascript" src="generators/arduino/zumo_motors.js"></script>
 <script type="text/javascript" src="generators/arduino/zumo_sensors.js"></script>
+<script type="text/javascript" src="generators/arduino/robot_motors.js"></script>
+<script type="text/javascript" src="generators/arduino/robot_misc.js"></script>
 
 <script type="text/javascript" src="supervision/s2aio_iot.js"></script>
 <!--TechnoZone51-->
@@ -258,29 +260,29 @@
 			  <br />
 			  <span><b>Blockly@rduino</b></span> (<a href="https://github.com/technologiescollege/Blockly-at-rduino">Github</a>)
               <span id="aboutBody" style="font-style: italic;"> </span>
-              <br /> - Blockly (<a href='https://developers.google.com/blockly' target='blank'>https://developers.google.com/blockly</a>)
-              <br /> - CompilerFlasher (<a href='https://codebender.cc' target='blank'>https://codebender.cc</a>)
-              <br /> - JQuerry (<a href='https://jquery.com' target='blank'>https://jquery.com</a>)
+              <br /> - Alan Yorinks - pymata : (<a href='http://mryslab.blogspot.fr/' target='blank'>http://mryslab.blogspot.fr/</a>)
+              <br /> - Fred Lin (@gasolin) - BlocklyDuino : (<a href='https://github.com/BlocklyDuino/BlocklyDuino' target='blank'>'https://github.com/BlocklyDuino/BlocklyDuino</a>)
+              <br /> - Blockly : (<a href='https://developers.google.com/blockly' target='blank'>https://developers.google.com/blockly</a>)
               <br /> - Bootstrap (<a href='http://getbootstrap.com' target='blank'>http://getbootstrap.com</a>)
-              <br /> - svg-pan-zoom (<a href='https://github.com/ariutta/svg-pan-zoom' target='blank'>https://github.com/ariutta/svg-pan-zoom</a>)
-              <br /> - Alan Yorinks (<a href='http://mryslab.blogspot.fr/' target='blank'>http://mryslab.blogspot.fr/</a>)
+			  <br /> - Codebender - CompilerFlasher : (<a href='https://codebender.cc' target='blank'>https://codebender.cc</a>)
+              <br /> - JQuerry (<a href='https://jquery.com' target='blank'>https://jquery.com</a>)
+			  <br /> - Español version : José Manuel Ruiz Gutiérrez (<a href='http://josemanuelruizgutierrez.blogspot.com.es/' target='blank'>blogspot</a>)
       </div>
     </div>
   </div>
 </div>
 <!-- picture "modal" -->
-  <div id="showcardModal" class="modal-dialog" style="display:none">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="showcardLabel"></h4>
-      </div>
-      <div class="modal-body text-center">
-              <img id="arduino_card_picture">
-      </div>
-    </div>
-  </div>
-
+<div id="showcardModal" class="modal-dialog" style="display:none">
+	<div class="modal-content">
+	  <div class="modal-header">
+		<button type="button" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+		<h4 class="modal-title" id="showcardLabel"></h4>
+	  </div>
+	  <div class="modal-body text-center">
+			  <img id="arduino_card_picture">
+	  </div>
+	</div>
+</div>
 <!-- example modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-lg">
@@ -315,7 +317,6 @@
 		</div>
     </div>
 </div>
-
 <!-- toolbox config modal -->
 <div class="modal fade" id="configModal" tabindex="-1" role="dialog" aria-labelledby="configModalLabel" aria-hidden="true">
   <div class="modal-dialog">
@@ -408,7 +409,8 @@
 		<block type="inout_angle_maths"></block>
         <block type="math_arithmetic"></block>
         <block type="math_single"></block>
-        <block type="math_trig"></block>
+        <block type="math_trig"></block>		
+        <block type="math_constant"></block>
         <block type="math_number_property"></block>
         <block type="math_change">
             <value name="DELTA">
@@ -557,8 +559,8 @@
 
 <xml id="CAT_ARDUINO" style="display: none">
     <category name="CAT_ARDUINO" colour="#00979D">
-        <block type="base_setup">
-		</block>
+        <block type="base_setup"></block>
+		<block type="base_const"></block>
 		<category name="CAT_ARDUINO_IN" colour="#00979D">
 			<block type="inout_analog_read_validator"></block>
             <block type="inout_digital_read_validator"></block>
@@ -651,139 +653,6 @@
 				</value>
 			</block>
             <block type="servo_read_degrees"></block>
-        </category>
-    </category>
-</xml>
-<xml id="CAT_ROBOTS" style="display: none">
-    <category name="CAT_ROBOTS" colour="#5b99a5">
-        <category name="CAT_ROBOTS_MOTORS" colour="#5b99a5">
-			<block type="arduino_s">
-				<value name="SPEEDA">
-					<shadow type="math_number">
-					<field name="NUM">175</field>
-					</shadow>
-				</value>
-				<value name="SPEEDB">
-					<shadow type="math_number">
-					<field name="NUM">175</field>
-					</shadow>
-				</value>
-			</block>
-			<block type="ardu_motor_s">
-				<value name="SPEEDA">
-					<shadow type="math_number">
-					<field name="NUM">175</field>
-					</shadow>
-				</value>
-				<value name="SPEEDB">
-					<shadow type="math_number">
-					<field name="NUM">175</field>
-					</shadow>
-				</value>
-			</block>
-			<block type="dfrobot_s">
-				<value name="SPEEDA">
-					<shadow type="math_number">
-					<field name="NUM">175</field>
-					</shadow>
-				</value>
-				<value name="SPEEDB">
-					<shadow type="math_number">
-					<field name="NUM">175</field>
-					</shadow>
-				</value>
-			</block>
-			<block type="generic_motor_s">
-				<value name="SPEEDA">
-					<shadow type="math_number">
-					<field name="NUM">175</field>
-					</shadow>
-				</value>
-				<value name="SPEEDB">
-					<shadow type="math_number">
-					<field name="NUM">175</field>
-					</shadow>
-				</value>
-			</block>
-			<block type="pololu_drv8835_s">
-				<value name="SPEEDA">
-					<shadow type="math_number">
-					<field name="NUM">175</field>
-					</shadow>
-				</value>
-				<value name="SPEEDB">
-					<shadow type="math_number">
-					<field name="NUM">175</field>
-					</shadow>
-				</value>
-			</block>
-			<block type="radio_shack_s">
-				<value name="SPEEDA">
-					<shadow type="math_number">
-					<field name="NUM">175</field>
-					</shadow>
-				</value>
-				<value name="SPEEDB">
-					<shadow type="math_number">
-					<field name="NUM">175</field>
-					</shadow>
-				</value>
-			</block>
-			<block type="zumo_motors_FNs">
-				<value name="SPEEDA">
-					<shadow type="math_number">
-					<field name="NUM">175</field>
-					</shadow>
-				</value>
-				<value name="SPEEDB">
-					<shadow type="math_number">
-					<field name="NUM">175</field>
-					</shadow>
-				</value>
-			</block>
-			<block type="zumo_motors_FUs">
-				<value name="SPEEDA">
-					<shadow type="math_number">
-					<field name="NUM">175</field>
-					</shadow>
-				</value>
-				<value name="SPEEDB">
-					<shadow type="math_number">
-					<field name="NUM">175</field>
-					</shadow>
-				</value>
-				<value name="FLIPL">
-					<shadow type="logic_boolean">
-					<field name="BOOL">False</field>
-					</shadow>
-				</value>
-				<value name="FLIPR">
-					<shadow type="logic_boolean">
-					<field name="BOOL">False</field>
-					</shadow>
-				</value>
-			</block>
-			<block type="generic_motor"></block>
-        </category>
-        <category name="CAT_ROBOT_MISC" colour="#5b99a5">
-			<block type="setup_button_wait_il"></block>
-			<block type="setup_button_wait_iph"></block>
-			<block type="IR_serial_decoder"></block>
-			<block type="IR_get_blink"></block>
-			<block type="IR_get"></block>
-			<block type="fourpin_ranger"></block>
-			<block type="play_notes_z">
-                <value name="DUR">
-                    <shadow type="math_number">
-                    <field name="NUM">0</field>
-                    </shadow>
-                </value>
-                <value name="VOL">
-                    <shadow type="math_number">
-                    <shadow name="NUM">0</field>
-                    </block>
-                </value>				
-			</block>
         </category>
     </category>
 </xml>
@@ -964,22 +833,23 @@
             <block type="technozone_led1yellow"></block>
             <block type="technozone_relay1"></block>
             <block type="technozone_buzzer1"></block>   
-        </category>
-        <category name="CAT_TECHNOZONE_MOTORS_CC" colour="#646464">
-            <block type="technozone_mot1easycon1"></block>
-            <block type="technozone_mot1easybot1"></block>
-            <block type="technozone_mot2"></block>
-        </category>
-        <category name="CAT_TECHNOZONE_MOTORS_PAP" colour="#646464">
-            <block type="technozone_pap1init"></block>
-            <block type="technozone_pap1cc"></block>
-            <block type="technozone_pap1relatif"></block>
-            <block type="technozone_pap1busy"></block>
-        </category>
-        <category name="CAT_TECHNOZONE_SERVO" colour="#646464">
-            <block type="technozone_servo1"></block>
-            <block type="technozone_read_servo1"></block>
-        </category>
+			<category name="CAT_TECHNOZONE_MOTORS_CC" colour="#646464">
+				<block type="technozone_mot1easycon1"></block>
+				<block type="technozone_mot1easybot1"></block>
+				<block type="technozone_mot2"></block>
+			</category>
+			<category name="CAT_TECHNOZONE_MOTORS_PAP" colour="#646464">
+				<block type="technozone_pap1init"></block>
+				<block type="technozone_pap1cc"></block>
+				<block type="technozone_pap1relatif"></block>
+				<block type="technozone_pap1busy"></block>
+			</category>
+			<category name="CAT_TECHNOZONE_SERVO" colour="#646464">
+				<block type="technozone_servo1"></block>
+				<block type="technozone_read_servo1"></block>
+			</category>
+		<sep></sep>
+		</category>
         <category name="CAT_TECHNOZONE_LCD" colour="#646464">
             <block type="technozone_lcdinit"></block>
             <block type="technozone_lcdspecial"></block>
@@ -1237,18 +1107,184 @@
     <category name="CAT_ZUMO" colour="#00138b">
         <category name="CAT_ZUMO_MOTORS" colour="#00138b">
             <block type="zumo_motors_FN"></block>
+			<block type="zumo_motors_FNs">
+				<value name="SPEEDA">
+					<shadow type="math_number">
+					<field name="NUM">175</field>
+					</shadow>
+				</value>
+				<value name="SPEEDB">
+					<shadow type="math_number">
+					<field name="NUM">175</field>
+					</shadow>
+				</value>
+			</block>
             <block type="zumo_motors_FR"></block>
+			<block type="zumo_motors_FRs">
+				<value name="SPEEDA">
+					<shadow type="math_number">
+					<field name="NUM">175</field>
+					</shadow>
+				</value>
+				<value name="SPEEDB">
+					<shadow type="math_number">
+					<field name="NUM">175</field>
+					</shadow>
+				</value>
+			</block>
             <block type="zumo_motors_FL"></block>
+            <block type="zumo_motors_FLs">
+				<value name="SPEEDA">
+					<shadow type="math_number">
+					<field name="NUM">175</field>
+					</shadow>
+				</value>
+				<value name="SPEEDB">
+					<shadow type="math_number">
+					<field name="NUM">175</field>
+					</shadow>
+				</value>
+			</block>
             <block type="zumo_motors_FB"></block>
-            <block type="ardu_motor"></block>
-            <block type="ardu_motor_s"></block>
+			<block type="zumo_motors_FBs">
+				<value name="SPEEDA">
+					<shadow type="math_number">
+					<field name="NUM">175</field>
+					</shadow>
+				</value>
+				<value name="SPEEDB">
+					<shadow type="math_number">
+					<field name="NUM">175</field>
+					</shadow>
+				</value>
+			</block>
+			<block type="zumo_motors_FUs">
+				<value name="SPEEDA">
+					<shadow type="math_number">
+					<field name="NUM">175</field>
+					</shadow>
+				</value>
+				<value name="SPEEDB">
+					<shadow type="math_number">
+					<field name="NUM">175</field>
+					</shadow>
+				</value>
+				<value name="FLIPL">
+					<shadow type="logic_boolean">
+					<field name="BOOL">False</field>
+					</shadow>
+				</value>
+				<value name="FLIPR">
+					<shadow type="logic_boolean">
+					<field name="BOOL">False</field>
+					</shadow>
+				</value>
+			</block>
         </category>
-        <category name="CAT_ZUMO_SENSORS" colour="#00138b">
+		<category name="CAT_ZUMO_SENSORS" colour="#00138b">
             <block type="setup_button_wait_il"></block>
             <block type="setup_button_wait_iph"></block>
             <block type="fourpin_ranger"></block>
+			<block type="play_notes_z">
+				<value name="DUR">
+					<shadow type="math_number">
+					<field name="NUM">1000</field>
+					</shadow>
+				</value>
+				<value name="VOL">
+					<shadow type="math_number">
+					<field name="NUM">127</field>
+					</shadow>
+				</value>
+			</block>
         </category>
     </category>
-</xml>     
+<sep></sep>
+</xml>
+<xml id="CAT_ROBOTS" style="display: none">
+    <category name="CAT_ROBOTS" colour="#5b99a5">
+        <category name="CAT_ROBOTS_MOTORS" colour="#5b99a5">
+			<block type="arduino_s">
+				<value name="SPEEDA">
+					<shadow type="math_number">
+					<field name="NUM">175</field>
+					</shadow>
+				</value>
+				<value name="SPEEDB">
+					<shadow type="math_number">
+					<field name="NUM">175</field>
+					</shadow>
+				</value>
+			</block>
+			<block type="ardu_motor"></block>
+			<block type="ardu_motor_s">
+				<value name="SPEEDA">
+					<shadow type="math_number">
+					<field name="NUM">175</field>
+					</shadow>
+				</value>
+				<value name="SPEEDB">
+					<shadow type="math_number">
+					<field name="NUM">175</field>
+					</shadow>
+				</value>
+			</block>
+			<block type="dfrobot_s">
+				<value name="SPEEDA">
+					<shadow type="math_number">
+					<field name="NUM">175</field>
+					</shadow>
+				</value>
+				<value name="SPEEDB">
+					<shadow type="math_number">
+					<field name="NUM">175</field>
+					</shadow>
+				</value>
+			</block>
+			<block type="generic_motor_s">
+				<value name="SPEEDA">
+					<shadow type="math_number">
+					<field name="NUM">175</field>
+					</shadow>
+				</value>
+				<value name="SPEEDB">
+					<shadow type="math_number">
+					<field name="NUM">175</field>
+					</shadow>
+				</value>
+			</block>
+			<block type="pololu_drv8835_s">
+				<value name="SPEEDA">
+					<shadow type="math_number">
+					<field name="NUM">175</field>
+					</shadow>
+				</value>
+				<value name="SPEEDB">
+					<shadow type="math_number">
+					<field name="NUM">175</field>
+					</shadow>
+				</value>
+			</block>
+			<block type="radio_shack_s">
+				<value name="SPEEDA">
+					<shadow type="math_number">
+					<field name="NUM">175</field>
+					</shadow>
+				</value>
+				<value name="SPEEDB">
+					<shadow type="math_number">
+					<field name="NUM">175</field>
+					</shadow>
+				</value>
+			</block>
+			<block type="generic_motor"></block>
+        </category>
+        <category name="CAT_ROBOT_MISC" colour="#5b99a5">
+			<block type="IR_serial_decoder"></block>
+			<block type="IR_get_blink"></block>
+			<block type="IR_get"></block>
+        </category>
+    </category>
+</xml>
 </body>
 </html>

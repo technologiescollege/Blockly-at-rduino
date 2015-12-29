@@ -524,7 +524,6 @@ BlocklyDuino.init = function() {
 										"position" : "absolute",
 										"top" : "0px",
 										"marginLeft" : "0px"});
-
 		// hide Title
 		$("#divTitre").css("display", "none");
 
@@ -643,7 +642,6 @@ BlocklyDuino.init = function() {
 BlocklyDuino.setOrientation = function() {
 
 	var newOrientation = BlocklyDuino.getStringParamFromUrl('ort', '');
-	
 	
 	if (newOrientation == 'hor') {
 		$("#ul_nav").addClass("nav nav-pills");

@@ -55,32 +55,3 @@ Blockly.Arduino.variables_set = function() {
       Blockly.Variables.NAME_TYPE);
   return varName + ' = ' + argument0 + ';\n';
 };
-
-
-Blockly.Arduino.constant_get = function() {
-  // Constant getter.
-  var code = Blockly.Arduino.variableDB_.getName(this.getFieldValue('CONST'),
-      Blockly.Variables.NAME_TYPE);
-  return [code, Blockly.Arduino.ORDER_ATOMIC];
-};
-
-Blockly.Arduino.variables_declare = function() {
-  // Constant setter.
-  var dropdown_type = this.getFieldValue('TYPE');
-  //TODO: settype to Constant
-  var argument0 = Blockly.Arduino.valueToCode(this, 'VALUE',
-      Blockly.Arduino.ORDER_ASSIGNMENT) || '0';
-  var varName = Blockly.Arduino.variableDB_.getName(this.getFieldValue('CONST'),
-      Blockly.Variables.NAME_TYPE);
-  Blockly.Arduino.setups_['setup_var' + varName] = varName + ' = ' + argument0 + ';\n';
-  return '';
-};
-
-Blockly.Arduino.constant_set = function() {
-  // Constant setter.
-  var argument0 = Blockly.Arduino.valueToCode(this, 'VALUE',
-      Blockly.Arduino.ORDER_ASSIGNMENT) || '0';
-  var varName = Blockly.Arduino.variableDB_.getName(this.getFieldValue('CONST'),
-      Blockly.Variables.NAME_TYPE);
-  return varName + ' = ' + argument0 + ';\n';
-};

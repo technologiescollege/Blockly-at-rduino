@@ -1,28 +1,42 @@
 var MSG = {
-  title: "Editor Gráfico para Ayuda  a la Programación de Arduino",
+  title: "Editor Gráfico para la Programación de Arduino",
   labelArduinoCard: "Tarjeta Arduino :",
   btn_switch: " Cambio de orientación del menú",
-  span_config: " Configurar los bloques",
+  span_config: " Configurar Bloques",
+  span_picture: " Mostrar Tarjeta",
+  showcardLabel: " Tarjeta Arduino Sleccionada",
+  span_supervision: " Monitorizar Tarjeta",
+  supervisionModalLabel: " Supervisión Tarjeta", 
   span_delete: " Eliminar TODOS los bloques",
-  span_saveXML:" Grabar en formato XML",
-  span_fakeload:" Cargar un fichero XML",
-  cb_cf_verify_btn: "Verificar el codigo",
-  btn_edit_code :"Editar el código",
+  span_saveXML:" Grabar formato XML",
+  span_fakeload:" Cargar fichero XML",
+  span_example: " Abrir un ejemplo",
+  span_doc: " documentación",
+  span_tuto: " tutorial",
+  span_plugin_codebender: " Si Desactivado...",
+  span_verify_codebender: " Verificar código",
+  span_edit_code: " Editar código",
+  span_flash_codebender: " Descargar en Arduino",
+  span_saveIno: " Grabar código INO",
+  exampleModalLabel: "Seleccionar ejemplo",
+  btn_plugin_codebender: " si inactivo...",
+  cb_cf_verify_btn: "Verificar código",
+  btn_edit_code :"Editar código",
   cb_cf_flash_btn: "Descargar en Arduino",
-  button_saveArduino: "Grabar fichero en formato INO",
-  cb_cf_serial_monitor_connect: "Conectar terminal serie",
+  button_saveArduino: "Grabar fichero formato INO",
+  span_connect_serial: " conectar puerto serie",
   a_blocks:" BLOQUES",
   a_arduino:" Código Arduino",
   a_term:" Terminal Serie",
   a_xml:" Tradución XML",
-  configModalLabel:"seleccionar las categorías de bloquees",
+  configModalLabel:"seleccionar categorías de bloques",
   span_select_all:"todas",
-  span_put_in_url:"añadir en la url",
+  span_put_in_url:"añadir a url",
   btn_close:"Cerrar",
   btn_valid:"Validar",
   editModalLabel:"Edición del código de Arduino",
   btn_closeCode:"Cancelar",
-  btn_validCode:"Validar",
+  btn_validCode:"Validar", 
   btn_size_min:"Reducir la ventana",
   btn_size_max:"Agrandar la ventana",
   btn_preview:"Ver código Arduino",
@@ -44,4 +58,10 @@ var MSG = {
   aboutBody:"<br />- Traducciones y adaptaciones Sébastien Canet, integración CodeBender por Julien Rata, impulsado por el increíble trabajo de Olivier Metayer !"
 	  + "<br />"
 	  + "<br />Contributions :"
+	  + "<br /> - Blockly (https://developers.google.com/blockly)"
+	  + "<br /> - CompilerFlasher (https://codebender.cc)"
+	  + "<br /> - JQuerry (https://jquery.com)"
+	  + "<br /> - Bootstrap (http://getbootstrap.com)"
+	  + "<br /> - svg-pan-zoom (https://github.com/ariutta/svg-pan-zoom)"
+    + "<br /> - ArduGate (http://arduinodev.com/software/ardugate)"
 };

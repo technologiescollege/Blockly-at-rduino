@@ -30,53 +30,90 @@ goog.provide('Blockly.Blocks.sensors');
 goog.require('Blockly.Blocks');
 
 Blockly.Blocks['setup_button_wait_il'] = {
-  helpUrl: 'http://arduino.cc/en/tutorial/button',
   init: function() {
-    this.setColour("#646464");
+    this.setColour("#00138b");
     this.appendDummyInput()
         .appendField("1 time wait - Gen")
         //.appendField(new Blockly.FieldImage("http://", 64, 64))
         .appendField("PIN#")
-        .appendField(new Blockly.FieldDropdown(profile.defaultBoard.digital), "PIN");
+        .appendField(new Blockly.FieldTextInput('', Blockly.Arduino.pinDigitalValidator), 'PIN');
     this.setTooltip('1 time wait button in setup) - INPUT & wait for HIGH');
- this.setPreviousStatement(false, null);
+	this.setPreviousStatement(false, null);
     this.setNextStatement(true, null);
+	this.setHelpUrl('http://arduino.cc/en/tutorial/button');
  }
 };
 
 Blockly.Blocks['setup_button_wait_iph'] = {
-  helpUrl: 'https://www.pololu.com/docs/0J57/5',
   init: function() {
-    this.setColour("#646464");
+    this.setColour("#00138b");
     this.appendDummyInput()
         .appendField("1 Time wait - Zumo")
         //.appendField(new Blockly.FieldImage("http://", 64, 64))
         .appendField("PIN#")
-        .appendField(new Blockly.FieldDropdown(profile.defaultBoard.digital), "PIN");
+        .appendField(new Blockly.FieldTextInput('', Blockly.Arduino.pinDigitalValidator), 'PIN');
     this.setTooltip('1 time wait button (in setup) - INPUT_PULLUP & wait for LOW)');
- this.setPreviousStatement(false, null);
+	this.setPreviousStatement(false, null);
     this.setNextStatement(true, null);
+	this.setHelpUrl('https://www.pololu.com/docs/0J57/5');
  }
 };
 
 Blockly.Blocks['fourpin_ranger'] = {
-  helpUrl: 'http://unknown.com',
   init: function() {
-    this.setColour("#646464");
+    this.setColour("#00138b");
 	this.appendDummyInput()
 	    .appendField("Four Pin Ranger")
 		.appendField("Trigger_Pin#")
-        .appendField(new Blockly.FieldDropdown(profile.defaultBoard.digital), "PIN1")
-		this.setInputsInline(false);
+	    .setAlign(Blockly.ALIGN_RIGHT)
+        .appendField(new Blockly.FieldTextInput('', Blockly.Arduino.pinDigitalValidator), 'PIN1');
 	this.appendDummyInput()
-		.appendField(new Blockly.FieldImage("../../media/fourpin_range.jpg", 40, 40))
-       .appendField("Echo_Pin#")
-       .appendField(new Blockly.FieldDropdown(profile.defaultBoard.digital), "PIN2")
-	   .setAlign(Blockly.ALIGN_RIGHT)
+		.appendField(new Blockly.FieldImage("blocks/zumobot/fourpin_ranger.jpg", 40, 40))
+        .appendField("Echo_Pin#")
+	    .setAlign(Blockly.ALIGN_RIGHT)
+        .appendField(new Blockly.FieldTextInput('', Blockly.Arduino.pinDigitalValidator), 'PIN2');
+	this.setInputsInline(false);
 	this.setOutput(true, 'Number');
     this.setTooltip('4Pin Sonic - Provides distance in inches');
+	this.setHelpUrl('https://penturalabs.wordpress.com/2014/04/09/it-can-see-giving-your-bot-sight/');
   }
 };
 
-
-
+Blockly.Blocks['play_notes_z'] = {
+  init: function() {
+    this.setColour('#00138b');
+	this.appendDummyInput()
+	    .appendField(Blockly.Msg.ROBOTS_MISC_ZUMO_BUZZER_TITLE);
+    this.appendDummyInput()
+        .appendField(
+				new Blockly.FieldDropdown([
+						[ Blockly.Msg.ROBOTS_MISC_BUZZER_NOTE + "_C(3)",	"NOTE_C(3)" ],
+						[ Blockly.Msg.ROBOTS_MISC_BUZZER_NOTE + "_D(3)",	"NOTE_D(3)" ],
+						[ Blockly.Msg.ROBOTS_MISC_BUZZER_NOTE + "_E(3)",	"NOTE_E(3)" ],
+						[ Blockly.Msg.ROBOTS_MISC_BUZZER_NOTE + "_F(3)",	"NOTE_F(3)" ],
+						[ Blockly.Msg.ROBOTS_MISC_BUZZER_NOTE + "_G(3)",	"NOTE_G(3)" ],
+						[ Blockly.Msg.ROBOTS_MISC_BUZZER_NOTE + "_A(3)",	"NOTE_A(3)" ],
+						[ Blockly.Msg.ROBOTS_MISC_BUZZER_NOTE + "_B(3)",	"NOTE_B(3)" ],
+						[ Blockly.Msg.ROBOTS_MISC_BUZZER_NOTE + "_C(2)",	"NOTE_C(2)" ],
+						[ Blockly.Msg.ROBOTS_MISC_BUZZER_NOTE + "_D(2)",	"NOTE_D(2)" ],
+						[ Blockly.Msg.ROBOTS_MISC_BUZZER_NOTE + "_E(2)",	"NOTE_E(2)" ],
+						[ Blockly.Msg.ROBOTS_MISC_BUZZER_NOTE + "_F(2)",	"NOTE_F(2)" ],
+						[ Blockly.Msg.ROBOTS_MISC_BUZZER_NOTE + "_G(2)",	"NOTE_G(2)" ],
+						[ Blockly.Msg.ROBOTS_MISC_BUZZER_NOTE + "_A(2)",	"NOTE_A(2)" ],
+						[ Blockly.Msg.ROBOTS_MISC_BUZZER_NOTE + "_B(1)",	"NOTE_B(1)" ],
+						[ Blockly.Msg.ROBOTS_MISC_BUZZER_NOTE + "_C(1)",	"NOTE_C(1)" ] ]), "NOTE");
+	this.setInputsInline(true) ;
+    this.appendValueInput("DUR", 'Number')
+        .setCheck("Number")
+        .setAlign(Blockly.ALIGN_RIGHT)
+        .appendField(Blockly.Msg.ROBOTS_MISC_BUZZER_DURATION);
+    this.appendValueInput("VOL", 'Number')
+        .setCheck("Number")
+        .setAlign(Blockly.ALIGN_RIGHT)
+        .appendField(Blockly.Msg.ROBOTS_MISC_BUZZER_VOLUME);
+     this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setTooltip(Blockly.Msg.ROBOTS_MISC_ZUMO_BUZZER_TOOLTIP);
+    this.setHelpUrl(Blockly.Msg.ROBOTS_MISC_ZUMO_BUZZER_HELPURL);
+  }
+};

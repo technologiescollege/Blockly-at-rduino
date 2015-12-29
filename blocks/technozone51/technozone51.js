@@ -833,11 +833,11 @@ Blockly.Blocks['technozone_bt_init'] = {
     this.appendDummyInput("")
         .setAlign(Blockly.ALIGN_RIGHT)
 		.appendField(Blockly.Msg.TECHNOZONE51_TEXT165);
-    this.appendValueInput("DIST", 'Number')
+    this.appendValueInput("RX", 'Number')
         .setCheck('Number')
         .setAlign(Blockly.ALIGN_RIGHT)
         .appendField("RX ");
-    this.appendValueInput("TRIGER", 'Number')
+    this.appendValueInput("TX", 'Number')
         .setCheck('Number')
         .setAlign(Blockly.ALIGN_RIGHT)
         .appendField("TX ");
@@ -902,11 +902,11 @@ Blockly.Blocks['technozone_ihm_init'] = {
     this.appendDummyInput("")
         .setAlign(Blockly.ALIGN_RIGHT)
 		.appendField(Blockly.Msg.TECHNOZONE51_TEXT165);
-    this.appendValueInput("DIST", 'Number')
+    this.appendValueInput("RX", 'Number')
         .setCheck('Number')
         .setAlign(Blockly.ALIGN_RIGHT)
         .appendField("RX ");
-    this.appendValueInput("TRIGER", 'Number')
+    this.appendValueInput("TX", 'Number')
         .setCheck('Number')
         .setAlign(Blockly.ALIGN_RIGHT)
         .appendField("TX ");

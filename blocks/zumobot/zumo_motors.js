@@ -30,115 +30,250 @@ goog.provide('Blockly.Blocks.motors');
 goog.require('Blockly.Blocks');
 
 
-
-
 Blockly.Blocks['zumo_motors_FN'] = {
   init: function() {
-    this.setColour("#646464");
-    this.appendDummyInput()
-        .appendField("Zumo -No flip")
-        .appendField(new Blockly.FieldImage("https://a.pololu-files.com/picture/0J4110.250.jpg", 64, 64))
-        .appendField(new Blockly.FieldDropdown([["Stop", "stop"], ["Forward", "forward"], ["Right", "right"], ["Left", "left"], ["Backward", "backward"]]), "DIRECTION");
-    /*this.appendValueInput("SPEED", 'Number')
-        .setCheck('Number')
-        .setAlign(Blockly.ALIGN_RIGHT)
-        .appendField("Speed");*/
-    this.setPreviousStatement(true, null);
-    this.setNextStatement(true, null);
-    this.setTooltip('Drive Pololu Zumo (wired correctly)');
-	this.setHelpUrl('https://www.pololu.com/docs/0J57/5');
-  }
-};
-Blockly.Blocks['zumo_motors_FR'] = {
-  init: function() {
-    this.setColour("#646464");
-    this.appendDummyInput()
-        .appendField("Zumo -Flip Right")
-        .appendField(new Blockly.FieldImage("https://a.pololu-files.com/picture/0J4110.250.jpg", 64, 64))
-        .appendField(new Blockly.FieldDropdown([["Stop", "stop"], ["Forward", "forward"], ["Right", "right"], ["Left", "left"], ["Backward", "backward"]]), "DIRECTION");
-    /*this.appendValueInput("SPEED", 'Number')
-        .setCheck('Number')
-        .setAlign(Blockly.ALIGN_RIGHT)
-        .appendField("Speed");*/
-    this.setPreviousStatement(true, null);
-    this.setNextStatement(true, null);
-    this.setTooltip('Drive Pololu Zumo (flipped right motor)');
-	this.setHelpUrl('https://www.pololu.com/docs/0J57/5');
-  }
-};
-Blockly.Blocks['zumo_motors_FL'] = {
-  init: function() {
-    this.setColour("#646464");
-    this.appendDummyInput()
-        .appendField("Zumo -Flip Left")
-        .appendField(new Blockly.FieldImage("https://a.pololu-files.com/picture/0J4110.250.jpg", 64, 64))
-        .appendField(new Blockly.FieldDropdown([["Stop", "stop"], ["Forward", "forward"], ["Right", "right"], ["Left", "left"], ["Backward", "backward"]]), "DIRECTION");
-    /*this.appendValueInput("SPEED", 'Number')
-        .setCheck('Number')
-        .setAlign(Blockly.ALIGN_RIGHT)
-        .appendField("Speed");*/
-    this.setPreviousStatement(true, null);
-    this.setNextStatement(true, null);
-    this.setTooltip('Drive Pololu Zumo (flipped left motor)');
-	this.setHelpUrl('https://www.pololu.com/docs/0J57/5');
-  }
-};
-Blockly.Blocks.zumo_motors_FB = {
-  init: function() {
-    this.setColour("#646464");
-	this.setHelpUrl("https://www.pololu.com/docs/0J57/5");
+	this.setHelpUrl(Blockly.Msg.ROBOTS_MISC_ZUMO_HELPURL);
+    this.setColour("#00138b");
     this.appendDummyInput("")
-        .appendField("Zumo -Both Flipped")
-        .appendField(new Blockly.FieldImage("https://a.pololu-files.com/picture/0J4110.250.jpg", 64, 64))
-        .appendField(new Blockly.FieldDropdown([["Stop", "stop"], ["Forward", "forward"], ["Right", "right"], ["Left", "left"], ["Backward", "backward"]]), "DIRECTION");
-    /*this.appendValueInput("SPEED", 'Number')
-        .setCheck('Number')
-        .setAlign(Blockly.ALIGN_RIGHT)
-        .appendField("Speed");*/
+        .appendField(Blockly.Msg.ROBOTS_MOTORS_ZUMO_FN_TITLE)
+        .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/robots/0J4110.250.jpg', 64, 64))
+        .appendField(
+				new Blockly.FieldDropdown([
+						[ Blockly.Msg.ROBOTS_MOTORS_STOP, "stop" ],
+						[ Blockly.Msg.ROBOTS_MOTORS_FORWARD, "forward" ],
+						[ Blockly.Msg.ROBOTS_MOTORS_RIGHT, "right" ],
+						[ Blockly.Msg.ROBOTS_MOTORS_LEFT, "left" ],
+						[ Blockly.Msg.ROBOTS_MOTORS_BACKWARD, "backward" ] ]),
+				"DIRECTION");
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    this.setTooltip('Drive Pololu Zumo (flipped both motors)');
-  }
-};
-Blockly.Blocks['ardu_motor'] = {
-  init: function() {
-    this.setColour("#646464");
-    this.appendDummyInput()
-        .appendField("ArduMotor")
-        .appendField(new Blockly.FieldImage("https://cdn.sparkfun.com//assets/parts/3/8/4/9/09815-01.jpg", 64, 64))
-        .appendField(new Blockly.FieldDropdown([["Stop", "stop"], ["Forward", "forward"], ["Right", "right"], ["Left", "left"], ["Backward", "backward"]]), "DIRECTION");
-    /*this.appendValueInput("SPEED", 'Number')
-        .setCheck('Number')
-        .setAlign(Blockly.ALIGN_RIGHT)
-        .appendField("Speed");*/
-    this.setPreviousStatement(true, null);
-    this.setNextStatement(true, null);
-    this.setTooltip('ArduMotor Sparkfun Shield A=left B=right');
-	this.setHelpUrl('https://www.sparkfun.com/datasheets/DevTools/Arduino/Ardumoto_v13.pdf');
+    this.setTooltip(Blockly.Msg.ROBOTS_MOTORS_ZUMO_FN_TOOLTIP);
   }
 };
 
-Blockly.Blocks['ardu_motor_s'] = {
-  init: function() {
-    this.setColour("#646464");
+Blockly.Blocks['zumo_motors_FNs'] = {
+   init: function() {
+    this.setHelpUrl(Blockly.Msg.ROBOTS_MISC_ZUMO_HELPURL);
+    this.setColour("#00138b");
 	this.setInputsInline(false) ; 
-	this.appendDummyInput()
-		.appendField("ArduMotor_Speed")
-        .appendField(new Blockly.FieldDropdown([["Stop", "stop"], ["Forward", "forward"], ["Right", "right"], ["Left", "left"], ["Backward", "backward"]]), "DIRECTION")
     this.appendDummyInput()
-        .appendField(new Blockly.FieldImage("https://cdn.sparkfun.com//assets/parts/3/8/4/9/09815-01.jpg", 40,40));
+        .appendField(Blockly.Msg.ROBOTS_MOTORS_ZUMO_FNS_TITLE)
+        .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/robots/0J4110.250.jpg', 64, 64));
+	this.appendDummyInput()
+        .appendField(
+				new Blockly.FieldDropdown([
+						[ Blockly.Msg.ROBOTS_MOTORS_STOP, "stop" ],
+						[ Blockly.Msg.ROBOTS_MOTORS_FORWARD, "forward" ],
+						[ Blockly.Msg.ROBOTS_MOTORS_RIGHT, "right" ],
+						[ Blockly.Msg.ROBOTS_MOTORS_LEFT, "left" ],
+						[ Blockly.Msg.ROBOTS_MOTORS_BACKWARD, "backward" ] ]),
+				"DIRECTION");
+   this.setInputsInline(true) ;
+   this.appendValueInput("SPEEDA", 'Number')
+       .setCheck('Number')
+        .setAlign(Blockly.ALIGN_RIGHT)
+        .appendField(Blockly.Msg.ROBOTS_MOTORS_SPEEDL);
+	this.appendValueInput("SPEEDB", 'Number')
+        .setCheck('Number')
+        .setAlign(Blockly.ALIGN_RIGHT)
+        .appendField(Blockly.Msg.ROBOTS_MOTORS_SPEEDR);
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setTooltip(Blockly.Msg.ROBOTS_MOTORS_ZUMO_FNS_TOOLTIP);
+  }
+};
+
+Blockly.Blocks['zumo_motors_FR'] = {
+ init: function() {
+    this.setHelpUrl(Blockly.Msg.ROBOTS_MISC_ZUMO_HELPURL);
+    this.setColour("#00138b");
+    this.appendDummyInput()
+        .appendField(Blockly.Msg.ROBOTS_MOTORS_ZUMO_FR_TITLE)
+        .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/robots/0J4110.250.jpg', 64, 64))
+        .appendField(
+				new Blockly.FieldDropdown([
+						[ Blockly.Msg.ROBOTS_MOTORS_STOP, "stop" ],
+						[ Blockly.Msg.ROBOTS_MOTORS_FORWARD, "forward" ],
+						[ Blockly.Msg.ROBOTS_MOTORS_RIGHT, "right" ],
+						[ Blockly.Msg.ROBOTS_MOTORS_LEFT, "left" ],
+						[ Blockly.Msg.ROBOTS_MOTORS_BACKWARD, "backward" ] ]),
+				"DIRECTION");
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setTooltip(Blockly.Msg.ROBOTS_MOTORS_ZUMO_FR_TOOLTIP);
+  }
+};
+
+Blockly.Blocks['zumo_motors_FRs'] = {
+  init: function() {
+    this.setHelpUrl(Blockly.Msg.ROBOTS_MISC_ZUMO_HELPURL);
+    this.setColour("#00138b");
+	this.setInputsInline(false) ; 
+    this.appendDummyInput()
+        .appendField(Blockly.Msg.ROBOTS_MOTORS_ZUMO_FRS_TITLE)
+        .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/robots/0J4110.250.jpg', 64, 64));
+    this.appendDummyInput()    
+		.appendField(
+				new Blockly.FieldDropdown([
+						[ Blockly.Msg.ROBOTS_MOTORS_STOP, "stop" ],
+						[ Blockly.Msg.ROBOTS_MOTORS_FORWARD, "forward" ],
+						[ Blockly.Msg.ROBOTS_MOTORS_RIGHT, "right" ],
+						[ Blockly.Msg.ROBOTS_MOTORS_LEFT, "left" ],
+						[ Blockly.Msg.ROBOTS_MOTORS_BACKWARD, "backward" ] ]),
+				"DIRECTION");
+	this.setInputsInline(true) ;   
+  this.appendValueInput("SPEEDA", 'Number')
+       .setCheck('Number')
+        .setAlign(Blockly.ALIGN_RIGHT)
+        .appendField(Blockly.Msg.ROBOTS_MOTORS_SPEEDL);
+	this.appendValueInput("SPEEDB", 'Number')
+        .setCheck('Number')
+        .setAlign(Blockly.ALIGN_RIGHT)
+        .appendField(Blockly.Msg.ROBOTS_MOTORS_SPEEDR);
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setTooltip(Blockly.Msg.ROBOTS_MOTORS_ZUMO_FRS_TOOLTIP);
+  }
+};
+
+Blockly.Blocks['zumo_motors_FL'] = {
+  init: function() {
+	this.setHelpUrl(Blockly.Msg.ROBOTS_MISC_ZUMO_HELPURL);
+    this.setColour("#00138b");
+    this.appendDummyInput()
+        .appendField(Blockly.Msg.ROBOTS_MOTORS_ZUMO_FL_TITLE)
+        .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/robots/0J4110.250.jpg', 64, 64))
+        .appendField(
+				new Blockly.FieldDropdown([
+						[ Blockly.Msg.ROBOTS_MOTORS_STOP, "stop" ],
+						[ Blockly.Msg.ROBOTS_MOTORS_FORWARD, "forward" ],
+						[ Blockly.Msg.ROBOTS_MOTORS_RIGHT, "right" ],
+						[ Blockly.Msg.ROBOTS_MOTORS_LEFT, "left" ],
+						[ Blockly.Msg.ROBOTS_MOTORS_BACKWARD, "backward" ] ]),
+				"DIRECTION");
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setTooltip(Blockly.Msg.ROBOTS_MOTORS_ZUMO_FL_TOOLTIP);
+  }
+};
+
+Blockly.Blocks['zumo_motors_FLs'] = {
+init: function() {
+    this.setHelpUrl(Blockly.Msg.ROBOTS_MISC_ZUMO_HELPURL);
+    this.setColour("#00138b");
+	this.setInputsInline(false) ; 
+    this.appendDummyInput()
+        .appendField(Blockly.Msg.ROBOTS_MOTORS_ZUMO_FLS_TITLE)
+        .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/robots/0J4110.250.jpg', 64, 64));
+     this.appendDummyInput()    
+		.appendField(
+				new Blockly.FieldDropdown([
+						[ Blockly.Msg.ROBOTS_MOTORS_STOP, "stop" ],
+						[ Blockly.Msg.ROBOTS_MOTORS_FORWARD, "forward" ],
+						[ Blockly.Msg.ROBOTS_MOTORS_RIGHT, "right" ],
+						[ Blockly.Msg.ROBOTS_MOTORS_LEFT, "left" ],
+						[ Blockly.Msg.ROBOTS_MOTORS_BACKWARD, "backward" ] ]),
+				"DIRECTION");
    this.setInputsInline(true) ; 
    this.appendValueInput("SPEEDA", 'Number')
        .setCheck('Number')
         .setAlign(Blockly.ALIGN_RIGHT)
-        .appendField("SpeedA")
+        .appendField(Blockly.Msg.ROBOTS_MOTORS_SPEEDL);
 	this.appendValueInput("SPEEDB", 'Number')
         .setCheck('Number')
         .setAlign(Blockly.ALIGN_RIGHT)
-        .appendField("SpeedB")
+        .appendField(Blockly.Msg.ROBOTS_MOTORS_SPEEDR);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    this.setTooltip('ArduMotor Sparkfun Shield A=left B=right');
-	this.setHelpUrl('https://www.sparkfun.com/datasheets/DevTools/Arduino/Ardumoto_v13.pdf');
+    this.setTooltip(Blockly.Msg.ROBOTS_MOTORS_ZUMO_FLS_TOOLTIP);
+  }
+};
+
+Blockly.Blocks['zumo_motors_FBs'] = {
+  init: function() {
+	this.setHelpUrl(Blockly.Msg.ROBOTS_MISC_ZUMO_HELPURL);
+    this.setColour("#00138b");
+    this.appendDummyInput()
+        .appendField(Blockly.Msg.ROBOTS_MOTORS_ZUMO_FBS_TITLE)
+        .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/robots/0J4110.250.jpg', 64, 64));
+     this.appendDummyInput()    
+		.appendField(
+				new Blockly.FieldDropdown([
+						[ Blockly.Msg.ROBOTS_MOTORS_STOP, "stop" ],
+						[ Blockly.Msg.ROBOTS_MOTORS_FORWARD, "forward" ],
+						[ Blockly.Msg.ROBOTS_MOTORS_RIGHT, "right" ],
+						[ Blockly.Msg.ROBOTS_MOTORS_LEFT, "left" ],
+						[ Blockly.Msg.ROBOTS_MOTORS_BACKWARD, "backward" ] ]),
+				"DIRECTION");
+   this.setInputsInline(true) ; 
+   this.appendValueInput("SPEEDA", 'Number')
+       .setCheck('Number')
+        .setAlign(Blockly.ALIGN_RIGHT)
+        .appendField(Blockly.Msg.ROBOTS_MOTORS_SPEEDL);
+	this.appendValueInput("SPEEDB", 'Number')
+        .setCheck('Number')
+        .setAlign(Blockly.ALIGN_RIGHT)
+        .appendField(Blockly.Msg.ROBOTS_MOTORS_SPEEDR);
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setTooltip(Blockly.Msg.ROBOTS_MOTORS_ZUMO_FBS_TOOLTIP);
+  }
+};
+
+Blockly.Blocks['zumo_motors_FB'] = {
+  init: function() {
+	this.setHelpUrl(Blockly.Msg.ROBOTS_MISC_ZUMO_HELPURL);
+    this.setColour("#00138b");
+    this.appendDummyInput()
+        .appendField(Blockly.Msg.ROBOTS_MOTORS_ZUMO_FB_TITLE)
+        .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/robots/0J4110.250.jpg', 64, 64))
+        .appendField(
+				new Blockly.FieldDropdown([
+						[ Blockly.Msg.ROBOTS_MOTORS_STOP, "stop" ],
+						[ Blockly.Msg.ROBOTS_MOTORS_FORWARD, "forward" ],
+						[ Blockly.Msg.ROBOTS_MOTORS_RIGHT, "right" ],
+						[ Blockly.Msg.ROBOTS_MOTORS_LEFT, "left" ],
+						[ Blockly.Msg.ROBOTS_MOTORS_BACKWARD, "backward" ] ]),
+				"DIRECTION");
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setTooltip(Blockly.Msg.ROBOTS_MOTORS_ZUMO_FB_TOOLTIP);
+  }
+};
+
+Blockly.Blocks['zumo_motors_FUs'] = {
+  init: function() {
+	this.setHelpUrl(Blockly.Msg.ROBOTS_MISC_ZUMO_HELPURL);
+    this.setColour("#00138b");
+    this.appendDummyInput()
+        .appendField(Blockly.Msg.ROBOTS_MOTORS_ZUMO_FUS_TITLE)
+        .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/robots/0J4110.250.jpg', 64, 64))
+        .appendField(
+				new Blockly.FieldDropdown([
+						[ Blockly.Msg.ROBOTS_MOTORS_STOP, "stop" ],
+						[ Blockly.Msg.ROBOTS_MOTORS_FORWARD, "forward" ],
+						[ Blockly.Msg.ROBOTS_MOTORS_RIGHT, "right" ],
+						[ Blockly.Msg.ROBOTS_MOTORS_LEFT, "left" ],
+						[ Blockly.Msg.ROBOTS_MOTORS_BACKWARD, "backward" ] ]),
+				"DIRECTION");
+    this.appendValueInput("SPEEDA", 'Number')
+        .setCheck('Number')
+        .setAlign(Blockly.ALIGN_RIGHT)
+        .appendField(Blockly.Msg.ROBOTS_MOTORS_SPEEDL);
+	this.appendValueInput("SPEEDB", 'Number')
+        .setCheck('Number')
+        .setAlign(Blockly.ALIGN_RIGHT)
+        .appendField(Blockly.Msg.ROBOTS_MOTORS_SPEEDR);
+	this.appendValueInput('FLIPL','Boolean')
+		.appendField('Flip left motor')
+		.setAlign(Blockly.ALIGN_RIGHT)
+        .setCheck('Boolean');
+    this.appendValueInput('FLIPR','Boolean')
+		.appendField('Flip right motor')
+		.setAlign(Blockly.ALIGN_RIGHT)
+        .setCheck('Boolean');
+	this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setTooltip(Blockly.Msg.ROBOTS_MOTORS_ZUMO_FUS_TOOLTIP);
   }
 };

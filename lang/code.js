@@ -227,3 +227,7 @@ document.write('<script src="lang/msg/' + Code.LANG + '.js"></script>\n');
 document.write('<script src="lang/blocks/' + Code.LANG + '.js"></script>\n');
 // Load Supervision's language strings.
 document.write('<script src="lang/supervision/' + Code.LANG + '.js"></script>\n');
+$("#content_supervision").load('./supervision/pymata_arduino.html', function() {
+				$("div[id^=specif_arduino]").hide();
+				$("div[id^=specif_" + $('#pinout').val()+"]").show();
+			});

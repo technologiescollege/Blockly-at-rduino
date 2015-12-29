@@ -55,7 +55,7 @@ var MSG = {
   arduino_card:"supprimer tout et sélectionner une carte",
   span_about:"à propos",
   aboutModalLabel:"à propos ...",
-  aboutBody:"<br />- traductions et adaptations Sébastien Canet, intégration CodeBender par Julien Rat, intégration multilingue et CSS par Olivier Métayer." 
+  aboutBody:"<br />- créations et améliorations par Sébastien Canet, intégration CodeBender par Julien Rat, intégration multilingue et CSS par Olivier Métayer." 
 	  + "<br />"
 	  + "<br />Contributions :"
 };
