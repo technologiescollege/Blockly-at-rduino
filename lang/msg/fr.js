@@ -6,7 +6,6 @@ var MSG = {
   span_picture: " afficher la carte",
   showcardLabel: " carte Arduino sélectionnée",
   span_supervision: " supervision de la carte",
-  supervisionModalLabel: " supervision de la carte",
   span_delete: " effacer TOUS les blocs",
   span_saveXML:" sauver en fichier XML",
   span_fakeload:" charger un fichier XML",
