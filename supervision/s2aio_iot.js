@@ -1,7 +1,7 @@
 var socket = {};
 
 // connect to the server
-var ipAddress = "192.168.0.31";
+var ipAddress = "localhost";
 var ipPort = "9000";
 
 var inputMode = "0";
