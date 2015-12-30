@@ -1,3 +1,13 @@
+        // hide all of the pwm input controls until selected
+
+
+        $("#v3").hide();
+        $("#v5").hide();
+        $("#v6").hide();
+        $("#v9").hide();
+        $("#v10").hide();
+        $("#v11").hide();
+
 var socket = {};
 
 // connect to the server
@@ -12,23 +22,21 @@ var pwmMode = "3";
 var pin_mode = "";
 var pin = "";
 var outputValue = "";
+var socket = new WebSocket('ws://' + ipAddress + ':' + ipPort);
+
 
 function WebSocketTest() {
 	  if ("WebSocket" in window)
             {
                alert(Blockly.Msg.SV_alert);
-               
-               // Let us open a web socket
-               var ws = new WebSocket('ws://' + ipAddress + ':' + ipPort);
-			   socket = ws;
-            }
-            
+			   //socket = new WebSocket('ws://' + ipAddress + ':' + ipPort);
+            }            
             else
             {
                // The browser doesn't support WebSocket
                alert("WebSocket NOT supported by your Browser!");
 			}
-};     
+}; 
 
 socket.onopen = function (event) {
 	$("#connected").text('Supervision Has Successfully Connected');
