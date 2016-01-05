@@ -8,8 +8,6 @@
         $("#v10").hide();
         $("#v11").hide();
 
-var socket = {};
-
 // connect to the server
 var ipAddress = "localhost";
 var ipPort = "9000";
@@ -22,14 +20,14 @@ var pwmMode = "3";
 var pin_mode = "";
 var pin = "";
 var outputValue = "";
-var socket = new WebSocket('ws://' + ipAddress + ':' + ipPort);
+var socket;// = new WebSocket('ws://' + ipAddress + ':' + ipPort);
 
 
-function WebSocketTest() {
+function WebSocketTest() {	  
 	  if ("WebSocket" in window)
             {
                alert(Blockly.Msg.SV_alert);
-			   //socket = new WebSocket('ws://' + ipAddress + ':' + ipPort);
+			   socket = new WebSocket('ws://' + ipAddress + ':' + ipPort);
             }            
             else
             {
