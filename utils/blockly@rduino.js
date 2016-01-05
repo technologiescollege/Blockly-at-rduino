@@ -585,6 +585,7 @@ BlocklyDuino.init = function() {
 		// load the compilerflasher module
 		function() {
 			compilerflasher = new compilerflasher(BlocklyDuino.getFiles);
+					
 			compilerflasher.on("pre_verify", function() {
 				$("#debug_arduino").html(MSG['pre_verify']);
 			});
@@ -599,7 +600,14 @@ BlocklyDuino.init = function() {
 								MSG['verification_failed'] + error_output);
 					});
 		});
-	
+		
+		if (($("#cb_cf_boards").prop("disabled") == "disabled") || ($("#cb_cf_ports").prop("disabled") == "disabled"))
+			{
+				//var currElem = $#btn_plugin_codebender");
+				//currElem.setAttribute("class", "btn btn-danger enabled");
+				$("btn_plugin_codebender").removeClass('btn btn-danger disabled').addClass('btn btn-danger enabled');
+			}
+					
 		// draggable "modal" dialog containing card image & videos
 	    $('body').on('mousedown', '#showcardModal', function() {
 	        $(this).addClass('draggable').parents().on('mousemove', function(e) {
