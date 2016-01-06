@@ -74,6 +74,7 @@ BlocklyDuino.renderContent = function() {
 			$("#content_supervision").load('./supervision/pymata_arduino.html', function() {
 				$("div[id^=specif_arduino]").hide();
 				$("div[id^=specif_" + $('#pinout').val()+"]").show();
+				$.getScript("./supervision/s2aio_iot.js" );
 			});
 		}
 	}
@@ -177,7 +178,6 @@ BlocklyDuino.setArduinoCard =  function () {
 	// set the card from url parameters
 	window.profile["defaultBoard"]=window.profile[$("#pinout").val()];
 	$('#arduino_card_picture').attr("src", profile.defaultBoard['picture']);
-	$('#arduino_card_supervision').attr("src", profile.defaultBoard['supervision']);
 	$('#arduino_card_miniPicture').attr("src", profile.defaultBoard['miniPicture']);
 };
 
@@ -601,12 +601,9 @@ BlocklyDuino.init = function() {
 					});
 		});
 		
-		if (($("#cb_cf_boards").prop("disabled") == "disabled") || ($("#cb_cf_ports").prop("disabled") == "disabled"))
-			{
-				//var currElem = $#btn_plugin_codebender");
-				//currElem.setAttribute("class", "btn btn-danger enabled");
-				$("btn_plugin_codebender").removeClass('btn btn-danger disabled').addClass('btn btn-danger enabled');
-			}
+		if ($("#cb_cf_boards").prop("disabled") || $("#cb_cf_ports").prop("disabled")) {
+				$("#btn_plugin_codebender").removeClass('disabled');
+		}
 					
 		// draggable "modal" dialog containing card image & videos
 	    $('body').on('mousedown', '#showcardModal', function() {

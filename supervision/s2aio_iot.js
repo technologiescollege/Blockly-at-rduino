@@ -20,7 +20,7 @@ var pwmMode = "3";
 var pin_mode = "";
 var pin = "";
 var outputValue = "";
-var socket;// = new WebSocket('ws://' + ipAddress + ':' + ipPort);
+var socket = new WebSocket('ws://' + ipAddress + ':' + ipPort);
 
 
 function WebSocketTest() {	  
@@ -36,13 +36,18 @@ function WebSocketTest() {
 			}
 }; 
 
-socket.onopen = function (event) {
-	$("#connected").text('Supervision Has Successfully Connected');
+socket.onerror = function (event) {
+	$("#connected").append('ERROR : WebSocket not Connected !');
+};
 
+socket.onopen = function (event) {
+	$("#connected").append('Supervision Has Successfully Connected');
 };
 
 socket.onclose = function (event) {
-	alert("The socket has closed!");
+	if (!$("#connected").contains("ERROR")) {
+		$("#connected").append('The socket has closed!');
+	}
 };
 
 socket.onmessage = function (message) {
