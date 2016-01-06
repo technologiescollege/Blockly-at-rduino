@@ -1,12 +1,10 @@
-        // hide all of the pwm input controls until selected
-
-
-        $("#v3").hide();
-        $("#v5").hide();
-        $("#v6").hide();
-        $("#v9").hide();
-        $("#v10").hide();
-        $("#v11").hide();
+// hide all of the pwm input controls until selected
+$("#v3").hide();
+$("#v5").hide();
+$("#v6").hide();
+$("#v9").hide();
+$("#v10").hide();
+$("#v11").hide();
 
 // connect to the server
 var ipAddress = "localhost";
@@ -37,7 +35,7 @@ function WebSocketTest() {
 }; 
 
 socket.onerror = function (event) {
-	$("#connected").append('ERROR : WebSocket not Connected !');
+	$("#connected").append(Blockly.Msg.SV_NotCon);
 };
 
 socket.onopen = function (event) {
