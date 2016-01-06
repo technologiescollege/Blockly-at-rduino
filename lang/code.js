@@ -221,6 +221,13 @@ Code.initLanguage = function() {
 
 };
 
+/**
+ * Initialize the page language.
+ */
+Code.initLanguageSupervision = function() {
+	  $('#span_SV_connect').text(Blockly.Msg.SV_connect);
+};
+
 //Load the Code demo's language strings.
 document.write('<script src="lang/msg/' + Code.LANG + '.js"></script>\n');
 // Load Blockly's language strings.

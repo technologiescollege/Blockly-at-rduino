@@ -12,13 +12,17 @@
 
 <!-- Tab panes -->
 <div class="tab-content" style="margin-top: 5px;">
-	<p id="connected"><b><a href="javascript:WebSocketTest()" class="btn btn-warning"><span class="glyphicon glyphicon-link"></span> Connect to Arduino/pymata</a></b></p>
+	   <a href="javascript:WebSocketTest()" class="btn btn-warning">
+	       <span class="glyphicon glyphicon-link"></span> 
+	       <span id="span_SV_connect"></span>
+	   </a>
+	<span id="connected"></span>
 
+	<!-- button id="btn_SV_connect" class="btn btn-warning" data-target="javascript:WebSocketTest()">
+		<span class="glyphicon glyphicon-link"> </span>
+		<span id="span_SV_connect"></span>
+	</button-->
 	<div id="tabs-1" class="tab-pane active">
-		<!--button id="btn_SV_connect" class="btn btn-warning" data-target="javascript:WebSocketTest()">
-				<span class="glyphicon glyphicon-link"> </span>
-				<span id="span_SV_connect"> </span>
-		</button-->
 		<input type="radio" name="e2" value="0" id="in2d" onclick="clicked(this.id);" checked>Disabled
 		<input type="radio" name="e2" value="1" id="out2d" onclick="clicked(this.id);">Enabled
 		<b>Pin 02:</b>

@@ -30,7 +30,7 @@ Blockly.Blocks.base_setup = {
         this.setColour("#00979D");
 		this.setHelpUrl(Blockly.Msg.ARDUINO_BASE_SETUP_HELPURL);
         this.appendDummyInput("")
-            .appendField("Setup")
+            .appendField("Setup");
         this.appendStatementInput('DO')
             .appendField(Blockly.LANG_CONTROLS_REPEAT_INPUT_DO);
         this.setTooltip("Exécuté seulement dans le 'Setup'");
@@ -75,7 +75,7 @@ Blockly.Blocks.inout_buildin_led = {
      this.setHelpUrl(Blockly.Msg.ARDUINO_INOUT_BUILDIN_LED_HELPURL);
 	this.appendDummyInput()
       	.appendField(Blockly.Msg.ARDUINO_INOUT_BUILDIN_LED_INPUT)
-		.appendField(new Blockly.FieldDropdown(Blockly.Msg.FIELDDROPDOWN), 'STAT')
+		.appendField(new Blockly.FieldDropdown(Blockly.Msg.FIELDDROPDOWN), 'STAT');
      this.setPreviousStatement(true, null);
      this.setNextStatement(true, null);
      this.setTooltip(Blockly.Msg.ARDUINO_INOUT_BUILDIN_LED_TOOLTIP);
@@ -91,7 +91,7 @@ Blockly.Blocks.inout_digital_write_validator = {
 		.appendField(new Blockly.FieldTextInput('', Blockly.Arduino.pinDigitalValidator), 'PIN');
 	this.appendDummyInput()
       	.appendField(Blockly.Msg.ARDUINO_INOUT_DIGITAL_WRITE_INPUT2)
-		.appendField(new Blockly.FieldDropdown(Blockly.Msg.FIELDDROPDOWN), 'STAT')
+		.appendField(new Blockly.FieldDropdown(Blockly.Msg.FIELDDROPDOWN), 'STAT');
     this.setInputsInline(true);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
@@ -106,11 +106,11 @@ Blockly.Blocks.inout_digital_write = {
 	this.appendValueInput("PIN", 'Number')
         .setAlign(Blockly.ALIGN_RIGHT)
 		.setCheck('Number')
-        .appendField(Blockly.Msg.ARDUINO_INOUT_DIGITAL_WRITE_INPUT1) 
+        .appendField(Blockly.Msg.ARDUINO_INOUT_DIGITAL_WRITE_INPUT1);
     this.setInputsInline(true);
 	this.appendValueInput("STAT", 'Boolean')
         .setAlign(Blockly.ALIGN_RIGHT)
-      	.appendField(Blockly.Msg.ARDUINO_INOUT_DIGITAL_WRITE_INPUT2)
+      	.appendField(Blockly.Msg.ARDUINO_INOUT_DIGITAL_WRITE_INPUT2);
     this.setInputsInline(false);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
@@ -124,7 +124,7 @@ Blockly.Blocks.inout_digital_read = {
     this.setHelpUrl(Blockly.Msg.ARDUINO_INOUT_DIGITAL_READ_HELPURL);
 	this.appendValueInput("PIN", 'Number')
         .setAlign(Blockly.ALIGN_RIGHT)
-        .appendField(Blockly.Msg.ARDUINO_INOUT_DIGITAL_READ_INPUT)
+        .appendField(Blockly.Msg.ARDUINO_INOUT_DIGITAL_READ_INPUT);
     this.setOutput(true, 'null');
     this.setTooltip(Blockly.Msg.ARDUINO_INOUT_DIGITAL_READ_TOOLTIP);
   }
@@ -166,7 +166,7 @@ Blockly.Blocks.inout_PWM_write = {
     this.setHelpUrl(Blockly.Msg.ARDUINO_INOUT_PWM_WRITE_HELPURL);
 	this.appendValueInput("PIN", 'Number')
         .setAlign(Blockly.ALIGN_RIGHT)
-        .appendField(Blockly.Msg.ARDUINO_INOUT_PWM_WRITE_INPUT1)
+        .appendField(Blockly.Msg.ARDUINO_INOUT_PWM_WRITE_INPUT1);
     this.appendValueInput("NUM", 'Number')
         .setAlign(Blockly.ALIGN_RIGHT)
         .appendField(Blockly.Msg.ARDUINO_INOUT_PWM_WRITE_INPUT2)
@@ -184,7 +184,7 @@ Blockly.Blocks.inout_analog_write = {
     this.setHelpUrl(Blockly.Msg.ARDUINO_INOUT_ANALOG_WRITE_HELPURL);
 	this.appendValueInput("PIN", 'Number')
         .setAlign(Blockly.ALIGN_RIGHT)
-        .appendField(Blockly.Msg.ARDUINO_INOUT_ANALOG_WRITE_INPUT1)
+        .appendField(Blockly.Msg.ARDUINO_INOUT_ANALOG_WRITE_INPUT1);
     this.appendValueInput("NUM", 'Number')
         .setAlign(Blockly.ALIGN_RIGHT)
         .appendField(Blockly.Msg.ARDUINO_INOUT_ANALOG_WRITE_INPUT2)
@@ -219,7 +219,7 @@ Blockly.Blocks.tone = {
     this.setHelpUrl(Blockly.Msg.ARDUINO_TONE_HELPURL);
 	this.appendValueInput("PIN", 'Number')
         .setAlign(Blockly.ALIGN_RIGHT)
-        .appendField(Blockly.Msg.ARDUINO_TONE_INPUT1)
+        .appendField(Blockly.Msg.ARDUINO_TONE_INPUT1);
     this.appendValueInput("NUM", 'Number')
         .setAlign(Blockly.ALIGN_RIGHT)
         .appendField(Blockly.Msg.ARDUINO_TONE_INPUT2)
@@ -241,7 +241,7 @@ Blockly.Blocks.notone = {
 	this.setHelpUrl(Blockly.Msg.ARDUINO_NOTONE_HELPURL);
 	this.appendValueInput("PIN", 'Number')
         .setAlign(Blockly.ALIGN_RIGHT)
-        .appendField(Blockly.Msg.ARDUINO_NOTONE_INPUT)
+        .appendField(Blockly.Msg.ARDUINO_NOTONE_INPUT);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setTooltip(Blockly.Msg.ARDUINO_NOTONE_TOOLTIP);
@@ -254,7 +254,7 @@ Blockly.Blocks.inout_analog_read = {
 	this.setHelpUrl(Blockly.Msg.ARDUINO_INOUT_ANALOG_READ_HELPURL);
 	this.appendValueInput("PIN", 'Number')
         .setAlign(Blockly.ALIGN_RIGHT)
-        .appendField(Blockly.Msg.ARDUINO_INOUT_ANALOG_READ_INPUT)
+        .appendField(Blockly.Msg.ARDUINO_INOUT_ANALOG_READ_INPUT);
     this.setOutput(true, 'Number');
     this.setTooltip(Blockly.Msg.ARDUINO_INOUT_ANALOG_READ_TOOLTIP);
   }

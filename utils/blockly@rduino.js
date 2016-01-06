@@ -75,6 +75,7 @@ BlocklyDuino.renderContent = function() {
 				$("div[id^=specif_arduino]").hide();
 				$("div[id^=specif_" + $('#pinout').val()+"]").show();
 				$.getScript("./supervision/s2aio_iot.js" );
+				Code.initLanguageSupervision();
 			});
 		}
 	}
@@ -310,6 +311,15 @@ BlocklyDuino.bindFunctions = function () {
     	BlocklyDuino.selectedTab = $(this).attr('id').substring(4);
     	BlocklyDuino.renderContent();
     });
+
+	$('#cb_cf_boards').on("change", function() {
+		if ($("#cb_cf_ports").prop("disabled")) {
+			$("#btn_plugin_codebender").removeClass('disabled');
+		} else {
+			$("#btn_plugin_codebender").addClass('disabled');
+		}
+	}
+	);
 
   $('#btn_size').on("click",  BlocklyDuino.changeSize);
   $('#btn_config').on("click",  BlocklyDuino.openConfigToolbox);
