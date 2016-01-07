@@ -1,13 +1,13 @@
 ﻿<ul class="nav nav-pills">
-	<li role="presentation" class="active"><a href="#tabs-1" aria-controls="tabs-1" role="tab" data-toggle="tab"><span id="span_supervision_tab1"> </span>Blockly.Msg.SV_DInput</a></li>
-	<li role="presentation"><a href="#tabs-2" aria-controls="tabs-2" role="tab" data-toggle="tab">Digital/PWM Output</a></li>
-	<li role="presentation"><a href="#tabs-3" aria-controls="tabs-3" role="tab" data-toggle="tab">Analog Input</a></li>
-	<li role="presentation"><a href="#tabs-4" aria-controls="tabs-4" role="tab" data-toggle="tab">Reports</a></li>
-	<li role="presentation"><a href="#tabs-5" aria-controls="tabs-5" role="tab" data-toggle="tab">Polled Data Retrieval</a></li>
-	<li role="presentation"><a href="#tabs-6" aria-controls="tabs-6" role="tab" data-toggle="tab">Servo</a></li>
-	<li role="presentation"><a href="#tabs-7" aria-controls="tabs-7" role="tab" data-toggle="tab">i2c</a></li>
-	<li role="presentation"><a href="#tabs-8" aria-controls="tabs-8" role="tab" data-toggle="tab">FirmataPlus Features</a></li>
-	<li role="presentation"><a href="#tabs-9" aria-controls="tabs-9" role="tab" data-toggle="tab">Documentation</a></li>
+	<li role="presentation" class="active"><a href="#tabs-1" aria-controls="tabs-1" role="tab" data-toggle="tab"><span id="span_supervision_tab1"> </span></a></li>
+	<li role="presentation"><a href="#tabs-2" aria-controls="tabs-2" role="tab" data-toggle="tab"><span id="span_supervision_tab2"> </span></a></li>
+	<li role="presentation"><a href="#tabs-3" aria-controls="tabs-3" role="tab" data-toggle="tab"><span id="span_supervision_tab3"> </span></a></li>
+	<li role="presentation"><a href="#tabs-4" aria-controls="tabs-4" role="tab" data-toggle="tab"><span id="span_supervision_tab4"> </span></a></li>
+	<li role="presentation"><a href="#tabs-5" aria-controls="tabs-5" role="tab" data-toggle="tab"><span id="span_supervision_tab5"> </span></a></li>
+	<li role="presentation"><a href="#tabs-6" aria-controls="tabs-6" role="tab" data-toggle="tab"><span id="span_supervision_tab6"> </span></a></li>
+	<li role="presentation"><a href="#tabs-7" aria-controls="tabs-7" role="tab" data-toggle="tab"><span id="span_supervision_tab7"> </span></a></li>
+	<li role="presentation"><a href="#tabs-8" aria-controls="tabs-8" role="tab" data-toggle="tab"><span id="span_supervision_tab8"> </span></a></li>
+	<li role="presentation"><a href="#tabs-9" aria-controls="tabs-9" role="tab" data-toggle="tab"><span id="span_supervision_tab9"> </span></a></li>
 </ul>
 
 <!-- Tab panes -->
@@ -17,15 +17,10 @@
 	       <span id="span_SV_connect"></span>
 	   </a>
 	<span id="connected"></span>
-
-	<!-- button id="btn_SV_connect" class="btn btn-warning" data-target="javascript:WebSocketTest()">
-		<span class="glyphicon glyphicon-link"> </span>
-		<span id="span_SV_connect"></span>
-	</button-->
 	<div id="tabs-1" class="tab-pane active">
-		<input type="radio" name="e2" value="0" id="in2d" onclick="clicked(this.id);" checked>Disabled
-		<input type="radio" name="e2" value="1" id="out2d" onclick="clicked(this.id);">Enabled
-		<b>Pin 02:</b>
+		<input type="radio" name="e2" value="0" id="in2d" onclick="clicked(this.id);" checked><span id="span_supervision_disabled"> </span>
+		<input type="radio" name="e2" value="1" id="out2d" onclick="clicked(this.id);"><span id="span_supervision_enabled"> </span>
+		<b><span id="span_supervision_pin"> </span> 02:</b>
 		<input id="ip2" name="pin" class="element text medium" type="text" maxlength="255" value="0"
 			   style="width: 20px;"/>
 		&nbsp;&nbsp;&nbsp;&nbsp;
@@ -39,9 +34,9 @@
 		<b>Latch Event Occurred On:</b>
 		<input id="dlevent2" name="pin" class="element text medium" type="text" maxlength="255" value="" style="width: 500px;"/>
 		<br>
-		<input type="radio" name="e3" value="0" id="in3d" onclick="clicked(this.id);" checked>Disabled
-		<input type="radio" name="e3" value="1" id="out3d" onclick="clicked(this.id);">Enabled
-		<b>Pin 03:</b>
+		<input type="radio" name="e3" value="0" id="in3d" onclick="clicked(this.id);" checked><span id="span_supervision_disabled"> </span>
+		<input type="radio" name="e3" value="1" id="out3d" onclick="clicked(this.id);"><span id="span_supervision_enabled"> </span>
+		<b><span id="span_supervision_pin"> </span> 03:</b>
 		<input id="ip3" name="pin" class="element text medium" type="text" maxlength="255" value="0"
 			   style="width: 20px;"/>
 		&nbsp;&nbsp;&nbsp;&nbsp;
@@ -381,16 +376,16 @@
 
 	</div>
 	<div id="tabs-2" class="tab-pane">
-		<b>Pin 03:</b>
-		<input type="radio" name="p3" value="0" id="p3low" onclick="clicked(this.id);" checked>Low
-		<input type="radio" name="p3" value="1" id="p3high" onclick="clicked(this.id);">High
+		<b><span id="span_supervision_pin"> </span> 03:</b>
+		<input type="radio" name="p3" value="0" id="p3low" onclick="clicked(this.id);" checked><span id="span_supervision_low"> </span>
+		<input type="radio" name="p3" value="1" id="p3high" onclick="clicked(this.id);"><span id="span_supervision_high"> </span>
 		<input type="radio" name="p3" value="2" onclick="clicked(this.id);" id="pwm3">PWM
 		<input type="number" name="p3pwm" id="v3" min="0" max="255" step="1" value="0"
 			   oninput="pwmChange(this.id);">
 		<br>
 		<b>Pin 04:</b>
-		<input type="radio" name="p4" value="3" id="p4low" onclick="clicked(this.id);" checked>Low
-		<input type="radio" name="p4" value="4" id="p4high" onclick="clicked(this.id);">High
+		<input type="radio" name="p4" value="3" id="p4low" onclick="clicked(this.id);" checked><span id="span_supervision_low"> </span>
+		<input type="radio" name="p4" value="4" id="p4high" onclick="clicked(this.id);"><span id="span_supervision_high"> </span>
 		<br>
 		<b>Pin 05:</b>
 		<input type="radio" name="p5" value="5" id="p5low" onclick="clicked(this.id);" checked>Low
@@ -1014,6 +1009,7 @@
 		<input id="runStepper" type="button" value="Run Stepper" onclick="runStepMotor();"/>
 	</div>
 	<div id="tabs-9" class="tab-pane">
+		<br/>
 		<b>Documentation</b><br/>
 		<br/>
 		Utilisation de s2aio mais surtout du module pymata intégré : <a href="https://github.com/MrYsLab/s2aio/wiki"><u>wiki d'Alan Yorinks</u></a>

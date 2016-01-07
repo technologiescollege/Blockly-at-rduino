@@ -367,11 +367,11 @@ Blockly.Arduino['math_random_int'] = function() {
       Blockly.Arduino.ORDER_COMMA) || '0';
   var functionName = Blockly.Arduino.provideFunction_(
       'math_random_int',
-      [ 'function ' + Blockly.Arduino.FUNCTION_NAME_PLACEHOLDER_ +
-          '(a, b) {',
+      [ 'long ' + Blockly.Arduino.FUNCTION_NAME_PLACEHOLDER_ +
+          '(int a,int b) {',
         '  if (a > b) {',
         '    // Swap a and b to ensure a is smaller.',
-        '    var c = a;',
+        '    int c = a;',
         '    a = b;',
         '    b = c;',
         '  }',

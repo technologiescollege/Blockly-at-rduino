@@ -108,14 +108,14 @@ Blockly.Arduino.inout_digital_read = function() {
   var dropdown_pin = Blockly.Arduino.valueToCode(this, 'PIN', Blockly.Arduino.ORDER_ATOMIC);
   Blockly.Arduino.setups_['setup_input_' + dropdown_pin] = 'pinMode(' + dropdown_pin + ', INPUT);';
   var code = 'digitalRead(' + dropdown_pin + ')';
-  return [code, Blockly.Arduino.ORDER_ATOMIC];
+  return code;
 };
 
 Blockly.Arduino.inout_digital_read_validator = function() {
   var dropdown_pin = this.getFieldValue('PIN');
   Blockly.Arduino.setups_['setup_input_' + dropdown_pin] = 'pinMode(' + dropdown_pin + ', INPUT);';
   var code = 'digitalRead(' + dropdown_pin + ')';
-  return [code, Blockly.Arduino.ORDER_ATOMIC];
+  return code;
 };
 
 Blockly.Arduino.inout_analog_write = function() {
@@ -138,20 +138,20 @@ Blockly.Arduino.inout_analog_read = function() {
   var dropdown_pin = Blockly.Arduino.valueToCode(this, 'PIN', Blockly.Arduino.ORDER_ATOMIC);
   Blockly.Arduino.setups_['setup_input_'+dropdown_pin] = 'pinMode('+dropdown_pin+', INPUT);';
   var code = 'analogRead(' + dropdown_pin + ')';
-  return [code, Blockly.Arduino.ORDER_ATOMIC];
+  return code;
 };
 
 Blockly.Arduino.inout_analog_read_validator = function() {
   var dropdown_pin = this.getFieldValue('PIN');
   Blockly.Arduino.setups_['setup_input_'+dropdown_pin] = 'pinMode('+dropdown_pin+', INPUT);';
   var code = 'analogRead(' + dropdown_pin + ')';
-  return [code, Blockly.Arduino.ORDER_ATOMIC];
+  return code;
 };
 
 Blockly.Arduino.inout_onoff = function() {
   // Boolean values HIGH and LOW. 
   var code = (this.getFieldValue('BOOL') == 'HIGH') ? 'HIGH' : 'LOW';
-  return [code, Blockly.Arduino.ORDER_ATOMIC];
+  return code;
 };
 
 Blockly.Arduino.inout_angle = function() {
@@ -159,7 +159,13 @@ Blockly.Arduino.inout_angle = function() {
   var angle = this.getFieldValue('ANGLE');
   // TODO: Change ORDER_NONE to the correct strength.
   return [angle, Blockly.Arduino.ORDER_ATOMIC];
+};
 
+Blockly.Arduino.inout_angle_maths = function() {
+  // Just angle
+  var angle = this.getFieldValue('ANGLE');
+  // TODO: Change ORDER_NONE to the correct strength.
+  return [angle, Blockly.Arduino.ORDER_ATOMIC];
 };
 
 Blockly.Arduino.tone = function() {
@@ -215,7 +221,7 @@ Blockly.Arduino.servo_read_degrees = function() {
   Blockly.Arduino.setups_['setup_servo_' + value_pin] = 'servo_' + value_pin + '.attach(' + value_pin + ');\n';
 
   var code = 'servo_' + value_pin + '.read()';
-  return [code, Blockly.Arduino.ORDER_ATOMIC];
+  return code;
 };
 
 Blockly.Arduino.serial_print = function() {

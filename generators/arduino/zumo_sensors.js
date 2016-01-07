@@ -42,7 +42,7 @@ Blockly.Arduino.setup_button_wait_il = function() {
 	Blockly.Arduino.setups_['setup_button_wait'] = " pinMode(buttonPin, INPUT);\n"+
 	 '   WaitForButton();\n';
  
-  return [code, Blockly.Arduino.ORDER_ATOMIC];
+  return code;
 };
 
 Blockly.Arduino.setup_button_wait_iph = function() {
@@ -56,7 +56,7 @@ Blockly.Arduino.setup_button_wait_iph = function() {
  Blockly.Arduino.setups_['setup_button_wait'] = " pinMode(buttonPin, INPUT_PULLUP);\n"+
  '   WaitForButton();\n';
   var code = '';
-  return [code, Blockly.Arduino.ORDER_ATOMIC];
+  return code;
 };
 
 Blockly.Arduino.fourpin_ranger = function() {
@@ -77,5 +77,5 @@ Blockly.Arduino.fourpin_ranger = function() {
     "  return value;\n"+
     "}\n";
   code="mesure_distance_cm("+dropdown_triger_pin+","+dropdown_dist_pin+")";
-  return [code, Blockly.Arduino.ORDER_ATOMIC];
+  return code;
 };

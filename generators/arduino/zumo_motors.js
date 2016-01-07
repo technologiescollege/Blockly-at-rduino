@@ -80,7 +80,7 @@ Blockly.Arduino['zumo_motors_FN'] = function() {
 "}\n\n"
     code="stop();\n";
   }
-  return [code, Blockly.Arduino.ORDER_ATOMIC];
+  return code;
 };
 Blockly.Arduino.zumo_motors_FL = function() {
   var dropdown_direction = this.getFieldValue('DIRECTION');
@@ -134,7 +134,7 @@ Blockly.Arduino.zumo_motors_FL = function() {
 "}\n\n"
     code="stop();\n";
   }
-  return [code, Blockly.Arduino.ORDER_ATOMIC];
+  return code;
 };
 
 Blockly.Arduino.zumo_motors_FR = function() {
@@ -189,7 +189,7 @@ Blockly.Arduino.zumo_motors_FR = function() {
 "}\n\n"
     code="stop();\n";
   }
-  return [code, Blockly.Arduino.ORDER_ATOMIC];
+  return code;
 };
 
 Blockly.Arduino.zumo_motors_FB = function() {
@@ -244,7 +244,7 @@ Blockly.Arduino.zumo_motors_FB = function() {
 "}\n\n"
     code="stop();\n";
   }
-  return [code, Blockly.Arduino.ORDER_ATOMIC];
+  return code;
 };
 
 Blockly.Arduino.zumo_motors_FNs = function() {

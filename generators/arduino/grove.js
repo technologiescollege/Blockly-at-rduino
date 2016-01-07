@@ -311,7 +311,7 @@ Blockly.Arduino.grove_thumb_joystick =  function() {
   }
   var code = 'analogRead('+stickPIN+')';
   Blockly.Arduino.setups_['setup_input_'+dropdown_pin] = 'pinMode('+dropdown_pin+', INPUT);';
-  return [code, Blockly.Arduino.ORDER_ATOMIC];
+  return code;
 };
 
 function hexToR(h) {return parseInt((cutHex(h)).substring(0,2),16);};

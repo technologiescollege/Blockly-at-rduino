@@ -226,6 +226,21 @@ Code.initLanguage = function() {
  */
 Code.initLanguageSupervision = function() {
 	  $('#span_SV_connect').text(Blockly.Msg.SV_connect);
+	  $('#span_supervision_tab1').text(Blockly.Msg.SV_tab1);
+	  $('#span_supervision_tab2').text(Blockly.Msg.SV_tab2);
+	  $('#span_supervision_tab3').text(Blockly.Msg.SV_tab3);
+	  $('#span_supervision_tab4').text(Blockly.Msg.SV_tab4);
+	  $('#span_supervision_tab5').text(Blockly.Msg.SV_tab5);
+	  $('#span_supervision_tab6').text(Blockly.Msg.SV_tab6);
+	  $('#span_supervision_tab7').text(Blockly.Msg.SV_tab7);
+	  $('#span_supervision_tab8').text(Blockly.Msg.SV_tab8);
+	  $('#span_supervision_tab9').text(Blockly.Msg.SV_tab9);
+	  $('#span_supervision_enabled').text(Blockly.Msg.SV_enabled);
+	  $('#span_supervision_disabled').text(Blockly.Msg.SV_disabled);	  
+	  $('#span_supervision_pin').text(Blockly.Msg.SV_pin);  
+	  $('#span_supervision_low').text(Blockly.Msg.SV_low);  
+	  $('#span_supervision_high').text(Blockly.Msg.SV_high);
+	  
 };
 
 //Load the Code demo's language strings.

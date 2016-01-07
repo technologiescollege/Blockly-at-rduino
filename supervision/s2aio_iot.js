@@ -30,7 +30,7 @@ function WebSocketTest() {
             else
             {
                // The browser doesn't support WebSocket
-               alert("WebSocket NOT supported by your Browser!");
+               alert(Blockly.Msg.SV_alert2);
 			}
 }; 
 
@@ -39,12 +39,12 @@ socket.onerror = function (event) {
 };
 
 socket.onopen = function (event) {
-	$("#connected").append('Supervision Has Successfully Connected');
+	$("#connected").append(Blockly.Msg.SV_onOpen);
 };
 
 socket.onclose = function (event) {
 	if (!$("#connected").contains("ERROR")) {
-		$("#connected").append('The socket has closed!');
+		$("#connected").append(Blockly.Msg.SV_onClose);
 	}
 };
 
@@ -87,7 +87,7 @@ socket.onmessage = function (message) {
 					document.getElementById("ia5").value = out;
 					break;
 				default:
-					alert("unknown analog pin")
+					alert(Blockly.Msg.SV_onMessage_analog)
 
 
 			}
@@ -161,7 +161,7 @@ socket.onmessage = function (message) {
 					document.getElementById("ip19").value = out;
 					break;
 				default:
-					alert("unknown digital pin");
+					alert(Blockly.Msg.SV_onMessage_digital);
 				//console.log('unknown digital pin: ' + pin);
 			}
 		}
@@ -265,7 +265,7 @@ socket.onmessage = function (message) {
 		case "get_analog_latch_data_reply":
 			console.log('get_analog_latch_data_reply' + params);
 			if (params[1] == null) {
-				document.getElementById('alatchdata').value = "No Latch Set"
+				document.getElementById('alatchdata').value = Blockly.Msg.SV_onMessage_i2c
 			}
 			else {
 
@@ -690,7 +690,6 @@ function pwmChange(control) {
 	var msg = JSON.stringify({"method": "analog_write", "params": [pin, value]});
 	socket.send(msg);
 	//console.log(pin + ':' + value);
-
 }
 
 

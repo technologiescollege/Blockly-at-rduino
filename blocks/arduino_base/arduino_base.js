@@ -295,6 +295,18 @@ Blockly.Blocks.inout_angle = {
   }
 };
 
+Blockly.Blocks.inout_angle_maths = {
+  init: function() {
+    this.setColour("#5CB712");
+	this.setHelpUrl('https://developers.google.com/blockly/custom-blocks/defining-blocks#appendfield');
+    this.appendDummyInput("")
+        .appendField("angle")
+        .appendField(new Blockly.FieldAngle("90"), "ANGLE");
+    this.setOutput(true, "Number");
+    this.setTooltip('angle °');
+  }
+};
+
 //servo block
 //http://www.seeedstudio.com/depot/emax-9g-es08a-high-sensitive-mini-servo-p-760.html?cPath=170_171
 Blockly.Blocks.servo_move = {

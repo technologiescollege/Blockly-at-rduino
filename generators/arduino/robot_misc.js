@@ -41,7 +41,7 @@ Blockly.Arduino.setup_button_wait_il = function() {
  '   WaitForButton();\n'+
  '	 delay(5000);\n';
   var code = '';
-  return [code, Blockly.Arduino.ORDER_ATOMIC];
+  return code;
 };
 
 Blockly.Arduino.setup_button_wait_iph = function() {
@@ -56,7 +56,7 @@ Blockly.Arduino.setup_button_wait_iph = function() {
  '   WaitForButton();\n'+
  'delay(5000);\n';
   var code = '';
-  return [code, Blockly.Arduino.ORDER_ATOMIC];
+  return code;
 };
 
 Blockly.Arduino.fourpin_ranger = function() {
@@ -82,7 +82,7 @@ Blockly.Arduino.fourpin_ranger = function() {
 //  code = "analogRead("+dropdown_tpin+")"";
   var code = "";
   var code = "Ping"+dropdown_tpin+"()";
-  return [code, Blockly.Arduino.ORDER_ATOMIC];
+  return code;
  }; 
  
  // Blockly.JavaScript['play_notes'] = function(block) {
@@ -125,7 +125,7 @@ Blockly.Arduino.IR_serial_decoder = function() {
   "   Serial.println(results.value, DEC); // Print the Serial 'results.value'\n"+
   "   irrecv.resume();   // Receive the next value\n"+
   "  }\n";
-  return [code, Blockly.Arduino.ORDER_ATOMIC];
+  return code;
 };
 
 Blockly.Arduino.IR_get_blink = function() {
@@ -165,7 +165,7 @@ Blockly.Arduino.setups_["setup_IR_get_blink"] = "pinMode(IRpin, INPUT);\n"+
   "  delay(100);      // keeps the transition smooth\n"+
   "  }\n"+
     "  }\n";
-  return [code, Blockly.Arduino.ORDER_ATOMIC];
+  return code;
  }; 
 
  Blockly.Arduino.IR_get= function() {
@@ -192,5 +192,5 @@ Blockly.Arduino.setups_["setup_IR_get_blink"] = "pinMode(IRpin, INPUT);\n"+
 
   var code = "";
   var code =  "IRRequest()";
-  return [code, Blockly.Arduino.ORDER_ATOMIC];
+  return code;
  }; 

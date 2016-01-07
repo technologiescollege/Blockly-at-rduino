@@ -312,14 +312,16 @@ BlocklyDuino.bindFunctions = function () {
     	BlocklyDuino.renderContent();
     });
 
+	/*neutralise les boutons 'vérifier & téléverser dans larduino'
 	$('#cb_cf_boards').on("change", function() {
-		if ($("#cb_cf_ports").prop("disabled")) {
-			$("#btn_plugin_codebender").removeClass('disabled');
+		if ($("#cb_cf_ports").prop("disabled"))
+		{
+			$("#btn_plugin_codebender").prop(disabled, true);
 		} else {
-			$("#btn_plugin_codebender").addClass('disabled');
+			$("#btn_plugin_codebender").prop(disabled, false);
 		}
 	}
-	);
+	);*/
 
   $('#btn_size').on("click",  BlocklyDuino.changeSize);
   $('#btn_config').on("click",  BlocklyDuino.openConfigToolbox);

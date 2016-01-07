@@ -32,18 +32,18 @@ Blockly.Arduino.technozone_lcdinit = function() {
   }
   Blockly.Arduino.setups_['setup_lcd'] = mysetup;
   var code="";
-  return [code, Blockly.Arduino.ORDER_ATOMIC];
+  return code;
 };
 
 Blockly.Arduino.technozone_lcdspecial = function() {
   var dropdown_special = this.getFieldValue('special');
   var code="lcd."+dropdown_special+"();\n";
-  return [code, Blockly.Arduino.ORDER_ATOMIC];
+  return code;
 };
 
 Blockly.Arduino.technozone_lcdclear = function() {
   var code = 'lcd.clear();\n';
-  return [code, Blockly.Arduino.ORDER_ATOMIC];
+  return code;
 };
 
 Blockly.Arduino.technozone_lcdwrite = function() {
@@ -55,7 +55,7 @@ Blockly.Arduino.technozone_lcdwrite = function() {
       Blockly.Arduino.ORDER_UNARY_POSTFIX) || '0';    
   var code = 'lcd.setCursor('+dropdown_col+','+dropdown_lig+');\n'+
   'lcd.print('+text+');\n';
-  return [code, Blockly.Arduino.ORDER_ATOMIC];
+  return code;
 };
 
 Blockly.Arduino.technozone_robot_lcdwrite = function() {
@@ -71,7 +71,7 @@ Blockly.Arduino.technozone_robot_lcdwrite = function() {
   Blockly.Arduino.setups_["setup_lcd"] = "lcd.begin(16,2);";
   var code = 'lcd.setCursor('+dropdown_col+','+dropdown_lig+');\n'+
   'lcd.print('+text+');\n';
-  return [code, Blockly.Arduino.ORDER_ATOMIC];
+  return code;
 };
 
 Blockly.Arduino.technozone_robot_lcdspecial = function() {
@@ -81,7 +81,7 @@ Blockly.Arduino.technozone_robot_lcdspecial = function() {
   Blockly.Arduino.definitions_['var_lcd'] = 'ShiftRegLCD123 lcd(12,13,SRLCD123);\n';
   //dans le setup    
   Blockly.Arduino.setups_["setup_lcd"] = "lcd.begin(16,2);";    
-  return [code, Blockly.Arduino.ORDER_ATOMIC];
+  return code;
 };
 
 Blockly.Arduino.technozone_robot_lcdclear = function() {
@@ -90,7 +90,7 @@ Blockly.Arduino.technozone_robot_lcdclear = function() {
   Blockly.Arduino.definitions_['var_lcd'] = 'LiquidCrystal lcd(12,11,5,13,3,2);\n';  
   //dans le setup    
   Blockly.Arduino.setups_["setup_lcd"] = "lcd.begin(16,2);";    
-  return [code, Blockly.Arduino.ORDER_ATOMIC];
+  return code;
 };
 
 Blockly.Arduino.technozone_led1red = function() {
@@ -98,7 +98,7 @@ Blockly.Arduino.technozone_led1red = function() {
   var dropdown_stat = this.getFieldValue('STAT');
   Blockly.Arduino.setups_['setup_led1red_'+dropdown_pin] = 'pinMode('+dropdown_pin+', OUTPUT);'; //code à insérer dans le setup Arduino
   var code = 'digitalWrite('+dropdown_pin+','+dropdown_stat+');\n'  //code à insérer dans la loop Arduino
-  return [code, Blockly.Arduino.ORDER_ATOMIC];
+  return code;
 };
 
 Blockly.Arduino.technozone_led1green = function() {
@@ -106,7 +106,7 @@ Blockly.Arduino.technozone_led1green = function() {
   var dropdown_stat = this.getFieldValue('STAT');
   Blockly.Arduino.setups_['setup_led1green_'+dropdown_pin] = 'pinMode('+dropdown_pin+', OUTPUT);'; //code à insérer dans le setup Arduino
   var code = 'digitalWrite('+dropdown_pin+','+dropdown_stat+');\n'  //code à insérer dans la loop Arduino
-  return [code, Blockly.Arduino.ORDER_ATOMIC];
+  return code;
 };
 
 Blockly.Arduino.technozone_led1yellow = function() {
@@ -114,7 +114,7 @@ Blockly.Arduino.technozone_led1yellow = function() {
   var dropdown_stat = this.getFieldValue('STAT');
   Blockly.Arduino.setups_['setup_led1yellow_'+dropdown_pin] = 'pinMode('+dropdown_pin+', OUTPUT);'; //code à insérer dans le setup Arduino
   var code = 'digitalWrite('+dropdown_pin+','+dropdown_stat+');\n'  //code à insérer dans la loop Arduino
-  return [code, Blockly.Arduino.ORDER_ATOMIC];
+  return code;
 };
 
 Blockly.Arduino.technozone_relay1 = function() {
@@ -122,7 +122,7 @@ Blockly.Arduino.technozone_relay1 = function() {
   var dropdown_stat = this.getFieldValue('STAT');
   Blockly.Arduino.setups_['setup_relay1_'+dropdown_pin] = 'pinMode('+dropdown_pin+', OUTPUT);'; //code à insérer dans le setup Arduino
   var code = 'digitalWrite('+dropdown_pin+','+dropdown_stat+');\n'  //code à insérer dans la loop Arduino
-  return [code, Blockly.Arduino.ORDER_ATOMIC];
+  return code;
 };
 
 Blockly.Arduino.technozone_buzzer1 = function() {
@@ -143,7 +143,7 @@ Blockly.Arduino.technozone_buzzer1 = function() {
   //dans setup    
   Blockly.Arduino.setups_['setup_buzzer_pin_'+dropdown_pin] = 'pinMode('+dropdown_pin+',OUTPUT);';
   var code = 'playTone('+dropdown_pin+','+value_num+','+value_tps+');\n';
-  return [code, Blockly.Arduino.ORDER_ATOMIC];    
+  return code;    
     
 };
 
@@ -163,7 +163,7 @@ Blockly.Arduino.technozone_robot_buzzer_tone = function() {
   //dans setup    
   Blockly.Arduino.setups_['setup_buzzer_pin'] = 'pinMode(3, OUTPUT);';
   var code = 'playTone('+value_num+','+value_tps+');\n';
-  return [code, Blockly.Arduino.ORDER_ATOMIC];
+  return code;
 };
 
 Blockly.Arduino.technozone_robot_irsend = function() {
@@ -205,7 +205,7 @@ Blockly.Arduino.technozone_robot_irsend = function() {
   Blockly.Arduino.setups_['setup_IRsensorPin_right'] = 'pinMode(9, INPUT);\n'+
   '  digitalWrite(9, HIGH);\n';    
   var code = 'IR38Write();\n';
-  return [code, Blockly.Arduino.ORDER_ATOMIC];
+  return code;
 };
 
 Blockly.Arduino.technozone_sonar1 = function() {
@@ -226,7 +226,7 @@ Blockly.Arduino.technozone_sonar1 = function() {
     "  return value;\n"+
     "}\n";
   code="mesure_distance_cm("+dropdown_triger_pin+","+dropdown_dist_pin+")";
-  return [code, Blockly.Arduino.ORDER_ATOMIC];
+  return code;
 };
 
 Blockly.Arduino.technozone_servo1 = function() {
@@ -241,7 +241,7 @@ Blockly.Arduino.technozone_servo1 = function() {
   Blockly.Arduino.setups_['setup_servo_'+dropdown_pin] = 'servo_'+dropdown_pin+'.attach('+dropdown_pin+');\n';
   
   var code = 'servo_'+dropdown_pin+'.write('+value_degree+');\n';
-  return [code, Blockly.Arduino.ORDER_ATOMIC];
+  return code;
 };
 
 Blockly.Arduino.technozone_read_servo1 = function() {
@@ -251,21 +251,21 @@ Blockly.Arduino.technozone_read_servo1 = function() {
   Blockly.Arduino.setups_['setup_servo_' + dropdown_pin] = 'servo_' + dropdown_pin + '.attach('+dropdown_pin+');\n';
   
   var code = 'servo_' + dropdown_pin + '.read()';
-  return [code, Blockly.Arduino.ORDER_ATOMIC];
+  return code;
 };
 
 Blockly.Arduino.technozone_btn1white = function() {
   var dropdown_pin = Blockly.Arduino.valueToCode(this, 'PIN', Blockly.Arduino.ORDER_ATOMIC);;
   Blockly.Arduino.setups_['setup_btn1white_'+dropdown_pin] = 'pinMode('+dropdown_pin+', INPUT);';
   var code = 'digitalRead('+dropdown_pin+')==0';
-  return [code, Blockly.Arduino.ORDER_ATOMIC];
+  return code;
 };
 
 Blockly.Arduino.technozone_robot_btn = function() {
   var dropdown_pin = Blockly.Arduino.valueToCode(this, 'PIN', Blockly.Arduino.ORDER_ATOMIC);;
   Blockly.Arduino.setups_['setup_btn'] = 'pinMode(7, INPUT);';
   var code = 'digitalRead(7)==0';
-  return [code, Blockly.Arduino.ORDER_ATOMIC];
+  return code;
 };
 
 Blockly.Arduino.technozone_robot_bt_available = function() {
@@ -306,7 +306,7 @@ Blockly.Arduino.technozone_robot_bt_available = function() {
   //dans setup    
   Blockly.Arduino.setups_['setup_bt'] = 'bt.begin(9600);';   
   var code = 'bt_read()>0';
-  return [code, Blockly.Arduino.ORDER_ATOMIC];
+  return code;
 };
 
 Blockly.Arduino.technozone_bt_init = function() {
@@ -450,7 +450,7 @@ Blockly.Arduino.technozone_bt_init = function() {
   Blockly.Arduino.setups_['setup_Timer1_attachInterrupt'] = 'Timer1.attachInterrupt(BTinterrupt);'; 
   Blockly.Arduino.setups_['setup_Timer1_stop'] = 'Timer1.stop();';    
   var code = '';
-  return [code, Blockly.Arduino.ORDER_ATOMIC];
+  return code;
 };
 
 
@@ -484,7 +484,7 @@ Blockly.Arduino.technozone_speech_init = function() {
    code+='  voice.SetBending('+bending+');//entre 0 et 1023 : 0=pas de distortion ;   512=ion maximale ;  1023=pas de distortion\n'+
     '  voice.BendingOn();\n';
  } 
-  return [code, Blockly.Arduino.ORDER_ATOMIC];
+  return code;
 };
 
 Blockly.Arduino.technozone_ihm_init = function() {
@@ -628,7 +628,7 @@ Blockly.Arduino.technozone_ihm_init = function() {
   Blockly.Arduino.setups_['setup_Timer1_attachInterrupt'] = 'Timer1.attachInterrupt(BTinterrupt);'; 
   Blockly.Arduino.setups_['setup_Timer1_stop'] = 'Timer1.stop();';    
   var code = '';
-  return [code, Blockly.Arduino.ORDER_ATOMIC];
+  return code;
 };
 
 Blockly.Arduino.technozone_robot_ihm_init = function() {
@@ -770,7 +770,7 @@ Blockly.Arduino.technozone_robot_ihm_init = function() {
   Blockly.Arduino.setups_['setup_Timer1_attachInterrupt'] = 'Timer1.attachInterrupt(BTinterrupt);'; 
   Blockly.Arduino.setups_['setup_Timer1_stop'] = 'Timer1.stop();';    
   var code = '';
-  return [code, Blockly.Arduino.ORDER_ATOMIC];
+  return code;
 };
 
 Blockly.Arduino.technozone_robot_ihm_available = function() {
@@ -810,7 +810,7 @@ Blockly.Arduino.technozone_robot_ihm_available = function() {
   //dans setup    
   Blockly.Arduino.setups_['setup_bt'] = 'bt.begin(9600);';   
   var code = 'ihm_available()';
-  return [code, Blockly.Arduino.ORDER_ATOMIC];
+  return code;
 };
 
 Blockly.Arduino.technozone_robot_ihm_change = function() {
@@ -822,7 +822,7 @@ Blockly.Arduino.technozone_robot_ihm_change = function() {
   //dans setup    
   Blockly.Arduino.setups_['setup_bt'] = 'bt.begin(9600);';   
   var code = 'ihm_change()';
-  return [code, Blockly.Arduino.ORDER_ATOMIC];
+  return code;
 };
 
 Blockly.Arduino.technozone_robot_ihm_inter_read = function() {
@@ -835,7 +835,7 @@ Blockly.Arduino.technozone_robot_ihm_inter_read = function() {
   Blockly.Arduino.setups_['setup_bt'] = 'bt.begin(9600);';   
   var led = this.getFieldValue('LED');    
   var code = 'testInter('+led+')';
-  return [code, Blockly.Arduino.ORDER_ATOMIC];
+  return code;
 };
 
 Blockly.Arduino.technozone_robot_ihm_btn_read = function() {
@@ -848,7 +848,7 @@ Blockly.Arduino.technozone_robot_ihm_btn_read = function() {
   Blockly.Arduino.setups_['setup_bt'] = 'bt.begin(9600);';   
   var led = this.getFieldValue('LED');    
   var code = 'testBtn('+led+')';
-  return [code, Blockly.Arduino.ORDER_ATOMIC];
+  return code;
 };
 
 Blockly.Arduino.technozone_robot_ihm_potar_read = function() {
@@ -864,7 +864,7 @@ Blockly.Arduino.technozone_robot_ihm_potar_read = function() {
   Blockly.Arduino.setups_['setup_bt'] = 'bt.begin(9600);';   
   var led = this.getFieldValue('LED');    
   var code = 'readPotar('+led+')';
-  return [code, Blockly.Arduino.ORDER_ATOMIC];
+  return code;
 };
 
 Blockly.Arduino.technozone_robot_bt_read = function() {
@@ -877,7 +877,7 @@ Blockly.Arduino.technozone_robot_bt_read = function() {
   //dans setup     
   Blockly.Arduino.setups_['setup_bt'] = 'bt.begin(9600);';   
   var code = '(stringOne = ' +text+ ')';
-  return [code, Blockly.Arduino.ORDER_ATOMIC];
+  return code;
 };
 
 Blockly.Arduino.technozone_robot_bt_write = function() {
@@ -891,104 +891,104 @@ Blockly.Arduino.technozone_robot_bt_write = function() {
   //dans setup     
   Blockly.Arduino.setups_['setup_bt'] = 'bt.begin(9600);';   
   var code = 'bt.println('+text+');\n';
-  return [code, Blockly.Arduino.ORDER_ATOMIC];
+  return code;
 };
 
 Blockly.Arduino.technozone_robot_irleft = function() {
   var code = 'IR_left==0';
-  return [code, Blockly.Arduino.ORDER_ATOMIC];
+  return code;
 };
 
 Blockly.Arduino.technozone_robot_ircenter = function() {
   var code = 'IR_center==0';
-  return [code, Blockly.Arduino.ORDER_ATOMIC];
+  return code;
 };
 
 Blockly.Arduino.technozone_robot_irright = function() {
   var code = 'IR_right==0';
-  return [code, Blockly.Arduino.ORDER_ATOMIC];
+  return code;
 };
 
 Blockly.Arduino.technozone_robot_ligleft = function() {
   Blockly.Arduino.setups_['setup_ligleft'] = 'pinMode(A2, INPUT);';    
   var code = 'digitalRead(A2)==1';
-  return [code, Blockly.Arduino.ORDER_ATOMIC];
+  return code;
 };
 
 Blockly.Arduino.technozone_robot_ligright = function() {
   Blockly.Arduino.setups_['setup_ligright'] = 'pinMode(A0, INPUT);';     
   var code = 'digitalRead(A0)==1';
-  return [code, Blockly.Arduino.ORDER_ATOMIC];
+  return code;
 };
 
 Blockly.Arduino.technozone_btn1black = function() {
   var dropdown_pin = Blockly.Arduino.valueToCode(this, 'PIN', Blockly.Arduino.ORDER_ATOMIC);;
   Blockly.Arduino.setups_['setup_btn1black_'+dropdown_pin] = 'pinMode('+dropdown_pin+', INPUT);';
   var code = 'digitalRead('+dropdown_pin+')==0';
-  return [code, Blockly.Arduino.ORDER_ATOMIC];
+  return code;
 };
 
 Blockly.Arduino.technozone_btn1green = function() {
   var dropdown_pin = Blockly.Arduino.valueToCode(this, 'PIN', Blockly.Arduino.ORDER_ATOMIC);;
   Blockly.Arduino.setups_['setup_btn1green_'+dropdown_pin] = 'pinMode('+dropdown_pin+', INPUT);';
   var code = 'digitalRead('+dropdown_pin+')==0';
-  return [code, Blockly.Arduino.ORDER_ATOMIC];
+  return code;
 };
 
 Blockly.Arduino.technozone_btn1red = function() {
   var dropdown_pin = Blockly.Arduino.valueToCode(this, 'PIN', Blockly.Arduino.ORDER_ATOMIC);;
   Blockly.Arduino.setups_['setup_btn1red_'+dropdown_pin] = 'pinMode('+dropdown_pin+', INPUT);';
   var code = 'digitalRead('+dropdown_pin+')==0';
-  return [code, Blockly.Arduino.ORDER_ATOMIC];
+  return code;
 };
 
 Blockly.Arduino.technozone_switch1 = function() {
   var dropdown_pin = Blockly.Arduino.valueToCode(this, 'PIN', Blockly.Arduino.ORDER_ATOMIC);;
   Blockly.Arduino.setups_['setup_switch1_'+dropdown_pin] = 'pinMode('+dropdown_pin+', INPUT);';
   var code = 'digitalRead('+dropdown_pin+')==0';
-  return [code, Blockly.Arduino.ORDER_ATOMIC];
+  return code;
 };
 
 Blockly.Arduino.technozone_ils1 = function() {
   var dropdown_pin = Blockly.Arduino.valueToCode(this, 'PIN', Blockly.Arduino.ORDER_ATOMIC);;
   Blockly.Arduino.setups_['setup_ils1_'+dropdown_pin] = 'pinMode('+dropdown_pin+', INPUT);';
   var code = 'digitalRead('+dropdown_pin+')==0';
-  return [code, Blockly.Arduino.ORDER_ATOMIC];
+  return code;
 };
 
 Blockly.Arduino.technozone_proxi1 = function() {
   var dropdown_pin = Blockly.Arduino.valueToCode(this, 'PIN', Blockly.Arduino.ORDER_ATOMIC);;
   Blockly.Arduino.setups_['setup_proxi1_'+dropdown_pin] = 'pinMode('+dropdown_pin+', INPUT);';
   var code = 'digitalRead('+dropdown_pin+')==0';
-  return [code, Blockly.Arduino.ORDER_ATOMIC];
+  return code;
 };
 
 Blockly.Arduino.technozone_bari1 = function() {
   var dropdown_pin = Blockly.Arduino.valueToCode(this, 'PIN', Blockly.Arduino.ORDER_ATOMIC);;
   Blockly.Arduino.setups_['setup_bari1_'+dropdown_pin] = 'pinMode('+dropdown_pin+', INPUT);';
   var code = 'digitalRead('+dropdown_pin+')==1';
-  return [code, Blockly.Arduino.ORDER_ATOMIC];
+  return code;
 };
 
 Blockly.Arduino.technozone_lig1 = function() {
   var dropdown_pin = Blockly.Arduino.valueToCode(this, 'PIN', Blockly.Arduino.ORDER_ATOMIC);;
   Blockly.Arduino.setups_['setup_lig1_'+dropdown_pin] = 'pinMode('+dropdown_pin+', INPUT);';
   var code = 'digitalRead('+dropdown_pin+')==1';
-  return [code, Blockly.Arduino.ORDER_ATOMIC];
+  return code;
 };
 
 Blockly.Arduino.technozone_cmouv1 = function() {
   var dropdown_pin = Blockly.Arduino.valueToCode(this, 'PIN', Blockly.Arduino.ORDER_ATOMIC);;
   Blockly.Arduino.setups_['setup_cmouv1_'+dropdown_pin] = 'pinMode('+dropdown_pin+', INPUT);';
   var code = 'digitalRead('+dropdown_pin+')==1';
-  return [code, Blockly.Arduino.ORDER_ATOMIC];
+  return code;
 };
 
 Blockly.Arduino.technozone_potar1 = function() {
   var dropdown_pin = Blockly.Arduino.valueToCode(this, 'PIN', Blockly.Arduino.ORDER_ATOMIC);;
     Blockly.Arduino.setups_['setup_potar1_'+dropdown_pin] = 'pinMode('+dropdown_pin+', INPUT);';
   var code = 'analogRead('+dropdown_pin+')';
-  return [code, Blockly.Arduino.ORDER_ATOMIC];
+  return code;
 };
 
 Blockly.Arduino.technozone_ctn1 = function() {
@@ -998,14 +998,14 @@ Blockly.Arduino.technozone_ctn1 = function() {
   */
   Blockly.Arduino.setups_['setup_ctn1_'+dropdown_pin] = 'pinMode('+dropdown_pin+', INPUT);';
   var code = 'round(- 0.525641025*(analogRead('+dropdown_pin+')/4)+ 116.0897436)';
-  return [code, Blockly.Arduino.ORDER_ATOMIC];
+  return code;
 };
 
 Blockly.Arduino.technozone_ldr1 = function() {
   var dropdown_pin = Blockly.Arduino.valueToCode(this, 'PIN', Blockly.Arduino.ORDER_ATOMIC);
   Blockly.Arduino.setups_['setup_ldr1_'+dropdown_pin] = 'pinMode('+dropdown_pin+', INPUT);';
   var code = 'round(1517.288685*exp(-64.822510*analogRead('+dropdown_pin+')/10000))';
-  return [code, Blockly.Arduino.ORDER_ATOMIC];
+  return code;
 };
 
 Blockly.Arduino.technozone_mot2 = function() {
@@ -1022,7 +1022,7 @@ Blockly.Arduino.technozone_mot2 = function() {
     "  analogWrite(pwmpin,vitesse);\n"+
     "}\n";
   code="cmd_mot("+dropdown_pindir+","+dropdown_pinpwm+","+value_sens+","+value_vitesse+");\n";
-  return [code, Blockly.Arduino.ORDER_ATOMIC];
+  return code;
 };
 
 Blockly.Arduino.technozone_pap1cc = function() {
@@ -1060,7 +1060,7 @@ Blockly.Arduino.technozone_pap1cc = function() {
     code+='MyStepper_'+dropdown_i2cadd+'.SpeedB('+value_vitesse+');     //Set Motor B speed\n';
     code+='MyStepper_'+dropdown_i2cadd+'.SetMode(CC);   //Enter in Continuous mode, Motor run as previously set\n';
   }
-  return [code, Blockly.Arduino.ORDER_ATOMIC];
+  return code;
 };
 
 Blockly.Arduino.technozone_robot_ihm_led_def = function() {
@@ -1075,7 +1075,7 @@ Blockly.Arduino.technozone_robot_ihm_led_def = function() {
   var code = 'bt.println("|l'+led+text.substring(1,text.length-1)+'");\n'+
              'delay(300);\n';
   
-  return [code, Blockly.Arduino.ORDER_ATOMIC];
+  return code;
 };
 
 Blockly.Arduino.technozone_robot_ihm_btn_def = function() {
@@ -1100,7 +1100,7 @@ Blockly.Arduino.technozone_robot_ihm_btn_def = function() {
   var led = this.getFieldValue('LED');  
   var text = Blockly.Arduino.valueToCode(this, 'TEXT',Blockly.Arduino.ORDER_UNARY_POSTFIX) || '\'\'';    
   var code = 'bt.println("|b'+led+text.substring(1,text.length-1)+'");\n';
-  return [code, Blockly.Arduino.ORDER_ATOMIC];
+  return code;
 };
 
 function makeHttpObject() {
@@ -1180,7 +1180,7 @@ Blockly.Arduino.technozone_speech_say = function() {
    code+='voice.say(sp'+lemot+');\n';
   }
   //var code = 'bt.println("|b'+led+text.substring(1,text.length-1)+'");\n';
-  return [code, Blockly.Arduino.ORDER_ATOMIC];
+  return code;
 };
 
 Blockly.Arduino.technozone_robot_ihm_inter_def = function() {
@@ -1206,7 +1206,7 @@ Blockly.Arduino.technozone_robot_ihm_inter_def = function() {
             Blockly.Arduino.ORDER_UNARY_POSTFIX);                             
   //      Blockly.Arduino.ORDER_UNARY_POSTFIX) || '\'\'';    
   var code = 'bt.println("|i'+led+text.substring(1,text.length-1)+'");\n';
-  return [code, Blockly.Arduino.ORDER_ATOMIC];
+  return code;
 };
 
 Blockly.Arduino.technozone_robot_ihm_led_on = function() {
@@ -1222,7 +1222,7 @@ Blockly.Arduino.technozone_robot_ihm_led_on = function() {
   var code = 'bt.println("|L'+led+couleur+'");\n';
       //       'delay(30);\n';
   
-  return [code, Blockly.Arduino.ORDER_ATOMIC];
+  return code;
 };
 
 Blockly.Arduino.technozone_robot_ihm_inter_on = function() {
@@ -1238,7 +1238,7 @@ Blockly.Arduino.technozone_robot_ihm_inter_on = function() {
   var code = 'bt.println("|I'+led+'W'+couleur+'");\n';
       //       'delay(300);\n';
   
-  return [code, Blockly.Arduino.ORDER_ATOMIC];
+  return code;
 };
 
 Blockly.Arduino.technozone_robot_ihm_potar_def = function() {
@@ -1268,7 +1268,7 @@ Blockly.Arduino.technozone_robot_ihm_potar_def = function() {
         //     'delay(10);\n'+
              'bt.println("|R'+led+'WV'+position+'");\n';
         //     'delay(10);\n';
-  return [code, Blockly.Arduino.ORDER_ATOMIC];
+  return code;
 };
 
 Blockly.Arduino.technozone_robot_ihm_gauge_def = function() {
@@ -1289,7 +1289,7 @@ Blockly.Arduino.technozone_robot_ihm_gauge_def = function() {
              'delay(100);\n'+
              'bt.println("|G'+led+'T'+graduation.substring(1,graduation.length-1)+'");\n'+
              'bt.println("|G'+led+'L'+titre.substring(1,titre.length-1)+'");\n';
-  return [code, Blockly.Arduino.ORDER_ATOMIC];
+  return code;
 };
 
 Blockly.Arduino.technozone_robot_ihm_gauge_write = function() {
@@ -1304,7 +1304,7 @@ Blockly.Arduino.technozone_robot_ihm_gauge_write = function() {
   var valeur = Blockly.Arduino.valueToCode(this, 'VALEUR',
             Blockly.Arduino.ORDER_UNARY_POSTFIX);       
   var code = 'bt.println("|G'+led+'W"+floatToString('+valeur+','+nbdecimal+'));\n';
-  return [code, Blockly.Arduino.ORDER_ATOMIC];
+  return code;
 };
 
 Blockly.Arduino.technozone_pap1relatif = function() {
@@ -1345,7 +1345,7 @@ Blockly.Arduino.technozone_pap1relatif = function() {
     code+='MyStepper_'+dropdown_i2cadd+'.StepB('+value_pas+');         //Set step number for motor B \n';
     code+='MyStepper_'+dropdown_i2cadd+'.SetMode(RELATIVE);   //Enter in Relative mode, Motor run as previously set\n';
   }
-  return [code, Blockly.Arduino.ORDER_ATOMIC];
+  return code;
 };
 
 Blockly.Arduino.technozone_robot_move = function() {
@@ -1401,7 +1401,7 @@ Blockly.Arduino.technozone_robot_move = function() {
       '  Stepper.SetMode(IDLE);';
   //dans loop    
   var code = 'move('+value_direction+','+value_distance+','+value_unit+','+value_preemptif+');\n';
-  return [code, Blockly.Arduino.ORDER_ATOMIC];
+  return code;
 };
 
 Blockly.Arduino.technozone_robot_turn = function() {
@@ -1450,7 +1450,7 @@ Blockly.Arduino.technozone_robot_turn = function() {
       "}\n";         
   //dans loop    
   var code = 'turn('+value_direction+','+value_angle+','+value_preemptif+');\n';
-  return [code, Blockly.Arduino.ORDER_ATOMIC];
+  return code;
 };
 
 Blockly.Arduino.technozone_robot_stop = function() {
@@ -1474,7 +1474,7 @@ Blockly.Arduino.technozone_robot_stop = function() {
       '  Stepper.SetMode(IDLE);';
   //dans loop    
   var code = 'stop();\n';
-  return [code, Blockly.Arduino.ORDER_ATOMIC];
+  return code;
 };
 
 Blockly.Arduino.technozone_pap1init = function() {
@@ -1491,14 +1491,14 @@ Blockly.Arduino.technozone_pap1init = function() {
   'MyStepper_'+dropdown_i2cadd+'.SpeedB(0);     //Motor B speed to 0\n'+
   'MyStepper_'+dropdown_i2cadd+'.SetMode(CC);   //Enter in Continious Current Mode\n';
   var code = ""; 
-  return [code, Blockly.Arduino.ORDER_ATOMIC];
+  return code;
 };
 
 Blockly.Arduino.technozone_pap1busy = function() {
   var dropdown_i2cadd = this.getFieldValue('I2CADD');
   var code = ""; 
   code='MyStepper_'+dropdown_i2cadd+'.Busy()';
-  return [code, Blockly.Arduino.ORDER_ATOMIC];
+  return code;
 };
 
 Blockly.Arduino.technozone_mot1easybot1 = function() {
@@ -1525,8 +1525,8 @@ Blockly.Arduino.technozone_mot1easybot1 = function() {
     "  analogWrite(pwmpin,vitesse);\n"+
     "}\n";
   code="cmd_mot("+dropdown_pindir+","+dropdown_pinpwm+","+value_sens+","+value_vitesse+");\n";
-  //return [code, Blockly.Arduino.ORDER_ATOMIC];
-  return [code, Blockly.Arduino.ORDER_ATOMIC];
+  //return code;
+  return code;
 };
 
 
@@ -1554,8 +1554,8 @@ Blockly.Arduino.technozone_mot1easycon1 = function() {
     "  analogWrite(pwmpin,vitesse);\n"+
     "}\n";
   code="cmd_mot("+dropdown_pindir+","+dropdown_pinpwm+","+value_sens+","+value_vitesse+");\n";
-  //return [code, Blockly.Arduino.ORDER_ATOMIC];
-  return [code, Blockly.Arduino.ORDER_ATOMIC];
+  //return code;
+  return code;
 };
 
 Blockly.Arduino.technozone_telec2 = function() {
@@ -1563,7 +1563,7 @@ Blockly.Arduino.technozone_telec2 = function() {
   var dropdown_touche = this.getFieldValue('TOUCHE');
   var code = ""; 
   code='IRkey("'+dropdown_touche+'")';
-  return [code, Blockly.Arduino.ORDER_ATOMIC];
+  return code;
 };
 
 Blockly.Arduino.technozone_telecsetup = function() {
@@ -1596,7 +1596,7 @@ Blockly.Arduino.technozone_telecsetup = function() {
   '    } else {return false;}\n'+
   '  } else {return false;}\n'+
   ' }\n';
-  return [code, Blockly.Arduino.ORDER_ATOMIC];
+  return code;
 };
 
 Blockly.Arduino.technozone_telec1= function() {
@@ -1604,16 +1604,16 @@ Blockly.Arduino.technozone_telec1= function() {
   var dropdown_touche = this.getFieldValue('TOUCHE');
   var code = ""; 
   code='IRkey("'+dropdown_touche+'")';
-  return [code, Blockly.Arduino.ORDER_ATOMIC];
+  return code;
 };
 
 Blockly.Arduino.technozone_telecinit = function() {
   var code = ""; 
   code='IRkeypressed()';
-  return [code, Blockly.Arduino.ORDER_ATOMIC];
+  return code;
 };
 
 Blockly.Arduino.technozone_telecflush = function() {
   var code='irrecv.resume(); //vide le tampon de la télécommande\n';
-  return [code, Blockly.Arduino.ORDER_ATOMIC];
+  return code;
 };
