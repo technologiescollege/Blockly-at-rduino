@@ -235,9 +235,9 @@ Code.initLanguageSupervision = function() {
 	  $('#span_supervision_tab7').text(Blockly.Msg.SV_tab7);
 	  $('#span_supervision_tab8').text(Blockly.Msg.SV_tab8);
 	  $('#span_supervision_tab9').text(Blockly.Msg.SV_tab9);
-	  $('#span_supervision_enabled').text(Blockly.Msg.SV_enabled);
-	  $('#span_supervision_disabled').text(Blockly.Msg.SV_disabled);	  
-	  $('#span_supervision_pin').text(Blockly.Msg.SV_pin);  
+	  $('span[id^="span_supervision_enabled"]').text(Blockly.Msg.SV_enabled);
+	  $('span[id^="span_supervision_disabled"]').text(Blockly.Msg.SV_disabled);	  
+	  $('span[id^="span_supervision_pin"]').text(Blockly.Msg.SV_pin);  
 	  $('#span_supervision_low').text(Blockly.Msg.SV_low);  
 	  $('#span_supervision_high').text(Blockly.Msg.SV_high);
 	  

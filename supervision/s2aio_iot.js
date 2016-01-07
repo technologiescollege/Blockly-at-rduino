@@ -43,9 +43,7 @@ socket.onopen = function (event) {
 };
 
 socket.onclose = function (event) {
-	if (!$("#connected").contains("ERROR")) {
-		$("#connected").append(Blockly.Msg.SV_onClose);
-	}
+	$("#connected").append(Blockly.Msg.SV_onClose);
 };
 
 socket.onmessage = function (message) {
