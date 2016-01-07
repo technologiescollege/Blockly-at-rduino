@@ -612,10 +612,6 @@ BlocklyDuino.init = function() {
 								MSG['verification_failed'] + error_output);
 					});
 		});
-		
-		if ($("#cb_cf_boards").prop("disabled") || $("#cb_cf_ports").prop("disabled")) {
-				$("#btn_plugin_codebender").removeClass('disabled');
-		}
 					
 		// draggable "modal" dialog containing card image & videos
 	    $('body').on('mousedown', '#showcardModal', function() {
