@@ -216,6 +216,8 @@ Code.initLanguage = function() {
   $('#btn_validCode').text(MSG['btn_validCode']);
 
   $("xml").find("category").each(function() {
+	// add attribute ID to keep categorie code
+	$(this).attr('id', $(this).attr('name'));
 	$(this).attr('name', Blockly.Msg[$(this).attr('name')]);
   });
 
@@ -238,8 +240,8 @@ Code.initLanguageSupervision = function() {
 	  $('span[id^="span_supervision_enabled"]').text(Blockly.Msg.SV_enabled);
 	  $('span[id^="span_supervision_disabled"]').text(Blockly.Msg.SV_disabled);	  
 	  $('span[id^="span_supervision_pin"]').text(Blockly.Msg.SV_pin);  
-	  $('#span_supervision_low').text(Blockly.Msg.SV_low);  
-	  $('#span_supervision_high').text(Blockly.Msg.SV_high);
+	  $('span[id^="span_supervision_low"]').text(Blockly.Msg.SV_low);  
+	  $('span[id^="span_supervision_high"]').text(Blockly.Msg.SV_high);
 	  
 };
 

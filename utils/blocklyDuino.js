@@ -81,7 +81,6 @@ var profile = {
 		/*irqonchange: [["1", "1"], ["2", "2"], ["3", "3"], ["4", "4"], ["5", "5"], ["6", "6"], ["7", "7"], ["8", "8"], ["9", "9"], ["10", "10"], ["11", "11"], ["12", "12"], ["13", "13"],["A0", "14"], ["A1", "15"], ["A2", "16"], ["A3", "17"], ["A4", "18"], ["A5", "19"]],*/
 		picture : "media/Arduino-Uno-Pinout.jpg",
 		miniPicture : "media/Arduino-Uno-Pinout-mini.jpg",
-		supervision : "supervision/pymata_arduino_uno.js",
 	    serial : 9600,
 	},
 	arduino_mega:{
@@ -92,7 +91,6 @@ var profile = {
 		/*irqonchange : [["10", "10"], ["11", "11"], ["12", "12"], ["13", "13"], ["14", "14"], ["15", "15"], ["50", "50"], ["51", "51"], ["52", "52"], ["53", "53"], ["A8", "62"], ["A9", "63"], ["A10", "64"], ["A11", "65"], ["A12", "66"], ["A13", "67"], ["A14", "68"], ["A15", "69"]],*/
 		picture : "media/Arduino-Mega-2560-Pinout.jpg",
 		miniPicture : "media/Arduino-Mega-2560-Pinout-mini.jpg",
-		supervision : "supervision/pymata_arduino_mega.js",
         serial : 9600,
 	},
 	dfrobot_romeo:{
@@ -102,7 +100,6 @@ var profile = {
 		analog : ["A0", "A1", "A2", "A3", "A4", "A5", "A6", "A7"],
 		picture : "media/DFRobot-RoMeo-Pinout.jpg",
 		miniPicture : "media/DFRobot-RoMeo-Pinout-mini.jpg",
-		supervision : "supervision/pymata_dfrobot_romeo.js",
         serial : 9600,
 	},
 };

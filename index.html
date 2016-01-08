@@ -200,7 +200,7 @@
 			<div id="content_arduino" class="tab-pane">
 				<select id="cb_cf_boards"></select>
 				<select id="cb_cf_ports"></select>				
-				<a id="btn_plugin_codebender" class='btn btn-danger' disabled="disabled" href="https://codebender.cc/static/plugin" target=_blank role='button'>
+				<a id="btn_plugin_codebender" class='btn btn-danger' href="https://codebender.cc/static/plugin" target=_blank role='button'>
 					<span class="glyphicon glyphicon-new-window"></span>
 					<span id="span_plugin_codebender"> </span>
 				</a>			
@@ -353,7 +353,7 @@
 </div>
 
 <!--    toolboxes definitions -->
-<xml id="CAT_LOGIC" style="display: none">
+<xml id="toolbox" style="display: none">
     <category name="CAT_LOGIC" colour="#E1A91A">
         <block type="controls_if"></block>
 		<block type="controls_switch"></block> 
@@ -363,8 +363,6 @@
         <block type="logic_boolean"></block>
         <block type="logic_null"></block>  
     </category>
-</xml>
-<xml id="CAT_LOOPS" style="display: none">
     <category name="CAT_LOOPS" colour="#C88330">
 		<block type="controls_repeat"></block>
         <block type="controls_repeat_ext">
@@ -396,8 +394,6 @@
         <block type="controls_forEach"></block>
         <block type="controls_flow_statements"></block>
     </category>
-</xml>
-<xml id="CAT_MATH" style="display: none">
     <category name="CAT_MATH" colour="#5CB712">
         <block type="math_number"></block>
 		<block type="inout_angle_maths"></block>
@@ -442,8 +438,7 @@
       </block>
         <block type="math_random_float"></block>
     </category>
-</xml>
-<!--<xml id="CAT_LIST" style="display: none">
+<!--
     <category name="CAT_LIST" colour="#9e8cc0">
         <block type="lists_create_empty"></block>
         <block type="lists_create_with"></block>
@@ -460,8 +455,7 @@
         <block type="lists_getIndex"></block>
         <block type="lists_setIndex"></block>
     </category>
-</xml>-->
-<xml id="CAT_TEXT" style="display: none">
+-->
     <category name="CAT_TEXT" colour="#8A55D7">
         <block type="text"></block>
 <!--         <block type="text_join"></block> -->
@@ -502,8 +496,7 @@
 <!--             </value> -->
 <!--         </block> -->
     </category>
-</xml>
-<!--<xml id="CAT_COLOR" style="display: none">
+<!--
     <category name="CAT_COLOR" colour="#c09e8c">
         <block type="colour_picker"></block>
         <block type="colour_random"></block>
@@ -542,16 +535,11 @@
             </value>
         </block>
     </category> 
-</xml>-->
-<xml id="CAT_VARIABLES" style="display: none">
+-->
     <category name="CAT_VARIABLES" custom="VARIABLE" colour="#EE7D16"></category>
-</xml>
-<xml id="CAT_FUNCTIONS" style="display: none">
     <category name="CAT_FUNCTIONS" custom="PROCEDURE" colour="#632D99"></category>
 <sep></sep>
-</xml>
 
-<xml id="CAT_ARDUINO" style="display: none">
     <category name="CAT_ARDUINO" colour="#00979D">
         <block type="base_setup"></block>
 		<block type="base_const"></block>
@@ -649,8 +637,7 @@
             <block type="servo_read_degrees"></block>
         </category>
     </category>
-</xml>
-<xml id="CAT_BQ" style="display: none">
+
     <category name="CAT_BQ" colour="#608621">
         <category name="CAT_BQ_IN" colour="#608621">
             <block type="bq_ultrason">
@@ -756,8 +743,7 @@
 			</block>
         </category>
     </category>
-</xml>
-<xml id="CAT_GROVE" style="display: none">
+
     <category name="CAT_GROVE" colour="#8ec31f">
         <category name="CAT_GROVE_IN" colour="#8ec31f">
             <block type="grove_button"></block>
@@ -802,8 +788,7 @@
             <block type="grove_bluetooth_slave"></block>
         </category>
     </category>
-</xml>
-<xml id="CAT_TECHNOZONE" style="display: none">
+
     <category name="CAT_TECHNOZONE" colour="#646464">
         <category name="CAT_TECHNOZONE_IN" colour="#646464">
             <block type="technozone_btn1white"></block>
@@ -977,8 +962,7 @@
             <block type="technozone_robot_ihm_gauge_write"></block>
         </category>
     </category>
-</xml>
-<xml id="CAT_TECHNOZONE_ROBOT" style="display: none">
+
     <category name="CAT_TECHNOZONE_ROBOT" colour="#646464">
         <category name="CAT_TECHNOZONE_ROBOT_IN" colour="#646464">
             <block type="technozone_robot_btn"></block>
@@ -1096,8 +1080,7 @@
             <block type="technozone_robot_ihm_gauge_write"></block>
         </category>
     </category>
-</xml>
-<xml id="CAT_ZUMO" style="display: none">
+
     <category name="CAT_ZUMO" colour="#00138b">
         <category name="CAT_ZUMO_MOTORS" colour="#00138b">
             <block type="zumo_motors_FN"></block>
@@ -1194,8 +1177,7 @@
         </category>
     </category>
 <sep></sep>
-</xml>
-<xml id="CAT_ROBOTS" style="display: none">
+
     <category name="CAT_ROBOTS" colour="#5b99a5">
         <category name="CAT_ROBOTS_MOTORS" colour="#5b99a5">
 			<block type="arduino_s">
@@ -1280,5 +1262,6 @@
         </category>
     </category>
 </xml>
+
 </body>
 </html>

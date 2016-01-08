@@ -1,11 +1,3 @@
-// hide all of the pwm input controls until selected
-$("#v3").hide();
-$("#v5").hide();
-$("#v6").hide();
-$("#v9").hide();
-$("#v10").hide();
-$("#v11").hide();
-
 // connect to the server
 var ipAddress = "localhost";
 var ipPort = "9000";
