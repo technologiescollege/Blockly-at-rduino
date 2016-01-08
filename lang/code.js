@@ -236,11 +236,17 @@ Code.initLanguageSupervision = function() {
 	  $('#span_supervision_tab8').text(Blockly.Msg.SV_tab8);
 	  $('#span_supervision_tab9').text(Blockly.Msg.SV_tab9);
 	  $('span[id^="span_supervision_enabled"]').text(Blockly.Msg.SV_enabled);
-	  $('span[id^="span_supervision_disabled"]').text(Blockly.Msg.SV_disabled);	  
-	  $('span[id^="span_supervision_pin"]').text(Blockly.Msg.SV_pin);  
-	  $('#span_supervision_low').text(Blockly.Msg.SV_low);  
-	  $('#span_supervision_high').text(Blockly.Msg.SV_high);
-	  
+	  $('span[id^="span_supervision_disabled"]').text(Blockly.Msg.SV_disabled);
+	  $('span[id^="span_supervision_pin_e"]').text(Blockly.Msg.SV_pin1);	  
+	  $('span[id^="span_supervision_pin_p"]').text(Blockly.Msg.SV_pin2);
+	  $('span[id^="span_supervision_pin_a"]').text(Blockly.Msg.SV_pin1);	      
+	  $('span[id^="span_supervision_low"]').text(Blockly.Msg.SV_low);	      
+	  $('span[id^="span_supervision_high"]').text(Blockly.Msg.SV_high);     
+	  $('span[id^="span_supervision_PWM"]').text(Blockly.Msg.SV_pwm);
+
+
+
+$('span[id^="span_supervision_documentation"]').text(Blockly.Msg.SV_documentation);		  
 };
 
 //Load the Code demo's language strings.

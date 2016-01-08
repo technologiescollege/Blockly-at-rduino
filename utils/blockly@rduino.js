@@ -310,18 +310,7 @@ BlocklyDuino.bindFunctions = function () {
     $('#menuPanelBlockly li[id^=tab_]').on("click", function () {
     	BlocklyDuino.selectedTab = $(this).attr('id').substring(4);
     	BlocklyDuino.renderContent();
-    });
-
-	/*neutralise les boutons 'vérifier & téléverser dans larduino'
-	$('#cb_cf_boards').on("change", function() {
-		if ($("#cb_cf_ports").prop("disabled"))
-		{
-			$("#btn_plugin_codebender").prop(disabled, true);
-		} else {
-			$("#btn_plugin_codebender").prop(disabled, false);
-		}
-	}
-	);*/
+		});
 
   $('#btn_size').on("click",  BlocklyDuino.changeSize);
   $('#btn_config').on("click",  BlocklyDuino.openConfigToolbox);
@@ -600,18 +589,28 @@ BlocklyDuino.init = function() {
 					
 			compilerflasher.on("pre_verify", function() {
 				$("#debug_arduino").html(MSG['pre_verify']);
-			});
-			compilerflasher.on("verification_succeed",
-					function(binary_size) {
-						$("#debug_arduino").html(
-								MSG['verification_succeed'] + binary_size);
-					});
-			compilerflasher.on("verification_failed",
-					function(error_output) {
-						$("#debug_arduino").html(
-								MSG['verification_failed'] + error_output);
-					});
-		});
+				//$("#btn_plugin_codebender").attr('disabled', 'disabled');
+				});
+			compilerflasher.on("verification_succeed", function(binary_size) {
+				$("#debug_arduino").html(MSG['verification_succeed'] + binary_size);
+				//$("#btn_plugin_codebender").attr('disabled', 'disabled');
+				});
+			compilerflasher.on("verification_failed", function(error_output) {
+				$("#debug_arduino").html(MSG['verification_failed'] + error_output);
+				//$("#btn_plugin_codebender").removeAttr('disabled');
+				});
+			var checked = $('#cb_cf_ports').attr('disabled');
+			//alert(checked);
+			if (checked=='disabled') {
+					$("btn_plugin_codebender").removeClass('disabled').removeAttr('disabled');
+					//alert("toto");
+				}
+				else {
+					$("btn_plugin_codebender").addClass('disabled').attr('disabled', 'disabled');
+					//alert("tata");
+				};
+		}
+	);
 					
 		// draggable "modal" dialog containing card image & videos
 	    $('body').on('mousedown', '#showcardModal', function() {
@@ -647,7 +646,8 @@ BlocklyDuino.init = function() {
             $(this).find("div.blocklyTreeSelected").removeClass("blocklyTreeSelected")
             $(this).find("span").css("color", "#000000");
         });*/
-	};
+
+};
 
 /**
  * Set menu orientation 
