@@ -391,7 +391,6 @@ function clicked(id) {
 			setPinMode('11', outputMode);
 			digitalWrite('11', '0');
 			break;
-
 		case 'p11high':
 			$("#v11").hide();
 			setPinMode('11', outputMode);
