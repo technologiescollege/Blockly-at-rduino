@@ -216,6 +216,8 @@ Code.initLanguage = function() {
   $('#btn_validCode').text(MSG['btn_validCode']);
 
   $("xml").find("category").each(function() {
+	// add attribute ID to keep categorie code
+	$(this).attr('id', $(this).attr('name'));
 	$(this).attr('name', Blockly.Msg[$(this).attr('name')]);
   });
 
@@ -236,6 +238,7 @@ Code.initLanguageSupervision = function() {
 	  $('#span_supervision_tab8').text(Blockly.Msg.SV_tab8);
 	  $('#span_supervision_tab9').text(Blockly.Msg.SV_tab9);
 	  $('span[id^="span_supervision_enabled"]').text(Blockly.Msg.SV_enabled);
+<<<<<<< HEAD
 	  $('span[id^="span_supervision_disabled"]').text(Blockly.Msg.SV_disabled);
 	  $('span[id^="span_supervision_pin_e"]').text(Blockly.Msg.SV_pin1);	  
 	  $('span[id^="span_supervision_pin_p"]').text(Blockly.Msg.SV_pin2);
@@ -247,6 +250,13 @@ Code.initLanguageSupervision = function() {
 
 
 $('span[id^="span_supervision_documentation"]').text(Blockly.Msg.SV_documentation);		  
+=======
+	  $('span[id^="span_supervision_disabled"]').text(Blockly.Msg.SV_disabled);	  
+	  $('span[id^="span_supervision_pin"]').text(Blockly.Msg.SV_pin);  
+	  $('span[id^="span_supervision_low"]').text(Blockly.Msg.SV_low);  
+	  $('span[id^="span_supervision_high"]').text(Blockly.Msg.SV_high);
+	  
+>>>>>>> origin/master
 };
 
 //Load the Code demo's language strings.

@@ -18,364 +18,37 @@
 	   </a>
 	<span id="connected"></span>
 	<div id="tabs-1" class="tab-pane active">
-		<input type="radio" name="e2" value="0" id="in2d" onclick="clicked(this.id);" checked><span id="span_supervision_disabled_e2"> </span>
-		<input type="radio" name="e2" value="1" id="out2d" onclick="clicked(this.id);"><span id="span_supervision_enabled_e2"> </span>
-		<b><span id="span_supervision_pin_e2"> </span> 02:</b>
-		<input id="ip2" name="pin" class="element text medium" type="text" maxlength="255" value="0"
-			   style="width: 20px;"/>
-		&nbsp;&nbsp;&nbsp;&nbsp;
-		<b>Data Latch</b>
-		<select id="dlatch2" onchange="digitalLatch('2', (this.id));">
-			<option value="1">No Latch Set</option>
-			<option value="2">Latch High</option>
-			<option value="3">Latch Low</option>
-		</select>
-		&nbsp;&nbsp;&nbsp;&nbsp;
-		<b>Latch Event Occurred On:</b>
-		<input id="dlevent2" name="pin" class="element text medium" type="text" maxlength="255" value="" style="width: 500px;"/>
-		<br>
-		<input type="radio" name="e3" value="0" id="in3d" onclick="clicked(this.id);" checked><span id="span_supervision_disabled_e3"> </span>
-		<input type="radio" name="e3" value="1" id="out3d" onclick="clicked(this.id);"><span id="span_supervision_enabled_e3"> </span>
-		<b><span id="span_supervision_pin_e3"> </span> 03:</b>
-		<input id="ip3" name="pin" class="element text medium" type="text" maxlength="255" value="0"
-			   style="width: 20px;"/>
-		&nbsp;&nbsp;&nbsp;&nbsp;
-		<b>Data Latch</b>
-		<select id="dlatch4" onchange="digitalLatch('3', (this.id));">
-			<option value="1">No Latch Set</option>
-			<option value="2">Latch High</option>
-			<option value="3">Latch Low</option>
-		</select>
-		&nbsp;&nbsp;&nbsp;&nbsp;
-		<b>Latch Event Occurred On:</b>
-		<input id="dlevent3" name="pin" class="element text medium" type="text" maxlength="255" value=""
-			   style="width: 500px;"/>
-		<br>
-
-		<input type="radio" name="e4" value="0" id="in4d" onclick="clicked(this.id);" checked><span id="span_supervision_disabled_e4"> </span>
-		<input type="radio" name="e4" value="1" id="out4d" onclick="clicked(this.id);"><span id="span_supervision_enabled_e4"> </span>
-		<b><span id="span_supervision_pin_e4"> </span> 04:</b>
-		<input id="ip4" name="pin" class="element text medium" type="text" maxlength="255" value="0"
-			   style="width: 20px;"/>
-		&nbsp;&nbsp;&nbsp;&nbsp;
-		<b>Data Latch</b>
-		<select id="dlatch4" onchange="digitalLatch('4', (this.id));">
-			<option value="1">No Latch Set</option>
-			<option value="2">Latch High</option>
-			<option value="3">Latch Low</option>
-		</select>
-		&nbsp;&nbsp;&nbsp;&nbsp;
-		<b>Latch Event Occurred On:</b>
-		<input id="dlevent4" name="pin" class="element text medium" type="text" maxlength="255" value=""
-			   style="width: 500px;"/>
-		<br>
-
-		<input type="radio" name="e5" value="0" id="in5d" onclick="clicked(this.id);" checked><span id="span_supervision_disabled_e5"> </span>
-		<input type="radio" name="e5" value="1" id="out5d" onclick="clicked(this.id);"><span id="span_supervision_enabled_e5"> </span>
-		<b><span id="span_supervision_pin_e5"> </span> 05:</b>
-		<input id="ip5" name="pin" class="element text medium" type="text" maxlength="255" value="0" style="width: 20px;"/>
-		&nbsp;&nbsp;&nbsp;&nbsp;
-		<b>Data Latch</b>
-		<select id="dlatch5" onchange="digitalLatch('5', (this.id));">
-			<option value="1">No Latch Set</option>
-			<option value="2">Latch High</option>
-			<option value="3">Latch Low</option>
-		</select>
-		&nbsp;&nbsp;&nbsp;&nbsp;
-		<b>Latch Event Occurred On:</b>
-		<input id="dlevent5" name="pin" class="element text medium" type="text" maxlength="255" value="" style="width: 500px;"/>
-		<br>
-
-		<input type="radio" name="e6" value="0" id="in6d" onclick="clicked(this.id);" checked><span id="span_supervision_disabled_e6"> </span>
-		<input type="radio" name="e6" value="1" id="out6d" onclick="clicked(this.id);"><span id="span_supervision_enabled_e6"> </span>
-		<b><span id="span_supervision_pin_e6"> </span> 06:</b>
-		<input id="ip6" name="pin" class="element text medium" type="text" maxlength="255" value="0"
-			   style="width: 20px;"/>
-		&nbsp;&nbsp;&nbsp;&nbsp;
-		<b>Data Latch</b>
-		<select id="dlatch6" onchange="digitalLatch('6', (this.id));">
-			<option value="1">No Latch Set</option>
-			<option value="2">Latch High</option>
-			<option value="3">Latch Low</option>
-		</select>
-		&nbsp;&nbsp;&nbsp;&nbsp;
-		<b>Latch Event Occurred On:</b>
-		<input id="dlevent6" name="pin" class="element text medium" type="text" maxlength="255" value=""
-			   style="width: 500px;"/>
-		<br>
-
-		<input type="radio" name="e7" value="0" id="in7d" onclick="clicked(this.id);" checked><span id="span_supervision_disabled_e7"> </span>
-		<input type="radio" name="e7" value="1" id="out7d" onclick="clicked(this.id);"><span id="span_supervision_enabled_e7"> </span>
-		<b><span id="span_supervision_pin_e7"> </span> 07:</b>
-		<input id="ip7" name="pin" class="element text medium" type="text" maxlength="255" value="0"
-			   style="width: 20px;"/>
-		&nbsp;&nbsp;&nbsp;&nbsp;
-		<b>Data Latch</b>
-		<select id="dlatch7" onchange="digitalLatch('7', (this.id));">
-			<option value="1">No Latch Set</option>
-			<option value="2">Latch High</option>
-			<option value="3">Latch Low</option>
-		</select>
-		&nbsp;&nbsp;&nbsp;&nbsp;
-		<b>Latch Event Occurred On:</b>
-		<input id="dlevent7" name="pin" class="element text medium" type="text" maxlength="255" value=""
-			   style="width: 500px;"/>
-		<br>
-
-		<input type="radio" name="e8" value="0" id="in8d" onclick="clicked(this.id);" checked><span id="span_supervision_disabled_e8"> </span>
-		<input type="radio" name="e8" value="1" id="out8d" onclick="clicked(this.id);"><span id="span_supervision_enabled_e8"> </span>
-		<b><span id="span_supervision_pin_e8"> </span> 08:</b>
-		<input id="ip8" name="pin" class="element text medium" type="text" maxlength="255" value="0"
-			   style="width: 20px;"/>
-		&nbsp;&nbsp;&nbsp;&nbsp;
-		<b>Data Latch</b>
-		<select id="dlatch8" onchange="digitalLatch('8, (this.id)');">
-			<option value="1">No Latch Set</option>
-			<option value="2">Latch High</option>
-			<option value="3">Latch Low</option>
-		</select>
-		&nbsp;&nbsp;&nbsp;&nbsp;
-		<b>Latch Event Occurred On:</b>
-		<input id="dlevent8" name="pin" class="element text medium" type="text" maxlength="255" value=""
-			   style="width: 500px;"/>
-		<br>
-
-		<input type="radio" name="e9" value="0" id="in9d" onclick="clicked(this.id);" checked><span id="span_supervision_disabled_e9"> </span>
-		<input type="radio" name="e9" value="1" id="out9" onclick="clicked(this.id);"><span id="span_supervision_enabled_e9"> </span>
-		<b><span id="span_supervision_pin_e9"> </span> 09:</b>
-		<input id="ip9" name="pin" class="element text medium" type="text" maxlength="255" value="0"
-			   style="width: 20px;"/>
-		&nbsp;&nbsp;&nbsp;&nbsp;
-		<b>Data Latch</b>
-		<select id="dlatch9" onchange="digitalLatch('9', (this.id));">
-			<option value="1">No Latch Set</option>
-			<option value="2">Latch High</option>
-			<option value="3">Latch Low</option>
-		</select>
-		&nbsp;&nbsp;&nbsp;&nbsp;
-		<b>Latch Event Occurred On:</b>
-		<input id="dlevent9" name="pin" class="element text medium" type="text" maxlength="255" value=""
-			   style="width: 500px;"/>
-		<br>
-
-		<input type="radio" name="e10" value="0" id="in10d" onclick="clicked(this.id);" checked><span id="span_supervision_disabled_e10"> </span>
-		<input type="radio" name="e2" value="1" id="out10d" onclick="clicked(this.id);"><span id="span_supervision_enabled_e10"> </span>
-		<b><span id="span_supervision_pin_e10"> </span> 10:</b>
-		<input id="ip10" name="pin" class="element text medium" type="text" maxlength="255" value="0"
-			   style="width: 20px;"/>
-		&nbsp;&nbsp;&nbsp;&nbsp;
-		<b>Data Latch</b>
-		<select id="dlatch10" onchange="digitalLatch('10', (this.id));">
-			<option value="1">No Latch Set</option>
-			<option value="2">Latch High</option>
-			<option value="3">Latch Low</option>
-		</select>
-		&nbsp;&nbsp;&nbsp;&nbsp;
-		<b>Latch Event Occurred On:</b>
-		<input id="dlevent10" name="pin" class="element text medium" type="text" maxlength="255" value=""
-			   style="width: 500px;"/>
-		<br>
-
-		<input type="radio" name="e11" value="0" id="in11d" onclick="clicked(this.id);" checked><span id="span_supervision_disabled_e11"> </span>
-		<input type="radio" name="e11" value="1" id="out11d" onclick="clicked(this.id);"><span id="span_supervision_enabled_e11"> </span>
-		<b><span id="span_supervision_pin_e11"> </span> 11:</b>
-		<input id="ip11" name="pin" class="element text medium" type="text" maxlength="255" value="0"
-			   style="width: 20px;"/>
-		&nbsp;&nbsp;&nbsp;&nbsp;
-		<b>Data Latch</b>
-		<select id="dlatch11" onchange="digitalLatch('11', (this.id));">
-			<option value="1">No Latch Set</option>
-			<option value="2">Latch High</option>
-			<option value="3">Latch Low</option>
-		</select>
-		&nbsp;&nbsp;&nbsp;&nbsp;
-		<b>Latch Event Occurred On:</b>
-		<input id="dlevent11" name="pin" class="element text medium" type="text" maxlength="255" value=""
-			   style="width: 500px;"/>
-		<br>
-
-		<input type="radio" name="e12" value="0" id="in12d" onclick="clicked(this.id);" checked><span id="span_supervision_disabled_e12"> </span>
-		<input type="radio" name="e12" value="1" id="out12d" onclick="clicked(this.id);"><span id="span_supervision_enabled_e12"> </span>
-		<b><span id="span_supervision_pin_e12"> </span> 12:</b>
-		<input id="ip12" name="pin" class="element text medium" type="text" maxlength="255" value="0"
-			   style="width: 20px;"/>
-		&nbsp;&nbsp;&nbsp;&nbsp;
-		<b>Data Latch</b>
-		<select id="dlatch12" onchange="digitalLatch('12', (this.id));">
-			<option value="1">No Latch Set</option>
-			<option value="2">Latch High</option>
-			<option value="3">Latch Low</option>
-		</select>
-		&nbsp;&nbsp;&nbsp;&nbsp;
-		<b>Latch Event Occurred On:</b>
-		<input id="dlevent12" name="pin" class="element text medium" type="text" maxlength="255" value=""
-			   style="width: 500px;"/>
-		<br>
-
-		<input type="radio" name="e13" value="0" id="in13d" onclick="clicked(this.id);" checked><span id="span_supervision_disabled_e13"> </span>
-		<input type="radio" name="e13" value="1" id="out13d" onclick="clicked(this.id);"><span id="span_supervision_enabled_e13"> </span>
-		<b><span id="span_supervision_pin_e13"> </span> 13:</b>
-		<input id="ip13" name="pin" class="element text medium" type="text" maxlength="255" value="0"
-			   style="width: 20px;"/>
-		&nbsp;&nbsp;&nbsp;&nbsp;
-		<b>Data Latch</b>
-		<select id="dlatch13" onchange="digitalLatch('13', (this.id));">
-			<option value="1">No Latch Set</option>
-			<option value="2">Latch High</option>
-			<option value="3">Latch Low</option>
-		</select>
-		&nbsp;&nbsp;&nbsp;&nbsp;
-		<b>Latch Event Occurred On:</b>
-		<input id="dlevent13" name="pin" class="element text medium" type="text" maxlength="255" value=""
-			   style="width: 500px;"/>
-		<br>
-
-		<input type="radio" name="e14" value="0" id="in14d" onclick="clicked(this.id);" checked><span id="span_supervision_disabled_e14"> </span>
-		<input type="radio" name="e14" value="1" id="out14d" onclick="clicked(this.id);"><span id="span_supervision_enabled_e14"> </span>
-		<b><span id="span_supervision_pin_e14"> </span> 14:</b>
-		<input id="ip14" name="pin" class="element text medium" type="text" maxlength="255" value="0"
-			   style="width: 20px;"/>
-		&nbsp;&nbsp;&nbsp;&nbsp;
-		<b>Data Latch</b>
-		<select id="dlatch14" onchange="digitalLatch('14', (this.id));">
-			<option value="1">No Latch Set</option>
-			<option value="2">Latch High</option>
-			<option value="3">Latch Low</option>
-		</select>
-		&nbsp;&nbsp;&nbsp;&nbsp;
-		<b>Latch Event Occurred On:</b>
-		<input id="dlevent14" name="pin" class="element text medium" type="text" maxlength="255" value=""
-			   style="width: 500px;"/>
-		<br>
-
-		<input type="radio" name="e15" value="0" id="in15d" onclick="clicked(this.id);" checked><span id="span_supervision_disabled_e15"> </span>
-		<input type="radio" name="e15" value="1" id="out15d" onclick="clicked(this.id);"><span id="span_supervision_enabled_e15"> </span>
-		<b><span id="span_supervision_pin_e15"> </span> 15:</b>
-		<input id="ip15" name="pin" class="element text medium" type="text" maxlength="255" value="0"
-			   style="width: 20px;"/>
-		&nbsp;&nbsp;&nbsp;&nbsp;
-		<b>Data Latch</b>
-		<select id="dlatch15" onchange="digitalLatch('15', (this.id));">
-			<option value="1">No Latch Set</option>
-			<option value="2">Latch High</option>
-			<option value="3">Latch Low</option>
-		</select>
-		&nbsp;&nbsp;&nbsp;&nbsp;
-		<b>Latch Event Occurred On:</b>
-		<input id="dlevent15" name="pin" class="element text medium" type="text" maxlength="255" value=""
-			   style="width: 500px;"/>
-		<br>
-
-		<input type="radio" name="e16" value="0" id="in16d" onclick="clicked(this.id);" checked><span id="span_supervision_disabled_e16"> </span>
-		<input type="radio" name="e16" value="1" id="out16d" onclick="clicked(this.id);"><span id="span_supervision_enabled_e16"> </span>
-		<b><span id="span_supervision_pin_e16"> </span> 16:</b>
-		<input id="ip16" name="pin" class="element text medium" type="text" maxlength="255" value="0"
-			   style="width: 20px;"/>
-		&nbsp;&nbsp;&nbsp;&nbsp;
-		<b>Data Latch</b>
-		<select id="dlatch16" onchange="digitalLatch('16', (this.id));">
-			<option value="1">No Latch Set</option>
-			<option value="2">Latch High</option>
-			<option value="3">Latch Low</option>
-		</select>
-		&nbsp;&nbsp;&nbsp;&nbsp;
-		<b>Latch Event Occurred On:</b>
-		<input id="dlevent16" name="pin" class="element text medium" type="text" maxlength="255" value=""
-			   style="width: 500px;"/>
-		<br>
-
-		<input type="radio" name="e17" value="0" id="in17d" onclick="clicked(this.id);" checked><span id="span_supervision_disabled_e17"> </span>
-		<input type="radio" name="e17" value="1" id="out17d" onclick="clicked(this.id);"><span id="span_supervision_enabled_e17"> </span>
-		<b><span id="span_supervision_pin_e17"> </span> 17:</b>
-		<input id="ip17" name="pin" class="element text medium" type="text" maxlength="255" value="0"
-			   style="width: 20px;"/>
-		&nbsp;&nbsp;&nbsp;&nbsp;
-		<b>Data Latch</b>
-		<select id="dlatch17" onchange="digitalLatch('17', (this.id));">
-			<option value="1">No Latch Set</option>
-			<option value="2">Latch High</option>
-			<option value="3">Latch Low</option>
-		</select>
-		&nbsp;&nbsp;&nbsp;&nbsp;
-		<b>Latch Event Occurred On:</b>
-		<input id="dlevent17" name="pin" class="element text medium" type="text" maxlength="255" value=""
-			   style="width: 500px;"/>
-		<br>
-
-		<input type="radio" name="e18" value="0" id="in18d" onclick="clicked(this.id);" checked><span id="span_supervision_disabled_e18"> </span>
-		<input type="radio" name="e18" value="1" id="out18d" onclick="clicked(this.id);"><span id="span_supervision_enabled_e18"> </span>
-		<b><span id="span_supervision_pin_e18"> </span> 18:</b>
-		<input id="ip18" name="pin" class="element text medium" type="text" maxlength="255" value="0"
-			   style="width: 20px;"/>
-		&nbsp;&nbsp;&nbsp;&nbsp;
-		<b>Data Latch</b>
-		<select id="dlatch18" onchange="digitalLatch('18', (this.id));">
-			<option value="1">No Latch Set</option>
-			<option value="2">Latch High</option>
-			<option value="3">Latch Low</option>
-		</select>
-		&nbsp;&nbsp;&nbsp;&nbsp;
-		<b>Latch Event Occurred On:</b>
-		<input id="dlevent18" name="pin" class="element text medium" type="text" maxlength="255" value=""
-			   style="width: 500px;"/>
-		<br>
-
-		<input type="radio" name="e19" value="0" id="in19d" onclick="clicked(this.id);" checked><span id="span_supervision_disabled_e19"> </span>
-		<input type="radio" name="e19" value="1" id="out19d" onclick="clicked(this.id);"><span id="span_supervision_enabled_e19"> </span>
-		<b><span id="span_supervision_pin_e19"> </span> 19:</b>
-		<input id="ip19" name="pin" class="element text medium" type="text" maxlength="255" value="0"
-			   style="width: 20px;"/>
-		&nbsp;&nbsp;&nbsp;&nbsp;
-		<b>Data Latch</b>
-		<select id="dlatch19" onchange="digitalLatch('19', (this.id));">
-			<option value="1">No Latch Set</option>
-			<option value="2">Latch High</option>
-			<option value="3">Latch Low</option>
-		</select>
-		&nbsp;&nbsp;&nbsp;&nbsp;
-		<b>Latch Event Occurred On:</b>
-		<input id="dlevent19" name="pin" class="element text medium" type="text" maxlength="255" value=""
-			   style="width: 500px;"/>
-        <br>
-
-<!-- Specifique MEGA -->
-<div id="specif_arduino_mega">        
-        <input type="radio" name="e20" value="0" id="in19d" onclick="clicked(this.id);" checked><span id="span_supervision_disabled_e20"> </span>
-        <input type="radio" name="e20" value="1" id="out19d" onclick="clicked(this.id);"><span id="span_supervision_enabled_e20"> </span>
-        <b><span id="span_supervision_pin_e20"> </span> 20:</b>
-        <input id="ip20" name="pin" class="element text medium" type="text" maxlength="255" value="0" style="width: 20px;"/>
-        &nbsp;&nbsp;&nbsp;&nbsp;
-        <b>Data Latch</b>
-        <select id="dlatch19" onchange="digitalLatch('20', (this.id));">
-            <option value="1">No Latch Set</option>
-            <option value="2">Latch High</option>
-            <option value="3">Latch Low</option>
-        </select>
-        &nbsp;&nbsp;&nbsp;&nbsp;
-        <b>Latch Event Occurred On:</b>
-        <input id="dlevent20" name="pin" class="element text medium" type="text" maxlength="255" value="" style="width: 500px;"/>
-        <br>
-        
-        <input type="radio" name="e21" value="0" id="in19d" onclick="clicked(this.id);" checked><span id="span_supervision_disabled_e21"> </span>
-        <input type="radio" name="e21" value="1" id="out19d" onclick="clicked(this.id);"><span id="span_supervision_enabled_e21"> </span>
-        <b><span id="span_supervision_pin_e21"> </span> 21:</b>
-        <input id="ip21" name="pin" class="element text medium" type="text" maxlength="255" value="0" style="width: 20px;"/>
-        &nbsp;&nbsp;&nbsp;&nbsp;
-        <b>Data Latch</b>
-        <select id="dlatch21" onchange="digitalLatch('21' (this.id));">
-            <option value="1">No Latch Set</option>
-            <option value="2">Latch High</option>
-            <option value="3">Latch Low</option>
-        </select>
-        &nbsp;&nbsp;&nbsp;&nbsp;
-        <b>Latch Event Occurred On:</b>
-        <input id="dlevent21" name="pin" class="element text medium" type="text" maxlength="255" value="" style="width: 500px;"/>
-		<br>
-</div>
-<!-- Specifique MEGA -->        
-
+		<div id="template_tabs1" style="display:none">
+			<div class="form-inline">
+				<div class="form-group">
+					<label class="radio-inline">
+						<input type="radio" name="e#pin_number#" value="0" id="in#pin_number#d" onclick="clicked(this.id);" checked="checked"/>
+						<span id="span_supervision_disabled_e#pin_number#"> </span>
+					</label>
+					<label class="radio-inline">
+						<input type="radio" name="e#pin_number#" value="1" id="out#pin_number#d" onclick="clicked(this.id);">
+						<span id="span_supervision_enabled_e#pin_number#"> </span>
+					</label>
+					<label><span id="span_supervision_pin_e#pin_number#"> </span> #pin_number# :</label>
+					<input id="ip#pin_number#" name="pin" class="form-control" type="text" value="0" size="1"/>
+				</div>
+				<div class="form-group">
+					<label>Data Latch</label>
+					<select id="dlatch#pin_number#" class="form-control" onchange="digitalLatch('#pin_number#', (this.id));">
+						<option value="1">No Latch Set</option>
+						<option value="2">Latch High</option>
+						<option value="3">Latch Low</option>
+					</select>
+				</div>
+				<div class="form-group">
+					<label>Latch Event Occurred On :</label>
+					<input id="dlevent#pin_number#" name="pin" class="form-control" type="text" maxlength="255" value="">
+				</div>
+			</div>
+		</div>
 	</div>
 	<div id="tabs-2" class="tab-pane">
+<<<<<<< HEAD
 		<b><span id="span_supervision_pin_p3"> </span> 03:</b>
 		<input type="radio" name="p3" value="0" id="p3low" onclick="clicked(this.id);" checked><span id="span_supervision_low_p3"> </span>
 		<input type="radio" name="p3" value="1" id="p3high" onclick="clicked(this.id);"><span id="span_supervision_high_p3"> </span>
@@ -616,7 +289,71 @@
 			   style="width: 500px;"/>
 		<br>
 
+=======
+		<div id="template_tabs2" style="display:none">
+			<div class="form-inline">
+				<div class="form-group">
+					<label><span id="span_supervision_pin_e#pin_number#"> </span> #pin_number# :</label>
+					<label class="radio-inline">
+						<input type="radio" name="p#pin_number#" value="0" id="p#pin_number#low" onclick="clicked(this.id);" checked>
+						<span id="span_supervision_low_p#pin_number#"> </span>
+					</label>
+					<label class="radio-inline">
+						<input type="radio" name="p#pin_number#" value="1" id="p#pin_number#high" onclick="clicked(this.id);">
+						<span id="span_supervision_high_p#pin_number#"> </span>
+					</label>
+					#pwm_line#
+				</div>
+			</div>
+		</div>
+		<div id="template_tabs2_pwm" style="display:none">
+			<label class="radio-inline">
+				<input type="radio" name="p#pin_number#" value="2" onclick="clicked(this.id);" id="pwm#pin_number#">
+				PWM
+			</label>
+			<input type="number" name="p#pin_number#pwm" id="v#pin_number#" class="form-control" style="display:none" min="0" max="255" step="1" value="0" oninput="pwmChange(this.id);">
+		</div>
+
 	</div>
+	<div id="tabs-3" class="tab-pane">
+		<div id="template_tabs3" style="display:none">
+			<div class="form-inline">
+				<div class="form-group">
+					<label class="radio-inline">
+						<input type="radio" name="p#pin_number#" value="0" id="p#pin_number#low" onclick="clicked(this.id);" checked>
+						<span id="span_supervision_disabled_e#pin_number#"> </span>
+					</label>
+					<label class="radio-inline">
+						<input type="radio" name="p#pin_number#" value="1" id="p#pin_number#high" onclick="clicked(this.id);">
+						<span id="span_supervision_enabled_e#pin_number#"> </span>
+					</label>
+					<label><span id="span_supervision_pin_e#pin_number#"> </span> A#pin_number# :</label>
+					<input id="ia#pin_number#" name="pin" class="form-control" type="text" value="0" size="1"/>
+				</div>
+				<div class="form-group">
+					<label>Latch Threshold</label>
+					<input id="a1thr#pin_number#" name="pin" class="form-control" type="text" maxlength="255" value="0" size="1"/>
+				</div>
+				<div class="form-group">
+					<label>Data Latch</label>
+					<select id="alatch#pin_number#" class="form-control" onchange="analogLatch('0', (this.id));">
+						<option value="1">No Latch Set</option>
+						<option value="2">==</option>
+						<option value="3"><</option>
+						<option value="4"><=</option>
+						<option value="5">></option>
+						<option value="6">>=</option>
+					</select>
+				</div>
+				<div class="form-group">
+					<label>Latch Event Occurred On :</label>
+					<input id="alevent#pin_number#" name="pin" class="form-control" type="text" maxlength="255" value="">
+				</div>
+			</div>
+		</div>
+>>>>>>> origin/master
+	</div>
+	
 	<div id="tabs-4" class="tab-pane">
 		<textarea id="reports" rows="10" cols="70"></textarea>
 		<br>
