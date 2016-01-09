@@ -25,12 +25,6 @@ Blockly.Msg.SV_NotCon = "Error: Websocket not connected!";
 Blockly.Msg.SV_Con = " Websocket connected!";
 Blockly.Msg.SV_enabled = "Enabled";
 Blockly.Msg.SV_disabled = "Disabled";
-Blockly.Msg.SV_pin1 = "Pin";
-Blockly.Msg.SV_pin2 = "Pin";
+Blockly.Msg.SV_pin = "Pin";
 Blockly.Msg.SV_low = "HIGH";
 Blockly.Msg.SV_high = "low";
-Blockly.Msg.SV_pwm = "PWM";
-
-
-
-Blockly.Msg.SV_documentation = "";

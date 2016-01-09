@@ -25,14 +25,6 @@ Blockly.Msg.SV_NotCon = " Erreur : connexion au Websocket non établie !";
 Blockly.Msg.SV_Con = " Connexion au Websocket établie !";
 Blockly.Msg.SV_enabled = "Activer";
 Blockly.Msg.SV_disabled = "Désactiver";
-Blockly.Msg.SV_pin1 = "la broche numérique ";
-Blockly.Msg.SV_pin2 = "Mettre la broche numérique ";
-Blockly.Msg.SV_low = "  0 - bas";
-Blockly.Msg.SV_high = "  1 - HAUT";
-Blockly.Msg.SV_pwm = "  modulation PWM";
-
-
-
-
-
-Blockly.Msg.SV_documentation = "";
+Blockly.Msg.SV_pin = "la broche";
+Blockly.Msg.SV_low = "Activer";
+Blockly.Msg.SV_high = "Désactiver";

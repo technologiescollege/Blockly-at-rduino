@@ -350,18 +350,9 @@ BlocklyDuino.bindFunctions = function() {
 	$('#pinout').on("change", BlocklyDuino.arduinoCard);
 
 	$('#load').on("change", BlocklyDuino.load);
-<<<<<<< HEAD
-	$('#btn_fakeload').on("click", function() {$('#load').click(); });
-
-    $('#menuPanelBlockly li[id^=tab_]').on("click", function () {
-    	BlocklyDuino.selectedTab = $(this).attr('id').substring(4);
-    	BlocklyDuino.renderContent();
-		});
-=======
 	$('#btn_fakeload').on("click", function() {
 		$('#load').click();
 	});
->>>>>>> origin/master
 
 	$('#menuPanelBlockly li[id^=tab_]').on("click", function() {
 		BlocklyDuino.selectedTab = $(this).attr('id').substring(4);
@@ -645,31 +636,6 @@ BlocklyDuino.init = function() {
 					
 			compilerflasher.on("pre_verify", function() {
 				$("#debug_arduino").html(MSG['pre_verify']);
-<<<<<<< HEAD
-				//$("#btn_plugin_codebender").attr('disabled', 'disabled');
-				});
-			compilerflasher.on("verification_succeed", function(binary_size) {
-				$("#debug_arduino").html(MSG['verification_succeed'] + binary_size);
-				//$("#btn_plugin_codebender").attr('disabled', 'disabled');
-				});
-			compilerflasher.on("verification_failed", function(error_output) {
-				$("#debug_arduino").html(MSG['verification_failed'] + error_output);
-				//$("#btn_plugin_codebender").removeAttr('disabled');
-				});
-			var checked = $('#cb_cf_ports').attr('disabled');
-			//alert(checked);
-			if (checked=='disabled') {
-					$("btn_plugin_codebender").removeClass('disabled').removeAttr('disabled');
-					//alert("toto");
-				}
-				else {
-					$("btn_plugin_codebender").addClass('disabled').attr('disabled', 'disabled');
-					//alert("tata");
-				};
-		}
-	);
-					
-=======
 			});
 			compilerflasher.on("verification_succeed",
 					function(binary_size) {
@@ -683,7 +649,6 @@ BlocklyDuino.init = function() {
 					});
 		});
 		
->>>>>>> origin/master
 		// draggable "modal" dialog containing card image & videos
 	    $('body').on('mousedown', '#showcardModal', function() {
 	        $(this).addClass('draggable').parents().on('mousemove', function(e) {
@@ -718,8 +683,7 @@ BlocklyDuino.init = function() {
             $(this).find("div.blocklyTreeSelected").removeClass("blocklyTreeSelected")
             $(this).find("span").css("color", "#000000");
         });*/
-
-};
+	};
 
 /**
  * Set menu orientation 
