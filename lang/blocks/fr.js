@@ -53,6 +53,25 @@ Blockly.Msg.CONTROLS_IF_TOOLTIP_1 = "Si une valeur est vraie, alors exécuter ce
 Blockly.Msg.CONTROLS_IF_TOOLTIP_2 = "Si une valeur est vraie, alors exécuter le premier bloc d’ordres. Sinon, exécuter le second bloc d’ordres.";
 Blockly.Msg.CONTROLS_IF_TOOLTIP_3 = "Si la première valeur est vraie, alors exécuter le premier bloc d’ordres. Sinon, si la seconde valeur est vraie, exécuter le second bloc d’ordres.";
 Blockly.Msg.CONTROLS_IF_TOOLTIP_4 = "Si la première valeur est vraie, alors exécuter le premier bloc d’ordres. Sinon, si la seconde valeur est vraie, exécuter le second bloc d’ordres. Si aucune des valeurs n’est vraie, exécuter le dernier bloc d’ordres.";
+//ESK 6/13/2015 SWITCH CASE
+Blockly.Msg.CONTROLS_SWITCH_CASEBREAK_TOOLTIP = "Ajoute une condition au bloc 'suivant que'.";
+Blockly.Msg.CONTROLS_SWITCH_DEFAULT_TOOLTIP = "Ajoute une condition finale, par défaut.";
+Blockly.Msg.CONTROLS_SWITCH_HELPURL = "https://en.wikipedia.org/wiki/Switch_statement";
+Blockly.Msg.CONTROLS_SWITCH_SWITCH_TOOLTIP = "Ajoute, retire, ou classe les sections de ce bloc.";
+Blockly.Msg.CONTROLS_SWITCH_VAR_TITLE = "suivant que la variable ";
+Blockly.Msg.CONTROLS_SWITCH_VAR_TAIL = "prend";
+Blockly.Msg.CONTROLS_SWITCH_MSG_DEFAULT = "par défaut faire";
+Blockly.Msg.CONTROLS_SWITCH_MSG_CASEBREAK = "la valeur";
+Blockly.Msg.CONTROLS_SWITCH_MSG_SWITCHVAR = "Suivant la valeur (var)";
+Blockly.Msg.CONTROLS_SWITCH_MSG_DO = "faire";
+Blockly.Msg.CONTROLS_SWITCH_TOOLTIP_1 = "Si une valeur est vraie alors exécuter les commandes suivantes.";
+Blockly.Msg.CONTROLS_SWITCH_TOOLTIP_2 = "Si une valeur est vraie alors exécuter le premier bloc de commandes. Sinon exécuter le bloc suivant de commandes.";
+Blockly.Msg.CONTROLS_SWITCH_TOOLTIP_3 = "Si une valeur est vraie alors exécuter le premier bloc de commandes. Sinon exécuter le bloc suivant de commandes si la condition est vraie.";
+Blockly.Msg.CONTROLS_SWITCH_TOOLTIP_4 = "Si une valeur est vraie alors exécuter le premier bloc de commandes. Sinon exécuter le bloc suivant de commandes si la condition est vraie.  Si aucune condition n'est vérifiée, alors faire le bloc de commandes par défaut.";
+Blockly.Msg.CONTROLS_SWITCH_VAR_TOOLTIP = "Déplacer le bloc de gauche pour l'ajouter.";
+Blockly.Msg.CONTROLS_SWITCH_CASEBREAK_TOOLTIP = "Ajoute un bloc de commandes sous condition";
+Blockly.Msg.CONTROLS_SWITCH_DEFAULT_TOOLTIP ="Ajoute un bloc d'actions par défaut";
+
 Blockly.Msg.CONTROLS_REPEAT_HELPURL = "http://fr.wikipedia.org/wiki/Boucle_for";
 Blockly.Msg.CONTROLS_REPEAT_INPUT_DO = "faire";
 Blockly.Msg.CONTROLS_REPEAT_TITLE = "répéter %1 fois";
