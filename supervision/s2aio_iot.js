@@ -16,7 +16,7 @@ var socket = new WebSocket('ws://' + ipAddress + ':' + ipPort);
 function WebSocketTest() {	  
 	  if ("WebSocket" in window)
             {
-               alert(Blockly.Msg.SV_alert);
+               alert(Blockly.Msg.SV_alert1);
 			   socket = new WebSocket('ws://' + ipAddress + ':' + ipPort);
             }            
             else

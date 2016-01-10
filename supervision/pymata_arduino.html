@@ -17,7 +17,9 @@
 	       <span id="span_SV_connect"></span>
 	   </a>
 	<span id="connected"></span>
+	<!-- Digital Input -->
 	<div id="tabs-1" class="tab-pane active">
+		<br/>
 		<div id="template_tabs1" style="display:none">
 			<div class="form-inline">
 				<div class="form-group">
@@ -47,18 +49,20 @@
 			</div>
 		</div>
 	</div>
+	<!-- Digital Output -->
 	<div id="tabs-2" class="tab-pane">
+		<br/>
 		<div id="template_tabs2" style="display:none">
 			<div class="form-inline">
 				<div class="form-group">
-					<label><span id="span_supervision_pin_e#pin_number#"> </span> #pin_number# :</label>
+					<label><span id="span_supervision_pin_s#pin_number#"> </span> #pin_number# :</label>
 					<label class="radio-inline">
 						<input type="radio" name="p#pin_number#" value="0" id="p#pin_number#low" onclick="clicked(this.id);" checked>
-						<span id="span_supervision_low_p#pin_number#"> </span>
+						<span id="span_supervision_high_s#pin_number#"> </span>
 					</label>
 					<label class="radio-inline">
 						<input type="radio" name="p#pin_number#" value="1" id="p#pin_number#high" onclick="clicked(this.id);">
-						<span id="span_supervision_high_p#pin_number#"> </span>
+						<span id="span_supervision_low_s#pin_number#"> </span>
 					</label>
 					#pwm_line#
 				</div>
@@ -66,14 +70,14 @@
 		</div>
 		<div id="template_tabs2_pwm" style="display:none">
 			<label class="radio-inline">
-				<input type="radio" name="p#pin_number#" value="2" onclick="clicked(this.id);" id="pwm#pin_number#">
-				PWM
+				<input type="radio" name="p#pin_number#" value="2" onclick="clicked(this.id);" id="pwm#pin_number#"><span id="span_supervision_PWM"> </span>
 			</label>
 			<input type="number" name="p#pin_number#pwm" id="v#pin_number#" class="form-control" style="display:none" min="0" max="255" step="1" value="0" oninput="pwmChange(this.id);">
 		</div>
-
 	</div>
+	<!-- Analog output -->
 	<div id="tabs-3" class="tab-pane">
+		<br/>
 		<div id="template_tabs3" style="display:none">
 			<div class="form-inline">
 				<div class="form-group">
@@ -110,76 +114,92 @@
 			</div>
 		</div>
 	</div>
-	
+	<!-- Reports -->
 	<div id="tabs-4" class="tab-pane">
+		<br/>
 		<textarea id="reports" rows="10" cols="70"></textarea>
-		<br>
-		<br>
-		<input id="analogReport" type="button" value="Get Analog Map" onclick="getAnalogMap();"/>
+		<br/>
+		<br/>
+		<a href="javascript:getAnalogMap()" class="btn btn-info">
+	       <span id="span_supervision_get_analog_map"></span>
+	    </a>
 		&nbsp
-		<input id="capabilityReport" type="button" value="Get CapablilityReport" onclick="getCapabilityReport();"/>
+		<a href="javascript:getCapabilityReport()" class="btn btn-info">
+	       <span id="span_supervision_get_capability"></span>
+	    </a>
+		<br/>
+		<br/>
+		<a href="javascript:getFirmwareVersion()" class="btn btn-info">
+	       <span id="span_supervision_get_firmware"></span>
+	    </a>
 		&nbsp
-		<input id="firmWareVersion" type="button" value="Get Firmware Version" onclick="getFirmwareVersion();"/>
+		<a href="javascript:getProtocolVersion()" class="btn btn-info">
+	       <span id="span_supervision_get_protocol"></span>
+	    </a>
 		&nbsp
-		<input id="protocolVersion" type="button" value="Get Protocol Version" onclick="getProtocolVersion();"/>
-		&nbsp
-		<input id="pymataVersion" type="button" value="Get PyMata Version" onclick="getPymataVersion();"/>
-		<br>
-		<br>
-		<input id="pinStateReport" type="button" value="Get Pin State Report for Pin:" onclick="getPinState();"/>
+		<a href="javascript:getPymataVersion()" class="btn btn-info">
+	       <span id="span_supervision_get_pymata"></span>
+	    </a>
+		<br/>
+		<br/>
+		<a href="javascript:getPinState()" class="btn btn-info">
+	       <span id="span_supervision_get_pin_report"></span>
+	    </a>
 		<INPUT id="pinSpinner" TYPE="NUMBER" MIN="0" MAX="127" STEP="1" VALUE="0" SIZE="3">
 		&nbsp
-		(For Pin State Reports, first select the pin number by using the spinner and then click the button to the
-		left)
-
-
+		<span id="span_supervision_get_pin_report_text"></span>
 	</div>
+	<!-- Polled Data -->
 	<div id="tabs-5" class="tab-pane">
-		<b>Digital Pin: </b>
+		<br/>
+		<b><span id="span_supervision_digital_pin"></span></b>
 		<INPUT TYPE="NUMBER" id="drPin" MIN="2" MAX="19" STEP="1" VALUE="2" SIZE="1">
-
-		<input id="digMan2" type="button" value="Read" onclick="digitalRead(this.id);"/>
+		<a href="javascript:digitalRead(this.id)" class="btn btn-info">
+	       <span id="span_supervision_read_pin"></span>
+	    </a>
 		&nbsp
-		<input id="ddata" name="pin" class="element text medium" type="text" maxlength="255" value=""
-			   style="width: 80px;"/>
+		<input id="ddata" name="pin" class="element text medium" type="text" maxlength="255" value="" style="width: 80px;"/>
 		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
-		<b>Analog Pin: </b>
+		<b><span id="span_supervision_analog_pin"></span></b>
 		<INPUT TYPE="NUMBER" id="arPin" MIN="0" MAX="5" STEP="1" VALUE="0" SIZE="1">
-
-		<input id="alMan2" type="button" value="Read" onclick="analogRead(this.id);"/>
+		<a href="javascript:analogRead(this.id)" class="btn btn-info">
+	       <span id="span_supervision_read_pin"></span>
+	    </a>
 		&nbsp
-		<input id="adata" name="pin" class="element text medium" type="text" maxlength="255" value=""
-			   style="width: 80px;"/>
+		<input id="adata" name="pin" class="element text medium" type="text" maxlength="255" value="" style="width: 80px;"/>
 
 		<br>
 		<br>
 
 		<br>
 		<br>
-		<b>Digital Latch Table Data: </b>
+		<b><span id="span_supervision_latch_digital_pin"></span></b>
 		<INPUT TYPE="NUMBER" id="dlData" MIN="2" MAX="19" STEP="1" VALUE="2" SIZE="1">
-
-		<input id="digLatch2" type="button" value="Read" onclick="digitalLatchRead(this.id);"/>
+		<a href="javascript:digitalLatchRead(this.id)" class="btn btn-info">
+	       <span id="span_supervision_read_pin"></span>
+	    </a>
 		&nbsp
 		<input id="dlatchdata" name="pin" class="element text medium" type="text" maxlength="255" value=""
 			   style="width: 500px;"/>
 
 		<br>
 		<br>
-		<b>Analog Latch Table Data: </b>
+		<b><span id="span_supervision_latch_analog_pin"></b>
 		<INPUT TYPE="NUMBER" id="alData" MIN="0" MAX="5" STEP="1" VALUE="0" SIZE="1">
-
-		<input id="anlLatch2" type="button" value="Read" onclick="analogLatchRead(this.id);"/>
+		<a href="javascript:analogLatchRead(this.id)" class="btn btn-info">
+	       <span id="span_supervision_read_pin"></span>
+	    </a>
 		&nbsp
 		<input id="alatchdata" name="pin" class="element text medium" type="text" maxlength="255" value=""
 			   style="width: 500px;"/>
-
 		<br>
 		<br>
 	</div>
+	<!-- Servo -->
 	<div id="tabs-6" class="tab-pane">
-		<b>Servo Pin</b>
+		<br/>
+		<b><span id="span_supervision_servo_pin"></span></b>
 		<select id="servoPin">
 			<option value="3">3</option>
 			<option value="5">5</option>
@@ -188,14 +208,17 @@
 			<option value="10">10</option>
 			<option value="11">11</option>
 		</select>
+		&nbsp;&nbsp;&nbsp;
+		<b><span id="span_supervision_servo_angle"></span></b></b>
+		<input id="servoAngle" name="pin" class="element text medium" type="text" maxlength="4" value="0" style="width: 60px;"/>
 		&nbsp;&nbsp;&nbsp;&nbsp;
-		<b>Servo Angle in Degress</b>
-		<input id="servoAngle" name="pin" class="element text medium" type="text" maxlength="4" value="0"
-			   style="width: 60px;"/>
-		&nbsp;&nbsp;&nbsp;&nbsp;
-		<input id="moveServo" type="button" value="Set Servo" onclick="servo();"/>
+		<a href="javascript:servo()" class="btn btn-info">
+	       <span id="span_supervision_servo_set"></span>
+	    </a>
 	</div>
+	<!-- i2c -->
 	<div id="tabs-7" class="tab-pane">
+		<br/>
 		<b>Default Values Are Set to Read Temperature from </b>
 		<a href="https://www.sparkfun.com/products/11931" target="_blank">A Sparkfun TMP102 </a>
 		<h2>I2C Config (Use before an I2C read or write)</h2>
@@ -246,12 +269,12 @@
 		<input id="i2cWriteTest" type="button" value="First Row On" onclick="i2cWriteDemo(1);"/>
 		&nbsp;&nbsp
 		<input id="i2cWriteTest" type="button" value="First Row Off" onclick="i2cWriteDemo(0);"/>
-
-
 	</div>
+	<!-- FirmataPlus specific -->
 	<div id="tabs-8" class="tab-pane">
-		<h2>Tone</h2><br>
-		<b>Pin:</b>
+		<br/>
+		<h2><span id="span_supervision_tone"></span></h2>
+		<b><span id="span_supervision_tone_pin"></span></b>
 		<select id="tonePin">
 			<option value="2">2</option>
 			<option value="3">3</option>
@@ -273,19 +296,19 @@
 			<option value="19">19</option>
 		</select>
 		&nbsp;&nbsp;&nbsp;&nbsp;
-		<b>Frequency (Hz)</b>
-		<input id="freq" class="element text medium" type="text" maxlength="4" value="1000"
-			   style="width: 60px;"/>
+		<b><span id="span_supervision_tone_freq"></span></b>
+		<input id="freq" class="element text medium" type="text" maxlength="4" value="1000" style="width: 60px;"/>
 		&nbsp;&nbsp;&nbsp;&nbsp;
-		<b>Duration (ms)</b>
-		<input id="duration" class="element text medium" type="text" maxlength="4" value="100"
-			   style="width: 60px;"/>
+		<b><span id="span_supervision_tone_dur"></span></b>
+		<input id="duration" class="element text medium" type="text" maxlength="4" value="100" style="width: 60px;"/>
 		&nbsp;&nbsp;&nbsp;&nbsp;
-		<input id="tone" type="button" value="Play Tone" onclick="playTone();"/>
+		<a href="javascript:playTone()" class="btn btn-info">
+	       <span id="span_supervision_tone_play"></span>
+	    </a>
 		<br><br>
 
-		<h2>Encoder</h2>
-		<b>Encoder Pin A:</b>
+		<h2><span id="span_supervision_encoder"></span></h2>
+		<b><span id="span_supervision_encoder_pinA"></span></b>
 		<select id="encoderPinA">
 			<option value="2">2</option>
 			<option value="3">3</option>
@@ -307,7 +330,7 @@
 			<option value="19">19</option>
 		</select>
 		&nbsp;&nbsp;&nbsp;&nbsp;
-		<b>Encoder Pin B:</b>
+		<b><span id="span_supervision_encoder_pinB"></b>
 		<select id="encoderPinB">
 			<option value="2">2</option>
 			<option value="3">3</option>
@@ -329,18 +352,19 @@
 			<option value="19">19</option>
 		</select>
 		&nbsp;&nbsp;&nbsp;&nbsp;
-		<input id="getAutoEncoder" type="button" value="Auto Encoder Read" onclick="encoderRead(0);"/>
-
-		<input id="encoderValue" class="element text medium" type="text" maxlength="4" value=""
-			   style="width: 100px;"/>
+		<a href="javascript:encoderRead(0)" class="btn btn-info">
+	       <span id="span_supervision_encoder_auto"></span>
+	    </a>
+		<input id="encoderValue" class="element text medium" type="text" maxlength="4" value="" style="width: 100px;"/>
 		&nbsp;&nbsp;&nbsp;&nbsp;
-		<input id="getEncoder" type="button" value="Manual Encoder Read" onclick="encoderRead(1);"/>
+		<a href="javascript:encoderRead(1)" class="btn btn-info">
+	       <span id="span_supervision_encoder_manual"></span>
+	    </a>
 		<input id="encoderValue2" class="element text medium" type="text" maxlength="4" value=""
 			   style="width: 100px;"/>
 		<br><br>
-
-		<h2>Sonar</h2>
-		<b>Trigger Pin:</b>
+		<h2><span id="span_supervision_sonar"></span></h2>
+		<b><span id="span_supervision_sonar_trig"></span></b>
 		<select id="sonarTriggerPin">
 			<option value="2">2</option>
 			<option value="3">3</option>
@@ -362,7 +386,7 @@
 			<option value="19">19</option>
 		</select>
 		&nbsp;&nbsp;&nbsp;&nbsp;
-		<b>Echo Pin:</b>
+		<b><span id="span_supervision_sonar_echo"></span></b>
 		<select id="sonarEchoPin">
 			<option value="2">2</option>
 			<option value="3">3</option>
@@ -384,18 +408,19 @@
 			<option value="19">19</option>
 		</select>
 		&nbsp;&nbsp;&nbsp;&nbsp;
-		<input id="getAutoSonar" type="button" value="Auto Sonar Read" onclick="sonarRead(0);"/>
-
-		<input id="sonarValue" class="element text medium" type="text" maxlength="4" value=""
-			   style="width: 100px;"/>
+		<a href="javascript:sonarRead(0)" class="btn btn-info">
+	       <span id="span_supervision_sonar_auto"></span>
+	    </a>
+		<input id="sonarValue" class="element text medium" type="text" maxlength="4" value="" style="width: 100px;"/>
 		&nbsp;&nbsp;&nbsp;&nbsp;
-		<input id="getEncoder" type="button" value="Manual Sonar Read" onclick="sonarRead(1);"/>
-		<input id="sonarValue2" class="element text medium" type="text" maxlength="4" value=""
-			   style="width: 100px;"/>
+		<a href="javascript:sonarRead(1)" class="btn btn-info">
+	       <span id="span_supervision_sonar_manual"></span>
+	    </a>
+		<input id="sonarValue2" class="element text medium" type="text" maxlength="4" value="" style="width: 100px;"/>
 		<br><br>
 
-		<h2>Stepper</h2>
-		<b>Pin 1:</b>
+		<h2><span id="span_supervision_stepper"></span></h2>
+		<b><span id="span_supervision_stepper_pin1"></span></b>
 		<select id="stepperPin1">
 			<option value="2">2</option>
 			<option value="3">3</option>
@@ -417,7 +442,7 @@
 			<option value="19">19</option>
 		</select>
 		&nbsp;&nbsp;&nbsp;&nbsp;
-		<b>Pin 2:</b>
+		<b><span id="span_supervision_stepper_pin2"></span></b>
 		<select id="stepperPin2">
 			<option value="2">2</option>
 			<option value="3">3</option>
@@ -439,7 +464,7 @@
 			<option value="19">19</option>
 		</select>
 		&nbsp;&nbsp;&nbsp;&nbsp;
-		<b>Pin 3:</b>
+		<b><span id="span_supervision_stepper_pin3"></span></b>
 		<select id="stepperPin3">
 			<option value="2">2</option>
 			<option value="3">3</option>
@@ -461,7 +486,7 @@
 			<option value="19">19</option>
 		</select>
 		&nbsp;&nbsp;&nbsp;&nbsp;
-		<b>Pin 4:</b>
+		<b><span id="span_supervision_stepper_pin4"></span></b>
 		<select id="stepperPin4">
 			<option value="2">2</option>
 			<option value="3">3</option>
@@ -485,23 +510,24 @@
 
 
 		&nbsp
-		<b>Steps/Rev (<= 21 bits)</b>
+		<b><span id="span_supervision_stepper_steps_rev"></span></b>
 		<input id="stepRev" class="element text medium" type="text" maxlength="4" value="180"
 			   style="width: 100px;"/>
 		<br>
 		<br>
 
-		<b>Motor Speed (<= 21 bits)</b>
+		<b><span id="span_supervision_stepper_motor"></span></b>
 		<input id="motorSpeed" class="element text medium" type="text" maxlength="4" value="20"
 			   style="width: 100px;"/>
 		&nbsp;&nbsp;&nbsp;&nbsp;
-		<b># Steps (<= 14 bits)</b>
-		<input id="numSteps" class="element text medium" type="text" maxlength="4" value="500"
-			   style="width: 100px;"/>
-					&nbsp;&nbsp;&nbsp;&nbsp;
-
-		<input id="runStepper" type="button" value="Run Stepper" onclick="runStepMotor();"/>
+		<b><span id="span_supervision_stepper_steps"></span></b>
+		<input id="numSteps" class="element text medium" type="text" maxlength="4" value="500" style="width: 100px;"/>
+		&nbsp;&nbsp;&nbsp;&nbsp;
+		<a href="javascript:runStepMotor()" class="btn btn-info">
+	       <span id="span_supervision_stepper_run"></span>
+	    </a>
 	</div>
+	<!-- Documentation -->
 	<div id="tabs-9" class="tab-pane">
 		<br/>
 		<b>Documentation</b><br/>

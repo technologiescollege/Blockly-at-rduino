@@ -239,9 +239,54 @@ Code.initLanguageSupervision = function() {
 	  $('#span_supervision_tab9').text(Blockly.Msg.SV_tab9);
 	  $('span[id^="span_supervision_enabled"]').text(Blockly.Msg.SV_enabled);
 	  $('span[id^="span_supervision_disabled"]').text(Blockly.Msg.SV_disabled);	  
-	  $('span[id^="span_supervision_pin"]').text(Blockly.Msg.SV_pin);  
-	  $('span[id^="span_supervision_low"]').text(Blockly.Msg.SV_low);  
-	  $('span[id^="span_supervision_high"]').text(Blockly.Msg.SV_high);
+	  $('span[id^="span_supervision_pin_e"]').text(Blockly.Msg.SV_pin_e);	  	  
+	  $('span[id^="span_supervision_pin_s"]').text(Blockly.Msg.SV_pin_s);  
+	  $('span[id^="span_supervision_low_e"]').text(Blockly.Msg.SV_low_e);  
+	  $('span[id^="span_supervision_high_e"]').text(Blockly.Msg.SV_high_e);  
+	  $('span[id^="span_supervision_low_s"]').text(Blockly.Msg.SV_low_s);  
+	  $('span[id^="span_supervision_high_s"]').text(Blockly.Msg.SV_high_s);
+	  $('span[id^="span_supervision_PWM"]').text(Blockly.Msg.SV_PWM);
+	  $('span[id^="span_supervision_read_pin').text(Blockly.Msg.SV_read_pin);	  
+	  $('#span_supervision_get_analog_map').text(Blockly.Msg.SV_get_analog_map);
+	  $('#span_supervision_get_capability').text(Blockly.Msg.SV_get_capability);
+	  $('#span_supervision_get_firmware').text(Blockly.Msg.SV_get_firmware);
+	  $('#span_supervision_get_protocol').text(Blockly.Msg.SV_get_protocol);
+	  $('#span_supervision_get_pymata').text(Blockly.Msg.SV_get_pymata);
+	  $('#span_supervision_get_pin_report').text(Blockly.Msg.SV_get_pin_report);
+	  $('#span_supervision_get_pin_report_text').text(Blockly.Msg.SV_get_pin_report_text);
+	  $('#span_supervision_digital_pin').text(Blockly.Msg.SV_digital_pin);
+	  $('#span_supervision_analog_pin').text(Blockly.Msg.SV_analog_pin);
+	  $('#span_supervision_latch_digital_pin').text(Blockly.Msg.SV_latch_digital_pin);
+	  $('#span_supervision_latch_analog_pin').text(Blockly.Msg.SV_latch_analog_pin);
+	  $('#span_supervision_servo_pin').text(Blockly.Msg.SV_servo_pin);
+	  $('#span_supervision_servo_angle').text(Blockly.Msg.SV_servo_angle);
+	  $('#span_supervision_servo_set').text(Blockly.Msg.SV_servo_set);
+	  
+	  
+	  $('#span_supervision_tone').text(Blockly.Msg.SV_tone);
+	  $('#span_supervision_tone_pin').text(Blockly.Msg.SV_tone_pin);
+	  $('#span_supervision_tone_freq').text(Blockly.Msg.SV_tone_freq);
+	  $('#span_supervision_tone_dur').text(Blockly.Msg.SV_tone_dur);
+	  $('#span_supervision_tone_play').text(Blockly.Msg.SV_tone_play);
+	  $('#span_supervision_encoder').text(Blockly.Msg.SV_encoder);
+	  $('#span_supervision_encoder_pinA').text(Blockly.Msg.SV_encoder_pinA);
+	  $('#span_supervision_encoder_pinB').text(Blockly.Msg.SV_encoder_pinB);
+	  $('#span_supervision_encoder_auto').text(Blockly.Msg.SV_encoder_auto);
+	  $('#span_supervision_encoder_manual').text(Blockly.Msg.SV_encoder_manual);
+	  $('#span_supervision_sonar').text(Blockly.Msg.SV_sonar);
+	  $('#span_supervision_sonar_trig').text(Blockly.Msg.SV_sonar_trig);
+	  $('#span_supervision_sonar_echo').text(Blockly.Msg.SV_sonar_echo);
+	  $('#span_supervision_sonar_auto').text(Blockly.Msg.SV_sonar_auto);
+	  $('#span_supervision_sonar_manual').text(Blockly.Msg.SV_sonar_manual);
+	  $('#span_supervision_stepper').text(Blockly.Msg.SV_stepper);
+	  $('#span_supervision_stepper_pin1').text(Blockly.Msg.SV_stepper_pin1);
+	  $('#span_supervision_stepper_pin2').text(Blockly.Msg.SV_stepper_pin2);
+	  $('#span_supervision_stepper_pin3').text(Blockly.Msg.SV_stepper_pin3);
+	  $('#span_supervision_stepper_pin4').text(Blockly.Msg.SV_stepper_pin4);
+	  $('#span_supervision_stepper_steps_rev').text(Blockly.Msg.SV_stepper_steps_rev);
+	  $('#span_supervision_stepper_motor').text(Blockly.Msg.SV_stepper_motor);
+	  $('#span_supervision_stepper_steps').text(Blockly.Msg.SV_stepper_steps);
+	  $('#span_supervision_stepper_run').text(Blockly.Msg.SV_stepper_run);
 	  
 };
 
