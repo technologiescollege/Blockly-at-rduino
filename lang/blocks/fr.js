@@ -426,10 +426,6 @@ Blockly.Msg.CAT_GROVE_OUT = "actionneurs";
 Blockly.Msg.CAT_GROVE_LCD = "écran LCD";
 Blockly.Msg.CAT_GROVE_COMM = "communication";
 
-Blockly.Msg.CAT_ROBOTS = "robots & cartes"; //Added April 7 2015 ESK
-Blockly.Msg.CAT_ROBOTS_MOTORS = "moteurs";
-Blockly.Msg.CAT_ROBOT_MISC = "divers";
-
 Blockly.Msg.CAT_TECHNOZONE = "TechnoZone51";  //added march 11th 2015
 Blockly.Msg.CAT_TECHNOZONE_IN = "capteurs";
 Blockly.Msg.CAT_TECHNOZONE_OUT = "actionneurs";
@@ -450,13 +446,21 @@ Blockly.Msg.CAT_TECHNOZONE_ROBOT_BT = "bluetooth";
 Blockly.Msg.CAT_TECHNOZONE_ROBOT_IHM = "console IHM";
 
 Blockly.Msg.CAT_ZUMO = "ZumoBot";	//added april 6th 2015
-Blockly.Msg.CAT_ZUMO_MOTORS = "Moteurs";
-Blockly.Msg.CAT_ZUMO_SENSORS = "Capteurs";
+Blockly.Msg.CAT_ZUMO_MOTORS = "moteurs";
+Blockly.Msg.CAT_ZUMO_SENSORS = "divers";
+
+Blockly.Msg.CAT_ROBOTS = "robots & cartes dédiées"; //Added April 7 2015 ESK
+Blockly.Msg.CAT_ROBOTS_MOTORS = "moteurs";
+Blockly.Msg.CAT_ROBOT_MISC = "divers";
 
 Blockly.Msg.CAT_BQ = "bitbloq";  //added july 14th 2015
 Blockly.Msg.CAT_BQ_IN = "capteurs";
 Blockly.Msg.CAT_BQ_OUT = "actionneurs";
 Blockly.Msg.CAT_BQ_COMM = "communication";
+
+Blockly.Msg.CAT_JEULIN = "feux de carrefour";  //added january 11th 2016
+Blockly.Msg.CAT_JEULIN_IN = "capteurs";
+Blockly.Msg.CAT_JEULIN_OUT = "actionneurs";
 
 Blockly.Msg.FIELDDROPDOWN = [["1 -> HAUT", "HIGH"], ["0 -> bas", "LOW"]];
 Blockly.Msg.FIELDDROPDOWN_ONOFF = [["marche", "ON"], ["arrêt", "OFF"]]

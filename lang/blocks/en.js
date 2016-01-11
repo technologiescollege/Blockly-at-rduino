@@ -460,6 +460,10 @@ Blockly.Msg.CAT_BQ_IN = "In";
 Blockly.Msg.CAT_BQ_OUT = "Out";
 Blockly.Msg.CAT_BQ_COMM = "Communication";
 
+Blockly.Msg.CAT_JEULIN = "Traffic light";  //added january 11th 2016
+Blockly.Msg.CAT_JEULIN_IN = "Sensors";
+Blockly.Msg.CAT_JEULIN_OUT = "Actuators";
+
 Blockly.Msg.FIELDDROPDOWN = [["HIGH", "HIGH"], ["LOW", "LOW"]];
 Blockly.Msg.FIELDDROPDOWN_ONOFF = [["ON", "ON"], ["OFF", "OFF"]];
 
