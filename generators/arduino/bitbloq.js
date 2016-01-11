@@ -43,7 +43,7 @@ Blockly.Arduino.bq_ultrason = function() {
     "  return value;\n"+
     "}\n";
   code="mesure_distance_cm("+dropdown_triger_pin+","+dropdown_dist_pin+")";
-  return code;
+  return [code, Blockly.Arduino.ORDER_ATOMIC];
 };
 
 Blockly.Arduino.bq_servo = function() {
@@ -65,26 +65,26 @@ Blockly.Arduino.bq_bouton_poussoir = function() {
   var dropdown_pin = Blockly.Arduino.valueToCode(this, 'PIN', Blockly.Arduino.ORDER_ATOMIC); //this.getFieldValue('PIN');
   Blockly.Arduino.setups_['setup_btn1white_'+dropdown_pin] = 'pinMode('+dropdown_pin+', INPUT);';
   var code = 'digitalRead('+dropdown_pin+')==0';
-  return code;
+  return [code, Blockly.Arduino.ORDER_ATOMIC];
 };
 
 Blockly.Arduino.bq_capteur_de_ligne = function() {
   var dropdown_pin = Blockly.Arduino.valueToCode(this, 'PIN', Blockly.Arduino.ORDER_ATOMIC); //this.getFieldValue('PIN');
   Blockly.Arduino.setups_['setup_lig1_'+dropdown_pin] = 'pinMode('+dropdown_pin+', INPUT);';
   var code = 'digitalRead('+dropdown_pin+')==1';
-  return code;
+  return [code, Blockly.Arduino.ORDER_ATOMIC];
 };
 
 Blockly.Arduino.bq_potentiometre = function() {
   var dropdown_pin = Blockly.Arduino.valueToCode(this, 'PIN', Blockly.Arduino.ORDER_ATOMIC); //this.getFieldValue('PIN');
   var code = 'analogRead('+dropdown_pin+')';
-  return code;
+  return [code, Blockly.Arduino.ORDER_ATOMIC];
 };
 
 Blockly.Arduino.bq_luminosite = function() {
   var dropdown_pin = Blockly.Arduino.valueToCode(this, 'PIN', Blockly.Arduino.ORDER_ATOMIC); //this.getFieldValue('PIN');
   var code = 'round(1517.288685*exp(-64.822510*analogRead('+dropdown_pin+')/10000))';
-  return code;
+  return [code, Blockly.Arduino.ORDER_ATOMIC];
 };
 
 Blockly.Arduino.bq_servo_rotation_continue = function() {

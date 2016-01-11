@@ -60,22 +60,17 @@ Blockly.Arduino.setup_button_wait_iph = function() {
 };
 
 Blockly.Arduino.fourpin_ranger = function() {
-  var dropdown_triger_pin = this.getFieldValue('PIN1');
-  var dropdown_dist_pin = this.getFieldValue('PIN2');
-  Blockly.Arduino.setups_["setup_sonar1"+dropdown_triger_pin] = "pinMode("+dropdown_triger_pin+",OUTPUT);//Sonar triger pin\n"+
-  "  pinMode("+dropdown_dist_pin+",INPUT);//Sonar distance pulse pin\n";
-  var code = "";
-  
-  Blockly.Arduino.definitions_['define_mesure_distance_cm'] = "int mesure_distance_cm(byte trig_pin, byte dist_pin)\n"+
-    "{\n"+
-    "  digitalWrite(trig_pin,HIGH);\n"+
-    "  delayMicroseconds(1000);\n"+
-    "  digitalWrite(trig_pin,LOW);\n"+
-    "  int value = (pulseIn(dist_pin,HIGH)/2)/29.1+2;\n"+
-    "  if (value>255) { value=255; }\n"+
-    "  delay(20);\n"+
-    "  return value;\n"+
-    "}\n";
-  code="mesure_distance_cm("+dropdown_triger_pin+","+dropdown_dist_pin+")";
-  return code;
+  var dropdown_pin = this.getFieldValue('PIN1');
+  var dropdown_unit = this.getFieldValue('PIN2');
+  Blockly.Arduino.definitions_['define_ultrasonic'] = '#include <Ultrasonic.h>\n';
+  Blockly.Arduino.definitions_['var_ultrasonic'+dropdown_pin] = 'Ultrasonic ultrasonic_'+dropdown_pin+'('+dropdown_pin+');\n';
+  var code;
+  if(dropdown_unit==="cm"){
+    Blockly.Arduino.setups_['setup_ultrasonic_'+dropdown_pin] = 'ultrasonic_'+dropdown_pin+'.MeasureInCentimeters();';
+    code = 'ultrasonic_'+dropdown_pin+'.RangeInCentimeters();';
+  } else {
+    Blockly.Arduino.setups_['setup_ultrasonic_'+dropdown_pin] = 'ultrasonic_'+dropdown_pin+'.MeasureInInches();';
+    code = 'ultrasonic_'+dropdown_pin+'.RangeInInches();';
+  }
+  return [code, Blockly.Arduino.ORDER_ATOMIC];
 };

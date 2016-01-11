@@ -192,5 +192,5 @@ Blockly.Arduino.setups_["setup_IR_get_blink"] = "pinMode(IRpin, INPUT);\n"+
 
   var code = "";
   var code =  "IRRequest()";
-  return code;
+  return [code, Blockly.Arduino.ORDER_ATOMIC];
  }; 

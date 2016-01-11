@@ -149,13 +149,10 @@ Blockly.Blocks['grove_button'] = {
     this.setHelpUrl(Blockly.Msg.GROVE_INOUT_BUTTON_HELPURL);
 	this.appendDummyInput()
         .appendField(Blockly.Msg.GROVE_INOUT_BUTTON_TEXT)
-        .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/grove/400px-Button1.jpg', 64, 64));
-    this.appendDummyInput()
+        .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/grove/400px-Button1.jpg', 64, 64))
 		.appendField(Blockly.Msg.GROVE_INOUT_BUTTON_INPUT)
 		.appendField(new Blockly.FieldTextInput('', Blockly.Arduino.pinDigitalValidator), 'PIN');
     this.setInputsInline(true);
-    this.setPreviousStatement(true, null);
-    this.setNextStatement(true, null);
     this.setOutput(true, 'Boolean');
     this.setTooltip(Blockly.Msg.GROVE_INOUT_BUTTON_TOOLTIP);
   }

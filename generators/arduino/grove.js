@@ -43,21 +43,21 @@ Blockly.Arduino.grove_button = function() {
   var dropdown_pin = this.getFieldValue('PIN');
   Blockly.Arduino.setups_['setup_button_'+dropdown_pin] = 'pinMode('+dropdown_pin+', INPUT);';
   var code = 'digitalRead('+dropdown_pin+')';
-  return code;
+  return [code, Blockly.Arduino.ORDER_ATOMIC];
 };
 
 Blockly.Arduino.grove_rotary_angle = function() {
   var dropdown_pin = this.getFieldValue('PIN');
   Blockly.Arduino.setups_['setup_button_'+dropdown_pin] = 'pinMode('+dropdown_pin+', INPUT);';
   var code = 'analogRead('+dropdown_pin+')';
-  return code;
+  return [code, Blockly.Arduino.ORDER_ATOMIC];
 };
 
 Blockly.Arduino.grove_tilt_switch = function() {
   var dropdown_pin = this.getFieldValue('PIN');
   Blockly.Arduino.setups_['setup_tilt_switch_'+dropdown_pin] = 'pinMode('+dropdown_pin+', INPUT);';
   var code = 'digitalRead('+dropdown_pin+')';
-  return code;
+  return [code, Blockly.Arduino.ORDER_ATOMIC];
 };
 
 Blockly.Arduino.grove_piezo_buzzer = function() {
@@ -85,7 +85,7 @@ Blockly.Arduino.grove_temporature_sensor = function() {
   */
   var code = 'round('+'(1/(log((float)(1023-analogRead('+dropdown_pin+'))*10000/analogRead('+dropdown_pin+'))/10000)/3975+1/298.15)-273.15'+')';
   Blockly.Arduino.setups_['setup_temporature_sensor_'+dropdown_pin] = 'pinMode('+dropdown_pin+', INPUT);';
-  return code;
+  return [code, Blockly.Arduino.ORDER_ATOMIC];
 };
 
 /*
@@ -201,21 +201,21 @@ Blockly.Arduino.grove_sound_sensor = function() {
   var dropdown_pin = this.getFieldValue('PIN');
   var code = 'analogRead('+dropdown_pin+')';
   Blockly.Arduino.setups_['setup_sound_sensor_'+dropdown_pin] = 'pinMode('+dropdown_pin+', INPUT);';
-  return code;
+  return [code, Blockly.Arduino.ORDER_ATOMIC];
 };
 
 Blockly.Arduino.grove_pir_motion_sensor = function() {
   var dropdown_pin = this.getFieldValue('PIN');
   Blockly.Arduino.setups_['setup_input_'+dropdown_pin] = 'pinMode('+dropdown_pin+', INPUT);';
   var code = 'digitalRead('+dropdown_pin+')';
-  return code;
+  return [code, Blockly.Arduino.ORDER_ATOMIC];
 };
 
 Blockly.Arduino.grove_line_finder = function() {
   var dropdown_pin = this.getFieldValue('PIN');
   Blockly.Arduino.setups_['setup_input_'+dropdown_pin] = 'pinMode('+dropdown_pin+', INPUT);';
   var code = 'digitalRead('+dropdown_pin+')';
-  return code;
+  return [code, Blockly.Arduino.ORDER_ATOMIC];
 };
 
 Blockly.Arduino.grove_ultrasonic_ranger = function() {
@@ -231,7 +231,7 @@ Blockly.Arduino.grove_ultrasonic_ranger = function() {
     Blockly.Arduino.setups_['setup_ultrasonic_'+dropdown_pin] = 'ultrasonic_'+dropdown_pin+'.MeasureInInches();';
     code = 'ultrasonic_'+dropdown_pin+'.RangeInInches();';
   }
-  return code;
+  return [code, Blockly.Arduino.ORDER_ATOMIC];
 };
 
 Blockly.Arduino.grove_motor_shield = function() {
@@ -311,7 +311,7 @@ Blockly.Arduino.grove_thumb_joystick =  function() {
   }
   var code = 'analogRead('+stickPIN+')';
   Blockly.Arduino.setups_['setup_input_'+dropdown_pin] = 'pinMode('+dropdown_pin+', INPUT);';
-  return code;
+  return [code, Blockly.Arduino.ORDER_ATOMIC];
 };
 
 function hexToR(h) {return parseInt((cutHex(h)).substring(0,2),16);};
