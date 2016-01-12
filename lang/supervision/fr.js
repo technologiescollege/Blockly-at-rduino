@@ -6,7 +6,7 @@ goog.require('Blockly.Msg');
 
 Blockly.Msg.SV_tab1 = "Entrées numériques";
 Blockly.Msg.SV_tab2 = "Sorties numériques/PWM";
-Blockly.Msg.SV_tab3 = "Sorties analogiques";
+Blockly.Msg.SV_tab3 = "Entrées analogiques";
 Blockly.Msg.SV_tab4 = "Rapports";
 Blockly.Msg.SV_tab5 = "Scrutation";
 Blockly.Msg.SV_tab6 = "Servomoteurs";
