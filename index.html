@@ -744,26 +744,28 @@
 			</block>
         </category>
     </category>
-	<category name="CAT_JEULIN" colour="#C12542">
+
+    <category name="CAT_JEULIN" colour="#C12542">
         <category name="CAT_JEULIN_IN" colour="#C12542">
-            <block type="jeulin_detection_appel_pieton_BP_voie1"></block>
-            <block type="jeulin_detection_appel_pieton_BP_voie2"></block>
-            <block type="jeulin_detection_magnetique_presence_voiture_ILS_voie1"></block>
-			<block type="jeulin_detection_photoelectrique_luminosite_LDR"></block>
-			<block type="jeulin_detection_infrarouge_presence_voiture_IR_voie1"></block>
+            <block type="jeulin_appel_pieton_voie1"></block>
+            <block type="jeulin_appel_pieton_voie2"></block>
+            <block type="jeulin_detection_magnetique_ils1"></block>
+            <block type="jeulin_detection_infrarouge_bari1"></block>
+            <block type="jeulin_detection_luminosite_ldr1"></block>
         </category>
         <category name="CAT_JEULIN_OUT" colour="#C12542">
-            <block type="jeulin_feu_rouge_voie1"></block>
-			<block type="jeulin_feu_orange_voie1"></block>
-			<block type="jeulin_feu_vert_voie1"></block>
-            <block type="jeulin_feu_rouge_voie2"></block>
-			<block type="jeulin_feu_orange_voie2"></block>
-			<block type="jeulin_feu_vert_voie2"></block>
-            <block type="jeulin_alarme_pieton_buzzer"></block>
-            <block type="jeulin_feu_rouge_pieton"></block>
-			<block type="jeulin_feu_vert_pieton"></block>
-		</category>
-	</category>
+            <block type="jeulin_feux_voie1_led1red"></block>
+            <block type="jeulin_feux_voie1_led1yellow"></block>
+            <block type="jeulin_feux_voie1_led1green"></block>
+            <block type="jeulin_feux_voie2_led1red"></block>
+            <block type="jeulin_feux_voie2_led1yellow"></block>
+            <block type="jeulin_feux_voie2_led1green"></block>
+            <block type="jeulin_feu_pieton_led1red"></block>
+            <block type="jeulin_feu_pieton_led1green"></block>
+            <block type="jeulin_alarme_pieton_buzzer1"></block>   
+        </category>
+    </category>
+	
     <category name="CAT_GROVE" colour="#8ec31f">
         <category name="CAT_GROVE_IN" colour="#8ec31f">
             <block type="grove_button"></block>
