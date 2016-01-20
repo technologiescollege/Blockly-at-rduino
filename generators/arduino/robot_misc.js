@@ -30,8 +30,9 @@ goog.require('Blockly.Arduino');
 
 
 Blockly.Arduino.setup_button_wait_il = function() {
-  var wait_pin = Blockly.Arduino.valueToCode(this, 'PIN', Blockly.Arduino.ORDER_ATOMIC);
-   Blockly.Arduino.definitions_["define_button_wait"] = ""+
+  //var wait_pin = Blockly.Arduino.valueToCode(this, 'PIN', Blockly.Arduino.ORDER_ATOMIC);
+  var wait_pin = this.getFieldValue('PIN');  
+  Blockly.Arduino.definitions_["define_button_wait"] = ""+
    "   const int buttonPin = "+wait_pin+";\n"+
    "   int buttonState = 0;\n"+
 	"   void WaitForButton (){\n"+
@@ -45,7 +46,8 @@ Blockly.Arduino.setup_button_wait_il = function() {
 };
 
 Blockly.Arduino.setup_button_wait_iph = function() {
-  var wait_pin = Blockly.Arduino.valueToCode(this, 'PIN', Blockly.Arduino.ORDER_ATOMIC);
+  //var wait_pin = Blockly.Arduino.valueToCode(this, 'PIN', Blockly.Arduino.ORDER_ATOMIC);
+  var wait_pin = this.getFieldValue('PIN');
    Blockly.Arduino.definitions_["define_button_wait"] = ""+
    "   const int buttonPin = "+wait_pin+";\n"+
    "   int buttonState = 0;\n"+
@@ -60,8 +62,9 @@ Blockly.Arduino.setup_button_wait_iph = function() {
 };
 
 Blockly.Arduino.fourpin_ranger = function() {
-   var dropdown_tpin = Blockly.Arduino.valueToCode(this, 'PIN', Blockly.Arduino.ORDER_ATOMIC);
+  // var dropdown_tpin = Blockly.Arduino.valueToCode(this, 'PIN', Blockly.Arduino.ORDER_ATOMIC);
    var dropdown_epin = this.getFieldValue('PIN2');
+   var dropdown_tpin = this.getFieldValue('PIN');
   Blockly.Arduino.definitions_["define_fourpin_"+dropdown_tpin] = "  const int pingPin"+dropdown_tpin+" = "+dropdown_tpin+";\n"+
   "  const int sensorPin"+dropdown_epin+" = "+dropdown_epin+";\n";
       Blockly.Arduino.definitions_['define_ping'] = "long Ping"+dropdown_tpin+"()\n"+
@@ -109,7 +112,8 @@ Blockly.Arduino.play_notes_z = function() {
 };
 
 Blockly.Arduino.IR_serial_decoder = function() {
- var dropdown_ipin = Blockly.Arduino.valueToCode(this, 'PIN', Blockly.Arduino.ORDER_ATOMIC);
+ //var dropdown_ipin = Blockly.Arduino.valueToCode(this, 'PIN', Blockly.Arduino.ORDER_ATOMIC);
+ var dropdown_ipin = this.getFieldValue('PIN');
   Blockly.Arduino.definitions_["define_IR_serial_decoder"] = "//Playing this requires the IR Remote Libraries to work\n" +
   "//Credit to Ken Shirriff, Enjoying Electronics, dablondeemu and Instructables  \n"+
   "#include <IRremote.h>\n"+
@@ -129,8 +133,9 @@ Blockly.Arduino.IR_serial_decoder = function() {
 };
 
 Blockly.Arduino.IR_get_blink = function() {
-   var dropdown_ipin = Blockly.Arduino.valueToCode(this, 'PIN', Blockly.Arduino.ORDER_ATOMIC);
+  // var dropdown_ipin = Blockly.Arduino.valueToCode(this, 'PIN', Blockly.Arduino.ORDER_ATOMIC);
    var dropdown_lpin = this.getFieldValue('PIN2');
+   var dropdown_ipin = this.getFieldValue('PIN');
    var IR_number = Blockly.Arduino.valueToCode(this, 'IR_NUM', Blockly.Arduino.ORDER_ATOMIC) 
   Blockly.Arduino.definitions_["define_IR_get_blink"] = "//Playing this requires the IR Remote Libraries to work\n" +
   "//Credit to Ken Shirriff, Enjoying Electronics, dablondeemu and Instructables  \n"+
@@ -169,7 +174,8 @@ Blockly.Arduino.setups_["setup_IR_get_blink"] = "pinMode(IRpin, INPUT);\n"+
  }; 
 
  Blockly.Arduino.IR_get= function() {
-   var dropdown_ipin = Blockly.Arduino.valueToCode(this, 'PIN', Blockly.Arduino.ORDER_ATOMIC);
+  // var dropdown_ipin = Blockly.Arduino.valueToCode(this, 'PIN', Blockly.Arduino.ORDER_ATOMIC);
+   var dropdown_ipin = this.getFieldValue('PIN');
    Blockly.Arduino.definitions_["define_IR_get"] = "//Playing this requires the IR Remote Libraries to work\n" +
   "//Credit to Ken Shirriff, Enjoying Electronics, dablondeemu and Instructables  \n"+
   "#include <IRremote.h>\n"+
