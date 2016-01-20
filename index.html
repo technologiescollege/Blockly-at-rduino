@@ -550,7 +550,20 @@
             <block type="inout_analog_read"></block>
             <block type="inout_digital_read"></block>			
             <block type="inout_onoff"></block>
-			<block type="inout_angle"></block>
+			<block type="inout_angle"></block>			
+			<block type="millis"></block>		
+			<block type="var_random">
+                <value name="rand_min">
+                    <shadow type="math_number">
+                    <field name="NUM">0</field>
+                    </shadow>
+                </value>
+                <value name="rand_max">
+                    <shadow type="math_number">
+                    <field name="NUM">100</field>
+                    </shadow>
+                </value>
+			</block>
             <block type="base_map">
                 <value name="NUM">
                     <shadow type="math_number">
@@ -562,7 +575,19 @@
                     <field name="NUM">0</field>
                     </shadow>
                 </value>
-            </block>
+            </block>				
+			<block type="various_constrain">
+                <value name="a">
+                    <shadow type="math_number">
+                    <field name="NUM">0</field>
+                    </shadow>
+                </value>
+                <value name="b">
+                    <shadow type="math_number">
+                    <field name="NUM">100</field>
+                    </shadow>
+                </value>
+			</block>
         </category>
         <category name="CAT_ARDUINO_OUT" colour="#00979D">
 			<block type="base_delay">			

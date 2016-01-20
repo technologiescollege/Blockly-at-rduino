@@ -37,6 +37,33 @@ Blockly.Blocks.base_setup = {
     }
 };
 
+Blockly.Blocks.millis = {
+  init: function() {
+    this.setColour("#00979D");
+	this.setHelpUrl(Blockly.Msg.ARDUINO_SINCE_PROGRAM_STARTED_HELPURL);
+    this.appendDummyInput("")
+         .appendField(Blockly.Msg.ARDUINO_SINCE_PROGRAM_STARTED);
+    this.setOutput(true, 'Number');
+    this.setTooltip(Blockly.Msg.ARDUINO_SINCE_PROGRAM_STARTED_TOOLTIP);
+  }
+};
+
+Blockly.Blocks.var_random = {
+  init: function() {
+    this.setColour("#00979D");
+    this.setHelpUrl("");
+    this.appendValueInput("rand_min")
+        .setCheck("Number")
+        .appendField(Blockly.Msg.ARDUINO_BETWEEN);
+    this.appendValueInput("rand_max")
+        .setCheck("Number")
+        .appendField(Blockly.Msg.ARDUINO_BETWEEN_AND);
+    this.setInputsInline(true);
+    this.setOutput(true);
+    this.setTooltip('');
+  }
+};
+
 Blockly.Blocks.base_delay = {
   init: function() {
     this.setColour("#00979D");
@@ -66,6 +93,27 @@ Blockly.Blocks.base_map = {
     this.setInputsInline(true);
     this.setOutput(true);
     this.setTooltip(Blockly.Msg.ARDUINO_BASE_MAP_TOOLTIP);
+  }
+};
+
+Blockly.Blocks.various_constrain = {
+  init: function() {
+    this.setColour("#00979D");
+    this.setHelpUrl(Blockly.Msg.ARDUINO_CONSTRAIN_HELPURL);
+    this.appendDummyInput()
+        .appendField(Blockly.Msg.ARDUINO_CONSTRAIN);
+    this.appendValueInput("x")
+        .setCheck("Number")
+        .appendField(Blockly.Msg.ARDUINO_CONSTRAIN_X);
+    this.appendValueInput("a")
+        .setCheck("Number")
+        .appendField(Blockly.Msg.ARDUINO_CONSTRAIN_A);
+    this.appendValueInput("b")
+        .setCheck("Number")
+        .appendField(Blockly.Msg.ARDUINO_CONSTRAIN_B);
+    this.setInputsInline(true);
+    this.setOutput(true, "Number");
+    this.setTooltip(Blockly.Msg.ARDUINO_CONSTRAIN_TOOLTIP);
   }
 };
 
