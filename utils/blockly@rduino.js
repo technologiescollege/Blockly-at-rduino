@@ -257,11 +257,13 @@ BlocklyDuino.arduinoCard =  function (){
  * prompts the users to save it into their local file system.
  */
 BlocklyDuino.saveXmlFile = function () {
-	  var xml = Blockly.Xml.workspaceToDom(BlocklyDuino.workspace);
+	  var xml = Blockly.Xml.workspaceToDom(Blockly.mainWorkspace);
 	  var data = Blockly.Xml.domToPrettyText(xml);
+	  var datenow = Date.now();
 	  var uri = 'data:text/xml;charset=utf-8,' + encodeURIComponent(data);
-	  $(this).attr({
-	            'download': "blockly_arduino.xml",
+	  $(this)
+	            .attr({
+	            'download': "blockly_arduino"+datenow+".xml",
 	                'href': uri,
 	                'target': '_blank'
 	        });
@@ -272,10 +274,12 @@ BlocklyDuino.saveXmlFile = function () {
  * prompts the users to save it into their local file system.
  */
 BlocklyDuino.saveArduinoFile = function () {
-	  var data = Blockly.Arduino.workspaceToCode(BlocklyDuino.workspace);
+	  var data = Blockly.Arduino.workspaceToCode();
+	  var datenow = Date.now();
 	  var uri = 'data:text/plain;charset=utf-8,' + encodeURIComponent(data);
-	  $(this).attr({
-	            'download': "code_arduino.ino",
+	  $(this)
+	            .attr({
+	            'download': "arduino"+datenow+".ino",
 	                'href': uri,
 	                'target': '_blank'
 	        });
