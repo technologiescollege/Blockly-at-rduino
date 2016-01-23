@@ -418,6 +418,9 @@ Blockly.Msg.CAT_FUNCTIONS = "fonctions";
 Blockly.Msg.CAT_ARDUINO = "arduino";
 Blockly.Msg.CAT_ARDUINO_IN = "entrées";
 Blockly.Msg.CAT_ARDUINO_OUT = "sorties";
+Blockly.Msg.CAT_ARDUINO_COMM = "communication";
+Blockly.Msg.CAT_ARDUINO_COMM_SERIAL = "port série";
+Blockly.Msg.CAT_ARDUINO_COMM_SOFTSERIAL = "software serial";
 Blockly.Msg.CAT_ARDUINO_SERVO = "servo-moteur";
 
 Blockly.Msg.CAT_GROVE = "Grove";  //added march 9th 2015
@@ -533,6 +536,33 @@ Blockly.Msg.ARDUINO_SERVO_READ_DEGREES_TOOLTIP = "renvoie le nombre de degrés d
 Blockly.Msg.ARDUINO_SERIAL_PRINT_HELPURL = "http://www.arduino.cc/en/Serial/Print";
 Blockly.Msg.ARDUINO_SERIAL_PRINT_CONTENT = "envoyer sur le port série la donnée :";
 Blockly.Msg.ARDUINO_SERIAL_PRINT_TOOLTIP = "envoie des données sur le port série pour surveillance par le moniteur en ASCII";
+
+Blockly.Msg.ARDUINO_SERVO_PIN = "PIN#";
+Blockly.Msg.ARDUINO_SERVO_ATTACHED = "Servo Attaché?";
+Blockly.Msg.ARDUINO_SERVO_DETACH = "Détacher Servo PIN#";
+
+//SERIAL
+Blockly.Msg.Serial_Print="Série Afficher console";
+Blockly.Msg.Serial_Write="Série Ecrire";
+Blockly.Msg.Serial_write_out="Ecrire";
+Blockly.Msg.Serial_Print_Format="Afficher  Format";
+Blockly.Msg.Serial_Print_ForDecimal="décimal";
+Blockly.Msg.Serial_Print_ForHexa="Hexadécimal";
+Blockly.Msg.Serial_Print_ForBin="Binaire";
+Blockly.Msg.Serial_Print_ForOct="Octal";
+Blockly.Msg.Serial_read="Série Lecture";
+Blockly.Msg.Serial_avai="Série Disponible?";
+Blockly.Msg.Serial_flush="Série Attente fin Transmission";
+
+//SOFTWARE SERIAL
+Blockly.Msg.SSERIAL_Init="INIT";
+Blockly.Msg.SSERIAL_TX="TX#";
+Blockly.Msg.SSERIAL_RX="RX#";
+Blockly.Msg.SSERIAL_Read="SoftwareSerial Lire";
+Blockly.Msg.SSERIAL_Print="SoftwareSerial Afficher";
+Blockly.Msg.SSERIAL_Write="SoftwareSerial Ecrire";
+Blockly.Msg.SSERIAL_Avai="SoftwareSerial Disponible?";
+
 //added april 6th 2015
 Blockly.Msg.GROVE_INOUT_LED_HELPURL = "http://www.seeedstudio.com/wiki/index.php?title=GROVE_-_Starter_Bundle_V1.0b#LED";
 Blockly.Msg.GROVE_INOUT_LED_INPUT1 = "mettre la DEL";

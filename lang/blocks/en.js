@@ -420,6 +420,9 @@ Blockly.Msg.CAT_FUNCTIONS = "Functions";
 Blockly.Msg.CAT_ARDUINO = "Arduino";
 Blockly.Msg.CAT_ARDUINO_IN = "In";
 Blockly.Msg.CAT_ARDUINO_OUT = "Out";
+Blockly.Msg.CAT_ARDUINO_COMM = "serial communication";
+Blockly.Msg.CAT_ARDUINO_COMM_SERIAL = "serial port";
+Blockly.Msg.CAT_ARDUINO_COMM_SOFTSERIAL = "softserial lib";
 Blockly.Msg.CAT_ARDUINO_SERVO = "Servo-Motor";
 
 Blockly.Msg.CAT_GROVE = "Grove";  //added march 9th 2015
@@ -535,6 +538,29 @@ Blockly.Msg.ARDUINO_SERVO_READ_DEGREES_TOOLTIP = "returns the number of degrees 
 Blockly.Msg.ARDUINO_SERIAL_PRINT_HELPURL = "http://www.arduino.cc/en/Serial/Print";
 Blockly.Msg.ARDUINO_SERIAL_PRINT_CONTENT = "send the data to the serial port :";
 Blockly.Msg.ARDUINO_SERIAL_PRINT_TOOLTIP = "sends data over the serial port for sruvaillance by the monitor in ASCII";
+
+//SERIAL
+Blockly.Msg.Serial_Print="Serial Print console";
+Blockly.Msg.Serial_Write="Serial write";
+Blockly.Msg.Serial_write_out="Write";
+Blockly.Msg.Serial_Print_Format="Print  Format";
+Blockly.Msg.Serial_Print_ForDecimal="decimal";
+Blockly.Msg.Serial_Print_ForHexa="hexadecimal";
+Blockly.Msg.Serial_Print_ForBin="binary";
+Blockly.Msg.Serial_Print_ForOct="octal";
+Blockly.Msg.Serial_read="Serial Read";
+Blockly.Msg.Serial_avai="Serial Available?";
+Blockly.Msg.Serial_flush="Serial flush";
+
+//SOFTWARE SERIAL
+Blockly.Msg.SSERIAL_Init="INIT";
+Blockly.Msg.SSERIAL_TX="TX#";
+Blockly.Msg.SSERIAL_RX="RX#";
+Blockly.Msg.SSERIAL_Read="SoftwareSerial Read";
+Blockly.Msg.SSERIAL_Print="SoftwareSerial Print";
+Blockly.Msg.SSERIAL_Write="SoftwareSerial Write";
+Blockly.Msg.SSERIAL_Avai="SoftwareSerial Available?";
+
 //added april 6th 2015
 Blockly.Msg.GROVE_INOUT_LED_HELPURL = "http://www.seeedstudio.com/wiki/index.php?title=GROVE_-_Starter_Bundle_V1.0b#LED";
 Blockly.Msg.GROVE_INOUT_LED_INPUT1 = "LED";

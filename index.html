@@ -26,6 +26,8 @@
 <script type="text/javascript" src="blocks/bitbloq/bitbloq.js"></script>
 <script type="text/javascript" src="blocks/grove/grove.js"></script>
 <script type="text/javascript" src="blocks/jeulin_maquette_feux/jeulin_maquette_feux.js"></script>
+<script type="text/javascript" src="blocks/serial/serial.js"></script>
+<script type="text/javascript" src="blocks/serial/softserial.js"></script>
 <script type="text/javascript" src="blocks/technozone51/technozone51.js"></script>
 <!--script type="text/javascript" src="blocks/technozone51/technozone51_barbot.js"></script-->
 <script type="text/javascript" src="blocks/zumobot/zumo_motors.js"></script>
@@ -44,6 +46,8 @@
 <script type="text/javascript" src="generators/arduino/bitbloq.js"></script>
 <script type="text/javascript" src="generators/arduino/grove.js"></script>
 <script type="text/javascript" src="generators/arduino/jeulin_maquette_feux.js"></script>
+<script type="text/javascript" src="generators/arduino/serial/serial.js"></script>
+<script type="text/javascript" src="generators/arduino/serial/softserial.js"></script>
 <script type="text/javascript" src="generators/arduino/technozone51.js"></script>
 <!--script type="text/javascript" src="generators/arduino/technozone51_barbot.js"></script-->
 <script type="text/javascript" src="generators/arduino/zumo_motors.js"></script>
@@ -644,15 +648,32 @@
                 </value>
             </block>
             <block type="notone"></block>
-            <block type="serial_print">
-				<value name="CONTENT">
-				<shadow type="text">
-				<field name="TEXT"></field>
-				</shadow>
-				</value>
-			</block>
         </category>
-        <category name="CAT_ARDUINO_SERVO" colour="#00979D">
+		<category name="CAT_ARDUINO_COMM" colour="#00979D">	
+			<category name="CAT_ARDUINO_COMM_SERIAL" colour="#00979D">
+				<block type="serial_printfor"></block>
+				<block type="serial_read"></block>
+				<block type="serial_available"></block>
+				<block type="serial_print">
+					<value name="CONTENT">
+					<shadow type="text">
+					<field name="TEXT"></field>
+					</shadow>
+					</value>
+				</block>
+				<block type="serial_write"></block>
+				<block type="serial_write_out"></block>
+				<block type="serial_flush"></block>
+			</category>
+			<category name="CAT_ARDUINO_COMM_SOFTSERIAL" colour="#00979D">
+				<block type="soft_init"></block>
+				<block type="soft_read"></block>
+				<block type="soft_print"></block>
+				<block type="soft_write"></block>
+				<block type="soft_available"></block>  
+			</category>
+        </category>
+		<category name="CAT_ARDUINO_SERVO" colour="#00979D">
             <block type="servo_move">
 				<value name="DEGREE">
 				<shadow type="inout_angle">
@@ -661,6 +682,8 @@
 				</value>
 			</block>
             <block type="servo_read_degrees"></block>
+			<block type="servo_attached"></block>
+			<block type="servo_detach"></block>
         </category>
     </category>
 	<sep></sep>

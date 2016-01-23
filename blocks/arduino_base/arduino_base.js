@@ -404,14 +404,28 @@ Blockly.Blocks.servo_read_degrees = {
   }
 };
 
-Blockly.Blocks.serial_print = {
+Blockly.Blocks.servo_attached = {
+  init: function() {
+	this.setColour("#00979D");
+	this.setHelpUrl('http://www.arduino.cc/playground/ComponentLib/servo');
+    this.appendValueInput("PIN", 'Number')
+        .appendField(Blockly.Msg.ARDUINO_SERVO_ATTACHED)
+        .appendField(new Blockly.FieldImage("http://www.seeedstudio.com/depot/images/product/a991.jpg", 64, 64))
+        .appendField(Blockly.Msg.ARDUINO_SERVO_PIN);
+    this.setOutput(true, 'Boolean');
+    this.setTooltip('true if the servo is attached to pin; false otherwise. ');
+  }
+};
+
+Blockly.Blocks.servo_detach = {
   init: function() {
     this.setColour("#00979D");
-	this.setHelpUrl(Blockly.Msg.ARDUINO_SERIAL_PRINT_HELPURL);
-    this.appendValueInput("CONTENT", String)
-        .appendField(Blockly.Msg.ARDUINO_SERIAL_PRINT_CONTENT);
+	this.setHelpUrl('');
+	this.setInputsInline(true);
+    this.appendValueInput("PIN", 'Number')
+        .appendField(Blockly.Msg.ARDUINO_SERVO_DETACH);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    this.setTooltip(Blockly.Msg.ARDUINO_SERIAL_PRINT_TOOLTIP);
+    this.setTooltip('Release a pin from servo driving.');
   }
 };

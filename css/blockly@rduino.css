@@ -86,7 +86,7 @@ html[dir="RTL"] .menuPanel-ver {
 }
 
 .div_miniPicture-hor {
-    position: absolute;
+  position: absolute;
 	clear: right;
 	float: center;
 	margin: 20px;

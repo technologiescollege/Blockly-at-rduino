@@ -1,4 +1,7 @@
-// connect to the server
+/**
+ * @fileoverview JavaScript for Blockly's Code demo.
+ * @author fraser@google.com (Neil Fraser)
+ */
 var ipAddress = "localhost";
 var ipPort = "9000";
 
@@ -39,7 +42,7 @@ socket.onclose = function (event) {
 };
 
 socket.onmessage = function (message) {
-	//console.log('got message' + message.data);
+	console.log('got message' + JSON.stringify(message.data));
 	//console.log(message.data);
 	var msg = JSON.parse(message.data);
 	var method = msg["method"];
@@ -48,7 +51,7 @@ socket.onmessage = function (message) {
 	//console.log(params);
 
 	//var out = data;
-	////console.log(out)
+	//console.log("method : " + method);
 	switch (method) {
 		case "analog_message_reply":
 		{
@@ -188,12 +191,16 @@ socket.onmessage = function (message) {
 			break;
 		case "sonar_data_reply":
 			console.log('received sonar data');
-			console.log(params[1]);
-			document.getElementById("sonarValue").value = params[1];
+			//console.log(params[1]);
+			//javascript version
+			//document.getElementById("sonarValue").value = params[1];
+			//jquery version
+			$("#sonarValue").val(params[1]);
 			break;
 		case "sonar_read_reply":
-			console.log('sonar_read_reply  ' + params);
-			document.getElementById("sonarValue2").value = params[1];
+			console.log('sonar_read_reply  ' + params[1]);
+			//document.getElementById("sonarValue2").value = params[1];
+			$("#sonarValue2").val(params[1]);
 			break;
 		case "analog_map_reply":
 		case "capability_report_reply":
