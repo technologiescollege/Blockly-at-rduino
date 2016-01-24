@@ -420,6 +420,7 @@ Blockly.Msg.CAT_FUNCTIONS = "Functions";
 Blockly.Msg.CAT_ARDUINO = "Arduino";
 Blockly.Msg.CAT_ARDUINO_IN = "In";
 Blockly.Msg.CAT_ARDUINO_OUT = "Out";
+Blockly.Msg.CAT_ARDUINO_CONVERSION = "conversions";
 Blockly.Msg.CAT_ARDUINO_COMM = "serial communication";
 Blockly.Msg.CAT_ARDUINO_COMM_SERIAL = "serial port";
 Blockly.Msg.CAT_ARDUINO_COMM_SOFTSERIAL = "softserial lib";
@@ -560,6 +561,17 @@ Blockly.Msg.SSERIAL_Read="SoftwareSerial Read";
 Blockly.Msg.SSERIAL_Print="SoftwareSerial Print";
 Blockly.Msg.SSERIAL_Write="SoftwareSerial Write";
 Blockly.Msg.SSERIAL_Avai="SoftwareSerial Available?";
+
+//VARIABLES 
+Blockly.Msg.ARDUINO_VAR_DECLARE="Declare";
+Blockly.Msg.ARDUINO_VAR_AS="as";
+Blockly.Msg.ARDUINO_VAR_VAL="value";
+
+//Conversions
+Blockly.Msg.CONV_tochar="Convert to char "; 
+Blockly.Msg.CONV_tobyte="Convert to Byte ";
+Blockly.Msg.CONV_toint="Convert to Int ";
+Blockly.Msg.CONV_tofloat="Convert to Float ";
 
 //added april 6th 2015
 Blockly.Msg.GROVE_INOUT_LED_HELPURL = "http://www.seeedstudio.com/wiki/index.php?title=GROVE_-_Starter_Bundle_V1.0b#LED";

@@ -67,7 +67,7 @@ Blockly.Arduino['serial_write_out'] = function() {
 };
 
 Blockly.Arduino['serial_flush'] = function() {
-    Blockly.Arduino.setups_['setup_serial'] = 'Serial.begin(9600);';
+  Blockly.Arduino.setups_['setup_serial'] = 'Serial.begin(9600);';
   var code = 'Serial.flush();\n';
   return code;
 };

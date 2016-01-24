@@ -23,9 +23,12 @@
 <script type="text/javascript" src="blocks/blockly/procedures.js"></script>
 
 <script type="text/javascript" src="blocks/arduino_base/arduino_base.js"></script>
+<script type="text/javascript" src="blocks/arduino_base/arduino_conversion.js"></script>
+<script type="text/javascript" src="blocks/arduino_base/arduino_variables.js"></script>
 <script type="text/javascript" src="blocks/bitbloq/bitbloq.js"></script>
 <script type="text/javascript" src="blocks/grove/grove.js"></script>
 <script type="text/javascript" src="blocks/jeulin_maquette_feux/jeulin_maquette_feux.js"></script>
+<script type="text/javascript" src="blocks/lp2i/lp2i.js"></script>
 <script type="text/javascript" src="blocks/serial/serial.js"></script>
 <script type="text/javascript" src="blocks/serial/softserial.js"></script>
 <script type="text/javascript" src="blocks/technozone51/technozone51.js"></script>
@@ -43,9 +46,12 @@
 <script type="text/javascript" src="generators/blockly/procedures.js"></script>
 
 <script type="text/javascript" src="generators/arduino/arduino_base.js"></script>
+<script type="text/javascript" src="generators/arduino/arduino_conversion.js"></script>
+<script type="text/javascript" src="generators/arduino/arduino_variables.js"></script>
 <script type="text/javascript" src="generators/arduino/bitbloq.js"></script>
 <script type="text/javascript" src="generators/arduino/grove.js"></script>
 <script type="text/javascript" src="generators/arduino/jeulin_maquette_feux.js"></script>
+<script type="text/javascript" src="generators/arduino/lp2i.js"></script>
 <script type="text/javascript" src="generators/arduino/serial/serial.js"></script>
 <script type="text/javascript" src="generators/arduino/serial/softserial.js"></script>
 <script type="text/javascript" src="generators/arduino/technozone51.js"></script>
@@ -547,7 +553,7 @@
 	<sep></sep>
     <category name="CAT_ARDUINO" colour="#00979D">
 		<block type="base_setup"></block>
-		<block type="base_const"></block>
+		<block type="variables_arduino_declare"></block>
 		<category name="CAT_ARDUINO_IN" colour="#00979D">
 			<block type="inout_analog_read_validator"></block>
             <block type="inout_digital_read_validator"></block>
@@ -648,7 +654,14 @@
                 </value>
             </block>
             <block type="notone"></block>
+			<block type="lp2i_mp3_play"></block>
         </category>
+		<category id="CAT_ARDUINO_CONVERSION" colour="#00979D"> 
+			  <block type="conversion_tochar"></block>
+			  <block type="conversion_tobyte"></block>
+			  <block type="conversion_toint"></block>
+			  <block type="conversion_tofloat"></block>
+		</category>
 		<category name="CAT_ARDUINO_COMM" colour="#00979D">	
 			<category name="CAT_ARDUINO_COMM_SERIAL" colour="#00979D">
 				<block type="serial_printfor"></block>

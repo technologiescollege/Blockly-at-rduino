@@ -372,7 +372,7 @@ Blockly.Msg.TEXT_TRIM_OPERATOR_LEFT = "supprimer les espaces du côté gauche";
 Blockly.Msg.TEXT_TRIM_OPERATOR_RIGHT = "supprimer les espaces du côté droit";
 Blockly.Msg.TEXT_TRIM_TOOLTIP = "Renvoyer une copie du texte avec les espaces supprimés d’un bout ou des deux.";
 Blockly.Msg.TODAY = "Aujourd'hui";
-Blockly.Msg.VARIABLES_DEFAULT_NAME = "élément";
+Blockly.Msg.VARIABLES_DEFAULT_NAME = "variable";
 Blockly.Msg.VARIABLES_GET_CREATE_SET = "Créer 'fixer %1'";
 Blockly.Msg.VARIABLES_GET_HELPURL = "https://github.com/google/blockly/wiki/Variables#get";  // untranslated
 Blockly.Msg.VARIABLES_GET_TOOLTIP = "Renvoie la valeur de cette variable.";
@@ -418,6 +418,7 @@ Blockly.Msg.CAT_FUNCTIONS = "fonctions";
 Blockly.Msg.CAT_ARDUINO = "arduino";
 Blockly.Msg.CAT_ARDUINO_IN = "entrées";
 Blockly.Msg.CAT_ARDUINO_OUT = "sorties";
+Blockly.Msg.CAT_ARDUINO_CONVERSION = "conversions";
 Blockly.Msg.CAT_ARDUINO_COMM = "communication";
 Blockly.Msg.CAT_ARDUINO_COMM_SERIAL = "port série";
 Blockly.Msg.CAT_ARDUINO_COMM_SOFTSERIAL = "software serial";
@@ -537,21 +538,21 @@ Blockly.Msg.ARDUINO_SERIAL_PRINT_HELPURL = "http://www.arduino.cc/en/Serial/Prin
 Blockly.Msg.ARDUINO_SERIAL_PRINT_CONTENT = "envoyer sur le port série la donnée :";
 Blockly.Msg.ARDUINO_SERIAL_PRINT_TOOLTIP = "envoie des données sur le port série pour surveillance par le moniteur en ASCII";
 
-Blockly.Msg.ARDUINO_SERVO_PIN = "PIN#";
-Blockly.Msg.ARDUINO_SERVO_ATTACHED = "Servo Attaché?";
-Blockly.Msg.ARDUINO_SERVO_DETACH = "Détacher Servo PIN#";
+Blockly.Msg.ARDUINO_SERVO_PIN = "sur la broche";
+Blockly.Msg.ARDUINO_SERVO_ATTACHED = "présence d'un servomoteur";
+Blockly.Msg.ARDUINO_SERVO_DETACH = "détacher le servomoteur de la broche";
 
 //SERIAL
-Blockly.Msg.Serial_Print="Série Afficher console";
+Blockly.Msg.Serial_Print="afficher la console";
 Blockly.Msg.Serial_Write="Série Ecrire";
-Blockly.Msg.Serial_write_out="Ecrire";
-Blockly.Msg.Serial_Print_Format="Afficher  Format";
+Blockly.Msg.Serial_write_out="écrire";
+Blockly.Msg.Serial_Print_Format="afficher format";
 Blockly.Msg.Serial_Print_ForDecimal="décimal";
-Blockly.Msg.Serial_Print_ForHexa="Hexadécimal";
-Blockly.Msg.Serial_Print_ForBin="Binaire";
-Blockly.Msg.Serial_Print_ForOct="Octal";
+Blockly.Msg.Serial_Print_ForHexa="hexadécimal";
+Blockly.Msg.Serial_Print_ForBin="binaire";
+Blockly.Msg.Serial_Print_ForOct="octal";
 Blockly.Msg.Serial_read="Série Lecture";
-Blockly.Msg.Serial_avai="Série Disponible?";
+Blockly.Msg.Serial_avai="Série Disponible ?";
 Blockly.Msg.Serial_flush="Série Attente fin Transmission";
 
 //SOFTWARE SERIAL
@@ -562,6 +563,17 @@ Blockly.Msg.SSERIAL_Read="SoftwareSerial Lire";
 Blockly.Msg.SSERIAL_Print="SoftwareSerial Afficher";
 Blockly.Msg.SSERIAL_Write="SoftwareSerial Ecrire";
 Blockly.Msg.SSERIAL_Avai="SoftwareSerial Disponible?";
+
+//VARIABLES 
+Blockly.Msg.ARDUINO_VAR_DECLARE="déclare";
+Blockly.Msg.ARDUINO_VAR_AS="en tant que";
+Blockly.Msg.ARDUINO_VAR_VAL="de valeur";
+
+//Conversions
+Blockly.Msg.CONV_tochar="convertir en char "; 
+Blockly.Msg.CONV_tobyte="convertir en Byte ";
+Blockly.Msg.CONV_toint="convertir en Int ";
+Blockly.Msg.CONV_tofloat="convertir en Float ";
 
 //added april 6th 2015
 Blockly.Msg.GROVE_INOUT_LED_HELPURL = "http://www.seeedstudio.com/wiki/index.php?title=GROVE_-_Starter_Bundle_V1.0b#LED";
