@@ -34,9 +34,9 @@ goog.require('Blockly.Blocks');
  */
 
 Blockly.Blocks['soft_init'] = {
-  helpUrl: 'http://arduino.cc/en/Reference/AnalogWrite',
   init: function() {
-    this.setColour(50);
+    this.setColour("#00979D");
+	this.setHelpUrl('http://arduino.cc/en/Reference/AnalogWrite');
     this.appendDummyInput()
 	.appendField(Blockly.Msg.SSERIAL_Init)
         .appendField(Blockly.Msg.SSERIAL_TX)
@@ -53,9 +53,9 @@ Blockly.Blocks['soft_init'] = {
 };
 
 Blockly.Blocks['soft_read'] = {
-	helpUrl: '',
   init: function() {
-    this.setColour(50);
+    this.setColour("#00979D");
+	this.setHelpUrl('');
 	this.appendDummyInput("")
 	    .appendTitle(Blockly.Msg.SSERIAL_Read);
     this.setInputsInline(true);
@@ -65,9 +65,9 @@ Blockly.Blocks['soft_read'] = {
 };
 
 Blockly.Blocks['soft_print'] = {
-  helpUrl: 'http://www.arduino.cc/en/Serial/Print',
   init: function() {
-    this.setColour(50);
+	this.setHelpUrl('http://www.arduino.cc/en/Serial/Print');
+    this.setColour("#00979D");
     this.appendValueInput("CONTENT", 'String')
         .appendField(Blockly.Msg.SSERIAL_Print);
     this.setPreviousStatement(true, null);
@@ -77,9 +77,9 @@ Blockly.Blocks['soft_print'] = {
 };
 
 Blockly.Blocks['soft_write'] = {
-  helpUrl: 'http://www.arduino.cc/en/Serial/Print',
   init: function() {
-    this.setColour(50);
+	this.setHelpUrl('http://www.arduino.cc/en/Serial/Print');
+    this.setColour("#00979D");
     this.appendValueInput("CONTENT", 'String')
         .appendField(Blockly.Msg.SSERIAL_Write);
     this.setPreviousStatement(true, null);
@@ -89,9 +89,9 @@ Blockly.Blocks['soft_write'] = {
 };
 
 Blockly.Blocks['soft_available'] = {
-	helpUrl: '',
   init: function() {
-    this.setColour(50);
+	this.setHelpUrl('');
+    this.setColour("#00979D");
 	this.appendDummyInput("")
 	    .appendTitle(Blockly.Msg.SSERIAL_Avai);
     this.setInputsInline(true);
@@ -99,5 +99,3 @@ Blockly.Blocks['soft_available'] = {
     this.setTooltip('');
   }
 };
-
-

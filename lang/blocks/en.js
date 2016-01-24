@@ -470,6 +470,8 @@ Blockly.Msg.CAT_JEULIN_OUT = "Actuators";
 
 Blockly.Msg.FIELDDROPDOWN = [["HIGH", "HIGH"], ["LOW", "LOW"]];
 Blockly.Msg.FIELDDROPDOWN_ONOFF = [["ON", "ON"], ["OFF", "OFF"]];
+Blockly.Msg.INOUT_HIGH_LEVEL = "1 -> HIGH";
+Blockly.Msg.INOUT_LOW_LEVEL = "0 -> low";
 
 //**********************************blocks***********************************************
 //**********************************blocks***********************************************
@@ -524,6 +526,8 @@ Blockly.Msg.ARDUINO_INOUT_ANALOG_READ_HELPURL = "http://arduino.cc/en/Reference/
 Blockly.Msg.ARDUINO_INOUT_ANALOG_READ_INPUT = "read value on the analog input";
 Blockly.Msg.ARDUINO_INOUT_ANALOG_READ_TOOLTIP = "returns a value between 0 and 1023";
 Blockly.Msg.ARDUINO_INOUT_ONOFF_HELPURL = "http://arduino.cc/en/Reference/Constants";
+Blockly.Msg.ARDUINO_INOUT_STATE = "state";
+Blockly.Msg.ARDUINO_PULSEIN="Pulse In";
 Blockly.Msg.ARDUINO_SERVO_MOVE_HELPURL = "http://www.arduino.cc/playground/ComponentLib/servo";
 Blockly.Msg.ARDUINO_SERVO_MOVE_INPUT1 = "rotate the servo-motor";
 Blockly.Msg.ARDUINO_SERVO_MOVE_IMAGE = "images/a991.jpg";
@@ -538,6 +542,7 @@ Blockly.Msg.ARDUINO_SERVO_READ_DEGREES_INPUT2 = "connected on the pin";
 Blockly.Msg.ARDUINO_SERVO_READ_DEGREES_TOOLTIP = "returns the number of degrees the last rotation";
 Blockly.Msg.ARDUINO_SERIAL_PRINT_HELPURL = "http://www.arduino.cc/en/Serial/Print";
 Blockly.Msg.ARDUINO_SERIAL_PRINT_CONTENT = "send the data to the serial port :";
+Blockly.Msg.ARDUINO_SERIAL_PRINTLN_CONTENT = "print new line data on serial port :";
 Blockly.Msg.ARDUINO_SERIAL_PRINT_TOOLTIP = "sends data over the serial port for sruvaillance by the monitor in ASCII";
 
 //SERIAL

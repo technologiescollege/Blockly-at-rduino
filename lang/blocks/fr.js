@@ -420,8 +420,8 @@ Blockly.Msg.CAT_ARDUINO_IN = "entrées";
 Blockly.Msg.CAT_ARDUINO_OUT = "sorties";
 Blockly.Msg.CAT_ARDUINO_CONVERSION = "conversions";
 Blockly.Msg.CAT_ARDUINO_COMM = "communication";
-Blockly.Msg.CAT_ARDUINO_COMM_SERIAL = "port série";
-Blockly.Msg.CAT_ARDUINO_COMM_SOFTSERIAL = "software serial";
+Blockly.Msg.CAT_ARDUINO_COMM_SERIAL = "sur le port série";
+Blockly.Msg.CAT_ARDUINO_COMM_SOFTSERIAL = "par liaison logicielle";
 Blockly.Msg.CAT_ARDUINO_SERVO = "servo-moteur";
 
 Blockly.Msg.CAT_GROVE = "Grove";  //added march 9th 2015
@@ -468,6 +468,8 @@ Blockly.Msg.CAT_JEULIN_OUT = "actionneurs";
 
 Blockly.Msg.FIELDDROPDOWN = [["1 -> HAUT", "HIGH"], ["0 -> bas", "LOW"]];
 Blockly.Msg.FIELDDROPDOWN_ONOFF = [["marche", "ON"], ["arrêt", "OFF"]]
+Blockly.Msg.INOUT_HIGH_LEVEL = "1 -> HAUT";
+Blockly.Msg.INOUT_LOW_LEVEL = "0 -> bas";
 
 //**********************************blocks***********************************************
 //**********************************blocks***********************************************
@@ -522,6 +524,8 @@ Blockly.Msg.ARDUINO_INOUT_ANALOG_READ_HELPURL = "http://arduino.cc/en/Reference/
 Blockly.Msg.ARDUINO_INOUT_ANALOG_READ_INPUT = "la valeur lue sur l'entrée Analogique";
 Blockly.Msg.ARDUINO_INOUT_ANALOG_READ_TOOLTIP = "renvoie une valeur comprise entre 0 et 1023";
 Blockly.Msg.ARDUINO_INOUT_ONOFF_HELPURL = "http://arduino.cc/en/Reference/Constants";
+Blockly.Msg.ARDUINO_INOUT_STAT="de l'état";
+Blockly.Msg.ARDUINO_PULSEIN="temps sur la broche";
 Blockly.Msg.ARDUINO_SERVO_MOVE_HELPURL = "http://www.arduino.cc/playground/ComponentLib/servo";
 Blockly.Msg.ARDUINO_SERVO_MOVE_INPUT1 = "orienter le servo-moteur";
 Blockly.Msg.ARDUINO_SERVO_MOVE_IMAGE = "blocks/arduino_base/servomoteur.jpg";
@@ -535,7 +539,8 @@ Blockly.Msg.ARDUINO_SERVO_READ_DEGREES_IMAGE = "blocks/arduino_base/servomoteur.
 Blockly.Msg.ARDUINO_SERVO_READ_DEGREES_INPUT2 = "connecté sur la broche";
 Blockly.Msg.ARDUINO_SERVO_READ_DEGREES_TOOLTIP = "renvoie le nombre de degrés de la dernière rotation";
 Blockly.Msg.ARDUINO_SERIAL_PRINT_HELPURL = "http://www.arduino.cc/en/Serial/Print";
-Blockly.Msg.ARDUINO_SERIAL_PRINT_CONTENT = "envoyer sur le port série la donnée :";
+Blockly.Msg.ARDUINO_SERIAL_PRINT_CONTENT = "afficher sur le port série le texte :";
+Blockly.Msg.ARDUINO_SERIAL_PRINTLN_CONTENT = "afficher sur une nouvelle ligne le texte :";
 Blockly.Msg.ARDUINO_SERIAL_PRINT_TOOLTIP = "envoie des données sur le port série pour surveillance par le moniteur en ASCII";
 
 Blockly.Msg.ARDUINO_SERVO_PIN = "sur la broche";
@@ -543,26 +548,26 @@ Blockly.Msg.ARDUINO_SERVO_ATTACHED = "présence d'un servomoteur";
 Blockly.Msg.ARDUINO_SERVO_DETACH = "détacher le servomoteur de la broche";
 
 //SERIAL
-Blockly.Msg.Serial_Print="afficher la console";
-Blockly.Msg.Serial_Write="Série Ecrire";
-Blockly.Msg.Serial_write_out="écrire";
-Blockly.Msg.Serial_Print_Format="afficher format";
+Blockly.Msg.Serial_Print="afficher sur la console série";
+Blockly.Msg.Serial_Write="envoyer sur le port série";
+Blockly.Msg.Serial_write_out="envoyer sur le port série";
+Blockly.Msg.Serial_Print_Format="envoyer au format";
 Blockly.Msg.Serial_Print_ForDecimal="décimal";
 Blockly.Msg.Serial_Print_ForHexa="hexadécimal";
 Blockly.Msg.Serial_Print_ForBin="binaire";
 Blockly.Msg.Serial_Print_ForOct="octal";
-Blockly.Msg.Serial_read="Série Lecture";
-Blockly.Msg.Serial_avai="Série Disponible ?";
-Blockly.Msg.Serial_flush="Série Attente fin Transmission";
+Blockly.Msg.Serial_read="donnée lue sur le port série";
+Blockly.Msg.Serial_avai="une donnée est disponible sur le port série ?";
+Blockly.Msg.Serial_flush="attente de fin de transmission par le port série";
 
 //SOFTWARE SERIAL
-Blockly.Msg.SSERIAL_Init="INIT";
-Blockly.Msg.SSERIAL_TX="TX#";
-Blockly.Msg.SSERIAL_RX="RX#";
-Blockly.Msg.SSERIAL_Read="SoftwareSerial Lire";
-Blockly.Msg.SSERIAL_Print="SoftwareSerial Afficher";
-Blockly.Msg.SSERIAL_Write="SoftwareSerial Ecrire";
-Blockly.Msg.SSERIAL_Avai="SoftwareSerial Disponible?";
+Blockly.Msg.SSERIAL_Init="initialisation : ";
+Blockly.Msg.SSERIAL_TX="broches TX ";
+Blockly.Msg.SSERIAL_RX="RX ";
+Blockly.Msg.SSERIAL_Read="donnée lue sur le port de communication";
+Blockly.Msg.SSERIAL_Print="afficher sur le port de communication le texte";
+Blockly.Msg.SSERIAL_Write="envoyer sur le port de communication";
+Blockly.Msg.SSERIAL_Avai="une donnée est disponible ?";
 
 //VARIABLES 
 Blockly.Msg.ARDUINO_VAR_DECLARE="déclare";

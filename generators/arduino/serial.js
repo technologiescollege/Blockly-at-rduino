@@ -46,6 +46,16 @@ Blockly.Arduino.serial_print = function() {
   return code;
 };
 
+Blockly.Arduino.serial_println = function() {
+  var content = Blockly.Arduino.valueToCode(this, 'CONTENT', Blockly.Arduino.ORDER_ATOMIC) || '0'
+  //content = content.replace('(','').replace(')','');
+
+  Blockly.Arduino.setups_['setup_serial_' + profile.defaultBoard.serial] = 'Serial.begin(' + profile.defaultBoard.serial + ');\n';
+
+  var code = 'Serial.println(' + content + ');\nSerial.print("\\t");\n';
+  return code;
+};
+
 Blockly.Arduino['serial_write'] = function() {
   var content = Blockly.Arduino.valueToCode(this, 'CONTENT', Blockly.Arduino.ORDER_ATOMIC) || '0';
   //content = content.replace('(','').replace(')','');

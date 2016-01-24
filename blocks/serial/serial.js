@@ -84,6 +84,18 @@ Blockly.Blocks['serial_print'] = {
   }
 };
 
+Blockly.Blocks['serial_println'] = {
+  init: function() {
+    this.setColour("#00979D");
+		this.setHelpUrl(Blockly.Msg.ARDUINO_SERIAL_PRINT_HELPURL);
+    this.appendValueInput("CONTENT", 'String')
+        .appendField(Blockly.Msg.ARDUINO_SERIAL_PRINTLN_CONTENT);
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setTooltip(Blockly.Msg.ARDUINO_SERIAL_PRINT_TOOLTIP);
+  }
+};
+
 Blockly.Blocks['serial_write'] = {
   init: function() {
     this.setColour("#00979D");

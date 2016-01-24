@@ -201,6 +201,15 @@ Blockly.Arduino.tone = function() {
   return code;
 };
 
+Blockly.Arduino.inout_pulsein = function() {
+  var dropdown_pin = this.getFieldValue('PIN');
+  var dropdown_stat = this.getFieldValue('STAT');
+  
+  Blockly.Arduino.setups_['setup_input_'+dropdown_pin] = 'pinMode('+dropdown_pin+', INPUT);';
+  var code = 'pulseIn('+dropdown_pin+','+dropdown_stat+ ');\n';
+  return [code, Blockly.Arduino.ORDER_ATOMIC];
+};
+
 Blockly.Arduino.notone = function() {
   var value_pin = Blockly.Arduino.valueToCode(this, 'PIN', Blockly.Arduino.ORDER_ATOMIC);
   Blockly.Arduino.setups_['setup_output'+value_pin] = 'pinMode('+value_pin+', OUTPUT);';
@@ -208,24 +217,6 @@ Blockly.Arduino.notone = function() {
   return code;
 };
 
-/*
-//servo
-#include <Servo.h>
-
-Servo servo_11;
-
-void setup() {
-  servo_11.attach(11);
-}
-
-void loop() {
-servo_11.write(0);
-delay(2000);
-
-servo_11.write(150); //0~180
-delay(2000);
-}
-*/
 Blockly.Arduino.servo_move = function() {
   var value_pin = Blockly.Arduino.valueToCode(this, 'PIN', Blockly.Arduino.ORDER_ATOMIC);
   var value_degree = Blockly.Arduino.valueToCode(this, 'DEGREE', Blockly.Arduino.ORDER_ATOMIC);
