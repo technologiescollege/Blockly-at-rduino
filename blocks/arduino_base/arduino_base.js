@@ -59,7 +59,7 @@ Blockly.Blocks.var_random = {
         .setCheck("Number")
         .appendField(Blockly.Msg.ARDUINO_BETWEEN_AND);
     this.setInputsInline(true);
-    this.setOutput(true);
+    this.setOutput(true, 'Number');
     this.setTooltip('');
   }
 };

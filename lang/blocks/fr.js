@@ -538,14 +538,13 @@ Blockly.Msg.ARDUINO_SERVO_READ_DEGREES_INPUT1 = "l'angle du servo-moteur";
 Blockly.Msg.ARDUINO_SERVO_READ_DEGREES_IMAGE = "blocks/arduino_base/servomoteur.jpg";
 Blockly.Msg.ARDUINO_SERVO_READ_DEGREES_INPUT2 = "connecté sur la broche";
 Blockly.Msg.ARDUINO_SERVO_READ_DEGREES_TOOLTIP = "renvoie le nombre de degrés de la dernière rotation";
+Blockly.Msg.ARDUINO_SERVO_PIN = "sur la broche";
+Blockly.Msg.ARDUINO_SERVO_ATTACHED = "présence d'un servomoteur";
+Blockly.Msg.ARDUINO_SERVO_DETACH = "détacher le servomoteur de la broche";
 Blockly.Msg.ARDUINO_SERIAL_PRINT_HELPURL = "http://www.arduino.cc/en/Serial/Print";
 Blockly.Msg.ARDUINO_SERIAL_PRINT_CONTENT = "afficher sur le port série le texte :";
 Blockly.Msg.ARDUINO_SERIAL_PRINTLN_CONTENT = "afficher sur une nouvelle ligne le texte :";
 Blockly.Msg.ARDUINO_SERIAL_PRINT_TOOLTIP = "envoie des données sur le port série pour surveillance par le moniteur en ASCII";
-
-Blockly.Msg.ARDUINO_SERVO_PIN = "sur la broche";
-Blockly.Msg.ARDUINO_SERVO_ATTACHED = "présence d'un servomoteur";
-Blockly.Msg.ARDUINO_SERVO_DETACH = "détacher le servomoteur de la broche";
 
 //SERIAL
 Blockly.Msg.Serial_Print="afficher sur la console série";

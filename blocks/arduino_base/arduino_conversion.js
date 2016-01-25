@@ -33,10 +33,10 @@ Blockly.Blocks.conversion.HUE = "#00979D";
 Blockly.Blocks['conversion_tochar'] = {
   init: function() {
     this.setColour(Blockly.Blocks.conversion.HUE);
-    this.appendValueInput("NAME")
+    this.appendValueInput("NAME", 'Number')
+        .setAlign(Blockly.ALIGN_RIGHT)
         .appendField(Blockly.Msg.CONV_tochar);
-    this.setPreviousStatement(true);
-    this.setNextStatement(true);
+    this.setOutput(true, 'String');
     this.setTooltip('');
     this.setHelpUrl('https://www.arduino.cc/en/Reference/CharCast');
   }
@@ -45,10 +45,9 @@ Blockly.Blocks['conversion_tochar'] = {
 Blockly.Blocks['conversion_tobyte'] = {
   init: function() {
     this.setColour(Blockly.Blocks.conversion.HUE);
-    this.appendValueInput("NAME")
+    this.appendValueInput("NAME", 'Number')
         .appendField(Blockly.Msg.CONV_tobyte);
-    this.setPreviousStatement(true);
-    this.setNextStatement(true);
+    this.setOutput(true, 'Number');
     this.setTooltip('');
     this.setHelpUrl('https://www.arduino.cc/en/Reference/ByteCast');
   }
@@ -57,10 +56,9 @@ Blockly.Blocks['conversion_tobyte'] = {
 Blockly.Blocks['conversion_toint'] = {
   init: function() {
     this.setColour(Blockly.Blocks.conversion.HUE);
-    this.appendValueInput("NAME")
+    this.appendValueInput("NAME", 'Number')
         .appendField(Blockly.Msg.CONV_toint);
-    this.setPreviousStatement(true);
-    this.setNextStatement(true);
+    this.setOutput(true, 'Number');
     this.setTooltip('');
     this.setHelpUrl('https://www.arduino.cc/en/Reference/IntCast');
   }
@@ -69,10 +67,9 @@ Blockly.Blocks['conversion_toint'] = {
 Blockly.Blocks['conversion_tofloat'] = {
   init: function() {
     this.setColour(Blockly.Blocks.conversion.HUE);
-    this.appendValueInput("NAME")
+    this.appendValueInput("NAME", 'Number')
         .appendField(Blockly.Msg.CONV_tofloat);
-    this.setPreviousStatement(true);
-    this.setNextStatement(true);
+    this.setOutput(true, 'Number');
     this.setTooltip('');
     this.setHelpUrl('https://www.arduino.cc/en/Reference/floatCast');
   }
