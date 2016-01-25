@@ -37,6 +37,31 @@ Blockly.Blocks.base_setup = {
     }
 };
 
+Blockly.Blocks.base_const = {
+  init: function () {
+        this.setColour("#00979D");
+		this.setHelpUrl(Blockly.Msg.ARDUINO_BASE_SETUP_HELPURL);
+        this.appendDummyInput("")
+            .appendField("Constantes");
+        this.appendStatementInput('DO')
+            .appendField(Blockly.LANG_CONTROLS_REPEAT_INPUT_DO);
+        this.setTooltip("Définition de constantes");
+    }
+};
+
+Blockly.Blocks.base_code = {
+  init: function() {
+    this.setHelpUrl(Blockly.Msg.TEXT_TEXT_HELPURL);
+    this.setColour("#00979D");
+    this.appendDummyInput()
+        .appendField("Code")
+        .appendField(new Blockly.FieldTextInput(''), 'TEXT');
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setTooltip(Blockly.Msg.TEXT_TEXT_TOOLTIP);
+  }
+};
+
 Blockly.Blocks.millis = {
   init: function() {
     this.setColour("#00979D");

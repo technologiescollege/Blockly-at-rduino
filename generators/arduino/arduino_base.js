@@ -31,14 +31,31 @@ goog.require('Blockly.Arduino');
 Blockly.Arduino.base_setup = function () {
     var branch = Blockly.Arduino.statementToCode(this, 'DO');
     if (Blockly.Arduino.INFINITE_LOOP_TRAP) {
-        branch = Blockly.Arduino.INFINITE_LOOP_TRAP.replace(/%1/g,
-                '\'' + this.id + '\'') + branch;
+        branch = Blockly.Arduino.INFINITE_LOOP_TRAP.replace(/%1/g, '\'' + this.id + '\'') + branch;
     }
     var code = //'{\n' +
             branch;// + '\n}\n';
     var setup_key = Blockly.Arduino.variableDB_.getDistinctName('base_setup', Blockly.Variables.NAME_TYPE);
     Blockly.Arduino.setups_[setup_key] = code;
     return ""; //do not return any actual code
+};
+
+Blockly.Arduino.base_const = function () {
+    var branch = Blockly.Arduino.statementToCode(this, 'DO');
+    if (Blockly.Arduino.INFINITE_LOOP_TRAP) {
+        branch = Blockly.Arduino.INFINITE_LOOP_TRAP.replace(/%1/g, '\'' + this.id + '\'') + branch;
+    }
+    var code = //'{\n' +
+            branch;// + '\n}\n';
+    var setup_key = Blockly.Arduino.variableDB_.getDistinctName('base_setup', Blockly.Variables.NAME_TYPE);
+    Blockly.Arduino.definitions_[setup_key] = code;
+    return "";
+};
+
+Blockly.Arduino.base_code = function() {
+  // Text value.
+  var code = this.getFieldValue('TEXT') + '\n';
+  return code;
 };
 
 Blockly.Arduino.millis = function(block) {
