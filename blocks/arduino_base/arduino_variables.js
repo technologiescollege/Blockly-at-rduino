@@ -32,7 +32,7 @@ goog.require('Blockly.Blocks');
 /**
  * Common HSV hue for all blocks in this category.
  */
-Blockly.Blocks.variables.HUE = '#00979D";
+Blockly.Blocks.variables.HUE = "#00979D";
 
 Blockly.Blocks['variables_arduino_declare'] = {
   // Variable setter.

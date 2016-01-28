@@ -39,6 +39,7 @@ var MSG = {
   btn_size_min:"réduire la fenêtre",
   btn_size_max:"agrandir la fenêtre",
   btn_preview:"aperçu du code Arduino",
+  btn_inline:"bascule orientation des blocks",
   httpRequestError: "Il y a eu un problème avec la demande.",
   linkAlert: "Partagez vos blocs grâce à ce lien:\n\n%1",
   hashError: "Désolé, '%1' ne correspond à aucun programme sauvegardé.",
@@ -56,5 +57,9 @@ var MSG = {
   aboutModalLabel:"à propos ...",
   aboutBody:"<br />- créations et améliorations par Sébastien Canet, intégration CodeBender par Julien Rat, intégration multilingue et CSS par Olivier Métayer." 
 	  + "<br />"
-	  + "<br />Contributions :"
+	  + "<br />Contributions :",
+  msg_ajax_ko:"Reqêtes AJAX non supportées par votre navigateur, les fonctionnalités suivantes ne seront pas opérationnelles : \n"
+	  + "- chargement de block via l'url \n"
+	  + "- supervision",
+  span_ajax_msg:"Ne plus afficher ce message"
 };

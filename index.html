@@ -63,7 +63,7 @@
 
 <!--TechnoZone51-->
 <script type="text/javascript" src="utils/html2canvas.js"></script>
-<script type="text/javascript" src="utils/Canvas2Image.js"></script>
+<script type="text/javascript" src="utils/canvas2image.js"></script>
 <!--Fin TZ51-->
 <script type="text/javascript" src="lang/code.js"></script>
 
@@ -72,7 +72,6 @@
 <link rel="stylesheet" type="text/css" href="css/blockly@rduino.css">
 <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="css/prettify.css">
-<link rel="stylesheet" type="text/css" href="css/s2aio.css">
 
 <script type="text/javascript">
 	$(window).load(function() {
@@ -205,6 +204,9 @@
 				<button id="btn_preview" class="btn btn-default">
 					<span id="icon_btn_preview" class="glyphicon glyphicon-eye-open"> </span>
 				</button>
+                <button id="btn_inline" class="btn btn-default">
+                    <span id="icon_btn_inline" class="glyphicon glyphicon-option-vertical"> </span>
+                </button>
 				<div id="toggle" class="modal-content" style="display: none;">
 					<pre id="pre_previewArduino"></pre>
 				</div>
@@ -277,6 +279,27 @@
     </div>
   </div>
 </div>
+<!-- ajax modal -->
+<div class="modal fade" id="ajaxModal" tabindex="-1" role="dialog" aria-labelledby="ajaxModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="ajaxModalLabel"></h4>
+      </div>
+      <div class="modal-body">
+          <pre id="msg_ajax_ko"></pre>
+          <input type="checkbox" name="ajax_msg" id="ajax_msg"/> <span id="span_ajax_msg"> </span>
+      </div>
+      
+      <div class="modal-body" id="modal-body-config"></div>
+      <div class="modal-footer">
+        <button id="btn_close" type="button" class="btn btn-default" data-dismiss="modal" ></button>
+        <button id="btn_valid_msg" type="button" class="btn btn-primary"></button>
+      </div>
+    </div>
+  </div>
+</div>
 <!-- picture "modal" -->
 <div id="showcardModal" class="modal-dialog" style="display:none">
 	<div class="modal-content">
@@ -297,14 +320,11 @@
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
         <h4 class="modal-title" id="exampleModalLabel"></h4>
       </div>
-	  			<script> 
-				$(function(){
-				  $("#includedContent").load("examples/exemples.txt"); 
-				});
-				</script> 
       <div class="modal-body">
 		<div class="table-responsive">
-			<table class="table table-hover" id="includedContent">
+			<table class="table table-hover">
+				<tbody id="includedContent">
+				</tbody>
 			</table>
 		</div>
       </div>
@@ -363,6 +383,7 @@
     </div>
   </div>
 </div>
+
 <!--    toolboxes definitions -->
 <xml id="toolbox" style="display: none">
     <category name="CAT_LOGIC" colour="#E1A91A">

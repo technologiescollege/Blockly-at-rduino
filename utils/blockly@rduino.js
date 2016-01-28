@@ -23,12 +23,39 @@ Blockly.pathToMedia = './media/';
 
 BlocklyDuino.selectedTab = 'blocks';
 BlocklyDuino.selectedCard = 'arduino_uno';
+BlocklyDuino.inlineBool = true;
 
 /**
  * Blockly's main workspace.
  * @type {Blockly.WorkspaceSvg}
  */
 BlocklyDuino.workspace = null;
+
+/**
+ * Toggle blocks rendering : inline or block
+ */
+BlocklyDuino.inline = function() {
+	var xmlBlocks = Blockly.Xml.workspaceToDom(BlocklyDuino.workspace);
+	
+	var blocks = xmlBlocks.getElementsByTagName("block");
+
+	BlocklyDuino.inlineBool = !BlocklyDuino.inlineBool;
+
+	for(var i=0; i<blocks.length;i++) {
+		blocks.item(i).setAttribute("inline", BlocklyDuino.inlineBool);
+	}
+	
+	BlocklyDuino.workspace.clear();
+	BlocklyDuino.loadBlocks(Blockly.Xml.domToPrettyText(xmlBlocks));
+	
+	if (BlocklyDuino.inlineBool) {
+		$('#icon_btn_inline').removeClass('glyphicon-option-horizontal');
+		$('#icon_btn_inline').addClass('glyphicon-option-vertical');
+	} else {
+		$('#icon_btn_inline').addClass('glyphicon-option-horizontal');
+		$('#icon_btn_inline').removeClass('glyphicon-option-vertical');
+	}
+};
 
 /**
  * Populate the currently selected pane with content generated from the blocks.
@@ -371,13 +398,24 @@ BlocklyDuino.bindFunctions = function() {
 
 	$('#select_all').on("click", BlocklyDuino.checkAll);
 	$('#btn_valid').on("click", BlocklyDuino.changeToolbox);
+	
+	$('#btn_valid_msg').on("click", function() {
+		if ($('#ajax_msg').prop("checked")) {
+			window.sessionStorage.msg_ajax_seen = true;
+		}
+		$('#ajaxModal').modal('hide');
+	});
 
+	$('#btn_inline').on("click", BlocklyDuino.inline);
+	
 	$('#btn_preview').on("click", function() {
 		$("#toggle").toggle("slide");
 	});
 	$('#pre_previewArduino').on("click", function() {
 		$("#toggle").toggle("slide");
 	});
+
+	$('#btn_example').on("click", BlocklyDuino.buildExamples);
 
 	$('#miniCard, #btn_picture').on('click', function() {
 		$('#showcardModal').css("z-index", 1040);
@@ -566,6 +604,8 @@ BlocklyDuino.init = function() {
 	
 	Code.initLanguage();
 
+	BlocklyDuino.testAjax();
+	
 	if (BlocklyDuino.getSize() == 'max') {
 		// place div on top
 		$("#divBody").css("top", "0px");
@@ -760,4 +800,55 @@ BlocklyDuino.switchOrientation = function() {
 	  }
 
 	window.location = window.location.protocol + '//' + window.location.host + window.location.pathname + search;
+};
+
+/**
+ * Create content for modal example 
+ */
+BlocklyDuino.buildExamples = function() {
+	$.ajax({
+	    cache: false,
+	    url: "./examples/examples.json",
+	    dataType: "json",
+	    success :  function(data) {
+				$("#includedContent").empty();
+				$.each(data, function(i, example){
+					if (example.visible) {
+						var line = "<tr>"
+								   + "<td><a href='index.html?lang=fr?url="+example.source_url+"'>"
+								   + example.source_text
+								   + "</a></td>"
+								   + "<td>"
+								   + "<a href='"+example.image+"' target=_blank>"
+								   + "<img class='vignette' src='"+example.image+"'>"
+								   + "</a>"
+								   + "</td>"
+								   + "<td>"
+								   + "<a href='"+example.link_url+"' target=_blank>"
+								   + example.link_text
+								   + "</a>"
+								   + "</td>"
+								   + "</tr>";
+	
+						$("#includedContent").append(line);
+					}
+				});
+			}
+		});
+};
+
+/**
+ * Test ajax request 
+ */
+BlocklyDuino.testAjax = function() {
+	$.ajax({
+	    type: "GET",
+	    url: "./index.html",
+	    dataType : 'text',
+	    error: function(){
+	    	if (!window.sessionStorage.msg_ajax_seen) {
+	    		$('#ajaxModal').modal('show');	    		
+	    	}
+	    }
+	});
 };

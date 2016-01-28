@@ -39,6 +39,7 @@ var MSG = {
   btn_size_min:"minimize the window",
   btn_size_max:"maximize the window",
   btn_preview:"preview Arduino code",
+  btn_inline:"toggle inline blocks",
   httpRequestError: "There was a problem with the request.",
   linkAlert: "Share your blocks with this link:\n\n%1",
   hashError: "Sorry, '%1' doesn't correspond with any saved program.",
@@ -56,5 +57,9 @@ var MSG = {
   aboutModalLabel:"about ...",
   aboutBody:"<br />- development and adaptations by Sébastien Canet, CodeBender integration by Julien Rat, CSS and multilingual by Olivier Metayer."
 		  + "<br />"
-		  + "<br />Contributions :"
+		  + "<br />Contributions :",
+  msg_ajax_ko:"AJAX requests are not supported by your browser, the following features will not be operational : \n"
+	  + "- load blocks through url \n"
+	  + "- supervision",
+  span_ajax_msg:"Do not show this message again"
 };

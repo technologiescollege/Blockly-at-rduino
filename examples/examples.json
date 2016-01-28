@@ -1,0 +1,34 @@
+[
+    {
+      "source_url":"./examples/blink/blink.xml",
+      "source_text":"le tout premier exercice : faire clignoter une diode",
+      "image":"./examples/blink/blink_fritzing.jpg",
+        "link_url": "",
+        "link_text": "",
+        "visible": true
+    },
+    {
+      "source_url":"./examples/servo_potentio/servo_potentio.xml",
+      "source_text":"faire varier l'angle d'un servomoteur proportionnellement au potentiomètre",
+      "image":"./examples/servo_potentio/servo_potentio_fritzing.jpg",
+      "link_url":"",
+      "link_text":"",
+        "visible": true
+    },
+    {
+      "source_url":"./examples/grenouille/grenouille.xml",
+      "source_text":"faire avancer un robot qui stoppe quand un objet est à moins de 10cm",
+      "image":"./examples/servo_potentio/servo_potentio_fritzing.jpg",
+      "link_url":"http://fablabo.net/wiki/FablabJunior_Automne_2015/Projet4",
+      "link_text":"sur Fablabo",
+        "visible": true
+    },
+   {
+      "source_url":"./examples/suiveur_de_ligne/suiveur_de_ligne.xml",
+      "source_text":"les détecteurs mesurent l'intensité lumineuse renvoyée par la table de chaque côté, puis stoppent ou font tourner les servomoteurs",
+      "image":"./examples/suiveur_de_ligne/suiveur_de_ligne_fritzing.jpg",
+      "link_url":"http://fablabo.net/wiki/FablabJunior_Automne_2015/Projet2",
+      "link_text":"sur Fablabo",
+        "visible": true
+   }
+]

@@ -183,6 +183,8 @@ Code.initLanguage = function() {
 
   $('#btn_preview').attr('title', MSG['btn_preview']);
 
+  $('#btn_inline').attr('title', MSG['btn_inline']);
+
   $('#span_delete').text(MSG['span_delete']);
   $('#span_saveXML').text(MSG['span_saveXML']);
   $('#span_fakeload').text(MSG['span_fakeload']);
@@ -215,6 +217,9 @@ Code.initLanguage = function() {
   $('#btn_closeCode').text(MSG['btn_closeCode']);
   $('#btn_validCode').text(MSG['btn_validCode']);
 
+  $('#msg_ajax_ko').text(MSG['msg_ajax_ko']);
+  $('#span_ajax_msg').text(MSG['span_ajax_msg']);
+  
   $("xml").find("category").each(function() {
 	// add attribute ID to keep categorie code
 	$(this).attr('id', $(this).attr('name'));

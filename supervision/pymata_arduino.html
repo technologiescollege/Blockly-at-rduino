@@ -19,16 +19,15 @@
 	<span id="connected"></span>
 	<!-- Digital Input -->
 	<div id="tabs-1" class="tab-pane active">
-		<br/>
 		<div id="template_tabs1" style="display:none">
 			<div class="form-inline">
 				<div class="form-group">
 					<label class="radio-inline">
-						<input type="radio" name="e#pin_number#" value="0" id="in#pin_number#d" onclick="clicked(this.id);" checked="checked"/>
+						<input type="radio" name="e#pin_number#" value="0" id="in_dig_#pin_number#" onclick="clicked(this.id);" checked="checked"/>
 						<span id="span_supervision_disabled_e#pin_number#"> </span>
 					</label>
 					<label class="radio-inline">
-						<input type="radio" name="e#pin_number#" value="1" id="out#pin_number#d" onclick="clicked(this.id);">
+						<input type="radio" name="e#pin_number#" value="1" id="out_dig_#pin_number#" onclick="clicked(this.id);">
 						<span id="span_supervision_enabled_e#pin_number#"> </span>
 					</label>
 					<label><span id="span_supervision_pin_e#pin_number#"> </span> #pin_number# :</label>
@@ -51,42 +50,41 @@
 	</div>
 	<!-- Digital Output -->
 	<div id="tabs-2" class="tab-pane">
-		<br/>
 		<div id="template_tabs2" style="display:none">
 			<div class="form-inline">
 				<div class="form-group">
-					<label><span id="span_supervision_pin_s#pin_number#"> </span> #pin_number# :</label>
+					<label><span id="span_supervision_pin_e#pin_number#"> </span> #pin_number# :</label>
 					<label class="radio-inline">
-						<input type="radio" name="p#pin_number#" value="0" id="p#pin_number#low" onclick="clicked(this.id);" checked>
-						<span id="span_supervision_high_s#pin_number#"> </span>
+						<input type="radio" name="p#pin_number#_tab2" value="0" id="low_#pin_number#" onclick="clicked(this.id);" checked="checked">
+						<span id="span_supervision_low_s#pin_number#"> </span>
 					</label>
 					<label class="radio-inline">
-						<input type="radio" name="p#pin_number#" value="1" id="p#pin_number#high" onclick="clicked(this.id);">
-						<span id="span_supervision_low_s#pin_number#"> </span>
+						<input type="radio" name="p#pin_number#_tab2" value="1" id="high_#pin_number#" onclick="clicked(this.id);">
+						<span id="span_supervision_high_s#pin_number#"> </span>
 					</label>
 					#pwm_line#
 				</div>
 			</div>
 		</div>
 		<div id="template_tabs2_pwm" style="display:none">
-			<label class="radio-inline">
-				<input type="radio" name="p#pin_number#" value="2" onclick="clicked(this.id);" id="pwm#pin_number#"><span id="span_supervision_PWM"> </span>
+			<label class="checkbox-inline">
+				<input type="checkbox" name="p#pin_number#_tab2_pwm" value="2" onclick="clicked(this.id);" id="pwm_#pin_number#"><span id="span_supervision_PWM"> </span>
 			</label>
-			<input type="number" name="p#pin_number#pwm" id="v#pin_number#" class="form-control" style="display:none" min="0" max="255" step="1" value="0" oninput="pwmChange(this.id);">
+			<input type="number" name="p#pin_number#_tab2_pwm" id="v#pin_number#" class="form-control" style="display:none" min="0" max="255" step="1" value="0" oninput="pwmChange(this.id);">
 		</div>
+
 	</div>
 	<!-- Analog output -->
 	<div id="tabs-3" class="tab-pane">
-		<br/>
 		<div id="template_tabs3" style="display:none">
 			<div class="form-inline">
 				<div class="form-group">
 					<label class="radio-inline">
-						<input type="radio" name="p#pin_number#" value="0" id="p#pin_number#low" onclick="clicked(this.id);" checked>
+						<input type="radio" name="p#pin_number#_tab3" value="0" id="in_ana_#pin_number#" onclick="clicked(this.id);" checked="checked">
 						<span id="span_supervision_disabled_e#pin_number#"> </span>
 					</label>
 					<label class="radio-inline">
-						<input type="radio" name="p#pin_number#" value="1" id="p#pin_number#high" onclick="clicked(this.id);">
+						<input type="radio" name="p#pin_number#_tab3" value="1" id="out_ana_#pin_number#" onclick="clicked(this.id);">
 						<span id="span_supervision_enabled_e#pin_number#"> </span>
 					</label>
 					<label><span id="span_supervision_pin_e#pin_number#"> </span> A#pin_number# :</label>

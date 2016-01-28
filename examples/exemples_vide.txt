@@ -1,1 +1,0 @@
-﻿<tbody><!-- 1ère ligne du tableau --><tr><td>description</td><td>photo/vignette du montage</td><td>complément</td></tr></tbody>

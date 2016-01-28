@@ -197,7 +197,7 @@ html[dir="RTL"] .divConfig-hor {
     padding-right: 10px;
 }
 
-#btn_about {
+#btn_about, #btn_logout {
     position: absolute;
     top: 10px;
 }
@@ -207,11 +207,11 @@ html[dir="RTL"] .divConfig-hor {
 	bottom: 10px;
 }
 
-html[dir="LTR"] #btn_about {
+html[dir="LTR"] #btn_about, html[dir="LTR"] #btn_logout {
     right: 15px;
 }
  
-html[dir="RTL"] #btn_about {
+html[dir="RTL"] #btn_about, html[dir="RTL"] #btn_logout {
 	left: 15px;
 }
 
@@ -252,34 +252,14 @@ html[dir="RTL"] #btn_preview {
     left: 60px;
 }
 
-#btn_zoomin {
+#btn_inline {
     position: absolute;
     right: 105px;
     top: 0px;
 }
 
-html[dir="RTL"] #btn_zoomin {
+html[dir="RTL"] #btn_inline {
     left: 105px;
-}
-
-#btn_zoomreset {
-    position: absolute;
-    right: 150px;
-    top: 0px;
-}
-
-html[dir="RTL"] #btn_zoomreset {
-    left: 150px;
-}
-
-#btn_zoomout {
-    position: absolute;
-    right: 195px;
-    top: 0px;
-}
-
-html[dir="RTL"] #btn_zoomout {
-    left: 195px;
 }
 
 #toggle {
@@ -464,4 +444,9 @@ html[dir="RTL"] .colors_category {
 }
 
 .draggable {
+}
+
+.vignette {
+    max-width: 100px;
+    max-height: 100px;
 }
