@@ -58,8 +58,8 @@ var MSG = {
   aboutBody:"<br />- créations et améliorations par Sébastien Canet, intégration CodeBender par Julien Rat, intégration multilingue et CSS par Olivier Métayer." 
 	  + "<br />"
 	  + "<br />Contributions :",
-  msg_ajax_ko:"Reqêtes AJAX non supportées par votre navigateur, les fonctionnalités suivantes ne seront pas opérationnelles : \n"
+  msg_ajax_ko:"Requêtes AJAX non supportées par votre navigateur, les fonctionnalités suivantes ne seront pas opérationnelles : \n"
 	  + "- chargement de block via l'url \n"
 	  + "- supervision",
-  span_ajax_msg:"Ne plus afficher ce message"
+  span_ajax_msg:"Ne plus afficher ce message."
 };
