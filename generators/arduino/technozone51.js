@@ -810,7 +810,7 @@ Blockly.Arduino.technozone_robot_ihm_available = function() {
   //dans setup    
   Blockly.Arduino.setups_['setup_bt'] = 'bt.begin(9600);';   
   var code = 'ihm_available()';
-  return code;
+  return [code, Blockly.Arduino.ORDER_ATOMIC];
 };
 
 Blockly.Arduino.technozone_robot_ihm_change = function() {
@@ -822,7 +822,7 @@ Blockly.Arduino.technozone_robot_ihm_change = function() {
   //dans setup    
   Blockly.Arduino.setups_['setup_bt'] = 'bt.begin(9600);';   
   var code = 'ihm_change()';
-  return code;
+  return [code, Blockly.Arduino.ORDER_ATOMIC];
 };
 
 Blockly.Arduino.technozone_robot_ihm_inter_read = function() {
