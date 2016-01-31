@@ -85,7 +85,7 @@
 <div class="loading"></div>
     <div id="divTitre">
         <p>
-            <a href="http://www.technologiescollege.fr/blockly@rduino/"> <img src="media/Arduino-uno-perspective-transparent.png" border="0" height="76px">
+            <a href=""> <img src="media/Arduino-uno-perspective-transparent.png" border="0" height="76px" onclick="localStorage.clear();">
             </a> 
             <b>Blockly@rduino</b> : 
             <span id="title"></span>
@@ -292,9 +292,8 @@
           <input type="checkbox" name="ajax_msg" id="ajax_msg"/> <span id="span_ajax_msg"> </span>
       </div>
       
-      <div class="modal-body" id="modal-body-config"></div>
       <div class="modal-footer">
-        <button id="btn_close" type="button" class="btn btn-default" data-dismiss="modal" ></button>
+        <button id="btn_closeAjax" type="button" class="btn btn-default" data-dismiss="modal" ></button>
         <button id="btn_valid_msg" type="button" class="btn btn-primary"></button>
       </div>
     </div>

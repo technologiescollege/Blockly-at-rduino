@@ -346,7 +346,10 @@ BlocklyDuino.load = function (event) {
       if (count && confirm(MSG['xmlLoad'])) {
     	  BlocklyDuino.workspace.clear();
       }
+      $('#tab_blocks a').tab('show');
       Blockly.Xml.domToWorkspace(BlocklyDuino.workspace, xml);
+      BlocklyDuino.selectedTab = 'blocks';
+      BlocklyDuino.renderContent();
     }
     // Reset value of input after loading because Chrome will not fire
     // a 'change' event if the same file is loaded again.
@@ -462,7 +465,7 @@ BlocklyDuino.checkAll = function () {
  * Build modal to configure ToolBox
  */
 BlocklyDuino.openConfigToolbox = function () {
-	var modalbody = document.getElementById("modal-body-config");
+	var modalbody = $("#modal-body-config");
 	
 	// load the toolboxes id's stored in session
 	var loadIds = window.localStorage.toolboxids;
@@ -472,7 +475,7 @@ BlocklyDuino.openConfigToolbox = function () {
 	}
 
 	// clear modal
-	modalbody.innerHTML = "";
+	modalbody.empty();
 	var i=0, n;
 	var ligne = "";
 	// create a checkbox for each toolbox category
@@ -489,7 +492,7 @@ BlocklyDuino.openConfigToolbox = function () {
 					+ Blockly.Msg[$(this).attr("id")] + '<br/>';
 		}
 		i++;
-		modalbody.innerHTML += ligne;
+		modalbody.append(ligne);
      });
 };
 
@@ -551,7 +554,9 @@ BlocklyDuino.buildToolbox = function() {
 	var xmlValue = '<xml id="toolbox">';
 	var xmlids = loadIds.split(",");
 	for (var i = 0; i < xmlids.length; i++) {
-		xmlValue += $('#'+xmlids[i])[0].outerHTML;
+		if ($('#'+xmlids[i]).length) {
+			xmlValue += $('#'+xmlids[i])[0].outerHTML;
+		}
 	}
 	xmlValue += '</xml>';
 

@@ -207,6 +207,7 @@ Code.initLanguage = function() {
   $('#span_put_in_url').text(MSG['span_put_in_url']);
   $('#btn_close').text(MSG['btn_close']);
   $('#btn_valid').text(MSG['btn_valid']);
+  $('#btn_closeAjax').text(MSG['btn_close']);
 
   $('#editModalLabel').text(MSG['editModalLabel']);
   $('#showcardLabel').text(MSG['showcardLabel']);

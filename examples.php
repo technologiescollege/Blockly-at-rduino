@@ -1,4 +1,7 @@
-﻿<html>
+﻿<?php
+session_start();
+?>
+<html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Examples Blockly@rduino</title>
@@ -15,7 +18,6 @@
 <body>
 <div class="container-fluid">
 <?php
-session_start();
 $password = 'd339669559aec82dabd05adb07a91c41';
 
 if (!isset($_SESSION['connected']) 
