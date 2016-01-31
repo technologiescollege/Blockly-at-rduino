@@ -104,13 +104,13 @@ Blockly.Arduino['math_single'] = function() {
       code = 'floor(' + arg + ')';
       break;
     case 'SIN':
-      code = 'sin(' + arg + ' / 180 * PI)';
+      code = 'sin(' + arg + ')';
       break;
     case 'COS':
-      code = 'cos(' + arg + ' / 180 * PI)';
+      code = 'cos(' + arg + ')';
       break;
     case 'TAN':
-      code = 'tan(' + arg + ' / 180 * PI)';
+      code = 'tan(' + arg + ')';
       break;
 	default:
       throw 'Unknown math operator: ' + operator;
@@ -375,7 +375,7 @@ Blockly.Arduino['math_random_int'] = function() {
         '    a = b;',
         '    b = c;',
         '  }',
-        '  return floor(random() * (b - a + 1) + a);',
+        '  return random(a,b);',
         '}']);
   var code = functionName + '(' + argument0 + ', ' + argument1 + ')';
   return [code, Blockly.Arduino.ORDER_FUNCTION_CALL];
@@ -383,5 +383,11 @@ Blockly.Arduino['math_random_int'] = function() {
 
 Blockly.Arduino['math_random_float'] = function() {
   // Random fraction between 0 and 1.
-  return ['random()', Blockly.Arduino.ORDER_FUNCTION_CALL];
+  var functionName = Blockly.Arduino.provideFunction_(
+      'math_random_float',
+      [ 'float ' + Blockly.Arduino.FUNCTION_NAME_PLACEHOLDER_ +
+          '{',
+        '  return random(0, 1000000)/1000000;',
+        '}\n']);
+  return ['math_random_float', Blockly.Arduino.ORDER_FUNCTION_CALL];
 };

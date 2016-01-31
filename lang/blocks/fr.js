@@ -543,7 +543,7 @@ Blockly.Msg.ARDUINO_SERVO_ATTACHED = "présence d'un servomoteur";
 Blockly.Msg.ARDUINO_SERVO_DETACH = "détacher le servomoteur de la broche";
 Blockly.Msg.ARDUINO_SERIAL_PRINT_HELPURL = "http://www.arduino.cc/en/Serial/Print";
 Blockly.Msg.ARDUINO_SERIAL_PRINT_CONTENT = "afficher sur le port série le texte :";
-Blockly.Msg.ARDUINO_SERIAL_PRINTLN_CONTENT = "afficher sur une nouvelle ligne le texte :";
+Blockly.Msg.ARDUINO_SERIAL_PRINTLN_CONTENT = "afficher, puis passe à la ligne, le texte :";
 Blockly.Msg.ARDUINO_SERIAL_PRINT_TOOLTIP = "envoie des données sur le port série pour surveillance par le moniteur en ASCII";
 
 //SERIAL
@@ -590,9 +590,9 @@ Blockly.Msg.GROVE_INOUT_BUTTON_TEXT = "l'état du bouton poussoir";
 Blockly.Msg.GROVE_INOUT_BUTTON_INPUT = "sur la broche";
 Blockly.Msg.GROVE_INOUT_BUTTON_TOOLTIP = "entrée numérique classique en lecture";
 Blockly.Msg.GROVE_INOUT_ROT_ANGLE_HELPURL = "http://www.seeedstudio.com/wiki/index.php?title=GROVE_-_Starter_Bundle_V1.0b#Potentiometer";
-Blockly.Msg.GROVE_INOUT_ROT_ANGLE_TEXT = "l'angle";
+Blockly.Msg.GROVE_INOUT_ROT_ANGLE_TEXT = "valeur du potentiomètre";
 Blockly.Msg.GROVE_INOUT_ROT_ANGLE_INPUT = "sur la broche";
-Blockly.Msg.GROVE_INOUT_ROT_ANGLE_TOOLTIP = "Lecture analogique dont le résultat varie entre 0 et 255";
+Blockly.Msg.GROVE_INOUT_ROT_ANGLE_TOOLTIP = "Lecture analogique dont le résultat varie entre 0 et 1023";
 Blockly.Msg.GROVE_INOUT_TILT_HELPURL = "http://www.seeedstudio.com/wiki/index.php?title=GROVE_-_Starter_Bundle_V1.0b#Tilt_switch";
 Blockly.Msg.GROVE_INOUT_TILT_TEXT = "l'état de l'interrupteur à bascule";
 Blockly.Msg.GROVE_INOUT_TILT_INPUT = "sur la broche";
