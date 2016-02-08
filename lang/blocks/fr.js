@@ -466,10 +466,10 @@ Blockly.Msg.CAT_JEULIN = "feux de carrefour";  //added january 11th 2016
 Blockly.Msg.CAT_JEULIN_IN = "capteurs";
 Blockly.Msg.CAT_JEULIN_OUT = "actionneurs";
 
-Blockly.Msg.FIELDDROPDOWN = [["1 -> HAUT", "HIGH"], ["0 -> bas", "LOW"]];
+Blockly.Msg.FIELDDROPDOWN = [["1 (état haut)", "HIGH"], ["0 (état bas)", "LOW"]];
 Blockly.Msg.FIELDDROPDOWN_ONOFF = [["marche", "ON"], ["arrêt", "OFF"]]
-Blockly.Msg.INOUT_HIGH_LEVEL = "1 -> HAUT";
-Blockly.Msg.INOUT_LOW_LEVEL = "0 -> bas";
+Blockly.Msg.INOUT_HIGH_LEVEL = "1 (état haut)";
+Blockly.Msg.INOUT_LOW_LEVEL = "0 (état bas)";
 
 //**********************************blocks***********************************************
 //**********************************blocks***********************************************
@@ -477,8 +477,8 @@ Blockly.Msg.INOUT_LOW_LEVEL = "0 -> bas";
 
 
 Blockly.Msg.ARDUINO_BASE_DELAY_HELPURL = "http://arduino.cc/en/Reference/delay";
-Blockly.Msg.ARDUINO_BASE_DELAY_DELAY_TIME = "faire une pause (en ms) de";
-Blockly.Msg.ARDUINO_BASE_DELAY_TOOLTIP = "spécifier le temps de pause, en millisecondes";
+Blockly.Msg.ARDUINO_BASE_DELAY_DELAY_TIME = "attente (en ms) de";
+Blockly.Msg.ARDUINO_BASE_DELAY_TOOLTIP = "spécifier le temps d'attente, en millisecondes";
 Blockly.Msg.ARDUINO_SINCE_PROGRAM_STARTED = "temps écoulé depuis le début du programme";
 Blockly.Msg.ARDUINO_SINCE_PROGRAM_STARTED_TOOLTIP = "durée en millisecondes depuis que le programme a commencé (unsigned long)";
 Blockly.Msg.ARDUINO_SINCE_PROGRAM_STARTED_HELPURL = "https://www.arduino.cc/en/Reference/Millis";
@@ -500,13 +500,13 @@ Blockly.Msg.ARDUINO_INOUT_BUILDIN_LED_TOOLTIP = "éteint ou allume la DEL sur la
 Blockly.Msg.ARDUINO_INOUT_DIGITAL_WRITE_HELPURL = "http://arduino.cc/en/Reference/DigitalWrite";
 Blockly.Msg.ARDUINO_INOUT_DIGITAL_WRITE_INPUT1 = "mettre la broche Numérique";
 Blockly.Msg.ARDUINO_INOUT_DIGITAL_WRITE_INPUT2 = "à l'état logique";
-Blockly.Msg.ARDUINO_INOUT_DIGITAL_WRITE_TOOLTIP = "écrire un état numérique 0 ou 1 sur une sortie spécifique";
+Blockly.Msg.ARDUINO_INOUT_DIGITAL_WRITE_TOOLTIP = "écrire un état logique 0 ou 1 sur une sortie spécifique";
 Blockly.Msg.ARDUINO_INOUT_DIGITAL_READ_HELPURL = "http://arduino.cc/en/Reference/DigitalRead";
-Blockly.Msg.ARDUINO_INOUT_DIGITAL_READ_INPUT = "l'état logique de la broche Digital";
-Blockly.Msg.ARDUINO_INOUT_DIGITAL_READ_TOOLTIP = "lecture de l'état numérique 0 ou 1 de la broche digital";
+Blockly.Msg.ARDUINO_INOUT_DIGITAL_READ_INPUT = "l'état logique de la broche Numérique";
+Blockly.Msg.ARDUINO_INOUT_DIGITAL_READ_TOOLTIP = "lecture de l'état logique 0 ou 1 de la broche numérique";
 Blockly.Msg.ARDUINO_INOUT_PWM_WRITE_HELPURL = "http://arduino.cc/en/Reference/AnalogWrite";
-Blockly.Msg.ARDUINO_INOUT_PWM_WRITE_INPUT1 = "écrire sur la broche PWM~";
-Blockly.Msg.ARDUINO_INOUT_PWM_WRITE_INPUT2 = "la valeur";
+Blockly.Msg.ARDUINO_INOUT_PWM_WRITE_INPUT1 = "metre la broche PWM~";
+Blockly.Msg.ARDUINO_INOUT_PWM_WRITE_INPUT2 = "à la valeur";
 Blockly.Msg.ARDUINO_INOUT_PWM_WRITE_TOOLTIP = "envoyer une valeur comprise entre 0 et 255 sur une sortie spécifique\nATTENTION à vérifier le n° sur la carte !";
 Blockly.Msg.ARDUINO_INOUT_ANALOG_WRITE_HELPURL = "http://arduino.cc/en/Reference/AnalogWrite";
 Blockly.Msg.ARDUINO_INOUT_ANALOG_WRITE_INPUT1 = "écrire sur la broche Analogique";
@@ -543,7 +543,7 @@ Blockly.Msg.ARDUINO_SERVO_ATTACHED = "présence d'un servomoteur";
 Blockly.Msg.ARDUINO_SERVO_DETACH = "détacher le servomoteur de la broche";
 Blockly.Msg.ARDUINO_SERIAL_PRINT_HELPURL = "http://www.arduino.cc/en/Serial/Print";
 Blockly.Msg.ARDUINO_SERIAL_PRINT_CONTENT = "afficher sur le port série le texte :";
-Blockly.Msg.ARDUINO_SERIAL_PRINTLN_CONTENT = "afficher, puis passe à la ligne, le texte :";
+Blockly.Msg.ARDUINO_SERIAL_PRINTLN_CONTENT = "afficher sur le port série le texte :";
 Blockly.Msg.ARDUINO_SERIAL_PRINT_TOOLTIP = "envoie des données sur le port série pour surveillance par le moniteur en ASCII";
 
 //SERIAL
