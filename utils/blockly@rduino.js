@@ -701,9 +701,16 @@ BlocklyDuino.init = function() {
 
 	// load blocks stored in session or passed by url
 	var urlFile = BlocklyDuino.getStringParamFromUrl('url', '');
-
+	var loadOnce = null;
+	try {
+			loadOnce = window.localStorage.loadOnceBlocks;
+		} catch (e) {
+			// Firefox sometimes throws a SecurityError when accessing
+			// localStorage.
+			// Restarting Firefox fixes this, so it looks like a bug.
+		}
 	if (urlFile) {
-		if (window.localStorage.loadOnceBlocks != null)
+		if (loadOnce != null)
 			{
 			if (!confirm(MSG['xmlLoad']))
 				{
