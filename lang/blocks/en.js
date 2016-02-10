@@ -551,6 +551,9 @@ Blockly.Msg.ARDUINO_SERIAL_PRINT_HELPURL = "http://www.arduino.cc/en/Serial/Prin
 Blockly.Msg.ARDUINO_SERIAL_PRINT_CONTENT = "send the data to the serial port :";
 Blockly.Msg.ARDUINO_SERIAL_PRINTLN_CONTENT = "print new line data on serial port :";
 Blockly.Msg.ARDUINO_SERIAL_PRINT_TOOLTIP = "sends data over the serial port for sruvaillance by the monitor in ASCII";
+Blockly.Msg.ARDUINO_SERIAL_PRINT_VAR_TEXT = "print text on serial port :"; //¨Proposé par LP2I le 07/02/16
+Blockly.Msg.ARDUINO_SERIAL_PRINT_VAR_NUMBER = "with this following number :"; //¨Proposé par LP2I le 07/02/16
+Blockly.Msg.ARDUINO_SERIAL_PRINT_VAR_NEW_LINE = "and go to a new line ?"; //¨Proposé par LP2I le 07/02/16
 
 //SERIAL
 Blockly.Msg.Serial_Print="Serial Print console";

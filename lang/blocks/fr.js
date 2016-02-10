@@ -482,7 +482,7 @@ Blockly.Msg.INOUT_LOW_LEVEL = "0 (état bas)";
 
 Blockly.Msg.ARDUINO_BASE_DELAY_HELPURL = "http://arduino.cc/en/Reference/delay";
 Blockly.Msg.ARDUINO_BASE_DELAY_DELAY_TIME = "faire une temporisation (en ms) de";
-Blockly.Msg.ARDUINO_BASE_DELAY_TOOLTIP = "spécifier le temps d'attente, en millisecondes";
+Blockly.Msg.ARDUINO_BASE_DELAY_TOOLTIP = "spécifier le temps d'attente en millisecondes";
 Blockly.Msg.ARDUINO_SINCE_PROGRAM_STARTED = "temps écoulé depuis le début du programme";
 Blockly.Msg.ARDUINO_SINCE_PROGRAM_STARTED_TOOLTIP = "durée en millisecondes depuis que le programme a commencé (unsigned long)";
 Blockly.Msg.ARDUINO_SINCE_PROGRAM_STARTED_HELPURL = "https://www.arduino.cc/en/Reference/Millis";
@@ -549,6 +549,9 @@ Blockly.Msg.ARDUINO_SERIAL_PRINT_HELPURL = "http://www.arduino.cc/en/Serial/Prin
 Blockly.Msg.ARDUINO_SERIAL_PRINT_CONTENT = "afficher sur le port série le texte :";
 Blockly.Msg.ARDUINO_SERIAL_PRINTLN_CONTENT = "afficher sur le port série le texte :";
 Blockly.Msg.ARDUINO_SERIAL_PRINT_TOOLTIP = "envoie des données sur le port série pour surveillance par le moniteur en ASCII";
+Blockly.Msg.ARDUINO_SERIAL_PRINT_VAR_TEXT = "afficher sur le port série le texte :"; //¨Proposé par LP2I le 07/02/16
+Blockly.Msg.ARDUINO_SERIAL_PRINT_VAR_NUMBER = "suivi du nombre :"; //¨Proposé par LP2I le 07/02/16
+Blockly.Msg.ARDUINO_SERIAL_PRINT_VAR_NEW_LINE = "puis d'un saut de ligne ?"; //¨Proposé par LP2I le 07/02/16
 
 //SERIAL
 Blockly.Msg.Serial_Print="afficher sur la console série";

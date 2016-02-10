@@ -56,6 +56,23 @@ Blockly.Arduino.serial_println = function() {
   return code;
 };
 
+// Ajouté par LP2I le 07/02/16
+Blockly.Arduino.serial_print_var = function() {
+  var value_text = Blockly.Arduino.valueToCode(this, 'Text', Blockly.Arduino.ORDER_ATOMIC) || '0';
+  var value_n = Blockly.Arduino.valueToCode(this, 'N', Blockly.Arduino.ORDER_ATOMIC);
+  var new_line = Blockly.Arduino.valueToCode(this, 'NEW_LINE', Blockly.Arduino.ORDER_ATOMIC);
+  Blockly.Arduino.setups_['setup_serial_' + profile.defaultBoard.serial] = 'Serial.begin(' + profile.defaultBoard.serial + ');\n';
+	if (new_line =="true")
+	{
+		var code =  'Serial.print('+value_text+');\n Serial.println('+value_n+');\n';
+	}
+	else
+	{
+		var code =  'Serial.print(' + value_text + ');\n Serial.print('+value_n+');\n';
+	}
+  return code;
+};
+
 Blockly.Arduino['serial_write'] = function() {
   var content = Blockly.Arduino.valueToCode(this, 'CONTENT', Blockly.Arduino.ORDER_ATOMIC) || '0';
   //content = content.replace('(','').replace(')','');
