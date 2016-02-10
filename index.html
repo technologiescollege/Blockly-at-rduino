@@ -274,7 +274,6 @@
               <br /> - Bootstrap (<a href='http://getbootstrap.com' target='blank'>http://getbootstrap.com</a>)
 			  <br /> - Codebender - CompilerFlasher : (<a href='https://codebender.cc' target='blank'>https://codebender.cc</a>)
               <br /> - JQuerry (<a href='https://jquery.com' target='blank'>https://jquery.com</a>)
-			  <br /> - Español version : José Manuel Ruiz Gutiérrez (<a href='http://josemanuelruizgutierrez.blogspot.com.es/' target='blank'>blogspot</a>)
       </div>
     </div>
   </div>
@@ -621,6 +620,12 @@
                 </value>
 			</block>
         </category>
+		<category name="CAT_ARDUINO_CONVERSION" colour="#00979D"> 
+			  <block type="conversion_tochar"></block>
+			  <block type="conversion_tobyte"></block>
+			  <block type="conversion_toint"></block>
+			  <block type="conversion_tofloat"></block>
+		</category>
         <category name="CAT_ARDUINO_OUT" colour="#00979D">
 			<block type="base_delay">			
 				<value name="DELAY_TIME">
@@ -630,7 +635,7 @@
 				</value>
 			</block>
             <block type="inout_buildin_led"></block>
-            <block type="inout_digital_write_validator"></block>
+			<block type="inout_digital_write_validator"></block>
             <block type="inout_PWM_write_validator">
                 <value name="NUM">
                     <shadow type="math_number">
@@ -676,14 +681,198 @@
                 </value>
             </block>
             <block type="notone"></block>
-			<block type="lp2i_mp3_play"></block>
+			<category name="CAT_OLED_U8G" colour="#00979D">
+				<block type="lp2i_u8g_draw_string">
+					<value name="Text">
+						<shadow type="text">
+						<field name="TEXT">Exemple</field>
+						</shadow>
+					</value>					
+					<value name="X">
+						<shadow type="math_number">
+						<field name="NUM">0</field>
+						</shadow>
+					</value>
+					<value name="Y">
+						<shadow type="math_number">
+						<field name="NUM">12</field>
+						</shadow>	
+					</value>
+				</block>				
+				<block type="lp2i_u8g_draw_4strings">
+					<value name="Text_line1">
+						<shadow type="text">
+						<field name="TEXT">Exemple ligne 1</field>
+						</shadow>
+					</value>
+					<value name="Text_line2">
+						<shadow type="text">
+						<field name="TEXT">Exemple ligne 2</field>
+						</shadow>
+					</value>
+					<value name="Text_line3">
+						<shadow type="text">
+						<field name="TEXT">Exemple ligne 3</field>
+						</shadow>
+					</value>
+					<value name="Text_line4">
+						<shadow type="text">
+						<field name="TEXT">Exemple ligne 4</field>
+						</shadow>
+					</value>					
+				</block>
+				<block type="lp2i_u8g_print">		
+					<value name="N">
+						<shadow type="math_number">
+						<field name="Num">0</field>
+						</shadow>
+					</value>					
+					<value name="X">
+						<shadow type="math_number">
+						<field name="NUM">0</field>
+						</shadow>
+					</value>
+					<value name="Y">
+						<shadow type="math_number">
+						<field name="NUM">12</field>
+						</shadow>	
+					</value>
+				</block>
+				<block type="lp2i_u8g_4draw_print">
+					<value name="Text_line1">
+						<shadow type="text">
+						<field name="TEXT">Exemple ligne 1</field>
+						</shadow>
+					</value>
+					<value name="N1">
+						<shadow type="math_number">
+						<field name="Num">0</field>
+						</shadow>
+					</value>
+					<value name="Text_line2">
+						<shadow type="text">
+						<field name="TEXT"></field>
+						</shadow>
+					</value>
+					<value name="N2">
+						<shadow type="math_number">
+						<field name="Num"></field>
+						</shadow>
+					</value>					
+					<value name="Text_line3">
+						<shadow type="text">
+						<field name="TEXT"></field>
+						</shadow>
+					</value>
+					<value name="N3">
+						<shadow type="math_number">
+						<field name="Num"></field>
+						</shadow>
+					</value>					
+					<value name="Text_line4">
+						<shadow type="text">
+						<field name="TEXT"></field>
+						</shadow>
+					</value>
+					<value name="N4">
+						<shadow type="math_number">
+						<field name="Num"></field>
+						</shadow>
+					</value>					
+				</block>
+			</category>
+			<category name="CAT_LED_RGB_CHAIN" colour="#00979D">
+				<block type="lp2i_ledRGB_WS2812B_init">
+					<value name="Pin_LedRGB">
+						<shadow type="math_number">
+						<field name="NUM">6</field>
+						</shadow>
+					</value>
+					<value name="Number_of_Pixels">
+						<shadow type="math_number">
+						<field name="NUM">1</field>
+						</shadow>	
+					</value>				
+				</block>
+				<block type="lp2i_ledRGB_WS2812B_setPixelColor">
+					<value name="Pixel_number">
+						<shadow type="math_number">
+						<field name="NUM">0</field>
+						</shadow>	
+					</value>				
+					<value name="Red">
+						<shadow type="math_number">
+						<field name="NUM">255</field>
+						</shadow>
+					</value>
+					<value name="Green">
+						<shadow type="math_number">
+						<field name="NUM">255</field>
+						</shadow>
+					</value>				
+					<value name="Blue">
+						<shadow type="math_number">
+						<field name="NUM">255</field>
+						</shadow>	
+					</value>				
+				</block>
+			</category>
+			<category name="CAT_DFPLAYER" colour="#00979D">
+				<block type="lp2i_mp3_init">
+					<value name="Pin_Rx">
+						<shadow type="math_number">
+						<field name="NUM">11</field>
+						</shadow>
+					</value>
+					<value name="Pin_Tx">
+						<shadow type="math_number">
+						<field name="NUM">10</field>
+						</shadow>	
+					</value>
+					<value name="Pin_Busy">
+						<shadow type="math_number">
+						<field name="NUM">12</field>
+						</shadow>	
+					</value>				
+					<value name="Volume">
+						<shadow type="math_number">
+						<field name="NUM">20</field>
+						</shadow>	
+					</value>					
+				</block>
+				<block type="lp2i_mp3_play">
+					<value name="File">
+						<shadow type="math_number">
+						<field name="NUM">0</field>
+						</shadow>
+					</value>
+					<value name="Wait">
+						<shadow type="logic_boolean">1
+						</shadow>
+					</value>
+				</block>
+				<block type="lp2i_mp3_volume">
+					<value name="Volume">
+						<shadow type="math_number">
+						<field name="NUM">25</field>
+						</shadow>
+					</value>
+				</block>
+			</category>
+            <category name="CAT_ARDUINO_SERVO" colour="#00979D">
+				<block type="servo_move">
+					<value name="DEGREE">
+					<shadow type="inout_angle">
+					<field name="NUM">0</field>
+					</shadow>
+					</value>
+				</block>
+				<block type="servo_read_degrees"></block>
+				<block type="servo_attached"></block>
+				<block type="servo_detach"></block>
+			</category>
+		<sep></sep>
         </category>
-		<category name="CAT_ARDUINO_CONVERSION" colour="#00979D"> 
-			  <block type="conversion_tochar"></block>
-			  <block type="conversion_tobyte"></block>
-			  <block type="conversion_toint"></block>
-			  <block type="conversion_tofloat"></block>
-		</category>
 		<category name="CAT_ARDUINO_COMM" colour="#00979D">	
 			<category name="CAT_ARDUINO_COMM_SERIAL" colour="#00979D">
 				<block type="serial_flush"></block>
@@ -715,19 +904,7 @@
 				<block type="soft_read"></block>
 			</category>
 			<sep></sep>
-        </category>
-		<category name="CAT_ARDUINO_SERVO" colour="#00979D">
-            <block type="servo_move">
-				<value name="DEGREE">
-				<shadow type="inout_angle">
-				<field name="NUM">0</field>
-				</shadow>
-				</value>
-			</block>
-            <block type="servo_read_degrees"></block>
-			<block type="servo_attached"></block>
-			<block type="servo_detach"></block>
-        </category>
+        </category>		
     </category>
 	<sep></sep>
     <category name="CAT_BQ" colour="#608621">
@@ -1063,7 +1240,7 @@
 				</value>
                 <value name="TITRE">
 					<shadow type="text">
-					<field name="TEXT">Tension;(v)</field>
+					<field name="TEXT">Tension (volts)</field>
 					</shadow>
 				</value>
                 <value name="CONTENT">

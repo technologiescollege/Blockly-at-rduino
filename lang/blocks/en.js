@@ -426,6 +426,10 @@ Blockly.Msg.CAT_ARDUINO_COMM_SERIAL = "serial port";
 Blockly.Msg.CAT_ARDUINO_COMM_SOFTSERIAL = "softserial lib";
 Blockly.Msg.CAT_ARDUINO_SERVO = "Servo-Motor";
 
+Blockly.Msg.CAT_LED_RGB_CHAIN = "chainable RGB LED";
+Blockly.Msg.CAT_OLED_U8G = "OLED screen I2C";
+Blockly.Msg.CAT_DFPLAYER = "DFPlayer mini MP3";
+
 Blockly.Msg.CAT_GROVE = "Grove";  //added march 9th 2015
 Blockly.Msg.CAT_GROVE_IN = "In";
 Blockly.Msg.CAT_GROVE_OUT = "Out";
@@ -541,7 +545,7 @@ Blockly.Msg.ARDUINO_SERVO_READ_DEGREES_IMAGE = "images/a991.jpg";
 Blockly.Msg.ARDUINO_SERVO_READ_DEGREES_INPUT2 = "connected on the pin";
 Blockly.Msg.ARDUINO_SERVO_READ_DEGREES_TOOLTIP = "returns the number of degrees the last rotation";
 Blockly.Msg.ARDUINO_SERVO_PIN = "PIN#e";
-Blockly.Msg.ARDUINO_SERVO_ATTACHED = "servo atatched ?";
+Blockly.Msg.ARDUINO_SERVO_ATTACHED = "servo attached ?";
 Blockly.Msg.ARDUINO_SERVO_DETACH = "detach servo on PIN#";
 Blockly.Msg.ARDUINO_SERIAL_PRINT_HELPURL = "http://www.arduino.cc/en/Serial/Print";
 Blockly.Msg.ARDUINO_SERIAL_PRINT_CONTENT = "send the data to the serial port :";
@@ -950,3 +954,56 @@ Blockly.Msg.BQ_IR_TITLE = "l'état du suiveur de ligne";
 Blockly.Msg.BQ_IR_TOOLTIP = 'Entrée Détecteur de ligne (réf : LIG1)';
 Blockly.Msg.BQ_BT_TITLE = "Bluetooth en mode esclave";
 Blockly.Msg.BQ_BT_TOOLTIP = 'Bluetooth V2.0+EDR esclave. Seulement 1 esclave par carte.';
+
+
+//added febr 7th 2016
+Blockly.Msg.lp2i_mp3_init = "Audio DFPlayer Mini MP3 Init";
+Blockly.Msg.lp2i_mp3_init_Pin_Rx = "Pin Rx =";
+Blockly.Msg.lp2i_mp3_init_Pin_Tx = "Pin Tx (not used) =";
+Blockly.Msg.lp2i_mp3_init_Pin_Busy = "Pin Busy =";
+Blockly.Msg.lp2i_mp3_init_Volume = "Volume (30 max) =";
+
+Blockly.Msg.lp2i_mp3 = "Audio DFPlayer Mini MP3";
+Blockly.Msg.lp2i_mp3_File = "mp3 file number to play =";
+Blockly.Msg.lp2i_mp3_Wait = "Waiting not busy to begin ? =";
+
+Blockly.Msg.lp2i_mp3_Volume = "Audio DFPlayer Mini MP3";
+Blockly.Msg.lp2i_mp3_Volume_Input = "Volume (30 max) =";
+
+Blockly.Msg.lp2i_u8g_draw_string = "OLED I2C display";
+Blockly.Msg.lp2i_u8g_draw_string_Text = "text to display =";
+Blockly.Msg.lp2i_u8g_draw_string_X = "raw x (127 max) =";
+Blockly.Msg.lp2i_u8g_draw_string_Y = "line y (63 max) =";
+
+Blockly.Msg.lp2i_u8g_draw_4strings = "OLED I2C display";
+Blockly.Msg.lp2i_u8g_draw_4strings_texts_to_display = "texts to display :";
+Blockly.Msg.lp2i_u8g_draw_4strings_Text_line1 = "line 1 =";
+Blockly.Msg.lp2i_u8g_draw_4strings_Text_line2 = "line 2 =";
+Blockly.Msg.lp2i_u8g_draw_4strings_Text_line3 = "line 3 =";
+Blockly.Msg.lp2i_u8g_draw_4strings_Text_line4 = "line 4 =";
+
+Blockly.Msg.lp2i_u8g_print = "OLED I2C display";
+Blockly.Msg.lp2i_u8g_print_N = "Number to display ="
+Blockly.Msg.lp2i_u8g_print_X = "raw x (127 max) =";
+Blockly.Msg.lp2i_u8g_print_Y = "line y (63 max) =";
+
+Blockly.Msg.lp2i_u8g_4draw_print = "OLED I2C display";
+Blockly.Msg.lp2i_u8g_4draw_print_to_display = "to display :";
+Blockly.Msg.lp2i_u8g_4draw_print_Text_line1 = "line 1 =";
+Blockly.Msg.lp2i_u8g_4draw_print_N1 = "Number 1 (at end) ="
+Blockly.Msg.lp2i_u8g_4draw_print_Text_line2 = "line 2 =";
+Blockly.Msg.lp2i_u8g_4draw_print_N2 = "Number 2 (at end) ="
+Blockly.Msg.lp2i_u8g_4draw_print_Text_line3 = "line 3 =";
+Blockly.Msg.lp2i_u8g_4draw_print_N3 = "Number 3 (at end) ="
+Blockly.Msg.lp2i_u8g_4draw_print_Text_line4 = "line 4 =";
+Blockly.Msg.lp2i_u8g_4draw_print_N4 = "Number 4 (at end) ="
+
+Blockly.Msg.lp2i_ledRGB_WS2812B_init = "Led RGB WS2812B Init";
+Blockly.Msg.lp2i_ledRGB_WS2812B_init_Pin = "Pin =";
+Blockly.Msg.lp2i_ledRGB_WS2812B_init_Number_of_Pixels = "Number of pixels =";
+
+Blockly.Msg.lp2i_ledRGB_WS2812B_setPixelColor = "Led RGB WS2812B. Send color :";
+Blockly.Msg.lp2i_ledRGB_WS2812B_setPixelColor_Red = "Red (255 max) =";
+Blockly.Msg.lp2i_ledRGB_WS2812B_setPixelColor_Green = "Green (255 max) =";
+Blockly.Msg.lp2i_ledRGB_WS2812B_setPixelColor_Blue = "Blue (255 max) =";
+Blockly.Msg.lp2i_ledRGB_WS2812B_setPixelColor_Pixel_Number = "for pixel number (0 first) =";

@@ -55,11 +55,11 @@ var MSG = {
   arduino_card:"supprimer tout et sélectionner une carte",
   span_about:"à propos",
   aboutModalLabel:"à propos ...",
-  aboutBody:"<br />- créations et améliorations par Sébastien Canet, intégration CodeBender par Julien Rat, intégration multilingue et CSS par Olivier Métayer." 
+  aboutBody:"<br />- créations et améliorations par Sébastien Canet, fonctions JS et CSS par Olivier Métayer, intégration CodeBender par Julien Rat." 
 	  + "<br />"
-	  + "<br />Contributions :",
+	  + "<br />S'appuie sur :",
   msg_ajax_ko:"Requêtes AJAX non supportées par votre navigateur, les fonctionnalités suivantes ne seront pas opérationnelles : \n"
-	  + "- chargement de block via l'url \n"
+	  + "- chargement de block via l'URL \n"
 	  + "- supervision",
   span_ajax_msg:"Ne plus afficher ce message."
 };

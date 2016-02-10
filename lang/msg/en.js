@@ -55,9 +55,9 @@ var MSG = {
   arduino_card:"delete all and select a card",
   span_about:"about",
   aboutModalLabel:"about ...",
-  aboutBody:"<br />- development and adaptations by Sébastien Canet, CodeBender integration by Julien Rat, CSS and multilingual by Olivier Metayer."
+  aboutBody:"<br />- development and adaptations by Sébastien Canet, CSS and JS functions by Olivier Metayer, CodeBender integration by Julien Rat."
 		  + "<br />"
-		  + "<br />Contributions :",
+		  + "<br />Thanks to:",
   msg_ajax_ko:"AJAX requests are not supported by your browser, the following features will not be operational : \n"
 	  + "- load blocks through url \n"
 	  + "- supervision",
