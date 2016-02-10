@@ -450,3 +450,7 @@ html[dir="RTL"] .colors_category {
     max-width: 100px;
     max-height: 100px;
 }
+
+.margin-top-5 {
+	margin-top: 5px;
+}

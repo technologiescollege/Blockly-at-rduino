@@ -665,6 +665,13 @@ BlocklyDuino.init = function() {
 	var urlFile = BlocklyDuino.getStringParamFromUrl('url', '');
 
 	if (urlFile) {
+		if (window.localStorage.loadOnceBlocks != null)
+			{
+			if (!confirm(MSG['xmlLoad']))
+				{
+				BlocklyDuino.loadBlocks();
+				}
+			}
 		$.get( urlFile, function( data ) {
 	        BlocklyDuino.loadBlocks(data );
 			}, 'text');
@@ -773,7 +780,7 @@ BlocklyDuino.setOrientation = function() {
 		$("#btn_fakeload").addClass("btn_ver");
 		$("#btn_picture").addClass("btn_ver");
 		$("#btn_example").addClass("btn_ver");
-		$("#btn_plugin_codebender").addClass("btn_ver");
+		//$("#btn_plugin_codebender").addClass("btn_ver");
 		$("#divTabpanel").addClass("divTabpanel-ver");
 		$("#div_help_button").addClass("div_help_button-ver");
 		$("#div_miniPicture").addClass("div_miniPicture-ver");	
