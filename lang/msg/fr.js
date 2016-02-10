@@ -60,6 +60,8 @@ var MSG = {
 	  + "<br />S'appuie sur :",
   msg_ajax_ko:"Requêtes AJAX non supportées par votre navigateur, les fonctionnalités suivantes ne seront pas opérationnelles : \n"
 	  + "- chargement de block via l'URL \n"
-	  + "- supervision",
+	  + "- supervision\n"
+	  + "\n"
+	  + "Pour Chrome, veuillez vérifier sur la page suivante : <a href='http://www.chrome-allow-file-access-from-file.com/' traget=_blank>http://www.chrome-allow-file-access-from-file.com/</a>\n",
   span_ajax_msg:"Ne plus afficher ce message."
 };

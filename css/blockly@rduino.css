@@ -242,6 +242,12 @@ html[dir="RTL"] #btn_size {
 	left: 15px;
 }
 
+#btn_blocs_picture {
+	position: absolute;
+	right: 150px;
+	top: 0px;
+}
+
 #btn_preview {
 	position: absolute;
 	right: 60px;

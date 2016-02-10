@@ -24,12 +24,49 @@ Blockly.pathToMedia = './media/';
 BlocklyDuino.selectedTab = 'blocks';
 BlocklyDuino.selectedCard = 'arduino_uno';
 BlocklyDuino.inlineBool = true;
+BlocklyDuino.pictSize = 2;
+
+
+//set default image size
+Blockly.Arduino.imageSizeNull = 0; //pictSize = 0
+Blockly.Arduino.imageSizeSmall = 32; //pictSize = 1
+Blockly.Arduino.imageSizeNormal = 64; //pictSize = 2
+Blockly.Arduino.imageSizeBig = 96; //pictSize = 3
+
+Blockly.Arduino.imageSize = Blockly.Arduino.imageSizeNormal;
 
 /**
  * Blockly's main workspace.
  * @type {Blockly.WorkspaceSvg}
  */
 BlocklyDuino.workspace = null;
+
+/**
+ * Toggle blocks picture : 
+ */
+BlocklyDuino.blockPicture = function() {
+	var xmlBlocks = Blockly.Xml.workspaceToDom(BlocklyDuino.workspace);
+	
+	var blocks = xmlBlocks.getElementsByTagName("block");
+	
+	if (BlocklyDuino.pictSize<4) {
+		$('#icon_btn_blocs_picture').removeClass('glyphicon-eye-close');
+		$('#icon_btn_blocs_picture').addClass('glyphicon-eye-open');
+		BlocklyDuino.pictSize++;
+	}
+	
+	if (BlocklyDuino.pictSize == 4) {
+		$('#icon_btn_blocs_picture').removeClass('glyphicon-eye-open');
+		$('#icon_btn_blocs_picture').addClass('glyphicon-eye-close');
+		BlocklyDuino.pictSize=0;
+	}
+	
+	Blockly.Arduino.imageSize = 32 * BlocklyDuino.pictSize;
+	
+	BlocklyDuino.workspace.clear();
+	BlocklyDuino.loadBlocks(Blockly.Xml.domToPrettyText(xmlBlocks));
+	
+};
 
 /**
  * Toggle blocks rendering : inline or block
@@ -410,6 +447,7 @@ BlocklyDuino.bindFunctions = function() {
 	});
 
 	$('#btn_inline').on("click", BlocklyDuino.inline);
+	$('#btn_blocs_picture').on("click", BlocklyDuino.blockPicture);
 	
 	$('#btn_preview').on("click", function() {
 		$("#toggle").toggle("slide");

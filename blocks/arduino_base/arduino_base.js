@@ -404,7 +404,7 @@ Blockly.Blocks.servo_move = {
 	this.setHelpUrl(Blockly.Msg.ARDUINO_SERVO_MOVE_HELPURL);
     this.appendDummyInput("")
         .appendField(Blockly.Msg.ARDUINO_SERVO_MOVE_INPUT1)
-        .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/arduino_base/servomoteur.jpg', 64, 64));
+        .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/arduino_base/servomoteur.jpg', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize));
     /* old version with Digital PWM correction
 	this.appendDummyInput("")
 		.setAlign(Blockly.ALIGN_RIGHT)
@@ -430,7 +430,7 @@ Blockly.Blocks.servo_read_degrees = {
 	this.setHelpUrl(Blockly.Msg.ARDUINO_SERVO_READ_DEGREES_HELPURL);
     this.appendDummyInput("")
         .appendField(Blockly.Msg.ARDUINO_SERVO_READ_DEGREES_INPUT1)
-        .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/arduino_base/servomoteur.jpg', 64, 64));
+        .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/arduino_base/servomoteur.jpg', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize));
 /* old version with Digital PWM correction
  	this.appendDummyInput("")	
         .setAlign(Blockly.ALIGN_RIGHT)
@@ -451,7 +451,7 @@ Blockly.Blocks.servo_attached = {
 	this.setHelpUrl('http://www.arduino.cc/playground/ComponentLib/servo');
     this.appendValueInput("PIN", 'Number')
         .appendField(Blockly.Msg.ARDUINO_SERVO_ATTACHED)
-        .appendField(new Blockly.FieldImage("http://www.seeedstudio.com/depot/images/product/a991.jpg", 64, 64))
+        .appendField(new Blockly.FieldImage("http://www.seeedstudio.com/depot/images/product/a991.jpg", Blockly.Arduino.imageSize, Blockly.Arduino.imageSize))
         .appendField(Blockly.Msg.ARDUINO_SERVO_PIN);
     this.setOutput(true, 'Boolean');
     this.setTooltip('true if the servo is attached to pin; false otherwise. ');
