@@ -69,8 +69,10 @@ Intégration de CodeBender : Julien Rat [https://github.com/julienrat](https://g
 
 **Ré-écriture totale et refonte graphique : Olivier Métayer**
 
-_Julien Rat : CodeBender plugin_
+_Julien RAT : CodeBender plugin_
+
+_Frédéric PICARD : bitbloq, maquette Jeulin_
 
 _Spanish translation : José Manuel Ruiz Gutteriez ([blog](http://josemanuelruizgutierrez.blogspot.com.es/))_
 
-_Daniel Pers ([site](http://blogpeda.ac-poitiers.fr/techno-jean-mace/)) : FDPlayer, OLED, RGB LED_
+_Daniel PERS ([site](http://blogpeda.ac-poitiers.fr/techno-jean-mace/)) : FDPlayer, OLED, RGB LED_
