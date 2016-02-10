@@ -34,7 +34,7 @@ Blockly.Blocks['setup_button_wait_il'] = {
     this.setColour("#00138b");
     this.appendDummyInput()
         .appendField("1 time wait - Gen")
-        //.appendField(new Blockly.FieldImage("http://", 64, 64))
+        //.appendField(new Blockly.FieldImage("http://", Blockly.Arduino.imageSize, Blockly.Arduino.imageSize))
         .appendField("PIN#")
         .appendField(new Blockly.FieldTextInput('', Blockly.Arduino.pinDigitalValidator), 'PIN');
     this.setTooltip('1 time wait button in setup) - INPUT & wait for HIGH');
@@ -49,7 +49,7 @@ Blockly.Blocks['setup_button_wait_iph'] = {
     this.setColour("#00138b");
     this.appendDummyInput()
         .appendField("1 Time wait - Zumo")
-        //.appendField(new Blockly.FieldImage("http://", 64, 64))
+        //.appendField(new Blockly.FieldImage("http://", Blockly.Arduino.imageSize, Blockly.Arduino.imageSize))
         .appendField("PIN#")
         .appendField(new Blockly.FieldTextInput('', Blockly.Arduino.pinDigitalValidator), 'PIN');
     this.setTooltip('1 time wait button (in setup) - INPUT_PULLUP & wait for LOW)');

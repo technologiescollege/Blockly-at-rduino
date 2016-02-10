@@ -15,7 +15,7 @@ Blockly.Blocks['bq_led'] = {
 	this.setHelpUrl(Blockly.Msg.BQ_HELPURL);
 	this.appendDummyInput()
         .appendField(Blockly.Msg.GROVE_INOUT_LED_INPUT1)
-        .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/bitbloq/LED.jpg', 64, 64));
+        .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/bitbloq/LED.jpg', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize));
     this.appendValueInput("PIN", 'Number')
         .setCheck('Number')
         .setAlign(Blockly.ALIGN_RIGHT)
@@ -37,7 +37,7 @@ Blockly.Blocks['bq_buzzer'] = {
 	this.setHelpUrl(Blockly.Msg.BQ_HELPURL);
     this.appendDummyInput()
 		.appendField(Blockly.Msg.TECHNOZONE51_TEXT43)
-        .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/bitbloq/buzzer.jpg', 64, 64));
+        .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/bitbloq/buzzer.jpg', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize));
 	this.appendValueInput("PIN", 'Number')
         .setCheck('Number')
         .setAlign(Blockly.ALIGN_RIGHT)
@@ -61,7 +61,7 @@ Blockly.Blocks['bq_ultrason'] = {
 	this.setHelpUrl(Blockly.Msg.BQ_HELPURL);
     this.appendDummyInput()
 	    .appendField(Blockly.Msg.TECHNOZONE51_TEXT28)
-        .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/bitbloq/ranger.jpg', 64, 64));
+        .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/bitbloq/ranger.jpg', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize));
     this.appendValueInput("TRIGER", 'Number')
         .setCheck('Number')
         .setAlign(Blockly.ALIGN_RIGHT)
@@ -81,7 +81,7 @@ Blockly.Blocks['bq_servo'] = {
 	this.setHelpUrl(Blockly.Msg.BQ_HELPURL);
     this.appendDummyInput("")
         .appendField(Blockly.Msg.BQ_SERVO1_TITLEA)
-        .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/bitbloq/mini-servo.jpg', 64, 64));
+        .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/bitbloq/mini-servo.jpg', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize));
 	this.appendValueInput("PIN", 'Number')
         .setCheck('Number')
         .setAlign(Blockly.ALIGN_RIGHT)
@@ -102,7 +102,7 @@ Blockly.Blocks['bq_servo_rotation_continue'] = {
 	this.setHelpUrl(Blockly.Msg.BQ_HELPURL);
     this.appendDummyInput()
         .appendField(Blockly.Msg.BQ_SERVO2_TITLEA)
-        .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/bitbloq/servo-continu.jpg', 64, 64));
+        .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/bitbloq/servo-continu.jpg', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize));
 	this.appendValueInput("PIN", 'Number')
         .setCheck('Number')
         .setAlign(Blockly.ALIGN_RIGHT)
@@ -126,7 +126,7 @@ Blockly.Blocks['bq_bouton_poussoir'] = {
 	this.setHelpUrl(Blockly.Msg.BQ_HELPURL);
     this.appendDummyInput()
         .appendField(Blockly.Msg.GROVE_INOUT_BUTTON_TEXT)
-        .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/bitbloq/BP.jpg', 64, 64));
+        .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/bitbloq/BP.jpg', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize));
 	this.appendValueInput("PIN", 'Number')
         .setCheck('Number')
         .setAlign(Blockly.ALIGN_RIGHT)
@@ -142,7 +142,7 @@ Blockly.Blocks['bq_luminosite'] = {
 	this.setHelpUrl(Blockly.Msg.BQ_HELPURL);
     this.appendDummyInput()
         .appendField(Blockly.Msg.BQ_LUX_TITLE)
-        .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/bitbloq/LDR.jpg', 64, 64));
+        .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/bitbloq/LDR.jpg', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize));
 	this.appendValueInput("PIN", 'Number')
         .setCheck('Number')
         .setAlign(Blockly.ALIGN_RIGHT)
@@ -158,7 +158,7 @@ Blockly.Blocks['bq_potentiometre'] = {
 	this.setHelpUrl(Blockly.Msg.BQ_HELPURL);
     this.appendDummyInput("")
         .appendField(Blockly.Msg.BQ_POT_TITLE)
-        .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/bitbloq/potentiometre.jpg', 64, 64));
+        .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/bitbloq/potentiometre.jpg', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize));
 	this.appendValueInput("PIN", 'Number')
         .setCheck('Number')
         .setAlign(Blockly.ALIGN_RIGHT)
@@ -174,7 +174,7 @@ Blockly.Blocks['bq_bluetooth_slave'] = {
 	this.setHelpUrl(Blockly.Msg.BQ_HELPURL);
     this.appendDummyInput()
       .appendField(Blockly.Msg.BQ_BT_TITLE)
-      .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/bitbloq/bluetooth.jpg', 64, 64));
+      .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/bitbloq/bluetooth.jpg', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize));
 	this.appendValueInput("PIN", 'Number')
         .setCheck('Number')
         .setAlign(Blockly.ALIGN_RIGHT)
@@ -205,7 +205,7 @@ Blockly.Blocks['bq_capteur_de_ligne'] = {
 	this.setHelpUrl(Blockly.Msg.BQ_HELPURL);
     this.appendDummyInput()
         .appendField(Blockly.Msg.BQ_IR_TITLE)
-        .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/bitbloq/IR.jpg', 64, 64));
+        .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/bitbloq/IR.jpg', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize));
 	this.appendValueInput("PIN", 'Number')
         .setCheck('Number')
         .setAlign(Blockly.ALIGN_RIGHT)

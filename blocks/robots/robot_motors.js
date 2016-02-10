@@ -35,7 +35,7 @@ Blockly.Blocks['ardu_motor'] = {
     this.setColour("#5b99a5");
     this.appendDummyInput()
         .appendField(Blockly.Msg.ROBOTS_MOTORS_ARDUMOTOR_TITLE )
-        .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/robots/09815-01.jpg', 64, 64))
+        .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/robots/09815-01.jpg', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize))
         .appendField(new Blockly.FieldDropdown([[Blockly.Msg.ROBOTS_MOTORS_STOP, "stop"], [Blockly.Msg.ROBOTS_MOTORS_FORWARD, "forward"], [Blockly.Msg.ROBOTS_MOTORS_RIGHT, "right"], [Blockly.Msg.ROBOTS_MOTORS_LEFT, "left"], [Blockly.Msg.ROBOTS_MOTORS_BACKWARD, "backward"]]), "DIRECTION");
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
@@ -59,7 +59,7 @@ Blockly.Blocks['ardu_motor_s'] = {
 						[ Blockly.Msg.ROBOTS_MOTORS_BACKWARD, "backward" ] ]),
 				"DIRECTION");
     this.appendDummyInput()
-        .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/robots/09815-01.jpg', 64, 64));
+        .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/robots/09815-01.jpg', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize));
    this.setInputsInline(true) ; 
    this.appendValueInput("SPEEDA", 'Number')
        .setCheck('Number')
@@ -91,7 +91,7 @@ Blockly.Blocks['arduino_s'] = {
 						[ Blockly.Msg.ROBOTS_MOTORS_BACKWARD, "backward" ] ]),
 				"DIRECTION");
     this.appendDummyInput()
-        .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/robots/MotorShield_R3_Front.jpg', 64, 64));
+        .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/robots/MotorShield_R3_Front.jpg', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize));
    this.setInputsInline(true) ; 
    this.appendValueInput("SPEEDA", 'Number')
        .setCheck('Number')
@@ -114,7 +114,7 @@ Blockly.Blocks['pololu_drv8835_s'] = {
 	this.setInputsInline(false) ; 
     this.appendDummyInput()
         .appendField(Blockly.Msg.ROBOTS_MOTORS_POLOLU8835_S_TITLE)
-        .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/robots/0J5705.1200.jpg', 64, 64));
+        .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/robots/0J5705.1200.jpg', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize));
 	this.appendDummyInput()
         .appendField(
 				new Blockly.FieldDropdown([
@@ -147,7 +147,7 @@ Blockly.Blocks['radio_shack_s'] = {
 	this.setInputsInline(false) ; 
     this.appendDummyInput()
         .appendField(Blockly.Msg.ROBOTS_MOTORS_RADIOSHACK_S_TITLE )
-        .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/robots/02770168_00.jpg', 64, 64));
+        .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/robots/02770168_00.jpg', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize));
 	this.appendDummyInput()
         .appendField(
 				new Blockly.FieldDropdown([
@@ -179,7 +179,7 @@ Blockly.Blocks['dfrobot_s'] = {
 	this.setInputsInline(false) ; 
     this.appendDummyInput()
         .appendField(Blockly.Msg.ROBOTS_MOTORS_DFROBOT_S_TITLE)
-        .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/robots/53AU4096-900x600.jpg', 64, 64));
+        .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/robots/53AU4096-900x600.jpg', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize));
 	this.appendDummyInput()
         .appendField(
 				new Blockly.FieldDropdown([

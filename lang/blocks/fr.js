@@ -481,7 +481,7 @@ Blockly.Msg.INOUT_LOW_LEVEL = "0 (état bas)";
 
 
 Blockly.Msg.ARDUINO_BASE_DELAY_HELPURL = "http://arduino.cc/en/Reference/delay";
-Blockly.Msg.ARDUINO_BASE_DELAY_DELAY_TIME = "attente (en ms) de";
+Blockly.Msg.ARDUINO_BASE_DELAY_DELAY_TIME = "faire une temporisation (en ms) de";
 Blockly.Msg.ARDUINO_BASE_DELAY_TOOLTIP = "spécifier le temps d'attente, en millisecondes";
 Blockly.Msg.ARDUINO_SINCE_PROGRAM_STARTED = "temps écoulé depuis le début du programme";
 Blockly.Msg.ARDUINO_SINCE_PROGRAM_STARTED_TOOLTIP = "durée en millisecondes depuis que le programme a commencé (unsigned long)";
@@ -525,7 +525,7 @@ Blockly.Msg.ARDUINO_NOTONE_HELPURL = "http://arduino.cc/en/Reference/AnalogWrite
 Blockly.Msg.ARDUINO_NOTONE_INPUT = "stopper le son sur la broche";
 Blockly.Msg.ARDUINO_NOTONE_TOOLTIP = "arrêter le son sur la broche selectionnée";
 Blockly.Msg.ARDUINO_INOUT_ANALOG_READ_HELPURL = "http://arduino.cc/en/Reference/AnalogRead";
-Blockly.Msg.ARDUINO_INOUT_ANALOG_READ_INPUT = "la valeur lue sur l'entrée Analogique";
+Blockly.Msg.ARDUINO_INOUT_ANALOG_READ_INPUT = "la valeur numérisée de l'entrée Analogique";
 Blockly.Msg.ARDUINO_INOUT_ANALOG_READ_TOOLTIP = "renvoie une valeur comprise entre 0 et 1023";
 Blockly.Msg.ARDUINO_INOUT_ONOFF_HELPURL = "http://arduino.cc/en/Reference/Constants";
 Blockly.Msg.ARDUINO_INOUT_STAT="de l'état";

@@ -36,7 +36,7 @@ Blockly.Blocks['zumo_motors_FN'] = {
     this.setColour("#00138b");
     this.appendDummyInput("")
         .appendField(Blockly.Msg.ROBOTS_MOTORS_ZUMO_FN_TITLE)
-        .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/robots/0J4110.250.jpg', 64, 64))
+        .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/robots/0J4110.250.jpg', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize))
         .appendField(
 				new Blockly.FieldDropdown([
 						[ Blockly.Msg.ROBOTS_MOTORS_STOP, "stop" ],
@@ -58,7 +58,7 @@ Blockly.Blocks['zumo_motors_FNs'] = {
 	this.setInputsInline(false) ; 
     this.appendDummyInput()
         .appendField(Blockly.Msg.ROBOTS_MOTORS_ZUMO_FNS_TITLE)
-        .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/robots/0J4110.250.jpg', 64, 64));
+        .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/robots/0J4110.250.jpg', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize));
 	this.appendDummyInput()
         .appendField(
 				new Blockly.FieldDropdown([
@@ -89,7 +89,7 @@ Blockly.Blocks['zumo_motors_FR'] = {
     this.setColour("#00138b");
     this.appendDummyInput()
         .appendField(Blockly.Msg.ROBOTS_MOTORS_ZUMO_FR_TITLE)
-        .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/robots/0J4110.250.jpg', 64, 64))
+        .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/robots/0J4110.250.jpg', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize))
         .appendField(
 				new Blockly.FieldDropdown([
 						[ Blockly.Msg.ROBOTS_MOTORS_STOP, "stop" ],
@@ -111,7 +111,7 @@ Blockly.Blocks['zumo_motors_FRs'] = {
 	this.setInputsInline(false) ; 
     this.appendDummyInput()
         .appendField(Blockly.Msg.ROBOTS_MOTORS_ZUMO_FRS_TITLE)
-        .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/robots/0J4110.250.jpg', 64, 64));
+        .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/robots/0J4110.250.jpg', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize));
     this.appendDummyInput()    
 		.appendField(
 				new Blockly.FieldDropdown([
@@ -142,7 +142,7 @@ Blockly.Blocks['zumo_motors_FL'] = {
     this.setColour("#00138b");
     this.appendDummyInput()
         .appendField(Blockly.Msg.ROBOTS_MOTORS_ZUMO_FL_TITLE)
-        .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/robots/0J4110.250.jpg', 64, 64))
+        .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/robots/0J4110.250.jpg', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize))
         .appendField(
 				new Blockly.FieldDropdown([
 						[ Blockly.Msg.ROBOTS_MOTORS_STOP, "stop" ],
@@ -164,7 +164,7 @@ init: function() {
 	this.setInputsInline(false) ; 
     this.appendDummyInput()
         .appendField(Blockly.Msg.ROBOTS_MOTORS_ZUMO_FLS_TITLE)
-        .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/robots/0J4110.250.jpg', 64, 64));
+        .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/robots/0J4110.250.jpg', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize));
      this.appendDummyInput()    
 		.appendField(
 				new Blockly.FieldDropdown([
@@ -195,7 +195,7 @@ Blockly.Blocks['zumo_motors_FBs'] = {
     this.setColour("#00138b");
     this.appendDummyInput()
         .appendField(Blockly.Msg.ROBOTS_MOTORS_ZUMO_FBS_TITLE)
-        .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/robots/0J4110.250.jpg', 64, 64));
+        .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/robots/0J4110.250.jpg', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize));
      this.appendDummyInput()    
 		.appendField(
 				new Blockly.FieldDropdown([
@@ -226,7 +226,7 @@ Blockly.Blocks['zumo_motors_FB'] = {
     this.setColour("#00138b");
     this.appendDummyInput()
         .appendField(Blockly.Msg.ROBOTS_MOTORS_ZUMO_FB_TITLE)
-        .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/robots/0J4110.250.jpg', 64, 64))
+        .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/robots/0J4110.250.jpg', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize))
         .appendField(
 				new Blockly.FieldDropdown([
 						[ Blockly.Msg.ROBOTS_MOTORS_STOP, "stop" ],
@@ -247,7 +247,7 @@ Blockly.Blocks['zumo_motors_FUs'] = {
     this.setColour("#00138b");
     this.appendDummyInput()
         .appendField(Blockly.Msg.ROBOTS_MOTORS_ZUMO_FUS_TITLE)
-        .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/robots/0J4110.250.jpg', 64, 64))
+        .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/robots/0J4110.250.jpg', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize))
         .appendField(
 				new Blockly.FieldDropdown([
 						[ Blockly.Msg.ROBOTS_MOTORS_STOP, "stop" ],
