@@ -69,4 +69,8 @@ Intégration de CodeBender : Julien Rat [https://github.com/julienrat](https://g
 
 **Ré-écriture totale et refonte graphique : Olivier Métayer**
 
-_Spanish translation : José Manuel Ruiz_
+_Julien Rat : CodeBender plugin_
+
+_Spanish translation : José Manuel Ruiz Gutteriez ([blog](http://josemanuelruizgutierrez.blogspot.com.es/))_
+
+_Daniel Pers ([site](http://blogpeda.ac-poitiers.fr/techno-jean-mace/)) : FDPlayer, OLED, RGB LED_
