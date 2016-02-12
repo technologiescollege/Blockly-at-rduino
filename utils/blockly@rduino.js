@@ -32,8 +32,9 @@ Blockly.Arduino.imageSizeNull = 0; //pictSize = 0
 Blockly.Arduino.imageSizeSmall = 32; //pictSize = 1
 Blockly.Arduino.imageSizeNormal = 64; //pictSize = 2
 Blockly.Arduino.imageSizeBig = 96; //pictSize = 3
-
+Blockly.Arduino.imageSizeOld = 32;
 Blockly.Arduino.imageSize = Blockly.Arduino.imageSizeNormal;
+Blockly.Arduino.imageBool = true;
 
 /**
  * Blockly's main workspace.
@@ -46,20 +47,54 @@ BlocklyDuino.workspace = null;
  */
 BlocklyDuino.blockPicture = function() {
 	var xmlBlocks = Blockly.Xml.workspaceToDom(BlocklyDuino.workspace);
+	var blocks = xmlBlocks.getElementsByTagName("block");
+	
+	Blockly.Arduino.imageBool = !Blockly.Arduino.imageBool;
+	
+	if (Blockly.Arduino.imageBool) {
+		$('#icon_btn_blocs_picture').removeClass('glyphicon-eye-close');
+		$('#icon_btn_blocs_picture').addClass('glyphicon-eye-open');
+		Blockly.Arduino.imageSize = Blockly.Arduino.imageSizeOld;		
+		$('#btn_blocs_picture_mini').show();
+		$('#btn_blocs_picture_maxi').show();
+	} else {
+		Blockly.Arduino.imageSizeOld = Blockly.Arduino.imageSize;
+		$('#icon_btn_blocs_picture').removeClass('glyphicon-eye-open');
+		$('#icon_btn_blocs_picture').addClass('glyphicon-eye-close');
+		Blockly.Arduino.imageSize = 0;
+		$('#btn_blocs_picture_mini').hide();
+		$('#btn_blocs_picture_maxi').hide();
+	}	
+	
+	BlocklyDuino.workspace.clear();
+	BlocklyDuino.loadBlocks(Blockly.Xml.domToPrettyText(xmlBlocks));
+	
+};
+
+BlocklyDuino.blockPicture_maxi = function() {
+	var xmlBlocks = Blockly.Xml.workspaceToDom(BlocklyDuino.workspace);
 	
 	var blocks = xmlBlocks.getElementsByTagName("block");
 	
-	if (BlocklyDuino.pictSize<4) {
-		$('#icon_btn_blocs_picture').removeClass('glyphicon-eye-close');
-		$('#icon_btn_blocs_picture').addClass('glyphicon-eye-open');
-		BlocklyDuino.pictSize++;
-	}
+	if (BlocklyDuino.pictSize<4) BlocklyDuino.pictSize++;
 	
-	if (BlocklyDuino.pictSize == 4) {
-		$('#icon_btn_blocs_picture').removeClass('glyphicon-eye-open');
-		$('#icon_btn_blocs_picture').addClass('glyphicon-eye-close');
-		BlocklyDuino.pictSize=0;
-	}
+	if (BlocklyDuino.pictSize > 5) BlocklyDuino.pictSize=5;
+	
+	Blockly.Arduino.imageSize = 32 * BlocklyDuino.pictSize;
+	
+	BlocklyDuino.workspace.clear();
+	BlocklyDuino.loadBlocks(Blockly.Xml.domToPrettyText(xmlBlocks));
+	
+};
+
+BlocklyDuino.blockPicture_mini = function() {
+	var xmlBlocks = Blockly.Xml.workspaceToDom(BlocklyDuino.workspace);
+	
+	var blocks = xmlBlocks.getElementsByTagName("block");
+	
+	if (BlocklyDuino.pictSize>1) BlocklyDuino.pictSize--;
+	
+	if (BlocklyDuino.pictSize <1) BlocklyDuino.pictSize=1;
 	
 	Blockly.Arduino.imageSize = 32 * BlocklyDuino.pictSize;
 	
@@ -447,7 +482,9 @@ BlocklyDuino.bindFunctions = function() {
 	});
 
 	$('#btn_inline').on("click", BlocklyDuino.inline);
-	$('#btn_blocs_picture').on("click", BlocklyDuino.blockPicture);
+	$('#btn_blocs_picture').on("click", BlocklyDuino.blockPicture);	
+	$('#btn_blocs_picture_mini').on("click", BlocklyDuino.blockPicture_mini);
+	$('#btn_blocs_picture_maxi').on("click", BlocklyDuino.blockPicture_maxi);
 	
 	$('#btn_preview').on("click", function() {
 		$("#toggle").toggle("slide");

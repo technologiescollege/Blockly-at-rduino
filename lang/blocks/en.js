@@ -485,6 +485,7 @@ Blockly.Msg.INOUT_LOW_LEVEL = "0 -> low";
 Blockly.Msg.ARDUINO_BASE_DELAY_HELPURL = "http://arduino.cc/en/Reference/delay";
 Blockly.Msg.ARDUINO_BASE_DELAY_DELAY_TIME = "delay (in ms)";
 Blockly.Msg.ARDUINO_BASE_DELAY_TOOLTIP = "specify the pause time in milliseconds";
+Blockly.Msg.ARDUINO_BASE_SETUP = "Setup";
 Blockly.Msg.ARDUINO_SINCE_PROGRAM_STARTED_HELPURL = "https://www.arduino.cc/en/Reference/Millis";
 Blockly.Msg.ARDUINO_SINCE_PROGRAM_STARTED = "time since program started";
 Blockly.Msg.ARDUINO_SINCE_PROGRAM_STARTED_TOOLTIP = "Number of milliseconds since the program started (unsigned long)";

@@ -248,6 +248,18 @@ html[dir="RTL"] #btn_size {
 	top: 0px;
 }
 
+#btn_blocs_picture_mini {
+	position: absolute;
+	right: 240px;
+	top: 0px;
+}
+
+#btn_blocs_picture_maxi {
+	position: absolute;
+	right: 195px;
+	top: 0px;
+}
+
 #btn_preview {
 	position: absolute;
 	right: 60px;

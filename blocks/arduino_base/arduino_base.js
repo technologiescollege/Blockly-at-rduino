@@ -30,7 +30,7 @@ Blockly.Blocks.base_setup = {
         this.setColour("#00979D");
 		this.setHelpUrl(Blockly.Msg.ARDUINO_BASE_SETUP_HELPURL);
         this.appendDummyInput("")
-            .appendField("Setup");
+            .appendField(Blockly.Msg.ARDUINO_BASE_SETUP);
         this.appendStatementInput('DO')
             .appendField(Blockly.LANG_CONTROLS_REPEAT_INPUT_DO);
         this.setTooltip("Exécuté seulement dans le 'Setup'");
