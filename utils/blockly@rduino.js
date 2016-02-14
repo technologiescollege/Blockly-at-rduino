@@ -24,9 +24,8 @@ Blockly.pathToMedia = './media/';
 BlocklyDuino.selectedTab = 'blocks';
 BlocklyDuino.selectedCard = 'arduino_uno';
 BlocklyDuino.inlineBool = true;
+
 BlocklyDuino.pictSize = 2;
-
-
 //set default image size
 Blockly.Arduino.imageSizeNull = 0; //pictSize = 0
 Blockly.Arduino.imageSizeSmall = 32; //pictSize = 1

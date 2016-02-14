@@ -306,7 +306,7 @@ Blockly.Arduino.technozone_robot_bt_available = function() {
   //dans setup    
   Blockly.Arduino.setups_['setup_bt'] = 'bt.begin(9600);';   
   var code = 'bt_read()>0';
-  return code;
+  return [code, Blockly.Arduino.ORDER_ATOMIC];
 };
 
 Blockly.Arduino.technozone_bt_init = function() {
