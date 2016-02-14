@@ -75,9 +75,9 @@ BlocklyDuino.blockPicture_maxi = function() {
 	
 	var blocks = xmlBlocks.getElementsByTagName("block");
 	
-	if (BlocklyDuino.pictSize<4) BlocklyDuino.pictSize++;
+	if (BlocklyDuino.pictSize<6) BlocklyDuino.pictSize++;
 	
-	if (BlocklyDuino.pictSize > 5) BlocklyDuino.pictSize=5;
+	if (BlocklyDuino.pictSize > 7) BlocklyDuino.pictSize=5;
 	
 	Blockly.Arduino.imageSize = 32 * BlocklyDuino.pictSize;
 	

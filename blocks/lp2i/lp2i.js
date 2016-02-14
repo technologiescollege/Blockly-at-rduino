@@ -4,7 +4,8 @@
 Blockly.Blocks['lp2i_mp3_init'] = {
   init: function() {
     this.appendDummyInput()
-		.appendField(Blockly.Msg.lp2i_mp3_init);
+		.appendField(Blockly.Msg.lp2i_mp3_init)
+		.appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/lp2i/dfplayer-mini-mp3-dfrobot.jpg', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize));
     this.appendValueInput("Pin_Rx" , 'Number')
         .setAlign(Blockly.ALIGN_RIGHT)
 		.appendField(Blockly.Msg.lp2i_mp3_init_Pin_Rx);		
@@ -28,7 +29,8 @@ Blockly.Blocks['lp2i_mp3_init'] = {
 Blockly.Blocks['lp2i_mp3_play'] = {
   init: function() {
     this.appendDummyInput()
-		.appendField(Blockly.Msg.lp2i_mp3);					
+		.appendField(Blockly.Msg.lp2i_mp3)
+		.appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/lp2i/dfplayer-mini-mp3-dfrobot.jpg', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize));					
     this.appendValueInput("Wait", 'Boolean')
         .setAlign(Blockly.ALIGN_RIGHT)
 		.appendField(Blockly.Msg.lp2i_mp3_Wait);	
@@ -46,7 +48,8 @@ Blockly.Blocks['lp2i_mp3_play'] = {
 Blockly.Blocks['lp2i_mp3_volume'] = {
   init: function() {
     this.appendDummyInput()
-		.appendField(Blockly.Msg.lp2i_mp3_Volume);			
+		.appendField(Blockly.Msg.lp2i_mp3_Volume)
+		.appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/lp2i/dfplayer-mini-mp3-dfrobot.jpg', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize));			
     this.appendValueInput("Volume" , 'Number')
         .setAlign(Blockly.ALIGN_RIGHT)
 		.appendField(Blockly.Msg.lp2i_mp3_Volume_Input);			
@@ -61,7 +64,8 @@ Blockly.Blocks['lp2i_mp3_volume'] = {
 Blockly.Blocks['lp2i_u8g_draw_string'] = {
  init: function() {
     this.appendDummyInput()
-        .appendField(Blockly.Msg.lp2i_u8g_draw_string);		
+        .appendField(Blockly.Msg.lp2i_u8g_draw_string)
+		.appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/lp2i/display-oled-128x64-i2c.jpg', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize));
     this.appendValueInput("Text" , 'String')
         .setAlign(Blockly.ALIGN_RIGHT)
 		.appendField(Blockly.Msg.lp2i_u8g_draw_string_Text);	  
@@ -82,7 +86,8 @@ Blockly.Blocks['lp2i_u8g_draw_string'] = {
 Blockly.Blocks['lp2i_u8g_draw_4strings'] = {
  init: function() {
     this.appendDummyInput()
-        .appendField(Blockly.Msg.lp2i_u8g_draw_4strings);
+        .appendField(Blockly.Msg.lp2i_u8g_draw_4strings)
+		.appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/lp2i/display-oled-128x64-i2c.jpg', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize));
     this.appendDummyInput()
         .appendField(Blockly.Msg.lp2i_u8g_draw_4strings_texts_to_display);		
     this.appendValueInput("Text_line1" , 'String')
@@ -108,7 +113,8 @@ Blockly.Blocks['lp2i_u8g_draw_4strings'] = {
 Blockly.Blocks['lp2i_u8g_print'] = {
  init: function() {
     this.appendDummyInput()
-        .appendField(Blockly.Msg.lp2i_u8g_print);		
+        .appendField(Blockly.Msg.lp2i_u8g_print)
+		.appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/lp2i/display-oled-128x64-i2c.jpg', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize));		
 	this.appendValueInput("N", 'Number')
         .setAlign(Blockly.ALIGN_RIGHT)
         .appendField(Blockly.Msg.lp2i_u8g_print_N);		
@@ -129,7 +135,8 @@ Blockly.Blocks['lp2i_u8g_print'] = {
 Blockly.Blocks['lp2i_u8g_4draw_print'] = {
  init: function() {
     this.appendDummyInput()
-        .appendField(Blockly.Msg.lp2i_u8g_4draw_print);		
+        .appendField(Blockly.Msg.lp2i_u8g_4draw_print)
+		.appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/lp2i/display-oled-128x64-i2c.jpg', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize));		
     this.appendDummyInput()
         .appendField(Blockly.Msg.lp2i_u8g_4draw_print_to_display);			
     this.appendValueInput("Text_line1" , 'String')
@@ -168,7 +175,8 @@ Blockly.Blocks['lp2i_u8g_4draw_print'] = {
 Blockly.Blocks['lp2i_ledRGB_WS2812B_init'] = {
   init: function() {
     this.appendDummyInput()
-        .appendField(Blockly.Msg.lp2i_ledRGB_WS2812B_init);				
+        .appendField(Blockly.Msg.lp2i_ledRGB_WS2812B_init)
+		.appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/lp2i/led-rgb-ws2812b.jpg', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize));
     this.appendValueInput("Pin_LedRGB" , 'Number')
         .setAlign(Blockly.ALIGN_RIGHT)
 		.appendField(Blockly.Msg.lp2i_ledRGB_WS2812B_init_Pin);				
@@ -186,7 +194,8 @@ Blockly.Blocks['lp2i_ledRGB_WS2812B_init'] = {
 Blockly.Blocks['lp2i_ledRGB_WS2812B_setPixelColor'] = {
   init: function() {
     this.appendDummyInput()
-        .appendField(Blockly.Msg.lp2i_ledRGB_WS2812B_setPixelColor);					
+        .appendField(Blockly.Msg.lp2i_ledRGB_WS2812B_setPixelColor)
+		.appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/lp2i/led-rgb-ws2812b.jpg', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize));					
     this.appendValueInput("Red" , 'Number')
         .setAlign(Blockly.ALIGN_RIGHT)
 		.appendField(Blockly.Msg.lp2i_ledRGB_WS2812B_setPixelColor_Red);			
