@@ -159,12 +159,31 @@ Blockly.Blocks.inout_pulsein = {
   init: function() {
     this.setColour("#00979D");
     this.setHelpUrl('http://arduino.cc/en/Reference/pulseIn');
-    this.appendDummyInput()
-		.appendField(Blockly.Msg.ARDUINO_PULSEIN)
-		.appendField(new Blockly.FieldTextInput('', Blockly.Arduino.pinDigitalValidator), 'PIN');
+    this.appendValueInput("PIN")
+        .setCheck("Number")
+        .appendField(Blockly.Msg.ARDUINO_PULSEIN);
 	this.appendDummyInput()
       	.appendField(Blockly.Msg.ARDUINO_INOUT_STAT)
 		.appendField(new Blockly.FieldDropdown(Blockly.Msg.FIELDDROPDOWN), 'STAT');
+    this.setInputsInline(true);
+    this.setOutput(true, 'Number');
+    this.setTooltip('Reads a pulse (either HIGH or LOW) on a pin. For example, if value is HIGH, pulseIn() waits for the pin to go HIGH, starts timing, then waits for the pin to go LOW and stops timing. Returns the length of the pulse in microseconds. Gives up and returns 0 if no pulse starts within a specified time out.');
+  }
+};
+
+Blockly.Blocks.inout_pulsein_timeout = {
+  init: function() {
+    this.setColour("#00979D");
+    this.setHelpUrl('http://arduino.cc/en/Reference/pulseIn');
+    this.appendValueInput("PIN")
+        .setCheck("Number")
+        .appendField(Blockly.Msg.ARDUINO_PULSEIN);
+	this.appendDummyInput()
+      	.appendField(Blockly.Msg.ARDUINO_INOUT_STAT)
+		.appendField(new Blockly.FieldDropdown(Blockly.Msg.FIELDDROPDOWN), 'STAT');
+	this.appendValueInput("TIMEOUT")
+        .setCheck("Number")
+        .appendField(Blockly.Msg.ARDUINO_PULSEIN_TIMEOUT);
     this.setInputsInline(true);
     this.setOutput(true, 'Number');
     this.setTooltip('Reads a pulse (either HIGH or LOW) on a pin. For example, if value is HIGH, pulseIn() waits for the pin to go HIGH, starts timing, then waits for the pin to go LOW and stops timing. Returns the length of the pulse in microseconds. Gives up and returns 0 if no pulse starts within a specified time out.');
