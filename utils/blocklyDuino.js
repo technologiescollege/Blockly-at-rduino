@@ -121,6 +121,12 @@ Blockly.Arduino.pinDigitalValidator = function(text) {
 	return (pos < 0) ? null : text;
 };
 
+Blockly.Arduino.pinInterruptValidator = function(text) {
+	var pos = profile.defaultBoard.interrupt.indexOf(text);
+		
+	return (pos < 0) ? null : text;
+};
+
 /**
  * Ensure that PIN and next PIN numbers exists in Digital array.
  * @param {string} text The user's text.

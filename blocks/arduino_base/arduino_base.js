@@ -395,3 +395,36 @@ Blockly.Blocks.inout_angle_maths = {
     this.setTooltip('angle °');
   }
 };
+
+
+Blockly.Blocks.inout_attachInterrupt = {
+  init: function() {
+    this.setColour("#00979D");
+	this.setHelpUrl('https://www.arduino.cc/en/Reference/AttachInterrupt');
+	this.appendDummyInput("")
+        .appendField(Blockly.Msg.LKL_ATTACHINTERRUPT_PIN)
+        .appendField(new Blockly.FieldDropdown(profile.defaultBoard.interrupt), 'PIN');
+    this.appendDummyInput("")
+      	.appendField(Blockly.Msg.LKL_MODE)
+      	.appendField(new Blockly.FieldDropdown([[Blockly.Msg.LKL_RISING, "RISING"], [Blockly.Msg.LKL_FALLING, "FALLING"], [Blockly.Msg.LKL_CHANGE, "CHANGE"], [Blockly.Msg.LKL_LOW, "LOW"]]), "mode");
+	this.appendStatementInput('DO')
+        .appendField(Blockly.Msg.CONTROLS_SWITCH_MSG_DO);
+    this.setInputsInline(true);
+    this.setPreviousStatement(true);
+    this.setNextStatement(true);
+	this.setTooltip(Blockly.Msg.LKL_TOOLTIP_INOUT_ATTACHINTERRUPT);
+  }
+};
+
+Blockly.Blocks.inout_detachInterrupt = {
+  init: function() {
+    this.setColour("#00979D");
+	this.setHelpUrl('https://www.arduino.cc/en/Reference/DetachInterrupt');
+	this.appendDummyInput("")
+        .appendField(Blockly.Msg.LKL_DETACHINTERRUPT_PIN)
+        .appendField(new Blockly.FieldTextInput('',  Blockly.Arduino.pinInterruptValidator), 'PIN');
+    this.setPreviousStatement(true);
+    this.setNextStatement(true);
+	this.setTooltip(Blockly.Msg.LKL_TOOLTIP_INOUT_DETACHINTERRUPT);
+  }
+};

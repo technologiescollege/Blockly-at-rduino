@@ -550,9 +550,19 @@ Blockly.Msg.ARDUINO_SERIAL_PRINT_CONTENT = "afficher sur le port série le texte
 Blockly.Msg.ARDUINO_SERIAL_PRINTLN_CONTENT = "afficher, puis saut, sur le port série le texte";
 Blockly.Msg.ARDUINO_SERIAL_PRINT_TAB_CONTENT = "afficher, avec une tabulation, sur le port série le texte";
 Blockly.Msg.ARDUINO_SERIAL_PRINT_TOOLTIP = "envoie des données sur le port série pour surveillance par le moniteur en ASCII";
-Blockly.Msg.ARDUINO_SERIAL_PRINT_VAR_TEXT = "afficher sur le port série le texte :"; //¨Proposé par LP2I le 07/02/16
-Blockly.Msg.ARDUINO_SERIAL_PRINT_VAR_NUMBER = "suivi du nombre :"; //¨Proposé par LP2I le 07/02/16
-Blockly.Msg.ARDUINO_SERIAL_PRINT_VAR_NEW_LINE = "puis d'un saut de ligne ?"; //¨Proposé par LP2I le 07/02/16
+Blockly.Msg.ARDUINO_SERIAL_PRINT_VAR_TEXT = "afficher sur le port série le texte :";
+Blockly.Msg.ARDUINO_SERIAL_PRINT_VAR_NUMBER = "suivi du nombre :";
+Blockly.Msg.ARDUINO_SERIAL_PRINT_VAR_NEW_LINE = "puis d'un saut de ligne ?";
+
+Blockly.Msg.LKL_ATTACHINTERRUPT_PIN = 'quand une interruption externe sur la broche';
+Blockly.Msg.LKL_DETACHINTERRUPT_PIN = "désactiver l'interruption externe de la broche";
+Blockly.Msg.LKL_TOOLTIP_INOUT_ATTACHINTERRUPT = "surveille une interruption sur une broche spécifique, voir l'aide !";
+Blockly.Msg.LKL_TOOLTIP_INOUT_DETACHINTERRUPT = 'Detachs interrupt to a specific Port';
+Blockly.Msg.LKL_RISING = 'front montant';
+Blockly.Msg.LKL_FALLING = 'front descendant';
+Blockly.Msg.LKL_CHANGE = "changement d'état";
+Blockly.Msg.LKL_LOW = "état bas";
+Blockly.Msg.LKL_MODE = 'correspond à un';
 
 //SERIAL
 Blockly.Msg.Serial_Print="afficher sur la console série";
