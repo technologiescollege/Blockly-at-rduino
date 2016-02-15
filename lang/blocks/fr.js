@@ -419,9 +419,8 @@ Blockly.Msg.CAT_ARDUINO = "arduino";
 Blockly.Msg.CAT_ARDUINO_IN = "entrées";
 Blockly.Msg.CAT_ARDUINO_OUT = "sorties";
 Blockly.Msg.CAT_ARDUINO_CONVERSION = "conversions";
-Blockly.Msg.CAT_ARDUINO_COMM = "communication";
-Blockly.Msg.CAT_ARDUINO_COMM_SERIAL = "sur le port série";
-Blockly.Msg.CAT_ARDUINO_COMM_SOFTSERIAL = "par liaison logicielle";
+Blockly.Msg.CAT_ARDUINO_COMM_SERIAL = "communication série";
+Blockly.Msg.CAT_ARDUINO_COMM_SOFTSERIAL = "communication logicielle";
 Blockly.Msg.CAT_ARDUINO_SERVO = "servo-moteur";
 
 Blockly.Msg.CAT_LED_RGB_CHAIN = "DEL RGB en série";
@@ -457,7 +456,7 @@ Blockly.Msg.CAT_ZUMO = "ZumoBot";	//added april 6th 2015
 Blockly.Msg.CAT_ZUMO_MOTORS = "moteurs";
 Blockly.Msg.CAT_ZUMO_SENSORS = "divers";
 
-Blockly.Msg.CAT_ROBOTS = "robots & cartes dédiées"; //Added April 7 2015 ESK
+Blockly.Msg.CAT_ROBOTS = "robots & cartes diverses"; //Added April 7 2015 ESK
 Blockly.Msg.CAT_ROBOTS_MOTORS = "moteurs";
 Blockly.Msg.CAT_ROBOT_MISC = "divers";
 

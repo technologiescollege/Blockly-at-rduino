@@ -424,8 +424,7 @@ Blockly.Msg.CAT_ARDUINO = "Arduino";
 Blockly.Msg.CAT_ARDUINO_IN = "In";
 Blockly.Msg.CAT_ARDUINO_OUT = "Out";
 Blockly.Msg.CAT_ARDUINO_CONVERSION = "converting";
-Blockly.Msg.CAT_ARDUINO_COMM = "serial communication";
-Blockly.Msg.CAT_ARDUINO_COMM_SERIAL = "serial port";
+Blockly.Msg.CAT_ARDUINO_COMM_SERIAL = "serial communication";
 Blockly.Msg.CAT_ARDUINO_COMM_SOFTSERIAL = "softserial lib";
 Blockly.Msg.CAT_ARDUINO_SERVO = "Servo-Motor";
 

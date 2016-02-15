@@ -21,7 +21,7 @@ Blockly.Blocks['lp2i_mp3_init'] = {
     this.setInputsInline(false);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    this.setColour("#00979D");
+    this.setColour("#F39800");
     this.setTooltip('');
     this.setHelpUrl('http://blogpeda.ac-poitiers.fr/techno-jean-mace/2016/02/07/utilisation-dun-module-audio-le-dfplayer-mini-mp3-de-dfrobot-avec-blockly-arduino/');
   }
@@ -40,7 +40,7 @@ Blockly.Blocks['lp2i_mp3_play'] = {
     this.setInputsInline(false);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    this.setColour("#00979D");
+    this.setColour("#F39800");
     this.setTooltip('');
     this.setHelpUrl('http://blogpeda.ac-poitiers.fr/techno-jean-mace/2016/02/07/utilisation-dun-module-audio-le-dfplayer-mini-mp3-de-dfrobot-avec-blockly-arduino/');
   }
@@ -56,7 +56,7 @@ Blockly.Blocks['lp2i_mp3_volume'] = {
     this.setInputsInline(false);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    this.setColour("#00979D");
+    this.setColour("#F39800");
     this.setTooltip('');
     this.setHelpUrl('http://blogpeda.ac-poitiers.fr/techno-jean-mace/2016/02/07/utilisation-dun-module-audio-le-dfplayer-mini-mp3-de-dfrobot-avec-blockly-arduino/');
   }

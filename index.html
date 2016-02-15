@@ -33,6 +33,7 @@
 <script type="text/javascript" src="blocks/led-rgb-ws2812b/led-rgb-ws2812b.js"></script>
 <script type="text/javascript" src="blocks/serial/serial.js"></script>
 <script type="text/javascript" src="blocks/serial/softserial.js"></script>
+<script type="text/javascript" src="blocks/servo/servo.js"></script>
 <script type="text/javascript" src="blocks/technozone51/technozone51.js"></script>
 <!--script type="text/javascript" src="blocks/technozone51/technozone51_barbot.js"></script-->
 <script type="text/javascript" src="blocks/zumobot/zumo_motors.js"></script>
@@ -57,6 +58,7 @@
 <script type="text/javascript" src="generators/arduino/jeulin_maquette_feux.js"></script>
 <script type="text/javascript" src="generators/arduino/led-rgb-ws2812b.js"></script>
 <script type="text/javascript" src="generators/arduino/serial.js"></script>
+<script type="text/javascript" src="generators/arduino/servo.js"></script>
 <script type="text/javascript" src="generators/arduino/softserial.js"></script>
 <script type="text/javascript" src="generators/arduino/technozone51.js"></script>
 <!--script type="text/javascript" src="generators/arduino/technozone51_barbot.js"></script-->
@@ -695,253 +697,237 @@
             </block>
             <block type="notone"></block>
 		</category>
-		<category name="CAT_ARDUINO_COMM" colour="#00979D">	
-			<category name="CAT_ARDUINO_COMM_SERIAL" colour="#00979D">
-				<block type="serial_flush"></block>
-				<block type="serial_write"></block>
-				<block type="serial_printfor"></block>
-				<block type="serial_print">
-					<value name="CONTENT">
-					<shadow type="text">
-					<field name="TEXT"></field>
-					</shadow>
-					</value>
-				</block>
-				<block type="serial_print_tab">
-					<value name="CONTENT">
-					<shadow type="text">
-					<field name="TEXT"></field>
-					</shadow>
-					</value>
-				</block>
-				<block type="serial_println">
-					<value name="CONTENT">
-					<shadow type="text">
-					<field name="TEXT"></field>
-					</shadow>
-					</value>
-				</block>
-				<block type="serial_print_var">
-					<value name="Text">
-						<shadow type="text">
-						<field name="TEXT"></field>
-						</shadow>
-					</value>
-					<value name="N">
-						<shadow type="math_number">
-						<field name="Num"></field>
-						</shadow>
-					</value>	
-					<value name="NEW_LINE"> 
-						<shadow type="logic_boolean">1
-						</shadow>
-					</value>
-				</block>		
-				<block type="serial_write_out"></block>
-				<block type="serial_available"></block>
-				<block type="serial_read"></block>
-			</category>
-			<category name="CAT_ARDUINO_COMM_SOFTSERIAL" colour="#00979D">
-				<block type="soft_init"></block>
-				<block type="soft_print"></block>
-				<block type="soft_write"></block>
-				<block type="soft_available"></block>
-				<block type="soft_read"></block>
-			</category>
-			<sep></sep>
-        </category>
-		<category name="CAT_OLED_U8G" colour="#00979D">
-			<block type="lp2i_u8g_draw_string">
-				<value name="Text">
-					<shadow type="text">
-					<field name="TEXT">Exemple</field>
-					</shadow>
-				</value>					
-				<value name="X">
-					<shadow type="math_number">
-					<field name="NUM">0</field>
-					</shadow>
-				</value>
-				<value name="Y">
-					<shadow type="math_number">
-					<field name="NUM">12</field>
-					</shadow>	
-				</value>
-			</block>				
-			<block type="lp2i_u8g_draw_4strings">
-				<value name="Text_line1">
-					<shadow type="text">
-					<field name="TEXT">Exemple ligne 1</field>
-					</shadow>
-				</value>
-				<value name="Text_line2">
-					<shadow type="text">
-					<field name="TEXT">Exemple ligne 2</field>
-					</shadow>
-				</value>
-				<value name="Text_line3">
-					<shadow type="text">
-					<field name="TEXT">Exemple ligne 3</field>
-					</shadow>
-				</value>
-				<value name="Text_line4">
-					<shadow type="text">
-					<field name="TEXT">Exemple ligne 4</field>
-					</shadow>
-				</value>					
-			</block>
-			<block type="lp2i_u8g_print">		
-				<value name="N">
-					<shadow type="math_number">
-					<field name="Num">0</field>
-					</shadow>
-				</value>					
-				<value name="X">
-					<shadow type="math_number">
-					<field name="NUM">0</field>
-					</shadow>
-				</value>
-				<value name="Y">
-					<shadow type="math_number">
-					<field name="NUM">12</field>
-					</shadow>	
-				</value>
-			</block>
-			<block type="lp2i_u8g_4draw_print">
-				<value name="Text_line1">
-					<shadow type="text">
-					<field name="TEXT">Exemple ligne 1</field>
-					</shadow>
-				</value>
-				<value name="N1">
-					<shadow type="math_number">
-					<field name="Num">0</field>
-					</shadow>
-				</value>
-				<value name="Text_line2">
-					<shadow type="text">
-					<field name="TEXT"></field>
-					</shadow>
-				</value>
-				<value name="N2">
-					<shadow type="math_number">
-					<field name="Num"></field>
-					</shadow>
-				</value>					
-				<value name="Text_line3">
-					<shadow type="text">
-					<field name="TEXT"></field>
-					</shadow>
-				</value>
-				<value name="N3">
-					<shadow type="math_number">
-					<field name="Num"></field>
-					</shadow>
-				</value>					
-				<value name="Text_line4">
-					<shadow type="text">
-					<field name="TEXT"></field>
-					</shadow>
-				</value>
-				<value name="N4">
-					<shadow type="math_number">
-					<field name="Num"></field>
-					</shadow>
-				</value>					
-			</block>
-		</category>
-		<category name="CAT_LED_RGB_CHAIN" colour="#00979D">
-			<block type="lp2i_ledRGB_WS2812B_init">
-				<value name="Pin_LedRGB">
-					<shadow type="math_number">
-					<field name="NUM">6</field>
-					</shadow>
-				</value>
-				<value name="Number_of_Pixels">
-					<shadow type="math_number">
-					<field name="NUM">1</field>
-					</shadow>	
-				</value>				
-			</block>
-			<block type="lp2i_ledRGB_WS2812B_setPixelColor">
-				<value name="Pixel_number">
-					<shadow type="math_number">
-					<field name="NUM">0</field>
-					</shadow>	
-				</value>				
-				<value name="Red">
-					<shadow type="math_number">
-					<field name="NUM">255</field>
-					</shadow>
-				</value>
-				<value name="Green">
-					<shadow type="math_number">
-					<field name="NUM">255</field>
-					</shadow>
-				</value>				
-				<value name="Blue">
-					<shadow type="math_number">
-					<field name="NUM">255</field>
-					</shadow>	
-				</value>				
-			</block>
-		</category>
-		<category name="CAT_DFPLAYER" colour="#00979D">
-			<block type="lp2i_mp3_init">
-				<value name="Pin_Rx">
-					<shadow type="math_number">
-					<field name="NUM">11</field>
-					</shadow>
-				</value>
-				<value name="Pin_Tx">
-					<shadow type="math_number">
-					<field name="NUM">10</field>
-					</shadow>	
-				</value>
-				<value name="Pin_Busy">
-					<shadow type="math_number">
-					<field name="NUM">12</field>
-					</shadow>	
-				</value>				
-				<value name="Volume">
-					<shadow type="math_number">
-					<field name="NUM">20</field>
-					</shadow>	
-				</value>					
-			</block>
-			<block type="lp2i_mp3_play">
-				<value name="File">
-					<shadow type="math_number">
-					<field name="NUM">0</field>
-					</shadow>
-				</value>
-				<value name="Wait">
-					<shadow type="logic_boolean">1
-					</shadow>
-				</value>
-			</block>
-			<block type="lp2i_mp3_volume">
-				<value name="Volume">
-					<shadow type="math_number">
-					<field name="NUM">25</field>
-					</shadow>
-				</value>
-			</block>
-		</category>
-		<category name="CAT_ARDUINO_SERVO" colour="#00979D">
-			<block type="servo_move">
-				<value name="DEGREE">
-				<shadow type="inout_angle">
-				<field name="NUM">0</field>
+		<category name="CAT_ARDUINO_COMM_SERIAL" colour="#00979D">
+			<block type="serial_flush"></block>
+			<block type="serial_write"></block>
+			<block type="serial_printfor"></block>
+			<block type="serial_print">
+				<value name="CONTENT">
+				<shadow type="text">
+				<field name="TEXT"></field>
 				</shadow>
 				</value>
 			</block>
-			<block type="servo_read_degrees"></block>
-			<block type="servo_attached"></block>
-			<block type="servo_detach"></block>
+			<block type="serial_print_tab">
+				<value name="CONTENT">
+				<shadow type="text">
+				<field name="TEXT"></field>
+				</shadow>
+				</value>
+			</block>
+			<block type="serial_println">
+				<value name="CONTENT">
+				<shadow type="text">
+				<field name="TEXT"></field>
+				</shadow>
+				</value>
+			</block>
+			<block type="serial_print_var">
+				<value name="Text">
+					<shadow type="text">
+					<field name="TEXT"></field>
+					</shadow>
+				</value>
+				<value name="N">
+					<shadow type="math_number">
+					<field name="Num"></field>
+					</shadow>
+				</value>	
+				<value name="NEW_LINE"> 
+					<shadow type="logic_boolean">1
+					</shadow>
+				</value>
+			</block>		
+			<block type="serial_write_out"></block>
+			<block type="serial_available"></block>
+			<block type="serial_read"></block>
 		</category>
-    </category>
-	<sep></sep>
+		<category name="CAT_ARDUINO_COMM_SOFTSERIAL" colour="#00979D">
+			<block type="soft_init"></block>
+			<block type="soft_print"></block>
+			<block type="soft_write"></block>
+			<block type="soft_available"></block>
+			<block type="soft_read"></block>
+		</category>
+	</category>	
+	<category name="CAT_OLED_U8G" colour="#1B2944">
+		<block type="lp2i_u8g_draw_string" colour="#1B2944">
+			<value name="Text">
+				<shadow type="text">
+				<field name="TEXT">Exemple</field>
+				</shadow>
+			</value>					
+			<value name="X">
+				<shadow type="math_number">
+				<field name="NUM">0</field>
+				</shadow>
+			</value>
+			<value name="Y">
+				<shadow type="math_number">
+				<field name="NUM">12</field>
+				</shadow>	
+			</value>
+		</block>				
+		<block type="lp2i_u8g_draw_4strings" colour="#1B2944">
+			<value name="Text_line1">
+				<shadow type="text">
+				<field name="TEXT">Exemple ligne 1</field>
+				</shadow>
+			</value>
+			<value name="Text_line2">
+				<shadow type="text">
+				<field name="TEXT">Exemple ligne 2</field>
+				</shadow>
+			</value>
+			<value name="Text_line3">
+				<shadow type="text">
+				<field name="TEXT">Exemple ligne 3</field>
+				</shadow>
+			</value>
+			<value name="Text_line4">
+				<shadow type="text">
+				<field name="TEXT">Exemple ligne 4</field>
+				</shadow>
+			</value>					
+		</block>
+		<block type="lp2i_u8g_print" colour="#1B2944">		
+			<value name="N">
+				<shadow type="math_number">
+				<field name="Num">0</field>
+				</shadow>
+			</value>					
+			<value name="X">
+				<shadow type="math_number">
+				<field name="NUM">0</field>
+				</shadow>
+			</value>
+			<value name="Y">
+				<shadow type="math_number">
+				<field name="NUM">12</field>
+				</shadow>	
+			</value>
+		</block>
+		<block type="lp2i_u8g_4draw_print" colour="#1B2944">
+			<value name="Text_line1">
+				<shadow type="text">
+				<field name="TEXT">Exemple ligne 1</field>
+				</shadow>
+			</value>
+			<value name="N1">
+				<shadow type="math_number">
+				<field name="Num">0</field>
+				</shadow>
+			</value>
+			<value name="Text_line2">
+				<shadow type="text">
+				<field name="TEXT"></field>
+				</shadow>
+			</value>
+			<value name="N2">
+				<shadow type="math_number">
+				<field name="Num"></field>
+				</shadow>
+			</value>					
+			<value name="Text_line3">
+				<shadow type="text">
+				<field name="TEXT"></field>
+				</shadow>
+			</value>
+			<value name="N3">
+				<shadow type="math_number">
+				<field name="Num"></field>
+				</shadow>
+			</value>					
+			<value name="Text_line4">
+				<shadow type="text">
+				<field name="TEXT"></field>
+				</shadow>
+			</value>
+			<value name="N4">
+				<shadow type="math_number">
+				<field name="Num"></field>
+				</shadow>
+			</value>					
+		</block>
+	</category>
+	<category name="CAT_LED_RGB_CHAIN" colour="#C9D7E2">
+		<block type="lp2i_ledRGB_WS2812B_init">
+			<value name="Pin_LedRGB">
+				<shadow type="math_number">
+				<field name="NUM">6</field>
+				</shadow>
+			</value>
+			<value name="Number_of_Pixels">
+				<shadow type="math_number">
+				<field name="NUM">1</field>
+				</shadow>	
+			</value>				
+		</block>
+		<block type="lp2i_ledRGB_WS2812B_setPixelColor">
+			<value name="Pixel_number">
+				<shadow type="math_number">
+				<field name="NUM">0</field>
+				</shadow>	
+			</value>				
+			<value name="Red">
+				<shadow type="math_number">
+				<field name="NUM">255</field>
+				</shadow>
+			</value>
+			<value name="Green">
+				<shadow type="math_number">
+				<field name="NUM">255</field>
+				</shadow>
+			</value>				
+			<value name="Blue">
+				<shadow type="math_number">
+				<field name="NUM">255</field>
+				</shadow>	
+			</value>				
+		</block>
+	</category>
+	<category name="CAT_DFPLAYER" colour="#F39800">
+		<block type="lp2i_mp3_init">
+			<value name="Pin_Rx">
+				<shadow type="math_number">
+				<field name="NUM">11</field>
+				</shadow>
+			</value>
+			<value name="Pin_Tx">
+				<shadow type="math_number">
+				<field name="NUM">10</field>
+				</shadow>	
+			</value>
+			<value name="Pin_Busy">
+				<shadow type="math_number">
+				<field name="NUM">12</field>
+				</shadow>	
+			</value>				
+			<value name="Volume">
+				<shadow type="math_number">
+				<field name="NUM">20</field>
+				</shadow>	
+			</value>					
+		</block>
+		<block type="lp2i_mp3_play">
+			<value name="File">
+				<shadow type="math_number">
+				<field name="NUM">0</field>
+				</shadow>
+			</value>
+			<value name="Wait">
+				<shadow type="logic_boolean">1
+				</shadow>
+			</value>
+		</block>
+		<block type="lp2i_mp3_volume">
+			<value name="Volume">
+				<shadow type="math_number">
+				<field name="NUM">25</field>
+				</shadow>
+			</value>
+		</block>
+	</category>
     <category name="CAT_BQ" colour="#608621">
         <category name="CAT_BQ_IN" colour="#608621">
             <block type="bq_ultrason">
@@ -1287,7 +1273,6 @@
             <block type="technozone_robot_ihm_gauge_write"></block>
         </category>
     </category>
-
     <category name="CAT_TECHNOZONE_ROBOT" colour="#646464">
         <category name="CAT_TECHNOZONE_ROBOT_IN" colour="#646464">
             <block type="technozone_robot_btn"></block>
@@ -1585,6 +1570,18 @@
 			<block type="IR_get"></block>
         </category>
     </category>
+	<category name="CAT_ARDUINO_SERVO" colour="#2475FA">
+		<block type="servo_move">
+			<value name="DEGREE">
+			<shadow type="inout_angle">
+			<field name="NUM">0</field>
+			</shadow>
+			</value>
+		</block>
+		<block type="servo_read_degrees"></block>
+		<block type="servo_attached"></block>
+		<block type="servo_detach"></block>
+	</category>
 </xml>
 
 </body>
