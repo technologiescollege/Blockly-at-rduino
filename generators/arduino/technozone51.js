@@ -868,7 +868,7 @@ Blockly.Arduino.technozone_robot_ihm_potar_read = function() {
 };
 
 Blockly.Arduino.technozone_robot_bt_read = function() {
-  var text = Blockly.Arduino.valueToCode(this, 'TEXT', Blockly.Arduino.ORDER_UNARY_POSTFIX) || '\'\''; 
+  //var text = Blockly.Arduino.valueToCode(this, 'TEXT', Blockly.Arduino.ORDER_UNARY_POSTFIX) || '\'\''; 
   //dans include définition    
   Blockly.Arduino.definitions_['define_SoftwareSerial'] = "#include <SoftwareSerial.h>\n";      
   Blockly.Arduino.definitions_['define_var_time_out'] = "boolean time_out;\n";
@@ -876,7 +876,8 @@ Blockly.Arduino.technozone_robot_bt_read = function() {
   
   //dans setup     
   Blockly.Arduino.setups_['setup_bt'] = 'bt.begin(9600);';   
-  var code = '(stringOne = ' +text+ ')';
+  //var code = '(stringOne = ' +text+ ')';
+  var code = 'stringOne';
   return [code, Blockly.Arduino.ORDER_ATOMIC];
 };
 

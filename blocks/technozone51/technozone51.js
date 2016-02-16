@@ -865,7 +865,7 @@ Blockly.Blocks['technozone_robot_bt_read'] = {
   init: function() {
     this.setColour("#646464");
 	this.setHelpUrl('http://www.techno-zone-51.fr/dokuwiki2/doku.php?id=documentation:btihm1');
-    this.appendValueInput("TEXT", String)
+    this.appendDummyInput("")	
         .setAlign(Blockly.ALIGN_RIGHT)
         .appendField(Blockly.Msg.TECHNOZONE51_TEXT161);
     this.setOutput(true, 'String');
