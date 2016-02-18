@@ -109,9 +109,9 @@ BlocklyDuino.cardPicture_maxi = function() {
 	
 	if (BlocklyDuino.cardSize > 3) BlocklyDuino.cardSize=5;
 	
-	if (BlocklyDuino.cardSize == 1) $('#arduino_card_picture').attr("src", profile.defaultBoard['picture']);
-	if (BlocklyDuino.cardSize == 2) $('#arduino_card_picture').attr("src", profile.defaultBoard['demiepicture']);
-	if (BlocklyDuino.cardSize == 3) $('#arduino_card_picture').attr("src", profile.defaultBoard['minipicture']);
+	if (BlocklyDuino.cardSize == 1) document.getElementById('arduino_card_picture').src=profile.defaultBoard['minipicture'];
+	if (BlocklyDuino.cardSize == 2) document.getElementById('arduino_card_picture').src=profile.defaultBoard['demiepicture'];
+	if (BlocklyDuino.cardSize == 3) document.getElementById('arduino_card_picture').src=profile.defaultBoard['picture'];
 	
 };
 
@@ -120,9 +120,10 @@ BlocklyDuino.cardPicture_mini = function() {
 	if (BlocklyDuino.cardSize>0) BlocklyDuino.cardSize--;
 	
 	if (BlocklyDuino.cardSize <1) BlocklyDuino.cardSize=0;
-	if (BlocklyDuino.cardSize == 1) $('#arduino_card_picture').attr("src", profile.defaultBoard['picture']);
-	if (BlocklyDuino.cardSize == 2) $('#arduino_card_picture').attr("src", profile.defaultBoard['demiepicture']);
-	if (BlocklyDuino.cardSize == 3) $('#arduino_card_picture').attr("src", profile.defaultBoard['minipicture']);
+	
+	if (BlocklyDuino.cardSize == 1) document.getElementById('arduino_card_picture').src=profile.defaultBoard['minipicture'];
+	if (BlocklyDuino.cardSize == 2) document.getElementById('arduino_card_picture').src=profile.defaultBoard['demiepicture'];
+	if (BlocklyDuino.cardSize == 3) document.getElementById('arduino_card_picture').src=profile.defaultBoard['picture'];
 };
 /**
  * Toggle blocks rendering : inline or block
@@ -342,6 +343,7 @@ BlocklyDuino.setArduinoCard =  function () {
 	// set the card from url parameters
 	window.profile["defaultBoard"]=window.profile[$("#pinout").val()];
 	$('#arduino_card_picture').attr("src", profile.defaultBoard['picture']);
+	$('#arduino_card_demiepicture').attr("src", profile.defaultBoard['demiepicture']);
 	$('#arduino_card_miniPicture').attr("src", profile.defaultBoard['miniPicture']);
 };
 
