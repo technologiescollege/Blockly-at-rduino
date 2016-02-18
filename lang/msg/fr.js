@@ -23,6 +23,7 @@ var MSG = {
   btn_edit_code :"éditer le code",
   cb_cf_flash_btn: "téléverser dans l'Arduino",
   button_saveArduino: "sauvegarde en fichier INO",
+  span_pasteIDEArduino: "copier dans l'IDE Arduino",
   span_connect_serial: " connecter la console série",
   a_blocks:" blocs",
   a_arduino:" code Arduino",

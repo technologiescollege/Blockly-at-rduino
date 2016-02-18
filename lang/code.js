@@ -199,6 +199,7 @@ Code.initLanguage = function() {
   $('#span_verify_codebender').text(MSG['span_verify_codebender']);
   $('#span_flash_codebender').text(MSG['span_flash_codebender']);
   $('#span_saveIno').text(MSG['span_saveIno']);
+  $('#span_pasteIDEArduino').text(MSG['span_pasteIDEArduino']);
   $('#span_connect_serial').text(MSG['span_connect_serial']);
   $('#span_edit_code').text(MSG['span_edit_code']);
 

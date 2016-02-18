@@ -23,6 +23,7 @@ var MSG = {
   btn_edit_code :"edit code",
   cb_cf_flash_btn: "upload to Arduino !",
   button_saveArduino: "save to INO file",
+  span_pasteIDEArduino: "paste to Arduino IDE",
   span_connect_serial: " connect serial console",
   a_blocks:" blocks",
   a_arduino:" Arduino code",
