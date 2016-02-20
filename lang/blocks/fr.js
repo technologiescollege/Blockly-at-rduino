@@ -559,11 +559,8 @@ Blockly.Msg.LKL_ATTACHINTERRUPT_PIN = 'quand une interruption externe sur la bro
 Blockly.Msg.LKL_DETACHINTERRUPT_PIN = "désactiver l'interruption externe de la broche";
 Blockly.Msg.LKL_TOOLTIP_INOUT_ATTACHINTERRUPT = "surveille une interruption sur une broche spécifique, voir l'aide !";
 Blockly.Msg.LKL_TOOLTIP_INOUT_DETACHINTERRUPT = 'Detachs interrupt to a specific Port';
-Blockly.Msg.LKL_RISING = 'front montant';
-Blockly.Msg.LKL_FALLING = 'front descendant';
-Blockly.Msg.LKL_CHANGE = "changement d'état";
-Blockly.Msg.LKL_LOW = "état bas";
 Blockly.Msg.LKL_MODE = 'correspond à un';
+Blockly.Msg.LKL_DROPDOWN = [['front montant', "RISING"], ['front descendant', "FALLING"], ["changement d'état", "CHANGE"], ["état bas", "LOW"]];
 
 //SERIAL
 Blockly.Msg.Serial_Print="afficher sur la console série";

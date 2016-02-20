@@ -560,14 +560,12 @@ Blockly.Msg.ARDUINO_SERIAL_PRINT_VAR_TEXT = "print text on serial port :";
 Blockly.Msg.ARDUINO_SERIAL_PRINT_VAR_NUMBER = "with this following number :"; 
 Blockly.Msg.ARDUINO_SERIAL_PRINT_VAR_NEW_LINE = "and go to a new line ?";
 
-Blockly.Msg.LKL_ATTACHINTERRUPT_PIN='attachInterrupt pin#';
-Blockly.Msg.LKL_DETACHINTERRUPT_PIN='detachInterrupt pin#';
-Blockly.Msg.LKL_TOOLTIP_INOUT_ATTACHINTERRUPT='Board\t' + 'Digital Pins Usable For Interrupts\n' + 'Uno, Nano, Mini, other 328-based\t' + '2, 3\n' + 'Mega, Mega2560, MegaADK\t' + '2, 3, 18, 19, 20, 21\n' + 'Micro, Leonardo, other 32u4-based\t' + '0, 1, 2, 3, 7\n' + 'Zero, MKR1000\t' + 'all digital pins, except 4\n' + 'Due\t' + 'all digital pins\n';
-Blockly.Msg.LKL_TOOLTIP_INOUT_DETACHINTERRUPT='Detachs interrupt to a specific Port';
-Blockly.Msg.LKL_RISING='RISING';
-Blockly.Msg.LKL_FALLING='FALLING';
-Blockly.Msg.LKL_CHANGE='CHANGE';
+Blockly.Msg.LKL_ATTACHINTERRUPT_PIN = "attachInterrupt pin#";
+Blockly.Msg.LKL_DETACHINTERRUPT_PIN = "detachInterrupt pin#";
+Blockly.Msg.LKL_TOOLTIP_INOUT_ATTACHINTERRUPT = 'Attachs interrupt to a specific Port';
+Blockly.Msg.LKL_TOOLTIP_INOUT_DETACHINTERRUPT = 'Detachs interrupt to a specific Port';
 Blockly.Msg.LKL_MODE = 'mode';
+Blockly.Msg.LKL_DROPDOWN = [['RISING', "RISING"], ['FALLING', "FALLING"], ['CHANGE', "CHANGE"], ['LOW', "LOW"]];
 
 //SERIAL
 Blockly.Msg.Serial_Print="Serial Print console";
