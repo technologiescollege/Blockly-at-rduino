@@ -34,8 +34,7 @@ Blockly.Arduino.imageSizeBig = 96; //pictSize = 3
 Blockly.Arduino.imageSizeOld = 32;
 Blockly.Arduino.imageSize = Blockly.Arduino.imageSizeNormal;
 Blockly.Arduino.imageBool = true;
-Blockly.Arduino.cardSize = 3;
-Blockly.Arduino.cardBool = true;
+Blockly.Arduino.cardSize = 200; //same as width in index.html showcardModal
 /**
  * Blockly's main workspace.
  * @type {Blockly.WorkspaceSvg}
@@ -104,26 +103,27 @@ BlocklyDuino.blockPicture_mini = function() {
 };
 
 BlocklyDuino.cardPicture_maxi = function() {	
-
-	if (BlocklyDuino.cardSize<4) BlocklyDuino.cardSize++;
+	var img = $("#arduino_card_picture");
+	var modal = $("#showcardModal");
 	
-	if (BlocklyDuino.cardSize > 3) BlocklyDuino.cardSize=5;
-	
-	if (BlocklyDuino.cardSize == 1) document.getElementById('arduino_card_picture').src=profile.defaultBoard['minipicture'];
-	if (BlocklyDuino.cardSize == 2) document.getElementById('arduino_card_picture').src=profile.defaultBoard['demiepicture'];
-	if (BlocklyDuino.cardSize == 3) document.getElementById('arduino_card_picture').src=profile.defaultBoard['picture'];
-	
+    if ((img.width() < 450)||(img.height() < 650))
+    {
+		Blockly.Arduino.cardSize += 50;
+		img.animate({width: Blockly.Arduino.cardSize}, 1000);
+		modal.animate({width: Blockly.Arduino.cardSize + 50}, 1000);
+    }	
 };
 
 BlocklyDuino.cardPicture_mini = function() {
-	
-	if (BlocklyDuino.cardSize>0) BlocklyDuino.cardSize--;
-	
-	if (BlocklyDuino.cardSize <1) BlocklyDuino.cardSize=0;
-	
-	if (BlocklyDuino.cardSize == 1) document.getElementById('arduino_card_picture').src=profile.defaultBoard['minipicture'];
-	if (BlocklyDuino.cardSize == 2) document.getElementById('arduino_card_picture').src=profile.defaultBoard['demiepicture'];
-	if (BlocklyDuino.cardSize == 3) document.getElementById('arduino_card_picture').src=profile.defaultBoard['picture'];
+	var img = $("#arduino_card_picture");
+	var modal = $("#showcardModal");
+    
+    if ((img.width() > 200)||(img.height() > 220))
+    {
+		Blockly.Arduino.cardSize -= 50;
+		img.animate({width: Blockly.Arduino.cardSize}, 1000);
+		modal.animate({width: Blockly.Arduino.cardSize + 50}, 1000);
+    }	
 };
 /**
  * Toggle blocks rendering : inline or block
@@ -343,7 +343,6 @@ BlocklyDuino.setArduinoCard =  function () {
 	// set the card from url parameters
 	window.profile["defaultBoard"]=window.profile[$("#pinout").val()];
 	$('#arduino_card_picture').attr("src", profile.defaultBoard['picture']);
-	$('#arduino_card_demiepicture').attr("src", profile.defaultBoard['demiepicture']);
 	$('#arduino_card_miniPicture').attr("src", profile.defaultBoard['miniPicture']);
 };
 
@@ -560,6 +559,7 @@ BlocklyDuino.bindFunctions = function() {
 	$('#miniCard, #btn_picture').on('click', function() {
 		$('#showcardModal').css("z-index", 1040);
 		$('#showcardModal').css("display", "inline-block");
+		Blockly.Arduino.cardSize = 200;
 	});
 
 	$('#showcardModal button.close').on('click', function() {

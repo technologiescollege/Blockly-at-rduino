@@ -69,10 +69,22 @@ html[dir="RTL"] .menuPanel-ver {
 }
 
 .div_close_modal {
-    padding-right: 10px;	
-    float: right;
+	padding-right: 10px;	
+	float: right;
 	bottom: 10px;
 	position: absolute;
+	text-align: center;
+}
+
+#btn_card_picture_mini {
+	padding-right: 10px;	
+	float: left;
+	text-align: center;
+}
+
+#btn_card_picture_maxi {
+	padding-right: 10px;	
+	float: left;
 	text-align: center;
 }
 
