@@ -81,7 +81,7 @@ Blockly.Arduino.var_random = function(block) {
 Blockly.Arduino.base_map = function() {
   var value_num = Blockly.Arduino.valueToCode(this, 'NUM', Blockly.Arduino.ORDER_NONE);
   var value_dmax = Blockly.Arduino.valueToCode(this, 'DMAX', Blockly.Arduino.ORDER_ATOMIC);
-  var code = 'map(' + value_num + ', 0, 1024, 0, ' + value_dmax + ')';
+  var code = 'map(' + value_num + ', 0, 1023, 0, ' + value_dmax + ')';
   return [code, Blockly.Arduino.ORDER_NONE];
 };
 

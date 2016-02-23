@@ -197,12 +197,13 @@ Blockly.Arduino['math_change'] = function() {
   // Add to a variable in place.
   var argument0 = Blockly.Arduino.valueToCode(this, 'DELTA', Blockly.Arduino.ORDER_ADDITIVE) || '0';
   var varName = Blockly.Arduino.variableDB_.getName(this.getFieldValue('VAR'), Blockly.Variables.NAME_TYPE);
-  var code = varName + ' = (typeof ' + varName + ' == \'number\' ? ' + varName + ' : 0) + ' + argument0 + ';\n'; ;
+  var code = varName + ' = ' + varName + ' + ' + argument0 + ';\n'; ;
   return [code, Blockly.Arduino.ORDER_EQUALITY];
 };
 
 // Rounding functions have a single operand.
 Blockly.Arduino['math_round'] = Blockly.Arduino['math_single'];
+
 // Trigonometry functions have a single operand.
 Blockly.Arduino['math_trig'] = Blockly.Arduino['math_single'];
 
