@@ -233,7 +233,7 @@ Blockly.Blocks.inout_digital_read = {
 	this.appendValueInput("PIN", 'Number')
         .setAlign(Blockly.ALIGN_RIGHT)
         .appendField(Blockly.Msg.ARDUINO_INOUT_DIGITAL_READ_INPUT);
-    this.setOutput(true, 'null');
+    this.setOutput(true, 'Boolean');
     this.setTooltip(Blockly.Msg.ARDUINO_INOUT_DIGITAL_READ_TOOLTIP);
   }
 };
@@ -445,5 +445,20 @@ Blockly.Blocks.inout_detachInterrupt = {
     this.setPreviousStatement(true);
     this.setNextStatement(true);
 	this.setTooltip(Blockly.Msg.LKL_TOOLTIP_INOUT_DETACHINTERRUPT);
+  }
+};
+
+Blockly.Blocks['biblio_include'] = {
+  init: function() {
+    this.appendDummyInput()
+        .appendField("inclure une bibliothèque")
+        .appendField(new Blockly.FieldTextInput("nom du fichier bibliothèque"), "File")
+        .appendField(".h");
+    this.setInputsInline(true);
+    this.setPreviousStatement(true);
+    this.setNextStatement(true);
+    this.setColour("#00979D");
+    this.setTooltip('');
+    this.setHelpUrl('https://www.arduino.cc/en/Reference/Libraries');
   }
 };

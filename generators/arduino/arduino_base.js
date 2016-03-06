@@ -253,3 +253,13 @@ Blockly.Arduino.inout_detachInterrupt = function() {
   var code = 'detachInterrupt' +'('+interrupt_pin+');\n'
   return code;
 };
+
+
+// génére #include < text_file .h>
+Blockly.Arduino['biblio_include'] = function() {
+  var text_file = this.getFieldValue('File');
+  var funcInclude = text_file+'.h';
+  Blockly.Arduino.definitions_[funcInclude] = '#include <'+text_file+'.h>';
+  var code = '\n';
+  return code;
+};

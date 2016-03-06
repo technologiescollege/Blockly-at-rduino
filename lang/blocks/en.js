@@ -442,6 +442,8 @@ Blockly.Msg.CAT_ARDUINO_COMM_SERIAL = "serial communication";
 Blockly.Msg.CAT_ARDUINO_COMM_SOFTSERIAL = "softserial lib";
 Blockly.Msg.CAT_ARDUINO_SERVO = "Servo-Motor";
 
+Blockly.Msg.CAT_ARDUINO_SHIELD = "Shield LCD Keypad"; //Added february 27th 2016
+
 Blockly.Msg.CAT_LED_RGB_CHAIN = "chainable RGB LED";
 Blockly.Msg.CAT_OLED_U8G = "OLED screen I2C";
 Blockly.Msg.CAT_DFPLAYER = "DFPlayer mini MP3";
@@ -453,8 +455,8 @@ Blockly.Msg.CAT_GROVE_LCD = "LCD screen";
 Blockly.Msg.CAT_GROVE_COMM = "Communication";
 
 Blockly.Msg.CAT_ROBOTS = "Robots misc."; //Added April 7 2015 ESK
-Blockly.Msg.CAT_ROBOTS_MOTORS = "Motors";
-Blockly.Msg.CAT_ROBOT_MISC = "Misc";
+Blockly.Msg.CAT_ROBOTS_MOTORS = "Shield Motors";
+Blockly.Msg.CAT_ROBOT_MISC = "IR";
 
 Blockly.Msg.CAT_TECHNOZONE = "TechnoZone51";  //added march 11th 2015
 Blockly.Msg.CAT_TECHNOZONE_IN = "sensors";
@@ -1043,3 +1045,9 @@ Blockly.Msg.lp2i_ledRGB_WS2812B_setPixelColor_Red = "Red (255 max) =";
 Blockly.Msg.lp2i_ledRGB_WS2812B_setPixelColor_Green = "Green (255 max) =";
 Blockly.Msg.lp2i_ledRGB_WS2812B_setPixelColor_Blue = "Blue (255 max) =";
 Blockly.Msg.lp2i_ledRGB_WS2812B_setPixelColor_Pixel_Number = "for pixel number (0 first) =";
+
+Blockly.Msg.LCD_SHIELD_PRINT_HELPURL = "http://www.dfrobot.com/wiki/index.php?title=Arduino_LCD_KeyPad_Shield_(SKU:_DFR0009)";
+Blockly.Msg.LCD_SHIELD_PRINT_TEXT = "écran LCD Keypad Shield";
+Blockly.Msg.LCD_SHIELD_PRINT_INPUT1 = "écrire sur la ligne 1";
+Blockly.Msg.LCD_SHIELD_PRINT_INPUT2 = "écrire sur la ligne 2";
+Blockly.Msg.LCD_SHIELD_PRINT_INPUT3 = "pendant (ms)";

@@ -41,6 +41,7 @@
 <script type="text/javascript" src="blocks/zumobot/zumo_sensors.js"></script>
 <script type="text/javascript" src="blocks/robots/robot_motors.js"></script>
 <script type="text/javascript" src="blocks/robots/robot_misc.js"></script>
+<script type="text/javascript" src="blocks/arduino_shield/arduino_shield.js"></script>
 
 <script type="text/javascript" src="generators/blocklyarduino/control.js"></script>
 <script type="text/javascript" src="generators/blocklyarduino/logic.js"></script>
@@ -68,6 +69,7 @@
 <script type="text/javascript" src="generators/arduino/zumo_sensors.js"></script>
 <script type="text/javascript" src="generators/arduino/robot_motors.js"></script>
 <script type="text/javascript" src="generators/arduino/robot_misc.js"></script>
+<script type="text/javascript" src="generators/arduino/arduino_shield.js"></script>
 
 <!--TechnoZone51-->
 <script type="text/javascript" src="utils/html2canvas.js"></script>
@@ -606,6 +608,7 @@
     <category name="CAT_ARDUINO" colour="#00979D">
 		<block type="base_setup"></block>
 		<block type="base_const"></block>
+		<block type="biblio_include"></block>
 		<block type="base_code"></block>
 		<block type="variables_arduino_declare"></block>
 		<category name="CAT_ARDUINO_IN" colour="#00979D">
@@ -770,6 +773,11 @@
 			<block type="soft_write"></block>
 			<block type="soft_available"></block>
 			<block type="soft_read"></block>
+		</category>
+		<category name="CAT_ROBOT_MISC" colour="#00979D">
+			<block type="IR_serial_decoder"></block>
+			<block type="IR_get_blink"></block>
+			<block type="IR_get"></block>
 		</category>
 	</category>	
 	<category name="CAT_OLED_U8G" colour="#1B2944">
@@ -1509,89 +1517,135 @@
         </category>
     </category>
 	<sep></sep>
-    <category name="CAT_ROBOTS" colour="#5b99a5">
-        <category name="CAT_ROBOTS_MOTORS" colour="#5b99a5">
-			<block type="arduino_s">
-				<value name="SPEEDA">
-					<shadow type="math_number">
-					<field name="NUM">175</field>
+	<category name="CAT_ROBOTS_MOTORS" colour="#5b99a5">
+		<block type="arduino_s">
+			<value name="SPEEDA">
+				<shadow type="math_number">
+				<field name="NUM">175</field>
+				</shadow>
+			</value>
+			<value name="SPEEDB">
+				<shadow type="math_number">
+				<field name="NUM">175</field>
+				</shadow>
+			</value>
+		</block>
+		<block type="ardu_motor"></block>
+		<block type="ardu_motor_s">
+			<value name="SPEEDA">
+				<shadow type="math_number">
+				<field name="NUM">175</field>
+				</shadow>
+			</value>
+			<value name="SPEEDB">
+				<shadow type="math_number">
+				<field name="NUM">175</field>
+				</shadow>
+			</value>
+		</block>
+		<block type="dfrobot_s">
+			<value name="SPEEDA">
+				<shadow type="math_number">
+				<field name="NUM">175</field>
+				</shadow>
+			</value>
+			<value name="SPEEDB">
+				<shadow type="math_number">
+				<field name="NUM">175</field>
+				</shadow>
+			</value>
+		</block>
+		<block type="generic_motor_s">
+			<value name="SPEEDA">
+				<shadow type="math_number">
+				<field name="NUM">175</field>
+				</shadow>
+			</value>
+			<value name="SPEEDB">
+				<shadow type="math_number">
+				<field name="NUM">175</field>
+				</shadow>
+			</value>
+		</block>
+		<block type="pololu_drv8835_s">
+			<value name="SPEEDA">
+				<shadow type="math_number">
+				<field name="NUM">175</field>
+				</shadow>
+			</value>
+			<value name="SPEEDB">
+				<shadow type="math_number">
+				<field name="NUM">175</field>
+				</shadow>
+			</value>
+		</block>
+		<block type="radio_shack_s">
+			<value name="SPEEDA">
+				<shadow type="math_number">
+				<field name="NUM">175</field>
+				</shadow>
+			</value>
+			<value name="SPEEDB">
+				<shadow type="math_number">
+				<field name="NUM">175</field>
+				</shadow>
+			</value>
+		</block>
+		<block type="generic_motor"></block>
+	</category>
+
+	<category name="CAT_ARDUINO_SHIELD" colour="#2475FA">
+		<block type="LCD_Keypad_Shield_DFR_09">
+					<value name="TEXT1">
+					<shadow type="text">
+					<field name="TEXT"></field>
 					</shadow>
 				</value>
-				<value name="SPEEDB">
+				<value name="TEXT2">
+					<shadow type="text">
+					<field name="TEXT"></field>
+					</shadow>
+				</value>
+				<value name="DELAY_TIME">
 					<shadow type="math_number">
-					<field name="NUM">175</field>
+					<field name="NUM">1000</field>
+					</shadow>
+				</value>
+		</block>
+		<block type="LCD_Keypad_Shield_DFR_09_lc">
+                <value name="ligne">
+                    <shadow type="math_number">
+                    <field name="NUM">1</field>
+                    </shadow>
+                </value>
+                <value name="colonne">
+                    <shadow type="math_number">
+                    <field name="NUM">1</field>
+                    </shadow>
+                </value>
+				<value name="TEXT4">
+					<shadow type="text">
+					<field name="TEXT"></field>
 					</shadow>
 				</value>
 			</block>
-			<block type="ardu_motor"></block>
-			<block type="ardu_motor_s">
-				<value name="SPEEDA">
-					<shadow type="math_number">
-					<field name="NUM">175</field>
-					</shadow>
-				</value>
-				<value name="SPEEDB">
-					<shadow type="math_number">
-					<field name="NUM">175</field>
-					</shadow>
-				</value>
+			<block type="LCD_Keypad_Shield_DFR_09_RAZ">
 			</block>
-			<block type="dfrobot_s">
-				<value name="SPEEDA">
-					<shadow type="math_number">
-					<field name="NUM">175</field>
-					</shadow>
-				</value>
-				<value name="SPEEDB">
-					<shadow type="math_number">
-					<field name="NUM">175</field>
-					</shadow>
-				</value>
+			<block type="Bluetooth_Shield_duinoFun">
+				<value name="BT_RX">
+                    <shadow type="math_number">
+                    <field name="NUM">7</field>
+                    </shadow>
+                </value>
+                <value name="BT_TX">
+                    <shadow type="math_number">
+                    <field name="NUM">6</field>
+                    </shadow>
+                </value>
 			</block>
-			<block type="generic_motor_s">
-				<value name="SPEEDA">
-					<shadow type="math_number">
-					<field name="NUM">175</field>
-					</shadow>
-				</value>
-				<value name="SPEEDB">
-					<shadow type="math_number">
-					<field name="NUM">175</field>
-					</shadow>
-				</value>
+			<block type="ArduiLed">
 			</block>
-			<block type="pololu_drv8835_s">
-				<value name="SPEEDA">
-					<shadow type="math_number">
-					<field name="NUM">175</field>
-					</shadow>
-				</value>
-				<value name="SPEEDB">
-					<shadow type="math_number">
-					<field name="NUM">175</field>
-					</shadow>
-				</value>
-			</block>
-			<block type="radio_shack_s">
-				<value name="SPEEDA">
-					<shadow type="math_number">
-					<field name="NUM">175</field>
-					</shadow>
-				</value>
-				<value name="SPEEDB">
-					<shadow type="math_number">
-					<field name="NUM">175</field>
-					</shadow>
-				</value>
-			</block>
-			<block type="generic_motor"></block>
-        </category>
-        <category name="CAT_ROBOT_MISC" colour="#5b99a5">
-			<block type="IR_serial_decoder"></block>
-			<block type="IR_get_blink"></block>
-			<block type="IR_get"></block>
-        </category>
-    </category>
+	</category>
 	<category name="CAT_ARDUINO_SERVO" colour="#2475FA">
 		<block type="servo_move">
 			<value name="DEGREE">
