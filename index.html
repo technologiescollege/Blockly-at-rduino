@@ -916,47 +916,87 @@
 			</value>				
 		</block>
 	</category>
-	<category name="CAT_DFPLAYER" colour="#F39800">
-		<block type="lp2i_mp3_init">
-			<value name="Pin_Rx">
-				<shadow type="math_number">
-				<field name="NUM">11</field>
-				</shadow>
-			</value>
-			<value name="Pin_Tx">
-				<shadow type="math_number">
-				<field name="NUM">10</field>
-				</shadow>	
-			</value>
-			<value name="Pin_Busy">
-				<shadow type="math_number">
-				<field name="NUM">12</field>
-				</shadow>	
-			</value>				
-			<value name="Volume">
-				<shadow type="math_number">
-				<field name="NUM">20</field>
-				</shadow>	
-			</value>					
-		</block>
-		<block type="lp2i_mp3_play">
-			<value name="File">
-				<shadow type="math_number">
-				<field name="NUM">0</field>
-				</shadow>
-			</value>
-			<value name="Wait">
-				<shadow type="logic_boolean">1
-				</shadow>
-			</value>
-		</block>
-		<block type="lp2i_mp3_volume">
-			<value name="Volume">
-				<shadow type="math_number">
-				<field name="NUM">25</field>
-				</shadow>
-			</value>
-		</block>
+	<category name="CAT_DFRobot" colour="#F39800">
+		<category name="CAT_DFPLAYER" colour="#F39800">
+			<block type="lp2i_mp3_init">
+				<value name="Pin_Rx">
+					<shadow type="math_number">
+					<field name="NUM">11</field>
+					</shadow>
+				</value>
+				<value name="Pin_Tx">
+					<shadow type="math_number">
+					<field name="NUM">10</field>
+					</shadow>	
+				</value>
+				<value name="Pin_Busy">
+					<shadow type="math_number">
+					<field name="NUM">12</field>
+					</shadow>	
+				</value>				
+				<value name="Volume">
+					<shadow type="math_number">
+					<field name="NUM">20</field>
+					</shadow>	
+				</value>					
+			</block>
+			<block type="lp2i_mp3_play">
+				<value name="File">
+					<shadow type="math_number">
+					<field name="NUM">0</field>
+					</shadow>
+				</value>
+				<value name="Wait">
+					<shadow type="logic_boolean">1
+					</shadow>
+				</value>
+			</block>
+			<block type="lp2i_mp3_volume">
+				<value name="Volume">
+					<shadow type="math_number">
+					<field name="NUM">25</field>
+					</shadow>
+				</value>
+			</block>
+		</category>
+		<category name="CAT_DFRobot_SHIELD_LCDKEYPAD" colour="#F39800">
+			<block type="LCD_Keypad_Shield_DFR_09">
+						<value name="TEXT1">
+						<shadow type="text">
+						<field name="TEXT"></field>
+						</shadow>
+					</value>
+					<value name="TEXT2">
+						<shadow type="text">
+						<field name="TEXT"></field>
+						</shadow>
+					</value>
+					<value name="DELAY_TIME">
+						<shadow type="math_number">
+						<field name="NUM">1000</field>
+						</shadow>
+					</value>
+			</block>
+			<block type="LCD_Keypad_Shield_DFR_09_lc">
+					<value name="ligne">
+						<shadow type="math_number">
+						<field name="NUM">1</field>
+						</shadow>
+					</value>
+					<value name="colonne">
+						<shadow type="math_number">
+						<field name="NUM">1</field>
+						</shadow>
+					</value>
+					<value name="TEXT4">
+						<shadow type="text">
+						<field name="TEXT"></field>
+						</shadow>
+					</value>
+				</block>
+				<block type="LCD_Keypad_Shield_DFR_09_RAZ">
+				</block>
+		</category>
 	</category>
     <category name="CAT_BQ" colour="#608621">
         <category name="CAT_BQ_IN" colour="#608621">
@@ -1127,7 +1167,20 @@
             <block type="grove_serial_lcd_effect"></block>
         </category>
         <category name="CAT_GROVE_COMM" colour="#8ec31f">
-            <block type="grove_bluetooth_slave"></block>
+            <block type="grove_bluetooth_slave"></block>			
+			<block type="Bluetooth_Shield_duinoFun">
+				<value name="BT_RX">
+                    <shadow type="math_number">
+                    <field name="NUM">7</field>
+                    </shadow>
+                </value>
+                <value name="BT_TX">
+                    <shadow type="math_number">
+                    <field name="NUM">6</field>
+                    </shadow>
+                </value>
+			</block>
+			<block type="ArduiLed"></block>
         </category>
     </category>
 
@@ -1592,59 +1645,6 @@
 			</value>
 		</block>
 		<block type="generic_motor"></block>
-	</category>
-
-	<category name="CAT_ARDUINO_SHIELD" colour="#2475FA">
-		<block type="LCD_Keypad_Shield_DFR_09">
-					<value name="TEXT1">
-					<shadow type="text">
-					<field name="TEXT"></field>
-					</shadow>
-				</value>
-				<value name="TEXT2">
-					<shadow type="text">
-					<field name="TEXT"></field>
-					</shadow>
-				</value>
-				<value name="DELAY_TIME">
-					<shadow type="math_number">
-					<field name="NUM">1000</field>
-					</shadow>
-				</value>
-		</block>
-		<block type="LCD_Keypad_Shield_DFR_09_lc">
-                <value name="ligne">
-                    <shadow type="math_number">
-                    <field name="NUM">1</field>
-                    </shadow>
-                </value>
-                <value name="colonne">
-                    <shadow type="math_number">
-                    <field name="NUM">1</field>
-                    </shadow>
-                </value>
-				<value name="TEXT4">
-					<shadow type="text">
-					<field name="TEXT"></field>
-					</shadow>
-				</value>
-			</block>
-			<block type="LCD_Keypad_Shield_DFR_09_RAZ">
-			</block>
-			<block type="Bluetooth_Shield_duinoFun">
-				<value name="BT_RX">
-                    <shadow type="math_number">
-                    <field name="NUM">7</field>
-                    </shadow>
-                </value>
-                <value name="BT_TX">
-                    <shadow type="math_number">
-                    <field name="NUM">6</field>
-                    </shadow>
-                </value>
-			</block>
-			<block type="ArduiLed">
-			</block>
 	</category>
 	<category name="CAT_ARDUINO_SERVO" colour="#2475FA">
 		<block type="servo_move">

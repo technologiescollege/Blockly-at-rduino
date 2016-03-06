@@ -442,11 +442,12 @@ Blockly.Msg.CAT_ARDUINO_COMM_SERIAL = "serial communication";
 Blockly.Msg.CAT_ARDUINO_COMM_SOFTSERIAL = "softserial lib";
 Blockly.Msg.CAT_ARDUINO_SERVO = "Servo-Motor";
 
-Blockly.Msg.CAT_ARDUINO_SHIELD = "Shield LCD Keypad"; //Added february 27th 2016
+Blockly.Msg.CAT_DFRobot = "DFRobot";
+Blockly.Msg.CAT_DFRobot_SHIELD_LCDKEYPAD = "Shield LCD Keypad"; //Added february 27th 2016
+Blockly.Msg.CAT_DFPLAYER = "DFPlayer mini MP3";
 
 Blockly.Msg.CAT_LED_RGB_CHAIN = "chainable RGB LED";
 Blockly.Msg.CAT_OLED_U8G = "OLED screen I2C";
-Blockly.Msg.CAT_DFPLAYER = "DFPlayer mini MP3";
 
 Blockly.Msg.CAT_GROVE = "Grove";  //added march 9th 2015
 Blockly.Msg.CAT_GROVE_IN = "In";

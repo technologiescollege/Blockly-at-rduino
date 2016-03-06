@@ -10,7 +10,7 @@
 
 Blockly.Blocks['LCD_Keypad_Shield_DFR_09'] = {
   init: function() {
-    this.setColour("#8ec31f");
+    this.setColour("#F39800");
 	this.setHelpUrl(Blockly.Msg.LCD_SHIELD_PRINT_HELPURL);
     this.appendDummyInput()
         .appendField(Blockly.Msg.LCD_SHIELD_PRINT_TEXT)
@@ -35,7 +35,7 @@ Blockly.Blocks['LCD_Keypad_Shield_DFR_09'] = {
 
 Blockly.Blocks.LCD_Keypad_Shield_DFR_09_lc = {
   init: function() {
-    this.setColour("#8ec31f");
+    this.setColour("#F39800");
 	this.setHelpUrl(Blockly.Msg.LCD_SHIELD_PRINT_HELPURL);
     this.appendDummyInput()
         .appendField(Blockly.Msg.LCD_SHIELD_PRINT_TEXT)
@@ -62,7 +62,7 @@ Blockly.Blocks.LCD_Keypad_Shield_DFR_09_lc = {
 
 Blockly.Blocks.LCD_Keypad_Shield_DFR_09_RAZ = {
   init: function() {
-    this.setColour("#8ec31f");
+    this.setColour("#F39800");
 	this.setHelpUrl(Blockly.Msg.LCD_SHIELD_PRINT_HELPURL);
     this.appendDummyInput()
         .appendField(Blockly.Msg.LCD_SHIELD_PRINT_TEXT)
@@ -78,7 +78,7 @@ Blockly.Blocks.LCD_Keypad_Shield_DFR_09_RAZ = {
 
 Blockly.Blocks['Bluetooth_Shield_duinoFun'] = {
   init: function() {
-    this.setColour("#31B0D5");
+    this.setColour("#8ec31f");
 	this.setHelpUrl('http://www.seeedstudio.com/wiki/Bluetooth_Shield');
     this.appendDummyInput("")
         .appendField('Initialise le module Bluetooth duinoFun');
@@ -106,7 +106,7 @@ Blockly.Blocks['ArduiLed'] = {
   init: function() {
 	this.setPreviousStatement(true);
     this.setNextStatement(true);
-	this.setColour("#31B0D5");
+	this.setColour("#8ec31f");
     this.appendDummyInput()
         .appendField("Utiliser l'application ArduiLed");
     this.appendDummyInput()
