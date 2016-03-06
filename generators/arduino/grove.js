@@ -88,6 +88,13 @@ Blockly.Arduino.grove_temporature_sensor = function() {
   return [code, Blockly.Arduino.ORDER_ATOMIC];
 };
 
+Blockly.Arduino.grove_moisture_sensor = function() {
+  var dropdown_pin = this.getFieldValue('PIN');
+  var code = 'analogRead('+dropdown_pin+')';
+  Blockly.Arduino.setups_['setup_moisture_sensor_'+dropdown_pin] = 'pinMode('+dropdown_pin+', INPUT);';
+  return [code, Blockly.Arduino.ORDER_ATOMIC];
+};
+
 /*
 #include <SerialLCD.h>
 #include <SoftwareSerial.h> //this is a must

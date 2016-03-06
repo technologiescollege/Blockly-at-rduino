@@ -40,12 +40,12 @@ Blockly.Blocks.base_setup = {
 Blockly.Blocks.base_const = {
   init: function () {
         this.setColour("#00979D");
-		this.setHelpUrl(Blockly.Msg.ARDUINO_BASE_SETUP_HELPURL);
+		this.setHelpUrl(Blockly.Msg.ARDUINO_BASE_DEFINE_HELPURL);
         this.appendDummyInput("")
-            .appendField("Constantes");
+            .appendField(Blockly.Msg.ARDUINO_BASE_DEFINE);
         this.appendStatementInput('DO')
             .appendField(Blockly.LANG_CONTROLS_REPEAT_INPUT_DO);
-        this.setTooltip("Définition de constantes");
+        this.setTooltip(Blockly.Msg.ARDUINO_BASE_DEFINE_TOOLTIP);
     }
 };
 

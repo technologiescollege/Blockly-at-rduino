@@ -73,7 +73,7 @@ Blockly.Arduino.controls_for = function() {
         variable0 + ' >= ' + endVar + ';\n' +
         '    ' + variable0 + ' += (' + startVar + ' <= ' + endVar +
             ') ? 1 : -1) {\n' +
-        branch0 + '}\n';
+        branch + '}\n';
   }
   return code;
 };
