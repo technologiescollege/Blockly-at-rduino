@@ -217,6 +217,20 @@ Blockly.Blocks['grove_temporature_sensor'] = {
   }
 };
 
+Blockly.Blocks['grove_moisture_sensor'] = {
+  init: function() {
+    this.setColour("#8ec31f");
+	this.setHelpUrl(Blockly.Msg.GROVE_INOUT_MOISTURE_HELPURL);
+    this.appendDummyInput()
+        .appendField(Blockly.Msg.GROVE_INOUT_MOISTURE_TEXT)
+        .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/grove/350px-Moisture_sensor.jpg', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize))
+        .appendField(Blockly.Msg.GROVE_INOUT_MOISTURE_INPUT)
+        .appendField(new Blockly.FieldTextInput('0',  Blockly.Arduino.pinAnalogValidator), 'PIN');
+    this.setOutput(true, 'Number');
+    this.setTooltip(Blockly.Msg.GROVE_INOUT_MOISTURE_TOOLTIP);
+  }
+};
+
 Blockly.Blocks['grove_serial_lcd_print'] = {
   init: function() {
     this.setColour("#8ec31f");

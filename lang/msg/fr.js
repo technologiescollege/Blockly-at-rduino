@@ -55,7 +55,7 @@ var MSG = {
   arduino_card:"supprimer tout et sélectionner une carte",
   span_about:"à propos",
   aboutModalLabel:"à propos ...",
-  aboutBody:"<br />- créations et améliorations par Sébastien Canet, fonctions JS et CSS par Olivier Métayer, intégration CodeBender par Julien Rat." 
+  aboutBody:"<br />- créations et améliorations par Sébastien Canet (<a href='mailto:sebastien.canet@ac-nantes.fr' traget=_blank>sebastien.canet@ac-nantes.fr</a>), fonctions JS et CSS par Olivier Métayer, intégration CodeBender par Julien Rat." 
 	  + "<br />"
 	  + "<br />S'appuie sur :",
   msg_ajax_ko:"Requêtes AJAX non supportées par votre navigateur, les fonctionnalités suivantes ne seront pas opérationnelles : \n"

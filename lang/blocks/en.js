@@ -10,6 +10,19 @@ Blockly.Msg.BACKPACK_GET = 'Paste All Blocks from Backpack';
 Blockly.Msg.BACKPACK_EMPTY = 'Empty the Backpack';
 Blockly.Msg.BACKPACK_CONFIRM_EMPTY = 'Are you sure you want to empty the backpack?';
 Blockly.Msg.ADD_COMMENT = "Add Comment";
+Blockly.Msg.ARRAY_CREATE_WITH_CONTAINER_TITLE_ADD = "array";
+Blockly.Msg.ARRAY_CREATE_WITH_CONTAINER_TOOLTIP = "Add, remove, or reorder sections to reconfigure this array block.";
+Blockly.Msg.ARRAY_CREATE_WITH_HELPURL = "";
+Blockly.Msg.ARRAY_CREATE_WITH_INPUT_WITH = "create array with";
+Blockly.Msg.ARRAY_CREATE_WITH_ITEM_TITLE = "item";
+Blockly.Msg.ARRAY_CREATE_WITH_ITEM_TOOLTIP = "Add an item to the array.";
+Blockly.Msg.ARRAY_CREATE_WITH_TOOLTIP = "Create a array with any number of items.";
+Blockly.Msg.ARRAY_GETINDEX_AT = "get index";
+Blockly.Msg.ARRAY_GETINDEX_AT1 = "get index";
+Blockly.Msg.ARRAY_GETINDEX_AT2 = "index";
+Blockly.Msg.ARRAY_GETINDEX_HELPURL = "";
+Blockly.Msg.ARRAY_GETINDEX_ITEM = "in Array";
+Blockly.Msg.ARRAY_GETINDEX_TOOLTIP = "";
 Blockly.Msg.AUTH = "Please authorize this app to enable your work to be saved and to allow it to be shared by you.";
 Blockly.Msg.CHANGE_VALUE_TITLE = "Change value:";
 Blockly.Msg.CHAT = "Chat with your collaborator by typing in this box!";
@@ -417,6 +430,7 @@ Blockly.Msg.CAT_BOOL = "Boolean";
 Blockly.Msg.CAT_MATH = "Math";
 Blockly.Msg.CAT_TEXT = "Text";
 Blockly.Msg.CAT_LIST = "Lists";
+Blockly.Msg.CAT_ARRAY = "Array";
 Blockly.Msg.CAT_COLOR = "Color";
 Blockly.Msg.CAT_VARIABLES = "Variables";
 Blockly.Msg.CAT_FUNCTIONS = "Functions";
@@ -428,9 +442,12 @@ Blockly.Msg.CAT_ARDUINO_COMM_SERIAL = "serial communication";
 Blockly.Msg.CAT_ARDUINO_COMM_SOFTSERIAL = "softserial lib";
 Blockly.Msg.CAT_ARDUINO_SERVO = "Servo-Motor";
 
+Blockly.Msg.CAT_DFRobot = "DFRobot";
+Blockly.Msg.CAT_DFRobot_SHIELD_LCDKEYPAD = "Shield LCD Keypad"; //Added february 27th 2016
+Blockly.Msg.CAT_DFPLAYER = "DFPlayer mini MP3";
+
 Blockly.Msg.CAT_LED_RGB_CHAIN = "chainable RGB LED";
 Blockly.Msg.CAT_OLED_U8G = "OLED screen I2C";
-Blockly.Msg.CAT_DFPLAYER = "DFPlayer mini MP3";
 
 Blockly.Msg.CAT_GROVE = "Grove";  //added march 9th 2015
 Blockly.Msg.CAT_GROVE_IN = "In";
@@ -439,8 +456,8 @@ Blockly.Msg.CAT_GROVE_LCD = "LCD screen";
 Blockly.Msg.CAT_GROVE_COMM = "Communication";
 
 Blockly.Msg.CAT_ROBOTS = "Robots misc."; //Added April 7 2015 ESK
-Blockly.Msg.CAT_ROBOTS_MOTORS = "Motors";
-Blockly.Msg.CAT_ROBOT_MISC = "Misc";
+Blockly.Msg.CAT_ROBOTS_MOTORS = "Shield Motors";
+Blockly.Msg.CAT_ROBOT_MISC = "IR";
 
 Blockly.Msg.CAT_TECHNOZONE = "TechnoZone51";  //added march 11th 2015
 Blockly.Msg.CAT_TECHNOZONE_IN = "sensors";
@@ -497,6 +514,9 @@ Blockly.Msg.ARDUINO_BASE_MAP_HELPURL ="http://arduino.cc/en/Reference/map";
 Blockly.Msg.ARDUINO_BASE_MAP_NUM ="to the transposed ";
 Blockly.Msg.ARDUINO_BASE_MAP_DMAX = "over a range of [0-";
 Blockly.Msg.ARDUINO_BASE_MAP_TOOLTIP = "transfer a value on a scale from 0 to 1023 to another scale";
+Blockly.Msg.ARDUINO_BASE_DEFINE_HELPURL = "https://www.arduino.cc/en/Reference/Define";
+Blockly.Msg.ARDUINO_BASE_DEFINE = "Define";
+Blockly.Msg.ARDUINO_BASE_DEFINE_TOOLTIP = "Define constants & librairies";
 Blockly.Msg.ARDUINO_CONSTRAIN = "constrain";
 Blockly.Msg.ARDUINO_CONSTRAIN_X = " number";
 Blockly.Msg.ARDUINO_CONSTRAIN_A = "from A = ";
@@ -632,6 +652,10 @@ Blockly.Msg.GROVE_INOUT_TEMP_HELPURL = "http://www.seeedstudio.com/wiki/Project_
 Blockly.Msg.GROVE_INOUT_TEMP_TEXT = "Temporature Sensor";
 Blockly.Msg.GROVE_INOUT_TEMP_INPUT = "PIN#";
 Blockly.Msg.GROVE_INOUT_TEMP_TOOLTIP = "return number of ambient temperature in °";
+Blockly.Msg.GROVE_INOUT_MOISTURE_HELPURL = "http://www.seeedstudio.com/wiki/Grove_-_Moisture_Sensor";
+Blockly.Msg.GROVE_INOUT_MOISTURE_TEXT = "Moisture Sensor";
+Blockly.Msg.GROVE_INOUT_MOISTURE_INPUT = "PIN#";
+Blockly.Msg.GROVE_INOUT_MOISTURE_TOOLTIP = "return number of moisture";
 Blockly.Msg.GROVE_INOUT_LCD_PRINT_HELPURL = "http://www.seeedstudio.com/wiki/index.php?title=GROVE_-_Starter_Bundle_V1.0b#Serial_LCD";
 Blockly.Msg.GROVE_INOUT_LCD_PRINT_TEXT = "Serial LCD";
 Blockly.Msg.GROVE_INOUT_LCD_PRINT_INPUT1 = "PIN#";
@@ -1022,3 +1046,9 @@ Blockly.Msg.lp2i_ledRGB_WS2812B_setPixelColor_Red = "Red (255 max) =";
 Blockly.Msg.lp2i_ledRGB_WS2812B_setPixelColor_Green = "Green (255 max) =";
 Blockly.Msg.lp2i_ledRGB_WS2812B_setPixelColor_Blue = "Blue (255 max) =";
 Blockly.Msg.lp2i_ledRGB_WS2812B_setPixelColor_Pixel_Number = "for pixel number (0 first) =";
+
+Blockly.Msg.LCD_SHIELD_PRINT_HELPURL = "http://www.dfrobot.com/wiki/index.php?title=Arduino_LCD_KeyPad_Shield_(SKU:_DFR0009)";
+Blockly.Msg.LCD_SHIELD_PRINT_TEXT = "écran LCD Keypad Shield";
+Blockly.Msg.LCD_SHIELD_PRINT_INPUT1 = "écrire sur la ligne 1";
+Blockly.Msg.LCD_SHIELD_PRINT_INPUT2 = "écrire sur la ligne 2";
+Blockly.Msg.LCD_SHIELD_PRINT_INPUT3 = "pendant (ms)";
