@@ -501,9 +501,9 @@ Blockly.Msg.ARDUINO_BASE_DELAY_HELPURL = "http://arduino.cc/en/Reference/delay";
 Blockly.Msg.ARDUINO_BASE_DELAY_DELAY_TIME = "faire une temporisation (en ms) de";
 Blockly.Msg.ARDUINO_BASE_DELAY_TOOLTIP = "spécifier le temps d'attente en millisecondes";
 Blockly.Msg.ARDUINO_BASE_SETUP = "initialisation (setup)";
-Blockly.Msg.ARDUINO_BASE_SETUP_HELPURL = "";
+Blockly.Msg.ARDUINO_BASE_SETUP_HELPURL = "https://www.arduino.cc/en/Reference/Setup";
 Blockly.Msg.ARDUINO_BASE_LOOP = "répéter indéfiniment (loop)";
-Blockly.Msg.ARDUINO_BASE_SETUP_LOOP_HELPURL = 'https://arduino.cc/en/Reference/Loop';
+Blockly.Msg.ARDUINO_BASE_SETUP_LOOP_HELPURL = "https://www.arduino.cc/en/Reference/Loop";
 Blockly.Msg.ARDUINO_SINCE_PROGRAM_STARTED = "temps écoulé depuis le début du programme";
 Blockly.Msg.ARDUINO_SINCE_PROGRAM_STARTED_TOOLTIP = "durée en millisecondes depuis que le programme a commencé (unsigned long)";
 Blockly.Msg.ARDUINO_SINCE_PROGRAM_STARTED_HELPURL = "https://www.arduino.cc/en/Reference/Millis";
@@ -513,14 +513,11 @@ Blockly.Msg.ARDUINO_BASE_MAP_HELPURL = "http://arduino.cc/en/Reference/map";
 Blockly.Msg.ARDUINO_BASE_MAP_NUM ="faire la transposée de";
 Blockly.Msg.ARDUINO_BASE_MAP_DMAX = "sur un intervalle de [0~";
 Blockly.Msg.ARDUINO_BASE_MAP_TOOLTIP = "transfère une valeur sur une échelle de 0 à 1023 vers une autre échelle";
-<<<<<<< HEAD
 Blockly.Msg.ARDUINO_BASE_CODE = "ligne de code";
 Blockly.Msg.ARDUINO_BASE_CONST = "définitions préalables";
-=======
 Blockly.Msg.ARDUINO_BASE_DEFINE_HELPURL = "https://www.arduino.cc/en/Reference/Define";
 Blockly.Msg.ARDUINO_BASE_DEFINE = "Définitions";
 Blockly.Msg.ARDUINO_BASE_DEFINE_TOOLTIP = "Définition de constantes & bibliothèques";
->>>>>>> origin/master
 Blockly.Msg.ARDUINO_CONSTRAIN = "limiter";
 Blockly.Msg.ARDUINO_CONSTRAIN_X = " le nombre";
 Blockly.Msg.ARDUINO_CONSTRAIN_A = "entre A = ";
@@ -606,10 +603,10 @@ Blockly.Msg.Serial_avai="une donnée est disponible sur le port série ?";
 Blockly.Msg.Serial_flush="attente de fin de transmission par le port série";
 
 //SOFTWARE SERIAL
-Blockly.Msg.SSERIAL_Init="initialisation : ";
+Blockly.Msg.SSERIAL_Init="initialisation :";
 Blockly.Msg.SSERIAL_SPEED="vitesse";
-Blockly.Msg.SSERIAL_TX="broches TX ";
-Blockly.Msg.SSERIAL_RX="RX ";
+Blockly.Msg.SSERIAL_TX="TX ";
+Blockly.Msg.SSERIAL_RX="broches RX ";
 Blockly.Msg.SSERIAL_Read="donnée lue sur le port de communication";
 Blockly.Msg.SSERIAL_Print="afficher sur le port de communication le texte";
 Blockly.Msg.SSERIAL_Write="envoyer sur le port de communication";

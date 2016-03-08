@@ -39,11 +39,11 @@ Blockly.Blocks['soft_init'] = {
 	this.setHelpUrl('http://arduino.cc/en/Reference/AnalogWrite');
     this.appendDummyInput()
 		.appendField(Blockly.Msg.SSERIAL_Init)
-        .appendField(Blockly.Msg.SSERIAL_TX)
+        .appendField(Blockly.Msg.SSERIAL_RX)
 		.appendField(new Blockly.FieldDropdown([['2', '2'],['3', '3'],['4', '4'],['5', '5'],['6', '6'],['7', '7'],['8', '8'],['9', '9'],['10', '10'],['11', '11'],['12', '12'],['13', '13']]), "PIN1");
 		//.appendField(new Blockly.FieldDropdown(profile.defaultBoard.digitalPins), "PIN1");
     this.appendDummyInput()
-        .appendField(Blockly.Msg.SSERIAL_RX)
+        .appendField(Blockly.Msg.SSERIAL_TX)
 	    .appendField(new Blockly.FieldDropdown([['2', '2'],['3', '3'],['4', '4'],['5', '5'],['6', '6'],['7', '7'],['8', '8'],['9', '9'],['10', '10'],['11', '11'],['12', '12'],['13', '13']]), "PIN2");
     this.appendDummyInput()
 	    .appendField(Blockly.Msg.SSERIAL_SPEED)
