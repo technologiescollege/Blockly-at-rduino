@@ -6,6 +6,7 @@
 <!-- <script type="text/javascript" src="blocks/blockly_uncompressed.js"></script> -->
 <script type="text/javascript" src="blocks/blockly_compressed.js"></script>
 
+<script type="text/javascript" src="utils/boards.js"></script>
 <script type="text/javascript" src="utils/blocklyDuino.js"></script>
 <script type="text/javascript" src="utils/blockly@rduino.js"></script>
 <script type="text/javascript" src="utils/spin.js"></script>
@@ -23,6 +24,7 @@
 <script type="text/javascript" src="blocks/blocklyarduino/procedures.js"></script>
 
 <script type="text/javascript" src="blocks/arduino_base/arduino_base.js"></script>
+<script type="text/javascript" src="blocks/arduino_base/arduino_io.js"></script>
 <script type="text/javascript" src="blocks/arduino_base/arduino_conversion.js"></script>
 <script type="text/javascript" src="blocks/arduino_base/arduino_variables.js"></script>
 <script type="text/javascript" src="blocks/bitbloq/bitbloq.js"></script>
@@ -49,6 +51,7 @@
 <script type="text/javascript" src="generators/blocklyarduino/procedures.js"></script>
 
 <script type="text/javascript" src="generators/arduino/arduino_base.js"></script>
+<script type="text/javascript" src="generators/arduino/arduino_io.js"></script>
 <script type="text/javascript" src="generators/arduino/arduino_conversion.js"></script>
 <script type="text/javascript" src="generators/arduino/arduino_variables.js"></script>
 <script type="text/javascript" src="generators/arduino/bitbloq.js"></script>
@@ -595,6 +598,7 @@
 	<sep></sep>
     <category name="CAT_ARDUINO" colour="#00979D">
 		<block type="base_setup"></block>
+		<block type="base_setup_loop"></block>
 		<block type="base_const"></block>
 		<block type="base_code"></block>
 		<block type="variables_arduino_declare"></block>
@@ -602,12 +606,9 @@
 			<block type="inout_analog_read_validator"></block>
             <block type="inout_digital_read_validator"></block>
             <block type="inout_analog_read"></block>
-            <block type="inout_digital_read"></block>
-            <block type="inout_pulsein"></block>
-            <block type="inout_pulsein_timeout"></block>					
+            <block type="inout_digital_read"></block>				
             <block type="inout_onoff"></block>
-			<block type="inout_angle"></block>			
-			<block type="millis"></block>		
+			<block type="inout_angle"></block>
 			<block type="var_random">
                 <value name="rand_min">
                     <shadow type="math_number">
@@ -647,13 +648,10 @@
 			<block type="inout_attachInterrupt"></block>
 			<block type="inout_detachInterrupt"></block>
         </category>
-		<category name="CAT_ARDUINO_CONVERSION" colour="#00979D"> 
-			  <block type="conversion_tochar"></block>
-			  <block type="conversion_tobyte"></block>
-			  <block type="conversion_toint"></block>
-			  <block type="conversion_tofloat"></block>
-		</category>
-        <category name="CAT_ARDUINO_OUT" colour="#00979D">
+		<category name="CAT_ARDUINO_TIME" colour="#00979D">			
+			<block type="millis"></block>		
+            <block type="inout_pulsein"></block>
+            <block type="inout_pulsein_timeout"></block>
 			<block type="base_delay">			
 				<value name="DELAY_TIME">
 					<shadow type="math_number">
@@ -661,6 +659,14 @@
 					</shadow>
 				</value>
 			</block>
+		</category>
+		<category name="CAT_ARDUINO_CONVERSION" colour="#00979D"> 
+			  <block type="conversion_tochar"></block>
+			  <block type="conversion_tobyte"></block>
+			  <block type="conversion_toint"></block>
+			  <block type="conversion_tofloat"></block>
+		</category>
+        <category name="CAT_ARDUINO_OUT" colour="#00979D">
             <block type="inout_buildin_led"></block>
 			<block type="inout_digital_write_validator"></block>
             <block type="inout_PWM_write_validator">
@@ -710,6 +716,7 @@
             <block type="notone"></block>
 		</category>
 		<category name="CAT_ARDUINO_COMM_SERIAL" colour="#00979D">
+			<block type="serial_init"></block>
 			<block type="serial_flush"></block>
 			<block type="serial_write"></block>
 			<block type="serial_printfor"></block>

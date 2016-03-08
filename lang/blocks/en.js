@@ -424,6 +424,7 @@ Blockly.Msg.CAT_ARDUINO = "Arduino";
 Blockly.Msg.CAT_ARDUINO_IN = "In";
 Blockly.Msg.CAT_ARDUINO_OUT = "Out";
 Blockly.Msg.CAT_ARDUINO_CONVERSION = "converting";
+Blockly.Msg.CAT_ARDUINO_TIME = "time";
 Blockly.Msg.CAT_ARDUINO_COMM_SERIAL = "serial communication";
 Blockly.Msg.CAT_ARDUINO_COMM_SOFTSERIAL = "softserial lib";
 Blockly.Msg.CAT_ARDUINO_SERVO = "Servo-Motor";
@@ -488,6 +489,9 @@ Blockly.Msg.ARDUINO_BASE_DELAY_HELPURL = "http://arduino.cc/en/Reference/delay";
 Blockly.Msg.ARDUINO_BASE_DELAY_DELAY_TIME = "delay (in ms)";
 Blockly.Msg.ARDUINO_BASE_DELAY_TOOLTIP = "specify the pause time in milliseconds";
 Blockly.Msg.ARDUINO_BASE_SETUP = "Setup";
+Blockly.Msg.ARDUINO_BASE_SETUP_HELPURL = "";
+Blockly.Msg.ARDUINO_BASE_LOOP = "Arduino loop forever:";
+Blockly.Msg.ARDUINO_BASE_SETUP_LOOP_HELPURL = 'https://arduino.cc/en/Reference/Loop';
 Blockly.Msg.ARDUINO_SINCE_PROGRAM_STARTED_HELPURL = "https://www.arduino.cc/en/Reference/Millis";
 Blockly.Msg.ARDUINO_SINCE_PROGRAM_STARTED = "time since program started";
 Blockly.Msg.ARDUINO_SINCE_PROGRAM_STARTED_TOOLTIP = "Number of milliseconds since the program started (unsigned long)";
@@ -497,6 +501,8 @@ Blockly.Msg.ARDUINO_BASE_MAP_HELPURL ="http://arduino.cc/en/Reference/map";
 Blockly.Msg.ARDUINO_BASE_MAP_NUM ="to the transposed ";
 Blockly.Msg.ARDUINO_BASE_MAP_DMAX = "over a range of [0-";
 Blockly.Msg.ARDUINO_BASE_MAP_TOOLTIP = "transfer a value on a scale from 0 to 1023 to another scale";
+Blockly.Msg.ARDUINO_BASE_CODE = "Coding";
+Blockly.Msg.ARDUINO_BASE_CONST = "define";
 Blockly.Msg.ARDUINO_CONSTRAIN = "constrain";
 Blockly.Msg.ARDUINO_CONSTRAIN_X = " number";
 Blockly.Msg.ARDUINO_CONSTRAIN_A = "from A = ";
@@ -568,6 +574,7 @@ Blockly.Msg.LKL_MODE = 'mode';
 Blockly.Msg.LKL_DROPDOWN = [['RISING', "RISING"], ['FALLING', "FALLING"], ['CHANGE', "CHANGE"], ['LOW', "LOW"]];
 
 //SERIAL
+Blockly.Msg.Serial_Init="Serial communication init speed";
 Blockly.Msg.Serial_Print="Serial Print console";
 Blockly.Msg.Serial_Write="Serial write";
 Blockly.Msg.Serial_write_out="Write";
@@ -582,6 +589,7 @@ Blockly.Msg.Serial_flush="Serial flush";
 
 //SOFTWARE SERIAL
 Blockly.Msg.SSERIAL_Init="INIT";
+Blockly.Msg.SSERIAL_SPEED="speed";
 Blockly.Msg.SSERIAL_TX="TX#";
 Blockly.Msg.SSERIAL_RX="RX#";
 Blockly.Msg.SSERIAL_Read="SoftwareSerial Read";

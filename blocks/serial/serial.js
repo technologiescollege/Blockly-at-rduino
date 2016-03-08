@@ -33,6 +33,20 @@ goog.require('Blockly.Blocks');
  * Common HSV hue for all blocks in this category.
  */
 
+ Blockly.Blocks['serial_init'] = {
+  init: function() {
+    this.setColour("#00979D");
+	this.setHelpUrl('http://arduino.cc/en/Serial');
+	this.setInputsInline(true);
+    this.appendDummyInput("")
+	    .appendField(Blockly.Msg.Serial_Init)
+     	.appendField(new Blockly.FieldDropdown(profile.defaultBoard.serial), "SPEED");
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setTooltip('Serial communication init speed.');
+  }
+};
+ 
 Blockly.Blocks['serial_printfor'] = {
   init: function() {
     this.setColour("#00979D");
