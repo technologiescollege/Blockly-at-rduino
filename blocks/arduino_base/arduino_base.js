@@ -65,11 +65,7 @@ Blockly.Blocks.base_const = {
         this.setColour("#00979D");
 		this.setHelpUrl(Blockly.Msg.ARDUINO_BASE_DEFINE_HELPURL);
         this.appendDummyInput("")
-<<<<<<< HEAD
-            .appendField(Blockly.Msg.ARDUINO_BASE_CONST);
-=======
             .appendField(Blockly.Msg.ARDUINO_BASE_DEFINE);
->>>>>>> origin/master
         this.appendStatementInput('DO')
             .appendField(Blockly.LANG_CONTROLS_REPEAT_INPUT_DO);
         this.setTooltip(Blockly.Msg.ARDUINO_BASE_DEFINE_TOOLTIP);
@@ -169,8 +165,6 @@ Blockly.Blocks.various_constrain = {
   }
 };
 
-<<<<<<< HEAD
-=======
 Blockly.Blocks.inout_buildin_led = {
    init: function() {
     this.setColour("#00979D");
@@ -491,4 +485,3 @@ Blockly.Blocks['biblio_include'] = {
     this.setHelpUrl('https://www.arduino.cc/en/Reference/Libraries');
   }
 };
->>>>>>> origin/master

@@ -518,14 +518,11 @@ Blockly.Msg.ARDUINO_BASE_MAP_HELPURL ="http://arduino.cc/en/Reference/map";
 Blockly.Msg.ARDUINO_BASE_MAP_NUM ="to the transposed ";
 Blockly.Msg.ARDUINO_BASE_MAP_DMAX = "over a range of [0-";
 Blockly.Msg.ARDUINO_BASE_MAP_TOOLTIP = "transfer a value on a scale from 0 to 1023 to another scale";
-<<<<<<< HEAD
 Blockly.Msg.ARDUINO_BASE_CODE = "Coding";
 Blockly.Msg.ARDUINO_BASE_CONST = "define";
-=======
 Blockly.Msg.ARDUINO_BASE_DEFINE_HELPURL = "https://www.arduino.cc/en/Reference/Define";
 Blockly.Msg.ARDUINO_BASE_DEFINE = "Define";
 Blockly.Msg.ARDUINO_BASE_DEFINE_TOOLTIP = "Define constants & librairies";
->>>>>>> origin/master
 Blockly.Msg.ARDUINO_CONSTRAIN = "constrain";
 Blockly.Msg.ARDUINO_CONSTRAIN_X = " number";
 Blockly.Msg.ARDUINO_CONSTRAIN_A = "from A = ";

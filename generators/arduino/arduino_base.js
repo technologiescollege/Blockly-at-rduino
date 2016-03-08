@@ -106,8 +106,6 @@ Blockly.Arduino.various_constrain = function() {
   var code = 'constrain('+value_x+','+value_a+','+value_b+')';
   // TODO: Change ORDER_NONE to the correct strength.
   return [code, Blockly.Arduino.ORDER_NONE];
-<<<<<<< HEAD
-=======
 };
 
 Blockly.Arduino.inout_buildin_led = function() {
@@ -277,5 +275,4 @@ Blockly.Arduino['biblio_include'] = function() {
   Blockly.Arduino.definitions_[funcInclude] = '#include <'+text_file+'.h>';
   var code = '\n';
   return code;
->>>>>>> origin/master
 };
