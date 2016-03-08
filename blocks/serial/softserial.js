@@ -41,10 +41,13 @@ Blockly.Blocks['soft_init'] = {
 		.appendField(Blockly.Msg.SSERIAL_Init)
         .appendField(Blockly.Msg.SSERIAL_TX)
 		.appendField(new Blockly.FieldDropdown([['2', '2'],['3', '3'],['4', '4'],['5', '5'],['6', '6'],['7', '7'],['8', '8'],['9', '9'],['10', '10'],['11', '11'],['12', '12'],['13', '13']]), "PIN1");
-//	.appendField(new Blockly.FieldDropdown(profile.default.digital), "PIN1");
+		//.appendField(new Blockly.FieldDropdown(profile.defaultBoard.digitalPins), "PIN1");
     this.appendDummyInput()
         .appendField(Blockly.Msg.SSERIAL_RX)
 	    .appendField(new Blockly.FieldDropdown([['2', '2'],['3', '3'],['4', '4'],['5', '5'],['6', '6'],['7', '7'],['8', '8'],['9', '9'],['10', '10'],['11', '11'],['12', '12'],['13', '13']]), "PIN2");
+    this.appendDummyInput()
+	    .appendField(Blockly.Msg.SSERIAL_SPEED)
+     	.appendField(new Blockly.FieldDropdown(profile.defaultBoard.serial), "SPEED");
     this.setInputsInline(true);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
