@@ -31,10 +31,33 @@ Blockly.Blocks.base_setup = {
 		this.setHelpUrl(Blockly.Msg.ARDUINO_BASE_SETUP_HELPURL);
         this.appendDummyInput("")
             .appendField(Blockly.Msg.ARDUINO_BASE_SETUP);
-        this.appendStatementInput('DO')
-            .appendField(Blockly.LANG_CONTROLS_REPEAT_INPUT_DO);
+        this.appendStatementInput('DO');
         this.setTooltip("Exécuté seulement dans le 'Setup'");
-    }
+    },
+	/** @return {!boolean} True if the block instance is in the workspace. */
+	getArduinoLoopsInstance: function() {
+    return true;
+	}
+};
+
+Blockly.Blocks.base_setup_loop = {
+  init: function () {
+        this.setColour("#00979D");
+		this.setHelpUrl(Blockly.Msg.ARDUINO_BASE_SETUP_LOOP_HELPURL);
+        this.appendDummyInput("")
+            .appendField(Blockly.Msg.ARDUINO_BASE_SETUP);
+        this.appendStatementInput('DO');
+		this.appendDummyInput()
+			.appendField(Blockly.Msg.ARDUINO_BASE_LOOP);
+		this.appendStatementInput('LOOP');
+		this.setInputsInline(false);
+        this.setTooltip("Définis le 'setup()' et le 'loop()'");
+		this.contextMenu = false;
+    },
+	/** @return {!boolean} True if the block instance is in the workspace. */
+	getArduinoLoopsInstance: function() {
+    return true;
+	}
 };
 
 Blockly.Blocks.base_const = {
@@ -42,7 +65,11 @@ Blockly.Blocks.base_const = {
         this.setColour("#00979D");
 		this.setHelpUrl(Blockly.Msg.ARDUINO_BASE_DEFINE_HELPURL);
         this.appendDummyInput("")
+<<<<<<< HEAD
+            .appendField(Blockly.Msg.ARDUINO_BASE_CONST);
+=======
             .appendField(Blockly.Msg.ARDUINO_BASE_DEFINE);
+>>>>>>> origin/master
         this.appendStatementInput('DO')
             .appendField(Blockly.LANG_CONTROLS_REPEAT_INPUT_DO);
         this.setTooltip(Blockly.Msg.ARDUINO_BASE_DEFINE_TOOLTIP);
@@ -54,7 +81,7 @@ Blockly.Blocks.base_code = {
     this.setHelpUrl(Blockly.Msg.TEXT_TEXT_HELPURL);
     this.setColour("#00979D");
     this.appendDummyInput()
-        .appendField("Code")
+        .appendField(Blockly.Msg.ARDUINO_BASE_CODE)
         .appendField(new Blockly.FieldTextInput(''), 'TEXT');
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
@@ -142,6 +169,8 @@ Blockly.Blocks.various_constrain = {
   }
 };
 
+<<<<<<< HEAD
+=======
 Blockly.Blocks.inout_buildin_led = {
    init: function() {
     this.setColour("#00979D");
@@ -462,3 +491,4 @@ Blockly.Blocks['biblio_include'] = {
     this.setHelpUrl('https://www.arduino.cc/en/Reference/Libraries');
   }
 };
+>>>>>>> origin/master
