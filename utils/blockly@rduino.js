@@ -877,13 +877,13 @@ BlocklyDuino.init = function() {
 	        $('.draggable').removeClass('draggable');
 	    });
 		
-/*pour changer couleur texte dans toolbox
+		/*pour changer couleur texte dans toolbox
         $("div:contains('bitbloq').blocklyTreeRow, div:contains('bitbloq').blocklyTreeRow ~ div").on("click", function() {
             $(this).removeClass("blocklyTreeSelected")
             $(this).find("div.blocklyTreeSelected").removeClass("blocklyTreeSelected")
             $(this).find("span").css("color", "#000000");
         });*/
-	};
+};
 
 /**
  * Set menu orientation 

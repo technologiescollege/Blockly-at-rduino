@@ -1,25 +1,10 @@
 /**
- * Visual Blocks Language
- *
- * Copyright 2012 Google Inc.
- * http://blockly.googlecode.com/
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *   http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
+ * @license Licensed under the Apache License, Version 2.0 (the "License"):
+ *          http://www.apache.org/licenses/LICENSE-2.0
  */
 
 /**
- * @fileoverview Variable blocks for Arduino.
- * @author gasolin@gmail.com (Fred Lin)
+ * @fileoverview Generating Arduino code for variables blocks.
  */
 'use strict';
 
@@ -28,30 +13,44 @@ goog.provide('Blockly.Arduino.variables');
 goog.require('Blockly.Arduino');
 
 
-Blockly.Arduino.variables_get = function() {
-  // Variable getter.
-  var code = Blockly.Arduino.variableDB_.getName(this.getFieldValue('VAR'),
+/**
+ * Code generator for variable (X) getter.
+ * Arduino code: loop { X }
+ * @param {Blockly.Block} block Block to generate the code from.
+ * @return {array} Completed code with order of operation.
+ */
+Blockly.Arduino['variables_get'] = function(block) {
+  var code = Blockly.Arduino.variableDB_.getName(block.getFieldValue('VAR'),
       Blockly.Variables.NAME_TYPE);
   return [code, Blockly.Arduino.ORDER_ATOMIC];
 };
 
-Blockly.Arduino.variables_declare = function() {
-  // Variable setter.
-  var dropdown_type = this.getFieldValue('TYPE');
-  //TODO: settype to variable
-  var argument0 = Blockly.Arduino.valueToCode(this, 'VALUE',
+/**
+ * Code generator for variable (X) setter (Y).
+ * Arduino code: type X;
+ *               loop { X = Y; }
+ * @param {Blockly.Block} block Block to generate the code from.
+ * @return {string} Completed code.
+ */
+Blockly.Arduino['variables_set'] = function(block) {
+  var argument0 = Blockly.Arduino.valueToCode(block, 'VALUE',
       Blockly.Arduino.ORDER_ASSIGNMENT) || '0';
-  var varName = Blockly.Arduino.variableDB_.getName(this.getFieldValue('VAR'),
-      Blockly.Variables.NAME_TYPE);
-  Blockly.Arduino.setups_['setup_var' + varName] = varName + ' = ' + argument0 + ';\n';
-  return '';
+  var varName = Blockly.Arduino.variableDB_.getName(
+      block.getFieldValue('VAR'), Blockly.Variables.NAME_TYPE);
+  return varName + ' = ' + argument0 + ';\n';
 };
 
-Blockly.Arduino.variables_set = function() {
-  // Variable setter.
-  var argument0 = Blockly.Arduino.valueToCode(this, 'VALUE',
+/**
+ * Code generator for variable (X) casting (Y).
+ * Arduino code: loop { (Y)X }
+ * @param {Blockly.Block} block Block to generate the code from.
+ * @return {array} Completed code with order of operation.
+ */
+Blockly.Arduino['variables_set_type'] = function(block) {
+  var argument0 = Blockly.Arduino.valueToCode(block, 'VARIABLE_SETTYPE_INPUT',
       Blockly.Arduino.ORDER_ASSIGNMENT) || '0';
-  var varName = Blockly.Arduino.variableDB_.getName(this.getFieldValue('VAR'),
-      Blockly.Variables.NAME_TYPE);
-  return varName + ' = ' + argument0 + ';\n';
+  var varType = Blockly.Arduino.getArduinoType_(
+      Blockly.Types[block.getFieldValue('VARIABLE_SETTYPE_TYPE')]);
+  var code = '(' + varType + ')(' + argument0 + ')';
+  return [code, Blockly.Arduino.ORDER_ATOMIC];
 };

@@ -7,6 +7,11 @@
 <script type="text/javascript" src="blocks/blockly_compressed.js"></script>
 
 <script type="text/javascript" src="utils/boards.js"></script>
+<!-- needed for type of variable--->
+<script type="text/javascript" src="utils/type.js"></script>
+<script type="text/javascript" src="utils/types.js"></script>
+<script type="text/javascript" src="utils/static_typing.js"></script>
+
 <script type="text/javascript" src="utils/blocklyDuino.js"></script>
 <script type="text/javascript" src="utils/blockly@rduino.js"></script>
 <script type="text/javascript" src="utils/spin.js"></script>
@@ -21,6 +26,7 @@
 <script type="text/javascript" src="blocks/blocklyarduino/math.js"></script>
 <script type="text/javascript" src="blocks/blocklyarduino/text.js"></script>
 <script type="text/javascript" src="blocks/blocklyarduino/variables.js"></script>
+<script type="text/javascript" src="blocks/blocklyarduino/variables_type.js"></script>
 <script type="text/javascript" src="blocks/blocklyarduino/array.js"></script>
 <script type="text/javascript" src="blocks/blocklyarduino/procedures.js"></script>
 
@@ -525,14 +531,14 @@
 	</category>
     <category name="CAT_TEXT" colour="#8A55D7">
         <block type="text"></block>
-<!--         <block type="text_join"></block> -->
-<!--       <block type="text_append"> -->
-<!--         <value name="TEXT"> -->
-<!--           <shadow type="text"></shadow> -->
-<!--         </value> -->
-<!--       </block> -->
-<!--         <block type="text_length"></block> -->
-<!--         <block type="text_isEmpty"></block> -->
+		<block type="text_join"></block>
+       <block type="text_append">
+         <value name="TEXT">
+           <shadow type="text"></shadow>
+         </value>
+       </block>
+         <block type="text_length"></block>
+         <block type="text_isEmpty"></block>
 <!--         <block type="text_indexOf"> -->
 <!--             <value name="VALUE"> -->
 <!--                 <block type="variables_get"> -->
@@ -603,7 +609,16 @@
         </block>
     </category> 
 -->
-    <category name="CAT_VARIABLES" custom="VARIABLE" colour="#EE7D16"></category>
+    <category name="CAT_VARIABLES" colour="#EE7D16">
+		<block type="variables_get"></block>
+		<block type="variables_set"></block>
+		<block type="variables_set">
+		  <value name="VALUE">
+			<block type="variables_set_type"></block>
+		  </value>
+		</block>
+		<block type="variables_set_type"></block>
+	</category>
     <category name="CAT_FUNCTIONS" custom="PROCEDURE" colour="#632D99"></category>
 	<sep></sep>
     <category name="CAT_ARDUINO" colour="#00979D">
