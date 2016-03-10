@@ -34,12 +34,14 @@
 <script type="text/javascript" src="blocks/arduino_base/arduino_io.js"></script>
 <script type="text/javascript" src="blocks/arduino_base/arduino_conversion.js"></script>
 <script type="text/javascript" src="blocks/arduino_base/arduino_variables.js"></script>
+<script type="text/javascript" src="blocks/adafruit_motorshield/adafruit_motorshield.js"></script>
 <script type="text/javascript" src="blocks/bitbloq/bitbloq.js"></script>
 <script type="text/javascript" src="blocks/dfplayer-mini-mp3-dfrobot/dfplayer-mini-mp3-dfrobot.js"></script>
 <script type="text/javascript" src="blocks/display-oled-128x64-i2c/display-oled-128x64-i2c.js"></script>
 <script type="text/javascript" src="blocks/grove/grove.js"></script>
 <script type="text/javascript" src="blocks/jeulin_maquette_feux/jeulin_maquette_feux.js"></script>
 <script type="text/javascript" src="blocks/led-rgb-ws2812b/led-rgb-ws2812b.js"></script>
+<script type="text/javascript" src="blocks/multi-function/multi-function.js"></script>
 <script type="text/javascript" src="blocks/serial/serial.js"></script>
 <script type="text/javascript" src="blocks/serial/softserial.js"></script>
 <script type="text/javascript" src="blocks/servo/servo.js"></script>
@@ -63,6 +65,7 @@
 <script type="text/javascript" src="generators/arduino/arduino_io.js"></script>
 <script type="text/javascript" src="generators/arduino/arduino_conversion.js"></script>
 <script type="text/javascript" src="generators/arduino/arduino_variables.js"></script>
+<script type="text/javascript" src="generators/arduino/adafruit_motorshield.js"></script>
 <script type="text/javascript" src="generators/arduino/bitbloq.js"></script>
 <script type="text/javascript" src="generators/arduino/dfplayer-mini-mp3-dfrobot.js"></script>
 <script type="text/javascript" src="generators/arduino/display-oled-128x64-i2c.js"></script>
@@ -798,8 +801,10 @@
 			<block type="IR_serial_decoder"></block>
 			<block type="IR_get_blink"></block>
 			<block type="IR_get"></block>
-		</category>
+		</category>   
+		<sep></sep>
 	</category>	
+	
 	<category name="CAT_OLED_U8G" colour="#1B2944">
 		<block type="lp2i_u8g_draw_string" colour="#1B2944">
 			<value name="Text">
@@ -1016,7 +1021,8 @@
 				</block>
 				<block type="LCD_Keypad_Shield_DFR_09_RAZ">
 				</block>
-		</category>
+		</category>   
+		<sep></sep>
 	</category>
     <category name="CAT_BQ" colour="#608621">
         <category name="CAT_BQ_IN" colour="#608621">
@@ -1121,7 +1127,8 @@
 					<field name="NUM">3</field>
 				</shadow>
 			</block>
-        </category>
+        </category>   
+		<sep></sep>
     </category>
 
     <category name="CAT_JEULIN" colour="#C12542">
@@ -1142,7 +1149,8 @@
             <block type="jeulin_feu_pieton_led1red"></block>
             <block type="jeulin_feu_pieton_led1green"></block>
             <block type="jeulin_alarme_pieton_buzzer1"></block>   
-        </category>
+        </category>   
+		<sep></sep>
     </category>
 	
     <category name="CAT_GROVE" colour="#8ec31f">
@@ -1201,9 +1209,21 @@
                 </value>
 			</block>
 			<block type="ArduiLed"></block>
-        </category>
+        </category>   
+		<sep></sep>
     </category>
-
+	
+	<category name="CAT_MULTIFUNCTION" colour="#0152AB">
+		<block type="multifunction_digital_read" colour="#0152AB"></block>
+		<block type="multifunction_pot_read" colour="#0152AB"></block>
+		<block type="multifunction_analog_read" colour="#0152AB"></block>
+		<block type="multifunction_buildin_led" colour="#0152AB"></block>
+		<block type="multifunction_tone" colour="#0152AB"></block>
+		<block type="multifunction_notone" colour="#0152AB"></block>
+		<block type="multifunction_segment" colour="#0152AB"></block>
+		<block type="multifunction_PWM_write" colour="#0152AB"></block>
+	</category>
+	
     <category name="CAT_TECHNOZONE" colour="#646464">
         <category name="CAT_TECHNOZONE_IN" colour="#646464">
             <block type="technozone_btn1white"></block>
@@ -1374,7 +1394,8 @@
 				</value>
             </block>
             <block type="technozone_robot_ihm_gauge_write"></block>
-        </category>
+        </category>   
+		<sep></sep>
     </category>
     <category name="CAT_TECHNOZONE_ROBOT" colour="#646464">
         <category name="CAT_TECHNOZONE_ROBOT_IN" colour="#646464">
@@ -1491,7 +1512,8 @@
 				</value>
             </block>
             <block type="technozone_robot_ihm_gauge_write"></block>
-        </category>
+        </category>   
+		<sep></sep>
     </category>
 
     <category name="CAT_ZUMO" colour="#00138b">
@@ -1587,10 +1609,22 @@
 					</shadow>
 				</value>
 			</block>
-        </category>
-    </category>
-	<sep></sep>
+        </category>    
+		<sep></sep>
+	</category>
+	
 	<category name="CAT_ROBOTS_MOTORS" colour="#5b99a5">
+	
+		<category name="CAT_ADAFRUIT_MOTORSHIELD_v1" colour="#2D7F4F">
+			<block type="dcmotor_v1" colour="#2D7F4F"></block>
+			<block type="pap_v1" colour="#2D7F4F"></block>
+		</category>	
+		<category name="CAT_ADAFRUIT_MOTORSHIELD_v2" colour="#005D9D">
+			<block type="dcmotor_v2" colour="#005D9D"></block>
+			<block type="pap_v2" colour="#005D9D"></block>
+			<block type="joystick" colour="#005D9D"></block>
+		</category>	
+		<sep></sep>
 		<block type="arduino_s">
 			<value name="SPEEDA">
 				<shadow type="math_number">

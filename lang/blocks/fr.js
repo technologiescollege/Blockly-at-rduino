@@ -438,12 +438,16 @@ Blockly.Msg.CAT_ARDUINO_COMM_SERIAL = "communication série";
 Blockly.Msg.CAT_ARDUINO_COMM_SOFTSERIAL = "communication logicielle";
 Blockly.Msg.CAT_ARDUINO_SERVO = "servo-moteur";
 
+Blockly.Msg.CAT_ADAFRUIT_MOTORSHIELD = "Adafruit Motorshield";
+Blockly.Msg.CAT_ADAFRUIT_MOTORSHIELD_v1 = "Version 1";
+Blockly.Msg.CAT_ADAFRUIT_MOTORSHIELD_v2 = "Version 2";
+
 Blockly.Msg.CAT_DFRobot = "DFRobot";
 Blockly.Msg.CAT_DFRobot_SHIELD_LCDKEYPAD = "carte LCD keypad"; //Added february 27th 2016
 Blockly.Msg.CAT_DFPLAYER = "DFPlayer mini MP3";
 
 Blockly.Msg.CAT_LED_RGB_CHAIN = "DEL RGB en série";
-Blockly.Msg.CAT_OLED_U8G = "Afficheur OLED I2C";
+Blockly.Msg.CAT_OLED_U8G = "afficheur OLED I2C";
 
 Blockly.Msg.CAT_GROVE = "Grove";  //added march 9th 2015
 Blockly.Msg.CAT_GROVE_IN = "capteurs";
@@ -486,6 +490,8 @@ Blockly.Msg.CAT_BQ_COMM = "communication";
 Blockly.Msg.CAT_JEULIN = "feux de carrefour";  //added january 11th 2016
 Blockly.Msg.CAT_JEULIN_IN = "capteurs";
 Blockly.Msg.CAT_JEULIN_OUT = "actionneurs";
+
+Blockly.Msg.CAT_MULTIFUNCTION = "multi-fonction";  //added march 9th 2016
 
 Blockly.Msg.FIELDDROPDOWN = [["1 (état haut)", "HIGH"], ["0 (état bas)", "LOW"]];
 Blockly.Msg.FIELDDROPDOWN_ONOFF = [["marche", "ON"], ["arrêt", "OFF"]]
@@ -1055,3 +1061,27 @@ Blockly.Msg.LCD_SHIELD_PRINT_INPUT1 = "écrire sur la ligne 1";
 Blockly.Msg.LCD_SHIELD_PRINT_INPUT2 = "écrire sur la ligne 2";
 Blockly.Msg.LCD_SHIELD_PRINT_INPUT3 = "pendant (ms)";
 Blockly.Msg.LCD_SHIELD_PRINT_TOOLTIP = "écris le texte sur un écran LCD série de 2 lignes sur 16 caractères";
+
+//SHIELD ADAFRUIT
+Blockly.Msg.ADAFRUIT_MOTORSHIELD_MOTOR1 = "v1 - Moteur CC";
+Blockly.Msg.ADAFRUIT_MOTORSHIELD_MOTOR2 = "v2 - Moteur CC";
+Blockly.Msg.ADAFRUIT_MOTORSHIELD_MOTOR_DIRECTION = "Direction";
+Blockly.Msg.ADAFRUIT_MOTORSHIELD_MOTOR_VITESSE = "Vitesse [0-255]";
+Blockly.Msg.ADAFRUIT_MOTORSHIELD_AVANT = "Avant";
+Blockly.Msg.ADAFRUIT_MOTORSHIELD_ARRIERE = "Arriere";
+Blockly.Msg.ADAFRUIT_MOTORSHIELD_STOP = "Stop";
+
+Blockly.Msg.ADAFRUIT_MOTORSHIELD_PAP1 = "v1 - Moteur Pas-à-pas";
+Blockly.Msg.ADAFRUIT_MOTORSHIELD_PAP2 = "v2 - Moteur Pas-à-pas";
+Blockly.Msg.ADAFRUIT_MOTORSHIELD_CONNECT = "Broche";
+Blockly.Msg.ADAFRUIT_MOTORSHIELD_MOTOR_PPT = "Pas par tour";
+Blockly.Msg.ADAFRUIT_MOTORSHIELD_MOTOR_RPM = "Vitesse (RPM)";
+Blockly.Msg.ADAFRUIT_MOTORSHIELD_MOTOR_NB_PAS = "Nb de pas";
+
+Blockly.Msg.ADAFRUIT_MOTORSHIELD_JOY1 = "v1 - Joystick";
+Blockly.Msg.ADAFRUIT_MOTORSHIELD_JOY2 = "v2 - Joystick";
+Blockly.Msg.ADAFRUIT_MOTORSHIELD_ENTREE_X = "Entrée (x)";
+Blockly.Msg.ADAFRUIT_MOTORSHIELD_ENTREE_Y = "Entrée (y)";
+Blockly.Msg.ADAFRUIT_MOTORSHIELD_NEUTRE = "Zone neutre";
+Blockly.Msg.ADAFRUIT_MOTORSHIELD_MOTORDC1 = "Moteur DC 1";
+Blockly.Msg.ADAFRUIT_MOTORSHIELD_MOTORDC2 = "Moteur DC 2";

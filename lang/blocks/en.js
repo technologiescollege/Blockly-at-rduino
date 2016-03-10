@@ -443,6 +443,10 @@ Blockly.Msg.CAT_ARDUINO_COMM_SERIAL = "serial communication";
 Blockly.Msg.CAT_ARDUINO_COMM_SOFTSERIAL = "softserial lib";
 Blockly.Msg.CAT_ARDUINO_SERVO = "Servo-Motor";
 
+Blockly.Msg.CAT_ADAFRUIT_MOTORSHIELD = "Adafruit Motorshield";
+Blockly.Msg.CAT_ADAFRUIT_MOTORSHIELD_v1 = "Version 1";
+Blockly.Msg.CAT_ADAFRUIT_MOTORSHIELD_v2 = "Version 2";
+
 Blockly.Msg.CAT_DFRobot = "DFRobot";
 Blockly.Msg.CAT_DFRobot_SHIELD_LCDKEYPAD = "Shield LCD Keypad"; //Added february 27th 2016
 Blockly.Msg.CAT_DFPLAYER = "DFPlayer mini MP3";
@@ -491,6 +495,8 @@ Blockly.Msg.CAT_BQ_COMM = "Communication";
 Blockly.Msg.CAT_JEULIN = "Traffic light";  //added january 11th 2016
 Blockly.Msg.CAT_JEULIN_IN = "Sensors";
 Blockly.Msg.CAT_JEULIN_OUT = "Actuators";
+
+Blockly.Msg.CAT_MULTIFUNCTION = "multi-fonction";  //added march 9th 2016
 
 Blockly.Msg.FIELDDROPDOWN = [["HIGH", "HIGH"], ["LOW", "LOW"]];
 Blockly.Msg.FIELDDROPDOWN_ONOFF = [["ON", "ON"], ["OFF", "OFF"]];
@@ -1060,3 +1066,22 @@ Blockly.Msg.LCD_SHIELD_PRINT_TEXT = "écran LCD Keypad Shield";
 Blockly.Msg.LCD_SHIELD_PRINT_INPUT1 = "écrire sur la ligne 1";
 Blockly.Msg.LCD_SHIELD_PRINT_INPUT2 = "écrire sur la ligne 2";
 Blockly.Msg.LCD_SHIELD_PRINT_INPUT3 = "pendant (ms)";
+
+//SHIELD ADAFRUIT
+Blockly.Msg.ADAFRUIT_MOTORSHIELD_MOTOR1 = "v1 - Motor DC";
+Blockly.Msg.ADAFRUIT_MOTORSHIELD_MOTOR2 = "v2 - Motor DC";
+Blockly.Msg.ADAFRUIT_MOTORSHIELD_MOTOR_DIRECTION = "Direction";
+Blockly.Msg.ADAFRUIT_MOTORSHIELD_MOTOR_VITESSE = "Speed [0-255]";
+Blockly.Msg.ADAFRUIT_MOTORSHIELD_AVANT = "Forward";
+Blockly.Msg.ADAFRUIT_MOTORSHIELD_ARRIERE = "Backward";
+Blockly.Msg.ADAFRUIT_MOTORSHIELD_STOP = "Stop";
+
+Blockly.Msg.ADAFRUIT_MOTORSHIELD_PAP1 = "v1 - Stepper Motor";
+Blockly.Msg.ADAFRUIT_MOTORSHIELD_PAP2 = "v2 - Stepper Motor";
+Blockly.Msg.ADAFRUIT_MOTORSHIELD_CONNECT = "Connect to";
+Blockly.Msg.ADAFRUIT_MOTORSHIELD_MOTOR_PPT = "Step";
+Blockly.Msg.ADAFRUIT_MOTORSHIELD_MOTOR_RPM = "Speed (RPM)";
+Blockly.Msg.ADAFRUIT_MOTORSHIELD_MOTOR_NB_PAS = "Move to Step";
+
+Blockly.Msg.ADAFRUIT_MOTORSHIELD_JOY1 = "v1 - Joystick";
+Blockly.Msg.ADAFRUIT_MOTORSHIELD_JOY2 = "v2 - Joystick";
