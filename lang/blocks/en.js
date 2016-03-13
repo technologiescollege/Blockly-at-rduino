@@ -444,8 +444,8 @@ Blockly.Msg.CAT_ARDUINO_COMM_SOFTSERIAL = "softserial lib";
 Blockly.Msg.CAT_ARDUINO_SERVO = "Servo-Motor";
 
 Blockly.Msg.CAT_ADAFRUIT_MOTORSHIELD = "Adafruit Motorshield";
-Blockly.Msg.CAT_ADAFRUIT_MOTORSHIELD_v1 = "Version 1";
-Blockly.Msg.CAT_ADAFRUIT_MOTORSHIELD_v2 = "Version 2";
+Blockly.Msg.CAT_ADAFRUIT_MOTORSHIELD_v1 = "Adafruit Motorshield v1";
+Blockly.Msg.CAT_ADAFRUIT_MOTORSHIELD_v2 = "Adafruit Motorshield v2";
 
 Blockly.Msg.CAT_DFRobot = "DFRobot";
 Blockly.Msg.CAT_DFRobot_SHIELD_LCDKEYPAD = "Shield LCD Keypad"; //Added february 27th 2016
