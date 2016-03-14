@@ -14,16 +14,16 @@ var socket = new WebSocket('ws://' + ipAddress + ':' + ipPort);
 
 
 function WebSocketTest() {	  
-	  if ("WebSocket" in window)
-            {
-               alert(Blockly.Msg.SV_alert1);
-			   socket = new WebSocket('ws://' + ipAddress + ':' + ipPort);
-            }            
-            else
-            {
-               // The browser doesn't support WebSocket
-               alert(Blockly.Msg.SV_alert2);
-			}
+  if ("WebSocket" in window)
+		{
+		   alert(Blockly.Msg.SV_alert1);
+		   socket = new WebSocket('ws://' + ipAddress + ':' + ipPort);
+		}            
+		else
+		{
+		   // The browser doesn't support WebSocket
+		   alert(Blockly.Msg.SV_alert2);
+		}
 }; 
 
 socket.onerror = function (event) {

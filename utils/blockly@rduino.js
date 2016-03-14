@@ -883,6 +883,11 @@ BlocklyDuino.init = function() {
             $(this).find("div.blocklyTreeSelected").removeClass("blocklyTreeSelected")
             $(this).find("span").css("color", "#000000");
         });*/
+	if (window.location.protocol == 'http:') {
+					$("#btn_create_example").attr("href","examples.php");
+					} else {
+					$("#btn_create_example").attr("href","examples.html");	
+					}
 };
 
 /**
@@ -992,6 +997,7 @@ BlocklyDuino.buildExamples = function() {
 			}
 		});
 };
+
 
 /**
  * Test ajax request 

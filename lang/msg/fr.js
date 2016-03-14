@@ -9,6 +9,7 @@ var MSG = {
   span_saveXML:" sauver en fichier XML",
   span_fakeload:" charger un fichier XML",
   span_example: " ouvrir un exemple",
+  span_create_example: " gérer les exemples",
   span_doc: " documentation",
   span_tuto: " tutoriel",
   span_plugin_codebender: " si grisé...",

@@ -172,6 +172,7 @@ Code.initLanguage = function() {
   $('#title').text(MSG['title']);
   $('#span_about').text(MSG['span_about']);
   $('#span_example').text(MSG['span_example']);
+  $('#span_create_example').text(MSG['span_create_example']);
   $('#span_picture').text(MSG['span_picture']);
   $('#aboutModalLabel').text(MSG['aboutModalLabel']);
   $('#aboutBody').html(MSG['aboutBody']);
