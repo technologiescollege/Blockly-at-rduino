@@ -1079,6 +1079,19 @@ Blockly.Msg.ADAFRUIT_MOTORSHIELD_STOP = "Stop";
 Blockly.Msg.ADAFRUIT_MOTORSHIELD_PAP1 = "v1 - Stepper Motor";
 Blockly.Msg.ADAFRUIT_MOTORSHIELD_PAP2 = "v2 - Stepper Motor";
 Blockly.Msg.ADAFRUIT_MOTORSHIELD_CONNECT = "Connect to";
+Blockly.Msg.ADAFRUIT_MOTORSHIELD_MOTOR_PPT = "Step";
+Blockly.Msg.ADAFRUIT_MOTORSHIELD_MOTOR_RPM = "Speed(RPM)";
+Blockly.Msg.ADAFRUIT_MOTORSHIELD_MOTOR_NB_PAS = "Move to Step";
+
+Blockly.Msg.ADAFRUIT_MOTORSHIELD_JOY1_MOT1 = "v1 - Joystick + motors";
+Blockly.Msg.ADAFRUIT_MOTORSHIELD_JOY_MOT2 = "v2 - Joystick + motors";
+Blockly.Msg.ADAFRUIT_MOTORSHIELD_JOY1 = "v1 - Joystick";
+Blockly.Msg.ADAFRUIT_MOTORSHIELD_JOY2 = "v2 - Joystick";
+Blockly.Msg.ADAFRUIT_MOTORSHIELD_ENTREE_X = "Connection(x)";
+Blockly.Msg.ADAFRUIT_MOTORSHIELD_ENTREE_Y = "Connection(y)";
+Blockly.Msg.ADAFRUIT_MOTORSHIELD_NEUTRE = "Neutral zone [0-255]";
+Blockly.Msg.ADAFRUIT_MOTORSHIELD_MOTORDC1 = "Motor DC 1";
+Blockly.Msg.ADAFRUIT_MOTORSHIELD_MOTORDC2 = "Motor DC 2";
 
 //SHIELD MULTIFUNCTION
 Blockly.Msg.multifunction_buildin_led_INPUT = "mettre la DEL intégrée";

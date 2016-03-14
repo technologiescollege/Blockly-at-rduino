@@ -1068,7 +1068,7 @@ Blockly.Msg.ADAFRUIT_MOTORSHIELD_MOTOR2 = "v2 - Moteur CC";
 Blockly.Msg.ADAFRUIT_MOTORSHIELD_MOTOR_DIRECTION = "Direction";
 Blockly.Msg.ADAFRUIT_MOTORSHIELD_MOTOR_VITESSE = "Vitesse [0-255]";
 Blockly.Msg.ADAFRUIT_MOTORSHIELD_AVANT = "Avant";
-Blockly.Msg.ADAFRUIT_MOTORSHIELD_ARRIERE = "Arriere";
+Blockly.Msg.ADAFRUIT_MOTORSHIELD_ARRIERE = "Arrière";
 Blockly.Msg.ADAFRUIT_MOTORSHIELD_STOP = "Stop";
 
 Blockly.Msg.ADAFRUIT_MOTORSHIELD_PAP1 = "v1 - Moteur Pas-à-pas";
@@ -1078,6 +1078,8 @@ Blockly.Msg.ADAFRUIT_MOTORSHIELD_MOTOR_PPT = "Pas par tour";
 Blockly.Msg.ADAFRUIT_MOTORSHIELD_MOTOR_RPM = "Vitesse (RPM)";
 Blockly.Msg.ADAFRUIT_MOTORSHIELD_MOTOR_NB_PAS = "Nb de pas";
 
+Blockly.Msg.ADAFRUIT_MOTORSHIELD_JOY1_MOT1 = "v1 - Joystick + moteurs";
+Blockly.Msg.ADAFRUIT_MOTORSHIELD_JOY_MOT2 = "v2 - Joystick + moteurs";
 Blockly.Msg.ADAFRUIT_MOTORSHIELD_JOY1 = "v1 - Joystick";
 Blockly.Msg.ADAFRUIT_MOTORSHIELD_JOY2 = "v2 - Joystick";
 Blockly.Msg.ADAFRUIT_MOTORSHIELD_ENTREE_X = "Entrée (x)";

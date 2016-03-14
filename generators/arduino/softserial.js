@@ -6,7 +6,7 @@ Blockly.Arduino['soft_init'] = function(block) {
   var dropdown_pin1 = this.getFieldValue('PIN1');
   var dropdown_pin2 = this.getFieldValue('PIN2');
   var dropdown_speed = this.getFieldValue('SPEED');
-  Blockly.Arduino.definitions_['define_ss'] = '#include <SoftwareSerial.h>\nSoftwareSerial mySerial('+dropdown_pin1+','+dropdown_pin2+');\n';
+  Blockly.Arduino.definitions_['define_ss'] = '#include <SoftwareSerial.h>\nSoftwareSerial mySerial' +dropdown_pin1+ '('+dropdown_pin1+','+dropdown_pin2+');\n';
   Blockly.Arduino.setups_['sserial_begin' + dropdown_pin1] = 'mySerial' + dropdown_pin1 + '.begin(' + dropdown_speed + ');' ;
   return '';
 };
