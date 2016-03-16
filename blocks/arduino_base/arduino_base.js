@@ -72,6 +72,27 @@ Blockly.Blocks.base_const = {
     }
 };
 
+Blockly.Blocks.base_define_const = {
+  init: function() {
+    //this.setHelpUrl(Blockly.Msg.ARDUINO_BASE_DEFINE_CONST_HELPURL); A faire
+	this.setHelpUrl('https://www.arduino.cc/en/Reference/Define');
+    this.setColour("#00979D");
+	this.appendValueInput("TEXT1", 'Null')
+        .setAlign(Blockly.ALIGN_RIGHT)
+    //  	.appendField(Blockly.Msg.ARDUINO_BASE_DEFINE_CONST_INPUT1); A faire
+		.appendField('Définir');
+    this.appendDummyInput()
+    //   .appendField(Blockly.Msg.ARDUINO_BASE_DEFINE_CONST_INPUT2) A faire
+		.appendField('comme étant')
+        .appendField(new Blockly.FieldTextInput(''), 'TEXT2');
+
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    //this.setTooltip(Blockly.Msg.ARDUINO_BASE_DEFINE_CONST_TOOLTIP); A faire
+	this.setTooltip('');
+  }
+};
+
 Blockly.Blocks.base_code = {
   init: function() {
     this.setHelpUrl(Blockly.Msg.TEXT_TEXT_HELPURL);
@@ -82,6 +103,17 @@ Blockly.Blocks.base_code = {
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setTooltip(Blockly.Msg.TEXT_TEXT_TOOLTIP);
+  }
+};
+
+Blockly.Blocks.base_end = {
+  init: function() {
+    this.setHelpUrl('');
+    this.setColour("#00979D");
+    this.appendDummyInput()
+        .appendField(Blockly.Msg.ARDUINO_BASE_END);
+    this.setPreviousStatement(true, null);
+    this.setTooltip(Blockly.Msg.END_TOOLTIP);
   }
 };
 

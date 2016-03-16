@@ -33,7 +33,7 @@
 <script type="text/javascript" src="blocks/arduino_base/arduino_base.js"></script>
 <script type="text/javascript" src="blocks/arduino_base/arduino_io.js"></script>
 <script type="text/javascript" src="blocks/arduino_base/arduino_conversion.js"></script>
-<script type="text/javascript" src="blocks/arduino_base/arduino_variables.js"></script>
+<script type="text/javascript" src="blocks/arduino_base/variables_type.js"></script>
 <script type="text/javascript" src="blocks/adafruit_motorshield/adafruit_motorshield.js"></script>
 <script type="text/javascript" src="blocks/bitbloq/bitbloq.js"></script>
 <script type="text/javascript" src="blocks/dfplayer-mini-mp3-dfrobot/dfplayer-mini-mp3-dfrobot.js"></script>
@@ -64,7 +64,7 @@
 <script type="text/javascript" src="generators/arduino/arduino_base.js"></script>
 <script type="text/javascript" src="generators/arduino/arduino_io.js"></script>
 <script type="text/javascript" src="generators/arduino/arduino_conversion.js"></script>
-<script type="text/javascript" src="generators/arduino/arduino_variables.js"></script>
+<script type="text/javascript" src="generators/arduino/variables_type.js"></script>
 <script type="text/javascript" src="generators/arduino/adafruit_motorshield.js"></script>
 <script type="text/javascript" src="generators/arduino/bitbloq.js"></script>
 <script type="text/javascript" src="generators/arduino/dfplayer-mini-mp3-dfrobot.js"></script>
@@ -617,26 +617,21 @@
         </block>
     </category> 
 -->
-    <category name="CAT_VARIABLES" custom="VARIABLE" colour="#EE7D16">
-		<block type="variables_get"></block>
+    <category name="CAT_VARIABLES" colour="#EE7D16">
 		<block type="variables_set"></block>
-		<block type="variables_set">
-		  <value name="VALUE">
-			<block type="variables_set_type"></block>
-		  </value>
-		</block>
 		<block type="variables_set_type"></block>
-		<block type="variables_declare"></block>
+		<block type="variables_get"></block>
 	</category>
     <category name="CAT_FUNCTIONS" custom="PROCEDURE" colour="#632D99"></category>
 	<sep></sep>
     <category name="CAT_ARDUINO" colour="#00979D">
 		<block type="base_setup"></block>
 		<block type="base_setup_loop"></block>
+		<block type="base_define_const"></block>
 		<block type="base_const"></block>
 		<block type="biblio_include"></block>
 		<block type="base_code"></block>
-		<block type="variables_arduino_declare"></block>
+		<block type="base_end"></block>
 		<category name="CAT_ARDUINO_IN" colour="#00979D">
 			<block type="inout_analog_read_validator"></block>
             <block type="inout_digital_read_validator"></block>
@@ -1718,6 +1713,8 @@
 		<block type="servo_read_degrees"></block>
 		<block type="servo_attached"></block>
 		<block type="servo_detach"></block>
+		<block type="servo_rot_continue"></block>
+		<block type="servo_rot_continue_param"></block>
 	</category>
 </xml>
 </body>

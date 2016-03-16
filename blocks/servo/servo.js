@@ -98,3 +98,53 @@ Blockly.Blocks.servo_detach = {
     this.setTooltip('Release a pin from servo driving.');
   }
 };
+
+Blockly.Blocks.servo_rot_continue = {
+  init: function() {
+    this.setColour("#2475FA");
+    this.setHelpUrl(Blockly.Msg.ARDUINO_SERVO_ROT_CONTINUE_HELPURL);
+	this.appendDummyInput()
+		.appendField(Blockly.Msg.ARDUINO_SERVO_ROT_CONTINUE_TEXT)
+		.appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/servo/servomoteur_rot_continue.jpg', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize));
+	this.appendValueInput("PIN", 'Number')
+        .setAlign(Blockly.ALIGN_RIGHT)
+		.setCheck('Number')
+        .appendField(Blockly.Msg.ARDUINO_SERVO_ROT_CONTINUE_INPUT1);
+    this.setInputsInline(true);
+	this.appendValueInput("SPEED", 'Null')
+        .setAlign(Blockly.ALIGN_RIGHT)
+      	.appendField(Blockly.Msg.ARDUINO_SERVO_ROT_CONTINUE_INPUT2);
+    this.setInputsInline(false);
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setTooltip(Blockly.Msg.ARDUINO_SERVO_ROT_CONTINUE_TOOLTIP);
+	this.setTooltip('');
+  }
+};
+
+Blockly.Blocks.servo_rot_continue_param = {
+  init: function() {
+    this.setColour("#2475FA");
+    this.setHelpUrl(Blockly.Msg.ARDUINO_SERVO_ROT_CONTINUE_HELPURL);
+	this.appendDummyInput()
+		.appendField(Blockly.Msg.ARDUINO_SERVO_ROT_CONTINUE_TEXT)
+		.appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/servo/servomoteur_rot_continue.jpg', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize));
+	this.appendValueInput("PIN", 'Number')
+        .setAlign(Blockly.ALIGN_RIGHT)
+		.setCheck('Number')
+        .appendField(Blockly.Msg.ARDUINO_SERVO_ROT_CONTINUE_INPUT1);
+    this.setInputsInline(true);
+	this.appendValueInput("SPEED", 'Null')
+        .setAlign(Blockly.ALIGN_RIGHT)
+      	.appendField(Blockly.Msg.ARDUINO_SERVO_ROT_CONTINUE_INPUT3);
+	this.appendDummyInput()
+        .setAlign(Blockly.ALIGN_RIGHT)
+        .appendField(Blockly.Msg.ARDUINO_SERVO_ROT_CONTINUE_INPUT4)
+        .appendField(new Blockly.FieldDropdown([[Blockly.Msg.ADAFRUIT_MOTORSHIELD_AVANT, "FORWARD"], [Blockly.Msg.ADAFRUIT_MOTORSHIELD_ARRIERE, "BACKWARD"]]), 'ETAT');    
+    this.setInputsInline(false);
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setTooltip(Blockly.Msg.ARDUINO_SERVO_ROT_CONTINUE_TOOLTIP);
+	this.setTooltip('');
+  }
+};

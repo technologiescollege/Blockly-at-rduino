@@ -110,7 +110,8 @@ Blockly.Blocks['ArduiLed'] = {
     this.appendDummyInput()
         .appendField("Utiliser l'application ArduiLed");
     this.appendDummyInput()
-        .appendField(new Blockly.FieldImage("blocks/arduino_shield/Logo_android.png", Blockly.Arduino.imageSize, Blockly.Arduino.imageSize,"ArduiLed ou http://google.fr"));
+		.appendField(new Blockly.FieldImage("blocks/grove/QRCode_ArduiLed.png", Blockly.Arduino.imageSize, Blockly.Arduino.imageSize,"ArduiLed ou http://google.fr"));
+    //    .appendField(new Blockly.FieldImage("blocks/arduino_shield/Logo_android.png", Blockly.Arduino.imageSize, Blockly.Arduino.imageSize,"ArduiLed ou http://google.fr"));
     this.setTooltip('');
     this.setHelpUrl('http://technojolie.fr/ftp/apps/QRCode_ArduiLed.png');
   }

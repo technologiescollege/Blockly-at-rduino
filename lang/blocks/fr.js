@@ -524,6 +524,7 @@ Blockly.Msg.ARDUINO_BASE_CONST = "définitions préalables";
 Blockly.Msg.ARDUINO_BASE_DEFINE_HELPURL = "https://www.arduino.cc/en/Reference/Define";
 Blockly.Msg.ARDUINO_BASE_DEFINE = "Définitions";
 Blockly.Msg.ARDUINO_BASE_DEFINE_TOOLTIP = "Définition de constantes & bibliothèques";
+Blockly.Msg.ARDUINO_BASE_END = 'attente infinie (fin de programme)';
 Blockly.Msg.ARDUINO_CONSTRAIN = "limiter";
 Blockly.Msg.ARDUINO_CONSTRAIN_X = " le nombre";
 Blockly.Msg.ARDUINO_CONSTRAIN_A = "entre A = ";
@@ -575,6 +576,13 @@ Blockly.Msg.ARDUINO_SERVO_READ_DEGREES_INPUT1 = "l'angle du servo-moteur";
 Blockly.Msg.ARDUINO_SERVO_READ_DEGREES_IMAGE = "blocks/arduino_base/servomoteur.jpg";
 Blockly.Msg.ARDUINO_SERVO_READ_DEGREES_INPUT2 = "connecté sur la broche";
 Blockly.Msg.ARDUINO_SERVO_READ_DEGREES_TOOLTIP = "renvoie le nombre de degrés de la dernière rotation";
+Blockly.Msg.ARDUINO_SERVO_ROT_CONTINUE_HELPURL = "https://www.arduino.cc/en/Reference/ServoWrite";
+Blockly.Msg.ARDUINO_SERVO_ROT_CONTINUE_TEXT = "faire tourner le servomoteur à rotation continue";
+Blockly.Msg.ARDUINO_SERVO_ROT_CONTINUE_INPUT1 = "de la broche";
+Blockly.Msg.ARDUINO_SERVO_ROT_CONTINUE_INPUT2 = "à la vitesse [0~180]";
+Blockly.Msg.ARDUINO_SERVO_ROT_CONTINUE_INPUT3 = "à la vitesse [0~90]";
+Blockly.Msg.ARDUINO_SERVO_ROT_CONTINUE_INPUT4 = "dans le sens";
+Blockly.Msg.ARDUINO_SERVO_ROT_CONTINUE_TOOLTIP = "utilise les degrés pour comme un indice de puissance : 0° -> à fond à gauche | 90° -> repos/équilibre | 180° -> à fond à droite";
 Blockly.Msg.ARDUINO_SERVO_PIN = "sur la broche";
 Blockly.Msg.ARDUINO_SERVO_ATTACHED = "présence d'un servomoteur";
 Blockly.Msg.ARDUINO_SERVO_DETACH = "détacher le servomoteur de la broche";
@@ -1065,28 +1073,28 @@ Blockly.Msg.LCD_SHIELD_PRINT_TOOLTIP = "écris le texte sur un écran LCD série
 //SHIELD ADAFRUIT
 Blockly.Msg.ADAFRUIT_MOTORSHIELD_MOTOR1 = "v1 - Moteur CC";
 Blockly.Msg.ADAFRUIT_MOTORSHIELD_MOTOR2 = "v2 - Moteur CC";
-Blockly.Msg.ADAFRUIT_MOTORSHIELD_MOTOR_DIRECTION = "Direction";
-Blockly.Msg.ADAFRUIT_MOTORSHIELD_MOTOR_VITESSE = "Vitesse [0-255]";
-Blockly.Msg.ADAFRUIT_MOTORSHIELD_AVANT = "Avant";
-Blockly.Msg.ADAFRUIT_MOTORSHIELD_ARRIERE = "Arrière";
-Blockly.Msg.ADAFRUIT_MOTORSHIELD_STOP = "Stop";
+Blockly.Msg.ADAFRUIT_MOTORSHIELD_MOTOR_DIRECTION = "direction";
+Blockly.Msg.ADAFRUIT_MOTORSHIELD_MOTOR_VITESSE = "vitesse [0-255]";
+Blockly.Msg.ADAFRUIT_MOTORSHIELD_AVANT = "avant";
+Blockly.Msg.ADAFRUIT_MOTORSHIELD_ARRIERE = "arrière";
+Blockly.Msg.ADAFRUIT_MOTORSHIELD_STOP = "stop";
 
-Blockly.Msg.ADAFRUIT_MOTORSHIELD_PAP1 = "v1 - Moteur Pas-à-pas";
-Blockly.Msg.ADAFRUIT_MOTORSHIELD_PAP2 = "v2 - Moteur Pas-à-pas";
-Blockly.Msg.ADAFRUIT_MOTORSHIELD_CONNECT = "Broche";
-Blockly.Msg.ADAFRUIT_MOTORSHIELD_MOTOR_PPT = "Pas par tour";
-Blockly.Msg.ADAFRUIT_MOTORSHIELD_MOTOR_RPM = "Vitesse (RPM)";
-Blockly.Msg.ADAFRUIT_MOTORSHIELD_MOTOR_NB_PAS = "Nb de pas";
+Blockly.Msg.ADAFRUIT_MOTORSHIELD_PAP1 = "v1 - moteur Pas-à-pas";
+Blockly.Msg.ADAFRUIT_MOTORSHIELD_PAP2 = "v2 - moteur Pas-à-pas";
+Blockly.Msg.ADAFRUIT_MOTORSHIELD_CONNECT = "broche";
+Blockly.Msg.ADAFRUIT_MOTORSHIELD_MOTOR_PPT = "pas par tour";
+Blockly.Msg.ADAFRUIT_MOTORSHIELD_MOTOR_RPM = "vitesse (RPM)";
+Blockly.Msg.ADAFRUIT_MOTORSHIELD_MOTOR_NB_PAS = "nombre de pas";
 
 Blockly.Msg.ADAFRUIT_MOTORSHIELD_JOY1_MOT1 = "v1 - Joystick + moteurs";
 Blockly.Msg.ADAFRUIT_MOTORSHIELD_JOY_MOT2 = "v2 - Joystick + moteurs";
 Blockly.Msg.ADAFRUIT_MOTORSHIELD_JOY1 = "v1 - Joystick";
 Blockly.Msg.ADAFRUIT_MOTORSHIELD_JOY2 = "v2 - Joystick";
-Blockly.Msg.ADAFRUIT_MOTORSHIELD_ENTREE_X = "Entrée (x)";
-Blockly.Msg.ADAFRUIT_MOTORSHIELD_ENTREE_Y = "Entrée (y)";
-Blockly.Msg.ADAFRUIT_MOTORSHIELD_NEUTRE = "Zone neutre";
-Blockly.Msg.ADAFRUIT_MOTORSHIELD_MOTORDC1 = "Moteur DC 1";
-Blockly.Msg.ADAFRUIT_MOTORSHIELD_MOTORDC2 = "Moteur DC 2";
+Blockly.Msg.ADAFRUIT_MOTORSHIELD_ENTREE_X = "entrée (x)";
+Blockly.Msg.ADAFRUIT_MOTORSHIELD_ENTREE_Y = "entrée (y)";
+Blockly.Msg.ADAFRUIT_MOTORSHIELD_NEUTRE = "zone neutre";
+Blockly.Msg.ADAFRUIT_MOTORSHIELD_MOTORDC1 = "moteur DC 1";
+Blockly.Msg.ADAFRUIT_MOTORSHIELD_MOTORDC2 = "moteur DC 2";
 
 //SHIELD MULTIFUNCTION
 Blockly.Msg.multifunction_buildin_led_INPUT = "mettre la DEL intégrée";
