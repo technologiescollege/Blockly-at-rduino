@@ -191,6 +191,21 @@ Blockly.Blocks['text_join'] = {
   newQuote_: Blockly.Blocks['text'].newQuote_
 };
 
+Blockly.Blocks['text_plus_var'] = {
+  init: function() {
+    this.setColour("#00979D");
+	this.setHelpUrl(Blockly.Msg.TEXT_JOIN_HELPURL);
+    this.appendValueInput("Text", 'String')
+	    .setAlign(Blockly.ALIGN_RIGHT)
+        .appendField(Blockly.Msg.TEXT_PLUS_VAR_TEXT);		
+	this.appendValueInput("N", 'Number')
+        .setAlign(Blockly.ALIGN_RIGHT)
+        .appendField(Blockly.Msg.TEXT_PLUS_VAR_NUM);			
+	this.setOutput(true, 'String');
+    this.setTooltip(Blockly.Msg.TEXT_JOIN_TOOLTIP);
+  }
+};
+
 Blockly.Blocks['text_create_join_container'] = {
   /**
    * Mutator block for container.
