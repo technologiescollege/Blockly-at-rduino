@@ -101,6 +101,15 @@ Blockly.Arduino['text_length'] = function(block) {
   return [code, Blockly.Arduino.ORDER_UNARY_POSTFIX];
 };
 
+Blockly.Arduino.text_plus_var = function() {
+  var value_text = Blockly.Arduino.valueToCode(this, 'Text', Blockly.Arduino.ORDER_ATOMIC) || '0';
+  var value_n = Blockly.Arduino.valueToCode(this, 'N', Blockly.Arduino.ORDER_ATOMIC);
+  var new_line = Blockly.Arduino.valueToCode(this, 'NEW_LINE', Blockly.Arduino.ORDER_ATOMIC);
+  Blockly.Arduino.setups_['setup_serial_' + profile.defaultBoard.serial] = 'Serial.begin(' + profile.defaultBoard.serial + ');\n';
+		var code =  value_text + '+' + value_n
+  return [code, Blockly.Arduino.ORDER_ATOMIC];
+};
+
 /**
  * Code generator to test if a string (X) is null/empty.
  * String length info: http://arduino.cc/en/Reference/StringLength
