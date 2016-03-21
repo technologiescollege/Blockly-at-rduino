@@ -456,6 +456,10 @@ Blockly.Msg.CAT_DFPLAYER = "DFPlayer mini MP3";
 Blockly.Msg.CAT_LED_RGB_CHAIN = "chainable RGB LED";
 Blockly.Msg.CAT_OLED_U8G = "OLED screen I2C";
 
+Blockly.Msg.CAT_ROBUNO = "RobUno";  //added march 17th 2016
+Blockly.Msg.CAT_ROBUNO_IN = "sensors";
+Blockly.Msg.CAT_ROBUNO_OUT = "actuators";
+
 Blockly.Msg.CAT_GROVE = "Grove";  //added march 9th 2015
 Blockly.Msg.CAT_GROVE_IN = "In";
 Blockly.Msg.CAT_GROVE_OUT = "Out";
@@ -1128,9 +1132,30 @@ Blockly.Msg.multifunction_segment_INPUT2 = "2ème chiffre";
 Blockly.Msg.multifunction_segment_INPUT3 = "3ème chiffre";
 Blockly.Msg.multifunction_segment_INPUT4 = "4ème chiffre";
 Blockly.Msg.multifunction_segment_TOOLTIP = "afficher 4 chifres sur les 7 segments";
-Blockly.Msg.ADAFRUIT_MOTORSHIELD_MOTOR_PPT = "Step";
-Blockly.Msg.ADAFRUIT_MOTORSHIELD_MOTOR_RPM = "Speed (RPM)";
-Blockly.Msg.ADAFRUIT_MOTORSHIELD_MOTOR_NB_PAS = "Move to Step";
 
-Blockly.Msg.ADAFRUIT_MOTORSHIELD_JOY1 = "v1 - Joystick";
-Blockly.Msg.ADAFRUIT_MOTORSHIELD_JOY2 = "v2 - Joystick";
+//Added March 18th 2016 
+Blockly.Msg.ROBUNO_INOUT_LED_INPUT1 = "Mettre la LED Rouge";
+Blockly.Msg.ROBUNO_INOUT_LED_INPUT2 = "sur la broche Numérique";
+Blockly.Msg.ROBUNO_INOUT_LED_INPUT3 = "à l'état";
+Blockly.Msg.ROBUNO_LED1_TOOLTIP = "Sortie led (réf : LED)";
+Blockly.Msg.ROBUNO_INOUT_LED_INPUT4 = "Mettre la LED Blanche";
+Blockly.Msg.ROBUNO_TEXT1 = "Allumer l'alarme collision";
+Blockly.Msg.ROBUNO_TEXT2 = "d'une fréquence (Hz)";
+Blockly.Msg.ROBUNO_TEXT3 = "pendant une durée (ms) ";
+Blockly.Msg.ROBUNO_BUZZER1_TOOLTIP = "Sortie Buzzer (réf : BUZZER)";
+Blockly.Msg.ROBUNO_SERVO2_TITLEA = "Faire tourner le ServoMoteur Gauche";
+Blockly.Msg.ROBUNO_SERVO2_TITLEB = "En marche Avant (VRAI) ou Arriere (FAUX)";
+Blockly.Msg.ROBUNO_SERVO2_TITLEC = "à la vitesse angulaire [0 ~ 180 degrés]";
+Blockly.Msg.ROBUNO_SERVO2_TITLED = "Faire tourner le ServoMoteur Droite";
+Blockly.Msg.ROBUNO_SERVO2_TOOLTIP = "rotation possible entre 0~180 degrés : 0~90 puissance variable dans un sens ; 90~180 puissance variable dans l'autre sens";
+Blockly.Msg.ROBUNO_PIN_PWM = "sur la broche PWM~";
+Blockly.Msg.ROBUNO_TEXT4 = "Le capteur de collision Gauche";
+Blockly.Msg.ROBUNO_TEXT5 = "sur la broche ";
+Blockly.Msg.ROBUNO_TEXT6 = " est appuyé ?";
+Blockly.Msg.ROBUNO_TEXT7 = "Entrée Capteur de collision (réf : Gauche ou Droite)";
+Blockly.Msg.ROBUNO_TEXT8 = "Le capteur de collision Droite";
+Blockly.Msg.ROBUNO_LUX_TITLE1 = "la luminosité lue sur la LDR Gauche";
+Blockly.Msg.ROBUNO_LUX_TITLE2 = "la luminosité lue sur la LDR Droite";
+Blockly.Msg.ROBUNO_LUX_TOOLTIP = "Entrée Capteur de Luminosité"; 
+Blockly.Msg.ROBUNO_PIN_ANALOG = "sur la broche Analogique";
+Blockly.Msg.ROBUNO_HELPURL = "www.technologieservices.fr/fr/a-a1000022060-edc1000003/article/RUSA-Robot-RobUno-a-servomoteurs.html";

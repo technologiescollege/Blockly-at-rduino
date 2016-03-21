@@ -116,7 +116,7 @@ Blockly.Blocks.inout_digital_read = {
 	this.appendValueInput("PIN", 'Number')
         .setAlign(Blockly.ALIGN_RIGHT)
         .appendField(Blockly.Msg.ARDUINO_INOUT_DIGITAL_READ_INPUT);
-    this.setOutput(true, 'null');
+    this.setOutput(true, 'Boolean');
     this.setTooltip(Blockly.Msg.ARDUINO_INOUT_DIGITAL_READ_TOOLTIP);
   }
 };
