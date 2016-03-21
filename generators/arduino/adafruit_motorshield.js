@@ -118,7 +118,7 @@ Blockly.Arduino.definitions_['Adafruit_StepperMotor *myMotor' +dropdown_PAP2] = 
 
 
 // Joystick - VERSION 2
-Blockly.Arduino.joystick = function() {
+Blockly.Arduino.joystick_mot = function() {
 
 //Implantation Librairies
 Blockly.Arduino.definitions_['Wire.h'] = '#include <Wire.h>';
@@ -263,6 +263,57 @@ code +=  'myMotor1->run(RELEASE);\n';
 code +=  'myMotor2->setSpeed(0);\n';
 code +=  'myMotor2->run(RELEASE);\n';
 code +=  '}\n';
+
+  return code;
+};
+
+
+// Joystick - VERSION 2
+Blockly.Arduino.joystick = function() {
+
+Blockly.Arduino.definitions_['Commentaire1'] = '//Definition variables';
+  var dropdown_entree_x = this.getFieldValue('entree_x');
+  var dropdown_entree_y = this.getFieldValue('entree_y');
+  var neut = Blockly.Arduino.valueToCode(this, 'zone_neutre');
+  var dropdown_motor_dc1 = this.getFieldValue('motor_dc1');
+  var dropdown_motor_dc2 = this.getFieldValue('motor_dc2');
+  Blockly.Arduino.definitions_['x'] = 'const int x = '+dropdown_entree_x+';';
+  Blockly.Arduino.definitions_['xMin'] = 'const int xMin = 0;';
+  Blockly.Arduino.definitions_['xMax'] = 'const int xMax = 1023;';
+  Blockly.Arduino.definitions_['y'] = 'const int y = '+dropdown_entree_y+';';
+  Blockly.Arduino.definitions_['yMin'] = 'const int yMin = 0;';
+  Blockly.Arduino.definitions_['yMax'] = 'const int yMax = 1023;';
+  Blockly.Arduino.definitions_['neut'] = 'int neut = '+neut+';';
+  Blockly.Arduino.definitions_['neutn'] = 'int neutn = -'+neut+';';
+  Blockly.Arduino.definitions_['calibration'] = 'int lecX, lecY, calX, calY, retX, retY, vit;\n';
+
+
+Blockly.Arduino.setups_['Commentaire2'] = '//Setup';
+Blockly.Arduino.setups_['serial.begin'] = 'Serial.begin(9600);';
+
+Blockly.Arduino.setups_['Commentaire3'] = '//Setup : Lecture des valeurs en x et y';
+Blockly.Arduino.setups_['lecX'] = 'lecX = analogRead(x);';
+Blockly.Arduino.setups_['lecY'] = 'lecY = analogRead(y);';
+
+  
+//Code
+
+var code = '// Calibration du joystick en 0,0\n';
+code +=  'calX = analogRead(x)-lecX;\n';
+code +=  'calY = analogRead(y)-lecY;\n\n';
+
+code +=  '// Reetalonnage x et y de 0,1023 a -255,255\n';
+code +=  'retX = map(calX, xMin, xMax, -255 , 255);\n';
+code +=  'retX= constrain(calX, -255, 255);\n';
+code +=  'retY = map(calY, yMin, yMax, -255, 255);\n';
+code +=  'retY = constrain(calY, -255, 255);\n';
+code +=  'Serial.print("X : ");\n';
+code +=  'Serial.print(retX);\n';
+code +=  'Serial.println();\n';
+code +=  'Serial.print("Y : ");\n';
+code +=  'Serial.print(retY);\n';
+code +=  'Serial.println();\n';
+code +=  'delay(50);\n';
 
   return code;
 };

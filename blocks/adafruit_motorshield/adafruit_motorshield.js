@@ -123,6 +123,40 @@ Blockly.Blocks['pap_v2'] = {
 };
 
 
+//Joystick + moteurs - V2
+Blockly.Blocks['joystick_mot'] = {
+  init: function() {
+    this.appendDummyInput()
+        .appendField(Blockly.Msg.ADAFRUIT_MOTORSHIELD_JOY_MOT2);
+    this.appendDummyInput()
+        .setAlign(Blockly.ALIGN_RIGHT)
+        .appendField(Blockly.Msg.ADAFRUIT_MOTORSHIELD_ENTREE_X)
+        .appendField(new Blockly.FieldDropdown([["A0", "A0"], ["A1", "A1"], ["A2", "A2"], ["A3", "A3"]]), 'entree_x');
+    this.appendDummyInput()
+        .setAlign(Blockly.ALIGN_RIGHT)
+        .appendField(Blockly.Msg.ADAFRUIT_MOTORSHIELD_ENTREE_Y)
+        .appendField(new Blockly.FieldDropdown([["A0", "A0"], ["A1", "A1"], ["A2", "A2"], ["A3", "A3"]]), 'entree_y');
+    this.appendValueInput('zone_neutre')
+        .setCheck("Number")
+        .setAlign(Blockly.ALIGN_RIGHT)
+        .appendField(Blockly.Msg.ADAFRUIT_MOTORSHIELD_NEUTRE);
+    this.appendDummyInput()
+        .setAlign(Blockly.ALIGN_RIGHT)
+        .appendField(Blockly.Msg.ADAFRUIT_MOTORSHIELD_MOTORDC1)
+        .appendField(new Blockly.FieldDropdown([["M1", "1"], ["M2", "2"], ["M3", "3"], ["M4", "4"]]), 'motor_dc1');
+    this.appendDummyInput()
+        .setAlign(Blockly.ALIGN_RIGHT)
+        .appendField(Blockly.Msg.ADAFRUIT_MOTORSHIELD_MOTORDC2)
+        .appendField(new Blockly.FieldDropdown([["M1", "1"], ["M2", "2"], ["M3", "3"], ["M4", "4"]]), 'motor_dc2');
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setColour("#a8bb19");
+    this.setTooltip('');
+    this.setHelpUrl('http://robot.sumo.free.fr/robot-sumo-la-fabrique.html');
+  }
+};
+
+
 //Joystick - V2
 Blockly.Blocks['joystick'] = {
   init: function() {

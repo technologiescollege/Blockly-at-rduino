@@ -441,6 +441,7 @@ Blockly.Msg.CAT_ARDUINO_SERVO = "servo-moteur";
 Blockly.Msg.CAT_ADAFRUIT_MOTORSHIELD = "Adafruit Motorshield";
 Blockly.Msg.CAT_ADAFRUIT_MOTORSHIELD_v1 = "Adafruit Motorshield v1";
 Blockly.Msg.CAT_ADAFRUIT_MOTORSHIELD_v2 = "Adafruit Motorshield v2";
+Blockly.Msg.CAT_ADAFRUIT_JOYSTICK = "Joystick";
 
 Blockly.Msg.CAT_DFRobot = "DFRobot";
 Blockly.Msg.CAT_DFRobot_SHIELD_LCDKEYPAD = "carte LCD keypad"; //Added february 27th 2016
@@ -1099,6 +1100,9 @@ Blockly.Msg.ADAFRUIT_MOTORSHIELD_ENTREE_Y = "entrée (y)";
 Blockly.Msg.ADAFRUIT_MOTORSHIELD_NEUTRE = "zone neutre";
 Blockly.Msg.ADAFRUIT_MOTORSHIELD_MOTORDC1 = "moteur DC 1";
 Blockly.Msg.ADAFRUIT_MOTORSHIELD_MOTORDC2 = "moteur DC 2";
+
+Blockly.Msg.ADAFRUIT_MOTORSHIELD_VARIABLES = "Variables : x = retX - y = retY";
+Blockly.Msg.ADAFRUIT_MOTORSHIELD_VARIABLES2 = "Neutre+ = neut - Neutre- = neutn";
 
 //SHIELD MULTIFUNCTION
 Blockly.Msg.multifunction_buildin_led_INPUT = "mettre la DEL intégrée";
