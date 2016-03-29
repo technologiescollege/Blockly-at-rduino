@@ -48,3 +48,8 @@ Blockly.Arduino['soft_available'] = function(block) {
   // TODO: Change ORDER_NONE to the correct strength.
   return [code, Blockly.Arduino.ORDER_ATOMIC];
 };
+
+Blockly.Arduino['soft_flush'] = function() {
+  var code = 'mySerial.flush();\n';
+  return code;
+};

@@ -102,3 +102,15 @@ Blockly.Blocks['soft_available'] = {
     this.setTooltip('');
   }
 };
+
+Blockly.Blocks['soft_flush'] = {
+  init: function() {
+    this.setColour("#00979D");
+	this.setHelpUrl('http://arduino.cc/en/Serial/Flush');
+	this.appendDummyInput("")
+	    .appendField(Blockly.Msg.Serial_flush);
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setTooltip('Waits for the transmission of outgoing serial data to complete.');
+  }
+};
