@@ -736,7 +736,7 @@ Blockly.Msg.GROVE_INOUT_BT_COMM1 = "liaison Bluetooth";
 Blockly.Msg.GROVE_INOUT_BT_COMM2 = "sur la broche";
 Blockly.Msg.GROVE_INOUT_BT_COMM3 = "nom du périphérique";
 Blockly.Msg.GROVE_INOUT_BT_COMM4 = "code secret";
-Blockly.Msg.GROVE_INOUT_BT_COMM5 = "lire";
+Blockly.Msg.GROVE_INOUT_BT_COMM5 = "envoyer";
 Blockly.Msg.GROVE_INOUT_BT_COMM6 = "recevoir";
 Blockly.Msg.GROVE_INOUT_BT_TOOLTIP = "Bluetooth V2.0 + EDR esclave. Supporte un seul esclave par carte";
 
