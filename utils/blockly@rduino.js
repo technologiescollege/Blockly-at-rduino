@@ -577,6 +577,16 @@ BlocklyDuino.bindFunctions = function() {
 		$('#videoModal').hide();
 	});
 	
+	$('#btn_convert').on('click', function() {
+		$('#convertModal').css("z-index", 1080);
+		$('#convertModal').css("display", "inline-block");
+	});
+
+	$('#convertModal button.close').on('click', function() {
+		$('#convertModal').css("z-index", 0);
+		$('#convertModal').hide();
+	});
+	
 	// $('#btn_switch').on("click", BlocklyDuino.switchOrientation);
 
 };
@@ -863,7 +873,22 @@ BlocklyDuino.init = function() {
 	    }).on('mouseup', function() {
 	        $('.draggable').removeClass('draggable');
 	    });
+		
 		$('body').on('mousedown', '#videoModal', function() {
+	        $(this).addClass('draggable').parents().on('mousemove', function(e) {
+	            $('.draggable').offset({
+	                top: e.pageY,
+	                left: e.pageX - $('.draggable').outerWidth()/2
+	            }).on('mouseup', function() {
+	                $(this).removeClass('draggable');
+	            });
+	            e.preventDefault();
+	        });
+	    }).on('mouseup', function() {
+	        $('.draggable').removeClass('draggable');
+	    });
+		
+		$('body').on('mousedown', '#convertModal', function() {
 	        $(this).addClass('draggable').parents().on('mousemove', function(e) {
 	            $('.draggable').offset({
 	                top: e.pageY,
@@ -1013,4 +1038,59 @@ BlocklyDuino.testAjax = function() {
 	    	}
 	    }
 	});
+};
+
+
+/**
+ * Add convert bin <-> text
+ */
+BlocklyDuino.text2bin = function() {
+  var output = document.getElementById("ti2");
+  var input = document.getElementById("ti1").value;
+  output.value = "";
+  var data=input;
+	var binArray = [];
+	var datEncode = "";
+	var i;
+	for (i=0; i < data.length; i++) {
+	binArray.push(data[i].charCodeAt(0).toString(2));
+	}
+	var j;
+	for (j=0; j < binArray.length; j++) {
+	var pad = padding_left(binArray[j], '0', 8);
+	datEncode += pad + ' ';
+	}
+	output.value = datEncode;
+};
+
+function padding_left(s, c, n) {
+	if (!s || !c || s.length >= n) {
+		return s;
+	}
+
+	var max = (n - s.length) / c.length;
+	for ( var i = 0; i < max; i++) {
+		s = c + s;
+	}
+	return s;
+};
+
+BlocklyDuino.bin2text = function() {
+var output = document.getElementById("ti4");
+var input = document.getElementById("ti3").value;
+output.value = "";
+var s = input;
+	s = s.replace(/\s/g, "");
+	var data = "";
+	if (s.length % 8 != 0) {
+		data = "???:";
+	} else {
+		while (s.length > 0) {
+			var first8 = s.substring(0, 8);
+			s = s.substring(8);
+			var chr = parseInt(first8, 2);
+			data += String.fromCharCode(chr);
+		}
+	}
+	output.value = data;
 };

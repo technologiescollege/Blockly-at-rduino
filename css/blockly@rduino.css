@@ -469,6 +469,13 @@ html[dir="RTL"] .colors_category {
 .draggable {
 }
 
+#convertModal .modal-content:hover {
+  cursor: move;
+}
+
+.draggable {
+}
+
 #videoModal .modal-content:hover {
   cursor: move;
 }

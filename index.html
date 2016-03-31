@@ -201,6 +201,10 @@
 		    </a>
 		</div>
 		<div id="div_help_button">
+			<button id="btn_convert" class="btn btn-primary text-left">
+		       <span class="glyphicon glyphicon-superscript"> </span>
+		       <span id="span_convert"> </span>
+		   </button>
 		   <a id="btn_doc" class='btn btn-success btn-info text-left' href="http://tic.technologiescollege.fr/wiki/" target=_blank role='button'>
 		       <span class="glyphicon glyphicon-info-sign"></span>
 		       <span id="span_doc"> </span>
@@ -385,6 +389,21 @@
       </div>
     </div>
   </div>
+</div>
+<!-- convert bin <-> text "modal" -->
+<div id="convertModal" class="modal-dialog" style="display:none">
+	<div class="modal-content">
+	  <div class="modal-header">
+		<button type="button" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			<input id="ti1" value="TEST" />
+			<button onclick="BlocklyDuino.text2bin();">Texte -> binaire</button>
+			<input id="ti2" />
+			<br/>
+			<input id="ti3" value="01010101" />
+			<button onclick="BlocklyDuino.bin2text();">Binaire -> texte</button>
+			<input id="ti4" />
+	  </div>
+	</div>
 </div>
 <!-- videos modal -->
 <div id="videoModal" class="modal-dialog" style="display:none">
