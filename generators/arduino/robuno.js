@@ -104,3 +104,25 @@ Blockly.Arduino.robuno_servomoteur_droite = function() {
   // var code = 'servo_'+dropdown_pin+'.write('+value_degree+');\n';
   return code;
 };
+
+Blockly.Arduino.robuno_moteurs_CC = function() {
+  var dropdown_mot = this.getFieldValue('MOT');
+  if (dropdown_mot == 'A') {
+	  var pindir = 12;
+	  var pinpwm = 10;
+  }  else if (dropdown_mot == 'B') {
+	  var pindir = 11;
+	  var pinpwm = 9;
+  };
+  var value_sens = Blockly.Arduino.valueToCode(this, 'SENS', Blockly.Arduino.ORDER_ATOMIC);
+  var value_vitesse = Blockly.Arduino.valueToCode(this, 'VITESSE', Blockly.Arduino.ORDER_ATOMIC);
+  Blockly.Arduino.setups_["setup_motShieldRobuno_"+pindir] = "pinMode("+pindir+",OUTPUT);\n"+
+  "  pinMode("+pinpwm+",OUTPUT);\n";
+  Blockly.Arduino.definitions_['define_cmd_mot'] = "void cmd_mot(byte dirpin,byte pwmpin,boolean sens,byte vitesse)\n"+
+    "{\n"+
+    "  digitalWrite(dirpin,sens);\n"+
+    "  analogWrite(pwmpin,vitesse);\n"+
+    "}\n";
+  code="cmd_mot("+pindir+","+pinpwm+","+value_sens+","+value_vitesse+");\n";
+  return code;
+};

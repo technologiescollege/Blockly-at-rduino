@@ -107,36 +107,6 @@ Blockly.Blocks['arduino_s'] = {
   }
 };
 
-Blockly.Blocks['arduino_ss'] = {
-   init: function() {
-	this.setHelpUrl(Blockly.Msg.ROBOTS_MOTORS_ARDUNIO_S_HELPURL);
-    this.setColour("#5b99a5");
-	this.setInputsInline(false) ; 
-	this.appendDummyInput()
-		.appendField(Blockly.Msg.ROBOTS_MOTORS_ARDUNIO_S_TITLE)
-        .appendField(
-				new Blockly.FieldDropdown([
-						[ Blockly.Msg.ROBOTS_MOTORS_STOP, "stop" ],
-						[ Blockly.Msg.ROBOTS_MOTORS_FORWARD, "forward" ],
-						[ Blockly.Msg.ROBOTS_MOTORS_RIGHT, "right" ],
-						[ Blockly.Msg.ROBOTS_MOTORS_LEFT, "left" ],
-						[ Blockly.Msg.ROBOTS_MOTORS_BACKWARD, "backward" ] ]),
-				"DIRECTION");
-   this.setInputsInline(true) ; 
-   this.appendValueInput("SPEEDA", 'Number')
-       .setCheck('Number')
-        .setAlign(Blockly.ALIGN_RIGHT)
-        .appendField(Blockly.Msg.ROBOTS_MOTORS_SPEEDL);
-	this.appendValueInput("SPEEDB", 'Number')
-        .setCheck('Number')
-        .setAlign(Blockly.ALIGN_RIGHT)
-        .appendField(Blockly.Msg.ROBOTS_MOTORS_SPEEDR);
-    this.setPreviousStatement(true, null);
-    this.setNextStatement(true, null);
-    this.setTooltip(Blockly.Msg.ROBOTS_MOTORS_ARDUNIO_S_TOOLTIP);
-  }
-};
-
 Blockly.Blocks['pololu_drv8835_s'] = {
   init: function() {
 	this.setHelpUrl('https://www.pololu.com/product/2511/resources');

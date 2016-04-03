@@ -38,6 +38,7 @@
 <script type="text/javascript" src="blocks/bitbloq/bitbloq.js"></script>
 <script type="text/javascript" src="blocks/dfplayer-mini-mp3-dfrobot/dfplayer-mini-mp3-dfrobot.js"></script>
 <script type="text/javascript" src="blocks/display-oled-128x64-i2c/display-oled-128x64-i2c.js"></script>
+<script type="text/javascript" src="blocks/fischertechnik/fischertechnik.js"></script>
 <script type="text/javascript" src="blocks/grove/grove.js"></script>
 <script type="text/javascript" src="blocks/jeulin_maquette_feux/jeulin_maquette_feux.js"></script>
 <script type="text/javascript" src="blocks/led-rgb-ws2812b/led-rgb-ws2812b.js"></script>
@@ -70,6 +71,7 @@
 <script type="text/javascript" src="generators/arduino/bitbloq.js"></script>
 <script type="text/javascript" src="generators/arduino/dfplayer-mini-mp3-dfrobot.js"></script>
 <script type="text/javascript" src="generators/arduino/display-oled-128x64-i2c.js"></script>
+<script type="text/javascript" src="generators/arduino/fischertechnik.js"></script>
 <script type="text/javascript" src="generators/arduino/grove.js"></script>
 <script type="text/javascript" src="generators/arduino/jeulin_maquette_feux.js"></script>
 <script type="text/javascript" src="generators/arduino/led-rgb-ws2812b.js"></script>
@@ -1059,9 +1061,9 @@
 		</category>   
 		<sep></sep>
 	</category>
-	
-	<category name="CAT_ROBUNO" colour="#88CE32">
-        <category name="CAT_ROBUNO_IN" colour="#88CE32">
+
+    <category name="CAT_ROBUNO" colour="#1A1BFF">
+        <category name="CAT_ROBUNO_IN" colour="#1A1BFF">
             <block type="robuno_capteur_collision_gauche">
 				<value name="PIN">
 				<shadow type="math_number">
@@ -1091,7 +1093,7 @@
 				</value>
 			</block>
         </category>
-        <category name="CAT_ROBUNO_OUT" colour="#88CE32">
+        <category name="CAT_ROBUNO_OUT" colour="#1A1BFF">
             <block type="robuno_led_rouge">
 				<value name="PIN">
 				<shadow type="math_number">
@@ -1153,9 +1155,99 @@
 				</shadow>
 				</value>			
 			</block>
+			<category name="CAT_ROBUNO_MOTORS_CC" colour="#1A1BFF">
+				<block type="robuno_moteurs_CC">
+					<value name="SENS">
+						<shadow type="inout_onoff">	
+						<field name="BOOL">HIGH</field>
+						</shadow>
+					</value>
+					<value name="VITESSE">
+						<shadow type="math_number">
+						<field name="NUM">127</field>
+						</shadow>
+					</value>
+				</block>
+			</category>
         </category>
-		<sep></sep>
-	</category>
+    </category>
+
+    <category name="CAT_FISCHERTECHNIK" colour="#778E9A">
+        <category name="CAT_FISCHERTECHNIK_IN" colour="#778E9A">
+            <block type="fischertechnik_BP_capteur_de_presence">
+				<value name="PIN">
+				<shadow type="math_number">
+				<field name="NUM">1</field>
+				</shadow>
+				</value>
+			</block>
+            <block type="fischertechnik_capteur_magnetique">
+				<value name="PIN">
+				<shadow type="math_number">
+				<field name="NUM">1</field>
+				</shadow>
+				</value>
+			</block>
+            <block type="fischertechnik_capteur_de_lumiere">
+				<value name="PIN">
+				<shadow type="math_number">
+				<field name="NUM">1</field>
+				</shadow>
+				</value>
+			</block>
+        </category>
+        <category name="CAT_FISCHERTECHNIK_OUT" colour="#778E9A">
+            <block type="fischertechnik_feu_rouge">
+				<value name="PIN">
+				<shadow type="math_number">
+				<field name="NUM">1</field>
+				</shadow>
+				</value>
+			</block>
+            <block type="fischertechnik_feu_vert">
+				<value name="PIN">
+				<shadow type="math_number">
+				<field name="NUM">1</field>
+				</shadow>
+				</value>
+			</block>
+            <block type="fischertechnik_feu_orange">
+				<value name="PIN">
+				<shadow type="math_number">
+				<field name="NUM">1</field>
+				</shadow>
+				</value>
+			</block>
+            <block type="fischertechnik_barriere_lumineuse">
+				<value name="PIN">
+				<shadow type="math_number">
+				<field name="NUM">1</field>
+				</shadow>
+				</value>
+			</block>
+            <block type="fischertechnik_buzzer">
+				<value name="PIN">
+				<shadow type="math_number">
+				<field name="NUM">1</field>
+				</shadow>
+				</value>
+				<value name="NUM">
+				<shadow type="math_number">
+				<field name="NUM">1000</field>
+				</shadow>
+				</value>
+				<value name="TPS">
+				<shadow type="math_number">
+				<field name="NUM">500</field>
+				</shadow>
+				</value>
+			</block>
+			<category name="CAT_FISCHERTECHNIK_MOTORS_CC" colour="#778E9A">
+				<block type="fischertechnik_moteurs_CC"></block>
+			</category>
+        </category>
+    </category>
+
 	
     <category name="CAT_BQ" colour="#608621">
         <category name="CAT_BQ_IN" colour="#608621">
@@ -1769,18 +1861,6 @@
 			<value name="SPEEDB">
 				<shadow type="math_number">
 				<field name="NUM">175</field>
-				</shadow>
-			</value>
-		</block>
-		<block type="arduino_ss">
-			<value name="SPEEDA">
-				<shadow type="math_number">
-				<field name="NUM">255</field>
-				</shadow>
-			</value>
-			<value name="SPEEDB">
-				<shadow type="math_number">
-				<field name="NUM">255</field>
 				</shadow>
 			</value>
 		</block>

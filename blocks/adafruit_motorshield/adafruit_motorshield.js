@@ -150,7 +150,7 @@ Blockly.Blocks['joystick_mot'] = {
         .appendField(new Blockly.FieldDropdown([["M1", "1"], ["M2", "2"], ["M3", "3"], ["M4", "4"]]), 'motor_dc2');
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    this.setColour("#a8bb19");
+    this.setColour("#005D9D");
     this.setTooltip('');
     this.setHelpUrl('http://robot.sumo.free.fr/robot-sumo-la-fabrique.html');
   }

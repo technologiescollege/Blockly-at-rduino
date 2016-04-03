@@ -453,6 +453,12 @@ Blockly.Msg.CAT_OLED_U8G = "afficheur OLED I2C";
 Blockly.Msg.CAT_ROBUNO = "RobUno";  //added march 17th 2016
 Blockly.Msg.CAT_ROBUNO_IN = "capteurs";
 Blockly.Msg.CAT_ROBUNO_OUT = "actionneurs";
+Blockly.Msg.CAT_ROBUNO_MOTORS_CC = "moteurs CC";
+
+Blockly.Msg.CAT_FISCHERTECHNIK = "fischertechnik";  //added march 26th 2016
+Blockly.Msg.CAT_FISCHERTECHNIK_IN = "capteurs";
+Blockly.Msg.CAT_FISCHERTECHNIK_OUT = "actionneurs";
+Blockly.Msg.CAT_FISCHERTECHNIK_MOTORS_CC = "moteurs CC";
 
 Blockly.Msg.CAT_GROVE = "Grove";  //added march 9th 2015
 Blockly.Msg.CAT_GROVE_IN = "capteurs";
@@ -1131,28 +1137,70 @@ Blockly.Msg.multifunction_segment_INPUT4 = "4ème chiffre";
 Blockly.Msg.multifunction_segment_TOOLTIP = "afficher 4 chifres sur les 7 segments";
 
 //Added March 18th 2016 
-Blockly.Msg.ROBUNO_INOUT_LED_INPUT1 = "Mettre la LED Rouge";
+Blockly.Msg.ROBUNO_INOUT_LED_INPUT1 = "mettre la DEL Rouge";
 Blockly.Msg.ROBUNO_INOUT_LED_INPUT2 = "sur la broche Numérique";
 Blockly.Msg.ROBUNO_INOUT_LED_INPUT3 = "à l'état";
 Blockly.Msg.ROBUNO_LED1_TOOLTIP = "Sortie led (réf : LED)";
-Blockly.Msg.ROBUNO_INOUT_LED_INPUT4 = "Mettre la LED Blanche";
-Blockly.Msg.ROBUNO_TEXT1 = "Allumer l'alarme collision";
+Blockly.Msg.ROBUNO_INOUT_LED_INPUT4 = "mettre la DEL Blanche";
+Blockly.Msg.ROBUNO_TEXT1 = "déclencher l'alarme collision";
 Blockly.Msg.ROBUNO_TEXT2 = "d'une fréquence (Hz)";
 Blockly.Msg.ROBUNO_TEXT3 = "pendant une durée (ms) ";
 Blockly.Msg.ROBUNO_BUZZER1_TOOLTIP = "Sortie Buzzer (réf : BUZZER)";
-Blockly.Msg.ROBUNO_SERVO2_TITLEA = "Faire tourner le ServoMoteur Gauche";
-Blockly.Msg.ROBUNO_SERVO2_TITLEB = "En marche Avant (VRAI) ou Arriere (FAUX)";
+Blockly.Msg.ROBUNO_SERVO2_TITLEA = "faire tourner le servomoteur de gauche";
+Blockly.Msg.ROBUNO_SERVO2_TITLEB = "vers l'Avant (VRAI) ou Arrière (FAUX)";
 Blockly.Msg.ROBUNO_SERVO2_TITLEC = "à la vitesse angulaire [0 ~ 180 degrés]";
-Blockly.Msg.ROBUNO_SERVO2_TITLED = "Faire tourner le ServoMoteur Droite";
+Blockly.Msg.ROBUNO_SERVO2_TITLED = "faire tourner le servomoteur de droite";
 Blockly.Msg.ROBUNO_SERVO2_TOOLTIP = "rotation possible entre 0~180 degrés : 0~90 puissance variable dans un sens ; 90~180 puissance variable dans l'autre sens";
 Blockly.Msg.ROBUNO_PIN_PWM = "sur la broche PWM~";
-Blockly.Msg.ROBUNO_TEXT4 = "Le capteur de collision Gauche";
+Blockly.Msg.ROBUNO_TEXT4 = "le capteur de collision Gauche";
 Blockly.Msg.ROBUNO_TEXT5 = "sur la broche ";
 Blockly.Msg.ROBUNO_TEXT6 = " est appuyé ?";
 Blockly.Msg.ROBUNO_TEXT7 = "Entrée Capteur de collision (réf : Gauche ou Droite)";
-Blockly.Msg.ROBUNO_TEXT8 = "Le capteur de collision Droite";
+Blockly.Msg.ROBUNO_TEXT8 = "le capteur de collision Droite";
+Blockly.Msg.ROBUNO_TEXT9 = "commande le moteur";
+Blockly.Msg.ROBUNO_TEXT10 = "du shield Moteurs CC";
+Blockly.Msg.ROBUNO_TEXT11 = "sur les broches";
+Blockly.Msg.ROBUNO_TEXT12 = "broche de commande de Direction (DIR)";
+Blockly.Msg.ROBUNO_TEXT13 = "broche de commande de la Vitesse (PWM~)";
+Blockly.Msg.ROBUNO_TEXT14 = "sens horaire (255) ou antihoraire (0)?";
+Blockly.Msg.ROBUNO_TEXT15 = "vitesse MAX (VRAI) ou nulle (FAUX)";
+Blockly.Msg.ROBUNO_TEXT16 = "Carte de commande de deux moteurs CC";
+
 Blockly.Msg.ROBUNO_LUX_TITLE1 = "la luminosité lue sur la LDR Gauche";
 Blockly.Msg.ROBUNO_LUX_TITLE2 = "la luminosité lue sur la LDR Droite";
-Blockly.Msg.ROBUNO_LUX_TOOLTIP = "Entrée Capteur de Luminosité"; 
+Blockly.Msg.ROBUNO_LUX_TOOLTIP = "entrée Capteur de Luminosité"; 
 Blockly.Msg.ROBUNO_PIN_ANALOG = "sur la broche Analogique";
-Blockly.Msg.ROBUNO_HELPURL = "www.technologieservices.fr/fr/a-a1000022060-edc1000003/article/RUSA-Robot-RobUno-a-servomoteurs.html";
+Blockly.Msg.ROBUNO_HELPURL = "http://www.technologieservices.fr/fr/a-a1000022060-edc1000003/article/RUSA-Robot-RobUno-a-servomoteurs.html";
+
+//Added March 26th 2016 
+Blockly.Msg.FISCHERTECHNIK_INOUT_LED_INPUT1 = "mettre le feu rouge";
+Blockly.Msg.FISCHERTECHNIK_INOUT_LED_INPUT2 = "sur la broche Numérique";
+Blockly.Msg.FISCHERTECHNIK_INOUT_LED_INPUT3 = "à l'état";
+Blockly.Msg.FISCHERTECHNIK_INOUT_LED_INPUT4 = "mettre le feu orange";
+Blockly.Msg.FISCHERTECHNIK_INOUT_LED_INPUT5 = "mettre le feu vert";
+Blockly.Msg.FISCHERTECHNIK_INOUT_LED_INPUT6 = "mettre la barriere lumineuse";
+Blockly.Msg.FISCHERTECHNIK_LED1_TOOLTIP = "Sortie led (réf : LED)";
+Blockly.Msg.FISCHERTECHNIK_TEXT1 = "allumer le buzzer";
+Blockly.Msg.FISCHERTECHNIK_TEXT2 = "à une fréquence (Hz)";
+Blockly.Msg.FISCHERTECHNIK_TEXT3 = "pendant une durée (ms) ";
+Blockly.Msg.FISCHERTECHNIK_TEXT4 = "le BP ou capteur de position de la barrière";
+Blockly.Msg.FISCHERTECHNIK_TEXT5 = "sur la broche ";
+Blockly.Msg.FISCHERTECHNIK_TEXT6 = " détecte du metal ?";
+Blockly.Msg.FISCHERTECHNIK_TEXT7 = "Entrée capteur magnétique (réf : ILS)";
+Blockly.Msg.FISCHERTECHNIK_TEXT8 = "le capteur magnétique";
+
+Blockly.Msg.FISCHERTECHNIK_BUZZER1_TOOLTIP = "Sortie Buzzer (réf : BUZZER)";
+Blockly.Msg.FISCHERTECHNIK_PIN = "sur la broche";
+Blockly.Msg.FISCHERTECHNIK_LUX_TITLE1 = "la luminosité lue sur le capteur de lumière";
+Blockly.Msg.FISCHERTECHNIK_LUX_TOOLTIP = "Entrée capteur de Luminosité"; 
+Blockly.Msg.FISCHERTECHNIK_PIN_ANALOG = "sur la broche Analogique";
+
+Blockly.Msg.FISCHERTECHNIK_TEXT9 = "commande le moteur";
+Blockly.Msg.FISCHERTECHNIK_TEXT10 = "du shield Moteurs CC";
+Blockly.Msg.FISCHERTECHNIK_TEXT11 = "sur les broches";
+Blockly.Msg.FISCHERTECHNIK_TEXT12 = "broche de commande de Direction (DIR)";
+Blockly.Msg.FISCHERTECHNIK_TEXT13 = "broche de commande de la Vitesse (PWM~)";
+Blockly.Msg.FISCHERTECHNIK_TEXT14 = "sens horaire (255) ou Antihoraire (0)?";
+Blockly.Msg.FISCHERTECHNIK_TEXT15 = "vitesse MAX (VRAI) ou nulle (FAUX)";
+Blockly.Msg.FISCHERTECHNIK_TEXT16 = "Carte de commande de deux moteurs CC";
+Blockly.Msg.FISCHERTECHNIK_TEXT17 = " est appuyée ?";
