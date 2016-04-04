@@ -460,6 +460,12 @@ Blockly.Msg.CAT_OLED_U8G = "OLED screen I2C";
 Blockly.Msg.CAT_ROBUNO = "RobUno";  //added march 17th 2016
 Blockly.Msg.CAT_ROBUNO_IN = "sensors";
 Blockly.Msg.CAT_ROBUNO_OUT = "actuators";
+Blockly.Msg.CAT_ROBUNO_MOTORS_CC = "moteurs CC";
+
+Blockly.Msg.CAT_FISCHERTECHNIK = "fischertechnik";  //added march 26th 2016
+Blockly.Msg.CAT_FISCHERTECHNIK_IN = "capteurs";
+Blockly.Msg.CAT_FISCHERTECHNIK_OUT = "actionneurs";
+Blockly.Msg.CAT_FISCHERTECHNIK_MOTORS_CC = "moteurs CC";
 
 Blockly.Msg.CAT_GROVE = "Grove";  //added march 9th 2015
 Blockly.Msg.CAT_GROVE_IN = "In";
