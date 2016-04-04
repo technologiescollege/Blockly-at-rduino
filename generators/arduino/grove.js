@@ -83,7 +83,7 @@ Blockly.Arduino.grove_temporature_sensor = function() {
   resistance=(float)(1023-a)*10000/a;
   temperature=1/(log(resistance/10000)/B+1/298.15)-273.15;
   */
-  var code = 'round('+'(1/(log((float)(1023-analogRead('+dropdown_pin+'))*10000/analogRead('+dropdown_pin+'))/10000)/3975+1/298.15)-273.15'+')';
+  var code = 'round('+'(1/(log((float)(1023-analogRead('+dropdown_pin+'))*10000/analogRead('+dropdown_pin+')/10000)/3975+1/298.15)-273.15'+')';
   Blockly.Arduino.setups_['setup_temporature_sensor_'+dropdown_pin] = 'pinMode('+dropdown_pin+', INPUT);';
   return [code, Blockly.Arduino.ORDER_ATOMIC];
 };
