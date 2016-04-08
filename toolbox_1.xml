@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<toolbox>
+	<parametre id="defaultCategories">CAT_LOGIC,CAT_LOOPS,CAT_MATH,CAT_ARRAY,CAT_TEXT,CAT_VARIABLES,CAT_FUNCTIONS
+	</parametre>
+	<category name="CAT_LOGIC" colour="#E1A91A">
+		<block type="controls_if"></block>
+		<block type="controls_switch"></block>
+		<block type="logic_compare"></block>
+		<block type="logic_operation"></block>
+		<block type="logic_negate"></block>
+		<block type="logic_boolean"></block>
+		<block type="logic_null"></block>
+	</category>
+	<category name="CAT_LOOPS" colour="#C88330">
+		<block type="controls_repeat"></block>
+		<block type="controls_repeat_ext">
+			<value name="TIMES">
+				<shadow type="math_number">
+					<field name="NUM">10</field>
+				</shadow>
+			</value>
+		</block>
+		<block type="controls_whileUntil"></block>
+		<block type="controls_for">
+			<field name="VAR">i</field>
+			<value name="FROM">
+				<shadow type="math_number">
+					<field name="NUM">1</field>
+				</shadow>
+			</value>
+			<value name="TO">
+				<shadow type="math_number">
+					<field name="NUM">10</field>
+				</shadow>
+			</value>
+			<value name="BY">
+				<shadow type="math_number">
+					<field name="NUM">1</field>
+				</shadow>
+			</value>
+		</block>
+		<block type="controls_forEach"></block>
+		<block type="controls_flow_statements"></block>
+	</category>
+	<category name="CAT_MATH" colour="#5CB712">
+		<block type="math_number"></block>
+		<block type="inout_angle_maths"></block>
+		<block type="math_arithmetic"></block>
+		<block type="math_single"></block>
+		<block type="math_trig"></block>
+		<block type="math_constant"></block>
+		<block type="math_number_property"></block>
+		<block type="math_change">
+			<value name="DELTA">
+				<shadow type="math_number">
+					<field name="NUM">1</field>
+				</shadow>
+			</value>
+		</block>
+		<block type="math_round"></block>
+		<block type="math_on_list"></block>
+		<block type="math_modulo"></block>
+		<block type="math_constrain">
+			<value name="LOW">
+				<shadow type="math_number">
+					<field name="NUM">1</field>
+				</shadow>
+			</value>
+			<value name="HIGH">
+				<shadow type="math_number">
+					<field name="NUM">100</field>
+				</shadow>
+			</value>
+		</block>
+		<block type="math_random_int">
+			<value name="FROM">
+				<shadow type="math_number">
+					<field name="NUM">1</field>
+				</shadow>
+			</value>
+			<value name="TO">
+				<shadow type="math_number">
+					<field name="NUM">100</field>
+				</shadow>
+			</value>
+		</block>
+		<block type="math_random_float"></block>
+	</category>
+	<category name="CAT_ARRAY" colour="#58B5DC">
+		<block type="array_create_with"></block>
+		<block type="array_getIndex">
+			<value name="AT">
+				<block type="math_number">
+					<field name="NUM">1</field>
+				</block>
+			</value>
+		</block>
+	</category>
+	<category name="CAT_TEXT" colour="#8A55D7">
+		<block type="text"></block>
+		<block type="text_join"></block>
+		<block type="text_append">
+			<value name="TEXT">
+				<shadow type="text"></shadow>
+			</value>
+		</block>
+		<block type="text_length"></block>
+		<block type="text_isEmpty"></block>
+	</category>
+	<category name="CAT_VARIABLES" colour="#EE7D16">
+		<block type="variables_set"></block>
+		<block type="variables_set_type"></block>
+		<block type="variables_get"></block>
+	</category>
+	<category name="CAT_FUNCTIONS" custom="PROCEDURE" colour="#632D99"></category>
+	<sep></sep>
+	<category name="CAT_KIT_VELO" colour="#C88330">
+		<block type="kit_velo_niv1_chenillard"></block>
+		<block type="kit_velo_niv1_tone"></block>	
+		<block type="kit_velo_niv1_notone"></block>	
+		<block type="kit_velo_niv1_test_BP"></block>			
+		<block type="kit_velo_niv1_pot"></block>		
+	</category>
+</toolbox>

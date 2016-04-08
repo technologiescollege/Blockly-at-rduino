@@ -207,9 +207,10 @@ Code.initLanguage = function() {
   $('#configModalLabel').text(MSG['configModalLabel']);
   $('#span_select_all').text(MSG['span_select_all']);
   $('#span_put_in_url').text(MSG['span_put_in_url']);
-  $('#btn_close').text(MSG['btn_close']);
-  $('#btn_valid').text(MSG['btn_valid']);
-  $('#btn_closeAjax').text(MSG['btn_close']);
+  $('#btn_close_config').text(MSG['btn_close']);
+  $('#btn_valid_config').text(MSG['btn_valid']);
+  $('#btn_close_msg').text(MSG['btn_close']);
+  $('#btn_valid_msg').text(MSG['btn_valid']);
 
   $('#editModalLabel').text(MSG['editModalLabel']);
   $('#showcardLabel').text(MSG['showcardLabel']);
