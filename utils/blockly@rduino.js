@@ -583,13 +583,23 @@ BlocklyDuino.bindFunctions = function() {
 	});
 	
 	$('#btn_convert').on('click', function() {
-		$('#convertModal').css("z-index", 1080);
+		$('#convertModal').css("z-index", 1060);
 		$('#convertModal').css("display", "inline-block");
 	});
-
+	
 	$('#convertModal button.close').on('click', function() {
 		$('#convertModal').css("z-index", 0);
 		$('#convertModal').hide();
+	});
+
+	$('#btn_RGB').on('click', function() {
+		$('#RGB_modal').css("z-index", 1070);
+		$('#RGB_modal').css("display", "inline-block");
+	});
+	
+	$('#RGB_modal button.close').on('click', function() {
+		$('#RGB_modal').css("z-index", 0);
+		$('#RGB_modal').hide();
 	});
 	
 	// $('#btn_switch').on("click", BlocklyDuino.switchOrientation);
@@ -973,6 +983,20 @@ BlocklyDuino.init = function() {
 	        $('.draggable').removeClass('draggable');
 	    });
 		
+		$('body').on('mousedown', '#RGB_modal', function() {
+	        $(this).addClass('draggable').parents().on('mousemove', function(e) {
+	            $('.draggable').offset({
+	                top: e.pageY,
+	                left: e.pageX - $('.draggable').outerWidth()/2
+	            }).on('mouseup', function() {
+	                $(this).removeClass('draggable');
+	            });
+	            e.preventDefault();
+	        });
+	    }).on('mouseup', function() {
+	        $('.draggable').removeClass('draggable');
+	    });
+		
 		/*pour changer couleur texte dans toolbox
         $("div:contains('bitbloq').blocklyTreeRow, div:contains('bitbloq').blocklyTreeRow ~ div").on("click", function() {
             $(this).removeClass("blocklyTreeSelected")
@@ -999,7 +1023,8 @@ BlocklyDuino.setOrientation = function() {
 		$("#menuPanelBlockly").addClass("menuPanelBlockly-hor");
 		$("#menuPanelFiles").addClass("menuPanelFiles-hor");
 		$("#divTabpanel").addClass("divTabpanel-hor");
-		$("#div_help_button").addClass("div_help_button-hor");		
+		$("#div_help_button").addClass("div_help_button-hor");
+		$("#div_tools_button").addClass("div_tools_button-hor");		
 		$("#div_miniPicture").addClass("div_miniPicture-hor");
 		
 		$("#btn_picture").removeClass("btn-block");
@@ -1028,6 +1053,7 @@ BlocklyDuino.setOrientation = function() {
 		//$("#btn_plugin_codebender").addClass("btn_ver");
 		$("#divTabpanel").addClass("divTabpanel-ver");
 		$("#div_help_button").addClass("div_help_button-ver");
+		$("#div_tools_button").addClass("div_tools_button-ver");
 		$("#div_miniPicture").addClass("div_miniPicture-ver");	
 		var div_miniPicture_height = $("#div_help_button").position().top
 												- ($("#menuPanelFiles").offset().top + $("#menuPanelFiles").outerHeight(true))

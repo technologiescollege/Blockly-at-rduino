@@ -113,6 +113,13 @@ html[dir="RTL"] .menuPanel-ver {
     text-align: center;
 }
 
+.div_tools_button-ver {
+    width: 200px;
+    bottom: 50px;
+    position: absolute;
+    text-align: center;
+}
+
 .div_help_button-hor {
     padding-left: 0px;
     bottom: 10px;
@@ -470,6 +477,13 @@ html[dir="RTL"] .colors_category {
 }
 
 #convertModal .modal-content:hover {
+  cursor: move;
+}
+
+.draggable {
+}
+
+#RGB_modal .modal-content:hover {
   cursor: move;
 }
 
