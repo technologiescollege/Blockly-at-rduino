@@ -393,6 +393,7 @@ Blockly.Msg.VARIABLES_SET = "mettre la variable %1 à %2";
 Blockly.Msg.VARIABLES_SET_CREATE_GET = "Créer 'obtenir %1'";
 Blockly.Msg.VARIABLES_SET_HELPURL = "https://github.com/google/blockly/wiki/Variables#set";  // untranslated
 Blockly.Msg.VARIABLES_SET_TOOLTIP = "Fixe cette variable pour qu’elle soit égale à la valeur de l’entrée.";
+Blockly.Msg.VARIABLES_AS = "de type";
 Blockly.Msg.PROCEDURES_DEFRETURN_TITLE = Blockly.Msg.PROCEDURES_DEFNORETURN_TITLE;
 Blockly.Msg.CONTROLS_IF_IF_TITLE_IF = Blockly.Msg.CONTROLS_IF_MSG_IF;
 Blockly.Msg.CONTROLS_WHILEUNTIL_INPUT_DO = Blockly.Msg.CONTROLS_REPEAT_INPUT_DO;

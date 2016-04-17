@@ -377,7 +377,7 @@ Blockly.Arduino.getArduinoType_ = function(typeBlockly) {
       //return 'ChildBlockMissing';
       return 'int';
     default:
-      return 'Invalid Blockly Type';
+      return 'Invalid Type';
     }
 };
 
