@@ -77,6 +77,8 @@ Blockly.Arduino.init = function(workspace) {
   Blockly.Arduino.includes_ = Object.create(null);
   // Create a dictionary of global definitions to be printed after variables
   Blockly.Arduino.definitions_ = Object.create(null);
+  // Create a dictionary of variables
+  Blockly.Arduino.variables_ = Object.create(null);
   // Create a dictionary of functions from the code generator
   Blockly.Arduino.codeFunctions_ = Object.create(null);
   // Create a dictionary of functions created by the user
@@ -89,41 +91,23 @@ Blockly.Arduino.init = function(workspace) {
   // Create a dictionary of pins to check if their use conflicts
   Blockly.Arduino.pins_ = Object.create(null);
 
-  /*if (Blockly.Variables) {
-    if (!Blockly.Arduino.variableDB_) {
-      Blockly.Arduino.variableDB_ =
-          new Blockly.Names(Blockly.Arduino.RESERVED_WORDS_);
-    } else {
-      Blockly.Arduino.variableDB_.reset();
-    }
-
-    var defvars = [];
-    var variables = Blockly.Variables.allVariables(workspace);
-    for (var x = 0; x < variables.length; x++) {
-      defvars[x] = 'truc ' +
-          Blockly.Arduino.variableDB_.getName(variables[x], Blockly.Variables.NAME_TYPE) + ';\n';
-    }
-    Blockly.Arduino.definitions_['variables'] = defvars.join('\n');
-  }		*/
-  
-
   if (!Blockly.Arduino.variableDB_) {
     Blockly.Arduino.variableDB_ =
-        new Blockly.Names(Blockly.Arduino.RESERVED_WORDS_);
+	new Blockly.Names(Blockly.Arduino.RESERVED_WORDS_);
   } else {
     Blockly.Arduino.variableDB_.reset();
   }
-  // Iterate through to capture all blocks Type and set the function arguments
-  var varsWithType = Blockly.Arduino.StaticTyping.collectVarsWithTypes(workspace);
-  Blockly.Arduino.StaticTyping.setProcedureArgs(workspace, varsWithType);
+
+  // Iterate through to capture all blocks types and set the function arguments
+  var varsWithTypes = Blockly.Arduino.StaticTyping.collectVarsWithTypes(workspace);
+  Blockly.Arduino.StaticTyping.setProcedureArgs(workspace, varsWithTypes);
+
   // Set variable declarations with their Arduino type in the defines dictionary
-  var variableDeclarations = [];
-  for (var varName in varsWithType) {
-    variableDeclarations.push(
-        Blockly.Arduino.getArduinoType_(varsWithType[varName]) + ' ' +
-        varName + ';');
+  for (var varName in varsWithTypes) {
+    Blockly.Arduino.addVariable(varName,
+	Blockly.Arduino.getArduinoType_(varsWithTypes[varName]) +' ' +
+	varName + ';');
   }
-  Blockly.Arduino.definitions_['variables'] = variableDeclarations.join('\n');
 };
 
 /**
@@ -133,12 +117,18 @@ Blockly.Arduino.init = function(workspace) {
  */
 Blockly.Arduino.finish = function(code) {
   // Convert the includes, definitions, and functions dictionaries into lists
-  var includes = [], definitions = [], functions = [];
+  var includes = [], definitions = [], variables = [], functions = [];
   for (var name in Blockly.Arduino.includes_) {
     includes.push(Blockly.Arduino.includes_[name]);
   }
   if (includes.length) {
     includes.push('\n');
+  }
+  for (var name in Blockly.Arduino.variables_) {
+    variables.push(Blockly.Arduino.variables_[name]);
+  }
+  if (variables.length) {
+    variables.push('\n');
   }
   for (var name in Blockly.Arduino.definitions_) {
     definitions.push(Blockly.Arduino.definitions_[name]);
@@ -179,8 +169,8 @@ Blockly.Arduino.finish = function(code) {
   delete Blockly.Arduino.pins_;
   Blockly.Arduino.variableDB_.reset();
 
-  var allDefs = includes.join('\n') + definitions.join('\n') +
-                functions.join('\n\n');
+  var allDefs = includes.join('\n') + variables.join('\n') +
+  	definitions.join('\n') + functions.join('\n\n');
   var setup = 'void setup() {' + setups.join('\n  ') + '\n}\n\n';
   var loop = 'void loop() {\n  ' + code.replace(/\n/g, '\n  ') + '\n}';
   return allDefs + setup + loop;
@@ -248,6 +238,25 @@ Blockly.Arduino.addFunction = function(preferedName, code) {
   }
   return Blockly.Arduino.functionNames_[preferedName];
 };
+
+/**
+ * Adds a string of code to declare a variable globally to the sketch.
+ * Only if overwrite option is set to true it will overwrite whatever
+ * value the identifier held before.
+ * @param {!string} varName The name of the variable to declare.
+ * @param {!string} code Code to be added for the declaration.
+ * @param {boolean=} overwrite Flag to ignore previously set value.
+ * @return {!boolean} Indicates if the declaration overwrote a previous one.
+ */
+Blockly.Arduino.addVariable = function(varName, code, overwrite) {
+  var overwritten = false;
+  if (overwrite || (Blockly.Arduino.variables_[varName] === undefined)) {
+    Blockly.Arduino.variables_[varName] = code;
+    overwritten = true;
+  }
+  return overwritten;
+};
+
 
 /**
  * Description.
@@ -366,7 +375,7 @@ Blockly.Arduino.getArduinoType_ = function(typeBlockly) {
     case Blockly.Types.CHILD_BLOCK_MISSING.typeName:
       // If no block connected default to int, change for easier debugging
       //return 'ChildBlockMissing';
-      return 'truc';
+      return 'int';
     default:
       return 'Invalid Blockly Type';
     }
