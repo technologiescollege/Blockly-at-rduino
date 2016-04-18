@@ -29,7 +29,7 @@ Blockly.Blocks['variables_set_type'] = {
     this.setColour(Blockly.Blocks.variables.HUE);
     this.appendValueInput('VARIABLE_SETTYPE_INPUT');
     this.appendDummyInput()
-        .appendField('as')
+        .appendField(Blockly.Msg.VARIABLES_AS)
         .appendField(new Blockly.FieldDropdown(
                          Blockly.Types.getValidTypeArray()),
                      'VARIABLE_SETTYPE_TYPE');

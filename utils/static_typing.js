@@ -62,8 +62,6 @@ Blockly.StaticTyping.prototype.collectVarsWithTypes = function(workspace) {
           }
           variableType = Blockly.Types.UNDEF;
         }
-      } else {
-	variableType = Blockly.Types.NUMBER;
       }
       this.assignTypeToVars(blocks[i], variableName, variableType);
     }

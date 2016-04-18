@@ -1,0 +1,1946 @@
+<html>
+<head>
+<link rel="icon" type="image/png" href="favicon.bmp" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Blockly@rduino</title>
+<!-- <script type="text/javascript" src="blocks/blockly_uncompressed.js"></script> -->
+<script type="text/javascript" src="blocks/blockly_compressed.js"></script>
+
+<script type="text/javascript" src="utils/boards.js"></script>
+<!-- needed for type of variable--->
+<script type="text/javascript" src="utils/type.js"></script>
+<script type="text/javascript" src="utils/types.js"></script>
+<script type="text/javascript" src="utils/static_typing.js"></script>
+
+<script type="text/javascript" src="utils/blocklyDuino.js"></script>
+<script type="text/javascript" src="utils/blockly@rduino.js"></script>
+<script type="text/javascript" src="utils/spin.js"></script>
+<script type="text/javascript" src="utils/jquery-2.1.3.min.js"></script>
+<script type="text/javascript" src="utils/bootstrap.min.3.3.6.js"></script>
+<script type="text/javascript" src="utils/prettify.js"></script>
+
+<!--script type="text/javascript" src="blocks/blocklyarduino/colour.js"></script>
+<script type="text/javascript" src="blocks/blocklyarduino/lists.js"></script-->
+<script type="text/javascript" src="blocks/blocklyarduino/logic.js"></script>
+<script type="text/javascript" src="blocks/blocklyarduino/loops.js"></script>
+<script type="text/javascript" src="blocks/blocklyarduino/math.js"></script>
+<script type="text/javascript" src="blocks/blocklyarduino/text.js"></script>
+<script type="text/javascript" src="blocks/blocklyarduino/variables.js"></script>
+<!--script type="text/javascript" src="blocks/blocklyarduino/variables_type.js"></script-->
+<script type="text/javascript" src="blocks/blocklyarduino/array.js"></script>
+<script type="text/javascript" src="blocks/blocklyarduino/procedures.js"></script>
+
+<script type="text/javascript" src="blocks/arduino_base/arduino_base.js"></script>
+<script type="text/javascript" src="blocks/arduino_base/arduino_io.js"></script>
+<script type="text/javascript" src="blocks/arduino_base/arduino_conversion.js"></script>
+<script type="text/javascript" src="blocks/arduino_base/variables_type.js"></script>
+<script type="text/javascript" src="blocks/adafruit_motorshield/adafruit_motorshield.js"></script>
+<script type="text/javascript" src="blocks/bitbloq/bitbloq.js"></script>
+<script type="text/javascript" src="blocks/dfplayer-mini-mp3-dfrobot/dfplayer-mini-mp3-dfrobot.js"></script>
+<script type="text/javascript" src="blocks/display-oled-128x64-i2c/display-oled-128x64-i2c.js"></script>
+<script type="text/javascript" src="blocks/fischertechnik/fischertechnik.js"></script>
+<script type="text/javascript" src="blocks/grove/grove.js"></script>
+<script type="text/javascript" src="blocks/jeulin_maquette_feux/jeulin_maquette_feux.js"></script>
+<script type="text/javascript" src="blocks/led-rgb-ws2812b/led-rgb-ws2812b.js"></script>
+<script type="text/javascript" src="blocks/multi-function/multi-function.js"></script>
+<script type="text/javascript" src="blocks/robuno/robuno.js"></script>
+<script type="text/javascript" src="blocks/serial/serial.js"></script>
+<script type="text/javascript" src="blocks/serial/softserial.js"></script>
+<script type="text/javascript" src="blocks/servo/servo.js"></script>
+<script type="text/javascript" src="blocks/technozone51/technozone51.js"></script>
+<!--script type="text/javascript" src="blocks/technozone51/technozone51_barbot.js"></script-->
+<script type="text/javascript" src="blocks/zumobot/zumo_motors.js"></script>
+<script type="text/javascript" src="blocks/zumobot/zumo_sensors.js"></script>
+<script type="text/javascript" src="blocks/robots/robot_motors.js"></script>
+<script type="text/javascript" src="blocks/robots/robot_misc.js"></script>
+<script type="text/javascript" src="blocks/arduino_shield/arduino_shield.js"></script>
+
+<script type="text/javascript" src="generators/blocklyarduino/control.js"></script>
+<script type="text/javascript" src="generators/blocklyarduino/logic.js"></script>
+<script type="text/javascript" src="generators/blocklyarduino/math.js"></script>
+<script type="text/javascript" src="generators/blocklyarduino/text.js"></script>
+<script type="text/javascript" src="generators/blocklyarduino/variables.js"></script>
+<script type="text/javascript" src="generators/blocklyarduino/array.js"></script>
+<script type="text/javascript" src="generators/blocklyarduino/procedures.js"></script>
+
+<script type="text/javascript" src="generators/arduino/arduino_base.js"></script>
+<script type="text/javascript" src="generators/arduino/arduino_io.js"></script>
+<script type="text/javascript" src="generators/arduino/arduino_conversion.js"></script>
+<script type="text/javascript" src="generators/arduino/variables_type.js"></script>
+<script type="text/javascript" src="generators/arduino/adafruit_motorshield.js"></script>
+<script type="text/javascript" src="generators/arduino/bitbloq.js"></script>
+<script type="text/javascript" src="generators/arduino/dfplayer-mini-mp3-dfrobot.js"></script>
+<script type="text/javascript" src="generators/arduino/display-oled-128x64-i2c.js"></script>
+<script type="text/javascript" src="generators/arduino/fischertechnik.js"></script>
+<script type="text/javascript" src="generators/arduino/grove.js"></script>
+<script type="text/javascript" src="generators/arduino/jeulin_maquette_feux.js"></script>
+<script type="text/javascript" src="generators/arduino/led-rgb-ws2812b.js"></script>
+<script type="text/javascript" src="generators/arduino/multi-function.js"></script>
+<script type="text/javascript" src="generators/arduino/robuno.js"></script>
+<script type="text/javascript" src="generators/arduino/serial.js"></script>
+<script type="text/javascript" src="generators/arduino/servo.js"></script>
+<script type="text/javascript" src="generators/arduino/softserial.js"></script>
+<script type="text/javascript" src="generators/arduino/technozone51.js"></script>
+<!--script type="text/javascript" src="generators/arduino/technozone51_barbot.js"></script-->
+<script type="text/javascript" src="generators/arduino/zumo_motors.js"></script>
+<script type="text/javascript" src="generators/arduino/zumo_sensors.js"></script>
+<script type="text/javascript" src="generators/arduino/robot_motors.js"></script>
+<script type="text/javascript" src="generators/arduino/robot_misc.js"></script>
+<script type="text/javascript" src="generators/arduino/arduino_shield.js"></script>
+
+<!--TechnoZone51-->
+<script type="text/javascript" src="utils/html2canvas.js"></script>
+<script type="text/javascript" src="utils/canvas2image.js"></script>
+<!--Fin TZ51-->
+<script type="text/javascript" src="lang/code.js"></script>
+
+<script type="text/javascript" src="http://codebender.cc/embed/compilerflasher.js"></script>
+
+<link rel="stylesheet" type="text/css" href="css/blockly@rduino.css">
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="css/prettify.css">
+
+<script type="text/javascript">
+	$(window).load(function() {
+		$(".loading").fadeOut("slow");
+	});
+</script>
+
+<body onload="BlocklyDuino.init()">
+<div class="loading"></div>
+    <div id="divTitre">
+        <p>
+            <a href=""> <img src="media/Arduino-uno-perspective-transparent.png" border="0" height="76px" onclick="localStorage.clear();" />
+            </a> 
+            <b>Blockly@rduino</b> : 
+            <span id="title"></span>
+    <button id="btn_about" type="button" class="btn btn-default btn-xs" data-toggle="modal" data-target="#aboutModal">
+        <span id="span_about"> </span>
+		<span class="glyphicon glyphicon-user"></span>		
+    </button>
+        </p>
+        <select id="languageMenu"></select>
+    </div>
+    <div id="divBody">
+    <div id="menuPanel">
+	    <div id="menuPanelConfig">
+	<!-- 		<button id="btn_switch" class="btn btn-default"> -->
+	<!-- 			<span class="glyphicon glyphicon-retweet"> </span> -->
+	<!-- 		</button> -->
+		    <div id="divCard">
+		            <label id="labelArduinoCard"></label> 
+		            <select id="pinout">
+		                <option value="arduino_uno" selected="selected">Arduino UNO</option>
+		                <option value="arduino_mega">Arduino MEGA</option>
+						<option value="dfrobot_romeo">DFRobot RoMeo</option>
+		            </select>
+		    </div>
+			<button id="btn_picture" class="btn btn-danger btn-block text-left">
+				<span class="glyphicon glyphicon-alert"> </span>
+				<span id="span_picture"> </span>
+			</button>
+			<button id="btn_config" class="text-left btn btn-warning btn-block " data-toggle="modal" data-target="#configModal">
+				<span class="glyphicon glyphicon-cog"> </span>
+				<span id="span_config"> </span>
+			</button>
+	    </div>
+	    <div id="menuPanelBlockly" class="margin-top-5">
+	            <ul id="ul_nav" role="tablist">
+	            <li role="presentation" id="tab_supervision">
+	                 <a href="#content_supervision" aria-controls="content_supervision" role="tab" data-toggle="tab">
+	                     <span class="glyphicon glyphicon-blackboard"></span>
+	                     <span id="a_supervision"> </span>
+	                 </a>
+	            </li>
+	            <li role="presentation" id="tab_blocks" class="active">
+	                 <a href="#content_blocks" aria-controls="content_blocks" role="tab" data-toggle="tab">
+	                     <span class="glyphicon glyphicon-home"></span>
+	                     <span id="a_blocks"> </span>
+	                 </a>
+	            </li>
+	            <li role="presentation" id="tab_arduino">
+	                 <a href="#content_arduino" aria-controls="content_arduino" role="tab" data-toggle="tab">
+	                     <span class="glyphicon glyphicon-check"></span>
+	                    <span id="a_arduino"></span>
+	                 </a>
+	            </li>
+	            <li role="presentation" id="tab_term">
+	                 <a href="#content_term" aria-controls="content_term" role="tab" data-toggle="tab">
+	                     <span  class="glyphicon glyphicon-log-out"></span>
+	                     <span id="a_term"> </span>
+	                 </a>
+	            </li>
+	            <li role="presentation" id="tab_xml">
+	                 <a href="#content_xml" aria-controls="content_xml" role="tab" data-toggle="tab">
+	                     <span  class="glyphicon glyphicon-file"></span>
+	                     <span id="a_xml"></span>
+	                 </a>
+	             </li>
+	        </ul>
+		</div>
+		<div id="menuPanelFiles">
+			<a id="btn_saveXML" class='btn btn-success btn-block text-left' href="#" role='button'>
+			  <span class="glyphicon glyphicon-cloud-download"></span>
+			  <span id="span_saveXML"> </span>
+			 </a>
+			<button id="btn_fakeload" class="btn btn-success btn-block">
+				<span class="glyphicon glyphicon-cloud-upload"></span>
+				<span id="span_fakeload"> </span>
+			</button>
+			<input type="file" id="load" style="display: none;" />
+			<button id="btn_example" class="btn btn-info btn-block" data-toggle="modal" data-target="#exampleModal">
+				<span class="glyphicon glyphicon-share"> </span>
+				<span id="span_example"> </span>
+			</button>
+			<a id="btn_create_example" class="btn btn-info btn-block" href="">
+				<span class="glyphicon glyphicon-wrench"> </span>
+				<span id="span_create_example"> </span>
+			</a>
+		</div> 
+		<div id="div_miniPicture">
+		    <a id="miniCard">
+		        <img id="arduino_card_miniPicture" />
+		    </a>
+		</div>
+		<div id="div_help_button">
+			<button id="btn_convert" class="btn btn-primary text-left">
+		       <span class="glyphicon glyphicon-superscript"> </span>
+		       <span id="span_convert"> </span>
+		   </button>
+		   <a id="btn_doc" class='btn btn-success btn-info text-left' href="http://tic.technologiescollege.fr/wiki/" target=_blank role='button'>
+		       <span class="glyphicon glyphicon-info-sign"></span>
+		       <span id="span_doc"> </span>
+		   </a>
+		   <a id="btn_tuto" class='btn btn-success btn-info text-left' href="documentation/blockly_doc.pdf" target=_blank role='button'>
+		       <span class="glyphicon glyphicon-question-sign"></span>
+		       <span id="span_tuto"> </span>
+		   </a>
+		   <button id="btn_videos" class="btn btn-danger text-left">
+		       <span class="glyphicon glyphicon-expand"> </span>
+		       <span id="span_videos"> </span>
+		   </button>
+		</div>       
+    </div>
+
+    <!-- Nav tabs -->
+    <div id="divTabpanel" role="tabpanel">
+        <!-- Tab panes -->
+        <div id="content_area" class="tab-content">
+			<div id="content_blocks" class="tab-pane active" style="position: relative;">
+				<button id="btn_delete" class="btn btn-danger">
+					<span class="glyphicon glyphicon-erase"> </span>
+					<span id="span_delete"> </span>
+				</button>
+				<button id="btn_blocs_picture_mini" class="btn btn-default">
+					<span id="icon_btn_blocs_picture_mini" class="glyphicon glyphicon-minus"> </span>
+				</button>
+				<button id="btn_blocs_picture_maxi" class="btn btn-default">
+					<span id="icon_btn_blocs_picture_maxi" class="glyphicon glyphicon-plus"> </span>
+				</button>
+				<button id="btn_blocs_picture" class="btn btn-default">
+					<span id="icon_btn_blocs_picture" class="glyphicon glyphicon-eye-open"> </span>
+				</button>
+				<button id="btn_size" class="btn btn-default">
+					<span id="icon_btn_size" class="glyphicon glyphicon-fullscreen"> </span>
+				</button>
+				<button id="btn_preview" class="btn btn-default">
+					<span id="icon_btn_preview" class="glyphicon glyphicon-list-alt"> </span>
+				</button>
+                <button id="btn_inline" class="btn btn-default">
+                    <span id="icon_btn_inline" class="glyphicon glyphicon-option-vertical"> </span>
+                </button>
+				<div id="toggle" class="modal-content" style="display: none;">
+					<pre id="pre_previewArduino"></pre>
+				</div>
+			</div>
+			<div id="content_arduino" class="tab-pane">
+				<select id="cb_cf_boards"></select>
+				<select id="cb_cf_ports"></select>				
+				<a id="btn_plugin_codebender" class='btn btn-danger' href="https://codebender.cc/static/plugin" target=_blank role='button'>
+					<span class="glyphicon glyphicon-new-window"></span>
+					<span id="span_plugin_codebender"> </span>
+				</a>			
+				<button id="cb_cf_verify_btn" class="btn btn-primary">
+					<span class="glyphicon glyphicon-ok"> </span>
+					<span id="span_verify_codebender"> </span>
+				</button>								
+				<button id="btn_edit_code" class="btn btn-primary" data-toggle="modal" data-target="#editModal">
+                    <span id="icon_edit_btn" class="glyphicon glyphicon-edit"> </span>
+                    <span id="span_edit_code"> </span>
+                </button>				
+                <button id="cb_cf_flash_btn" class="btn btn-primary">
+					<span class="glyphicon glyphicon-log-in"> </span>
+					<span id="span_flash_codebender"> </span>
+				</button>				
+				<a id="btn_saveArduino" class='btn btn-primary' href="#" role='button'>
+					<span class="glyphicon glyphicon-save"> </span>
+					<span id="span_saveIno"> </span>
+				</a>
+                <button id="btn_pasteIDEArduino" class="btn btn-primary">
+					<span class="glyphicon glyphicon-random"> </span>
+					<span id="span_pasteIDEArduino"> </span>
+				</button>					
+                <pre id="pre_arduino"></pre>
+                <div id="debug_arduino"></div>
+            </div>
+            <div id="content_term" class="tab-pane">
+                <select id="cb_cf_baud_rates"></select>
+                <button id="cb_cf_serial_monitor_connect" class="btn btn-primary">
+					<span class="glyphicon glyphicon-transfer"> </span>
+					<span id="span_connect_serial"> </span>				
+				</button>
+                <div id="cb_cf_serial_monitor"></div>
+            </div>
+            <div id="content_supervision" class="tab-pane">
+            </div>
+            <div id="content_xml" class="tab-pane">
+                <pre id="pre_xml"></pre>
+            </div>
+        </div>
+    </div>
+    </div>
+<!-- Modals -->
+<!-- about modal -->
+<div class="modal fade" id="aboutModal" tabindex="-1" role="dialog" aria-labelledby="aboutModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="aboutModalLabel"></h4>
+      </div>
+      <div class="modal-body">
+              <span><b>Documentation :</b></span> <a href="http://tic.technologiescollege.fr/wiki/doku.php">Wiki</a>
+			  <br />
+			  <br />
+			  <span><b>Blockly@rduino</b></span> (<a href="https://github.com/technologiescollege/Blockly-at-rduino">Github</a>)
+              <span id="aboutBody" style="font-style: italic;"> </span>
+              <br /> - Alan Yorinks - pymata : (<a href='http://mryslab.blogspot.fr/' target='blank'>http://mryslab.blogspot.fr/</a>)
+              <br /> - Fred Lin (@gasolin) - BlocklyDuino : (<a href='https://github.com/BlocklyDuino/BlocklyDuino' target='blank'>'https://github.com/BlocklyDuino/BlocklyDuino</a>)
+              <br /> - Blockly : (<a href='https://developers.google.com/blockly' target='blank'>https://developers.google.com/blockly</a>)
+              <br /> - Bootstrap (<a href='http://getbootstrap.com' target='blank'>http://getbootstrap.com</a>)
+			  <br /> - Codebender - CompilerFlasher : (<a href='https://codebender.cc' target='blank'>https://codebender.cc</a>)
+              <br /> - JQuerry (<a href='https://jquery.com' target='blank'>https://jquery.com)</a>
+			  <br />
+			  <br /><i/>version 04-04-2016
+			  <br />
+			  <br /><center>
+					<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+					<input type="hidden" name="cmd" value="_s-xclick">
+					<input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----MIIHRwYJKoZIhvcNAQcEoIIHODCCBzQCAQExggEwMIIBLAIBADCBlDCBjjELMAkGA1UEBhMCVVMxCzAJBgNVBAgTAkNBMRYwFAYDVQQHEw1Nb3VudGFpbiBWaWV3MRQwEgYDVQQKEwtQYXlQYWwgSW5jLjETMBEGA1UECxQKbGl2ZV9jZXJ0czERMA8GA1UEAxQIbGl2ZV9hcGkxHDAaBgkqhkiG9w0BCQEWDXJlQHBheXBhbC5jb20CAQAwDQYJKoZIhvcNAQEBBQAEgYAJgrlyKFLvrPLE466I/C6ixXUGcjCFWFDL8g8X1fvVuJzH6Oas51725FWmM2lj/qnlMC1OXDsQ5t+gZdtOHT/aNGKMGVKAwunuzdXunh12K6B/IyviY/t92zr4MNAzKUPbFEedz+KhPof+qHLtbggsH838JNZkI/C/IT2ywYjaVTELMAkGBSsOAwIaBQAwgcQGCSqGSIb3DQEHATAUBggqhkiG9w0DBwQI1IdcWrDXciiAgaBz6D0isbpRuJMLj/+WkYtJeIqWf5gWhgO6ZQuqIty98fGcIo4o++FnUPhVP7zNzLRnvQDEPBh2kmYKSeZzKKjhrftr4JUaf/kQ7ZlKrvZSI/9m9tRRhSXrLyPCdhG7WQpypTC5Zt8PENDPx6pUfpYGhmAQ/jaS+OHb8+XQbddJJWcNhP5NDPuNSyI3aAGNonqFkw+QhWtsZNfOlZYfWfIMoIIDhzCCA4MwggLsoAMCAQICAQAwDQYJKoZIhvcNAQEFBQAwgY4xCzAJBgNVBAYTAlVTMQswCQYDVQQIEwJDQTEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEUMBIGA1UEChMLUGF5UGFsIEluYy4xEzARBgNVBAsUCmxpdmVfY2VydHMxETAPBgNVBAMUCGxpdmVfYXBpMRwwGgYJKoZIhvcNAQkBFg1yZUBwYXlwYWwuY29tMB4XDTA0MDIxMzEwMTMxNVoXDTM1MDIxMzEwMTMxNVowgY4xCzAJBgNVBAYTAlVTMQswCQYDVQQIEwJDQTEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEUMBIGA1UEChMLUGF5UGFsIEluYy4xEzARBgNVBAsUCmxpdmVfY2VydHMxETAPBgNVBAMUCGxpdmVfYXBpMRwwGgYJKoZIhvcNAQkBFg1yZUBwYXlwYWwuY29tMIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDBR07d/ETMS1ycjtkpkvjXZe9k+6CieLuLsPumsJ7QC1odNz3sJiCbs2wC0nLE0uLGaEtXynIgRqIddYCHx88pb5HTXv4SZeuv0Rqq4+axW9PLAAATU8w04qqjaSXgbGLP3NmohqM6bV9kZZwZLR/klDaQGo1u9uDb9lr4Yn+rBQIDAQABo4HuMIHrMB0GA1UdDgQWBBSWn3y7xm8XvVk/UtcKG+wQ1mSUazCBuwYDVR0jBIGzMIGwgBSWn3y7xm8XvVk/UtcKG+wQ1mSUa6GBlKSBkTCBjjELMAkGA1UEBhMCVVMxCzAJBgNVBAgTAkNBMRYwFAYDVQQHEw1Nb3VudGFpbiBWaWV3MRQwEgYDVQQKEwtQYXlQYWwgSW5jLjETMBEGA1UECxQKbGl2ZV9jZXJ0czERMA8GA1UEAxQIbGl2ZV9hcGkxHDAaBgkqhkiG9w0BCQEWDXJlQHBheXBhbC5jb22CAQAwDAYDVR0TBAUwAwEB/zANBgkqhkiG9w0BAQUFAAOBgQCBXzpWmoBa5e9fo6ujionW1hUhPkOBakTr3YCDjbYfvJEiv/2P+IobhOGJr85+XHhN0v4gUkEDI8r2/rNk1m0GA8HKddvTjyGw/XqXa+LSTlDYkqI8OwR8GEYj4efEtcRpRYBxV8KxAW93YDWzFGvruKnnLbDAF6VR5w/cCMn5hzGCAZowggGWAgEBMIGUMIGOMQswCQYDVQQGEwJVUzELMAkGA1UECBMCQ0ExFjAUBgNVBAcTDU1vdW50YWluIFZpZXcxFDASBgNVBAoTC1BheVBhbCBJbmMuMRMwEQYDVQQLFApsaXZlX2NlcnRzMREwDwYDVQQDFAhsaXZlX2FwaTEcMBoGCSqGSIb3DQEJARYNcmVAcGF5cGFsLmNvbQIBADAJBgUrDgMCGgUAoF0wGAYJKoZIhvcNAQkDMQsGCSqGSIb3DQEHATAcBgkqhkiG9w0BCQUxDxcNMTYwMzIxMTMwODA1WjAjBgkqhkiG9w0BCQQxFgQUD4sqb6CSRovMjw9qLI8TrSfQnLUwDQYJKoZIhvcNAQEBBQAEgYAALAeXJN42x54w5ygTV8/zzkLlvngOIaU9kaOXfiS3iMkUil4AiOSyyVLWRzc9NdyHdZjCGq4YVSufHpOnreGQAfiOQHp1zwMQ+pr2kzhCDIfa+TIjvD8+5T0QHLsjniH/y3qxkXNjEOoL/sI1/Bp/f+r33W17UifHwZDVoOsT/w==-----END PKCS7-----
+					">
+					<input type="image" src="https://www.paypalobjects.com/fr_FR/FR/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal, le réflexe sécurité pour payer en ligne">
+					<img alt="" border="0" src="https://www.paypalobjects.com/fr_FR/i/scr/pixel.gif" width="1" height="1">
+					</form>
+				</center>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- ajax modal -->
+<div class="modal fade" id="ajaxModal" tabindex="-1" role="dialog" aria-labelledby="ajaxModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="ajaxModalLabel"></h4>
+      </div>
+      <div class="modal-body">
+          <pre id="msg_ajax_ko"></pre>
+          <input type="checkbox" name="ajax_msg" id="ajax_msg"/> <span id="span_ajax_msg"> </span>
+      </div>
+      
+      <div class="modal-footer">
+        <button id="btn_closeAjax" type="button" class="btn btn-default" data-dismiss="modal" ></button>
+        <button id="btn_valid_msg" type="button" class="btn btn-primary"></button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- picture "modal" -->
+<div id="showcardModal" class="modal-dialog modal-sm" style="display:none">
+	<div class="modal-content">
+	  <div class="modal-header">
+		<button type="button" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+		<button id="btn_card_picture_mini" class="btn btn-default">
+			<span id="icon_btn_blocs_picture_mini" class="glyphicon glyphicon-minus"> </span>
+		</button>
+		<button id="btn_card_picture_maxi" class="btn btn-default">
+			<span id="icon_btn_blocs_picture_maxi" class="glyphicon glyphicon-plus"> </span>
+		</button>
+	  </div>
+	  <div class="modal-body text-center">
+			  <img id="arduino_card_picture" width="200">
+	  </div>
+	</div>
+</div>
+<!-- example modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="exampleModalLabel"></h4>
+      </div>
+      <div class="modal-body">
+		<div class="table-responsive">
+			<table class="table table-hover">
+				<tbody id="includedContent">
+				</tbody>
+			</table>
+		</div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- convert bin <-> text "modal" -->
+<div id="convertModal" class="modal-dialog" style="display:none">
+	<div class="modal-content">
+	  <div class="modal-header">
+		<button type="button" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			<input id="ti1" value="TEST" />
+			<button onclick="BlocklyDuino.text2bin();">Texte -> binaire</button>
+			<input id="ti2" />
+			<br/>
+			<input id="ti3" value="01010101" />
+			<button onclick="BlocklyDuino.bin2text();">Binaire -> texte</button>
+			<input id="ti4" />
+	  </div>
+	</div>
+</div>
+<!-- videos modal -->
+<div id="videoModal" class="modal-dialog" style="display:none">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="videoModalLabel"></h4>
+      </div>
+	  <div class="modal-body text-center">
+		<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/videoseries?list=PLwy0yw3Oq4-uFNmgedXx9_L_TJNORo-4N&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+		</div>
+    </div>
+</div>
+<!-- toolbox config modal -->
+<div class="modal fade" id="configModal" tabindex="-1" role="dialog" aria-labelledby="configModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="configModalLabel"></h4>
+      </div>
+      
+      <input type="checkbox" name="select_all" id="select_all"/> <span id="span_select_all"> </span>
+      <div style="float : right; margin-right : 5px;">
+            <input type="checkbox" name="put_in_url" id="put_in_url"/> <span id="span_put_in_url"> </span>
+      </div>
+      
+      <div class="modal-body" id="modal-body-config"></div>
+      <div class="modal-footer">
+        <button id="btn_close" type="button" class="btn btn-default" data-dismiss="modal" ></button>
+        <button id="btn_valid" type="button" class="btn btn-primary"></button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- edit code modal -->
+<div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="editModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="editModalLabel"></h4>
+      </div>
+      <div class="modal-body" id="modal-body-code">
+            <textarea id="edit_code" rows="20" cols="100"></textarea>
+      </div>
+      <div class="modal-footer">
+        <button id="btn_closeCode" type="button" class="btn btn-default" data-dismiss="modal" ></button>
+        <button id="btn_validCode" type="button" class="btn btn-primary"  data-dismiss="modal"></button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--    toolboxes definitions -->
+<xml id="toolbox" style="display: none">
+    <category name="CAT_LOGIC" colour="#E1A91A">
+        <block type="controls_if"></block>
+		<block type="controls_switch"></block> 
+        <block type="logic_compare"></block>
+        <block type="logic_operation"></block>
+        <block type="logic_negate"></block>
+        <block type="logic_boolean"></block>
+        <block type="logic_null"></block>  
+    </category>
+    <category name="CAT_LOOPS" colour="#C88330">
+		<block type="controls_repeat"></block>
+        <block type="controls_repeat_ext">
+            <value name="TIMES">
+                <shadow type="math_number">
+                    <field name="NUM">10</field>
+                </shadow>
+            </value>
+        </block>
+        <block type="controls_whileUntil"></block>
+        <block type="controls_for">
+            <field name="VAR">i</field>
+            <value name="FROM">
+                <shadow type="math_number">
+                    <field name="NUM">1</field>
+                </shadow>
+            </value>
+            <value name="TO">
+                <shadow type="math_number">
+                    <field name="NUM">10</field>
+                </shadow>
+            </value>
+            <value name="BY">
+                <shadow type="math_number">
+                    <field name="NUM">1</field>
+                </shadow>
+            </value>
+        </block>
+        <block type="controls_forEach"></block>
+        <block type="controls_flow_statements"></block>
+    </category>
+    <category name="CAT_MATH" colour="#5CB712">
+        <block type="math_number"></block>
+		<block type="inout_angle_maths"></block>
+        <block type="math_arithmetic"></block>
+        <block type="math_single"></block>
+        <block type="math_trig"></block>		
+        <block type="math_constant"></block>
+        <block type="math_number_property"></block>
+        <block type="math_change">
+            <value name="DELTA">
+                <shadow type="math_number">
+                    <field name="NUM">1</field>
+                </shadow>
+            </value>
+        </block>
+        <block type="math_round"></block>
+        <block type="math_on_list"></block>
+        <block type="math_modulo"></block>
+        <block type="math_constrain">
+            <value name="LOW">
+                <shadow type="math_number">
+                    <field name="NUM">1</field>
+                </shadow>
+            </value>
+            <value name="HIGH">
+                <shadow type="math_number">
+                    <field name="NUM">100</field>
+                </shadow>
+            </value>
+        </block>
+      <block type="math_random_int">
+        <value name="FROM">
+          <shadow type="math_number">
+            <field name="NUM">1</field>
+          </shadow>
+        </value>
+        <value name="TO">
+          <shadow type="math_number">
+            <field name="NUM">100</field>
+          </shadow>
+        </value>
+      </block>
+      <block type="math_random_float"></block>
+    </category>
+    <!--category name="CAT_LIST" colour="#58B5DC">
+        <block type="lists_create_empty"></block>
+        <block type="lists_create_with"></block>
+        <block type="lists_repeat">
+            <value name="NUM">
+                <block type="math_number">
+                    <field name="NUM">5</field>
+                </block>
+            </value>
+        </block>
+        <block type="lists_length"></block>
+        <block type="lists_isEmpty"></block>
+        <block type="lists_indexOf"></block>
+        <block type="lists_getIndex"></block>
+        <block type="lists_setIndex"></block>
+    </category-->	
+	<category name="CAT_ARRAY" colour="#58B5DC">
+		<block type="array_create_with"></block>
+		<block type="array_getIndex">
+			<value name="AT">
+			  <block type="math_number">
+				<field name="NUM">1</field>
+			  </block>
+			</value>
+		</block>
+	</category>
+    <category name="CAT_TEXT" colour="#8A55D7">
+        <block type="text"></block>
+		<block type="text_join"></block>
+       <block type="text_append">
+         <value name="TEXT">
+           <shadow type="text"></shadow>
+         </value>
+       </block>
+         <block type="text_length"></block>
+         <block type="text_isEmpty"></block>
+<!--         <block type="text_indexOf"> -->
+<!--             <value name="VALUE"> -->
+<!--                 <block type="variables_get"> -->
+<!--                     <field name="VAR" class="textVar">...</field> -->
+<!--                 </block> -->
+<!--             </value> -->
+<!--         </block> -->
+<!--         <block type="text_charAt"> -->
+<!--             <value name="VALUE"> -->
+<!--                 <block type="variables_get"> -->
+<!--                     <field name="VAR" class="textVar">...</field> -->
+<!--                 </block> -->
+<!--             </value> -->
+<!--         </block> -->
+<!--         <block type="text_getSubstring"> -->
+<!--             <value name="STRING"> -->
+<!--                 <block type="variables_get"> -->
+<!--                     <field name="VAR" class="textVar">...</field> -->
+<!--                 </block> -->
+<!--             </value> -->
+<!--         </block> -->
+<!--         <block type="text_changeCase"></block> -->
+<!--         <block type="text_trim"></block> -->
+<!--         <block type="text_print"></block> -->
+<!--         <block type="text_prompt_ext"> -->
+<!--             <value name="TEXT"> -->
+<!--                 <block type="text"></block> -->
+<!--             </value> -->
+<!--         </block> -->
+    </category>
+<!--
+    <category name="CAT_COLOR" colour="#c09e8c">
+        <block type="colour_picker"></block>
+        <block type="colour_random"></block>
+        <block type="colour_rgb">
+            <value name="RED">
+                <block type="math_number">
+                    <field name="NUM">100</field>
+                </block>
+            </value>
+            <value name="GREEN">
+                <block type="math_number">
+                    <field name="NUM">50</field>
+                </block>
+            </value>
+            <value name="BLUE">
+                <block type="math_number">
+                    <field name="NUM">0</field>
+                </block>
+            </value>
+        </block>
+        <block type="colour_blend">
+            <value name="COLOUR1">
+                <block type="colour_picker">
+                    <field name="COLOUR">#ff0000</field>
+                </block>
+            </value>
+            <value name="COLOUR2">
+                <block type="colour_picker">
+                    <field name="COLOUR">#3333ff</field>
+                </block>
+            </value>
+            <value name="RATIO">
+                <block type="math_number">
+                    <field name="NUM">0.5</field>
+                </block>
+            </value>
+        </block>
+    </category> 
+-->
+    <category name="CAT_VARIABLES" colour="#EE7D16">
+		<block type="variables_set"></block>
+		<block type="variables_set_type"></block>
+		<block type="variables_get"></block>
+	</category>
+    <category name="CAT_FUNCTIONS" custom="PROCEDURE" colour="#632D99"></category>
+	<sep></sep>
+    <category name="CAT_ARDUINO" colour="#00979D">
+		<block type="base_setup"></block>
+		<block type="base_setup_loop"></block>
+		<block type="base_define_const"></block>
+		<block type="base_const"></block>
+		<block type="biblio_include"></block>
+		<block type="base_code"></block>
+		<block type="base_end"></block>
+		<category name="CAT_ARDUINO_IN" colour="#00979D">
+			<block type="inout_analog_read_validator"></block>
+            <block type="inout_digital_read_validator"></block>
+            <block type="inout_analog_read"></block>
+            <block type="inout_digital_read"></block>				
+            <block type="inout_onoff"></block>
+			<block type="inout_angle"></block>
+			<block type="var_random">
+                <value name="rand_min">
+                    <shadow type="math_number">
+                    <field name="NUM">0</field>
+                    </shadow>
+                </value>
+                <value name="rand_max">
+                    <shadow type="math_number">
+                    <field name="NUM">100</field>
+                    </shadow>
+                </value>
+			</block>
+            <block type="base_map">
+                <value name="NUM">
+                    <shadow type="math_number">
+                    <field name="NUM">0</field>
+                    </shadow>
+                </value>
+                <value name="DMAX">
+                    <shadow type="math_number">
+                    <field name="NUM">0</field>
+                    </shadow>
+                </value>
+            </block>				
+			<block type="various_constrain">
+                <value name="a">
+                    <shadow type="math_number">
+                    <field name="NUM">0</field>
+                    </shadow>
+                </value>
+                <value name="b">
+                    <shadow type="math_number">
+                    <field name="NUM">100</field>
+                    </shadow>
+                </value>
+			</block>
+			<block type="inout_attachInterrupt"></block>
+			<block type="inout_detachInterrupt"></block>
+        </category>
+		<category name="CAT_ARDUINO_TIME" colour="#00979D">			
+			<block type="millis"></block>		
+            <block type="inout_pulsein"></block>
+            <block type="inout_pulsein_timeout"></block>
+			<block type="base_delay">			
+				<value name="DELAY_TIME">
+					<shadow type="math_number">
+					<field name="NUM">1000</field>
+					</shadow>
+				</value>
+			</block>
+		</category>
+		<category name="CAT_ARDUINO_CONVERSION" colour="#00979D"> 
+			  <block type="conversion_tochar"></block>
+			  <block type="conversion_tobyte"></block>
+			  <block type="conversion_toint"></block>
+			  <block type="conversion_tofloat"></block>
+		</category>
+        <category name="CAT_ARDUINO_OUT" colour="#00979D">
+            <block type="inout_buildin_led"></block>
+			<block type="inout_digital_write_validator"></block>
+            <block type="inout_PWM_write_validator">
+                <value name="NUM">
+                    <shadow type="math_number">
+                    <field name="NUM">0</field>
+                    </shadow>
+                </value>
+            </block>
+            <block type="inout_analog_write_validator">
+				<value name="NUM">
+				<shadow type="math_number">
+					<field name="NUM">0</field>
+				</shadow>
+				</value>
+			</block>
+			<block type="inout_digital_write">
+				<value name="STAT">
+				<shadow type="inout_onoff"></shadow>
+			</block>
+			<block type="inout_PWM_write">
+                <value name="NUM">
+                    <shadow type="math_number">
+                    <field name="NUM">0</field>
+                    </shadow>
+                </value>
+            </block>
+            <block type="inout_analog_write">
+				<value name="NUM">
+				<shadow type="math_number">
+				<field name="NUM">0</field>
+				</shadow>
+				</value>
+			</block>
+            <block type="tone">
+                <value name="NUM">
+                    <shadow type="math_number">
+                    <field name="NUM">0</field>
+                    </shadow>
+                </value>
+                <value name="TPS">
+                    <shadow type="math_number">
+                    <field name="NUM">0</field>
+                    </shadow>
+                </value>
+            </block>
+            <block type="notone"></block>
+		</category>
+		<category name="CAT_ARDUINO_COMM_SERIAL" colour="#00979D">
+			<block type="serial_init"></block>
+			<block type="serial_flush"></block>
+			<block type="serial_write"></block>
+			<block type="serial_printfor"></block>
+			<block type="serial_print">
+				<value name="CONTENT">
+				<shadow type="text">
+				<field name="TEXT"></field>
+				</shadow>
+				</value>
+			</block>
+			<block type="serial_print_tab">
+				<value name="CONTENT">
+				<shadow type="text">
+				<field name="TEXT"></field>
+				</shadow>
+				</value>
+			</block>
+			<block type="serial_println">
+				<value name="CONTENT">
+				<shadow type="text">
+				<field name="TEXT"></field>
+				</shadow>
+				</value>
+			</block>
+			<block type="serial_print_var">
+				<value name="Text">
+					<shadow type="text">
+					<field name="TEXT"></field>
+					</shadow>
+				</value>
+				<value name="N">
+					<shadow type="math_number">
+					<field name="Num"></field>
+					</shadow>
+				</value>	
+				<value name="NEW_LINE"> 
+					<shadow type="logic_boolean">1
+					</shadow>
+				</value>
+			</block>		
+			<block type="serial_write_out"></block>
+			<block type="serial_available"></block>
+			<block type="serial_read"></block>
+		</category>
+		<category name="CAT_ARDUINO_COMM_SOFTSERIAL" colour="#00979D">
+			<block type="soft_init"></block>
+			<block type="soft_flush"></block>
+			<block type="soft_print"></block>
+			<block type="soft_write"></block>
+			<block type="soft_available"></block>
+			<block type="soft_read"></block>
+		</category>
+		<category name="CAT_ROBOT_MISC" colour="#00979D">
+			<block type="IR_serial_decoder"></block>
+			<block type="IR_get_blink"></block>
+			<block type="IR_get"></block>
+		</category>   
+		<sep></sep>
+	</category>	
+	
+	<category name="CAT_OLED_U8G" colour="#1B2944">
+		<block type="lp2i_u8g_draw_string" colour="#1B2944">
+			<value name="Text">
+				<shadow type="text">
+				<field name="TEXT">Exemple</field>
+				</shadow>
+			</value>					
+			<value name="X">
+				<shadow type="math_number">
+				<field name="NUM">0</field>
+				</shadow>
+			</value>
+			<value name="Y">
+				<shadow type="math_number">
+				<field name="NUM">12</field>
+				</shadow>	
+			</value>
+		</block>				
+		<block type="lp2i_u8g_draw_4strings" colour="#1B2944">
+			<value name="Text_line1">
+				<shadow type="text">
+				<field name="TEXT">Exemple ligne 1</field>
+				</shadow>
+			</value>
+			<value name="Text_line2">
+				<shadow type="text">
+				<field name="TEXT">Exemple ligne 2</field>
+				</shadow>
+			</value>
+			<value name="Text_line3">
+				<shadow type="text">
+				<field name="TEXT">Exemple ligne 3</field>
+				</shadow>
+			</value>
+			<value name="Text_line4">
+				<shadow type="text">
+				<field name="TEXT">Exemple ligne 4</field>
+				</shadow>
+			</value>					
+		</block>
+		<block type="lp2i_u8g_print" colour="#1B2944">		
+			<value name="N">
+				<shadow type="math_number">
+				<field name="Num">0</field>
+				</shadow>
+			</value>					
+			<value name="X">
+				<shadow type="math_number">
+				<field name="NUM">0</field>
+				</shadow>
+			</value>
+			<value name="Y">
+				<shadow type="math_number">
+				<field name="NUM">12</field>
+				</shadow>	
+			</value>
+		</block>
+		<block type="lp2i_u8g_4draw_print" colour="#1B2944">
+			<value name="Text_line1">
+				<shadow type="text">
+				<field name="TEXT">Exemple ligne 1</field>
+				</shadow>
+			</value>
+			<value name="N1">
+				<shadow type="math_number">
+				<field name="Num">0</field>
+				</shadow>
+			</value>
+			<value name="Text_line2">
+				<shadow type="text">
+				<field name="TEXT"></field>
+				</shadow>
+			</value>
+			<value name="N2">
+				<shadow type="math_number">
+				<field name="Num"></field>
+				</shadow>
+			</value>					
+			<value name="Text_line3">
+				<shadow type="text">
+				<field name="TEXT"></field>
+				</shadow>
+			</value>
+			<value name="N3">
+				<shadow type="math_number">
+				<field name="Num"></field>
+				</shadow>
+			</value>					
+			<value name="Text_line4">
+				<shadow type="text">
+				<field name="TEXT"></field>
+				</shadow>
+			</value>
+			<value name="N4">
+				<shadow type="math_number">
+				<field name="Num"></field>
+				</shadow>
+			</value>					
+		</block>
+	</category>
+	<category name="CAT_LED_RGB_CHAIN" colour="#C9D7E2">
+		<block type="lp2i_ledRGB_WS2812B_init">
+			<value name="Pin_LedRGB">
+				<shadow type="math_number">
+				<field name="NUM">6</field>
+				</shadow>
+			</value>
+			<value name="Number_of_Pixels">
+				<shadow type="math_number">
+				<field name="NUM">1</field>
+				</shadow>	
+			</value>				
+		</block>
+		<block type="lp2i_ledRGB_WS2812B_setPixelColor">
+			<value name="Pixel_number">
+				<shadow type="math_number">
+				<field name="NUM">0</field>
+				</shadow>	
+			</value>				
+			<value name="Red">
+				<shadow type="math_number">
+				<field name="NUM">255</field>
+				</shadow>
+			</value>
+			<value name="Green">
+				<shadow type="math_number">
+				<field name="NUM">255</field>
+				</shadow>
+			</value>				
+			<value name="Blue">
+				<shadow type="math_number">
+				<field name="NUM">255</field>
+				</shadow>	
+			</value>				
+		</block>
+	</category>
+	<category name="CAT_DFRobot" colour="#F39800">
+		<category name="CAT_DFPLAYER" colour="#F39800">
+			<block type="lp2i_mp3_init">
+				<value name="Pin_Rx">
+					<shadow type="math_number">
+					<field name="NUM">11</field>
+					</shadow>
+				</value>
+				<value name="Pin_Tx">
+					<shadow type="math_number">
+					<field name="NUM">10</field>
+					</shadow>	
+				</value>
+				<value name="Pin_Busy">
+					<shadow type="math_number">
+					<field name="NUM">12</field>
+					</shadow>	
+				</value>				
+				<value name="Volume">
+					<shadow type="math_number">
+					<field name="NUM">20</field>
+					</shadow>	
+				</value>					
+			</block>
+			<block type="lp2i_mp3_play">
+				<value name="File">
+					<shadow type="math_number">
+					<field name="NUM">0</field>
+					</shadow>
+				</value>
+				<value name="Wait">
+					<shadow type="logic_boolean">1
+					</shadow>
+				</value>
+			</block>
+			<block type="lp2i_mp3_volume">
+				<value name="Volume">
+					<shadow type="math_number">
+					<field name="NUM">25</field>
+					</shadow>
+				</value>
+			</block>
+		</category>
+		<category name="CAT_DFRobot_SHIELD_LCDKEYPAD" colour="#F39800">
+			<block type="LCD_Keypad_Shield_DFR_09">
+						<value name="TEXT1">
+						<shadow type="text">
+						<field name="TEXT"></field>
+						</shadow>
+					</value>
+					<value name="TEXT2">
+						<shadow type="text">
+						<field name="TEXT"></field>
+						</shadow>
+					</value>
+					<value name="DELAY_TIME">
+						<shadow type="math_number">
+						<field name="NUM">1000</field>
+						</shadow>
+					</value>
+			</block>
+			<block type="LCD_Keypad_Shield_DFR_09_lc">
+					<value name="ligne">
+						<shadow type="math_number">
+						<field name="NUM">1</field>
+						</shadow>
+					</value>
+					<value name="colonne">
+						<shadow type="math_number">
+						<field name="NUM">1</field>
+						</shadow>
+					</value>
+					<value name="TEXT4">
+						<shadow type="text">
+						<field name="TEXT"></field>
+						</shadow>
+					</value>
+				</block>
+				<block type="LCD_Keypad_Shield_DFR_09_RAZ">
+				</block>
+		</category>   
+		<sep></sep>
+	</category>
+
+    <category name="CAT_ROBUNO" colour="#1A1BFF">
+        <category name="CAT_ROBUNO_IN" colour="#1A1BFF">
+            <block type="robuno_capteur_collision_gauche">
+				<value name="PIN">
+				<shadow type="math_number">
+				<field name="NUM">1</field>
+				</shadow>
+				</value>
+			</block>
+            <block type="robuno_capteur_collision_droite">
+				<value name="PIN">
+				<shadow type="math_number">
+				<field name="NUM">1</field>
+				</shadow>
+				</value>
+			</block>
+            <block type="robuno_ldr_gauche">
+				<value name="PIN">
+				<shadow type="math_number">
+				<field name="NUM">1</field>
+				</shadow>
+				</value>
+			</block>
+            <block type="robuno_ldr_droite">
+				<value name="PIN">
+				<shadow type="math_number">
+				<field name="NUM">1</field>
+				</shadow>
+				</value>
+			</block>
+        </category>
+        <category name="CAT_ROBUNO_OUT" colour="#1A1BFF">
+            <block type="robuno_led_rouge">
+				<value name="PIN">
+				<shadow type="math_number">
+				<field name="NUM">1</field>
+				</shadow>
+				</value>
+			</block>
+            <block type="robuno_led_blanche">
+				<value name="PIN">
+				<shadow type="math_number">
+				<field name="NUM">1</field>
+				</shadow>
+				</value>
+			</block>
+            <block type="robuno_buzzer">
+				<value name="PIN">
+				<shadow type="math_number">
+				<field name="NUM">1</field>
+				</shadow>
+				</value>
+				<value name="NUM">
+				<shadow type="math_number">
+				<field name="NUM">1000</field>
+				</shadow>
+				</value>
+				<value name="TPS">
+				<shadow type="math_number">
+				<field name="NUM">500</field>
+				</shadow>
+				</value>
+			</block>
+            <block type="robuno_servomoteur_gauche">
+				<value name="PIN">
+				<shadow type="math_number">
+				<field name="NUM">3</field>
+				</shadow>
+				</value>
+				<value name="SENS">
+				<shadow type="logic_boolean"></shadow>
+				</value>
+				<value name="VITESSE">
+				<shadow type="inout_angle">
+				<field name="NUM">127</field>
+				</shadow>
+				</value>			
+			</block>
+            <block type="robuno_servomoteur_droite">
+				<value name="PIN">
+				<shadow type="math_number">
+				<field name="NUM">3</field>
+				</shadow>
+				</value>
+				<value name="SENS">
+				<shadow type="logic_boolean"></shadow>
+				</value>
+				<value name="VITESSE">
+				<shadow type="inout_angle">
+				<field name="NUM">127</field>
+				</shadow>
+				</value>			
+			</block>
+			<category name="CAT_ROBUNO_MOTORS_CC" colour="#1A1BFF">
+				<block type="robuno_moteurs_CC">
+					<value name="SENS">
+						<shadow type="inout_onoff">	
+						<field name="BOOL">HIGH</field>
+						</shadow>
+					</value>
+					<value name="VITESSE">
+						<shadow type="math_number">
+						<field name="NUM">127</field>
+						</shadow>
+					</value>
+				</block>
+			</category>
+        </category>
+    </category>
+
+    <category name="CAT_FISCHERTECHNIK" colour="#778E9A">
+        <category name="CAT_FISCHERTECHNIK_IN" colour="#778E9A">
+            <block type="fischertechnik_BP_capteur_de_presence">
+				<value name="PIN">
+				<shadow type="math_number">
+				<field name="NUM">1</field>
+				</shadow>
+				</value>
+			</block>
+            <block type="fischertechnik_capteur_magnetique">
+				<value name="PIN">
+				<shadow type="math_number">
+				<field name="NUM">1</field>
+				</shadow>
+				</value>
+			</block>
+            <block type="fischertechnik_capteur_de_lumiere">
+				<value name="PIN">
+				<shadow type="math_number">
+				<field name="NUM">1</field>
+				</shadow>
+				</value>
+			</block>
+        </category>
+        <category name="CAT_FISCHERTECHNIK_OUT" colour="#778E9A">
+            <block type="fischertechnik_feu_rouge">
+				<value name="PIN">
+				<shadow type="math_number">
+				<field name="NUM">1</field>
+				</shadow>
+				</value>
+			</block>
+            <block type="fischertechnik_feu_vert">
+				<value name="PIN">
+				<shadow type="math_number">
+				<field name="NUM">1</field>
+				</shadow>
+				</value>
+			</block>
+            <block type="fischertechnik_feu_orange">
+				<value name="PIN">
+				<shadow type="math_number">
+				<field name="NUM">1</field>
+				</shadow>
+				</value>
+			</block>
+            <block type="fischertechnik_barriere_lumineuse">
+				<value name="PIN">
+				<shadow type="math_number">
+				<field name="NUM">1</field>
+				</shadow>
+				</value>
+			</block>
+            <block type="fischertechnik_buzzer">
+				<value name="PIN">
+				<shadow type="math_number">
+				<field name="NUM">1</field>
+				</shadow>
+				</value>
+				<value name="NUM">
+				<shadow type="math_number">
+				<field name="NUM">1000</field>
+				</shadow>
+				</value>
+				<value name="TPS">
+				<shadow type="math_number">
+				<field name="NUM">500</field>
+				</shadow>
+				</value>
+			</block>
+			<category name="CAT_FISCHERTECHNIK_MOTORS_CC" colour="#778E9A">
+				<block type="fischertechnik_moteurs_CC"></block>
+			</category>
+        </category>
+    </category>
+
+	
+    <category name="CAT_BQ" colour="#608621">
+        <category name="CAT_BQ_IN" colour="#608621">
+            <block type="bq_ultrason">
+				<value name="TRIGER">
+				<shadow type="math_number">
+				<field name="NUM">0</field>
+				</shadow>
+				</value>
+				<value name="DIST">
+				<shadow type="math_number">
+				<field name="NUM">1</field>
+				</shadow>
+				</value>
+			</block>
+            <block type="bq_bouton_poussoir">
+				<value name="PIN">
+				<shadow type="math_number">
+				<field name="NUM">1</field>
+				</shadow>
+				</value>
+			</block>
+            <block type="bq_luminosite">
+				<value name="PIN">
+				<shadow type="math_number">
+				<field name="NUM">1</field>
+				</shadow>
+				</value>
+			</block>
+            <block type="bq_potentiometre">
+				<value name="PIN">
+				<shadow type="math_number">
+				<field name="NUM">1</field>
+				</shadow>
+				</value>
+			</block>
+			<block type="bq_capteur_de_ligne">
+				<value name="PIN">
+				<shadow type="math_number">
+				<field name="NUM">1</field>
+				</shadow>
+				</value>
+			</block>
+        </category>
+        <category name="CAT_BQ_OUT" colour="#608621">
+            <block type="bq_led">
+				<value name="PIN">
+				<shadow type="math_number">
+				<field name="NUM">1</field>
+				</shadow>
+				</value>
+			</block>
+            <block type="bq_buzzer">
+				<value name="PIN">
+				<shadow type="math_number">
+				<field name="NUM">1</field>
+				</shadow>
+				</value>
+				<value name="NUM">
+				<shadow type="math_number">
+				<field name="NUM">1000</field>
+				</shadow>
+				</value>
+				<value name="TPS">
+				<shadow type="math_number">
+				<field name="NUM">500</field>
+				</shadow>
+				</value>
+			</block>
+            <block type="bq_servo">
+				<value name="PIN">
+				<shadow type="math_number">
+				<field name="NUM">3</field>
+				</shadow>
+				</value>
+				<value name="DEGREE">
+				<shadow type="inout_angle">
+				<field name="NUM">90</field>
+				</shadow>
+				</value>
+			</block>
+            <block type="bq_servo_rotation_continue">
+				<value name="PIN">
+				<shadow type="math_number">
+				<field name="NUM">3</field>
+				</shadow>
+				</value>
+				<value name="SENS">
+				<shadow type="logic_boolean"></shadow>
+				</value>
+				<value name="VITESSE">
+				<shadow type="inout_angle">
+				<field name="NUM">127</field>
+				</shadow>
+				</value>			
+			</block>
+        </category>
+        <category name="CAT_BQ_COMM" colour="#608621">
+            <block type="bq_bluetooth_slave">
+				<value name="PIN">
+				<shadow type="math_number">
+					<field name="NUM">3</field>
+				</shadow>
+			</block>
+        </category>   
+		<sep></sep>
+    </category>
+
+    <category name="CAT_JEULIN" colour="#C12542">
+        <category name="CAT_JEULIN_IN" colour="#C12542">
+            <block type="jeulin_appel_pieton_voie1"></block>
+            <block type="jeulin_appel_pieton_voie2"></block>
+            <block type="jeulin_detection_magnetique_ils1"></block>
+            <block type="jeulin_detection_infrarouge_bari1"></block>
+            <block type="jeulin_detection_luminosite_ldr1"></block>
+        </category>
+        <category name="CAT_JEULIN_OUT" colour="#C12542">
+            <block type="jeulin_feux_voie1_led1red"></block>
+            <block type="jeulin_feux_voie1_led1yellow"></block>
+            <block type="jeulin_feux_voie1_led1green"></block>
+            <block type="jeulin_feux_voie2_led1red"></block>
+            <block type="jeulin_feux_voie2_led1yellow"></block>
+            <block type="jeulin_feux_voie2_led1green"></block>
+            <block type="jeulin_feu_pieton_led1red"></block>
+            <block type="jeulin_feu_pieton_led1green"></block>
+            <block type="jeulin_alarme_pieton_buzzer1"></block>   
+        </category>   
+		<sep></sep>
+    </category>
+	
+    <category name="CAT_GROVE" colour="#8ec31f">
+        <category name="CAT_GROVE_IN" colour="#8ec31f">
+            <block type="grove_button"></block>
+            <block type="grove_rotary_angle"></block>
+            <block type="grove_tilt_switch"></block>
+            <block type="grove_temporature_sensor"></block>
+			<block type="grove_moisture_sensor"></block>
+            <block type="grove_sound_sensor"></block>
+            <block type="grove_pir_motion_sensor"></block>
+            <block type="grove_line_finder"></block>
+            <block type="grove_ultrasonic_ranger"></block>
+            <block type="grove_thumb_joystick"></block>
+        </category>
+        <category name="CAT_GROVE_OUT" colour="#8ec31f">
+            <block type="grove_led"></block>
+            <block type="grove_piezo_buzzer"></block>
+            <block type="grove_relay"></block>
+            <block type="grove_motor_shield"></block>
+            <block type="grove_rgb_led"></block>
+        </category>
+        <category name="CAT_GROVE_LCD" colour="#8ec31f">
+            <block type="grove_serial_lcd_print">
+				<value name="TEXT">
+					<shadow type="text">
+					<field name="TEXT"></field>
+					</shadow>
+				</value>
+				<value name="TEXT2">
+					<shadow type="text">
+					<field name="TEXT"></field>
+					</shadow>
+				</value>
+				<value name="DELAY_TIME">
+					<shadow type="math_number">
+					<field name="NUM">1000</field>
+					</shadow>
+				</value>
+			</block>
+            <block type="grove_serial_lcd_power"></block>
+            <block type="grove_serial_lcd_effect"></block>
+        </category>
+        <category name="CAT_GROVE_COMM" colour="#8ec31f">
+            <block type="grove_bluetooth_slave"></block>			
+			<block type="Bluetooth_Shield_duinoFun">
+				<value name="BT_RX">
+                    <shadow type="math_number">
+                    <field name="NUM">7</field>
+                    </shadow>
+                </value>
+                <value name="BT_TX">
+                    <shadow type="math_number">
+                    <field name="NUM">6</field>
+                    </shadow>
+                </value>
+			</block>
+			<block type="ArduiLed"></block>
+        </category>   
+		<sep></sep>
+    </category>
+	
+	<category name="CAT_MULTIFUNCTION" colour="#0152AB">
+		<block type="multifunction_digital_read" colour="#0152AB"></block>
+		<block type="multifunction_pot_read" colour="#0152AB"></block>
+		<block type="multifunction_analog_read" colour="#0152AB"></block>
+		<block type="multifunction_buildin_led" colour="#0152AB"></block>
+		<block type="multifunction_tone" colour="#0152AB"></block>
+		<block type="multifunction_notone" colour="#0152AB"></block>
+		<block type="multifunction_segment" colour="#0152AB"></block>
+		<block type="multifunction_segment_number" colour="#0152AB"></block>
+		<block type="multifunction_PWM_write" colour="#0152AB"></block>
+	</category>
+	
+    <category name="CAT_TECHNOZONE" colour="#646464">
+        <category name="CAT_TECHNOZONE_IN" colour="#646464">
+            <block type="technozone_btn1white"></block>
+            <block type="technozone_btn1black"></block>
+            <block type="technozone_btn1green"></block>
+            <block type="technozone_btn1red"></block>
+            <block type="technozone_switch1"></block>
+            <block type="technozone_ils1"></block>
+            <block type="technozone_proxi1"></block>
+            <block type="technozone_bari1"></block>
+            <block type="technozone_lig1"></block>
+            <block type="technozone_cmouv1"></block>
+            <block type="technozone_potar1"></block>
+            <block type="technozone_ctn1"></block>
+            <block type="technozone_ldr1"></block>
+            <block type="technozone_sonar1"></block>
+        </category>
+        <category name="CAT_TECHNOZONE_OUT" colour="#646464">
+            <block type="technozone_led1red"></block>
+            <block type="technozone_led1green"></block>
+            <block type="technozone_led1yellow"></block>
+            <block type="technozone_relay1"></block>
+            <block type="technozone_buzzer1"></block>   
+		</category>
+		<category name="CAT_TECHNOZONE_MOTORS_CC" colour="#646464">
+			<block type="technozone_mot1easycon1"></block>
+			<block type="technozone_mot1easybot1"></block>
+			<block type="technozone_mot2"></block>
+		</category>		
+		<category name="CAT_TECHNOZONE_MOTORS_PAP" colour="#646464">
+			<block type="technozone_pap1init"></block>
+			<block type="technozone_pap1cc"></block>
+			<block type="technozone_pap1relatif"></block>
+			<block type="technozone_pap1busy"></block>
+		</category>
+		<category name="CAT_TECHNOZONE_SERVO" colour="#646464">
+			<block type="technozone_servo1"></block>
+			<block type="technozone_read_servo1"></block>
+		</category>
+        <category name="CAT_TECHNOZONE_LCD" colour="#646464">
+            <block type="technozone_lcdinit"></block>
+            <block type="technozone_lcdspecial"></block>
+            <block type="technozone_lcdclear"></block>
+            <block type="technozone_lcdwrite">
+                <value name="COL">
+                    <shadow type="math_number">
+                    <field name="NUM">0</field>
+                    </shadow>
+                </value>
+                <value name="LIG">
+                    <shadow type="math_number">
+                    <field name="NUM">0</field>
+                    </shadow>
+                </value>	
+                <value name="TEXT">
+					<shadow type="text">
+					<field name="TEXT"></field>
+					</shadow>
+				</value>
+            </block>
+        </category>
+        <category name="CAT_TECHNOZONE_TELEC" colour="#646464">
+            <block type="technozone_telecsetup"></block>
+            <block type="technozone_telecflush"></block>
+            <block type="technozone_telecinit"></block>
+            <block type="technozone_telec2"></block>
+            <block type="technozone_telec1"></block>
+        </category>
+        <category name="CAT_TECHNOZONE_SPEECH" colour="#646464">
+            <block type="technozone_speech_init">
+                <value name="SPEED">
+					<shadow type="math_number">
+					<field name="NUM">800</field>
+					</shadow>
+				</value>
+                <value name="PITCH">
+					<shadow type="math_number">
+					<field name="NUM">700</field>
+					</shadow>
+				</value>
+                <value name="BENDING">
+					<shadow type="math_number">
+					<field name="NUM">0</field>
+					</shadow>
+				</value>
+            </block>
+            <block type="technozone_speech_say">
+                <value name="TEXT">
+					<shadow type="text">
+					<field name="TEXT"></field>
+					</shadow>
+				</value>
+            </block>
+        </category>
+        <category name="CAT_TECHNOZONE_BT" colour="#646464">
+            <block type="technozone_bt_init"></block>
+            <block type="technozone_robot_bt_available"></block>
+            <block type="technozone_robot_bt_read"></block>
+            <block type="technozone_robot_bt_write"></block>
+        </category>
+        <category name="CAT_TECHNOZONE_IHM" colour="#646464">
+            <block type="technozone_ihm_init"></block>
+            <block type="technozone_robot_ihm_available"></block>
+            <block type="technozone_robot_ihm_change"></block>
+            <block type="technozone_robot_ihm_led_def">
+                <value name="TEXT">
+					<shadow type="text">
+					<field name="TEXT"></field>
+					</shadow>
+				</value>
+            </block>
+            <block type="technozone_robot_ihm_led_on"></block>
+            <block type="technozone_robot_ihm_btn_def">
+                <value name="TEXT">
+					<shadow type="text">
+					<field name="TEXT"></field>
+					</shadow>
+				</value>
+            </block>
+            <block type="technozone_robot_ihm_btn_read"></block>
+            <block type="technozone_robot_ihm_inter_def">
+                <value name="TEXT">
+					<shadow type="text">
+					<field name="TEXT"></field>
+					</shadow>
+				</value>
+            </block>
+            <block type="technozone_robot_ihm_inter_on"></block>
+            <block type="technozone_robot_ihm_inter_read"></block>
+            <block type="technozone_robot_ihm_potar_def">
+                <value name="POTARI">
+                    <shadow type="math_number">
+                        <field name="NUM">0</field>
+                    </shadow>
+                </value>
+                <value name="POTARA">
+                    <shadow type="math_number">
+                        <field name="NUM">255</field>
+                    </shadow>
+                </value>
+                <value name="POTARP">
+                    <shadow type="math_number">
+                        <field name="NUM">0</field>
+                    </shadow>
+                </value>
+                <value name="TEXT">
+					<shadow type="text">
+					<field name="TEXT"></field>
+					</shadow>
+				</value>
+            </block>
+            <block type="technozone_robot_ihm_potar_read"></block>
+            <block type="technozone_robot_ihm_gauge_def">
+                <value name="GRADUATION">
+					<shadow type="text">
+					<field name="TEXT">0 5 1 10</field>
+					</shadow>
+				</value>
+                <value name="TITRE">
+					<shadow type="text">
+					<field name="TEXT">Tension (volts)</field>
+					</shadow>
+				</value>
+                <value name="CONTENT">
+					<shadow type="text">
+					<field name="TEXT"></field>
+					</shadow>
+				</value>
+            </block>
+            <block type="technozone_robot_ihm_gauge_write"></block>
+        </category>   
+		<sep></sep>
+    </category>
+    <category name="CAT_TECHNOZONE_ROBOT" colour="#646464">
+        <category name="CAT_TECHNOZONE_ROBOT_IN" colour="#646464">
+            <block type="technozone_robot_btn"></block>
+            <block type="technozone_robot_irsend"></block>
+            <block type="technozone_robot_irleft"></block>
+            <block type="technozone_robot_ircenter"></block>
+            <block type="technozone_robot_irright"></block>
+            <block type="technozone_robot_ligleft"></block>
+            <block type="technozone_robot_ligright"></block>
+        </category>
+        <category name="CAT_TECHNOZONE_ROBOT_OUT" colour="#646464">
+            <block type="technozone_robot_buzzer_tone"></block>
+        </category>
+		<category name="CAT_TECHNOZONE_ROBOT_MOT" colour="#646464">
+            <block type="technozone_robot_move"></block>
+            <block type="technozone_robot_turn"></block>
+            <block type="technozone_robot_stop"></block>
+        </category>
+        <category name="CAT_TECHNOZONE_ROBOT_LCD" colour="#646464">
+            <block type="technozone_robot_lcdclear"></block>
+            <block type="technozone_robot_lcdwrite">
+                <value name="COL">
+                    <shadow type="math_number">
+                    <field name="NUM">0</field>
+                    </shadow>
+                </value>
+                <value name="LIG">
+                    <shadow type="math_number">
+                    <field name="NUM">0</field>
+                    </shadow>
+                </value>	
+                <value name="TEXT">
+					<shadow type="text">
+					<field name="TEXT"></field>
+					</shadow>
+				</value>
+			</block>
+            <block type="technozone_robot_lcdspecial"></block>
+        </category>
+        <category name="CAT_TECHNOZONE_ROBOT_BT" colour="#646464">
+            <block type="technozone_bt_init"></block>
+            <block type="technozone_robot_bt_available"></block>
+            <block type="technozone_robot_bt_read"></block>
+            <block type="technozone_robot_bt_write"></block>
+        </category>
+        <category name="CAT_TECHNOZONE_ROBOT_IHM" colour="#646464">
+            <block type="technozone_robot_ihm_init"></block>
+            <block type="technozone_robot_ihm_available"></block>
+            <block type="technozone_robot_ihm_change"></block>
+            <block type="technozone_robot_ihm_led_def">
+                <value name="TEXT">
+					<shadow type="text">
+					<field name="TEXT"></field>
+					</shadow>
+				</value>
+            </block>
+            <block type="technozone_robot_ihm_led_on"></block>
+            <block type="technozone_robot_ihm_btn_def">
+                <value name="TEXT">
+					<shadow type="text">
+					<field name="TEXT"></field>
+					</shadow>
+				</value>
+            </block>
+            <block type="technozone_robot_ihm_btn_read"></block>
+            <block type="technozone_robot_ihm_inter_def">
+                <value name="TEXT">
+					<shadow type="text">
+					<field name="TEXT"></field>
+					</shadow>
+				</value>
+            </block>
+            <block type="technozone_robot_ihm_inter_on"></block>
+            <block type="technozone_robot_ihm_inter_read"></block>
+            <block type="technozone_robot_ihm_potar_def">
+                <value name="POTARI">
+                    <shadow type="math_number">
+                        <field name="NUM">0</field>
+                    </shadow>
+                </value>
+                <value name="POTARA">
+                    <shadow type="math_number">
+                        <field name="NUM">255</field>
+                    </shadow>
+                </value>
+                <value name="POTARP">
+                    <shadow type="math_number">
+                        <field name="NUM">0</field>
+                    </shadow>
+                </value>
+                <value name="TEXT">
+					<shadow type="text">
+					<field name="TEXT"></field>
+					</shadow>
+				</value>
+            </block>
+            <block type="technozone_robot_ihm_potar_read"></block>
+            <block type="technozone_robot_ihm_gauge_def">
+                <value name="GRADUATION">
+					<shadow type="text">
+					<field name="TEXT">0 5 1 10</field>
+					</shadow>
+				</value>
+                <value name="TITRE">
+					<shadow type="text">
+					<field name="TEXT">Tension;(v)</field>
+					</shadow>
+				</value>
+                <value name="CONTENT">
+					<shadow type="text">
+					<field name="TEXT"></field>
+					</shadow>
+				</value>
+            </block>
+            <block type="technozone_robot_ihm_gauge_write"></block>
+        </category>   
+		<sep></sep>
+    </category>
+
+    <category name="CAT_ZUMO" colour="#00138b">
+        <category name="CAT_ZUMO_MOTORS" colour="#00138b">
+            <block type="zumo_motors_FN"></block>
+			<block type="zumo_motors_FNs">
+				<value name="SPEEDA">
+					<shadow type="math_number">
+					<field name="NUM">175</field>
+					</shadow>
+				</value>
+				<value name="SPEEDB">
+					<shadow type="math_number">
+					<field name="NUM">175</field>
+					</shadow>
+				</value>
+			</block>
+            <block type="zumo_motors_FR"></block>
+			<block type="zumo_motors_FRs">
+				<value name="SPEEDA">
+					<shadow type="math_number">
+					<field name="NUM">175</field>
+					</shadow>
+				</value>
+				<value name="SPEEDB">
+					<shadow type="math_number">
+					<field name="NUM">175</field>
+					</shadow>
+				</value>
+			</block>
+            <block type="zumo_motors_FL"></block>
+            <block type="zumo_motors_FLs">
+				<value name="SPEEDA">
+					<shadow type="math_number">
+					<field name="NUM">175</field>
+					</shadow>
+				</value>
+				<value name="SPEEDB">
+					<shadow type="math_number">
+					<field name="NUM">175</field>
+					</shadow>
+				</value>
+			</block>
+            <block type="zumo_motors_FB"></block>
+			<block type="zumo_motors_FBs">
+				<value name="SPEEDA">
+					<shadow type="math_number">
+					<field name="NUM">175</field>
+					</shadow>
+				</value>
+				<value name="SPEEDB">
+					<shadow type="math_number">
+					<field name="NUM">175</field>
+					</shadow>
+				</value>
+			</block>
+			<block type="zumo_motors_FUs">
+				<value name="SPEEDA">
+					<shadow type="math_number">
+					<field name="NUM">175</field>
+					</shadow>
+				</value>
+				<value name="SPEEDB">
+					<shadow type="math_number">
+					<field name="NUM">175</field>
+					</shadow>
+				</value>
+				<value name="FLIPL">
+					<shadow type="logic_boolean">
+					<field name="BOOL">False</field>
+					</shadow>
+				</value>
+				<value name="FLIPR">
+					<shadow type="logic_boolean">
+					<field name="BOOL">False</field>
+					</shadow>
+				</value>
+			</block>
+        </category>
+		<category name="CAT_ZUMO_SENSORS" colour="#00138b">
+            <block type="setup_button_wait_il"></block>
+            <block type="setup_button_wait_iph"></block>
+            <block type="fourpin_ranger"></block>
+			<block type="play_notes_z">
+				<value name="DUR">
+					<shadow type="math_number">
+					<field name="NUM">1000</field>
+					</shadow>
+				</value>
+				<value name="VOL">
+					<shadow type="math_number">
+					<field name="NUM">127</field>
+					</shadow>
+				</value>
+			</block>
+        </category>    
+		<sep></sep>
+	</category>
+	
+	<category name="CAT_ROBOTS_MOTORS" colour="#5b99a5">
+	
+		<category name="CAT_ADAFRUIT_MOTORSHIELD_v1" colour="#2D7F4F">
+			<block type="dcmotor_v1" colour="#2D7F4F"></block>
+			<block type="pap_v1" colour="#2D7F4F"></block>
+		</category>	
+		<category name="CAT_ADAFRUIT_MOTORSHIELD_v2" colour="#005D9D">
+			<block type="dcmotor_v2" colour="#005D9D"></block>
+			<block type="pap_v2" colour="#005D9D"></block>
+			<block type="joystick" colour="#005D9D"></block>
+			<block type="joystick_mot" colour="#005D9D"></block>
+		</category>	
+		<sep></sep>
+		<block type="arduino_s">
+			<value name="SPEEDA">
+				<shadow type="math_number">
+				<field name="NUM">175</field>
+				</shadow>
+			</value>
+			<value name="SPEEDB">
+				<shadow type="math_number">
+				<field name="NUM">175</field>
+				</shadow>
+			</value>
+		</block>
+		<block type="ardu_motor"></block>
+		<block type="ardu_motor_s">
+			<value name="SPEEDA">
+				<shadow type="math_number">
+				<field name="NUM">175</field>
+				</shadow>
+			</value>
+			<value name="SPEEDB">
+				<shadow type="math_number">
+				<field name="NUM">175</field>
+				</shadow>
+			</value>
+		</block>
+		<block type="dfrobot_s">
+			<value name="SPEEDA">
+				<shadow type="math_number">
+				<field name="NUM">175</field>
+				</shadow>
+			</value>
+			<value name="SPEEDB">
+				<shadow type="math_number">
+				<field name="NUM">175</field>
+				</shadow>
+			</value>
+		</block>
+		<block type="generic_motor_s">
+			<value name="SPEEDA">
+				<shadow type="math_number">
+				<field name="NUM">175</field>
+				</shadow>
+			</value>
+			<value name="SPEEDB">
+				<shadow type="math_number">
+				<field name="NUM">175</field>
+				</shadow>
+			</value>
+		</block>
+		<block type="pololu_drv8835_s">
+			<value name="SPEEDA">
+				<shadow type="math_number">
+				<field name="NUM">175</field>
+				</shadow>
+			</value>
+			<value name="SPEEDB">
+				<shadow type="math_number">
+				<field name="NUM">175</field>
+				</shadow>
+			</value>
+		</block>
+		<block type="radio_shack_s">
+			<value name="SPEEDA">
+				<shadow type="math_number">
+				<field name="NUM">175</field>
+				</shadow>
+			</value>
+			<value name="SPEEDB">
+				<shadow type="math_number">
+				<field name="NUM">175</field>
+				</shadow>
+			</value>
+		</block>
+		<block type="generic_motor"></block>
+	</category>
+	<category name="CAT_ARDUINO_SERVO" colour="#2475FA">
+		<block type="servo_move">
+			<value name="DEGREE">
+			<shadow type="inout_angle">
+			<field name="NUM">0</field>
+			</shadow>
+			</value>
+		</block>
+		<block type="servo_read_degrees"></block>
+		<block type="servo_attached"></block>
+		<block type="servo_detach"></block>
+		<block type="servo_rot_continue"></block>
+		<block type="servo_rot_continue_param"></block>
+	</category>
+</xml>
+</body>
+</html>

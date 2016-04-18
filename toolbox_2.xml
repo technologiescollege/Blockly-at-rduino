@@ -1,0 +1,1453 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<toolbox>
+	<parametre id="defaultCategories">CAT_LOGIC,CAT_LOOPS,CAT_VARIABLES,CAT_FUNCTIONS,CAT_MATH,CAT_ARDUINO
+	</parametre>
+	<category name="CAT_LOGIC" colour="#E1A91A">
+		<block type="controls_if"></block>
+		<block type="controls_switch"></block>
+		<block type="logic_compare"></block>
+		<block type="logic_operation"></block>
+		<block type="logic_negate"></block>
+		<block type="logic_boolean"></block>
+		<block type="logic_null"></block>
+	</category>
+	<category name="CAT_LOOPS" colour="#C88330">
+		<block type="controls_repeat"></block>
+		<block type="controls_repeat_ext">
+			<value name="TIMES">
+				<shadow type="math_number">
+					<field name="NUM">10</field>
+				</shadow>
+			</value>
+		</block>
+		<block type="controls_whileUntil"></block>
+		<block type="controls_for">
+			<field name="VAR">i</field>
+			<value name="FROM">
+				<shadow type="math_number">
+					<field name="NUM">1</field>
+				</shadow>
+			</value>
+			<value name="TO">
+				<shadow type="math_number">
+					<field name="NUM">10</field>
+				</shadow>
+			</value>
+			<value name="BY">
+				<shadow type="math_number">
+					<field name="NUM">1</field>
+				</shadow>
+			</value>
+		</block>
+		<block type="controls_forEach"></block>
+		<block type="controls_flow_statements"></block>
+	</category>
+	<category name="CAT_MATH" colour="#5CB712">
+		<block type="math_number"></block>
+		<block type="inout_angle_maths"></block>
+		<block type="math_arithmetic"></block>
+		<block type="math_single"></block>
+		<block type="math_trig"></block>
+		<block type="math_constant"></block>
+		<block type="math_number_property"></block>
+		<block type="math_change">
+			<value name="DELTA">
+				<shadow type="math_number">
+					<field name="NUM">1</field>
+				</shadow>
+			</value>
+		</block>
+		<block type="math_round"></block>
+		<block type="math_on_list"></block>
+		<block type="math_modulo"></block>
+		<block type="math_constrain">
+			<value name="LOW">
+				<shadow type="math_number">
+					<field name="NUM">1</field>
+				</shadow>
+			</value>
+			<value name="HIGH">
+				<shadow type="math_number">
+					<field name="NUM">100</field>
+				</shadow>
+			</value>
+		</block>
+		<block type="math_random_int">
+			<value name="FROM">
+				<shadow type="math_number">
+					<field name="NUM">1</field>
+				</shadow>
+			</value>
+			<value name="TO">
+				<shadow type="math_number">
+					<field name="NUM">100</field>
+				</shadow>
+			</value>
+		</block>
+		<block type="math_random_float"></block>
+	</category>
+	<!--category name="CAT_LIST" colour="#58B5DC"> <block type="lists_create_empty"></block> 
+		<block type="lists_create_with"></block> <block type="lists_repeat"> <value 
+		name="NUM"> <block type="math_number"> <field name="NUM">5</field> </block> 
+		</value> </block> <block type="lists_length"></block> <block type="lists_isEmpty"></block> 
+		<block type="lists_indexOf"></block> <block type="lists_getIndex"></block> 
+		<block type="lists_setIndex"></block> </category -->
+	<category name="CAT_ARRAY" colour="#58B5DC">
+		<block type="array_create_with"></block>
+		<block type="array_getIndex">
+			<value name="AT">
+				<block type="math_number">
+					<field name="NUM">1</field>
+				</block>
+			</value>
+		</block>
+	</category>
+	<category name="CAT_TEXT" colour="#8A55D7">
+		<block type="text"></block>
+		<block type="text_join"></block>
+		<block type="text_append">
+			<value name="TEXT">
+				<shadow type="text"></shadow>
+			</value>
+		</block>
+		<block type="text_length"></block>
+		<block type="text_isEmpty"></block>
+		<!-- <block type="text_indexOf"> -->
+		<!-- <value name="VALUE"> -->
+		<!-- <block type="variables_get"> -->
+		<!-- <field name="VAR" class="textVar">...</field> -->
+		<!-- </block> -->
+		<!-- </value> -->
+		<!-- </block> -->
+		<!-- <block type="text_charAt"> -->
+		<!-- <value name="VALUE"> -->
+		<!-- <block type="variables_get"> -->
+		<!-- <field name="VAR" class="textVar">...</field> -->
+		<!-- </block> -->
+		<!-- </value> -->
+		<!-- </block> -->
+		<!-- <block type="text_getSubstring"> -->
+		<!-- <value name="STRING"> -->
+		<!-- <block type="variables_get"> -->
+		<!-- <field name="VAR" class="textVar">...</field> -->
+		<!-- </block> -->
+		<!-- </value> -->
+		<!-- </block> -->
+		<!-- <block type="text_changeCase"></block> -->
+		<!-- <block type="text_trim"></block> -->
+		<!-- <block type="text_print"></block> -->
+		<!-- <block type="text_prompt_ext"> -->
+		<!-- <value name="TEXT"> -->
+		<!-- <block type="text"></block> -->
+		<!-- </value> -->
+		<!-- </block> -->
+	</category>
+	<!-- <category name="CAT_COLOR" colour="#c09e8c"> <block type="colour_picker"></block> 
+		<block type="colour_random"></block> <block type="colour_rgb"> <value name="RED"> 
+		<block type="math_number"> <field name="NUM">100</field> </block> </value> 
+		<value name="GREEN"> <block type="math_number"> <field name="NUM">50</field> 
+		</block> </value> <value name="BLUE"> <block type="math_number"> <field name="NUM">0</field> 
+		</block> </value> </block> <block type="colour_blend"> <value name="COLOUR1"> 
+		<block type="colour_picker"> <field name="COLOUR">#ff0000</field> </block> 
+		</value> <value name="COLOUR2"> <block type="colour_picker"> <field name="COLOUR">#3333ff</field> 
+		</block> </value> <value name="RATIO"> <block type="math_number"> <field 
+		name="NUM">0.5</field> </block> </value> </block> </category> -->
+	<category name="CAT_VARIABLES" colour="#EE7D16">
+		<block type="variables_set"></block>
+		<block type="variables_set_type"></block>
+		<block type="variables_get"></block>
+	</category>
+	<category name="CAT_FUNCTIONS" custom="PROCEDURE" colour="#632D99"></category>
+	<sep></sep>
+	<category name="CAT_ARDUINO" colour="#00979D">
+		<block type="base_setup"></block>
+		<block type="base_setup_loop"></block>
+		<block type="base_define_const"></block>
+		<block type="base_const"></block>
+		<block type="biblio_include"></block>
+		<block type="base_code"></block>
+		<block type="base_end"></block>
+		<category name="CAT_ARDUINO_IN" colour="#00979D">
+			<block type="inout_analog_read_validator"></block>
+			<block type="inout_digital_read_validator"></block>
+			<block type="inout_analog_read"></block>
+			<block type="inout_digital_read"></block>
+			<block type="inout_onoff"></block>
+			<block type="inout_angle"></block>
+			<block type="var_random">
+				<value name="rand_min">
+					<shadow type="math_number">
+						<field name="NUM">0</field>
+					</shadow>
+				</value>
+				<value name="rand_max">
+					<shadow type="math_number">
+						<field name="NUM">100</field>
+					</shadow>
+				</value>
+			</block>
+			<block type="base_map">
+				<value name="NUM">
+					<shadow type="math_number">
+						<field name="NUM">0</field>
+					</shadow>
+				</value>
+				<value name="DMAX">
+					<shadow type="math_number">
+						<field name="NUM">0</field>
+					</shadow>
+				</value>
+			</block>
+			<block type="various_constrain">
+				<value name="a">
+					<shadow type="math_number">
+						<field name="NUM">0</field>
+					</shadow>
+				</value>
+				<value name="b">
+					<shadow type="math_number">
+						<field name="NUM">100</field>
+					</shadow>
+				</value>
+			</block>
+			<block type="inout_attachInterrupt"></block>
+			<block type="inout_detachInterrupt"></block>
+		</category>
+		<category name="CAT_ARDUINO_TIME" colour="#00979D">
+			<block type="millis"></block>
+			<block type="inout_pulsein"></block>
+			<block type="inout_pulsein_timeout"></block>
+			<block type="base_delay">
+				<value name="DELAY_TIME">
+					<shadow type="math_number">
+						<field name="NUM">1000</field>
+					</shadow>
+				</value>
+			</block>
+		</category>
+		<category name="CAT_ARDUINO_CONVERSION" colour="#00979D">
+			<block type="conversion_tochar"></block>
+			<block type="conversion_tobyte"></block>
+			<block type="conversion_toint"></block>
+			<block type="conversion_tofloat"></block>
+		</category>
+		<category name="CAT_ARDUINO_OUT" colour="#00979D">
+			<block type="inout_buildin_led"></block>
+			<block type="inout_digital_write_validator"></block>
+			<block type="inout_PWM_write_validator">
+				<value name="NUM">
+					<shadow type="math_number">
+						<field name="NUM">0</field>
+					</shadow>
+				</value>
+			</block>
+			<block type="inout_analog_write_validator">
+				<value name="NUM">
+					<shadow type="math_number">
+						<field name="NUM">0</field>
+					</shadow>
+				</value>
+			</block>
+			<block type="inout_digital_write">
+				<value name="STAT">
+					<shadow type="inout_onoff"></shadow>
+				</value>
+			</block>
+			<block type="inout_PWM_write">
+				<value name="NUM">
+					<shadow type="math_number">
+						<field name="NUM">0</field>
+					</shadow>
+				</value>
+			</block>
+			<block type="inout_analog_write">
+				<value name="NUM">
+					<shadow type="math_number">
+						<field name="NUM">0</field>
+					</shadow>
+				</value>
+			</block>
+			<block type="tone">
+				<value name="NUM">
+					<shadow type="math_number">
+						<field name="NUM">0</field>
+					</shadow>
+				</value>
+				<value name="TPS">
+					<shadow type="math_number">
+						<field name="NUM">0</field>
+					</shadow>
+				</value>
+			</block>
+			<block type="notone"></block>
+		</category>
+		<category name="CAT_ARDUINO_COMM_SERIAL" colour="#00979D">
+			<block type="serial_init"></block>
+			<block type="serial_flush"></block>
+			<block type="serial_write"></block>
+			<block type="serial_printfor"></block>
+			<block type="serial_print">
+				<value name="CONTENT">
+					<shadow type="text">
+						<field name="TEXT"></field>
+					</shadow>
+				</value>
+			</block>
+			<block type="serial_print_tab">
+				<value name="CONTENT">
+					<shadow type="text">
+						<field name="TEXT"></field>
+					</shadow>
+				</value>
+			</block>
+			<block type="serial_println">
+				<value name="CONTENT">
+					<shadow type="text">
+						<field name="TEXT"></field>
+					</shadow>
+				</value>
+			</block>
+			<block type="serial_print_var">
+				<value name="Text">
+					<shadow type="text">
+						<field name="TEXT"></field>
+					</shadow>
+				</value>
+				<value name="N">
+					<shadow type="math_number">
+						<field name="Num"></field>
+					</shadow>
+				</value>
+				<value name="NEW_LINE">
+					<shadow type="logic_boolean">1
+					</shadow>
+				</value>
+			</block>
+			<block type="serial_write_out"></block>
+			<block type="serial_available"></block>
+			<block type="serial_read"></block>
+		</category>
+		<category name="CAT_ARDUINO_COMM_SOFTSERIAL" colour="#00979D">
+			<block type="soft_init"></block>
+			<block type="soft_flush"></block>
+			<block type="soft_print"></block>
+			<block type="soft_write"></block>
+			<block type="soft_available"></block>
+			<block type="soft_read"></block>
+		</category>
+		<category name="CAT_ROBOT_MISC" colour="#00979D">
+			<block type="IR_serial_decoder"></block>
+			<block type="IR_get_blink"></block>
+			<block type="IR_get"></block>
+		</category>
+		<sep></sep>
+	</category>
+
+	<category name="CAT_OLED_U8G" colour="#1B2944">
+		<block type="lp2i_u8g_draw_string" colour="#1B2944">
+			<value name="Text">
+				<shadow type="text">
+					<field name="TEXT">Exemple</field>
+				</shadow>
+			</value>
+			<value name="X">
+				<shadow type="math_number">
+					<field name="NUM">0</field>
+				</shadow>
+			</value>
+			<value name="Y">
+				<shadow type="math_number">
+					<field name="NUM">12</field>
+				</shadow>
+			</value>
+		</block>
+		<block type="lp2i_u8g_draw_4strings" colour="#1B2944">
+			<value name="Text_line1">
+				<shadow type="text">
+					<field name="TEXT">Exemple ligne 1</field>
+				</shadow>
+			</value>
+			<value name="Text_line2">
+				<shadow type="text">
+					<field name="TEXT">Exemple ligne 2</field>
+				</shadow>
+			</value>
+			<value name="Text_line3">
+				<shadow type="text">
+					<field name="TEXT">Exemple ligne 3</field>
+				</shadow>
+			</value>
+			<value name="Text_line4">
+				<shadow type="text">
+					<field name="TEXT">Exemple ligne 4</field>
+				</shadow>
+			</value>
+		</block>
+		<block type="lp2i_u8g_print" colour="#1B2944">
+			<value name="N">
+				<shadow type="math_number">
+					<field name="Num">0</field>
+				</shadow>
+			</value>
+			<value name="X">
+				<shadow type="math_number">
+					<field name="NUM">0</field>
+				</shadow>
+			</value>
+			<value name="Y">
+				<shadow type="math_number">
+					<field name="NUM">12</field>
+				</shadow>
+			</value>
+		</block>
+		<block type="lp2i_u8g_4draw_print" colour="#1B2944">
+			<value name="Text_line1">
+				<shadow type="text">
+					<field name="TEXT">Exemple ligne 1</field>
+				</shadow>
+			</value>
+			<value name="N1">
+				<shadow type="math_number">
+					<field name="Num">0</field>
+				</shadow>
+			</value>
+			<value name="Text_line2">
+				<shadow type="text">
+					<field name="TEXT"></field>
+				</shadow>
+			</value>
+			<value name="N2">
+				<shadow type="math_number">
+					<field name="Num"></field>
+				</shadow>
+			</value>
+			<value name="Text_line3">
+				<shadow type="text">
+					<field name="TEXT"></field>
+				</shadow>
+			</value>
+			<value name="N3">
+				<shadow type="math_number">
+					<field name="Num"></field>
+				</shadow>
+			</value>
+			<value name="Text_line4">
+				<shadow type="text">
+					<field name="TEXT"></field>
+				</shadow>
+			</value>
+			<value name="N4">
+				<shadow type="math_number">
+					<field name="Num"></field>
+				</shadow>
+			</value>
+		</block>
+	</category>
+	<category name="CAT_LED_RGB_CHAIN" colour="#C9D7E2">
+		<block type="lp2i_ledRGB_WS2812B_init">
+			<value name="Pin_LedRGB">
+				<shadow type="math_number">
+					<field name="NUM">6</field>
+				</shadow>
+			</value>
+			<value name="Number_of_Pixels">
+				<shadow type="math_number">
+					<field name="NUM">1</field>
+				</shadow>
+			</value>
+		</block>
+		<block type="lp2i_ledRGB_WS2812B_setPixelColor">
+			<value name="Pixel_number">
+				<shadow type="math_number">
+					<field name="NUM">0</field>
+				</shadow>
+			</value>
+			<value name="Red">
+				<shadow type="math_number">
+					<field name="NUM">255</field>
+				</shadow>
+			</value>
+			<value name="Green">
+				<shadow type="math_number">
+					<field name="NUM">255</field>
+				</shadow>
+			</value>
+			<value name="Blue">
+				<shadow type="math_number">
+					<field name="NUM">255</field>
+				</shadow>
+			</value>
+		</block>
+	</category>
+	<category name="CAT_DFRobot" colour="#F39800">
+		<category name="CAT_DFPLAYER" colour="#F39800">
+			<block type="lp2i_mp3_init">
+				<value name="Pin_Rx">
+					<shadow type="math_number">
+						<field name="NUM">11</field>
+					</shadow>
+				</value>
+				<value name="Pin_Tx">
+					<shadow type="math_number">
+						<field name="NUM">10</field>
+					</shadow>
+				</value>
+				<value name="Pin_Busy">
+					<shadow type="math_number">
+						<field name="NUM">12</field>
+					</shadow>
+				</value>
+				<value name="Volume">
+					<shadow type="math_number">
+						<field name="NUM">20</field>
+					</shadow>
+				</value>
+			</block>
+			<block type="lp2i_mp3_play">
+				<value name="File">
+					<shadow type="math_number">
+						<field name="NUM">0</field>
+					</shadow>
+				</value>
+				<value name="Wait">
+					<shadow type="logic_boolean">1
+					</shadow>
+				</value>
+			</block>
+			<block type="lp2i_mp3_volume">
+				<value name="Volume">
+					<shadow type="math_number">
+						<field name="NUM">25</field>
+					</shadow>
+				</value>
+			</block>
+		</category>
+		<category name="CAT_DFRobot_SHIELD_LCDKEYPAD" colour="#F39800">
+			<block type="LCD_Keypad_Shield_DFR_09">
+				<value name="TEXT1">
+					<shadow type="text">
+						<field name="TEXT"></field>
+					</shadow>
+				</value>
+				<value name="TEXT2">
+					<shadow type="text">
+						<field name="TEXT"></field>
+					</shadow>
+				</value>
+				<value name="DELAY_TIME">
+					<shadow type="math_number">
+						<field name="NUM">1000</field>
+					</shadow>
+				</value>
+			</block>
+			<block type="LCD_Keypad_Shield_DFR_09_lc">
+				<value name="ligne">
+					<shadow type="math_number">
+						<field name="NUM">1</field>
+					</shadow>
+				</value>
+				<value name="colonne">
+					<shadow type="math_number">
+						<field name="NUM">1</field>
+					</shadow>
+				</value>
+				<value name="TEXT4">
+					<shadow type="text">
+						<field name="TEXT"></field>
+					</shadow>
+				</value>
+			</block>
+			<block type="LCD_Keypad_Shield_DFR_09_RAZ">
+			</block>
+		</category>
+		<sep></sep>
+	</category>
+
+	<category name="CAT_ROBUNO" colour="#1A1BFF">
+		<category name="CAT_ROBUNO_IN" colour="#1A1BFF">
+			<block type="robuno_capteur_collision_gauche">
+				<value name="PIN">
+					<shadow type="math_number">
+						<field name="NUM">1</field>
+					</shadow>
+				</value>
+			</block>
+			<block type="robuno_capteur_collision_droite">
+				<value name="PIN">
+					<shadow type="math_number">
+						<field name="NUM">1</field>
+					</shadow>
+				</value>
+			</block>
+			<block type="robuno_ldr_gauche">
+				<value name="PIN">
+					<shadow type="math_number">
+						<field name="NUM">1</field>
+					</shadow>
+				</value>
+			</block>
+			<block type="robuno_ldr_droite">
+				<value name="PIN">
+					<shadow type="math_number">
+						<field name="NUM">1</field>
+					</shadow>
+				</value>
+			</block>
+		</category>
+		<category name="CAT_ROBUNO_OUT" colour="#1A1BFF">
+			<block type="robuno_led_rouge">
+				<value name="PIN">
+					<shadow type="math_number">
+						<field name="NUM">1</field>
+					</shadow>
+				</value>
+			</block>
+			<block type="robuno_led_blanche">
+				<value name="PIN">
+					<shadow type="math_number">
+						<field name="NUM">1</field>
+					</shadow>
+				</value>
+			</block>
+			<block type="robuno_buzzer">
+				<value name="PIN">
+					<shadow type="math_number">
+						<field name="NUM">1</field>
+					</shadow>
+				</value>
+				<value name="NUM">
+					<shadow type="math_number">
+						<field name="NUM">1000</field>
+					</shadow>
+				</value>
+				<value name="TPS">
+					<shadow type="math_number">
+						<field name="NUM">500</field>
+					</shadow>
+				</value>
+			</block>
+			<block type="robuno_servomoteur_gauche">
+				<value name="PIN">
+					<shadow type="math_number">
+						<field name="NUM">3</field>
+					</shadow>
+				</value>
+				<value name="SENS">
+					<shadow type="logic_boolean"></shadow>
+				</value>
+				<value name="VITESSE">
+					<shadow type="inout_angle">
+						<field name="NUM">127</field>
+					</shadow>
+				</value>
+			</block>
+			<block type="robuno_servomoteur_droite">
+				<value name="PIN">
+					<shadow type="math_number">
+						<field name="NUM">3</field>
+					</shadow>
+				</value>
+				<value name="SENS">
+					<shadow type="logic_boolean"></shadow>
+				</value>
+				<value name="VITESSE">
+					<shadow type="inout_angle">
+						<field name="NUM">127</field>
+					</shadow>
+				</value>
+			</block>
+			<category name="CAT_ROBUNO_MOTORS_CC" colour="#1A1BFF">
+				<block type="robuno_moteurs_CC">
+					<value name="SENS">
+						<shadow type="inout_onoff">
+							<field name="BOOL">HIGH</field>
+						</shadow>
+					</value>
+					<value name="VITESSE">
+						<shadow type="math_number">
+							<field name="NUM">127</field>
+						</shadow>
+					</value>
+				</block>
+			</category>
+		</category>
+	</category>
+
+	<category name="CAT_FISCHERTECHNIK" colour="#778E9A">
+		<category name="CAT_FISCHERTECHNIK_IN" colour="#778E9A">
+			<block type="fischertechnik_BP_capteur_de_presence">
+				<value name="PIN">
+					<shadow type="math_number">
+						<field name="NUM">1</field>
+					</shadow>
+				</value>
+			</block>
+			<block type="fischertechnik_capteur_magnetique">
+				<value name="PIN">
+					<shadow type="math_number">
+						<field name="NUM">1</field>
+					</shadow>
+				</value>
+			</block>
+			<block type="fischertechnik_capteur_de_lumiere">
+				<value name="PIN">
+					<shadow type="math_number">
+						<field name="NUM">1</field>
+					</shadow>
+				</value>
+			</block>
+		</category>
+		<category name="CAT_FISCHERTECHNIK_OUT" colour="#778E9A">
+			<block type="fischertechnik_feu_rouge">
+				<value name="PIN">
+					<shadow type="math_number">
+						<field name="NUM">1</field>
+					</shadow>
+				</value>
+			</block>
+			<block type="fischertechnik_feu_vert">
+				<value name="PIN">
+					<shadow type="math_number">
+						<field name="NUM">1</field>
+					</shadow>
+				</value>
+			</block>
+			<block type="fischertechnik_feu_orange">
+				<value name="PIN">
+					<shadow type="math_number">
+						<field name="NUM">1</field>
+					</shadow>
+				</value>
+			</block>
+			<block type="fischertechnik_barriere_lumineuse">
+				<value name="PIN">
+					<shadow type="math_number">
+						<field name="NUM">1</field>
+					</shadow>
+				</value>
+			</block>
+			<block type="fischertechnik_buzzer">
+				<value name="PIN">
+					<shadow type="math_number">
+						<field name="NUM">1</field>
+					</shadow>
+				</value>
+				<value name="NUM">
+					<shadow type="math_number">
+						<field name="NUM">1000</field>
+					</shadow>
+				</value>
+				<value name="TPS">
+					<shadow type="math_number">
+						<field name="NUM">500</field>
+					</shadow>
+				</value>
+			</block>
+			<category name="CAT_FISCHERTECHNIK_MOTORS_CC" colour="#778E9A">
+				<block type="fischertechnik_moteurs_CC"></block>
+			</category>
+		</category>
+	</category>
+
+
+	<category name="CAT_BQ" colour="#608621">
+		<category name="CAT_BQ_IN" colour="#608621">
+			<block type="bq_ultrason">
+				<value name="TRIGER">
+					<shadow type="math_number">
+						<field name="NUM">0</field>
+					</shadow>
+				</value>
+				<value name="DIST">
+					<shadow type="math_number">
+						<field name="NUM">1</field>
+					</shadow>
+				</value>
+			</block>
+			<block type="bq_bouton_poussoir">
+				<value name="PIN">
+					<shadow type="math_number">
+						<field name="NUM">1</field>
+					</shadow>
+				</value>
+			</block>
+			<block type="bq_luminosite">
+				<value name="PIN">
+					<shadow type="math_number">
+						<field name="NUM">1</field>
+					</shadow>
+				</value>
+			</block>
+			<block type="bq_potentiometre">
+				<value name="PIN">
+					<shadow type="math_number">
+						<field name="NUM">1</field>
+					</shadow>
+				</value>
+			</block>
+			<block type="bq_capteur_de_ligne">
+				<value name="PIN">
+					<shadow type="math_number">
+						<field name="NUM">1</field>
+					</shadow>
+				</value>
+			</block>
+		</category>
+		<category name="CAT_BQ_OUT" colour="#608621">
+			<block type="bq_led">
+				<value name="PIN">
+					<shadow type="math_number">
+						<field name="NUM">1</field>
+					</shadow>
+				</value>
+			</block>
+			<block type="bq_buzzer">
+				<value name="PIN">
+					<shadow type="math_number">
+						<field name="NUM">1</field>
+					</shadow>
+				</value>
+				<value name="NUM">
+					<shadow type="math_number">
+						<field name="NUM">1000</field>
+					</shadow>
+				</value>
+				<value name="TPS">
+					<shadow type="math_number">
+						<field name="NUM">500</field>
+					</shadow>
+				</value>
+			</block>
+			<block type="bq_servo">
+				<value name="PIN">
+					<shadow type="math_number">
+						<field name="NUM">3</field>
+					</shadow>
+				</value>
+				<value name="DEGREE">
+					<shadow type="inout_angle">
+						<field name="NUM">90</field>
+					</shadow>
+				</value>
+			</block>
+			<block type="bq_servo_rotation_continue">
+				<value name="PIN">
+					<shadow type="math_number">
+						<field name="NUM">3</field>
+					</shadow>
+				</value>
+				<value name="SENS">
+					<shadow type="logic_boolean"></shadow>
+				</value>
+				<value name="VITESSE">
+					<shadow type="inout_angle">
+						<field name="NUM">127</field>
+					</shadow>
+				</value>
+			</block>
+		</category>
+		<category name="CAT_BQ_COMM" colour="#608621">
+			<block type="bq_bluetooth_slave">
+				<value name="PIN">
+					<shadow type="math_number">
+						<field name="NUM">3</field>
+					</shadow>
+				</value>
+			</block>
+		</category>
+		<sep></sep>
+	</category>
+
+	<category name="CAT_JEULIN" colour="#C12542">
+		<category name="CAT_JEULIN_IN" colour="#C12542">
+			<block type="jeulin_appel_pieton_voie1"></block>
+			<block type="jeulin_appel_pieton_voie2"></block>
+			<block type="jeulin_detection_magnetique_ils1"></block>
+			<block type="jeulin_detection_infrarouge_bari1"></block>
+			<block type="jeulin_detection_luminosite_ldr1"></block>
+		</category>
+		<category name="CAT_JEULIN_OUT" colour="#C12542">
+			<block type="jeulin_feux_voie1_led1red"></block>
+			<block type="jeulin_feux_voie1_led1yellow"></block>
+			<block type="jeulin_feux_voie1_led1green"></block>
+			<block type="jeulin_feux_voie2_led1red"></block>
+			<block type="jeulin_feux_voie2_led1yellow"></block>
+			<block type="jeulin_feux_voie2_led1green"></block>
+			<block type="jeulin_feu_pieton_led1red"></block>
+			<block type="jeulin_feu_pieton_led1green"></block>
+			<block type="jeulin_alarme_pieton_buzzer1"></block>
+		</category>
+		<sep></sep>
+	</category>
+
+	<category name="CAT_GROVE" colour="#8ec31f">
+		<category name="CAT_GROVE_IN" colour="#8ec31f">
+			<block type="grove_button"></block>
+			<block type="grove_rotary_angle"></block>
+			<block type="grove_tilt_switch"></block>
+			<block type="grove_temporature_sensor"></block>
+			<block type="grove_moisture_sensor"></block>
+			<block type="grove_sound_sensor"></block>
+			<block type="grove_pir_motion_sensor"></block>
+			<block type="grove_line_finder"></block>
+			<block type="grove_ultrasonic_ranger"></block>
+			<block type="grove_thumb_joystick"></block>
+		</category>
+		<category name="CAT_GROVE_OUT" colour="#8ec31f">
+			<block type="grove_led"></block>
+			<block type="grove_piezo_buzzer"></block>
+			<block type="grove_relay"></block>
+			<block type="grove_motor_shield"></block>
+			<block type="grove_rgb_led"></block>
+		</category>
+		<category name="CAT_GROVE_LCD" colour="#8ec31f">
+			<block type="grove_serial_lcd_print">
+				<value name="TEXT">
+					<shadow type="text">
+						<field name="TEXT"></field>
+					</shadow>
+				</value>
+				<value name="TEXT2">
+					<shadow type="text">
+						<field name="TEXT"></field>
+					</shadow>
+				</value>
+				<value name="DELAY_TIME">
+					<shadow type="math_number">
+						<field name="NUM">1000</field>
+					</shadow>
+				</value>
+			</block>
+			<block type="grove_serial_lcd_power"></block>
+			<block type="grove_serial_lcd_effect"></block>
+		</category>
+		<category name="CAT_GROVE_COMM" colour="#8ec31f">
+			<block type="grove_bluetooth_slave"></block>
+			<block type="Bluetooth_Shield_duinoFun">
+				<value name="BT_RX">
+					<shadow type="math_number">
+						<field name="NUM">7</field>
+					</shadow>
+				</value>
+				<value name="BT_TX">
+					<shadow type="math_number">
+						<field name="NUM">6</field>
+					</shadow>
+				</value>
+			</block>
+			<block type="ArduiLed"></block>
+		</category>
+		<sep></sep>
+	</category>
+
+	<category name="CAT_MULTIFUNCTION" colour="#0152AB">
+		<block type="multifunction_digital_read" colour="#0152AB"></block>
+		<block type="multifunction_pot_read" colour="#0152AB"></block>
+		<block type="multifunction_analog_read" colour="#0152AB"></block>
+		<block type="multifunction_buildin_led" colour="#0152AB"></block>
+		<block type="multifunction_tone" colour="#0152AB"></block>
+		<block type="multifunction_notone" colour="#0152AB"></block>
+		<block type="multifunction_segment" colour="#0152AB"></block>
+		<block type="multifunction_segment_number" colour="#0152AB"></block>
+		<block type="multifunction_PWM_write" colour="#0152AB"></block>
+	</category>
+
+	<category name="CAT_TECHNOZONE" colour="#646464">
+		<category name="CAT_TECHNOZONE_IN" colour="#646464">
+			<block type="technozone_btn1white"></block>
+			<block type="technozone_btn1black"></block>
+			<block type="technozone_btn1green"></block>
+			<block type="technozone_btn1red"></block>
+			<block type="technozone_switch1"></block>
+			<block type="technozone_ils1"></block>
+			<block type="technozone_proxi1"></block>
+			<block type="technozone_bari1"></block>
+			<block type="technozone_lig1"></block>
+			<block type="technozone_cmouv1"></block>
+			<block type="technozone_potar1"></block>
+			<block type="technozone_ctn1"></block>
+			<block type="technozone_ldr1"></block>
+			<block type="technozone_sonar1"></block>
+		</category>
+		<category name="CAT_TECHNOZONE_OUT" colour="#646464">
+			<block type="technozone_led1red"></block>
+			<block type="technozone_led1green"></block>
+			<block type="technozone_led1yellow"></block>
+			<block type="technozone_relay1"></block>
+			<block type="technozone_buzzer1"></block>
+		</category>
+		<category name="CAT_TECHNOZONE_MOTORS_CC" colour="#646464">
+			<block type="technozone_mot1easycon1"></block>
+			<block type="technozone_mot1easybot1"></block>
+			<block type="technozone_mot2"></block>
+		</category>
+		<category name="CAT_TECHNOZONE_MOTORS_PAP" colour="#646464">
+			<block type="technozone_pap1init"></block>
+			<block type="technozone_pap1cc"></block>
+			<block type="technozone_pap1relatif"></block>
+			<block type="technozone_pap1busy"></block>
+		</category>
+		<category name="CAT_TECHNOZONE_SERVO" colour="#646464">
+			<block type="technozone_servo1"></block>
+			<block type="technozone_read_servo1"></block>
+		</category>
+		<category name="CAT_TECHNOZONE_LCD" colour="#646464">
+			<block type="technozone_lcdinit"></block>
+			<block type="technozone_lcdspecial"></block>
+			<block type="technozone_lcdclear"></block>
+			<block type="technozone_lcdwrite">
+				<value name="COL">
+					<shadow type="math_number">
+						<field name="NUM">0</field>
+					</shadow>
+				</value>
+				<value name="LIG">
+					<shadow type="math_number">
+						<field name="NUM">0</field>
+					</shadow>
+				</value>
+				<value name="TEXT">
+					<shadow type="text">
+						<field name="TEXT"></field>
+					</shadow>
+				</value>
+			</block>
+		</category>
+		<category name="CAT_TECHNOZONE_TELEC" colour="#646464">
+			<block type="technozone_telecsetup"></block>
+			<block type="technozone_telecflush"></block>
+			<block type="technozone_telecinit"></block>
+			<block type="technozone_telec2"></block>
+			<block type="technozone_telec1"></block>
+		</category>
+		<category name="CAT_TECHNOZONE_SPEECH" colour="#646464">
+			<block type="technozone_speech_init">
+				<value name="SPEED">
+					<shadow type="math_number">
+						<field name="NUM">800</field>
+					</shadow>
+				</value>
+				<value name="PITCH">
+					<shadow type="math_number">
+						<field name="NUM">700</field>
+					</shadow>
+				</value>
+				<value name="BENDING">
+					<shadow type="math_number">
+						<field name="NUM">0</field>
+					</shadow>
+				</value>
+			</block>
+			<block type="technozone_speech_say">
+				<value name="TEXT">
+					<shadow type="text">
+						<field name="TEXT"></field>
+					</shadow>
+				</value>
+			</block>
+		</category>
+		<category name="CAT_TECHNOZONE_BT" colour="#646464">
+			<block type="technozone_bt_init"></block>
+			<block type="technozone_robot_bt_available"></block>
+			<block type="technozone_robot_bt_read"></block>
+			<block type="technozone_robot_bt_write"></block>
+		</category>
+		<category name="CAT_TECHNOZONE_IHM" colour="#646464">
+			<block type="technozone_ihm_init"></block>
+			<block type="technozone_robot_ihm_available"></block>
+			<block type="technozone_robot_ihm_change"></block>
+			<block type="technozone_robot_ihm_led_def">
+				<value name="TEXT">
+					<shadow type="text">
+						<field name="TEXT"></field>
+					</shadow>
+				</value>
+			</block>
+			<block type="technozone_robot_ihm_led_on"></block>
+			<block type="technozone_robot_ihm_btn_def">
+				<value name="TEXT">
+					<shadow type="text">
+						<field name="TEXT"></field>
+					</shadow>
+				</value>
+			</block>
+			<block type="technozone_robot_ihm_btn_read"></block>
+			<block type="technozone_robot_ihm_inter_def">
+				<value name="TEXT">
+					<shadow type="text">
+						<field name="TEXT"></field>
+					</shadow>
+				</value>
+			</block>
+			<block type="technozone_robot_ihm_inter_on"></block>
+			<block type="technozone_robot_ihm_inter_read"></block>
+			<block type="technozone_robot_ihm_potar_def">
+				<value name="POTARI">
+					<shadow type="math_number">
+						<field name="NUM">0</field>
+					</shadow>
+				</value>
+				<value name="POTARA">
+					<shadow type="math_number">
+						<field name="NUM">255</field>
+					</shadow>
+				</value>
+				<value name="POTARP">
+					<shadow type="math_number">
+						<field name="NUM">0</field>
+					</shadow>
+				</value>
+				<value name="TEXT">
+					<shadow type="text">
+						<field name="TEXT"></field>
+					</shadow>
+				</value>
+			</block>
+			<block type="technozone_robot_ihm_potar_read"></block>
+			<block type="technozone_robot_ihm_gauge_def">
+				<value name="GRADUATION">
+					<shadow type="text">
+						<field name="TEXT">0 5 1 10</field>
+					</shadow>
+				</value>
+				<value name="TITRE">
+					<shadow type="text">
+						<field name="TEXT">Tension (volts)</field>
+					</shadow>
+				</value>
+				<value name="CONTENT">
+					<shadow type="text">
+						<field name="TEXT"></field>
+					</shadow>
+				</value>
+			</block>
+			<block type="technozone_robot_ihm_gauge_write"></block>
+		</category>
+		<sep></sep>
+	</category>
+	<category name="CAT_TECHNOZONE_ROBOT" colour="#646464">
+		<category name="CAT_TECHNOZONE_ROBOT_IN" colour="#646464">
+			<block type="technozone_robot_btn"></block>
+			<block type="technozone_robot_irsend"></block>
+			<block type="technozone_robot_irleft"></block>
+			<block type="technozone_robot_ircenter"></block>
+			<block type="technozone_robot_irright"></block>
+			<block type="technozone_robot_ligleft"></block>
+			<block type="technozone_robot_ligright"></block>
+		</category>
+		<category name="CAT_TECHNOZONE_ROBOT_OUT" colour="#646464">
+			<block type="technozone_robot_buzzer_tone"></block>
+		</category>
+		<category name="CAT_TECHNOZONE_ROBOT_MOT" colour="#646464">
+			<block type="technozone_robot_move"></block>
+			<block type="technozone_robot_turn"></block>
+			<block type="technozone_robot_stop"></block>
+		</category>
+		<category name="CAT_TECHNOZONE_ROBOT_LCD" colour="#646464">
+			<block type="technozone_robot_lcdclear"></block>
+			<block type="technozone_robot_lcdwrite">
+				<value name="COL">
+					<shadow type="math_number">
+						<field name="NUM">0</field>
+					</shadow>
+				</value>
+				<value name="LIG">
+					<shadow type="math_number">
+						<field name="NUM">0</field>
+					</shadow>
+				</value>
+				<value name="TEXT">
+					<shadow type="text">
+						<field name="TEXT"></field>
+					</shadow>
+				</value>
+			</block>
+			<block type="technozone_robot_lcdspecial"></block>
+		</category>
+		<category name="CAT_TECHNOZONE_ROBOT_BT" colour="#646464">
+			<block type="technozone_bt_init"></block>
+			<block type="technozone_robot_bt_available"></block>
+			<block type="technozone_robot_bt_read"></block>
+			<block type="technozone_robot_bt_write"></block>
+		</category>
+		<category name="CAT_TECHNOZONE_ROBOT_IHM" colour="#646464">
+			<block type="technozone_robot_ihm_init"></block>
+			<block type="technozone_robot_ihm_available"></block>
+			<block type="technozone_robot_ihm_change"></block>
+			<block type="technozone_robot_ihm_led_def">
+				<value name="TEXT">
+					<shadow type="text">
+						<field name="TEXT"></field>
+					</shadow>
+				</value>
+			</block>
+			<block type="technozone_robot_ihm_led_on"></block>
+			<block type="technozone_robot_ihm_btn_def">
+				<value name="TEXT">
+					<shadow type="text">
+						<field name="TEXT"></field>
+					</shadow>
+				</value>
+			</block>
+			<block type="technozone_robot_ihm_btn_read"></block>
+			<block type="technozone_robot_ihm_inter_def">
+				<value name="TEXT">
+					<shadow type="text">
+						<field name="TEXT"></field>
+					</shadow>
+				</value>
+			</block>
+			<block type="technozone_robot_ihm_inter_on"></block>
+			<block type="technozone_robot_ihm_inter_read"></block>
+			<block type="technozone_robot_ihm_potar_def">
+				<value name="POTARI">
+					<shadow type="math_number">
+						<field name="NUM">0</field>
+					</shadow>
+				</value>
+				<value name="POTARA">
+					<shadow type="math_number">
+						<field name="NUM">255</field>
+					</shadow>
+				</value>
+				<value name="POTARP">
+					<shadow type="math_number">
+						<field name="NUM">0</field>
+					</shadow>
+				</value>
+				<value name="TEXT">
+					<shadow type="text">
+						<field name="TEXT"></field>
+					</shadow>
+				</value>
+			</block>
+			<block type="technozone_robot_ihm_potar_read"></block>
+			<block type="technozone_robot_ihm_gauge_def">
+				<value name="GRADUATION">
+					<shadow type="text">
+						<field name="TEXT">0 5 1 10</field>
+					</shadow>
+				</value>
+				<value name="TITRE">
+					<shadow type="text">
+						<field name="TEXT">Tension;(v)</field>
+					</shadow>
+				</value>
+				<value name="CONTENT">
+					<shadow type="text">
+						<field name="TEXT"></field>
+					</shadow>
+				</value>
+			</block>
+			<block type="technozone_robot_ihm_gauge_write"></block>
+		</category>
+		<sep></sep>
+	</category>
+
+	<category name="CAT_ZUMO" colour="#00138b">
+		<category name="CAT_ZUMO_MOTORS" colour="#00138b">
+			<block type="zumo_motors_FN"></block>
+			<block type="zumo_motors_FNs">
+				<value name="SPEEDA">
+					<shadow type="math_number">
+						<field name="NUM">175</field>
+					</shadow>
+				</value>
+				<value name="SPEEDB">
+					<shadow type="math_number">
+						<field name="NUM">175</field>
+					</shadow>
+				</value>
+			</block>
+			<block type="zumo_motors_FR"></block>
+			<block type="zumo_motors_FRs">
+				<value name="SPEEDA">
+					<shadow type="math_number">
+						<field name="NUM">175</field>
+					</shadow>
+				</value>
+				<value name="SPEEDB">
+					<shadow type="math_number">
+						<field name="NUM">175</field>
+					</shadow>
+				</value>
+			</block>
+			<block type="zumo_motors_FL"></block>
+			<block type="zumo_motors_FLs">
+				<value name="SPEEDA">
+					<shadow type="math_number">
+						<field name="NUM">175</field>
+					</shadow>
+				</value>
+				<value name="SPEEDB">
+					<shadow type="math_number">
+						<field name="NUM">175</field>
+					</shadow>
+				</value>
+			</block>
+			<block type="zumo_motors_FB"></block>
+			<block type="zumo_motors_FBs">
+				<value name="SPEEDA">
+					<shadow type="math_number">
+						<field name="NUM">175</field>
+					</shadow>
+				</value>
+				<value name="SPEEDB">
+					<shadow type="math_number">
+						<field name="NUM">175</field>
+					</shadow>
+				</value>
+			</block>
+			<block type="zumo_motors_FUs">
+				<value name="SPEEDA">
+					<shadow type="math_number">
+						<field name="NUM">175</field>
+					</shadow>
+				</value>
+				<value name="SPEEDB">
+					<shadow type="math_number">
+						<field name="NUM">175</field>
+					</shadow>
+				</value>
+				<value name="FLIPL">
+					<shadow type="logic_boolean">
+						<field name="BOOL">False</field>
+					</shadow>
+				</value>
+				<value name="FLIPR">
+					<shadow type="logic_boolean">
+						<field name="BOOL">False</field>
+					</shadow>
+				</value>
+			</block>
+		</category>
+		<category name="CAT_ZUMO_SENSORS" colour="#00138b">
+			<block type="setup_button_wait_il"></block>
+			<block type="setup_button_wait_iph"></block>
+			<block type="fourpin_ranger"></block>
+			<block type="play_notes_z">
+				<value name="DUR">
+					<shadow type="math_number">
+						<field name="NUM">1000</field>
+					</shadow>
+				</value>
+				<value name="VOL">
+					<shadow type="math_number">
+						<field name="NUM">127</field>
+					</shadow>
+				</value>
+			</block>
+		</category>
+		<sep></sep>
+	</category>
+
+	<category name="CAT_ROBOTS_MOTORS" colour="#5b99a5">
+
+		<category name="CAT_ADAFRUIT_MOTORSHIELD_v1" colour="#2D7F4F">
+			<block type="dcmotor_v1" colour="#2D7F4F"></block>
+			<block type="pap_v1" colour="#2D7F4F"></block>
+		</category>
+		<category name="CAT_ADAFRUIT_MOTORSHIELD_v2" colour="#005D9D">
+			<block type="dcmotor_v2" colour="#005D9D"></block>
+			<block type="pap_v2" colour="#005D9D"></block>
+			<block type="joystick" colour="#005D9D"></block>
+			<block type="joystick_mot" colour="#005D9D"></block>
+		</category>
+		<sep></sep>
+		<block type="arduino_s">
+			<value name="SPEEDA">
+				<shadow type="math_number">
+					<field name="NUM">175</field>
+				</shadow>
+			</value>
+			<value name="SPEEDB">
+				<shadow type="math_number">
+					<field name="NUM">175</field>
+				</shadow>
+			</value>
+		</block>
+		<block type="ardu_motor"></block>
+		<block type="ardu_motor_s">
+			<value name="SPEEDA">
+				<shadow type="math_number">
+					<field name="NUM">175</field>
+				</shadow>
+			</value>
+			<value name="SPEEDB">
+				<shadow type="math_number">
+					<field name="NUM">175</field>
+				</shadow>
+			</value>
+		</block>
+		<block type="dfrobot_s">
+			<value name="SPEEDA">
+				<shadow type="math_number">
+					<field name="NUM">175</field>
+				</shadow>
+			</value>
+			<value name="SPEEDB">
+				<shadow type="math_number">
+					<field name="NUM">175</field>
+				</shadow>
+			</value>
+		</block>
+		<block type="generic_motor_s">
+			<value name="SPEEDA">
+				<shadow type="math_number">
+					<field name="NUM">175</field>
+				</shadow>
+			</value>
+			<value name="SPEEDB">
+				<shadow type="math_number">
+					<field name="NUM">175</field>
+				</shadow>
+			</value>
+		</block>
+		<block type="pololu_drv8835_s">
+			<value name="SPEEDA">
+				<shadow type="math_number">
+					<field name="NUM">175</field>
+				</shadow>
+			</value>
+			<value name="SPEEDB">
+				<shadow type="math_number">
+					<field name="NUM">175</field>
+				</shadow>
+			</value>
+		</block>
+		<block type="radio_shack_s">
+			<value name="SPEEDA">
+				<shadow type="math_number">
+					<field name="NUM">175</field>
+				</shadow>
+			</value>
+			<value name="SPEEDB">
+				<shadow type="math_number">
+					<field name="NUM">175</field>
+				</shadow>
+			</value>
+		</block>
+		<block type="generic_motor"></block>
+	</category>
+	<category name="CAT_ARDUINO_SERVO" colour="#2475FA">
+		<block type="servo_move">
+			<value name="DEGREE">
+				<shadow type="inout_angle">
+					<field name="NUM">0</field>
+				</shadow>
+			</value>
+		</block>
+		<block type="servo_read_degrees"></block>
+		<block type="servo_attached"></block>
+		<block type="servo_detach"></block>
+		<block type="servo_rot_continue"></block>
+		<block type="servo_rot_continue_param"></block>
+	</category>
+	<category name="CAT_KIT_VELO" colour="#C88330">
+		<block type="kit_velo_niv2_chenillard"></block>
+		<block type="kit_velo_niv2_tone"></block>	
+		<block type="kit_velo_niv2_notone"></block>	
+		<block type="kit_velo_niv2_test_BP"></block>			
+		<block type="kit_velo_niv2_pot"></block>		
+	</category>
+</toolbox>
