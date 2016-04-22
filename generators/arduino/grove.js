@@ -474,3 +474,42 @@ Blockly.Arduino.grove_bluetooth_slave = function() {
   '}\n';
   return code;
 };
+
+Blockly.Arduino.grove_dht_read = function() {
+  var sensor = this.getFieldValue('SENSOR');
+  var pin = this.getFieldValue('PIN');
+  var type = this.getFieldValue('TYPE');
+
+  var code = '';
+  switch(type){
+      case 'h':
+//      code += 'floatToStr(dht_' + pin + '_' + sensor + '.readHumidity()) + "%"';
+        code += '(int)(dht_' + pin + '_' + sensor + '.readHumidity())';
+      break;
+      case 'C':
+//        code += 'floatToStr(dht_' + pin + '_' + sensor + '.readTemperature()) + "C"';
+          code += '(int)(dht_' + pin + '_' + sensor + '.readTemperature())';
+      break;
+      case 'F':
+//        code += 'floatToStr(dht_' + pin + '_' + sensor + '.readTemperature(true)) + "F"';
+          code += '(int)(dht_' + pin + '_' + sensor + '.readTemperature(true))';
+      break;
+  }
+
+
+  Blockly.Arduino.definitions_['define_dht_'+ pin + '_' + sensor] = '#include <DHT.h>\n'
+    + 'DHT dht_' + pin + '_' + sensor + '(' + pin + ',' + sensor + ');\n';
+
+  Blockly.Arduino.setups_['setup_dht_' + pin + '_' + sensor] = 'dht_' + pin + '_' + sensor + '.begin();\n'
+/*
+  Blockly.Arduino.definitions_['define_dht_floatToStr'] = 'String floatToStr(float val){\n'
+    + '  int buf = (int)val;\n'
+    + '  String str = String(buf);\n'
+    + '  str += ".";\n'
+    + '  str += String((int)(val*10)-buf*10);\n'
+    + '  return str;\n'
+    + '}\n';
+*/
+  return [code, Blockly.Arduino.ORDER_ATOMIC];
+};
+

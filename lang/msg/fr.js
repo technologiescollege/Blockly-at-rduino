@@ -57,12 +57,14 @@ var MSG = {
   span_about:"à propos",
   aboutModalLabel:"à propos ...",
   aboutBody:"<br />- créations et améliorations par Sébastien Canet (<a href='mailto:sebastien.canet@ac-nantes.fr' traget=_blank>sebastien.canet@ac-nantes.fr</a>), fonctions JS et CSS par Olivier Métayer, intégration CodeBender par Julien Rat." 
-	  + "<br />"
-	  + "<br />S'appuie sur :",
-  msg_ajax_ko:"Requêtes AJAX non supportées par votre navigateur, les fonctionnalités suivantes ne seront pas opérationnelles : \n"
-	  + "- chargement de block via l'URL \n"
-	  + "- supervision\n"
-	  + "\n"
-	  + "Pour Chrome, veuillez vérifier sur la page suivante : <a href='http://www.chrome-allow-file-access-from-file.com/' traget=_blank>http://www.chrome-allow-file-access-from-file.com/</a>\n",
+	+ "<br />"
+	+ "<br />S'appuie sur :",
+  msg_ajax_ko:"Requêtes AJAX non supportées par votre navigateur, les fonctionnalités\n"
+	+ "suivantes ne seront pas opérationnelles : \n"
+	+ "- chargement de blocs via l'URL \n"
+	+ "- supervision\n"
+	+ "\n\n"
+	+ "Pour Chrome, veuillez vérifier sur la page suivante :\n"
+	+ "http://www.chrome-allow-file-access-from-file.com\n",
   span_ajax_msg:"Ne plus afficher ce message."
 };

@@ -57,12 +57,14 @@ var MSG = {
   span_about:"about",
   aboutModalLabel:"about ...",
   aboutBody:"<br />- development and adaptations by Sébastien Canet(<a href='mailto:sebastien.canet@ac-nantes.fr' traget=_blank>sebastien.canet@ac-nantes.fr</a>), CSS and JS functions by Olivier Metayer, CodeBender integration by Julien Rat."
-		  + "<br />"
-		  + "<br />Thanks to:",
-  msg_ajax_ko:"AJAX requests are not supported by your browser, the following features will not be operational : \n"
-	  + "- load blocks through url \n"
-	  + "- supervision"
-	  + "\n"
-	  + "For Chrome, please check here : <a href='http://www.chrome-allow-file-access-from-file.com/' traget=_blank>http://www.chrome-allow-file-access-from-file.com/</a>\n",
+	+ "<br />"
+	+ "<br />Thanks to:",
+  msg_ajax_ko:"AJAX requests are not supported by your browser, the following features\n"
+	+ "will not be operational : \n"
+	+ "- load blocks through url \n"
+	+ "- supervision"
+	+ "\n\n"
+	+ "For Chrome, please check here :\n"
+	+ "http://www.chrome-allow-file-access-from-file.com\n",
   span_ajax_msg:"Do not show this message again"
 };

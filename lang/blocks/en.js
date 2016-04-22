@@ -657,6 +657,15 @@ Blockly.Msg.CONV_toint="Convert to Int ";
 Blockly.Msg.CONV_tofloat="Convert to Float ";
 
 //added april 6th 2015
+Blockly.Msg.GROVE_INOUT_DHT_HELPURL = "https://github.com/adafruit/DHT-sensor-library";
+Blockly.Msg.GROVE_INOUT_DHT_READ_C = "Temperature C";
+Blockly.Msg.GROVE_INOUT_DHT_READ_F = "Temperature F";
+Blockly.Msg.GROVE_INOUT_DHT_READ_H = "Humidity %";
+Blockly.Msg.GROVE_INOUT_DHT_READ_PIN = "Pin#";
+Blockly.Msg.GROVE_INOUT_DHT_READ_SENSOR = "Sensor";
+Blockly.Msg.GROVE_INOUT_DHT_READ_TOOLTIP = "The DHT sensors are made of two parts, a capacitive humidity sensor and a thermistor.";
+Blockly.Msg.GROVE_INOUT_DHT_READ_TYPE = "Content";
+Blockly.Msg.GROVE_INOUT_DHT_WARNING = "Need to install the (adafruit) DHT-sensor-library";
 Blockly.Msg.GROVE_INOUT_LED_HELPURL = "http://www.seeedstudio.com/wiki/index.php?title=GROVE_-_Starter_Bundle_V1.0b#LED";
 Blockly.Msg.GROVE_INOUT_LED_INPUT1 = "LED";
 Blockly.Msg.GROVE_INOUT_LED_INPUT2 = "on Digital";

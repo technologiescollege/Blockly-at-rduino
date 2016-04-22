@@ -418,3 +418,23 @@ Blockly.Blocks['grove_bluetooth_slave'] = {
     this.setTooltip(Blockly.Msg.GROVE_INOUT_BT_TOOLTIP);
   }
 };
+
+Blockly.Blocks['grove_dht_read'] = {
+  init: function() {
+    this.setColour("#8ec31f");
+    this.setHelpUrl(Blockly.Msg.GROVE_INOUT_DHT_HELPURL);
+    this.appendDummyInput()
+      .appendField(Blockly.Msg.GROVE_INOUT_DHT_READ_TYPE)
+      .appendField(new Blockly.FieldDropdown([[Blockly.Msg.GROVE_INOUT_DHT_READ_H,"h"],[Blockly.Msg.GROVE_INOUT_DHT_READ_C,"C"],[Blockly.Msg.GROVE_INOUT_DHT_READ_F,"F"]]), "TYPE");
+    this.appendDummyInput()
+      .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/grove/dht11.jpg', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize))
+      .appendField(Blockly.Msg.GROVE_INOUT_DHT_READ_SENSOR)
+      .appendField(new Blockly.FieldDropdown([["DHT11","DHT11"],["DHT21","DHT21"],["DHT22","DHT22"]]), "SENSOR");
+    this.appendDummyInput()
+      .appendField(Blockly.Msg.GROVE_INOUT_DHT_READ_PIN)
+      .appendField(new Blockly.FieldTextInput('',  Blockly.Arduino.pinDigitalValidator), 'PIN');
+    this.setInputsInline(true);
+    this.setOutput(true, 'Number');
+    this.setTooltip(Blockly.Msg.GROVE_INOUT_DHT_READ_TOOLTIP);
+  }
+};
