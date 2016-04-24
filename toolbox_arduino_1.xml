@@ -114,6 +114,12 @@
 	</category>
 	<category name="CAT_FUNCTIONS" custom="PROCEDURE" colour="#632D99"></category>
 	<sep></sep>
+	<category name="CAT_MBOT_1" colour="#33C7F2">
+		<block type="mbot_forward"></block>
+		<block type="mbot_backward"></block>	
+		<block type="mbot_turn_left"></block>	
+		<block type="mbot_turn_right"></block>	
+	</category>
 	<category name="CAT_KIT_VELO" colour="#C88330">
 		<block type="kit_velo_niv1_chenillard"></block>
 		<block type="kit_velo_niv1_tone"></block>	

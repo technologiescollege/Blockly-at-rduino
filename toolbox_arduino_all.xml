@@ -1430,6 +1430,12 @@
 		</block>
 		<block type="generic_motor"></block>
 	</category>
+	<category name="CAT_MBOT_3" colour="#33C7F2">
+		<block type="mbot_forward"></block>
+		<block type="mbot_backward"></block>	
+		<block type="mbot_turn_left"></block>	
+		<block type="mbot_turn_right"></block>	
+	</category>
 	<category name="CAT_ARDUINO_SERVO" colour="#2475FA">
 		<block type="servo_move">
 			<value name="DEGREE">
