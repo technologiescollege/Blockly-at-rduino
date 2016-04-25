@@ -1,5 +1,5 @@
 
-http://www.technologieservices.fr/fr/a-a1000022060-edc1000003/article/RUSA-Robot-RobUno-a-servomoteurs.html
+//http://www.technologieservices.fr/fr/a-a1000022060-edc1000003/article/RUSA-Robot-RobUno-a-servomoteurs.html
 
 'use strict';
 
@@ -123,6 +123,6 @@ Blockly.Arduino.robuno_moteurs_CC = function() {
     "  digitalWrite(dirpin,sens);\n"+
     "  analogWrite(pwmpin,vitesse);\n"+
     "}\n";
-  code="cmd_mot("+pindir+","+pinpwm+","+value_sens+","+value_vitesse+");\n";
+  var code="cmd_mot("+pindir+","+pinpwm+","+value_sens+","+value_vitesse+");\n";
   return code;
 };

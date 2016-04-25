@@ -13,7 +13,7 @@ Blockly.Blocks['mbot_mot_left'] = {
     this.setColour("#33C7F2");
 	this.appendDummyInput()
         .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/mbot/mot_left.jpg', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize));
-    this.appendValueInput("PIN", 'Number')
+    this.appendValueInput("PWM", 'Number')
         .setCheck('Number')
         .setAlign(Blockly.ALIGN_RIGHT)
         .appendField("moteur gauche : puissance");	
@@ -34,7 +34,7 @@ Blockly.Blocks['mbot_mot_right'] = {
     this.setColour("#33C7F2");
 	this.appendDummyInput()
         .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/mbot/mot_right.jpg', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize));
-    this.appendValueInput("PIN", 'Number')
+    this.appendValueInput("PWM", 'Number')
         .setCheck('Number')
         .setAlign(Blockly.ALIGN_RIGHT)
         .appendField("moteur droit : puissance");

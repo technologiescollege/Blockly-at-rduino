@@ -1433,9 +1433,21 @@
 	</category>
 	<category name="CAT_MBOT_3" colour="#33C7F2">
 		<block type="mbot_left_sens"></block>
-		<block type="mbot_left_PWM"></block>	
+		<block type="mbot_left_PWM">
+			<value name="PWM">
+				<shadow type="math_number">
+					<field name="NUM">127</field>
+				</shadow>
+			</value>
+		</block>	
 		<block type="mbot_right_sens"></block>	
-		<block type="mbot_right_PWM"></block>	
+		<block type="mbot_right_PWM">
+			<value name="PWM">
+				<shadow type="math_number">
+					<field name="NUM">127</field>
+				</shadow>
+			</value>
+		</block>
 	</category>
 	<category name="CAT_ARDUINO_SERVO" colour="#2475FA">
 		<block type="servo_move">
