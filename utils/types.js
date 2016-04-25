@@ -17,28 +17,28 @@ goog.require('Blockly.Type');
 
 /** Text string. */
 Blockly.Types.TEXT = new Blockly.Type({
-  typeName: 'Text',
+  typeName: 'chaîne de caractères',
   basicType: Blockly.Type.BasicTypes.TEXT,
   compatibleTypes: [],
 });
 
 /** Single character. */
 Blockly.Types.CHARACTER = new Blockly.Type({
-  typeName: 'Character',
+  typeName: 'caractère',
   basicType: Blockly.Type.BasicTypes.TEXT,
   compatibleTypes: [],
 });
 
 /** Boolean. */
 Blockly.Types.BOOLEAN = new Blockly.Type({
-  typeName: 'Boolean',
+  typeName: 'booléen (ToR)',
   basicType: Blockly.Type.BasicTypes.BOOLEAN,
   compatibleTypes: [Blockly.Type.BasicTypes.NUMBER],
 });
 
 /** Integer number. */
 Blockly.Types.NUMBER = new Blockly.Type({
-  typeName: 'Number',
+  typeName: 'entier',
   basicType: Blockly.Type.BasicTypes.NUMBER,
   compatibleTypes: [Blockly.Type.BasicTypes.CHARACTER,
                     Blockly.Type.BasicTypes.DECIMAL],
@@ -46,28 +46,28 @@ Blockly.Types.NUMBER = new Blockly.Type({
 
 /** Decimal/floating point number. */
 Blockly.Types.DECIMAL = new Blockly.Type({
-  typeName: 'Decimal',
+  typeName: 'chiffre à virgule',
   basicType: Blockly.Type.BasicTypes.DECIMAL,
   compatibleTypes: [Blockly.Type.NUMBER],
 });
 
 /** Array/List of items. */
 Blockly.Types.ARRAY = new Blockly.Type({
-  typeName: 'Array',
+  typeName: 'liste',
   basicType: Blockly.Type.BasicTypes.ARRAY,
   compatibleTypes: [],
 });
 
 /** Null indicate there is no type. */
 Blockly.Types.NULL = new Blockly.Type({
-  typeName: 'Null',
+  typeName: 'vide',
   basicType: Blockly.Type.BasicTypes.NULL,
   compatibleTypes: [],
 });
 
 /** Type not defined, or not yet defined. */
 Blockly.Types.UNDEF = new Blockly.Type({
-  typeName: 'Undefined',
+  typeName: 'Non défini',
   basicType: Blockly.Type.BasicTypes.UNDEF,
   compatibleTypes: [],
 });

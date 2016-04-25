@@ -18,6 +18,8 @@ var MSG = {
   span_flash_codebender: " upload in Arduino",
   span_saveIno: " save code in INO format",
   exampleModalLabel: "choose an example",
+  convertModalLabel: "convert binary <-> ASCII text",
+  RGBModalLabel: "convert color <-> code",
   btn_plugin_codebender: " if disabled...",
   cb_cf_verify_btn: "verify code",
   btn_edit_code :"edit code",

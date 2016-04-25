@@ -104,6 +104,7 @@
 	</category>
 	<category name="CAT_TEXT" colour="#8A55D7">
 		<block type="text"></block>
+		<block type="text_char"></block>
 		<block type="text_join"></block>
 		<block type="text_append">
 			<value name="TEXT">

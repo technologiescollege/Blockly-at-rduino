@@ -214,7 +214,9 @@ Code.initLanguage = function() {
 
   $('#editModalLabel').text(MSG['editModalLabel']);
   $('#showcardLabel').text(MSG['showcardLabel']);
-  $('#exampleModalLabel').text(MSG['exampleModalLabel']);
+  $('#exampleModalLabel').text(MSG['exampleModalLabel']);  
+  $('#convertModalLabel').text(MSG['convertModalLabel']);
+  $('#RGBModalLabel').text(MSG['RGBModalLabel']);
   
   $('#btn_doc').attr('title', MSG['span_doc']);  
   $('#btn_tuto').attr('title', MSG['span_tuto']);
