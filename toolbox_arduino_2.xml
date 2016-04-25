@@ -1444,12 +1444,10 @@
 		<block type="servo_rot_continue_param"></block>
 	</category>
 	<category name="CAT_MBOT_2" colour="#33C7F2">
-		<block type="mbot_forward"></block>
-		<block type="mbot_backward"></block>	
-		<block type="mbot_turn_left"></block>	
-		<block type="mbot_turn_right"></block>	
+		<block type="mbot_mot_left"></block>
+		<block type="mbot_mot_right"></block>
 	</category>
-	<category name="CAT_KIT_VELO" colour="#C88330">
+	<category name="CAT_KIT_VELO_2" colour="#C88330">
 		<block type="kit_velo_niv2_chenillard"></block>
 		<block type="kit_velo_niv2_tone"></block>	
 		<block type="kit_velo_niv2_notone"></block>	

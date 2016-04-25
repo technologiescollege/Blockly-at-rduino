@@ -151,7 +151,7 @@ Blockly.Arduino.inout_pulsein = function() {
   var dropdown_stat = this.getFieldValue('STAT');
   
   Blockly.Arduino.setups_['setup_input_'+dropdown_pin] = 'pinMode('+dropdown_pin+', INPUT);';
-  var code = 'pulseIn('+dropdown_pin+','+dropdown_stat+ ');\n';
+  var code = 'pulseIn('+dropdown_pin+','+dropdown_stat+ ')';
   return [code, Blockly.Arduino.ORDER_ATOMIC];
 };
 

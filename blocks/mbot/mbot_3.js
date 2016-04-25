@@ -8,11 +8,15 @@ goog.require('Blockly.Arduino');
 
 // define blocks
 
-Blockly.Blocks['mbot_forward'] = {
+Blockly.Blocks['mbot_left_sens'] = {
   init: function() {
     this.setColour("#33C7F2");
 	this.appendDummyInput()
-        .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/mbot/forward.jpg', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize));
+        .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/mbot/mot_left.jpg', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize));
+	this.appendDummyInput()
+		.setAlign(Blockly.ALIGN_RIGHT)
+      	.appendField("moteur gauche : sens")
+		.appendField(new Blockly.FieldDropdown(Blockly.Msg.FIELDDROPDOWN), 'STAT');
 	this.setHelpUrl(Blockly.Msg.BQ_HELPURL);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
@@ -20,11 +24,15 @@ Blockly.Blocks['mbot_forward'] = {
   }
 };
 
-Blockly.Blocks['mbot_backward'] = {
+Blockly.Blocks['mbot_left_PWM'] = {
   init: function() {
     this.setColour("#33C7F2");
 	this.appendDummyInput()
-        .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/mbot/backward.jpg', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize));
+        .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/mbot/mot_left.jpg', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize));	
+    this.appendValueInput("PIN", 'Number')
+        .setCheck('Number')
+        .setAlign(Blockly.ALIGN_RIGHT)
+        .appendField("moteur gauche : puissance");
 	this.setHelpUrl(Blockly.Msg.BQ_HELPURL);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
@@ -32,11 +40,15 @@ Blockly.Blocks['mbot_backward'] = {
   }
 };
 
-Blockly.Blocks['mbot_turn_left'] = {
+Blockly.Blocks['mbot_right_sens'] = {
   init: function() {
     this.setColour("#33C7F2");
 	this.appendDummyInput()
-        .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/mbot/left.jpg', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize));
+        .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/mbot/mot_right.jpg', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize));
+	this.appendDummyInput()
+		.setAlign(Blockly.ALIGN_RIGHT)
+      	.appendField("moteur droit : sens")
+		.appendField(new Blockly.FieldDropdown(Blockly.Msg.FIELDDROPDOWN), 'STAT');
 	this.setHelpUrl(Blockly.Msg.BQ_HELPURL);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
@@ -44,11 +56,15 @@ Blockly.Blocks['mbot_turn_left'] = {
   }
 };
 
-Blockly.Blocks['mbot_turn_right'] = {
+Blockly.Blocks['mbot_right_PWM'] = {
   init: function() {
     this.setColour("#33C7F2");
 	this.appendDummyInput()
-        .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/mbot/right.jpg', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize));
+        .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/mbot/mot_right.jpg', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize));
+    this.appendValueInput("PIN", 'Number')
+        .setCheck('Number')
+        .setAlign(Blockly.ALIGN_RIGHT)
+        .appendField("moteur droit : puissance");
 	this.setHelpUrl(Blockly.Msg.BQ_HELPURL);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);

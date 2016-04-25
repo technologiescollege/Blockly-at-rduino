@@ -120,7 +120,7 @@
 		<block type="mbot_turn_left"></block>	
 		<block type="mbot_turn_right"></block>	
 	</category>
-	<category name="CAT_KIT_VELO" colour="#C88330">
+	<category name="CAT_KIT_VELO_1" colour="#C88330">
 		<block type="kit_velo_niv1_chenillard"></block>
 		<block type="kit_velo_niv1_tone"></block>	
 		<block type="kit_velo_niv1_notone"></block>	

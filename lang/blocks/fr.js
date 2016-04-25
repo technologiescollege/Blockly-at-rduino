@@ -505,6 +505,14 @@ Blockly.Msg.CAT_JEULIN_OUT = "actionneurs";
 
 Blockly.Msg.CAT_MULTIFUNCTION = "multi-fonction";  //added march 9th 2016
 
+Blockly.Msg.CAT_KIT_VELO_1 = "OBC33 kit vélo";
+Blockly.Msg.CAT_KIT_VELO_2 = "OBC33 kit vélo";
+Blockly.Msg.CAT_KIT_VELO_3 = "OBC33 kit vélo";  //added april 8th 2016
+
+Blockly.Msg.CAT_MBOT_1 = "mBot";
+Blockly.Msg.CAT_MBOT_2 = "mBot";
+Blockly.Msg.CAT_MBOT_3 = "mBot"; //added april 8th 2016
+
 Blockly.Msg.FIELDDROPDOWN = [["1 (état haut)", "HIGH"], ["0 (état bas)", "LOW"]];
 Blockly.Msg.FIELDDROPDOWN_ONOFF = [["marche", "ON"], ["arrêt", "OFF"]]
 Blockly.Msg.INOUT_HIGH_LEVEL = "1 (état haut)";

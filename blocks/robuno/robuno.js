@@ -23,7 +23,7 @@ Blockly.Blocks['robuno_led_rouge'] = {
 	this.appendDummyInput()
 		.setAlign(Blockly.ALIGN_RIGHT)
       	.appendField(Blockly.Msg.ROBUNO_INOUT_LED_INPUT3)
-		.appendField(new Blockly.FieldDropdown(Blockly.Msg.FIELDDROPDOWN), 'STAT')
+		.appendField(new Blockly.FieldDropdown(Blockly.Msg.FIELDDROPDOWN), 'STAT');
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setTooltip(Blockly.Msg.ROBUNO_LED1_TOOLTIP);
