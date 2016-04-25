@@ -1228,4 +1228,19 @@ Blockly.Msg.FISCHERTECHNIK_TEXT13 = "broche de commande de la Vitesse (PWM~)";
 Blockly.Msg.FISCHERTECHNIK_TEXT14 = "sens horaire (255) ou Antihoraire (0)?";
 Blockly.Msg.FISCHERTECHNIK_TEXT15 = "vitesse MAX (VRAI) ou nulle (FAUX)";
 Blockly.Msg.FISCHERTECHNIK_TEXT16 = "Carte de commande de deux moteurs CC";
+
+//Added April 19th 2016 
+Blockly.Msg.MBOT_HELPURL = "http://www.makeblock.cc/mbot/";
+Blockly.Msg.MBOT_FORWARD_TOOLTIP = "avance";
+Blockly.Msg.MBOT_BACKWARD_TOOLTIP = "recule";
+Blockly.Msg.MBOT_TURN_LEFT_TOOLTIP = "tourne à gauche";
+Blockly.Msg.MBOT_TURN_RIGHT_TOOLTIP = "tourne à droite";
+Blockly.Msg.MBOT_MOTOR_TOOLTIP = "gestion individuelle des moteurs";
+Blockly.Msg.MBOT_MOTOR_TITLE = "vers l'avant (1) ou arrière (0)";
+Blockly.Msg.MBOT_MOTOR_LEFT_TITLE = "moteur à gauche : puissance";
+Blockly.Msg.MBOT_MOTOR_RIGHT_TITLE = "moteur à droite : puissance";
+Blockly.Msg.MBOT_MOTOR_SENS = "1 : avancer | 0 : reculer";
+Blockly.Msg.MBOT_MOTOR_LEFT_SENS = "moteur gauche : sens";
+Blockly.Msg.MBOT_MOTOR_LEFT_PWM = "moteur gauche : puissance";
+Blockly.Msg.MBOT_MOTOR_RIGHT_SENS = "moteur droit : sens";
 Blockly.Msg.FISCHERTECHNIK_TEXT17 = " est appuyée ?";

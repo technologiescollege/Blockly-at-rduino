@@ -13,10 +13,10 @@ Blockly.Blocks['mbot_forward'] = {
     this.setColour("#33C7F2");
 	this.appendDummyInput()
         .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/mbot/forward.jpg', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize));
-	this.setHelpUrl(Blockly.Msg.BQ_HELPURL);
+	this.setHelpUrl(Blockly.Msg.MBOT_HELPURL);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    this.setTooltip(Blockly.Msg.BQ_LED1_TOOLTIP);
+    this.setTooltip(Blockly.Msg.MBOT_FORWARD_TOOLTIP);
   }
 };
 
@@ -25,10 +25,10 @@ Blockly.Blocks['mbot_backward'] = {
     this.setColour("#33C7F2");
 	this.appendDummyInput()
         .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/mbot/backward.jpg', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize));
-	this.setHelpUrl(Blockly.Msg.BQ_HELPURL);
+	this.setHelpUrl(Blockly.Msg.MBOT_HELPURL);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    this.setTooltip(Blockly.Msg.BQ_LED1_TOOLTIP);
+    this.setTooltip(Blockly.Msg.MBOT_BACKWARD_TOOLTIP);
   }
 };
 
@@ -37,10 +37,10 @@ Blockly.Blocks['mbot_turn_left'] = {
     this.setColour("#33C7F2");
 	this.appendDummyInput()
         .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/mbot/left.jpg', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize));
-	this.setHelpUrl(Blockly.Msg.BQ_HELPURL);
+	this.setHelpUrl(Blockly.Msg.MBOT_HELPURL);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    this.setTooltip(Blockly.Msg.BQ_LED1_TOOLTIP);
+    this.setTooltip(Blockly.Msg.MBOT_TURN_LEFT_TOOLTIP);
   }
 };
 
@@ -49,9 +49,9 @@ Blockly.Blocks['mbot_turn_right'] = {
     this.setColour("#33C7F2");
 	this.appendDummyInput()
         .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/mbot/right.jpg', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize));
-	this.setHelpUrl(Blockly.Msg.BQ_HELPURL);
+	this.setHelpUrl(Blockly.Msg.MBOT_HELPURL);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    this.setTooltip(Blockly.Msg.BQ_LED1_TOOLTIP);
+    this.setTooltip(Blockly.Msg.MBOT_TURN_RIGHT_TOOLTIP);
   }
 };
