@@ -15,7 +15,7 @@ compilerflasher = function (loadFiles) {
 
     // codebender plugin and app minimum supported versions
     this.minVersion = {
-        pluginFirefox: '1.6.2.1',
+        pluginFirefox: '1.6.2.2',
         pluginChrome: '1.6.0.8',
         app: '1.0.0.8'
     };
@@ -36,56 +36,48 @@ compilerflasher = function (loadFiles) {
      */
     this.eventManager = new function () {
         this._listeners = {};
-
         this.addListener = function (type, listener) {
-            if (typeof this._listeners[type] == 'undefined') {
+            if (typeof this._listeners[type] === 'undefined') {
                 this._listeners[type] = [];
             }
-
             this._listeners[type].push(listener);
         };
-
-        this.fire = function (event, param1, param2) {
-            if (typeof event == 'string') {
-                event = {
-                    type: event
-                };
+        this.fire = function (event) {
+            if (typeof event === 'string') {
+                event = {type: event};
             }
             if (!event.target) {
                 event.target = this;
             }
             if (!event.type) {
-                throw new Error("Event object missing 'type' property.");
+                throw new Error('Event object missing "type" property.');
             }
             if (this._listeners[event.type] instanceof Array) {
+                var eventArguments = [];
+                var i;
+                var argumentsLength = arguments.length;
+                for (i = 1; i < argumentsLength; i++) {
+                    eventArguments.push(arguments[i]);
+                }
                 var listeners = this._listeners[event.type];
-                for (var i = 0, len = listeners.length; i < len; i++) {
-                    if (typeof param1 != 'undefined') {
-                        if (typeof param2 != 'undefined') {
-                            listeners[i].call(this, param1, param2);
-                        }
-                        else {
-                            listeners[i].call(this, param1);
-                        }
-                    }
-                    else {
-                        listeners[i].call(this);
-                    }
+                var listenersLength = listeners.length;
+                for (i = 0; i < listenersLength; i++) {
+                    listeners[i].apply(this, eventArguments);
                 }
             }
         };
-
         this.removeListener = function (type, listener) {
             if (this._listeners[type] instanceof Array) {
                 var listeners = this._listeners[type];
-                for (var i = 0, len = listeners.length; i < len; i++) {
+                var listenersLength = listeners.length;
+                for (var i = 0; i < listenersLength; i++) {
                     if (listeners[i] === listener) {
                         listeners.splice(i, 1);
                         break;
                     }
                 }
             }
-        };
+        }
     };
 
     /**
@@ -768,6 +760,7 @@ compilerflasher = function (loadFiles) {
                         metaData = {
                             "message": "Non catchable plugin crash.",
                             "tabID": selfPh.tabID,
+                            "type": selfCf.pluginOrApp,
                             "version": (window.plugin_version == 'undefined' || window.plugin_version === null) ? "undefined" : window.plugin_version,
                             "OS": {
                                 "name": (typeof Browsers.os.name == 'undefined') ? 'undefined' : Browsers.os.name,
@@ -1208,6 +1201,8 @@ compilerflasher = function (loadFiles) {
                 return;
             }
 
+            selfCf.eventManager.fire('serial-monitor-connected');
+
             var $baudRates = $('#cb_cf_baud_rates');
             var speed = $baudRates.find('option:selected').val();
             var $ports = $("#cb_cf_ports");
@@ -1236,6 +1231,8 @@ compilerflasher = function (loadFiles) {
             $("#serial_monitor_content").fadeIn(300);
 
             this.connected = true;
+            // When in app no status messages appear when connection establishes
+            this.serialMonitorInitialized = selfCf.useApp;
 
             $serialMonitorConnect
                 .html('<i class="icon-unlink"></i> Disconnect')
@@ -1253,10 +1250,23 @@ compilerflasher = function (loadFiles) {
             };
 
             function serialReadCallback(from, line) {
-                if (line.indexOf('connecting at') < 0) {
+                if (!selfPh.serialMonitorInitialized) {
+                    if (line.indexOf('connecting at') > -1) {
+                        $serialHud.html(line);
+                    }
+                    else if (line.indexOf('connected at') > -1) {
+                        $serialHud.html(line);
+                        selfPh.serialMonitorInitialized = true;
+                    }
+                    return;
+                }
+
+                if (selfPh.serialMonitorInitialized) {
                     selfPh.serialMonitorStats.bytesReceived += line.length;
                 }
+
                 selfPh.serialHudAppendString(line);
+                selfCf.eventManager.fire('serial-monitor-received-data', line);
 
                 // codebender app
                 if (selfCf.useApp) {
@@ -1426,6 +1436,7 @@ compilerflasher = function (loadFiles) {
                 });
 
             this.connected = false;
+            this.serialMonitorInitialized = false;
 
             // UI updates
             $baudRates.removeAttr('disabled');
@@ -1608,6 +1619,7 @@ compilerflasher = function (loadFiles) {
             if (typeof status == 'undefined' || status == 0) {
                 actionId = 34;
                 metaData = {
+                    "type": selfCf.pluginOrApp,
                     "message": msg,
                     "version": (window.plugin_version == 'undefined' || window.plugin_version === null) ? "undefined" : window.plugin_version,
                     "url": window.location.pathname,
@@ -1626,6 +1638,7 @@ compilerflasher = function (loadFiles) {
             else if (status == 1) {
                 actionId = 55;
                 metaData = {
+                    "type": selfCf.pluginOrApp,
                     "message": msg,
                     "version": (window.plugin_version == 'undefined' || window.plugin_version === null) ? "undefined" : window.plugin_version,
                     "url": window.location.pathname,
@@ -3178,7 +3191,7 @@ compilerflasher = function (loadFiles) {
      * @returns {*} Serial monitor section HTML
      */
     function getSerialMonitorSection() {
-        var staticSerialMonitorSection = '\x3Cstyle\x3E\x0A\x09\x23serial_monitor_content\x0A\x09\x7B\x0A\x09\x09display\x3A\x20none\x3B\x0A\x09\x7D\x0A\x0A\x09\x23serial_hud\x0A\x09\x7B\x0A\x09\x09overflow\x2Dy\x3A\x20scroll\x3B\x0A\x09\x7D\x0A\x0A\x09\x23serial_monitor_hud_and_autoscroll\x0A\x09\x7B\x0A\x09\x09display\x3A\x20inline\x2Dblock\x3B\x0A\x09\x7D\x0A\x0A\x09\x23serial\x2Dchecboxes\x0A\x09\x7B\x0A\x09\x09display\x3A\x20inline\x2Dblock\x3B\x0A\x09\x7D\x0A\x0A\x09\x23serial\x2Dchecboxes\x20\x3E\x20label\x0A\x09\x7B\x0A\x09\x09margin\x2Dbottom\x3A\x200\x3B\x0A\x09\x7D\x0A\x0A\x09\x23autoscroll_label\x0A\x09\x7B\x0A\x09\x09position\x3A\x20relative\x3B\x0A\x09\x09top\x3A\x208px\x3B\x0A\x09\x7D\x0A\x0A\x09\x23autoscroll_check\x0A\x09\x7B\x0A\x09\x09display\x3A\x20block\x3B\x0A\x09\x7D\x0A\x0A\x09\x23echo_label\x0A\x09\x7B\x0A\x09\x09position\x3A\x20relative\x3B\x0A\x09\x09top\x3A\x203px\x3B\x0A\x09\x7D\x0A\x0A\x09.serial\x2Dmonitor\x2Decho\x0A\x09\x7B\x0A\x09\x09display\x3A\x20inline\x2Dblock\x3B\x0A\x09\x09color\x3A\x20\x23FF0000\x3B\x0A\x09\x7D\x0A\x0A\x09\x23serial\x2Dline\x2Dendings\x0A\x09\x7B\x0A\x09\x09width\x3A\x20130px\x3B\x0A\x09\x09margin\x2Dbottom\x3A\x2010px\x3B\x0A\x09\x7D\x0A\x3C\x2Fstyle\x3E\x0A\x0A\x3Cdiv\x20id\x3D\x22serial_monitor_content\x22\x3E\x0A\x09\x3Cdiv\x20id\x3D\x22serial_monitor_hud_and_autoscroll\x22\x3E\x0A\x09\x09\x3Cpre\x20id\x3D\x22serial_hud\x22\x20class\x3D\x22well\x22\x3E\x3C\x2Fpre\x3E\x0A\x0A\x09\x20\x20\x20\x20\x3Cspan\x20id\x3D\x22serial\x2Dchecboxes\x22\x3E\x0A\x09\x09\x20\x20\x20\x20\x3Clabel\x20id\x3D\x22autoscroll_label\x22\x20class\x3D\x22checkbox\x22\x3E\x0A\x09\x09\x09\x20\x20\x20\x20\x3Cinput\x20id\x3D\x27autoscroll_check\x27\x20type\x3D\x22checkbox\x22\x20checked\x3E\x0A\x09\x09\x09\x20\x20\x20\x20Autoscroll\x0A\x09\x09\x20\x20\x20\x20\x3C\x2Flabel\x3E\x0A\x0A\x09\x09\x20\x20\x20\x20\x3Clabel\x20id\x3D\x22echo_label\x22\x20class\x3D\x22checkbox\x22\x3E\x0A\x09\x09\x09\x20\x20\x20\x20\x3Cinput\x20id\x3D\x27echo_check\x27\x20type\x3D\x22checkbox\x22\x3E\x0A\x09\x09\x09\x20\x20\x20\x20Echo\x0A\x09\x09\x20\x20\x20\x20\x3C\x2Flabel\x3E\x0A\x09\x20\x20\x20\x20\x3C\x2Fspan\x3E\x0A\x0A\x09\x09\x3Cselect\x20id\x3D\x22serial\x2Dline\x2Dendings\x22\x3E\x0A\x09\x09\x09\x3Coption\x20value\x3D\x22nle\x22\x3ENo\x20line\x20ending\x3C\x2Foption\x3E\x0A\x09\x09\x09\x3Coption\x20value\x3D\x22nl\x22\x3ENewline\x3C\x2Foption\x3E\x0A\x09\x09\x09\x3Coption\x20value\x3D\x22cr\x22\x3ECarriage\x20return\x3C\x2Foption\x3E\x0A\x09\x09\x09\x3Coption\x20value\x3D\x22nlcr\x22\x20selected\x3D\x22selected\x22\x3EBoth\x20NL\x20\x26\x20CR\x3C\x2Foption\x3E\x0A\x09\x09\x3C\x2Fselect\x3E\x0A\x09\x3C\x2Fdiv\x3E\x0A\x0A\x09\x3Cdiv\x20class\x3D\x22input\x2Dappend\x22\x3E\x0A\x09\x09\x3Cinput\x20id\x3D\x22text2send\x22\x20type\x3D\x22text\x22\x20placeholder\x3D\x22Type\x20a\x20message\x22\x20onkeydown\x3D\x22compilerflasher.pluginHandler.serialSendOnEnter\x28event\x29\x22\x3E\x0A\x09\x09\x3Cbutton\x20id\x3D\x22serial_send\x22\x20onclick\x3D\x22compilerflasher.pluginHandler.serialSend\x28\x29\x22\x20class\x3D\x22btn\x22\x20title\x3D\x22Send\x20Message\x22\x3ESend\x3C\x2Fbutton\x3E\x0A\x09\x3C\x2Fdiv\x3E\x0A\x3C\x2Fdiv\x3E\x0A';
+        var staticSerialMonitorSection = '\x20\x20\x20\x20\x20\x20\x20\x20\x3Cstyle\x3E\x0A\x20\x20\x20\x20\x23serial_monitor_content\x20\x7B\x0A\x20\x20\x20\x20\x20\x20\x20\x20display\x3A\x20none\x3B\x0A\x20\x20\x20\x20\x7D\x0A\x0A\x20\x20\x20\x20\x23serial_hud\x20\x7B\x0A\x20\x20\x20\x20\x20\x20\x20\x20overflow\x2Dy\x3A\x20auto\x3B\x0A\x20\x20\x20\x20\x7D\x0A\x0A\x20\x20\x20\x20\x23serial_monitor_hud_and_autoscroll\x20\x7B\x0A\x20\x20\x20\x20\x20\x20\x20\x20display\x3A\x20inline\x2Dblock\x3B\x0A\x20\x20\x20\x20\x7D\x0A\x0A\x20\x20\x20\x20\x23serial\x2Dchecboxes\x20\x7B\x0A\x20\x20\x20\x20\x20\x20\x20\x20display\x3A\x20inline\x2Dblock\x3B\x0A\x20\x20\x20\x20\x7D\x0A\x0A\x20\x20\x20\x20\x23serial\x2Dchecboxes\x20\x3E\x20label\x20\x7B\x0A\x20\x20\x20\x20\x20\x20\x20\x20margin\x2Dbottom\x3A\x200\x3B\x0A\x20\x20\x20\x20\x7D\x0A\x0A\x20\x20\x20\x20\x23autoscroll_label\x20\x7B\x0A\x20\x20\x20\x20\x20\x20\x20\x20position\x3A\x20relative\x3B\x0A\x20\x20\x20\x20\x20\x20\x20\x20top\x3A\x208px\x3B\x0A\x20\x20\x20\x20\x7D\x0A\x0A\x20\x20\x20\x20\x23autoscroll_check\x20\x7B\x0A\x20\x20\x20\x20\x20\x20\x20\x20display\x3A\x20block\x3B\x0A\x20\x20\x20\x20\x7D\x0A\x0A\x20\x20\x20\x20\x23echo_label\x20\x7B\x0A\x20\x20\x20\x20\x20\x20\x20\x20position\x3A\x20relative\x3B\x0A\x20\x20\x20\x20\x20\x20\x20\x20top\x3A\x203px\x3B\x0A\x20\x20\x20\x20\x7D\x0A\x0A\x20\x20\x20\x20.serial\x2Dmonitor\x2Decho\x20\x7B\x0A\x20\x20\x20\x20\x20\x20\x20\x20display\x3A\x20inline\x2Dblock\x3B\x0A\x20\x20\x20\x20\x20\x20\x20\x20color\x3A\x20\x23FF0000\x3B\x0A\x20\x20\x20\x20\x7D\x0A\x0A\x20\x20\x20\x20\x23serial\x2Dline\x2Dendings\x20\x7B\x0A\x20\x20\x20\x20\x20\x20\x20\x20width\x3A\x20130px\x3B\x0A\x20\x20\x20\x20\x20\x20\x20\x20margin\x2Dbottom\x3A\x2010px\x3B\x0A\x20\x20\x20\x20\x7D\x0A\x3C\x2Fstyle\x3E\x0A\x0A\x3Cdiv\x20class\x3D\x22serial\x2Dmonitor\x2Dcontainer\x22\x3E\x0A\x20\x20\x20\x20\x3Cdiv\x20id\x3D\x22serial_monitor_content\x22\x3E\x0A\x20\x20\x20\x20\x20\x20\x20\x20\x3Cdiv\x20id\x3D\x22serial_monitor_hud_and_autoscroll\x22\x3E\x0A\x20\x20\x20\x20\x20\x20\x20\x20\x3Cspan\x20id\x3D\x22serial\x2Dchecboxes\x22\x3E\x0A\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x3Clabel\x20id\x3D\x22autoscroll_label\x22\x20class\x3D\x22checkbox\x22\x3E\x0A\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x3Cinput\x20id\x3D\x27autoscroll_check\x27\x20type\x3D\x22checkbox\x22\x20checked\x3E\x0A\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20Autoscroll\x0A\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x3C\x2Flabel\x3E\x0A\x0A\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x3Clabel\x20id\x3D\x22echo_label\x22\x20class\x3D\x22checkbox\x22\x3E\x0A\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x3Cinput\x20id\x3D\x27echo_check\x27\x20type\x3D\x22checkbox\x22\x3E\x0A\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20Echo\x0A\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x3C\x2Flabel\x3E\x0A\x20\x20\x20\x20\x20\x20\x20\x20\x3C\x2Fspan\x3E\x0A\x0A\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x3Cselect\x20id\x3D\x22serial\x2Dline\x2Dendings\x22\x3E\x0A\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x3Coption\x20value\x3D\x22nle\x22\x3ENo\x20line\x20ending\x3C\x2Foption\x3E\x0A\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x3Coption\x20value\x3D\x22nl\x22\x3ENewline\x3C\x2Foption\x3E\x0A\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x3Coption\x20value\x3D\x22cr\x22\x3ECarriage\x20return\x3C\x2Foption\x3E\x0A\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x3Coption\x20value\x3D\x22nlcr\x22\x20selected\x3D\x22selected\x22\x3EBoth\x20NL\x20\x26\x20CR\x3C\x2Foption\x3E\x0A\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x3C\x2Fselect\x3E\x0A\x20\x20\x20\x20\x20\x20\x20\x20\x3C\x2Fdiv\x3E\x0A\x0A\x20\x20\x20\x20\x20\x20\x20\x20\x3Cdiv\x20class\x3D\x22input\x2Dappend\x22\x3E\x0A\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x3Cinput\x20id\x3D\x22text2send\x22\x20type\x3D\x22text\x22\x20placeholder\x3D\x22Type\x20a\x20message\x22\x0A\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20onkeydown\x3D\x22compilerflasher.pluginHandler.serialSendOnEnter\x28event\x29\x22\x3E\x0A\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x3Cbutton\x20id\x3D\x22serial_send\x22\x20onclick\x3D\x22compilerflasher.pluginHandler.serialSend\x28\x29\x22\x20class\x3D\x22btn\x22\x20title\x3D\x22Send\x20Message\x22\x3E\x0A\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20Send\x0A\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x3C\x2Fbutton\x3E\x0A\x20\x20\x20\x20\x20\x20\x20\x20\x3C\x2Fdiv\x3E\x0A\x20\x20\x20\x20\x3C\x2Fdiv\x3E\x0A\x0A\x20\x20\x20\x20\x3Cpre\x20id\x3D\x22serial_hud\x22\x20class\x3D\x22well\x22\x3E\x3C\x2Fpre\x3E\x0A\x3C\x2Fdiv\x3E\x0A\x20\x20\x20\x20';
 
         if (window.codebender
             && window.codebender.compilerflasher
@@ -3243,7 +3256,7 @@ function logging() {
  */
 window.flashing_errors =
 {
-    "-1": "Couldn’t find an Arduino on the selected port. If you are using Leonardo check that you have the correct port selected. If it is correct, try pressing the board’s reset button after initiating the upload.",
+    "-1": "Couldnâ€™t find an Arduino on the selected port. If you are using Leonardo check that you have the correct port selected. If it is correct, try pressing the boardâ€™s reset button after initiating the upload.",
     "-2": "There was a problem programming your Arduino. If you are using a non-English Windows version, or username please contact us.",
     "-22": "The selected port seems to be in use. Please check your board connection, and make sure that you are not using it from some other application or you don't have an open serial monitor.",
     "-23": "Another flashing process is still active. Please wait until it is done and try again.",
