@@ -520,6 +520,10 @@ Blockly.Msg.CAT_MBOT_1 = "mBot";
 Blockly.Msg.CAT_MBOT_2 = "mBot";
 Blockly.Msg.CAT_MBOT_3 = "mBot"; //added april 8th 2016
 
+Blockly.Msg.CAT_ROMEO_1 = "RoMeo v2";
+Blockly.Msg.CAT_ROMEO_2 = "RoMeo v2";
+Blockly.Msg.CAT_ROMEO_3 = "RoMeo v2"; //added may 1st 2016
+
 Blockly.Msg.FIELDDROPDOWN = [["HIGH", "HIGH"], ["LOW", "LOW"]];
 Blockly.Msg.FIELDDROPDOWN_ONOFF = [["ON", "ON"], ["OFF", "OFF"]];
 Blockly.Msg.INOUT_HIGH_LEVEL = "1 -> HIGH";
@@ -1244,3 +1248,6 @@ Blockly.Msg.MBOT_MOTOR_LEFT_SENS = "moteur gauche : sens";
 Blockly.Msg.MBOT_MOTOR_LEFT_PWM = "moteur gauche : puissance";
 Blockly.Msg.MBOT_MOTOR_RIGHT_SENS = "moteur droit : sens";
 Blockly.Msg.FISCHERTECHNIK_TEXT17 = " est appuyée ?";
+
+//Added May 1rst 2016 
+Blockly.Msg.ROMEO_HELPURL = "http://www.dfrobot.com/wiki/index.php/Romeo_V2-All_in_one_Controller_%28R3%29_%28SKU:DFR0225%29";

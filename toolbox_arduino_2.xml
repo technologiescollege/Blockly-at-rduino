@@ -1115,6 +1115,66 @@
 			</value>
 		</block>
 	</category>
+	<category name="CAT_DFRobot" colour="#F39800">
+		<category name="CAT_ROMEO_2" colour="#F39800">
+			<block type="romeo_mot_left">
+				<value name="PWM">
+					<shadow type="math_number">
+						<field name="NUM">127</field>
+					</shadow>
+				</value>
+			</block>
+			<block type="romeo_mot_right">
+				<value name="PWM">
+					<shadow type="math_number">
+						<field name="NUM">127</field>
+					</shadow>
+				</value>
+			</block>
+		</category>
+		<category name="CAT_DFPLAYER" colour="#F39800">
+			<block type="lp2i_mp3_init">
+				<value name="Pin_Rx">
+					<shadow type="math_number">
+						<field name="NUM">11</field>
+					</shadow>
+				</value>
+				<value name="Pin_Tx">
+					<shadow type="math_number">
+						<field name="NUM">10</field>
+					</shadow>
+				</value>
+				<value name="Pin_Busy">
+					<shadow type="math_number">
+						<field name="NUM">12</field>
+					</shadow>
+				</value>
+				<value name="Volume">
+					<shadow type="math_number">
+						<field name="NUM">20</field>
+					</shadow>
+				</value>
+			</block>
+			<block type="lp2i_mp3_play">
+				<value name="File">
+					<shadow type="math_number">
+						<field name="NUM">0</field>
+					</shadow>
+				</value>
+				<value name="Wait">
+					<shadow type="logic_boolean">1
+					</shadow>
+				</value>
+			</block>
+			<block type="lp2i_mp3_volume">
+				<value name="Volume">
+					<shadow type="math_number">
+						<field name="NUM">25</field>
+					</shadow>
+				</value>
+			</block>
+		</category>
+	</category>
 	<category name="CAT_KIT_VELO_2" colour="#C88330">
 		<block type="kit_velo_niv2_chenillard"></block>
 		<block type="kit_velo_niv2_tone"></block>	

@@ -121,6 +121,12 @@
 		<block type="mbot_turn_left"></block>	
 		<block type="mbot_turn_right"></block>	
 	</category>
+	<category name="CAT_ROMEO_1" colour="#F39800">
+		<block type="romeo_forward"></block>
+		<block type="romeo_backward"></block>	
+		<block type="romeo_turn_left"></block>	
+		<block type="romeo_turn_right"></block>	
+	</category>
 	<category name="CAT_KIT_VELO_1" colour="#C88330">
 		<block type="kit_velo_niv1_chenillard"></block>
 		<block type="kit_velo_niv1_tone"></block>	
