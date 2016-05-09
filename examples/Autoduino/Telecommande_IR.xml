@@ -1,0 +1,153 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="serial_init" x="38" y="163">
+    <field name="SPEED">9600</field>
+    <next>
+      <block type="variables_set">
+        <field name="VAR">variable</field>
+        <value name="VALUE">
+          <block type="variables_set_type">
+            <field name="VARIABLE_SETTYPE_TYPE">NUMBER</field>
+            <value name="VARIABLE_SETTYPE_INPUT">
+              <block type="autoduino_rc">
+                <field name="PIN">4</field>
+                <field name="STAT">1</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <next>
+          <block type="controls_if">
+            <value name="IF0">
+              <block type="logic_compare">
+                <field name="OP">NEQ</field>
+                <value name="A">
+                  <block type="variables_get">
+                    <field name="VAR">variable</field>
+                  </block>
+                </value>
+                <value name="B">
+                  <block type="math_number">
+                    <field name="NUM">0</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <statement name="DO0">
+              <block type="serial_print_var">
+                <value name="Text">
+                  <shadow type="text">
+                    <field name="TEXT"></field>
+                  </shadow>
+                  <block type="text">
+                    <field name="TEXT">IR Code: </field>
+                  </block>
+                </value>
+                <value name="N">
+                  <shadow type="math_number">
+                    <field name="NUM">0</field>
+                  </shadow>
+                  <block type="variables_get">
+                    <field name="VAR">variable</field>
+                  </block>
+                </value>
+                <value name="NEW_LINE">
+                  <shadow type="logic_boolean">
+                    <field name="BOOL">TRUE</field>
+                  </shadow>
+                </value>
+                <next>
+                  <block type="controls_if">
+                    <value name="IF0">
+                      <block type="logic_operation" inline="false">
+                        <field name="OP">OR</field>
+                        <comment pinned="false" h="80" w="160">La télécommande A4 peut renvoyer deux valeurs pour la même touche, si la touche est répétée ou pas. Il faut donc analyser les deux suites de codes.</comment>
+                        <value name="A">
+                          <block type="logic_compare">
+                            <field name="OP">NEQ</field>
+                            <value name="A">
+                              <block type="math_number">
+                                <field name="NUM">0</field>
+                              </block>
+                            </value>
+                            <value name="B">
+                              <block type="autoduino_ir_code_detection">
+                                <field name="IR_Code">2435</field>
+                                <field name="max_Time">2500</field>
+                                <value name="IRrecv">
+                                  <block type="autoduino_ir_code_detection">
+                                    <field name="IR_Code">386</field>
+                                    <field name="max_Time">2500</field>
+                                    <value name="IRrecv">
+                                      <block type="autoduino_ir_code_detection">
+                                        <field name="IR_Code">2433</field>
+                                        <field name="max_Time">2500</field>
+                                        <value name="IRrecv">
+                                          <block type="variables_get">
+                                            <field name="VAR">variable</field>
+                                          </block>
+                                        </value>
+                                      </block>
+                                    </value>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                        <value name="B">
+                          <block type="logic_compare">
+                            <field name="OP">NEQ</field>
+                            <value name="A">
+                              <block type="math_number">
+                                <field name="NUM">0</field>
+                              </block>
+                            </value>
+                            <value name="B">
+                              <block type="autoduino_ir_code_detection">
+                                <field name="IR_Code">387</field>
+                                <field name="max_Time">2500</field>
+                                <value name="IRrecv">
+                                  <block type="autoduino_ir_code_detection">
+                                    <field name="IR_Code">2434</field>
+                                    <field name="max_Time">2500</field>
+                                    <value name="IRrecv">
+                                      <block type="autoduino_ir_code_detection">
+                                        <field name="IR_Code">385</field>
+                                        <field name="max_Time">2500</field>
+                                        <value name="IRrecv">
+                                          <block type="variables_get">
+                                            <field name="VAR">variable</field>
+                                          </block>
+                                        </value>
+                                      </block>
+                                    </value>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                    <statement name="DO0">
+                      <block type="serial_println">
+                        <value name="CONTENT">
+                          <shadow type="text">
+                            <field name="TEXT"></field>
+                          </shadow>
+                          <block type="text">
+                            <field name="TEXT">OK... Good !</field>
+                          </block>
+                        </value>
+                      </block>
+                    </statement>
+                  </block>
+                </next>
+              </block>
+            </statement>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+</xml>

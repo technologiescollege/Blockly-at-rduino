@@ -1,0 +1,1376 @@
+[33mcommit ae3ff460194f81f7e1956eddf5ece21fc1e054c4[m
+Author: SebCanet <sebastien.canet@ac-nantes.fr>
+Date:   Fri Apr 22 02:46:30 2016 +0200
+
+    dht11 added
+
+[33mcommit a7d92bed89d91403c1c8c9accad7c4a86badad6b[m
+Author: SebCanet <sebastien.canet@ac-nantes.fr>
+Date:   Mon Apr 18 02:11:58 2016 +0200
+
+    version number updated
+
+[33mcommit c5e2614df62e8a1bda58a8852db556220cc35c59[m
+Author: SebCanet <sebastien.canet@ac-nantes.fr>
+Date:   Sun Apr 17 21:19:29 2016 +0200
+
+    type variable translation
+
+[33mcommit 41822d74d6e06fd94d2b0e9541fa2042dd68c428[m
+Author: SebCanet <sebastien.canet@ac-nantes.fr>
+Date:   Sun Apr 17 20:48:12 2016 +0200
+
+    update toolbox
+
+[33mcommit 88a4ed5937e322e12260370dbcd78fa9e8e04e25[m
+Author: Oliv <olivier@Dell-System-Inspiron-N7110>
+Date:   Sun Apr 17 20:38:23 2016 +0200
+
+    - variable type correction
+
+[33mcommit 0e7241b86814b2cd8d217cdd845e42630b058b69[m
+Author: SebCanet <sebastien.canet@ac-nantes.fr>
+Date:   Mon Apr 11 23:00:02 2016 +0200
+
+    added RGB convert tool
+
+[33mcommit 5feebdb81aaeb6805c103dd173c9980c51144067[m
+Author: SebCanet <sebastien.canet@ac-nantes.fr>
+Date:   Fri Apr 8 18:40:20 2016 +0200
+
+    added different toolbox level
+
+[33mcommit d0e2df325d44ce1a81bdb4b9df8e41f5632bd0bd[m
+Author: SebCanet <sebastien.canet@ac-nantes.fr>
+Date:   Tue Apr 5 11:51:54 2016 +0200
+
+    Update README.md
+
+[33mcommit 6de60cb770ce8371018b82af69f17514d09870ee[m
+Author: SebCanet <sebastien.canet@ac-nantes.fr>
+Date:   Mon Apr 4 20:25:37 2016 +0200
+
+    T° grove
+
+[33mcommit aae5c7b7f24fc82738e4d40472868ee7a8e45d1e[m
+Author: SebCanet <sebastien.canet@ac-nantes.fr>
+Date:   Mon Apr 4 20:05:12 2016 +0200
+
+    correct Grove T° sensor
+
+[33mcommit 5d77ce91222db357bfd15e128666bd180e2180f0[m
+Merge: 08b60a2 c55f424
+Author: SebCanet <sebastien.canet@ac-nantes.fr>
+Date:   Mon Apr 4 02:13:38 2016 +0200
+
+    Merge pull request #13 from technologiescollege/master
+    
+    added catgories name
+
+[33mcommit c55f42407d0acbfbe21cefba3e9ddca289eb1bca[m
+Author: SebCanet <sebastien.canet@ac-nantes.fr>
+Date:   Mon Apr 4 02:10:51 2016 +0200
+
+    added catgories name
+
+[33mcommit 08b60a2c62fb22a07cbcdcb2606b45aa3bd6a80b[m
+Author: SebCanet <sebastien.canet@ac-nantes.fr>
+Date:   Mon Apr 4 01:25:50 2016 +0200
+
+    num version
+
+[33mcommit e89fcb2bfe675c7e9964db1bb1e0afa869d6786f[m
+Author: SebCanet <sebastien.canet@ac-nantes.fr>
+Date:   Mon Apr 4 01:23:09 2016 +0200
+
+    add RobUno + fischetechnik categories
+
+[33mcommit 1fb442f22c51128c6b6ded766e6b3888ceca0757[m
+Author: SebCanet <sebastien.canet@ac-nantes.fr>
+Date:   Fri Apr 1 01:59:14 2016 +0200
+
+    added convert bin2text tool
+
+[33mcommit 5f567e91e47451da2f0bf9c568c89d010fbcca0e[m
+Author: SebCanet <sebastien.canet@ac-nantes.fr>
+Date:   Wed Mar 30 22:08:16 2016 +0200
+
+    french translation updated
+
+[33mcommit aab7c4c70e25b85a0e0c2917c682daee892046ee[m
+Author: SebCanet <sebastien.canet@ac-nantes.fr>
+Date:   Tue Mar 29 16:44:13 2016 +0200
+
+    add flush in myserial
+
+[33mcommit 074611f1c2013b7ab796cfd34371a884c1f0ca34[m
+Author: SebCanet <sebastien.canet@ac-nantes.fr>
+Date:   Mon Mar 21 23:44:14 2016 +0100
+
+    update screenshot
+
+[33mcommit 0a61fb5d9be69c0dd24c80152a65835a89508e75[m
+Author: SebCanet <sebastien.canet@ac-nantes.fr>
+Date:   Mon Mar 21 23:42:07 2016 +0100
+
+    update screenshot
+
+[33mcommit 720726fb5336c9749eb41eb91e0d9f1a8f4e44cd[m
+Author: SebCanet <sebastien.canet@ac-nantes.fr>
+Date:   Mon Mar 21 18:09:27 2016 +0100
+
+    update motorshield
+
+[33mcommit 0305db0621bc8b5840269c4a7a688d242001bb5e[m
+Author: SebCanet <sebastien.canet@ac-nantes.fr>
+Date:   Mon Mar 21 14:13:26 2016 +0100
+
+    modify about modal
+
+[33mcommit 212e3dc58a0042dd1eb4b927988c2e22ef8d9815[m
+Author: SebCanet <sebastien.canet@ac-nantes.fr>
+Date:   Mon Mar 21 03:42:27 2016 +0100
+
+    paypal added
+
+[33mcommit 8545861b3d772ba10f9558f66e409ffb15b679ed[m
+Author: SebCanet <sebastien.canet@ac-nantes.fr>
+Date:   Mon Mar 21 03:39:07 2016 +0100
+
+    added RoUno blocks
+    
+    thanks to Fred Picard
+
+[33mcommit eb2f4889bea9a96a2a2050d94201984cf4b1935e[m
+Author: SebCanet <sebastien.canet@ac-nantes.fr>
+Date:   Fri Mar 18 16:44:31 2016 +0100
+
+    version number added in 'about'
+
+[33mcommit b3454a2a3e1e70835211f256236797742fe1baf7[m
+Author: SebCanet <sebastien.canet@ac-nantes.fr>
+Date:   Fri Mar 18 16:34:15 2016 +0100
+
+    minor bug
+
+[33mcommit 8a1842637ae440f3bb53e79dd89d8d1041dc2980[m
+Merge: d06b5e3 3ec4eea
+Author: SebCanet <sebastien.canet@ac-nantes.fr>
+Date:   Wed Mar 16 21:34:30 2016 +0100
+
+    Merge pull request #7 from EricSKennedy/master
+    
+    Robot shield bug fix & slight improvements.  Created text block but l…
+
+[33mcommit 3ec4eeac03e2e7870841f1d88f7da5288d49f3ec[m
+Author: Eric Kennedy <erickennedy@outlook.com>
+Date:   Wed Mar 16 07:14:09 2016 -0700
+
+    Robot shield bug fix & slight improvements.  Created text block but left it out of the menu.  Recent improvements in text blocks were better than what I created.
+
+[33mcommit d06b5e373c22886c94846b3cf1742ef5cacf3728[m
+Author: SebCanet <sebastien.canet@ac-nantes.fr>
+Date:   Wed Mar 16 02:15:36 2016 +0100
+
+    new blocks
+    
+    define
+    continuous servo
+
+[33mcommit e73640039be030b7d1b538bf37c62b5e0d383c01[m
+Author: SebCanet <sebastien.canet@ac-nantes.fr>
+Date:   Tue Mar 15 18:49:51 2016 +0100
+
+    few bugs corrected
+
+[33mcommit 943abb4165c8ea588cebec76fbb38ada9453feb2[m
+Author: SebCanet <sebastien.canet@ac-nantes.fr>
+Date:   Mon Mar 14 19:58:30 2016 +0100
+
+    softserial bug corrected
+
+[33mcommit b1b3b494e15723965c0541fad3649217290e1b92[m
+Author: SebCanet <sebastien.canet@ac-nantes.fr>
+Date:   Mon Mar 14 02:32:06 2016 +0100
+
+    add 'create example' button
+
+[33mcommit 1a57744fe718777fcbde9ea09e429a4aa34d34ce[m
+Author: SebCanet <sebastien.canet@ac-nantes.fr>
+Date:   Sun Mar 13 23:57:29 2016 +0100
+
+    change catgeorie name
+
+[33mcommit a9eb0cd3c04f1d3a1edfb5450dfb2b899f691c33[m
+Author: SebCanet <sebastien.canet@ac-nantes.fr>
+Date:   Fri Mar 11 02:53:25 2016 +0100
+
+    multifunction shield
+
+[33mcommit 53cdd68bbc4fc2ef3666a970fd537166783a3312[m
+Author: SebCanet <sebastien.canet@ac-nantes.fr>
+Date:   Thu Mar 10 23:22:37 2016 +0100
+
+    adafruit motorshield
+
+[33mcommit 63e982bf1bab1d59322dbd411ce649cc1c947aa5[m
+Author: SebCanet <sebastien.canet@ac-nantes.fr>
+Date:   Wed Mar 9 02:22:05 2016 +0100
+
+    added text blocks and trying to type viable
+
+[33mcommit 82ae1be1d9156f8aa9b30413ba39f6eae77e5b3b[m
+Author: SebCanet <sebastien.canet@ac-nantes.fr>
+Date:   Tue Mar 8 22:59:15 2016 +0100
+
+    cleaning
+
+[33mcommit bab3c5e9aebdeda0fafff4c4dd4a728c61501646[m
+Author: SebCanet <sebastien.canet@ac-nantes.fr>
+Date:   Tue Mar 8 22:48:19 2016 +0100
+
+    cleaning
+
+[33mcommit 36f4fc7adc4ef4a5103518769abce48b5d85b0ed[m
+Author: SebCanet <sebastien.canet@ac-nantes.fr>
+Date:   Tue Mar 8 22:29:45 2016 +0100
+
+    cleaning js file
+
+[33mcommit b932619eb62c948e1e765f8e40f0367f6fb13ed1[m
+Author: SebCanet <sebastien.canet@ac-nantes.fr>
+Date:   Tue Mar 8 22:29:26 2016 +0100
+
+    added baud rate to serial
+
+[33mcommit 542c2d8785af280f79f69d46a3b83949a10bf5db[m
+Merge: 20f6cce 1770eec
+Author: SebCanet <sebastien.canet@ac-nantes.fr>
+Date:   Tue Mar 8 22:17:06 2016 +0100
+
+    Merge remote-tracking branch 'origin/master'
+
+[33mcommit 20f6cce4d7648e29745168984ceb8d20b7f0110c[m
+Author: SebCanet <sebastien.canet@ac-nantes.fr>
+Date:   Tue Mar 8 22:16:23 2016 +0100
+
+    Revert "add baud rate in communication"
+    
+    This reverts commit 080e489e84114313187e01c29895ccc7c9e8db02.
+
+[33mcommit 080e489e84114313187e01c29895ccc7c9e8db02[m
+Author: SebCanet <sebastien.canet@ac-nantes.fr>
+Date:   Tue Mar 8 22:10:26 2016 +0100
+
+    add baud rate in communication
+
+[33mcommit 1770eec8f694aa17ee3e69fc3e28190367800369[m
+Author: SebCanet <sebastien.canet@ac-nantes.fr>
+Date:   Sun Mar 6 17:38:40 2016 +0100
+
+    cleaning categories
+
+[33mcommit 2da8a7edfd9e5ab0cdbb2f2b9eca30b5ee6d3bd5[m
+Author: SebCanet <sebastien.canet@ac-nantes.fr>
+Date:   Sun Mar 6 17:19:08 2016 +0100
+
+    add
+    
+    new blocks
+    librairie
+
+[33mcommit 5f5366f8c6728fa477915dfe9c3f2a7e558a6f22[m
+Author: SebCanet <sebastien.canet@ac-nantes.fr>
+Date:   Sun Mar 6 15:05:27 2016 +0100
+
+    add 'array' blocks
+
+[33mcommit a0f541e81cbe39cc49424744749d2bbb5cced49e[m
+Author: SebCanet <sebastien.canet@ac-nantes.fr>
+Date:   Sat Mar 5 15:33:41 2016 +0100
+
+    'about' modif
+
+[33mcommit b7df7d2c7757dc0d619ad6f2b0f431df261fef14[m
+Author: SebCanet <sebastien.canet@ac-nantes.fr>
+Date:   Wed Feb 24 23:16:06 2016 +0100
+
+    math bug fixed
+
+[33mcommit dde56e4e1a8869c699b3e9f73084396022151d19[m
+Author: SebCanet <sebastien.canet@ac-nantes.fr>
+Date:   Tue Feb 23 19:33:41 2016 +0100
+
+    bug fixed
+
+[33mcommit 3105eff1fec0c0cd82aae8f4f5896ab40373035e[m
+Author: SebCanet <sebastien.canet@ac-nantes.fr>
+Date:   Sat Feb 20 12:36:50 2016 +0100
+
+    attach interrupt bug correction
+
+[33mcommit c109b40339d52412ccf8991c3d030d9100f7aa34[m
+Author: SebCanet <sebastien.canet@ac-nantes.fr>
+Date:   Sat Feb 20 01:32:07 2016 +0100
+
+    update lang
+
+[33mcommit a96d0de38ac6750f6435c9b3b1c3607c9c76cc5a[m
+Author: SebCanet <sebastien.canet@ac-nantes.fr>
+Date:   Sat Feb 20 01:31:45 2016 +0100
+
+    zoom card picture in modal
+
+[33mcommit fd3de1d2823b905cdc54f88033ea546ae02f345c[m
+Author: SebCanet <sebastien.canet@ac-nantes.fr>
+Date:   Thu Feb 18 18:01:43 2016 +0100
+
+    change modal picture size
+
+[33mcommit 6a090e7929c6e05d854e6667830e50495cfee547[m
+Author: SebCanet <sebastien.canet@ac-nantes.fr>
+Date:   Thu Feb 18 04:57:37 2016 +0100
+
+    zoom card picture
+
+[33mcommit 80332da6487a32d55d1c59f6154da6575cd1d262[m
+Author: SebCanet <sebastien.canet@ac-nantes.fr>
+Date:   Thu Feb 18 04:18:05 2016 +0100
+
+    added upload ine IDE Arduino
+
+[33mcommit a339408402c40d549fbb707f189d346d41a21c70[m
+Author: SebCanet <sebastien.canet@ac-nantes.fr>
+Date:   Tue Feb 16 19:32:02 2016 +0100
+
+    BT block update
+
+[33mcommit 74fe08eb2de869edbc498fe793e3555307ebcf90[m
+Author: SebCanet <sebastien.canet@ac-nantes.fr>
+Date:   Mon Feb 15 04:42:32 2016 +0100
+
+    added new In blocks
+
+[33mcommit a793ee98f21e37b47f1871ec6a59326c674a4fde[m
+Author: SebCanet <sebastien.canet@ac-nantes.fr>
+Date:   Mon Feb 15 04:26:15 2016 +0100
+
+    added interrupt
+
+[33mcommit 875eb33b0ba3936f84def41b34119f8cc84b7134[m
+Author: SebCanet <sebastien.canet@ac-nantes.fr>
+Date:   Mon Feb 15 02:06:32 2016 +0100
+
+    organizing
+
+[33mcommit 23b6c9f2ad9b2420c44d6c954e7fb6623e361960[m
+Author: SebCanet <sebastien.canet@ac-nantes.fr>
+Date:   Sun Feb 14 19:42:33 2016 +0100
+
+    re-organize
+
+[33mcommit 78a12028ce3e0ec50de376c1f59f3d49ad066f06[m
+Author: SebCanet <sebastien.canet@ac-nantes.fr>
+Date:   Sun Feb 14 18:43:11 2016 +0100
+
+    add picture
+
+[33mcommit aa3b09cf6b03e83ef82afdb94000911a41b9f3ba[m
+Author: SebCanet <sebastien.canet@ac-nantes.fr>
+Date:   Sun Feb 14 11:15:01 2016 +0100
+
+    backpack test
+
+[33mcommit 38965c3b13730e042c91a7c984bfa97cc34b5949[m
+Author: SebCanet <sebastien.canet@ac-nantes.fr>
+Date:   Fri Feb 12 20:37:50 2016 +0100
+
+    zoom finished
+
+[33mcommit 77d761a9805358c8a6b85037dc412eac0cf92b2d[m
+Author: SebCanet <sebastien.canet@ac-nantes.fr>
+Date:   Wed Feb 10 16:56:07 2016 +0100
+
+    new serial print var function
+
+[33mcommit acc98a719e5468ad167995622e9b86f0a09fce81[m
+Author: SebCanet <sebastien.canet@ac-nantes.fr>
+Date:   Wed Feb 10 16:35:01 2016 +0100
+
+    picture zoomable & deletable
+
+[33mcommit a6daf67b646e78a3fae0efd681eacb28ff0b95df[m
+Author: SebCanet <sebastien.canet@ac-nantes.fr>
+Date:   Wed Feb 10 16:04:16 2016 +0100
+
+    fusion example
+
+[33mcommit 147872d6ed59e917775f0280b09009d8659cabd5[m
+Author: SebCanet <sebastien.canet@ac-nantes.fr>
+Date:   Wed Feb 10 15:50:19 2016 +0100
+
+    multi zoom in picture blocks
+
+[33mcommit 608a83ba6aadb20cb2feae37046d3eb576a11ab5[m
+Author: SebCanet <sebastien.canet@ac-nantes.fr>
+Date:   Wed Feb 10 14:52:36 2016 +0100
+
+    added new blocs
+    
+    OLED i2c
+    RGB LED
+    DFPlayer
+
+[33mcommit 38966497070667ce4051d2f952ace3543a055bb9[m
+Author: SebCanet <sebastien.canet@ac-nantes.fr>
+Date:   Wed Feb 10 14:50:24 2016 +0100
+
+    Updated README.md
+
+[33mcommit ce31ef45584dc6b5d90c5fba23f9bc390f5db549[m
+Author: SebCanet <sebastien.canet@ac-nantes.fr>
+Date:   Wed Feb 10 14:48:58 2016 +0100
+
+    Updated README.md
+
+[33mcommit c20be5938da3d847e002c8cc39fd710924f03137[m
+Author: SebCanet <sebastien.canet@ac-nantes.fr>
+Date:   Wed Feb 10 02:58:13 2016 +0100
+
+    minor correction
+
+[33mcommit eefbc7303edb788834b5c0c978ffbd33ce1aebfc[m
+Author: SebCanet <sebastien.canet@ac-nantes.fr>
+Date:   Mon Feb 8 16:47:27 2016 +0100
+
+    minor update french translation
+
+[33mcommit 52067e10c71e45da72544196f52a0ede5a28f11c[m
+Author: SebCanet <sebastien.canet@ac-nantes.fr>
+Date:   Mon Feb 8 16:37:48 2016 +0100
+
+    minor french translation update
+
+[33mcommit 4bb03678f93f91bab7af5ea015f921fcb5094c06[m
+Author: SebCanet <sebastien.canet@ac-nantes.fr>
+Date:   Sun Jan 31 22:45:40 2016 +0100
+
+    translation corrected
+
+[33mcommit dd39a060c6beec7da0beaf0ede9fe819cc24dee1[m
+Merge: 4ed7845 a2e9f99
+Author: Oliv <olivier@Dell-System-Inspiron-N7110>
+Date:   Sun Jan 31 19:42:54 2016 +0100
+
+    Merge branch 'master' of https://github.com/technologiescollege/Blockly-at-rduino
+
+[33mcommit 4ed7845a29a1f339b81ca1f5dd05321f8cace9ba[m
+Author: Oliv <olivier@Dell-System-Inspiron-N7110>
+Date:   Sun Jan 31 19:42:42 2016 +0100
+
+    - bugs corrections
+
+[33mcommit a2e9f99ad6b65684bb78f8e8865cadcc8469dff7[m
+Author: SebCanet <sebastien.canet@ac-nantes.fr>
+Date:   Sun Jan 31 18:53:42 2016 +0100
+
+    ihm pb
+
+[33mcommit 4409b40530186c748fce968593b8fe9affa6b7de[m
+Author: SebCanet <sebastien.canet@ac-nantes.fr>
+Date:   Sun Jan 31 18:30:39 2016 +0100
+
+    correction
+
+[33mcommit 4554620ddd21f2df4a5811afc4386007c0ce2b73[m
+Author: SebCanet <sebastien.canet@ac-nantes.fr>
+Date:   Sun Jan 31 17:45:24 2016 +0100
+
+    maths update
+
+[33mcommit 466ddf229c6abd5ca4a8f033567b8c149cf8e40d[m
+Author: SebCanet <sebastien.canet@ac-nantes.fr>
+Date:   Mon Jan 25 22:57:22 2016 +0100
+
+    correct string
+
+[33mcommit 63fc4419d1528fce37c83f54d114ca583caf02c2[m
+Author: Oliv <olivier@Dell-System-Inspiron-N7110>
+Date:   Thu Jan 28 06:01:28 2016 +0100
+
+    - Examples edition
+    - supervision corrections
+    - AJAX test
+
+[33mcommit b31998ad9b0d45e054ce7743fc0626bdf800b0f3[m
+Author: SebCanet <sebastien.canet@ac-nantes.fr>
+Date:   Mon Jan 25 02:24:00 2016 +0100
+
+    added CONST
+
+[33mcommit d77a5606ab371b8752fd274ae851ddd77e090337[m
+Author: SebCanet <sebastien.canet@ac-nantes.fr>
+Date:   Mon Jan 25 01:35:07 2016 +0100
+
+    language corrected
+
+[33mcommit 4522bcb8a42c78c76ef732db57d0b7bbedbd51c2[m
+Author: SebCanet <sebastien.canet@ac-nantes.fr>
+Date:   Mon Jan 25 00:38:18 2016 +0100
+
+    added serial library
+
+[33mcommit 0362ddf6bbe559630472cec6118c2eee69fccaf9[m
+Author: SebCanet <sebastien.canet@ac-nantes.fr>
+Date:   Sun Jan 24 23:10:09 2016 +0100
+
+    added blocks
+    
+    conversion
+    DF mini player
+
+[33mcommit 20678758c2d2c6dca2fa288ee695e4c699264c68[m
+Author: SebCanet <sebastien.canet@ac-nantes.fr>
+Date:   Sat Jan 23 19:12:02 2016 +0100
+
+    serial comm added
+
+[33mcommit 027f7639c17b39510b170a51276407a5a4a2fc08[m
+Merge: f6480aa 9276e8b
+Author: SebCanet <sebastien.canet@ac-nantes.fr>
+Date:   Wed Jan 20 22:34:15 2016 +0100
+
+    Merge pull request #6 from EricSKennedy/master
+    
+    Random save XML and INO filename and Robot Misc fixes
+
+[33mcommit 9276e8b46349cabcb4c574a06e3ff179d4b3eb79[m
+Author: Eric Kennedy <erickennedy@outlook.com>
+Date:   Wed Jan 20 13:13:44 2016 -0800
+
+    Fix deprecated code in Robots-Misc
+
+[33mcommit bfcfcf2227493db8f9a1c6bbc0344e26d4896543[m
+Author: Eric Kennedy <erickennedy@outlook.com>
+Date:   Wed Jan 20 12:37:36 2016 -0800
+
+    Date-time file names - each time you select save, the file name changes.  This makes using the save function easier.
+
+[33mcommit f6480aadf94c328edc97633a7c34d8dd11586647[m
+Author: SebCanet <sebastien.canet@ac-nantes.fr>
+Date:   Wed Jan 20 02:19:00 2016 +0100
+
+    new Arduino blocs
+
+[33mcommit d08feaa3a8dfa61f9f12d64f2f49694b7544ccca[m
+Author: SebCanet <sebastien.canet@ac-nantes.fr>
+Date:   Thu Jan 14 20:58:36 2016 +0100
+
+    jeulin traffic light
+
+[33mcommit 16dcfdc9dff83f35a4997e620db8edd70592bb4d[m
+Author: SebCanet <sebastien.canet@ac-nantes.fr>
+Date:   Tue Jan 12 23:05:05 2016 +0100
+
+    oups
+
+[33mcommit a9ef7e02f71a587e1d2d3f5f91c9bd644f9b34a8[m
+Author: SebCanet <sebastien.canet@ac-nantes.fr>
+Date:   Mon Jan 11 23:38:05 2016 +0100
+
+    added pedagogiq traffic light
+
+[33mcommit c831e77a60b1eca457fce558db72c4fb732a76a5[m
+Author: SebCanet <sebastien.canet@ac-nantes.fr>
+Date:   Mon Jan 11 22:28:25 2016 +0100
+
+    sensor define update
+
+[33mcommit 62d689cd5239916eed43f75d7e167bf11885cf4f[m
+Author: SebCanet <sebastien.canet@ac-nantes.fr>
+Date:   Sun Jan 10 18:45:17 2016 +0100
+
+    update translation for Supervision
+
+[33mcommit 81825a44d539052840ba136f518f9c89a47c893f[m
+Author: SebCanet <sebastien.canet@ac-nantes.fr>
+Date:   Sun Jan 10 14:23:03 2016 +0100
+
+    'switch' translation
+
+[33mcommit fb858e53b5a1846ce4532389bddd03819d6643e1[m
+Author: SebCanet <sebastien.canet@ac-nantes.fr>
+Date:   Sat Jan 9 17:05:31 2016 +0100
+
+    minor update
+
+[33mcommit 56a196a70e779f0e6c0b9376d2e73acc440e8434[m
+Author: SebCanet <sebastien.canet@ac-nantes.fr>
+Date:   Sat Jan 9 16:37:12 2016 +0100
+
+    update correction
+
+[33mcommit 7073a72fda224a21439793adb01339791138f44d[m
+Merge: b9ec00d f00eded
+Author: SebCanet <sebastien.canet@ac-nantes.fr>
+Date:   Sat Jan 9 14:13:30 2016 +0100
+
+    Merge remote-tracking branch 'origin/master'
+    
+    # Conflicts:
+    #	index.html
+    #	lang/code.js
+    #	supervision/pymata_arduino.html
+    #	utils/blockly@rduino.js
+
+[33mcommit f00edede5c009559874616ce38f38eb97603af12[m
+Author: Oliv <olivier@Dell-System-Inspiron-N7110>
+Date:   Fri Jan 8 21:23:52 2016 +0100
+
+    - supervision refactored (first part)
+    - toolbox definition like Google Blockly
+
+[33mcommit b9ec00d4f97b328bce748ece921ea7957eb0f8a2[m
+Author: SebCanet <sebastien.canet@ac-nantes.fr>
+Date:   Fri Jan 8 01:39:21 2016 +0100
+
+    update translation supervision
+
+[33mcommit f4c332746f95b955df1301e05608ce9177514877[m
+Author: Oliv <olivier@Dell-System-Inspiron-N7110>
+Date:   Thu Jan 7 21:10:36 2016 +0100
+
+    supervision translation
+
+[33mcommit 9a628db95cee61de233dc3157419a53c9a0a6dbf[m
+Author: SebCanet <sebastien.canet@ac-nantes.fr>
+Date:   Thu Jan 7 10:46:42 2016 +0100
+
+    correct bug
+
+[33mcommit 1983de7e15fa09fc37966c81301b10fd66fa3d97[m
+Author: SebCanet <sebastien.canet@ac-nantes.fr>
+Date:   Thu Jan 7 01:51:55 2016 +0100
+
+    clean
+
+[33mcommit b7972170f750f79340990b574e4f8dd96f5c8513[m
+Author: SebCanet <sebastien.canet@ac-nantes.fr>
+Date:   Thu Jan 7 01:49:59 2016 +0100
+
+    supervision work + bug correction
+
+[33mcommit ee7cf68f9e1aba9c20d1860f328b3acdc00e4a94[m
+Author: SebCanet <sebastien.canet@ac-nantes.fr>
+Date:   Wed Jan 6 22:27:10 2016 +0100
+
+    supervision internationalisation test
+
+[33mcommit a61fd5a2450fba9f244fa27656c97a7f91fb57cd[m
+Author: Oliv <olivier@Dell-System-Inspiron-N7110>
+Date:   Wed Jan 6 20:54:32 2016 +0100
+
+    - Bug correction
+    - Init supervision translation
+
+[33mcommit d91f3c20628628e6c316277eb31e3485ace67ea6[m
+Author: Oliv <olivier@Dell-System-Inspiron-N7110>
+Date:   Wed Jan 6 17:18:07 2016 +0100
+
+    Supervision corrections
+
+[33mcommit 3ece829784349cf963c74ca64a2c3de38e16e100[m
+Author: SebCanet <sebastien.canet@ac-nantes.fr>
+Date:   Tue Jan 5 14:39:38 2016 +0100
+
+    work on supervision...
+
+[33mcommit c8e08e888e324a925c2ff23c49269eddb102c514[m
+Author: SebCanet <sebastien.canet@ac-nantes.fr>
+Date:   Tue Jan 5 13:59:23 2016 +0100
+
+    toggle button Codebender plugin
+
+[33mcommit 37744865c76dbee7c0b412c99bea6ea5aa14a14d[m
+Author: SebCanet <sebastien.canet@ac-nantes.fr>
+Date:   Wed Dec 30 01:25:21 2015 +0100
+
+    work in progress on supervision
+
+[33mcommit 8011c80a946f8afda538ca5ee7ab4bcdf77b53b7[m
+Author: SebCanet <sebastien.canet@ac-nantes.fr>
+Date:   Tue Dec 29 16:34:18 2015 +0100
+
+    cleaning...again....
+
+[33mcommit 0784d43db012e09ed91f29c9cc90d2c21be87678[m
+Author: SebCanet <sebastien.canet@ac-nantes.fr>
+Date:   Tue Dec 29 13:56:07 2015 +0100
+
+    update supervision for new s2aio
+
+[33mcommit 2dbb644013b3e1bb6e6d3e62f38a29fac5544164[m
+Author: SebCanet <sebastien.canet@ac-nantes.fr>
+Date:   Tue Dec 29 03:54:57 2015 +0100
+
+    cleaning, and verification
+
+[33mcommit 0336d6eb5efe6fef2dde456e96d967031c8315c5[m
+Author: SebCanet <sebastien.canet@ac-nantes.fr>
+Date:   Fri Dec 25 19:04:11 2015 +0100
+
+    correction to new blockly
+
+[33mcommit fc0ba0932986ea875c8408f9d5d09826e0986c00[m
+Author: SebCanet <sebastien.canet@ac-nantes.fr>
+Date:   Fri Dec 25 04:16:51 2015 +0100
+
+    cleaning...
+
+[33mcommit 3b1fb06f54aaa66ca2c2fddda7a3e4e00dd30084[m
+Author: SebCanet <sebastien.canet@ac-nantes.fr>
+Date:   Fri Dec 25 03:53:03 2015 +0100
+
+    Revert "cleaning..."
+    
+    This reverts commit 55905d5f02a80eb9e70e413df11c51f71b543f34.
+
+[33mcommit b5c2282a3110b5f8afbe2e9a5fcc2118c72346e3[m
+Author: SebCanet <sebastien.canet@ac-nantes.fr>
+Date:   Fri Dec 25 03:50:36 2015 +0100
+
+    Revert "Revert "Revert "test"""
+    
+    This reverts commit 32ec6223366dfa4916e92c9918cb51b2263f7186.
+
+[33mcommit 32ec6223366dfa4916e92c9918cb51b2263f7186[m
+Author: SebCanet <sebastien.canet@ac-nantes.fr>
+Date:   Fri Dec 25 03:47:23 2015 +0100
+
+    Revert "Revert "test""
+    
+    This reverts commit 8facfc4701efff4636b0f247aad647e47be6f0d3.
+
+[33mcommit 8facfc4701efff4636b0f247aad647e47be6f0d3[m
+Author: SebCanet <sebastien.canet@ac-nantes.fr>
+Date:   Fri Dec 25 03:47:02 2015 +0100
+
+    Revert "test"
+    
+    This reverts commit 8f50697024f8aaba10fe6bc3e680a847918bb912.
+
+[33mcommit 8f50697024f8aaba10fe6bc3e680a847918bb912[m
+Author: SebCanet <sebastien.canet@ac-nantes.fr>
+Date:   Fri Dec 25 03:45:47 2015 +0100
+
+    test
+
+[33mcommit 55905d5f02a80eb9e70e413df11c51f71b543f34[m
+Author: SebCanet <sebastien.canet@ac-nantes.fr>
+Date:   Thu Dec 24 17:25:18 2015 +0100
+
+    cleaning...
+
+[33mcommit 0905ef62568d4dae6bcbf13e5d68cbda9b247b1e[m
+Author: SebCanet <sebastien.canet@ac-nantes.fr>
+Date:   Thu Dec 24 03:07:27 2015 +0100
+
+    update
+
+[33mcommit 6b56738893b913a9dac6d36f148e3676bc2cc7a3[m
+Author: SebCanet <sebastien.canet@ac-nantes.fr>
+Date:   Wed Dec 23 14:05:12 2015 +0100
+
+    modify text color
+
+[33mcommit 5f83f4fc3f75a3fa4cbab3ca782d55f66f77e5f5[m
+Author: SebCanet <sebastien.canet@ac-nantes.fr>
+Date:   Wed Dec 23 13:48:22 2015 +0100
+
+    modal draggable and together
+
+[33mcommit eee1842a24cee192a760340c1a073fed42de4f58[m
+Author: SebCanet <sebastien.canet@ac-nantes.fr>
+Date:   Wed Dec 23 02:59:07 2015 +0100
+
+    modal floating
+
+[33mcommit 55f3989ae8323ce9c981d608065f3d11d6e43a05[m
+Author: SebCanet <sebastien.canet@ac-nantes.fr>
+Date:   Tue Dec 22 02:14:51 2015 +0100
+
+    nothing important
+
+[33mcommit 45f6723cbca85894697c2df1957801f4458e1629[m
+Author: Oliv <olivier@Dell-System-Inspiron-N7110>
+Date:   Mon Dec 21 22:42:52 2015 +0100
+
+    - add choosen card to url
+    - "modal" showing card image, draggable
+
+[33mcommit 71b4bb456ea10ec33d0fce75734448e114b8ae01[m
+Author: SebCanet <sebastien.canet@ac-nantes.fr>
+Date:   Mon Dec 21 04:47:31 2015 +0100
+
+    colors like Scratch
+
+[33mcommit 214e725797506358187feae0851d5901a8c2a799[m
+Author: Oliv <olivier@Dell-System-Inspiron-N7110>
+Date:   Sun Dec 20 22:58:33 2015 +0100
+
+    - integration of last Google Blockly version
+    - extends use of JQuery
+    - remove switch orientation button
+    - add toolbox's categories to url
+    - various interface redesigns
+
+[33mcommit 1be04715aa12ce7bf02db5be903f87cbc8e1217f[m
+Author: SebCanet <sebastien.canet@ac-nantes.fr>
+Date:   Sat Dec 19 14:34:04 2015 +0100
+
+    update mini picture
+
+[33mcommit 6baf2438e8aa41ee502f3fbe87900cdeb45aaba2[m
+Author: SebCanet <sebastien.canet@ac-nantes.fr>
+Date:   Sat Dec 19 14:10:24 2015 +0100
+
+    cleaning
+
+[33mcommit d94b903f0b7e37fa6e33fbab972cc6ee7cd9b352[m
+Author: SebCanet <sebastien.canet@ac-nantes.fr>
+Date:   Thu Dec 17 02:46:45 2015 +0100
+
+    cleaning
+
+[33mcommit 89d3b16efc3d09729e95d1aea438d8bab9bc29ab[m
+Author: SebCanet <sebastien.canet@ac-nantes.fr>
+Date:   Mon Dec 14 22:34:26 2015 +0100
+
+    cleaning...
+
+[33mcommit cc01c9fffac3844c69ce527b6583dc9f5cf8f3ff[m
+Author: SebCanet <sebastien.canet@ac-nantes.fr>
+Date:   Mon Dec 14 03:18:01 2015 +0100
+
+    add button connection
+
+[33mcommit 756a6328f91d16bd44cc72c7e80ffe7c12d6e5a9[m
+Author: SebCanet <sebastien.canet@ac-nantes.fr>
+Date:   Mon Dec 7 23:07:59 2015 +0100
+
+    pymata update
+
+[33mcommit a8afb425d144eee57099fabeebe26c4f4b9ddb7e[m
+Author: SebCanet <sebastien.canet@ac-nantes.fr>
+Date:   Sun Dec 6 18:31:24 2015 +0100
+
+    update documentation supervision
+
+[33mcommit 6b78723b812ea6cca1cb6eb6df37cbb96f038107[m
+Author: SebCanet <sebastien.canet@ac-nantes.fr>
+Date:   Sun Dec 6 16:25:54 2015 +0100
+
+    supervision update
+
+[33mcommit 11354aa8f8875c84513a6fc064149605343fc21f[m
+Author: SebCanet <sebastien.canet@ac-nantes.fr>
+Date:   Sun Dec 6 04:53:22 2015 +0100
+
+    supervision multicard
+
+[33mcommit 767150490a8fd22a6f590d0b222d877f0673f0a0[m
+Author: SebCanet <sebastien.canet@ac-nantes.fr>
+Date:   Sun Dec 6 02:52:48 2015 +0100
+
+    update v1.6
+
+[33mcommit 9cf42a9e5a772f5dd31d84de9e58cfcab8b280fc[m
+Author: SebCanet <sebastien.canet@ac-nantes.fr>
+Date:   Sun Dec 6 02:52:09 2015 +0100
+
+    s2aio v1.6 update
+
+[33mcommit ffacde5d65f1b3f55a406e986f65a733142853de[m
+Author: SebCanet <sebastien.canet@ac-nantes.fr>
+Date:   Fri Dec 4 01:47:03 2015 +0100
+
+    supervision working on...
+
+[33mcommit 771cab2db2e95b2127cd096941d287eb65d444f7[m
+Author: SebCanet <sebastien.canet@ac-nantes.fr>
+Date:   Thu Dec 3 13:12:21 2015 +0100
+
+    supervision
+
+[33mcommit 1d93195970244c07e13fc1c135329a1dc44e3c4a[m
+Author: SebCanet <sebastien.canet@ac-nantes.fr>
+Date:   Thu Dec 3 03:39:17 2015 +0100
+
+    supervision by Pymata_aio
+
+[33mcommit 3c4bbcdec416cfc18cedd3b1db0fd526efa47087[m
+Author: SebCanet <sebastien.canet@ac-nantes.fr>
+Date:   Mon Nov 30 02:58:07 2015 +0100
+
+    supervision
+
+[33mcommit 3f9d895c3e70e81d414e54349449ddcc69f13301[m
+Author: SebCanet <sebastien.canet@ac-nantes.fr>
+Date:   Sun Nov 29 00:27:04 2015 +0100
+
+    syntax correction
+
+[33mcommit 66ce13d2f72f5d5221f7bca91784047f00a1b6ea[m
+Author: SebCanet <sebastien.canet@ac-nantes.fr>
+Date:   Sat Nov 28 17:40:27 2015 +0100
+
+    supervision
+
+[33mcommit b5365456c49d24d838ca8f1744a6ba146d8c74be[m
+Author: SebCanet <sebastien.canet@ac-nantes.fr>
+Date:   Fri Nov 27 04:01:51 2015 +0100
+
+    clean & update
+
+[33mcommit 35bf1f488064fb1ec2e7259d43b6935101c66180[m
+Author: SebCanet <sebastien.canet@ac-nantes.fr>
+Date:   Tue Nov 24 16:47:39 2015 +0100
+
+    release 1.0
+
+[33mcommit ccce53bd17cce8199071fc843cf366a54a5d4334[m
+Author: SebCanet <sebastien.canet@ac-nantes.fr>
+Date:   Wed Nov 18 20:49:25 2015 +0100
+
+    new supervision upon Alan Yorinks work
+    
+    use FirmataPlus and pymata-aio iot, yet to come...
+
+[33mcommit 2cc2d1cdcff64ae2c12534a59aac15f7175ed3f4[m
+Author: SebCanet <sebastien.canet@ac-nantes.fr>
+Date:   Tue Nov 17 21:22:15 2015 +0100
+
+    nodejs
+
+[33mcommit 58cffcf1e835ebda78096d02304f043718f0d097[m
+Author: SebCanet <sebastien.canet@ac-nantes.fr>
+Date:   Mon Nov 16 02:37:50 2015 +0100
+
+    angle block added
+
+[33mcommit e007a20d184bca20fa631a0da7701e5d41afabc9[m
+Author: SebCanet <sebastien.canet@ac-nantes.fr>
+Date:   Mon Nov 9 02:22:32 2015 +0100
+
+    TZ51 update
+
+[33mcommit ac76a6ed76c1ddf461b8c543a1ff07f7e10efca6[m
+Author: SebCanet <sebastien.canet@ac-nantes.fr>
+Date:   Mon Nov 9 01:05:13 2015 +0100
+
+    TechnoZone51 update
+
+[33mcommit e3ccb348a2a615f7397bea878af8cd2eb72ac6e2[m
+Author: SebCanet <sebastien.canet@ac-nantes.fr>
+Date:   Wed Nov 4 23:11:19 2015 +0100
+
+    add example
+
+[33mcommit f15af6dbcd866f470635ee76ea7a923173adb063[m
+Author: SebCanet <sebastien.canet@ac-nantes.fr>
+Date:   Wed Nov 4 18:04:47 2015 +0100
+
+    supervision
+
+[33mcommit 63198d8209bbc2289a81f499e2b4172688a591b7[m
+Author: SebCanet <sebastien.canet@ac-nantes.fr>
+Date:   Tue Nov 3 21:49:01 2015 +0100
+
+    added ardugate for dwonload
+
+[33mcommit 0a639e1d6bd0244ecad14c4c70c0664e39a86ee5[m
+Author: SebCanet <sebastien.canet@ac-nantes.fr>
+Date:   Tue Nov 3 21:44:44 2015 +0100
+
+    update + supervision
+
+[33mcommit aa999ddc7604bd1c961f76fd3e1e083224c1d393[m
+Author: SebCanet <sebastien.canet@ac-nantes.fr>
+Date:   Tue Nov 3 16:57:15 2015 +0100
+
+    update div, add links
+
+[33mcommit 71606f0e5c4067708329aacb987c787cc786a520[m
+Author: SebCanet <sebastien.canet@ac-nantes.fr>
+Date:   Tue Nov 3 02:55:54 2015 +0100
+
+    supervision test
+
+[33mcommit 5a419f53654dbead10329bbf8e34eaa6b4d9bca7[m
+Author: SebCanet <sebastien.canet@ac-nantes.fr>
+Date:   Mon Nov 2 02:01:30 2015 +0100
+
+    documentation started
+
+[33mcommit 4fd97654bf3d6e0c6f3d5bca2e6594f2199e782d[m
+Author: SebCanet <sebastien.canet@ac-nantes.fr>
+Date:   Mon Nov 2 01:48:51 2015 +0100
+
+    table for example
+
+[33mcommit 57703f76d350c356ec843f6593fb43f796b043e1[m
+Author: SebCanet <sebastien.canet@ac-nantes.fr>
+Date:   Sat Oct 31 19:23:36 2015 +0100
+
+    minor updates
+
+[33mcommit f9e68a47f9590c724e73ecdb4a3a47ad0cd39be3[m
+Author: SebCanet <sebastien.canet@ac-nantes.fr>
+Date:   Sat Oct 31 19:10:27 2015 +0100
+
+    minor update
+
+[33mcommit 53540ff28f85823d561f551eaffff1a30b48c470[m
+Author: SebCanet <sebastien.canet@ac-nantes.fr>
+Date:   Fri Oct 30 17:46:26 2015 +0100
+
+    example
+
+[33mcommit c3f13186c77b4a8dc7a1f7bbaee864d1583f02bb[m
+Merge: 36f6543 c901daa
+Author: SebCanet <sebastien.canet@ac-nantes.fr>
+Date:   Fri Oct 30 12:48:34 2015 +0100
+
+    Merge pull request #4 from EricSKennedy/master
+    
+    More translations for TechnoZone51 blocks
+
+[33mcommit 36f65434541b95669940ef7661a8e9d8050f8f1d[m
+Author: SebCanet <sebastien.canet@ac-nantes.fr>
+Date:   Thu Oct 29 21:04:22 2015 +0100
+
+    enhance and new fonction
+
+[33mcommit 49432b5ca6cdf80624527bc106a26cd61f41fac2[m
+Author: SebCanet <sebastien.canet@ac-nantes.fr>
+Date:   Wed Oct 28 03:24:31 2015 +0100
+
+    beautify
+
+[33mcommit 90de0cf74a88098b0ff1b56494e10813bfe6f1dc[m
+Author: SebCanet <sebastien.canet@ac-nantes.fr>
+Date:   Tue Oct 27 20:15:46 2015 +0100
+
+    more example
+
+[33mcommit c901daaae1ee10ad8070b5c9562cf975e94c40ea[m
+Merge: f25d30b 46cb12f
+Author: EricSKennedy <EricSKennedy@users.noreply.github.com>
+Date:   Sat Oct 24 07:02:36 2015 -0700
+
+    Merge pull request #6 from technologiescollege/master
+    
+    Pull from upstream
+
+[33mcommit 46cb12f249ef67906bdd8cb99dd4141637d7cef8[m
+Author: SebCanet <sebastien.canet@ac-nantes.fr>
+Date:   Fri Oct 23 02:50:10 2015 +0200
+
+    few bugs corrected + card picture
+
+[33mcommit 9311f728c6caa0e14128853852d20fc1903ff150[m
+Author: SebCanet <sebastien.canet@ac-nantes.fr>
+Date:   Thu Oct 22 20:57:55 2015 +0200
+
+    Updated README.md
+
+[33mcommit f25d30ba6029239856d03082dfefbcc23632aaef[m
+Merge: f88461d 15408b5
+Author: EricSKennedy <EricSKennedy@users.noreply.github.com>
+Date:   Sun Sep 27 18:19:42 2015 -0700
+
+    Merge pull request #5 from technologiescollege/master
+    
+    Pull from upstream
+
+[33mcommit 15408b5b5a70714b030605ac883789a77cb15074[m
+Author: SebCanet <sebastien.canet@ac-nantes.fr>
+Date:   Sun Sep 6 21:39:49 2015 +0200
+
+    update spanish translation
+
+[33mcommit 7f2a076dcb8b3118a1ef4d8f7d339e126194a3b9[m
+Author: SebCanet <sebastien.canet@ac-nantes.fr>
+Date:   Fri Aug 28 03:38:14 2015 +0200
+
+    correction
+
+[33mcommit f17be9ea7784237211509561393225d793b4b7ef[m
+Author: SebCanet <sebastien.canet@ac-nantes.fr>
+Date:   Fri Aug 28 00:25:21 2015 +0200
+
+    Updated README.md
+
+[33mcommit 25fed447d295fe27cfdfc12c8cb58eb8407cfa9e[m
+Author: SebCanet <sebastien.canet@ac-nantes.fr>
+Date:   Wed Aug 19 17:33:38 2015 +0200
+
+    Delete tempo from servo block
+
+[33mcommit f88461d69c58ba686f1d8f7c66a9477f884b3212[m
+Author: Eric Kennedy <erickennedy@outlook.com>
+Date:   Fri Jul 24 12:26:31 2015 -0700
+
+    Final fix on current head fork conflict
+
+[33mcommit d21810eaea7678eb253d9ba60a66cdbfa95ff2d4[m
+Author: Eric Kennedy <erickennedy@outlook.com>
+Date:   Fri Jul 24 12:21:24 2015 -0700
+
+    TechnoZone Translations 7/24/2015
+
+[33mcommit 4cbab05d75dca43626c730e52b0e05aa208ac45d[m
+Merge: b8ffa7a bb83fc5
+Author: EricSKennedy <EricSKennedy@users.noreply.github.com>
+Date:   Tue Jul 21 12:47:54 2015 -0700
+
+    Merge pull request #4 from technologiescollege/master
+    
+    Pull from SebCanet 07/21/2015
+
+[33mcommit b8ffa7aa3c8a60d777b491bccc09f3c4066d6a9b[m
+Author: Eric Kennedy <erickennedy@outlook.com>
+Date:   Tue Jul 21 12:45:33 2015 -0700
+
+    Fixing conflict with upstream fork 20150721 - part one - Re-copy of Master files in conflict
+
+[33mcommit bb83fc5110b186dd81a122cff7ed145a87c5ebda[m
+Author: SebCanet <sebastien.canet@ac-nantes.fr>
+Date:   Mon Jul 20 17:50:53 2015 +0200
+
+    wiki link
+
+[33mcommit d22318b96d3c43ec6c838fdf9464c128207d4dcf[m
+Author: SebCanet <sebastien.canet@ac-nantes.fr>
+Date:   Mon Jul 20 01:50:01 2015 +0200
+
+    Bitbloq translated
+
+[33mcommit ed18401ebac2fe88b9e2ec9e81718a2ea96a5cb7[m
+Author: unknown <ESK0112@MIL-ESK0112-01.americas.swk.pri>
+Date:   Fri Jul 17 13:31:08 2015 -0700
+
+    More French translation TechnoZone51
+
+[33mcommit 613319ac6502fb5d384c17b2d1c7409778d53c34[m
+Author: SebCanet <sebastien.canet@ac-nantes.fr>
+Date:   Fri Jul 17 04:48:07 2015 +0200
+
+    BitBloq update
+
+[33mcommit 88bfbd5e60619b8fd47562874b11473e333e1a87[m
+Author: SebCanet <sebastien.canet@ac-nantes.fr>
+Date:   Fri Jul 17 03:27:40 2015 +0200
+
+    update some TECHNONZONE51 translation
+
+[33mcommit 27078cb378b8e8b05feb0deb19067bfa6ffd5d1f[m
+Author: SebCanet <sebastien.canet@ac-nantes.fr>
+Date:   Thu Jul 16 16:02:18 2015 +0200
+
+    update bugs 'number'
+
+[33mcommit 6fe2fe77dcfbcf7c1daaa3ea6df4c8c3308c293a[m
+Author: SebCanet <sebastien.canet@ac-nantes.fr>
+Date:   Thu Jul 16 03:34:54 2015 +0200
+
+    Add bitbloq blocks
+
+[33mcommit ee69d7ec9c11547e9e5bf0b8ce4938ce016e48b5[m
+Author: unknown <ESK0112@MIL-ESK0112-01.americas.swk.pri>
+Date:   Wed Jul 15 06:35:45 2015 -0700
+
+    More French Translation
+
+[33mcommit 2a7b86b9952116ec05ee6b235f305b2d9b31b8fd[m
+Merge: 5947f06 17d5383
+Author: SebCanet <sebastien.canet@ac-nantes.fr>
+Date:   Wed Jul 15 13:04:45 2015 +0200
+
+    Merge pull request #3 from EricSKennedy/master
+    
+    Technozone51 Updates - French and English
+
+[33mcommit 17d5383120e0aec51370a9a8378339d898615150[m
+Author: unknown <ESK0112@MIL-ESK0112-01.americas.swk.pri>
+Date:   Tue Jul 14 16:44:41 2015 -0700
+
+    Updates to Technozone51 blocks
+
+[33mcommit 46895c5ef9fe7d667fd701aacf931adbc4196f17[m
+Merge: c0aca0e 5947f06
+Author: EricSKennedy <EricSKennedy@users.noreply.github.com>
+Date:   Mon Jul 13 12:18:28 2015 -0700
+
+    Merge pull request #1 from technologiescollege/master
+    
+    Update from SebCanet
+
+[33mcommit 5947f0657814d39ecc61fcfbeb43faeb940a78f7[m
+Author: SebCanet <sebastien.canet@ac-nantes.fr>
+Date:   Tue Jul 7 02:19:37 2015 +0200
+
+    TechnoZone update
+
+[33mcommit 268621204c78ef4d877122ee5448d07e1c90956e[m
+Merge: 7e70da1 c0aca0e
+Author: SebCanet <sebastien.canet@ac-nantes.fr>
+Date:   Tue Jun 23 16:02:17 2015 +0200
+
+    Merge pull request #2 from EricSKennedy/master
+    
+    4 new blocks - IR remote control
+
+[33mcommit c0aca0e0e0340ad292f06db2ecb09bc5d767cc5b[m
+Author: EricSKennedy <eric.kennedy@outlook.com>
+Date:   Mon Jun 22 13:01:42 2015 -0700
+
+    Updates for:
+    -Generic (cheap) Non-PWM motor drivers
+    -Dual Pin Tester for Analog and Digital pin verification
+    -Beginning translation of TechnoZone I/O cards
+
+[33mcommit aac13becf370ed2252ddc2359211caa148a3e292[m
+Author: EricSKennedy <eric.kennedy@outlook.com>
+Date:   Thu Jun 18 07:06:29 2015 -0700
+
+    Addition to allow Analog ports on blocks in the robot catagory
+
+[33mcommit e94ffce548a250132011cfd66c045d6207f06748[m
+Author: EricSKennedy <eric.kennedy@outlook.com>
+Date:   Wed Jun 17 13:50:49 2015 -0700
+
+    Removed attempt to get A0-5 working as digital inputs
+
+[33mcommit 861420efe29b7c000d3a40ff1b91fda64cd28303[m
+Author: EricSKennedy <eric.kennedy@outlook.com>
+Date:   Wed Jun 17 13:45:06 2015 -0700
+
+    Fix to make sure the pull request to Tech is clean
+
+[33mcommit 161c1ca08456a8c0a0190650c39c6db18adb385f[m
+Author: EricSKennedy <eric.kennedy@outlook.com>
+Date:   Wed Jun 17 07:00:07 2015 -0700
+
+    Updates for latest version of fork
+
+[33mcommit bdd216fc65908e9222c81880f7329b887c18c55e[m
+Author: Oliv <olivier@Dell-System-Inspiron-N7110>
+Date:   Mon May 25 20:31:37 2015 +0200
+
+    no message
+
+[33mcommit bc45754b2be09b4089b7a3d55f692337f45c8dc5[m
+Merge: 5edd579 7e70da1
+Author: EricSKennedy <eric.kennedy@outlook.com>
+Date:   Mon Jun 15 13:24:14 2015 -0700
+
+    Merge branch 'master' of https://github.com/EricSKennedy/Blockly-at-rduino
+    
+    Conflicts:
+    	index.html
+
+[33mcommit 5edd5796fcc557b773ed23bab5bcc1b5a40c1968[m
+Author: EricSKennedy <eric.kennedy@outlook.com>
+Date:   Mon Jun 15 12:38:40 2015 -0700
+
+    added switch case to logic.  added IR remote blocks to Robots misc
+
+[33mcommit 7e70da10638d4548bdac323d61b9e8ecaaa17e04[m
+Author: Oliv <olivier@Dell-System-Inspiron-N7110>
+Date:   Sat Jun 13 17:39:03 2015 +0200
+
+    - grove : modification _get_next_pin() function
+
+[33mcommit 1ab6bc2f2bb2f30338687b35fc5210e8aed78444[m
+Author: SebCanet <sebastien.canet@ac-nantes.fr>
+Date:   Sun Jun 7 20:33:05 2015 +0200
+
+    Update compilerflasher
+
+[33mcommit 5b9f16267e660dbfd08ab9a9239f62de4d60253b[m
+Author: Oliv <olivier@Dell-System-Inspiron-N7110>
+Date:   Sun Jun 7 16:58:06 2015 +0200
+
+    - replace dropdowns pin with inputs
+    - replace appendTitle (deprecated) with appendField
+    - download images integrated in blocks
+
+[33mcommit 67d842a65f0273ffe63dbd3fcd2dec71cf3ead07[m
+Merge: b579ab3 f7f9287
+Author: Oliv <olivier@Dell-System-Inspiron-N7110>
+Date:   Sun Jun 7 00:12:02 2015 +0200
+
+    Merge branch 'master' of https://github.com/technologiescollege/Blockly-at-rduino.git
+
+[33mcommit f7f9287d88ad710a2db30a59f7067de4bd488d9b[m
+Author: SebCanet <sebastien.canet@ac-nantes.fr>
+Date:   Wed Jun 3 18:32:52 2015 +0200
+
+    MàJ Compilerflasher codebender
+
+[33mcommit 4a4f9ca47e8870e13124cc49dc6097e78ce75345[m
+Author: SebCanet <sebastien.canet@ac-nantes.fr>
+Date:   Tue Jun 2 14:21:06 2015 +0200
+
+    Licence
+
+[33mcommit 1a8e2c4704f59642c47951a2c660b08a796b1a84[m
+Author: SebCanet <sebastien.canet@ac-nantes.fr>
+Date:   Tue Jun 2 14:20:45 2015 +0200
+
+    Delete LICENSE
+
+[33mcommit b579ab3beb7df8b9f75f008ff925eeb241c581e5[m
+Author: Oliv <olivier@Dell-System-Inspiron-N7110>
+Date:   Mon May 25 20:31:37 2015 +0200
+
+    - zoom on block's SVG
+    - use localStorage
+    - RTL css
+
+[33mcommit fa453bc0964bff946608390ac839882858b1ceae[m
+Author: SebCanet <sebastien.canet@ac-nantes.fr>
+Date:   Mon May 11 01:07:53 2015 +0200
+
+    Updated README.md
+
+[33mcommit 39dd0f50d8521edc178203e4aac9993c76f7df78[m
+Author: SebCanet <sebastien.canet@ac-nantes.fr>
+Date:   Mon May 11 01:04:49 2015 +0200
+
+    Updated README.md
+
+[33mcommit b97494ff4c9f1df0786d21054c37feb23801659d[m
+Author: SebCanet <sebastien.canet@ac-nantes.fr>
+Date:   Sat Apr 25 19:38:05 2015 +0200
+
+    Updated README.md
+
+[33mcommit 18e69bb9538fc53bbd3e845fc88d1d98ab0405c0[m
+Author: SebCanet <sebastien.canet@ac-nantes.fr>
+Date:   Sat Apr 25 19:35:34 2015 +0200
+
+    Updated README.md
+
+[33mcommit cd0c60386035f1b55265cceb21695a0d51e8756a[m
+Author: SebCanet <sebastien.canet@ac-nantes.fr>
+Date:   Sat Apr 25 19:07:37 2015 +0200
+
+    Blockly@rduino v1.0
+
+[33mcommit 8a012bc6c2807ea83956f36904f0d5e57ca160f3[m
+Author: SebCanet <sebastien.canet@ac-nantes.fr>
+Date:   Sat Apr 25 18:58:28 2015 +0200
+
+    Initial commit

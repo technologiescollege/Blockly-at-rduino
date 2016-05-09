@@ -1,0 +1,269 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="serial_init" x="112" y="162">
+    <field name="SPEED">9600</field>
+    <next>
+      <block type="variables_set">
+        <field name="VAR">T1</field>
+        <value name="VALUE">
+          <block type="variables_set_type">
+            <field name="VARIABLE_SETTYPE_TYPE">DECIMAL</field>
+            <value name="VARIABLE_SETTYPE_INPUT">
+              <block type="autoduino_digital_temperature_sensor">
+                <field name="INDEX">0</field>
+                <field name="PIN">3</field>
+                <field name="RESOLUTION">12</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <next>
+          <block type="variables_set">
+            <field name="VAR">T2</field>
+            <value name="VALUE">
+              <block type="variables_set_type">
+                <field name="VARIABLE_SETTYPE_TYPE">DECIMAL</field>
+                <value name="VARIABLE_SETTYPE_INPUT">
+                  <block type="autoduino_digital_temperature_sensor">
+                    <field name="INDEX">0</field>
+                    <field name="PIN">4</field>
+                    <field name="RESOLUTION">12</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <next>
+              <block type="variables_set">
+                <field name="VAR">T1_T2</field>
+                <value name="VALUE">
+                  <block type="variables_set_type">
+                    <field name="VARIABLE_SETTYPE_TYPE">DECIMAL</field>
+                    <value name="VARIABLE_SETTYPE_INPUT">
+                      <block type="math_arithmetic">
+                        <field name="OP">MINUS</field>
+                        <value name="A">
+                          <block type="variables_get">
+                            <field name="VAR">T2</field>
+                          </block>
+                        </value>
+                        <value name="B">
+                          <block type="variables_get">
+                            <field name="VAR">T1</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <next>
+                  <block type="serial_print_var">
+                    <value name="Text">
+                      <shadow type="text">
+                        <field name="TEXT"></field>
+                      </shadow>
+                      <block type="text">
+                        <field name="TEXT">T1: </field>
+                      </block>
+                    </value>
+                    <value name="N">
+                      <shadow type="math_number">
+                        <field name="NUM">0</field>
+                      </shadow>
+                      <block type="variables_get">
+                        <field name="VAR">T1</field>
+                      </block>
+                    </value>
+                    <value name="NEW_LINE">
+                      <shadow type="logic_boolean">
+                        <field name="BOOL">TRUE</field>
+                      </shadow>
+                      <block type="logic_boolean">
+                        <field name="BOOL">FALSE</field>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="serial_print_var">
+                        <value name="Text">
+                          <shadow type="text">
+                            <field name="TEXT"></field>
+                          </shadow>
+                          <block type="text">
+                            <field name="TEXT"> T2: </field>
+                          </block>
+                        </value>
+                        <value name="N">
+                          <shadow type="math_number">
+                            <field name="NUM">0</field>
+                          </shadow>
+                          <block type="variables_get">
+                            <field name="VAR">T2</field>
+                          </block>
+                        </value>
+                        <value name="NEW_LINE">
+                          <shadow type="logic_boolean">
+                            <field name="BOOL">TRUE</field>
+                          </shadow>
+                          <block type="logic_boolean">
+                            <field name="BOOL">FALSE</field>
+                          </block>
+                        </value>
+                        <next>
+                          <block type="serial_print_var">
+                            <value name="Text">
+                              <shadow type="text">
+                                <field name="TEXT"></field>
+                              </shadow>
+                              <block type="text">
+                                <field name="TEXT"> Delta T :</field>
+                              </block>
+                            </value>
+                            <value name="N">
+                              <shadow type="math_number">
+                                <field name="NUM">0</field>
+                              </shadow>
+                              <block type="variables_get">
+                                <field name="VAR">T1_T2</field>
+                              </block>
+                            </value>
+                            <value name="NEW_LINE">
+                              <shadow type="logic_boolean">
+                                <field name="BOOL">TRUE</field>
+                              </shadow>
+                            </value>
+                            <next>
+                              <block type="autoduino_rgb_led">
+                                <field name="Number_of_Pixels">2</field>
+                                <field name="PIN">9</field>
+                                <value name="C1">
+                                  <block type="math_constrain">
+                                    <value name="VALUE">
+                                      <block type="math_arithmetic">
+                                        <field name="OP">MULTIPLY</field>
+                                        <value name="A">
+                                          <block type="math_arithmetic">
+                                            <field name="OP">MINUS</field>
+                                            <value name="A">
+                                              <block type="variables_set_type">
+                                                <field name="VARIABLE_SETTYPE_TYPE">NUMBER</field>
+                                                <value name="VARIABLE_SETTYPE_INPUT">
+                                                  <block type="variables_get">
+                                                    <field name="VAR">T1</field>
+                                                  </block>
+                                                </value>
+                                              </block>
+                                            </value>
+                                            <value name="B">
+                                              <block type="math_number">
+                                                <field name="NUM">17</field>
+                                              </block>
+                                            </value>
+                                          </block>
+                                        </value>
+                                        <value name="B">
+                                          <block type="math_number">
+                                            <field name="NUM">15</field>
+                                          </block>
+                                        </value>
+                                      </block>
+                                    </value>
+                                    <value name="LOW">
+                                      <shadow type="math_number">
+                                        <field name="NUM">1</field>
+                                      </shadow>
+                                      <block type="math_number">
+                                        <field name="NUM">0</field>
+                                      </block>
+                                    </value>
+                                    <value name="HIGH">
+                                      <shadow type="math_number">
+                                        <field name="NUM">100</field>
+                                      </shadow>
+                                      <block type="math_number">
+                                        <field name="NUM">255</field>
+                                      </block>
+                                    </value>
+                                  </block>
+                                </value>
+                                <value name="C2">
+                                  <block type="math_number">
+                                    <field name="NUM">0</field>
+                                  </block>
+                                </value>
+                                <value name="C3">
+                                  <block type="math_constrain">
+                                    <value name="VALUE">
+                                      <block type="math_arithmetic">
+                                        <field name="OP">MULTIPLY</field>
+                                        <value name="A">
+                                          <block type="math_arithmetic">
+                                            <field name="OP">MINUS</field>
+                                            <value name="A">
+                                              <block type="variables_set_type">
+                                                <field name="VARIABLE_SETTYPE_TYPE">NUMBER</field>
+                                                <value name="VARIABLE_SETTYPE_INPUT">
+                                                  <block type="variables_get">
+                                                    <field name="VAR">T2</field>
+                                                  </block>
+                                                </value>
+                                              </block>
+                                            </value>
+                                            <value name="B">
+                                              <block type="math_number">
+                                                <field name="NUM">17</field>
+                                              </block>
+                                            </value>
+                                          </block>
+                                        </value>
+                                        <value name="B">
+                                          <block type="math_number">
+                                            <field name="NUM">15</field>
+                                          </block>
+                                        </value>
+                                      </block>
+                                    </value>
+                                    <value name="LOW">
+                                      <shadow type="math_number">
+                                        <field name="NUM">1</field>
+                                      </shadow>
+                                      <block type="math_number">
+                                        <field name="NUM">0</field>
+                                      </block>
+                                    </value>
+                                    <value name="HIGH">
+                                      <shadow type="math_number">
+                                        <field name="NUM">100</field>
+                                      </shadow>
+                                      <block type="math_number">
+                                        <field name="NUM">255</field>
+                                      </block>
+                                    </value>
+                                  </block>
+                                </value>
+                                <value name="Pixel_number">
+                                  <block type="math_number">
+                                    <field name="NUM">1</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+  <block type="math_arithmetic" x="426" y="831">
+    <field name="OP">MULTIPLY</field>
+    <value name="B">
+      <block type="math_number">
+        <field name="NUM">20</field>
+      </block>
+    </value>
+  </block>
+</xml>

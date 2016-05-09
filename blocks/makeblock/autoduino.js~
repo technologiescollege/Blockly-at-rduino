@@ -1,0 +1,427 @@
+//Blocks for the AUTODUINO interface
+
+/**
+ * @license
+ * GPL
+ *
+ * Copyright 2016 Bernard Remond.
+ * https://github.com/nbremond77
+ *
+ */
+
+/**
+ * @fileoverview Helper functions for generating autoduino interface board.
+ * @author nbremond@laposte.net (Bernard Remond)
+ */
+
+goog.provide('Blockly.Blocks.autoduino');
+
+goog.require('Blockly.Blocks');
+
+Blockly.Blocks['autoduino_led'] = {
+  init: function() {
+    this.setColour("#8B0000");
+	this.setHelpUrl(Blockly.Msg.AUTODUINO_INOUT_LED_HELPURL);
+    this.appendDummyInput()
+        .appendField(Blockly.Msg.AUTODUINO_INOUT_LED_INPUT1)
+        .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/autoduino/media/700x560_k-ap-mdel-m.jpg', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize));
+	this.appendValueInput("PIN", 'Number')
+        .setCheck('Number')
+        .setAlign(Blockly.ALIGN_RIGHT)
+        .appendField(Blockly.Msg.AUTODUINO_INOUT_LED_INPUT2);		
+    this.setInputsInline(true);
+	this.appendDummyInput()
+		.setAlign(Blockly.ALIGN_RIGHT)
+        .appendField(Blockly.Msg.AUTODUINO_INOUT_LED_INPUT3)
+        .appendField(new Blockly.FieldDropdown(Blockly.Msg.FIELDDROPDOWN), "STAT");
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setTooltip(Blockly.Msg.AUTODUINO_INOUT_LED_TOOLTIP);
+  }
+};
+
+Blockly.Blocks['autoduino_piezo_buzzer'] = {
+  init: function() {
+    this.setColour("#8B0000");
+	this.setHelpUrl(Blockly.Msg.AUTODUINO_INOUT_BUZZER_HELPURL);
+    this.appendDummyInput()
+        .appendField(Blockly.Msg.AUTODUINO_INOUT_BUZZER_TEXT1)
+        .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/autoduino/media/700x560_k-ap-mbuz-m.jpg', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize))
+	this.appendValueInput("PIN", 'Number')
+        .setCheck('Number')
+        .setAlign(Blockly.ALIGN_RIGHT)	
+        .appendField(Blockly.Msg.AUTODUINO_INOUT_BUZZER_INPUT);
+	this.appendDummyInput("")
+		.setAlign(Blockly.ALIGN_RIGHT)
+        .appendField(Blockly.Msg.AUTODUINO_INOUT_BUZZER_TEXT2)
+        .appendField(new Blockly.FieldDropdown(Blockly.Msg.FIELDDROPDOWN), "STAT");
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setTooltip(Blockly.Msg.AUTODUINO_INOUT_BUZZER_TOOLTIP);
+  }
+};
+
+// Blockly.Blocks['autoduino_rgb_led'] = {
+  // init: function() {
+    // this.setColour("#8B0000");
+	// this.setHelpUrl(Blockly.Msg.AUTODUINO_INOUT_RGBLED_HELPURL);
+    // this.appendDummyInput()
+		// .appendField(Blockly.Msg.AUTODUINO_INOUT_RGBLED_TEXT)
+        // .appendField(new Blockly.FieldImage("http://www.seeedstudio.com/depot/images/product/chanbalelednb1.jpg", Blockly.Arduino.imageSize, Blockly.Arduino.imageSize))
+		// .appendField(Blockly.Msg.AUTODUINO_INOUT_RGBLED_INPUT)
+        // .appendField(new Blockly.FieldDropdown(profile.defaultBoard.digital), "PIN");
+	// this.appendField(new Blockly.ValueInput("C1", 'Number'))
+        // .setCheck('Number')
+        // .setAlign(Blockly.ALIGN_RIGHT)
+        // .appendField(Blockly.Msg.AUTODUINO_INOUT_RGBLED_COLOR1);
+	// this.appendDummyInput()
+		// .appendField(Blockly.Msg.AUTODUINO_INOUT_RGBLED_TEXT)
+        // .appendField(new Blockly.FieldImage("http://www.seeedstudio.com/depot/images/product/chanbalelednb1.jpg", Blockly.Arduino.imageSize, Blockly.Arduino.imageSize));
+	// this.interpolateMsg(
+        // Blockly.Msg.AUTODUINO_INOUT_RGBLED_COLOR1 + ' %1 ' + 
+        // Blockly.Msg.AUTODUINO_INOUT_RGBLED_INPUT + ' %2 ',
+        // ["PIN", new Blockly.FieldDropdown(profile.defaultBoard.digital)],
+        // ["C1", null, Blockly.ALIGN_RIGHT],
+        // Blockly.ALIGN_RIGHT);
+	// this.appendValueInput("C2", 'Number')
+        // .setCheck('Number')
+        // .setAlign(Blockly.ALIGN_RIGHT)
+        // .appendField(Blockly.Msg.AUTODUINO_INOUT_RGBLED_COLOR2);
+	// this.appendValueInput("C3", 'Number')		
+        // .setCheck('Number')
+        // .setAlign(Blockly.ALIGN_RIGHT)
+        // .appendField(Blockly.Msg.AUTODUINO_INOUT_RGBLED_COLOR3);
+    // this.setPreviousStatement(true, null);
+    // this.setNextStatement(true, null);
+    // this.setTooltip(Blockly.Msg.AUTODUINO_INOUT_RGBLED_TOOLTIP);
+    // this.itemCount_ = 1;
+  // }
+// };
+Blockly.Blocks['autoduino_rgb_led'] = {
+  init: function() {
+    this.setHelpUrl(Blockly.Msg.AUTODUINO_INOUT_RGBLED_HELPURL);
+    this.setColour("#8B0000");
+    this.appendDummyInput()
+        .appendField(Blockly.Msg.AUTODUINO_INOUT_RGBLED_TEXT);
+    this.appendDummyInput()
+        .setAlign(Blockly.ALIGN_CENTRE)
+        .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/autoduino/media/ws2812.jpg', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize));
+    this.appendValueInput("C1")
+        .setCheck("Number")
+        .setAlign(Blockly.ALIGN_RIGHT)
+        .appendField(Blockly.Msg.AUTODUINO_INOUT_RGBLED_COLOR1)
+        .appendField(new Blockly.FieldTextInput('',  Blockly.Arduino.pinPWMValidator), 'PIN1')
+        .appendField(Blockly.Msg.AUTODUINO_INOUT_RGBLED_INPUT);
+    this.appendValueInput("C2")
+        .setCheck("Number")
+        .setAlign(Blockly.ALIGN_RIGHT)
+        .appendField(Blockly.Msg.AUTODUINO_INOUT_RGBLED_COLOR2)
+        .appendField(new Blockly.FieldTextInput('',  Blockly.Arduino.pinPWMValidator), 'PIN2')
+        .appendField(Blockly.Msg.AUTODUINO_INOUT_RGBLED_INPUT);
+    this.appendValueInput("C3")
+        .setCheck("Number")
+        .setAlign(Blockly.ALIGN_RIGHT)
+        .appendField(Blockly.Msg.AUTODUINO_INOUT_RGBLED_COLOR3)
+        .appendField(new Blockly.FieldTextInput('',  Blockly.Arduino.pinPWMValidator), 'PIN3')
+        .appendField(Blockly.Msg.AUTODUINO_INOUT_RGBLED_INPUT);
+    this.setPreviousStatement(true, "null");
+    this.setNextStatement(true, "null");
+    this.setTooltip('');
+  }
+};
+
+Blockly.Blocks['autoduino_button'] = {
+  init: function() {
+    this.setColour("#8B0000");
+    this.setHelpUrl(Blockly.Msg.AUTODUINO_INOUT_BUTTON_HELPURL);
+	this.appendDummyInput()
+        .appendField(Blockly.Msg.AUTODUINO_INOUT_BUTTON_TEXT)
+        .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/autoduino/media/700x560_K-AP-MBP-M.jpg', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize))
+		.appendField(Blockly.Msg.AUTODUINO_INOUT_BUTTON_INPUT)
+		.appendField(new Blockly.FieldTextInput('', Blockly.Arduino.pinDigitalValidator), 'PIN');
+    this.setInputsInline(true);
+    this.setOutput(true, 'Boolean');
+    this.setTooltip(Blockly.Msg.AUTODUINO_INOUT_BUTTON_TOOLTIP);
+  }
+};
+
+Blockly.Blocks['autoduino_rotary_angle'] = {
+  init: function() {
+    this.setColour("#8B0000");
+	this.setHelpUrl(Blockly.Msg.AUTODUINO_INOUT_ROT_ANGLE_HELPURL);
+    this.appendDummyInput()
+        .appendField(Blockly.Msg.AUTODUINO_INOUT_ROT_ANGLE_TEXT)
+        .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/autoduino/media/encoder_push.jpg', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize))
+        .appendField(Blockly.Msg.AUTODUINO_INOUT_ROT_ANGLE_INPUT)
+        .appendField(new Blockly.FieldTextInput('',  Blockly.Arduino.pinAnalogValidator), 'PIN');
+    this.setOutput(true, 'Number');
+    this.setTooltip(Blockly.Msg.AUTODUINO_INOUT_ROT_ANGLE_TOOLTIP);
+  }
+};
+
+Blockly.Blocks['autoduino_tilt_switch'] = {
+  init: function() {
+    this.setColour("#8B0000");
+	this.setHelpUrl(Blockly.Msg.AUTODUINO_INOUT_TILT_HELPURL);
+    this.appendDummyInput()
+        .appendField(Blockly.Msg.AUTODUINO_INOUT_TILT_TEXT)
+        .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/autoduino/media/700x560_k-ap-mmr-m.jpg', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize))
+        .appendField(Blockly.Msg.AUTODUINO_INOUT_TILT_INPUT)
+        .appendField(new Blockly.FieldTextInput('',  Blockly.Arduino.pinDigitalValidator), 'PIN');
+    this.setOutput(true, 'Boolean');
+    this.setTooltip(Blockly.Msg.AUTODUINO_INOUT_TILT_TOOLTIP);
+  }
+};
+
+Blockly.Blocks['autoduino_relay'] = {
+  init: function() {
+    this.setColour("#8B0000");
+	this.setHelpUrl(Blockly.Msg.AUTODUINO_INOUT_RELAY_HELPURL);
+    this.appendDummyInput()
+        .appendField(Blockly.Msg.AUTODUINO_INOUT_RELAY_TEXT1)
+        .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/autoduino/media/700x560_K-AP-MREL-M.jpg', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize))
+        .appendField(Blockly.Msg.AUTODUINO_INOUT_RELAY_INPUT)
+        .appendField(new Blockly.FieldTextInput('',  Blockly.Arduino.pinDigitalValidator), 'PIN')
+        .appendField(Blockly.Msg.AUTODUINO_INOUT_RELAY_TEXT2)
+        .appendField(new Blockly.FieldDropdown(Blockly.Msg.FIELDDROPDOWN), "STAT");
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setTooltip(Blockly.Msg.AUTODUINO_INOUT_RELAY_TOOLTIP);
+  }
+};
+
+Blockly.Blocks['autoduino_temperature_sensor'] = {
+  init: function() {
+    this.setColour("#8B0000");
+	this.setHelpUrl(Blockly.Msg.AUTODUINO_INOUT_TEMP_HELPURL);
+    this.appendDummyInput()
+        .appendField(Blockly.Msg.AUTODUINO_INOUT_TEMP_TEXT)
+        .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/autoduino/media/k-ap-stemp-01.jpg', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize))
+        .appendField(Blockly.Msg.AUTODUINO_INOUT_TEMP_INPUT)
+        .appendField(new Blockly.FieldTextInput('',  Blockly.Arduino.pinAnalogValidator), 'PIN');
+    this.setOutput(true, 'Number');
+    this.setTooltip(Blockly.Msg.AUTODUINO_INOUT_TEMP_TOOLTIP);
+  }
+};
+
+Blockly.Blocks['autoduino_moisture_sensor'] = {
+  init: function() {
+    this.setColour("#8B0000");
+	this.setHelpUrl(Blockly.Msg.AUTODUINO_INOUT_MOISTURE_HELPURL);
+    this.appendDummyInput()
+        .appendField(Blockly.Msg.AUTODUINO_INOUT_MOISTURE_TEXT)
+        .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/autoduino/media/700x560_K-AP-MHE-M.jpg', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize))
+        .appendField(Blockly.Msg.AUTODUINO_INOUT_MOISTURE_INPUT)
+        .appendField(new Blockly.FieldTextInput('0',  Blockly.Arduino.pinAnalogValidator), 'PIN');
+    this.setOutput(true, 'Number');
+    this.setTooltip(Blockly.Msg.AUTODUINO_INOUT_MOISTURE_TOOLTIP);
+  }
+};
+
+Blockly.Blocks['autoduino_serial_lcd_print'] = {
+  init: function() {
+    this.setColour("#8B0000");
+	this.setHelpUrl(Blockly.Msg.AUTODUINO_INOUT_LCD_PRINT_HELPURL);
+    this.appendDummyInput()
+        .appendField(Blockly.Msg.AUTODUINO_INOUT_LCD_PRINT_TEXT)
+        .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/autoduino/media/LCD.JPG', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize))
+        .appendField(Blockly.Msg.AUTODUINO_INOUT_LCD_PRINT_INPUT1)
+        .appendField(new Blockly.FieldTextInput('1',  Blockly.Arduino.pinAutoduinoDigitalValidator), 'PIN');
+    this.appendValueInput("TEXT", 'String')
+        .setCheck('String')
+        .setAlign(Blockly.ALIGN_RIGHT)
+        .appendField(Blockly.Msg.AUTODUINO_INOUT_LCD_PRINT_INPUT2);
+    this.appendValueInput("TEXT2", 'String')
+        .setCheck('String')
+        .setAlign(Blockly.ALIGN_RIGHT)
+        .appendField(Blockly.Msg.AUTODUINO_INOUT_LCD_PRINT_INPUT3);
+    this.appendValueInput("DELAY_TIME", 'Number')
+        .setCheck('Number')
+        .setAlign(Blockly.ALIGN_RIGHT)
+        .appendField(Blockly.Msg.AUTODUINO_INOUT_LCD_PRINT_INPUT4);
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setTooltip(Blockly.Msg.AUTODUINO_INOUT_LCD_PRINT_TOOLTIP);
+  }
+};
+
+//autoduino lcd power on/off
+Blockly.Blocks['autoduino_serial_lcd_power'] = {
+  init: function() {
+    this.setColour("#8B0000");
+	this.setHelpUrl(Blockly.Msg.AUTODUINO_INOUT_LCD_POWER_HELPURL);
+    this.appendDummyInput()
+        .appendField(Blockly.Msg.AUTODUINO_INOUT_LCD_POWER_TEXT)
+        .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/autoduino/media/I2C_LCD.jpg', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize))
+        .appendField(Blockly.Msg.AUTODUINO_INOUT_LCD_POWER_INPUT)
+        .appendField(new Blockly.FieldTextInput('1',  Blockly.Arduino.pinAutoduinoDigitalValidator), 'PIN');
+    this.appendDummyInput()
+        .setAlign(Blockly.ALIGN_RIGHT)
+        .appendField(Blockly.Msg.AUTODUINO_INOUT_LCD_POWER_STATE)
+        .appendField(new Blockly.FieldDropdown(Blockly.Msg.FIELDDROPDOWN_ONOFF), "STAT");
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setTooltip(Blockly.Msg.AUTODUINO_INOUT_LCD_POWER_TOOLTIP);
+  }
+};
+
+//scroll left/right/no scroll/blink/noblink
+Blockly.Blocks['autoduino_serial_lcd_effect'] = {
+  init: function() {
+    this.setColour("#8B0000");
+	this.setHelpUrl(Blockly.Msg.AUTODUINO_INOUT_LCD_EFFECT_HELPURL);
+    this.appendDummyInput()
+        .appendField(Blockly.Msg.AUTODUINO_INOUT_LCD_EFFECT_TEXT)
+        .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/autoduino/media/I2C_LCD.jpg', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize))
+        .appendField(Blockly.Msg.AUTODUINO_INOUT_LCD_EFFECT_INPUT)
+        .appendField(new Blockly.FieldTextInput('1',  Blockly.Arduino.pinAutoduinoDigitalValidator), 'PIN');
+    this.appendDummyInput()
+        .setAlign(Blockly.ALIGN_RIGHT)
+        .appendField(Blockly.Msg.AUTODUINO_INOUT_LCD_EFFECT_EFFECT)
+        .appendField(new Blockly.FieldDropdown(Blockly.Msg.AUTODUINO_INOUT_LCD_EFFECT_EFFECT_EFFECT), "STAT");
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setTooltip(Blockly.Msg.AUTODUINO_INOUT_LCD_EFFECT_TOOLTIP);
+  }
+};
+
+Blockly.Blocks['autoduino_sound_sensor'] = {
+  init: function() {
+    this.setColour("#8B0000");
+	this.setHelpUrl(Blockly.Msg.AUTODUINO_INOUT_SOUND_HELPURL);
+    this.appendDummyInput()
+        .appendField(Blockly.Msg.AUTODUINO_INOUT_SOUND_TEXT)
+        .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/autoduino/media/400px-Twig-Sound-sensor.jpg', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize))
+        .appendField(Blockly.Msg.AUTODUINO_INOUT_SOUND_INPUT)
+        .appendField(new Blockly.FieldTextInput('',  Blockly.Arduino.pinAnalogValidator), 'PIN');
+    this.setOutput(true, 'Number');
+    this.setTooltip(Blockly.Msg.AUTODUINO_INOUT_SOUND_TOOLTIP);
+  }
+};
+
+Blockly.Blocks['autoduino_pir_motion_sensor'] = {
+  init: function() {
+    this.setColour("#8B0000");
+	this.setHelpUrl(Blockly.Msg.AUTODUINO_INOUT_PIR_HELPURL);
+    this.appendDummyInput()
+        .appendField(Blockly.Msg.AUTODUINO_INOUT_PIR_TEXT)
+        .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/autoduino/media/400px-Twig-PIR_Motion_Sensor.jpg', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize))
+        .appendField(Blockly.Msg.AUTODUINO_INOUT_PIR_INPUT)
+        .appendField(new Blockly.FieldTextInput('',  Blockly.Arduino.pinDigitalValidator), 'PIN');
+    this.setOutput(true, 'Number');
+    this.setTooltip(Blockly.Msg.AUTODUINO_INOUT_PIR_TOOLTIP);
+  }
+};
+
+Blockly.Blocks['autoduino_line_finder'] = {
+  init: function() {
+    this.setColour("#8B0000");
+	this.setHelpUrl(Blockly.Msg.AUTODUINO_INOUT_LINE_HELPURL);
+    this.appendDummyInput()
+        .appendField(Blockly.Msg.AUTODUINO_INOUT_LINE_TEXT)
+        .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/autoduino/media/400px-Autoduinolinefinder1.jpg', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize))
+	    .appendField(Blockly.Msg.AUTODUINO_INOUT_LINE_INPUT)
+        .appendField(new Blockly.FieldTextInput('',  Blockly.Arduino.pinDigitalValidator), 'PIN');
+    this.setOutput(true, 'Boolean');
+    this.setTooltip(Blockly.Msg.AUTODUINO_INOUT_LINE_TOOLTIP);
+  }
+};
+
+Blockly.Blocks['autoduino_ultrasonic_ranger'] = {
+  init: function() {
+    this.setColour("#8B0000");
+	this.setHelpUrl(Blockly.Msg.AUTODUINO_INOUT_ULTRASONIC_HELPURL);
+    this.appendDummyInput()
+	    .appendField(Blockly.Msg.AUTODUINO_INOUT_ULTRASONIC_TEXT)
+        .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/autoduino/media/200px-Twig_-_Ultrasonic_Ranger2.jpg', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize))
+        .appendField(Blockly.Msg.AUTODUINO_INOUT_ULTRASONIC_INPUT)
+        .appendField(new Blockly.FieldTextInput('',  Blockly.Arduino.pinDigitalValidator), 'PIN')
+        .appendField(Blockly.Msg.AUTODUINO_INOUT_ULTRASONIC_UNIT)
+        .appendField(new Blockly.FieldDropdown(Blockly.Msg.AUTODUINO_INOUT_ULTRASONIC_UNIT_CHOICE), "UNIT");
+    this.setOutput(true, 'Boolean');
+    this.setTooltip(Blockly.Msg.AUTODUINO_INOUT_ULTRASONIC_TOOLTIP);
+  }
+};
+
+Blockly.Blocks['autoduino_motor_shield'] = {
+  init: function() {
+    this.setColour("#8B0000");
+	this.setHelpUrl(Blockly.Msg.AUTODUINO_INOUT_MOTOR_HELPURL);
+    this.appendDummyInput()
+        .appendField(Blockly.Msg.AUTODUINO_INOUT_MOTOR_TEXT)
+        .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/autoduino/media/400px-Smotoshield2.jpg', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize))
+        .appendField(new Blockly.FieldDropdown(Blockly.Msg.AUTODUINO_INOUT_MOTOR_CHOICE), "DIRECTION");
+    /*this.appendValueInput("SPEED", 'Number')
+        .setCheck('Number')
+        .setAlign(Blockly.ALIGN_RIGHT)
+        .appendField("Speed");*/
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setTooltip(Blockly.Msg.AUTODUINO_INOUT_MOTOR_TOOLTIP);
+  }
+};
+
+Blockly.Blocks['autoduino_thumb_joystick'] = {
+  init: function() {
+    this.setColour("#8B0000");
+	this.setHelpUrl(Blockly.Msg.AUTODUINO_INOUT_JOYSTICK_HELPURL);
+    this.appendDummyInput()
+		.appendField(Blockly.Msg.AUTODUINO_INOUT_JOYSTICK_TEXT1)
+        .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/autoduino/media/200px-Twig_-_Thumb_Joystick_v0.9b.jpg', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize))
+		.appendField(Blockly.Msg.AUTODUINO_INOUT_JOYSTICK_INPUT)
+        .appendField(new Blockly.FieldTextInput('',  Blockly.Arduino.pinAutoduinoAnalogValidator), 'PIN')
+        .appendField(Blockly.Msg.AUTODUINO_INOUT_JOYSTICK_TEXT2)
+        .appendField(new Blockly.FieldDropdown(Blockly.Msg.AUTODUINO_INOUT_JOYSTICK_AXES), "AXIS");
+    this.setOutput(true, 'Number');
+this.setTooltip(Blockly.Msg.AUTODUINO_INOUT_JOYSTICK_TOOLTIP);
+  }
+};
+
+Blockly.Blocks['autoduino_bluetooth_slave'] = {
+  init: function() {
+    this.setColour("#8B0000");
+	this.setHelpUrl(Blockly.Msg.AUTODUINO_INOUT_BT_HELPURL);
+    this.appendDummyInput()
+      .appendField(Blockly.Msg.AUTODUINO_INOUT_BT_COMM1)
+      .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/autoduino/media/Twigbt00.jpg', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize))
+      .appendField(Blockly.Msg.AUTODUINO_INOUT_BT_COMM2)
+      .appendField(new Blockly.FieldTextInput('1',  Blockly.Arduino.pinAutoduinoDigitalValidator), 'PIN');
+    this.appendDummyInput()
+      .setAlign(Blockly.ALIGN_RIGHT)
+      .appendField(Blockly.Msg.AUTODUINO_INOUT_BT_COMM3)
+      .appendField(new Blockly.FieldTextInput('blocklyduino'), 'NAME');
+    this.appendDummyInput()
+      .setAlign(Blockly.ALIGN_RIGHT)
+      .appendField(Blockly.Msg.AUTODUINO_INOUT_BT_COMM4)
+      .appendField(new Blockly.FieldTextInput('0000'), 'PINCODE');
+    this.appendStatementInput("RCV")
+      .setAlign(Blockly.ALIGN_RIGHT)
+      .appendField(Blockly.Msg.AUTODUINO_INOUT_BT_COMM5);
+    this.appendStatementInput("SNT")
+      .setAlign(Blockly.ALIGN_RIGHT)
+      .appendField(Blockly.Msg.AUTODUINO_INOUT_BT_COMM6);
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setTooltip(Blockly.Msg.AUTODUINO_INOUT_BT_TOOLTIP);
+  }
+};
+
+Blockly.Blocks['autoduino_dht_read'] = {
+  init: function() {
+    this.setColour("#8B0000");
+    this.setHelpUrl(Blockly.Msg.AUTODUINO_INOUT_DHT_HELPURL);
+    this.appendDummyInput()
+      .appendField(Blockly.Msg.AUTODUINO_INOUT_DHT_READ_TYPE)
+      .appendField(new Blockly.FieldDropdown([[Blockly.Msg.AUTODUINO_INOUT_DHT_READ_H,"h"],[Blockly.Msg.AUTODUINO_INOUT_DHT_READ_C,"C"],[Blockly.Msg.AUTODUINO_INOUT_DHT_READ_F,"F"]]), "TYPE");
+    this.appendDummyInput()
+      .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/autoduino/media/dht11.jpg', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize))
+      .appendField(Blockly.Msg.AUTODUINO_INOUT_DHT_READ_SENSOR)
+      .appendField(new Blockly.FieldDropdown([["DHT11","DHT11"],["DHT21","DHT21"],["DHT22","DHT22"]]), "SENSOR");
+    this.appendDummyInput()
+      .appendField(Blockly.Msg.AUTODUINO_INOUT_DHT_READ_PIN)
+      .appendField(new Blockly.FieldTextInput('',  Blockly.Arduino.pinDigitalValidator), 'PIN');
+    this.setInputsInline(true);
+    this.setOutput(true, 'Number');
+    this.setTooltip(Blockly.Msg.AUTODUINO_INOUT_DHT_READ_TOOLTIP);
+  }
+};

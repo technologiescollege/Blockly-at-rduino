@@ -1,0 +1,32 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="serial_init" x="112" y="162">
+    <field name="SPEED">9600</field>
+    <next>
+      <block type="serial_print_var">
+        <value name="Text">
+          <shadow type="text">
+            <field name="TEXT"></field>
+          </shadow>
+          <block type="text">
+            <field name="TEXT">T: </field>
+          </block>
+        </value>
+        <value name="N">
+          <shadow type="math_number">
+            <field name="NUM">0</field>
+          </shadow>
+          <block type="autoduino_digital_temperature_sensor">
+            <field name="INDEX">0</field>
+            <field name="PIN">3</field>
+            <field name="RESOLUTION">9</field>
+          </block>
+        </value>
+        <value name="NEW_LINE">
+          <shadow type="logic_boolean">
+            <field name="BOOL">TRUE</field>
+          </shadow>
+        </value>
+      </block>
+    </next>
+  </block>
+</xml>
