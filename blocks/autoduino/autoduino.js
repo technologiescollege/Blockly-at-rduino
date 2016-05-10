@@ -20,14 +20,10 @@ goog.require('Blockly.Blocks');
 
 
 // get specific messages for the autoduino
-    document.write('<script src="blocks/autoduino/autoduino_msg.js"></script>\n');
+    document.write('<script src="blocks/autoduino/msg_autoduino.js"></script>\n');
         
 // set the toolbox from url parameters
     var toolboxFile = BlocklyDuino.getStringParamFromUrl('toolbox', '');
-
-    if (toolboxFile) {
-            $("#toolboxes").val(toolboxFile);
-    }
     
 // redefine pin names for specific toolbox
     if (toolboxFile == 'toolbox_autoduino_a4_autolumi') {
@@ -42,10 +38,7 @@ goog.require('Blockly.Blocks');
         //alert("Load: " + toolboxFile);
         document.write('<script src="blocks/autoduino/msg_autoduino_a4_portail_1_vetail.js"></script>\n');
     }
-    else {
-        //alert("Load - defaut: " + toolboxFile);
-        document.write('<script src="blocks/autoduino/msg_autoduino.js"></script>\n');
-    }	
+
 
     
     
