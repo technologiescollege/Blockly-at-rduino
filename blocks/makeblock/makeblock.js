@@ -21,24 +21,17 @@ goog.require('Blockly.Blocks');
 
 
 // get specific messages for the makeblock
-    document.write('<script src="blocks/makeblock/makeblock_msg.js"></script>\n');
+    document.write('<script src="blocks/makeblock/msg_makeblock.js"></script>\n');
         
 // set the toolbox from url parameters
     var toolboxFile = BlocklyDuino.getStringParamFromUrl('toolbox', '');
-
-    if (toolboxFile) {
-            $("#toolboxes").val(toolboxFile);
-    }
     
 // redefine pin names for specific toolbox
     if (toolboxFile == 'toolbox_makeblock_mbot') {
         //alert("Load: " + toolboxFile);
         document.write('<script src="blocks/makeblock/msg_makeblock_mbot.js"></script>\n');
     }
-    else {
-        //alert("Load - defaut: " + toolboxFile);
-        document.write('<script src="blocks/makeblock/msg_makeblock.js"></script>\n');
-    }	
+
 
 
 /** ****************** CAPTEURS ******************************/
