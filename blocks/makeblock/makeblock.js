@@ -31,7 +31,7 @@ goog.require('Blockly.Blocks');
         //alert("Load: " + toolboxFile);
         document.write('<script src="blocks/makeblock/msg_makeblock_mbot.js"></script>\n');
     }
-
+ 
 
 
 /** ****************** CAPTEURS ******************************/
