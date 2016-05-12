@@ -301,6 +301,15 @@ Code.initLanguageSupervision = function() {
 	  
 };
 
+//Load FRENCH by default... This allow to have a definition for additionnal blocks messages in case another langage is chosen
+//Load the Code demo's language strings.
+//document.write('<script src="lang/msg/fr.js"></script>\n');
+// Load Blockly's language strings.
+//document.write('<script src="lang/blocks/fr.js"></script>\n');
+// Load Supervision's language strings.
+//document.write('<script src="lang/supervision/fr.js"></script>\n');
+
+// And then load the chose langage
 //Load the Code demo's language strings.
 document.write('<script src="lang/msg/' + Code.LANG + '.js"></script>\n');
 // Load Blockly's language strings.

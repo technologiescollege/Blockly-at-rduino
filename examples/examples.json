@@ -30,5 +30,13 @@
       "link_url":"http://fablabo.net/wiki/FablabJunior_Automne_2015/Projet2",
       "link_text":"sur Fablabo",
         "visible": true
+   },
+   {
+      "source_url":"./examples/BT_PAF_Nantes/BT_PAF_Nantes.xml",
+      "source_text":"voici comment connecter une carte Bluetooth pour commencer à recueillir des informations envoyées",
+      "image":"./examples/BT_PAF_Nantes/BT_PAF_Nantes_fritzing.jpg",
+      "link_url":"",
+      "link_text":"",
+        "visible": true
    }
 ]

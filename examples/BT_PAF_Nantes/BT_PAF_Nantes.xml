@@ -1,0 +1,46 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="soft_init" x="38" y="38">
+    <field name="PIN1">10</field>
+    <field name="PIN2">11</field>
+    <field name="SPEED">300</field>
+    <next>
+      <block type="controls_if">
+        <value name="IF0">
+          <block type="soft_available"></block>
+        </value>
+        <statement name="DO0">
+          <block type="variables_set">
+            <field name="VAR">bluetooth</field>
+            <value name="VALUE">
+              <block type="variables_set_type">
+                <field name="VARIABLE_SETTYPE_TYPE">NUMBER</field>
+                <value name="VARIABLE_SETTYPE_INPUT">
+                  <block type="soft_read"></block>
+                </value>
+              </block>
+            </value>
+            <next>
+              <block type="controls_if">
+                <value name="IF0">
+                  <block type="logic_compare">
+                    <field name="OP">EQ</field>
+                    <value name="A">
+                      <block type="variables_get">
+                        <field name="VAR">bluetooth</field>
+                      </block>
+                    </value>
+                    <value name="B">
+                      <block type="math_number">
+                        <field name="NUM">0</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+              </block>
+            </next>
+          </block>
+        </statement>
+      </block>
+    </next>
+  </block>
+</xml>

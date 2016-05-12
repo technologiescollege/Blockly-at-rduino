@@ -47,6 +47,7 @@ var profile = {
                 ['14400', '14400'], ['19200', '19200'], ['28800', '28800'],
                 ['31250', '31250'], ['38400', '38400'], ['57600', '57600'],
                 ['115200', '115200']],
+		upload_arg: ".\avrdude -Cavrdude.conf -v -patmega2560 -cwiring -P\\.\COM9 -b115200 -D -V -Uflash:w:s2aio-FirmataPlus.Mega.hex:i",
 	},
 	arduino_mega:{
 		description: "Arduino Mega",
