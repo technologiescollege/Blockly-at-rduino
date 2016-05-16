@@ -18,7 +18,7 @@ goog.provide('Blockly.Blocks.makeblock');
 
 goog.require('Blockly.Blocks');
 
-
+/*
 
 // get specific messages for the makeblock
     document.write('<script src="blocks/makeblock/msg_makeblock.js"></script>\n');
@@ -32,7 +32,7 @@ goog.require('Blockly.Blocks');
         document.write('<script src="blocks/makeblock/msg_makeblock_mbot.js"></script>\n');
     }
  
-
+*/
 
 /** ****************** CAPTEURS ******************************/
 

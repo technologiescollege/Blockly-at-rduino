@@ -1,3 +1,9 @@
+'use strict';
+
+goog.provide('Blockly.Msg.fr');
+
+goog.require('Blockly.Msg');
+
 // redefinition of the pin names for specific toolbox
 
 Blockly.Msg.Makeblock_Mcore = [["Port 1 (m-Core)", '["12", "11"]'], ["Suiveur de ligne", '["10", "9"]'], ["Ultrason", '["A3", "A2"]'], ["Port 4 (m-Core)", '["A1", "A0"]']];

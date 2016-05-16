@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <toolbox>
-	<parametre id="defaultCategories">CAT_LOGIC,CAT_LOOPS,CAT_MATH,CAT_ARRAY,CAT_TEXT,CAT_VARIABLES,CAT_FUNCTIONS,CAT_ARDUINO,CAT_AUTODUINO
+	<parametre id="defaultCategories">CAT_LOGIC,CAT_LOOPS,CAT_MATH,CAT_ARRAY,CAT_TEXT,CAT_VARIABLES,CAT_FUNCTIONS,CAT_ARDUINO,AUTODUINO_TARGET_AUTODUINO
 	</parametre>
 	<category name="CAT_LOGIC" colour="#E1A91A">
 		<block type="controls_if"></block>
@@ -297,7 +297,7 @@
 		</category>
 		<sep></sep>
 	</category>
-        <category name="CAT_AUTODUINO">
+        <category name="AUTODUINO_TARGET_AUTODUINO">
             <category name="CAT_AUTODUINO_IN">
                 <block type="autoduino_button"></block>
                 <block type="autoduino_rotary_angle"></block>
@@ -336,6 +336,105 @@
             </category>
             <category name="CAT_AUTODUINO_COMM">
                 <block type="autoduino_bluetooth_slave"></block>
+                <block type="autoduino_rc"></block>
+                <block type="autoduino_ir_code_detection"></block>
+            </category>
+            <category name="CAT_AUTODUINO_UTIL">
+                <block type="autoduino_edge_detection"></block>
+            </category>
+        </category>	
+        <category name="AUTODUINO_TARGET_AUTOLUMI">
+            <category name="CAT_AUTODUINO_IN">
+                <block type="autoduino_button"></block>
+                <block type="autoduino_rotary_angle"></block>
+                <block type="autoduino_rotary_push"></block>
+                <block type="autoduino_ils_switch"></block>
+                <block type="autoduino_pir_motion_sensor"></block>
+                <block type="autoduino_ultrasonic_ranger"></block>
+                <block type="autoduino_LDR_sensor"></block>
+            </category>
+            <category name="CAT_AUTODUINO_OUT">
+                <block type="autoduino_led"></block>
+                <block type="autoduino_led_eclairage"></block>
+                <block type="autoduino_output"></block>
+                <block type="autoduino_rgb_led"></block>
+                <block type="autoduino_rgb_led2"></block>
+                <block type="autoduino_piezo_buzzer"></block>
+            </category>
+            <category name="CAT_AUTODUINO_LCD">
+                <block type="autoduino_lcdwrite"></block>
+                <block type="autoduino_lcdprint"></block>
+                <block type="autoduino_lcdclear"></block>
+                <block type="autoduino_lcdspecial"></block>
+                <block type="autoduino_lcdinit"></block>
+            </category>
+            <category name="CAT_AUTODUINO_COMM">
+                <block type="autoduino_rc"></block>
+                <block type="autoduino_ir_code_detection"></block>
+            </category>
+            <category name="CAT_AUTODUINO_UTIL">
+                <block type="autoduino_edge_detection"></block>
+            </category>
+        </category>	
+        <category name="AUTODUINO_TARGET_AUTOALARME">
+            <category name="CAT_AUTODUINO_IN">
+                <block type="autoduino_button"></block>
+                <block type="autoduino_rotary_angle"></block>
+                <block type="autoduino_rotary_push"></block>
+                <block type="autoduino_ils_switch"></block>
+                <block type="autoduino_pir_motion_sensor"></block>
+                <block type="autoduino_ultrasonic_ranger"></block>
+                <block type="autoduino_LDR_sensor"></block>
+            </category>
+            <category name="CAT_AUTODUINO_OUT">
+                <block type="autoduino_led"></block>
+                <block type="autoduino_led_eclairage"></block>
+                <block type="autoduino_output"></block>
+                <block type="autoduino_rgb_led"></block>
+                <block type="autoduino_rgb_led2"></block>
+                <block type="autoduino_piezo_buzzer"></block>
+            </category>
+            <category name="CAT_AUTODUINO_LCD">
+                <block type="autoduino_lcdwrite"></block>
+                <block type="autoduino_lcdprint"></block>
+                <block type="autoduino_lcdclear"></block>
+                <block type="autoduino_lcdspecial"></block>
+                <block type="autoduino_lcdinit"></block>
+            </category>
+            <category name="CAT_AUTODUINO_COMM">
+                <block type="autoduino_rc"></block>
+                <block type="autoduino_ir_code_detection"></block>
+            </category>
+            <category name="CAT_AUTODUINO_UTIL">
+                <block type="autoduino_edge_detection"></block>
+            </category>
+        </category>	
+        <category name="AUTODUINO_TARGET_PORTAIL_1">
+            <category name="CAT_AUTODUINO_IN">
+                <block type="autoduino_button"></block>
+                <block type="autoduino_rotary_angle"></block>
+                <block type="autoduino_rotary_push"></block>
+                <block type="autoduino_ils_switch"></block>
+                <block type="autoduino_pir_motion_sensor"></block>
+                <block type="autoduino_ultrasonic_ranger"></block>
+                <block type="autoduino_LDR_sensor"></block>
+            </category>
+            <category name="CAT_AUTODUINO_OUT">
+                <block type="autoduino_led"></block>
+                <block type="autoduino_led_eclairage"></block>
+                <block type="autoduino_output"></block>
+                <block type="autoduino_rgb_led"></block>
+                <block type="autoduino_rgb_led2"></block>
+                <block type="autoduino_piezo_buzzer"></block>
+            </category>
+            <category name="CAT_AUTODUINO_LCD">
+                <block type="autoduino_lcdwrite"></block>
+                <block type="autoduino_lcdprint"></block>
+                <block type="autoduino_lcdclear"></block>
+                <block type="autoduino_lcdspecial"></block>
+                <block type="autoduino_lcdinit"></block>
+            </category>
+            <category name="CAT_AUTODUINO_COMM">
                 <block type="autoduino_rc"></block>
                 <block type="autoduino_ir_code_detection"></block>
             </category>

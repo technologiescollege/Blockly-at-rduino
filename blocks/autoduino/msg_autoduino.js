@@ -1,3 +1,10 @@
+'use strict';
+
+goog.provide('Blockly.Msg.fr');
+
+goog.require('Blockly.Msg');
+
+
 //added april 24th 2016
 Blockly.Msg.CAT_AUTODUINO = "Autoduino";  //added march 9th 2015
 Blockly.Msg.CAT_AUTODUINO_IN = "capteurs";
@@ -196,3 +203,8 @@ Blockly.Msg.AUTODUINO_TEXT99 = "Ecrire sur l'écran LCD (réf : LCD1)";
 Blockly.Msg.AUTODUINO_EDGE_TEXT = "détection ";
 Blockly.Msg.AUTODUINO_EDGE_INPUT = "sur l'entrée";
 Blockly.Msg.AUTODUINO_EDGE_UP_DOWN = [["front montant", "UP"], ["front descedant", "DOWN"]];
+
+Blockly.Msg.AUTODUINO_TARGET_AUTODUINO = "Carte Autoduino";
+Blockly.Msg.AUTODUINO_TARGET_AUTOLUMI = "Maquette A4 AutoLumi";
+Blockly.Msg.AUTODUINO_TARGET_AUTOALARME = "Maquette A4 AutoAlarme";
+Blockly.Msg.AUTODUINO_TARGET_PORTAIL_1 = "Maquette A4 Portail 1 ventail";

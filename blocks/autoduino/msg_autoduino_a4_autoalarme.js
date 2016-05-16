@@ -1,3 +1,9 @@
+'use strict';
+
+goog.provide('Blockly.Msg.fr');
+
+goog.require('Blockly.Msg');
+
 // redefinition of the pin names for specific toolbox
 
 Blockly.Msg.AUTODUINO_OUT = [["Voyant lumineux", "7"], ["Buzzer", "8"]];

@@ -1,0 +1,234 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="serial_init" x="63" y="212">
+    <field name="SPEED">9600</field>
+    <next>
+      <block type="autoduino_led_eclairage">
+        <field name="PIN">41</field>
+        <field name="STAT">LOW</field>
+        <next>
+          <block type="variables_set">
+            <field name="VAR">Etat_SdB</field>
+            <value name="VALUE">
+              <block type="variables_set_type">
+                <field name="VARIABLE_SETTYPE_TYPE">BOOLEAN</field>
+                <value name="VARIABLE_SETTYPE_INPUT">
+                  <block type="logic_boolean">
+                    <field name="BOOL">FALSE</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <next>
+              <block type="variables_set">
+                <field name="VAR">BP_SdB_precedent</field>
+                <value name="VALUE">
+                  <block type="variables_set_type">
+                    <field name="VARIABLE_SETTYPE_TYPE">BOOLEAN</field>
+                    <value name="VARIABLE_SETTYPE_INPUT">
+                      <block type="logic_boolean">
+                        <field name="BOOL">FALSE</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <next>
+                  <block type="controls_whileUntil">
+                    <field name="MODE">WHILE</field>
+                    <value name="BOOL">
+                      <block type="logic_boolean">
+                        <field name="BOOL">TRUE</field>
+                      </block>
+                    </value>
+                    <statement name="DO">
+                      <block type="variables_set">
+                        <field name="VAR">BP_SdB_precedent</field>
+                        <value name="VALUE">
+                          <block type="variables_get">
+                            <field name="VAR">BP_SdB</field>
+                          </block>
+                        </value>
+                        <next>
+                          <block type="variables_set">
+                            <field name="VAR">BP_SdB</field>
+                            <value name="VALUE">
+                              <block type="variables_set_type">
+                                <field name="VARIABLE_SETTYPE_TYPE">BOOLEAN</field>
+                                <value name="VARIABLE_SETTYPE_INPUT">
+                                  <block type="autoduino_button">
+                                    <field name="PIN">A3</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                            <next>
+                              <block type="controls_if">
+                                <value name="IF0">
+                                  <block type="logic_operation">
+                                    <field name="OP">AND</field>
+                                    <value name="A">
+                                      <block type="variables_get">
+                                        <field name="VAR">BP_SdB</field>
+                                      </block>
+                                    </value>
+                                    <value name="B">
+                                      <block type="logic_negate">
+                                        <value name="BOOL">
+                                          <block type="variables_get">
+                                            <field name="VAR">BP_SdB_precedent</field>
+                                          </block>
+                                        </value>
+                                      </block>
+                                    </value>
+                                  </block>
+                                </value>
+                                <statement name="DO0">
+                                  <block type="variables_set">
+                                    <field name="VAR">Etat_SdB</field>
+                                    <value name="VALUE">
+                                      <block type="logic_negate">
+                                        <value name="BOOL">
+                                          <block type="variables_get">
+                                            <field name="VAR">Etat_SdB</field>
+                                          </block>
+                                        </value>
+                                      </block>
+                                    </value>
+                                  </block>
+                                </statement>
+                                <next>
+                                  <block type="controls_if">
+                                    <mutation else="1"></mutation>
+                                    <value name="IF0">
+                                      <block type="variables_get">
+                                        <field name="VAR">Etat_SdB</field>
+                                      </block>
+                                    </value>
+                                    <statement name="DO0">
+                                      <block type="autoduino_led_eclairage">
+                                        <field name="PIN">41</field>
+                                        <field name="STAT">HIGH</field>
+                                      </block>
+                                    </statement>
+                                    <statement name="ELSE">
+                                      <block type="autoduino_led_eclairage">
+                                        <field name="PIN">41</field>
+                                        <field name="STAT">LOW</field>
+                                      </block>
+                                    </statement>
+                                    <next>
+                                      <block type="serial_print_var">
+                                        <value name="Text">
+                                          <shadow type="text">
+                                            <field name="TEXT"></field>
+                                          </shadow>
+                                          <block type="text">
+                                            <field name="TEXT">BP:</field>
+                                          </block>
+                                        </value>
+                                        <value name="N">
+                                          <shadow type="math_number">
+                                            <field name="NUM">0</field>
+                                          </shadow>
+                                          <block type="variables_get">
+                                            <field name="VAR">Etat_SdB</field>
+                                          </block>
+                                        </value>
+                                        <value name="NEW_LINE">
+                                          <shadow type="logic_boolean">
+                                            <field name="BOOL">TRUE</field>
+                                          </shadow>
+                                        </value>
+                                      </block>
+                                    </next>
+                                  </block>
+                                </next>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </statement>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+  <block type="serial_init" x="99" y="989">
+    <field name="SPEED">9600</field>
+    <next>
+      <block type="autoduino_led_eclairage">
+        <field name="PIN">41</field>
+        <field name="STAT">LOW</field>
+        <next>
+          <block type="variables_set">
+            <field name="VAR">BP_SdB</field>
+            <value name="VALUE">
+              <block type="variables_set_type">
+                <field name="VARIABLE_SETTYPE_TYPE">BOOLEAN</field>
+                <value name="VARIABLE_SETTYPE_INPUT">
+                  <block type="autoduino_button">
+                    <field name="PIN">A3</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <next>
+              <block type="controls_if">
+                <mutation else="1"></mutation>
+                <value name="IF0">
+                  <block type="logic_compare">
+                    <field name="OP">EQ</field>
+                    <value name="A">
+                      <block type="variables_get">
+                        <field name="VAR">BP_SdB</field>
+                      </block>
+                    </value>
+                    <value name="B">
+                      <block type="math_number">
+                        <field name="NUM">1</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <statement name="DO0">
+                  <block type="autoduino_led_eclairage">
+                    <field name="PIN">41</field>
+                    <field name="STAT">HIGH</field>
+                    <next>
+                      <block type="base_delay">
+                        <value name="DELAY_TIME">
+                          <shadow type="math_number">
+                            <field name="NUM">1000</field>
+                          </shadow>
+                        </value>
+                      </block>
+                    </next>
+                  </block>
+                </statement>
+                <statement name="ELSE">
+                  <block type="autoduino_led_eclairage">
+                    <field name="PIN">41</field>
+                    <field name="STAT">LOW</field>
+                    <next>
+                      <block type="base_delay">
+                        <value name="DELAY_TIME">
+                          <shadow type="math_number">
+                            <field name="NUM">1000</field>
+                          </shadow>
+                        </value>
+                      </block>
+                    </next>
+                  </block>
+                </statement>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+</xml>

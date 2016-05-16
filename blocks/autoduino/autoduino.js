@@ -19,6 +19,7 @@ goog.provide('Blockly.Blocks.autoduino');
 goog.require('Blockly.Blocks');
 
 
+/**
 // get specific messages for the autoduino
     document.write('<script src="blocks/autoduino/msg_autoduino.js"></script>\n');
         
@@ -39,7 +40,7 @@ goog.require('Blockly.Blocks');
         document.write('<script src="blocks/autoduino/msg_autoduino_a4_portail_1_vetail.js"></script>\n');
     }
 
-
+*/
     
     
 /** ****************** CAPTEURS ******************************/

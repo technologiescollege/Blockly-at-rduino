@@ -3,11 +3,11 @@
 <link rel="icon" type="image/png" href="favicon.bmp" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Blockly@rduino</title>
-<!-- <script type="text/javascript" src="blocks/blockly_uncompressed.js"></script> -->
+<!--script type="text/javascript" src="blocks/blockly_uncompressed.js"></script-->
 <script type="text/javascript" src="blocks/blockly_compressed.js"></script>
 
 <script type="text/javascript" src="utils/boards.js"></script>
-<!-- needed for type of variable--->
+<!-- needed for type of variable-->
 <script type="text/javascript" src="utils/type.js"></script>
 <script type="text/javascript" src="utils/types.js"></script>
 <script type="text/javascript" src="utils/static_typing.js"></script>
@@ -56,10 +56,9 @@
 <script type="text/javascript" src="blocks/robots/robot_motors.js"></script>
 <script type="text/javascript" src="blocks/robots/robot_misc.js"></script>
 <script type="text/javascript" src="blocks/arduino_shield/arduino_shield.js"></script>
-<script type="text/javascript" src="blocks/autoduino/autoduino.js"></script>  <!-- //NBR -->
-<script type="text/javascript" src="blocks/autoduino/autoduino_autolumi.js"></script>  <!-- //NBR -->
-<script type="text/javascript" src="blocks/makeblock/makeblock.js"></script>  <!-- //NBR -->
-<script type="text/javascript" src="blocks/makeblock/makeblock_mbot.js"></script>  <!-- //NBR -->
+<script type="text/javascript" src="blocks/autoduino/autoduino.js"></script><!--NBR-->
+<script type="text/javascript" src="blocks/makeblock/makeblock.js"></script><!--NBR-->
+
 
 <script type="text/javascript" src="generators/blocklyarduino/control.js"></script>
 <script type="text/javascript" src="generators/blocklyarduino/logic.js"></script>
@@ -94,8 +93,8 @@
 <script type="text/javascript" src="generators/arduino/robot_misc.js"></script>
 <script type="text/javascript" src="generators/arduino/arduino_shield.js"></script>
 <script type="text/javascript" src="generators/arduino/kit_velo_niv1.js"></script>
-<script type="text/javascript" src="generators/autoduino/autoduino.js"></script> <!-- //NBR -->
-<script type="text/javascript" src="generators/makeblock/makeblock.js"></script> <!-- //NBR -->
+<script type="text/javascript" src="generators/autoduino/autoduino.js"></script><!--NBR-->
+<script type="text/javascript" src="generators/makeblock/makeblock.js"></script><!--NBR-->
 
 <!--TechnoZone51-->
 <script type="text/javascript" src="utils/html2canvas.js"></script>
@@ -222,7 +221,7 @@
 		   </button>
 		</div>
 		<div id="div_help_button">
-		   <a id="btn_doc" class='btn btn-success btn-info text-left' href="http://tic.technologiescollege.fr/wiki/" target=_blank role='button'>
+		   <a id="btn_doc" class="btn btn-success btn-info text-left" href="http://tic.technologiescollege.fr/wiki/" target=_blank role='button'>
 		       <span class="glyphicon glyphicon-info-sign"></span>
 		       <span id="span_doc"> </span>
 		   </a>
@@ -460,17 +459,13 @@
 		<div id="divToolbox">
 			<label id="labelToolboxDefinition"></label> 
 			<select id="toolboxes">
-				<option value="toolbox_algo">Algo simple</option>
-				<option value="toolbox_arduino_1">Arduino pour débutants</option>
-				<option value="toolbox_arduino_2">Arduino pour habitués</option>
-				<option value="toolbox_arduino_all" selected="selected">Arduino pour experts</option>
-				<option value="toolbox_autoduino" selected="selected">Autoduino</option>  <!-- //NBR -->
-				<option value="toolbox_autoduino_a4_autolumi" selected="selected">Autoduino maquette A4: AutoLumi</option>  <!-- //NBR -->
-				<option value="toolbox_autoduino_a4_autoalarme" selected="selected">Autoduino maquette A4: AutoAlarme</option>  <!-- //NBR -->
-				<option value="toolbox_autoduino_a4_portail_1_vetail" selected="selected">Autoduino maquette A4: Portail 1 ventail</option>  <!-- //NBR -->
-				<option value="toolbox_makeblock" selected="selected">Makeblock</option>  <!-- //NBR -->
-				<option value="toolbox_makeblock_mbot" selected="selected">Makeblock robot mBot</option>  <!-- //NBR -->
-			</select>
+				<option value="toolbox_algo" selected="selected">Algo simple</option>
+				<option value="toolbox_1" selected="selected">Arduino pour débutants</option>
+				<option value="toolbox_2" selected="selected">Arduino pour habitués</option>
+				<option value="toolbox_arduino_all">Arduino pour experts</option>
+				<option value="toolbox_autoduino" selected="selected">Autoduino</option><!--NBR-->
+				<option value="toolbox_makeblock" selected="selected">Makeblock</option><!--NBR-->	
+                        </select>
 		</div>
       <input type="checkbox" name="select_all" id="select_all"/> <span id="span_select_all"> </span>
       <div style="float : right; margin-right : 5px;">
@@ -506,4 +501,3 @@
 
 </body>
 </html>
- 

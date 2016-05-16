@@ -1,3 +1,9 @@
+'use strict';
+
+goog.provide('Blockly.Msg.fr');
+
+goog.require('Blockly.Msg');
+
 // redefinition of the pin names for specific toolbox
 
 Blockly.Msg.AUTODUINO_OUT = [["Lumière cuisine", "40"], ["Lumière sanitaire", "41"], ["LED sanitaire", "42"], ["Lumière salon 1", "43"], ["Lumière salon 2", "44"], ["Lumière entrée", "45"]];

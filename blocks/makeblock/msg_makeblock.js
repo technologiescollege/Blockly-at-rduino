@@ -1,3 +1,8 @@
+'use strict';
+
+goog.provide('Blockly.Msg.fr');
+
+goog.require('Blockly.Msg');
 
 //added mai 5th 2016
 Blockly.Msg.CAT_MAKEBLOCK = "Makeblock"; 

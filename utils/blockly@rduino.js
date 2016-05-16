@@ -426,7 +426,8 @@ BlocklyDuino.getFiles = function (){
 BlocklyDuino.uploadClick = function() {
     var code = $('#pre_arduino').text();
     
-    var url = "http://127.0.0.1:888/";
+//    var url = "http://127.0.0.1:888/";
+    var url = "http://127.0.0.1:1020/"; // Temporary set to 1020 to match the "arduino compiler uploader server" 
     var method = "POST";
 
     // You REALLY want async = true.
