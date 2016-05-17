@@ -24,18 +24,18 @@ goog.require('Blockly.Blocks');
     document.write('<script src="blocks/autoduino/msg_autoduino.js"></script>\n');
         
 // set the toolbox from url parameters
-    var toolboxFile = BlocklyDuino.getStringParamFromUrl('toolbox', '');
+    var toolboxFile = BlocklyDuino.getStringParamFromUrl('toolboxids', '');
     
 // redefine pin names for specific toolbox
-    if (toolboxFile == 'toolbox_autoduino_a4_autolumi') {
+    if (toolboxFile.indexOf('AUTODUINO_TARGET_AUTOLUMI')) {
         //alert("Load: " + toolboxFile);
         document.write('<script src="blocks/autoduino/msg_autoduino_a4_autolumi.js"></script>\n');
     }
-    else if (toolboxFile == 'toolbox_autoduino_a4_autoalarme') {
+    else if (toolboxFile.indexOf('AUTODUINO_TARGET_AUTOALARME')) {
         //alert("Load: " + toolboxFile);
         document.write('<script src="blocks/autoduino/msg_autoduino_a4_autoalarme.js"></script>\n');
     }
-    else if (toolboxFile == 'toolbox_autoduino_a4_portail_1_ventail') {
+    else if (toolboxFile.indexOf('AUTODUINO_TARGET_PORTAIL')) {
         //alert("Load: " + toolboxFile);
         document.write('<script src="blocks/autoduino/msg_autoduino_a4_portail_1_vetail.js"></script>\n');
     }
