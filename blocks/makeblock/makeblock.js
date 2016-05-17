@@ -24,10 +24,10 @@ goog.require('Blockly.Blocks');
     document.write('<script src="blocks/makeblock/msg_makeblock.js"></script>\n');
         
 // set the toolbox from url parameters
-    var toolboxFile = BlocklyDuino.getStringParamFromUrl('toolbox', '');
+    var toolboxFile = BlocklyDuino.getStringParamFromUrl('toolboxids', '');
     
 // redefine pin names for specific toolbox
-    if (toolboxFile == 'toolbox_makeblock_mbot') {
+    if (toolboxFile.indexOf('AUTODUINO_TARGET_MBOT')) {
         //alert("Load: " + toolboxFile);
         document.write('<script src="blocks/makeblock/msg_makeblock_mbot.js"></script>\n');
     }
