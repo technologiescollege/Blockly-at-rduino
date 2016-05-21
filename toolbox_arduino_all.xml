@@ -86,11 +86,11 @@
 		</block>
 		<block type="math_random_float"></block>
 	</category>
-	<!--category name="CAT_LIST" colour="#58B5DC"> <block type="lists_create_empty"></block> 
-		<block type="lists_create_with"></block> <block type="lists_repeat"> <value 
-		name="NUM"> <block type="math_number"> <field name="NUM">5</field> </block> 
-		</value> </block> <block type="lists_length"></block> <block type="lists_isEmpty"></block> 
-		<block type="lists_indexOf"></block> <block type="lists_getIndex"></block> 
+	<!--category name="CAT_LIST" colour="#58B5DC"> <block type="lists_create_empty"></block>
+		<block type="lists_create_with"></block> <block type="lists_repeat"> <value
+		name="NUM"> <block type="math_number"> <field name="NUM">5</field> </block>
+		</value> </block> <block type="lists_length"></block> <block type="lists_isEmpty"></block>
+		<block type="lists_indexOf"></block> <block type="lists_getIndex"></block>
 		<block type="lists_setIndex"></block> </category -->
 	<category name="CAT_ARRAY" colour="#58B5DC">
 		<block type="array_create_with"></block>
@@ -143,15 +143,15 @@
 		<!-- </value> -->
 		<!-- </block> -->
 	</category>
-	<!-- <category name="CAT_COLOR" colour="#c09e8c"> <block type="colour_picker"></block> 
-		<block type="colour_random"></block> <block type="colour_rgb"> <value name="RED"> 
-		<block type="math_number"> <field name="NUM">100</field> </block> </value> 
-		<value name="GREEN"> <block type="math_number"> <field name="NUM">50</field> 
-		</block> </value> <value name="BLUE"> <block type="math_number"> <field name="NUM">0</field> 
-		</block> </value> </block> <block type="colour_blend"> <value name="COLOUR1"> 
-		<block type="colour_picker"> <field name="COLOUR">#ff0000</field> </block> 
-		</value> <value name="COLOUR2"> <block type="colour_picker"> <field name="COLOUR">#3333ff</field> 
-		</block> </value> <value name="RATIO"> <block type="math_number"> <field 
+	<!-- <category name="CAT_COLOR" colour="#c09e8c"> <block type="colour_picker"></block>
+		<block type="colour_random"></block> <block type="colour_rgb"> <value name="RED">
+		<block type="math_number"> <field name="NUM">100</field> </block> </value>
+		<value name="GREEN"> <block type="math_number"> <field name="NUM">50</field>
+		</block> </value> <value name="BLUE"> <block type="math_number"> <field name="NUM">0</field>
+		</block> </value> </block> <block type="colour_blend"> <value name="COLOUR1">
+		<block type="colour_picker"> <field name="COLOUR">#ff0000</field> </block>
+		</value> <value name="COLOUR2"> <block type="colour_picker"> <field name="COLOUR">#3333ff</field>
+		</block> </value> <value name="RATIO"> <block type="math_number"> <field
 		name="NUM">0.5</field> </block> </value> </block> </category> -->
 	<category name="CAT_VARIABLES" colour="#EE7D16">
 		<block type="variables_set"></block>
@@ -456,6 +456,11 @@
 					<field name="NUM">1</field>
 				</shadow>
 			</value>
+			<value name="Brightness">
+				<shadow type="math_number">
+					<field name="NUM">125</field>
+				</shadow>
+			</value>
 		</block>
 		<block type="lp2i_ledRGB_WS2812B_setPixelColor">
 			<value name="Pixel_number">
@@ -489,8 +494,8 @@
 						<field name="NUM">127</field>
 					</shadow>
 				</value>
-			</block>	
-			<block type="romeo_right_sens"></block>	
+			</block>
+			<block type="romeo_right_sens"></block>
 			<block type="romeo_right_PWM">
 				<value name="PWM">
 					<shadow type="math_number">
@@ -1458,7 +1463,7 @@
 				</shadow>
 			</value>
 		</block>
-		<block type="mbot_right_sens"></block>	
+		<block type="mbot_right_sens"></block>
 		<block type="mbot_right_PWM">
 			<value name="PWM">
 				<shadow type="math_number">

@@ -650,13 +650,13 @@ Blockly.Msg.SSERIAL_Print="afficher sur le port de communication le texte";
 Blockly.Msg.SSERIAL_Write="envoyer sur le port de communication";
 Blockly.Msg.SSERIAL_Avai="une donnée est disponible ?";
 
-//VARIABLES 
+//VARIABLES
 Blockly.Msg.ARDUINO_VAR_DECLARE="déclare";
 Blockly.Msg.ARDUINO_VAR_AS="en tant que";
 Blockly.Msg.ARDUINO_VAR_VAL="de valeur";
 
 //Conversions
-Blockly.Msg.CONV_tochar="convertir en char "; 
+Blockly.Msg.CONV_tochar="convertir en char ";
 Blockly.Msg.CONV_tobyte="convertir en Byte ";
 Blockly.Msg.CONV_toint="convertir en Int ";
 Blockly.Msg.CONV_tofloat="convertir en Float ";
@@ -1088,6 +1088,8 @@ Blockly.Msg.lp2i_u8g_4draw_print_N4 = "Nombre 4 (en fin de ligne) ="
 Blockly.Msg.lp2i_ledRGB_WS2812B_init = "Led RGB WS2812B Init";
 Blockly.Msg.lp2i_ledRGB_WS2812B_init_Pin = "Broche =";
 Blockly.Msg.lp2i_ledRGB_WS2812B_init_Number_of_Pixels = "Nombre de pixels =";
+Blockly.Msg.lp2i_ledRGB_WS2812B_Brightness = "Luminosité =";
+
 
 Blockly.Msg.lp2i_ledRGB_WS2812B_setPixelColor = "Led RGB WS2812B. Envoyer couleur :";
 Blockly.Msg.lp2i_ledRGB_WS2812B_setPixelColor_Red = "Rouge (255 max) =";
@@ -1157,7 +1159,7 @@ Blockly.Msg.multifunction_segment_INPUT3 = "3ème chiffre";
 Blockly.Msg.multifunction_segment_INPUT4 = "4ème chiffre";
 Blockly.Msg.multifunction_segment_TOOLTIP = "afficher 4 chifres sur les 7 segments";
 
-//Added March 18th 2016 
+//Added March 18th 2016
 Blockly.Msg.ROBUNO_INOUT_LED_INPUT1 = "mettre la DEL Rouge";
 Blockly.Msg.ROBUNO_INOUT_LED_INPUT2 = "sur la broche Numérique";
 Blockly.Msg.ROBUNO_INOUT_LED_INPUT3 = "à l'état";
@@ -1189,11 +1191,11 @@ Blockly.Msg.ROBUNO_TEXT16 = "Carte de commande de deux moteurs CC";
 
 Blockly.Msg.ROBUNO_LUX_TITLE1 = "la luminosité lue sur la LDR Gauche";
 Blockly.Msg.ROBUNO_LUX_TITLE2 = "la luminosité lue sur la LDR Droite";
-Blockly.Msg.ROBUNO_LUX_TOOLTIP = "entrée Capteur de Luminosité"; 
+Blockly.Msg.ROBUNO_LUX_TOOLTIP = "entrée Capteur de Luminosité";
 Blockly.Msg.ROBUNO_PIN_ANALOG = "sur la broche Analogique";
 Blockly.Msg.ROBUNO_HELPURL = "http://www.technologieservices.fr/fr/a-a1000022060-edc1000003/article/RUSA-Robot-RobUno-a-servomoteurs.html";
 
-//Added March 26th 2016 
+//Added March 26th 2016
 Blockly.Msg.FISCHERTECHNIK_INOUT_LED_INPUT1 = "mettre le feu rouge";
 Blockly.Msg.FISCHERTECHNIK_INOUT_LED_INPUT2 = "sur la broche Numérique";
 Blockly.Msg.FISCHERTECHNIK_INOUT_LED_INPUT3 = "à l'état";
@@ -1213,7 +1215,7 @@ Blockly.Msg.FISCHERTECHNIK_TEXT8 = "le capteur magnétique";
 Blockly.Msg.FISCHERTECHNIK_BUZZER1_TOOLTIP = "Sortie Buzzer (réf : BUZZER)";
 Blockly.Msg.FISCHERTECHNIK_PIN = "sur la broche";
 Blockly.Msg.FISCHERTECHNIK_LUX_TITLE1 = "la luminosité lue sur le capteur de lumière";
-Blockly.Msg.FISCHERTECHNIK_LUX_TOOLTIP = "Entrée capteur de Luminosité"; 
+Blockly.Msg.FISCHERTECHNIK_LUX_TOOLTIP = "Entrée capteur de Luminosité";
 Blockly.Msg.FISCHERTECHNIK_PIN_ANALOG = "sur la broche Analogique";
 
 Blockly.Msg.FISCHERTECHNIK_TEXT9 = "commande le moteur";
@@ -1226,7 +1228,7 @@ Blockly.Msg.FISCHERTECHNIK_TEXT15 = "vitesse MAX (VRAI) ou nulle (FAUX)";
 Blockly.Msg.FISCHERTECHNIK_TEXT16 = "Carte de commande de deux moteurs CC";
 Blockly.Msg.FISCHERTECHNIK_TEXT17 = " est appuyée ?";
 
-//Added April 19th 2016 
+//Added April 19th 2016
 Blockly.Msg.MBOT_HELPURL = "http://www.makeblock.cc/mbot/";
 Blockly.Msg.MBOT_FORWARD_TOOLTIP = "avance";
 Blockly.Msg.MBOT_BACKWARD_TOOLTIP = "recule";
@@ -1242,5 +1244,5 @@ Blockly.Msg.MBOT_MOTOR_LEFT_PWM = "moteur gauche : puissance";
 Blockly.Msg.MBOT_MOTOR_RIGHT_SENS = "moteur droit : sens";
 Blockly.Msg.MBOT_MOTOR_RIGHT_PWM = "moteur droit : puissance";
 
-//Added May 1rst 2016 
+//Added May 1rst 2016
 Blockly.Msg.ROMEO_HELPURL = "http://www.dfrobot.com/wiki/index.php/Romeo_V2-All_in_one_Controller_%28R3%29_%28SKU:DFR0225%29";
