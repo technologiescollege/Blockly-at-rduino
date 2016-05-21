@@ -2,7 +2,7 @@
 
 ### FORUM !!! [http://blockly.technologiescollege.fr/forum](http://blockly.technologiescollege.fr/forum)
 
-**Multilingual** version of Blockly@rduino
+**Multilingual** version of Blockly@rduinoo
 =====
 
 Blockly@rduino est un programme web, un **webware graphique permettant la programmation graphique pour [Arduino](http://www.arduino.cc/) et sa _traduction en code_**.
