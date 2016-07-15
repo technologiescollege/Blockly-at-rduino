@@ -1,0 +1,359 @@
+diff -c -r ./Blockly-at-rduino-gh-pages/blocks/arduino_base/arduino_base.js ./Blockly-at-rduino-l298n-new/blocks/arduino_base/arduino_base.js
+*** ./Blockly-at-rduino-gh-pages/blocks/arduino_base/arduino_base.js	2016-05-12 04:28:04.000000000 +0200
+--- ./Blockly-at-rduino-l298n-new/blocks/arduino_base/arduino_base.js	2016-06-08 01:51:24.710835200 +0200
+***************
+*** 197,202 ****
+--- 197,233 ----
+    }
+  };
+  
++ //@pbra 20160607
++ Blockly.Blocks.inout_digital_mode = {
++   init: function() {
++     this.setColour("#00979D");
++     this.setHelpUrl(Blockly.Msg.ARDUINO_INOUT_DIGITAL_MODE_HELPURL);
++ 	this.appendValueInput("PIN", 'Number')
++         .setAlign(Blockly.ALIGN_RIGHT)
++ 		.setCheck('Number')
++         .appendField(Blockly.Msg.ARDUINO_INOUT_DIGITAL_MODE_INPUT1);
++ 	this.appendValueInput("PINMODE", 'Null')
++         .setAlign(Blockly.ALIGN_RIGHT)
++       	.appendField(Blockly.Msg.ARDUINO_INOUT_DIGITAL_MODE_INPUT2);
++     this.setInputsInline(true);
++     this.setPreviousStatement(true, null);
++     this.setNextStatement(true, null);
++     this.setTooltip(Blockly.Msg.ARDUINO_INOUT_DIGITAL_MODE_TOOLTIP);
++   }
++ };
++ 
++ // @pbra dropdown pinmode
++ Blockly.Blocks['pinmode'] = {
++   init: function() {
++     this.setColour("#00979D");
++ 	this.setHelpUrl(Blockly.Msg.ARDUINO_INOUT_DIGITAL_MODE_HELPURL);
++     this.appendDummyInput("")
++         .appendField(new Blockly.FieldDropdown(Blockly.Msg.ARDUINO_INOUT_DIGITAL_MODE_DROPDOWN), 'PINMODE');
++     this.setOutput(true,'Null');
++     this.setTooltip(Blockly.Msg.ARDUINO_INOUT_DIGITAL_MODE_TOOLTIP);
++   }
++ };
++ 
+  Blockly.Blocks.inout_buildin_led = {
+     init: function() {
+      this.setColour("#00979D");
+Only in ./Blockly-at-rduino-l298n-new/blocks/robots: l298n.jpg
+diff -c -r ./Blockly-at-rduino-gh-pages/blocks/robots/robot_motors.js ./Blockly-at-rduino-l298n-new/blocks/robots/robot_motors.js
+*** ./Blockly-at-rduino-gh-pages/blocks/robots/robot_motors.js	2016-05-12 04:28:04.000000000 +0200
+--- ./Blockly-at-rduino-l298n-new/blocks/robots/robot_motors.js	2016-06-13 11:15:11.853829100 +0200
+***************
+*** 248,253 ****
+--- 248,313 ----
+    }
+  };
+  
++ //@pbra 20160613
++ Blockly.Blocks['l298n_motor_init'] = {
++   init: function() {
++     this.setColour("#5b99a5");
++ 	this.appendDummyInput()
++ 		.appendField(Blockly.Msg.ROBOTS_MOTORS_L298N_MOTOR_INIT_TITLE)
++ 		.appendField(new Blockly.FieldImage("blocks/robots/l298n.jpg", Blockly.Arduino.imageSize, Blockly.Arduino.imageSize))
++ 	this.appendDummyInput()
++ 		.appendField(Blockly.Msg.ROBOTS_MOTORS_L298N_ID)
++         .appendField(new Blockly.FieldTextInput('ID'), 'ID')
++         .setAlign(Blockly.ALIGN_RIGHT);
++ 	this.appendDummyInput()
++ 		.appendField(Blockly.Msg.ROBOTS_MOTORS_L298N_MOTOR_PIN_EN)
++         .appendField(new Blockly.FieldTextInput('0',  Blockly.Arduino.pinPWMValidator), 'PIN-EN')
++ 	    .setAlign(Blockly.ALIGN_RIGHT);
++ 	this.appendDummyInput()
++ 		.appendField(Blockly.Msg.ROBOTS_MOTORS_L298N_MOTOR_PIN_IN1)
++         .appendField(new Blockly.FieldTextInput('0',  Blockly.Arduino.pinDualValidator), 'PIN-IN1')
++ 		.appendField(Blockly.Msg.ROBOTS_MOTORS_L298N_MOTOR_PIN_IN2)
++         .appendField(new Blockly.FieldTextInput('0',  Blockly.Arduino.pinDualValidator), 'PIN-IN2')
++ 	    .setAlign(Blockly.ALIGN_RIGHT);
++ 	this.setInputsInline(false);
++ 	//	this.setInputsInline(true);
++ 	this.setPreviousStatement(true, null);
++     this.setNextStatement(true, null);
++ 	this.setTooltip(Blockly.Msg.ROBOTS_MOTORS_L298N_INIT_TOOLTIP);
++   }
++ };
++ 
++ 
++ //@pbra 20160613
++ Blockly.Blocks['l298n_motor'] = {
++   init: function() {
++     this.setColour("#5b99a5");
++ 	this.appendDummyInput()
++ 		.appendField(Blockly.Msg.ROBOTS_MOTORS_L298N_MOTOR_TITLE)
++ 		.appendField(new Blockly.FieldImage("blocks/robots/l298n.jpg", Blockly.Arduino.imageSize, Blockly.Arduino.imageSize))
++ 		.appendField(
++ 				new Blockly.FieldDropdown([
++ 						[ Blockly.Msg.ROBOTS_MOTORS_L298N_STOP, "stop" ],
++ 						[ Blockly.Msg.ROBOTS_MOTORS_L298N_FORWARD, "forward" ],
++ 						[ Blockly.Msg.ROBOTS_MOTORS_L298N_BACKWARD, "backward" ],
++ 						[ Blockly.Msg.ROBOTS_MOTORS_L298N_BRAKE, "brake" ] ]),
++ 				"DIRECTION");
++     this.appendValueInput("ID", 'String')
++         .setCheck('String')
++         .setAlign(Blockly.ALIGN_RIGHT)
++         .appendField(Blockly.Msg.ROBOTS_MOTORS_L298N_ID);
++     this.appendValueInput("SPEED", 'Number')
++         .setCheck('Number')
++         .setAlign(Blockly.ALIGN_RIGHT)
++         .appendField(Blockly.Msg.ROBOTS_MOTORS_L298N_MOTOR_SPEED);
++ 	this.setInputsInline(false);
++ 	//	this.setInputsInline(true);
++ 	this.setPreviousStatement(true, null);
++     this.setNextStatement(true, null);
++ 	this.setTooltip(Blockly.Msg.ROBOTS_MOTORS_L298N_TOOLTIP);
++   }
++ };
++ 
+  Blockly.Blocks['generic_motor'] = {
+    init: function() {
+      this.setColour("#5b99a5");
+diff -c -r ./Blockly-at-rduino-gh-pages/generators/arduino/arduino_base.js ./Blockly-at-rduino-l298n-new/generators/arduino/arduino_base.js
+*** ./Blockly-at-rduino-gh-pages/generators/arduino/arduino_base.js	2016-05-12 04:28:04.000000000 +0200
+--- ./Blockly-at-rduino-l298n-new/generators/arduino/arduino_base.js	2016-06-08 02:16:18.749139300 +0200
+***************
+*** 122,127 ****
+--- 122,141 ----
+    return [code, Blockly.Arduino.ORDER_NONE];
+  };
+  
++ //@pbra 20160607
++ Blockly.Arduino.inout_digital_mode = function() {
++   var dropdown_pin = Blockly.Arduino.valueToCode(this, 'PIN', Blockly.Arduino.ORDER_ATOMIC);
++   var dropdown_mode = Blockly.Arduino.valueToCode(this, 'PINMODE', Blockly.Arduino.ORDER_ATOMIC).replace(/['"]+/g, '');
++   var code = 'pinMode(' + dropdown_pin + ', ' + dropdown_mode + ');\n';
++   return code;
++ };
++ 
++ // @pbra dropdown pinmode
++ Blockly.Arduino.pinmode = function() {
++   return [this.getFieldValue('PINMODE'), Blockly.Arduino.ORDER_ATOMIC];
++ };
++ 
++ 
+  Blockly.Arduino.inout_buildin_led = function() {
+    var dropdown_stat = this.getFieldValue('STAT');
+    Blockly.Arduino.setups_['setup_output_13'] = 'pinMode(13, OUTPUT);';
+diff -c -r ./Blockly-at-rduino-gh-pages/generators/arduino/robot_motors.js ./Blockly-at-rduino-l298n-new/generators/arduino/robot_motors.js
+*** ./Blockly-at-rduino-gh-pages/generators/arduino/robot_motors.js	2016-05-12 04:28:04.000000000 +0200
+--- ./Blockly-at-rduino-l298n-new/generators/arduino/robot_motors.js	2016-06-13 11:30:08.125144400 +0200
+***************
+*** 424,429 ****
+--- 424,491 ----
+    return code;
+  };
+  
++ // @pbra 20160613
++ Blockly.Arduino.l298n_motor_init = function() {
++   var id = '_' + this.getFieldValue("ID").replace(/\s/g, '').replace(/['"]+/g, '').toLowerCase();
++   var PinEN = this.getFieldValue("PIN-EN");
++   var PinIN1 = this.getFieldValue("PIN-IN1");
++   var PinIN2 = this.getFieldValue("PIN-IN2");
++   var mysetup = "";
++ 
++   mysetup += " // pin assignation for L298N" + id + "\n";
++   mysetup += " pinMode("+PinIN1+",OUTPUT);//IN1" + id +" Pin\n" ;
++   mysetup += " pinMode("+PinIN2+",OUTPUT);//IN2" + id +" Pin\n";
++   mysetup += " pinMode("+PinEN+",OUTPUT);//PWM" + id +" Pin\n" ;
++   Blockly.Arduino.setups_["setup_l298n_motor" + id] = mysetup;
++   Blockly.Arduino.definitions_["setup_l298n_motor" + id] = " // pin assignation for L298N" + id + "\n"+
++ 	" int l298n" + id + "[3] = {"+PinEN+", "+PinIN1+", "+PinIN2+"};";
++   var code = "";
++   return code;
++ };
++ 
++ // @pbra 20160612
++ Blockly.Arduino.l298n_motor = function() {
++   var dropdown_direction = this.getFieldValue('DIRECTION'); 
++   var id = '_' + Blockly.Arduino.valueToCode(this, 'ID', Blockly.Arduino.ORDER_ATOMIC).replace(/\s/g, '').replace(/['"]+/g, '').toLowerCase();
++   var speed = Blockly.Arduino.valueToCode(this, 'SPEED', Blockly.Arduino.ORDER_ATOMIC) || '127';
++ 
++   var code = "";
++   if(dropdown_direction==="forward"){
++     Blockly.Arduino.definitions_['define_l298n_forward'] = "void l298n_forward(int speed,int Pins[3])\n"+
++ "{\n"+
++      "  analogWrite(Pins[0],speed);//Motor speed\n"+
++      "  digitalWrite(Pins[1],HIGH);//turn DC Motor move clockwise\n"+
++      "  digitalWrite(Pins[2],LOW);//turn DC Motor move clockwise\n"+
++ "}\n";
++     code="l298n_forward("+speed+", l298n" + id + ");\n";
++   } else if (dropdown_direction==="backward") {
++     Blockly.Arduino.definitions_['define_l298n_backward'] = "void l298n_backward(int speed,int Pins[3])\n"+
++ "{\n"+
++      "  analogWrite(Pins[0],speed);//Motor speed\n"+
++      "  digitalWrite(Pins[1],LOW);//turn DC Motor move anti-clockwise\n"+
++      "  digitalWrite(Pins[2],HIGH);//turn DC Motor move anti-clockwise\n"+
++ "}\n\n";
++     code="l298n_backward("+speed+", l298n" + id + ");\n";
++   } else if (dropdown_direction==="stop"){
++     Blockly.Arduino.definitions_['define_l298n_stop'] = "void l298n_stop(int Pins[3])\n"+
++ "{\n"+
++      "  analogWrite(Pins[0],0);//Motor speed\n"+
++      "  digitalWrite(Pins[1],LOW);//turn DC Motor off\n"+
++      "  digitalWrite(Pins[2],LOW);//turn DC Motor off\n"+
++ "}\n\n";
++     code="l298n_stop(l298n" + id + ");\n";
++   } else if (dropdown_direction==="brake"){
++     Blockly.Arduino.definitions_['define_l298n_brake'] = "void l298n_brake(int Pins[3])\n"+
++ "{\n"+
++      "  analogWrite(Pins[0],255);//Motor speed\n"+
++      "  digitalWrite(Pins[1],LOW);//turn DC Motor off\n"+
++      "  digitalWrite(Pins[2],LOW);//turn DC Motor off\n"+
++ "}\n\n";
++     code="l298n_brake(l298n" + id + ");\n";
++   }
++   return code;
++ };
++ 
+  Blockly.Arduino.generic_motor = function() {
+     var dropdown_direction = this.getFieldValue('DIRECTION'); 
+    var PinA1 = this.getFieldValue("PIN-A1");
+diff -c -r ./Blockly-at-rduino-gh-pages/lang/blocks/en.js ./Blockly-at-rduino-l298n-new/lang/blocks/en.js
+*** ./Blockly-at-rduino-gh-pages/lang/blocks/en.js	2016-05-12 04:28:04.000000000 +0200
+--- ./Blockly-at-rduino-l298n-new/lang/blocks/en.js	2016-06-13 11:14:32.614847200 +0200
+***************
+*** 1250,1253 ****
+  Blockly.Msg.FISCHERTECHNIK_TEXT17 = " est appuyée ?";
+  
+  //Added May 1rst 2016 
+! Blockly.Msg.ROMEO_HELPURL = "http://www.dfrobot.com/wiki/index.php/Romeo_V2-All_in_one_Controller_%28R3%29_%28SKU:DFR0225%29";
+\ No newline at end of file
+--- 1250,1275 ----
+  Blockly.Msg.FISCHERTECHNIK_TEXT17 = " est appuyée ?";
+  
+  //Added May 1rst 2016 
+! Blockly.Msg.ROMEO_HELPURL = "http://www.dfrobot.com/wiki/index.php/Romeo_V2-All_in_one_Controller_%28R3%29_%28SKU:DFR0225%29";
+! 
+! //pbra 20160607 L298N
+! Blockly.Msg.ROBOTS_MOTORS_L298N_MOTOR_TITLE = "L298N Motor Controller";
+! Blockly.Msg.ROBOTS_MOTORS_L298N_MOTOR_INIT_TITLE = "L298N Motor Controller Init";
+! Blockly.Msg.ROBOTS_MOTORS_L298N_ID = "Identication"
+! Blockly.Msg.ROBOTS_MOTORS_L298N_MOTOR_SPEED = "Speed";
+! Blockly.Msg.ROBOTS_MOTORS_L298N_MOTOR_PIN_IN1 = "IN1 pin (direction)";
+! Blockly.Msg.ROBOTS_MOTORS_L298N_MOTOR_PIN_IN2 = "IN2 pin (direction)";
+! Blockly.Msg.ROBOTS_MOTORS_L298N_MOTOR_PIN_EN = "EN pin (pwm)";
+! Blockly.Msg.ROBOTS_MOTORS_L298N_STOP = "stop";
+! Blockly.Msg.ROBOTS_MOTORS_L298N_FORWARD = "forward";
+! Blockly.Msg.ROBOTS_MOTORS_L298N_BACKWARD = "backward";
+! Blockly.Msg.ROBOTS_MOTORS_L298N_BRAKE = "brake";
+! Blockly.Msg.ROBOTS_MOTORS_L298N_INIT_TOOLTIP = "L298N initialization block (1 for each motor)";
+! Blockly.Msg.ROBOTS_MOTORS_L298N_TOOLTIP = "L298N block, use the same id as in the initialization block";
+! 
+! //pbra 20160607 PinMode
+! Blockly.Msg.ARDUINO_INOUT_DIGITAL_MODE_HELPURL = "https://www.arduino.cc/en/Reference/PinMode";
+! Blockly.Msg.ARDUINO_INOUT_DIGITAL_MODE_INPUT1 = "Set Pin Mode for pin";
+! Blockly.Msg.ARDUINO_INOUT_DIGITAL_MODE_INPUT2 = "to";
+! Blockly.Msg.ARDUINO_INOUT_DIGITAL_MODE_DROPDOWN = [["INPUT", "INPUT"], ["OUTPUT", "OUTPUT"], ["INPUT_PULLUP", "INPUT_PULLUP"]];
+! Blockly.Msg.ARDUINO_INOUT_DIGITAL_MODE_TOOLTIP = "Configures the specified pin to behave either as an input or an output";
+diff -c -r ./Blockly-at-rduino-gh-pages/lang/blocks/fr.js ./Blockly-at-rduino-l298n-new/lang/blocks/fr.js
+*** ./Blockly-at-rduino-gh-pages/lang/blocks/fr.js	2016-05-12 04:28:04.000000000 +0200
+--- ./Blockly-at-rduino-l298n-new/lang/blocks/fr.js	2016-06-13 11:14:22.681382200 +0200
+***************
+*** 1243,1246 ****
+  Blockly.Msg.MBOT_MOTOR_RIGHT_PWM = "moteur droit : puissance";
+  
+  //Added May 1rst 2016 
+! Blockly.Msg.ROMEO_HELPURL = "http://www.dfrobot.com/wiki/index.php/Romeo_V2-All_in_one_Controller_%28R3%29_%28SKU:DFR0225%29";
+\ No newline at end of file
+--- 1243,1268 ----
+  Blockly.Msg.MBOT_MOTOR_RIGHT_PWM = "moteur droit : puissance";
+  
+  //Added May 1rst 2016 
+! Blockly.Msg.ROMEO_HELPURL = "http://www.dfrobot.com/wiki/index.php/Romeo_V2-All_in_one_Controller_%28R3%29_%28SKU:DFR0225%29";
+! 
+! //pbra 20160613 L298N
+! Blockly.Msg.ROBOTS_MOTORS_L298N_MOTOR_TITLE = "L298N Contrôleur Moteur";
+! Blockly.Msg.ROBOTS_MOTORS_L298N_MOTOR_INIT_TITLE = "L298N Contrôleur Moteur Init";
+! Blockly.Msg.ROBOTS_MOTORS_L298N_ID = "Identifiant"
+! Blockly.Msg.ROBOTS_MOTORS_L298N_MOTOR_SPEED = "Vitesse";
+! Blockly.Msg.ROBOTS_MOTORS_L298N_MOTOR_PIN_IN1 = "Broche IN1 (direction)";
+! Blockly.Msg.ROBOTS_MOTORS_L298N_MOTOR_PIN_IN2 = "Broche IN2 (direction)";
+! Blockly.Msg.ROBOTS_MOTORS_L298N_MOTOR_PIN_EN = "Broche EN (pwm)";
+! Blockly.Msg.ROBOTS_MOTORS_L298N_STOP = "arrêt";
+! Blockly.Msg.ROBOTS_MOTORS_L298N_FORWARD = "avance";
+! Blockly.Msg.ROBOTS_MOTORS_L298N_BACKWARD = "recul";
+! Blockly.Msg.ROBOTS_MOTORS_L298N_BRAKE = "frein";
+! Blockly.Msg.ROBOTS_MOTORS_L298N_INIT_TOOLTIP = "L298N, bloc d'initialisation (1 par moteur)";
+! Blockly.Msg.ROBOTS_MOTORS_L298N_TOOLTIP = "Bloc L298N, utiliser le même id que dans le bloc d'initialisation";
+! 
+! //pbra 20160607 PinMode
+! Blockly.Msg.ARDUINO_INOUT_DIGITAL_MODE_HELPURL = "https://www.arduino.cc/en/Reference/PinMode";
+! Blockly.Msg.ARDUINO_INOUT_DIGITAL_MODE_INPUT1 = "Changer le mode de fonctionnement de la broche";
+! Blockly.Msg.ARDUINO_INOUT_DIGITAL_MODE_INPUT2 = "à";
+! Blockly.Msg.ARDUINO_INOUT_DIGITAL_MODE_DROPDOWN = [["ENTREE", "INPUT"], ["SORTIE", "OUTPUT"], ["ENTREE_PULLUP", "INPUT_PULLUP"]];
+! Blockly.Msg.ARDUINO_INOUT_DIGITAL_MODE_TOOLTIP = "Configurer la broche spécifée pour fonctionner comme une entrée ou une sortie";
+\ No newline at end of file
+diff -c -r ./Blockly-at-rduino-gh-pages/toolbox_arduino_all.xml ./Blockly-at-rduino-l298n-new/toolbox_arduino_all.xml
+*** ./Blockly-at-rduino-gh-pages/toolbox_arduino_all.xml	2016-05-12 04:28:04.000000000 +0200
+--- ./Blockly-at-rduino-l298n-new/toolbox_arduino_all.xml	2016-06-13 10:36:21.200119800 +0200
+***************
+*** 168,173 ****
+--- 168,185 ----
+  		<block type="biblio_include"></block>
+  		<block type="base_code"></block>
+  		<block type="base_end"></block>
++ 		<!-- @pbra 20160607 -->
++ 		<block type="inout_digital_mode">
++ 			<value name="PIN">
++ 				<shadow type="math_number">
++ 					<field name="NUM">0</field>
++ 				</shadow>
++ 			</value>
++ 			<value name="PINMODE">
++ 				<shadow type="pinmode"></shadow>
++ 			</value>
++ 		</block>
++ 		<!-- @pbra 20160607 END-->
+  		<category name="CAT_ARDUINO_IN" colour="#00979D">
+  			<block type="inout_analog_read_validator"></block>
+  			<block type="inout_digital_read_validator"></block>
+***************
+*** 1423,1428 ****
+--- 1435,1455 ----
+  				</shadow>
+  			</value>
+  		</block>
++ 		<!-- @pbra 20160613 -->
++ 		<block type="l298n_motor_init"></block>
++ 		<block type="l298n_motor">
++ 			<value name="SPEED">
++ 				<shadow type="math_number">
++ 					<field name="NUM">175</field>
++ 				</shadow>
++ 			</value>
++ 			<value name="ID">
++ 				<shadow type="text_char">
++ 					<field name="TEXT">ID1</field>
++ 				</shadow>
++ 			</value>
++ 		</block>
++ 		<!-- @pbra 20160613 END-->
+  		<block type="pololu_drv8835_s">
+  			<value name="SPEEDA">
+  				<shadow type="math_number">
+diff -c -r ./Blockly-at-rduino-gh-pages/utils/blocklyDuino.js ./Blockly-at-rduino-l298n-new/utils/blocklyDuino.js
+*** ./Blockly-at-rduino-gh-pages/utils/blocklyDuino.js	2016-05-12 04:28:04.000000000 +0200
+--- ./Blockly-at-rduino-l298n-new/utils/blocklyDuino.js	2016-06-12 23:01:42.242538600 +0200
+***************
+*** 369,375 ****
+      case Blockly.Types.BOOLEAN.typeName:
+        return 'boolean';
+      case Blockly.Types.NULL.typeName:
+!       return 'void';
+      case Blockly.Types.UNDEF.typeName:
+        return 'undefined';
+      case Blockly.Types.CHILD_BLOCK_MISSING.typeName:
+--- 369,375 ----
+      case Blockly.Types.BOOLEAN.typeName:
+        return 'boolean';
+      case Blockly.Types.NULL.typeName:
+!       return 'int';
+      case Blockly.Types.UNDEF.typeName:
+        return 'undefined';
+      case Blockly.Types.CHILD_BLOCK_MISSING.typeName:

@@ -120,5 +120,5 @@ Blockly.Arduino.controls_switch = function() {
     code += ' default :\n' + branch + ' ';
   }
   code += '}'
-  return code;
+  return code + '\n';
 };

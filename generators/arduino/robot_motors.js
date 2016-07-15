@@ -262,41 +262,41 @@ Blockly.Arduino.arduino_s = function() {
   "  pinMode(11,OUTPUT);//speedPinB\n";
   var code = "";
   if(dropdown_direction==="forward"){
-    Blockly.Arduino.definitions_['define_forward'] = "void forward()\n"+
+    Blockly.Arduino.definitions_['define_forward'] = "void forward(int MotA, int MotB)\n"+
 "{\n"+
-     "  analogWrite(3,"+speedA+");//Motor A speed\n"+
-     "  analogWrite(11,"+speedB+");//Motor B speed\n"+
+     "  analogWrite(3,MotA);//Motor A speed\n"+
+     "  analogWrite(11,MotB);//Motor B speed\n"+
      "  digitalWrite(13,LOW);//turn DC Motor B (right) move clockwise\n"+
      "  digitalWrite(12,LOW);//turn DC Motor A (left) move clockwise\n"+
 "}\n";
-    code="forward();\n";
+    code="forward("+speedA+", "+speedB+");\n";
   } else if (dropdown_direction==="right") {
-    Blockly.Arduino.definitions_['define_right'] = "void right()\n"+
+    Blockly.Arduino.definitions_['define_right'] = "void right(int MotA, int MotB)\n"+
 "{\n"+
-     "  analogWrite(3,"+speedA+");//Motor A speed\n"+
-     "  analogWrite(11,"+speedB+");//Motor B speed\n"+
+     "  analogWrite(3,MotA);//Motor A speed\n"+
+     "  analogWrite(11,MotB);//Motor B speed\n"+
      "  digitalWrite(13,HIGH);//turn DC Motor B (right) move clockwise\n"+
      "  digitalWrite(12,LOW);//turn DC Motor A (left) move anti-clockwise\n"+
 "}\n\n";
-    code="right();\n";
+    code="right("+speedA+", "+speedB+");\n";
   } else if (dropdown_direction==="left") {
-    Blockly.Arduino.definitions_['define_left'] = "void left()\n"+
+    Blockly.Arduino.definitions_['define_left'] = "void left(int MotA, int MotB)\n"+
 "{\n"+
-     "  analogWrite(3,"+speedA+");//Motor A speed\n"+
-     "  analogWrite(11,"+speedB+");//Motor B speed\n"+
+     "  analogWrite(3,MotA);//Motor A speed\n"+
+     "  analogWrite(11,MotB);//Motor B speed\n"+
      "  digitalWrite(13,LOW);//turn DC Motor B (right) move anticlockwise\n"+
      "  digitalWrite(12,HIGH);//turn DC Motor A (left) move clockwise\n"+
 "}\n\n";
-    code="left();\n";
+    code="left("+speedA+", "+speedB+");\n";
   } else if (dropdown_direction==="backward"){
-    Blockly.Arduino.definitions_['define_backward'] = "void backward()\n"+
+    Blockly.Arduino.definitions_['define_backward'] = "void backward(int MotA, int MotB)\n"+
 "{\n"+
-     "  analogWrite(3,"+speedA+");//Motor A speed\n"+
-     "  analogWrite(11,"+speedB+");//Motor B speed\n"+
+     "  analogWrite(3,MotA);//Motor A speed\n"+
+     "  analogWrite(11,MotB);//Motor B speed\n"+
      "  digitalWrite(13,HIGH);//turn DC Motor B (right) move anticlockwise\n"+
      "  digitalWrite(12,HIGH);//turn DC Motor A (left) move anticlockwise\n"+
 "}\n\n";
-    code="backward();\n";
+    code="backward("+speedA+", "+speedB+");\n";
   } else if (dropdown_direction==="stop"){
     Blockly.Arduino.definitions_['define_stop'] = "void stop()\n"+
 "{\n"+
