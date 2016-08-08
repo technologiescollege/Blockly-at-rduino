@@ -1,42 +1,50 @@
 [
     {
-      "source_url":"./examples/blink/blink.xml",
-      "source_text":"le tout premier exercice : faire clignoter une diode",
-      "image":"./examples/blink/blink_fritzing.jpg",
+        "source_url": "./examples/blink/blink.xml",
+        "source_text": "le tout premier exercice : faire clignoter une diode",
+        "image": "./examples/blink/blink_fritzing.jpg",
         "link_url": "",
         "link_text": "",
         "visible": true
     },
     {
-      "source_url":"./examples/servo_potentio/servo_potentio.xml",
-      "source_text":"faire varier l'angle d'un servomoteur proportionnellement au potentiomètre",
-      "image":"./examples/servo_potentio/servo_potentio_fritzing.jpg",
-      "link_url":"",
-      "link_text":"",
+        "source_url": "./examples/servo_potentio/servo_potentio.xml",
+        "source_text": "faire varier l'angle d'un servomoteur proportionnellement au potentiomètre",
+        "image": "./examples/servo_potentio/servo_potentio_fritzing.jpg",
+        "link_url": "",
+        "link_text": "",
         "visible": true
     },
     {
-      "source_url":"./examples/grenouille/grenouille.xml",
-      "source_text":"faire avancer un robot qui stoppe quand un objet est à moins de 10cm",
-      "image":"./examples/servo_potentio/servo_potentio_fritzing.jpg",
-      "link_url":"http://fablabo.net/wiki/FablabJunior_Automne_2015/Projet4",
-      "link_text":"sur Fablabo",
+        "source_url": "./examples/grenouille/grenouille.xml",
+        "source_text": "faire avancer un robot qui stoppe quand un objet est à moins de 10cm",
+        "image": "./examples/servo_potentio/servo_potentio_fritzing.jpg",
+        "link_url": "http://fablabo.net/wiki/FablabJunior_Automne_2015/Projet4",
+        "link_text": "sur Fablabo",
         "visible": true
     },
-   {
-      "source_url":"./examples/suiveur_de_ligne/suiveur_de_ligne.xml",
-      "source_text":"les détecteurs mesurent l'intensité lumineuse renvoyée par la table de chaque côté, puis stoppent ou font tourner les servomoteurs",
-      "image":"./examples/suiveur_de_ligne/suiveur_de_ligne_fritzing.jpg",
-      "link_url":"http://fablabo.net/wiki/FablabJunior_Automne_2015/Projet2",
-      "link_text":"sur Fablabo",
+    {
+        "source_url": "./examples/suiveur_de_ligne/suiveur_de_ligne.xml",
+        "source_text": "les détecteurs mesurent l'intensité lumineuse renvoyée par la table de chaque côté, puis stoppent ou font tourner les servomoteurs",
+        "image": "./examples/suiveur_de_ligne/suiveur_de_ligne_fritzing.jpg",
+        "link_url": "http://fablabo.net/wiki/FablabJunior_Automne_2015/Projet2",
+        "link_text": "sur Fablabo",
         "visible": true
-   },
-   {
-      "source_url":"./examples/BT_PAF_Nantes/BT_PAF_Nantes.xml",
-      "source_text":"voici comment connecter une carte Bluetooth pour commencer à recueillir des informations envoyées",
-      "image":"./examples/BT_PAF_Nantes/BT_PAF_Nantes_fritzing.jpg",
-      "link_url":"",
-      "link_text":"",
+    },
+    {
+        "source_url": "./examples/BT_PAF_Nantes/BT_PAF_Nantes.xml",
+        "source_text": "voici comment connecter une carte Bluetooth pour commencer à recueillir des informations envoyées",
+        "image": "./examples/BT_PAF_Nantes/BT_PAF_Nantes_fritzing.jpg",
+        "link_url": "",
+        "link_text": "",
         "visible": true
-   }
+    },
+    {
+        "source_url": "./examples/BT_PAF_Nantes/BT_PAF_Nantes.xml",
+        "source_text": "suite à la connection Bluetooth, voici comment piloter par Android",
+        "image": "./examples/BT_PAF_Nantes/BT_PAF_Nantes_fritzing.jpg",
+        "link_url": "https://www.youtube-nocookie.com/embed/vlJl28qE5vg?list=PLwy0yw3Oq4-uFJl0j-efUAAlfCbqtcTMr",
+        "link_text": "Tutos vidéo",
+        "visible": true
+    }
 ]

@@ -20,6 +20,7 @@ body {
 .rotate270 {
     -webkit-transform: rotate(270deg);
     -moz-transform: rotate(270deg);
+    -moz-transform: rotate(270deg);
     -o-transform: rotate(270deg);
     -ms-transform: rotate(270deg);
 }
@@ -32,14 +33,14 @@ body {
 }
 
 #divTitre {
-	height: 66px;
+	height: 56px;
 	vertical-align: top;
 	position: relative;
 	width: 100%;
 }
 
 #divTitre p {
-	font-size: 25px;
+	font-size: 15px;
 }
 
 #divBody {
@@ -468,40 +469,34 @@ html[dir="RTL"] .colors_category {
 #div_miniPicture:hover {
 	cursor: pointer;
 }
+.vignette {
+    max-width: 100px;
+    max-height: 100px;
+}
+.margin-top-5 {
+	margin-top: 5px;
+}
 
 #showcardModal .modal-content:hover {
   cursor: move;
 }
-
 .draggable {
 }
 
 #convertModal .modal-content:hover {
   cursor: move;
 }
-
 .draggable {
 }
 
 #RGB_modal .modal-content:hover {
   cursor: move;
 }
-
 .draggable {
 }
 
 #videoModal .modal-content:hover {
   cursor: move;
 }
-
 .draggable {
-}
-
-.vignette {
-    max-width: 100px;
-    max-height: 100px;
-}
-
-.margin-top-5 {
-	margin-top: 5px;
 }

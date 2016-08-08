@@ -15,7 +15,6 @@ Blockly.Msg.SV_tab8 = "Fonctions spécifiques";
 Blockly.Msg.SV_tab9 = "Requêtes HTTP";
 Blockly.Msg.SV_alert1 = "Votre navigateur est compatible avec les websockets";
 Blockly.Msg.SV_alert2 = "Votre navigateur n'est pas compatible avec les websockets";
-Blockly.Msg.SV_connect = " Connection à Pymata/Arduino";
 Blockly.Msg.SV_onOpen = " La supervision est connectée à la carte";
 Blockly.Msg.SV_onClose = " Le websocket est fermé.";
 Blockly.Msg.SV_onMessage_analog = "Broche analogique inconnue";

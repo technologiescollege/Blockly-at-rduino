@@ -107,9 +107,14 @@
 
 <script type="text/javascript" src="http://codebender.cc/embed/compilerflasher.js"></script>
 
-<link rel="stylesheet" type="text/css" href="css/blockly@rduino.css">
-<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-<link rel="stylesheet" type="text/css" href="css/prettify.css">
+<link rel="stylesheet" type="text/css" href="./css/blockly@rduino.css">
+<link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
+
+<link rel="stylesheet" type="text/css" href="./css/bootstrap-toggle.min.css" />
+<link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
+<script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
+
+<link rel="stylesheet" type="text/css" href="./css/prettify.css">
 
 <script type="text/javascript">
 	$(window).load(function() {
@@ -121,16 +126,15 @@
 <div class="loading"></div>
     <div id="divTitre">
         <p>
-            <a href=""> <img src="media/Arduino-uno-perspective-transparent.png" border="0" height="76px" onclick="localStorage.clear();" />
+            <a href=""><img src="media/logo.png" border="0" height="46px" onclick="localStorage.clear();" />
             </a> 
             <b>Blockly@rduino</b> : 
             <span id="title"></span>
-    <button id="btn_about" type="button" class="btn btn-default btn-xs" data-toggle="modal" data-target="#aboutModal">
-        <span id="span_about"> </span>
-		<span class="glyphicon glyphicon-user"></span>		
-    </button>
-        </p>
-        <select id="languageMenu"></select>
+		<button id="btn_about" type="button" class="btn btn-default btn-xs" data-toggle="modal" data-target="#aboutModal">
+			<b><span id="span_about"> </span></b>
+			<span class="glyphicon glyphicon-user"></span>		
+		</button>
+		<select id="languageMenu"></select>
     </div>
     <div id="divBody">
     <div id="menuPanel">
@@ -181,12 +185,13 @@
 	                     <span id="a_term"> </span>
 	                 </a>
 	            </li>
-	            <li role="presentation" id="tab_xml">
+	            <!--only to see XML translation online -->
+				<!--li role="presentation" id="tab_xml">
 	                 <a href="#content_xml" aria-controls="content_xml" role="tab" data-toggle="tab">
 	                     <span  class="glyphicon glyphicon-file"></span>
 	                     <span id="a_xml"></span>
 	                 </a>
-	             </li>
+	             </li-->
 	        </ul>
 		</div>
 		<div id="menuPanelFiles">
@@ -214,6 +219,10 @@
 		    </a>
 		</div>
 		<div id="div_tools_button">
+			<button id="btn_configGlobal" class="btn btn-warning text-left" data-toggle="modal" data-target="#configModalGlobal">
+		       <span class="glyphicon glyphicon-cog"> </span>
+		       <span id="span_configGlobal"> </span>
+		   </button>
 			<button id="btn_RGB" class="btn btn-primary text-left">
 		       <span class="glyphicon glyphicon-th"> </span>
 		       <span id="span_RGB"> </span>
@@ -224,6 +233,10 @@
 		   </button>
 		</div>
 		<div id="div_help_button">
+		   <button id="btn_videos" class="btn btn-danger text-left">
+		       <span class="glyphicon glyphicon-expand"> </span>
+		       <span id="span_videos"> </span>
+		   </button>
 		   <a id="btn_doc" class='btn btn-success btn-info text-left' href="http://tic.technologiescollege.fr/wiki/" target=_blank role='button'>
 		       <span class="glyphicon glyphicon-info-sign"></span>
 		       <span id="span_doc"> </span>
@@ -232,10 +245,6 @@
 		       <span class="glyphicon glyphicon-question-sign"></span>
 		       <span id="span_tuto"> </span>
 		   </a>
-		   <button id="btn_videos" class="btn btn-danger text-left">
-		       <span class="glyphicon glyphicon-expand"> </span>
-		       <span id="span_videos"> </span>
-		   </button>
 		</div>       
     </div>
 
@@ -333,14 +342,15 @@
 			  <br />
 			  <span><b>Blockly@rduino</b></span> (<a href="https://github.com/technologiescollege/Blockly-at-rduino">Github</a>)
               <span id="aboutBody" style="font-style: italic;"> </span>
-              <br /> - Alan Yorinks - pymata : (<a href='http://mryslab.blogspot.fr/' target='blank'>http://mryslab.blogspot.fr/</a>)
-              <br /> - Fred Lin (@gasolin) - BlocklyDuino : (<a href='https://github.com/BlocklyDuino/BlocklyDuino' target='blank'>'https://github.com/BlocklyDuino/BlocklyDuino</a>)
+              <br /> - Alan YORINKS - PyMata-aio : (<a href='http://mryslab.blogspot.fr' target='blank'>http://mryslab.blogspot.fr</a>)
+              <br /> - Bernard REMOND - rDuino-Compiler-Uploader-Server : (<a href='https://github.com/nbremond77' target='blank'>https://github.com/nbremond77</a>)
+              <br /> - Fred LIN (@gasolin) - BlocklyDuino : (<a href='https://github.com/BlocklyDuino/BlocklyDuino' target='blank'>'https://github.com/BlocklyDuino/BlocklyDuino</a>)
               <br /> - Blockly : (<a href='https://developers.google.com/blockly' target='blank'>https://developers.google.com/blockly</a>)
               <br /> - Bootstrap (<a href='http://getbootstrap.com' target='blank'>http://getbootstrap.com</a>)
 			  <br /> - Codebender - CompilerFlasher : (<a href='https://codebender.cc' target='blank'>https://codebender.cc</a>)
               <br /> - JQuerry (<a href='https://jquery.com' target='blank'>https://jquery.com)</a>
 			  <br />
-			  <br /><i/>version 15-07-2016
+			  <br /><i/>version 07-08-2016
 			  <br />
 			  <br /><center>
 					<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
@@ -446,10 +456,19 @@
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="videoModalLabel"></h4>
+        <h4 class="modal-title" id="videoModalLabelTitle"></h4>
       </div>
 	  <div class="modal-body text-center">
-		<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/videoseries?list=PLwy0yw3Oq4-uFNmgedXx9_L_TJNORo-4N&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+		<h6 class="modal-body text-center" id="videoModalLabel1"></h6>
+		<iframe width="215" height="120" src="https://www.youtube-nocookie.com/embed/nXWwNrwVFXM?list=PLwy0yw3Oq4-uFNmgedXx9_L_TJNORo-4N" frameborder="0" allowfullscreen></iframe>
+	  </div>
+	  <div class="modal-body text-center">
+		<h6 class="modal-body text-center" id="videoModalLabel2"></h6>
+		<iframe width="215" height="120" src="https://www.youtube-nocookie.com/embed/vlJl28qE5vg?list=PLwy0yw3Oq4-uFJl0j-efUAAlfCbqtcTMr" frameborder="0" allowfullscreen></iframe>
+	  </div>
+	  <div class="modal-body text-center">
+		<h6 class="modal-body text-center" id="videoModalLabel3"></h6>
+		<iframe src="https://player.vimeo.com/video/177939950?byline=0&portrait=0" width="150" height="120" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 	  </div>
     </div>
 </div>
@@ -501,6 +520,39 @@
       </div>
     </div>
   </div>
+</div>
+<!-- global config modal -->
+<div class="modal fade" id="configModalGlobal" tabindex="-1" role="dialog" aria-labelledby="configModalGlobalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+		  <div class="modal-header">
+			<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			<h4 class="modal-title" id="configModalGlobalLabel"></h4>
+		  </div>    
+		<div class="modal-body" id="modal-body-config-global">
+			<select id="languageMenu"></select>
+			<div id="divCard">
+		            <label id="labelArduinoCard"></label> 
+		            <select id="pinout">
+		                <option value="arduino_uno" selected="selected">Arduino UNO</option>
+		                <option value="arduino_mega">Arduino MEGA</option>
+						<option value="dfrobot_romeo">DFRobot RoMeo</option>
+		            </select>
+		    </div>
+			
+			<input id="toggle-WebAccess" checked data-toggle="toggle" data-on="Accès web" data-off="Hors ligne" data-onstyle="success" data-offstyle="danger" type="checkbox">
+			</p>
+			Serveur local <input id="toggle-WebAccess" checked data-toggle="toggle" data-on="Local" data-off="En ligne" data-onstyle="success" data-offstyle="danger" type="checkbox"> Serveur CodeBender
+			</p>
+			<button id="btn_Help_Offline" type="button" class="btn btn-default">Serveurs de communication</button>
+			<button id="btn_Help_Online" type="button" class="btn btn-primary">Plugin CodeBender</button>
+		</div>  
+		<div class="modal-footer">
+			<button id="btn_close_config_global" type="button" class="btn btn-default" data-dismiss="modal" ></button>
+			<button id="btn_valid_config_global" type="button" class="btn btn-primary"></button>
+		</div>
+		</div>
+	</div>
 </div>
 
 </body>

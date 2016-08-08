@@ -426,34 +426,30 @@ BlocklyDuino.getFiles = function (){
 BlocklyDuino.uploadClick = function() {
     var code = $('#pre_arduino').text();
     
-    var url = "http://127.0.0.1:888/";
+    var url = "http://127.0.0.1:5005/openIDE";
     var method = "POST";
 
     // You REALLY want async = true.
     // Otherwise, it'll block ALL execution waiting for server response.
     var async = true;
-	var response = confirm("Ready to upload to Arduino?");
+	var request = new XMLHttpRequest();
 	
-	if (response == true) {
-		var request = new XMLHttpRequest();
+	request.onreadystatechange = function() {
+		if (request.readyState != 4) { 
+			return; 
+		}
 		
-		request.onreadystatechange = function() {
-			if (request.readyState != 4) { 
-				return; 
-			}
-			
-			var status = parseInt(request.status); // HTTP response status, e.g., 200 for "200 OK"
-			var errorInfo = null;
-		};
+		var status = parseInt(request.status); // HTTP response status, e.g., 200 for "200 OK"
+		var errorInfo = null;
+	};
 
-		request.open(method, url, async);
-		request.setRequestHeader("Content-Type", "text/plain;charset=UTF-8");
-		request.send(code);	  
-	}
+	request.open(method, url, async);
+	request.setRequestHeader("Content-Type", "text/plain;charset=UTF-8");
+	request.send(code);	
 }
 
 /**
- * Load blocks from local file.
+ // * Load blocks from local file.
  */
 BlocklyDuino.load = function (event) {
   var files = event.target.files;
@@ -918,6 +914,9 @@ BlocklyDuino.init = function() {
 		$("#configModal .close").hide();
 		$('#btn_close_config').hide();
 		$("#configModal").modal({ backdrop: 'static', keyboard: false });
+		$("#configModalGlobal .close").hide();
+		$('#btn_close_config_global').hide();
+		$("#configModalGlobal").modal({ backdrop: 'static', keyboard: false });
 	}
 	
 	$(document).ready(
