@@ -153,7 +153,7 @@
 	            <ul id="ul_nav" role="tablist">
 	            <li role="presentation" id="tab_supervision">
 	                 <a href="#content_supervision" aria-controls="content_supervision" role="tab" data-toggle="tab">
-	                     <span class="glyphicon glyphicon-blackboard"></span>
+	                     <span class="glyphicon glyphicon-transfer"></span>
 	                     <span id="a_supervision"> </span>
 	                 </a>
 	            </li>
@@ -210,7 +210,7 @@
 		</div>
 		<div id="div_tools_button">
 			<button id="btn_configGlobal" class="btn btn-warning text-left" data-toggle="modal" data-target="#configModalGlobal">
-		       <span class="glyphicon glyphicon-cog"> </span>
+		       <span class="glyphicon glyphicon-th-list"> </span>
 		       <span id="span_configGlobal"> </span>
 		   </button>
 			<button id="btn_RGB" class="btn btn-primary text-left">
@@ -248,10 +248,10 @@
 					<span id="span_delete"> </span>
 				</button>
 				<button id="btn_blocs_picture_mini" class="btn btn-default">
-					<span id="icon_btn_blocs_picture_mini" class="glyphicon glyphicon-minus"> </span>
+					<span id="icon_btn_blocs_picture_mini" class="glyphicon glyphicon-zoom-out"> </span>
 				</button>
 				<button id="btn_blocs_picture_maxi" class="btn btn-default">
-					<span id="icon_btn_blocs_picture_maxi" class="glyphicon glyphicon-plus"> </span>
+					<span id="icon_btn_blocs_picture_maxi" class="glyphicon glyphicon-zoom-in"> </span>
 				</button>
 				<button id="btn_blocs_picture" class="btn btn-default">
 					<span id="icon_btn_blocs_picture" class="glyphicon glyphicon-eye-open"> </span>
@@ -260,7 +260,7 @@
 					<span id="icon_btn_size" class="glyphicon glyphicon-fullscreen"> </span>
 				</button>
 				<button id="btn_preview" class="btn btn-default">
-					<span id="icon_btn_preview" class="glyphicon glyphicon-list-alt"> </span>
+					<span id="icon_btn_preview" class="glyphicon glyphicon-sunglasses"> </span>
 				</button>
                 <button id="btn_inline" class="btn btn-default">
                     <span id="icon_btn_inline" class="glyphicon glyphicon-option-vertical"> </span>
@@ -287,15 +287,23 @@
                 <button id="cb_cf_flash_btn" class="btn btn-primary">
 					<span class="glyphicon glyphicon-log-in"> </span>
 					<span id="span_flash_codebender"> </span>
-				</button>				
+				</button>						
+				<a id="btn_flash_local" class='btn btn-primary' href="#" role='button'>
+					<span class="glyphicon glyphicon-log-in"> </span>
+					<span id="span_flash_local"> </span>
+				</a>						
 				<a id="btn_saveArduino" class='btn btn-primary' href="#" role='button'>
 					<span class="glyphicon glyphicon-save"> </span>
 					<span id="span_saveIno"> </span>
+				</a>		
+				<a id="btn_getResult" class='btn btn-primary' href="http://127.0.0.1" role='button'>
+					<span class="glyphicon glyphicon-list-alt"> </span>
+					<span id="span_flash_local_result"> </span>
 				</a>
                 <button id="btn_pasteIDEArduino" class="btn btn-primary">
 					<span class="glyphicon glyphicon-random"> </span>
 					<span id="span_pasteIDEArduino"> </span>
-				</button>					
+				</button>
                 <pre id="pre_arduino"></pre>
                 <div id="debug_arduino"></div>
             </div>
@@ -534,7 +542,7 @@
 			</p>
 			<label id="span_Upload"> </label></br>
 			<span id="span_Upload_local"> </span>
-			<input id="toggle-WebAccess" checked data-toggle="toggle" data-on="Local" data-off="Codebender" data-onstyle="info" data-offstyle="success" data-width="120" type="checkbox">
+			<input id="toggle-LocalCodebender" checked data-toggle="toggle" data-on="Local" data-off="Codebender" data-onstyle="info" data-offstyle="success" data-width="120" type="checkbox">
 			<span id="span_Upload_codebender"> </span>
 			</p>
 			<label id="span_Download"> </label></br>

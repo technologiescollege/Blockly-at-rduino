@@ -191,9 +191,9 @@ BlocklyDuino.renderContent = function() {
 				}
 				//neutralise le bouton 'btn_plugin_codebender'
 				if ($("select#cb_cf_ports").prop("disabled")) {
-					$("#btn_plugin_codebender").removeClass("disabled");
+					$("#btn_plugin_codebender").removeClass('hidden');
 				} else {
-					$("#btn_plugin_codebender").addClass("disabled");
+					$("#btn_plugin_codebender").addClass('hidden');
 				}
 
 			} catch (e) {
@@ -420,28 +420,30 @@ BlocklyDuino.getFiles = function (){
 /**
  * Load Arduino code from component pre_arduino to webserver
  * and open it in IDE Arduino
- * Thansk to gasolin
  */
 
-BlocklyDuino.uploadClick = function() {
+BlocklyDuino.ArduinoIDEClick = function() {
     var code = $('#pre_arduino').text();
     
     var url = "http://127.0.0.1:5005/openIDE";
     var method = "POST";
 
-    // You REALLY want async = true.
-    // Otherwise, it'll block ALL execution waiting for server response.
     var async = true;
 	var request = new XMLHttpRequest();
-	
-	request.onreadystatechange = function() {
-		if (request.readyState != 4) { 
-			return; 
-		}
-		
-		var status = parseInt(request.status); // HTTP response status, e.g., 200 for "200 OK"
-		var errorInfo = null;
-	};
+
+	request.open(method, url, async);
+	request.setRequestHeader("Content-Type", "text/plain;charset=UTF-8");
+	request.send(code);	
+}
+
+BlocklyDuino.uploadClick = function() {
+    var code = $('#pre_arduino').text();
+    
+    var url = "http://127.0.0.1:5005/upload";
+    var method = "POST";
+
+    var async = true;
+	var request = new XMLHttpRequest();
 
 	request.open(method, url, async);
 	request.setRequestHeader("Content-Type", "text/plain;charset=UTF-8");
@@ -498,6 +500,14 @@ BlocklyDuino.discard = function () {
 };
 
 /**
+ * Configuration & modify buttons state
+ */
+BlocklyDuino.configGlobal = function () {
+
+    //$("#toggle-LocalCodebender").attr('disabled') = $('#toggle-WebAccess').bootstrapSwitch('state');
+
+};
+/**
  * Binds functions to each of the buttons, nav links, and related.
  */
 BlocklyDuino.bindFunctions = function() {
@@ -505,14 +515,16 @@ BlocklyDuino.bindFunctions = function() {
 	$('#btn_delete').on("click", BlocklyDuino.discard);
 	$('#btn_saveXML').on("click", BlocklyDuino.saveXmlFile);
 	$('#btn_saveArduino').on("click", BlocklyDuino.saveArduinoFile);	
-	$('#btn_pasteIDEArduino').on("click", BlocklyDuino.uploadClick);
+	$('#btn_pasteIDEArduino').on("click", BlocklyDuino.ArduinoIDEClick);	
+	$('#btn_flash_local').on("click", BlocklyDuino.uploadClick);
 
 	$('#pinout').on("focus", function() {
 		BlocklyDuino.selectedCard = $(this).val();
 	});
 	$('#pinout').on("change", BlocklyDuino.arduinoCard);
 	
-	$('#toolboxes').on("change", BlocklyDuino.changeToolboxDefinition);
+	$('#toolboxes').on("change", BlocklyDuino.changeToolboxDefinition);	
+	$('#btn_configGlobal').on("click", BlocklyDuino.configGlobal);
 
 	$('#load').on("change", BlocklyDuino.load);
 	$('#btn_fakeload').on("click", function() {
