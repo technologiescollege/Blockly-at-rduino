@@ -217,11 +217,29 @@ Code.initLanguage = function() {
   $('#exampleModalLabel').text(MSG['exampleModalLabel']);  
   $('#convertModalLabel').text(MSG['convertModalLabel']);
   $('#RGBModalLabel').text(MSG['RGBModalLabel']);
+  $('#videoModalLabelTitle').text(MSG['videoModalLabelTitle']);
+  $('#videoModalLabel1').text(MSG['videoModalLabel1']);
+  $('#videoModalLabel2').text(MSG['videoModalLabel2']);
+  $('#videoModalLabel3').text(MSG['videoModalLabel3']);
+  
+  $('#configModalGlobalLabel').text(MSG['configModalGlobalLabel']);
+  $('#span_languageMenu').text(MSG['span_languageMenu']);
+  $('#span_OnOffLine').text(MSG['span_OnOffLine']);
+  $('#span_OnLine').text(MSG['span_OnLine']);
+  $('#span_OffLine').text(MSG['span_OffLine']);
+  $('#span_Upload').text(MSG['span_Upload']);
+  $('#span_Upload_local').text(MSG['span_Upload_local']);
+  $('#span_Upload_codebender').text(MSG['span_Upload_codebender']);
+  $('#span_Download').text(MSG['span_Download']);
+  $('#span_Download_local').text(MSG['span_Download_local']);
+  $('#span_Download_codebender').text(MSG['span_Download_codebender']);
   
   $('#btn_doc').attr('title', MSG['span_doc']);  
   $('#btn_tuto').attr('title', MSG['span_tuto']);
   $('#btn_closeCode').text(MSG['btn_closeCode']);
   $('#btn_validCode').text(MSG['btn_validCode']);
+  $('#btn_close_config_global').text(MSG['btn_closeCode']);
+  $('#btn_valid_config_global').text(MSG['btn_validCode']);
 
   $('#msg_ajax_ko').text(MSG['msg_ajax_ko']);
   $('#span_ajax_msg').text(MSG['span_ajax_msg']);
@@ -269,6 +287,7 @@ Code.initLanguageSupervision = function() {
 	  $('#span_supervision_analog_pin').text(Blockly.Msg.SV_analog_pin);
 	  $('#span_supervision_latch_digital_pin').text(Blockly.Msg.SV_latch_digital_pin);
 	  $('#span_supervision_latch_analog_pin').text(Blockly.Msg.SV_latch_analog_pin);
+	  $('#span_supervision_servo').text(Blockly.Msg.SV_servo);
 	  $('#span_supervision_servo_pin').text(Blockly.Msg.SV_servo_pin);
 	  $('#span_supervision_servo_angle').text(Blockly.Msg.SV_servo_angle);
 	  $('#span_supervision_servo_set').text(Blockly.Msg.SV_servo_set);
@@ -297,7 +316,9 @@ Code.initLanguageSupervision = function() {
 	  $('#span_supervision_stepper_steps_rev').text(Blockly.Msg.SV_stepper_steps_rev);
 	  $('#span_supervision_stepper_motor').text(Blockly.Msg.SV_stepper_motor);
 	  $('#span_supervision_stepper_steps').text(Blockly.Msg.SV_stepper_steps);
-	  $('#span_supervision_stepper_run').text(Blockly.Msg.SV_stepper_run);
+	  $('#span_supervision_stepper_run').text(Blockly.Msg.SV_stepper_run);	  
+	  
+	  $('#span_supervision_HTTP_BT').text(Blockly.Msg.SV_HTTP_BT);
 	  
 };
 

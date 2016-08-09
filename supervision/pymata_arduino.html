@@ -5,9 +5,8 @@
 	<li role="presentation"><a href="#tabs-4" aria-controls="tabs-4" role="tab" data-toggle="tab"><span id="span_supervision_tab4"> </span></a></li>
 	<li role="presentation"><a href="#tabs-5" aria-controls="tabs-5" role="tab" data-toggle="tab"><span id="span_supervision_tab5"> </span></a></li>
 	<li role="presentation"><a href="#tabs-6" aria-controls="tabs-6" role="tab" data-toggle="tab"><span id="span_supervision_tab6"> </span></a></li>
-	<li role="presentation"><a href="#tabs-7" aria-controls="tabs-7" role="tab" data-toggle="tab"><span id="span_supervision_tab7"> </span></a></li>
+	<!--li role="presentation"><a href="#tabs-7" aria-controls="tabs-7" role="tab" data-toggle="tab"><span id="span_supervision_tab7"> </span></a></li-->
 	<li role="presentation"><a href="#tabs-8" aria-controls="tabs-8" role="tab" data-toggle="tab"><span id="span_supervision_tab8"> </span></a></li>
-	<li role="presentation"><a href="#tabs-9" aria-controls="tabs-9" role="tab" data-toggle="tab"><span id="span_supervision_tab9"> </span></a></li>
 </ul>
 
 <!-- Tab panes -->
@@ -108,43 +107,8 @@
 			</div>
 		</div>
 	</div>
-	<!-- Reports -->
-	<div id="tabs-4" class="tab-pane">
-		<br/>
-		<textarea id="reports" rows="10" cols="70"></textarea>
-		<br/>
-		<br/>
-		<a href="javascript:getAnalogMap()" class="btn btn-info">
-	       <span id="span_supervision_get_analog_map"></span>
-	    </a>
-		&nbsp
-		<a href="javascript:getCapabilityReport()" class="btn btn-info">
-	       <span id="span_supervision_get_capability"></span>
-	    </a>
-		<br/>
-		<br/>
-		<a href="javascript:getFirmwareVersion()" class="btn btn-info">
-	       <span id="span_supervision_get_firmware"></span>
-	    </a>
-		&nbsp
-		<a href="javascript:getProtocolVersion()" class="btn btn-info">
-	       <span id="span_supervision_get_protocol"></span>
-	    </a>
-		&nbsp
-		<a href="javascript:getPymataVersion()" class="btn btn-info">
-	       <span id="span_supervision_get_pymata"></span>
-	    </a>
-		<br/>
-		<br/>
-		<a href="javascript:getPinState()" class="btn btn-info">
-	       <span id="span_supervision_get_pin_report"></span>
-	    </a>
-		<INPUT id="pinSpinner" TYPE="NUMBER" MIN="0" MAX="127" STEP="1" VALUE="0" SIZE="3">
-		&nbsp
-		<span id="span_supervision_get_pin_report_text"></span>
-	</div>
 	<!-- Polled Data -->
-	<div id="tabs-5" class="tab-pane">
+	<div id="tabs-4" class="tab-pane">
 		<br/>
 		<b><span id="span_supervision_digital_pin"></span></b>
 		<INPUT TYPE="NUMBER" id="drPin" MIN="2" MAX="19" STEP="1" VALUE="2" SIZE="1">
@@ -190,9 +154,9 @@
 		<br>
 		<br>
 	</div>
-	<!-- Servo -->
-	<div id="tabs-6" class="tab-pane">
-		<br/>
+	<!-- FirmataPlus -->
+	<div id="tabs-5" class="tab-pane">
+		<h2><span id="span_supervision_servo"></span></h2>
 		<b><span id="span_supervision_servo_pin"></span></b>
 		<select id="servoPin">
 			<option value="3">3</option>
@@ -209,64 +173,8 @@
 		<a href="javascript:servo()" class="btn btn-info">
 	       <span id="span_supervision_servo_set"></span>
 	    </a>
-	</div>
-	<!-- i2c -->
-	<div id="tabs-7" class="tab-pane">
-		<br/>
-		<b>Default Values Are Set to Read Temperature from </b>
-		<a href="https://www.sparkfun.com/products/11931" target="_blank">A Sparkfun TMP102 </a>
-		<h2>I2C Config (Use before an I2C read or write)</h2>
-		<input id="configI2C" type="button" value="Configure I2C" onclick="i2cConfig();"/>
-		<b>Read Delay Time</b>
-		<input id="i2cDelayTime" name="pin" class="element text medium" type="text" maxlength="4" value="0"
-			   style="width: 120px;"/>
-
-
-		<h2>I2C Read</h2>
-		<b>Device Address</b>
-		<input id="i2cReadAddress" name="pin" class="element text medium" type="text" maxlength="4" value="72"
-			   style="width: 120px;"/>
-		<b>Device Register</b>
-		<input id="i2cReadRegister" name="pin" class="element text medium" type="text" maxlength="4" value="0"
-			   style="width: 120px;"/>
-		<b>Number of Bytes To Read</b>
-		<input id="i2cReadNumBytes" name="pin" class="element text medium" type="text" maxlength="4" value="2"
-			   style="width: 120px;"/>
-		<b>Read Type</b>
-		<select id="i2cReadType">
-			<option value="I2C_READ">"I2C_READ"</option>
-			<option value="I2C_READ_CONTINUOUS" selected>"I2C_READ_CONTINUOUS"</option>
-			<option value="I2C_STOP_READING">"I2C_STOP_READING"</option>
-		</select>
-		<br>
-		<br>
-		<input id="i2cReadReq" type="button" value="I2C Read" onclick="i2cReadRequest();"/>
-		<input id="i2cRequestResult" name="pin" class="element text medium" type="text" maxlength="4" value="0"
-			   style="width: 120px;"/>
-		&nbsp;&nbsp<b>Celcius</b>
-		<input id="i2cRequestResultc" name="pin" class="element text medium" type="text" maxlength="4" value="0"
-			   style="width: 120px;"/>
-		&nbsp;&nbsp<b>Fahrenheit</b>
-		<input id="i2cRequestResultf" name="pin" class="element text medium" type="text" maxlength="4" value="0"
-			   style="width: 120px;"/>
-
-		<br> <br>
-		<input id="i2cRead" type="button" value="Retrieve Last Read Value" onclick="i2cReadData();"/>
-		<input id="i2cReadResult" name="pin" class="element text medium" type="text" maxlength="4" value="0"
-			   style="width: 120px;"/>
-
-		<br><br><hr size="6">
-		<h1>PyMata IoT</h1>
-		<b> Write Data To 8x8 BiColor LED Backpack</b>
-		<a href="https://www.adafruit.com/products/902" target="_blank">Adafruit Product ID 109 </a>
 		<br><br>
-		<input id="i2cWriteTest" type="button" value="First Row On" onclick="i2cWriteDemo(1);"/>
-		&nbsp;&nbsp
-		<input id="i2cWriteTest" type="button" value="First Row Off" onclick="i2cWriteDemo(0);"/>
-	</div>
-	<!-- FirmataPlus specific -->
-	<div id="tabs-8" class="tab-pane">
-		<br/>
+
 		<h2><span id="span_supervision_tone"></span></h2>
 		<b><span id="span_supervision_tone_pin"></span></b>
 		<select id="tonePin">
@@ -521,8 +429,62 @@
 	       <span id="span_supervision_stepper_run"></span>
 	    </a>
 	</div>
+	<!-- i2c -->
+	<div id="tabs-6" class="tab-pane">
+		<br/>
+		<b>Default Values Are Set to Read Temperature from </b>
+		<a href="https://www.sparkfun.com/products/11931" target="_blank">A Sparkfun TMP102 </a>
+		<h2>I2C Config (Use before an I2C read or write)</h2>
+		<input id="configI2C" type="button" value="Configure I2C" onclick="i2cConfig();"/>
+		<b>Read Delay Time</b>
+		<input id="i2cDelayTime" name="pin" class="element text medium" type="text" maxlength="4" value="0"
+			   style="width: 120px;"/>
+
+
+		<h2>I2C Read</h2>
+		<b>Device Address</b>
+		<input id="i2cReadAddress" name="pin" class="element text medium" type="text" maxlength="4" value="72"
+			   style="width: 120px;"/>
+		<b>Device Register</b>
+		<input id="i2cReadRegister" name="pin" class="element text medium" type="text" maxlength="4" value="0"
+			   style="width: 120px;"/>
+		<b>Number of Bytes To Read</b>
+		<input id="i2cReadNumBytes" name="pin" class="element text medium" type="text" maxlength="4" value="2"
+			   style="width: 120px;"/>
+		<b>Read Type</b>
+		<select id="i2cReadType">
+			<option value="I2C_READ">"I2C_READ"</option>
+			<option value="I2C_READ_CONTINUOUS" selected>"I2C_READ_CONTINUOUS"</option>
+			<option value="I2C_STOP_READING">"I2C_STOP_READING"</option>
+		</select>
+		<br>
+		<br>
+		<input id="i2cReadReq" type="button" value="I2C Read" onclick="i2cReadRequest();"/>
+		<input id="i2cRequestResult" name="pin" class="element text medium" type="text" maxlength="4" value="0"
+			   style="width: 120px;"/>
+		&nbsp;&nbsp<b>Celcius</b>
+		<input id="i2cRequestResultc" name="pin" class="element text medium" type="text" maxlength="4" value="0"
+			   style="width: 120px;"/>
+		&nbsp;&nbsp<b>Fahrenheit</b>
+		<input id="i2cRequestResultf" name="pin" class="element text medium" type="text" maxlength="4" value="0"
+			   style="width: 120px;"/>
+
+		<br> <br>
+		<input id="i2cRead" type="button" value="Retrieve Last Read Value" onclick="i2cReadData();"/>
+		<input id="i2cReadResult" name="pin" class="element text medium" type="text" maxlength="4" value="0"
+			   style="width: 120px;"/>
+
+		<br><br><hr size="6">
+		<h1>PyMata IoT</h1>
+		<b> Write Data To 8x8 BiColor LED Backpack</b>
+		<a href="https://www.adafruit.com/products/902" target="_blank">Adafruit Product ID 109 </a>
+		<br><br>
+		<input id="i2cWriteTest" type="button" value="First Row On" onclick="i2cWriteDemo(1);"/>
+		&nbsp;&nbsp
+		<input id="i2cWriteTest" type="button" value="First Row Off" onclick="i2cWriteDemo(0);"/>
+	</div>
 	<!-- Requetes -->
-	<div id="tabs-9" class="tab-pane">
+	<div id="tabs-7" class="tab-pane">
 		<br/>
 		<b><span id="span_supervision_HTTP"></span></b>
 		<input id="request" class="element text medium" type="text" maxlength="4" style="width: 400px;"/>
@@ -531,5 +493,40 @@
 		<a href="javascript:HTTPRequest(request)" class="btn btn-info">
 	       <span id="span_supervision_HTTP_BT"></span>
 	    </a>
+	</div>
+	<!-- Reports -->
+	<div id="tabs-8" class="tab-pane">
+		<br/>
+		<textarea id="reports" rows="10" cols="70"></textarea>
+		<br/>
+		<br/>
+		<a href="javascript:getAnalogMap()" class="btn btn-info">
+	       <span id="span_supervision_get_analog_map"></span>
+	    </a>
+		&nbsp
+		<a href="javascript:getCapabilityReport()" class="btn btn-info">
+	       <span id="span_supervision_get_capability"></span>
+	    </a>
+		<br/>
+		<br/>
+		<a href="javascript:getFirmwareVersion()" class="btn btn-info">
+	       <span id="span_supervision_get_firmware"></span>
+	    </a>
+		&nbsp
+		<a href="javascript:getProtocolVersion()" class="btn btn-info">
+	       <span id="span_supervision_get_protocol"></span>
+	    </a>
+		&nbsp
+		<a href="javascript:getPymataVersion()" class="btn btn-info">
+	       <span id="span_supervision_get_pymata"></span>
+	    </a>
+		<br/>
+		<br/>
+		<a href="javascript:getPinState()" class="btn btn-info">
+	       <span id="span_supervision_get_pin_report"></span>
+	    </a>
+		<INPUT id="pinSpinner" TYPE="NUMBER" MIN="0" MAX="127" STEP="1" VALUE="0" SIZE="3">
+		&nbsp
+		<span id="span_supervision_get_pin_report_text"></span>
 	</div>
 </div>

@@ -111,8 +111,7 @@
 <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
 
 <link rel="stylesheet" type="text/css" href="./css/bootstrap-toggle.min.css" />
-<link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
-<script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
+<script src="./utils/bootstrap-toggle.min.js"></script>
 
 <link rel="stylesheet" type="text/css" href="./css/prettify.css">
 
@@ -134,7 +133,6 @@
 			<b><span id="span_about"> </span></b>
 			<span class="glyphicon glyphicon-user"></span>		
 		</button>
-		<select id="languageMenu"></select>
     </div>
     <div id="divBody">
     <div id="menuPanel">
@@ -142,14 +140,6 @@
 	<!-- 		<button id="btn_switch" class="btn btn-default"> -->
 	<!-- 			<span class="glyphicon glyphicon-retweet"> </span> -->
 	<!-- 		</button> -->
-		    <div id="divCard">
-		            <label id="labelArduinoCard"></label> 
-		            <select id="pinout">
-		                <option value="arduino_uno" selected="selected">Arduino UNO</option>
-		                <option value="arduino_mega">Arduino MEGA</option>
-						<option value="dfrobot_romeo">DFRobot RoMeo</option>
-		            </select>
-		    </div>
 			<button id="btn_picture" class="btn btn-danger btn-block text-left">
 				<span class="glyphicon glyphicon-alert"> </span>
 				<span id="span_picture"> </span>
@@ -459,15 +449,15 @@
         <h4 class="modal-title" id="videoModalLabelTitle"></h4>
       </div>
 	  <div class="modal-body text-center">
-		<h6 class="modal-body text-center" id="videoModalLabel1"></h6>
+		<span id="videoModalLabel1"> </span></br>
 		<iframe width="215" height="120" src="https://www.youtube-nocookie.com/embed/nXWwNrwVFXM?list=PLwy0yw3Oq4-uFNmgedXx9_L_TJNORo-4N" frameborder="0" allowfullscreen></iframe>
 	  </div>
 	  <div class="modal-body text-center">
-		<h6 class="modal-body text-center" id="videoModalLabel2"></h6>
+		<span id="videoModalLabel2"> </span></br>
 		<iframe width="215" height="120" src="https://www.youtube-nocookie.com/embed/vlJl28qE5vg?list=PLwy0yw3Oq4-uFJl0j-efUAAlfCbqtcTMr" frameborder="0" allowfullscreen></iframe>
 	  </div>
 	  <div class="modal-body text-center">
-		<h6 class="modal-body text-center" id="videoModalLabel3"></h6>
+		<span id="videoModalLabel3"> </span></br>
 		<iframe src="https://player.vimeo.com/video/177939950?byline=0&portrait=0" width="150" height="120" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 	  </div>
     </div>
@@ -530,7 +520,7 @@
 			<h4 class="modal-title" id="configModalGlobalLabel"></h4>
 		  </div>    
 		<div class="modal-body" id="modal-body-config-global">
-			<select id="languageMenu"></select>
+			<label id="span_languageMenu"> </label>  <select id="languageMenu"></select></br>
 			<div id="divCard">
 		            <label id="labelArduinoCard"></label> 
 		            <select id="pinout">
@@ -539,13 +529,23 @@
 						<option value="dfrobot_romeo">DFRobot RoMeo</option>
 		            </select>
 		    </div>
-			
-			<input id="toggle-WebAccess" checked data-toggle="toggle" data-on="Accès web" data-off="Hors ligne" data-onstyle="success" data-offstyle="danger" type="checkbox">
+			<span id="span_OnOffLine"> </span>
+			<input id="toggle-WebAccess" checked data-toggle="toggle" data-on=span_OnLine data-off=span_OffLine data-onstyle="success" data-offstyle="info" data-width="120" type="checkbox">
 			</p>
-			Serveur local <input id="toggle-WebAccess" checked data-toggle="toggle" data-on="Local" data-off="En ligne" data-onstyle="success" data-offstyle="danger" type="checkbox"> Serveur CodeBender
+			<label id="span_Upload"> </label></br>
+			<span id="span_Upload_local"> </span>
+			<input id="toggle-WebAccess" checked data-toggle="toggle" data-on="Local" data-off="Codebender" data-onstyle="info" data-offstyle="success" data-width="120" type="checkbox">
+			<span id="span_Upload_codebender"> </span>
 			</p>
-			<button id="btn_Help_Offline" type="button" class="btn btn-default">Serveurs de communication</button>
-			<button id="btn_Help_Online" type="button" class="btn btn-primary">Plugin CodeBender</button>
+			<label id="span_Download"> </label></br>
+			<a id="btn_Help_Offline" class='btn btn-info text-left' href="https://github.com/technologiescollege/Blockly-rduino-communication" target="_blank" role='button'>
+			  <span class="glyphicon glyphicon-download"></span>
+			  <span id="span_Download_local"> </span>
+			 </a>
+			<a id="btn_Help_Online" class='btn btn-success text-left' href="https://codebender.cc/static/plugin" target="_blank" role='button'>
+			  <span class="glyphicon glyphicon-download"></span>
+			  <span id="span_Download_codebender"> </span>
+			 </a>
 		</div>  
 		<div class="modal-footer">
 			<button id="btn_close_config_global" type="button" class="btn btn-default" data-dismiss="modal" ></button>

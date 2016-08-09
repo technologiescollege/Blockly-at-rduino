@@ -33,7 +33,7 @@ body {
 }
 
 #divTitre {
-	height: 56px;
+	height: 46px;
 	vertical-align: top;
 	position: relative;
 	width: 100%;
@@ -45,7 +45,7 @@ body {
 
 #divBody {
     position: absolute;
-    top: 66px;
+    top: 46px;
     bottom: 5px;
     width: 100%;
 }
@@ -236,9 +236,9 @@ html[dir="RTL"] #btn_about, html[dir="RTL"] #btn_logout {
 }
 
 #languageMenu {
-	position: absolute;
+	/*position: absolute;
 	top: 35px;
-	right: 15px;
+	right: 15px;*/
 }
 
 html[dir="RTL"] #languageMenu {
