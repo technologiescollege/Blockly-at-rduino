@@ -502,11 +502,55 @@ BlocklyDuino.discard = function () {
 /**
  * Configuration & modify buttons state
  */
-BlocklyDuino.configGlobal = function () {
+BlocklyDuino.toggleWeb = function () {
+	//checked = online
+	if ($('#toggle-WebAccess').prop('checked')) {
+			$("#cb_cf_boards").removeClass('hidden');
+			$("#cb_cf_ports").removeClass('hidden');
+			$("#cb_cf_verify_btn").removeClass('hidden');
+			$("#cb_cf_flash_btn").removeClass('hidden');
+			$("#btn_plugin_codebender").removeClass('hidden');
+			$('#toggle-LocalCodebender').bootstrapToggle('enable');
+			if ($('#toggle-LocalCodebender').prop('checked')) {
+				$("#btn_Help_Online").removeClass('hidden');				
+			}
+		} else {
+			$("#cb_cf_boards").addClass('hidden');
+			$("#cb_cf_ports").addClass('hidden');
+			$("#cb_cf_verify_btn").addClass('hidden');
+			$("#cb_cf_flash_btn").addClass('hidden');
+			$("#btn_plugin_codebender").addClass('hidden');
+			$('#toggle-LocalCodebender').bootstrapToggle('on');
+			$('#toggle-LocalCodebender').bootstrapToggle('disable');
+			$("#btn_Help_Offline").removeClass('hidden');	
+			if ($('#toggle-LocalCodebender').prop('checked')) {
+				$("#btn_Help_Online").addClass('hidden');				
+			}
+		}
+};
 
-    //$("#toggle-LocalCodebender").attr('disabled') = $('#toggle-WebAccess').bootstrapSwitch('state');
+BlocklyDuino.toggleLocalCodeBender = function () {
+	//checked = local
+	if ($('#toggle-LocalCodebender').prop('checked')) {
+			$("#btn_flash_local").removeClass('hidden');
+			$("#btn_getResult").removeClass('hidden');
+			$("#btn_pasteIDEArduino").removeClass('hidden');
+			$("#cb_cf_flash_btn").addClass('hidden');
+			if ($('#toggle-WebAccess').prop('checked')) {
+				$("#btn_Help_Offline").removeClass('hidden');				
+			}
+		} else {
+			$("#btn_flash_local").addClass('hidden');
+			$("#btn_getResult").addClass('hidden');
+			$("#btn_pasteIDEArduino").addClass('hidden');
+			$("#cb_cf_flash_btn").removeClass('hidden');
+			if ($('#toggle-WebAccess').prop('checked')) {
+				$("#btn_Help_Offline").addClass('hidden');				
+			}
+		}
 
 };
+
 /**
  * Binds functions to each of the buttons, nav links, and related.
  */
@@ -517,6 +561,9 @@ BlocklyDuino.bindFunctions = function() {
 	$('#btn_saveArduino').on("click", BlocklyDuino.saveArduinoFile);	
 	$('#btn_pasteIDEArduino').on("click", BlocklyDuino.ArduinoIDEClick);	
 	$('#btn_flash_local').on("click", BlocklyDuino.uploadClick);
+		
+	$('#toggle-WebAccess').on("change", BlocklyDuino.toggleWeb);
+	$('#toggle-LocalCodebender').on("change", BlocklyDuino.toggleLocalCodeBender);
 
 	$('#pinout').on("focus", function() {
 		BlocklyDuino.selectedCard = $(this).val();
@@ -524,7 +571,6 @@ BlocklyDuino.bindFunctions = function() {
 	$('#pinout').on("change", BlocklyDuino.arduinoCard);
 	
 	$('#toolboxes').on("change", BlocklyDuino.changeToolboxDefinition);	
-	$('#btn_configGlobal').on("click", BlocklyDuino.configGlobal);
 
 	$('#load').on("change", BlocklyDuino.load);
 	$('#btn_fakeload').on("click", function() {
@@ -836,6 +882,11 @@ BlocklyDuino.init = function() {
 	BlocklyDuino.setOrientation();
 	
 	BlocklyDuino.testAjax();
+	
+	$('#toggle-WebAccess').bootstrapToggle('on');
+	$('#toggle-LocalCodebender').bootstrapToggle('on');
+	BlocklyDuino.toggleWeb();
+	BlocklyDuino.toggleLocalCodeBender();
 	
 	if ($('#toolbox').length) {
 		BlocklyDuino.toolboxInIndexHtml = true;		

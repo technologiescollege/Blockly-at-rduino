@@ -240,8 +240,6 @@ Code.initLanguage = function() {
   $('#btn_tuto').attr('title', MSG['span_tuto']);
   $('#btn_closeCode').text(MSG['btn_closeCode']);
   $('#btn_validCode').text(MSG['btn_validCode']);
-  $('#btn_close_config_global').text(MSG['btn_closeCode']);
-  $('#btn_valid_config_global').text(MSG['btn_validCode']);
 
   $('#msg_ajax_ko').text(MSG['msg_ajax_ko']);
   $('#span_ajax_msg').text(MSG['span_ajax_msg']);
