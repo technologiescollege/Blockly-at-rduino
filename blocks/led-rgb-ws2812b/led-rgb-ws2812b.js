@@ -6,7 +6,7 @@ Blockly.Blocks['lp2i_ledRGB_WS2812B_init'] = {
     this.appendDummyInput()
         .appendField(Blockly.Msg.lp2i_ledRGB_WS2812B_init)
 		.appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/led-rgb-ws2812b/led-rgb-ws2812b.jpg', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize));
-    this.appendValueInput("Pin_LedRGB" , 'Number')
+    this.appendValueInput("Pin_LedRGB_init" , 'Number')
         .setAlign(Blockly.ALIGN_RIGHT)
 		.appendField(Blockly.Msg.lp2i_ledRGB_WS2812B_init_Pin);
     this.appendValueInput("Number_of_Pixels" , 'Number')
@@ -29,6 +29,9 @@ Blockly.Blocks['lp2i_ledRGB_WS2812B_setPixelColor'] = {
     this.appendDummyInput()
         .appendField(Blockly.Msg.lp2i_ledRGB_WS2812B_setPixelColor)
 		.appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/led-rgb-ws2812b/led-rgb-ws2812b.jpg', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize));
+    this.appendValueInput("Pin_LedRGB" , 'Number')
+        .setAlign(Blockly.ALIGN_RIGHT)
+		.appendField(Blockly.Msg.lp2i_ledRGB_WS2812B_init_Pin);
     this.appendValueInput("Red" , 'Number')
         .setAlign(Blockly.ALIGN_RIGHT)
 		.appendField(Blockly.Msg.lp2i_ledRGB_WS2812B_setPixelColor_Red);
