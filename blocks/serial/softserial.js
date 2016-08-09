@@ -60,8 +60,10 @@ Blockly.Blocks['soft_read'] = {
     this.setColour("#00979D");
 	this.setHelpUrl('');
 	this.appendDummyInput("")
+		.appendField(Blockly.Msg.SSERIAL_RX)
+        .appendField(new Blockly.FieldTextInput(''), 'RX_ss')
 	    .appendTitle(Blockly.Msg.SSERIAL_Read);
-    this.setInputsInline(true);
+    this.setInputsInline(false);
     this.setOutput(true, 'String');
     this.setTooltip('');
   }
@@ -71,8 +73,12 @@ Blockly.Blocks['soft_print'] = {
   init: function() {
 	this.setHelpUrl('http://www.arduino.cc/en/Serial/Print');
     this.setColour("#00979D");
+	this.appendDummyInput("")
+		.appendField(Blockly.Msg.SSERIAL_RX)
+        .appendField(new Blockly.FieldTextInput(''), 'RX_ss');
     this.appendValueInput("CONTENT", 'String')
         .appendField(Blockly.Msg.SSERIAL_Print);
+    this.setInputsInline(false);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setTooltip('');
@@ -83,8 +89,12 @@ Blockly.Blocks['soft_write'] = {
   init: function() {
 	this.setHelpUrl('http://www.arduino.cc/en/Serial/Print');
     this.setColour("#00979D");
+	this.appendDummyInput("")
+		.appendField(Blockly.Msg.SSERIAL_RX)
+        .appendField(new Blockly.FieldTextInput(''), 'RX_ss');
     this.appendValueInput("CONTENT", 'String')
         .appendField(Blockly.Msg.SSERIAL_Write);
+    this.setInputsInline(false);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setTooltip('');
@@ -96,8 +106,10 @@ Blockly.Blocks['soft_available'] = {
 	this.setHelpUrl('');
     this.setColour("#00979D");
 	this.appendDummyInput("")
+		.appendField(Blockly.Msg.SSERIAL_RX)
+        .appendField(new Blockly.FieldTextInput(''), 'RX_ss')
 	    .appendTitle(Blockly.Msg.SSERIAL_Avai);
-    this.setInputsInline(true);
+    this.setInputsInline(false);
     this.setOutput(true, 'Boolean');
     this.setTooltip('');
   }
@@ -108,7 +120,10 @@ Blockly.Blocks['soft_flush'] = {
     this.setColour("#00979D");
 	this.setHelpUrl('http://arduino.cc/en/Serial/Flush');
 	this.appendDummyInput("")
+		.appendField(Blockly.Msg.SSERIAL_RX)
+        .appendField(new Blockly.FieldTextInput(''), 'RX_ss')
 	    .appendField(Blockly.Msg.Serial_flush);
+    this.setInputsInline(false);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setTooltip('Waits for the transmission of outgoing serial data to complete.');

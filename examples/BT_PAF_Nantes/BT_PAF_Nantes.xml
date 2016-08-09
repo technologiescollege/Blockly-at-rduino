@@ -6,7 +6,9 @@
     <next>
       <block type="controls_if">
         <value name="IF0">
-          <block type="soft_available"></block>
+          <block type="soft_available">
+            <field name="RX_ss">10</field>
+          </block>
         </value>
         <statement name="DO0">
           <block type="variables_set">
@@ -15,7 +17,9 @@
               <block type="variables_set_type">
                 <field name="VARIABLE_SETTYPE_TYPE">NUMBER</field>
                 <value name="VARIABLE_SETTYPE_INPUT">
-                  <block type="soft_read"></block>
+                  <block type="soft_read">
+                    <field name="RX_ss">10</field>
+                  </block>
                 </value>
               </block>
             </value>

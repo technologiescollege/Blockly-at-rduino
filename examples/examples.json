@@ -40,11 +40,11 @@
         "visible": true
     },
     {
-        "source_url": "./examples/BT_PAF_Nantes/BT_PAF_Nantes.xml",
-        "source_text": "suite à la connection Bluetooth, voici comment piloter par Android",
-        "image": "./examples/BT_PAF_Nantes/BT_PAF_Nantes_fritzing.jpg",
+        "source_url": "./examples/BT_piloter_DEL/BT_piloter_DEL.xml",
+        "source_text": "suite à la connection Bluetooth, voici comment piloter une DEL par Android",
+        "image": "./examples/BT_piloter_DEL/BT_piloter_DEL_fritzing.jpg",
         "link_url": "https://www.youtube-nocookie.com/embed/vlJl28qE5vg?list=PLwy0yw3Oq4-uFJl0j-efUAAlfCbqtcTMr",
-        "link_text": "Tutos vidéo",
+        "link_text": "tutos vidéo",
         "visible": true
     }
 ]
