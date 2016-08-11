@@ -6,8 +6,8 @@ Blockly.Arduino.technozone_lcdinit = function() {
   var dropdown_blink = this.getTitleValue('blink');
   var dropdown_backlight = this.getTitleValue('backlight');
   Blockly.Arduino.definitions_['define_Wire'] = '#include <Wire.h>\n';
-  Blockly.Arduino.definitions_['define_LiquidCrystal_I2C'] = '#include <LiquidCrystal_I2C.h>\n';
-  Blockly.Arduino.definitions_['var_lcd'] = 'LiquidCrystal_I2C lcd('+dropdown_I2C_adress+','+dropdown_nbcol+','+dropdown_nblig+');\n';
+  Blockly.Arduino.definitions_['define_LiquidCrystal_I2C_TechnoZone51'] = '#include <LiquidCrystal_I2C_TechnoZone51.h>\n';
+  Blockly.Arduino.definitions_['var_lcd'] = 'LiquidCrystal_I2C_TechnoZone51 lcd('+dropdown_I2C_adress+','+dropdown_nbcol+','+dropdown_nblig+');\n';
   var mysetup='lcd.init();\n';
   if (dropdown_backlight=="TRUE")
   {
