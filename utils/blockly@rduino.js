@@ -883,11 +883,6 @@ BlocklyDuino.init = function() {
 	
 	BlocklyDuino.testAjax();
 	
-	$('#toggle-WebAccess').bootstrapToggle('on');
-	$('#toggle-LocalCodebender').bootstrapToggle('on');
-	BlocklyDuino.toggleWeb();
-	BlocklyDuino.toggleLocalCodeBender();
-	
 	if ($('#toolbox').length) {
 		BlocklyDuino.toolboxInIndexHtml = true;		
 	}
@@ -969,6 +964,9 @@ BlocklyDuino.init = function() {
 
 	// bind events to html elements
 	BlocklyDuino.bindFunctions();
+	
+	$('#toggle-WebAccess').bootstrapToggle('on');
+	$('#toggle-LocalCodebender').bootstrapToggle('on');
 
 	// open ConfigToolbox modal
 	if (BlocklyDuino.getStringParamFromUrl('openConfigToolbox', '') != '') {
@@ -1140,7 +1138,7 @@ BlocklyDuino.buildExamples = function() {
 				$.each(data, function(i, example){
 					if (example.visible) {
 						var line = "<tr>"
-								   + "<td><a href='index.html?lang=fr?url="+example.source_url+"'>"
+								   + "<td><a href='index.html?lang=fr&url="+example.source_url+"'>"
 								   + example.source_text
 								   + "</a></td>"
 								   + "<td>"

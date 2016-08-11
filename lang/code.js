@@ -229,6 +229,8 @@ Code.initLanguage = function() {
   $('#span_OnOffLine').text(MSG['span_OnOffLine']);
   $('#span_OnLine').text(MSG['span_OnLine']);
   $('#span_OffLine').text(MSG['span_OffLine']);
+  $('#span_LocalCodebender_Code').text(MSG['span_LocalCodebender_Code']);
+  $('#span_LocalCodebender_Local').text(MSG['span_LocalCodebender_Local']);
   $('#span_Upload').text(MSG['span_Upload']);
   $('#span_Upload_local').text(MSG['span_Upload_local']);
   $('#span_Upload_codebender').text(MSG['span_Upload_codebender']);
@@ -236,8 +238,13 @@ Code.initLanguage = function() {
   $('#span_Download_local').text(MSG['span_Download_local']);
   $('#span_Download_codebender').text(MSG['span_Download_codebender']);
   
+  $('#btn_configGlobal').attr('title', MSG['span_configGlobal']);
+  $('#btn_RGB').attr('title', MSG['span_RGB']);
+  $('#btn_convert').attr('title', MSG['span_convert']);
   $('#btn_doc').attr('title', MSG['span_doc']);  
   $('#btn_tuto').attr('title', MSG['span_tuto']);
+  $('#btn_videos').attr('title', MSG['span_videos']);
+  
   $('#btn_closeCode').text(MSG['btn_closeCode']);
   $('#btn_validCode').text(MSG['btn_validCode']);
 

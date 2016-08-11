@@ -198,7 +198,7 @@
 				<span class="glyphicon glyphicon-share"> </span>
 				<span id="span_example"> </span>
 			</button>
-			<a id="btn_create_example" class="btn btn-info btn-block" href="">
+			<a id="btn_create_example" class="btn btn-info btn-block" href="" target="_blank">
 				<span class="glyphicon glyphicon-wrench"> </span>
 				<span id="span_create_example"> </span>
 			</a>
@@ -211,29 +211,23 @@
 		<div id="div_tools_button">
 			<button id="btn_configGlobal" class="btn btn-warning text-left" data-toggle="modal" data-target="#configModalGlobal">
 		       <span class="glyphicon glyphicon-th-list"> </span>
-		       <span id="span_configGlobal"> </span>
 		   </button>
 			<button id="btn_RGB" class="btn btn-primary text-left">
 		       <span class="glyphicon glyphicon-th"> </span>
-		       <span id="span_RGB"> </span>
 		    </button>
 			<button id="btn_convert" class="btn btn-primary text-left">
 		       <span class="glyphicon glyphicon-superscript"> </span>
-		       <span id="span_convert"> </span>
 		   </button>
 		</div>
 		<div id="div_help_button">
 		   <button id="btn_videos" class="btn btn-danger text-left">
 		       <span class="glyphicon glyphicon-expand"> </span>
-		       <span id="span_videos"> </span>
 		   </button>
 		   <a id="btn_doc" class='btn btn-success btn-info text-left' href="http://tic.technologiescollege.fr/wiki/" target=_blank role='button'>
 		       <span class="glyphicon glyphicon-info-sign"></span>
-		       <span id="span_doc"> </span>
 		   </a>
 		   <a id="btn_tuto" class='btn btn-success btn-info text-left' href="documentation/blockly_doc.pdf" target=_blank role='button'>
 		       <span class="glyphicon glyphicon-question-sign"></span>
-		       <span id="span_tuto"> </span>
 		   </a>
 		</div>       
     </div>
@@ -539,11 +533,11 @@
 		            </select>
 		    </div>
 			<span id="span_OnOffLine"> </span>
-			<input id="toggle-WebAccess" checked data-toggle="toggle" data-on=span_OnLine data-off=span_OffLine data-onstyle="success" data-offstyle="info" data-width="120" type="checkbox">
+			<input id="toggle-WebAccess" checked data-toggle="toggle" data-on="<span id='span_OnLine'> </span>" data-off='<span id="span_OffLine"> </span>' data-onstyle="success" data-offstyle="info" data-width="120" type="checkbox">
 			</p>
 			<label id="span_Upload"> </label></br>
 			<span id="span_Upload_local"> </span>
-			<input id="toggle-LocalCodebender" checked data-toggle="toggle" data-on="Local" data-off="Codebender" data-onstyle="info" data-offstyle="success" data-width="120" type="checkbox">
+			<input id="toggle-LocalCodebender" checked data-toggle="toggle" data-on='<span id="span_LocalCodebender_Local"> </span>' data-off='<span id="span_LocalCodebender_Code"> </span>' data-onstyle="info" data-offstyle="success" data-width="120" type="checkbox">
 			<span id="span_Upload_codebender"> </span>
 			</p>
 			<label id="span_Download"> </label></br>
