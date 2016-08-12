@@ -98,15 +98,15 @@ Blockly.Arduino.init = function(workspace) {
     Blockly.Arduino.variableDB_.reset();
   }
 
-  // Iterate through to capture all blocks types and set the function arguments
+ // Iterate through to capture all blocks types and set the function arguments
   var varsWithTypes = Blockly.Arduino.StaticTyping.collectVarsWithTypes(workspace);
   Blockly.Arduino.StaticTyping.setProcedureArgs(workspace, varsWithTypes);
 
   // Set variable declarations with their Arduino type in the defines dictionary
   for (var varName in varsWithTypes) {
     Blockly.Arduino.addVariable(varName,
-	Blockly.Arduino.getArduinoType_(varsWithTypes[varName]) +' ' +
-	varName + ';');
+        Blockly.Arduino.getArduinoType_(varsWithTypes[varName]) +' ' +
+        varName + ';');
   }
 };
 
@@ -357,28 +357,31 @@ Blockly.Arduino.scrub_ = function(block, code) {
  * @private
  */
 Blockly.Arduino.getArduinoType_ = function(typeBlockly) {
-  switch (typeBlockly.typeName) {
-    case Blockly.Types.NUMBER.typeName:
-      return 'int';
-    case Blockly.Types.DECIMAL.typeName:
-      return 'float';
-    case Blockly.Types.TEXT.typeName:
-      return 'String';
-    case Blockly.Types.CHARACTER.typeName:
+  switch (typeBlockly.typeId) {
+    case Blockly.Types.SHORT_NUMBER.typeId:
       return 'char';
-    case Blockly.Types.BOOLEAN.typeName:
-      return 'boolean';
-    case Blockly.Types.NULL.typeName:
-      return 'void';
-    case Blockly.Types.UNDEF.typeName:
+    case Blockly.Types.NUMBER.typeId:
       return 'int';
-    case Blockly.Types.CHILD_BLOCK_MISSING.typeName:
+    case Blockly.Types.LARGE_NUMBER.typeId:
+      return 'long';
+    case Blockly.Types.DECIMAL.typeId:
+      return 'float';
+    case Blockly.Types.TEXT.typeId:
+      return 'String';
+    case Blockly.Types.CHARACTER.typeId:
+      return 'char';
+    case Blockly.Types.BOOLEAN.typeId:
+      return 'boolean';
+    case Blockly.Types.NULL.typeId:
+      return 'void';
+    case Blockly.Types.UNDEF.typeId:
+      return 'undefined';
+    case Blockly.Types.CHILD_BLOCK_MISSING.typeId:
       // If no block connected default to int, change for easier debugging
       //return 'ChildBlockMissing';
       return 'int';
     default:
-      //return 'Invalid Type';
-	  return 'int';
+      return 'Invalid Blockly Type';
     }
 };
 
