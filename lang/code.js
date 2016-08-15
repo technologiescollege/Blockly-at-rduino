@@ -235,6 +235,7 @@ Code.initLanguage = function() {
   $('#span_Upload_local').text(MSG['span_Upload_local']);
   $('#span_Upload_codebender').text(MSG['span_Upload_codebender']);
   $('#span_Download').text(MSG['span_Download']);
+  $('#span_Download_Arduino').text(MSG['span_Download_Arduino']);
   $('#span_Download_local').text(MSG['span_Download_local']);
   $('#span_Download_codebender').text(MSG['span_Download_codebender']);
   
