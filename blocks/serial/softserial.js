@@ -66,6 +66,14 @@ Blockly.Blocks['soft_read'] = {
     this.setInputsInline(false);
     this.setOutput(true, 'String');
     this.setTooltip('');
+  },
+  /**
+   * Assigns a type to the block based on the selected type to cast.
+   * @return {!string} Blockly type for this block configuration.
+   * @this Blockly.Block
+   */
+  getBlockType: function() {
+    return Blockly.Types.CHARACTER;
   }
 };
 

@@ -33,7 +33,7 @@ body {
 }
 
 #divTitre {
-	height: 46px;
+	height: 36px;
 	vertical-align: top;
 	position: relative;
 	width: 100%;
@@ -45,7 +45,7 @@ body {
 
 #divBody {
     position: absolute;
-    top: 46px;
+    top: 36px;
     bottom: 5px;
     width: 100%;
 }
@@ -219,7 +219,7 @@ html[dir="RTL"] .divConfig-hor {
 
 #btn_about, #btn_logout {
     position: absolute;
-    top: 10px;
+    top: 5px;
 }
 
 #btn_doc-hor{

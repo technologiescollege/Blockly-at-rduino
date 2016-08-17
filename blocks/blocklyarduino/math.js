@@ -27,10 +27,16 @@
 goog.provide('Blockly.Blocks.math');
 
 goog.require('Blockly.Blocks');
+goog.require('Blockly.Types');
+/**
+ * Common HSV hue for all blocks in this category.
+ */
+Blockly.Blocks.math.HUE = "#5CB712";
+
 
 Blockly.Blocks.inout_angle_maths = {
   init: function() {
-    this.setColour("#5CB712");
+    this.setColour(Blockly.Blocks.math.HUE);
 	this.setHelpUrl('https://developers.google.com/blockly/custom-blocks/defining-blocks#appendfield');
     this.appendDummyInput("")
         .appendField("angle")
@@ -54,10 +60,27 @@ Blockly.Blocks['math_number'] = {
     this.setHelpUrl(Blockly.Msg.MATH_NUMBER_HELPURL);
     this.setColour(Blockly.Blocks.math.HUE);
     this.appendDummyInput()
-        .appendField(new Blockly.FieldTextInput('0',
-        Blockly.FieldTextInput.numberValidator), 'NUM');
-    this.setOutput(true, 'Number');
-    this.setTooltip(Blockly.Msg.MATH_NUMBER_TOOLTIP);
+        .appendField(
+            new Blockly.FieldTextInput(
+                '0', Blockly.FieldTextInput.numberValidator),
+            'NUM');
+    this.setOutput(true, Blockly.Types.NUMBER.output);
+    // Assign 'this' to a variable for use in the tooltip closure below.
+    var thisBlock = this;
+    // Number block is trivial.  Use tooltip of parent block if it exists.
+    this.setTooltip(function() {
+      var parent = thisBlock.getParent();
+      return (parent && parent.getInputsInline() && parent.tooltip) ||
+          Blockly.Msg.MATH_NUMBER_TOOLTIP;
+    });
+  },
+  /**
+   * Reads the numerical value from the block and assigns a block type.
+   * @this Blockly.Block
+   */
+  getBlockType: function() {
+    var numString = this.getFieldValue('NUM');
+    return Blockly.Types.identifyNumber(numString);
   }
 };
 
