@@ -1,1 +1,0 @@
-fonction random dans maths -> function par void, vérifier code

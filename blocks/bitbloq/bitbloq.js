@@ -70,7 +70,7 @@ Blockly.Blocks['bq_ultrason'] = {
         .setCheck('Number')
         .setAlign(Blockly.ALIGN_RIGHT)
 		.appendField(Blockly.Msg.TECHNOZONE51_TEXT30);
-	this.setOutput(true, 'Boolean');
+	this.setOutput(true, 'Number');
     this.setTooltip(Blockly.Msg.BQ_SONAR1_TOOLTIP);
   }
 };

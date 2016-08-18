@@ -138,7 +138,7 @@ Blockly.Blocks['technozone_proxi1'] = {
         .setAlign(Blockly.ALIGN_RIGHT)
         .appendField(Blockly.Msg.TECHNOZONE51_TEXT16);
     this.setInputsInline(true);
-    this.setOutput(true, 'Boolean');
+    this.setOutput(true, 'Number');
     this.setTooltip(Blockly.Msg.TECHNOZONE51_TEXT17);
   }
 };
