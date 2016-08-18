@@ -557,6 +557,9 @@ BlocklyDuino.toggleLocalCodeBender = function () {
  * Binds functions to each of the buttons, nav links, and related.
  */
 BlocklyDuino.bindFunctions = function() {
+	
+	$('#clearLink').on("click", BlocklyDuino.clearLocalStorage);
+	
 	// Navigation buttons
 	$('#btn_delete').on("click", BlocklyDuino.discard);
 	$('#btn_saveXML').on("click", BlocklyDuino.saveXmlFile);
@@ -1234,3 +1237,8 @@ var s = input;
 	}
 	output.value = data;
 };
+
+BlocklyDuino.clearLocalStorage = function () {
+	window.removeEventListener('unload', BlocklyDuino.backupBlocks, false);
+	localStorage.clear();
+}
