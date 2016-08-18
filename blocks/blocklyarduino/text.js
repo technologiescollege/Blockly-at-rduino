@@ -47,7 +47,14 @@ Blockly.Blocks['text'] = {
         .appendField(new Blockly.FieldTextInput(''), 'TEXT')
         .appendField(this.newQuote_(false));
     this.setOutput(true, 'String');
-    this.setTooltip(Blockly.Msg.TEXT_TEXT_TOOLTIP);
+    // Assign 'this' to a variable for use in the tooltip closure below.
+    var thisBlock = this;
+    // Text block is trivial.  Use tooltip of parent block if it exists.
+    this.setTooltip(function() {
+      var parent = thisBlock.getParent();
+      return (parent && parent.getInputsInline() && parent.tooltip) ||
+          Blockly.Msg.TEXT_TEXT_TOOLTIP;
+    });
   },
   /**
    * Create an image of an open or closed quote.
@@ -57,13 +64,12 @@ Blockly.Blocks['text'] = {
    * @private
    */
   newQuote_: function(open) {
-	var file = '';
     if (open == this.RTL) {
-      file = 'quote1.png';
+      var file = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAKCAQAAAAqJXdxAAAAqUlEQVQI1z3KvUpCcRiA8ef9E4JNHhI0aFEacm1o0BsI0Slx8wa8gLauoDnoBhq7DcfWhggONDmJJgqCPA7neJ7p934EOOKOnM8Q7PDElo/4x4lFb2DmuUjcUzS3URnGib9qaPNbuXvBO3sGPHJDRG6fGVdMSeWDP2q99FQdFrz26Gu5Tq7dFMzUvbXy8KXeAj57cOklgA+u1B5AoslLtGIHQMaCVnwDnADZIFIrXsoXrgAAAABJRU5ErkJggg==';
     } else {
-      file = 'quote0.png';
+      var file = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAKCAQAAAAqJXdxAAAAn0lEQVQI1z3OMa5BURSF4f/cQhAKjUQhuQmFNwGJEUi0RKN5rU7FHKhpjEH3TEMtkdBSCY1EIv8r7nFX9e29V7EBAOvu7RPjwmWGH/VuF8CyN9/OAdvqIXYLvtRaNjx9mMTDyo+NjAN1HNcl9ZQ5oQMM3dgDUqDo1l8DzvwmtZN7mnD+PkmLa+4mhrxVA9fRowBWmVBhFy5gYEjKMfz9AylsaRRgGzvZAAAAAElFTkSuQmCC';
     }
-    return new Blockly.FieldImage(Blockly.pathToMedia + file, 12, 12, '"');
+    return new Blockly.FieldImage(file, 12, 12, '"');
   }
 };
 
@@ -128,12 +134,11 @@ Blockly.Blocks['text_join'] = {
    * @this Blockly.Block
    */
   decompose: function(workspace) {
-    var containerBlock = Blockly.Block.obtain(workspace,
-                                           'text_create_join_container');
+    var containerBlock = workspace.newBlock('text_create_join_container');
     containerBlock.initSvg();
     var connection = containerBlock.getInput('STACK').connection;
     for (var i = 0; i < this.itemCount_; i++) {
-      var itemBlock = Blockly.Block.obtain(workspace, 'text_create_join_item');
+      var itemBlock = workspace.newBlock('text_create_join_item');
       itemBlock.initSvg();
       connection.connect(itemBlock.previousConnection);
       connection = itemBlock.nextConnection;
@@ -154,13 +159,18 @@ Blockly.Blocks['text_join'] = {
       itemBlock = itemBlock.nextConnection &&
           itemBlock.nextConnection.targetBlock();
     }
+    // Disconnect any children that don't belong.
+    for (var i = 0; i < this.itemCount_; i++) {
+      var connection = this.getInput('ADD' + i).connection.targetConnection;
+      if (connection && connections.indexOf(connection) == -1) {
+        connection.disconnect();
+      }
+    }
     this.itemCount_ = connections.length;
     this.updateShape_();
     // Reconnect any child blocks.
     for (var i = 0; i < this.itemCount_; i++) {
-      if (connections[i]) {
-        this.getInput('ADD' + i).connection.connect(connections[i]);
-      }
+      Blockly.Mutator.reconnect(connections[i], this, 'ADD' + i);
     }
   },
   /**
@@ -185,46 +195,29 @@ Blockly.Blocks['text_join'] = {
    * @this Blockly.Block
    */
   updateShape_: function() {
-    // Delete everything.
-    if (this.getInput('EMPTY')) {
+    if (this.itemCount_ && this.getInput('EMPTY')) {
       this.removeInput('EMPTY');
-    } else {
-      var i = 0;
-      while (this.getInput('ADD' + i)) {
-        this.removeInput('ADD' + i);
-        i++;
-      }
-    }
-    // Rebuild block.
-    if (this.itemCount_ == 0) {
+    } else if (!this.itemCount_ && !this.getInput('EMPTY')) {
       this.appendDummyInput('EMPTY')
           .appendField(this.newQuote_(true))
           .appendField(this.newQuote_(false));
-    } else {
-      for (var i = 0; i < this.itemCount_; i++) {
+    }
+    // Add new inputs.
+    for (var i = 0; i < this.itemCount_; i++) {
+      if (!this.getInput('ADD' + i)) {
         var input = this.appendValueInput('ADD' + i);
         if (i == 0) {
           input.appendField(Blockly.Msg.TEXT_JOIN_TITLE_CREATEWITH);
         }
       }
     }
+    // Remove deleted inputs.
+    while (this.getInput('ADD' + i)) {
+      this.removeInput('ADD' + i);
+      i++;
+    }
   },
   newQuote_: Blockly.Blocks['text'].newQuote_
-};
-
-Blockly.Blocks['text_plus_var'] = {
-  init: function() {
-    this.setColour("#00979D");
-	this.setHelpUrl(Blockly.Msg.TEXT_JOIN_HELPURL);
-    this.appendValueInput("Text", 'String')
-	    .setAlign(Blockly.ALIGN_RIGHT)
-        .appendField(Blockly.Msg.TEXT_PLUS_VAR_TEXT);		
-	this.appendValueInput("N", 'Number')
-        .setAlign(Blockly.ALIGN_RIGHT)
-        .appendField(Blockly.Msg.TEXT_PLUS_VAR_NUM);			
-	this.setOutput(true, 'String');
-    this.setTooltip(Blockly.Msg.TEXT_JOIN_TOOLTIP);
-  }
 };
 
 Blockly.Blocks['text_create_join_container'] = {
@@ -279,26 +272,6 @@ Blockly.Blocks['text_append'] = {
       return Blockly.Msg.TEXT_APPEND_TOOLTIP.replace('%1',
           thisBlock.getFieldValue('VAR'));
     });
-  },
-  /**
-   * Return all variables referenced by this block.
-   * @return {!Array.<string>} List of variable names.
-   * @this Blockly.Block
-   */
-  getVars: function() {
-    return [this.getFieldValue('VAR')];
-  },
-  /**
-   * Notification that a variable is renaming.
-   * If the name matches one of this block's variables, rename it.
-   * @param {string} oldName Previous name of variable.
-   * @param {string} newName Renamed variable.
-   * @this Blockly.Block
-   */
-  renameVar: function(oldName, newName) {
-    if (Blockly.Names.equals(oldName, this.getFieldValue('VAR'))) {
-      this.setFieldValue(newName, 'VAR');
-    }
   }
 };
 
@@ -370,7 +343,9 @@ Blockly.Blocks['text_indexOf'] = {
       this.appendDummyInput().appendField(Blockly.Msg.TEXT_INDEXOF_TAIL);
     }
     this.setInputsInline(true);
-    this.setTooltip(Blockly.Msg.TEXT_INDEXOF_TOOLTIP);
+    var tooltip = Blockly.Msg.TEXT_INDEXOF_TOOLTIP
+        .replace('%1', Blockly.Blocks.ONE_BASED_INDEXING ? '0' : '-1');
+    this.setTooltip(tooltip);
   }
 };
 
@@ -395,7 +370,17 @@ Blockly.Blocks['text_charAt'] = {
     this.appendDummyInput('AT');
     this.setInputsInline(true);
     this.updateAt_(true);
-    this.setTooltip(Blockly.Msg.TEXT_CHARAT_TOOLTIP);
+    // Assign 'this' to a variable for use in the tooltip closure below.
+    var thisBlock = this;
+    this.setTooltip(function() {
+      var where = thisBlock.getFieldValue('WHERE');
+      var tooltip = Blockly.Msg.TEXT_CHARAT_TOOLTIP;
+      if (where == 'FROM_START' || where == 'FROM_END') {
+        tooltip += '  ' + Blockly.Msg.LISTS_INDEX_FROM_END_TOOLTIP
+            .replace('%1', Blockly.Blocks.ONE_BASED_INDEXING ? '#1' : '#0');
+      }
+      return tooltip;
+    });
   },
   /**
    * Create XML to represent whether there is an 'AT' input.
@@ -546,17 +531,20 @@ Blockly.Blocks['text_getSubstring'] = {
     }
     var menu = new Blockly.FieldDropdown(this['WHERE_OPTIONS_' + n],
         function(value) {
-      var newAt = (value == 'FROM_START') || (value == 'FROM_END');
-      // The 'isAt' variable is available due to this function being a closure.
-      if (newAt != isAt) {
-        var block = this.sourceBlock_;
-        block.updateAt_(n, newAt);
-        // This menu has been destroyed and replaced.  Update the replacement.
-        block.setFieldValue(value, 'WHERE' + n);
-        return null;
-      }
-      return undefined;
-    });
+          var newAt = (value == 'FROM_START') || (value == 'FROM_END');
+          // The 'isAt' variable is available due to this function being a
+          // closure.
+          if (newAt != isAt) {
+            var block = this.sourceBlock_;
+            block.updateAt_(n, newAt);
+            // This menu has been destroyed and replaced.
+            // Update the replacement.
+            block.setFieldValue(value, 'WHERE' + n);
+            return null;
+          }
+          return undefined;
+        });
+
     this.getInput('AT' + n)
         .appendField(menu, 'WHERE' + n);
     if (n == 1) {
@@ -660,11 +648,7 @@ Blockly.Blocks['text_prompt_ext'] = {
    * @this Blockly.Block
    */
   updateType_: function(newOp) {
-    if (newOp == 'NUMBER') {
-      this.outputConnection.setCheck('Number');
-    } else {
-      this.outputConnection.setCheck('String');
-    }
+    this.outputConnection.setCheck(newOp == 'NUMBER' ? 'Number' : 'String');
   },
   /**
    * Create XML to represent the output type.
@@ -696,7 +680,7 @@ Blockly.Blocks['text_prompt'] = {
     var TYPES =
         [[Blockly.Msg.TEXT_PROMPT_TYPE_TEXT, 'TEXT'],
          [Blockly.Msg.TEXT_PROMPT_TYPE_NUMBER, 'NUMBER']];
-    // Assign 'this' to a variable for use in the closure below.
+    // Assign 'this' to a variable for use in the closures below.
     var thisBlock = this;
     this.setHelpUrl(Blockly.Msg.TEXT_PROMPT_HELPURL);
     this.setColour(Blockly.Blocks.texts.HUE);
@@ -709,8 +693,6 @@ Blockly.Blocks['text_prompt'] = {
         .appendField(new Blockly.FieldTextInput(''), 'TEXT')
         .appendField(this.newQuote_(false));
     this.setOutput(true, 'String');
-    // Assign 'this' to a variable for use in the tooltip closure below.
-    var thisBlock = this;
     this.setTooltip(function() {
       return (thisBlock.getFieldValue('TYPE') == 'TEXT') ?
           Blockly.Msg.TEXT_PROMPT_TOOLTIP_TEXT :
