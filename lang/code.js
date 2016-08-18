@@ -88,7 +88,7 @@ Code.LANGUAGE_RTL = ['ar', 'fa', 'he'];
  * @return {string} User's language.
  */
 Code.getLang = function() {
-  var lang = BlocklyDuino.getStringParamFromUrl('lang', '');
+  var lang = BlocklyArduino.getStringParamFromUrl('lang', '');
   if (Code.LANGUAGE_NAME[lang] === undefined) {
     // Default to English.
     lang = 'en';
@@ -109,7 +109,7 @@ Code.isRtl = function() {
  */
 Code.changeLanguage = function() {
   // Store the blocks for the duration of the reload.
-	BlocklyDuino.backupBlocks();
+	BlocklyArduino.backupBlocks();
 
   var languageMenuSelected = $('#languageMenu option:selected').val();
   var newLang = encodeURIComponent(languageMenuSelected);
@@ -225,6 +225,8 @@ Code.initLanguage = function() {
   $('#videoModalLabel3').text(MSG['videoModalLabel3']);
   
   $('#configModalGlobalLabel').text(MSG['configModalGlobalLabel']);
+  $('#btn_closeConfgiGlobal').text(MSG['btn_close']);
+  $('#btn_validConfgiGlobal').text(MSG['btn_valid']);
   $('#span_languageMenu').text(MSG['span_languageMenu']);
   $('#span_OnOffLine').text(MSG['span_OnOffLine']);
   $('#span_OnLine').text(MSG['span_OnLine']);

@@ -121,7 +121,7 @@
 	});
 </script>
 
-<body onload="BlocklyDuino.init()">
+<body onload="BlocklyArduino.init()">
 <div class="loading"></div>
     <div id="divTitre">
         <p>
@@ -129,7 +129,7 @@
             </a> 
             <b>Blockly@rduino</b> : 
             <span id="title"></span>
-		<button id="btn_about" type="button" class="btn btn-default" data-toggle="modal" data-target="#aboutModal">
+		<button id="btn_about" type="button" class="btn btn-default btn-sm" data-toggle="modal" data-target="#aboutModal">
 			<b><span id="span_about"> </span></b>
 			<span class="glyphicon glyphicon-user"></span>		
 		</button>
@@ -423,11 +423,11 @@
       </div>
 	  <div class="modal-body text-center" id="convert_content">
 		<input id="ti1" value="TEST" />
-		<button onclick="BlocklyDuino.text2bin();">Texte -> binaire</button>
+		<button onclick="BlocklyArduino.text2bin();">Texte -> binaire</button>
 		<input id="ti2" />
 		<br/>
 		<input id="ti3" value="01010101" />
-		<button onclick="BlocklyDuino.bin2text();">Binaire -> texte</button>
+		<button onclick="BlocklyArduino.bin2text();">Binaire -> texte</button>
 		<input id="ti4" />
 	  </div>
 	</div>
@@ -554,6 +554,10 @@
 			  <span id="span_Download_codebender"> </span>
 			 </a>
 		</div>  
+		<div class="modal-footer">
+			<button id="btn_closeConfgiGlobal" type="button" class="btn btn-default" data-dismiss="modal" ></button>
+			<button id="btn_validConfgiGlobal" type="button" class="btn btn-primary"  data-dismiss="modal"></button>
+		</div>
 		</div>
 	</div>
 </div>
