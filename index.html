@@ -3,21 +3,22 @@
 <link rel="icon" type="image/png" href="favicon.bmp" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Blockly@rduino</title>
-<!-- <script type="text/javascript" src="blocks/blockly_uncompressed.js"></script> -->
-<script type="text/javascript" src="blocks/blockly_compressed.js"></script>
+<!-- <script type="text/javascript" src="core_blockly/blockly_uncompressed.js"></script> -->
+<script type="text/javascript" src="core_blockly/blockly_compressed.js"></script>
 
-<script type="text/javascript" src="utils/boards.js"></script>
+<script type="text/javascript" src="core_blocklyArduino/boards.js"></script>
 <!-- needed for type of variable--->
-<script type="text/javascript" src="utils/type.js"></script>
-<script type="text/javascript" src="utils/types.js"></script>
-<script type="text/javascript" src="utils/static_typing.js"></script>
+<script type="text/javascript" src="core_blocklyArduino/type.js"></script>
+<script type="text/javascript" src="core_blocklyArduino/types.js"></script>
+<script type="text/javascript" src="core_blocklyArduino/static_typing.js"></script>
 
-<script type="text/javascript" src="utils/blocklyDuino.js"></script>
-<script type="text/javascript" src="utils/blockly@rduino.js"></script>
-<script type="text/javascript" src="utils/spin.js"></script>
-<script type="text/javascript" src="utils/jquery-2.1.3.min.js"></script>
-<script type="text/javascript" src="utils/bootstrap.min.3.3.6.js"></script>
-<script type="text/javascript" src="utils/prettify.js"></script>
+<script type="text/javascript" src="generators/arduino.js"></script>
+
+<script type="text/javascript" src="core_blocklyArduino/blockly@rduino.js"></script>
+<script type="text/javascript" src="core_blocklyArduino/spin.js"></script>
+<script type="text/javascript" src="core_blocklyArduino/jquery-2.1.3.min.js"></script>
+<script type="text/javascript" src="core_blocklyArduino/bootstrap.min.3.3.6.js"></script>
+<script type="text/javascript" src="core_blocklyArduino/prettify.js"></script>
 
 <!--script type="text/javascript" src="blocks/blocklyarduino/colour.js"></script>
 <script type="text/javascript" src="blocks/blocklyarduino/lists.js"></script-->
@@ -99,8 +100,8 @@
 <script type="text/javascript" src="generators/arduino/kit_velo_niv1.js"></script>
 
 <!--TechnoZone51-->
-<script type="text/javascript" src="utils/html2canvas.js"></script>
-<script type="text/javascript" src="utils/canvas2image.js"></script>
+<script type="text/javascript" src="core_blocklyArduino/html2canvas.js"></script>
+<script type="text/javascript" src="core_blocklyArduino/canvas2image.js"></script>
 <!--Fin TZ51-->
 <script type="text/javascript" src="lang/code.js"></script>
 
@@ -110,7 +111,7 @@
 <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 
 <link rel="stylesheet" type="text/css" href="css/bootstrap-toggle.min.css" />
-<script src="utils/bootstrap-toggle.min.js"></script>
+<script src="core_blocklyArduino/bootstrap-toggle.min.js"></script>
 
 <link rel="stylesheet" type="text/css" href="css/prettify.css">
 
@@ -439,7 +440,7 @@
         <h4 class="modal-title" id="RGBModalLabel"></h4>
       </div>
 	  <div class="modal-body text-center" id="frame_RGB">
-		<iframe width="550" height="700" src="./utils/RGB/RGB.html" frameborder="0" allowfullscreen></iframe>
+		<iframe width="550" height="700" src="./core_blocklyArduino/RGB/RGB.html" frameborder="0" allowfullscreen></iframe>
 	  </div>
     </div>
 </div>
@@ -475,11 +476,11 @@
 		<div id="divToolbox">
 			<label id="labelToolboxDefinition"></label> 
 			<select id="toolboxes">
-				<option value="toolbox_algo">Algorithme simple</option>
-				<option value="toolbox_arduino_1">Arduino pour débutants</option>
-				<option value="toolbox_arduino_2">Arduino pour habitués</option>
-				<option value="toolbox_arduino_3">Arduino pour experts</option>
-				<option value="toolbox_arduino_all" selected="selected">TOUT</option>
+				<option value="./generators/toolbox_algo">Algorithme simple</option>
+				<option value="./generators/toolbox_arduino_1">Arduino pour débutants</option>
+				<option value="./generators/toolbox_arduino_2">Arduino pour habitués</option>
+				<option value="./generators/toolbox_arduino_3">Arduino pour experts</option>
+				<option value="./generators/toolbox_arduino_all" selected="selected">TOUT</option>
 			</select>
 		</div>
       <input type="checkbox" name="select_all" id="select_all"/> <span id="span_select_all"> </span>

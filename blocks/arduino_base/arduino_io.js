@@ -23,11 +23,20 @@
  */
 'use strict';
 
+
+goog.provide('Blockly.Blocks.arduino_io');
+
+goog.require('Blockly.Blocks');
+goog.require('Blockly.Types');
+
+/** Common HSV hue for all blocks in this category. */
+Blockly.Blocks.arduino_io.HUE = "#00979D";
+
 //To support syntax defined in http://arduino.cc/en/Reference/HomePage
 
 Blockly.Blocks.inout_buildin_led = {
    init: function() {
-    this.setColour("#00979D");
+    this.setColour(Blockly.Blocks.arduino_io.HUE);
     this.setHelpUrl(Blockly.Msg.ARDUINO_INOUT_BUILDIN_LED_HELPURL);
 	this.appendDummyInput()
       	.appendField(Blockly.Msg.ARDUINO_INOUT_BUILDIN_LED_INPUT)
@@ -40,7 +49,7 @@ Blockly.Blocks.inout_buildin_led = {
 
 Blockly.Blocks.inout_pulsein = {
   init: function() {
-    this.setColour("#00979D");
+    this.setColour(Blockly.Blocks.arduino_io.HUE);
     this.setHelpUrl('http://arduino.cc/en/Reference/pulseIn');
     this.appendValueInput("PIN")
         .setCheck("Number")
@@ -56,7 +65,7 @@ Blockly.Blocks.inout_pulsein = {
 
 Blockly.Blocks.inout_pulsein_timeout = {
   init: function() {
-    this.setColour("#00979D");
+    this.setColour(Blockly.Blocks.arduino_io.HUE);
     this.setHelpUrl('http://arduino.cc/en/Reference/pulseIn');
     this.appendValueInput("PIN")
         .setCheck("Number")
@@ -75,7 +84,7 @@ Blockly.Blocks.inout_pulsein_timeout = {
 
 Blockly.Blocks.inout_digital_write_validator = {
   init: function() {
-    this.setColour("#00979D");
+    this.setColour(Blockly.Blocks.arduino_io.HUE);
     this.setHelpUrl(Blockly.Msg.ARDUINO_INOUT_DIGITAL_WRITE_HELPURL);
     this.appendDummyInput()
 		.appendField(Blockly.Msg.ARDUINO_INOUT_DIGITAL_WRITE_INPUT1)
@@ -92,7 +101,7 @@ Blockly.Blocks.inout_digital_write_validator = {
 
 Blockly.Blocks.inout_digital_write = {
   init: function() {
-    this.setColour("#00979D");
+    this.setColour(Blockly.Blocks.arduino_io.HUE);
     this.setHelpUrl(Blockly.Msg.ARDUINO_INOUT_DIGITAL_WRITE_HELPURL);
 	this.appendValueInput("PIN", 'Number')
         .setAlign(Blockly.ALIGN_RIGHT)
@@ -111,19 +120,23 @@ Blockly.Blocks.inout_digital_write = {
 
 Blockly.Blocks.inout_digital_read = {
   init: function() {
-    this.setColour("#00979D");
+    this.setColour(Blockly.Blocks.arduino_io.HUE);
     this.setHelpUrl(Blockly.Msg.ARDUINO_INOUT_DIGITAL_READ_HELPURL);
 	this.appendValueInput("PIN", 'Number')
         .setAlign(Blockly.ALIGN_RIGHT)
         .appendField(Blockly.Msg.ARDUINO_INOUT_DIGITAL_READ_INPUT);
     this.setOutput(true, 'Boolean');
     this.setTooltip(Blockly.Msg.ARDUINO_INOUT_DIGITAL_READ_TOOLTIP);
+  },
+  /** @return {!string} The type of return value for the block, an integer. */
+  getBlockType: function() {
+    return Blockly.Types.BOOLEAN;
   }
 };
 
 Blockly.Blocks.inout_digital_read_validator = {
   init: function() {
-    this.setColour("#00979D");
+    this.setColour(Blockly.Blocks.arduino_io.HUE);
     this.setHelpUrl(Blockly.Msg.ARDUINO_INOUT_DIGITAL_READ_HELPURL);
     this.appendDummyInput()
 		.appendField(Blockly.Msg.ARDUINO_INOUT_DIGITAL_READ_INPUT)
@@ -136,7 +149,7 @@ Blockly.Blocks.inout_digital_read_validator = {
 
 Blockly.Blocks.inout_PWM_write_validator = {
   init: function() {
-    this.setColour("#00979D");
+    this.setColour(Blockly.Blocks.arduino_io.HUE);
     this.setHelpUrl(Blockly.Msg.ARDUINO_INOUT_PWM_WRITE_HELPURL);
     this.appendDummyInput("")
         .appendField(Blockly.Msg.ARDUINO_INOUT_PWM_WRITE_INPUT1)
@@ -153,7 +166,7 @@ Blockly.Blocks.inout_PWM_write_validator = {
 
 Blockly.Blocks.inout_PWM_write = {
   init: function() {
-    this.setColour("#00979D");
+    this.setColour(Blockly.Blocks.arduino_io.HUE);
     this.setHelpUrl(Blockly.Msg.ARDUINO_INOUT_PWM_WRITE_HELPURL);
 	this.appendValueInput("PIN", 'Number')
         .setAlign(Blockly.ALIGN_RIGHT)
@@ -171,7 +184,7 @@ Blockly.Blocks.inout_PWM_write = {
 
 Blockly.Blocks.inout_analog_write = {
   init: function() {
-    this.setColour("#00979D");
+    this.setColour(Blockly.Blocks.arduino_io.HUE);
     this.setHelpUrl(Blockly.Msg.ARDUINO_INOUT_ANALOG_WRITE_HELPURL);
 	this.appendValueInput("PIN", 'Number')
         .setAlign(Blockly.ALIGN_RIGHT)
@@ -189,7 +202,7 @@ Blockly.Blocks.inout_analog_write = {
 
 Blockly.Blocks.inout_analog_write_validator = {
   init: function() {
-    this.setColour("#00979D");
+    this.setColour(Blockly.Blocks.arduino_io.HUE);
     this.setHelpUrl(Blockly.Msg.ARDUINO_INOUT_ANALOG_WRITE_HELPURL);
     this.appendDummyInput("")
         .appendField(Blockly.Msg.ARDUINO_INOUT_ANALOG_WRITE_INPUT1)
@@ -206,7 +219,7 @@ Blockly.Blocks.inout_analog_write_validator = {
 
 Blockly.Blocks.tone = {
   init: function() {
-    this.setColour("#00979D");
+    this.setColour(Blockly.Blocks.arduino_io.HUE);
     this.setHelpUrl(Blockly.Msg.ARDUINO_TONE_HELPURL);
 	this.appendValueInput("PIN", 'Number')
         .setAlign(Blockly.ALIGN_RIGHT)
@@ -228,7 +241,7 @@ Blockly.Blocks.tone = {
 
 Blockly.Blocks.notone = {
   init: function() {
-    this.setColour("#00979D");
+    this.setColour(Blockly.Blocks.arduino_io.HUE);
 	this.setHelpUrl(Blockly.Msg.ARDUINO_NOTONE_HELPURL);
 	this.appendValueInput("PIN", 'Number')
         .setAlign(Blockly.ALIGN_RIGHT)
@@ -241,19 +254,23 @@ Blockly.Blocks.notone = {
 
 Blockly.Blocks.inout_analog_read = {
   init: function() {
-    this.setColour("#00979D");
+    this.setColour(Blockly.Blocks.arduino_io.HUE);
 	this.setHelpUrl(Blockly.Msg.ARDUINO_INOUT_ANALOG_READ_HELPURL);
 	this.appendValueInput("PIN", 'Number')
         .setAlign(Blockly.ALIGN_RIGHT)
         .appendField(Blockly.Msg.ARDUINO_INOUT_ANALOG_READ_INPUT);
     this.setOutput(true, 'Number');
     this.setTooltip(Blockly.Msg.ARDUINO_INOUT_ANALOG_READ_TOOLTIP);
+  },
+  /** @return {!string} The type of return value for the block, an integer. */
+  getBlockType: function() {
+    return Blockly.Types.NUMBER;
   }
 };
 
 Blockly.Blocks.inout_analog_read_validator = {
   init: function() {
-    this.setColour("#00979D");
+    this.setColour(Blockly.Blocks.arduino_io.HUE);
 	this.setHelpUrl(Blockly.Msg.ARDUINO_INOUT_ANALOG_READ_HELPURL);
     this.appendDummyInput()
         .appendField(Blockly.Msg.ARDUINO_INOUT_ANALOG_READ_INPUT)
@@ -265,7 +282,7 @@ Blockly.Blocks.inout_analog_read_validator = {
 
 Blockly.Blocks['inout_onoff'] = {
   init: function() {
-    this.setColour("#00979D");
+    this.setColour(Blockly.Blocks.arduino_io.HUE);
 	this.setHelpUrl(Blockly.Msg.ARDUINO_INOUT_ONOFF_HELPURL);
     this.appendDummyInput("")
         .appendField(new Blockly.FieldDropdown(Blockly.Msg.FIELDDROPDOWN), 'BOOL');
@@ -276,7 +293,7 @@ Blockly.Blocks['inout_onoff'] = {
 
 Blockly.Blocks.inout_angle = {
   init: function() {
-    this.setColour("#00979D");
+    this.setColour(Blockly.Blocks.arduino_io.HUE);
 	this.setHelpUrl('https://developers.google.com/blockly/custom-blocks/defining-blocks#appendfield');
     this.appendDummyInput("")
         .appendField("angle")
@@ -301,7 +318,7 @@ Blockly.Blocks.inout_angle_maths = {
 
 Blockly.Blocks.inout_attachInterrupt = {
   init: function() {
-	this.setColour("#00979D");
+	this.setColour(Blockly.Blocks.arduino_io.HUE);
 	this.setHelpUrl('https://www.arduino.cc/en/Reference/AttachInterrupt');
 	this.appendDummyInput("")
         .appendField(Blockly.Msg.LKL_ATTACHINTERRUPT_PIN)
@@ -320,7 +337,7 @@ Blockly.Blocks.inout_attachInterrupt = {
 
 Blockly.Blocks.inout_detachInterrupt = {
   init: function() {
-    this.setColour("#00979D");
+    this.setColour(Blockly.Blocks.arduino_io.HUE);
 	this.setHelpUrl('https://www.arduino.cc/en/Reference/DetachInterrupt');
 	this.appendDummyInput("")
         .appendField(Blockly.Msg.LKL_DETACHINTERRUPT_PIN)

@@ -20,6 +20,7 @@ if (isset($_SESSION['connected'])
             case 'image/png':
             case 'image/gif':
             case 'image/jpeg':
+            case 'image/jpg':
             case 'image/pjpeg':
             case 'image/bmp':
             case 'text/plain':
