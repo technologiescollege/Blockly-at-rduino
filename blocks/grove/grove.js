@@ -341,7 +341,7 @@ Blockly.Blocks['grove_line_finder'] = {
 };
 
 Blockly.Blocks['grove_ultrasonic_ranger'] = {
-  init: function() {
+	init: function() {
     this.setColour("#8ec31f");
 	this.setHelpUrl(Blockly.Msg.GROVE_INOUT_ULTRASONIC_HELPURL);
     this.appendDummyInput()
@@ -351,7 +351,7 @@ Blockly.Blocks['grove_ultrasonic_ranger'] = {
         .appendField(new Blockly.FieldTextInput('',  Blockly.Arduino.pinDigitalValidator), 'PIN')
         .appendField(Blockly.Msg.GROVE_INOUT_ULTRASONIC_UNIT)
         .appendField(new Blockly.FieldDropdown(Blockly.Msg.GROVE_INOUT_ULTRASONIC_UNIT_CHOICE), "UNIT");
-    this.setOutput(true, 'Boolean');
+    this.setOutput(true, 'Number');
     this.setTooltip(Blockly.Msg.GROVE_INOUT_ULTRASONIC_TOOLTIP);
   }
 };
