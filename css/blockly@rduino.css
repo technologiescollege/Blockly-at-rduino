@@ -219,7 +219,7 @@ html[dir="RTL"] .divConfig-hor {
 
 #btn_about, #btn_logout {
     position: absolute;
-    top: 5px;
+    top: 3px;
 }
 
 #btn_doc-hor{

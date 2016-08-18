@@ -225,6 +225,8 @@ Code.initLanguage = function() {
   $('#videoModalLabel3').text(MSG['videoModalLabel3']);
   
   $('#configModalGlobalLabel').text(MSG['configModalGlobalLabel']);
+  $('#btn_closeConfigGlobale').text(MSG['btn_close']);
+  $('#btn_validConfigGlobale').text(MSG['btn_valid']);
   $('#span_languageMenu').text(MSG['span_languageMenu']);
   $('#span_OnOffLine').text(MSG['span_OnOffLine']);
   $('#span_OnLine').text(MSG['span_OnLine']);
