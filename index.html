@@ -3,8 +3,8 @@
 <link rel="icon" type="image/png" href="favicon.bmp" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Blockly@rduino</title>
-<!-- <script type="text/javascript" src="core_blockly/blockly_uncompressed.js"></script> -->
-<script type="text/javascript" src="core_blockly/blockly_compressed.js"></script>
+<!-- <script type="text/javascript" src="blocks/blockly_uncompressed.js"></script> -->
+<script type="text/javascript" src="blocks/blockly_compressed.js"></script>
 
 <script type="text/javascript" src="core_blocklyArduino/boards.js"></script>
 <!-- needed for type of variable--->
@@ -121,7 +121,7 @@
 	});
 </script>
 
-<body onload="BlocklyArduino.init()">
+<body onload="BlocklyDuino.init()">
 <div class="loading"></div>
     <div id="divTitre">
         <p>
@@ -129,7 +129,7 @@
             </a> 
             <b>Blockly@rduino</b> : 
             <span id="title"></span>
-		<button id="btn_about" type="button" class="btn btn-default btn-sm" data-toggle="modal" data-target="#aboutModal">
+		<button id="btn_about" type="button" class="btn btn-default" data-toggle="modal" data-target="#aboutModal">
 			<b><span id="span_about"> </span></b>
 			<span class="glyphicon glyphicon-user"></span>		
 		</button>
@@ -423,11 +423,11 @@
       </div>
 	  <div class="modal-body text-center" id="convert_content">
 		<input id="ti1" value="TEST" />
-		<button onclick="BlocklyArduino.text2bin();">Texte -> binaire</button>
+		<button onclick="BlocklyDuino.text2bin();">Texte -> binaire</button>
 		<input id="ti2" />
 		<br/>
 		<input id="ti3" value="01010101" />
-		<button onclick="BlocklyArduino.bin2text();">Binaire -> texte</button>
+		<button onclick="BlocklyDuino.bin2text();">Binaire -> texte</button>
 		<input id="ti4" />
 	  </div>
 	</div>
@@ -440,7 +440,7 @@
         <h4 class="modal-title" id="RGBModalLabel"></h4>
       </div>
 	  <div class="modal-body text-center" id="frame_RGB">
-		<iframe width="550" height="700" src="./core_blocklyArduino/RGB/RGB.html" frameborder="0" allowfullscreen></iframe>
+		<iframe width="550" height="700" src="./utils/RGB/RGB.html" frameborder="0" allowfullscreen></iframe>
 	  </div>
     </div>
 </div>
@@ -476,11 +476,11 @@
 		<div id="divToolbox">
 			<label id="labelToolboxDefinition"></label> 
 			<select id="toolboxes">
-				<option value="./generators/toolbox_algo">Algorithme simple</option>
-				<option value="./generators/toolbox_arduino_1">Arduino pour débutants</option>
-				<option value="./generators/toolbox_arduino_2">Arduino pour habitués</option>
-				<option value="./generators/toolbox_arduino_3">Arduino pour experts</option>
-				<option value="./generators/toolbox_arduino_all" selected="selected">TOUT</option>
+				<option value="toolbox_algo">Algorithme simple</option>
+				<option value="toolbox_arduino_1">Arduino pour débutants</option>
+				<option value="toolbox_arduino_2">Arduino pour habitués</option>
+				<option value="toolbox_arduino_3">Arduino pour experts</option>
+				<option value="toolbox_arduino_all" selected="selected">TOUT</option>
 			</select>
 		</div>
       <input type="checkbox" name="select_all" id="select_all"/> <span id="span_select_all"> </span>
@@ -554,10 +554,6 @@
 			  <span id="span_Download_codebender"> </span>
 			 </a>
 		</div>  
-		<div class="modal-footer">
-			<button id="btn_closeConfgiGlobal" type="button" class="btn btn-default" data-dismiss="modal" ></button>
-			<button id="btn_validConfgiGlobal" type="button" class="btn btn-primary"  data-dismiss="modal"></button>
-		</div>
 		</div>
 	</div>
 </div>
