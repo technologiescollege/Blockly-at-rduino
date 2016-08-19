@@ -5,14 +5,14 @@ session_start();
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Examples Blockly@rduino</title>
-<script type="text/javascript" src="./utils/jquery-2.1.3.min.js"></script>
-<script type="text/javascript" src="./utils/bootstrap.min.3.3.6.js"></script>
-<script type="text/javascript" src="./utils/bootstrap-toggle.min.js"></script>
-<script type="text/javascript" src="./utils/examples.js"></script>
+<script type="text/javascript" src="../core_BlocklyArduino/jquery-2.1.3.min.js"></script>
+<script type="text/javascript" src="../core_BlocklyArduino/bootstrap.min.3.3.6.js"></script>
+<script type="text/javascript" src="../core_BlocklyArduino/bootstrap-toggle.min.js"></script>
+<script type="text/javascript" src="../core_BlocklyArduino/examples.js"></script>
 
-<link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
-<link rel="stylesheet" type="text/css" href="./css/blockly@rduino.css">
-<link rel="stylesheet" type="text/css" href="./css/bootstrap-toggle.min.css" />
+<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="../css/blockly@rduino.css">
+<link rel="stylesheet" type="text/css" href="../css/bootstrap-toggle.min.css" />
 </head>
 
 <body>
@@ -54,7 +54,7 @@ if (!isset($_SESSION['connected'])) {
 </div>
 <?php
 } else  {
-$path = './examples';
+$path = './';
 
 $directory = new RecursiveDirectoryIterator($path,RecursiveDirectoryIterator::SKIP_DOTS);
 $iterator = new RecursiveIteratorIterator($directory,RecursiveIteratorIterator::SELF_FIRST);
@@ -153,8 +153,8 @@ foreach ($iterator as $fileinfo) {
 								</td>
 								</tr>
 			<?php
-			if (file_exists('./examples/examples.json')) {
-				$contents = file_get_contents("./examples/examples.json");
+			if (file_exists('./examples.json')) {
+				$contents = file_get_contents("./examples.json");
 				$json = json_decode($contents); 
 				foreach ($json as $example) {
 					?>

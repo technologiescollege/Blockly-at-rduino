@@ -213,7 +213,7 @@ Examples.initServer = function() {
 	$("#addDir").on("click",	function(e) {
 		e.preventDefault();
 		var newDir = $("#newDir").val();
-		if (newDir.substring(0, 11) != './examples/') {
+		if (newDir.substring(0, 11) != './') {
 			newDir = './' + $("#newDir").val();
 		}
 		if ($("#directory option[value='" + newDir + "']").length == 0) {
