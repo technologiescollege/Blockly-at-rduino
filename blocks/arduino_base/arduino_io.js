@@ -263,7 +263,7 @@ Blockly.Blocks.inout_analog_read_validator = {
   }
 };
 
-Blockly.Blocks['inout_onoff'] = {
+Blockly.Blocks.inout_onoff = {
   init: function() {
     this.setColour("#00979D");
 	this.setHelpUrl(Blockly.Msg.ARDUINO_INOUT_ONOFF_HELPURL);
@@ -285,19 +285,6 @@ Blockly.Blocks.inout_angle = {
     this.setTooltip('angle °');
   }
 };
-
-Blockly.Blocks.inout_angle_maths = {
-  init: function() {
-    this.setColour("#5CB712");
-	this.setHelpUrl('https://developers.google.com/blockly/custom-blocks/defining-blocks#appendfield');
-    this.appendDummyInput("")
-        .appendField("angle")
-        .appendField(new Blockly.FieldAngle("90"), "ANGLE");
-    this.setOutput(true, "Number");
-    this.setTooltip('angle °');
-  }
-};
-
 
 Blockly.Blocks.inout_attachInterrupt = {
   init: function() {
