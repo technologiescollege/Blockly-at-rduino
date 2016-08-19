@@ -21,7 +21,7 @@ var MSG = {
   span_edit_code: " edit Arduino code",
   span_flash_codebender: " upload in Arduino",
   span_saveIno: " save code in INO format",
-  span_flash_local: " upload in Arduino",
+  span_flash_local: " local upload in Arduino",
   span_flash_local_result: " result of upload",
   exampleModalLabel: "choose an example",
   convertModalLabel: "convert binary <-> ASCII text",

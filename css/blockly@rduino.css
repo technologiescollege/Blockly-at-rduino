@@ -337,7 +337,7 @@ html[dir="RTL"] #btn_delete {
 }
 
 #serial_hud {
-    height: 500px;
+    height: 100%;
     overflow: auto;
     width: 100%;
     background-color: #080808;
