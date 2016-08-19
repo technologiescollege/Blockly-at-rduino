@@ -28,13 +28,54 @@ Blockly.Blocks.controls_switch.getVarType = function() {
 	return this.inputList[1].connection.targetBlock().getBlockType();
 };
 //---------------------------------maths--------------------------------------------
-Blockly.Blocks['math_number']['getBlockType'] = function() {
+Blockly.Blocks.math_number.getBlockType = function() {
     var numString = this.getFieldValue('NUM');
     return Blockly.Types.identifyNumber(numString);
 };
-Blockly.Blocks['inout_pulsein']['getBlockType'] = function() {
-	return Blockly.Types.LARGE_NUMBER;
+Blockly.Blocks.inout_angle_maths.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.math_arithmetic.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.math_single.getBlockType = function() {
+	return Blockly.Types.DECIMAL;
+};
+Blockly.Blocks.math_trig.getBlockType = function() {
+	return Blockly.Types.DECIMAL;
 };
 Blockly.Blocks.math_constant.getBlockType = function() {
 	return Blockly.Types.DECIMAL;
+};
+Blockly.Blocks.math_number_property.getBlockType = function() {
+	return Blockly.Types.BOOLEAN;
+};
+Blockly.Blocks.math_change.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.math_round.getBlockType = function() {
+	return Blockly.Types.DECIMAL;
+};
+Blockly.Blocks.math_modulo.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.math_random_int.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.math_random_float.getBlockType = function() {
+	return Blockly.Types.DECIMAL;
+};
+
+
+
+
+
+
+
+
+
+
+
+Blockly.Blocks.inout_pulsein.getBlockType = function() {
+	return Blockly.Types.LARGE_NUMBER;
 };
