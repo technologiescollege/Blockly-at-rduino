@@ -70,15 +70,7 @@ BlocklyDuino.renderContent = function() {
 				if (typeof prettyPrintOne == 'function') {
 					$('#pre_arduino').html(prettyPrintOne($('#pre_arduino').html(), 'cpp'));
 				}
-				//neutralise le bouton 'btn_plugin_codebender'
-				if ($("select#cb_cf_ports").prop("disabled")) {
-					$("#btn_plugin_codebender").removeClass('hidden');
-					$("#tab_term").removeClass('hidden');
-				} else {
-					$("#btn_plugin_codebender").addClass('hidden');
-					$("#tab_term").addClass('hidden');
-				}
-
+				BlocklyDuino.toggleWeb();
 			} catch (e) {
 				alert(e);
 			}
@@ -695,6 +687,15 @@ BlocklyDuino.init = function() {
 						wheel: true}
 		      });
 
+	//init web or local
+	$('#toggle-WebAccess').bootstrapToggle('on');
+	$('#toggle-LocalCodebender').bootstrapToggle('on');
+	if ($("select#cb_cf_ports").prop("disabled")) {
+					$("#tab_term").addClass('hidden');
+					$('#toggle-LocalCodebender').bootstrapToggle('disable');
+		} else $("#tab_term").removeClass('hidden');
+	BlocklyDuino.toggleWeb();			
+	
 	BlocklyDuino.renderContent();
 	
 	BlocklyDuino.workspace.addChangeListener(BlocklyDuino.renderArduinoCodePreview);
@@ -729,9 +730,6 @@ BlocklyDuino.init = function() {
 
 	// bind events to html elements
 	BlocklyDuino.bindFunctions();
-	
-	$('#toggle-WebAccess').bootstrapToggle('on');
-	$('#toggle-LocalCodebender').bootstrapToggle('on');
 
 	// open ConfigToolbox modal
 	if (BlocklyDuino.getStringParamFromUrl('openConfigToolbox', '') != '') {
