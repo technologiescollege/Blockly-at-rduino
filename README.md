@@ -1,6 +1,8 @@
-[Wiki : http://tic.technologiescollege.fr/wiki/doku.php/en/blockly_rduino/bugs](http://tic.technologiescollege.fr/wiki/doku.php/en/blockly_rduino/bugs)
+### WIKI !!! [http://tic.technologiescollege.fr/wiki/doku.php/en/blockly_rduino/bugs](http://tic.technologiescollege.fr/wiki/doku.php/en/blockly_rduino/bugs)
 
 ### FORUM !!! [http://blockly.technologiescollege.fr/forum](http://blockly.technologiescollege.fr/forum)
+
+### Offl-line upload & supervision [https://github.com/technologiescollege/Blockly-rduino-communication](https://github.com/technologiescollege/Blockly-rduino-communication)
 
 **Multilingual** version of Blockly@rduinoo
 =====
@@ -67,6 +69,8 @@ Programme Blockly : [https://developers.google.com/blockly/](https://developers.
 
 Concept d'origine BlocklyDuino : Fred Lin (@gasolin [https://github.com/gasolin/BlocklyDuino](https://github.com/gasolin/BlocklyDuino)).
 
+Fonctions de typage ArduBlock : Carlos Pereira Atencio ([https://github.com/carlosperate/ardublockly](https://github.com/carlosperate/ardublockly)).
+
 Son projet s'est aussi inspiré de [ardublock](https://github.com/taweili/ardublock) et [modkit](http://www.modk.it/).
 
 Intégration de CodeBender : Julien Rat [https://github.com/julienrat](https://github.com/julienrat)
@@ -75,7 +79,7 @@ Intégration de CodeBender : Julien Rat [https://github.com/julienrat](https://g
 
 _Julien RAT : CodeBender plugin_
 
-_Frédéric PICARD : bitbloq, maquette Jeulin_
+_Frédéric PICARD : bitbloq, maquette Jeulin, vidéos, etc_
 
 _Spanish translation : José Manuel Ruiz Gutteriez ([blog](http://josemanuelruizgutierrez.blogspot.com.es/))_
 
