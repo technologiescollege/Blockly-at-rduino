@@ -1,5 +1,5 @@
 //***********************************************************************************
-//								Blockly
+//								GOOGLE Blockly
 //***********************************************************************************
 
 //---------------------------------logic--------------------------------------------
@@ -65,17 +65,111 @@ Blockly.Blocks.math_random_int.getBlockType = function() {
 Blockly.Blocks.math_random_float.getBlockType = function() {
 	return Blockly.Types.DECIMAL;
 };
+//---------------------------------text--------------------------------------------
+Blockly.Blocks.text.getBlockType = function() {
+	return Blockly.Types.TEXT;
+};
+Blockly.Blocks.text_char.getBlockType = function() {
+	return Blockly.Types.TEXT;
+};
+Blockly.Blocks.text_join.getBlockType = function() {
+	return Blockly.Types.TEXT;
+};
+Blockly.Blocks.text_append.getBlockType = function() {
+	return Blockly.Types.TEXT;
+};
+Blockly.Blocks.text_length.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.text_isEmpty.getBlockType = function() {
+	return Blockly.Types.BOOLEAN;
+};
 
+//***********************************************************************************
+//								Arduino base 
+//***********************************************************************************
 
+//---------------------------------arduino_base.js-------------------------------------
 
+Blockly.Blocks.millis.getBlockType = function() {
+	return Blockly.Types.LARGE_NUMBER;
+};
+Blockly.Blocks.var_random.getBlockType = function() {
+	return Blockly.Types.LARGE_NUMBER;
+};
+Blockly.Blocks.base_delay.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.base_map.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.various_constrain.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
 
+//---------------------------------arduino_conversion.js-------------------------------------
 
+Blockly.Blocks.conversion_tochar.getBlockType = function() {
+	return Blockly.Types.TEXT;
+};
+Blockly.Blocks.conversion_tobyte.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.conversion_toint.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.conversion_tofloat.getBlockType = function() {
+	return Blockly.Types.DECIMAL;
+};
 
+//---------------------------------arduino_io.js-------------------------------------
 
-
-
-
-
+Blockly.Blocks.inout_buildin_led.getBlockType = function() {
+	return Blockly.Types.BOOLEAN;
+};
 Blockly.Blocks.inout_pulsein.getBlockType = function() {
 	return Blockly.Types.LARGE_NUMBER;
 };
+Blockly.Blocks.inout_pulsein_timeout.getBlockType = function() {
+	return Blockly.Types.LARGE_NUMBER;
+};
+Blockly.Blocks.inout_digital_read.getBlockType = function() {
+	return Blockly.Types.BOOLEAN;
+};
+Blockly.Blocks.inout_digital_read_validator.getBlockType = function() {
+	return Blockly.Types.BOOLEAN;
+};
+Blockly.Blocks.inout_PWM_write_validator.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.inout_PWM_write.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.inout_analog_write.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.inout_analog_write_validator.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.inout_analog_read.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.tone.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.notone.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.inout_analog_read_validator.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.inout_onoff.getBlockType = function() {
+	return Blockly.Types.BOOLEAN;
+};
+Blockly.Blocks.inout_angle.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.inout_angle.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+
