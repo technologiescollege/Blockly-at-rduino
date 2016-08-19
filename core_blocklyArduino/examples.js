@@ -77,7 +77,7 @@ Examples.initLocal = function() {
 
 	// load './examples/examples.json' file to init table
 	$.ajax({
-				url : './examples/examples.json',
+				url : '../examples/examples.json',
 				type : "get",
 				dataType : "json",
 				success : function(data) {
@@ -214,7 +214,7 @@ Examples.initServer = function() {
 		e.preventDefault();
 		var newDir = $("#newDir").val();
 		if (newDir.substring(0, 11) != './examples/') {
-			newDir = './examples/' + $("#newDir").val();
+			newDir = './' + $("#newDir").val();
 		}
 		if ($("#directory option[value='" + newDir + "']").length == 0) {
 			$("#directory").append(	'<option value="' + newDir
@@ -342,6 +342,7 @@ Examples.initServer = function() {
 			case 'image/png':
 			case 'image/gif':
 			case 'image/jpeg':
+			case 'image/jpg':
 			case 'image/pjpeg':
 			case 'image/bmp':
 			case 'text/plain':

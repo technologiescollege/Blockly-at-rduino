@@ -1069,9 +1069,9 @@ BlocklyDuino.init = function() {
             $(this).find("span").css("color", "#000000");
         });*/
 	if (window.location.protocol == 'http:') {
-					$("#btn_create_example").attr("href","examples.php");
+					$("#btn_create_example").attr("href","./examples/examples.php");
 					} else {
-					$("#btn_create_example").attr("href","examples.html");	
+					$("#btn_create_example").attr("href","./examples/examples.html");	
 					}
 };
 
@@ -1143,16 +1143,16 @@ BlocklyDuino.buildExamples = function() {
 				$.each(data, function(i, example){
 					if (example.visible) {
 						var line = "<tr>"
-								   + "<td><a href='index.html?lang=fr&url="+example.source_url+"'>"
+								   + "<td><a href='index.html?lang=fr&url=./examples/"+example.source_url+"'>"
 								   + example.source_text
 								   + "</a></td>"
 								   + "<td>"
-								   + "<a href='"+example.image+"' target=_blank>"
-								   + "<img class='vignette' src='"+example.image+"'>"
+								   + "<a href='./examples/"+example.image+"' target=_blank>"
+								   + "<img class='vignette' src='./examples/"+example.image+"'>"
 								   + "</a>"
 								   + "</td>"
 								   + "<td>"
-								   + "<a href='"+example.link_url+"' target=_blank>"
+								   + "<a href='./examples/"+example.link_url+"' target=_blank>"
 								   + example.link_text
 								   + "</a>"
 								   + "</td>"

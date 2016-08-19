@@ -3,8 +3,8 @@
 <link rel="icon" type="image/png" href="favicon.bmp" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Blockly@rduino</title>
-<!-- <script type="text/javascript" src="blocks/blockly_uncompressed.js"></script> -->
-<script type="text/javascript" src="blocks/blockly_compressed.js"></script>
+<!-- <script type="text/javascript" src="core_blockly/blockly_uncompressed.js"></script> -->
+<script type="text/javascript" src="core_blockly/blockly_compressed.js"></script>
 
 <script type="text/javascript" src="core_blocklyArduino/boards.js"></script>
 <!-- needed for type of variable--->
@@ -63,8 +63,8 @@
 <script type="text/javascript" src="blocks/robots/robot_misc.js"></script>
 <script type="text/javascript" src="blocks/arduino_shield/arduino_shield.js"></script>
 
-<!--use core_Ardublock type function, add it to blocks from Blockly-->
-<script type="text/javascript" src="blocks/blocks_typing.js"></script>
+<!--use core_Ardublock type function, add it to blocks from Blockly, LAST BLOCKS js-->
+<script type="text/javascript" src="core_blocklyArduino/blocks_typing.js"></script>
 
 <script type="text/javascript" src="generators/blocklyarduino/control.js"></script>
 <script type="text/javascript" src="generators/blocklyarduino/logic.js"></script>
@@ -479,11 +479,11 @@
 		<div id="divToolbox">
 			<label id="labelToolboxDefinition"></label> 
 			<select id="toolboxes">
-				<option value="toolbox_algo">Algorithme simple</option>
-				<option value="toolbox_arduino_1">Arduino pour débutants</option>
-				<option value="toolbox_arduino_2">Arduino pour habitués</option>
-				<option value="toolbox_arduino_3">Arduino pour experts</option>
-				<option value="toolbox_arduino_all" selected="selected">TOUT</option>
+				<option value="./toolbox/toolbox_algo">Algorithme simple</option>
+				<option value="./toolbox/toolbox_arduino_1">Arduino pour débutants</option>
+				<option value="./toolbox/toolbox_arduino_2">Arduino pour habitués</option>
+				<option value="./toolbox/toolbox_arduino_3">Arduino pour experts</option>
+				<option value="./toolbox/toolbox_arduino_all" selected="selected">TOUT</option>
 			</select>
 		</div>
       <input type="checkbox" name="select_all" id="select_all"/> <span id="span_select_all"> </span>
