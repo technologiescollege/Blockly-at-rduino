@@ -53,14 +53,6 @@ Blockly.Blocks['math_number'] = {
       return (parent && parent.getInputsInline() && parent.tooltip) ||
           Blockly.Msg.MATH_NUMBER_TOOLTIP;
     });
-  },
-  /**
-   * Reads the numerical value from the block and assigns a block type.
-   * @this Blockly.Block
-   */
-  getBlockType: function() {
-    var numString = this.getFieldValue('NUM');
-    return Blockly.Types.identifyNumber(numString);
   }
 };
 

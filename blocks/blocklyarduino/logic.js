@@ -337,6 +337,10 @@ Blockly.Blocks['logic_compare'] = {
     }
     this.prevBlocks_[0] = blockA;
     this.prevBlocks_[1] = blockB;
+  },
+  /** Assigns a type to the block, comparison operations result in booleans. */
+  getBlockType: function() {
+    return Blockly.Types.BOOLEAN;
   }
 };
 
@@ -532,14 +536,6 @@ Blockly.Blocks['controls_switch'] = {
     this.defaultCount_ = 0;
   },
   /**
-   * Return all variables referenced by this block.
-   * @return {!Array.<string>} List of variable names.
-   * @this Blockly.Block
-   */
-  getVars: function() {
-    return [this.getFieldValue('SWVAR')];
-  },
-  /**
    * Notification that a variable is renaming.
    * If the name matches one of this block's variables, rename it.
    * @param {string} oldName Previous name of variable.
@@ -550,15 +546,6 @@ Blockly.Blocks['controls_switch'] = {
     if (Blockly.Names.equals(oldName, this.getFieldValue('SWVAR'))) {
       this.setFieldValue(newName, 'SWVAR');
     }
-  },
-  /**
-   * Searches through the nested blocks to find a variable type.
-   * @this Blockly.Block
-   * @param {!string} varName Name of this block variable to check type.
-   * @return {string} String to indicate the type of this block.
-   */
-  getVarType: function(varName) {
-    return Blockly.Types.getChildBlockType(this);
   },
   //do I need a custom context menu like from 'variables_get' ?
   /**
