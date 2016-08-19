@@ -69,7 +69,7 @@ Programme Blockly : [https://developers.google.com/blockly/](https://developers.
 
 Concept d'origine BlocklyDuino : Fred Lin (@gasolin [https://github.com/gasolin/BlocklyDuino](https://github.com/gasolin/BlocklyDuino)).
 
-Fonctions de typage ArduBlock : Carlos Pereira Atencio ([https://github.com/carlosperate/ardublockly](https://github.com/carlosperate/ardublockly)).
+Fonctions de typage ArduBlockly : Carlos Pereira Atencio ([https://github.com/carlosperate/ardublockly](https://github.com/carlosperate/ardublockly)).
 
 Son projet s'est aussi inspiré de [ardublock](https://github.com/taweili/ardublock) et [modkit](http://www.modk.it/).
 
