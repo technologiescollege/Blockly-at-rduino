@@ -4,12 +4,6 @@ goog.provide('Blockly.Arduino.base');
 
 goog.require('Blockly.Arduino');
 
-Blockly.Arduino['inout_highlow'] = function() {
-  // Boolean values HIGH and LOW.
-  var code = (this.getFieldValue('BOOL') == 'HIGH') ? 'HIGH' : 'LOW';
-  return [code, Blockly.Arduino.ORDER_ATOMIC];
-};
-
 Blockly.Arduino['serial_init'] = function() {
   var dropdown_speed = this.getFieldValue('SPEED');
   Blockly.Arduino.setups_['serial_begin'] = 'Serial.begin(' + dropdown_speed + ');' ;

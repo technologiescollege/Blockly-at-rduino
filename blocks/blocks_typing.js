@@ -173,3 +173,38 @@ Blockly.Blocks.inout_angle.getBlockType = function() {
 	return Blockly.Types.NUMBER;
 };
 
+//---------------------------------serial.js-------------------------------------
+
+Blockly.Blocks.serial_read.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.serial_available.getBlockType = function() {
+	return Blockly.Types.BOOLEAN;
+};
+Blockly.Blocks.serial_write.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.serial_write_out.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+
+//---------------------------------softserial.js-------------------------------------
+
+Blockly.Blocks.soft_read.getBlockType = function() {
+	return Blockly.Types.CHAR;
+};
+Blockly.Blocks.soft_print.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.soft_write.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.soft_available.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+
+//---------------------------------robot_misc.js-------------------------------------
+
+Blockly.Blocks.IR_get.getBlockType = function() {
+	return Blockly.Types.LARGE_NUMBER;
+};

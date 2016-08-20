@@ -101,7 +101,7 @@ Blockly.Arduino.play_notes_z = function() {
   var note_letter = this.getFieldValue("NOTE");
   var note_duration = Blockly.Arduino.valueToCode(this,"DUR", Blockly.Arduino.ORDER_ATOMIC) || '200'
   var note_volume = Blockly.Arduino.valueToCode(this,"VOL", Blockly.Arduino.ORDER_ATOMIC) || '15'
-  Blockly.Arduino.definitions_["define_button_wait"] = "//Playing Zumo notes requires the Pololu Zumo Buzzer Libraries to work\n" +
+  Blockly.Arduino.includes_["includes_button_wait"] = "//Playing Zumo notes requires the Pololu Zumo Buzzer Libraries to work\n" +
   "#include <ZumoBuzzer.h>\n"+
    "ZumoBuzzer buzzer;\n"+
    "//To play music, you'll want to write code direct - see library examples";
@@ -114,10 +114,10 @@ Blockly.Arduino.play_notes_z = function() {
 Blockly.Arduino.IR_serial_decoder = function() {
  //var dropdown_ipin = Blockly.Arduino.valueToCode(this, 'PIN', Blockly.Arduino.ORDER_ATOMIC);
  var dropdown_ipin = this.getFieldValue('PIN');
-  Blockly.Arduino.definitions_["define_IR_serial_decoder"] = "//Playing this requires the IR Remote Libraries to work\n" +
+  Blockly.Arduino.includes_["includes_IR"] = "//Playing this requires the IR Remote Libraries to work\n" +
   "//Credit to Ken Shirriff, Enjoying Electronics, dablondeemu and Instructables  \n"+
-  "#include <IRremote.h>\n"+
-  "int IRpin = "+dropdown_ipin+";\n"+
+  "#include <IRremote.h>\n";
+  Blockly.Arduino.definitions_["define_IR_serial_decoder"] = "int IRpin = "+dropdown_ipin+";\n"+
   "IRrecv irrecv(IRpin);\n"+
    "decode_results results;\n";   
   Blockly.Arduino.setups_["setup_IR_serial_decoder"] = "pinMode(IRpin, INPUT);\n"+
@@ -137,10 +137,10 @@ Blockly.Arduino.IR_get_blink = function() {
    var dropdown_lpin = this.getFieldValue('PIN2');
    var dropdown_ipin = this.getFieldValue('PIN');
    var IR_number = Blockly.Arduino.valueToCode(this, 'IR_NUM', Blockly.Arduino.ORDER_ATOMIC) 
-  Blockly.Arduino.definitions_["define_IR_get_blink"] = "//Playing this requires the IR Remote Libraries to work\n" +
+  Blockly.Arduino.includes_["includes_IR"] = "//Playing this requires the IR Remote Libraries to work\n" +
   "//Credit to Ken Shirriff, Enjoying Electronics, dablondeemu and Instructables  \n"+
-  "#include <IRremote.h>\n"+
-  "int IRpin = "+dropdown_ipin+";\n"+
+  "#include <IRremote.h>\n";
+  Blockly.Arduino.definitions_["define_IR_get_blink"] = "int IRpin = "+dropdown_ipin+";\n"+
   "int LEDpin = "+dropdown_lpin+";\n"+
   "boolean LEDon = true; // initializing LEDon as true\n"+
   "IRrecv irrecv(IRpin);\n"+
@@ -176,10 +176,10 @@ Blockly.Arduino.setups_["setup_IR_get_blink"] = "pinMode(IRpin, INPUT);\n"+
  Blockly.Arduino.IR_get= function() {
   // var dropdown_ipin = Blockly.Arduino.valueToCode(this, 'PIN', Blockly.Arduino.ORDER_ATOMIC);
    var dropdown_ipin = this.getFieldValue('PIN');
-   Blockly.Arduino.definitions_["define_IR_get"] = "//Playing this requires the IR Remote Libraries to work\n" +
+  Blockly.Arduino.includes_["includes_IR"] = "//Playing this requires the IR Remote Libraries to work\n" +
   "//Credit to Ken Shirriff, Enjoying Electronics, dablondeemu and Instructables  \n"+
-  "#include <IRremote.h>\n"+
-  "unsigned long IRCode = 0;\n"+
+  "#include <IRremote.h>\n";
+   Blockly.Arduino.definitions_["define_IR_get"] = "unsigned long IRCode = 0;\n"+
   "int IRpin = "+dropdown_ipin+";\n"+
   "IRrecv irrecv(IRpin);\n"+
   "decode_results results;\n"+ 

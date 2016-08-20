@@ -404,6 +404,7 @@ Blockly.Msg.ARD_TYPE_DECIMAL = "nombre à virgule";
 Blockly.Msg.ARD_TYPE_ARRAY = "tableau";
 Blockly.Msg.ARD_TYPE_NULL = "vide";
 Blockly.Msg.ARD_TYPE_UNDEF = "non défini";
+Blockly.Msg.ARD_TYPE_VOLATILE = "entier volatile";
 Blockly.Msg.ARD_TYPE_CHILDBLOCKMISSING = "typage manquant sur un bloc";
 Blockly.Msg.PROCEDURES_DEFRETURN_TITLE = "pour la fonction";
 Blockly.Msg.CONTROLS_IF_IF_TITLE_IF = Blockly.Msg.CONTROLS_IF_MSG_IF;

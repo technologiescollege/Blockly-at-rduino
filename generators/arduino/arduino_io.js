@@ -27,13 +27,6 @@ goog.provide('Blockly.Arduino.base');
 
 goog.require('Blockly.Arduino');
 
-Blockly.Arduino.inout_buildin_led = function() {
-  var dropdown_stat = this.getFieldValue('STAT');
-  Blockly.Arduino.setups_['setup_output_13'] = 'pinMode(13, OUTPUT);';
-  var code = 'digitalWrite(13, ' + dropdown_stat + ');\n';
-  return code;
-};
-
 Blockly.Arduino.inout_digital_write = function() {
   var dropdown_pin = Blockly.Arduino.valueToCode(this, 'PIN', Blockly.Arduino.ORDER_ATOMIC);
   var dropdown_stat = Blockly.Arduino.valueToCode(this, 'STAT', Blockly.Arduino.ORDER_ATOMIC);
@@ -168,20 +161,18 @@ Blockly.Arduino.inout_pulsein_timeout = function() {
 Blockly.Arduino.inout_attachInterrupt = function() {
   var dropdown_pin = this.getFieldValue('PIN');
   var dropdown_mode = this.getFieldValue('mode');
-  Blockly.Arduino.setups_['setup_input_'+dropdown_pin] = 'pinMode('+dropdown_pin+', INPUT);';
-  var interrupt_pin='digitalPinToInterrupt('+dropdown_pin+')';
-  var code = 'attachInterrupt' +'('+interrupt_pin+','+'attachInterrupt_'+dropdown_pin+','+dropdown_mode+');\n'
   var funcName='attachInterrupt_'+dropdown_pin;
+  Blockly.Arduino.setups_['setup_Interrupt_'+dropdown_pin] = 'pinMode('+dropdown_pin+', INPUT);\n'
+  + 'attachInterrupt('+dropdown_pin+','+'attachInterrupt_'+dropdown_pin+','+dropdown_mode+');\n';
+  
   var branch = Blockly.Arduino.statementToCode(this, 'DO' );
   var code2='void'+ ' ' + funcName + '() {\n' + branch + '}\n';
   Blockly.Arduino.definitions_[funcName] = code2;
-  return code;
+  return "";
 };
 
 Blockly.Arduino.inout_detachInterrupt = function() {
   var dropdown_pin = this.getFieldValue('PIN');
-  Blockly.Arduino.setups_['setup_input_'+dropdown_pin] = 'pinMode('+dropdown_pin+', INPUT);';
-  var interrupt_pin='digitalPinToInterrupt('+dropdown_pin+')';
-  var code = 'detachInterrupt' +'('+interrupt_pin+');\n'
+  var code = 'detachInterrupt('+dropdown_pin+');\n'
   return code;
 };

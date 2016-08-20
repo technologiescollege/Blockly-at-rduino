@@ -6,9 +6,6 @@ goog.provide('Blockly.Msg.en');
 
 goog.require('Blockly.Msg');
 
-Blockly.Msg.BACKPACK_GET = 'Paste All Blocks from Backpack';
-Blockly.Msg.BACKPACK_EMPTY = 'Empty the Backpack';
-Blockly.Msg.BACKPACK_CONFIRM_EMPTY = 'Are you sure you want to empty the backpack?';
 Blockly.Msg.ADD_COMMENT = "Add Comment";
 Blockly.Msg.ARRAY_CREATE_WITH_CONTAINER_TITLE_ADD = "array";
 Blockly.Msg.ARRAY_CREATE_WITH_CONTAINER_TOOLTIP = "Add, remove, or reorder sections to reconfigure this array block.";
@@ -411,6 +408,7 @@ Blockly.Msg.ARD_TYPE_NUMBER = "Number";
 Blockly.Msg.ARD_TYPE_SHORT = "Short Number";
 Blockly.Msg.ARD_TYPE_TEXT = "Text";
 Blockly.Msg.ARD_TYPE_UNDEF = "Undefined";
+Blockly.Msg.ARD_TYPE_VOLATILE = "Volatile integer";
 Blockly.Msg.PROCEDURES_DEFRETURN_TITLE = Blockly.Msg.PROCEDURES_DEFNORETURN_TITLE;
 Blockly.Msg.CONTROLS_IF_IF_TITLE_IF = Blockly.Msg.CONTROLS_IF_MSG_IF;
 Blockly.Msg.CONTROLS_WHILEUNTIL_INPUT_DO = Blockly.Msg.CONTROLS_REPEAT_INPUT_DO;

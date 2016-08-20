@@ -252,7 +252,11 @@ Code.initLanguage = function() {
   $('#btn_validCode').text(MSG['btn_validCode']);
 
   $('#msg_ajax_ko').text(MSG['msg_ajax_ko']);
-  $('#span_ajax_msg').text(MSG['span_ajax_msg']);
+  $('#span_ajax_msg').text(MSG['span_ajax_msg']);  
+  
+  $('#firstModalLabel').text(MSG['firstModalLabel']);
+  $('#span_first_msg').text(MSG['span_first_msg']);
+  $('#btn_valid_first_msg').text(MSG['btn_valid_first_msg']);
   
   $("xml").find("category").each(function() {
 	// add attribute ID to keep categorie code

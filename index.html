@@ -35,7 +35,9 @@
 <script type="text/javascript" src="blocks/arduino_base/arduino_base.js"></script>
 <script type="text/javascript" src="blocks/arduino_base/arduino_io.js"></script>
 <script type="text/javascript" src="blocks/arduino_base/arduino_conversion.js"></script>
-<script type="text/javascript" src="blocks/arduino_base/variables_type.js"></script>
+<script type="text/javascript" src="blocks/arduino_base/arduino_serial.js"></script>
+<script type="text/javascript" src="blocks/arduino_base/arduino_softserial.js"></script>
+<script type="text/javascript" src="blocks/arduino_base/arduino_set_type.js"></script>
 <script type="text/javascript" src="blocks/adafruit_motorshield/adafruit_motorshield.js"></script>
 <script type="text/javascript" src="blocks/bitbloq/bitbloq.js"></script>
 <script type="text/javascript" src="blocks/dfplayer-mini-mp3-dfrobot/dfplayer-mini-mp3-dfrobot.js"></script>
@@ -54,8 +56,6 @@
 <script type="text/javascript" src="blocks/mbot/mbot_3.js"></script>
 <script type="text/javascript" src="blocks/multi-function/multi-function.js"></script>
 <script type="text/javascript" src="blocks/robuno/robuno.js"></script>
-<script type="text/javascript" src="blocks/serial/serial.js"></script>
-<script type="text/javascript" src="blocks/serial/softserial.js"></script>
 <script type="text/javascript" src="blocks/servo/servo.js"></script>
 <script type="text/javascript" src="blocks/technozone51/technozone51.js"></script>
 <!--script type="text/javascript" src="blocks/technozone51/technozone51_barbot.js"></script-->
@@ -77,9 +77,11 @@
 <script type="text/javascript" src="generators/blocklyarduino/procedures.js"></script>
 
 <script type="text/javascript" src="generators/arduino/arduino_base.js"></script>
-<script type="text/javascript" src="generators/arduino/arduino_io.js"></script>
 <script type="text/javascript" src="generators/arduino/arduino_conversion.js"></script>
-<script type="text/javascript" src="generators/arduino/variables_type.js"></script>
+<script type="text/javascript" src="generators/arduino/arduino_io.js"></script>
+<script type="text/javascript" src="generators/arduino/arduino_serial.js"></script>
+<script type="text/javascript" src="generators/arduino/arduino_softserial.js"></script>
+<script type="text/javascript" src="generators/arduino/arduino_set_type.js"></script>
 <script type="text/javascript" src="generators/arduino/adafruit_motorshield.js"></script>
 <script type="text/javascript" src="generators/arduino/bitbloq.js"></script>
 <script type="text/javascript" src="generators/arduino/dfplayer-mini-mp3-dfrobot.js"></script>
@@ -92,9 +94,7 @@
 <script type="text/javascript" src="generators/arduino/mbot.js"></script>
 <script type="text/javascript" src="generators/arduino/multi-function.js"></script>
 <script type="text/javascript" src="generators/arduino/robuno.js"></script>
-<script type="text/javascript" src="generators/arduino/serial.js"></script>
 <script type="text/javascript" src="generators/arduino/servo.js"></script>
-<script type="text/javascript" src="generators/arduino/softserial.js"></script>
 <script type="text/javascript" src="generators/arduino/technozone51.js"></script>
 <!--script type="text/javascript" src="generators/arduino/technozone51_barbot.js"></script-->
 <script type="text/javascript" src="generators/arduino/zumo_motors.js"></script>
@@ -340,6 +340,7 @@
 			  <span><b>Blockly@rduino</b></span> (<a href="https://github.com/technologiescollege/Blockly-at-rduino">Github</a>)
               <span id="aboutBody" style="font-style: italic;"> </span>
               <br /> - Alan YORINKS - PyMata-aio : (<a href='http://mryslab.blogspot.fr' target='blank'>http://mryslab.blogspot.fr</a>)
+			  <br /> - Carlos PEREIRA ATENCIO - Ardublockly : (<a href='https://github.com/carlosperate/ardublockly' target='blank'>https://github.com/carlosperate/ardublockly</a>)
               <br /> - Bernard REMOND - rDuino-Compiler-Uploader-Server : (<a href='https://github.com/nbremond77' target='blank'>https://github.com/nbremond77</a>)
               <br /> - Fred LIN (@gasolin) - BlocklyDuino : (<a href='https://github.com/BlocklyDuino/BlocklyDuino' target='blank'>'https://github.com/BlocklyDuino/BlocklyDuino</a>)
               <br /> - Blockly : (<a href='https://developers.google.com/blockly' target='blank'>https://developers.google.com/blockly</a>)
@@ -347,7 +348,7 @@
 			  <br /> - Codebender - CompilerFlasher : (<a href='https://codebender.cc' target='blank'>https://codebender.cc</a>)
               <br /> - JQuerry (<a href='https://jquery.com' target='blank'>https://jquery.com)</a>
 			  <br />
-			  <br /><i/>version 09-08-2016
+			  <br /><i/>version 19-08-2016 - v2.0 "SuperUpload"
 			  <br />
 			  <br /><center>
 					<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
@@ -358,6 +359,25 @@
 					<img alt="" border="0" src="https://www.paypalobjects.com/fr_FR/i/scr/pixel.gif" width="1" height="1">
 					</form>
 				</center>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- info first connect modal -->
+<div class="modal fade" id="firstModal" tabindex="-1" role="dialog" aria-labelledby="firstModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="firstModalLabel"></h4>
+      </div>
+      <div class="modal-body">
+          <iframe width="550" height="700" src="./core_BlocklyArduino/first_info.html" frameborder="0" allowfullscreen></iframe>
+		  <br/>
+      </div>      
+      <div class="modal-footer">
+		 <span id="span_first_msg"></span>  <input type="checkbox" name="first_msg" id="first_msg"/>
+        <button id="btn_valid_first_msg" type="button" class="btn btn-primary"></button>
       </div>
     </div>
   </div>
@@ -373,8 +393,7 @@
       <div class="modal-body">
           <pre id="msg_ajax_ko"></pre>
           <input type="checkbox" name="ajax_msg" id="ajax_msg"/> <span id="span_ajax_msg"> </span>
-      </div>
-      
+      </div>      
       <div class="modal-footer">
         <button id="btn_close_msg" type="button" class="btn btn-default" data-dismiss="modal" ></button>
         <button id="btn_valid_msg" type="button" class="btn btn-primary"></button>

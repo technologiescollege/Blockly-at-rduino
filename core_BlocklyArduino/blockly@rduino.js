@@ -390,6 +390,13 @@ BlocklyDuino.bindFunctions = function() {
 			window.sessionStorage.msg_ajax_seen = true;
 		}
 		$('#ajaxModal').modal('hide');
+	});	
+	
+	$('#btn_valid_first_msg').on("click", function() {
+		if ($('#first_msg').prop("checked")) {
+			window.sessionStorage.msg_first_seen = true;
+		}
+		$('#firstModal').modal('hide');
 	});
 
 	$('#btn_inline').on("click", BlocklyDuino.inline);
@@ -639,6 +646,8 @@ BlocklyDuino.init = function() {
 	BlocklyDuino.setOrientation();
 	
 	BlocklyDuino.testAjax();
+					
+	BlocklyDuino.firstBlocklyArduino();
 	
 	if ($('#toolbox').length) {
 		BlocklyDuino.toolboxInIndexHtml = true;		
@@ -891,4 +900,14 @@ BlocklyDuino.testAjax = function() {
 BlocklyDuino.clearLocalStorage = function () {
 	window.removeEventListener('unload', BlocklyDuino.backupBlocks, false);
 	localStorage.clear();
+};
+
+
+/**
+ * Modal first connection -> info
+ */
+BlocklyDuino.firstBlocklyArduino = function() {
+	if (!window.sessionStorage.msg_first_seen) {
+		$('#firstModal').modal('show');	
+	}
 };
