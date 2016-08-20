@@ -27,11 +27,7 @@ Blockly.Arduino.bq_buzzer = function() {
 
 Blockly.Arduino.bq_ultrason = function() {
   var dropdown_triger_pin = Blockly.Arduino.valueToCode(this, 'TRIGER', Blockly.Arduino.ORDER_ATOMIC); //this.getFieldValue('TRIGER');
-  var dropdown_dist_pin = Blockly.Arduino.valueToCode(this, 'DIST', Blockly.Arduino.ORDER_ATOMIC); //this.getFieldValue('DIST');
-  Blockly.Arduino.setups_["setup_sonar1"] = "pinMode("+dropdown_triger_pin+",OUTPUT);//Sonar triger pin\n"+
-  "  pinMode("+dropdown_dist_pin+",INPUT);//Sonar distance pulse pin\n";
-  var code = "";
-  
+  var dropdown_dist_pin = Blockly.Arduino.valueToCode(this, 'DIST', Blockly.Arduino.ORDER_ATOMIC); //this.getFieldValue('DIST');  
   Blockly.Arduino.definitions_['define_mesure_distance_cm'] = "int mesure_distance_cm(byte trig_pin,byte dist_pin)\n"+
     "{\n"+
     "  digitalWrite(trig_pin,HIGH);\n"+
@@ -41,8 +37,10 @@ Blockly.Arduino.bq_ultrason = function() {
     "  if (value>255) { value=255; }\n"+
     "  delay(20);\n"+
     "  return value;\n"+
-    "}\n";
-  code="mesure_distance_cm("+dropdown_triger_pin+","+dropdown_dist_pin+")";
+    "}";
+  Blockly.Arduino.setups_['setup_sonar_BQ_' + dropdown_triger_pin] = 'pinMode('+dropdown_triger_pin+',OUTPUT);//Sonar triger pin\n'+
+  '  pinMode('+dropdown_dist_pin+',INPUT);//Sonar distance pulse pin';
+  var code = 'mesure_distance_cm('+dropdown_triger_pin+','+dropdown_dist_pin+')';
   return [code, Blockly.Arduino.ORDER_ATOMIC];
 };
 
