@@ -84,7 +84,8 @@ Blockly.Blocks['soft_print'] = {
 	this.appendDummyInput("")
 		.appendField(Blockly.Msg.SSERIAL_RX)
         .appendField(new Blockly.FieldTextInput(''), 'RX_ss');
-    this.appendValueInput("CONTENT", 'String')
+    this.appendValueInput("CONTENT")
+		.setCheck('String')
         .appendField(Blockly.Msg.SSERIAL_Print);
     this.setInputsInline(false);
     this.setPreviousStatement(true, null);
@@ -100,7 +101,8 @@ Blockly.Blocks['soft_write'] = {
 	this.appendDummyInput("")
 		.appendField(Blockly.Msg.SSERIAL_RX)
         .appendField(new Blockly.FieldTextInput(''), 'RX_ss');
-    this.appendValueInput("CONTENT", 'String')
+    this.appendValueInput("CONTENT")
+		.setCheck('String')
         .appendField(Blockly.Msg.SSERIAL_Write);
     this.setInputsInline(false);
     this.setPreviousStatement(true, null);

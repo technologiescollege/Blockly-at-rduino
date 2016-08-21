@@ -18,7 +18,7 @@
     {
         "source_url": "./grenouille/grenouille.xml",
         "source_text": "faire avancer un robot qui stoppe quand un objet est à moins de 10cm",
-        "image": "./servo_potentio/servo_potentio_fritzing.jpg",
+        "image": "./grenouille/grenouille.jpg",
         "link_url": "http://fablabo.net/wiki/FablabJunior_Automne_2015/Projet4",
         "link_text": "sur Fablabo",
         "visible": true

@@ -1,40 +1,35 @@
 <xml xmlns="http://www.w3.org/1999/xhtml">
-  <block type="soft_init" x="38" y="38">
+  <block type="soft_init" id="guH2}bQ1PY*n}eU_A^@)" x="75" y="64">
     <field name="PIN1">10</field>
     <field name="PIN2">11</field>
     <field name="SPEED">300</field>
     <next>
-      <block type="controls_if">
+      <block type="controls_if" id="d.ka}d|(1VyxV:Y`S_{v">
         <value name="IF0">
-          <block type="soft_available">
+          <block type="soft_available" id=":`zWf6lT1gADg~6U|p@n">
             <field name="RX_ss">10</field>
           </block>
         </value>
         <statement name="DO0">
-          <block type="variables_set">
+          <block type="variables_set" id="WWeI6pSTsFj|!]7)(vms">
             <field name="VAR">bluetooth</field>
             <value name="VALUE">
-              <block type="variables_set_type">
-                <field name="VARIABLE_SETTYPE_TYPE">NUMBER</field>
-                <value name="VARIABLE_SETTYPE_INPUT">
-                  <block type="soft_read">
-                    <field name="RX_ss">10</field>
-                  </block>
-                </value>
+              <block type="soft_read" id="5b.Wem?5_8uw;_zQf!sB">
+                <field name="RX_ss">10</field>
               </block>
             </value>
             <next>
-              <block type="controls_if">
+              <block type="controls_if" id="*ByAx|vpYPkA`0.N[6ZG">
                 <value name="IF0">
-                  <block type="logic_compare">
+                  <block type="logic_compare" id="ks:Up:,Q(hFI|Tfx8CnZ">
                     <field name="OP">EQ</field>
                     <value name="A">
-                      <block type="variables_get">
+                      <block type="variables_get" id="4:p/rSvg?uPsnEC{nl,4">
                         <field name="VAR">bluetooth</field>
                       </block>
                     </value>
                     <value name="B">
-                      <block type="math_number">
+                      <block type="math_number" id="Kk,fZ2SK29~T||.0*?7M">
                         <field name="NUM">0</field>
                       </block>
                     </value>

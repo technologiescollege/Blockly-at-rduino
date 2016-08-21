@@ -51,7 +51,7 @@ Blockly.Arduino.bq_servo = function() {
   var delay_time = '0';
   //delay_time = delay_time.replace('(','').replace(')','');
 
-  Blockly.Arduino.definitions_['define_servo'] = '#include <Servo.h>\n';
+  Blockly.Arduino.includes_['define_servo'] = '#include <Servo.h>\n';
   Blockly.Arduino.definitions_['var_servo' + dropdown_pin] = 'Servo servo_' + dropdown_pin + ';\n';
   Blockly.Arduino.setups_['setup_servo_' + dropdown_pin] = 'servo_' + dropdown_pin + '.attach(' + dropdown_pin + ');\n';
 
@@ -90,7 +90,7 @@ Blockly.Arduino.bq_servo_rotation_continue = function() {
   var value_degree = Blockly.Arduino.valueToCode(this, 'VITESSE', Blockly.Arduino.ORDER_ATOMIC);
   var value_sens = Blockly.Arduino.valueToCode(this, 'SENS', Blockly.Arduino.ORDER_ATOMIC);
   
-  Blockly.Arduino.definitions_['define_servo'] = '#include <Servo.h>\n';
+  Blockly.Arduino.includes_['define_servo'] = '#include <Servo.h>\n';
   Blockly.Arduino.definitions_['var_servo'+pin] = 'Servo servo_'+pin+';\n';
   Blockly.Arduino.setups_['setup_servo_'+pin] = 'servo_'+pin+'.attach('+pin+');\n';
   if (value_sens =="true")
@@ -115,7 +115,7 @@ Blockly.Arduino.bq_bluetooth_slave = function() {
   var statement_receive = Blockly.Arduino.statementToCode(this, "RCV");
   var statement_send = Blockly.Arduino.statementToCode(this, "SNT");
 
-  Blockly.Arduino.definitions_['define_softwareserial'] = '#include <SoftwareSerial.h>\n';
+  Blockly.Arduino.includes_['define_softwareserial'] = '#include <SoftwareSerial.h>\n';
   Blockly.Arduino.definitions_['var_bluetooth_'+dropdown_pin] = 'SoftwareSerial blueToothSerial_'+dropdown_pin+'('+dropdown_pin+','+NextPIN+');\n';
 
   Blockly.Arduino.setups_['setup_bluetooth_'+dropdown_pin] = 'Serial.begin(9600);\n';

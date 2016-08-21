@@ -11,7 +11,7 @@ goog.require('Blockly.Arduino');
 Blockly.Blocks['romeo_mot_left'] = {
   init: function() {
     this.setColour("#F39800");
-	this.appendValueInput("PWM", 'Number')
+	this.appendValueInput("PWM")
         .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/dfrobot_romeo_v2/mot_left.jpg', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize))
         .setCheck('Number')
         .setAlign(Blockly.ALIGN_RIGHT)
@@ -31,7 +31,7 @@ Blockly.Blocks['romeo_mot_left'] = {
 Blockly.Blocks['romeo_mot_right'] = {
   init: function() {
     this.setColour("#F39800");
-	this.appendValueInput("PWM", 'Number')
+	this.appendValueInput("PWM")
         .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/dfrobot_romeo_v2/mot_right.jpg', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize))
         .setCheck('Number')
         .setAlign(Blockly.ALIGN_RIGHT)

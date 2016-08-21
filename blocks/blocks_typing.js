@@ -113,7 +113,7 @@ Blockly.Blocks.conversion_tochar.getBlockType = function() {
 	return Blockly.Types.TEXT;
 };
 Blockly.Blocks.conversion_tobyte.getBlockType = function() {
-	return Blockly.Types.NUMBER;
+	return Blockly.Types.SHORT_NUMBER;
 };
 Blockly.Blocks.conversion_toint.getBlockType = function() {
 	return Blockly.Types.NUMBER;
@@ -173,7 +173,7 @@ Blockly.Blocks.inout_angle.getBlockType = function() {
 	return Blockly.Types.NUMBER;
 };
 
-//---------------------------------serial.js-------------------------------------
+//---------------------------------arduino_serial.js-------------------------------------
 
 Blockly.Blocks.serial_read.getBlockType = function() {
 	return Blockly.Types.NUMBER;
@@ -188,10 +188,10 @@ Blockly.Blocks.serial_write_out.getBlockType = function() {
 	return Blockly.Types.NUMBER;
 };
 
-//---------------------------------softserial.js-------------------------------------
+//---------------------------------arduino_softserial.js-------------------------------------
 
 Blockly.Blocks.soft_read.getBlockType = function() {
-	return Blockly.Types.CHAR;
+	return Blockly.Types.CHARACTER;
 };
 Blockly.Blocks.soft_print.getBlockType = function() {
 	return Blockly.Types.NUMBER;
@@ -200,7 +200,7 @@ Blockly.Blocks.soft_write.getBlockType = function() {
 	return Blockly.Types.NUMBER;
 };
 Blockly.Blocks.soft_available.getBlockType = function() {
-	return Blockly.Types.NUMBER;
+	return Blockly.Types.BOOLEAN;
 };
 
 //---------------------------------robot_misc.js-------------------------------------
@@ -210,13 +210,90 @@ Blockly.Blocks.IR_get.getBlockType = function() {
 };
 
 //***********************************************************************************
+//								adafruit_motorshield
+//***********************************************************************************
+
+//---------------------------------adafruit_motorshield.js-------------------------------------
+
+Blockly.Blocks.dcmotor_v1.getBlockType = function() {
+	return Blockly.Types.BOOLEAN;
+};
+
+//***********************************************************************************
+//								arduino_shield
+//***********************************************************************************
+
+//---------------------------------arduino_shield.js-------------------------------------
+
+Blockly.Blocks.LCD_Keypad_Shield_DFR_09.getBlockType = function() {
+	return Blockly.Types.BOOLEAN;
+};
+
+//***********************************************************************************
 //								Bitbloq
 //***********************************************************************************
 
 //---------------------------------bitbloq.js-------------------------------------
 
 Blockly.Blocks.bq_led.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.bq_buzzer.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.bq_ultrason.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.bq_servo.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.bq_bouton_poussoir.getBlockType = function() {
 	return Blockly.Types.BOOLEAN;
+};
+Blockly.Blocks.bq_capteur_de_ligne.getBlockType = function() {
+	return Blockly.Types.BOOLEAN;
+};
+Blockly.Blocks.bq_potentiometre.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.bq_luminosite.getBlockType = function() {
+	return Blockly.Types.DECIMAL;
+};
+Blockly.Blocks.bq_servo_rotation_continue.getBlockType = function() {
+	return Blockly.Types.DECIMAL;
+};
+Blockly.Blocks.bq_bluetooth_slave.getBlockType = function() {
+	return Blockly.Types.TEXT;
+};
+
+//***********************************************************************************
+//								dfplayer-mini-mp3-dfrobot
+//***********************************************************************************
+
+//---------------------------------dfplayer-mini-mp3-dfrobot.js-------------------------------------
+
+Blockly.Blocks.lp2i_mp3_init.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+
+//***********************************************************************************
+//								dfrobot_romeo_v2
+//***********************************************************************************
+
+//---------------------------------dfrobot_romeo_v2.js-------------------------------------
+
+Blockly.Blocks.romeo_forward.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+
+//***********************************************************************************
+//								display-oled-128x64-i2c
+//***********************************************************************************
+
+//---------------------------------display-oled-128x64-i2c.js-------------------------------------
+
+Blockly.Blocks.lp2i_u8g_print.getBlockType = function() {
+	return Blockly.Types.NUMBER;
 };
 
 //***********************************************************************************
@@ -232,5 +309,33 @@ Blockly.Blocks.flycam_record.getBlockType = function() {
 	return Blockly.Types.NUMBER;
 };
 Blockly.Blocks.flycam_stop.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+
+//***********************************************************************************
+//								servo
+//***********************************************************************************
+
+//---------------------------------servo.js-------------------------------------
+
+Blockly.Blocks.servo_move.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.servo_read_degrees.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.servo_attached.getBlockType = function() {
+	return Blockly.Types.BOOLEAN;
+};
+Blockly.Blocks.servo_detach.getBlockType = function() {
+	return Blockly.Types.BOOLEAN;
+};
+Blockly.Blocks.servo_detach.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.servo_rot_continue.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.servo_rot_continue.getBlockType = function() {
 	return Blockly.Types.NUMBER;
 };

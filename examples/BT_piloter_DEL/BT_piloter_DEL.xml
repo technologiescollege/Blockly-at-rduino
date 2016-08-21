@@ -1,83 +1,78 @@
 <xml xmlns="http://www.w3.org/1999/xhtml">
-  <block type="soft_init" x="38" y="38">
+  <block type="soft_init" id="BpklyBpX1CrJ|bO?h18M" x="38" y="38">
     <field name="PIN1">10</field>
     <field name="PIN2">11</field>
     <field name="SPEED">300</field>
     <next>
-      <block type="controls_if">
+      <block type="controls_if" id="`D9u7n?9Ttvj1Ozqm|4Q">
         <value name="IF0">
-          <block type="soft_available">
+          <block type="soft_available" id="MwqxJA_,DxQW]p6+0zFw">
             <field name="RX_ss">10</field>
           </block>
         </value>
         <statement name="DO0">
-          <block type="variables_set">
+          <block type="variables_set" id=")](0YHWd(;b8(|EB1,VR">
             <field name="VAR">bluetooth</field>
             <value name="VALUE">
-              <block type="variables_set_type">
-                <field name="VARIABLE_SETTYPE_TYPE">NUMBER</field>
-                <value name="VARIABLE_SETTYPE_INPUT">
-                  <block type="soft_read">
-                    <field name="RX_ss">10</field>
-                  </block>
-                </value>
+              <block type="soft_read" id="zhV3cI`Ve16#1IXg0l7.">
+                <field name="RX_ss">10</field>
               </block>
             </value>
             <next>
-              <block type="controls_if">
+              <block type="controls_if" id="B{dhWoMH(1-F^g`sIlb+">
                 <value name="IF0">
-                  <block type="logic_compare">
+                  <block type="logic_compare" id="c]Zk=U20MIJ^{p6iBh,J">
                     <field name="OP">EQ</field>
                     <value name="A">
-                      <block type="variables_get">
+                      <block type="variables_get" id="yJyF8WgL_|]e!{jHnl}C">
                         <field name="VAR">bluetooth</field>
                       </block>
                     </value>
                     <value name="B">
-                      <block type="math_number">
+                      <block type="math_number" id="OBD)Fo198.|/;bi4M+Yr">
                         <field name="NUM">1</field>
                       </block>
                     </value>
                   </block>
                 </value>
                 <statement name="DO0">
-                  <block type="bq_led">
+                  <block type="bq_led" id="cvV{P%CRieWux8R;C1a`">
                     <field name="STAT">HIGH</field>
                     <value name="PIN">
                       <shadow type="math_number">
                         <field name="NUM">1</field>
                       </shadow>
-                      <block type="math_number">
+                      <block type="math_number" id="U}.i@FJwm8HA6!]_Wq^X">
                         <field name="NUM">8</field>
                       </block>
                     </value>
                   </block>
                 </statement>
                 <next>
-                  <block type="controls_if">
+                  <block type="controls_if" id="54F0W0{hA54mn5*P#ofa">
                     <value name="IF0">
-                      <block type="logic_compare">
+                      <block type="logic_compare" id="1pZ@ttV+.^x,dgd*r+^G">
                         <field name="OP">EQ</field>
                         <value name="A">
-                          <block type="variables_get">
+                          <block type="variables_get" id="[(Nuk,PoO+Lkft-T@h`c">
                             <field name="VAR">bluetooth</field>
                           </block>
                         </value>
                         <value name="B">
-                          <block type="math_number">
+                          <block type="math_number" id=",l4.iyJkZMgMv7QZ6bXW">
                             <field name="NUM">0</field>
                           </block>
                         </value>
                       </block>
                     </value>
                     <statement name="DO0">
-                      <block type="bq_led">
+                      <block type="bq_led" id="Es=T8CoB(/T0D2y8GKM%">
                         <field name="STAT">LOW</field>
                         <value name="PIN">
                           <shadow type="math_number">
                             <field name="NUM">1</field>
                           </shadow>
-                          <block type="math_number">
+                          <block type="math_number" id="VHOsEl}OKj^4w,yga3BY">
                             <field name="NUM">8</field>
                           </block>
                         </value>

@@ -32,16 +32,11 @@ Blockly.Blocks.servo_move = {
     this.appendDummyInput("")
         .appendField(Blockly.Msg.ARDUINO_SERVO_MOVE_INPUT1)
         .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/servo/servomoteur.jpg', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize));
-    /* old version with Digital PWM correction
-	this.appendDummyInput("")
-		.setAlign(Blockly.ALIGN_RIGHT)
-		.appendField(Blockly.Msg.ARDUINO_SERVO_MOVE_INPUT2)
-        .appendField(new Blockly.FieldTextInput('',  Blockly.Arduino.pinPWMValidator), 'PIN'); */
-	this.appendValueInput("PIN", 'Number')
+	this.appendValueInput("PIN")
         .setCheck('Number')
         .setAlign(Blockly.ALIGN_RIGHT)
         .appendField(Blockly.Msg.ARDUINO_SERVO_MOVE_INPUT2);
-    this.appendValueInput("DEGREE", 'Number')
+    this.appendValueInput("DEGREE")
         .setCheck('Number')
         .setAlign(Blockly.ALIGN_RIGHT)
         .appendField(Blockly.Msg.ARDUINO_SERVO_MOVE_DEGREE);
@@ -58,12 +53,7 @@ Blockly.Blocks.servo_read_degrees = {
     this.appendDummyInput("")
         .appendField(Blockly.Msg.ARDUINO_SERVO_READ_DEGREES_INPUT1)
         .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/servo/servomoteur.jpg', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize));
-/* old version with Digital PWM correction
- 	this.appendDummyInput("")	
-        .setAlign(Blockly.ALIGN_RIGHT)
-        .appendField(Blockly.Msg.ARDUINO_SERVO_READ_DEGREES_INPUT2)
-        .appendField(new Blockly.FieldTextInput('',  Blockly.Arduino.pinPWMValidator), 'PIN'); */
-	this.appendValueInput("PIN", 'Number')
+	this.appendValueInput("PIN")
         .setCheck('Number')
 		.setAlign(Blockly.ALIGN_RIGHT)
         .appendField(Blockly.Msg.ARDUINO_SERVO_READ_DEGREES_INPUT2);    
@@ -76,7 +66,8 @@ Blockly.Blocks.servo_attached = {
   init: function() {
 	this.setColour("#2475FA");
 	this.setHelpUrl('http://www.arduino.cc/playground/ComponentLib/servo');
-    this.appendValueInput("PIN", 'Number')
+    this.appendValueInput("PIN")
+		.setCheck('Number')
         .appendField(Blockly.Msg.ARDUINO_SERVO_ATTACHED)
         .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/servo/servomoteur.jpg', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize))
         .appendField(Blockly.Msg.ARDUINO_SERVO_PIN);
@@ -90,7 +81,8 @@ Blockly.Blocks.servo_detach = {
     this.setColour("#2475FA");
 	this.setHelpUrl('');
 	this.setInputsInline(true);
-    this.appendValueInput("PIN", 'Number')
+    this.appendValueInput("PIN")
+		.setCheck('Number')
         .appendField(Blockly.Msg.ARDUINO_SERVO_DETACH)
         .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/servo/servomoteur.jpg', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize));
     this.setPreviousStatement(true, null);
@@ -106,19 +98,19 @@ Blockly.Blocks.servo_rot_continue = {
 	this.appendDummyInput()
 		.appendField(Blockly.Msg.ARDUINO_SERVO_ROT_CONTINUE_TEXT)
 		.appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/servo/servomoteur_rot_continue.jpg', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize));
-	this.appendValueInput("PIN", 'Number')
+	this.appendValueInput("PIN")
         .setAlign(Blockly.ALIGN_RIGHT)
 		.setCheck('Number')
         .appendField(Blockly.Msg.ARDUINO_SERVO_ROT_CONTINUE_INPUT1);
     this.setInputsInline(true);
-	this.appendValueInput("SPEED", 'Null')
+	this.appendValueInput("SPEED")
+		.setCheck('Number')
         .setAlign(Blockly.ALIGN_RIGHT)
       	.appendField(Blockly.Msg.ARDUINO_SERVO_ROT_CONTINUE_INPUT2);
     this.setInputsInline(false);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setTooltip(Blockly.Msg.ARDUINO_SERVO_ROT_CONTINUE_TOOLTIP);
-	this.setTooltip('');
   }
 };
 
@@ -129,12 +121,13 @@ Blockly.Blocks.servo_rot_continue_param = {
 	this.appendDummyInput()
 		.appendField(Blockly.Msg.ARDUINO_SERVO_ROT_CONTINUE_TEXT)
 		.appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/servo/servomoteur_rot_continue.jpg', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize));
-	this.appendValueInput("PIN", 'Number')
+	this.appendValueInput("PIN")
         .setAlign(Blockly.ALIGN_RIGHT)
 		.setCheck('Number')
         .appendField(Blockly.Msg.ARDUINO_SERVO_ROT_CONTINUE_INPUT1);
     this.setInputsInline(true);
-	this.appendValueInput("SPEED", 'Null')
+	this.appendValueInput("SPEED")
+		.setCheck('Number')
         .setAlign(Blockly.ALIGN_RIGHT)
       	.appendField(Blockly.Msg.ARDUINO_SERVO_ROT_CONTINUE_INPUT3);
 	this.appendDummyInput()
@@ -145,6 +138,5 @@ Blockly.Blocks.servo_rot_continue_param = {
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setTooltip(Blockly.Msg.ARDUINO_SERVO_ROT_CONTINUE_TOOLTIP);
-	this.setTooltip('');
   }
 };

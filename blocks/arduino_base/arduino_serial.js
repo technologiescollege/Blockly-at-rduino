@@ -52,7 +52,7 @@ Blockly.Blocks['serial_printfor'] = {
     this.setColour("#00979D");
 	this.setHelpUrl('http://arduino.cc/en/Serial/Println');
 	this.setInputsInline(true);
-    this.appendValueInput("CONTENT", 'Number')
+    this.appendValueInput("CONTENT")
         .setCheck('Number')
         .appendField(Blockly.Msg.Serial_Print_Format)
      	.appendField(new Blockly.FieldDropdown([[Blockly.Msg.Serial_Print_ForDecimal, "DEC"],[Blockly.Msg.Serial_Print_ForHexa, "HEX"],[Blockly.Msg.Serial_Print_ForBin, "BIN"],[Blockly.Msg.Serial_Print_ForOct, "OCT"]]), "TYPE");
@@ -90,7 +90,8 @@ Blockly.Blocks['serial_print'] = {
   init: function() {
     this.setColour("#00979D");
 	this.setHelpUrl(Blockly.Msg.ARDUINO_SERIAL_PRINT_HELPURL);
-    this.appendValueInput("CONTENT", 'String')
+    this.appendValueInput("CONTENT")
+		.setCheck('String')
         .appendField(Blockly.Msg.ARDUINO_SERIAL_PRINT_CONTENT);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
@@ -102,7 +103,8 @@ Blockly.Blocks['serial_print_tab'] = {
   init: function() {
     this.setColour("#00979D");
 	this.setHelpUrl(Blockly.Msg.ARDUINO_SERIAL_PRINT_HELPURL);
-    this.appendValueInput("CONTENT", 'String')
+    this.appendValueInput("CONTENT")
+		.setCheck('String')
         .appendField(Blockly.Msg.ARDUINO_SERIAL_PRINT_TAB_CONTENT);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
@@ -114,7 +116,8 @@ Blockly.Blocks['serial_println'] = {
   init: function() {
     this.setColour("#00979D");
 	this.setHelpUrl(Blockly.Msg.ARDUINO_SERIAL_PRINT_HELPURL);
-    this.appendValueInput("CONTENT", 'String')
+    this.appendValueInput("CONTENT")
+		.setCheck('String')
         .appendField(Blockly.Msg.ARDUINO_SERIAL_PRINTLN_CONTENT);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
@@ -126,13 +129,16 @@ Blockly.Blocks['serial_print_var'] = {
   init: function() {
     this.setColour("#00979D");
 	this.setHelpUrl(Blockly.Msg.ARDUINO_SERIAL_PRINT_HELPURL);
-    this.appendValueInput("Text", 'String')
+    this.appendValueInput("Text")
+		.setCheck('String')
 	    .setAlign(Blockly.ALIGN_RIGHT)
         .appendField(Blockly.Msg.ARDUINO_SERIAL_PRINT_VAR_TEXT);		
-	this.appendValueInput("N", 'Number')
+	this.appendValueInput("N")
+		.setCheck('Number')
         .setAlign(Blockly.ALIGN_RIGHT)
         .appendField(Blockly.Msg.ARDUINO_SERIAL_PRINT_VAR_NUMBER);			
-	this.appendValueInput("NEW_LINE", 'Boolean') 
+	this.appendValueInput("NEW_LINE")
+		.setCheck('Boolean') 
         .setAlign(Blockly.ALIGN_RIGHT)
 		.appendField(Blockly.Msg.ARDUINO_SERIAL_PRINT_VAR_NEW_LINE);
     this.setPreviousStatement(true, null);
@@ -145,7 +151,8 @@ Blockly.Blocks['serial_write'] = {
   init: function() {
     this.setColour("#00979D");
 	this.setHelpUrl('');
-    this.appendValueInput("CONTENT", String)
+    this.appendValueInput("CONTENT")
+		.setCheck('String')
         .appendField(Blockly.Msg.Serial_Write);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
@@ -159,6 +166,7 @@ Blockly.Blocks['serial_write_out'] = {
     this.setHelpUrl('');
     this.setColour("#00979D");
     this.appendValueInput("valeur")
+		.setCheck('String')		
         .appendField(Blockly.Msg.Serial_write_out);
     this.setInputsInline(true);
     this.setOutput(true, "Number");
