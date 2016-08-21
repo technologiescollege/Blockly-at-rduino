@@ -473,6 +473,8 @@ Blockly.Msg.CAT_FISCHERTECHNIK_IN = "capteurs";
 Blockly.Msg.CAT_FISCHERTECHNIK_OUT = "actionneurs";
 Blockly.Msg.CAT_FISCHERTECHNIK_MOTORS_CC = "moteurs CC";
 
+Blockly.Msg.CAT_FLYCAMONE = "FlyCamOne Eco v2"; //added august 20th 2016
+
 Blockly.Msg.CAT_GROVE = "Grove";  //added march 9th 2015
 Blockly.Msg.CAT_GROVE_IN = "capteurs";
 Blockly.Msg.CAT_GROVE_OUT = "actionneurs";
@@ -1258,3 +1260,18 @@ Blockly.Msg.MBOT_MOTOR_RIGHT_PWM = "moteur droit : puissance";
 
 //Added May 1rst 2016
 Blockly.Msg.ROMEO_HELPURL = "http://www.dfrobot.com/wiki/index.php/Romeo_V2-All_in_one_Controller_%28R3%29_%28SKU:DFR0225%29";
+
+
+//Added august 20th 2016
+Blockly.Msg.FLYCAM_SWITCH_HELPURL = "http://tic.technologiescollege.fr/wiki/doku.php/fr/arduino/flycam";
+Blockly.Msg.FLYCAM_SWITCH_TEXT = "changer le mode";
+Blockly.Msg.FLYCAM_SWITCH_INPUT = "de la Flycam sur la broche n°";
+Blockly.Msg.FLYCAM_SWITCH_TOOLTIP = "patienter car la commande doit se fixer pendant 3s puis une pause de 1s avant la suite";
+Blockly.Msg.FLYCAM_RECORD_HELPURL = Blockly.Msg.FLYCAM_SWITCH_HELPURL;
+Blockly.Msg.FLYCAM_RECORD_TEXT = "lancer la capture";
+Blockly.Msg.FLYCAM_RECORD_INPUT = Blockly.Msg.FLYCAM_SWITCH_INPUT;
+Blockly.Msg.FLYCAM_RECORD_TOOLTIP = "envoi d'une impulsion d'1s de type servo=180°";
+Blockly.Msg.FLYCAM_STOP_HELPURL = Blockly.Msg.FLYCAM_SWITCH_HELPURL;
+Blockly.Msg.FLYCAM_STOP_TEXT = "arrêter la capture";
+Blockly.Msg.FLYCAM_STOP_INPUT = Blockly.Msg.FLYCAM_SWITCH_INPUT;
+Blockly.Msg.FLYCAM_STOP_TOOLTIP = "envoi d'une impulsion d'1s de type servo=0°";

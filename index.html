@@ -46,6 +46,7 @@
 <script type="text/javascript" src="blocks/dfrobot_romeo_v2/dfrobot_romeo_v2_3.js"></script>
 <script type="text/javascript" src="blocks/display-oled-128x64-i2c/display-oled-128x64-i2c.js"></script>
 <script type="text/javascript" src="blocks/fischertechnik/fischertechnik.js"></script>
+<script type="text/javascript" src="blocks/flycamone-eco-v2/flycamone-eco-v2.js"></script>
 <script type="text/javascript" src="blocks/grove/grove.js"></script>
 <script type="text/javascript" src="blocks/jeulin_maquette_feux/jeulin_maquette_feux.js"></script>
 <script type="text/javascript" src="blocks/kit_velo/kit_velo_niv1.js"></script>
@@ -88,6 +89,7 @@
 <script type="text/javascript" src="generators/arduino/dfrobot_romeo_v2.js"></script>
 <script type="text/javascript" src="generators/arduino/display-oled-128x64-i2c.js"></script>
 <script type="text/javascript" src="generators/arduino/fischertechnik.js"></script>
+<script type="text/javascript" src="generators/arduino/flycamone-eco-v2.js"></script>
 <script type="text/javascript" src="generators/arduino/grove.js"></script>
 <script type="text/javascript" src="generators/arduino/jeulin_maquette_feux.js"></script>
 <script type="text/javascript" src="generators/arduino/led-rgb-ws2812b.js"></script>
@@ -290,12 +292,16 @@
                 <button id="cb_cf_flash_btn" class="btn btn-primary">
 					<span class="glyphicon glyphicon-log-in"> </span>
 					<span id="span_flash_codebender"> </span>
-				</button>						
+				</button>			
+				<button id="btn_verify_local" class="btn btn-primary">
+					<span class="glyphicon glyphicon-ok"> </span>
+					<span id="span_verify_local"> </span>
+				</button>							
 				<a id="btn_flash_local" class='btn btn-primary' href="#" role='button'>
 					<span class="glyphicon glyphicon-log-in"> </span>
 					<span id="span_flash_local"> </span>
 				</a>		
-				<a id="btn_getResult" class='btn btn-primary' href="http://127.0.0.1" role='button'>
+				<a id="btn_getResult" class='btn btn-primary' href="http://127.0.0.1:5005/get_result" role='button' target='_blank'>
 					<span class="glyphicon glyphicon-list-alt"> </span>
 					<span id="span_flash_local_result"> </span>
 				</a>

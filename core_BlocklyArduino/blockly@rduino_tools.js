@@ -98,6 +98,7 @@ BlocklyDuino.toggleLocalCodeBender = function () {
 	//checked = local
 	if ($('#toggle-LocalCodebender').prop('checked')) {
 			$("#btn_flash_local").removeClass('hidden');
+			$("#btn_verify_local").removeClass('hidden');
 			$("#btn_getResult").removeClass('hidden');
 			$("#btn_pasteIDEArduino").removeClass('hidden');
 			$("#cb_cf_flash_btn").addClass('hidden');
@@ -107,6 +108,7 @@ BlocklyDuino.toggleLocalCodeBender = function () {
 			}
 		} else {
 			$("#btn_flash_local").addClass('hidden');
+			$("#btn_verify_local").addClass('hidden');
 			$("#btn_getResult").addClass('hidden');
 			$("#btn_pasteIDEArduino").addClass('hidden');
 			$("#cb_cf_flash_btn").removeClass('hidden');

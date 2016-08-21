@@ -21,6 +21,7 @@ var MSG = {
   span_edit_code: " éditer le code",
   span_flash_codebender: " téléverser dans l'Arduino",
   span_saveIno: " sauver le code en INO",
+  span_verify_local: " vérification par EDI Arduino",
   span_flash_local: " téléverser dans l'Arduino",
   span_flash_local_result: " résultat du téléversement",
   firstModalLabel: "Bienvenue sur Blockly@rduino !",

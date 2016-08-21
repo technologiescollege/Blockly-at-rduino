@@ -474,9 +474,11 @@ Blockly.Msg.CAT_ROBUNO_OUT = "actuators";
 Blockly.Msg.CAT_ROBUNO_MOTORS_CC = "moteurs CC";
 
 Blockly.Msg.CAT_FISCHERTECHNIK = "fischertechnik";  //added march 26th 2016
-Blockly.Msg.CAT_FISCHERTECHNIK_IN = "capteurs";
-Blockly.Msg.CAT_FISCHERTECHNIK_OUT = "actionneurs";
+Blockly.Msg.CAT_FISCHERTECHNIK_IN = "sensors";
+Blockly.Msg.CAT_FISCHERTECHNIK_OUT = "actuators";
 Blockly.Msg.CAT_FISCHERTECHNIK_MOTORS_CC = "moteurs CC";
+
+Blockly.Msg.CAT_FLYCAMONE = "FlyCamOne Eco v2"; //added august 20th 2016
 
 Blockly.Msg.CAT_GROVE = "Grove";  //added march 9th 2015
 Blockly.Msg.CAT_GROVE_IN = "In";
@@ -1263,3 +1265,18 @@ Blockly.Msg.FISCHERTECHNIK_TEXT17 = " est appuyée ?";
 
 //Added May 1rst 2016
 Blockly.Msg.ROMEO_HELPURL = "http://www.dfrobot.com/wiki/index.php/Romeo_V2-All_in_one_Controller_%28R3%29_%28SKU:DFR0225%29";
+
+
+//Added august 20th 2016
+Blockly.Msg.FLYCAM_SWITCH_HELPURL = "http://tic.technologiescollege.fr/wiki/doku.php/fr/arduino/flycam";
+Blockly.Msg.FLYCAM_SWITCH_TEXT = "change mode";
+Blockly.Msg.FLYCAM_SWITCH_INPUT = "of Flycam on PIN#";
+Blockly.Msg.FLYCAM_SWITCH_TOOLTIP = "be patient because it sends a signal during 3s and a wait of 1s";
+Blockly.Msg.FLYCAM_RECORD_HELPURL = Blockly.Msg.FLYCAM_SWITCH_HELPURL;
+Blockly.Msg.FLYCAM_RECORD_TEXT = "start capture";
+Blockly.Msg.FLYCAM_RECORD_INPUT = Blockly.Msg.FLYCAM_SWITCH_INPUT;
+Blockly.Msg.FLYCAM_RECORD_TOOLTIP = "send order for 1s, like a servo=180°";
+Blockly.Msg.FLYCAM_STOP_HELPURL = Blockly.Msg.FLYCAM_SWITCH_HELPURL;
+Blockly.Msg.FLYCAM_STOP_TEXT = "stop capture";
+Blockly.Msg.FLYCAM_STOP_INPUT = Blockly.Msg.FLYCAM_SWITCH_INPUT;
+Blockly.Msg.FLYCAM_STOP_TOOLTIP = "send order for 1s, like a servo=0°";

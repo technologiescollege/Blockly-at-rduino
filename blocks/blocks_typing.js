@@ -208,3 +208,23 @@ Blockly.Blocks.soft_available.getBlockType = function() {
 Blockly.Blocks.IR_get.getBlockType = function() {
 	return Blockly.Types.LARGE_NUMBER;
 };
+
+//***********************************************************************************
+//								Bitbloq
+//***********************************************************************************
+
+//---------------------------------bitbloq.js-------------------------------------
+
+Blockly.Blocks.bq_led.getBlockType = function() {
+	return Blockly.Types.BOOLEAN;
+};
+
+//***********************************************************************************
+//								FlyCamEco v2
+//***********************************************************************************
+
+//---------------------------------flycamone-eco-v2.js-------------------------------------
+
+Blockly.Blocks.flycam_switch.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};

@@ -696,7 +696,29 @@
 			</category>
 		</category>
 	</category>
-
+	<category name="CAT_FLYCAMONE" colour="#46C286">
+		<block type="flycam_switch">
+			<value name="PIN">
+				<shadow type="math_number">
+					<field name="NUM">2</field>
+				</shadow>
+			</value>
+		</block>
+		<block type="flycam_record">
+			<value name="PIN">
+				<shadow type="math_number">
+					<field name="NUM">2</field>
+				</shadow>
+			</value>
+		</block>
+		<block type="flycam_stop">
+			<value name="PIN">
+				<shadow type="math_number">
+					<field name="NUM">2</field>
+				</shadow>
+			</value>
+		</block>		
+	</category>
 	<category name="CAT_FISCHERTECHNIK" colour="#778E9A">
 		<category name="CAT_FISCHERTECHNIK_IN" colour="#778E9A">
 			<block type="fischertechnik_BP_capteur_de_presence">
