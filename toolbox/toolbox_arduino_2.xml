@@ -286,7 +286,7 @@
 	</category>
 	<category name="CAT_LED_RGB_CHAIN" colour="#C9D7E2">
 		<block type="lp2i_ledRGB_WS2812B_init">
-			<value name="Pin_LedRGB">
+			<value name="Pin_LedRGB_init">
 				<shadow type="math_number">
 					<field name="NUM">6</field>
 				</shadow>
@@ -297,7 +297,24 @@
 				</shadow>
 			</value>
 		</block>
+		<block type="lp2i_ledRGB_WS2812B_setBrightness">
+			<value name="Pin_LedRGB">
+				<shadow type="math_number">
+					<field name="NUM">6</field>
+				</shadow>
+			</value>
+			<value name="Brightness">
+				<shadow type="math_number">
+					<field name="NUM">127</field>
+				</shadow>
+			</value>
+		</block>
 		<block type="lp2i_ledRGB_WS2812B_setPixelColor">
+			<value name="Pin_LedRGB">
+				<shadow type="math_number">
+					<field name="NUM">6</field>
+				</shadow>
+			</value>
 			<value name="Pixel_number">
 				<shadow type="math_number">
 					<field name="NUM">0</field>
