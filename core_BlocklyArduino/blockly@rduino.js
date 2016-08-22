@@ -696,13 +696,8 @@ BlocklyDuino.init = function() {
 						wheel: true}
 		      });
 
-	//init web or local
-	$('#toggle-WebAccess').bootstrapToggle('on');
-	$('#toggle-LocalCodebender').bootstrapToggle('on');
-	if ($("select#cb_cf_ports").prop("disabled")) {
-					$("#tab_term").addClass('hidden');
-					$('#toggle-LocalCodebender').bootstrapToggle('disable');
-		} else $("#tab_term").removeClass('hidden');
+	BlocklyDuino.initGlobalConfig();
+	
 	BlocklyDuino.toggleWeb();			
 	
 	BlocklyDuino.renderContent();
