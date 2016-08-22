@@ -69,8 +69,8 @@ Blockly.Arduino.base_define_const = function() {
   // Text value.
   var value_text1 = Blockly.Arduino.valueToCode(this, 'TEXT1', Blockly.Arduino.ORDER_ATOMIC);
   var value_text2 = this.getFieldValue('TEXT2');
-  var code = '#define ' + value_text1 + ' ' + value_text2 + '\n';
-  return code;
+  Blockly.Arduino.includes_[value_text1] = '#define ' + value_text1 + ' ' + value_text2;
+  return "";
 };
 
 Blockly.Arduino.base_code = function() {
@@ -133,6 +133,5 @@ Blockly.Arduino['biblio_include'] = function() {
   var text_file = this.getFieldValue('File');
   var funcInclude = text_file+'.h';
   Blockly.Arduino.includes_[funcInclude] = '#include <'+text_file+'.h>';
-  var code = '\n';
-  return code;
+  return "";
 };
