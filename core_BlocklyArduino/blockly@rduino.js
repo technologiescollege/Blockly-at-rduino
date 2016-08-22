@@ -71,6 +71,7 @@ BlocklyDuino.renderContent = function() {
 					$('#pre_arduino').html(prettyPrintOne($('#pre_arduino').html(), 'cpp'));
 				}
 				BlocklyDuino.toggleWeb();
+				BlocklyDuino.toggleLocalCodeBender();
 			} catch (e) {
 				alert(e);
 			}
@@ -384,6 +385,7 @@ BlocklyDuino.bindFunctions = function() {
 
 	$('#select_all').on("click", BlocklyDuino.checkAll);
 	$('#btn_valid_config').on("click", BlocklyDuino.changeToolbox);
+	$('#btn_validConfigGlobale').on("click", BlocklyDuino.validateConfigGlobal);
 	
 	$('#btn_valid_msg').on("click", function() {
 		if ($('#ajax_msg').prop("checked")) {
@@ -696,15 +698,6 @@ BlocklyDuino.init = function() {
 						wheel: true}
 		      });
 
-	//init web or local
-	$('#toggle-WebAccess').bootstrapToggle('on');
-	$('#toggle-LocalCodebender').bootstrapToggle('on');
-	if ($("select#cb_cf_ports").prop("disabled")) {
-					$("#tab_term").addClass('hidden');
-					$('#toggle-LocalCodebender').bootstrapToggle('disable');
-		} else $("#tab_term").removeClass('hidden');
-	BlocklyDuino.toggleWeb();			
-	
 	BlocklyDuino.renderContent();
 	
 	BlocklyDuino.workspace.addChangeListener(BlocklyDuino.renderArduinoCodePreview);
@@ -772,69 +765,71 @@ BlocklyDuino.init = function() {
 					});
 		});
 		
-		// draggable "modal" dialog containing card image & videos
-	    $('body').on('mousedown', '#showcardModal', function() {
-	        $(this).addClass('draggable').parents().on('mousemove', function(e) {
-	            $('.draggable').offset({
-	                top: e.pageY,
-	                left: e.pageX - $('.draggable').outerWidth() / 2
-	            }).on('mouseup', function() {
-	                $(this).removeClass('draggable');
-	            });
-	            e.preventDefault();
-	        });
-	    }).on('mouseup', function() {
-	        $('.draggable').removeClass('draggable');
-	    });
-		
-		$('body').on('mousedown', '#videoModal', function() {
-	        $(this).addClass('draggable').parents().on('mousemove', function(e) {
-	            $('.draggable').offset({
-	                top: e.pageY,
-	                left: e.pageX - $('.draggable').outerWidth()/2
-	            }).on('mouseup', function() {
-	                $(this).removeClass('draggable');
-	            });
-	            e.preventDefault();
-	        });
-	    }).on('mouseup', function() {
-	        $('.draggable').removeClass('draggable');
-	    });
-		
-		$('body').on('mousedown', '#convertModal', function() {
-	        $(this).addClass('draggable').parents().on('mousemove', function(e) {
-	            $('.draggable').offset({
-	                top: e.pageY,
-	                left: e.pageX - $('.draggable').outerWidth()/2
-	            }).on('mouseup', function() {
-	                $(this).removeClass('draggable');
-	            });
-	            e.preventDefault();
-	        });
-	    }).on('mouseup', function() {
-	        $('.draggable').removeClass('draggable');
-	    });
-		
-		$('body').on('mousedown', '#RGB_modal', function() {
-	        $(this).addClass('draggable').parents().on('mousemove', function(e) {
-	            $('.draggable').offset({
-	                top: e.pageY,
-	                left: e.pageX - $('.draggable').outerWidth()/2
-	            }).on('mouseup', function() {
-	                $(this).removeClass('draggable');
-	            });
-	            e.preventDefault();
-	        });
-	    }).on('mouseup', function() {
-	        $('.draggable').removeClass('draggable');
-	    });
-		
-		/*pour changer couleur texte dans toolbox
-        $("div:contains('bitbloq').blocklyTreeRow, div:contains('bitbloq').blocklyTreeRow ~ div").on("click", function() {
-            $(this).removeClass("blocklyTreeSelected")
-            $(this).find("div.blocklyTreeSelected").removeClass("blocklyTreeSelected")
-            $(this).find("span").css("color", "#000000");
-        });*/
+	BlocklyDuino.initGlobalConfig();
+	
+	// draggable "modal" dialog containing card image & videos
+    $('body').on('mousedown', '#showcardModal', function() {
+        $(this).addClass('draggable').parents().on('mousemove', function(e) {
+            $('.draggable').offset({
+                top: e.pageY,
+                left: e.pageX - $('.draggable').outerWidth() / 2
+            }).on('mouseup', function() {
+                $(this).removeClass('draggable');
+            });
+            e.preventDefault();
+        });
+    }).on('mouseup', function() {
+        $('.draggable').removeClass('draggable');
+    });
+	
+	$('body').on('mousedown', '#videoModal', function() {
+        $(this).addClass('draggable').parents().on('mousemove', function(e) {
+            $('.draggable').offset({
+                top: e.pageY,
+                left: e.pageX - $('.draggable').outerWidth()/2
+            }).on('mouseup', function() {
+                $(this).removeClass('draggable');
+            });
+            e.preventDefault();
+        });
+    }).on('mouseup', function() {
+        $('.draggable').removeClass('draggable');
+    });
+	
+	$('body').on('mousedown', '#convertModal', function() {
+        $(this).addClass('draggable').parents().on('mousemove', function(e) {
+            $('.draggable').offset({
+                top: e.pageY,
+                left: e.pageX - $('.draggable').outerWidth()/2
+            }).on('mouseup', function() {
+                $(this).removeClass('draggable');
+            });
+            e.preventDefault();
+        });
+    }).on('mouseup', function() {
+        $('.draggable').removeClass('draggable');
+    });
+	
+	$('body').on('mousedown', '#RGB_modal', function() {
+        $(this).addClass('draggable').parents().on('mousemove', function(e) {
+            $('.draggable').offset({
+                top: e.pageY,
+                left: e.pageX - $('.draggable').outerWidth()/2
+            }).on('mouseup', function() {
+                $(this).removeClass('draggable');
+            });
+            e.preventDefault();
+        });
+    }).on('mouseup', function() {
+        $('.draggable').removeClass('draggable');
+    });
+	
+	/*pour changer couleur texte dans toolbox
+    $("div:contains('bitbloq').blocklyTreeRow, div:contains('bitbloq').blocklyTreeRow ~ div").on("click", function() {
+        $(this).removeClass("blocklyTreeSelected")
+        $(this).find("div.blocklyTreeSelected").removeClass("blocklyTreeSelected")
+        $(this).find("span").css("color", "#000000");
+    });*/
 	if (window.location.protocol == 'http:') {
 					$("#btn_create_example").attr("href","./examples/examples.php");
 					} else {

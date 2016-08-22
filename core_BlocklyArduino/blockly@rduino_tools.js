@@ -6,6 +6,40 @@
 
 
 /**
+ * Init modal Global Configuration
+ */
+BlocklyDuino.initGlobalConfig = function () {
+	
+	// set the webAccess from url parameters
+	var webAccess = BlocklyDuino.getStringParamFromUrl('webaccess', '');
+	if (webAccess === undefined || webAccess === "") {
+		webAccess = window.localStorage.webAccess;
+	}
+	
+	// set the localCodebender from url parameters
+	var localCodebender = BlocklyDuino.getStringParamFromUrl('localcodebender', '');
+	if (localCodebender === undefined || localCodebender === "") {
+		localCodebender = window.localStorage.localCodebender;
+	}
+
+	if (webAccess == "true") {
+		$('#toggle-WebAccess').bootstrapToggle('on');
+	} else {
+		$('#toggle-WebAccess').bootstrapToggle('off');
+	}
+	
+	if (localCodebender == "true") {
+		$('#toggle-LocalCodebender').bootstrapToggle('on');
+	} else {
+		$('#toggle-LocalCodebender').bootstrapToggle('off');
+	}
+	
+	BlocklyDuino.toggleWeb();			
+	BlocklyDuino.toggleLocalCodeBender();
+	
+}
+
+/**
  * Load Arduino code from component pre_arduino to webserver
  * and open it in IDE Arduino
  */
@@ -41,84 +75,115 @@ BlocklyDuino.uploadClick = function() {
 /**
  * Configuration & modify buttons state
  */
-BlocklyDuino.toggleWeb = function () {
-	//checked = online
-	//$("select#cb_cf_ports").prop("disabled") == plugin non installed
+BlocklyDuino.toggleWeb = function() {
+	// checked = online
+	// $("select#cb_cf_ports").prop("disabled") == plugin non installed
 	if ($("select#cb_cf_ports").prop("disabled")) {
-				$("#cb_cf_boards").addClass('hidden');
-				$("#cb_cf_ports").addClass('hidden');
-				$("#cb_cf_verify_btn").addClass('hidden');
-				$("#cb_cf_flash_btn").addClass('hidden');
-				$("#btn_plugin_codebender").removeClass('hidden');
-				$("#tab_term").addClass('hidden');
-				document.querySelector("#debug_arduino").style.display="none";
-				$("#pre_arduino").css('height', "100%");
-				$('#toggle-LocalCodebender').bootstrapToggle('on');
-				$('#toggle-LocalCodebender').bootstrapToggle('disable');
+		$("#cb_cf_boards").addClass('hidden');
+		$("#cb_cf_ports").addClass('hidden');
+		$("#cb_cf_verify_btn").addClass('hidden');
+		$("#cb_cf_flash_btn").addClass('hidden');
+		$("#btn_plugin_codebender").removeClass('hidden');
+		$("#tab_term").addClass('hidden');
+		document.querySelector("#debug_arduino").style.display = "none";
+		$("#pre_arduino").css('height', "100%");
+		$('#toggle-LocalCodebender').bootstrapToggle('on');
+		$('#toggle-LocalCodebender').bootstrapToggle('disable');
+		window.localStorage.localCodebender = "true";
 	} else {
 		if ($('#toggle-WebAccess').prop('checked')) {
-				$("#cb_cf_boards").removeClass('hidden');
-				$("#cb_cf_ports").removeClass('hidden');
-				$("#cb_cf_verify_btn").removeClass('hidden');
-				$("#cb_cf_flash_btn").removeClass('hidden');
-				$("#btn_plugin_codebender").addClass('hidden');
-				$("#tab_term").removeClass('hidden');
-				document.querySelector("#debug_arduino").style.display="block";
-				$("#pre_arduino").css('height', "65%");
-		} else {
-				$("#cb_cf_boards").removeClass('hidden');
-				$("#cb_cf_ports").removeClass('hidden');
-				$("#cb_cf_verify_btn").addClass('hidden');
-				$("#cb_cf_flash_btn").addClass('hidden');
-				$("#btn_plugin_codebender").addClass('hidden');
-				$("#tab_term").removeClass('hidden');
-				document.querySelector("#debug_arduino").style.display="block";
-				$("#pre_arduino").css('height', "65%");
-			
-		}				
-	}
-	if ($('#toggle-WebAccess').prop('checked')) {
-			$('#toggle-LocalCodebender').bootstrapToggle('enable');
-			if ($('#toggle-LocalCodebender').prop('checked')) {
-				$("#btn_Help_Online").removeClass('hidden');			
-			}
-		} else {
-			if ($("select#cb_cf_ports").prop("disabled")) 
-					$("#btn_plugin_codebender").addClass('hidden');
-			$('#toggle-LocalCodebender').bootstrapToggle('on');
-			$('#toggle-LocalCodebender').bootstrapToggle('disable');
-			$("#btn_Help_Offline").removeClass('hidden');	
-			if ($('#toggle-LocalCodebender').prop('checked')) {
-				$("#btn_Help_Online").addClass('hidden');	
-			}
-	}
-};
-
-BlocklyDuino.toggleLocalCodeBender = function () {
-	//checked = local
-	if ($('#toggle-LocalCodebender').prop('checked')) {
-			$("#btn_flash_local").removeClass('hidden');
-			$("#btn_verify_local").removeClass('hidden');
-			$("#btn_getResult").removeClass('hidden');
-			$("#btn_pasteIDEArduino").removeClass('hidden');
-			$("#cb_cf_flash_btn").addClass('hidden');
-			if ($('#toggle-WebAccess').prop('checked')) {
-				$("#btn_Help_Offline").removeClass('hidden');	
-				$("#btn_MyArduino").removeClass('hidden');				
-			}
-		} else {
-			$("#btn_flash_local").addClass('hidden');
-			$("#btn_verify_local").addClass('hidden');
-			$("#btn_getResult").addClass('hidden');
-			$("#btn_pasteIDEArduino").addClass('hidden');
+			$("#cb_cf_boards").removeClass('hidden');
+			$("#cb_cf_ports").removeClass('hidden');
+			$("#cb_cf_verify_btn").removeClass('hidden');
 			$("#cb_cf_flash_btn").removeClass('hidden');
-			if ($('#toggle-WebAccess').prop('checked')) {
-				$("#btn_Help_Offline").addClass('hidden');	
-				$("#btn_MyArduino").addClass('hidden');					
-			}
+			$("#btn_plugin_codebender").addClass('hidden');
+			$("#tab_term").removeClass('hidden');
+			document.querySelector("#debug_arduino").style.display = "block";
+			$("#pre_arduino").css('height', "65%");
+		} else {
+			$("#cb_cf_boards").removeClass('hidden');
+			$("#cb_cf_ports").removeClass('hidden');
+			$("#cb_cf_verify_btn").addClass('hidden');
+			$("#cb_cf_flash_btn").addClass('hidden');
+			$("#btn_plugin_codebender").addClass('hidden');
+			$("#tab_term").removeClass('hidden');
+			document.querySelector("#debug_arduino").style.display = "block";
+			$("#pre_arduino").css('height', "65%");
+
+		}
 	}
+
+	if ($('#toggle-WebAccess').prop('checked')) {
+		$('#toggle-LocalCodebender').bootstrapToggle('enable');
+		if ($('#toggle-LocalCodebender').prop('checked')) {
+			$("#btn_Help_Online").removeClass('hidden');
+		}
+		window.localStorage.webAccess = "true";
+	} else {
+		if ($("select#cb_cf_ports").prop("disabled"))
+			$("#btn_plugin_codebender").addClass('hidden');
+		$('#toggle-LocalCodebender').bootstrapToggle('on');
+		$('#toggle-LocalCodebender').bootstrapToggle('disable');
+		window.localStorage.localCodebender = "true";
+		$("#btn_Help_Offline").removeClass('hidden');
+		if ($('#toggle-LocalCodebender').prop('checked')) {
+			$("#btn_Help_Online").addClass('hidden');
+		}
+		window.localStorage.webAccess = "false";
+	}
+	
 };
 
+BlocklyDuino.toggleLocalCodeBender = function() {
+	// checked = local
+	if ($('#toggle-LocalCodebender').prop('checked')) {
+		$("#btn_flash_local").removeClass('hidden');
+		$("#btn_verify_local").removeClass('hidden');
+		$("#btn_getResult").removeClass('hidden');
+		$("#btn_pasteIDEArduino").removeClass('hidden');
+		$("#cb_cf_flash_btn").addClass('hidden');
+		if ($('#toggle-WebAccess').prop('checked')) {
+			$("#btn_Help_Offline").removeClass('hidden');
+			$("#btn_MyArduino").removeClass('hidden');
+		}
+		window.localStorage.localCodebender = "true";
+	} else {
+		$("#btn_flash_local").addClass('hidden');
+		$("#btn_verify_local").addClass('hidden');
+		$("#btn_getResult").addClass('hidden');
+		$("#btn_pasteIDEArduino").addClass('hidden');
+		$("#cb_cf_flash_btn").removeClass('hidden');
+		if ($('#toggle-WebAccess').prop('checked')) {
+			$("#btn_Help_Offline").addClass('hidden');
+			$("#btn_MyArduino").addClass('hidden');
+		}
+		window.localStorage.localCodebender = "false";
+	}
+
+};
+
+/**
+ * Validate global configuration
+ */
+BlocklyDuino.validateConfigGlobal = function () {
+
+	var search = window.location.search;
+	// remove values from url
+	search = search.replace(/([?&]webaccess=)[^&]*/, '');
+	search = search.replace(/([?&]localcodebender=)[^&]*/, '');
+	
+	if ($("#put_config_in_url").prop('checked')) {
+		// put values in url
+		if (search.length <= 1) {
+			search = '?webaccess=' + window.localStorage.webAccess + '&localcodebender=' + window.localStorage.localCodebender;
+		} else {
+			search = search + '&webaccess=' + window.localStorage.webAccess + '&localcodebender=' + window.localStorage.localCodebender;
+		}
+	}
+	
+	window.location = window.location.protocol + '//'
+	+ window.location.host + window.location.pathname + search;
+}
 /**
  * Add convert bin <-> text
  */
