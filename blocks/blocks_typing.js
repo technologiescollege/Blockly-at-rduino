@@ -3,31 +3,43 @@
 //***********************************************************************************
 
 //---------------------------------logic--------------------------------------------
-Blockly.Blocks.logic_compare.getBlockType = function() {
-	return Blockly.Types.BOOLEAN;
-};
-Blockly.Blocks.logic_operation.getBlockType = function() {
-	return Blockly.Types.BOOLEAN;
-};
-Blockly.Blocks.logic_negate.getBlockType = function() {
-	return Blockly.Types.BOOLEAN;
-};
-Blockly.Blocks.logic_boolean.getBlockType = function() {
-	return Blockly.Types.BOOLEAN;
-};
-Blockly.Blocks.logic_null.getBlockType = function() {
-	return Blockly.Types.NULL;
-};
-Blockly.Blocks.logic_ternary.getBlockType = function() {
-	return Blockly.Types.BOOLEAN;
-};
-Blockly.Blocks.controls_switch.getVars = function() {
-	return [this.getFieldValue('SWVAR')];	
-};
-Blockly.Blocks.controls_switch.getVarType = function() {
-	return this.inputList[1].connection.targetBlock().getBlockType();
-};
+
+	Blockly.Blocks.logic_compare.getBlockType = function() {
+		return Blockly.Types.BOOLEAN;
+	};
+	Blockly.Blocks.logic_operation.getBlockType = function() {
+		return Blockly.Types.BOOLEAN;
+	};
+	Blockly.Blocks.logic_negate.getBlockType = function() {
+		return Blockly.Types.BOOLEAN;
+	};
+	Blockly.Blocks.logic_boolean.getBlockType = function() {
+		return Blockly.Types.BOOLEAN;
+	};
+	Blockly.Blocks.logic_null.getBlockType = function() {
+		return Blockly.Types.NULL;
+	};
+	Blockly.Blocks.logic_ternary.getBlockType = function() {
+		return Blockly.Types.BOOLEAN;
+	};
+	Blockly.Blocks.controls_switch.getVars = function() {
+		return [this.getFieldValue('SWVAR')];	
+	};
+	Blockly.Blocks.controls_switch.getVarType = function() {
+		return this.inputList[1].connection.targetBlock().getBlockType();
+	};
+	
+//---------------------------------loops--------------------------------------------
+
+	Blockly.Blocks.controls_for.getVarType = function() {
+		return this.inputList[1].connection.targetBlock().getBlockType();
+	};
+	Blockly.Blocks.controls_forEach.getVarType = function() {
+		return this.inputList[1].connection.targetBlock().getBlockType();
+	};
+
 //---------------------------------maths--------------------------------------------
+
 Blockly.Blocks.math_number.getBlockType = function() {
     var numString = this.getFieldValue('NUM');
     return Blockly.Types.identifyNumber(numString);
@@ -65,7 +77,9 @@ Blockly.Blocks.math_random_int.getBlockType = function() {
 Blockly.Blocks.math_random_float.getBlockType = function() {
 	return Blockly.Types.DECIMAL;
 };
+
 //---------------------------------text--------------------------------------------
+
 Blockly.Blocks.text.getBlockType = function() {
 	return Blockly.Types.TEXT;
 };
@@ -297,20 +311,36 @@ Blockly.Blocks.lp2i_u8g_print.getBlockType = function() {
 };
 
 //***********************************************************************************
-//								Adafruit DEL RGB NeoPixel
+//								fischertechnik
 //***********************************************************************************
 
-//---------------------------------led-rgb-ws2812b.js-------------------------------------
+//---------------------------------fischertechnik.js-------------------------------------
 
-
-
-//***********************************************************************************
-//								DF Robot
-//***********************************************************************************
-
-//---------------------------------display-oled-128x64-i2c.js-------------------------------------
-
-Blockly.Blocks.lp2i_u8g_print.getBlockType = function() {
+Blockly.Blocks.fischertechnik_feu_rouge.getBlockType = function() {
+	return Blockly.Types.BOOLEAN;
+};
+Blockly.Blocks.fischertechnik_feu_orange.getBlockType = function() {
+	return Blockly.Types.BOOLEAN;
+};
+Blockly.Blocks.fischertechnik_feu_vert.getBlockType = function() {
+	return Blockly.Types.BOOLEAN;
+};
+Blockly.Blocks.fischertechnik_barriere_lumineuse.getBlockType = function() {
+	return Blockly.Types.BOOLEAN;
+};
+Blockly.Blocks.fischertechnik_buzzer.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.fischertechnik_BP_capteur_de_presence.getBlockType = function() {
+	return Blockly.Types.BOOLEAN;
+};
+Blockly.Blocks.fischertechnik_capteur_magnetique.getBlockType = function() {
+	return Blockly.Types.BOOLEAN;
+};
+Blockly.Blocks.fischertechnik_capteur_de_lumiere.getBlockType = function() {
+	return Blockly.Types.DECIMAL;
+};
+Blockly.Blocks.fischertechnik_moteurs_CC.getBlockType = function() {
 	return Blockly.Types.NUMBER;
 };
 
@@ -329,6 +359,194 @@ Blockly.Blocks.flycam_record.getBlockType = function() {
 Blockly.Blocks.flycam_stop.getBlockType = function() {
 	return Blockly.Types.NUMBER;
 };
+
+//***********************************************************************************
+//								GROVE
+//***********************************************************************************
+
+//---------------------------------grove.js-------------------------------------
+
+Blockly.Blocks.grove_led.getBlockType = function() {
+	return Blockly.Types.BOOLEAN;
+};
+Blockly.Blocks.grove_button.getBlockType = function() {
+	return Blockly.Types.BOOLEAN;
+};
+Blockly.Blocks.grove_rotary_angle.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.grove_tilt_switch.getBlockType = function() {
+	return Blockly.Types.BOOLEAN;
+};
+Blockly.Blocks.grove_piezo_buzzer.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.grove_relay.getBlockType = function() {
+	return Blockly.Types.BOOLEAN;
+};
+Blockly.Blocks.grove_temporature_sensor.getBlockType = function() {
+	return Blockly.Types.DECIMAL;
+};
+Blockly.Blocks.grove_serial_lcd_print.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.grove_serial_lcd_power.getBlockType = function() {
+	return Blockly.Types.BOOLEAN;
+};
+Blockly.Blocks.grove_serial_lcd_effect.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.grove_sound_sensor.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.grove_pir_motion_sensor.getBlockType = function() {
+	return Blockly.Types.BOOLEAN;
+};
+Blockly.Blocks.grove_line_finder.getBlockType = function() {
+	return Blockly.Types.BOOLEAN;
+};
+Blockly.Blocks.grove_ultrasonic_ranger.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.grove_motor_shield.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.grove_thumb_joystick.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.grove_rgb_led.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.grove_bluetooth_slave.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.grove_dht_read.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+//***********************************************************************************
+//								JEULIN maquette de feux
+//***********************************************************************************
+
+//---------------------------------jeulin_maquette_feux.js-------------------------------------
+
+Blockly.Blocks.jeulin_appel_pieton_voie1.getBlockType = function() {
+	return Blockly.Types.BOOLEAN;
+};
+Blockly.Blocks.jeulin_appel_pieton_voie2.getBlockType = function() {
+	return Blockly.Types.BOOLEAN;
+};
+Blockly.Blocks.jeulin_detection_magnetique_ils1.getBlockType = function() {
+	return Blockly.Types.BOOLEAN;
+};
+Blockly.Blocks.jeulin_detection_infrarouge_bari1.getBlockType = function() {
+	return Blockly.Types.BOOLEAN;
+};
+Blockly.Blocks.jeulin_detection_luminosite_ldr1.getBlockType = function() {
+	return Blockly.Types.DECIMAL;
+};
+Blockly.Blocks.jeulin_feux_voie1_led1red.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.jeulin_feux_voie1_led1yellow.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.jeulin_feux_voie1_led1green.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.jeulin_feux_voie2_led1red.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.jeulin_feux_voie2_led1yellow.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.jeulin_feux_voie2_led1green.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.jeulin_feu_pieton_led1red.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.jeulin_feu_pieton_led1green.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.jeulin_alarme_pieton_buzzer1.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+
+//***********************************************************************************
+//								Kit vélo Ptits Deb
+//***********************************************************************************
+
+//---------------------------------kit_velo_niv1.js-------------------------------------
+
+//---------------------------------kit_velo_niv2.js-------------------------------------
+
+
+//***********************************************************************************
+//								Adafruit DEL RGB NeoPixel
+//***********************************************************************************
+
+//---------------------------------led-rgb-ws2812b.js-------------------------------------
+
+
+//***********************************************************************************
+//								Makeblock mBot
+//***********************************************************************************
+
+//---------------------------------mbot.js-------------------------------------
+
+
+//***********************************************************************************
+//								MultiFunction shield
+//***********************************************************************************
+
+//---------------------------------multi-function.js-------------------------------------
+
+
+//***********************************************************************************
+//								Robots misc.
+//***********************************************************************************
+
+//---------------------------------robot_misc.js-------------------------------------
+
+//---------------------------------robot_motors.js-------------------------------------
+
+//***********************************************************************************
+//								RobUno
+//***********************************************************************************
+
+//---------------------------------robuno.js-------------------------------------
+
+Blockly.Blocks.robuno_led_rouge.getBlockType = function() {
+	return Blockly.Types.BOOLEAN;
+};
+Blockly.Blocks.robuno_led_blanche.getBlockType = function() {
+	return Blockly.Types.BOOLEAN;
+};
+Blockly.Blocks.robuno_buzzer.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.robuno_servomoteur_gauche.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.robuno_servomoteur_droite.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.robuno_capteur_collision_gauche.getBlockType = function() {
+	return Blockly.Types.BOOLEAN;
+};
+Blockly.Blocks.robuno_capteur_collision_droite.getBlockType = function() {
+	return Blockly.Types.BOOLEAN;
+};
+Blockly.Blocks.robuno_ldr_gauche.getBlockType = function() {
+	return Blockly.Types.DECIMAL;
+};
+Blockly.Blocks.robuno_ldr_droite.getBlockType = function() {
+	return Blockly.Types.DECIMAL;
+};
+Blockly.Blocks.robuno_moteurs_CC.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+
 
 //***********************************************************************************
 //								servo
@@ -357,3 +575,17 @@ Blockly.Blocks.servo_rot_continue.getBlockType = function() {
 Blockly.Blocks.servo_rot_continue.getBlockType = function() {
 	return Blockly.Types.NUMBER;
 };
+
+//***********************************************************************************
+//								TechnZone51
+//***********************************************************************************
+
+//---------------------------------technozone51.js-------------------------------------
+
+//***********************************************************************************
+//								Zumobot
+//***********************************************************************************
+
+//---------------------------------zumo_motors.js-------------------------------------
+
+//---------------------------------zumo_sensors.js-------------------------------------

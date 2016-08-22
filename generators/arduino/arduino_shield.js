@@ -44,7 +44,7 @@ Blockly.Arduino.LCD_Keypad_Shield_DFR_09_lc = function(block) {
   
   var code = 'lcd.setCursor('+value_num_colonne+','+value_num_ligne+'); \n';
   code    += 'lcd.print('+text4+'); \n';
-return code;
+  return code;
 };
 
 
@@ -55,7 +55,7 @@ Blockly.Arduino.LCD_Keypad_Shield_DFR_09_RAZ = function(block) {
   Blockly.Arduino.setups_['setup_lcd'] = 'lcd.begin(16, 2);\n';
   
   var code = 'lcd.clear(); \n';
-return code;
+  return code;
 };
 
 Blockly.Arduino.Bluetooth_Shield_duinoFun = function() {
@@ -92,7 +92,7 @@ Blockly.Arduino.Bluetooth_Shield_duinoFun = function() {
   '}\n';
   
  var code = '';
-  return code;
+ return code;
 };
 
 Blockly.Arduino.ArduiLed = function(block) {
@@ -122,8 +122,6 @@ Blockly.Arduino.ArduiLed = function(block) {
   '    blueToothSerial.print(RecvDonnees);\n'+ 
   '  }\n'+ 
   '}\n'+ 
-  '\n';
-  
- 
+  '\n'; 
   return code;
 };

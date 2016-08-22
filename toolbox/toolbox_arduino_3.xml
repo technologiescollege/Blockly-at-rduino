@@ -692,20 +692,18 @@
 					</shadow>
 				</value>
 			</block>
-			<category name="CAT_ROBUNO_MOTORS_CC" colour="#1A1BFF">
-				<block type="robuno_moteurs_CC">
-					<value name="SENS">
-						<shadow type="inout_onoff">
-							<field name="BOOL">HIGH</field>
-						</shadow>
-					</value>
-					<value name="VITESSE">
-						<shadow type="math_number">
-							<field name="NUM">127</field>
-						</shadow>
-					</value>
-				</block>
-			</category>
+			<block type="robuno_moteurs_CC">
+				<value name="SENS">
+					<shadow type="inout_onoff">
+						<field name="BOOL">HIGH</field>
+					</shadow>
+				</value>
+				<value name="VITESSE">
+					<shadow type="math_number">
+						<field name="NUM">127</field>
+					</shadow>
+				</value>
+			</block>
 		</category>
 	</category>
 
@@ -779,9 +777,8 @@
 					</shadow>
 				</value>
 			</block>
-			<category name="CAT_FISCHERTECHNIK_MOTORS_CC" colour="#778E9A">
-				<block type="fischertechnik_moteurs_CC"></block>
-			</category>
+			<block type="fischertechnik_moteurs_CC">
+			</block>
 		</category>
 	</category>
 	<category name="CAT_FLYCAMONE" colour="#46C286">

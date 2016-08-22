@@ -38,7 +38,7 @@ Blockly.Blocks['grove_led'] = {
     this.appendDummyInput()
         .appendField(Blockly.Msg.GROVE_INOUT_LED_INPUT1)
         .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/grove/400px-LED1.jpg', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize));
-	this.appendValueInput("PIN", 'Number')
+	this.appendValueInput("PIN")
         .setCheck('Number')
         .setAlign(Blockly.ALIGN_RIGHT)
         .appendField(Blockly.Msg.GROVE_INOUT_LED_INPUT2);		
@@ -60,7 +60,7 @@ Blockly.Blocks['grove_piezo_buzzer'] = {
     this.appendDummyInput()
         .appendField(Blockly.Msg.GROVE_INOUT_BUZZER_TEXT1)
         .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/grove/400px-Buzzer1.jpg', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize))
-	this.appendValueInput("PIN", 'Number')
+	this.appendValueInput("PIN")
         .setCheck('Number')
         .setAlign(Blockly.ALIGN_RIGHT)	
         .appendField(Blockly.Msg.GROVE_INOUT_BUZZER_INPUT);
@@ -74,42 +74,6 @@ Blockly.Blocks['grove_piezo_buzzer'] = {
   }
 };
 
-// Blockly.Blocks['grove_rgb_led'] = {
-  // init: function() {
-    // this.setColour("#8ec31f");
-	// this.setHelpUrl(Blockly.Msg.GROVE_INOUT_RGBLED_HELPURL);
-    // this.appendDummyInput()
-		// .appendField(Blockly.Msg.GROVE_INOUT_RGBLED_TEXT)
-        // .appendField(new Blockly.FieldImage("http://www.seeedstudio.com/depot/images/product/chanbalelednb1.jpg", Blockly.Arduino.imageSize, Blockly.Arduino.imageSize))
-		// .appendField(Blockly.Msg.GROVE_INOUT_RGBLED_INPUT)
-        // .appendField(new Blockly.FieldDropdown(profile.defaultBoard.digital), "PIN");
-	// this.appendField(new Blockly.ValueInput("C1", 'Number'))
-        // .setCheck('Number')
-        // .setAlign(Blockly.ALIGN_RIGHT)
-        // .appendField(Blockly.Msg.GROVE_INOUT_RGBLED_COLOR1);
-	// this.appendDummyInput()
-		// .appendField(Blockly.Msg.GROVE_INOUT_RGBLED_TEXT)
-        // .appendField(new Blockly.FieldImage("http://www.seeedstudio.com/depot/images/product/chanbalelednb1.jpg", Blockly.Arduino.imageSize, Blockly.Arduino.imageSize));
-	// this.interpolateMsg(
-        // Blockly.Msg.GROVE_INOUT_RGBLED_COLOR1 + ' %1 ' + 
-        // Blockly.Msg.GROVE_INOUT_RGBLED_INPUT + ' %2 ',
-        // ["PIN", new Blockly.FieldDropdown(profile.defaultBoard.digital)],
-        // ["C1", null, Blockly.ALIGN_RIGHT],
-        // Blockly.ALIGN_RIGHT);
-	// this.appendValueInput("C2", 'Number')
-        // .setCheck('Number')
-        // .setAlign(Blockly.ALIGN_RIGHT)
-        // .appendField(Blockly.Msg.GROVE_INOUT_RGBLED_COLOR2);
-	// this.appendValueInput("C3", 'Number')		
-        // .setCheck('Number')
-        // .setAlign(Blockly.ALIGN_RIGHT)
-        // .appendField(Blockly.Msg.GROVE_INOUT_RGBLED_COLOR3);
-    // this.setPreviousStatement(true, null);
-    // this.setNextStatement(true, null);
-    // this.setTooltip(Blockly.Msg.GROVE_INOUT_RGBLED_TOOLTIP);
-    // this.itemCount_ = 1;
-  // }
-// };
 Blockly.Blocks['grove_rgb_led'] = {
   init: function() {
     this.setHelpUrl(Blockly.Msg.GROVE_INOUT_RGBLED_HELPURL);
@@ -240,15 +204,15 @@ Blockly.Blocks['grove_serial_lcd_print'] = {
         .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/grove/400px-LCD1.jpg', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize))
         .appendField(Blockly.Msg.GROVE_INOUT_LCD_PRINT_INPUT1)
         .appendField(new Blockly.FieldTextInput('1',  Blockly.Arduino.pinGroveDigitalValidator), 'PIN');
-    this.appendValueInput("TEXT", 'String')
+    this.appendValueInput("TEXT")
         .setCheck('String')
         .setAlign(Blockly.ALIGN_RIGHT)
         .appendField(Blockly.Msg.GROVE_INOUT_LCD_PRINT_INPUT2);
-    this.appendValueInput("TEXT2", 'String')
+    this.appendValueInput("TEXT2")
         .setCheck('String')
         .setAlign(Blockly.ALIGN_RIGHT)
         .appendField(Blockly.Msg.GROVE_INOUT_LCD_PRINT_INPUT3);
-    this.appendValueInput("DELAY_TIME", 'Number')
+    this.appendValueInput("DELAY_TIME")
         .setCheck('Number')
         .setAlign(Blockly.ALIGN_RIGHT)
         .appendField(Blockly.Msg.GROVE_INOUT_LCD_PRINT_INPUT4);
@@ -386,7 +350,7 @@ Blockly.Blocks['grove_thumb_joystick'] = {
         .appendField(Blockly.Msg.GROVE_INOUT_JOYSTICK_TEXT2)
         .appendField(new Blockly.FieldDropdown(Blockly.Msg.GROVE_INOUT_JOYSTICK_AXES), "AXIS");
     this.setOutput(true, 'Number');
-this.setTooltip(Blockly.Msg.GROVE_INOUT_JOYSTICK_TOOLTIP);
+	this.setTooltip(Blockly.Msg.GROVE_INOUT_JOYSTICK_TOOLTIP);
   }
 };
 

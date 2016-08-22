@@ -147,8 +147,8 @@ Blockly.Arduino.grove_serial_lcd_print = function() {
   /*if(text.length>16||text2.length>16){
       alert("string is too long");
   }*/
-  Blockly.Arduino.definitions_['define_seriallcd'] = '#include <SerialLCD.h>\n';
-  Blockly.Arduino.definitions_['define_softwareserial'] = '#include <SoftwareSerial.h>\n';
+  Blockly.Arduino.includes_['define_seriallcd'] = '#include <SerialLCD.h>\n';
+  Blockly.Arduino.includes_['define_softwareserial'] = '#include <SoftwareSerial.h>\n';
   //generate PIN#+1 port
   var NextPIN = _get_next_pin(dropdown_pin);
 
@@ -168,8 +168,8 @@ Blockly.Arduino.grove_serial_lcd_power = function() {
   var dropdown_pin = this.getFieldValue('PIN');
   var dropdown_stat = this.getFieldValue('STAT');
 
-  Blockly.Arduino.definitions_['define_seriallcd'] = '#include <SerialLCD.h>\n';
-  Blockly.Arduino.definitions_['define_softwareserial'] = '#include <SoftwareSerial.h>\n';
+  Blockly.Arduino.includes_['define_seriallcd'] = '#include <SerialLCD.h>\n';
+  Blockly.Arduino.includes_['define_softwareserial'] = '#include <SoftwareSerial.h>\n';
   //generate PIN#+1 port
   var NextPIN = _get_next_pin(dropdown_pin);
 
@@ -187,8 +187,8 @@ Blockly.Arduino.grove_serial_lcd_effect = function() {
   var dropdown_pin = this.getFieldValue('PIN');
   var dropdown_stat = this.getFieldValue('STAT');
 
-  Blockly.Arduino.definitions_['define_seriallcd'] = '#include <SerialLCD.h>\n';
-  Blockly.Arduino.definitions_['define_softwareserial'] = '#include <SoftwareSerial.h>\n';
+  Blockly.Arduino.includes_['define_seriallcd'] = '#include <SerialLCD.h>\n';
+  Blockly.Arduino.includes_['define_softwareserial'] = '#include <SoftwareSerial.h>\n';
   //generate PIN#+1 port
   var NextPIN = _get_next_pin(dropdown_pin);
 
@@ -495,8 +495,8 @@ Blockly.Arduino.grove_dht_read = function() {
   }
 
 
-  Blockly.Arduino.definitions_['define_dht_'+ pin + '_' + sensor] = '#include <DHT.h>\n'
-    + 'DHT dht_' + pin + '_' + sensor + '(' + pin + ',' + sensor + ');\n';
+  Blockly.Arduino.includes_['define_dht_'+ pin + '_' + sensor] = '#include <DHT.h>\n'
+  Blockly.Arduino.definitions_['define_dht_'+ pin + '_' + sensor] = 'DHT dht_' + pin + '_' + sensor + '(' + pin + ',' + sensor + ');\n';
 
   Blockly.Arduino.setups_['setup_dht_' + pin + '_' + sensor] = 'dht_' + pin + '_' + sensor + '.begin();\n'
 /*
@@ -510,4 +510,3 @@ Blockly.Arduino.grove_dht_read = function() {
 */
   return [code, Blockly.Arduino.ORDER_ATOMIC];
 };
-
