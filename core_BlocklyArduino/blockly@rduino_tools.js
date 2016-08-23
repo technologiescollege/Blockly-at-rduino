@@ -61,8 +61,28 @@ BlocklyDuino.ArduinoIDEClick = function() {
 BlocklyDuino.uploadClick = function() {
     var code = $('#pre_arduino').text();
     
-    var url = "http://127.0.0.1:5005/upload";
+	var board = profile.defaultBoard.upload_arg;
+    var url = "http://127.0.0.1:5005/board";
     var method = "POST";
+
+    var async = true;
+	var request = new XMLHttpRequest();
+
+	request.open(method, url, async);
+	request.setRequestHeader("Content-Type", "text/plain;charset=UTF-8");
+	request.send(board);
+	url = "http://127.0.0.1:5005/upload";
+	request.open(method, url, async);
+	request.setRequestHeader("Content-Type", "text/plain;charset=UTF-8");
+	request.send(code);
+};
+
+BlocklyDuino.verify_local_Click = function() {
+    var code = $('#pre_arduino').text();
+    
+    var url = "http://127.0.0.1:5005/compile/set_board " + profile.defaultBoard.upload_arg;
+    var method = "POST";
+	var board = profile.defaultBoard.upload_arg;
 
     var async = true;
 	var request = new XMLHttpRequest();

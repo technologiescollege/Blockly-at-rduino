@@ -301,7 +301,7 @@
 					<span class="glyphicon glyphicon-log-in"> </span>
 					<span id="span_flash_local"> </span>
 				</a>		
-				<a id="btn_getResult" class='btn btn-primary' href="http://127.0.0.1:5005/get_result" role='button' target='_blank'>
+				<a id="btn_getResult" class='btn btn-primary' href="http://127.0.0.1:5005" role='button' target='_blank'>
 					<span class="glyphicon glyphicon-list-alt"> </span>
 					<span id="span_flash_local_result"> </span>
 				</a>
@@ -311,6 +311,7 @@
 				</button>
                 <pre id="pre_arduino"></pre>
                 <div id="debug_arduino"></div>
+				<div id="debug_arduino_local"></div>
             </div>
             <div id="content_term" class="tab-pane">
                 <select id="cb_cf_baud_rates"></select>
@@ -563,9 +564,10 @@
 			<div id="divCard">
 		            <label id="labelArduinoCard"></label> 
 		            <select id="pinout">
-		                <option value="arduino_uno" selected="selected">Arduino UNO</option>
-		                <option value="arduino_mega">Arduino MEGA</option>
-						<option value="dfrobot_romeo">DFRobot RoMeo</option>
+		                <option value="arduino_uno" selected="selected">Arduino/Genuino UNO</option>
+		                <option value="arduino_nano">Arduino/Genuino NANO</option>
+		                <option value="arduino_mega">Arduino/Genuino MEGA</option>
+						<option value="dfrobot_romeo">DFRobot RoMeo v2</option>
 		            </select>
 		    </div>
 	        <div style="float : right; margin-right : 5px;">

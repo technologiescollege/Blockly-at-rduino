@@ -356,6 +356,7 @@ BlocklyDuino.bindFunctions = function() {
 	$('#btn_saveArduino').on("click", BlocklyDuino.saveArduinoFile);	
 	$('#btn_pasteIDEArduino').on("click", BlocklyDuino.ArduinoIDEClick);	
 	$('#btn_flash_local').on("click", BlocklyDuino.uploadClick);
+	$('#btn_verify_local').on("click", BlocklyDuino.verify_local_Click);
 		
 	$('#toggle-WebAccess').on("change", BlocklyDuino.toggleWeb);
 	$('#toggle-LocalCodebender').on("change", BlocklyDuino.toggleLocalCodeBender);
