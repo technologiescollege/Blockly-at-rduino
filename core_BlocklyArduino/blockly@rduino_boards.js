@@ -47,7 +47,7 @@ var profile = {
                 ['14400', '14400'], ['19200', '19200'], ['28800', '28800'],
                 ['31250', '31250'], ['38400', '38400'], ['57600', '57600'],
                 ['115200', '115200']],
-		upload_arg: "arduino:avr:nano",
+		upload_arg: "arduino:avr:nano:cpu=atmega328",
 	},
 	arduino_uno: {
 	    description: "Arduino Uno",

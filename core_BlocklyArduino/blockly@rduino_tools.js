@@ -70,10 +70,6 @@ BlocklyDuino.uploadClick = function() {
 
 	request.open(method, url, async);
 	request.setRequestHeader("Content-Type", "text/plain;charset=UTF-8");
-	/*request.send(board);
-	url = "http://127.0.0.1:5005/upload";
-	request.open(method, url, async);
-	request.setRequestHeader("Content-Type", "text/plain;charset=UTF-8");*/
 	request.send(code);
 };
 
