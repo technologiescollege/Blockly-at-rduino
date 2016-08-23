@@ -541,6 +541,22 @@ Blockly.Blocks.mbot_right_PWM.getBlockType = function() {
 };
 
 //***********************************************************************************
+//								My Human Kit
+//***********************************************************************************
+
+//---------------------------------mhk.js-------------------------------------
+
+Blockly.Blocks.mhk_ultrason.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.mhk_capteur_myoware.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.mhk_moteur_vibreur.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+
+//***********************************************************************************
 //								MultiFunction shield
 //***********************************************************************************
 

@@ -56,6 +56,7 @@
 <script type="text/javascript" src="blocks/mbot/mbot_2.js"></script>
 <script type="text/javascript" src="blocks/mbot/mbot_3.js"></script>
 <script type="text/javascript" src="blocks/multi-function/multi-function.js"></script>
+<script type="text/javascript" src="blocks/myhumankit/myhumankit.js"></script>
 <script type="text/javascript" src="blocks/robuno/robuno.js"></script>
 <script type="text/javascript" src="blocks/servo/servo.js"></script>
 <script type="text/javascript" src="blocks/technozone51/technozone51.js"></script>
@@ -95,6 +96,7 @@
 <script type="text/javascript" src="generators/arduino/led-rgb-ws2812b.js"></script>
 <script type="text/javascript" src="generators/arduino/mbot.js"></script>
 <script type="text/javascript" src="generators/arduino/multi-function.js"></script>
+<script type="text/javascript" src="generators/arduino/myhumankit.js"></script>
 <script type="text/javascript" src="generators/arduino/robuno.js"></script>
 <script type="text/javascript" src="generators/arduino/servo.js"></script>
 <script type="text/javascript" src="generators/arduino/technozone51.js"></script>
@@ -380,7 +382,7 @@
         <h4 class="modal-title" id="firstModalLabel"></h4>
       </div>
       <div class="modal-body">
-			<i><b>Documentation wiki : </b><a href="http://tic.technologiescollege.fr/wiki/doku.php">http://tic.technologiescollege.fr/wiki/doku.php</a></i>
+			<b>Documentation wiki : </b><a href="http://tic.technologiescollege.fr/wiki/doku.php">http://tic.technologiescollege.fr/wiki/doku.php</a>
 			<br />
 			<b>Forum : </b><a href='http://blockly.technologiescollege.fr/forum' target='blank'>http://blockly.technologiescollege.fr/forum</a>
 			<br />
@@ -500,6 +502,10 @@
 		<span id="videoModalLabel3"> </span><br/>
 		<iframe src="https://player.vimeo.com/video/177939950?byline=0&portrait=0" width="150" height="120" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 	  </div>
+	  <div class="modal-body text-center">
+		<span id="videoModalLabel4"> </span><br/>
+		<iframe src="https://player.vimeo.com/video/179961741?byline=0&portrait=0" width="150" height="120" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+	  </div>
     </div>
 </div>
 <!-- toolbox config modal -->
@@ -570,17 +576,22 @@
 						<option value="dfrobot_romeo">DFRobot RoMeo v2</option>
 		            </select>
 		    </div>
+			<br />
 	        <div style="float : right; margin-right : 5px;">
 	            <input type="checkbox" name="put_config_in_url" id="put_config_in_url"/> <span id="span_put_config_in_url"> </span>
 	        </div>
 	        <div style="clear : both;">
 			<span id="span_OnOffLine"> </span>
-			<input id="toggle-WebAccess" data-toggle="toggle" data-on="<span id='span_OnLine'> </span>" data-off='<span id="span_OffLine"> </span>' data-onstyle="success" data-offstyle="info" data-width="120" type="checkbox">
-			<label id="span_Upload"> </label><br/>
+			<input id="toggle-WebAccess" data-toggle="toggle" data-on="<span id='span_OnLine'> </span>" data-off='<span id="span_OffLine"> </span>' data-onstyle="success" data-offstyle="info" data-width="120" type="checkbox"><br />
+			<br/>
+			<label id="span_Upload"> </label>
+			<br/>
 			<span id="span_Upload_local"> </span>
 			<input id="toggle-LocalCodebender" data-toggle="toggle" data-on='<span id="span_LocalCodebender_Local"> </span>' data-off='<span id="span_LocalCodebender_Code"> </span>' data-onstyle="info" data-offstyle="success" data-width="120" type="checkbox">
 			<span id="span_Upload_codebender"> </span>
-			<label id="span_Download"> </label><br/>
+			<br/>
+			<label id="span_Download"> </label>
+			<br/>
 			<a id="btn_MyArduino" class='btn btn-primary text-left' href="https://github.com/technologiescollege/arduino" target="_blank" role='button'>
 			  <span class="glyphicon glyphicon-download"></span>
 			  <span id="span_Download_Arduino"> </span>

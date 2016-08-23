@@ -536,6 +536,8 @@ Blockly.Msg.FIELDDROPDOWN_ONOFF = [["marche", "ON"], ["arrêt", "OFF"]]
 Blockly.Msg.INOUT_HIGH_LEVEL = "1 (état haut)";
 Blockly.Msg.INOUT_LOW_LEVEL = "0 (état bas)";
 
+Blockly.Msg.CAT_MHK = "MyHumanKit"; //added august 23th 2016
+
 //**********************************blocks***********************************************
 //**********************************blocks***********************************************
 //**********************************blocks***********************************************
@@ -1275,3 +1277,18 @@ Blockly.Msg.FLYCAM_STOP_HELPURL = Blockly.Msg.FLYCAM_SWITCH_HELPURL;
 Blockly.Msg.FLYCAM_STOP_TEXT = "arrêter la capture";
 Blockly.Msg.FLYCAM_STOP_INPUT = Blockly.Msg.FLYCAM_SWITCH_INPUT;
 Blockly.Msg.FLYCAM_STOP_TOOLTIP = "envoi d'une impulsion d'1s de type servo=0°";
+
+
+//Added august 23th 2016
+Blockly.Msg.MHK_ULTRASON_HELPURL = "http://www.gotronic.fr/art-module-de-detection-us-hc-sr04-20912.htm";
+Blockly.Msg.MHK_ULTRASON1 = "la distance mesurée en cm ";
+Blockly.Msg.MHK_ULTRASON2 = "TRIG sur la broche ";
+Blockly.Msg.MHK_ULTRASON3 = "ECHO sur la broche ";
+Blockly.Msg.MHK_ULTRASON_TOOLTIP = "Détection obstacle par ultrason";
+Blockly.Msg.MHK_MOTEUR_VIBREUR_HELPURL = "http://www.gotronic.fr/art-vibreur-miniature-vm1201-20685.htm";
+Blockly.Msg.MHK_MOTEUR_VIBREUR1 = " faire vibrer le moteur sur la broche";
+Blockly.Msg.MHK_MOTEUR_VIBREUR2 = "en envoyant la valeur";
+Blockly.Msg.MHK_CAPTEUR_MYOWARE_HELPURL = "http://www.robotshop.com/eu/fr/capteur-electrique-muscle-myoware.html";
+Blockly.Msg.MHK_CAPTEUR_MYOWARE1 = "la valeur lue par le capteur myoware ";
+Blockly.Msg.MHK_CAPTEUR_MYOWARE2 = "sur la broche analogique ";
+Blockly.Msg.MHK_CAPTEUR_MYOWARE_TOOLTIP = "myoware sensor input";

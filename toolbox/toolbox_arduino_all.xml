@@ -803,6 +803,33 @@
 			</value>
 		</block>		
 	</category>
+	<category name="CAT_MHK" colour="#FF6B37">
+		<block type="mhk_ultrason">
+			<value name="TRIGER">
+				<shadow type="math_number">
+					<field name="NUM">2</field>
+				</shadow>
+			</value><value name="DIST">
+				<shadow type="math_number">
+					<field name="NUM">3</field>
+				</shadow>
+			</value>
+		</block>
+		<block type="mhk_capteur_myoware">
+			<value name="PIN">
+				<shadow type="math_number">
+					<field name="NUM">2</field>
+				</shadow>
+			</value>
+		</block>
+		<block type="mhk_moteur_vibreur">
+			<value name="NUM">
+				<shadow type="math_number">
+					<field name="NUM">2</field>
+				</shadow>
+			</value>
+		</block>		
+	</category>
 	<category name="CAT_BQ" colour="#608621">
 		<category name="CAT_BQ_IN" colour="#608621">
 			<block type="bq_ultrason">

@@ -105,9 +105,7 @@ BlocklyDuino.toggleWeb = function() {
 		$("#pre_arduino").css('height', "100%");
 		$('#toggle-LocalCodebender').bootstrapToggle('on');
 		$('#toggle-LocalCodebender').bootstrapToggle('disable');
-		window.localStorage.localCodebender = "true";
 	} else {
-		if ($('#toggle-WebAccess').prop('checked')) {
 			$("#cb_cf_boards").removeClass('hidden');
 			$("#cb_cf_ports").removeClass('hidden');
 			$("#cb_cf_verify_btn").removeClass('hidden');
@@ -116,6 +114,13 @@ BlocklyDuino.toggleWeb = function() {
 			$("#tab_term").removeClass('hidden');
 			document.querySelector("#debug_arduino").style.display = "block";
 			$("#pre_arduino").css('height', "65%");
+		if ($('#toggle-WebAccess').prop('checked')) {
+			
+		$('#toggle-LocalCodebender').bootstrapToggle('enable');
+		if ($('#toggle-LocalCodebender').prop('checked')) {
+			$("#btn_Help_Online").removeClass('hidden');
+		}
+		window.localStorage.webAccess = "true";
 		} else {
 			$("#cb_cf_boards").removeClass('hidden');
 			$("#cb_cf_ports").removeClass('hidden');
@@ -125,11 +130,19 @@ BlocklyDuino.toggleWeb = function() {
 			$("#tab_term").removeClass('hidden');
 			document.querySelector("#debug_arduino").style.display = "block";
 			$("#pre_arduino").css('height', "65%");
-
+		if ($("select#cb_cf_ports").prop("disabled"))
+			$("#btn_plugin_codebender").addClass('hidden');
+		$('#toggle-LocalCodebender').bootstrapToggle('on');
+		$('#toggle-LocalCodebender').bootstrapToggle('disable');
+		window.localStorage.localCodebender = "true";
+		$("#btn_Help_Offline").removeClass('hidden');
+		if ($('#toggle-LocalCodebender').prop('checked')) {
+			$("#btn_Help_Online").addClass('hidden');
+		}
+		window.localStorage.webAccess = "false";
 		}
 	}
-
-	if ($('#toggle-WebAccess').prop('checked')) {
+	/*if ($('#toggle-WebAccess').prop('checked')) {
 		$('#toggle-LocalCodebender').bootstrapToggle('enable');
 		if ($('#toggle-LocalCodebender').prop('checked')) {
 			$("#btn_Help_Online").removeClass('hidden');
@@ -146,8 +159,7 @@ BlocklyDuino.toggleWeb = function() {
 			$("#btn_Help_Online").addClass('hidden');
 		}
 		window.localStorage.webAccess = "false";
-	}
-	
+	}	*/
 };
 
 BlocklyDuino.toggleLocalCodeBender = function() {
@@ -175,7 +187,6 @@ BlocklyDuino.toggleLocalCodeBender = function() {
 		}
 		window.localStorage.localCodebender = "false";
 	}
-
 };
 
 /**
