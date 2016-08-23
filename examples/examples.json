@@ -46,5 +46,21 @@
         "link_url": "https://www.youtube-nocookie.com/embed/vlJl28qE5vg?list=PLwy0yw3Oq4-uFJl0j-efUAAlfCbqtcTMr",
         "link_text": "tutos vidéo",
         "visible": true
+    },
+    {
+        "source_url": "./gant_sonar/gant_sonar1.xml",
+        "source_text": "simulation d'un gant sonar 1 : une détection d'un obstacle fait vibrer un moteur",
+        "image": "./gant_sonar/gant_sonar1.png",
+        "link_url": "",
+        "link_text": "",
+        "visible": true
+    },
+    {
+        "source_url": "./gant_sonar/gant_sonar2.xml",
+        "source_text": "simulation d'un gant sonar 2 : une détection d'un obstacle à gauche ou à droite fait vibrer un moteur droit ou gauche",
+        "image": "./gant_sonar/gant_sonar2.png",
+        "link_url": "",
+        "link_text": "",
+        "visible": true
     }
 ]

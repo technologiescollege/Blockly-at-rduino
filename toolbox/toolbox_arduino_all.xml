@@ -828,7 +828,19 @@
 					<field name="NUM">2</field>
 				</shadow>
 			</value>
-		</block>		
+		</block>
+		<block type="mhk_servo_moteur">
+			<value name="PIN">
+				<shadow type="math_number">
+					<field name="NUM">3</field>
+				</shadow>
+			</value>
+			<value name="DEGREE">
+				<shadow type="inout_angle">
+					<field name="NUM">90</field>
+				</shadow>
+			</value>
+		</block>
 	</category>
 	<category name="CAT_BQ" colour="#608621">
 		<category name="CAT_BQ_IN" colour="#608621">

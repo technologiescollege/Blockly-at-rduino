@@ -2,7 +2,7 @@
 
 'use strict';
 
-goog.provide('Blockly.Blocks.mhk');
+goog.provide('Blockly.Arduino.mhk');
 
 goog.require('Blockly.Arduino');
 
@@ -36,6 +36,18 @@ Blockly.Arduino.mhk_moteur_vibreur = function() {
   var dropdown_pin = this.getFieldValue('PIN');
   var value_num = Blockly.Arduino.valueToCode(this, 'NUM', Blockly.Arduino.ORDER_ATOMIC);
   Blockly.Arduino.setups_['setup_output_'+dropdown_pin] = 'pinMode('+dropdown_pin+', OUTPUT);';
-  var code = 'analogWrite(' + dropdown_pin + ', ' + value_num + ')';
-  return [code, Blockly.Arduino.ORDER_ATOMIC];
+  var code = 'analogWrite(' + dropdown_pin + ', ' + value_num + ');';
+  return code;
+};
+
+Blockly.Arduino.mhk_servo_moteur = function() {
+  var dropdown_pin = Blockly.Arduino.valueToCode(this, 'PIN', Blockly.Arduino.ORDER_ATOMIC);
+  var value_degree = Blockly.Arduino.valueToCode(this, 'DEGREE', Blockly.Arduino.ORDER_ATOMIC);
+
+  Blockly.Arduino.includes_['define_servo'] = '#include <Servo.h>';
+  Blockly.Arduino.definitions_['var_servo' + dropdown_pin] = 'Servo servo_' + dropdown_pin + ';';
+  Blockly.Arduino.setups_['setup_servo_' + dropdown_pin] = 'servo_' + dropdown_pin + '.attach(' + dropdown_pin + ');';
+
+  var code = 'servo_' + dropdown_pin + '.write(' + value_degree + ');';
+  return code;
 };
