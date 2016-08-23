@@ -103,11 +103,11 @@ Blockly.Blocks['play_notes_z'] = {
 						[ Blockly.Msg.ROBOTS_MISC_BUZZER_NOTE + "_B(1)",	"NOTE_B(1)" ],
 						[ Blockly.Msg.ROBOTS_MISC_BUZZER_NOTE + "_C(1)",	"NOTE_C(1)" ] ]), "NOTE");
 	this.setInputsInline(true) ;
-    this.appendValueInput("DUR", 'Number')
+    this.appendValueInput("DUR")
         .setCheck("Number")
         .setAlign(Blockly.ALIGN_RIGHT)
         .appendField(Blockly.Msg.ROBOTS_MISC_BUZZER_DURATION);
-    this.appendValueInput("VOL", 'Number')
+    this.appendValueInput("VOL")
         .setCheck("Number")
         .setAlign(Blockly.ALIGN_RIGHT)
         .appendField(Blockly.Msg.ROBOTS_MISC_BUZZER_VOLUME);

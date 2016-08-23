@@ -69,11 +69,11 @@ Blockly.Blocks['zumo_motors_FNs'] = {
 						[ Blockly.Msg.ROBOTS_MOTORS_BACKWARD, "backward" ] ]),
 				"DIRECTION");
    this.setInputsInline(true) ;
-   this.appendValueInput("SPEEDA", 'Number')
+   this.appendValueInput("SPEEDA")
        .setCheck('Number')
         .setAlign(Blockly.ALIGN_RIGHT)
         .appendField(Blockly.Msg.ROBOTS_MOTORS_SPEEDL);
-	this.appendValueInput("SPEEDB", 'Number')
+	this.appendValueInput("SPEEDB")
         .setCheck('Number')
         .setAlign(Blockly.ALIGN_RIGHT)
         .appendField(Blockly.Msg.ROBOTS_MOTORS_SPEEDR);
@@ -122,11 +122,11 @@ Blockly.Blocks['zumo_motors_FRs'] = {
 						[ Blockly.Msg.ROBOTS_MOTORS_BACKWARD, "backward" ] ]),
 				"DIRECTION");
 	this.setInputsInline(true) ;   
-  this.appendValueInput("SPEEDA", 'Number')
+  this.appendValueInput("SPEEDA")
        .setCheck('Number')
         .setAlign(Blockly.ALIGN_RIGHT)
         .appendField(Blockly.Msg.ROBOTS_MOTORS_SPEEDL);
-	this.appendValueInput("SPEEDB", 'Number')
+	this.appendValueInput("SPEEDB")
         .setCheck('Number')
         .setAlign(Blockly.ALIGN_RIGHT)
         .appendField(Blockly.Msg.ROBOTS_MOTORS_SPEEDR);
@@ -175,11 +175,11 @@ init: function() {
 						[ Blockly.Msg.ROBOTS_MOTORS_BACKWARD, "backward" ] ]),
 				"DIRECTION");
    this.setInputsInline(true) ; 
-   this.appendValueInput("SPEEDA", 'Number')
+   this.appendValueInput("SPEEDA")
        .setCheck('Number')
         .setAlign(Blockly.ALIGN_RIGHT)
         .appendField(Blockly.Msg.ROBOTS_MOTORS_SPEEDL);
-	this.appendValueInput("SPEEDB", 'Number')
+	this.appendValueInput("SPEEDB")
         .setCheck('Number')
         .setAlign(Blockly.ALIGN_RIGHT)
         .appendField(Blockly.Msg.ROBOTS_MOTORS_SPEEDR);
@@ -206,11 +206,11 @@ Blockly.Blocks['zumo_motors_FBs'] = {
 						[ Blockly.Msg.ROBOTS_MOTORS_BACKWARD, "backward" ] ]),
 				"DIRECTION");
    this.setInputsInline(true) ; 
-   this.appendValueInput("SPEEDA", 'Number')
+   this.appendValueInput("SPEEDA")
        .setCheck('Number')
         .setAlign(Blockly.ALIGN_RIGHT)
         .appendField(Blockly.Msg.ROBOTS_MOTORS_SPEEDL);
-	this.appendValueInput("SPEEDB", 'Number')
+	this.appendValueInput("SPEEDB")
         .setCheck('Number')
         .setAlign(Blockly.ALIGN_RIGHT)
         .appendField(Blockly.Msg.ROBOTS_MOTORS_SPEEDR);
@@ -256,19 +256,19 @@ Blockly.Blocks['zumo_motors_FUs'] = {
 						[ Blockly.Msg.ROBOTS_MOTORS_LEFT, "left" ],
 						[ Blockly.Msg.ROBOTS_MOTORS_BACKWARD, "backward" ] ]),
 				"DIRECTION");
-    this.appendValueInput("SPEEDA", 'Number')
+    this.appendValueInput("SPEEDA")
         .setCheck('Number')
         .setAlign(Blockly.ALIGN_RIGHT)
         .appendField(Blockly.Msg.ROBOTS_MOTORS_SPEEDL);
-	this.appendValueInput("SPEEDB", 'Number')
+	this.appendValueInput("SPEEDB")
         .setCheck('Number')
         .setAlign(Blockly.ALIGN_RIGHT)
         .appendField(Blockly.Msg.ROBOTS_MOTORS_SPEEDR);
-	this.appendValueInput('FLIPL','Boolean')
+	this.appendValueInput('FLIPL')
 		.appendField('Flip left motor')
 		.setAlign(Blockly.ALIGN_RIGHT)
         .setCheck('Boolean');
-    this.appendValueInput('FLIPR','Boolean')
+    this.appendValueInput('FLIPR')
 		.appendField('Flip right motor')
 		.setAlign(Blockly.ALIGN_RIGHT)
         .setCheck('Boolean');

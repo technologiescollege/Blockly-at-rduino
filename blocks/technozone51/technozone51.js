@@ -11,7 +11,8 @@ Blockly.Blocks['technozone_btn1white'] = {
 	this.appendDummyInput("")
         .appendField(Blockly.Msg.TECHNOZONE51_TEXT5)
         .appendField(new Blockly.FieldImage("blocks/technozone51/btn1white.jpg", Blockly.Arduino.imageSize, Blockly.Arduino.imageSize))
-    this.appendValueInput("PIN", 'Number')
+    this.appendValueInput("PIN")
+		.setCheck('Number')
         .setAlign(Blockly.ALIGN_RIGHT)
 		.appendField(Blockly.Msg.TECHNOZONE51_TEXT2)
     this.appendDummyInput("")
@@ -31,7 +32,8 @@ Blockly.Blocks['technozone_btn1black'] = {
 	this.appendDummyInput("")
         .appendField(Blockly.Msg.TECHNOZONE51_TEXT5)
         .appendField(new Blockly.FieldImage("blocks/technozone51/btn1black.jpg", Blockly.Arduino.imageSize, Blockly.Arduino.imageSize))
-    this.appendValueInput("PIN", 'Number')
+    this.appendValueInput("PIN")
+		.setCheck('Number')
         .setAlign(Blockly.ALIGN_RIGHT)
         .appendField(Blockly.Msg.TECHNOZONE51_TEXT2)
     this.appendDummyInput("")
@@ -51,7 +53,8 @@ Blockly.Blocks['technozone_btn1green'] = {
     this.appendDummyInput("")
         .appendField(Blockly.Msg.TECHNOZONE51_TEXT5)
         .appendField(new Blockly.FieldImage("blocks/technozone51/btn1green.jpg", Blockly.Arduino.imageSize, Blockly.Arduino.imageSize))
-    this.appendValueInput("PIN", 'Number')
+    this.appendValueInput("PIN")
+		.setCheck('Number')
         .setAlign(Blockly.ALIGN_RIGHT)
         .appendField(Blockly.Msg.TECHNOZONE51_TEXT2)
     this.appendDummyInput("")
@@ -71,7 +74,8 @@ Blockly.Blocks['technozone_btn1red'] = {
     this.appendDummyInput("")
         .appendField(Blockly.Msg.TECHNOZONE51_TEXT5)
         .appendField(new Blockly.FieldImage("blocks/technozone51/btn1red.jpg", Blockly.Arduino.imageSize, Blockly.Arduino.imageSize))
-    this.appendValueInput("PIN", 'Number')
+    this.appendValueInput("PIN")
+		.setCheck('Number')
         .setAlign(Blockly.ALIGN_RIGHT)
         .appendField(Blockly.Msg.TECHNOZONE51_TEXT2)
     this.appendDummyInput("")
@@ -91,7 +95,8 @@ Blockly.Blocks['technozone_switch1'] = {
     this.appendDummyInput("")
         .appendField(Blockly.Msg.TECHNOZONE51_TEXT11)
         .appendField(new Blockly.FieldImage("blocks/technozone51/switch1.jpg", Blockly.Arduino.imageSize, Blockly.Arduino.imageSize))
-    this.appendValueInput("PIN", 'Number')
+    this.appendValueInput("PIN")
+		.setCheck('Number')
         .setAlign(Blockly.ALIGN_RIGHT)
         .appendField(Blockly.Msg.TECHNOZONE51_TEXT2)
     this.appendDummyInput("")
@@ -111,7 +116,8 @@ Blockly.Blocks['technozone_ils1'] = {
     this.appendDummyInput("")
         .appendField(Blockly.Msg.TECHNOZONE51_TEXT1)
         .appendField(new Blockly.FieldImage("blocks/technozone51/ils1.jpg", Blockly.Arduino.imageSize, Blockly.Arduino.imageSize))
-    this.appendValueInput("PIN", 'Number')
+    this.appendValueInput("PIN")
+		.setCheck('Number')
         .setAlign(Blockly.ALIGN_RIGHT)
         .appendField(Blockly.Msg.TECHNOZONE51_TEXT2)
     this.appendDummyInput("")
@@ -131,7 +137,8 @@ Blockly.Blocks['technozone_proxi1'] = {
     this.appendDummyInput("")
         .appendField(Blockly.Msg.TECHNOZONE51_TEXT15)
         .appendField(new Blockly.FieldImage("blocks/technozone51/proxi1.jpg", Blockly.Arduino.imageSize, Blockly.Arduino.imageSize))
-    this.appendValueInput("PIN", 'Number')
+    this.appendValueInput("PIN")
+		.setCheck('Number')
         .setAlign(Blockly.ALIGN_RIGHT)
         .appendField(Blockly.Msg.TECHNOZONE51_TEXT2)
     this.appendDummyInput("")
@@ -151,7 +158,8 @@ Blockly.Blocks['technozone_bari1'] = {
     this.appendDummyInput("")
         .appendField(Blockly.Msg.TECHNOZONE51_TEXT18)
         .appendField(new Blockly.FieldImage("blocks/technozone51/bari1.jpg", Blockly.Arduino.imageSize, Blockly.Arduino.imageSize))
-    this.appendValueInput("PIN", 'Number')
+    this.appendValueInput("PIN")
+		.setCheck('Number')
         .setAlign(Blockly.ALIGN_RIGHT)
         .appendField(Blockly.Msg.TECHNOZONE51_TEXT2)
     this.appendDummyInput("")
@@ -171,7 +179,8 @@ Blockly.Blocks['technozone_lig1'] = {
     this.appendDummyInput("")
         .appendField(Blockly.Msg.TECHNOZONE51_TEXT1)
         .appendField(new Blockly.FieldImage("blocks/technozone51/lig1.jpg", Blockly.Arduino.imageSize, Blockly.Arduino.imageSize))
-    this.appendValueInput("PIN", 'Number')
+    this.appendValueInput("PIN")
+		.setCheck('Number')
         .setAlign(Blockly.ALIGN_RIGHT)
         .appendField(Blockly.Msg.TECHNOZONE51_TEXT2)
     this.appendDummyInput("")
@@ -193,7 +202,8 @@ Blockly.Blocks['technozone_cmouv1'] = {
         .appendField(new Blockly.FieldImage("blocks/technozone51/servo1.jpg", Blockly.Arduino.imageSize, Blockly.Arduino.imageSize))
         .appendField(new Blockly.FieldImage("blocks/technozone51/plus.jpg", 20, 64))
         .appendField(new Blockly.FieldImage("blocks/technozone51/cmouv1.jpg", Blockly.Arduino.imageSize, Blockly.Arduino.imageSize))
-    this.appendValueInput("PIN", 'Number')
+    this.appendValueInput("PIN")
+		.setCheck('Number')
         .setAlign(Blockly.ALIGN_RIGHT)
         .appendField(Blockly.Msg.TECHNOZONE51_TEXT2)
     this.appendDummyInput("")
@@ -213,7 +223,8 @@ Blockly.Blocks['technozone_potar1'] = {
     this.appendDummyInput("")
         .appendField(Blockly.Msg.TECHNOZONE51_TEXT22)
         .appendField(new Blockly.FieldImage("blocks/technozone51/potar1.jpg", Blockly.Arduino.imageSize, Blockly.Arduino.imageSize))
-    this.appendValueInput("PIN", 'Number')
+    this.appendValueInput("PIN")
+		.setCheck('Number')
         .setAlign(Blockly.ALIGN_RIGHT)
         .appendField(Blockly.Msg.TECHNOZONE51_TEXT2)
     this.setOutput(true, 'Number');
@@ -229,7 +240,8 @@ Blockly.Blocks['technozone_ctn1'] = {
     this.appendDummyInput("")
         .appendField(Blockly.Msg.TECHNOZONE51_TEXT24)
         .appendField(new Blockly.FieldImage("blocks/technozone51/ctn1.jpg", Blockly.Arduino.imageSize, Blockly.Arduino.imageSize))
-    this.appendValueInput("PIN", 'Number')
+    this.appendValueInput("PIN")
+		.setCheck('Number')
         .setAlign(Blockly.ALIGN_RIGHT)
         .appendField(Blockly.Msg.TECHNOZONE51_TEXT2)
     this.setOutput(true, 'Number');
@@ -245,7 +257,8 @@ Blockly.Blocks['technozone_ldr1'] = {
     this.appendDummyInput("")
         .appendField(Blockly.Msg.TECHNOZONE51_TEXT26)
         .appendField(new Blockly.FieldImage("blocks/technozone51/ldr1.jpg", Blockly.Arduino.imageSize, Blockly.Arduino.imageSize))
-    this.appendValueInput("PIN", 'Number')
+    this.appendValueInput("PIN")
+		.setCheck('Number')
         .setAlign(Blockly.ALIGN_RIGHT)
         .appendField(Blockly.Msg.TECHNOZONE51_TEXT2)
     this.setOutput(true, 'Number');
@@ -261,11 +274,12 @@ Blockly.Blocks['technozone_sonar1'] = {
     this.appendDummyInput("")
 	    .appendField(Blockly.Msg.TECHNOZONE51_TEXT28)
         .appendField(new Blockly.FieldImage("blocks/technozone51/sonar1.jpg", Blockly.Arduino.imageSize, Blockly.Arduino.imageSize))
-    this.appendValueInput("TRIGER",'Number')	
+    this.appendValueInput("TRIGER")	
         .setCheck('Number')
         .setAlign(Blockly.ALIGN_RIGHT)
 	    .appendField(Blockly.Msg.TECHNOZONE51_TEXT29)
-    this.appendValueInput("DIST", 'Number')
+    this.appendValueInput("DIST")
+		.setCheck('Number')
         .setAlign(Blockly.ALIGN_RIGHT)
         .appendField(Blockly.Msg.TECHNOZONE51_TEXT30)
     this.setOutput(true, 'Boolean');
@@ -282,7 +296,8 @@ Blockly.Blocks['technozone_led1red'] = {
         .appendField(new Blockly.FieldDropdown([[Blockly.Msg.TECHNOZONE51_TEXT33, "HIGH"], [Blockly.Msg.TECHNOZONE51_TEXT34, "LOW"]]), "STAT")
         .appendField(Blockly.Msg.TECHNOZONE51_TEXT32)
         .appendField(new Blockly.FieldImage("blocks/technozone51/led1red.jpg", Blockly.Arduino.imageSize, Blockly.Arduino.imageSize))
-    this.appendValueInput("PIN", 'Number')
+    this.appendValueInput("PIN")
+		.setCheck('Number')
         .setAlign(Blockly.ALIGN_RIGHT)
         .appendField(Blockly.Msg.TECHNOZONE51_TEXT2)
     this.setPreviousStatement(true, null);
@@ -300,7 +315,8 @@ Blockly.Blocks['technozone_led1green'] = {
         .appendField(new Blockly.FieldDropdown([[Blockly.Msg.TECHNOZONE51_TEXT33, "HIGH"], [Blockly.Msg.TECHNOZONE51_TEXT34, "LOW"]]), "STAT")
         .appendField(Blockly.Msg.TECHNOZONE51_TEXT32)
         .appendField(new Blockly.FieldImage("blocks/technozone51/led1green.jpg", Blockly.Arduino.imageSize, Blockly.Arduino.imageSize))
-    this.appendValueInput("PIN", 'Number')
+    this.appendValueInput("PIN")
+		.setCheck('Number')
         .setAlign(Blockly.ALIGN_RIGHT)
         .appendField(Blockly.Msg.TECHNOZONE51_TEXT2)
     this.setPreviousStatement(true, null);
@@ -318,7 +334,8 @@ Blockly.Blocks['technozone_led1yellow'] = {
         .appendField(new Blockly.FieldDropdown([[Blockly.Msg.TECHNOZONE51_TEXT33, "HIGH"], [Blockly.Msg.TECHNOZONE51_TEXT34, "LOW"]]), "STAT")
         .appendField(Blockly.Msg.TECHNOZONE51_TEXT32)
         .appendField(new Blockly.FieldImage("blocks/technozone51/led1yellow.jpg", Blockly.Arduino.imageSize, Blockly.Arduino.imageSize))
-    this.appendValueInput("PIN", 'Number')
+    this.appendValueInput("PIN")
+		.setCheck('Number')
         .setAlign(Blockly.ALIGN_RIGHT)
         .appendField(Blockly.Msg.TECHNOZONE51_TEXT2)
     this.setPreviousStatement(true, null);
@@ -335,7 +352,8 @@ Blockly.Blocks['technozone_relay1'] = {
         .appendField(new Blockly.FieldDropdown([[Blockly.Msg.TECHNOZONE51_TEXT40, "LOW"], [Blockly.Msg.TECHNOZONE51_TEXT41, "HIGH"]]), "STAT")
         .appendField(Blockly.Msg.TECHNOZONE51_TEXT38)
         .appendField(new Blockly.FieldImage("blocks/technozone51/relay1.jpg", Blockly.Arduino.imageSize, Blockly.Arduino.imageSize))
-    this.appendValueInput("PIN", 'Number')
+    this.appendValueInput("PIN")
+		.setCheck('Number')
         .setAlign(Blockly.ALIGN_RIGHT)
         .appendField(Blockly.Msg.TECHNOZONE51_TEXT2)
     this.setPreviousStatement(true, null);
@@ -351,13 +369,16 @@ Blockly.Blocks['technozone_buzzer1'] = {
     this.appendDummyInput("")
 		.appendField(Blockly.Msg.TECHNOZONE51_TEXT43)
         .appendField(new Blockly.FieldImage("blocks/technozone51/buzzer1.jpg", Blockly.Arduino.imageSize, Blockly.Arduino.imageSize))
-    this.appendValueInput("PIN", 'Number')
+    this.appendValueInput("PIN")
+		.setCheck('Number')
         .setAlign(Blockly.ALIGN_RIGHT)
         .appendField(Blockly.Msg.TECHNOZONE51_TEXT2)
-    this.appendValueInput("NUM",'Number')
+    this.appendValueInput("NUM")
+		.setCheck('Number')
         .setAlign(Blockly.ALIGN_RIGHT)
         .appendField(Blockly.Msg.TECHNOZONE51_TEXT44)
-    this.appendValueInput("TPS",'Number')
+    this.appendValueInput("TPS")
+		.setCheck('Number')
         .setAlign(Blockly.ALIGN_RIGHT)
         .appendField(Blockly.Msg.TECHNOZONE51_TEXT45)
     this.setInputsInline(false);
@@ -379,10 +400,12 @@ Blockly.Blocks['technozone_mot1easycon1'] = {
         .appendField(new Blockly.FieldImage("blocks/technozone51/easycon1.jpg", Blockly.Arduino.imageSize, Blockly.Arduino.imageSize))
         .appendField(new Blockly.FieldImage("blocks/technozone51/plus.jpg", 20, 64))
         .appendField(new Blockly.FieldImage("blocks/technozone51/kitmot1.jpg", Blockly.Arduino.imageSize, Blockly.Arduino.imageSize));
-    this.appendValueInput("SENS", 'Boolean')
+    this.appendValueInput("SENS")
+		.setCheck('Boolean')
         .setAlign(Blockly.ALIGN_RIGHT)
         .appendField(Blockly.Msg.TECHNOZONE51_TEXT53);
-    this.appendValueInput("VITESSE",'Number')
+    this.appendValueInput("VITESSE")
+		.setCheck('Number')
         .setAlign(Blockly.ALIGN_RIGHT)
         .appendField(Blockly.Msg.TECHNOZONE51_TEXT54);          
     this.setPreviousStatement(true, null);
@@ -403,10 +426,12 @@ Blockly.Blocks['technozone_mot1easybot1'] = {
         .appendField(new Blockly.FieldImage("blocks/technozone51/easybot.jpg", Blockly.Arduino.imageSize, Blockly.Arduino.imageSize))
         .appendField(new Blockly.FieldImage("blocks/technozone51/plus.jpg", 20, 64))
         .appendField(new Blockly.FieldImage("blocks/technozone51/kitmot1.jpg", Blockly.Arduino.imageSize, Blockly.Arduino.imageSize));
-    this.appendValueInput("SENS", 'Boolean')
+    this.appendValueInput("SENS")
+		.setCheck('Boolean')
         .setAlign(Blockly.ALIGN_RIGHT)
         .appendField(Blockly.Msg.TECHNOZONE51_TEXT53);
-    this.appendValueInput("VITESSE",'Number')
+    this.appendValueInput("VITESSE")
+		.setCheck('Number')
         .setAlign(Blockly.ALIGN_RIGHT)
         .appendField(Blockly.Msg.TECHNOZONE51_TEXT54);          
     this.setPreviousStatement(true, null);
@@ -426,16 +451,20 @@ Blockly.Blocks['technozone_mot2'] = {
         .appendField(Blockly.Msg.TECHNOZONE51_TEXT58)
         .appendField(new Blockly.FieldImage("blocks/technozone51/mot2.jpg", Blockly.Arduino.imageSize, Blockly.Arduino.imageSize))
         //.appendField(Blockly.Msg.TECHNOZONE51_TEXT59);
-    this.appendValueInput("PINDIR", 'Number')
+    this.appendValueInput("PINDIR")
+		.setCheck('Number')
         .setAlign(Blockly.ALIGN_RIGHT)
         .appendField(Blockly.Msg.TECHNOZONE51_TEXT60)
-    this.appendValueInput("PINPWM", 'Number')
+    this.appendValueInput("PINPWM")
+		.setCheck('Number')
         .setAlign(Blockly.ALIGN_RIGHT)
         .appendField(Blockly.Msg.TECHNOZONE51_TEXT61)
-    this.appendValueInput("SENS", 'Boolean')
+    this.appendValueInput("SENS")
+		.setCheck('Boolean')
         .setAlign(Blockly.ALIGN_RIGHT)
         .appendField(Blockly.Msg.TECHNOZONE51_TEXT53);
-    this.appendValueInput("VITESSE",'Number')
+    this.appendValueInput("VITESSE")
+		.setCheck('Number')
         .setAlign(Blockly.ALIGN_RIGHT)
         .appendField(Blockly.Msg.TECHNOZONE51_TEXT54);          
     this.setPreviousStatement(true, null);
@@ -483,10 +512,12 @@ Blockly.Blocks['technozone_pap1cc'] = {
         .appendField(Blockly.Msg.TECHNOZONE51_TEXT64)
         .appendField(Blockly.Msg.TECHNOZONE51_TEXT65)
         .appendField(new Blockly.FieldDropdown([["16", "16"], ["17", "17"], ["18", "18"], ["19", "19"], ["20", "20"], ["21", "21"], ["22", "22"], ["23", "23"]]), "I2CADD");
-    this.appendValueInput("SENS", 'Boolean')
+    this.appendValueInput("SENS")
+		.setCheck('Boolean')
         .setAlign(Blockly.ALIGN_RIGHT)
         .appendField(Blockly.Msg.TECHNOZONE51_TEXT53);
-    this.appendValueInput("VITESSE",'Number')
+    this.appendValueInput("VITESSE")
+		.setCheck('Number')
         .setAlign(Blockly.ALIGN_RIGHT)
         .appendField(Blockly.Msg.TECHNOZONE51_TEXT54);          
     this.setPreviousStatement(true, null);
@@ -510,13 +541,16 @@ Blockly.Blocks['technozone_pap1relatif'] = {
         .appendField(Blockly.Msg.TECHNOZONE51_TEXT64)
         .appendField(Blockly.Msg.TECHNOZONE51_TEXT65)
         .appendField(new Blockly.FieldDropdown([["16", "16"], ["17", "17"], ["18", "18"], ["19", "19"], ["20", "20"], ["21", "21"], ["22", "22"], ["23", "23"]]), "I2CADD");
-    this.appendValueInput("SENS", 'Boolean')
+    this.appendValueInput("SENS")
+		.setCheck('Boolean')
         .setAlign(Blockly.ALIGN_RIGHT)
         .appendField(Blockly.Msg.TECHNOZONE51_TEXT53);
-    this.appendValueInput("VITESSE",'Number')
+    this.appendValueInput("VITESSE")
+		.setCheck('Number')
         .setAlign(Blockly.ALIGN_RIGHT)
         .appendField(Blockly.Msg.TECHNOZONE51_TEXT54);
-    this.appendValueInput("PAS",'Number')
+    this.appendValueInput("PAS")
+		.setCheck('Number')
         .setAlign(Blockly.ALIGN_RIGHT)
         .appendField(Blockly.Msg.TECHNOZONE51_TEXT72);               
     this.setPreviousStatement(true, null);
@@ -553,10 +587,12 @@ Blockly.Blocks['technozone_servo1'] = {
         .appendField(new Blockly.FieldImage("blocks/technozone51/servo1.jpg", Blockly.Arduino.imageSize, Blockly.Arduino.imageSize))
         .appendField(new Blockly.FieldImage("blocks/technozone51/plus.jpg", 20, 64))
         .appendField(new Blockly.FieldImage("blocks/technozone51/servomoteur1.jpg", Blockly.Arduino.imageSize, Blockly.Arduino.imageSize))
-    this.appendValueInput("PIN", 'Number')
+    this.appendValueInput("PIN")
+		.setCheck('Number')
         .setAlign(Blockly.ALIGN_RIGHT)
         .appendField(Blockly.Msg.TECHNOZONE51_TEXT2)
-    this.appendValueInput("DEGREE",'Number')
+    this.appendValueInput("DEGREE")
+		.setCheck('Number')
         .setAlign(Blockly.ALIGN_RIGHT)
         .appendField(Blockly.Msg.TECHNOZONE51_TEXT48);
     this.setPreviousStatement(true, null);
@@ -573,7 +609,8 @@ Blockly.Blocks['technozone_read_servo1'] = {
     this.appendDummyInput("")
         .appendField(Blockly.Msg.TECHNOZONE51_TEXT50)
         .appendField(new Blockly.FieldImage("blocks/technozone51/servomoteur1.jpg", Blockly.Arduino.imageSize, Blockly.Arduino.imageSize))
-    this.appendValueInput("PIN", 'Number')
+    this.appendValueInput("PIN")
+		.setCheck('Number')
         .setAlign(Blockly.ALIGN_RIGHT)
         .appendField(Blockly.Msg.TECHNOZONE51_TEXT2)
     this.setOutput(true, 'Number');
@@ -657,15 +694,18 @@ Blockly.Blocks['technozone_lcdwrite'] = {
     this.appendDummyInput("")
         .appendField(Blockly.Msg.TECHNOZONE51_TEXT94)
         .appendField(new Blockly.FieldImage("blocks/technozone51/lcd1.jpg", Blockly.Arduino.imageSize, Blockly.Arduino.imageSize))
-    this.appendValueInput("TEXT", String)
+    this.appendValueInput("TEXT")
+		.setCheck('String')
         .setAlign(Blockly.ALIGN_RIGHT)
         .appendField(Blockly.Msg.TECHNOZONE51_TEXT98);
     this.appendDummyInput("")
 		.appendField(Blockly.Msg.TECHNOZONE51_TEXT95);
-    this.appendValueInput("COL", 'Number')
+    this.appendValueInput("COL")
+		.setCheck('Number')
         .setAlign(Blockly.ALIGN_RIGHT)
         .appendField(Blockly.Msg.TECHNOZONE51_TEXT96)
-    this.appendValueInput("LIG", 'Number')
+    this.appendValueInput("LIG")
+		.setCheck('Number')
         .setAlign(Blockly.ALIGN_RIGHT)
         .appendField(Blockly.Msg.TECHNOZONE51_TEXT97)   
     this.setPreviousStatement(true, null);
@@ -684,7 +724,8 @@ Blockly.Blocks['technozone_telecsetup'] = {
     this.appendDummyInput("")
         .setAlign(Blockly.ALIGN_RIGHT)
         .appendField(new Blockly.FieldImage("blocks/technozone51/irf1.jpg", Blockly.Arduino.imageSize, Blockly.Arduino.imageSize))
-    this.appendValueInput("PIN", 'Number')
+    this.appendValueInput("PIN")
+		.setCheck('Number')
         .setAlign(Blockly.ALIGN_RIGHT)
         .appendField(Blockly.Msg.TECHNOZONE51_TEXT2)
     this.setPreviousStatement(true, null);
@@ -783,15 +824,15 @@ Blockly.Blocks['technozone_speech_init'] = {
 	this.setHelpUrl('http://www.techno-zone-51.fr/dokuwiki2/doku.php?id=parole:faire_parler_vos_cartes_arduino');
     this.appendDummyInput("")
         .appendField(Blockly.Msg.TECHNOZONE51_TEXT167); 
-    this.appendValueInput("SPEED", 'Number')
+    this.appendValueInput("SPEED")
         .setCheck('Number')
         .setAlign(Blockly.ALIGN_RIGHT)
         .appendField(Blockly.Msg.TECHNOZONE51_TEXT169); 
-    this.appendValueInput("PITCH",'Number')
+    this.appendValueInput("PITCH")
         .setCheck('Number')
         .setAlign(Blockly.ALIGN_RIGHT)
         .appendField(Blockly.Msg.TECHNOZONE51_TEXT170); 
-    this.appendValueInput("BENDING",'Number')
+    this.appendValueInput("BENDING")
         .setCheck('Number')
         .setAlign(Blockly.ALIGN_RIGHT)
         .appendField(Blockly.Msg.TECHNOZONE51_TEXT171); 
@@ -811,7 +852,8 @@ Blockly.Blocks['technozone_speech_say'] = {
 	this.setHelpUrl('http://www.techno-zone-51.fr/dokuwiki2/doku.php?id=parole:faire_parler_vos_cartes_arduino');
     this.appendDummyInput("")
         .appendField(Blockly.Msg.TECHNOZONE51_TEXT167);
-    this.appendValueInput("TEXT", String)
+    this.appendValueInput("TEXT")
+		.setCheck('String')
         .setAlign(Blockly.ALIGN_RIGHT)
         .appendField(Blockly.Msg.TECHNOZONE51_TEXT166);  
     this.setPreviousStatement(true, null);
@@ -833,11 +875,11 @@ Blockly.Blocks['technozone_bt_init'] = {
     this.appendDummyInput("")
         .setAlign(Blockly.ALIGN_RIGHT)
 		.appendField(Blockly.Msg.TECHNOZONE51_TEXT165);
-    this.appendValueInput("RX", 'Number')
+    this.appendValueInput("RX")
         .setCheck('Number')
         .setAlign(Blockly.ALIGN_RIGHT)
         .appendField("RX ");
-    this.appendValueInput("TX", 'Number')
+    this.appendValueInput("TX")
         .setCheck('Number')
         .setAlign(Blockly.ALIGN_RIGHT)
         .appendField("TX ");
@@ -878,7 +920,8 @@ Blockly.Blocks['technozone_robot_bt_write'] = {
   init: function() {
     this.setColour("#646464");
 	this.setHelpUrl('http://www.techno-zone-51.fr/dokuwiki2/doku.php?id=documentation:btihm1');
-    this.appendValueInput("TEXT", String)
+    this.appendValueInput("TEXT")
+		.setCheck('String')
         .setAlign(Blockly.ALIGN_RIGHT)
         .appendField(Blockly.Msg.TECHNOZONE51_TEXT163);
     this.setPreviousStatement(true, null);
@@ -902,11 +945,11 @@ Blockly.Blocks['technozone_ihm_init'] = {
     this.appendDummyInput("")
         .setAlign(Blockly.ALIGN_RIGHT)
 		.appendField(Blockly.Msg.TECHNOZONE51_TEXT165);
-    this.appendValueInput("RX", 'Number')
+    this.appendValueInput("RX")
         .setCheck('Number')
         .setAlign(Blockly.ALIGN_RIGHT)
         .appendField("RX ");
-    this.appendValueInput("TX", 'Number')
+    this.appendValueInput("TX")
         .setCheck('Number')
         .setAlign(Blockly.ALIGN_RIGHT)
         .appendField("TX ");
@@ -951,7 +994,8 @@ Blockly.Blocks['technozone_robot_ihm_led_def'] = {
         .appendField(new Blockly.FieldDropdown([["1", "1"], ["2", "2"], ["3", "3"], ["4", "4"], ["5", "5"], ["6", "6"], ["7", "7"], ["8", "8"], ["9", "9"], ["A", "A"]]), "LED")
     this.appendDummyInput("")
         .appendField(Blockly.Msg.TECHNOZONE51_TEXT119);
-    this.appendValueInput("TEXT", String)
+    this.appendValueInput("TEXT")
+		.setCheck('String')
         .setAlign(Blockly.ALIGN_RIGHT)
         .appendField(Blockly.Msg.TECHNOZONE51_TEXT120);
     this.setInputsInline(false);
@@ -991,7 +1035,8 @@ Blockly.Blocks['technozone_robot_ihm_btn_def'] = {
         .appendField(new Blockly.FieldDropdown([["1", "1"], ["2", "2"], ["3", "3"], ["4", "4"], ["5", "5"], ["6", "6"], ["7", "7"], ["8", "8"], ["9", "9"], ["A", "A"]]), "LED")
     this.appendDummyInput("")
         .appendField(Blockly.Msg.TECHNOZONE51_TEXT119);
-    this.appendValueInput("TEXT", String)
+    this.appendValueInput("TEXT")
+		.setCheck('String')
         .setAlign(Blockly.ALIGN_RIGHT)
         .appendField(Blockly.Msg.TECHNOZONE51_TEXT120);
     this.setInputsInline(true);
@@ -1029,7 +1074,8 @@ Blockly.Blocks['technozone_robot_ihm_inter_def'] = {
         .appendField(new Blockly.FieldDropdown([["1", "1"], ["2", "2"], ["3", "3"], ["4", "4"], ["5", "5"], ["6", "6"], ["7", "7"], ["8", "8"], ["9", "9"], ["A", "A"]]), "LED")
     this.appendDummyInput("")
         .appendField(Blockly.Msg.TECHNOZONE51_TEXT119);
-    this.appendValueInput("TEXT", String)
+    this.appendValueInput("TEXT")
+		.setCheck('String')
         .setAlign(Blockly.ALIGN_RIGHT)
         .appendField(Blockly.Msg.TECHNOZONE51_TEXT120);
     this.setInputsInline(true);
@@ -1092,15 +1138,16 @@ Blockly.Blocks['technozone_robot_ihm_potar_def'] = {
         .setAlign(Blockly.ALIGN_RIGHT)
         .appendField(Blockly.Msg.TECHNOZONE51_TEXT144)
         .setCheck('Number');  
-    this.appendValueInput("POTARA",'Number')
+    this.appendValueInput("POTARA")
         .setAlign(Blockly.ALIGN_RIGHT)
         .appendField(Blockly.Msg.TECHNOZONE51_TEXT145)
         .setCheck('Number'); 
-    this.appendValueInput("POTARP",'Number')
+    this.appendValueInput("POTARP")
         .setAlign(Blockly.ALIGN_RIGHT)
         .appendField(Blockly.Msg.TECHNOZONE51_TEXT146)
         .setCheck('Number');  
-    this.appendValueInput("TEXT", String)
+    this.appendValueInput("TEXT")
+		.setCheck('String')
         .setAlign(Blockly.ALIGN_RIGHT)
         .appendField(Blockly.Msg.TECHNOZONE51_TEXT120); 
     this.setInputsInline(true);  
@@ -1134,13 +1181,16 @@ Blockly.Blocks['technozone_robot_ihm_gauge_def'] = {
         .appendField(new Blockly.FieldDropdown([["1", "1"], ["2", "2"], ["3", "3"], ["4", "4"], ["5", "5"], ["6", "6"], ["7", "7"], ["8", "8"], ["9", "9"], ["A", "A"]]), "LED")
     this.appendDummyInput("")
         .appendField(Blockly.Msg.TECHNOZONE51_TEXT119); 
-    this.appendValueInput("GRADUATION", String)
+    this.appendValueInput("GRADUATION")
+		.setCheck('String')
         .setAlign(Blockly.ALIGN_RIGHT)
         .appendField(Blockly.Msg.TECHNOZONE51_TEXT151); 
-    this.appendValueInput("TITRE", String)
+    this.appendValueInput("TITRE")
+		.setCheck('String')
         .setAlign(Blockly.ALIGN_RIGHT)
         .appendField(Blockly.Msg.TECHNOZONE51_TEXT152); 
-    this.appendValueInput("CONTENT", String)
+    this.appendValueInput("CONTENT")
+		.setCheck('String')
         .setAlign(Blockly.ALIGN_RIGHT)
         .appendField(Blockly.Msg.TECHNOZONE51_TEXT120); 
     this.setInputsInline(false);  
@@ -1160,7 +1210,7 @@ Blockly.Blocks['technozone_robot_ihm_gauge_write'] = {
         .appendField(new Blockly.FieldDropdown([["1", "1"], ["2", "2"], ["3", "3"], ["4", "4"], ["5", "5"], ["6", "6"], ["7", "7"], ["8", "8"], ["9", "9"], ["A", "A"]]), "LED")
     this.appendDummyInput("")
         .appendField(Blockly.Msg.TECHNOZONE51_TEXT119);
-    this.appendValueInput("VALEUR",'Number')
+    this.appendValueInput("VALEUR")
         .setAlign(Blockly.ALIGN_RIGHT)
         .appendField(Blockly.Msg.TECHNOZONE51_TEXT155)
         .setCheck('Number');   
@@ -1182,7 +1232,7 @@ Blockly.Blocks['technozone_robot_move'] = {
     this.appendDummyInput("")
         .appendField("faire ")
         .appendField(new Blockly.FieldDropdown([["avancer", "0"], ["reculer", "1"]]), "DIR");     
-    this.appendValueInput("DISTANCE",'Number')
+    this.appendValueInput("DISTANCE")
         .setAlign(Blockly.ALIGN_RIGHT)
         .appendField(" le robot de ")
         .setCheck('Number');
@@ -1207,7 +1257,7 @@ Blockly.Blocks['technozone_robot_turn'] = {
     this.appendDummyInput("")
         .appendField("faire tourner le robot à ")
         .appendField(new Blockly.FieldDropdown([["droite", "0"], ["gauche", "1"]]), "ROT");     
-    this.appendValueInput("ANGLE",'Number')
+    this.appendValueInput("ANGLE")
         .setAlign(Blockly.ALIGN_RIGHT)
         .appendField(" de ")
         .setCheck('Number');
@@ -1320,10 +1370,10 @@ Blockly.Blocks['technozone_robot_buzzer_tone'] = {
   init: function() {
     this.setColour("#646464");
 	this.setHelpUrl('http://www.techno-zone-51.fr/dokuwiki2/doku.php?id=documentation:buzzer1');
-    this.appendValueInput("FREQUENCE",'Number')
+    this.appendValueInput("FREQUENCE")
         .appendField("émettre un son d'une fréquence ")
         .setCheck('Number');
-    this.appendValueInput("DURATION",'Number')
+    this.appendValueInput("DURATION")
         .appendField(" Hz pendant une durée de ")
         .setCheck('Number');
     this.appendDummyInput("")
@@ -1355,15 +1405,18 @@ Blockly.Blocks['technozone_robot_lcdwrite'] = {
     this.appendDummyInput("")
         .appendField("écrire sur l'écran LCD")
         .appendField(new Blockly.FieldImage("blocks/technozone51/lcd1.jpg", Blockly.Arduino.imageSize, Blockly.Arduino.imageSize))
-    this.appendValueInput("TEXT", String)
+    this.appendValueInput("TEXT")
+		.setCheck('String')
         .setAlign(Blockly.ALIGN_RIGHT)
         .appendField("le texte");
     this.appendDummyInput("")
         .appendField("à partir de la position :");
-    this.appendValueInput("COL", 'Number')    
+    this.appendValueInput("COL")
+		.setCheck('Number')   
         .setAlign(Blockly.ALIGN_RIGHT)
         .appendField("colonne [0..MAXCOL-1]")
-    this.appendValueInput("LIG",'Number')    
+    this.appendValueInput("LIG")
+		.setCheck('Number')
         .setAlign(Blockly.ALIGN_RIGHT)
         .appendField("ligne [0..MAXLIG-1]")     
     this.setInputsInline(false);

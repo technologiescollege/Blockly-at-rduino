@@ -67,7 +67,7 @@ Blockly.Arduino.fourpin_ranger = function() {
    var dropdown_tpin = this.getFieldValue('PIN');
   Blockly.Arduino.definitions_["define_fourpin_"+dropdown_tpin] = "  const int pingPin"+dropdown_tpin+" = "+dropdown_tpin+";\n"+
   "  const int sensorPin"+dropdown_epin+" = "+dropdown_epin+";\n";
-      Blockly.Arduino.definitions_['define_ping'] = "long Ping"+dropdown_tpin+"()\n"+
+   Blockly.Arduino.definitions_['define_ping'] = "long Ping"+dropdown_tpin+"()\n"+
 "{\n"+
       "// The PING))) is triggered by a HIGH pulse of 2 or more microseconds.\n"+
       "// Give a short LOW pulse beforehand to ensure a clean HIGH pulse:\n"+
@@ -103,7 +103,7 @@ Blockly.Arduino.play_notes_z = function() {
   var note_volume = Blockly.Arduino.valueToCode(this,"VOL", Blockly.Arduino.ORDER_ATOMIC) || '15'
   Blockly.Arduino.includes_["includes_button_wait"] = "//Playing Zumo notes requires the Pololu Zumo Buzzer Libraries to work\n" +
   "#include <ZumoBuzzer.h>\n"+
-   "ZumoBuzzer buzzer;\n"+
+   "//ZumoBuzzer buzzer;\n"+
    "//To play music, you'll want to write code direct - see library examples";
   var code = "";
   var code = 'buzzer.stopPlaying();\n'+

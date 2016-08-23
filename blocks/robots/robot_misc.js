@@ -37,7 +37,7 @@ Blockly.Blocks['IR_serial_decoder'] = {
         .appendField(Blockly.Msg.ROBOTS_MISC_IR_SENSOR_PIN)
 		.appendField(new Blockly.FieldTextInput('',  Blockly.Arduino.pinDualValidator), 'PIN')
     this.setTooltip(Blockly.Msg.ROBOTS_MISC_IR_DECODE_TOOLTIP);
- this.setPreviousStatement(true, null);
+	this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
  }
 };
@@ -45,7 +45,7 @@ Blockly.Blocks['IR_serial_decoder'] = {
 Blockly.Blocks['IR_get_blink'] = {
   init: function() {
     this.setColour("#00979D");
-	this.appendValueInput("IR_NUM", 'Number')
+	this.appendValueInput("IR_NUM")
        .setCheck('Number')
         .appendField(Blockly.Msg.ROBOTS_MISC_IR_GET_BLINK_TITLE)
 		.setAlign(Blockly.ALIGN_RIGHT)

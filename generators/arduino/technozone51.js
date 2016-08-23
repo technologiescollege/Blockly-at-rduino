@@ -65,7 +65,7 @@ Blockly.Arduino.technozone_robot_lcdwrite = function() {
       Blockly.Arduino.ORDER_UNARY_POSTFIX);
   var dropdown_lig = Blockly.Arduino.valueToCode(this, 'LIG',
       Blockly.Arduino.ORDER_UNARY_POSTFIX);
-  Blockly.Arduino.definitions_['define_LiquidCrystal'] = '#include <ShiftRegLCD123.h>\n'; 
+  Blockly.Arduino.includes_['define_LiquidCrystal'] = '#include <ShiftRegLCD123.h>\n'; 
   Blockly.Arduino.definitions_['var_lcd'] = 'ShiftRegLCD123 lcd(12,13,SRLCD123);\n';
   //dans le setup    
   Blockly.Arduino.setups_["setup_lcd"] = "lcd.begin(16,2);";
@@ -77,7 +77,7 @@ Blockly.Arduino.technozone_robot_lcdwrite = function() {
 Blockly.Arduino.technozone_robot_lcdspecial = function() {
   var dropdown_special = this.getFieldValue('special');
   var code="lcd."+dropdown_special+"();";
-  Blockly.Arduino.definitions_['define_LiquidCrystal'] = '#include <ShiftRegLCD123.h>\n'; 
+  Blockly.Arduino.includes_['define_LiquidCrystal'] = '#include <ShiftRegLCD123.h>\n'; 
   Blockly.Arduino.definitions_['var_lcd'] = 'ShiftRegLCD123 lcd(12,13,SRLCD123);\n';
   //dans le setup    
   Blockly.Arduino.setups_["setup_lcd"] = "lcd.begin(16,2);";    
@@ -86,7 +86,7 @@ Blockly.Arduino.technozone_robot_lcdspecial = function() {
 
 Blockly.Arduino.technozone_robot_lcdclear = function() {
   var code = 'lcd.clear();';
-  Blockly.Arduino.definitions_['define_LiquidCrystal'] = '#include <LiquidCrystal.h>\n'; 
+  Blockly.Arduino.includes_['define_LiquidCrystal'] = '#include <LiquidCrystal.h>\n'; 
   Blockly.Arduino.definitions_['var_lcd'] = 'LiquidCrystal lcd(12,11,5,13,3,2);\n';  
   //dans le setup    
   Blockly.Arduino.setups_["setup_lcd"] = "lcd.begin(16,2);";    
@@ -236,7 +236,7 @@ Blockly.Arduino.technozone_servo1 = function() {
   //var delay_time = Blockly.Arduino.valueToCode(this, 'DELAY_TIME', Blockly.Arduino.ORDER_ATOMIC) || '1000'
   //delay_time = delay_time.replace('(','').replace(')','');
   
-  Blockly.Arduino.definitions_['define_servo1'] = '#include <Servo.h>\n';
+  Blockly.Arduino.includes_['define_servo1'] = '#include <Servo.h>\n';
   Blockly.Arduino.definitions_['var_servo'+dropdown_pin] = 'Servo servo_'+dropdown_pin+';\n';
   Blockly.Arduino.setups_['setup_servo_'+dropdown_pin] = 'servo_'+dropdown_pin+'.attach('+dropdown_pin+');\n';
   
@@ -246,7 +246,7 @@ Blockly.Arduino.technozone_servo1 = function() {
 
 Blockly.Arduino.technozone_read_servo1 = function() {
   var dropdown_pin = Blockly.Arduino.valueToCode(this, 'PIN', Blockly.Arduino.ORDER_ATOMIC);
-  Blockly.Arduino.definitions_['define_servo1'] = '#include <Servo.h>\n';
+  Blockly.Arduino.includes_['define_servo1'] = '#include <Servo.h>\n';
   Blockly.Arduino.definitions_['var_servo' + dropdown_pin] = 'Servo servo_'+dropdown_pin+';\n';
   Blockly.Arduino.setups_['setup_servo_' + dropdown_pin] = 'servo_' + dropdown_pin + '.attach('+dropdown_pin+');\n';
   
@@ -270,7 +270,7 @@ Blockly.Arduino.technozone_robot_btn = function() {
 
 Blockly.Arduino.technozone_robot_bt_available = function() {
   //dans include définition    
-  Blockly.Arduino.definitions_['define_SoftwareSerial'] = "#include <SoftwareSerial.h>\n";      
+  Blockly.Arduino.includes_['define_SoftwareSerial'] = "#include <SoftwareSerial.h>\n";      
   Blockly.Arduino.definitions_['define_var_time_out'] = "boolean time_out;\n";
   Blockly.Arduino.definitions_['define_var_stringOne'] = 'String stringOne = "";\n';    
   //dans fonctions
@@ -313,8 +313,8 @@ Blockly.Arduino.technozone_bt_init = function() {
   var dropdown_RX_pin = Blockly.Arduino.valueToCode(this, 'RX', Blockly.Arduino.ORDER_ATOMIC);
   var dropdown_TX_pin = Blockly.Arduino.valueToCode(this, 'TX', Blockly.Arduino.ORDER_ATOMIC);   
   //dans include définition    
-  Blockly.Arduino.definitions_['define_SoftwareSerial'] = "#include <SoftwareSerial.h>\n"; 
-  Blockly.Arduino.definitions_['define_TimerOne'] = "#include <TimerOne.h>\n";
+  Blockly.Arduino.includes_['define_SoftwareSerial'] = "#include <SoftwareSerial.h>\n"; 
+  Blockly.Arduino.includes_['define_TimerOne'] = "#include <TimerOne.h>\n";
   Blockly.Arduino.definitions_['define_var_bt'] = "SoftwareSerial bt("+dropdown_RX_pin+","+dropdown_TX_pin+"); // RX, TX\n"; 
   Blockly.Arduino.definitions_['define_var_time_out'] = "boolean time_out;\n";
   Blockly.Arduino.definitions_['define_var_stringOne'] = 'String stringOne = "";\n';
@@ -459,7 +459,7 @@ Blockly.Arduino.technozone_speech_init = function() {
   var pitch = Blockly.Arduino.valueToCode(this, 'PITCH', Blockly.Arduino.ORDER_ATOMIC);    
   var bending = Blockly.Arduino.valueToCode(this, 'BENDING', Blockly.Arduino.ORDER_ATOMIC);    
   //dans include définition    
-  Blockly.Arduino.definitions_['define_Talkietz'] = '#include "talkietz.h" //Inspired by Talkie library Copyright 2011 Peter Knight\n';      
+  Blockly.Arduino.includes_['define_Talkietz'] = '#include "talkietz.h" //Inspired by Talkie library Copyright 2011 Peter Knight\n';      
   Blockly.Arduino.definitions_['define_const_PSxx'] = 'const unsigned char PS_16 = (1 << ADPS2);\n'+
       'const unsigned char PS_32 = (1 << ADPS2);\n'+
       'const unsigned char PS_64 = (1 << ADPS2);\n'+
@@ -491,8 +491,8 @@ Blockly.Arduino.technozone_ihm_init = function() {
   var dropdown_RX_pin = Blockly.Arduino.valueToCode(this, 'RX', Blockly.Arduino.ORDER_ATOMIC);
   var dropdown_TX_pin = Blockly.Arduino.valueToCode(this, 'TX', Blockly.Arduino.ORDER_ATOMIC);   
   //dans include définition    
-  Blockly.Arduino.definitions_['define_SoftwareSerial'] = "#include <SoftwareSerial.h>\n"; 
-  Blockly.Arduino.definitions_['define_TimerOne'] = "#include <TimerOne.h>\n";
+  Blockly.Arduino.includes_['define_SoftwareSerial'] = "#include <SoftwareSerial.h>\n"; 
+  Blockly.Arduino.includes_['define_TimerOne'] = "#include <TimerOne.h>\n";
   Blockly.Arduino.definitions_['define_var_bt'] = "SoftwareSerial bt("+dropdown_RX_pin+","+dropdown_TX_pin+"); // RX, TX\n"; 
   Blockly.Arduino.definitions_['define_var_time_out'] = "boolean time_out;\n";
   Blockly.Arduino.definitions_['define_var_stringOne'] = 'String stringOne = "";\n';
@@ -633,8 +633,8 @@ Blockly.Arduino.technozone_ihm_init = function() {
 
 Blockly.Arduino.technozone_robot_ihm_init = function() {
   //dans include définition    
-  Blockly.Arduino.definitions_['define_SoftwareSerial'] = "#include <SoftwareSerial.h>\n"; 
-  Blockly.Arduino.definitions_['define_TimerOne'] = "#include <TimerOne.h>\n";
+  Blockly.Arduino.includes_['define_SoftwareSerial'] = "#include <SoftwareSerial.h>\n"; 
+  Blockly.Arduino.includes_['define_TimerOne'] = "#include <TimerOne.h>\n";
   Blockly.Arduino.definitions_['define_var_bt'] = "SoftwareSerial bt(4, 2); // RX, TX\n"; 
   Blockly.Arduino.definitions_['define_var_time_out'] = "boolean time_out;\n";
   Blockly.Arduino.definitions_['define_var_stringOne'] = 'String stringOne = "";\n';
@@ -775,7 +775,7 @@ Blockly.Arduino.technozone_robot_ihm_init = function() {
 
 Blockly.Arduino.technozone_robot_ihm_available = function() {
   //dans include définition    
-  Blockly.Arduino.definitions_['define_SoftwareSerial'] = "#include <SoftwareSerial.h>\n";       
+  Blockly.Arduino.includes_['define_SoftwareSerial'] = "#include <SoftwareSerial.h>\n";       
   Blockly.Arduino.definitions_['define_var_time_out'] = "boolean time_out;\n";
   Blockly.Arduino.definitions_['define_var_stringOne'] = 'String stringOne = "";\n';    
   //dans fonctions
@@ -815,7 +815,7 @@ Blockly.Arduino.technozone_robot_ihm_available = function() {
 
 Blockly.Arduino.technozone_robot_ihm_change = function() {
   //dans include définition    
-  Blockly.Arduino.definitions_['define_SoftwareSerial'] = "#include <SoftwareSerial.h>\n";       
+  Blockly.Arduino.includes_['define_SoftwareSerial'] = "#include <SoftwareSerial.h>\n";       
   Blockly.Arduino.definitions_['define_var_time_out'] = "boolean time_out;\n";
   Blockly.Arduino.definitions_['define_var_stringOne'] = 'String stringOne = "";\n';    
   //dans fonctions
@@ -827,7 +827,7 @@ Blockly.Arduino.technozone_robot_ihm_change = function() {
 
 Blockly.Arduino.technozone_robot_ihm_inter_read = function() {
   //dans include définition    
-  Blockly.Arduino.definitions_['define_SoftwareSerial'] = "#include <SoftwareSerial.h>\n";      
+  Blockly.Arduino.includes_['define_SoftwareSerial'] = "#include <SoftwareSerial.h>\n";      
   Blockly.Arduino.definitions_['define_var_time_out'] = "boolean time_out;\n";
   Blockly.Arduino.definitions_['define_var_stringOne'] = 'String stringOne = "";\n';    
   //dans fonctions
@@ -840,7 +840,7 @@ Blockly.Arduino.technozone_robot_ihm_inter_read = function() {
 
 Blockly.Arduino.technozone_robot_ihm_btn_read = function() {
   //dans include définition    
-  Blockly.Arduino.definitions_['define_SoftwareSerial'] = "#include <SoftwareSerial.h>\n";      
+  Blockly.Arduino.includes_['define_SoftwareSerial'] = "#include <SoftwareSerial.h>\n";      
   Blockly.Arduino.definitions_['define_var_time_out'] = "boolean time_out;\n";
   Blockly.Arduino.definitions_['define_var_stringOne'] = 'String stringOne = "";\n';    
   //dans fonctions
@@ -853,7 +853,7 @@ Blockly.Arduino.technozone_robot_ihm_btn_read = function() {
 
 Blockly.Arduino.technozone_robot_ihm_potar_read = function() {
   //dans include définition    
-  Blockly.Arduino.definitions_['define_SoftwareSerial'] = "#include <SoftwareSerial.h>\n";       
+  Blockly.Arduino.includes_['define_SoftwareSerial'] = "#include <SoftwareSerial.h>\n";       
   Blockly.Arduino.definitions_['define_var_time_out'] = "boolean time_out;\n";
   Blockly.Arduino.definitions_['define_var_stringOne'] = 'String stringOne = "";\n';    
   //dans fonctions
@@ -870,7 +870,7 @@ Blockly.Arduino.technozone_robot_ihm_potar_read = function() {
 Blockly.Arduino.technozone_robot_bt_read = function() {
   //var text = Blockly.Arduino.valueToCode(this, 'TEXT', Blockly.Arduino.ORDER_UNARY_POSTFIX) || '\'\''; 
   //dans include définition    
-  Blockly.Arduino.definitions_['define_SoftwareSerial'] = "#include <SoftwareSerial.h>\n";      
+  Blockly.Arduino.includes_['define_SoftwareSerial'] = "#include <SoftwareSerial.h>\n";      
   Blockly.Arduino.definitions_['define_var_time_out'] = "boolean time_out;\n";
   Blockly.Arduino.definitions_['define_var_stringOne'] = 'String stringOne = "";\n';
   
@@ -885,7 +885,7 @@ Blockly.Arduino.technozone_robot_bt_write = function() {
   var text = Blockly.Arduino.valueToCode(this, 'TEXT',
       Blockly.Arduino.ORDER_UNARY_POSTFIX) || '\'\'';    
   //dans include définition    
-  Blockly.Arduino.definitions_['define_SoftwareSerial'] = "#include <SoftwareSerial.h>\n";      
+  Blockly.Arduino.includes_['define_SoftwareSerial'] = "#include <SoftwareSerial.h>\n";      
   Blockly.Arduino.definitions_['define_var_time_out'] = "boolean time_out;\n";
   Blockly.Arduino.definitions_['define_var_stringOne'] = 'String stringOne = "";\n';
   
@@ -1066,7 +1066,7 @@ Blockly.Arduino.technozone_pap1cc = function() {
 
 Blockly.Arduino.technozone_robot_ihm_led_def = function() {
   //dans include définition    
-  Blockly.Arduino.definitions_['define_SoftwareSerial'] = "#include <SoftwareSerial.h>\n";      
+  Blockly.Arduino.includes_['define_SoftwareSerial'] = "#include <SoftwareSerial.h>\n";      
   Blockly.Arduino.definitions_['define_var_time_out'] = "boolean time_out;\n";
   Blockly.Arduino.definitions_['define_var_stringOne'] = 'String stringOne = "";\n';    
   //dans setup    
@@ -1081,7 +1081,7 @@ Blockly.Arduino.technozone_robot_ihm_led_def = function() {
 
 Blockly.Arduino.technozone_robot_ihm_btn_def = function() {
   //dans include définition    
-  Blockly.Arduino.definitions_['define_SoftwareSerial'] = "#include <SoftwareSerial.h>\n";      
+  Blockly.Arduino.includes_['define_SoftwareSerial'] = "#include <SoftwareSerial.h>\n";      
   Blockly.Arduino.definitions_['define_var_time_out'] = "boolean time_out;\n";
   Blockly.Arduino.definitions_['define_var_stringOne'] = 'String stringOne = "";\n'; 
   //dans fonctions
@@ -1116,7 +1116,7 @@ function makeHttpObject() {
 
 Blockly.Arduino.technozone_speech_say = function() {
   //dans include définition    
-  Blockly.Arduino.definitions_['define_Talkietz'] = '#include "talkietz.h" //Inspired by Talkie library Copyright 2011 Peter Knight\n';      
+  Blockly.Arduino.includes_['define_Talkietz'] = '#include "talkietz.h" //Inspired by Talkie library Copyright 2011 Peter Knight\n';      
   Blockly.Arduino.definitions_['define_const_PSxx'] = 'const unsigned char PS_16 = (1 << ADPS2);\n'+
       'const unsigned char PS_32 = (1 << ADPS2);\n'+
       'const unsigned char PS_64 = (1 << ADPS2);\n'+
@@ -1186,7 +1186,7 @@ Blockly.Arduino.technozone_speech_say = function() {
 
 Blockly.Arduino.technozone_robot_ihm_inter_def = function() {
   //dans include définition    
-  Blockly.Arduino.definitions_['define_SoftwareSerial'] = "#include <SoftwareSerial.h>\n";      
+  Blockly.Arduino.includes_['define_SoftwareSerial'] = "#include <SoftwareSerial.h>\n";      
   Blockly.Arduino.definitions_['define_var_time_out'] = "boolean time_out;\n";
   Blockly.Arduino.definitions_['define_var_stringOne'] = 'String stringOne = "";\n';    
   Blockly.Arduino.definitions_['define_testInter'] = 'boolean testInter(int num) {\n'+
@@ -1212,7 +1212,7 @@ Blockly.Arduino.technozone_robot_ihm_inter_def = function() {
 
 Blockly.Arduino.technozone_robot_ihm_led_on = function() {
   //dans include définition    
-  Blockly.Arduino.definitions_['define_SoftwareSerial'] = "#include <SoftwareSerial.h>\n";      
+  Blockly.Arduino.includes_['define_SoftwareSerial'] = "#include <SoftwareSerial.h>\n";      
   Blockly.Arduino.definitions_['define_var_time_out'] = "boolean time_out;\n";
   Blockly.Arduino.definitions_['define_var_stringOne'] = 'String stringOne = "";\n';    
   //dans setup    
@@ -1228,7 +1228,7 @@ Blockly.Arduino.technozone_robot_ihm_led_on = function() {
 
 Blockly.Arduino.technozone_robot_ihm_inter_on = function() {
   //dans include définition    
-  Blockly.Arduino.definitions_['define_SoftwareSerial'] = "#include <SoftwareSerial.h>\n";      
+  Blockly.Arduino.includes_['define_SoftwareSerial'] = "#include <SoftwareSerial.h>\n";      
   Blockly.Arduino.definitions_['define_var_time_out'] = "boolean time_out;\n";
   Blockly.Arduino.definitions_['define_var_stringOne'] = 'String stringOne = "";\n';    
   //dans setup    
@@ -1244,7 +1244,7 @@ Blockly.Arduino.technozone_robot_ihm_inter_on = function() {
 
 Blockly.Arduino.technozone_robot_ihm_potar_def = function() {
   //dans include définition    
-  Blockly.Arduino.definitions_['define_SoftwareSerial'] = "#include <SoftwareSerial.h>\n";      
+  Blockly.Arduino.includes_['define_SoftwareSerial'] = "#include <SoftwareSerial.h>\n";      
   Blockly.Arduino.definitions_['define_var_time_out'] = "boolean time_out;\n";
   Blockly.Arduino.definitions_['define_var_stringOne'] = 'String stringOne = "";\n';    
   //dans setup    
@@ -1274,7 +1274,7 @@ Blockly.Arduino.technozone_robot_ihm_potar_def = function() {
 
 Blockly.Arduino.technozone_robot_ihm_gauge_def = function() {
   //dans include définition    
-  Blockly.Arduino.definitions_['define_SoftwareSerial'] = "#include <SoftwareSerial.h>\n";       
+  Blockly.Arduino.includes_['define_SoftwareSerial'] = "#include <SoftwareSerial.h>\n";       
   Blockly.Arduino.definitions_['define_var_time_out'] = "boolean time_out;\n";
   Blockly.Arduino.definitions_['define_var_stringOne'] = 'String stringOne = "";\n';    
   //dans setup    
@@ -1295,7 +1295,7 @@ Blockly.Arduino.technozone_robot_ihm_gauge_def = function() {
 
 Blockly.Arduino.technozone_robot_ihm_gauge_write = function() {
   //dans include définition    
-  Blockly.Arduino.definitions_['define_SoftwareSerial'] = "#include <SoftwareSerial.h>\n";      
+  Blockly.Arduino.includes_['define_SoftwareSerial'] = "#include <SoftwareSerial.h>\n";      
   Blockly.Arduino.definitions_['define_var_time_out'] = "boolean time_out;\n";
   Blockly.Arduino.definitions_['define_var_stringOne'] = 'String stringOne = "";\n';    
   //dans setup    
@@ -1355,11 +1355,11 @@ Blockly.Arduino.technozone_robot_move = function() {
   var value_unit = this.getFieldValue('UNIT');
   var value_preemptif = this.getFieldValue('PREEMPTIF');
   //dans définitions    
-  Blockly.Arduino.definitions_['define_Wire'] = '#include <Wire.h>';
-  Blockly.Arduino.definitions_['define_Pap1'] = '#include <Pap1.h>';
+  Blockly.Arduino.includes_['define_Wire'] = '#include <Wire.h>';
+  Blockly.Arduino.includes_['define_Pap1'] = '#include <Pap1.h>';
   Blockly.Arduino.definitions_['define_Stepper'] = 'Pap1 Stepper(23);\n'; 
-  Blockly.Arduino.definitions_['define_step_per_dm'] = '#define step_per_dm 958.5    //Nombre de pas par dm\n';
-  Blockly.Arduino.definitions_['define_vmax'] = '#define vmax 253            //vitesse maximale des moteurs\n';
+  Blockly.Arduino.includes_['define_step_per_dm'] = '#define step_per_dm 958.5    //Nombre de pas par dm\n';
+  Blockly.Arduino.includes_['define_vmax'] = '#define vmax 253            //vitesse maximale des moteurs\n';
   //dans fonctions    
   Blockly.Arduino.definitions_['define_calcule_step'] = "unsigned int calcule_step(unsigned int dist,unsigned int unite)\n"+
       "{\n"+
@@ -1410,11 +1410,11 @@ Blockly.Arduino.technozone_robot_turn = function() {
   var value_angle = Blockly.Arduino.valueToCode(this, 'ANGLE', Blockly.Arduino.ORDER_ATOMIC);
   var value_preemptif = this.getFieldValue('PREEMPTIF');    
   //dans définitions    
-  Blockly.Arduino.definitions_['define_Wire'] = '#include <Wire.h>';
-  Blockly.Arduino.definitions_['define_Pap1'] = '#include <Pap1.h>';
+  Blockly.Arduino.includes_['define_Wire'] = '#include <Wire.h>';
+  Blockly.Arduino.includes_['define_Pap1'] = '#include <Pap1.h>';
   Blockly.Arduino.definitions_['define_Stepper'] = 'Pap1 Stepper(23);\n'; 
-  Blockly.Arduino.definitions_['define_step_per_degre'] = '#define step_per_degre 10.5846   //Nombre de pas pour tourner de 1°\n';    
-  Blockly.Arduino.definitions_['define_vmax'] = '#define vmax 253            //vitesse maximale des moteurs\n';    
+  Blockly.Arduino.includes_['define_step_per_degre'] = '#define step_per_degre 10.5846   //Nombre de pas pour tourner de 1°\n';    
+  Blockly.Arduino.includes_['define_vmax'] = '#define vmax 253            //vitesse maximale des moteurs\n';    
   //dans le setup    
   Blockly.Arduino.setups_["setup_Wire"] = "Wire.begin(); // join i2c bus";
   Blockly.Arduino.setups_["setup_Stepper"] = 'Stepper.Begin(SINGLE_STEPPING,AUTO_RELAX);\n'+
@@ -1456,8 +1456,8 @@ Blockly.Arduino.technozone_robot_turn = function() {
 
 Blockly.Arduino.technozone_robot_stop = function() {
   //dans définitions    
-  Blockly.Arduino.definitions_['define_Wire'] = '#include <Wire.h>';
-  Blockly.Arduino.definitions_['define_Pap1'] = '#include <Pap1.h>';
+  Blockly.Arduino.includes_['define_Wire'] = '#include <Wire.h>';
+  Blockly.Arduino.includes_['define_Pap1'] = '#include <Pap1.h>';
   Blockly.Arduino.definitions_['define_Stepper'] = 'Pap1 Stepper(23);\n'; 
   //dans fonctions    
   Blockly.Arduino.definitions_['define_stop'] = "void stop()\n"+
@@ -1482,8 +1482,8 @@ Blockly.Arduino.technozone_pap1init = function() {
   var dropdown_i2cadd = this.getFieldValue('I2CADD');
   var dropdown_mode = this.getFieldValue('MODE');
   var dropdown_relax = this.getFieldValue('RELAX');
-  Blockly.Arduino.definitions_['define_Wire'] = '#include <Wire.h>\n';
-  Blockly.Arduino.definitions_['define_Pap1'] = '#include <Pap1.h>\n';
+  Blockly.Arduino.includes_['define_Wire'] = '#include <Wire.h>\n';
+  Blockly.Arduino.includes_['define_Pap1'] = '#include <Pap1.h>\n';
   Blockly.Arduino.definitions_['define_MyStepper_'+dropdown_i2cadd] = 'Pap1 MyStepper_'+dropdown_i2cadd+'(16);\n';
   Blockly.Arduino.setups_["setup_wire_begin"+dropdown_i2cadd] = "Wire.begin(); // join i2c bus before calling the stepper constructor";
   Blockly.Arduino.setups_["setup_pap1_"+dropdown_i2cadd] = "MyStepper_"+dropdown_i2cadd+".Begin("+dropdown_mode+","+dropdown_relax+");\n"+
@@ -1578,7 +1578,7 @@ Blockly.Arduino.technozone_telecsetup = function() {
   '{\n'+
   '  if (irrecv.decode(&results)) {return true;} else {return false;}\n'+
   '}'; 
-  Blockly.Arduino.definitions_['define_telec'] = '#include <IRremote.h>\n'+
+  Blockly.Arduino.includes_['define_telec'] = '#include <IRremote.h>\n'+
   '//Déclaration de la broche utilisée pour le récepteur infrarouge\n'+
   'int RECV_PIN = '+dropdown_pin+'; //Broche du récepteur Infrarouge\n'+
   'IRrecv irrecv(RECV_PIN);\n'+

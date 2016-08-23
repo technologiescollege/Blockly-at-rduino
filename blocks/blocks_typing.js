@@ -487,13 +487,58 @@ Blockly.Blocks.jeulin_alarme_pieton_buzzer1.getBlockType = function() {
 
 //---------------------------------led-rgb-ws2812b.js-------------------------------------
 
+Blockly.Blocks.lp2i_ledRGB_WS2812B_init.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.lp2i_ledRGB_WS2812B_setPixelColor.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.lp2i_ledRGB_WS2812B_setBrightness.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
 
 //***********************************************************************************
 //								Makeblock mBot
 //***********************************************************************************
 
-//---------------------------------mbot.js-------------------------------------
+//---------------------------------mbot1.js-------------------------------------
 
+Blockly.Blocks.mbot_forward.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.mbot_backward.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.mbot_turn_left.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.mbot_turn_right.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+
+//---------------------------------mbot2.js-------------------------------------
+
+Blockly.Blocks.mbot_mot_left.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.mbot_mot_right.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+
+//---------------------------------mbot3.js-------------------------------------
+
+Blockly.Blocks.mbot_left_sens.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.mbot_left_PWM.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.mbot_right_sens.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.mbot_right_PWM.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
 
 //***********************************************************************************
 //								MultiFunction shield
@@ -501,6 +546,33 @@ Blockly.Blocks.jeulin_alarme_pieton_buzzer1.getBlockType = function() {
 
 //---------------------------------multi-function.js-------------------------------------
 
+Blockly.Blocks.multifunction_buildin_led.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.multifunction_digital_read.getBlockType = function() {
+	return Blockly.Types.BOOLEAN;
+};
+Blockly.Blocks.multifunction_pot_read.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.multifunction_analog_read.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.multifunction_tone.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.multifunction_notone.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.multifunction_segment.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.multifunction_segment_number.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.multifunction_PWM_write.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
 
 //***********************************************************************************
 //								Robots misc.
@@ -508,8 +580,42 @@ Blockly.Blocks.jeulin_alarme_pieton_buzzer1.getBlockType = function() {
 
 //---------------------------------robot_misc.js-------------------------------------
 
+Blockly.Blocks.IR_serial_decoder.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.IR_get_blink.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.IR_get_blink.getBlockType = function() {
+	return Blockly.Types.LARGE_NUMBER;
+};
+
 //---------------------------------robot_motors.js-------------------------------------
 
+Blockly.Blocks.ardu_motor.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.ardu_motor_s.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.arduino_s.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.pololu_drv8835_s.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.radio_shack_s.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.dfrobot_s.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.generic_motor_s.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.generic_motor.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
 //***********************************************************************************
 //								RobUno
 //***********************************************************************************
@@ -582,10 +688,264 @@ Blockly.Blocks.servo_rot_continue.getBlockType = function() {
 
 //---------------------------------technozone51.js-------------------------------------
 
+Blockly.Blocks.technozone_lcdinit.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.technozone_lcdspecial.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.technozone_lcdclear.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.technozone_lcdwrite.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.technozone_robot_lcdspecial.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.technozone_robot_lcdclear.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.technozone_led1red.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.technozone_led1green.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.technozone_led1yellow.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.technozone_relay1.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.technozone_buzzer1.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.technozone_robot_buzzer_tone.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.technozone_robot_irsend.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.technozone_sonar1.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.technozone_servo1.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.technozone_read_servo1.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.technozone_btn1white.getBlockType = function() {
+	return Blockly.Types.BOOLEAN;
+};
+Blockly.Blocks.technozone_robot_btn.getBlockType = function() {
+	return Blockly.Types.BOOLEAN;
+};
+Blockly.Blocks.technozone_robot_bt_available.getBlockType = function() {
+	return Blockly.Types.BOOLEAN;
+};
+Blockly.Blocks.technozone_bt_init.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.technozone_speech_init.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.technozone_ihm_init.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.technozone_robot_ihm_init.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.technozone_robot_ihm_available.getBlockType = function() {
+	return Blockly.Types.BOOLEAN;
+};
+Blockly.Blocks.technozone_robot_ihm_change.getBlockType = function() {
+	return Blockly.Types.BOOLEAN;
+};
+Blockly.Blocks.technozone_robot_ihm_inter_read.getBlockType = function() {
+	return Blockly.Types.BOOLEAN;
+};
+Blockly.Blocks.technozone_robot_ihm_btn_read.getBlockType = function() {
+	return Blockly.Types.BOOLEAN;
+};
+Blockly.Blocks.technozone_robot_ihm_potar_read.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.technozone_robot_bt_read.getBlockType = function() {
+	return Blockly.Types.TEXT;
+};
+Blockly.Blocks.technozone_robot_bt_write.getBlockType = function() {
+	return Blockly.Types.TEXT;
+};
+Blockly.Blocks.technozone_robot_irleft.getBlockType = function() {
+	return Blockly.Types.BOOLEAN;
+};
+Blockly.Blocks.technozone_robot_ircenter.getBlockType = function() {
+	return Blockly.Types.BOOLEAN;
+};
+Blockly.Blocks.technozone_robot_irright.getBlockType = function() {
+	return Blockly.Types.BOOLEAN;
+};
+Blockly.Blocks.technozone_robot_ligleft.getBlockType = function() {
+	return Blockly.Types.BOOLEAN;
+};
+Blockly.Blocks.technozone_robot_ligright.getBlockType = function() {
+	return Blockly.Types.BOOLEAN;
+};
+Blockly.Blocks.technozone_btn1black.getBlockType = function() {
+	return Blockly.Types.BOOLEAN;
+};
+Blockly.Blocks.technozone_btn1green.getBlockType = function() {
+	return Blockly.Types.BOOLEAN;
+};
+Blockly.Blocks.technozone_btn1red.getBlockType = function() {
+	return Blockly.Types.BOOLEAN;
+};
+Blockly.Blocks.technozone_switch1.getBlockType = function() {
+	return Blockly.Types.BOOLEAN;
+};
+Blockly.Blocks.technozone_ils1.getBlockType = function() {
+	return Blockly.Types.BOOLEAN;
+};
+Blockly.Blocks.technozone_proxi1.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.technozone_bari1.getBlockType = function() {
+	return Blockly.Types.BOOLEAN;
+};
+Blockly.Blocks.technozone_lig1.getBlockType = function() {
+	return Blockly.Types.BOOLEAN;
+};
+Blockly.Blocks.technozone_cmouv1.getBlockType = function() {
+	return Blockly.Types.BOOLEAN;
+};
+Blockly.Blocks.technozone_potar1.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.technozone_ctn1.getBlockType = function() {
+	return Blockly.Types.DECIMAL;
+};
+Blockly.Blocks.technozone_ldr1.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.technozone_mot2.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.technozone_pap1cc.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.technozone_robot_ihm_led_def.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.technozone_robot_ihm_btn_def.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.technozone_speech_say.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.technozone_robot_ihm_inter_def.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.technozone_robot_ihm_led_on.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.technozone_robot_ihm_inter_on.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.technozone_robot_ihm_potar_def.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.technozone_robot_ihm_gauge_def.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.technozone_robot_ihm_gauge_write.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.technozone_pap1relatif.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.technozone_robot_move.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.technozone_robot_turn.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.technozone_robot_stop.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.technozone_pap1init.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.technozone_pap1busy.getBlockType = function() {
+	return Blockly.Types.BOOLEAN;
+};
+Blockly.Blocks.technozone_mot1easybot1.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.technozone_mot1easycon1.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.technozone_telec2.getBlockType = function() {
+	return Blockly.Types.BOOLEAN;
+};
+Blockly.Blocks.technozone_telecsetup.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.technozone_telec1.getBlockType = function() {
+	return Blockly.Types.BOOLEAN;
+};
+Blockly.Blocks.technozone_telecinit.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.technozone_telecflush.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+
 //***********************************************************************************
 //								Zumobot
 //***********************************************************************************
 
 //---------------------------------zumo_motors.js-------------------------------------
 
+Blockly.Blocks.zumo_motors_FN.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.zumo_motors_FNs.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.zumo_motors_FR.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.zumo_motors_FRs.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.zumo_motors_FL.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.zumo_motors_FLs.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.zumo_motors_FBs.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.zumo_motors_FB.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.zumo_motors_FUs.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
 //---------------------------------zumo_sensors.js-------------------------------------
+
+Blockly.Blocks.setup_button_wait_il.getBlockType = function() {
+	return Blockly.Types.BOOLEAN;
+};
+Blockly.Blocks.setup_button_wait_iph.getBlockType = function() {
+	return Blockly.Types.BOOLEAN;
+};
+Blockly.Blocks.fourpin_ranger.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.play_notes_z.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
