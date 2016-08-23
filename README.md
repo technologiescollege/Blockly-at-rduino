@@ -1,4 +1,4 @@
-### WIKI !!! [http://tic.technologiescollege.fr/wiki/doku.php/en/blockly_rduino/bugs](http://tic.technologiescollege.fr/wiki/doku.php/en/blockly_rduino/bugs)
+### WIKI !!! [http://tic.technologiescollege.fr/wiki/doku.php/en/blockly_rduino/](http://tic.technologiescollege.fr/wiki/doku.php/en/blockly_rduino/)
 
 ### FORUM !!! [http://blockly.technologiescollege.fr/forum](http://blockly.technologiescollege.fr/forum)
 
