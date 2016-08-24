@@ -49,7 +49,6 @@ BlocklyDuino.ArduinoIDEClick = function() {
     
     var url = "http://127.0.0.1:5005/openIDE";
     var method = "POST";
-
     var async = true;
 	var request = new XMLHttpRequest();
 
@@ -60,7 +59,6 @@ BlocklyDuino.ArduinoIDEClick = function() {
 
 BlocklyDuino.uploadClick = function() {
 	//first change board
-	request.open(method, url, async);
 	var board = "board=" + profile.defaultBoard.upload_arg;
     var url = "http://127.0.0.1:5005/set_board";
     var method = "POST";
@@ -76,16 +74,15 @@ BlocklyDuino.uploadClick = function() {
 	}
     request.send(board);
 	//then send code
-	/*var code = $('#pre_arduino').text();
+	var code = $('#pre_arduino').text();
 	url = "http://127.0.0.1:5005/upload";
 	request.open(method, url, async);
 	request.setRequestHeader("Content-Type", "text/plain;charset=UTF-8");
-	request.send(code);*/
+	request.send(code);
 };
 
 BlocklyDuino.verify_local_Click = function() {
 	//first change board
-	request.open(method, url, async);
 	var board = "board=" + profile.defaultBoard.upload_arg;
     var url = "http://127.0.0.1:5005/set_board";
     var method = "POST";
@@ -101,11 +98,11 @@ BlocklyDuino.verify_local_Click = function() {
 	}
     request.send(board);
 	//then send code
-    /*var code = $('#pre_arduino').text();    
+    var code = $('#pre_arduino').text();    
     url = "http://127.0.0.1:5005/compile";
 	request.open(method, url, async);
 	request.setRequestHeader("Content-Type", "text/plain;charset=UTF-8");
-	request.send(code);	*/
+	request.send(code);	
 };
 
 /**
