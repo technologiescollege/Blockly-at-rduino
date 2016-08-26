@@ -70,8 +70,8 @@ BlocklyDuino.renderContent = function() {
 				if (typeof prettyPrintOne == 'function') {
 					$('#pre_arduino').html(prettyPrintOne($('#pre_arduino').html(), 'cpp'));
 				}
-				BlocklyDuino.toggleWeb();
-				BlocklyDuino.toggleLocalCodeBender();
+				
+				BlocklyDuino.initGlobalConfig();
 			} catch (e) {
 				alert(e);
 			}
@@ -226,33 +226,6 @@ BlocklyDuino.setArduinoCard =  function () {
 };
 
 /**
- * Change Arduino card
- */
-BlocklyDuino.arduinoCard =  function (){
-  $("#pinout").blur();
-  if (window.profile["defaultBoard"]!=window.profile[$("#pinout").val()])
-  {
-	  if (window.confirm(MSG['arduino_card']+' '+window.profile[$("#pinout").val()].description+' ?'))
-		  {
-			BlocklyDuino.workspace.clear();
-			  var search = window.location.search;
-			  if (search.length <= 1) {
-			    search = '?card=' + $("#pinout").val();
-			  } else if (search.match(/[?&]card=[^&]*/)) {
-			    search = search.replace(/([?&]card=)[^&]*/, '$1' + $("#pinout").val());
-			  } else {
-			    search = search.replace(/\?/, '?card=' + $("#pinout").val() + '&');
-			  }
-
-			  window.location = window.location.protocol + '//' +
-			      window.location.host + window.location.pathname + search;
-		} else {
-			$("#pinout").val(BlocklyDuino.selectedCard);
-		}
-  }
-}; 
-
-/**
  * Creates an XML file containing the blocks from the Blockly workspace and
  * prompts the users to save it into their local file system.
  */
@@ -364,7 +337,6 @@ BlocklyDuino.bindFunctions = function() {
 	$('#pinout').on("focus", function() {
 		BlocklyDuino.selectedCard = $(this).val();
 	});
-	$('#pinout').on("change", BlocklyDuino.arduinoCard);
 	
 	$('#toolboxes').on("change", BlocklyDuino.changeToolboxDefinition);	
 
@@ -698,6 +670,8 @@ BlocklyDuino.init = function() {
 						{controls: true,
 						wheel: true}
 		      });
+	// bind events to html elements
+	BlocklyDuino.bindFunctions();
 
 	BlocklyDuino.renderContent();
 	
@@ -731,9 +705,6 @@ BlocklyDuino.init = function() {
     // Hook a save function onto unload.
 	window.addEventListener('unload', BlocklyDuino.backupBlocks, false);
 
-	// bind events to html elements
-	BlocklyDuino.bindFunctions();
-
 	// open ConfigToolbox modal
 	if (BlocklyDuino.getStringParamFromUrl('openConfigToolbox', '') != '') {
 		delete window.localStorage.toolboxids;
@@ -765,8 +736,10 @@ BlocklyDuino.init = function() {
 								MSG['verification_failed'] + error_output);
 					});
 		});
-		
+	
+	//global config
 	BlocklyDuino.initGlobalConfig();
+	BlocklyDuino.testPluginCodeBender();
 	
 	// draggable "modal" dialog containing card image & videos
     $('body').on('mousedown', '#showcardModal', function() {

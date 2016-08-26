@@ -194,7 +194,18 @@ Blockly.Blocks['controls_forEach'] = {
    * @this Blockly.Block
    */
   init: function() {
-    this.jsonInit({
+    this.setHelpUrl(Blockly.Msg.CONTROLS_FOREACH_TITLE);
+    this.setColour(Blockly.Blocks.loops.HUE);
+	this.appendDummyInput()
+        .appendField(Blockly.Msg.CONTROLS_SWITCH_VAR_TITLE)
+        .appendField(new Blockly.FieldVariable(Blockly.Msg.VARIABLES_GET_ITEM), 'VAR');
+    this.appendValueInput('LIST')
+        .setCheck('Array')
+        .setAlign(Blockly.ALIGN_RIGHT)
+		.appendField(Blockly.Msg.CONTROLS_SWITCH_MSG_CASEBREAK);
+    this.setPreviousStatement(true);
+    this.setNextStatement(true);
+    /*this.jsonInit({
       "message0": Blockly.Msg.CONTROLS_FOREACH_TITLE,
       "args0": [
         {
@@ -212,7 +223,7 @@ Blockly.Blocks['controls_forEach'] = {
       "nextStatement": null,
       "colour": Blockly.Blocks.loops.HUE,
       "helpUrl": Blockly.Msg.CONTROLS_FOREACH_HELPURL
-    });
+    });*/
     this.appendStatementInput('DO')
         .appendField(Blockly.Msg.CONTROLS_FOREACH_INPUT_DO);
     // Assign 'this' to a variable for use in the tooltip closure below.

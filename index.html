@@ -564,22 +564,23 @@
 		  <div class="modal-header">
 			<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 			<h4 class="modal-title" id="configModalGlobalLabel"></h4>
+	            <input type="checkbox" name="put_config_in_url" id="put_config_in_url"/><i> <span id="span_put_config_in_url"> </span></i>
 		  </div>    
 		<div class="modal-body" id="modal-body-config-global">
 			<label id="span_languageMenu"> </label>  <select id="languageMenu"></select><br/>
 			<div id="divCard">
 		            <label id="labelArduinoCard"></label> 
 		            <select id="pinout">
-		                <option value="arduino_uno" selected="selected">Arduino/Genuino UNO</option>
-		                <option value="arduino_nano">Arduino/Genuino NANO</option>
+		                <!--option value="arduino_nano">Arduino/Genuino LEONARDO</option-->
 		                <option value="arduino_mega">Arduino/Genuino MEGA</option>
+		                <!--option value="arduino_nano">Arduino/Genuino MICRO</option-->
+		                <option value="arduino_nano">Arduino/Genuino NANO</option>
+		                <option value="arduino_uno" selected="selected">Arduino/Genuino UNO</option>
+		                <!--option value="arduino_nano">Arduino/Genuino YUN</option-->
 						<option value="dfrobot_romeo">DFRobot RoMeo v2</option>
 		            </select>
 		    </div>
-			<br />
-	        <div style="float : right; margin-right : 5px;">
-	            <input type="checkbox" name="put_config_in_url" id="put_config_in_url"/> <span id="span_put_config_in_url"> </span>
-	        </div>
+			<br />	        
 	        <div style="clear : both;">
 			<span id="span_OnOffLine"> </span>
 			<input id="toggle-WebAccess" data-toggle="toggle" data-on="<span id='span_OnLine'> </span>" data-off='<span id="span_OffLine"> </span>' data-onstyle="success" data-offstyle="info" data-width="120" type="checkbox"><br />

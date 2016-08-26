@@ -34,9 +34,22 @@
 	Blockly.Blocks.controls_for.getVarType = function() {
 		return this.inputList[1].connection.targetBlock().getBlockType();
 	};
+	Blockly.Blocks.controls_forEach.getVars = function() {
+		return [this.getFieldValue('VAR')];	
+	};
 	Blockly.Blocks.controls_forEach.getVarType = function() {
 		return this.inputList[1].connection.targetBlock().getBlockType();
 	};
+	
+//---------------------------------array--------------------------------------------
+
+	Blockly.Blocks.array_create_with.getBlockType = function() {
+		return this.inputList[1].connection.targetBlock().getBlockType();
+	};
+	Blockly.Blocks.array_getIndex.getBlockType = function() {
+		return this.inputList[1].connection.targetBlock().getBlockType();
+	};
+
 
 //---------------------------------maths--------------------------------------------
 

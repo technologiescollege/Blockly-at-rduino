@@ -105,28 +105,6 @@ Code.isRtl = function() {
 };
 
 /**
- * Save the blocks and reload with a different language.
- */
-Code.changeLanguage = function() {
-  // Store the blocks for the duration of the reload.
-	BlocklyDuino.backupBlocks();
-
-  var languageMenuSelected = $('#languageMenu option:selected').val();
-  var newLang = encodeURIComponent(languageMenuSelected);
-  var search = window.location.search;
-  if (search.length <= 1) {
-    search = '?lang=' + newLang;
-  } else if (search.match(/[?&]lang=[^&]*/)) {
-    search = search.replace(/([?&]lang=)[^&]*/, '$1' + newLang);
-  } else {
-    search = search.replace(/\?/, '?lang=' + newLang + '&');
-  }
-
-  window.location = window.location.protocol + '//' +
-      window.location.host + window.location.pathname + search;
-};
-
-/**
  * User's language (e.g. "en").
  * @type string
  */
@@ -166,7 +144,6 @@ Code.initLanguage = function() {
     }
     languageMenu.append(option);
   }
-  languageMenu.bind('change', Code.changeLanguage);
 
   // Inject language strings.
   $('#title').text(MSG['title']);
