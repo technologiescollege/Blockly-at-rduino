@@ -27,6 +27,8 @@ BlocklyDuino.inlineBool = true;
 BlocklyDuino.withImage = true;
 BlocklyDuino.ajaxOK = true;
 BlocklyDuino.toolboxInIndexHtml = false;
+BlocklyDuino.pluginCodebender_found = navigator.plugins['Codebender.cc'] !== undefined
+|| navigator.plugins['Codebendercc'] !== undefined;
 
 /**
  * Blockly's main workspace.
@@ -617,7 +619,7 @@ BlocklyDuino.changeToolboxDefinition =  function (){
  * Initialize Blockly.  Called on page load.
  */
 BlocklyDuino.init = function() {
-	
+
 	BlocklyDuino.setOrientation();
 	
 	BlocklyDuino.testAjax();
@@ -717,29 +719,10 @@ BlocklyDuino.init = function() {
 		//$("#configModalGlobal").modal({ backdrop: 'static', keyboard: false });
 	}
 	
-	$(document).ready(
-		// load the compilerflasher module
-		function() {
-			compilerflasher = new compilerflasher(BlocklyDuino.getFiles);
-					
-			compilerflasher.on("pre_verify", function() {
-				$("#debug_arduino").html(MSG['pre_verify']);
-			});
-			compilerflasher.on("verification_succeed",
-					function(binary_size) {
-						$("#debug_arduino").html(
-								MSG['verification_succeed'] + binary_size);
-					});
-			compilerflasher.on("verification_failed",
-					function(error_output) {
-						$("#debug_arduino").html(
-								MSG['verification_failed'] + error_output);
-					});
-		});
+	BlocklyDuino.initCompilerFlasher();
 	
 	//global config
 	BlocklyDuino.initGlobalConfig();
-	BlocklyDuino.testPluginCodeBender();
 	
 	// draggable "modal" dialog containing card image & videos
     $('body').on('mousedown', '#showcardModal', function() {
@@ -813,7 +796,24 @@ BlocklyDuino.init = function() {
 
 
 /**
- * Create content for modal example 
+ * Load the compilerflasher module 
+ */
+BlocklyDuino.initCompilerFlasher = function() {
+	compilerflasher = new compilerflasher(BlocklyDuino.getFiles);
+
+	compilerflasher.on("pre_verify", function() {
+		$("#debug_arduino").html(MSG['pre_verify']);
+	});
+	compilerflasher.on("verification_succeed", function(binary_size) {
+		$("#debug_arduino").html(MSG['verification_succeed'] + binary_size);
+	});
+	compilerflasher.on("verification_failed", function(error_output) {
+		$("#debug_arduino").html(MSG['verification_failed'] + error_output);
+	});
+};
+
+/**
+ * Create content for modal example
  */
 BlocklyDuino.buildExamples = function() {
 	$.ajax({
