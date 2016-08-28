@@ -376,6 +376,10 @@ BlocklyDuino.bindFunctions = function() {
 		$('#firstModal').modal('hide');
 	});
 
+	$('#firstModal').on('hidden.bs.modal', function (e) {
+		$('#firstModal iframe').remove();
+	});
+	
 	$('#btn_inline').on("click", BlocklyDuino.inline);
 	$('#btn_blocs_picture').on("click", BlocklyDuino.blockPicture);	
 	$('#btn_blocs_picture_mini').on("click", BlocklyDuino.blockPicture_mini);
@@ -407,10 +411,18 @@ BlocklyDuino.bindFunctions = function() {
 	$('#btn_videos').on('click', function() {
 		$('#videoModal').css("z-index", 1050);
 		$('#videoModal').css("display", "inline-block");
+		$('#videoModal1').prop('src', "https://www.youtube-nocookie.com/embed/nXWwNrwVFXM?list=PLwy0yw3Oq4-uFNmgedXx9_L_TJNORo-4N");
+		$('#videoModal2').prop('src', "https://www.youtube-nocookie.com/embed/vlJl28qE5vg?list=PLwy0yw3Oq4-uFJl0j-efUAAlfCbqtcTMr");
+		$('#videoModal3').prop('src', "https://player.vimeo.com/video/177939950?byline=0&portrait=0");
+		$('#videoModal4').prop('src', "https://player.vimeo.com/video/179961741?byline=0&portrait=0");
 	});
 
 	$('#videoModal button.close').on('click', function() {
 		$('#videoModal').css("z-index", 0);
+		$('#videoModal1').prop('src', "");
+		$('#videoModal2').prop('src', "");
+		$('#videoModal3').prop('src', "");
+		$('#videoModal4').prop('src', "");
 		$('#videoModal').hide();
 	});
 	
@@ -877,6 +889,7 @@ BlocklyDuino.clearLocalStorage = function () {
  */
 BlocklyDuino.firstBlocklyArduino = function() {
 	if (!window.sessionStorage.msg_first_seen) {
+		$('#firstModal iframe').prop('src', "https://player.vimeo.com/video/179569437?autoplay=1&title=0&byline=0&portrait=0"); 
 		$('#firstModal').modal('show');	
 	}
 };
