@@ -802,9 +802,9 @@ BlocklyDuino.init = function() {
         $(this).find("span").css("color", "#000000");
     });*/
 	if (window.location.protocol == 'http:') {
-					$("#btn_create_example").attr("href","./examples/examples.php");
+					$("#btn_create_example").attr("href","./examples/examples.php?lang=" + Code.LANG);
 					} else {
-					$("#btn_create_example").attr("href","./examples/examples.html");	
+					$("#btn_create_example").attr("href","./examples/examples.html?lang=" + Code.LANG);	
 					}
 };
 

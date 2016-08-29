@@ -111,7 +111,7 @@
 	<div id="tabs-4" class="tab-pane">
 		<br/>
 		<b><span id="span_supervision_digital_pin"></span></b>
-		<INPUT TYPE="NUMBER" id="drPin" MIN="2" MAX="19" STEP="1" VALUE="2" SIZE="1">
+		<INPUT TYPE="NUMBER" id="drPin" MIN="2" MAX="52" STEP="1" VALUE="2" SIZE="1">
 		<a href="javascript:digitalRead(this.id)" class="btn btn-info">
 	       <span id="span_supervision_read_pin"></span>
 	    </a>
@@ -120,7 +120,7 @@
 		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
 		<b><span id="span_supervision_analog_pin"></span></b>
-		<INPUT TYPE="NUMBER" id="arPin" MIN="0" MAX="5" STEP="1" VALUE="0" SIZE="1">
+		<INPUT TYPE="NUMBER" id="arPin" MIN="0" MAX="16" STEP="1" VALUE="0" SIZE="1">
 		<a href="javascript:analogRead(this.id)" class="btn btn-info">
 	       <span id="span_supervision_read_pin"></span>
 	    </a>
@@ -133,7 +133,7 @@
 		<br>
 		<br>
 		<b><span id="span_supervision_latch_digital_pin"></span></b>
-		<INPUT TYPE="NUMBER" id="dlData" MIN="2" MAX="19" STEP="1" VALUE="2" SIZE="1">
+		<INPUT TYPE="NUMBER" id="dlData" MIN="2" MAX="52" STEP="1" VALUE="2" SIZE="1">
 		<a href="javascript:digitalLatchRead(this.id)" class="btn btn-info">
 	       <span id="span_supervision_read_pin"></span>
 	    </a>
@@ -144,7 +144,7 @@
 		<br>
 		<br>
 		<b><span id="span_supervision_latch_analog_pin"></span></b>
-		<INPUT TYPE="NUMBER" id="alData" MIN="0" MAX="5" STEP="1" VALUE="0" SIZE="1">
+		<INPUT TYPE="NUMBER" id="alData" MIN="0" MAX="16" STEP="1" VALUE="0" SIZE="1">
 		<a href="javascript:analogLatchRead(this.id)" class="btn btn-info">
 	       <span id="span_supervision_read_pin"></span>
 	    </a>
@@ -158,14 +158,15 @@
 	<div id="tabs-5" class="tab-pane">
 		<h2><span id="span_supervision_servo"></span></h2>
 		<b><span id="span_supervision_servo_pin"></span></b>
-		<select id="servoPin">
+		<INPUT TYPE="NUMBER" id="SV_servo_pin" MIN="2" MAX="52" STEP="1" VALUE="2" SIZE="1">
+		<!--select id="servoPin">
 			<option value="3">3</option>
 			<option value="5">5</option>
 			<option value="6">6</option>
 			<option value="9">9</option>
 			<option value="10">10</option>
 			<option value="11">11</option>
-		</select>
+		</select-->
 		&nbsp;&nbsp;&nbsp;
 		<b><span id="span_supervision_servo_angle"></span></b>
 		<input id="servoAngle" name="pin" class="element text medium" type="text" maxlength="4" value="0" style="width: 60px;"/>
@@ -177,12 +178,13 @@
 
 		<h2><span id="span_supervision_tone"></span></h2>
 		<b><span id="span_supervision_tone_pin"></span></b>
-		<select id="tonePin"></select>
+		<INPUT TYPE="NUMBER" id="SV_tone_pin" MIN="2" MAX="52" STEP="1" VALUE="2" SIZE="1">
+		<!--select id="tonePin"></select>
 		<script type="text/javascript">
 			for (var i=2; i <= 19; i++) {
 				$("#tonePin").append('<option value="'+i+'">'+i+'</option>');
 			}
-		</script>
+		</script-->
 		&nbsp;&nbsp;&nbsp;&nbsp;
 		<b><span id="span_supervision_tone_freq"></span></b>
 		<input id="freq" class="element text medium" type="text" maxlength="4" value="1000" style="width: 60px;"/>
@@ -197,20 +199,22 @@
 
 		<h2><span id="span_supervision_encoder"></span></h2>
 		<b><span id="span_supervision_encoder_pinA"></span></b>
-		<select id="encoderPinA"></select>
+		<INPUT TYPE="NUMBER" id="SV_encoder_pin1" MIN="2" MAX="52" STEP="1" VALUE="2" SIZE="1">
+		<!--select id="encoderPinA"></select>
         <script type="text/javascript">
 	        for (var i=2; i <= 19; i++) {
 	            $("#encoderPinA").append('<option value="'+i+'">'+i+'</option>');
 	        }
-        </script>
+        </script-->
 		&nbsp;&nbsp;&nbsp;&nbsp;
 		<b><span id="span_supervision_encoder_pinB"></span></b>
-		<select id="encoderPinB"></select>
+		<INPUT TYPE="NUMBER" id="SV_encoder_pin2" MIN="2" MAX="52" STEP="1" VALUE="2" SIZE="1">
+		<!--select id="encoderPinB"></select>
         <script type="text/javascript">
             for (var i=2; i <= 19; i++) {
                 $("#encoderPinB").append('<option value="'+i+'">'+i+'</option>');
             }
-        </script>
+        </script-->
 		&nbsp;&nbsp;&nbsp;&nbsp;
 		<a href="javascript:encoderRead(0)" class="btn btn-info">
 	       <span id="span_supervision_encoder_auto"></span>
@@ -225,20 +229,22 @@
 		<br><br>
 		<h2><span id="span_supervision_sonar"></span></h2>
 		<b><span id="span_supervision_sonar_trig"></span></b>
-		<select id="sonarTriggerPin"></select>
+		<INPUT TYPE="NUMBER" id="SV_sonar_pin1" MIN="2" MAX="52" STEP="1" VALUE="2" SIZE="1">
+		<!--select id="sonarTriggerPin"></select>
         <script type="text/javascript">
             for (var i=2; i <= 19; i++) {
                 $("#sonarTriggerPin").append('<option value="'+i+'">'+i+'</option>');
             }
-        </script>
+        </script-->
 		&nbsp;&nbsp;&nbsp;&nbsp;
 		<b><span id="span_supervision_sonar_echo"></span></b>
-		<select id="sonarEchoPin"></select>
+		<INPUT TYPE="NUMBER" id="SV_sonar_pin2" MIN="2" MAX="52" STEP="1" VALUE="2" SIZE="1">
+		<!--select id="sonarEchoPin"></select>
         <script type="text/javascript">
             for (var i=2; i <= 19; i++) {
                 $("#sonarEchoPin").append('<option value="'+i+'">'+i+'</option>');
             }
-        </script>
+        </script-->
 		&nbsp;&nbsp;&nbsp;&nbsp;
 		<a href="javascript:sonarRead(0)" class="btn btn-info">
 	       <span id="span_supervision_sonar_auto"></span>
@@ -253,40 +259,44 @@
 
 		<h2><span id="span_supervision_stepper"></span></h2>
 		<b><span id="span_supervision_stepper_pin1"></span></b>
-		<select id="stepperPin1"></select>
+		<INPUT TYPE="NUMBER" id="SV_stepper_pin1" MIN="2" MAX="52" STEP="1" VALUE="2" SIZE="1">
+		<!--select id="stepperPin1"></select>
         <script type="text/javascript">
             for (var i=2; i <= 19; i++) {
                 $("#stepperPin1").append('<option value="'+i+'">'+i+'</option>');
             }
             $("#stepperPin1").val("8");
-        </script>
+        </script-->
 		&nbsp;&nbsp;&nbsp;&nbsp;
 		<b><span id="span_supervision_stepper_pin2"></span></b>
-		<select id="stepperPin2"></select>
+		<INPUT TYPE="NUMBER" id="SV_stepper_pin2" MIN="2" MAX="52" STEP="1" VALUE="2" SIZE="1">
+		<!--select id="stepperPin2"></select>
         <script type="text/javascript">
             for (var i=2; i <= 19; i++) {
                 $("#stepperPin2").append('<option value="'+i+'">'+i+'</option>');
             }
             $("#stepperPin2").val("9");
-        </script>
+        </script-->
 		&nbsp;&nbsp;&nbsp;&nbsp;
 		<b><span id="span_supervision_stepper_pin3"></span></b>
 		<select id="stepperPin3"></select>
-        <script type="text/javascript">
+		<INPUT TYPE="NUMBER" id="SV_stepper_pin3" MIN="2" MAX="52" STEP="1" VALUE="2" SIZE="1">
+        <!--script type="text/javascript">
             for (var i=2; i <= 19; i++) {
                 $("#stepperPin3").append('<option value="'+i+'">'+i+'</option>');
             }
             $("#stepperPin3").val("10");
-        </script>
+        </script-->
 		&nbsp;&nbsp;&nbsp;&nbsp;
 		<b><span id="span_supervision_stepper_pin4"></span></b>
-		<select id="stepperPin4"></select>
+		<INPUT TYPE="NUMBER" id="SV_stepper_pin4" MIN="2" MAX="52" STEP="1" VALUE="2" SIZE="1">
+		<!--select id="stepperPin4"></select>
         <script type="text/javascript">
             for (var i=2; i <= 19; i++) {
                 $("#stepperPin4").append('<option value="'+i+'">'+i+'</option>');
             }
             $("#stepperPin4").val("11");
-        </script>
+        </script-->
 
 
 		&nbsp;
