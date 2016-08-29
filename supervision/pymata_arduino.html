@@ -26,7 +26,7 @@
 						<span id="span_supervision_enabled_e#pin_number#"> </span>
 					</label>
 					<label><span id="span_supervision_pin_e#pin_number#"> </span> #pin_number# :</label>
-					<input id="ip#pin_number#" name="pin" class="form-control" type="text" value="0" size="1"/>
+					<input id="ip#pin_number#" name="pin" class="form-control" type="text" value="0" size="1" disabled="disabled"/>
 				</div>
 				<div class="form-group">
 					<label>Data Latch</label>
@@ -38,7 +38,7 @@
 				</div>
 				<div class="form-group">
 					<label>Latch Event Occurred On :</label>
-					<input id="dlevent#pin_number#" name="pin" class="form-control" type="text" maxlength="255" value="">
+					<input id="dlevent#pin_number#" name="pin" class="form-control" type="text" maxlength="255" value="" disabled="disabled">
 				</div>
 			</div>
 		</div>
@@ -83,7 +83,7 @@
 						<span id="span_supervision_enabled_e#pin_number#"> </span>
 					</label>
 					<label><span id="span_supervision_pin_e#pin_number#"> </span> A#pin_number# :</label>
-					<input id="ia#pin_number#" name="pin" class="form-control" type="text" value="0" size="1"/>
+					<input id="ia#pin_number#" name="pin" class="form-control" type="text" value="0" size="1" disabled="disabled"/>
 				</div>
 				<div class="form-group">
 					<label>Latch Threshold</label>
@@ -94,15 +94,15 @@
 					<select id="alatch#pin_number#" class="form-control" onchange="analogLatch('0', (this.id));">
 						<option value="1">No Latch Set</option>
 						<option value="2">==</option>
-						<option value="3"><</option>
-						<option value="4"><=</option>
-						<option value="5">></option>
-						<option value="6">>=</option>
+						<option value="3">&lt;</option>
+						<option value="4">&lt;=</option>
+						<option value="5">&gt;</option>
+						<option value="6">&gt;=</option>
 					</select>
 				</div>
 				<div class="form-group">
 					<label>Latch Event Occurred On :</label>
-					<input id="alevent#pin_number#" name="pin" class="form-control" type="text" maxlength="255" value="">
+					<input id="alevent#pin_number#" name="pin" class="form-control" type="text" maxlength="255" value="" disabled="disabled">
 				</div>
 			</div>
 		</div>
@@ -115,8 +115,8 @@
 		<a href="javascript:digitalRead(this.id)" class="btn btn-info">
 	       <span id="span_supervision_read_pin"></span>
 	    </a>
-		&nbsp
-		<input id="ddata" name="pin" class="element text medium" type="text" maxlength="255" value="" style="width: 80px;"/>
+		&nbsp;
+		<input id="ddata" name="pin" class="element text medium" type="text" maxlength="255" value="" style="width: 80px;" disabled="disabled"/>
 		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
 		<b><span id="span_supervision_analog_pin"></span></b>
@@ -124,8 +124,8 @@
 		<a href="javascript:analogRead(this.id)" class="btn btn-info">
 	       <span id="span_supervision_read_pin"></span>
 	    </a>
-		&nbsp
-		<input id="adata" name="pin" class="element text medium" type="text" maxlength="255" value="" style="width: 80px;"/>
+		&nbsp;
+		<input id="adata" name="pin" class="element text medium" type="text" maxlength="255" value="" style="width: 80px;" disabled="disabled"/>
 
 		<br>
 		<br>
@@ -137,20 +137,20 @@
 		<a href="javascript:digitalLatchRead(this.id)" class="btn btn-info">
 	       <span id="span_supervision_read_pin"></span>
 	    </a>
-		&nbsp
+		&nbsp;
 		<input id="dlatchdata" name="pin" class="element text medium" type="text" maxlength="255" value=""
-			   style="width: 500px;"/>
+			   style="width: 500px;" disabled="disabled"/>
 
 		<br>
 		<br>
-		<b><span id="span_supervision_latch_analog_pin"></b>
+		<b><span id="span_supervision_latch_analog_pin"></span></b>
 		<INPUT TYPE="NUMBER" id="alData" MIN="0" MAX="5" STEP="1" VALUE="0" SIZE="1">
 		<a href="javascript:analogLatchRead(this.id)" class="btn btn-info">
 	       <span id="span_supervision_read_pin"></span>
 	    </a>
-		&nbsp
+		&nbsp;
 		<input id="alatchdata" name="pin" class="element text medium" type="text" maxlength="255" value=""
-			   style="width: 500px;"/>
+			   style="width: 500px;" disabled="disabled"/>
 		<br>
 		<br>
 	</div>
@@ -167,7 +167,7 @@
 			<option value="11">11</option>
 		</select>
 		&nbsp;&nbsp;&nbsp;
-		<b><span id="span_supervision_servo_angle"></span></b></b>
+		<b><span id="span_supervision_servo_angle"></span></b>
 		<input id="servoAngle" name="pin" class="element text medium" type="text" maxlength="4" value="0" style="width: 60px;"/>
 		&nbsp;&nbsp;&nbsp;&nbsp;
 		<a href="javascript:servo()" class="btn btn-info">
@@ -177,26 +177,12 @@
 
 		<h2><span id="span_supervision_tone"></span></h2>
 		<b><span id="span_supervision_tone_pin"></span></b>
-		<select id="tonePin">
-			<option value="2">2</option>
-			<option value="3">3</option>
-			<option value="4">4</option>
-			<option value="5">5</option>
-			<option value="6">6</option>
-			<option value="7">7</option>
-			<option value="8">8</option>
-			<option value="9">9</option>
-			<option value="10">10</option>
-			<option value="11">11</option>
-			<option value="12">12</option>
-			<option value="13">13</option>
-			<option value="14">14</option>
-			<option value="15">15</option>
-			<option value="16">16</option>
-			<option value="17">17</option>
-			<option value="18">18</option>
-			<option value="19">19</option>
-		</select>
+		<select id="tonePin"></select>
+		<script type="text/javascript">
+			for (var i=2; i <= 19; i++) {
+				$("#tonePin").append('<option value="'+i+'">'+i+'</option>');
+			}
+		</script>
 		&nbsp;&nbsp;&nbsp;&nbsp;
 		<b><span id="span_supervision_tone_freq"></span></b>
 		<input id="freq" class="element text medium" type="text" maxlength="4" value="1000" style="width: 60px;"/>
@@ -211,207 +197,99 @@
 
 		<h2><span id="span_supervision_encoder"></span></h2>
 		<b><span id="span_supervision_encoder_pinA"></span></b>
-		<select id="encoderPinA">
-			<option value="2">2</option>
-			<option value="3">3</option>
-			<option value="4">4</option>
-			<option value="5">5</option>
-			<option value="6">6</option>
-			<option value="7">7</option>
-			<option value="8">8</option>
-			<option value="9">9</option>
-			<option value="10">10</option>
-			<option value="11">11</option>
-			<option value="12">12</option>
-			<option value="13">13</option>
-			<option value="14">14</option>
-			<option value="15">15</option>
-			<option value="16">16</option>
-			<option value="17">17</option>
-			<option value="18">18</option>
-			<option value="19">19</option>
-		</select>
+		<select id="encoderPinA"></select>
+        <script type="text/javascript">
+	        for (var i=2; i <= 19; i++) {
+	            $("#encoderPinA").append('<option value="'+i+'">'+i+'</option>');
+	        }
+        </script>
 		&nbsp;&nbsp;&nbsp;&nbsp;
-		<b><span id="span_supervision_encoder_pinB"></b>
-		<select id="encoderPinB">
-			<option value="2">2</option>
-			<option value="3">3</option>
-			<option value="4">4</option>
-			<option value="5">5</option>
-			<option value="6">6</option>
-			<option value="7">7</option>
-			<option value="8">8</option>
-			<option value="9">9</option>
-			<option value="10">10</option>
-			<option value="11">11</option>
-			<option value="12">12</option>
-			<option value="13">13</option>
-			<option value="14">14</option>
-			<option value="15">15</option>
-			<option value="16">16</option>
-			<option value="17">17</option>
-			<option value="18">18</option>
-			<option value="19">19</option>
-		</select>
+		<b><span id="span_supervision_encoder_pinB"></span></b>
+		<select id="encoderPinB"></select>
+        <script type="text/javascript">
+            for (var i=2; i <= 19; i++) {
+                $("#encoderPinB").append('<option value="'+i+'">'+i+'</option>');
+            }
+        </script>
 		&nbsp;&nbsp;&nbsp;&nbsp;
 		<a href="javascript:encoderRead(0)" class="btn btn-info">
 	       <span id="span_supervision_encoder_auto"></span>
 	    </a>
-		<input id="encoderValue" class="element text medium" type="text" maxlength="4" value="" style="width: 100px;"/>
+		<input id="encoderValue" class="element text medium" type="text" maxlength="4" value="" style="width: 100px;" disabled="disabled"/>
 		&nbsp;&nbsp;&nbsp;&nbsp;
 		<a href="javascript:encoderRead(1)" class="btn btn-info">
 	       <span id="span_supervision_encoder_manual"></span>
 	    </a>
 		<input id="encoderValue2" class="element text medium" type="text" maxlength="4" value=""
-			   style="width: 100px;"/>
+			   style="width: 100px;" disabled="disabled"/>
 		<br><br>
 		<h2><span id="span_supervision_sonar"></span></h2>
 		<b><span id="span_supervision_sonar_trig"></span></b>
-		<select id="sonarTriggerPin">
-			<option value="2">2</option>
-			<option value="3">3</option>
-			<option value="4">4</option>
-			<option value="5">5</option>
-			<option value="6">6</option>
-			<option value="7">7</option>
-			<option value="8">8</option>
-			<option value="9">9</option>
-			<option value="10">10</option>
-			<option value="11">11</option>
-			<option value="12">12</option>
-			<option value="13">13</option>
-			<option value="14">14</option>
-			<option value="15">15</option>
-			<option value="16">16</option>
-			<option value="17">17</option>
-			<option value="18">18</option>
-			<option value="19">19</option>
-		</select>
+		<select id="sonarTriggerPin"></select>
+        <script type="text/javascript">
+            for (var i=2; i <= 19; i++) {
+                $("#sonarTriggerPin").append('<option value="'+i+'">'+i+'</option>');
+            }
+        </script>
 		&nbsp;&nbsp;&nbsp;&nbsp;
 		<b><span id="span_supervision_sonar_echo"></span></b>
-		<select id="sonarEchoPin">
-			<option value="2">2</option>
-			<option value="3">3</option>
-			<option value="4">4</option>
-			<option value="5">5</option>
-			<option value="6">6</option>
-			<option value="7">7</option>
-			<option value="8">8</option>
-			<option value="9">9</option>
-			<option value="10">10</option>
-			<option value="11">11</option>
-			<option value="12">12</option>
-			<option value="13">13</option>
-			<option value="14">14</option>
-			<option value="15">15</option>
-			<option value="16">16</option>
-			<option value="17">17</option>
-			<option value="18">18</option>
-			<option value="19">19</option>
-		</select>
+		<select id="sonarEchoPin"></select>
+        <script type="text/javascript">
+            for (var i=2; i <= 19; i++) {
+                $("#sonarEchoPin").append('<option value="'+i+'">'+i+'</option>');
+            }
+        </script>
 		&nbsp;&nbsp;&nbsp;&nbsp;
 		<a href="javascript:sonarRead(0)" class="btn btn-info">
 	       <span id="span_supervision_sonar_auto"></span>
 	    </a>
-		<input id="sonarValue" type="text" style="width: 100px;"/>
+		<input id="sonarValue" type="text" style="width: 100px;" disabled="disabled"/>
 		&nbsp;&nbsp;&nbsp;&nbsp;
 		<a href="javascript:sonarRead(1)" class="btn btn-info">
 	       <span id="span_supervision_sonar_manual"></span>
 	    </a>
-		<input id="sonarValue2" type="text" style="width: 100px;"/>
+		<input id="sonarValue2" type="text" style="width: 100px;" disabled="disabled"/>
 		<br><br>
 
 		<h2><span id="span_supervision_stepper"></span></h2>
 		<b><span id="span_supervision_stepper_pin1"></span></b>
-		<select id="stepperPin1">
-			<option value="2">2</option>
-			<option value="3">3</option>
-			<option value="4">4</option>
-			<option value="5">5</option>
-			<option value="6">6</option>
-			<option value="7">7</option>
-			<option value="8" selected>8</option>
-			<option value="9">9</option>
-			<option value="10">10</option>
-			<option value="11">11</option>
-			<option value="12">12</option>
-			<option value="13">13</option>
-			<option value="14">14</option>
-			<option value="15">15</option>
-			<option value="16">16</option>
-			<option value="17">17</option>
-			<option value="18">18</option>
-			<option value="19">19</option>
-		</select>
+		<select id="stepperPin1"></select>
+        <script type="text/javascript">
+            for (var i=2; i <= 19; i++) {
+                $("#stepperPin1").append('<option value="'+i+'">'+i+'</option>');
+            }
+            $("#stepperPin1").val("8");
+        </script>
 		&nbsp;&nbsp;&nbsp;&nbsp;
 		<b><span id="span_supervision_stepper_pin2"></span></b>
-		<select id="stepperPin2">
-			<option value="2">2</option>
-			<option value="3">3</option>
-			<option value="4">4</option>
-			<option value="5">5</option>
-			<option value="6">6</option>
-			<option value="7">7</option>
-			<option value="8">8</option>
-			<option value="9" selected>9</option>
-			<option value="10">10</option>
-			<option value="11">11</option>
-			<option value="12">12</option>
-			<option value="13">13</option>
-			<option value="14">14</option>
-			<option value="15">15</option>
-			<option value="16">16</option>
-			<option value="17">17</option>
-			<option value="18">18</option>
-			<option value="19">19</option>
-		</select>
+		<select id="stepperPin2"></select>
+        <script type="text/javascript">
+            for (var i=2; i <= 19; i++) {
+                $("#stepperPin2").append('<option value="'+i+'">'+i+'</option>');
+            }
+            $("#stepperPin2").val("9");
+        </script>
 		&nbsp;&nbsp;&nbsp;&nbsp;
 		<b><span id="span_supervision_stepper_pin3"></span></b>
-		<select id="stepperPin3">
-			<option value="2">2</option>
-			<option value="3">3</option>
-			<option value="4">4</option>
-			<option value="5">5</option>
-			<option value="6">6</option>
-			<option value="7">7</option>
-			<option value="8">8</option>
-			<option value="9">9</option>
-			<option value="10" selected>10</option>
-			<option value="11">11</option>
-			<option value="12">12</option>
-			<option value="13">13</option>
-			<option value="14">14</option>
-			<option value="15">15</option>
-			<option value="16">16</option>
-			<option value="17">17</option>
-			<option value="18">18</option>
-			<option value="19">19</option>
-		</select>
+		<select id="stepperPin3"></select>
+        <script type="text/javascript">
+            for (var i=2; i <= 19; i++) {
+                $("#stepperPin3").append('<option value="'+i+'">'+i+'</option>');
+            }
+            $("#stepperPin3").val("10");
+        </script>
 		&nbsp;&nbsp;&nbsp;&nbsp;
 		<b><span id="span_supervision_stepper_pin4"></span></b>
-		<select id="stepperPin4">
-			<option value="2">2</option>
-			<option value="3">3</option>
-			<option value="4">4</option>
-			<option value="5">5</option>
-			<option value="6">6</option>
-			<option value="7">7</option>
-			<option value="8">8</option>
-			<option value="9">9</option>
-			<option value="10">10</option>
-			<option value="11" selected>11</option>
-			<option value="12">12</option>
-			<option value="13">13</option>
-			<option value="14">14</option>
-			<option value="15">15</option>
-			<option value="16">16</option>
-			<option value="17">17</option>
-			<option value="18">18</option>
-			<option value="19">19</option>
-		</select>
+		<select id="stepperPin4"></select>
+        <script type="text/javascript">
+            for (var i=2; i <= 19; i++) {
+                $("#stepperPin4").append('<option value="'+i+'">'+i+'</option>');
+            }
+            $("#stepperPin4").val("11");
+        </script>
 
 
-		&nbsp
+		&nbsp;
 		<b><span id="span_supervision_stepper_steps_rev"></span></b>
 		<input id="stepRev" class="element text medium" type="text" maxlength="4" value="180"
 			   style="width: 100px;"/>
@@ -461,18 +339,18 @@
 		<br>
 		<input id="i2cReadReq" type="button" value="I2C Read" onclick="i2cReadRequest();"/>
 		<input id="i2cRequestResult" name="pin" class="element text medium" type="text" maxlength="4" value="0"
-			   style="width: 120px;"/>
-		&nbsp;&nbsp<b>Celcius</b>
+			   style="width: 120px;" disabled="disabled"/>
+		&nbsp;&nbsp;<b>Celcius</b>
 		<input id="i2cRequestResultc" name="pin" class="element text medium" type="text" maxlength="4" value="0"
-			   style="width: 120px;"/>
-		&nbsp;&nbsp<b>Fahrenheit</b>
+			   style="width: 120px;" disabled="disabled"/>
+		&nbsp;&nbsp;<b>Fahrenheit</b>
 		<input id="i2cRequestResultf" name="pin" class="element text medium" type="text" maxlength="4" value="0"
-			   style="width: 120px;"/>
+			   style="width: 120px;" disabled="disabled"/>
 
 		<br> <br>
 		<input id="i2cRead" type="button" value="Retrieve Last Read Value" onclick="i2cReadData();"/>
 		<input id="i2cReadResult" name="pin" class="element text medium" type="text" maxlength="4" value="0"
-			   style="width: 120px;"/>
+			   style="width: 120px;" disabled="disabled"/>
 
 		<br><br><hr size="6">
 		<h1>PyMata IoT</h1>
@@ -480,7 +358,7 @@
 		<a href="https://www.adafruit.com/products/902" target="_blank">Adafruit Product ID 109 </a>
 		<br><br>
 		<input id="i2cWriteTest" type="button" value="First Row On" onclick="i2cWriteDemo(1);"/>
-		&nbsp;&nbsp
+		&nbsp;&nbsp;
 		<input id="i2cWriteTest" type="button" value="First Row Off" onclick="i2cWriteDemo(0);"/>
 	</div>
 	<!-- Requetes -->
@@ -503,7 +381,7 @@
 		<a href="javascript:getAnalogMap()" class="btn btn-info">
 	       <span id="span_supervision_get_analog_map"></span>
 	    </a>
-		&nbsp
+		&nbsp;
 		<a href="javascript:getCapabilityReport()" class="btn btn-info">
 	       <span id="span_supervision_get_capability"></span>
 	    </a>
@@ -512,11 +390,11 @@
 		<a href="javascript:getFirmwareVersion()" class="btn btn-info">
 	       <span id="span_supervision_get_firmware"></span>
 	    </a>
-		&nbsp
+		&nbsp;
 		<a href="javascript:getProtocolVersion()" class="btn btn-info">
 	       <span id="span_supervision_get_protocol"></span>
 	    </a>
-		&nbsp
+		&nbsp;
 		<a href="javascript:getPymataVersion()" class="btn btn-info">
 	       <span id="span_supervision_get_pymata"></span>
 	    </a>
@@ -526,7 +404,7 @@
 	       <span id="span_supervision_get_pin_report"></span>
 	    </a>
 		<INPUT id="pinSpinner" TYPE="NUMBER" MIN="0" MAX="127" STEP="1" VALUE="0" SIZE="3">
-		&nbsp
+		&nbsp;
 		<span id="span_supervision_get_pin_report_text"></span>
 	</div>
 </div>
