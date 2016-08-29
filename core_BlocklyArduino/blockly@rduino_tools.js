@@ -115,9 +115,12 @@ BlocklyDuino.toggleWeb = function() {
 	if ($('#toggle-WebAccess').prop('checked')) {
 		$("#btn_Help_Online").removeClass('hidden');
 		window.localStorage.webAccess = "true";
+		$('#toggle-LocalCodebender').bootstrapToggle('enable');
 	} else {
 		$("#btn_Help_Online").addClass('hidden');
 		window.localStorage.webAccess = "false";
+		$('#toggle-LocalCodebender').bootstrapToggle('on');
+		$('#toggle-LocalCodebender').bootstrapToggle('disable');
 	}
 };
 
