@@ -531,6 +531,10 @@ Blockly.Msg.CAT_ROMEO_1 = "RoMeo v2";
 Blockly.Msg.CAT_ROMEO_2 = "RoMeo v2";
 Blockly.Msg.CAT_ROMEO_3 = "RoMeo v2"; //added may 1st 2016
 
+Blockly.Msg.CAT_SPI_COMM = "ISP communication";
+Blockly.Msg.CAT_STEPPER = "Moteurs pas à pas"; //added august 28th 2016
+
+
 Blockly.Msg.FIELDDROPDOWN = [["1 (état haut)", "HIGH"], ["0 (état bas)", "LOW"]];
 Blockly.Msg.FIELDDROPDOWN_ONOFF = [["marche", "ON"], ["arrêt", "OFF"]]
 Blockly.Msg.INOUT_HIGH_LEVEL = "1 (état haut)";
@@ -1296,3 +1300,39 @@ Blockly.Msg.MHK_SERVO_MOTEUR1 = "positionne le servo-moteur";
 Blockly.Msg.MHK_SERVO_MOTEUR2 = "de la broche";
 Blockly.Msg.MHK_SERVO_MOTEUR3 = "à un angle de [0~180°]";
 Blockly.Msg.MHK_SERVO_MOTEUR_TOOLTIP = "Sortie Servo-moteur (réf : MINI-SERVO)";
+
+// added august 28th 2016
+// blocks from Ardublockly project
+
+Blockly.Msg.SPI_SETUP = "Setup";
+Blockly.Msg.SPI_SETUP_CONF = "configuration:";
+Blockly.Msg.SPI_SETUP_DIVIDE = "clock divide";
+Blockly.Msg.SPI_SETUP_LSBFIRST = "LSBFIRST";
+Blockly.Msg.SPI_SETUP_MODE = "SPI mode (idle - edge)";
+Blockly.Msg.SPI_SETUP_MODE0 = "0 (Low - Falling)";
+Blockly.Msg.SPI_SETUP_MODE1 = "1 (Low - Rising)";
+Blockly.Msg.SPI_SETUP_MODE2 = "2 (High - Falling)";
+Blockly.Msg.SPI_SETUP_MODE3 = "3 (High - Rising)";
+Blockly.Msg.SPI_SETUP_MSBFIRST = "MSBFIRST";
+Blockly.Msg.SPI_SETUP_SHIFT = "data shift";
+Blockly.Msg.SPI_SETUP_TIP = "Configures the SPI peripheral.";
+Blockly.Msg.SPI_TRANSRETURN_TIP = "Send a SPI message to an specified slave device and get data back.";
+Blockly.Msg.SPI_TRANS_NONE = "none";
+Blockly.Msg.SPI_TRANS_SLAVE = "to slave pin";
+Blockly.Msg.SPI_TRANS_TIP = "Send a SPI message to an specified slave device.";
+Blockly.Msg.SPI_TRANS_VAL = "transfer";
+Blockly.Msg.SPI_TRANS_WARN1 = "A setup block for %1 must be added to the workspace to use this block!";
+Blockly.Msg.SPI_TRANS_WARN2 = "Old pin value %1 is no longer available.";
+Blockly.Msg.STEPPER_MOTOR = "stepper motor:";
+Blockly.Msg.STEPPER_PIN1 = "pin1#";
+Blockly.Msg.STEPPER_PIN2 = "pin2#";
+Blockly.Msg.STEPPER_REVOLVS = "how many steps per revolution";
+Blockly.Msg.STEPPER_SETUP = "Setup";
+Blockly.Msg.STEPPER_SETUP_TIP = "Configures a stepper motor pinout and other settings.";
+Blockly.Msg.STEPPER_SPEED = "set speed (rpm) to";
+Blockly.Msg.STEPPER_STEP = "move stepper";
+Blockly.Msg.STEPPER_STEPS = "steps";
+Blockly.Msg.STEPPER_STEP_TIP = "Turns the stepper motor a specific number of steps.";
+Blockly.Msg.STEPPER_STEP_WARN1 = "A STEPPER configuration block must be added to use this block!";
+Blockly.Msg.STEPPER_STEP_WARN2 = "A Name input must be added to the Stepper configuration block!";
+Blockly.Msg.STEPPER_STEP_WARN3 = "Selected stepper does not exist any more, please select a new one.";c

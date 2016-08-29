@@ -343,7 +343,11 @@
 		</category>
 		<sep></sep>
 	</category>
-
+	<category name="CAT_SPI_COMM" colour=170>
+		<block type="spi_setup"></block>
+		<block type="spi_transfer"></block>
+		<block type="spi_transfer_return"></block>
+	</category>
 	<category name="CAT_OLED_U8G" colour="#1B2944">
 		<block type="lp2i_u8g_draw_string" colour="#1B2944">
 			<value name="Text">

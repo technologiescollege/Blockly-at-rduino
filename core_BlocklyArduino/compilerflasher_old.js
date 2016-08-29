@@ -1201,6 +1201,8 @@ compilerflasher = function (loadFiles) {
                 return;
             }
 
+            selfCf.eventManager.fire('serial-monitor-connected');
+
             var $baudRates = $('#cb_cf_baud_rates');
             var speed = $baudRates.find('option:selected').val();
             var $ports = $("#cb_cf_ports");
@@ -1229,7 +1231,6 @@ compilerflasher = function (loadFiles) {
             $("#serial_monitor_content").fadeIn(300);
 
             this.connected = true;
-            selfCf.eventManager.fire('serial-monitor-connected');
             // When in app no status messages appear when connection establishes
             this.serialMonitorInitialized = selfCf.useApp;
 
@@ -1436,8 +1437,6 @@ compilerflasher = function (loadFiles) {
 
             this.connected = false;
             this.serialMonitorInitialized = false;
-
-            selfCf.eventManager.fire('serial-monitor-disconnected');
 
             // UI updates
             $baudRates.removeAttr('disabled');
@@ -3257,7 +3256,7 @@ function logging() {
  */
 window.flashing_errors =
 {
-    "-1": "Couldn’t find an Arduino on the selected port. If you are using Leonardo check that you have the correct port selected. If it is correct, try pressing the board’s reset button after initiating the upload.",
+    "-1": "Couldnâ€™t find an Arduino on the selected port. If you are using Leonardo check that you have the correct port selected. If it is correct, try pressing the boardâ€™s reset button after initiating the upload.",
     "-2": "There was a problem programming your Arduino. If you are using a non-English Windows version, or username please contact us.",
     "-22": "The selected port seems to be in use. Please check your board connection, and make sure that you are not using it from some other application or you don't have an open serial monitor.",
     "-23": "Another flashing process is still active. Please wait until it is done and try again.",
@@ -3291,3 +3290,4 @@ window.flashing_errors =
     33005: "This baudrate is not supported by the operating system.",
     36000: "Could not connect to your device. Make sure that you have connected it properly, that you have selected the correct settings (device type and port) and try again."
 };
+

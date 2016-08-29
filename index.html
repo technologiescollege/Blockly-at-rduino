@@ -59,6 +59,8 @@
 <script type="text/javascript" src="blocks/myhumankit/myhumankit.js"></script>
 <script type="text/javascript" src="blocks/robuno/robuno.js"></script>
 <script type="text/javascript" src="blocks/servo/servo.js"></script>
+<script type="text/javascript" src="blocks/spi_comm/spi_comm.js"></script>
+<script type="text/javascript" src="blocks/stepper_motor/stepper_motor.js"></script>
 <script type="text/javascript" src="blocks/technozone51/technozone51.js"></script>
 <!--script type="text/javascript" src="blocks/technozone51/technozone51_barbot.js"></script-->
 <script type="text/javascript" src="blocks/zumobot/zumo_motors.js"></script>
@@ -99,6 +101,8 @@
 <script type="text/javascript" src="generators/arduino/myhumankit.js"></script>
 <script type="text/javascript" src="generators/arduino/robuno.js"></script>
 <script type="text/javascript" src="generators/arduino/servo.js"></script>
+<script type="text/javascript" src="generators/arduino/spi_comm.js"></script>
+<script type="text/javascript" src="generators/arduino/stepper_motor.js"></script>
 <script type="text/javascript" src="generators/arduino/technozone51.js"></script>
 <!--script type="text/javascript" src="generators/arduino/technozone51_barbot.js"></script-->
 <script type="text/javascript" src="generators/arduino/zumo_motors.js"></script>
@@ -114,7 +118,10 @@
 <!--Fin TZ51-->
 <script type="text/javascript" src="lang/code.js"></script>
 
-<script type="text/javascript" src="http://codebender.cc/embed/compilerflasher.js"></script>
+<!--update plugin>
+<script type="text/javascript" src="http://codebender.cc/embed/compilerflasher.js"></script-->
+<!--offline plugin-->
+<script type="text/javascript" src="core_BlocklyArduino/compilerflasher.js"></script>
 
 <link rel="stylesheet" type="text/css" href="css/blockly@rduino.css">
 <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
@@ -571,12 +578,12 @@
 			<div id="divCard">
 		            <label id="labelArduinoCard"></label> 
 		            <select id="pinout">
-		                <!--option value="arduino_nano">Arduino/Genuino LEONARDO</option-->
+		                <option value="arduino_leonardo">Arduino/Genuino LEONARDO</option>
 		                <option value="arduino_mega">Arduino/Genuino MEGA</option>
-		                <!--option value="arduino_nano">Arduino/Genuino MICRO</option-->
+		                <option value="arduino_micro">Arduino/Genuino MICRO</option>
 		                <option value="arduino_nano">Arduino/Genuino NANO</option>
 		                <option value="arduino_uno" selected="selected">Arduino/Genuino UNO</option>
-		                <!--option value="arduino_nano">Arduino/Genuino YUN</option-->
+		                <option value="arduino_yun">Arduino/Genuino YUN</option>
 						<option value="dfrobot_romeo">DFRobot RoMeo v2</option>
 		            </select>
 		    </div>

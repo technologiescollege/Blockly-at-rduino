@@ -70,8 +70,9 @@ BlocklyDuino.renderContent = function() {
 				if (typeof prettyPrintOne == 'function') {
 					$('#pre_arduino').html(prettyPrintOne($('#pre_arduino').html(), 'cpp'));
 				}
-				
-				BlocklyDuino.initGlobalConfig();
+				BlocklyDuino.toggleWeb();	
+				BlocklyDuino.toggleLocalCodeBender();
+				BlocklyDuino.testPluginCodeBender();
 			} catch (e) {
 				alert(e);
 			}
@@ -214,12 +215,13 @@ BlocklyDuino.backupBlocks = function () {
  */
 BlocklyDuino.setArduinoCard =  function () {
 	var cardId = BlocklyDuino.getStringParamFromUrl('card', '');
-	if (cardId) {
-		$("#pinout").val(cardId);
+	if (!cardId) {
+		//$("#pinout").val(cardId);
+		cardId = "arduino_uno";
 	}
 	
 	// set the card from url parameters
-	window.profile["defaultBoard"]=window.profile[$("#pinout").val()];
+	window.profile["defaultBoard"]=window.profile[cardId];
 	$('#arduino_card_picture').attr("src", profile.defaultBoard['picture']);
 	$('#arduino_card_miniPicture').attr("src", profile.defaultBoard['miniPicture']);	
 	$('#pictureModalLabel').text(profile.defaultBoard['description']);
@@ -738,8 +740,9 @@ BlocklyDuino.init = function() {
 		});
 	
 	//global config
-	BlocklyDuino.initGlobalConfig();
-	BlocklyDuino.testPluginCodeBender();
+	//BlocklyDuino.initGlobalConfig();
+	//BlocklyDuino.testPluginCodeBender();
+	//BlocklyDuino.toggleLocalCodeBender();
 	
 	// draggable "modal" dialog containing card image & videos
     $('body').on('mousedown', '#showcardModal', function() {
