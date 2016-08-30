@@ -728,9 +728,9 @@ BlocklyDuino.init = function() {
 		$("#configModal .close").hide();
 		$('#btn_close_config').hide();
 		$("#configModal").modal({ backdrop: 'static', keyboard: false });
-		//$("#configModalGlobal .close").hide();
-		//$('#btn_close_config_global').hide();
-		//$("#configModalGlobal").modal({ backdrop: 'static', keyboard: false });
+		$("#configModalGlobal .close").hide();
+		$('#btn_close_config_global').hide();
+		$("#configModalGlobal").modal({ backdrop: 'static', keyboard: false });
 	}
 	
 	BlocklyDuino.initCompilerFlasher();
