@@ -324,7 +324,7 @@ Code.initLanguageSupervision = function() {
 // Load Supervision's language strings.
 //document.write('<script src="lang/supervision/fr.js"></script>\n');
 
-// And then load the chose langage
+// And then load the choose langage
 //Load the Code demo's language strings.
 document.write('<script src="lang/msg/' + Code.LANG + '.js"></script>\n');
 // Load Blockly's language strings.
