@@ -79,8 +79,8 @@ Blockly.Blocks.servo_attached = {
 Blockly.Blocks.servo_detach = {
   init: function() {
     this.setColour("#2475FA");
-	this.setHelpUrl('');
-	this.setInputsInline(true);
+	this.setHelpUrl('http://www.arduino.cc/playground/ComponentLib/servo');
+	this.setInputsInline(false);
     this.appendValueInput("PIN")
 		.setCheck('Number')
         .appendField(Blockly.Msg.ARDUINO_SERVO_DETACH)
