@@ -4,6 +4,8 @@
 
 ### Off-line upload & supervision [https://github.com/technologiescollege/Blockly-rduino-communication](https://github.com/technologiescollege/Blockly-rduino-communication)
 
+### Internet Explorer banni ! Attention à la compatibilité de votre navigateur avec le plugin Codebender.
+
 **Multilingual** version of Blockly@rduinoo
 =====
 
