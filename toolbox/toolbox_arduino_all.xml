@@ -1562,4 +1562,46 @@
 		<block type="stepper_config"></block>
 		<block type="stepper_step"></block>
 	</category>
+	<category name="CAT_ESUS" colour="#2475FA">
+		<block type="EsusBoard_init"></block>
+		<block type="EsusBoard_motor1">
+				<value name="NEW_LINE">
+					<shadow type="logic_boolean">1
+					</shadow>
+				</value>
+		</block>
+		<block type="EsusBoard_motor2">
+				<value name="NEW_LINE">
+					<shadow type="logic_boolean">1
+					</shadow>
+				</value>
+		</block>
+		<block type="EsusBoard_analog"></block>
+		<block type="EsusBoard_WifiConfig">
+				<value name="Text_ssid">
+					<shadow type="text">
+						<field name="TEXT"></field>
+					</shadow>
+				</value>
+				<value name="Text_password">
+					<shadow type="text">
+						<field name="TEXT"></field>
+					</shadow>
+				</value>
+		</block>
+		<block type="EsusBoard_WifiConfigIP">
+				<value name="Text_IP1">
+					<shadow type="NUM">
+						<field name="NUM"></field>
+					</shadow>
+				</value>
+		</block>
+		<block type="EsusBoard_ReadStream"></block>
+		<block type="conversion_toString"></block>
+		<block type="EsusBoard_WifiContain"></block>
+		<block type="EsusBoard_dataWifiAvailable"></block>
+	</category>
 </toolbox>
+
+
+
