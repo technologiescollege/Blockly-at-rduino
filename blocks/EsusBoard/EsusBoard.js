@@ -9,7 +9,7 @@
 
  Blockly.Blocks['EsusBoard_init'] = {
   init: function() {
-    this.setColour("#00979D");
+    this.setColour("#00559D");
 	this.setHelpUrl('http://www.macerobotics.com');
 	this.setInputsInline(true);
     this.appendDummyInput("")
@@ -21,7 +21,7 @@
 
  Blockly.Blocks['EsusBoard_motor1'] = {
   init: function() {
-    this.setColour("#00979D");
+    this.setColour("#00559D");
 	this.setHelpUrl('http://www.macerobotics.com');
 	this.appendValueInput("PIN", 'Number')
         .setAlign(Blockly.ALIGN_RIGHT)
@@ -40,7 +40,7 @@
 
  Blockly.Blocks['EsusBoard_motor2'] = {
   init: function() {
-    this.setColour("#00979D");
+    this.setColour("#00559D");
 	this.setHelpUrl('http://www.macerobotics.com');
 	this.appendValueInput("PIN", 'Number')
         .setAlign(Blockly.ALIGN_RIGHT)
@@ -59,7 +59,7 @@
 
 Blockly.Blocks['EsusBoard_analog'] = {
   init: function() {
-    this.setColour("#00979D");
+    this.setColour("#00559D");
 	this.setHelpUrl('http://www.macerobotics.com');
 	this.appendValueInput("PIN")
 		.setCheck('Number')
@@ -72,7 +72,7 @@ Blockly.Blocks['EsusBoard_analog'] = {
 
  Blockly.Blocks['EsusBoard_WifiConfig'] = {
   init: function() {
-    this.setColour("#00975D");
+    this.setColour("#00559D");
 	this.setHelpUrl('http://www.macerobotics.com');
     this.appendValueInput("Text_ssid")
 		.setCheck('String')
@@ -91,7 +91,7 @@ Blockly.Blocks['EsusBoard_analog'] = {
 
  Blockly.Blocks['EsusBoard_WifiConfigIP'] = {
   init: function() {
-    this.setColour("#00975D");
+    this.setColour("#00559D");
 	this.setHelpUrl('http://www.macerobotics.com');
     this.appendValueInput("Text_ip1")
 		.setCheck('Number')
@@ -115,7 +115,7 @@ Blockly.Blocks['EsusBoard_analog'] = {
 
 Blockly.Blocks['EsusBoard_ReadStream'] = {
   init: function() {
-    this.setColour("#00975D");
+    this.setColour("#00559D");
 	this.setHelpUrl('http://www.macerobotics.com');
 	this.appendDummyInput("")
 	    .appendField(Blockly.Msg.WIFI_READ_STREAM);
@@ -126,7 +126,7 @@ Blockly.Blocks['EsusBoard_ReadStream'] = {
 
 Blockly.Blocks['EsusBoard_dataWifiAvailable'] = {
   init: function() {
-    this.setColour("#00975D");
+    this.setColour("#00559D");
 	this.setHelpUrl('http://www.macerobotics.com');
 	this.appendDummyInput("")
 	    .appendField(Blockly.Msg.WIFI_DATA_AVAILABLE);
@@ -138,7 +138,7 @@ Blockly.Blocks['EsusBoard_dataWifiAvailable'] = {
 Blockly.Blocks['EsusBoard_WifiContain'] = {
   init: function() {
     this.setHelpUrl(Blockly.Msg.TEXT_APPEND_HELPURL);
-    this.setColour("#00975D");
+    this.setColour("#00559D");
     this.appendDummyInput("")
         .appendField(Blockly.Msg.WIFI_CONTAIN);
     this.appendDummyInput("")
@@ -157,17 +157,6 @@ Blockly.Blocks['EsusBoard_WifiContain'] = {
   }
 }
 
-Blockly.Blocks['conversion_toString'] = {
-  init: function() {
-    this.setColour("#00979D");
-    this.appendValueInput("NAME")
-		.setCheck('Number')
-        .setAlign(Blockly.ALIGN_RIGHT)
-        .appendField(Blockly.Msg.CONV_toSring);
-    this.setOutput(true, 'String');
-    this.setTooltip('');
-  }
-};
 
 
 

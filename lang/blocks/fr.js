@@ -1350,7 +1350,6 @@ Blockly.Msg.WIFI_PASSWORD="mot de passe";
 Blockly.Msg.WIFI_IP="configuration adresse WIFI :";
 Blockly.Msg.ESUS_WIFI_CONFIG="Configuration WIFI";
 Blockly.Msg.WIFI_READ_STREAM="lecture donnée WIFI";
-Blockly.Msg.CONV_toSring="convertir en String";
 Blockly.Msg.WIFI_CONTAIN2="contient";
 Blockly.Msg.WIFI_CONTAIN="donnée WIFI";
 Blockly.Msg.WIFI_DATA_AVAILABLE="donnée WIFI disponible ?";

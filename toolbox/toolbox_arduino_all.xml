@@ -1597,7 +1597,6 @@
 				</value>
 		</block>
 		<block type="EsusBoard_ReadStream"></block>
-		<block type="conversion_toString"></block>
 		<block type="EsusBoard_WifiContain"></block>
 		<block type="EsusBoard_dataWifiAvailable"></block>
 	</category>
