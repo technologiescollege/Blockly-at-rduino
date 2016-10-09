@@ -549,13 +549,15 @@ Blockly.Msg.CAT_MHK = "MyHumanKit"; //added august 23th 2016
 
 Blockly.Msg.ARDUINO_BASE_DELAY_HELPURL = "http://arduino.cc/en/Reference/delay";
 Blockly.Msg.ARDUINO_BASE_DELAY_DELAY_TIME = "faire une temporisation (en ms) de";
+Blockly.Msg.ARDUINO_BASE_DELAY_DELAY_TIME_SEC = "faire une temporisation (en s) de";
 Blockly.Msg.ARDUINO_BASE_DELAY_TOOLTIP = "spécifier le temps d'attente en millisecondes";
 Blockly.Msg.ARDUINO_BASE_SETUP = "initialisation (setup)";
 Blockly.Msg.ARDUINO_BASE_SETUP_HELPURL = "https://www.arduino.cc/en/Reference/Setup";
 Blockly.Msg.ARDUINO_BASE_LOOP = "répéter indéfiniment (loop)";
 Blockly.Msg.ARDUINO_BASE_SETUP_LOOP_HELPURL = "https://www.arduino.cc/en/Reference/Loop";
-Blockly.Msg.ARDUINO_SINCE_PROGRAM_STARTED = "temps écoulé depuis le début du programme";
-Blockly.Msg.ARDUINO_SINCE_PROGRAM_STARTED_TOOLTIP = "durée en millisecondes depuis que le programme a commencé (unsigned long)";
+Blockly.Msg.ARDUINO_SINCE_PROGRAM_STARTED = "temps écoulé (ms) depuis le début du programme";
+Blockly.Msg.ARDUINO_SINCE_PROGRAM_STARTED_SEC = "temps écoulé (s) depuis le début du programme";
+Blockly.Msg.ARDUINO_SINCE_PROGRAM_STARTED_TOOLTIP = "durée depuis que le programme a commencé (unsigned long)";
 Blockly.Msg.ARDUINO_SINCE_PROGRAM_STARTED_HELPURL = "https://www.arduino.cc/en/Reference/Millis";
 Blockly.Msg.ARDUINO_BETWEEN = "nombre aléatoire entre";
 Blockly.Msg.ARDUINO_BETWEEN_AND = "et";
