@@ -121,10 +121,16 @@ Blockly.Blocks.text_isEmpty.getBlockType = function() {
 Blockly.Blocks.millis.getBlockType = function() {
 	return Blockly.Types.LARGE_NUMBER;
 };
+Blockly.Blocks.millis_sec.getBlockType = function() {
+	return Blockly.Types.LARGE_NUMBER;
+};
 Blockly.Blocks.var_random.getBlockType = function() {
 	return Blockly.Types.LARGE_NUMBER;
 };
 Blockly.Blocks.base_delay.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.base_delay_sec.getBlockType = function() {
 	return Blockly.Types.NUMBER;
 };
 Blockly.Blocks.base_map.getBlockType = function() {

@@ -128,6 +128,17 @@ Blockly.Blocks.millis = {
   }
 };
 
+Blockly.Blocks.millis_sec = {
+  init: function() {
+    this.setColour("#00979D");
+	this.setHelpUrl(Blockly.Msg.ARDUINO_SINCE_PROGRAM_STARTED_HELPURL);
+    this.appendDummyInput("")
+         .appendField(Blockly.Msg.ARDUINO_SINCE_PROGRAM_STARTED_SEC);
+    this.setOutput(true, 'Number');
+    this.setTooltip(Blockly.Msg.ARDUINO_SINCE_PROGRAM_STARTED_TOOLTIP);
+  }
+};
+
 Blockly.Blocks.var_random = {
   init: function() {
     this.setColour("#00979D");
@@ -150,6 +161,20 @@ Blockly.Blocks.base_delay = {
     this.setHelpUrl(Blockly.Msg.ARDUINO_BASE_DELAY_HELPURL);
     this.appendValueInput("DELAY_TIME", 'Number')
         .appendField(Blockly.Msg.ARDUINO_BASE_DELAY_DELAY_TIME)
+        .setCheck('Number');
+    this.setInputsInline(true);
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setTooltip(Blockly.Msg.ARDUINO_BASE_DELAY_TOOLTIP);
+  }
+};
+
+Blockly.Blocks.base_delay_sec = {
+  init: function() {
+    this.setColour("#00979D");
+    this.setHelpUrl(Blockly.Msg.ARDUINO_BASE_DELAY_HELPURL);
+    this.appendValueInput("DELAY_TIME", 'Number')
+        .appendField(Blockly.Msg.ARDUINO_BASE_DELAY_DELAY_TIME_SEC)
         .setCheck('Number');
     this.setInputsInline(true);
     this.setPreviousStatement(true, null);
