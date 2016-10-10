@@ -972,16 +972,22 @@ Blockly.Blocks.zumo_motors_FUs.getBlockType = function() {
 };
 //---------------------------------zumo_sensors.js-------------------------------------
 
-Blockly.Blocks.setup_button_wait_il.getBlockType = function() {
+Blockly.Blocks.Zumo_setup_button_wait_il.getBlockType = function() {
 	return Blockly.Types.BOOLEAN;
 };
-Blockly.Blocks.setup_button_wait_iph.getBlockType = function() {
+Blockly.Blocks.Zumo_setup_button_wait_iph.getBlockType = function() {
 	return Blockly.Types.BOOLEAN;
 };
-Blockly.Blocks.fourpin_ranger.getBlockType = function() {
+Blockly.Blocks.Zumo_wait_button_push.getBlockType = function() {
+	return Blockly.Types.BOOLEAN;
+};
+Blockly.Blocks.Zumo_play_notes_z.getBlockType = function() {
 	return Blockly.Types.NUMBER;
 };
-Blockly.Blocks.play_notes_z.getBlockType = function() {
+Blockly.Blocks.Zumo_line_follower.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.Zumo_BorderDetect.getBlockType = function() {
 	return Blockly.Types.NUMBER;
 };
 
@@ -1022,5 +1028,3 @@ Blockly.Blocks.EsusBoard_dataWifiAvailable.getBlockType = function() {
 Blockly.Blocks.EsusBoard_WifiContain.getBlockType = function() {
 	return Blockly.Types.TEXT;
 };
-
-

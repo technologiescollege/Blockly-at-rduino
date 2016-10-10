@@ -1431,6 +1431,7 @@
 		<category name="CAT_ZUMO_SENSORS" colour="#00138b">
 			<block type="Zumo_setup_button_wait_il"></block>
 			<block type="Zumo_setup_button_wait_iph"></block>
+			<block type="Zumo_wait_button_push"></block>
 			<block type="Zumo_play_notes_z">
 				<value name="DUR">
 					<shadow type="math_number">
@@ -1443,6 +1444,10 @@
 					</shadow>
 				</value>
 			</block>
+		</category>
+		<category name="CAT_ZUMO_FUNCTION" colour="#00138b">
+			<block type="Zumo_line_follower"></block>
+			<block type="Zumo_BorderDetect"></block>
 		</category>
 		<sep></sep>
 	</category>
@@ -1553,7 +1558,7 @@
 			</value>
 		</block>
 	</category>
-	<category name="CAT_ARDUINO_SERVO" colour="#2475FA">
+	<category name="CAT_ARDUINO_SERVO" colour="#191919">
 		<block type="servo_move">
 			<value name="DEGREE">
 				<shadow type="inout_angle">
@@ -1573,89 +1578,89 @@
 	</category>
 	<category name="CAT_ESUS" colour="#2475FA">
 		<category name="CAT_ESUS_MOTORS" colour="#2475FA">
-		<block type="EsusBoard_motor1">
-				<value name="NEW_LINE">
-					<shadow type="logic_boolean">1
-					</shadow>
-				</value>
-		</block>
-		<block type="EsusBoard_motor2">
-				<value name="NEW_LINE">
-					<shadow type="logic_boolean">1
-					</shadow>
-				</value>
-		</block>
+			<block type="EsusBoard_motor1">
+					<value name="NEW_LINE">
+						<shadow type="logic_boolean">1
+						</shadow>
+					</value>
+			</block>
+			<block type="EsusBoard_motor2">
+					<value name="NEW_LINE">
+						<shadow type="logic_boolean">1
+						</shadow>
+					</value>
+			</block>
 		</category>
 		<category name="CAT_ESUS_WIFI" colour="#4075F0">
-		<block type="EsusBoard_WifiConfig">
-				<value name="Text_ssid">
-					<shadow type="text">
-						<field name="TEXT"></field>
-					</shadow>
-				</value>
-				<value name="Text_password">
-					<shadow type="text">
-						<field name="TEXT"></field>
-					</shadow>
-				</value>
-		</block>
-		<block type="EsusBoard_WifiConfigIP">
-				<value name="Text_ip1">
-					<shadow type="math_number">
-						<field name="NUM">192</field>
-					</shadow>
-				</value>
-				<value name="Text_ip2">
-					<shadow type="math_number">
-						<field name="NUM">168</field>
-					</shadow>
-				</value>
-				<value name="Text_ip3">
-					<shadow type="math_number">
-						<field name="NUM">1</field>
-					</shadow>
-				</value>
-				<value name="Text_ip4">
-					<shadow type="math_number">
-						<field name="NUM">12</field>
-					</shadow>
-				</value>
-		</block>
-		<block type="EsusBoard_ReadStream"></block>
-		<block type="EsusBoard_WifiContain"></block>
-		<block type="EsusBoard_dataWifiAvailable"></block>
-		<block type="EsusBoard_WifiConfigAP">
-				<value name="Text_ssid">
-					<shadow type="text">
-						<field name="TEXT"></field>
-					</shadow>
-				</value>
-				<value name="Text_password">
-					<shadow type="text">
-						<field name="TEXT">8 caractères minimum</field>
-					</shadow>
-				</value>
-				<value name="Text_ip1AP">
-					<shadow type="math_number">
-						<field name="NUM">192</field>
-					</shadow>
-				</value>
-				<value name="Text_ip2AP">
-					<shadow type="math_number">
-						<field name="NUM">168</field>
-					</shadow>
-				</value>
-				<value name="Text_ip3AP">
-					<shadow type="math_number">
-						<field name="NUM">1</field>
-					</shadow>
-				</value>
-				<value name="Text_ip4AP">
-					<shadow type="math_number">
-						<field name="NUM">22</field>
-					</shadow>
-				</value>
-		</block>
+			<block type="EsusBoard_WifiConfigAP">
+					<value name="Text_ssid">
+						<shadow type="text">
+							<field name="TEXT"></field>
+						</shadow>
+					</value>
+					<value name="Text_password">
+						<shadow type="text">
+							<field name="TEXT">8 caractères minimum</field>
+						</shadow>
+					</value>
+					<value name="Text_ip1AP">
+						<shadow type="math_number">
+							<field name="NUM">192</field>
+						</shadow>
+					</value>
+					<value name="Text_ip2AP">
+						<shadow type="math_number">
+							<field name="NUM">168</field>
+						</shadow>
+					</value>
+					<value name="Text_ip3AP">
+						<shadow type="math_number">
+							<field name="NUM">1</field>
+						</shadow>
+					</value>
+					<value name="Text_ip4AP">
+						<shadow type="math_number">
+							<field name="NUM">22</field>
+						</shadow>
+					</value>
+			</block>
+			<block type="EsusBoard_WifiConfig">
+					<value name="Text_ssid">
+						<shadow type="text">
+							<field name="TEXT"></field>
+						</shadow>
+					</value>
+					<value name="Text_password">
+						<shadow type="text">
+							<field name="TEXT"></field>
+						</shadow>
+					</value>
+			</block>
+			<block type="EsusBoard_WifiConfigIP">
+					<value name="Text_ip1">
+						<shadow type="math_number">
+							<field name="NUM">192</field>
+						</shadow>
+					</value>
+					<value name="Text_ip2">
+						<shadow type="math_number">
+							<field name="NUM">168</field>
+						</shadow>
+					</value>
+					<value name="Text_ip3">
+						<shadow type="math_number">
+							<field name="NUM">1</field>
+						</shadow>
+					</value>
+					<value name="Text_ip4">
+						<shadow type="math_number">
+							<field name="NUM">12</field>
+						</shadow>
+					</value>
+			</block>
+			<block type="EsusBoard_ReadStream"></block>
+			<block type="EsusBoard_WifiContain"></block>
+			<block type="EsusBoard_dataWifiAvailable"></block>
 		</category>
 		<block type="EsusBoard_init"></block>
 		<block type="EsusBoard_analog"></block>

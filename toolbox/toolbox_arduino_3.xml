@@ -1554,7 +1554,7 @@
 			</value>
 		</block>
 	</category>
-	<category name="CAT_ARDUINO_SERVO" colour="#2475FA">
+	<category name="CAT_ARDUINO_SERVO" colour="#191919">
 		<block type="servo_move">
 			<value name="DEGREE">
 				<shadow type="inout_angle">

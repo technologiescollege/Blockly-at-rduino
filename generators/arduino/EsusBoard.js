@@ -9,7 +9,6 @@ goog.provide('Blockly.Blocks.conversion');
 goog.require('Blockly.Blocks');
 
 
-
 Blockly.Arduino['EsusBoard_init'] = function() {
   Blockly.Arduino.includes_['define_esus'] = '#include <esusBoard.h>';
   Blockly.Arduino.setups_['esus_init'] = 'initEsusBoard();';

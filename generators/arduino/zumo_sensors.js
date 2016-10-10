@@ -62,3 +62,11 @@ Blockly.Arduino.Zumo_setup_button_wait_iph = function() {
   var code = '';
   return code;
 };
+
+Blockly.Arduino.Zumo_wait_button_push = function() {
+  Blockly.Arduino.definitions_["define_zumo_button_wait"] = "#include <Pushbutton.h>\n" +
+  "Pushbutton button(ZUMO_BUTTON);";
+  
+  var code = 'button.waitForButton();';
+  return code;
+};
