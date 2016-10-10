@@ -26,22 +26,22 @@ Blockly.Blocks['Zumo_line_follower'] = {
   init: function() {
     this.setColour("#00138b");
     this.appendDummyInput()
-        .appendField("Suiveur de ligne");
-    this.setTooltip('se calibre en cherchant une ligne noire, puis se cale dessus');
+        .appendField(Blockly.Msg.ROBOTS_MOTORS_ZUMO_FCT_FOLLOWER);
+    this.setTooltip(Blockly.Msg.ROBOTS_MOTORS_ZUMO_FCT_FOLLOWER_TOOLTIP);
 	this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-	this.setHelpUrl('https://www.pololu.com/docs/0J57/7.d');
+	this.setHelpUrl(Blockly.Msg.ROBOTS_MOTORS_ZUMO_FCT_FOLLOWER_HELPURL);
  }
 };
 
-Blockly.Blocks['Zumo_BorderDetect'] = {
+Blockly.Blocks['Zumo_SensorCalibration'] = {
   init: function() {
     this.setColour("#00138b");
     this.appendDummyInput()
-        .appendField("détecteur de bord");
-    this.setTooltip("détecte si le bord d'une zone est atteint, pour ne pas en sortir");
+        .appendField(Blockly.Msg.ROBOTS_MOTORS_ZUMO_FCT_SENSORCALIBRATION);
+    this.setTooltip(Blockly.Msg.ROBOTS_MOTORS_ZUMO_FCT_SENSORCALIBRATION_TOOLTIP);
 	this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-	this.setHelpUrl('https://www.pololu.com/docs/0J57/7.b');
+	this.setHelpUrl(Blockly.Msg.ROBOTS_MOTORS_ZUMO_FCT_SENSORCALIBRATION_HELPURL);
  }
 };

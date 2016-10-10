@@ -353,6 +353,14 @@
 		<block type="IR_get_blink"></block>
 		<block type="IR_get"></block>
 	</category>
+	<category name="APDS-9960_RGB_Gesture" colour="#D9242D">
+		<block type="APDS9960_ColorSensor_init"></block>
+		<block type="APDS9960_ColorSensor_test"></block>
+		<block type="APDS9960_ColorSensor_ambient"></block>
+		<block type="APDS9960_ColorSensor_red"></block>
+		<block type="APDS9960_ColorSensor_green"></block>
+		<block type="APDS9960_ColorSensor_blue"></block>
+	</category>
 	<category name="CAT_SPI_COMM" colour="170">
 		<block type="spi_setup"></block>
 		<block type="spi_transfer"></block>
@@ -1447,7 +1455,7 @@
 		</category>
 		<category name="CAT_ZUMO_FUNCTION" colour="#00138b">
 			<block type="Zumo_line_follower"></block>
-			<block type="Zumo_BorderDetect"></block>
+			<block type="Zumo_SensorCalibration"></block>
 		</category>
 		<sep></sep>
 	</category>

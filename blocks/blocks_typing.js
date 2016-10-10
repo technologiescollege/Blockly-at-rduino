@@ -1028,3 +1028,24 @@ Blockly.Blocks.EsusBoard_dataWifiAvailable.getBlockType = function() {
 Blockly.Blocks.EsusBoard_WifiContain.getBlockType = function() {
 	return Blockly.Types.TEXT;
 };
+
+//---------------------------------APDS-9960_RGB_Gesture.js-------------------------------------
+
+Blockly.Blocks.APDS9960_ColorSensor_init.getBlockType = function() {
+	return Blockly.Types.NULL;
+};
+Blockly.Blocks.APDS9960_ColorSensor_test.getBlockType = function() {
+	return Blockly.Types.BOOLEAN;
+};
+Blockly.Blocks.APDS9960_ColorSensor_ambient.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.APDS9960_ColorSensor_red.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.APDS9960_ColorSensor_green.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.APDS9960_ColorSensor_blue.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};

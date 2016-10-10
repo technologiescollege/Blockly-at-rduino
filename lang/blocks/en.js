@@ -512,6 +512,7 @@ Blockly.Msg.CAT_TECHNOZONE_ROBOT_IHM = "HMI console";
 Blockly.Msg.CAT_ZUMO = "ZumoBot";	//added april 6th 2015
 Blockly.Msg.CAT_ZUMO_MOTORS = "Motors";
 Blockly.Msg.CAT_ZUMO_SENSORS = "Sensors";
+Blockly.Msg.CAT_ZUMO_FUNCTION = "Functions";
 
 Blockly.Msg.CAT_BQ = "bitbloq";  //added july 14th 2015
 Blockly.Msg.CAT_BQ_IN = "In";
@@ -545,6 +546,10 @@ Blockly.Msg.INOUT_HIGH_LEVEL = "1 -> HIGH";
 Blockly.Msg.INOUT_LOW_LEVEL = "0 -> low";
 
 Blockly.Msg.CAT_MHK = "MyHumanKit"; //added august 23th 2016
+
+Blockly.Msg.CAT_ESUS = "Esus board"; //added 8 october 2016
+Blockly.Msg.CAT_ESUS_WIFI = "WiFi";
+Blockly.Msg.CAT_ESUS_MOTORS = "Motors control";
 
 
 //**********************************blocks***********************************************
@@ -822,6 +827,13 @@ Blockly.Msg.ROBOTS_MOTORS_ZUMO_FRS_TITLE = "Zumo -Flip right & speed";
 Blockly.Msg.ROBOTS_MOTORS_ZUMO_FRS_TOOLTIP = "Drive Pololu Zumo (flipped right motor) +Speed";
 Blockly.Msg.ROBOTS_MOTORS_ZUMO_FUS_TITLE = "Zumo -Flip Motors";
 Blockly.Msg.ROBOTS_MOTORS_ZUMO_FUS_TOOLTIP = "Drive Pololu Zumo with option to flip motors";
+Blockly.Msg.ROBOTS_MOTORS_ZUMO_FCT_FOLLOWER = "line follower";
+Blockly.Msg.ROBOTS_MOTORS_ZUMO_FCT_FOLLOWER_TOOLTIP = "follow a black line";
+Blockly.Msg.ROBOTS_MOTORS_ZUMO_FCT_FOLLOWER_HELPURL = "https://www.pololu.com/docs/0J57/7.d";
+Blockly.Msg.ROBOTS_MOTORS_ZUMO_FCT_SENSORCALIBRATION = "calibrates the sensor";
+Blockly.Msg.ROBOTS_MOTORS_ZUMO_FCT_SENSORCALIBRATION_TOOLTIP = "calibrates the sensor for ten seconds and 
+turns on the pin 13 LED while calibration is going on";
+Blockly.Msg.ROBOTS_MOTORS_ZUMO_FCT_SENSORCALIBRATION_HELPURL = "https://www.pololu.com/product/1419";
 Blockly.Msg.ROBOTS_MOTORS_ARDUMOTOR_TITLE = "Ardumotor";
 Blockly.Msg.ROBOTS_MOTORS_ARDUMOTOR_TOOLTIP = "ArduMotor Sparkfun Shield A=left B=right";
 Blockly.Msg.ROBOTS_MOTORS_ARDUMOTOR_HELPURL = "https://www.sparkfun.com/datasheets/DevTools/Arduino/Ardumoto_v13.pdf";
@@ -1345,21 +1357,18 @@ Blockly.Msg.STEPPER_STEP_WARN2 = "A Name input must be added to the Stepper conf
 Blockly.Msg.STEPPER_STEP_WARN3 = "Selected stepper does not exist any more, please select a new one.";
 
 //******** Esus Board (Mace Robotics)
-Blockly.Msg.CAT_ESUS = "Esus board";
-Blockly.Msg.CAT_ESUS_WIFI = "WiFi";
-Blockly.Msg.CAT_ESUS_MOTORS = "Motors control";
-Blockly.Msg.EsusBoard_init="Esus board initialisation";
-Blockly.Msg.MOTOR1_SPEED="Motor 1, speed:";
-Blockly.Msg.MOTOR1_DIRECTION="Direction:";
-Blockly.Msg.MOTOR2_SPEED="Motor 2, speed:";
-Blockly.Msg.MOTOR2_DIRECTION="Direction:";
+Blockly.Msg.ESUS_EsusBoard_init="Esus board initialisation";
+Blockly.Msg.ESUS_MOTOR1_SPEED="Motor 1, speed:";
+Blockly.Msg.ESUS_MOTOR1_DIRECTION="Direction:";
+Blockly.Msg.ESUS_MOTOR2_SPEED="Motor 2, speed:";
+Blockly.Msg.ESUS_MOTOR2_DIRECTION="Direction:";
 Blockly.Msg.ESUS_ANALOG="Analog input:";
-Blockly.Msg.WIFI_SSID="WiFi configuration, infra mode SSID:";
-Blockly.Msg.WIFI_PASSWORD="password";
-Blockly.Msg.WIFI_IP="WiFi IP:";
-Blockly.Msg.WIFI_READ_STREAM="read data WiFi";
-Blockly.Msg.WIFI_CONTAIN2="contain";
-Blockly.Msg.WIFI_CONTAIN="data WiFi";
-Blockly.Msg.WIFI_DATA_AVAILABLE="data WiFi available?";
-Blockly.Msg.WIFI_AP="configuration WiFi mode AP SSID:";
-Blockly.Msg.WIFI_AP_IP="IP Address:";
+Blockly.Msg.ESUS_WIFI_SSID="WiFi configuration, infra mode SSID:";
+Blockly.Msg.ESUS_WIFI_PASSWORD="password";
+Blockly.Msg.ESUS_WIFI_IP="WiFi IP:";
+Blockly.Msg.ESUS_WIFI_READ_STREAM="read data WiFi";
+Blockly.Msg.ESUS_WIFI_CONTAIN2="contain";
+Blockly.Msg.ESUS_WIFI_CONTAIN="data WiFi";
+Blockly.Msg.ESUS_WIFI_DATA_AVAILABLE="data WiFi available?";
+Blockly.Msg.ESUS_WIFI_AP="configuration WiFi mode AP SSID:";
+Blockly.Msg.ESUS_WIFI_AP_IP="IP Address:";

@@ -30,15 +30,20 @@ goog.require('Blockly.Arduino');
 
 
 Blockly.Arduino.Zumo_line_follower = function() {
-  Blockly.Arduino.includes_["includes_Zumo_line_follower"] = 
+  Blockly.Arduino.includes_["includes_Zumo_SensorCalibration"] = 
   "#include <QTRSensors.h>\n" +
-  "#include <ZumoReflectanceSensorArray.h>\n" +
+  "#include <ZumoReflectanceSensorArray.h>";
+  
+  Blockly.Arduino.includes_["includes_Zumo_line_follower"] = 
   "#include <ZumoMotors.h>\n" +
   "#include <ZumoBuzzer.h>\n" +
-  "#include <Pushbutton.h>\n" +
-  "\n" +
-  "ZumoBuzzer buzzer;\n" +
-  "ZumoReflectanceSensorArray reflectanceSensors;\n" +
+  "#include <Pushbutton.h>";
+  
+   Blockly.Arduino.definitions_["defines_Zumo_Reflectance"] =
+  "ZumoReflectanceSensorArray reflectanceSensor\n" +
+  "ZumoBuzzer buzzer;";
+  
+  Blockly.Arduino.definitions_["defines_Zumo_line_follower"] =
   "ZumoMotors motors;\n" +
   "Pushbutton button(ZUMO_BUTTON);\n" +
   "int lastError = 0;\n" +
@@ -46,26 +51,26 @@ Blockly.Arduino.Zumo_line_follower = function() {
   
   Blockly.Arduino.setups_['setup_Zumo_line_follower'] = 
   'buzzer.play(">g32>>c32");\n' +
-  "reflectanceSensors.init();\n" +
-  "button.waitForButton();\n" +
-  "pinMode(13, OUTPUT);\n" +
-  "digitalWrite(13, HIGH);\n" +
-  "delay(1000);\n" +
-  "int i;\n" +
-  "for(i = 0; i < 80; i++){\n" +
-  "  if ((i > 10 && i <= 30) || (i > 50 && i <= 70))\n" +
-  "    motors.setSpeeds(-200, 200);\n" +
-  "  else\n" +
-  "    motors.setSpeeds(200, -200);\n" +
-  "  reflectanceSensors.calibrate();\n" +
-  "  delay(20);\n" +
-  "  }\n" +
-  "motors.setSpeeds(0,0);\n" +
-  "digitalWrite(13, LOW);\n" +
-  'buzzer.play(">g32>>c32");\n' +
-  "button.waitForButton();\n" +
-  'buzzer.play("L16 cdegreg4");\n' +
-  "while(buzzer.isPlaying());\n"; 
+  "  reflectanceSensors.init();\n" +
+  "  button.waitForButton();\n" +
+  "  pinMode(13, OUTPUT);\n" +
+  "  digitalWrite(13, HIGH);\n" +
+  "  delay(1000);\n" +
+  "  int i;\n" +
+  "  for(i = 0; i < 80; i++){\n" +
+  "    if ((i > 10 && i <= 30) || (i > 50 && i <= 70))\n" +
+  "      motors.setSpeeds(-200, 200);\n" +
+  "    else\n" +
+  "      motors.setSpeeds(200, -200);\n" +
+  "    reflectanceSensors.calibrate();\n" +
+  "    delay(20);\n" +
+  "    }\n" +
+  "  motors.setSpeeds(0,0);\n" +
+  "  digitalWrite(13, LOW);\n" +
+  '  buzzer.play(">g32>>c32");\n' +
+  "  button.waitForButton();\n" +
+  '  buzzer.play("L16 cdegreg4");\n' +
+  "  while(buzzer.isPlaying());\n"; 
   
   var code = 
   "unsigned int sensors[6];\n" +
@@ -83,19 +88,64 @@ Blockly.Arduino.Zumo_line_follower = function() {
   return code;
 };
 
-Blockly.Arduino.Zumo_BorderDetect = function() {
-  var wait_pin = this.getFieldValue('PIN');  
-  Blockly.Arduino.definitions_["define_button_wait"] = 
-  "const int buttonPin = 12;\n"+
-  "int buttonState = 0;\n"+
-  "void WaitForButton (){\n"+
-  "	buttonState = digitalRead(buttonPin);\n"+
-  "	while(buttonState == HIGH) {\n" +
-  "		buttonState = digitalRead(buttonPin);\n" +
-  "		}\n" +
-  "	}\n";
- Blockly.Arduino.setups_['setup_button_wait'] = " pinMode(buttonPin, INPUT_PULLUP);\n"+
- "WaitForButton();\n";
-  var code = '';
+Blockly.Arduino.Zumo_SensorCalibration = function() {
+  Blockly.Arduino.includes_["includes_Zumo_SensorCalibration"] = 
+  "#include <QTRSensors.h>\n" +
+  "#include <ZumoReflectanceSensorArray.h>";
+  
+  Blockly.Arduino.definitions_["defines_Zumo_SensorCalibration"] =
+  "// Define an array for holding sensor values.\n" +
+  "#define NUM_SENSORS 6\n" +
+  "unsigned int sensorValues[NUM_SENSORS];";
+
+  Blockly.Arduino.definitions_["defines_Zumo_Reflectance"] =
+  "ZumoReflectanceSensorArray reflectanceSensor\n" +
+  "ZumoBuzzer buzzer;";
+  
+  Blockly.Arduino.setups_['setup_Zumo_SensorCalibration'] = 
+  "reflectanceSensors.init();\n" +
+  "  delay(500);\n" +
+  "  pinMode(13, OUTPUT);\n" +
+  "  digitalWrite(13, HIGH);        // turn on LED to indicate we are in calibration mode\n" +  
+  "  unsigned long startTime = millis();\n" +
+  "  while(millis() - startTime < 10000)   // make the calibration take 10 seconds\n" +
+  "  {\n" +
+  "    reflectanceSensors.calibrate();\n" +
+  "  }\n" +
+  "  digitalWrite(13, LOW);         // turn off LED to indicate we are through with calibration\n" +
+  "  // print the calibration minimum values measured when emitters were on\n" +
+  "  Serial.begin(9600);\n" +
+  "  for (byte i = 0; i < NUM_SENSORS; i++)\n" +
+  "  {\n" +
+  "    Serial.print(reflectanceSensors.calibratedMinimumOn[i]);\n" +
+  "    Serial.print(' ');\n" +
+  "  }\n" +
+  "  Serial.println();\n" +  
+  "  // print the calibration maximum values measured when emitters were on\n" +
+  "  for (byte i = 0; i < NUM_SENSORS; i++)\n" +
+  "  {\n" +
+  "    Serial.print(reflectanceSensors.calibratedMaximumOn[i]);\n" +
+  "    Serial.print(' ');\n" +
+  "  }\n" +
+  "  Serial.println();\n" +
+  "  Serial.println();\n" +
+  "  delay(1000);\n";
+  
+  var code = 
+  "// read calibrated sensor values and obtain a measure of the line position.\n" +
+  "// Note: the values returned will be incorrect if the sensors have not been properly\n" +
+  "// calibrated during the calibration phase.\n" +
+  "unsigned int position = reflectanceSensors.readLine(sensorValues);\n" +
+  "// To get raw sensor values instead, call:  \n" +
+  "//reflectanceSensors.read(sensorValues);\n" +
+  "for (byte i = 0; i < NUM_SENSORS; i++)\n" +
+  "{\n" +
+  "  Serial.print(sensorValues[i]);\n" +
+  "  Serial.print(' ');\n" +
+  "}\n" +
+  "Serial.print('   ');\n" +
+  "Serial.println(position);\n" +  
+  "delay(250);";  
+  
   return code;
 };
