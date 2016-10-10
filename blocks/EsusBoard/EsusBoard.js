@@ -137,7 +137,7 @@ Blockly.Blocks['EsusBoard_dataWifiAvailable'] = {
 
 Blockly.Blocks['EsusBoard_WifiContain'] = {
   init: function() {
-    this.setHelpUrl(Blockly.Msg.TEXT_APPEND_HELPURL);
+	this.setHelpUrl('http://www.macerobotics.com');
     this.setColour("#00559D");
     this.appendDummyInput("")
         .appendField(Blockly.Msg.WIFI_CONTAIN);
@@ -155,7 +155,39 @@ Blockly.Blocks['EsusBoard_WifiContain'] = {
     });
     this.setOutput(true, 'String');
   }
-}
+};
+
+ Blockly.Blocks['EsusBoard_WifiConfigAP'] = {
+  init: function() {
+    this.setColour("#00559D");
+	this.setHelpUrl('http://www.macerobotics.com');
+    this.appendValueInput("Text_ssid")
+		.setCheck('String')
+	    .setAlign(Blockly.ALIGN_RIGHT)
+        .appendField(Blockly.Msg.WIFI_AP);
+    this.appendValueInput("Text_password")
+		.setCheck('String')
+	    .setAlign(Blockly.ALIGN_RIGHT)
+        .appendField(Blockly.Msg.WIFI_PASSWORD);
+    this.appendValueInput("Text_ip1AP")
+		.setCheck('Number')
+	    .setAlign(Blockly.ALIGN_RIGHT)
+        .appendField(Blockly.Msg.WIFI_AP_IP);
+    this.appendValueInput("Text_ip2AP")
+		.setCheck('Number')
+	    .setAlign(Blockly.ALIGN_RIGHT)
+	this.appendValueInput("Text_ip3AP")
+		.setCheck('Number')
+	    .setAlign(Blockly.ALIGN_RIGHT)
+	this.appendValueInput("Text_ip4AP")
+		.setCheck('Number')
+	    .setAlign(Blockly.ALIGN_RIGHT)
+    this.setInputsInline(false);
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setTooltip(Blockly.Msg.ESUS_WIFI_CONFIG);
+  }
+};
 
 
 

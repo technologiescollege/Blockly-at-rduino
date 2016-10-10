@@ -1341,3 +1341,23 @@ Blockly.Msg.STEPPER_STEP_TIP = "Turns the stepper motor a specific number of ste
 Blockly.Msg.STEPPER_STEP_WARN1 = "A STEPPER configuration block must be added to use this block!";
 Blockly.Msg.STEPPER_STEP_WARN2 = "A Name input must be added to the Stepper configuration block!";
 Blockly.Msg.STEPPER_STEP_WARN3 = "Selected stepper does not exist any more, please select a new one.";
+
+//******** Esus Board (Mace Robotics)
+Blockly.Msg.CAT_ESUS = "Esus board";
+Blockly.Msg.CAT_ESUS_WIFI = "Wifi";
+Blockly.Msg.CAT_ESUS_MOTORS = "Motors control";
+Blockly.Msg.EsusBoard_init="Esus board initialisation";
+Blockly.Msg.MOTOR1_SPEED="Motor 1, speed :";
+Blockly.Msg.MOTOR1_DIRECTION="Direction :";
+Blockly.Msg.MOTOR2_SPEED="Motor 2, speed :";
+Blockly.Msg.MOTOR2_DIRECTION="Direction :";
+Blockly.Msg.ESUS_ANALOG="Analog input :";
+Blockly.Msg.WIFI_SSID="WIFI configuration, infra mode SSID:";
+Blockly.Msg.WIFI_PASSWORD="password";
+Blockly.Msg.WIFI_IP="WIFI IP :";
+Blockly.Msg.WIFI_READ_STREAM="read data WIFI";
+Blockly.Msg.WIFI_CONTAIN2="contain";
+Blockly.Msg.WIFI_CONTAIN="data WIFI";
+Blockly.Msg.WIFI_DATA_AVAILABLE="data WIFI available ?";
+Blockly.Msg.WIFI_AP="configuration WIFI mode AP SSID:";
+Blockly.Msg.WIFI_AP_IP="IP Address :";
