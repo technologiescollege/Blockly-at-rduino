@@ -40,7 +40,7 @@ Blockly.Blocks['Zumo_setup_button_wait_il'] = {
     this.setTooltip('1 time wait button (in setup) - INPUT & wait for HIGH');
 	this.setPreviousStatement(false, null);
     this.setNextStatement(true, null);
-	this.setHelpUrl('http://arduino.cc/en/tutorial/button');
+	this.setHelpUrl('https://www.pololu.com/docs/0J57/5');
  }
 };
 
@@ -54,6 +54,18 @@ Blockly.Blocks['Zumo_setup_button_wait_iph'] = {
         .appendField(new Blockly.FieldTextInput('', Blockly.Arduino.pinDigitalValidator), 'PIN')*/;
     this.setTooltip('1 time wait button (in setup) - INPUT_PULLUP & wait for LOW');
 	this.setPreviousStatement(false, null);
+    this.setNextStatement(true, null);
+	this.setHelpUrl('https://www.pololu.com/docs/0J57/5');
+ }
+};
+
+Blockly.Blocks['Zumo_wait_button_push'] = {
+  init: function() {
+    this.setColour("#00138b");
+    this.appendDummyInput()
+        .appendField("attendre appui sur le bouton");
+    this.setTooltip("tant qu'on n'appuie pas sur le bouton le programe est en attente");
+	this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
 	this.setHelpUrl('https://www.pololu.com/docs/0J57/5');
  }
