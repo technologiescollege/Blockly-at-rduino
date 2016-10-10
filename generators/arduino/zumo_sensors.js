@@ -24,53 +24,41 @@
  * @author erickennedy@outlook.com  Eric Kennedy
  */
 
-goog.provide('Blockly.Arduino.sensors');
+goog.provide('Blockly.Arduino.Zumo_sensors');
 
 goog.require('Blockly.Arduino');
 
 
-Blockly.Arduino.setup_button_wait_il = function() {
-  var wait_pin = this.getFieldValue('PIN');
+Blockly.Arduino.Zumo_setup_button_wait_il = function() {
+  var wait_pin = this.getFieldValue('PIN');  
+  Blockly.Arduino.definitions_["define_button_wait"] = 
+  "const int buttonPin = 12;\n"+
+  "int buttonState = 0;\n"+
+  "void WaitForButton (){\n"+
+  "	buttonState = digitalRead(buttonPin);\n"+
+  "	while(buttonState == LOW) {\n"+
+  "		buttonState = digitalRead(buttonPin);\n" +
+  "		}\n" +
+  "	}\n";
+  Blockly.Arduino.setups_['setup_button_wait'] = "pinMode(buttonPin, INPUT);\n"+
+  "WaitForButton();\n"; 
   var code = '';
-  
-   Blockly.Arduino.definitions_["define_button_wait"] = ""+
-   "const int buttonPin = " +wait_pin+ ";\n"+
-   "int buttonState = 0;\n"+
-	"void WaitForButton (){\n"+
-	"buttonState = digitalRead(buttonPin);\n"+
-	"while(buttonState == LOW) {buttonState = digitalRead(buttonPin);}}\n";
-	Blockly.Arduino.setups_['setup_button_wait'] = " pinMode(buttonPin, INPUT);\n"+
-	 '   WaitForButton();\n';
- 
   return code;
 };
 
-Blockly.Arduino.setup_button_wait_iph = function() {
-  var wait_pin = this.getFieldValue('PIN');
-   Blockly.Arduino.definitions_["define_button_wait"] = ""+
-   "   const int buttonPin = "+wait_pin+";\n"+
-   "   int buttonState = 0;\n"+
-	"   void WaitForButton (){\n"+
-	"   buttonState = digitalRead(buttonPin);\n"+
-	"   while(buttonState == HIGH) {buttonState = digitalRead(buttonPin);}}\n";
+Blockly.Arduino.Zumo_setup_button_wait_iph = function() {
+  var wait_pin = this.getFieldValue('PIN');  
+  Blockly.Arduino.definitions_["define_button_wait"] = 
+  "const int buttonPin = 12;\n"+
+  "int buttonState = 0;\n"+
+  "void WaitForButton (){\n"+
+  "	buttonState = digitalRead(buttonPin);\n"+
+  "	while(buttonState == HIGH) {\n" +
+  "		buttonState = digitalRead(buttonPin);\n" +
+  "		}\n" +
+  "	}\n";
  Blockly.Arduino.setups_['setup_button_wait'] = " pinMode(buttonPin, INPUT_PULLUP);\n"+
- '   WaitForButton();\n';
+ "WaitForButton();\n";
   var code = '';
   return code;
-};
-
-Blockly.Arduino.fourpin_ranger = function() {
-  var dropdown_pin = this.getFieldValue('PIN1');
-  var dropdown_unit = this.getFieldValue('PIN2');
-  Blockly.Arduino.definitions_['define_ultrasonic'] = '#include <Ultrasonic.h>\n';
-  Blockly.Arduino.definitions_['var_ultrasonic'+dropdown_pin] = 'Ultrasonic ultrasonic_'+dropdown_pin+'('+dropdown_pin+');\n';
-  var code;
-  if(dropdown_unit==="cm"){
-    Blockly.Arduino.setups_['setup_ultrasonic_'+dropdown_pin] = 'ultrasonic_'+dropdown_pin+'.MeasureInCentimeters();';
-    code = 'ultrasonic_'+dropdown_pin+'.RangeInCentimeters();';
-  } else {
-    Blockly.Arduino.setups_['setup_ultrasonic_'+dropdown_pin] = 'ultrasonic_'+dropdown_pin+'.MeasureInInches();';
-    code = 'ultrasonic_'+dropdown_pin+'.RangeInInches();';
-  }
-  return [code, Blockly.Arduino.ORDER_ATOMIC];
 };

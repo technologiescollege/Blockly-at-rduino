@@ -136,6 +136,36 @@ Blockly.Blocks.inout_digital_read_validator = {
   }
 };
 
+Blockly.Blocks['inout_button_wait_il'] = {
+  init: function() {
+    this.setColour("#00979D");
+    this.appendDummyInput()
+        .appendField("1 time wait - push")
+        //.appendField(new Blockly.FieldImage("http://", Blockly.Arduino.imageSize, Blockly.Arduino.imageSize))
+        .appendField("PIN#")
+        .appendField(new Blockly.FieldTextInput('', Blockly.Arduino.pinDigitalValidator), 'PIN');
+    this.setTooltip('1 time wait button in setup) - INPUT & wait for HIGH');
+	this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+	this.setHelpUrl('http://arduino.cc/en/tutorial/button');
+ }
+};
+
+Blockly.Blocks['inout_button_wait_iph'] = {
+  init: function() {
+    this.setColour("#00979D");
+    this.appendDummyInput()
+        .appendField("1 Time wait - pull")
+        //.appendField(new Blockly.FieldImage("http://", Blockly.Arduino.imageSize, Blockly.Arduino.imageSize))
+        .appendField("PIN#")
+        .appendField(new Blockly.FieldTextInput('', Blockly.Arduino.pinDigitalValidator), 'PIN');
+    this.setTooltip('1 time wait button (in setup) - INPUT_PULLUP & wait for LOW)');
+	this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+	this.setHelpUrl('https://www.pololu.com/docs/0J57/5');
+ }
+};
+
 Blockly.Blocks.inout_PWM_write_validator = {
   init: function() {
     this.setColour("#00979D");
