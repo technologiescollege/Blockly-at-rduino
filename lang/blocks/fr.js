@@ -1341,17 +1341,20 @@ Blockly.Msg.STEPPER_STEP_WARN3 = "Selected stepper does not exist any more, plea
 
 //******** Esus Board (Mace Robotics)
 Blockly.Msg.CAT_ESUS = "Carte Esus";
+Blockly.Msg.CAT_ESUS_WIFI = "Wifi";
+Blockly.Msg.CAT_ESUS_MOTORS = "Commandes moteurs";
 Blockly.Msg.EsusBoard_init="Initialisation carte Esus";
 Blockly.Msg.MOTOR1_SPEED="Moteur 1, vitesse :";
 Blockly.Msg.MOTOR1_DIRECTION="Sens rotation :";
 Blockly.Msg.MOTOR2_SPEED="Moteur 2, vitesse :";
 Blockly.Msg.MOTOR2_DIRECTION="Sens rotation :";
 Blockly.Msg.ESUS_ANALOG="Entrée analogique :";
-Blockly.Msg.WIFI_SSID="configuration WIFI   SSID:";
+Blockly.Msg.WIFI_SSID="configuration WIFI mode infra  SSID:";
 Blockly.Msg.WIFI_PASSWORD="mot de passe";
 Blockly.Msg.WIFI_IP="configuration adresse WIFI :";
-Blockly.Msg.ESUS_WIFI_CONFIG="Configuration WIFI";
 Blockly.Msg.WIFI_READ_STREAM="lecture donnée WIFI";
 Blockly.Msg.WIFI_CONTAIN2="contient";
 Blockly.Msg.WIFI_CONTAIN="donnée WIFI";
 Blockly.Msg.WIFI_DATA_AVAILABLE="donnée WIFI disponible ?";
+Blockly.Msg.WIFI_AP="configuration WIFI mode AP SSID:";
+Blockly.Msg.WIFI_AP_IP="adresse IP :";
