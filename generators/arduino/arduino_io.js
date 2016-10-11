@@ -73,6 +73,38 @@ Blockly.Arduino.inout_digital_read_validator = function() {
   return [code, Blockly.Arduino.ORDER_ATOMIC];
 };
 
+Blockly.Arduino.inout_button_wait_il = function() {
+  //var wait_pin = Blockly.Arduino.valueToCode(this, 'PIN', Blockly.Arduino.ORDER_ATOMIC);
+  var wait_pin = this.getFieldValue('PIN');  
+  Blockly.Arduino.definitions_["define_button_wait"] = ""+
+   "   const int buttonPin = "+wait_pin+";\n"+
+   "   int buttonState = 0;\n"+
+	"   void WaitForButton (){\n"+
+	"   buttonState = digitalRead(buttonPin);\n"+
+	"   while(buttonState == LOW) {buttonState = digitalRead(buttonPin);}}\n";
+ Blockly.Arduino.setups_['setup_button_wait'] = " pinMode(buttonPin, INPUT);\n"+
+ '   WaitForButton();\n'+
+ '	 delay(5000);\n';
+  var code = '';
+  return code;
+};
+
+Blockly.Arduino.inout_button_wait_iph = function() {
+  //var wait_pin = Blockly.Arduino.valueToCode(this, 'PIN', Blockly.Arduino.ORDER_ATOMIC);
+  var wait_pin = this.getFieldValue('PIN');
+   Blockly.Arduino.definitions_["define_button_wait"] = ""+
+   "   const int buttonPin = "+wait_pin+";\n"+
+   "   int buttonState = 0;\n"+
+	"   void WaitForButton (){\n"+
+	"   buttonState = digitalRead(buttonPin);\n"+
+	"   while(buttonState == HIGH) {buttonState = digitalRead(buttonPin);}}\n";
+ Blockly.Arduino.setups_['setup_button_wait'] = " pinMode(buttonPin, INPUT_PULLUP);\n"+
+ '   WaitForButton();\n'+
+ 'delay(5000);\n';
+  var code = '';
+  return code;
+};
+
 Blockly.Arduino.inout_analog_write = function() {
   var dropdown_pin = Blockly.Arduino.valueToCode(this, 'PIN', Blockly.Arduino.ORDER_ATOMIC);
   var value_num = Blockly.Arduino.valueToCode(this, 'NUM', Blockly.Arduino.ORDER_ATOMIC);

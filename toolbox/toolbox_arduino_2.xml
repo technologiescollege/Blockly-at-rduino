@@ -175,6 +175,8 @@
 			<block type="inout_digital_read"></block>
 			<block type="inout_onoff"></block>
 			<block type="inout_angle"></block>
+			<block type="inout_button_wait_il"></block>
+			<block type="inout_button_wait_iph"></block>
 			<block type="var_random">
 				<value name="rand_min">
 					<shadow type="math_number">
@@ -216,12 +218,20 @@
 		</category>
 		<category name="CAT_ARDUINO_TIME" colour="#00979D">
 			<block type="millis"></block>
+			<block type="millis_sec"></block>
 			<block type="inout_pulsein"></block>
 			<block type="inout_pulsein_timeout"></block>
 			<block type="base_delay">
 				<value name="DELAY_TIME">
 					<shadow type="math_number">
 						<field name="NUM">1000</field>
+					</shadow>
+				</value>
+			</block>
+			<block type="base_delay_sec">
+				<value name="DELAY_TIME">
+					<shadow type="math_number">
+						<field name="NUM">5</field>
 					</shadow>
 				</value>
 			</block>
@@ -1118,10 +1128,9 @@
 			</block>
 		</category>
 		<category name="CAT_ZUMO_SENSORS" colour="#00138b">
-			<block type="setup_button_wait_il"></block>
-			<block type="setup_button_wait_iph"></block>
-			<block type="fourpin_ranger"></block>
-			<block type="play_notes_z">
+			<block type="Zumo_setup_button_wait_il"></block>
+			<block type="Zumo_setup_button_wait_iph"></block>
+			<block type="Zumo_play_notes_z">
 				<value name="DUR">
 					<shadow type="math_number">
 						<field name="NUM">1000</field>

@@ -90,9 +90,20 @@ Blockly.Arduino.millis = function(block) {
   return [code, Blockly.Arduino.ORDER_ATOMIC];
 };
 
+Blockly.Arduino.millis_sec = function(block) {
+  var code = '(1000*millis())';
+  return [code, Blockly.Arduino.ORDER_ATOMIC];
+};
+
 Blockly.Arduino.base_delay = function() {
   var delay_time = Blockly.Arduino.valueToCode(this, 'DELAY_TIME', Blockly.Arduino.ORDER_ATOMIC);
   var code = 'delay(' + delay_time + ');\n';
+  return code;
+};
+
+Blockly.Arduino.base_delay_sec = function() {
+  var delay_time = Blockly.Arduino.valueToCode(this, 'DELAY_TIME', Blockly.Arduino.ORDER_ATOMIC);
+  var code = '(1000*delay(' + delay_time + '));\n';
   return code;
 };
 

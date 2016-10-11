@@ -25,61 +25,53 @@
  * @author erickennedy@outlook.com  Eric Kennedy
  */
 
-goog.provide('Blockly.Blocks.sensors');
+goog.provide('Blockly.Blocks.Zumo_sensors');
 
 goog.require('Blockly.Blocks');
 
-Blockly.Blocks['setup_button_wait_il'] = {
+Blockly.Blocks['Zumo_setup_button_wait_il'] = {
   init: function() {
     this.setColour("#00138b");
     this.appendDummyInput()
-        .appendField("1 time wait - Gen")
+        .appendField("1 Time wait - push")/*
         //.appendField(new Blockly.FieldImage("http://", Blockly.Arduino.imageSize, Blockly.Arduino.imageSize))
         .appendField("PIN#")
-        .appendField(new Blockly.FieldTextInput('', Blockly.Arduino.pinDigitalValidator), 'PIN');
-    this.setTooltip('1 time wait button in setup) - INPUT & wait for HIGH');
-	this.setPreviousStatement(false, null);
-    this.setNextStatement(true, null);
-	this.setHelpUrl('http://arduino.cc/en/tutorial/button');
- }
-};
-
-Blockly.Blocks['setup_button_wait_iph'] = {
-  init: function() {
-    this.setColour("#00138b");
-    this.appendDummyInput()
-        .appendField("1 Time wait - Zumo")
-        //.appendField(new Blockly.FieldImage("http://", Blockly.Arduino.imageSize, Blockly.Arduino.imageSize))
-        .appendField("PIN#")
-        .appendField(new Blockly.FieldTextInput('', Blockly.Arduino.pinDigitalValidator), 'PIN');
-    this.setTooltip('1 time wait button (in setup) - INPUT_PULLUP & wait for LOW)');
+        .appendField(new Blockly.FieldTextInput('', Blockly.Arduino.pinDigitalValidator), 'PIN')*/;
+    this.setTooltip('1 time wait button (in setup) - INPUT & wait for HIGH');
 	this.setPreviousStatement(false, null);
     this.setNextStatement(true, null);
 	this.setHelpUrl('https://www.pololu.com/docs/0J57/5');
  }
 };
 
-Blockly.Blocks['fourpin_ranger'] = {
+Blockly.Blocks['Zumo_setup_button_wait_iph'] = {
   init: function() {
     this.setColour("#00138b");
-	this.appendDummyInput()
-	    .appendField("Four Pin Ranger")
-		.appendField("Trigger_Pin#")
-	    .setAlign(Blockly.ALIGN_RIGHT)
-        .appendField(new Blockly.FieldTextInput('', Blockly.Arduino.pinDigitalValidator), 'PIN1');
-	this.appendDummyInput()
-		.appendField(new Blockly.FieldImage("blocks/zumobot/fourpin_ranger.jpg", 40, 40))
-        .appendField("Echo_Pin#")
-	    .setAlign(Blockly.ALIGN_RIGHT)
-        .appendField(new Blockly.FieldTextInput('', Blockly.Arduino.pinDigitalValidator), 'PIN2');
-	this.setInputsInline(false);
-	this.setOutput(true, 'Number');
-    this.setTooltip('4Pin Sonic - Provides distance in inches');
-	this.setHelpUrl('https://penturalabs.wordpress.com/2014/04/09/it-can-see-giving-your-bot-sight/');
-  }
+    this.appendDummyInput()
+        .appendField("1 Time wait - pull")/*
+        //.appendField(new Blockly.FieldImage("http://", Blockly.Arduino.imageSize, Blockly.Arduino.imageSize))
+        .appendField("PIN#")
+        .appendField(new Blockly.FieldTextInput('', Blockly.Arduino.pinDigitalValidator), 'PIN')*/;
+    this.setTooltip('1 time wait button (in setup) - INPUT_PULLUP & wait for LOW');
+	this.setPreviousStatement(false, null);
+    this.setNextStatement(true, null);
+	this.setHelpUrl('https://www.pololu.com/docs/0J57/5');
+ }
 };
 
-Blockly.Blocks['play_notes_z'] = {
+Blockly.Blocks['Zumo_wait_button_push'] = {
+  init: function() {
+    this.setColour("#00138b");
+    this.appendDummyInput()
+        .appendField("attendre appui sur le bouton");
+    this.setTooltip("tant qu'on n'appuie pas sur le bouton le programe est en attente");
+	this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+	this.setHelpUrl('https://www.pololu.com/docs/0J57/5');
+ }
+};
+
+Blockly.Blocks['Zumo_play_notes_z'] = {
   init: function() {
     this.setColour('#00138b');
 	this.appendDummyInput()

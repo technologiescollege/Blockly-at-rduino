@@ -503,6 +503,7 @@ Blockly.Msg.CAT_TECHNOZONE_ROBOT_IHM = "console IHM";
 Blockly.Msg.CAT_ZUMO = "ZumoBot";	//added april 6th 2015
 Blockly.Msg.CAT_ZUMO_MOTORS = "moteurs";
 Blockly.Msg.CAT_ZUMO_SENSORS = "divers";
+Blockly.Msg.CAT_ZUMO_FUNCTION = "fonctions";
 
 Blockly.Msg.CAT_ROBOTS = "robots & cartes diverses"; //Added April 7 2015 ESK
 Blockly.Msg.CAT_ROBOTS_MOTORS = "cartes moteurs";
@@ -542,6 +543,10 @@ Blockly.Msg.INOUT_LOW_LEVEL = "0 (état bas)";
 
 Blockly.Msg.CAT_MHK = "MyHumanKit"; //added august 23th 2016
 
+Blockly.Msg.CAT_ESUS = "carte Esus"; //added 8 october 2016
+Blockly.Msg.CAT_ESUS_WIFI = "WiFi";
+Blockly.Msg.CAT_ESUS_MOTORS = "commandes moteurs";
+
 //**********************************blocks***********************************************
 //**********************************blocks***********************************************
 //**********************************blocks***********************************************
@@ -549,13 +554,15 @@ Blockly.Msg.CAT_MHK = "MyHumanKit"; //added august 23th 2016
 
 Blockly.Msg.ARDUINO_BASE_DELAY_HELPURL = "http://arduino.cc/en/Reference/delay";
 Blockly.Msg.ARDUINO_BASE_DELAY_DELAY_TIME = "faire une temporisation (en ms) de";
+Blockly.Msg.ARDUINO_BASE_DELAY_DELAY_TIME_SEC = "faire une temporisation (en s) de";
 Blockly.Msg.ARDUINO_BASE_DELAY_TOOLTIP = "spécifier le temps d'attente en millisecondes";
 Blockly.Msg.ARDUINO_BASE_SETUP = "initialisation (setup)";
 Blockly.Msg.ARDUINO_BASE_SETUP_HELPURL = "https://www.arduino.cc/en/Reference/Setup";
 Blockly.Msg.ARDUINO_BASE_LOOP = "répéter indéfiniment (loop)";
 Blockly.Msg.ARDUINO_BASE_SETUP_LOOP_HELPURL = "https://www.arduino.cc/en/Reference/Loop";
-Blockly.Msg.ARDUINO_SINCE_PROGRAM_STARTED = "temps écoulé depuis le début du programme";
-Blockly.Msg.ARDUINO_SINCE_PROGRAM_STARTED_TOOLTIP = "durée en millisecondes depuis que le programme a commencé (unsigned long)";
+Blockly.Msg.ARDUINO_SINCE_PROGRAM_STARTED = "temps écoulé (ms) depuis le début du programme";
+Blockly.Msg.ARDUINO_SINCE_PROGRAM_STARTED_SEC = "temps écoulé (s) depuis le début du programme";
+Blockly.Msg.ARDUINO_SINCE_PROGRAM_STARTED_TOOLTIP = "durée depuis que le programme a commencé (unsigned long)";
 Blockly.Msg.ARDUINO_SINCE_PROGRAM_STARTED_HELPURL = "https://www.arduino.cc/en/Reference/Millis";
 Blockly.Msg.ARDUINO_BETWEEN = "nombre aléatoire entre";
 Blockly.Msg.ARDUINO_BETWEEN_AND = "et";
@@ -814,6 +821,12 @@ Blockly.Msg.ROBOTS_MOTORS_ZUMO_FRS_TITLE = "Zumo - Flip right & speed";
 Blockly.Msg.ROBOTS_MOTORS_ZUMO_FRS_TOOLTIP = "Drive Pololu Zumo (flipped right motor) + vitesse";
 Blockly.Msg.ROBOTS_MOTORS_ZUMO_FBS_TITLE = "Zumo - Flip both & speed";
 Blockly.Msg.ROBOTS_MOTORS_ZUMO_FBS_TOOLTIP = "Pololu Zumo (2 moteurs) + vitesse";
+Blockly.Msg.ROBOTS_MOTORS_ZUMO_FCT_FOLLOWER = "suiveur de ligne";
+Blockly.Msg.ROBOTS_MOTORS_ZUMO_FCT_FOLLOWER_TOOLTIP = "se calibre en cherchant une ligne noire, puis se cale dessus";
+Blockly.Msg.ROBOTS_MOTORS_ZUMO_FCT_FOLLOWER_HELPURL = "https://www.pololu.com/docs/0J57/7.d";
+Blockly.Msg.ROBOTS_MOTORS_ZUMO_FCT_SENSORCALIBRATION = "calibrage du suiveur";
+Blockly.Msg.ROBOTS_MOTORS_ZUMO_FCT_SENSORCALIBRATION_TOOLTIP = "calibre pendant 10s en exposant les couleurs blanc/noir, puis allume la diode 13";
+Blockly.Msg.ROBOTS_MOTORS_ZUMO_FCT_SENSORCALIBRATION_HELPURL = "https://www.pololu.com/product/1419";
 Blockly.Msg.ROBOTS_MOTORS_ARDUMOTOR_TITLE = "Ardumotor";
 Blockly.Msg.ROBOTS_MOTORS_ARDUMOTOR_TOOLTIP = "ArduMotor Sparkfun Shield A=left B=right";
 Blockly.Msg.ROBOTS_MOTORS_ARDUMOTOR_HELPURL = "https://www.sparkfun.com/datasheets/DevTools/Arduino/Ardumoto_v13.pdf";
@@ -1338,21 +1351,18 @@ Blockly.Msg.STEPPER_STEP_WARN2 = "A Name input must be added to the Stepper conf
 Blockly.Msg.STEPPER_STEP_WARN3 = "Selected stepper does not exist any more, please select a new one.";
 
 //******** Esus Board (Mace Robotics)
-Blockly.Msg.CAT_ESUS = "Carte Esus";
-Blockly.Msg.CAT_ESUS_WIFI = "Wifi";
-Blockly.Msg.CAT_ESUS_MOTORS = "Commandes moteurs";
-Blockly.Msg.EsusBoard_init="Initialisation carte Esus";
-Blockly.Msg.MOTOR1_SPEED="Moteur 1, vitesse :";
-Blockly.Msg.MOTOR1_DIRECTION="Sens rotation :";
-Blockly.Msg.MOTOR2_SPEED="Moteur 2, vitesse :";
-Blockly.Msg.MOTOR2_DIRECTION="Sens rotation :";
-Blockly.Msg.ESUS_ANALOG="Entrée analogique :";
-Blockly.Msg.WIFI_SSID="configuration WIFI mode infra  SSID:";
-Blockly.Msg.WIFI_PASSWORD="mot de passe";
-Blockly.Msg.WIFI_IP="configuration adresse WIFI :";
-Blockly.Msg.WIFI_READ_STREAM="lecture donnée WIFI";
-Blockly.Msg.WIFI_CONTAIN2="contient";
-Blockly.Msg.WIFI_CONTAIN="donnée WIFI";
-Blockly.Msg.WIFI_DATA_AVAILABLE="donnée WIFI disponible ?";
-Blockly.Msg.WIFI_AP="configuration WIFI mode AP SSID:";
-Blockly.Msg.WIFI_AP_IP="adresse IP :";
+Blockly.Msg.ESUS_EsusBoard_init="initialisation carte Esus";
+Blockly.Msg.ESUS_MOTOR1_SPEED="moteur 1, vitesse :";
+Blockly.Msg.ESUS_MOTOR1_DIRECTION="sens rotation :";
+Blockly.Msg.ESUS_MOTOR2_SPEED="moteur 2, vitesse :";
+Blockly.Msg.ESUS_MOTOR2_DIRECTION="sens rotation :";
+Blockly.Msg.ESUS_ANALOG="entrée analogique :";
+Blockly.Msg.ESUS_WIFI_SSID="configuration WiFi mode infra  SSID :";
+Blockly.Msg.ESUS_WIFI_PASSWORD="mot de passe";
+Blockly.Msg.ESUS_WIFI_IP="configuration adresse WiFi :";
+Blockly.Msg.ESUS_WIFI_READ_STREAM="lecture donnée WiFi";
+Blockly.Msg.ESUS_WIFI_CONTAIN2="contient";
+Blockly.Msg.ESUS_WIFI_CONTAIN="donnée WiFi";
+Blockly.Msg.ESUS_WIFI_DATA_AVAILABLE="donnée WiFi disponible ?";
+Blockly.Msg.ESUS_WIFI_AP="configuration WiFi mode AP SSID:";
+Blockly.Msg.ESUS_WIFI_AP_IP="adresse IP :";

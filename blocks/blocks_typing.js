@@ -121,10 +121,16 @@ Blockly.Blocks.text_isEmpty.getBlockType = function() {
 Blockly.Blocks.millis.getBlockType = function() {
 	return Blockly.Types.LARGE_NUMBER;
 };
+Blockly.Blocks.millis_sec.getBlockType = function() {
+	return Blockly.Types.LARGE_NUMBER;
+};
 Blockly.Blocks.var_random.getBlockType = function() {
 	return Blockly.Types.LARGE_NUMBER;
 };
 Blockly.Blocks.base_delay.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.base_delay_sec.getBlockType = function() {
 	return Blockly.Types.NUMBER;
 };
 Blockly.Blocks.base_map.getBlockType = function() {
@@ -966,16 +972,22 @@ Blockly.Blocks.zumo_motors_FUs.getBlockType = function() {
 };
 //---------------------------------zumo_sensors.js-------------------------------------
 
-Blockly.Blocks.setup_button_wait_il.getBlockType = function() {
+Blockly.Blocks.Zumo_setup_button_wait_il.getBlockType = function() {
 	return Blockly.Types.BOOLEAN;
 };
-Blockly.Blocks.setup_button_wait_iph.getBlockType = function() {
+Blockly.Blocks.Zumo_setup_button_wait_iph.getBlockType = function() {
 	return Blockly.Types.BOOLEAN;
 };
-Blockly.Blocks.fourpin_ranger.getBlockType = function() {
+Blockly.Blocks.Zumo_wait_button_push.getBlockType = function() {
+	return Blockly.Types.BOOLEAN;
+};
+Blockly.Blocks.Zumo_play_notes_z.getBlockType = function() {
 	return Blockly.Types.NUMBER;
 };
-Blockly.Blocks.play_notes_z.getBlockType = function() {
+Blockly.Blocks.Zumo_line_follower.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.Zumo_BorderDetect.getBlockType = function() {
 	return Blockly.Types.NUMBER;
 };
 
@@ -1017,4 +1029,23 @@ Blockly.Blocks.EsusBoard_WifiContain.getBlockType = function() {
 	return Blockly.Types.TEXT;
 };
 
+//---------------------------------APDS-9960_RGB_Gesture.js-------------------------------------
 
+Blockly.Blocks.APDS9960_ColorSensor_init.getBlockType = function() {
+	return Blockly.Types.NULL;
+};
+Blockly.Blocks.APDS9960_ColorSensor_test.getBlockType = function() {
+	return Blockly.Types.BOOLEAN;
+};
+Blockly.Blocks.APDS9960_ColorSensor_ambient.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.APDS9960_ColorSensor_red.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.APDS9960_ColorSensor_green.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.APDS9960_ColorSensor_blue.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};

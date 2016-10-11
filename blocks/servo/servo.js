@@ -27,7 +27,7 @@
 //http://www.seeedstudio.com/depot/emax-9g-es08a-high-sensitive-mini-servo-p-760.html?cPath=170_171
 Blockly.Blocks.servo_move = {
   init: function() {
-    this.setColour("#2475FA");
+    this.setColour("#191919");
 	this.setHelpUrl(Blockly.Msg.ARDUINO_SERVO_MOVE_HELPURL);
     this.appendDummyInput("")
         .appendField(Blockly.Msg.ARDUINO_SERVO_MOVE_INPUT1)
@@ -48,7 +48,7 @@ Blockly.Blocks.servo_move = {
 
 Blockly.Blocks.servo_read_degrees = {
   init: function() {
-    this.setColour("#2475FA");
+    this.setColour("#191919");
 	this.setHelpUrl(Blockly.Msg.ARDUINO_SERVO_READ_DEGREES_HELPURL);
     this.appendDummyInput("")
         .appendField(Blockly.Msg.ARDUINO_SERVO_READ_DEGREES_INPUT1)
@@ -64,7 +64,7 @@ Blockly.Blocks.servo_read_degrees = {
 
 Blockly.Blocks.servo_attached = {
   init: function() {
-	this.setColour("#2475FA");
+	this.setColour("#191919");
 	this.setHelpUrl('http://www.arduino.cc/playground/ComponentLib/servo');
     this.appendValueInput("PIN")
 		.setCheck('Number')
@@ -78,7 +78,7 @@ Blockly.Blocks.servo_attached = {
 
 Blockly.Blocks.servo_detach = {
   init: function() {
-    this.setColour("#2475FA");
+    this.setColour("#191919");
 	this.setHelpUrl('http://www.arduino.cc/playground/ComponentLib/servo');
 	this.setInputsInline(false);
     this.appendValueInput("PIN")
@@ -93,7 +93,7 @@ Blockly.Blocks.servo_detach = {
 
 Blockly.Blocks.servo_rot_continue = {
   init: function() {
-    this.setColour("#2475FA");
+    this.setColour("#191919");
     this.setHelpUrl(Blockly.Msg.ARDUINO_SERVO_ROT_CONTINUE_HELPURL);
 	this.appendDummyInput()
 		.appendField(Blockly.Msg.ARDUINO_SERVO_ROT_CONTINUE_TEXT)
@@ -116,7 +116,7 @@ Blockly.Blocks.servo_rot_continue = {
 
 Blockly.Blocks.servo_rot_continue_param = {
   init: function() {
-    this.setColour("#2475FA");
+    this.setColour("#191919");
     this.setHelpUrl(Blockly.Msg.ARDUINO_SERVO_ROT_CONTINUE_HELPURL);
 	this.appendDummyInput()
 		.appendField(Blockly.Msg.ARDUINO_SERVO_ROT_CONTINUE_TEXT)
