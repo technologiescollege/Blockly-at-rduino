@@ -23,7 +23,7 @@
 		return Blockly.Types.BOOLEAN;
 	};
 	Blockly.Blocks.controls_switch.getVars = function() {
-		return [this.getFieldValue('SWVAR')];	
+		return [this.getFieldValue('SWVAR')];
 	};
 	Blockly.Blocks.controls_switch.getVarType = function() {
 		return this.inputList[1].connection.targetBlock().getBlockType();
@@ -985,10 +985,10 @@ Blockly.Blocks.Zumo_play_notes_z.getBlockType = function() {
 	return Blockly.Types.NUMBER;
 };
 Blockly.Blocks.Zumo_line_follower.getBlockType = function() {
-	return Blockly.Types.NUMBER;
+	return Blockly.Types.NULL;
 };
-Blockly.Blocks.Zumo_BorderDetect.getBlockType = function() {
-	return Blockly.Types.NUMBER;
+Blockly.Blocks.Zumo_SensorCalibration.getBlockType = function() {
+	return Blockly.Types.NULL;
 };
 
 //---------------------------------EsusBoard.js-------------------------------------
@@ -1014,6 +1014,10 @@ Blockly.Blocks.EsusBoard_WifiConfig.getBlockType = function() {
 };
 
 Blockly.Blocks.EsusBoard_WifiConfigIP.getBlockType = function() {
+	return Blockly.Types.NULL;
+};
+
+Blockly.Blocks.EsusBoard_WifiConfigAP.getBlockType = function() {
 	return Blockly.Types.NULL;
 };
 
