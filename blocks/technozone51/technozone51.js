@@ -1,4 +1,4 @@
-﻿//www.technozone51fr
+﻿//www.technozone51.fr
 
 // define blocks
 'use strict';

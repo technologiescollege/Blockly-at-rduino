@@ -1,14 +1,5 @@
 'use strict';
 
-goog.provide('Blockly.Arduino.EsusBoard');
-
-goog.require('Blockly.Arduino');
-
-goog.provide('Blockly.Blocks.conversion');
-
-goog.require('Blockly.Blocks');
-
-
 Blockly.Arduino['EsusBoard_init'] = function() {
   Blockly.Arduino.includes_['define_esus'] = '#include <esusBoard.h>';
   Blockly.Arduino.setups_['esus_init'] = 'initEsusBoard();';
@@ -70,8 +61,7 @@ Blockly.Arduino['EsusBoard_dataWifiAvailable'] = function() {
 
 
 Blockly.Arduino['EsusBoard_WifiContain'] = function(block) {
-  var varName = Blockly.Arduino.variableDB_.getName(
-      block.getFieldValue('VAR'), Blockly.Variables.NAME_TYPE);
+  var varName = Blockly.Arduino.variableDB_.getName(block.getFieldValue('VAR'), Blockly.Variables.NAME_TYPE);
   var code = '';
   if (varName == '') {
     code = '""';
@@ -99,4 +89,3 @@ Blockly.Arduino['EsusBoard_WifiConfigAP'] = function() {
   Blockly.Arduino.setups_['server_begin'] = "initServerWifi();";
   return '\n';
 };
-

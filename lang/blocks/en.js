@@ -831,8 +831,7 @@ Blockly.Msg.ROBOTS_MOTORS_ZUMO_FCT_FOLLOWER = "line follower";
 Blockly.Msg.ROBOTS_MOTORS_ZUMO_FCT_FOLLOWER_TOOLTIP = "follow a black line";
 Blockly.Msg.ROBOTS_MOTORS_ZUMO_FCT_FOLLOWER_HELPURL = "https://www.pololu.com/docs/0J57/7.d";
 Blockly.Msg.ROBOTS_MOTORS_ZUMO_FCT_SENSORCALIBRATION = "calibrates the sensor";
-Blockly.Msg.ROBOTS_MOTORS_ZUMO_FCT_SENSORCALIBRATION_TOOLTIP = "calibrates the sensor for ten seconds and 
-turns on the pin 13 LED while calibration is going on";
+Blockly.Msg.ROBOTS_MOTORS_ZUMO_FCT_SENSORCALIBRATION_TOOLTIP = "calibrates the sensor for ten seconds and turns on the pin 13 LED while calibration is going on";
 Blockly.Msg.ROBOTS_MOTORS_ZUMO_FCT_SENSORCALIBRATION_HELPURL = "https://www.pololu.com/product/1419";
 Blockly.Msg.ROBOTS_MOTORS_ARDUMOTOR_TITLE = "Ardumotor";
 Blockly.Msg.ROBOTS_MOTORS_ARDUMOTOR_TOOLTIP = "ArduMotor Sparkfun Shield A=left B=right";
