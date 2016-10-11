@@ -21,7 +21,6 @@ goog.provide('Blockly.Arduino.APDS9960');
 
 goog.require('Blockly.Arduino');
 
-
 Blockly.Arduino.APDS9960_ColorSensor_init = function() {
   Blockly.Arduino.includes_["includes_APDS9960"] = 
   "#include <Wire.h>\n" +

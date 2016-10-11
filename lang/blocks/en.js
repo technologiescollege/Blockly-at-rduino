@@ -831,8 +831,7 @@ Blockly.Msg.ROBOTS_MOTORS_ZUMO_FCT_FOLLOWER = "line follower";
 Blockly.Msg.ROBOTS_MOTORS_ZUMO_FCT_FOLLOWER_TOOLTIP = "follow a black line";
 Blockly.Msg.ROBOTS_MOTORS_ZUMO_FCT_FOLLOWER_HELPURL = "https://www.pololu.com/docs/0J57/7.d";
 Blockly.Msg.ROBOTS_MOTORS_ZUMO_FCT_SENSORCALIBRATION = "calibrates the sensor";
-Blockly.Msg.ROBOTS_MOTORS_ZUMO_FCT_SENSORCALIBRATION_TOOLTIP = "calibrates the sensor for ten seconds and 
-turns on the pin 13 LED while calibration is going on";
+Blockly.Msg.ROBOTS_MOTORS_ZUMO_FCT_SENSORCALIBRATION_TOOLTIP = "calibrates the sensor for ten seconds and turns on the pin 13 LED while calibration is going on";
 Blockly.Msg.ROBOTS_MOTORS_ZUMO_FCT_SENSORCALIBRATION_HELPURL = "https://www.pololu.com/product/1419";
 Blockly.Msg.ROBOTS_MOTORS_ARDUMOTOR_TITLE = "Ardumotor";
 Blockly.Msg.ROBOTS_MOTORS_ARDUMOTOR_TOOLTIP = "ArduMotor Sparkfun Shield A=left B=right";
@@ -1372,3 +1371,5 @@ Blockly.Msg.ESUS_WIFI_CONTAIN="data WiFi";
 Blockly.Msg.ESUS_WIFI_DATA_AVAILABLE="data WiFi available?";
 Blockly.Msg.ESUS_WIFI_AP="configuration WiFi mode AP SSID:";
 Blockly.Msg.ESUS_WIFI_AP_IP="IP Address:";
+Blockly.Msg.ESUS_WIFI_SEND_STREAM="send data WiFi (text)";
+Blockly.Msg.ESUS_WIFI_SEND_FLOAT_STREAM="send data WiFi (float)";

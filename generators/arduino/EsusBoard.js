@@ -4,11 +4,6 @@ goog.provide('Blockly.Arduino.EsusBoard');
 
 goog.require('Blockly.Arduino');
 
-goog.provide('Blockly.Blocks.conversion');
-
-goog.require('Blockly.Blocks');
-
-
 Blockly.Arduino['EsusBoard_init'] = function() {
   Blockly.Arduino.includes_['define_esus'] = '#include <esusBoard.h>';
   Blockly.Arduino.setups_['esus_init'] = 'initEsusBoard();';
@@ -70,8 +65,7 @@ Blockly.Arduino['EsusBoard_dataWifiAvailable'] = function() {
 
 
 Blockly.Arduino['EsusBoard_WifiContain'] = function(block) {
-  var varName = Blockly.Arduino.variableDB_.getName(
-      block.getFieldValue('VAR'), Blockly.Variables.NAME_TYPE);
+  var varName = Blockly.Arduino.variableDB_.getName(block.getFieldValue('VAR'), Blockly.Variables.NAME_TYPE);
   var code = '';
   if (varName == '') {
     code = '""';
@@ -100,3 +94,14 @@ Blockly.Arduino['EsusBoard_WifiConfigAP'] = function() {
   return '\n';
 };
 
+Blockly.Arduino['EsusBoard_SendStream'] = function() {
+  var data = Blockly.Arduino.valueToCode(this, 'Text_send', Blockly.Arduino.ORDER_ATOMIC);
+  var code = 'sendStringClientWifi('+ data + ');\n';
+  return code;
+};
+
+Blockly.Arduino['EsusBoard_SendFloatStream'] = function() {
+  var data = Blockly.Arduino.valueToCode(this, 'sendFloat', Blockly.Arduino.ORDER_ATOMIC);
+  var code = 'sendFloatClientWifi('+ data + ');\n';
+  return code;
+}; 

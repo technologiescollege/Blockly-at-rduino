@@ -1669,6 +1669,20 @@
 			<block type="EsusBoard_ReadStream"></block>
 			<block type="EsusBoard_WifiContain"></block>
 			<block type="EsusBoard_dataWifiAvailable"></block>
+			<block type="EsusBoard_SendStream">
+				<value name="Text_send">
+					<shadow type="text">
+						<field name="TEXT"></field>
+					</shadow>
+				</value>
+			</block>
+			<block type="EsusBoard_SendFloatStream">
+				<value name="sendFloat">
+					<shadow type="math_number">
+						<field name="NUM"></field>
+					</shadow>
+				</value>
+			</block>
 		</category>
 		<block type="EsusBoard_init"></block>
 		<block type="EsusBoard_analog"></block>
