@@ -1371,3 +1371,5 @@ Blockly.Msg.ESUS_WIFI_CONTAIN="data WiFi";
 Blockly.Msg.ESUS_WIFI_DATA_AVAILABLE="data WiFi available?";
 Blockly.Msg.ESUS_WIFI_AP="configuration WiFi mode AP SSID:";
 Blockly.Msg.ESUS_WIFI_AP_IP="IP Address:";
+Blockly.Msg.ESUS_WIFI_SEND_STREAM="send data WiFi (text)";
+Blockly.Msg.ESUS_WIFI_SEND_FLOAT_STREAM="send data WiFi (float)";

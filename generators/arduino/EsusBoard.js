@@ -89,3 +89,15 @@ Blockly.Arduino['EsusBoard_WifiConfigAP'] = function() {
   Blockly.Arduino.setups_['server_begin'] = "initServerWifi();";
   return '\n';
 };
+
+Blockly.Arduino['EsusBoard_SendStream'] = function() {
+  var data = Blockly.Arduino.valueToCode(this, 'Text_send', Blockly.Arduino.ORDER_ATOMIC);
+  var code = 'sendStringClientWifi('+ data + ');\n';
+  return code;
+};
+
+Blockly.Arduino['EsusBoard_SendFloatStream'] = function() {
+  var data = Blockly.Arduino.valueToCode(this, 'sendFloat', Blockly.Arduino.ORDER_ATOMIC);
+  var code = 'sendFloatClientWifi('+ data + ');\n';
+  return code;
+};

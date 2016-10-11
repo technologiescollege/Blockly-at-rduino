@@ -183,3 +183,33 @@ Blockly.Blocks['EsusBoard_WifiContain'] = {
     this.setOutput(true, 'String');
   }
 };
+
+Blockly.Blocks['EsusBoard_SendStream'] = {
+  init: function() {
+    this.setColour("#2475FA");
+	this.setHelpUrl('http://www.macerobotics.com');
+	this.setInputsInline(true);
+    this.appendValueInput("Text_send")
+		.setCheck('String')
+	    .setAlign(Blockly.ALIGN_RIGHT)
+        .appendField(Blockly.Msg.ESUS_WIFI_SEND_STREAM);
+    this.setPreviousStatement(true);
+    this.setNextStatement(true);
+    this.setNextStatement(true, null);
+  }
+};
+
+Blockly.Blocks['EsusBoard_SendFloatStream'] = {
+  init: function() {
+    this.setColour("#2475FA");
+	this.setHelpUrl('http://www.macerobotics.com');
+	this.setInputsInline(true);
+    this.appendValueInput("sendFloat")
+		.setCheck('Number')
+	    .setAlign(Blockly.ALIGN_RIGHT)
+        .appendField(Blockly.Msg.ESUS_WIFI_SEND_FLOAT_STREAM);
+    this.setPreviousStatement(true);
+    this.setNextStatement(true);
+    this.setNextStatement(true, null);
+  }
+};
