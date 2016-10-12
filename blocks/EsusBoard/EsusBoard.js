@@ -1,9 +1,5 @@
 'use strict';
 
-goog.provide('Blockly.Blocks.EsusBoard');
-
-goog.require('Blockly.Blocks');
-
 /**
  * Common HSV hue for all blocks in this category.
  */ 
@@ -117,7 +113,11 @@ Blockly.Blocks['EsusBoard_WifiConfigIP'] = {
 
 Blockly.Blocks['EsusBoard_WifiConfigAP'] = {
   init: function() {
+<<<<<<< HEAD
     this.setColour(Blockly.Blocks.EsusBoard.HUE);
+=======
+    this.setColour("#2475FA");
+>>>>>>> origin/gh-pages
 	this.setHelpUrl('http://www.macerobotics.com');
     this.appendValueInput("Text_ssid")
 		.setCheck('String')
@@ -187,6 +187,7 @@ Blockly.Blocks['EsusBoard_WifiContain'] = {
     });
     this.setOutput(true, 'String');
   }
+<<<<<<< HEAD
 };
 
 Blockly.Blocks['EsusBoard_SendStream'] = {
@@ -217,4 +218,6 @@ Blockly.Blocks['EsusBoard_SendFloatStream'] = {
     this.setNextStatement(true);
     this.setNextStatement(true, null);
   }
+=======
+>>>>>>> origin/gh-pages
 };
