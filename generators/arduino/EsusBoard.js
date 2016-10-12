@@ -104,4 +104,4 @@ Blockly.Arduino['EsusBoard_SendFloatStream'] = function() {
   var data = Blockly.Arduino.valueToCode(this, 'sendFloat', Blockly.Arduino.ORDER_ATOMIC);
   var code = 'sendFloatClientWifi('+ data + ');\n';
   return code;
-}; 
+};

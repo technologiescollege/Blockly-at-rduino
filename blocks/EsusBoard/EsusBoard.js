@@ -3,7 +3,6 @@
 goog.provide('Blockly.Blocks.EsusBoard');
 
 goog.require('Blockly.Blocks');
-
 /**
  * Common HSV hue for all blocks in this category.
  */ 
