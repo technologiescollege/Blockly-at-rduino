@@ -551,6 +551,8 @@ Blockly.Msg.CAT_ESUS = "Esus board"; //added 8 october 2016
 Blockly.Msg.CAT_ESUS_WIFI = "WiFi";
 Blockly.Msg.CAT_ESUS_MOTORS = "Motors control";
 
+Blockly.Msg.CAT_APDS_9960_RGB_Gesture = "color + movement"; //added 9 october 2016
+
 
 //**********************************blocks***********************************************
 //**********************************blocks***********************************************
@@ -830,7 +832,7 @@ Blockly.Msg.ROBOTS_MOTORS_ZUMO_FUS_TOOLTIP = "Drive Pololu Zumo with option to f
 Blockly.Msg.ROBOTS_MOTORS_ZUMO_FCT_FOLLOWER = "line follower";
 Blockly.Msg.ROBOTS_MOTORS_ZUMO_FCT_FOLLOWER_TOOLTIP = "follow a black line";
 Blockly.Msg.ROBOTS_MOTORS_ZUMO_FCT_FOLLOWER_HELPURL = "https://www.pololu.com/docs/0J57/7.d";
-Blockly.Msg.ROBOTS_MOTORS_ZUMO_FCT_SENSORCALIBRATION = "calibrates the sensor";
+Blockly.Msg.ROBOTS_MOTORS_ZUMO_FCT_SENSORCALIBRATION = "manual calibration of sensors";
 Blockly.Msg.ROBOTS_MOTORS_ZUMO_FCT_SENSORCALIBRATION_TOOLTIP = "calibrates the sensor for ten seconds and turns on the pin 13 LED while calibration is going on";
 Blockly.Msg.ROBOTS_MOTORS_ZUMO_FCT_SENSORCALIBRATION_HELPURL = "https://www.pololu.com/product/1419";
 Blockly.Msg.ROBOTS_MOTORS_ARDUMOTOR_TITLE = "Ardumotor";
@@ -1373,3 +1375,17 @@ Blockly.Msg.ESUS_WIFI_AP="configuration WiFi mode AP SSID:";
 Blockly.Msg.ESUS_WIFI_AP_IP="IP Address:";
 Blockly.Msg.ESUS_WIFI_SEND_STREAM="send data WiFi (text)";
 Blockly.Msg.ESUS_WIFI_SEND_FLOAT_STREAM="send data WiFi (float)";
+
+
+//******** APDS9960 couleurs et mouvements
+Blockly.Msg.APDS9960_MISC_HELPURL = "https://www.sparkfun.com/products/12787";
+Blockly.Msg.APDS9960_INIT_TITLE = "init of APDS-9960 sensor";
+Blockly.Msg.APDS9960_INIT_TOOLTIP = "test sensor and init I2C bus";
+Blockly.Msg.APDS9960_TEST_TITLE = "test";
+Blockly.Msg.APDS9960_TEST_TOOLTIP = "verify if work well";
+Blockly.Msg.APDS9960_AMBIENT_TITLE = "ambient light";
+Blockly.Msg.APDS9960_AMBIENT_TOOLTIP = "ambient light on 10 bits digit";
+Blockly.Msg.APDS9960_RED_TITLE = "RGB code for RED (0~255)";
+Blockly.Msg.APDS9960_GREEN_TITLE = "RGB code for GREEN (0~255)";
+Blockly.Msg.APDS9960_BLUE_TITLE = "RGB code for BLUE (0~255)";
+Blockly.Msg.APDS9960_COLORSENSOR_TOOLTIP = "send value of color on 10 bits digit";

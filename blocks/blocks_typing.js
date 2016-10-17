@@ -1044,7 +1044,7 @@ Blockly.Blocks.EsusBoard_SendFloatStream.getBlockType = function() {
 //---------------------------------APDS-9960_RGB_Gesture.js-------------------------------------
 
 Blockly.Blocks.APDS9960_ColorSensor_init.getBlockType = function() {
-	return Blockly.Types.NULL;
+	return Blockly.Types.BOOLEAN;
 };
 Blockly.Blocks.APDS9960_ColorSensor_test.getBlockType = function() {
 	return Blockly.Types.BOOLEAN;

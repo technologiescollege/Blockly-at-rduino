@@ -535,17 +535,18 @@ Blockly.Msg.CAT_ROMEO_3 = "RoMeo v2"; //added may 1st 2016
 Blockly.Msg.CAT_SPI_COMM = "ISP communication";
 Blockly.Msg.CAT_STEPPER = "Moteurs pas à pas"; //added august 28th 2016
 
-
-Blockly.Msg.FIELDDROPDOWN = [["1 (état haut)", "HIGH"], ["0 (état bas)", "LOW"]];
-Blockly.Msg.FIELDDROPDOWN_ONOFF = [["marche", "ON"], ["arrêt", "OFF"]]
-Blockly.Msg.INOUT_HIGH_LEVEL = "1 (état haut)";
-Blockly.Msg.INOUT_LOW_LEVEL = "0 (état bas)";
-
 Blockly.Msg.CAT_MHK = "MyHumanKit"; //added august 23th 2016
 
 Blockly.Msg.CAT_ESUS = "carte Esus"; //added 8 october 2016
 Blockly.Msg.CAT_ESUS_WIFI = "WiFi";
 Blockly.Msg.CAT_ESUS_MOTORS = "commandes moteurs";
+
+Blockly.Msg.CAT_APDS_9960_RGB_Gesture = "couleur + mouvement"; //added 9 october 2016
+
+Blockly.Msg.FIELDDROPDOWN = [["1 (état haut)", "HIGH"], ["0 (état bas)", "LOW"]];
+Blockly.Msg.FIELDDROPDOWN_ONOFF = [["marche", "ON"], ["arrêt", "OFF"]]
+Blockly.Msg.INOUT_HIGH_LEVEL = "1 (état haut)";
+Blockly.Msg.INOUT_LOW_LEVEL = "0 (état bas)";
 
 //**********************************blocks***********************************************
 //**********************************blocks***********************************************
@@ -824,7 +825,7 @@ Blockly.Msg.ROBOTS_MOTORS_ZUMO_FBS_TOOLTIP = "Pololu Zumo (2 moteurs) + vitesse"
 Blockly.Msg.ROBOTS_MOTORS_ZUMO_FCT_FOLLOWER = "suiveur de ligne";
 Blockly.Msg.ROBOTS_MOTORS_ZUMO_FCT_FOLLOWER_TOOLTIP = "se calibre en cherchant une ligne noire, puis se cale dessus";
 Blockly.Msg.ROBOTS_MOTORS_ZUMO_FCT_FOLLOWER_HELPURL = "https://www.pololu.com/docs/0J57/7.d";
-Blockly.Msg.ROBOTS_MOTORS_ZUMO_FCT_SENSORCALIBRATION = "calibrage du suiveur";
+Blockly.Msg.ROBOTS_MOTORS_ZUMO_FCT_SENSORCALIBRATION = "calibrage manuel du suiveur";
 Blockly.Msg.ROBOTS_MOTORS_ZUMO_FCT_SENSORCALIBRATION_TOOLTIP = "calibre pendant 10s en exposant les couleurs blanc/noir, puis allume la diode 13";
 Blockly.Msg.ROBOTS_MOTORS_ZUMO_FCT_SENSORCALIBRATION_HELPURL = "https://www.pololu.com/product/1419";
 Blockly.Msg.ROBOTS_MOTORS_ARDUMOTOR_TITLE = "Ardumotor";
@@ -1351,20 +1352,34 @@ Blockly.Msg.STEPPER_STEP_WARN2 = "A Name input must be added to the Stepper conf
 Blockly.Msg.STEPPER_STEP_WARN3 = "Selected stepper does not exist any more, please select a new one.";
 
 //******** Esus Board (Mace Robotics)
-Blockly.Msg.ESUS_EsusBoard_init="initialisation carte Esus";
-Blockly.Msg.ESUS_MOTOR1_SPEED="moteur 1, vitesse :";
-Blockly.Msg.ESUS_MOTOR1_DIRECTION="sens rotation :";
-Blockly.Msg.ESUS_MOTOR2_SPEED="moteur 2, vitesse :";
-Blockly.Msg.ESUS_MOTOR2_DIRECTION="sens rotation :";
-Blockly.Msg.ESUS_ANALOG="entrée analogique :";
-Blockly.Msg.ESUS_WIFI_SSID="configuration WiFi mode infra  SSID :";
-Blockly.Msg.ESUS_WIFI_PASSWORD="mot de passe";
-Blockly.Msg.ESUS_WIFI_IP="configuration adresse WiFi :";
-Blockly.Msg.ESUS_WIFI_READ_STREAM="lecture donnée WiFi";
-Blockly.Msg.ESUS_WIFI_CONTAIN2="contient";
-Blockly.Msg.ESUS_WIFI_CONTAIN="donnée WiFi";
-Blockly.Msg.ESUS_WIFI_DATA_AVAILABLE="donnée WiFi disponible ?";
-Blockly.Msg.ESUS_WIFI_AP="configuration WiFi mode AP SSID:";
-Blockly.Msg.ESUS_WIFI_AP_IP="adresse IP :";
-Blockly.Msg.ESUS_WIFI_SEND_STREAM="envoyer donnée WiFi (texte)";
-Blockly.Msg.ESUS_WIFI_SEND_FLOAT_STREAM="envoyer donnée WiFi (nombre)";
+Blockly.Msg.ESUS_EsusBoard_init = "initialisation carte Esus";
+Blockly.Msg.ESUS_MOTOR1_SPEED = "moteur 1, vitesse :";
+Blockly.Msg.ESUS_MOTOR1_DIRECTION = "sens rotation :";
+Blockly.Msg.ESUS_MOTOR2_SPEED = "moteur 2, vitesse :";
+Blockly.Msg.ESUS_MOTOR2_DIRECTION = "sens rotation :";
+Blockly.Msg.ESUS_ANALOG = "entrée analogique :";
+Blockly.Msg.ESUS_WIFI_SSID = "configuration WiFi mode infra  SSID :";
+Blockly.Msg.ESUS_WIFI_PASSWORD = "mot de passe";
+Blockly.Msg.ESUS_WIFI_IP = "configuration adresse WiFi :";
+Blockly.Msg.ESUS_WIFI_READ_STREAM = "lecture donnée WiFi";
+Blockly.Msg.ESUS_WIFI_CONTAIN2 = "contient";
+Blockly.Msg.ESUS_WIFI_CONTAIN = "donnée WiFi";
+Blockly.Msg.ESUS_WIFI_DATA_AVAILABLE = "donnée WiFi disponible ?";
+Blockly.Msg.ESUS_WIFI_AP = "configuration WiFi mode AP SSID:";
+Blockly.Msg.ESUS_WIFI_AP_IP = "adresse IP :";
+Blockly.Msg.ESUS_WIFI_SEND_STREAM = "envoyer donnée WiFi (texte)";
+Blockly.Msg.ESUS_WIFI_SEND_FLOAT_STREAM = "envoyer donnée WiFi (nombre)";
+
+
+//******** APDS9960 couleurs et mouvements
+Blockly.Msg.APDS9960_MISC_HELPURL = "https://www.sparkfun.com/products/12787";
+Blockly.Msg.APDS9960_INIT_TITLE = "initialisation du capteur APDS-9960";
+Blockly.Msg.APDS9960_INIT_TOOLTIP = "test pour se calibrer sur la luminosité ambiante";
+Blockly.Msg.APDS9960_TEST_TITLE = "test du capteur";
+Blockly.Msg.APDS9960_TEST_TOOLTIP = "renvoie FAUX en cas d'erreur matérielle";
+Blockly.Msg.APDS9960_AMBIENT_TITLE = "luminosité ambiante";
+Blockly.Msg.APDS9960_AMBIENT_TOOLTIP = "renvoie une valeur pour la quantité de lumière mesurée";
+Blockly.Msg.APDS9960_RED_TITLE = "code RVB de Rouge (0~255)";
+Blockly.Msg.APDS9960_GREEN_TITLE = "code RVB de Vert (0~255)";
+Blockly.Msg.APDS9960_BLUE_TITLE = "code RVB de Bleu (0~255)";
+Blockly.Msg.APDS9960_COLORSENSOR_TOOLTIP = "renvoie une valeur codée sur 10 bits pour le mélange RVB classique";

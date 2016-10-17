@@ -27,6 +27,8 @@ Blockly.Blocks['Zumo_line_follower'] = {
     this.setColour("#00138b");
     this.appendDummyInput()
         .appendField(Blockly.Msg.ROBOTS_MOTORS_ZUMO_FCT_FOLLOWER);
+    this.appendValueInput("ERROR")
+        .setCheck("Number");
     this.setTooltip(Blockly.Msg.ROBOTS_MOTORS_ZUMO_FCT_FOLLOWER_TOOLTIP);
 	this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
