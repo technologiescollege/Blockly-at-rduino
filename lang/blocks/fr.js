@@ -1383,3 +1383,25 @@ Blockly.Msg.APDS9960_RED_TITLE = "code RVB de Rouge (0~255)";
 Blockly.Msg.APDS9960_GREEN_TITLE = "code RVB de Vert (0~255)";
 Blockly.Msg.APDS9960_BLUE_TITLE = "code RVB de Bleu (0~255)";
 Blockly.Msg.APDS9960_COLORSENSOR_TOOLTIP = "renvoie une valeur codée sur 10 bits pour le mélange RVB classique";
+
+//pbra 20160613 L298N
+Blockly.Msg.ROBOTS_MOTORS_L298N_MOTOR_TITLE = "L298N Contrôleur Moteur";
+Blockly.Msg.ROBOTS_MOTORS_L298N_MOTOR_INIT_TITLE = "L298N Contrôleur Moteur Init";
+Blockly.Msg.ROBOTS_MOTORS_L298N_ID = "Identifiant"
+Blockly.Msg.ROBOTS_MOTORS_L298N_MOTOR_SPEED = "Vitesse";
+Blockly.Msg.ROBOTS_MOTORS_L298N_MOTOR_PIN_IN1 = "Broche IN1 (direction)";
+Blockly.Msg.ROBOTS_MOTORS_L298N_MOTOR_PIN_IN2 = "Broche IN2 (direction)";
+Blockly.Msg.ROBOTS_MOTORS_L298N_MOTOR_PIN_EN = "Broche EN (pwm)";
+Blockly.Msg.ROBOTS_MOTORS_L298N_STOP = "arrêt";
+Blockly.Msg.ROBOTS_MOTORS_L298N_FORWARD = "avance";
+Blockly.Msg.ROBOTS_MOTORS_L298N_BACKWARD = "recul";
+Blockly.Msg.ROBOTS_MOTORS_L298N_BRAKE = "frein";
+Blockly.Msg.ROBOTS_MOTORS_L298N_INIT_TOOLTIP = "L298N, bloc d'initialisation (1 par moteur)";
+Blockly.Msg.ROBOTS_MOTORS_L298N_TOOLTIP = "Bloc L298N, utiliser le même id que dans le bloc d'initialisation";
+
+//pbra 20160607 PinMode
+Blockly.Msg.ARDUINO_INOUT_DIGITAL_MODE_HELPURL = "https://www.arduino.cc/en/Reference/PinMode";
+Blockly.Msg.ARDUINO_INOUT_DIGITAL_MODE_INPUT1 = "Changer le mode de fonctionnement de la broche";
+Blockly.Msg.ARDUINO_INOUT_DIGITAL_MODE_INPUT2 = "à";
+Blockly.Msg.ARDUINO_INOUT_DIGITAL_MODE_DROPDOWN = [["ENTREE", "INPUT"], ["SORTIE", "OUTPUT"], ["ENTREE_PULLUP", "INPUT_PULLUP"]];
+Blockly.Msg.ARDUINO_INOUT_DIGITAL_MODE_TOOLTIP = "Configurer la broche spécifée pour fonctionner comme une entrée ou une sortie";

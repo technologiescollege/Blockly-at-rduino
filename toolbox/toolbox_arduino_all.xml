@@ -168,6 +168,18 @@
 		<block type="biblio_include"></block>
 		<block type="base_code"></block>
 		<block type="base_end"></block>
+		<!-- @pbra 20160607 -->
+		<block type="inout_digital_mode">
+			<value name="PIN">
+				<shadow type="math_number">
+					<field name="NUM">0</field>
+				</shadow>
+			</value>
+			<value name="PINMODE">
+				<shadow type="pinmode"></shadow>
+			</value>
+		</block>
+		<!-- @pbra 20160607 END-->
 		<category name="CAT_ARDUINO_IN" colour="#00979D">
 			<block type="inout_analog_read_validator"></block>
 			<block type="inout_digital_read_validator"></block>
@@ -1528,6 +1540,21 @@
 				</shadow>
 			</value>
 		</block>
+		<!-- @pbra 20160613 -->
+		<block type="l298n_motor_init"></block>
+		<block type="l298n_motor">
+			<value name="SPEED">
+				<shadow type="math_number">
+					<field name="NUM">175</field>
+				</shadow>
+			</value>
+			<value name="ID">
+				<shadow type="text_char">
+					<field name="TEXT">ID1</field>
+				</shadow>
+			</value>
+		</block>
+		<!-- @pbra 20160613 END-->
 		<block type="pololu_drv8835_s">
 			<value name="SPEEDA">
 				<shadow type="math_number">

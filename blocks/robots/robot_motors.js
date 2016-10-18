@@ -248,6 +248,66 @@ Blockly.Blocks['generic_motor_s'] = {
   }
 };
 
+//@pbra 20160613
+Blockly.Blocks['l298n_motor_init'] = {
+  init: function() {
+    this.setColour("#5b99a5");
+	this.appendDummyInput()
+		.appendField(Blockly.Msg.ROBOTS_MOTORS_L298N_MOTOR_INIT_TITLE)
+		.appendField(new Blockly.FieldImage("blocks/robots/l298n.jpg", Blockly.Arduino.imageSize, Blockly.Arduino.imageSize))
+	this.appendDummyInput()
+		.appendField(Blockly.Msg.ROBOTS_MOTORS_L298N_ID)
+        .appendField(new Blockly.FieldTextInput('ID'), 'ID')
+        .setAlign(Blockly.ALIGN_RIGHT);
+	this.appendDummyInput()
+		.appendField(Blockly.Msg.ROBOTS_MOTORS_L298N_MOTOR_PIN_EN)
+        .appendField(new Blockly.FieldTextInput('0',  Blockly.Arduino.pinPWMValidator), 'PIN-EN')
+	    .setAlign(Blockly.ALIGN_RIGHT);
+	this.appendDummyInput()
+		.appendField(Blockly.Msg.ROBOTS_MOTORS_L298N_MOTOR_PIN_IN1)
+        .appendField(new Blockly.FieldTextInput('0',  Blockly.Arduino.pinDualValidator), 'PIN-IN1')
+		.appendField(Blockly.Msg.ROBOTS_MOTORS_L298N_MOTOR_PIN_IN2)
+        .appendField(new Blockly.FieldTextInput('0',  Blockly.Arduino.pinDualValidator), 'PIN-IN2')
+	    .setAlign(Blockly.ALIGN_RIGHT);
+	this.setInputsInline(false);
+	//	this.setInputsInline(true);
+	this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+	this.setTooltip(Blockly.Msg.ROBOTS_MOTORS_L298N_INIT_TOOLTIP);
+  }
+};
+
+
+//@pbra 20160613
+Blockly.Blocks['l298n_motor'] = {
+  init: function() {
+    this.setColour("#5b99a5");
+	this.appendDummyInput()
+		.appendField(Blockly.Msg.ROBOTS_MOTORS_L298N_MOTOR_TITLE)
+		.appendField(new Blockly.FieldImage("blocks/robots/l298n.jpg", Blockly.Arduino.imageSize, Blockly.Arduino.imageSize))
+		.appendField(
+				new Blockly.FieldDropdown([
+						[ Blockly.Msg.ROBOTS_MOTORS_L298N_STOP, "stop" ],
+						[ Blockly.Msg.ROBOTS_MOTORS_L298N_FORWARD, "forward" ],
+						[ Blockly.Msg.ROBOTS_MOTORS_L298N_BACKWARD, "backward" ],
+						[ Blockly.Msg.ROBOTS_MOTORS_L298N_BRAKE, "brake" ] ]),
+				"DIRECTION");
+    this.appendValueInput("ID", 'String')
+        .setCheck('String')
+        .setAlign(Blockly.ALIGN_RIGHT)
+        .appendField(Blockly.Msg.ROBOTS_MOTORS_L298N_ID);
+    this.appendValueInput("SPEED", 'Number')
+        .setCheck('Number')
+        .setAlign(Blockly.ALIGN_RIGHT)
+        .appendField(Blockly.Msg.ROBOTS_MOTORS_L298N_MOTOR_SPEED);
+	this.setInputsInline(false);
+	//	this.setInputsInline(true);
+	this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+	this.setTooltip(Blockly.Msg.ROBOTS_MOTORS_L298N_TOOLTIP);
+  }
+};
+
 Blockly.Blocks['generic_motor'] = {
   init: function() {
     this.setColour("#5b99a5");
