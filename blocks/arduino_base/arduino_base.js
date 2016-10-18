@@ -222,6 +222,36 @@ Blockly.Blocks.various_constrain = {
   }
 };
 
+//@pbra 20160607
+Blockly.Blocks.inout_digital_mode = {
+  init: function() {
+    this.setColour("#00979D");
+    this.setHelpUrl(Blockly.Msg.ARDUINO_INOUT_DIGITAL_MODE_HELPURL);
+	this.appendValueInput("PIN", 'Number')
+        .setAlign(Blockly.ALIGN_RIGHT)
+		.setCheck('Number')
+        .appendField(Blockly.Msg.ARDUINO_INOUT_DIGITAL_MODE_INPUT1);
+	this.appendValueInput("PINMODE", 'Null')
+        .setAlign(Blockly.ALIGN_RIGHT)
+      	.appendField(Blockly.Msg.ARDUINO_INOUT_DIGITAL_MODE_INPUT2);
+    this.setInputsInline(true);
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setTooltip(Blockly.Msg.ARDUINO_INOUT_DIGITAL_MODE_TOOLTIP);
+  }
+};
+
+// @pbra dropdown pinmode
+Blockly.Blocks['pinmode'] = {
+  init: function() {
+    this.setColour("#00979D");
+	this.setHelpUrl(Blockly.Msg.ARDUINO_INOUT_DIGITAL_MODE_HELPURL);
+    this.appendDummyInput("")
+        .appendField(new Blockly.FieldDropdown(Blockly.Msg.ARDUINO_INOUT_DIGITAL_MODE_DROPDOWN), 'PINMODE');
+    this.setOutput(true,'Null');
+    this.setTooltip(Blockly.Msg.ARDUINO_INOUT_DIGITAL_MODE_TOOLTIP);
+  }
+};
 Blockly.Blocks['biblio_include'] = {
   init: function() {
     this.appendDummyInput()
