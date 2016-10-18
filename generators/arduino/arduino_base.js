@@ -122,6 +122,20 @@ Blockly.Arduino.various_constrain = function() {
   return [code, Blockly.Arduino.ORDER_NONE];
 };
 
+//@pbra 20160607
+Blockly.Arduino.inout_digital_mode = function() {
+  var dropdown_pin = Blockly.Arduino.valueToCode(this, 'PIN', Blockly.Arduino.ORDER_ATOMIC);
+  var dropdown_mode = Blockly.Arduino.valueToCode(this, 'PINMODE', Blockly.Arduino.ORDER_ATOMIC).replace(/['"]+/g, '');
+  var code = 'pinMode(' + dropdown_pin + ', ' + dropdown_mode + ');\n';
+  return code;
+};
+
+// @pbra dropdown pinmode
+Blockly.Arduino.pinmode = function() {
+  return [this.getFieldValue('PINMODE'), Blockly.Arduino.ORDER_ATOMIC];
+};
+
+
 Blockly.Arduino.inout_buildin_led = function() {
   var dropdown_stat = this.getFieldValue('STAT');
   Blockly.Arduino.setups_['setup_output_13'] = 'pinMode(13, OUTPUT);';

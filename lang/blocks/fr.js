@@ -1246,3 +1246,25 @@ Blockly.Msg.MBOT_MOTOR_RIGHT_PWM = "moteur droit : puissance";
 
 //Added May 1rst 2016
 Blockly.Msg.ROMEO_HELPURL = "http://www.dfrobot.com/wiki/index.php/Romeo_V2-All_in_one_Controller_%28R3%29_%28SKU:DFR0225%29";
+
+//pbra 20160613 L298N
+Blockly.Msg.ROBOTS_MOTORS_L298N_MOTOR_TITLE = "L298N Contrôleur Moteur";
+Blockly.Msg.ROBOTS_MOTORS_L298N_MOTOR_INIT_TITLE = "L298N Contrôleur Moteur Init";
+Blockly.Msg.ROBOTS_MOTORS_L298N_ID = "Identifiant"
+Blockly.Msg.ROBOTS_MOTORS_L298N_MOTOR_SPEED = "Vitesse";
+Blockly.Msg.ROBOTS_MOTORS_L298N_MOTOR_PIN_IN1 = "Broche IN1 (direction)";
+Blockly.Msg.ROBOTS_MOTORS_L298N_MOTOR_PIN_IN2 = "Broche IN2 (direction)";
+Blockly.Msg.ROBOTS_MOTORS_L298N_MOTOR_PIN_EN = "Broche EN (pwm)";
+Blockly.Msg.ROBOTS_MOTORS_L298N_STOP = "arrêt";
+Blockly.Msg.ROBOTS_MOTORS_L298N_FORWARD = "avance";
+Blockly.Msg.ROBOTS_MOTORS_L298N_BACKWARD = "recul";
+Blockly.Msg.ROBOTS_MOTORS_L298N_BRAKE = "frein";
+Blockly.Msg.ROBOTS_MOTORS_L298N_INIT_TOOLTIP = "L298N, bloc d'initialisation (1 par moteur)";
+Blockly.Msg.ROBOTS_MOTORS_L298N_TOOLTIP = "Bloc L298N, utiliser le même id que dans le bloc d'initialisation";
+
+//pbra 20160607 PinMode
+Blockly.Msg.ARDUINO_INOUT_DIGITAL_MODE_HELPURL = "https://www.arduino.cc/en/Reference/PinMode";
+Blockly.Msg.ARDUINO_INOUT_DIGITAL_MODE_INPUT1 = "Changer le mode de fonctionnement de la broche";
+Blockly.Msg.ARDUINO_INOUT_DIGITAL_MODE_INPUT2 = "à";
+Blockly.Msg.ARDUINO_INOUT_DIGITAL_MODE_DROPDOWN = [["ENTREE", "INPUT"], ["SORTIE", "OUTPUT"], ["ENTREE_PULLUP", "INPUT_PULLUP"]];
+Blockly.Msg.ARDUINO_INOUT_DIGITAL_MODE_TOOLTIP = "Configurer la broche spécifée pour fonctionner comme une entrée ou une sortie";
