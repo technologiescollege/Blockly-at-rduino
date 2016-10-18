@@ -394,6 +394,18 @@ Blockly.Msg.VARIABLES_SET_CREATE_GET = "Créer 'obtenir %1'";
 Blockly.Msg.VARIABLES_SET_HELPURL = "https://github.com/google/blockly/wiki/Variables#set";  // untranslated
 Blockly.Msg.VARIABLES_SET_TOOLTIP = "Fixe cette variable pour qu’elle soit égale à la valeur de l’entrée.";
 Blockly.Msg.VARIABLES_AS = "de type";
+Blockly.Msg.ARD_TYPE_CHAR = "caractère";
+Blockly.Msg.ARD_TYPE_TEXT = "texte";
+Blockly.Msg.ARD_TYPE_BOOL = "booléen ToR";
+Blockly.Msg.ARD_TYPE_SHORT = "chiffre entier";
+Blockly.Msg.ARD_TYPE_NUMBER = "nombre entier";
+Blockly.Msg.ARD_TYPE_LONG = "nombre entier long";
+Blockly.Msg.ARD_TYPE_DECIMAL = "nombre à virgule";
+Blockly.Msg.ARD_TYPE_ARRAY = "tableau";
+Blockly.Msg.ARD_TYPE_NULL = "vide";
+Blockly.Msg.ARD_TYPE_UNDEF = "non défini";
+Blockly.Msg.ARD_TYPE_VOLATILE = "entier volatile";
+Blockly.Msg.ARD_TYPE_CHILDBLOCKMISSING = "typage manquant sur un bloc";
 Blockly.Msg.PROCEDURES_DEFRETURN_TITLE = "pour la fonction";
 Blockly.Msg.CONTROLS_IF_IF_TITLE_IF = Blockly.Msg.CONTROLS_IF_MSG_IF;
 Blockly.Msg.CONTROLS_WHILEUNTIL_INPUT_DO = Blockly.Msg.CONTROLS_REPEAT_INPUT_DO;
@@ -461,6 +473,8 @@ Blockly.Msg.CAT_FISCHERTECHNIK_IN = "capteurs";
 Blockly.Msg.CAT_FISCHERTECHNIK_OUT = "actionneurs";
 Blockly.Msg.CAT_FISCHERTECHNIK_MOTORS_CC = "moteurs CC";
 
+Blockly.Msg.CAT_FLYCAMONE = "FlyCamOne Eco v2"; //added august 20th 2016
+
 Blockly.Msg.CAT_GROVE = "Grove";  //added march 9th 2015
 Blockly.Msg.CAT_GROVE_IN = "capteurs";
 Blockly.Msg.CAT_GROVE_OUT = "actionneurs";
@@ -489,6 +503,7 @@ Blockly.Msg.CAT_TECHNOZONE_ROBOT_IHM = "console IHM";
 Blockly.Msg.CAT_ZUMO = "ZumoBot";	//added april 6th 2015
 Blockly.Msg.CAT_ZUMO_MOTORS = "moteurs";
 Blockly.Msg.CAT_ZUMO_SENSORS = "divers";
+Blockly.Msg.CAT_ZUMO_FUNCTION = "fonctions";
 
 Blockly.Msg.CAT_ROBOTS = "robots & cartes diverses"; //Added April 7 2015 ESK
 Blockly.Msg.CAT_ROBOTS_MOTORS = "cartes moteurs";
@@ -517,6 +532,17 @@ Blockly.Msg.CAT_ROMEO_1 = "RoMeo v2";
 Blockly.Msg.CAT_ROMEO_2 = "RoMeo v2";
 Blockly.Msg.CAT_ROMEO_3 = "RoMeo v2"; //added may 1st 2016
 
+Blockly.Msg.CAT_SPI_COMM = "ISP communication";
+Blockly.Msg.CAT_STEPPER = "Moteurs pas à pas"; //added august 28th 2016
+
+Blockly.Msg.CAT_MHK = "MyHumanKit"; //added august 23th 2016
+
+Blockly.Msg.CAT_ESUS = "carte Esus"; //added 8 october 2016
+Blockly.Msg.CAT_ESUS_WIFI = "WiFi";
+Blockly.Msg.CAT_ESUS_MOTORS = "commandes moteurs";
+
+Blockly.Msg.CAT_APDS_9960_RGB_Gesture = "couleur + mouvement"; //added 9 october 2016
+
 Blockly.Msg.FIELDDROPDOWN = [["1 (état haut)", "HIGH"], ["0 (état bas)", "LOW"]];
 Blockly.Msg.FIELDDROPDOWN_ONOFF = [["marche", "ON"], ["arrêt", "OFF"]]
 Blockly.Msg.INOUT_HIGH_LEVEL = "1 (état haut)";
@@ -529,13 +555,15 @@ Blockly.Msg.INOUT_LOW_LEVEL = "0 (état bas)";
 
 Blockly.Msg.ARDUINO_BASE_DELAY_HELPURL = "http://arduino.cc/en/Reference/delay";
 Blockly.Msg.ARDUINO_BASE_DELAY_DELAY_TIME = "faire une temporisation (en ms) de";
+Blockly.Msg.ARDUINO_BASE_DELAY_DELAY_TIME_SEC = "faire une temporisation (en s) de";
 Blockly.Msg.ARDUINO_BASE_DELAY_TOOLTIP = "spécifier le temps d'attente en millisecondes";
 Blockly.Msg.ARDUINO_BASE_SETUP = "initialisation (setup)";
 Blockly.Msg.ARDUINO_BASE_SETUP_HELPURL = "https://www.arduino.cc/en/Reference/Setup";
 Blockly.Msg.ARDUINO_BASE_LOOP = "répéter indéfiniment (loop)";
 Blockly.Msg.ARDUINO_BASE_SETUP_LOOP_HELPURL = "https://www.arduino.cc/en/Reference/Loop";
-Blockly.Msg.ARDUINO_SINCE_PROGRAM_STARTED = "temps écoulé depuis le début du programme";
-Blockly.Msg.ARDUINO_SINCE_PROGRAM_STARTED_TOOLTIP = "durée en millisecondes depuis que le programme a commencé (unsigned long)";
+Blockly.Msg.ARDUINO_SINCE_PROGRAM_STARTED = "temps écoulé (ms) depuis le début du programme";
+Blockly.Msg.ARDUINO_SINCE_PROGRAM_STARTED_SEC = "temps écoulé (s) depuis le début du programme";
+Blockly.Msg.ARDUINO_SINCE_PROGRAM_STARTED_TOOLTIP = "durée depuis que le programme a commencé (unsigned long)";
 Blockly.Msg.ARDUINO_SINCE_PROGRAM_STARTED_HELPURL = "https://www.arduino.cc/en/Reference/Millis";
 Blockly.Msg.ARDUINO_BETWEEN = "nombre aléatoire entre";
 Blockly.Msg.ARDUINO_BETWEEN_AND = "et";
@@ -644,7 +672,7 @@ Blockly.Msg.Serial_flush="attente de fin de transmission par le port série";
 Blockly.Msg.SSERIAL_Init="initialisation :";
 Blockly.Msg.SSERIAL_SPEED="vitesse";
 Blockly.Msg.SSERIAL_TX="TX ";
-Blockly.Msg.SSERIAL_RX="broches RX ";
+Blockly.Msg.SSERIAL_RX="broche RX ";
 Blockly.Msg.SSERIAL_Read="donnée lue sur le port de communication";
 Blockly.Msg.SSERIAL_Print="afficher sur le port de communication le texte";
 Blockly.Msg.SSERIAL_Write="envoyer sur le port de communication";
@@ -794,6 +822,12 @@ Blockly.Msg.ROBOTS_MOTORS_ZUMO_FRS_TITLE = "Zumo - Flip right & speed";
 Blockly.Msg.ROBOTS_MOTORS_ZUMO_FRS_TOOLTIP = "Drive Pololu Zumo (flipped right motor) + vitesse";
 Blockly.Msg.ROBOTS_MOTORS_ZUMO_FBS_TITLE = "Zumo - Flip both & speed";
 Blockly.Msg.ROBOTS_MOTORS_ZUMO_FBS_TOOLTIP = "Pololu Zumo (2 moteurs) + vitesse";
+Blockly.Msg.ROBOTS_MOTORS_ZUMO_FCT_FOLLOWER = "suiveur de ligne";
+Blockly.Msg.ROBOTS_MOTORS_ZUMO_FCT_FOLLOWER_TOOLTIP = "se calibre en cherchant une ligne noire, puis se cale dessus";
+Blockly.Msg.ROBOTS_MOTORS_ZUMO_FCT_FOLLOWER_HELPURL = "https://www.pololu.com/docs/0J57/7.d";
+Blockly.Msg.ROBOTS_MOTORS_ZUMO_FCT_SENSORCALIBRATION = "calibrage manuel du suiveur";
+Blockly.Msg.ROBOTS_MOTORS_ZUMO_FCT_SENSORCALIBRATION_TOOLTIP = "calibre pendant 10s en exposant les couleurs blanc/noir, puis allume la diode 13";
+Blockly.Msg.ROBOTS_MOTORS_ZUMO_FCT_SENSORCALIBRATION_HELPURL = "https://www.pololu.com/product/1419";
 Blockly.Msg.ROBOTS_MOTORS_ARDUMOTOR_TITLE = "Ardumotor";
 Blockly.Msg.ROBOTS_MOTORS_ARDUMOTOR_TOOLTIP = "ArduMotor Sparkfun Shield A=left B=right";
 Blockly.Msg.ROBOTS_MOTORS_ARDUMOTOR_HELPURL = "https://www.sparkfun.com/datasheets/DevTools/Arduino/Ardumoto_v13.pdf";
@@ -1246,6 +1280,109 @@ Blockly.Msg.MBOT_MOTOR_RIGHT_PWM = "moteur droit : puissance";
 
 //Added May 1rst 2016
 Blockly.Msg.ROMEO_HELPURL = "http://www.dfrobot.com/wiki/index.php/Romeo_V2-All_in_one_Controller_%28R3%29_%28SKU:DFR0225%29";
+
+
+//Added august 20th 2016
+Blockly.Msg.FLYCAM_SWITCH_HELPURL = "http://tic.technologiescollege.fr/wiki/doku.php/fr/arduino/flycam";
+Blockly.Msg.FLYCAM_SWITCH_TEXT = "changer le mode";
+Blockly.Msg.FLYCAM_SWITCH_INPUT = "de la Flycam sur la broche n°";
+Blockly.Msg.FLYCAM_SWITCH_TOOLTIP = "patienter car la commande doit se fixer pendant 3s puis une pause de 1s avant la suite";
+Blockly.Msg.FLYCAM_RECORD_HELPURL = Blockly.Msg.FLYCAM_SWITCH_HELPURL;
+Blockly.Msg.FLYCAM_RECORD_TEXT = "lancer la capture";
+Blockly.Msg.FLYCAM_RECORD_INPUT = Blockly.Msg.FLYCAM_SWITCH_INPUT;
+Blockly.Msg.FLYCAM_RECORD_TOOLTIP = "envoi d'une impulsion d'1s de type servo=180°";
+Blockly.Msg.FLYCAM_STOP_HELPURL = Blockly.Msg.FLYCAM_SWITCH_HELPURL;
+Blockly.Msg.FLYCAM_STOP_TEXT = "arrêter la capture";
+Blockly.Msg.FLYCAM_STOP_INPUT = Blockly.Msg.FLYCAM_SWITCH_INPUT;
+Blockly.Msg.FLYCAM_STOP_TOOLTIP = "envoi d'une impulsion d'1s de type servo=0°";
+
+
+//Added august 23th 2016
+Blockly.Msg.MHK_ULTRASON_HELPURL = "http://www.gotronic.fr/art-module-de-detection-us-hc-sr04-20912.htm";
+Blockly.Msg.MHK_ULTRASON1 = "la distance mesurée en cm ";
+Blockly.Msg.MHK_ULTRASON2 = "TRIG sur la broche ";
+Blockly.Msg.MHK_ULTRASON3 = "ECHO sur la broche ";
+Blockly.Msg.MHK_ULTRASON_TOOLTIP = "Détection d'obstacle par ultrason";
+Blockly.Msg.MHK_MOTEUR_VIBREUR_HELPURL = "http://www.gotronic.fr/art-vibreur-miniature-vm1201-20685.htm";
+Blockly.Msg.MHK_MOTEUR_VIBREUR1 = " faire vibrer le moteur sur la broche";
+Blockly.Msg.MHK_MOTEUR_VIBREUR2 = "à la valeur";
+Blockly.Msg.MHK_CAPTEUR_MYOWARE_HELPURL = "http://www.robotshop.com/eu/fr/capteur-electrique-muscle-myoware.html";
+Blockly.Msg.MHK_CAPTEUR_MYOWARE1 = "la valeur lue par le capteur myoware ";
+Blockly.Msg.MHK_CAPTEUR_MYOWARE2 = "sur la broche analogique ";
+Blockly.Msg.MHK_CAPTEUR_MYOWARE_TOOLTIP = "myoware capteur musculaire";
+Blockly.Msg.MHK_SERVO_MOTEUR1 = "positionne le servo-moteur";
+Blockly.Msg.MHK_SERVO_MOTEUR2 = "de la broche";
+Blockly.Msg.MHK_SERVO_MOTEUR3 = "à un angle de [0~180°]";
+Blockly.Msg.MHK_SERVO_MOTEUR_TOOLTIP = "Sortie Servo-moteur (réf : MINI-SERVO)";
+
+// added august 28th 2016
+// blocks from Ardublockly project
+
+Blockly.Msg.SPI_SETUP = "Setup";
+Blockly.Msg.SPI_SETUP_CONF = "configuration:";
+Blockly.Msg.SPI_SETUP_DIVIDE = "clock divide";
+Blockly.Msg.SPI_SETUP_LSBFIRST = "LSBFIRST";
+Blockly.Msg.SPI_SETUP_MODE = "SPI mode (idle - edge)";
+Blockly.Msg.SPI_SETUP_MODE0 = "0 (Low - Falling)";
+Blockly.Msg.SPI_SETUP_MODE1 = "1 (Low - Rising)";
+Blockly.Msg.SPI_SETUP_MODE2 = "2 (High - Falling)";
+Blockly.Msg.SPI_SETUP_MODE3 = "3 (High - Rising)";
+Blockly.Msg.SPI_SETUP_MSBFIRST = "MSBFIRST";
+Blockly.Msg.SPI_SETUP_SHIFT = "data shift";
+Blockly.Msg.SPI_SETUP_TIP = "Configures the SPI peripheral.";
+Blockly.Msg.SPI_TRANSRETURN_TIP = "Send a SPI message to an specified slave device and get data back.";
+Blockly.Msg.SPI_TRANS_NONE = "none";
+Blockly.Msg.SPI_TRANS_SLAVE = "to slave pin";
+Blockly.Msg.SPI_TRANS_TIP = "Send a SPI message to an specified slave device.";
+Blockly.Msg.SPI_TRANS_VAL = "transfer";
+Blockly.Msg.SPI_TRANS_WARN1 = "A setup block for %1 must be added to the workspace to use this block!";
+Blockly.Msg.SPI_TRANS_WARN2 = "Old pin value %1 is no longer available.";
+Blockly.Msg.STEPPER_MOTOR = "stepper motor:";
+Blockly.Msg.STEPPER_PIN1 = "pin1#";
+Blockly.Msg.STEPPER_PIN2 = "pin2#";
+Blockly.Msg.STEPPER_REVOLVS = "how many steps per revolution";
+Blockly.Msg.STEPPER_SETUP = "Setup";
+Blockly.Msg.STEPPER_SETUP_TIP = "Configures a stepper motor pinout and other settings.";
+Blockly.Msg.STEPPER_SPEED = "set speed (rpm) to";
+Blockly.Msg.STEPPER_STEP = "move stepper";
+Blockly.Msg.STEPPER_STEPS = "steps";
+Blockly.Msg.STEPPER_STEP_TIP = "Turns the stepper motor a specific number of steps.";
+Blockly.Msg.STEPPER_STEP_WARN1 = "A STEPPER configuration block must be added to use this block!";
+Blockly.Msg.STEPPER_STEP_WARN2 = "A Name input must be added to the Stepper configuration block!";
+Blockly.Msg.STEPPER_STEP_WARN3 = "Selected stepper does not exist any more, please select a new one.";
+
+//******** Esus Board (Mace Robotics)
+Blockly.Msg.ESUS_EsusBoard_init = "initialisation carte Esus";
+Blockly.Msg.ESUS_MOTOR1_SPEED = "moteur 1, vitesse :";
+Blockly.Msg.ESUS_MOTOR1_DIRECTION = "sens rotation :";
+Blockly.Msg.ESUS_MOTOR2_SPEED = "moteur 2, vitesse :";
+Blockly.Msg.ESUS_MOTOR2_DIRECTION = "sens rotation :";
+Blockly.Msg.ESUS_ANALOG = "entrée analogique :";
+Blockly.Msg.ESUS_WIFI_SSID = "configuration WiFi mode infra  SSID :";
+Blockly.Msg.ESUS_WIFI_PASSWORD = "mot de passe";
+Blockly.Msg.ESUS_WIFI_IP = "configuration adresse WiFi :";
+Blockly.Msg.ESUS_WIFI_READ_STREAM = "lecture donnée WiFi";
+Blockly.Msg.ESUS_WIFI_CONTAIN2 = "contient";
+Blockly.Msg.ESUS_WIFI_CONTAIN = "donnée WiFi";
+Blockly.Msg.ESUS_WIFI_DATA_AVAILABLE = "donnée WiFi disponible ?";
+Blockly.Msg.ESUS_WIFI_AP = "configuration WiFi mode AP SSID:";
+Blockly.Msg.ESUS_WIFI_AP_IP = "adresse IP :";
+Blockly.Msg.ESUS_WIFI_SEND_STREAM = "envoyer donnée WiFi (texte)";
+Blockly.Msg.ESUS_WIFI_SEND_FLOAT_STREAM = "envoyer donnée WiFi (nombre)";
+
+
+//******** APDS9960 couleurs et mouvements
+Blockly.Msg.APDS9960_MISC_HELPURL = "https://www.sparkfun.com/products/12787";
+Blockly.Msg.APDS9960_INIT_TITLE = "initialisation du capteur APDS-9960";
+Blockly.Msg.APDS9960_INIT_TOOLTIP = "test pour se calibrer sur la luminosité ambiante";
+Blockly.Msg.APDS9960_TEST_TITLE = "test du capteur";
+Blockly.Msg.APDS9960_TEST_TOOLTIP = "renvoie FAUX en cas d'erreur matérielle";
+Blockly.Msg.APDS9960_AMBIENT_TITLE = "luminosité ambiante";
+Blockly.Msg.APDS9960_AMBIENT_TOOLTIP = "renvoie une valeur pour la quantité de lumière mesurée";
+Blockly.Msg.APDS9960_RED_TITLE = "code RVB de Rouge (0~255)";
+Blockly.Msg.APDS9960_GREEN_TITLE = "code RVB de Vert (0~255)";
+Blockly.Msg.APDS9960_BLUE_TITLE = "code RVB de Bleu (0~255)";
+Blockly.Msg.APDS9960_COLORSENSOR_TOOLTIP = "renvoie une valeur codée sur 10 bits pour le mélange RVB classique";
 
 //pbra 20160613 L298N
 Blockly.Msg.ROBOTS_MOTORS_L298N_MOTOR_TITLE = "L298N Contrôleur Moteur";

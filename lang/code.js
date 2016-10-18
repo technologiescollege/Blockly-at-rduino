@@ -105,28 +105,6 @@ Code.isRtl = function() {
 };
 
 /**
- * Save the blocks and reload with a different language.
- */
-Code.changeLanguage = function() {
-  // Store the blocks for the duration of the reload.
-	BlocklyDuino.backupBlocks();
-
-  var languageMenuSelected = $('#languageMenu option:selected').val();
-  var newLang = encodeURIComponent(languageMenuSelected);
-  var search = window.location.search;
-  if (search.length <= 1) {
-    search = '?lang=' + newLang;
-  } else if (search.match(/[?&]lang=[^&]*/)) {
-    search = search.replace(/([?&]lang=)[^&]*/, '$1' + newLang);
-  } else {
-    search = search.replace(/\?/, '?lang=' + newLang + '&');
-  }
-
-  window.location = window.location.protocol + '//' +
-      window.location.host + window.location.pathname + search;
-};
-
-/**
  * User's language (e.g. "en").
  * @type string
  */
@@ -166,7 +144,6 @@ Code.initLanguage = function() {
     }
     languageMenu.append(option);
   }
-  languageMenu.bind('change', Code.changeLanguage);
 
   // Inject language strings.
   $('#title').text(MSG['title']);
@@ -201,12 +178,16 @@ Code.initLanguage = function() {
   $('#span_flash_codebender').text(MSG['span_flash_codebender']);
   $('#span_saveIno').text(MSG['span_saveIno']);
   $('#span_pasteIDEArduino').text(MSG['span_pasteIDEArduino']);
+  $('#span_verify_local').text(MSG['span_verify_local']);
+  $('#span_flash_local').text(MSG['span_flash_local']);
+  $('#span_flash_local_result').text(MSG['span_flash_local_result']);
   $('#span_connect_serial').text(MSG['span_connect_serial']);
   $('#span_edit_code').text(MSG['span_edit_code']);
 
   $('#configModalLabel').text(MSG['configModalLabel']);
   $('#span_select_all').text(MSG['span_select_all']);
   $('#span_put_in_url').text(MSG['span_put_in_url']);
+  $('#span_put_config_in_url').text(MSG['span_put_in_url']);
   $('#btn_close_config').text(MSG['btn_close']);
   $('#btn_valid_config').text(MSG['btn_valid']);
   $('#btn_close_msg').text(MSG['btn_close']);
@@ -217,14 +198,45 @@ Code.initLanguage = function() {
   $('#exampleModalLabel').text(MSG['exampleModalLabel']);  
   $('#convertModalLabel').text(MSG['convertModalLabel']);
   $('#RGBModalLabel').text(MSG['RGBModalLabel']);
+  $('#videoModalLabelTitle').text(MSG['videoModalLabelTitle']);
+  $('#videoModalLabel1').text(MSG['videoModalLabel1']);
+  $('#videoModalLabel2').text(MSG['videoModalLabel2']);
+  $('#videoModalLabel3').text(MSG['videoModalLabel3']);
+  $('#videoModalLabel4').text(MSG['videoModalLabel4']);
   
+  $('#configModalGlobalLabel').text(MSG['configModalGlobalLabel']);
+  $('#btn_closeConfigGlobale').text(MSG['btn_close']);
+  $('#btn_validConfigGlobale').text(MSG['btn_valid']);
+  $('#span_languageMenu').text(MSG['span_languageMenu']);
+  $('#span_OnOffLine').text(MSG['span_OnOffLine']);
+  $('#span_OnLine').text(MSG['span_OnLine']);
+  $('#span_OffLine').text(MSG['span_OffLine']);
+  $('#span_LocalCodebender_Code').text(MSG['span_LocalCodebender_Code']);
+  $('#span_LocalCodebender_Local').text(MSG['span_LocalCodebender_Local']);
+  $('#span_Upload').text(MSG['span_Upload']);
+  $('#span_Upload_local').text(MSG['span_Upload_local']);
+  $('#span_Upload_codebender').text(MSG['span_Upload_codebender']);
+  $('#span_Download').text(MSG['span_Download']);
+  $('#span_Download_Arduino').text(MSG['span_Download_Arduino']);
+  $('#span_Download_local').text(MSG['span_Download_local']);
+  $('#span_Download_codebender').text(MSG['span_Download_codebender']);
+  
+  $('#btn_configGlobal').attr('title', MSG['span_configGlobal']);
+  $('#btn_RGB').attr('title', MSG['span_RGB']);
+  $('#btn_convert').attr('title', MSG['span_convert']);
   $('#btn_doc').attr('title', MSG['span_doc']);  
   $('#btn_tuto').attr('title', MSG['span_tuto']);
+  $('#btn_videos').attr('title', MSG['span_videos']);
+  
   $('#btn_closeCode').text(MSG['btn_closeCode']);
   $('#btn_validCode').text(MSG['btn_validCode']);
 
   $('#msg_ajax_ko').text(MSG['msg_ajax_ko']);
-  $('#span_ajax_msg').text(MSG['span_ajax_msg']);
+  $('#span_ajax_msg').text(MSG['span_ajax_msg']);  
+  
+  $('#firstModalLabel').text(MSG['firstModalLabel']);
+  $('#span_first_msg').text(MSG['span_first_msg']);
+  $('#btn_valid_first_msg').text(MSG['btn_valid_first_msg']);
   
   $("xml").find("category").each(function() {
 	// add attribute ID to keep categorie code
@@ -269,6 +281,7 @@ Code.initLanguageSupervision = function() {
 	  $('#span_supervision_analog_pin').text(Blockly.Msg.SV_analog_pin);
 	  $('#span_supervision_latch_digital_pin').text(Blockly.Msg.SV_latch_digital_pin);
 	  $('#span_supervision_latch_analog_pin').text(Blockly.Msg.SV_latch_analog_pin);
+	  $('#span_supervision_servo').text(Blockly.Msg.SV_servo);
 	  $('#span_supervision_servo_pin').text(Blockly.Msg.SV_servo_pin);
 	  $('#span_supervision_servo_angle').text(Blockly.Msg.SV_servo_angle);
 	  $('#span_supervision_servo_set').text(Blockly.Msg.SV_servo_set);
@@ -297,7 +310,9 @@ Code.initLanguageSupervision = function() {
 	  $('#span_supervision_stepper_steps_rev').text(Blockly.Msg.SV_stepper_steps_rev);
 	  $('#span_supervision_stepper_motor').text(Blockly.Msg.SV_stepper_motor);
 	  $('#span_supervision_stepper_steps').text(Blockly.Msg.SV_stepper_steps);
-	  $('#span_supervision_stepper_run').text(Blockly.Msg.SV_stepper_run);
+	  $('#span_supervision_stepper_run').text(Blockly.Msg.SV_stepper_run);	  
+	  
+	  $('#span_supervision_HTTP_BT').text(Blockly.Msg.SV_HTTP_BT);
 	  
 };
 
@@ -309,7 +324,7 @@ Code.initLanguageSupervision = function() {
 // Load Supervision's language strings.
 //document.write('<script src="lang/supervision/fr.js"></script>\n');
 
-// And then load the chose langage
+// And then load the choose langage
 //Load the Code demo's language strings.
 document.write('<script src="lang/msg/' + Code.LANG + '.js"></script>\n');
 // Load Blockly's language strings.

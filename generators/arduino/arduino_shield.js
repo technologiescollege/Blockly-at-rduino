@@ -6,7 +6,7 @@
  */
 
 
- goog.require('Blockly.Arduino');
+goog.require('Blockly.Arduino');
 
 
 Blockly.Arduino.LCD_Keypad_Shield_DFR_09 = function() {
@@ -18,7 +18,7 @@ Blockly.Arduino.LCD_Keypad_Shield_DFR_09 = function() {
   /*if(text.length>16||text2.length>16){
       alert("string is too long");
   }*/
-  Blockly.Arduino.definitions_['define_LiquidCrystal'] = '#include <LiquidCrystal.h>\n';
+  Blockly.Arduino.includes_['define_LiquidCrystal'] = '#include <LiquidCrystal.h>\n';
   
   Blockly.Arduino.definitions_['var_LiquidCrystal lcd'] = 'LiquidCrystal lcd(8, 9, 4, 5, 6, 7);\n';
 
@@ -38,24 +38,24 @@ Blockly.Arduino.LCD_Keypad_Shield_DFR_09_lc = function(block) {
   var value_num_colonne = Blockly.Arduino.valueToCode(this, 'colonne', Blockly.Arduino.ORDER_ATOMIC)-1;
   var text4 = Blockly.Arduino.valueToCode(this, 'TEXT4', Blockly.Arduino.ORDER_UNARY_POSTFIX) || '\'\'';
   
-  Blockly.Arduino.definitions_['define_LiquidCrystal'] = '#include <LiquidCrystal.h>\n';
+  Blockly.Arduino.includes_['define_LiquidCrystal'] = '#include <LiquidCrystal.h>\n';
   Blockly.Arduino.definitions_['var_LiquidCrystal lcd'] = 'LiquidCrystal lcd(8, 9, 4, 5, 6, 7);\n';
   Blockly.Arduino.setups_['setup_lcd'] = 'lcd.begin(16, 2);\n';
   
   var code = 'lcd.setCursor('+value_num_colonne+','+value_num_ligne+'); \n';
   code    += 'lcd.print('+text4+'); \n';
-return code;
+  return code;
 };
 
 
 Blockly.Arduino.LCD_Keypad_Shield_DFR_09_RAZ = function(block) {
   
-  Blockly.Arduino.definitions_['define_LiquidCrystal'] = '#include <LiquidCrystal.h>\n';
+  Blockly.Arduino.includes_['define_LiquidCrystal'] = '#include <LiquidCrystal.h>\n';
   Blockly.Arduino.definitions_['var_LiquidCrystal lcd'] = 'LiquidCrystal lcd(8, 9, 4, 5, 6, 7);\n';
   Blockly.Arduino.setups_['setup_lcd'] = 'lcd.begin(16, 2);\n';
   
   var code = 'lcd.clear(); \n';
-return code;
+  return code;
 };
 
 Blockly.Arduino.Bluetooth_Shield_duinoFun = function() {
@@ -63,7 +63,7 @@ Blockly.Arduino.Bluetooth_Shield_duinoFun = function() {
   var value_RX_pin = Blockly.Arduino.valueToCode(this, 'BT_TX', Blockly.Arduino.ORDER_ATOMIC);
   var value_TX_pin = Blockly.Arduino.valueToCode(this, 'BT_RX', Blockly.Arduino.ORDER_ATOMIC);   
   //dans include définition    
-  Blockly.Arduino.definitions_['define_SoftwareSerial'] = '#include <SoftwareSerial.h>\n'; 
+  Blockly.Arduino.includes_['define_SoftwareSerial'] = '#include <SoftwareSerial.h>\n'; 
   Blockly.Arduino.definitions_['define_RxTx'] = 
   '#define RxD '+ value_RX_pin +'\n' + 
   '#define TxD '+ value_TX_pin +'\n'; 
@@ -92,12 +92,12 @@ Blockly.Arduino.Bluetooth_Shield_duinoFun = function() {
   '}\n';
   
  var code = '';
-  return code;
+ return code;
 };
 
 Blockly.Arduino.ArduiLed = function(block) {
   // Ce programme permet d'allumer la led 13 en utilisant l'application Android ArduiLed
-  Blockly.Arduino.definitions_['define_LedPin'] = '#define LedPin 13 \n';  
+  Blockly.Arduino.includes_['define_LedPin'] = '#define LedPin 13 \n';  
   Blockly.Arduino.definitions_['define_RecvDonnees'] = 'byte RecvDonnees; \n';    
   Blockly.Arduino.setups_['setup_LedPin'] = '  pinMode(LedPin, OUTPUT);'; 
   
@@ -122,8 +122,6 @@ Blockly.Arduino.ArduiLed = function(block) {
   '    blueToothSerial.print(RecvDonnees);\n'+ 
   '  }\n'+ 
   '}\n'+ 
-  '\n';
-  
- 
+  '\n'; 
   return code;
 };

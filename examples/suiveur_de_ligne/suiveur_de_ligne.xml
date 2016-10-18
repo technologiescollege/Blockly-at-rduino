@@ -1,6 +1,5 @@
 <xml xmlns="http://www.w3.org/1999/xhtml">
   <block type="procedures_defnoreturn" id="5" x="864" y="-113">
-    <mutation></mutation>
     <field name="NAME">reculer</field>
     <statement name="STACK">
       <block type="servo_move" id="53" inline="false">
@@ -36,9 +35,9 @@
   <block type="variables_set" id="1" inline="true" x="10" y="56">
     <field name="VAR">LumG</field>
     <value name="VALUE">
-      <block type="inout_analog_read" id="2">
-        <field name="PIN">A0</field>
-        <comment pinned="true" h="81" w="246">capteur lumière gauche
+      <block type="inout_analog_read_validator" id="cXHX:e#4P7XW@HbIW[O{">
+        <field name="PIN">A1</field>
+        <comment pinned="true" h="78" w="193">capteur lumière gauche
 valeur &gt; 800 sol banc
 valeur &lt; 800 sol noir
         </comment>
@@ -48,9 +47,9 @@ valeur &lt; 800 sol noir
       <block type="variables_set" id="3" inline="true">
         <field name="VAR">LumD</field>
         <value name="VALUE">
-          <block type="inout_analog_read" id="4">
-            <field name="PIN">A1</field>
-            <comment pinned="true" h="85" w="176">capteur lumière droite
+          <block type="inout_analog_read_validator" id="PZCN4`|aMw{nuFMgOmsV">
+            <field name="PIN">A0</field>
+            <comment pinned="true" h="96" w="260">capteur lumière droite
 valeur &gt; 800 sol blanc
 valeur &lt; 800 sol noir
             </comment>
@@ -60,7 +59,6 @@ valeur &lt; 800 sol noir
     </next>
   </block>
   <block type="procedures_defnoreturn" id="58" x="867" y="196">
-    <mutation></mutation>
     <field name="NAME">avancer</field>
     <statement name="STACK">
       <block type="servo_move" id="59" inline="false">
@@ -92,8 +90,16 @@ valeur &lt; 800 sol noir
     </statement>
   </block>
   <block type="inout_digital_write" id="10" x="26" y="326">
-    <field name="PIN">2</field>
-    <field name="STAT">HIGH</field>
+    <value name="PIN">
+      <block type="math_number" id="b?2cA1?DRtPv6erX?7Q3">
+        <field name="NUM">2</field>
+      </block>
+    </value>
+    <value name="STAT">
+      <block type="logic_boolean" id="/NSw4O*nNy-Du?qZ8CmK">
+        <field name="BOOL">TRUE</field>
+      </block>
+    </value>
     <next>
       <block type="serial_print" id="11" inline="false">
         <value name="CONTENT">
@@ -123,7 +129,7 @@ valeur &lt; 800 sol noir
                       </block>
                     </value>
                     <next>
-                      <block type="base_delay" id="19" inline="true">
+                      <block type="base_delay" id="19">
                         <value name="DELAY_TIME">
                           <block type="math_number" id="20">
                             <field name="NUM">50</field>
@@ -133,10 +139,10 @@ valeur &lt; 800 sol noir
                           <block type="controls_if" id="21" inline="false">
                             <mutation else="1"></mutation>
                             <value name="IF0">
-                              <block type="logic_operation" id="22" inline="true">
+                              <block type="logic_operation" id="22">
                                 <field name="OP">AND</field>
                                 <value name="A">
-                                  <block type="logic_compare" id="23" inline="true">
+                                  <block type="logic_compare" id="23">
                                     <field name="OP">GT</field>
                                     <value name="A">
                                       <block type="variables_get" id="24">
@@ -151,7 +157,7 @@ valeur &lt; 800 sol noir
                                   </block>
                                 </value>
                                 <value name="B">
-                                  <block type="logic_compare" id="26" inline="true">
+                                  <block type="logic_compare" id="26">
                                     <field name="OP">GT</field>
                                     <value name="A">
                                       <block type="variables_get" id="27">
@@ -176,10 +182,10 @@ valeur &lt; 800 sol noir
                               <block type="controls_if" id="116" inline="false">
                                 <mutation else="1"></mutation>
                                 <value name="IF0">
-                                  <block type="logic_operation" id="117" inline="true">
+                                  <block type="logic_operation" id="117">
                                     <field name="OP">AND</field>
                                     <value name="A">
-                                      <block type="logic_compare" id="118" inline="true">
+                                      <block type="logic_compare" id="118">
                                         <field name="OP">LT</field>
                                         <value name="A">
                                           <block type="variables_get" id="119">
@@ -194,7 +200,7 @@ valeur &lt; 800 sol noir
                                       </block>
                                     </value>
                                     <value name="B">
-                                      <block type="logic_compare" id="121" inline="true">
+                                      <block type="logic_compare" id="121">
                                         <field name="OP">LT</field>
                                         <value name="A">
                                           <block type="variables_get" id="122">
@@ -218,10 +224,10 @@ valeur &lt; 800 sol noir
                                 <statement name="ELSE">
                                   <block type="controls_if" id="98" inline="false">
                                     <value name="IF0">
-                                      <block type="logic_operation" id="99" inline="true">
+                                      <block type="logic_operation" id="99">
                                         <field name="OP">AND</field>
                                         <value name="A">
-                                          <block type="logic_compare" id="100" inline="true">
+                                          <block type="logic_compare" id="100">
                                             <field name="OP">GT</field>
                                             <value name="A">
                                               <block type="variables_get" id="101">
@@ -236,7 +242,7 @@ valeur &lt; 800 sol noir
                                           </block>
                                         </value>
                                         <value name="B">
-                                          <block type="logic_compare" id="103" inline="true">
+                                          <block type="logic_compare" id="103">
                                             <field name="OP">LT</field>
                                             <value name="A">
                                               <block type="variables_get" id="104">
@@ -260,10 +266,10 @@ valeur &lt; 800 sol noir
                                     <next>
                                       <block type="controls_if" id="107" inline="false">
                                         <value name="IF0">
-                                          <block type="logic_operation" id="108" inline="true">
+                                          <block type="logic_operation" id="108">
                                             <field name="OP">AND</field>
                                             <value name="A">
-                                              <block type="logic_compare" id="109" inline="true">
+                                              <block type="logic_compare" id="109">
                                                 <field name="OP">LT</field>
                                                 <value name="A">
                                                   <block type="variables_get" id="110">
@@ -278,7 +284,7 @@ valeur &lt; 800 sol noir
                                               </block>
                                             </value>
                                             <value name="B">
-                                              <block type="logic_compare" id="112" inline="true">
+                                              <block type="logic_compare" id="112">
                                                 <field name="OP">GT</field>
                                                 <value name="A">
                                                   <block type="variables_get" id="113">
@@ -319,7 +325,6 @@ valeur &lt; 800 sol noir
     </next>
   </block>
   <block type="procedures_defnoreturn" id="74" x="869" y="518">
-    <mutation></mutation>
     <field name="NAME">stop</field>
     <statement name="STACK">
       <block type="servo_move" id="75" inline="false">
@@ -350,8 +355,7 @@ valeur &lt; 800 sol noir
       </block>
     </statement>
   </block>
-  <block type="procedures_defnoreturn" id="147" x="514" y="837">
-    <mutation></mutation>
+  <block type="procedures_defnoreturn" id="147" x="462" y="838">
     <field name="NAME">tourneD</field>
     <statement name="STACK">
       <block type="servo_move" id="148" inline="false">
@@ -383,7 +387,6 @@ valeur &lt; 800 sol noir
     </statement>
   </block>
   <block type="procedures_defnoreturn" id="140" x="866" y="834">
-    <mutation></mutation>
     <field name="NAME">tourneG</field>
     <statement name="STACK">
       <block type="servo_move" id="141" inline="false">

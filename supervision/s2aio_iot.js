@@ -12,8 +12,7 @@ var pin = "";
 var outputValue = "";
 var socket = new WebSocket('ws://' + ipAddress + ':' + ipPort);
 
-
-function WebSocketTest() {	  
+function WebSocketTest() {
   if ("WebSocket" in window)
 		{
 		   alert(Blockly.Msg.SV_alert1);
@@ -51,7 +50,6 @@ socket.onmessage = function (message) {
 	//console.log("method : " + method);
 	switch (method) {
 		case "analog_message_reply":
-		{
 			//console.log('analog');
 			var pin = params[0];
 			////console.log(a)
@@ -63,15 +61,13 @@ socket.onmessage = function (message) {
 				alert(Blockly.Msg.SV_onMessage_analog);
 			}
 			break;
-		}
 
 		case "digital_message_reply":
-		{
 			//console.log('digital message');
 
-			pin = params[0];
+			var pin = params[0];
 			////console.log(a)
-			out = params[1];
+			var out = params[1];
 			//console.log('digital message');
 			//console.log('pin: ' + pin);
 			//console.log('value =' + out);
@@ -81,38 +77,40 @@ socket.onmessage = function (message) {
 					alert(Blockly.Msg.SV_onMessage_digital);
 				//console.log('unknown digital pin: ' + pin);
 			}
-		}
 			break;
+			
 		case "i2c_read_request_reply":
 			console.log('i2c_request_result' + params);
 
-			TemperatureSum = (params[1] << 8 | params[2]) >> 4;
+			var temperatureSum = (params[1] << 8 | params[2]) >> 4;
 
-			celsius = TemperatureSum * 0.0625;
+			var celsius = temperatureSum * 0.0625;
 			console.log(celsius);
 
-			fahrenheit = (1.8 * celsius) + 32;
+			var fahrenheit = (1.8 * celsius) + 32;
 			console.log(fahrenheit);
-			document.getElementById("i2cRequestResult").value = params;
-			document.getElementById("i2cRequestResultf").value = fahrenheit;
-			document.getElementById("i2cRequestResultc").value = celsius;
+			$("#i2cRequestResult").val(params);
+			$("#i2cRequestResultf").val(fahrenheit);
+			$("#i2cRequestResultc").val(celsius);
 			break;
 
 		case "i2c_read_data_reply":
 			console.log('i2c_read_result');
-				console.log(params);
-				document.getElementById("i2cReadResult").value = params;
+			console.log(params);
+			$("#i2cReadResult").val(params);
 			break;
 
 		case "encoder_data_reply":
 			console.log('received encoder data');
 			console.log(params);
-			document.getElementById("encoderValue").value = params[1];
+			$("#encoderValue").val(params[1]);
 			break;
+			
 		case "encoder_read_reply":
 			console.log('encoder_read_reply  ' + params);
-			document.getElementById("encoderValue2").value = params[1];
+			$("#encoderValue2").val(params[1]);
 			break;
+			
 		case "sonar_data_reply":
 			console.log('received sonar data');
 			//console.log(params[1]);
@@ -121,11 +119,13 @@ socket.onmessage = function (message) {
 			//jquery version
 			$("#sonarValue").val(params[1]);
 			break;
+			
 		case "sonar_read_reply":
 			console.log('sonar_read_reply  ' + params[1]);
 			//document.getElementById("sonarValue2").value = params[1];
 			$("#sonarValue2").val(params[1]);
 			break;
+			
 		case "analog_map_reply":
 		case "capability_report_reply":
 		case "firmware_version_reply":
@@ -133,64 +133,57 @@ socket.onmessage = function (message) {
 		case "pymata_version_reply":
 		case "pin_state_reply":
 				console.log(params);
-			document.getElementById("reports").value = params;
+			$("#reports").val(params);
 			break;
+			
 		case "digital_latch_data_reply":
 			//console.log('digital_latch_callback');
-			pin = params[0].slice(1);
-			var id = 'dlevent' + pin;
-			//console.log(id)
+			var pin = params[0].slice(1);
 
-			document.getElementById(id).value = params;
-			id = 'dlatch' + pin;
-			console.log('al: ' + id);
+			$("#dlevent"+pin).val(params);
+			console.log('al: dlatch' + id);
 			//console.log(document.getElementyById(id).value);
 			//document.getElementyById(id).value = '1';
-			document.getElementById(id).selectedIndex = "0";
+			$("#dlatch" + pin).val("1");
 
 			//console.log(message.data);
-
 			break;
+			
 		case "analog_latch_data_reply":
 			//console.log('analog_latch_callback');
-			pin = params[0].slice(1);
-			id = 'alevent' + pin;
-			//console.log(id);
+			var pin = params[0].slice(1);
 
-			document.getElementById(id).value = params;
-			id = 'alatch' + pin;
-			console.log('al: ' + id);
+			$("#alevent"+pin).val(params);
+			console.log('al: alatch' + pin);
 			//console.log(document.getElementyById(id).value);
 			//document.getElementyById(id).value = '1';
-			document.getElementById(id).selectedIndex = "0";
+			$("#alatch" + pin).val("1");
 			break;
 
 		case "digital_read_reply":
-			document.getElementById('ddata').value = params[1];
+			$('#ddata').val(params[1]);
 			break;
 
 		case "analog_read_reply":
-			document.getElementById('adata').value = params[1];
+			$('#adata').val(params[1]);
 			break;
+			
+
 		case "get_digital_latch_data_reply":
 			console.log(params);
 			if (params[1] == null) {
-				document.getElementById('dlatchdata').value = "No Latch Set";
-			}
-			else {
-
-				document.getElementById('dlatchdata').value = params[1];
+				$('#dlatchdata').val("No Latch Set");
+			} else {
+				$('#dlatchdata').val(params[1]);
 			}
 			break;
 
 		case "get_analog_latch_data_reply":
 			console.log('get_analog_latch_data_reply' + params);
 			if (params[1] == null) {
-				document.getElementById('alatchdata').value = Blockly.Msg.SV_onMessage_i2c;
-			}
-			else {
-
-				document.getElementById('alatchdata').value = params[1];
+				$('#alatchdata').val(Blockly.Msg.SV_onMessage_i2c);
+			} else {
+				$('#alatchdata').val(params[1]);
 			}
 			break;
 
@@ -267,7 +260,7 @@ function pwmChange(control) {
 	var pin = 0;
 	var value = 0;
 	pin = control.substring(1);
-	value = document.getElementById(control).value;
+	value = $("#"+control).val();
 	var msg = JSON.stringify({"method": "analog_write", "params": [pin, value]});
 	socket.send(msg);
 	//console.log(pin + ':' + value);
@@ -275,15 +268,14 @@ function pwmChange(control) {
 
 
 function servo() {
-	pin = document.getElementById('servoPin').value;
+	var pin = $('#servoPin').val();
 	console.log('servoPin: ' + pin);
-	var angle = document.getElementById('servoAngle').value;
+	var angle = ('#servoAngle').val();
 	console.log('servoAngle: ' + angle);
 	var msg = JSON.stringify({"method": "servo_config", "params": [pin, "544", "2400"]});
 	socket.send(msg);
 	msg = JSON.stringify({"method": "analog_write", "params": [pin, angle]});
 	socket.send(msg);
-
 }
 
 
@@ -293,65 +285,65 @@ function setPinMode(pin, mode) {
 }
 
 function digitalWrite(pin, value) {
-	msg = JSON.stringify({"method": "digital_write", "params": [pin, value]});
+	var msg = JSON.stringify({"method": "digital_write", "params": [pin, value]});
 	socket.send(msg);
 }
 
 function disableDigitalReporting(pin) {
-	msg = JSON.stringify({"method": "disable_digital_reporting", "params": [pin]});
+	var msg = JSON.stringify({"method": "disable_digital_reporting", "params": [pin]});
 	socket.send(msg);
 }
 
 function enableDigitalReporting(pin) {
-	msg = JSON.stringify({"method": "enable_digital_reporting", "params": [pin]});
+	var msg = JSON.stringify({"method": "enable_digital_reporting", "params": [pin]});
 	socket.send(msg);
 }
 
 function disableAnalogReporting(pin) {
-	msg = JSON.stringify({"method": "disable_analog_reporting", "params": [pin]});
+	var msg = JSON.stringify({"method": "disable_analog_reporting", "params": [pin]});
 	socket.send(msg);
 }
 
 function enbleAnalogReporting(pin) {
-	msg = JSON.stringify({"method": "endable_analog_reporting", "params": [pin]});
+	var msg = JSON.stringify({"method": "endable_analog_reporting", "params": [pin]});
 	socket.send(msg);
 }
 
 function getAnalogMap() {
-	msg = JSON.stringify({"method": "get_analog_map", "params": ["null"]});
+	var msg = JSON.stringify({"method": "get_analog_map", "params": ["null"]});
 	console.log(msg);
 	socket.send(msg);
 }
 
 function getCapabilityReport() {
-	msg = JSON.stringify({"method": "get_capability_report", "params": ["null"]});
+	var msg = JSON.stringify({"method": "get_capability_report", "params": ["null"]});
 	//console.log(msg);
 	socket.send(msg);
 }
 
 function getFirmwareVersion() {
-	msg = JSON.stringify({"method": "get_firmware_version", "params": ["null"]});
+	var msg = JSON.stringify({"method": "get_firmware_version", "params": ["null"]});
 	//console.log(msg);
 	socket.send(msg);
 }
 
 function getProtocolVersion() {
-	msg = JSON.stringify({"method": "get_protocol_version", "params": ["null"]});
+	var msg = JSON.stringify({"method": "get_protocol_version", "params": ["null"]});
 	//console.log(msg);
 	socket.send(msg);
 }
 
 function getPymataVersion() {
-	msg = JSON.stringify({"method": "get_pymata_version", "params": ["null"]});
+	var msg = JSON.stringify({"method": "get_pymata_version", "params": ["null"]});
 	//console.log(msg);
 	socket.send(msg);
 }
 
 function getPinState() {
 	// first get the pin number from the spinner
-	pin = document.getElementById('pinSpinner').value;
+	var pin = $('#pinSpinner').val();
 
-	msg = JSON.stringify({"method": "get_pin_state", "params": [pin]});
+	var msg = JSON.stringify({"method": "get_pin_state", "params": [pin]});
 	//console.log(msg);
 	socket.send(msg);
 }
@@ -371,7 +363,7 @@ function digitalLatch(pin, id) {
 			break;
 	}
 	//console.log(threshold)
-	msg = JSON.stringify({"method": "set_digital_latch", "params": [pin, threshold]});
+	var msg = JSON.stringify({"method": "set_digital_latch", "params": [pin, threshold]});
 	//console.log(msg)
 	socket.send(msg);
 }
@@ -381,9 +373,9 @@ function analogLatch(pin, id) {
 	//console.log('analog latch pin: ' + pin);
 	var thId = "a1thr" + pin;
 	//console.log(thId)
-	var threshold = document.getElementById(thId).value;
+	var threshold = $("#"+thId).val();
 	//console.log('threshold: ' + threshold);
-	var choice = document.getElementById(id).value;
+	var choice = $("#" + id).val();
 	var comp = "";
 	//console.log('choice = ' + choice)
 	switch (choice) {
@@ -403,82 +395,78 @@ function analogLatch(pin, id) {
 			comp = "3";
 			break;
 	}
-	msg = JSON.stringify({"method": "set_analog_latch", "params": [pin, comp, threshold]});
+	var msg = JSON.stringify({"method": "set_analog_latch", "params": [pin, comp, threshold]});
 	//console.log(msg)
 	socket.send(msg);
-
 }
 
 
 function digitalRead() {
-	pin = document.getElementById("drPin").value;
+	var pin = $("#drPin").val();
 	setPinMode(pin, inputMode);
-	msg = JSON.stringify({"method": "digital_read", "params": [pin]});
+	var msg = JSON.stringify({"method": "digital_read", "params": [pin]});
 	console.log(pin);
 	socket.send(msg);
 }
 
 function analogRead() {
-	pin = document.getElementById("arPin").value;
+	var pin = ("#arPin").val();
 	setPinMode(pin, analogMode);
-	msg = JSON.stringify({"method": "analog_read", "params": [pin]});
+	var msg = JSON.stringify({"method": "analog_read", "params": [pin]});
 	console.log(pin);
 	socket.send(msg);
 }
-
 
 function digitalLatchRead() {
-	pin = document.getElementById("dlData").value;
+	var pin = $("#dlData").val();
 	console.log('digitalLatchdata pin ' + pin);
 	setPinMode(pin, inputMode);
-	msg = JSON.stringify({"method": "get_digital_latch_data", "params": [pin]});
+	var msg = JSON.stringify({"method": "get_digital_latch_data", "params": [pin]});
 	console.log(pin);
 	socket.send(msg);
 }
 
-
 function analogLatchRead() {
-	pin = document.getElementById("alData").value;
+	var pin = $("#alData").val();
 	console.log('analogLatchdata pin ' + pin);
 	setPinMode(pin, analogMode);
 	msg = JSON.stringify({"method": "get_analog_latch_data", "params": [pin]});
 	console.log(msg);
-
 	socket.send(msg);
 }
 
 function playTone() {
-	pin = document.getElementById("tonePin").value;
-	var frequency = document.getElementById("freq").value;
-	var duration = document.getElementById("duration").value;
-	msg = JSON.stringify({"method": "play_tone", "params": [pin, "TONE_TONE", frequency, duration]});
+	var pin = $("#tonePin").val();
+	var frequency = $("#freq").val();
+	var duration = $("duration").val();
+	var msg = JSON.stringify({"method": "play_tone", "params": [pin, "TONE_TONE", frequency, duration]});
 	console.log(msg);
 	socket.send(msg);
 }
 
 function encoderRead(type) {
-	var pin_a = document.getElementById("encoderPinA").value;
-	var pin_b = document.getElementById("encoderPinB").value;
-	msg = JSON.stringify({"method": "encoder_config", "params": [pin_a, pin_b]});
+	var pin_a = $("#encoderPinA").val();
+	var pin_b = $("#encoderPinB").val();
+	var msg = JSON.stringify({"method": "encoder_config", "params": [pin_a, pin_b]});
 	console.log(msg);
 	socket.send(msg);
 	if (type == 1) {
-		var msg = JSON.stringify(({"method": "encoder_read", "params": [pin_a]}));
+		msg = JSON.stringify(({"method": "encoder_read", "params": [pin_a]}));
 		console.log(msg);
 		socket.send(msg);
 	}
 }
 
 function sonarRead(type) {
-	var trigger = document.getElementById("sonarTriggerPin").value;
-	var echo = document.getElementById("sonarEchoPin").value;
+	var trigger = $("#sonarTriggerPin").val();
+	var echo = $("#sonarEchoPin").val();
 	var ping_interval = "50";
 	var max_dist = "200";
-	msg = JSON.stringify({"method": "sonar_config", "params": [trigger, echo, ping_interval, max_dist]});
+	var msg = JSON.stringify({"method": "sonar_config", "params": [trigger, echo, ping_interval, max_dist]});
 	console.log(msg);
 	socket.send(msg);
 	if (type == 1) {
-		var msg = JSON.stringify(({"method": "sonar_read", "params": [trigger]}));
+		msg = JSON.stringify(({"method": "sonar_read", "params": [trigger]}));
 		console.log(msg);
 		socket.send(msg);
 	}
@@ -486,34 +474,34 @@ function sonarRead(type) {
 
 function runStepMotor() {
 	console.log('runStepMotor');
-	var pin1 = document.getElementById("stepperPin1").value;
-	var pin2 = document.getElementById("stepperPin2").value;
-	var pin3 = document.getElementById("stepperPin3").value;
-	var pin4 = document.getElementById("stepperPin4").value;
-	var stepsPerRev = document.getElementById("stepRev").value;
-	var speed = document.getElementById("motorSpeed").value;
-	var steps = document.getElementById("numSteps").value;
-	msg = JSON.stringify({"method": "stepper_config", "params": [stepsPerRev, [pin1, pin2, pin3, pin4]]});
+	var pin1 = $("#stepperPin1").val();
+	var pin2 = $("#stepperPin2").val();
+	var pin3 = $("#stepperPin3").val();
+	var pin4 = $("#stepperPin4").val();
+	var stepsPerRev = $("#stepRev").val();
+	var speed = $("#motorSpeed").val();
+	var steps = $("#numSteps").val();
+	var msg = JSON.stringify({"method": "stepper_config", "params": [stepsPerRev, [pin1, pin2, pin3, pin4]]});
 	console.log(msg);
 	socket.send(msg);
-	var msg = JSON.stringify({"method": "stepper_step", "params": [speed, steps]});
+	msg = JSON.stringify({"method": "stepper_step", "params": [speed, steps]});
 	console.log(msg);
 	socket.send(msg);
 }
 
 function i2cConfig() {
-	var delay = document.getElementById("i2cDelayTime").value;
-	msg = JSON.stringify({"method": "i2c_config", "params": [delay]});
+	var delay = $("#i2cDelayTime").val();
+	var msg = JSON.stringify({"method": "i2c_config", "params": [delay]});
 	console.log(msg);
 	socket.send(msg);
 }
 
 function i2cReadRequest() {
-	var i2cAddress =  document.getElementById("i2cReadAddress").value;
-	var i2cRegister = document.getElementById("i2cReadRegister").value;
-	var i2cNumBytes = document.getElementById("i2cReadNumBytes").value;
-	var i2cReadTp = document.getElementById("i2cReadType").value;
-	msg = JSON.stringify({"method": "i2c_read_request", "params": [i2cAddress, i2cRegister,
+	var i2cAddress =  $("#i2cReadAddress").val();
+	var i2cRegister = $("#i2cReadRegister").val();
+	var i2cNumBytes = $("#i2cReadNumBytes").val();
+	var i2cReadTp = $("#i2cReadType").val();
+	var msg = JSON.stringify({"method": "i2c_read_request", "params": [i2cAddress, i2cRegister,
 		i2cNumBytes, i2cReadTp ]});
 	console.log(msg);
 	socket.send(msg);
@@ -521,8 +509,8 @@ function i2cReadRequest() {
 }
 
 function i2cReadData() {
-	i2cAddress =  document.getElementById("i2cReadAddress").value;
-	msg = JSON.stringify({"method": "i2c_read_data", "params": [i2cAddress ]});
+	var i2cAddress =  $("#i2cReadAddress").val();
+	var msg = JSON.stringify({"method": "i2c_read_data", "params": [i2cAddress ]});
 	console.log(msg);
 	socket.send(msg);
 
@@ -536,7 +524,7 @@ function i2cWriteDemo(state) {
 	var blinkCommand = 129;
 	var brightness = 231;
 
-	msg = JSON.stringify({"method": "i2c_config", "params": [matrix_address, [delay]]});
+	var msg = JSON.stringify({"method": "i2c_config", "params": [matrix_address, [delay]]});
 	console.log(msg);
 	socket.send(msg);
 
@@ -574,44 +562,45 @@ function i2cWriteDemo(state) {
 }
 
 function HTTPRequest(request) {
-var xhr_object = null;
+	var xhr_object = null;
 
-if(window.XMLHttpRequest) // Firefox
-   xhr_object = new XMLHttpRequest();
-else if(window.ActiveXObject) // Internet Explorer
-   xhr_object = new ActiveXObject("Microsoft.XMLHTTP");
-else { // XMLHttpRequest non supporté par le navigateur
-   alert("Votre navigateur ne supporte pas les objets XMLHTTPRequest...");
-   return;
-}
+	if (window.XMLHttpRequest) {// Firefox
+		xhr_object = new XMLHttpRequest();
+	} else if (window.ActiveXObject) {// Internet Explorer
+		xhr_object = new ActiveXObject("Microsoft.XMLHTTP");
+	} else { // XMLHttpRequest non supporté par le navigateur
+		alert("Votre navigateur ne supporte pas les objets XMLHTTPRequest...");
+		return;
+	}
 
-var method   = f.elements["method"][0].checked ? "GET" : "POST";
-var s1       = f.elements["string1"].value;
-var s2       = f.elements["string2"].value;
-var data     = null;
+	var method = f.elements["method"][0].checked ? "GET" : "POST";
+	var s1 = f.elements["string1"].value;
+	var s2 = f.elements["string2"].value;
+	var data = null;
 
-if(s1 != "" && s2 != "")
-   data = "s1="+s1+"&s2="+s2;
+	if (s1 != "" && s2 != "")
+		data = "s1=" + s1 + "&s2=" + s2;
 
-if(method == "GET" && data != null) {
-   filename += "?"+data;
-   data      = null;
-}
+	if (method == "GET" && data != null) {
+		filename += "?" + data;
+		data = null;
+	}
 
-xhr_object.open(method, filename, true);
+	xhr_object.open(method, filename, true);
 
-xhr_object.onreadystatechange = function() {
-   if(this.readyState == 4) {
-      var tmp = this.responseText.split(":");
-      if(typeof(tmp[1]) != "undefined") {
-         f.elements["string1_r"].value = tmp[1];
-      }
-      alert(tmp[0]);
-   }
-}
+	xhr_object.onreadystatechange = function() {
+		if (this.readyState == 4) {
+			var tmp = this.responseText.split(":");
+			if (typeof (tmp[1]) != "undefined") {
+				f.elements["string1_r"].value = tmp[1];
+			}
+			alert(tmp[0]);
+		}
+	}
 
-if(method == "POST")
-   xhr_object.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+	if (method == "POST")
+		xhr_object.setRequestHeader("Content-type",
+				"application/x-www-form-urlencoded");
 
-xhr_object.send(data);
+	xhr_object.send(data);
 }

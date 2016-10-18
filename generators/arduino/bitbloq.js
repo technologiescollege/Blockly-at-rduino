@@ -27,11 +27,7 @@ Blockly.Arduino.bq_buzzer = function() {
 
 Blockly.Arduino.bq_ultrason = function() {
   var dropdown_triger_pin = Blockly.Arduino.valueToCode(this, 'TRIGER', Blockly.Arduino.ORDER_ATOMIC); //this.getFieldValue('TRIGER');
-  var dropdown_dist_pin = Blockly.Arduino.valueToCode(this, 'DIST', Blockly.Arduino.ORDER_ATOMIC); //this.getFieldValue('DIST');
-  Blockly.Arduino.setups_["setup_sonar1"] = "pinMode("+dropdown_triger_pin+",OUTPUT);//Sonar triger pin\n"+
-  "  pinMode("+dropdown_dist_pin+",INPUT);//Sonar distance pulse pin\n";
-  var code = "";
-  
+  var dropdown_dist_pin = Blockly.Arduino.valueToCode(this, 'DIST', Blockly.Arduino.ORDER_ATOMIC); //this.getFieldValue('DIST');  
   Blockly.Arduino.definitions_['define_mesure_distance_cm'] = "int mesure_distance_cm(byte trig_pin,byte dist_pin)\n"+
     "{\n"+
     "  digitalWrite(trig_pin,HIGH);\n"+
@@ -41,8 +37,10 @@ Blockly.Arduino.bq_ultrason = function() {
     "  if (value>255) { value=255; }\n"+
     "  delay(20);\n"+
     "  return value;\n"+
-    "}\n";
-  code="mesure_distance_cm("+dropdown_triger_pin+","+dropdown_dist_pin+")";
+    "}";
+  Blockly.Arduino.setups_['setup_sonar_BQ_' + dropdown_triger_pin] = 'pinMode('+dropdown_triger_pin+',OUTPUT);//Sonar triger pin\n'+
+  '  pinMode('+dropdown_dist_pin+',INPUT);//Sonar distance pulse pin';
+  var code = 'mesure_distance_cm('+dropdown_triger_pin+','+dropdown_dist_pin+')';
   return [code, Blockly.Arduino.ORDER_ATOMIC];
 };
 
@@ -53,7 +51,7 @@ Blockly.Arduino.bq_servo = function() {
   var delay_time = '0';
   //delay_time = delay_time.replace('(','').replace(')','');
 
-  Blockly.Arduino.definitions_['define_servo'] = '#include <Servo.h>\n';
+  Blockly.Arduino.includes_['define_servo'] = '#include <Servo.h>\n';
   Blockly.Arduino.definitions_['var_servo' + dropdown_pin] = 'Servo servo_' + dropdown_pin + ';\n';
   Blockly.Arduino.setups_['setup_servo_' + dropdown_pin] = 'servo_' + dropdown_pin + '.attach(' + dropdown_pin + ');\n';
 
@@ -92,7 +90,7 @@ Blockly.Arduino.bq_servo_rotation_continue = function() {
   var value_degree = Blockly.Arduino.valueToCode(this, 'VITESSE', Blockly.Arduino.ORDER_ATOMIC);
   var value_sens = Blockly.Arduino.valueToCode(this, 'SENS', Blockly.Arduino.ORDER_ATOMIC);
   
-  Blockly.Arduino.definitions_['define_servo'] = '#include <Servo.h>\n';
+  Blockly.Arduino.includes_['define_servo'] = '#include <Servo.h>\n';
   Blockly.Arduino.definitions_['var_servo'+pin] = 'Servo servo_'+pin+';\n';
   Blockly.Arduino.setups_['setup_servo_'+pin] = 'servo_'+pin+'.attach('+pin+');\n';
   if (value_sens =="true")
@@ -117,7 +115,7 @@ Blockly.Arduino.bq_bluetooth_slave = function() {
   var statement_receive = Blockly.Arduino.statementToCode(this, "RCV");
   var statement_send = Blockly.Arduino.statementToCode(this, "SNT");
 
-  Blockly.Arduino.definitions_['define_softwareserial'] = '#include <SoftwareSerial.h>\n';
+  Blockly.Arduino.includes_['define_softwareserial'] = '#include <SoftwareSerial.h>\n';
   Blockly.Arduino.definitions_['var_bluetooth_'+dropdown_pin] = 'SoftwareSerial blueToothSerial_'+dropdown_pin+'('+dropdown_pin+','+NextPIN+');\n';
 
   Blockly.Arduino.setups_['setup_bluetooth_'+dropdown_pin] = 'Serial.begin(9600);\n';

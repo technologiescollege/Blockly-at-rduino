@@ -66,7 +66,7 @@ Blockly.Arduino.robuno_servomoteur_gauche = function() {
   var value_degree = Blockly.Arduino.valueToCode(this, 'VITESSE', Blockly.Arduino.ORDER_ATOMIC);
   var value_sens = Blockly.Arduino.valueToCode(this, 'SENS', Blockly.Arduino.ORDER_ATOMIC);
   
-  Blockly.Arduino.definitions_['define_servo'] = '#include <Servo.h>\n';
+  Blockly.Arduino.includes_['define_servo'] = '#include <Servo.h>\n';
   Blockly.Arduino.definitions_['var_servo'+pin] = 'Servo servo_'+pin+';\n';
   Blockly.Arduino.setups_['setup_servo_'+pin] = 'servo_'+pin+'.attach('+pin+');\n';
   if (value_sens =="true")
@@ -88,7 +88,7 @@ Blockly.Arduino.robuno_servomoteur_droite = function() {
   var value_degree = Blockly.Arduino.valueToCode(this, 'VITESSE', Blockly.Arduino.ORDER_ATOMIC);
   var value_sens = Blockly.Arduino.valueToCode(this, 'SENS', Blockly.Arduino.ORDER_ATOMIC);
   
-  Blockly.Arduino.definitions_['define_servo'] = '#include <Servo.h>\n';
+  Blockly.Arduino.includes_['define_servo'] = '#include <Servo.h>\n';
   Blockly.Arduino.definitions_['var_servo'+pin] = 'Servo servo_'+pin+';\n';
   Blockly.Arduino.setups_['setup_servo_'+pin] = 'servo_'+pin+'.attach('+pin+');\n';
   if (value_sens =="true")

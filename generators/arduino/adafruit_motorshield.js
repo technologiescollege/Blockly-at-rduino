@@ -14,7 +14,7 @@ Blockly.Arduino.dcmotor_v1 = function() {
   var value_vitesse = Blockly.Arduino.valueToCode(this, 'Vitesse');
 
 //librairie
-Blockly.Arduino.definitions_['AFMotor.h'] = '#include <AFMotor.h>';
+Blockly.Arduino.includes_['AFMotor.h'] = '#include <AFMotor.h>';
 
 //Définition des moteurs
 Blockly.Arduino.definitions_[' AF_DCMotor motor_dc_'+dropdown_moteur] = 'AF_DCMotor motor_dc_'+dropdown_moteur+'('+dropdown_moteur+', MOTOR12_2KHZ);\n';
@@ -38,9 +38,9 @@ Blockly.Arduino.dcmotor_v2 = function() {
   var value_vitesse = Blockly.Arduino.valueToCode(this, 'Vitesse');
 
 //librairie
-Blockly.Arduino.definitions_['Wire.h'] = '#include <Wire.h>';
-Blockly.Arduino.definitions_['Adafruit_MotorShield.h'] = '#include <Adafruit_MotorShield.h>';
-Blockly.Arduino.definitions_['utility/Adafruit_MS_PWMServoDriver.h'] = '#include "utility/Adafruit_MS_PWMServoDriver.h"';
+Blockly.Arduino.includes_['Wire.h'] = '#include <Wire.h>';
+Blockly.Arduino.includes_['Adafruit_MotorShield.h'] = '#include <Adafruit_MotorShield.h>';
+Blockly.Arduino.includes_['utility/Adafruit_MS_PWMServoDriver.h'] = '#include "utility/Adafruit_MS_PWMServoDriver.h"';
 
 //Définition des moteurs
 Blockly.Arduino.definitions_['Adafruit_AFMS'] = 'Adafruit_MotorShield AFMS = Adafruit_MotorShield();';
@@ -99,9 +99,9 @@ Blockly.Arduino.pap_v2 = function() {
   var value_Nb_de_pas_PAP2 = Blockly.Arduino.valueToCode(this, 'Nb_de_pas2');
 
 //librairie
-Blockly.Arduino.definitions_['Wire.h'] = '#include <Wire.h>';
-Blockly.Arduino.definitions_['Adafruit_MotorShield.h'] = '#include <Adafruit_MotorShield.h>';
-Blockly.Arduino.definitions_['utility/Adafruit_MS_PWMServoDriver.h'] = '#include "utility/Adafruit_MS_PWMServoDriver.h"';
+Blockly.Arduino.includes_['Wire.h'] = '#include <Wire.h>';
+Blockly.Arduino.includes_['Adafruit_MotorShield.h'] = '#include <Adafruit_MotorShield.h>';
+Blockly.Arduino.includes_['utility/Adafruit_MS_PWMServoDriver.h'] = '#include "utility/Adafruit_MS_PWMServoDriver.h"';
 
 //Définition des moteurs
 Blockly.Arduino.definitions_['Adafruit_AFMS'] = 'Adafruit_MotorShield AFMS = Adafruit_MotorShield();';
@@ -121,9 +121,9 @@ Blockly.Arduino.definitions_['Adafruit_StepperMotor *myMotor' +dropdown_PAP2] = 
 Blockly.Arduino.joystick_mot = function() {
 
 //Implantation Librairies
-Blockly.Arduino.definitions_['Wire.h'] = '#include <Wire.h>';
-Blockly.Arduino.definitions_['Adafruit_MotorShield.h'] = '#include <Adafruit_MotorShield.h>';
-Blockly.Arduino.definitions_['utility/Adafruit_MS_PWMServoDriver.h'] = '#include "utility/Adafruit_MS_PWMServoDriver.h"';
+Blockly.Arduino.includes_['Wire.h'] = '#include <Wire.h>';
+Blockly.Arduino.includes_['Adafruit_MotorShield.h'] = '#include <Adafruit_MotorShield.h>';
+Blockly.Arduino.includes_['utility/Adafruit_MS_PWMServoDriver.h'] = '#include "utility/Adafruit_MS_PWMServoDriver.h"';
 
 Blockly.Arduino.definitions_['Commentaire1'] = '//Definition variables';
   var dropdown_entree_x = this.getFieldValue('entree_x');

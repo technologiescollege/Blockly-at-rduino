@@ -6,9 +6,9 @@
       </block>
     </value>
     <value name="DEGREE">
-      <block type="base_map" id="28" inline="true">
+      <block type="base_map" id="28">
         <value name="NUM">
-          <block type="inout_analog_read" id="4">
+          <block type="inout_analog_read_validator" id="DtXa~88{J:U]mW%?-yOa">
             <field name="PIN">A1</field>
           </block>
         </value>
@@ -21,4 +21,3 @@
     </value>
   </block>
 </xml>
-

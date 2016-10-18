@@ -32,7 +32,7 @@ goog.require('Blockly.Blocks');
 /**
  * Common HSV hue for all blocks in this category.
  */
-Blockly.Blocks.colour.HUE = "#c09e8c";
+Blockly.Blocks.colour.HUE = 20;
 
 Blockly.Blocks['colour_picker'] = {
   /**
@@ -51,8 +51,15 @@ Blockly.Blocks['colour_picker'] = {
       ],
       "output": "Colour",
       "colour": Blockly.Blocks.colour.HUE,
-      "tooltip": Blockly.Msg.COLOUR_PICKER_TOOLTIP,
       "helpUrl": Blockly.Msg.COLOUR_PICKER_HELPURL
+    });
+    // Assign 'this' to a variable for use in the tooltip closure below.
+    var thisBlock = this;
+    // Colour block is trivial.  Use tooltip of parent block if it exists.
+    this.setTooltip(function() {
+      var parent = thisBlock.getParent();
+      return (parent && parent.getInputsInline() && parent.tooltip) ||
+          Blockly.Msg.COLOUR_PICKER_TOOLTIP;
     });
   }
 };

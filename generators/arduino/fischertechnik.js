@@ -7,7 +7,7 @@ goog.provide('Blockly.Arduino.fischertechnik');
 goog.require('Blockly.Arduino');
 
 Blockly.Arduino.fischertechnik_feu_rouge = function() {
-	var dropdown_pin = Blockly.Arduino.valueToCode(this, 'PIN', Blockly.Arduino.ORDER_ATOMIC);
+  var dropdown_pin = Blockly.Arduino.valueToCode(this, 'PIN', Blockly.Arduino.ORDER_ATOMIC);
   var dropdown_stat = this.getFieldValue('STAT');
   Blockly.Arduino.setups_['setup_green_led_'+dropdown_pin] = 'pinMode('+dropdown_pin+', OUTPUT);';
   var code = 'digitalWrite('+dropdown_pin+','+dropdown_stat+');\n';
@@ -15,7 +15,7 @@ Blockly.Arduino.fischertechnik_feu_rouge = function() {
 };
 
 Blockly.Arduino.fischertechnik_feu_vert = function() {
-	var dropdown_pin = Blockly.Arduino.valueToCode(this, 'PIN', Blockly.Arduino.ORDER_ATOMIC);
+  var dropdown_pin = Blockly.Arduino.valueToCode(this, 'PIN', Blockly.Arduino.ORDER_ATOMIC);
   var dropdown_stat = this.getFieldValue('STAT');
   Blockly.Arduino.setups_['setup_green_led_'+dropdown_pin] = 'pinMode('+dropdown_pin+', OUTPUT);';
   var code = 'digitalWrite('+dropdown_pin+','+dropdown_stat+');\n';
@@ -23,7 +23,7 @@ Blockly.Arduino.fischertechnik_feu_vert = function() {
 };
 
 Blockly.Arduino.fischertechnik_feu_orange = function() {
-	var dropdown_pin = Blockly.Arduino.valueToCode(this, 'PIN', Blockly.Arduino.ORDER_ATOMIC);
+  var dropdown_pin = Blockly.Arduino.valueToCode(this, 'PIN', Blockly.Arduino.ORDER_ATOMIC);
   var dropdown_stat = this.getFieldValue('STAT');
   Blockly.Arduino.setups_['setup_green_led_'+dropdown_pin] = 'pinMode('+dropdown_pin+', OUTPUT);';
   var code = 'digitalWrite('+dropdown_pin+','+dropdown_stat+');\n';

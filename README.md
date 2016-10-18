@@ -1,6 +1,10 @@
-[Wiki : http://tic.technologiescollege.fr/wiki/doku.php/en/blockly_rduino/bugs](http://tic.technologiescollege.fr/wiki/doku.php/en/blockly_rduino/bugs)
+### WIKI !!! [http://info.technologiescollege.fr/wiki/doku.php/en/blockly_rduino/](http://info.technologiescollege.fr/wiki/doku.php/en/blockly_rduino/)
 
 ### FORUM !!! [http://blockly.technologiescollege.fr/forum](http://blockly.technologiescollege.fr/forum)
+
+### Off-line upload & supervision [https://github.com/technologiescollege/Blockly-rduino-communication](https://github.com/technologiescollege/Blockly-rduino-communication)
+
+### Internet Explorer banni ! Attention à la compatibilité de votre navigateur avec le plugin Codebender.
 
 **Multilingual** version of Blockly@rduinoo
 =====
@@ -13,7 +17,7 @@ Blockly@rduino est basé sur [Blockly](https://developers.google.com/blockly/), 
 
 Blockly@rduino ne possèdait à l'origine qu'une bibliothèque de blocs pour les modules [Grove](http://www.seeedstudio.com/wiki/GROVE_System), particulièrement adaptée à la découverte des micro-contrôleurs et aux expérimentations de systèmes mécatroniques.
 
-Libre à vous d'en rajouter autant que voulu grâce à cette notice explicative : [http://tic.technologiescollege.fr/wiki/doku.php/fr/arduino/blockly_rduino/creerblocsmulti](http://tic.technologiescollege.fr/wiki/doku.php/fr/arduino/blockly_rduino/creerblocsmulti)
+Libre à vous d'en rajouter autant que voulu grâce à cette notice explicative : [http://info.technologiescollege.fr/wiki/doku.php/fr/arduino/blockly_rduino/creerblocsmultiling](http://info.technologiescollege.fr/wiki/doku.php/fr/arduino/blockly_rduino/creerblocsmultiling)
 
 Cette version a été réorganisée et améliorée pour la faire utiliser au mieux par des élèves débutants dans le code.
 
@@ -67,6 +71,8 @@ Programme Blockly : [https://developers.google.com/blockly/](https://developers.
 
 Concept d'origine BlocklyDuino : Fred Lin (@gasolin [https://github.com/gasolin/BlocklyDuino](https://github.com/gasolin/BlocklyDuino)).
 
+Fonctions de typage ArduBlockly : Carlos Pereira Atencio ([https://github.com/carlosperate/ardublockly](https://github.com/carlosperate/ardublockly)).
+
 Son projet s'est aussi inspiré de [ardublock](https://github.com/taweili/ardublock) et [modkit](http://www.modk.it/).
 
 Intégration de CodeBender : Julien Rat [https://github.com/julienrat](https://github.com/julienrat)
@@ -75,7 +81,7 @@ Intégration de CodeBender : Julien Rat [https://github.com/julienrat](https://g
 
 _Julien RAT : CodeBender plugin_
 
-_Frédéric PICARD : bitbloq, maquette Jeulin_
+_Frédéric PICARD : bitbloq, maquette Jeulin, vidéos, etc_
 
 _Spanish translation : José Manuel Ruiz Gutteriez ([blog](http://josemanuelruizgutierrez.blogspot.com.es/))_
 

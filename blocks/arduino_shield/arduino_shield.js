@@ -15,15 +15,15 @@ Blockly.Blocks['LCD_Keypad_Shield_DFR_09'] = {
     this.appendDummyInput()
         .appendField(Blockly.Msg.LCD_SHIELD_PRINT_TEXT)
         .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/arduino_shield/400px-LCD_Keypad_Shield.jpg', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize))
-    this.appendValueInput("TEXT1", 'String')
-     //   .setCheck('String')
+    this.appendValueInput("TEXT1")
+        .setCheck('String')
         .setAlign(Blockly.ALIGN_RIGHT)
         .appendField(Blockly.Msg.LCD_SHIELD_PRINT_INPUT1);
-    this.appendValueInput("TEXT2", 'String')
-    //    .setCheck('String')
+    this.appendValueInput("TEXT2")
+        .setCheck('String')
         .setAlign(Blockly.ALIGN_RIGHT)
         .appendField(Blockly.Msg.LCD_SHIELD_PRINT_INPUT2);
-    this.appendValueInput("DELAY_TIME", 'Number')
+    this.appendValueInput("DELAY_TIME")
         .setCheck('Number')
         .setAlign(Blockly.ALIGN_RIGHT)
         .appendField(Blockly.Msg.LCD_SHIELD_PRINT_INPUT3);
@@ -49,8 +49,8 @@ Blockly.Blocks.LCD_Keypad_Shield_DFR_09_lc = {
         .setCheck("Number")
 		.setAlign(Blockly.ALIGN_RIGHT)
         .appendField("écrire à partir de la colonne");
-	this.appendValueInput("TEXT4", 'String')
-        .setCheck('Number')
+	this.appendValueInput("TEXT4")
+        .setCheck('String')
         .setAlign(Blockly.ALIGN_RIGHT)
         .appendField("Message à afficher");
     //this.setInputsInline(true);
