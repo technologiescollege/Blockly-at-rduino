@@ -1389,3 +1389,26 @@ Blockly.Msg.APDS9960_RED_TITLE = "RGB code for RED (0~255)";
 Blockly.Msg.APDS9960_GREEN_TITLE = "RGB code for GREEN (0~255)";
 Blockly.Msg.APDS9960_BLUE_TITLE = "RGB code for BLUE (0~255)";
 Blockly.Msg.APDS9960_COLORSENSOR_TOOLTIP = "send value of color on 10 bits digit";
+
+//pbra 20160607 L298N
+Blockly.Msg.ROBOTS_MOTORS_L298N_MOTOR_TITLE = "L298N Motor Controller";
+Blockly.Msg.ROBOTS_MOTORS_L298N_MOTOR_INIT_TITLE = "L298N Motor Controller Init";
+Blockly.Msg.ROBOTS_MOTORS_L298N_ID = "Identication"
+Blockly.Msg.ROBOTS_MOTORS_L298N_MOTOR_SPEED = "Speed";
+Blockly.Msg.ROBOTS_MOTORS_L298N_MOTOR_PIN_IN1 = "IN1 pin (direction)";
+Blockly.Msg.ROBOTS_MOTORS_L298N_MOTOR_PIN_IN2 = "IN2 pin (direction)";
+Blockly.Msg.ROBOTS_MOTORS_L298N_MOTOR_PIN_EN = "EN pin (pwm)";
+Blockly.Msg.ROBOTS_MOTORS_L298N_STOP = "stop";
+Blockly.Msg.ROBOTS_MOTORS_L298N_FORWARD = "forward";
+Blockly.Msg.ROBOTS_MOTORS_L298N_BACKWARD = "backward";
+Blockly.Msg.ROBOTS_MOTORS_L298N_BRAKE = "brake";
+Blockly.Msg.ROBOTS_MOTORS_L298N_INIT_TOOLTIP = "L298N initialization block (1 for each motor)";
+Blockly.Msg.ROBOTS_MOTORS_L298N_TOOLTIP = "L298N block, use the same id as in the initialization block";
+
+//pbra 20160607 PinMode
+Blockly.Msg.ARDUINO_INOUT_DIGITAL_MODE_HELPURL = "https://www.arduino.cc/en/Reference/PinMode";
+Blockly.Msg.ARDUINO_INOUT_DIGITAL_MODE_INPUT1 = "Set Pin Mode for pin";
+Blockly.Msg.ARDUINO_INOUT_DIGITAL_MODE_INPUT2 = "to";
+Blockly.Msg.ARDUINO_INOUT_DIGITAL_MODE_DROPDOWN = [["INPUT", "INPUT"], ["OUTPUT", "OUTPUT"], ["INPUT_PULLUP", "INPUT_PULLUP"]];
+Blockly.Msg.ARDUINO_INOUT_DIGITAL_MODE_TOOLTIP = "Configures the specified pin to behave either as an input or an output";
+
