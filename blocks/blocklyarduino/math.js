@@ -134,11 +134,11 @@ Blockly.Blocks['math_single'] = {
           "options": [
             [Blockly.Msg.MATH_SINGLE_OP_ROOT, 'ROOT'],
             [Blockly.Msg.MATH_SINGLE_OP_ABSOLUTE, 'ABS'],
-            ['-', 'NEG'],
+            ['-', 'NEG']/*,
             ['ln', 'LN'],
             ['log10', 'LOG10'],
             ['e^', 'EXP'],
-            ['10^', 'POW10']
+            ['10^', 'POW10']*/
           ]
         },
         {

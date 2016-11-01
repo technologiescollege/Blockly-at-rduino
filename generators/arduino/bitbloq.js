@@ -11,7 +11,7 @@ Blockly.Arduino.bq_led = function() {
 	var dropdown_pin = Blockly.Arduino.valueToCode(this, 'PIN', Blockly.Arduino.ORDER_ATOMIC);
   var dropdown_stat = this.getFieldValue('STAT');
   Blockly.Arduino.setups_['setup_green_led_'+dropdown_pin] = 'pinMode('+dropdown_pin+', OUTPUT);';
-  var code = 'digitalWrite('+dropdown_pin+','+dropdown_stat+');\n';
+  var code = 'digitalWrite('+dropdown_pin+','+dropdown_stat+');';
   return code;
 };
 
@@ -21,7 +21,7 @@ Blockly.Arduino.bq_buzzer = function() {
   var value_num = Blockly.Arduino.valueToCode(this, 'NUM', Blockly.Arduino.ORDER_ATOMIC);
   var value_tps = Blockly.Arduino.valueToCode(this, 'TPS', Blockly.Arduino.ORDER_ATOMIC);
   //Blockly.Arduino.setups_['setup_relay1'+dropdown_pin] = 'pinMode('+dropdown_pin+', OUTPUT);';
-  var code = 'tone('+dropdown_pin+','+value_num+','+value_tps+');\n';
+  var code = 'tone('+dropdown_pin+','+value_num+','+value_tps+');';
   return code;
 };
 
@@ -55,7 +55,7 @@ Blockly.Arduino.bq_servo = function() {
   Blockly.Arduino.definitions_['var_servo' + dropdown_pin] = 'Servo servo_' + dropdown_pin + ';\n';
   Blockly.Arduino.setups_['setup_servo_' + dropdown_pin] = 'servo_' + dropdown_pin + '.attach(' + dropdown_pin + ');\n';
 
-  var code = 'servo_' + dropdown_pin + '.write(' + value_degree + ');\n';
+  var code = 'servo_' + dropdown_pin + '.write(' + value_degree + ');';
   return code;
 };
 
@@ -69,7 +69,7 @@ Blockly.Arduino.bq_bouton_poussoir = function() {
 Blockly.Arduino.bq_capteur_de_ligne = function() {
   var dropdown_pin = Blockly.Arduino.valueToCode(this, 'PIN', Blockly.Arduino.ORDER_ATOMIC); //this.getFieldValue('PIN');
   Blockly.Arduino.setups_['setup_lig1_'+dropdown_pin] = 'pinMode('+dropdown_pin+', INPUT);';
-  var code = 'digitalRead('+dropdown_pin+')==1';
+  var code = '(digitalRead('+dropdown_pin+')==1)';
   return [code, Blockly.Arduino.ORDER_ATOMIC];
 };
 
@@ -149,6 +149,6 @@ Blockly.Arduino.bq_bluetooth_slave = function() {
   '    blueToothSerial_'+dropdown_pin+'.print(recvChar_'+dropdown_pin+');\n'+
        statement_send+
   '  }\n'+
-  '}\n';
+  '}';
   return code;
 };

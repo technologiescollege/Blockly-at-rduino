@@ -251,7 +251,7 @@ BlocklyDuino.validateConfigGlobal = function () {
 	//BlocklyDuino.initGlobalConfig();
 	BlocklyDuino.toggleWeb();
 	BlocklyDuino.toggleLocalCodeBender();
-	BlocklyDuino.testPluginCodeBender();
+	//BlocklyDuino.testPluginCodeBender();
 	
 	window.location = window.location.protocol + '//' + window.location.host + window.location.pathname + search;
 }

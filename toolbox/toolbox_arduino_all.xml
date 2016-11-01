@@ -155,8 +155,8 @@
 		name="NUM">0.5</field> </block> </value> </block> </category> -->
 	<category name="CAT_VARIABLES" custom="VARIABLE" colour="#EE7D16">
 		<block type="variables_set"></block>
-		<block type="variables_set_type"></block>
 		<block type="variables_get"></block>
+		<block type="variables_set_type"></block>
 	</category>
 	<category name="CAT_FUNCTIONS" custom="PROCEDURE" colour="#632D99"></category>
 	<sep></sep>
@@ -248,12 +248,12 @@
 				</value>
 			</block>
 		</category>
-		<category name="CAT_ARDUINO_CONVERSION" colour="#00979D">
+		<!--category name="CAT_ARDUINO_CONVERSION" colour="#00979D">
 			<block type="conversion_tochar"></block>
 			<block type="conversion_tobyte"></block>
 			<block type="conversion_toint"></block>
 			<block type="conversion_tofloat"></block>
-		</category>
+		</category-->
 		<category name="CAT_ARDUINO_OUT" colour="#00979D">
 			<block type="inout_buildin_led"></block>
 			<block type="inout_digital_write_validator"></block>

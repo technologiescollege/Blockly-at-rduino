@@ -28,7 +28,7 @@ Blockly.Blocks['conversion_tochar'] = {
   init: function() {
     this.setColour("#00979D");
     this.appendValueInput("NAME")
-		.setCheck('Number')
+		//.setCheck('Number')
         .setAlign(Blockly.ALIGN_RIGHT)
         .appendField(Blockly.Msg.CONV_tochar);
     this.setOutput(true, 'String');
@@ -41,7 +41,7 @@ Blockly.Blocks['conversion_tobyte'] = {
   init: function() {
     this.setColour("#00979D");
     this.appendValueInput("NAME")
-		.setCheck('Number')
+		//.setCheck('Number')
         .appendField(Blockly.Msg.CONV_tobyte);
     this.setOutput(true, 'Number');
     this.setTooltip('');
@@ -53,7 +53,7 @@ Blockly.Blocks['conversion_toint'] = {
   init: function() {
     this.setColour("#00979D");
     this.appendValueInput("NAME")
-		.setCheck('Number')
+		//.setCheck('Number')
         .appendField(Blockly.Msg.CONV_toint);
     this.setOutput(true, 'Number');
     this.setTooltip('');
@@ -65,7 +65,7 @@ Blockly.Blocks['conversion_tofloat'] = {
   init: function() {
     this.setColour("#00979D");
     this.appendValueInput("NAME")
-		.setCheck('Number')
+		//.setCheck('Number')
         .appendField(Blockly.Msg.CONV_tofloat);
     this.setOutput(true, 'Number');
     this.setTooltip('');
