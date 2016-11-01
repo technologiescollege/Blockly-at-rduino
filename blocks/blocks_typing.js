@@ -1061,3 +1061,180 @@ Blockly.Blocks.APDS9960_ColorSensor_green.getBlockType = function() {
 Blockly.Blocks.APDS9960_ColorSensor_blue.getBlockType = function() {
 	return Blockly.Types.NUMBER;
 };
+
+//***********************************************************************************
+//								Autoduino
+//***********************************************************************************
+
+//---------------------------------autoduino.js-------------------------------------
+
+Blockly.Blocks.autoduino_button.getBlockType = function() {
+	return Blockly.Types.BOOLEAN;
+};
+Blockly.Blocks.autoduino_rotary_angle.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.autoduino_rotary_push.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.autoduino_potentiometer.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.autoduino_dht_read.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.autoduino_temperature_sensor.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.autoduino_moisture_sensor.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.autoduino_tilt_switch.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.autoduino_ils_switch.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.autoduino_pir_motion_sensor.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.autoduino_ultrasonic_ranger.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.autoduino_LDR_sensor.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.autoduino_line_finder.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.autoduino_ir_switch.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.autoduino_digital_temperature_sensor.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.autoduino_led.getBlockType = function() {
+	return Blockly.Types.BOOLEAN;
+};
+Blockly.Blocks.autoduino_led_eclairage.getBlockType = function() {
+	return Blockly.Types.BOOLEAN;
+};
+Blockly.Blocks.autoduino_IR_led.getBlockType = function() {
+	return Blockly.Types.BOOLEAN;
+};
+Blockly.Blocks.autoduino_output.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.autoduino_rgb_led.getBlockType = function() {
+	return Blockly.Types.BOOLEAN;
+};
+Blockly.Blocks.autoduino_rgb_led2.getBlockType = function() {
+	return Blockly.Types.BOOLEAN;
+};
+Blockly.Blocks.autoduino_piezo_buzzer.getBlockType = function() {
+	return Blockly.Types.BOOLEAN;
+};
+Blockly.Blocks.autoduino_relay.getBlockType = function() {
+	return Blockly.Types.BOOLEAN;
+};
+Blockly.Blocks.autoduino_motor.getBlockType = function() {
+	return Blockly.Types.BOOLEAN;
+};
+Blockly.Blocks.autoduino_dual_motor.getBlockType = function() {
+	return Blockly.Types.BOOLEAN;
+};
+Blockly.Blocks.autoduino_motor_builtin.getBlockType = function() {
+	return Blockly.Types.BOOLEAN;
+};
+Blockly.Blocks.autoduino_lcdinit.getBlockType = function() {
+	return Blockly.Types.BOOLEAN;
+};
+Blockly.Blocks.autoduino_lcdspecial.getBlockType = function() {
+	return Blockly.Types.BOOLEAN;
+};
+Blockly.Blocks.autoduino_lcdclear.getBlockType = function() {
+	return Blockly.Types.BOOLEAN;
+};
+Blockly.Blocks.autoduino_lcdwrite.getBlockType = function() {
+	return Blockly.Types.BOOLEAN;
+};
+Blockly.Blocks.autoduino_lcdprint.getBlockType = function() {
+	return Blockly.Types.BOOLEAN;
+};
+Blockly.Blocks.autoduino_bluetooth_slave.getBlockType = function() {
+	return Blockly.Types.BOOLEAN;
+};
+Blockly.Blocks.autoduino_rc.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.autoduino_ir_code_detection.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.autoduino_edge_detection.getBlockType = function() {
+	return Blockly.Types.BOOLEAN;
+};
+
+/***********************************************************************************
+//								Makeblock
+//***********************************************************************************
+
+//---------------------------------makeblock.js-------------------------------------
+
+Blockly.Blocks.makeblock_button.getBlockType = function() {
+	return Blockly.Types.BOOLEAN;
+};
+Blockly.Blocks.makeblock_potentiometer.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.makeblock_ils_switch.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.makeblock_pir_motion_sensor.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.makeblock_ultrasonic_ranger.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.makeblock_LDR_sensor.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.makeblock_line_finder.getBlockType = function() {
+	return Blockly.Types.BOOLEAN;
+};
+Blockly.Blocks.makeblock_digital_temperature_sensor.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.makeblock_led.getBlockType = function() {
+	return Blockly.Types.BOOLEAN;
+};
+Blockly.Blocks.makeblock_output.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.makeblock_IR_led.getBlockType = function() {
+	return Blockly.Types.BOOLEAN;
+};
+Blockly.Blocks.makeblock_rgb_led.getBlockType = function() {
+	return Blockly.Types.BOOLEAN;
+};
+Blockly.Blocks.makeblock_rgb_led2.getBlockType = function() {
+	return Blockly.Types.BOOLEAN;
+};
+Blockly.Blocks.makeblock_piezo_buzzer.getBlockType = function() {
+	return Blockly.Types.BOOLEAN;
+};
+Blockly.Blocks.makeblock_motor_builtin.getBlockType = function() {
+	return Blockly.Types.BOOLEAN;
+};
+Blockly.Blocks.makeblock_bluetooth_slave.getBlockType = function() {
+	return Blockly.Types.BOOLEAN;
+};
+Blockly.Blocks.makeblock_rc.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.makeblock_ir_code_detection.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.makeblock_edge_detection.getBlockType = function() {
+	return Blockly.Types.BOOLEAN;
+};
+

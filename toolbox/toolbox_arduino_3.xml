@@ -1580,4 +1580,203 @@
 		<block type="servo_rot_continue"></block>
 		<block type="servo_rot_continue_param"></block>
 	</category>
+	<category name="AUTODUINO_TARGET_AUTODUINO">
+		<category name="CAT_AUTODUINO_IN">
+			<block type="autoduino_button"></block>
+			<block type="autoduino_rotary_angle"></block>
+			<block type="autoduino_rotary_push"></block>
+			<block type="autoduino_potentiometer"></block>
+			<block type="autoduino_dht_read"></block>
+			<block type="autoduino_temperature_sensor"></block>
+			<block type="autoduino_moisture_sensor"></block>
+			<block type="autoduino_tilt_switch"></block>
+			<block type="autoduino_ils_switch"></block>
+			<block type="autoduino_pir_motion_sensor"></block>
+			<block type="autoduino_ultrasonic_ranger"></block>
+			<block type="autoduino_LDR_sensor"></block>
+			<block type="autoduino_line_finder"></block>
+			<block type="autoduino_ir_switch"></block>
+			<block type="autoduino_digital_temperature_sensor"></block>
+		</category>
+		<category name="CAT_AUTODUINO_OUT">
+			<block type="autoduino_led"></block>
+			<block type="autoduino_led_eclairage"></block>
+			<block type="autoduino_IR_led"></block>
+			<block type="autoduino_output"></block>
+			<block type="autoduino_rgb_led"></block>
+			<block type="autoduino_rgb_led2"></block>
+			<block type="autoduino_piezo_buzzer"></block>
+			<block type="autoduino_relay"></block>
+			<block type="autoduino_motor"></block>
+			<block type="autoduino_dual_motor"></block>
+			<block type="autoduino_motor_builtin"></block>
+		</category>
+		<category name="CAT_AUTODUINO_LCD">
+			<block type="autoduino_lcdwrite"></block>
+			<block type="autoduino_lcdprint"></block>
+			<block type="autoduino_lcdclear"></block>
+			<block type="autoduino_lcdspecial"></block>
+			<block type="autoduino_lcdinit"></block>
+		</category>
+		<category name="CAT_AUTODUINO_COMM">
+			<block type="autoduino_bluetooth_slave"></block>
+			<block type="autoduino_rc"></block>
+			<block type="autoduino_ir_code_detection"></block>
+		</category>
+		<category name="CAT_AUTODUINO_UTIL">
+			<block type="autoduino_edge_detection"></block>
+		</category>
+	</category>	
+	<category name="AUTODUINO_TARGET_AUTOALARME">
+		<category name="CAT_AUTODUINO_IN">
+			<block type="autoduino_button"></block>
+			<block type="autoduino_rotary_angle"></block>
+			<block type="autoduino_rotary_push"></block>
+			<block type="autoduino_ils_switch"></block>
+			<block type="autoduino_pir_motion_sensor"></block>
+			<block type="autoduino_ultrasonic_ranger"></block>
+			<block type="autoduino_LDR_sensor"></block>
+		</category>
+		<category name="CAT_AUTODUINO_OUT">
+			<block type="autoduino_led"></block>
+			<block type="autoduino_led_eclairage"></block>
+			<block type="autoduino_output"></block>
+			<block type="autoduino_rgb_led"></block>
+			<block type="autoduino_rgb_led2"></block>
+			<block type="autoduino_piezo_buzzer"></block>
+		</category>
+		<category name="CAT_AUTODUINO_LCD">
+			<block type="autoduino_lcdwrite"></block>
+			<block type="autoduino_lcdprint"></block>
+			<block type="autoduino_lcdclear"></block>
+			<block type="autoduino_lcdspecial"></block>
+			<block type="autoduino_lcdinit"></block>
+		</category>
+		<category name="CAT_AUTODUINO_COMM">
+			<block type="autoduino_rc"></block>
+			<block type="autoduino_ir_code_detection"></block>
+		</category>
+		<category name="CAT_AUTODUINO_UTIL">
+			<block type="autoduino_edge_detection"></block>
+		</category>
+	</category>	
+	<category name="AUTODUINO_TARGET_AUTOLUMI">
+		<category name="CAT_AUTODUINO_IN">
+			<block type="autoduino_button"></block>
+			<block type="autoduino_rotary_angle"></block>
+			<block type="autoduino_rotary_push"></block>
+			<block type="autoduino_ils_switch"></block>
+			<block type="autoduino_pir_motion_sensor"></block>
+			<block type="autoduino_ultrasonic_ranger"></block>
+			<block type="autoduino_LDR_sensor"></block>
+		</category>
+		<category name="CAT_AUTODUINO_OUT">
+			<block type="autoduino_led"></block>
+			<block type="autoduino_led_eclairage"></block>
+			<block type="autoduino_output"></block>
+			<block type="autoduino_rgb_led"></block>
+			<block type="autoduino_rgb_led2"></block>
+			<block type="autoduino_piezo_buzzer"></block>
+		</category>
+		<category name="CAT_AUTODUINO_LCD">
+			<block type="autoduino_lcdwrite"></block>
+			<block type="autoduino_lcdprint"></block>
+			<block type="autoduino_lcdclear"></block>
+			<block type="autoduino_lcdspecial"></block>
+			<block type="autoduino_lcdinit"></block>
+		</category>
+		<category name="CAT_AUTODUINO_COMM">
+			<block type="autoduino_rc"></block>
+			<block type="autoduino_ir_code_detection"></block>
+		</category>
+		<category name="CAT_AUTODUINO_UTIL">
+			<block type="autoduino_edge_detection"></block>
+		</category>
+	</category>	
+	<category name="AUTODUINO_TARGET_PORTAIL_1">
+		<category name="CAT_AUTODUINO_IN">
+			<block type="autoduino_button"></block>
+			<block type="autoduino_rotary_angle"></block>
+			<block type="autoduino_rotary_push"></block>
+			<block type="autoduino_ils_switch"></block>
+			<block type="autoduino_pir_motion_sensor"></block>
+			<block type="autoduino_ultrasonic_ranger"></block>
+			<block type="autoduino_LDR_sensor"></block>
+		</category>
+		<category name="CAT_AUTODUINO_OUT">
+			<block type="autoduino_led"></block>
+			<block type="autoduino_led_eclairage"></block>
+			<block type="autoduino_output"></block>
+			<block type="autoduino_rgb_led"></block>
+			<block type="autoduino_rgb_led2"></block>
+			<block type="autoduino_piezo_buzzer"></block>
+			<block type="autoduino_motor"></block>
+		</category>
+		<category name="CAT_AUTODUINO_LCD">
+			<block type="autoduino_lcdwrite"></block>
+			<block type="autoduino_lcdprint"></block>
+			<block type="autoduino_lcdclear"></block>
+			<block type="autoduino_lcdspecial"></block>
+			<block type="autoduino_lcdinit"></block>
+		</category>
+		<category name="CAT_AUTODUINO_COMM">
+			<block type="autoduino_rc"></block>
+			<block type="autoduino_ir_code_detection"></block>
+		</category>
+		<category name="CAT_AUTODUINO_UTIL">
+			<block type="autoduino_edge_detection"></block>
+		</category>
+	</category>     
+	<category name="CAT_MAKEBLOCK">
+		<category name="CAT_MAKEBLOCK_IN">
+			<block type="makeblock_button"></block>
+			<block type="makeblock_potentiometer"></block>
+			<block type="makeblock_ils_switch"></block>
+			<block type="makeblock_pir_motion_sensor"></block>
+			<block type="makeblock_ultrasonic_ranger"></block>
+			<block type="makeblock_LDR_sensor"></block>
+			<block type="makeblock_line_finder"></block>
+			<block type="makeblock_digital_temperature_sensor"></block>
+		</category>
+		<category name="CAT_MAKEBLOCK_OUT">
+			<block type="makeblock_led"></block>
+			<block type="makeblock_output"></block>
+			<block type="makeblock_IR_led"></block>
+			<block type="makeblock_rgb_led"></block>
+			<block type="makeblock_rgb_led2"></block>
+			<block type="makeblock_piezo_buzzer"></block>
+			<block type="makeblock_motor_builtin"></block>
+		</category>
+		<category name="CAT_MAKEBLOCK_COMM">
+			<block type="makeblock_bluetooth_slave"></block>
+			<block type="makeblock_rc"></block>
+			<block type="makeblock_ir_code_detection"></block>
+		</category>
+		<category name="CAT_MAKEBLOCK_UTIL">
+			<block type="makeblock_edge_detection"></block>
+		</category>
+	</category>	
+	<category name="CAT_MAKEBLOCK_TARGET_MBOT">
+		<category name="CAT_MAKEBLOCK_IN">
+			<block type="makeblock_button"></block>
+			<block type="makeblock_ultrasonic_ranger"></block>
+			<block type="makeblock_LDR_sensor"></block>
+			<block type="makeblock_line_finder"></block>
+		</category>
+		<category name="CAT_MAKEBLOCK_OUT">
+			<block type="makeblock_led"></block>
+			<block type="makeblock_output"></block>
+			<block type="makeblock_rgb_led"></block>
+			<block type="makeblock_rgb_led2"></block>
+			<block type="makeblock_piezo_buzzer"></block>
+			<block type="makeblock_motor_builtin"></block>
+		</category>
+		<category name="CAT_MAKEBLOCK_COMM">
+			<block type="makeblock_rc"></block>
+			<block type="makeblock_ir_code_detection"></block>
+		</category>
+		<category name="CAT_MAKEBLOCK_UTIL">
+			<block type="makeblock_edge_detection"></block>
+		</category>
+	</category>        
 </toolbox>
