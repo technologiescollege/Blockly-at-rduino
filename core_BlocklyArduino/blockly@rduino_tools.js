@@ -45,7 +45,10 @@ BlocklyDuino.initGlobalConfig = function () {
 BlocklyDuino.ArduinoIDEClick = function() {
     var code = $('#pre_arduino').text();
     
-    var url = "http://127.0.0.1:5005/openIDE";
+//    var url = "http://127.0.0.1:5005/openIDE";
+    var url = "https://127.0.0.1:5005/openIDE"; 
+    // NBR set to https in order to correct the muxed content blocking by firefox
+    // see here https://developer.mozilla.org/en-US/docs/Web/Security/Mixed_content
     var method = "POST";
     var async = true;
 	var request = new XMLHttpRequest();
@@ -58,7 +61,8 @@ BlocklyDuino.ArduinoIDEClick = function() {
 BlocklyDuino.uploadClick = function() {
 	//first change board
 	var board = "board=" + profile.defaultBoard['upload_arg'];
-    var url = "http://127.0.0.1:5005/set_board";
+//    var url = "http://127.0.0.1:5005/set_board";
+    var url = "https://127.0.0.1:5005/set_board";
     var method = "POST";
     var async = true;
     var request = new XMLHttpRequest();
@@ -74,7 +78,8 @@ BlocklyDuino.uploadClick = function() {
     setTimeout( function() {		
 		//then send code after 1000ms
 		var code = $('#pre_arduino').text();
-		url = "http://127.0.0.1:5005/upload";
+//		url = "http://127.0.0.1:5005/upload";
+		url = "https://127.0.0.1:5005/upload";
 		request.open(method, url, async);
 		request.setRequestHeader("Content-Type", "text/plain;charset=UTF-8");
 		request.send(code);
@@ -84,7 +89,8 @@ BlocklyDuino.uploadClick = function() {
 BlocklyDuino.verify_local_Click = function() {
 	//first change board
 	var board = "board=" + profile.defaultBoard['upload_arg'];
-    var url = "http://127.0.0.1:5005/set_board";
+//    var url = "http://127.0.0.1:5005/set_board";
+    var url = "https://127.0.0.1:5005/set_board";
     var method = "POST";
     var async = true;
     var request = new XMLHttpRequest();
@@ -100,7 +106,8 @@ BlocklyDuino.verify_local_Click = function() {
     setTimeout( function() {		
 		//then send code after 1000ms
 		var code = $('#pre_arduino').text();
-		url = "http://127.0.0.1:5005/compile";
+//		url = "http://127.0.0.1:5005/compile";
+		url = "https://127.0.0.1:5005/compile";
 		request.open(method, url, async);
 		request.setRequestHeader("Content-Type", "text/plain;charset=UTF-8");
 		request.send(code);
