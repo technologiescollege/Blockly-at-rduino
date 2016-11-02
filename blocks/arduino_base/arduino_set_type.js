@@ -12,8 +12,8 @@
  */
 'use strict';
 
-goog.require('Blockly.Blocks.variables');
 goog.require('Blockly.Blocks');
+
 goog.require('Blockly.Types');
 
 
@@ -30,13 +30,13 @@ Blockly.Blocks['variables_set_type'] = {
     this.setColour(Blockly.Blocks.variables.HUE);
     this.appendValueInput('VARIABLE_SETTYPE_INPUT');
     this.appendDummyInput()
-        .appendField(Blockly.Msg.ARD_VAR_AS)
+        .appendField(Blockly.Msg.VARIABLES_AS)
         .appendField(new Blockly.FieldDropdown(
                          Blockly.Types.getValidTypeArray()),
                      'VARIABLE_SETTYPE_TYPE');
     this.setInputsInline(true);
     this.setOutput(true);
-    this.setTooltip(Blockly.Msg.ARD_VAR_AS_TIP);
+    this.setTooltip('Sets a value to a specific type');
   },
   /**
    * Assigns a type to the block based on the selected type to cast.
