@@ -321,6 +321,16 @@ BlocklyDuino.discard = function () {
 };
 
 /**
+ * Undo/redo functions
+ */
+BlocklyDuino.Undo = function () {
+  Blockly.mainWorkspace.undo(0);
+};
+BlocklyDuino.Redo = function () {
+  Blockly.mainWorkspace.undo(1);
+};
+
+/**
  * Binds functions to each of the buttons, nav links, and related.
  */
 BlocklyDuino.bindFunctions = function() {
@@ -329,6 +339,8 @@ BlocklyDuino.bindFunctions = function() {
 	
 	// Navigation buttons
 	$('#btn_delete').on("click", BlocklyDuino.discard);
+	$('#btn_undo').on("click", BlocklyDuino.Undo);
+	$('#btn_redo').on("click", BlocklyDuino.Redo);
 	$('#btn_saveXML').on("click", BlocklyDuino.saveXmlFile);
 	$('#btn_saveArduino').on("click", BlocklyDuino.saveArduinoFile);	
 	$('#btn_pasteIDEArduino').on("click", BlocklyDuino.ArduinoIDEClick);	

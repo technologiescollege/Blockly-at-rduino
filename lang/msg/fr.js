@@ -13,6 +13,8 @@ var MSG = {
   span_doc: " wiki",
   span_tuto: " forum",
   span_videos: "tutoriels vidéos",
+  span_undo: "annuler (ctrl+z)",
+  span_redo: "rétablir (ctrl+y)",
   span_configGlobal: " Configuration globale",
   span_RGB: " conversion couleur <-> valeurs RVB",
   span_convert: " conversion texte <-> binaire",

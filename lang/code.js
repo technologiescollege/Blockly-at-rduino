@@ -227,6 +227,8 @@ Code.initLanguage = function() {
   $('#btn_doc').attr('title', MSG['span_doc']);  
   $('#btn_tuto').attr('title', MSG['span_tuto']);
   $('#btn_videos').attr('title', MSG['span_videos']);
+  $('#btn_undo').attr('title', MSG['span_undo']);
+  $('#btn_redo').attr('title', MSG['span_redo']);
   
   $('#btn_closeCode').text(MSG['btn_closeCode']);
   $('#btn_validCode').text(MSG['btn_validCode']);
