@@ -1,3 +1,4 @@
+<!-- specific version for offline version : Blockly@duino+communication_AIO -->
 <html>
 <head>
 <link rel="icon" type="image/png" href="favicon.bmp" />
@@ -13,7 +14,7 @@
 
 <script type="text/javascript" src="generators/arduino.js"></script>
 
-<script type="text/javascript" src="core_BlocklyArduino/blockly@rduino.js"></script>
+<script type="text/javascript" src="core_BlocklyArduino/blockly@rduino_AIO.js"></script>
 <script type="text/javascript" src="core_BlocklyArduino/blockly@rduino_boards.js"></script>
 <script type="text/javascript" src="core_BlocklyArduino/blockly@rduino_tools.js"></script>
 <script type="text/javascript" src="core_BlocklyArduino/blockly@rduino_visual.js"></script>
@@ -144,7 +145,7 @@
 <body onload="BlocklyDuino.init()">
 <div class="loading"></div>
     <div id="divTitre">
-            <a href="./index.html"><img id="clearLink" src="media/logo-mini.png" border="0" height="36px" onclick="" />
+            <a href="./index_AIO.html"><img id="clearLink" src="media/logo-mini.png" border="0" height="36px" onclick="" />
             </a> 
             <b>Blockly@rduino</b> : 
             <span id="title"></span>
@@ -152,10 +153,6 @@
 			<b><span id="span_about"> </span></b>
 			<span class="glyphicon glyphicon-user"></span>		
 		</button>
-    </div>
-    <div id="unredo">
-		<input id="undo" onclick="Blockly.mainWorkspace.undo(0);" name="undo" title="undo(ctrl+z)" src="media/undo.png" onmouseover="this.src='media/undo1.png'" onmousedown="this.src='media/undo2.png'" onmouseup="this.src='media/undo1.png'" onmouseout="this.src='media/undo.png'" border="0" height="35" type="image">
-		<input id="redo" onclick="Blockly.mainWorkspace.undo(1);" name="redo" title="redo(ctrl+y)" src="media/redo.png" onmouseover="this.src='media/redo1.png'" onmousedown="this.src='media/redo2.png'" onmouseup="this.src='media/redo1.png'" onmouseout="this.src='media/redo.png'" border="0" height="35" type="image">
     </div>
     <div id="divBody">
     <div id="menuPanel">
@@ -232,9 +229,9 @@
 		    </a>
 		</div>
 		<div id="div_tools_button">
-			<button id="btn_configGlobal" class="btn btn-warning text-left" data-toggle="modal" data-target="#configModalGlobal">
+			<!--button id="btn_configGlobal" class="btn btn-warning text-left" data-toggle="modal" data-target="#configModalGlobal">
 		       <span class="glyphicon glyphicon-cog"> </span>
-		   </button>
+		   </button-->
 			<button id="btn_RGB" class="btn btn-primary text-left">
 		       <span class="glyphicon glyphicon-th"> </span>
 		    </button>
@@ -287,8 +284,7 @@
 				</div>
 			</div>
 			<div id="content_arduino" class="tab-pane">
-				<select id="cb_cf_boards"></select>
-				<select id="cb_cf_ports"></select>				
+				<!--select id="cb_cf_boards"></select-->	
 				<a id="btn_plugin_codebender" class='btn btn-danger' href="https://codebender.cc/static/plugin" target=_blank role='button'>
 					<span class="glyphicon glyphicon-new-window"></span>
 					<span id="span_plugin_codebender"> </span>
@@ -330,6 +326,7 @@
 				<div id="debug_arduino_local"></div>
             </div>
             <div id="content_term" class="tab-pane">
+				<select id="cb_cf_ports"></select>			
                 <select id="cb_cf_baud_rates"></select>
                 <button id="cb_cf_serial_monitor_connect" class="btn btn-primary">
 					<span class="glyphicon glyphicon-transfer"> </span>
@@ -371,7 +368,7 @@
 			  <br /> - Codebender - CompilerFlasher : (<a href='https://codebender.cc' target='blank'>https://codebender.cc</a>)
               <br /> - JQuerry (<a href='https://jquery.com' target='blank'>https://jquery.com)</a>
 			  <br />
-			  <br /><i>version 1-11-2016 - v2.1 "SuperUpload"</i>
+			  <br /><i>version 10-10-2016 - v2.1 "SuperUpload"</i>
 			  <br />
 			  <br />
 			  <div align="center">
@@ -445,6 +442,19 @@
 	<div class="modal-content">
 	  <div class="modal-header">
 		<button type="button" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			<div id="divCard">
+		            <label id="labelArduinoCard"></label> 
+		            <select id="pinout">
+		                <option value="arduino_leonardo">Arduino/Genuino LEONARDO</option>
+		                <option value="arduino_mega">Arduino/Genuino MEGA</option>
+		                <option value="arduino_micro">Arduino/Genuino MICRO</option>
+		                <option value="arduino_nano">Arduino/Genuino NANO</option>
+		                <option value="arduino_uno" selected="selected">Arduino/Genuino UNO</option>
+		                <option value="arduino_yun">Arduino/Genuino YUN</option>
+						<option value="dfrobot_romeo">DFRobot RoMeo v2</option>
+						<option value="microfeux">Micro-feux Jeulin</option>
+		            </select>
+		    </div>
 		<button id="btn_card_picture_mini" class="btn btn-default">
 			<span id="icon_btn_blocs_picture_mini" class="glyphicon glyphicon-minus"> </span>
 		</button>
@@ -553,8 +563,7 @@
       <input type="checkbox" name="select_all" id="select_all"/> <span id="span_select_all"> </span>
       <div style="float : right; margin-right : 5px;">
             <input type="checkbox" name="put_in_url" id="put_in_url"/> <span id="span_put_in_url"> </span>
-      </div>
-      
+      </div>      
       <div class="modal-body" id="modal-body-config"></div>
       <div class="modal-footer">
         <button id="btn_close_config" type="button" class="btn btn-default" data-dismiss="modal" ></button>
@@ -588,7 +597,7 @@
 		  <div class="modal-header">
 			<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 			<h4 class="modal-title" id="configModalGlobalLabel"></h4>
-	            <input type="checkbox" name="put_config_in_url" id="put_config_in_url"/><i> <span id="span_put_config_in_url"> </span></i>
+	            <!--input type="checkbox" name="put_config_in_url" id="put_config_in_url"/><i> <span id="span_put_config_in_url"> </span></i-->
 		  </div>    
 		<div class="modal-body" id="modal-body-config-global">
 			<label id="span_languageMenu"> </label>  <select id="languageMenu"></select><br/>
@@ -607,7 +616,7 @@
 		    </div>
 			<br />	        
 	        <div style="clear : both;">
-			<span id="span_OnOffLine"> </span>
+			<!--span id="span_OnOffLine"> </span>
 			<input id="toggle-WebAccess" data-toggle="toggle" data-on="<span id='span_OnLine'> </span>" data-off='<span id="span_OffLine"> </span>' data-onstyle="success" data-offstyle="info" data-width="120" type="checkbox"><br />
 			<br/>
 			<label id="span_Upload"> </label>
@@ -629,7 +638,7 @@
 			<a id="btn_Help_Online" class='btn btn-success text-left' href="https://codebender.cc/static/plugin" target="_blank" role='button'>
 			  <span class="glyphicon glyphicon-download"></span>
 			  <span id="span_Download_codebender"> </span>
-			 </a>
+			 </a-->
 			 </div>
 		</div>  
 		<div class="modal-footer">

@@ -43,6 +43,12 @@ body {
 	font-size: 15px;
 }
 
+#unredo {
+    position: absolute;
+    top: 3px;
+	left: 50%;
+}
+
 #divBody {
     position: absolute;
     top: 36px;
