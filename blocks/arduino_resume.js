@@ -1,3 +1,12 @@
+//$('head').append($('<script>').attr('type', 'text/javascript').attr('src', "blocks/blocklyarduino/colour.js"));
+$('head').append($('<script>').attr('type', 'text/javascript').attr('src', "blocks/blocklyarduino/lists.js"));
+$('head').append($('<script>').attr('type', 'text/javascript').attr('src', "blocks/blocklyarduino/array.js"));
+$('head').append($('<script>').attr('type', 'text/javascript').attr('src', "blocks/blocklyarduino/logic.js"));
+$('head').append($('<script>').attr('type', 'text/javascript').attr('src', "blocks/blocklyarduino/loops.js"));
+$('head').append($('<script>').attr('type', 'text/javascript').attr('src', "blocks/blocklyarduino/math.js"));
+$('head').append($('<script>').attr('type', 'text/javascript').attr('src', "blocks/blocklyarduino/procedures.js"));
+$('head').append($('<script>').attr('type', 'text/javascript').attr('src', "blocks/blocklyarduino/text.js"));
+
 $('head').append($('<script>').attr('type', 'text/javascript').attr('src', "blocks/arduino_base/arduino_base.js"));
 $('head').append($('<script>').attr('type', 'text/javascript').attr('src', "blocks/arduino_base/arduino_io.js"));
 $('head').append($('<script>').attr('type', 'text/javascript').attr('src', "blocks/arduino_base/arduino_conversion.js"));
