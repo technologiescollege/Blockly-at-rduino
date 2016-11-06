@@ -215,16 +215,8 @@
 				</div>
 			</div>
 			<div id="content_arduino" class="tab-pane">
-				<select id="cb_cf_boards"></select>
-				<select id="cb_cf_ports"></select>				
-				<a id="btn_plugin_codebender" class='btn btn-danger' href="https://codebender.cc/static/plugin" target=_blank role='button'>
-					<span class="glyphicon glyphicon-new-window"></span>
-					<span id="span_plugin_codebender"> </span>
-				</a>			
-				<button id="cb_cf_verify_btn" class="btn btn-primary">
-					<span class="glyphicon glyphicon-ok"> </span>
-					<span id="span_verify_codebender"> </span>
-				</button>								
+				<!--select id="cb_cf_boards"></select-->
+				<select id="cb_cf_ports"></select>
 				<button id="btn_edit_code" class="btn btn-primary" data-toggle="modal" data-target="#editModal">
                     <span id="icon_edit_btn" class="glyphicon glyphicon-edit"> </span>
                     <span id="span_edit_code"> </span>
@@ -233,10 +225,6 @@
 					<span class="glyphicon glyphicon-save"> </span>
 					<span id="span_saveIno"> </span>
 				</a>				
-                <button id="cb_cf_flash_btn" class="btn btn-primary">
-					<span class="glyphicon glyphicon-log-in"> </span>
-					<span id="span_flash_codebender"> </span>
-				</button>			
 				<button id="btn_verify_local" class="btn btn-primary">
 					<span class="glyphicon glyphicon-ok"> </span>
 					<span id="span_verify_local"> </span>
@@ -257,7 +245,7 @@
                 <div id="debug_arduino"></div>
 				<div id="debug_arduino_local"></div>
             </div>
-            <div id="content_term" class="tab-pane">
+            <div id="content_term" class="tab-pane">	
                 <select id="cb_cf_baud_rates"></select>
                 <button id="cb_cf_serial_monitor_connect" class="btn btn-primary">
 					<span class="glyphicon glyphicon-transfer"> </span>
@@ -379,7 +367,19 @@
 		<button id="btn_card_picture_maxi" class="btn btn-default">
 			<span id="icon_btn_blocs_picture_maxi" class="glyphicon glyphicon-plus"> </span>
 		</button>
-		<h4 class="modal-title" id="pictureModalLabel"></h4>
+		<button id="btn_card_picture_change" class="btn btn-primary btn-sm">
+			<span id="span_card_picture_change"> </span>
+		</button>
+		<select id="pinout">
+			<option value="arduino_leonardo">Arduino/Genuino LEONARDO</option>
+			<option value="arduino_mega">Arduino/Genuino MEGA</option>
+			<option value="arduino_micro">Arduino/Genuino MICRO</option>
+			<option value="arduino_nano">Arduino/Genuino NANO</option>
+			<option value="arduino_uno" selected="selected">Arduino/Genuino UNO</option>
+			<option value="arduino_yun">Arduino/Genuino YUN</option>
+			<option value="dfrobot_romeo">DFRobot RoMeo v2</option>
+			<option value="microfeux">Micro-feux Jeulin</option>
+		</select>
 	  </div>
 	  <div class="modal-body text-center">
 			  <img id="arduino_card_picture" width="200">
@@ -510,7 +510,7 @@
   </div>
 </div>
 <!-- global config modal -->
-<div class="modal fade" id="configModalGlobal" tabindex="-1" role="dialog" aria-labelledby="configModalGlobalLabel" aria-hidden="true">
+<!--div class="modal fade" id="configModalGlobal" tabindex="-1" role="dialog" aria-labelledby="configModalGlobalLabel" aria-hidden="true">
 	<div class="modal-dialog">
 		<div class="modal-content">
 		  <div class="modal-header">
@@ -565,7 +565,7 @@
 		</div>	
 		</div>
 	</div>
-</div>
+</div-->
 
 </body>
 </html>

@@ -2,6 +2,7 @@ var MSG = {
   title: "graphic editor helping Arduino interfaces programming",
   labelArduinoCard: "Card ",
   btn_switch: " modify menu orientation",
+  span_card_picture_change: "change",
   span_config: " configure blocks",
   span_picture: " show Arduino card",
   span_supervision: " card supervision",

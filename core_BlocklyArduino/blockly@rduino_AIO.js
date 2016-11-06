@@ -73,8 +73,8 @@ BlocklyDuino.renderContent = function() {
 				if (typeof prettyPrintOne == 'function') {
 					$('#pre_arduino').html(prettyPrintOne($('#pre_arduino').html(), 'cpp'));
 				}
-				BlocklyDuino.toggleWeb();	
-				BlocklyDuino.toggleLocalCodeBender();
+				//BlocklyDuino.toggleWeb();	
+				//BlocklyDuino.toggleLocalCodeBender();
 				BlocklyDuino.testPluginCodeBender();
 			} catch (e) {
 				alert(e);
@@ -375,7 +375,7 @@ BlocklyDuino.bindFunctions = function() {
 
 	$('#select_all').on("click", BlocklyDuino.checkAll);
 	$('#btn_valid_config').on("click", BlocklyDuino.changeToolbox);
-	$('#btn_validConfigGlobale').on("click", BlocklyDuino.validateConfigGlobal);
+	$('#btn_card_picture_change').on("click", BlocklyDuino.validateConfigOffline);
 	
 	$('#btn_valid_msg').on("click", function() {
 		if ($('#ajax_msg').prop("checked")) {
@@ -691,13 +691,13 @@ BlocklyDuino.init = function() {
 					length: 3,
 					colour: '#ccc',
 					snap: true},
-					sounds : true,
-					media: 'media/',
-					rtl: Code.isRtl(),
-					toolbox: BlocklyDuino.buildToolbox(),
-					zoom:
-						{controls: true,
-						wheel: true}
+				sounds : true,
+				media: 'media/',
+				rtl: Code.isRtl(),
+				toolbox: BlocklyDuino.buildToolbox(),
+				zoom:
+					{controls: true,
+					wheel: true}
 		      });
 	// bind events to html elements
 	BlocklyDuino.bindFunctions();

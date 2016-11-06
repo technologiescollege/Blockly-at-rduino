@@ -375,6 +375,7 @@ BlocklyDuino.bindFunctions = function() {
 	$('#select_all').on("click", BlocklyDuino.checkAll);
 	$('#btn_valid_config').on("click", BlocklyDuino.changeToolbox);
 	$('#btn_validConfigGlobale').on("click", BlocklyDuino.validateConfigGlobal);
+	$('#btn_card_picture_change').on("click", BlocklyDuino.validateConfigGlobal);
 	
 	$('#btn_valid_msg').on("click", function() {
 		if ($('#ajax_msg').prop("checked")) {
