@@ -1,7 +1,6 @@
 /**
  * @license Licensed under the Apache License, Version 2.0 (the "License"):
  *          http://www.apache.org/licenses/LICENSE-2.0
- * Thanks to Carlos @Ardublockly
  */
 
 /**
@@ -14,10 +13,11 @@
  */
 'use strict';
 
-goog.provide('Blockly.Blocks.stepper');
+goog.provide('Blockly.Blocks.stepper_motor');
 
 goog.require('Blockly.Blocks');
 goog.require('Blockly.Types');
+goog.require('Blockly.FieldInstance');
 
 
 /** Common HSV hue for all blocks in this category. */
@@ -33,30 +33,30 @@ Blockly.Blocks['stepper_config'] = {
     this.setHelpUrl('http://arduino.cc/en/Reference/StepperConstructor');
     this.setColour(Blockly.Blocks.stepper.HUE);
     this.appendDummyInput()
-        .appendField(Blockly.Msg.STEPPER_SETUP)
+        .appendField(Blockly.Msg.ARD_STEPPER_SETUP)
         .appendField(
             new Blockly.FieldInstance('Stepper',
-                                      Blockly.Msg.STEPPER_DEFAULT_NAME,
+                                      Blockly.Msg.ARD_STEPPER_DEFAULT_NAME,
                                       true, true, false),
             'STEPPER_NAME')
-        .appendField(Blockly.Msg.STEPPER_MOTOR);
+        .appendField(Blockly.Msg.ARD_STEPPER_MOTOR);
     this.appendDummyInput()
         .setAlign(Blockly.ALIGN_RIGHT)
-        .appendField(Blockly.Msg.STEPPER_PIN1)
+        .appendField(Blockly.Msg.ARD_STEPPER_PIN1)
         .appendField(new Blockly.FieldDropdown(
             Blockly.Arduino.Boards.selected.digitalPins), 'STEPPER_PIN1')
-        .appendField(Blockly.Msg.STEPPER_PIN2)
+        .appendField(Blockly.Msg.ARD_STEPPER_PIN2)
         .appendField(new Blockly.FieldDropdown(
             Blockly.Arduino.Boards.selected.digitalPins), 'STEPPER_PIN2');
     this.appendValueInput('STEPPER_STEPS')
         .setCheck(Blockly.Types.NUMBER.checkList)
         .setAlign(Blockly.ALIGN_RIGHT)
-        .appendField(Blockly.Msg.STEPPER_REVOLVS);
+        .appendField(Blockly.Msg.ARD_STEPPER_REVOLVS);
     this.appendValueInput('STEPPER_SPEED')
         .setCheck(Blockly.Types.NUMBER.checkList)
         .setAlign(Blockly.ALIGN_RIGHT)
-        .appendField(Blockly.Msg.STEPPER_SPEED);
-    this.setTooltip(Blockly.Msg.STEPPER_SETUP_TIP);
+        .appendField(Blockly.Msg.ARD_STEPPER_SPEED);
+    this.setTooltip(Blockly.Msg.ARD_STEPPER_SETUP_TIP);
   },
   /**
    * Updates the content of the the pin related fields.
@@ -79,19 +79,19 @@ Blockly.Blocks['stepper_step'] = {
     this.setHelpUrl('http://arduino.cc/en/Reference/StepperStep');
     this.setColour(Blockly.Blocks.stepper.HUE);
     this.appendDummyInput()
-        .appendField(Blockly.Msg.STEPPER_STEP)
+        .appendField(Blockly.Msg.ARD_STEPPER_STEP)
         .appendField(
             new Blockly.FieldInstance('Stepper',
-                                      Blockly.Msg.STEPPER_DEFAULT_NAME,
+                                      Blockly.Msg.ARD_STEPPER_DEFAULT_NAME,
                                       false, true, false),
             'STEPPER_NAME');
     this.appendValueInput('STEPPER_STEPS')
         .setCheck(Blockly.Types.NUMBER.checkList);
     this.appendDummyInput()
-        .appendField(Blockly.Msg.STEPPER_STEPS);
+        .appendField(Blockly.Msg.ARD_STEPPER_STEPS);
     this.setPreviousStatement(true);
     this.setNextStatement(true);
-    this.setTooltip(Blockly.Msg.STEPPER_STEP_TIP);
+    this.setTooltip(Blockly.Msg.ARD_STEPPER_STEP_TIP);
   },
   /**
    * Called whenever anything on the workspace changes.
@@ -107,8 +107,8 @@ Blockly.Blocks['stepper_step'] = {
     } else {
       // Set a warning to select a valid stepper config block
       this.setWarningText(
-        Blockly.Msg.COMPONENT_WARN1.replace(
-            '%1', Blockly.Msg.STEPPER_COMPONENT).replace(
+        Blockly.Msg.ARD_COMPONENT_WARN1.replace(
+            '%1', Blockly.Msg.ARD_STEPPER_COMPONENT).replace(
                 '%2', instanceName));
     }
   }

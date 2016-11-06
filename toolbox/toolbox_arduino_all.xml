@@ -1613,7 +1613,7 @@
 		<block type="servo_rot_continue"></block>
 		<block type="servo_rot_continue_param"></block>
 	</category>
-	<category name="CAT_STEPPER" colour="80">
+	<category name="CAT_STEPPER" colour="#8CA55B">
 		<block type="stepper_config"></block>
 		<block type="stepper_step"></block>
 	</category>

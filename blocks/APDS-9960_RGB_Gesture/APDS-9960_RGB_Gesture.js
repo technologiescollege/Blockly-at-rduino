@@ -21,6 +21,7 @@
 goog.provide('Blockly.Blocks.APDS9960');
 
 goog.require('Blockly.Blocks');
+goog.require('Blockly.Types');
 
 /** Common HSV hue for all blocks in this category. */
 Blockly.Blocks.APDS9960.HUE = "#D9242D";

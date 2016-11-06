@@ -218,8 +218,8 @@ BlocklyDuino.backupBlocks = function () {
 BlocklyDuino.setArduinoCard =  function () {
 	var cardId = BlocklyDuino.getStringParamFromUrl('card', '');
 	if (!cardId) {
-		//$("#pinout").val(cardId);
 		cardId = "arduino_uno";
+		$("#pinout").val(cardId);
 	}
 	
 	// set the card from url parameters
@@ -375,6 +375,7 @@ BlocklyDuino.bindFunctions = function() {
 	$('#select_all').on("click", BlocklyDuino.checkAll);
 	$('#btn_valid_config').on("click", BlocklyDuino.changeToolbox);
 	$('#btn_validConfigGlobale').on("click", BlocklyDuino.validateConfigGlobal);
+	$('#btn_card_picture_change').on("click", BlocklyDuino.validateConfigOffline);
 	
 	$('#btn_valid_msg').on("click", function() {
 		if ($('#ajax_msg').prop("checked")) {
@@ -750,6 +751,8 @@ BlocklyDuino.init = function() {
 	//global config
 	BlocklyDuino.initGlobalConfig();
 	
+	BlocklyDuino.OnOffLine();
+	
 	// draggable "modal" dialog containing card image & videos
     $('body').on('mousedown', '#showcardModal', function() {
         $(this).addClass('draggable').parents().on('mousemove', function(e) {
@@ -902,7 +905,9 @@ BlocklyDuino.clearLocalStorage = function () {
  * Modal first connection -> info
  */
 BlocklyDuino.firstBlocklyArduino = function() {
-	if (!window.sessionStorage.msg_first_seen) {
+	if (BlocklyDuino.getStringParamFromUrl('AIO', '') == 'on') {
+		$('#firstModal').addClass('draggable');
+	} else if (!window.sessionStorage.msg_first_seen) {
 		$('#firstModal iframe').prop('src', "https://player.vimeo.com/video/179569437?autoplay=1&title=0&byline=0&portrait=0"); 
 		$('#firstModal').modal('show');	
 	}

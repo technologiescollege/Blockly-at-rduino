@@ -148,6 +148,7 @@ Code.initLanguage = function() {
   // Inject language strings.
   $('#title').text(MSG['title']);
   $('#span_about').text(MSG['span_about']);
+  $('#span_card_picture_change').text(MSG['span_card_picture_change']);
   $('#span_example').text(MSG['span_example']);
   $('#span_create_example').text(MSG['span_create_example']);
   $('#span_picture').text(MSG['span_picture']);
