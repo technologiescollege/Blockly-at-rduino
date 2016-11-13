@@ -23,13 +23,18 @@
  */
 'use strict';
 
+goog.provide('Blockly.Blocks.multifunction');
+
+goog.require('Blockly.Blocks');
+goog.require('Blockly.Types');
+
 //To support syntax defined in http://arduino.cc/en/Reference/HomePage
 
 Blockly.Msg.multifunction_HELPURL = 'http://arduinolearning.com/code/multi-function-shield-examples.php'
 
 Blockly.Blocks.multifunction_buildin_led = {
    init: function() {
-    this.setColour("#0152AB");
+    this.setColour(Blockly.Blocks.multifunction.HUE);
     this.setHelpUrl(Blockly.Msg.multifunction_HELPURL);
 	this.appendDummyInput()
         .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/multi-function/DEL.jpg', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize))
@@ -48,7 +53,7 @@ Blockly.Blocks.multifunction_buildin_led = {
 
 Blockly.Blocks.multifunction_digital_read = {
   init: function() {
-    this.setColour("#0152AB");
+    this.setColour(Blockly.Blocks.multifunction.HUE);
     this.setHelpUrl(Blockly.Msg.multifunction_HELPURL);
 	this.appendDummyInput()
         .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/multi-function/BP.jpg', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize))
@@ -62,7 +67,7 @@ Blockly.Blocks.multifunction_digital_read = {
 
 Blockly.Blocks.multifunction_pot_read = {
   init: function() {
-    this.setColour("#0152AB");
+    this.setColour(Blockly.Blocks.multifunction.HUE);
 	this.setHelpUrl(Blockly.Msg.multifunction_HELPURL);
 	this.appendDummyInput()
         .setAlign(Blockly.ALIGN_RIGHT)
@@ -75,7 +80,7 @@ Blockly.Blocks.multifunction_pot_read = {
 
 Blockly.Blocks.multifunction_analog_read = {
   init: function() {
-    this.setColour("#0152AB");
+    this.setColour(Blockly.Blocks.multifunction.HUE);
 	this.setHelpUrl(Blockly.Msg.multifunction_HELPURL);
 	this.appendDummyInput()
         .setAlign(Blockly.ALIGN_RIGHT)
@@ -88,7 +93,7 @@ Blockly.Blocks.multifunction_analog_read = {
 
 Blockly.Blocks.multifunction_tone = {
   init: function() {
-    this.setColour("#0152AB");
+    this.setColour(Blockly.Blocks.multifunction.HUE);
     this.setHelpUrl(Blockly.Msg.multifunction_HELPURL);
 	this.appendDummyInput()
         .setAlign(Blockly.ALIGN_RIGHT)
@@ -111,7 +116,7 @@ Blockly.Blocks.multifunction_tone = {
 
 Blockly.Blocks.multifunction_notone = {
   init: function() {
-    this.setColour("#0152AB");
+    this.setColour(Blockly.Blocks.multifunction.HUE);
 	this.setHelpUrl(Blockly.Msg.multifunction_HELPURL);
 	this.appendDummyInput()
         .setAlign(Blockly.ALIGN_LEFT)
@@ -124,7 +129,7 @@ Blockly.Blocks.multifunction_notone = {
 
 Blockly.Blocks.multifunction_segment = {
   init: function() {
-    this.setColour("#0152AB");
+    this.setColour(Blockly.Blocks.multifunction.HUE);
 	this.setHelpUrl(Blockly.Msg.multifunction_HELPURL);
 	this.appendDummyInput()
 		.setAlign(Blockly.ALIGN_LEFT)
@@ -154,7 +159,7 @@ Blockly.Blocks.multifunction_segment = {
 
 Blockly.Blocks.multifunction_segment_number = {
   init: function() {
-    this.setColour("#0152AB");
+    this.setColour(Blockly.Blocks.multifunction.HUE);
 	this.setHelpUrl(Blockly.Msg.multifunction_HELPURL);
 	this.appendDummyInput()
 		.setAlign(Blockly.ALIGN_LEFT)
@@ -171,7 +176,7 @@ Blockly.Blocks.multifunction_segment_number = {
 
 Blockly.Blocks.multifunction_PWM_write = {
   init: function() {
-    this.setColour("#0152AB");
+    this.setColour(Blockly.Blocks.multifunction.HUE);
     this.setHelpUrl(Blockly.Msg.multifunction_HELPURL);
 	this.appendDummyInput()
         .setAlign(Blockly.ALIGN_LEFT)

@@ -4,13 +4,16 @@
  * 
  * Didier Dumas - 2016
  */
+'use strict';
 
+goog.provide('Blockly.Blocks.arduino_shield');
 
-// goog.require('Blockly.Blocks');
+goog.require('Blockly.Blocks');
+goog.require('Blockly.Types');
 
 Blockly.Blocks['LCD_Keypad_Shield_DFR_09'] = {
   init: function() {
-    this.setColour("#F39800");
+    this.setColour(Blockly.Blocks.arduino_shield.HUE);
 	this.setHelpUrl(Blockly.Msg.LCD_SHIELD_PRINT_HELPURL);
     this.appendDummyInput()
         .appendField(Blockly.Msg.LCD_SHIELD_PRINT_TEXT)
@@ -35,7 +38,7 @@ Blockly.Blocks['LCD_Keypad_Shield_DFR_09'] = {
 
 Blockly.Blocks.LCD_Keypad_Shield_DFR_09_lc = {
   init: function() {
-    this.setColour("#F39800");
+    this.setColour(Blockly.Blocks.arduino_shield.HUE);
 	this.setHelpUrl(Blockly.Msg.LCD_SHIELD_PRINT_HELPURL);
     this.appendDummyInput()
         .appendField(Blockly.Msg.LCD_SHIELD_PRINT_TEXT)
@@ -62,7 +65,7 @@ Blockly.Blocks.LCD_Keypad_Shield_DFR_09_lc = {
 
 Blockly.Blocks.LCD_Keypad_Shield_DFR_09_RAZ = {
   init: function() {
-    this.setColour("#F39800");
+    this.setColour(Blockly.Blocks.arduino_shield.HUE);
 	this.setHelpUrl(Blockly.Msg.LCD_SHIELD_PRINT_HELPURL);
     this.appendDummyInput()
         .appendField(Blockly.Msg.LCD_SHIELD_PRINT_TEXT)

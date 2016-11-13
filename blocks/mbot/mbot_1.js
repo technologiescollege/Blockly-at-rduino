@@ -2,15 +2,16 @@
 
 'use strict';
 
-goog.provide('Blockly.Arduino.mBot');
+goog.provide('Blockly.Blocks.mBot_1');
 
-goog.require('Blockly.Arduino');
+goog.require('Blockly.Blocks');
+goog.require('Blockly.Types');
 
 // define blocks
 
 Blockly.Blocks['mbot_forward'] = {
   init: function() {
-    this.setColour("#33C7F2");
+    this.setColour(Blockly.Blocks.mBot_1.HUE);
 	this.appendDummyInput()
         .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/mbot/forward.jpg', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize));
 	this.setHelpUrl(Blockly.Msg.MBOT_HELPURL);
@@ -22,7 +23,7 @@ Blockly.Blocks['mbot_forward'] = {
 
 Blockly.Blocks['mbot_backward'] = {
   init: function() {
-    this.setColour("#33C7F2");
+    this.setColour(Blockly.Blocks.mBot_1.HUE);
 	this.appendDummyInput()
         .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/mbot/backward.jpg', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize));
 	this.setHelpUrl(Blockly.Msg.MBOT_HELPURL);
@@ -34,7 +35,7 @@ Blockly.Blocks['mbot_backward'] = {
 
 Blockly.Blocks['mbot_turn_left'] = {
   init: function() {
-    this.setColour("#33C7F2");
+    this.setColour(Blockly.Blocks.mBot_1.HUE);
 	this.appendDummyInput()
         .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/mbot/left.jpg', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize));
 	this.setHelpUrl(Blockly.Msg.MBOT_HELPURL);
@@ -46,7 +47,7 @@ Blockly.Blocks['mbot_turn_left'] = {
 
 Blockly.Blocks['mbot_turn_right'] = {
   init: function() {
-    this.setColour("#33C7F2");
+    this.setColour(Blockly.Blocks.mBot_1.HUE);
 	this.appendDummyInput()
         .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/mbot/right.jpg', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize));
 	this.setHelpUrl(Blockly.Msg.MBOT_HELPURL);

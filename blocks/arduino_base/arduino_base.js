@@ -21,13 +21,19 @@
  * @fileoverview Helper functions for generating Arduino blocks.
  * @author gasolin@gmail.com (Fred Lin)
  */
+ 
 'use strict';
+
+goog.provide('Blockly.Blocks.arduino_base');
+
+goog.require('Blockly.Blocks');
+goog.require('Blockly.Types');
 
 //To support syntax defined in http://arduino.cc/en/Reference/HomePage
 
 Blockly.Blocks.base_setup = {
   init: function () {
-        this.setColour("#00979D");
+        this.setColour(Blockly.Blocks.arduino_base.HUE);
 		this.setHelpUrl(Blockly.Msg.ARDUINO_BASE_SETUP_HELPURL);
         this.appendDummyInput("")
             .appendField(Blockly.Msg.ARDUINO_BASE_SETUP);
@@ -42,7 +48,7 @@ Blockly.Blocks.base_setup = {
 
 Blockly.Blocks.base_setup_loop = {
   init: function () {
-        this.setColour("#00979D");
+        this.setColour(Blockly.Blocks.arduino_base.HUE);
 		this.setHelpUrl(Blockly.Msg.ARDUINO_BASE_SETUP_LOOP_HELPURL);
         this.appendDummyInput("")
             .appendField(Blockly.Msg.ARDUINO_BASE_SETUP);
@@ -62,7 +68,7 @@ Blockly.Blocks.base_setup_loop = {
 
 Blockly.Blocks.base_const = {
   init: function () {
-        this.setColour("#00979D");
+        this.setColour(Blockly.Blocks.arduino_base.HUE);
 		this.setHelpUrl(Blockly.Msg.ARDUINO_BASE_DEFINE_HELPURL);
         this.appendDummyInput("")
             .appendField(Blockly.Msg.ARDUINO_BASE_DEFINE);
@@ -76,7 +82,7 @@ Blockly.Blocks.base_define_const = {
   init: function() {
     //this.setHelpUrl(Blockly.Msg.ARDUINO_BASE_DEFINE_CONST_HELPURL); A faire
 	this.setHelpUrl('https://www.arduino.cc/en/Reference/Define');
-    this.setColour("#00979D");
+    this.setColour(Blockly.Blocks.arduino_base.HUE);
 	this.appendValueInput("TEXT1", 'Null')
         .setAlign(Blockly.ALIGN_RIGHT)
     //  	.appendField(Blockly.Msg.ARDUINO_BASE_DEFINE_CONST_INPUT1); A faire
@@ -96,7 +102,7 @@ Blockly.Blocks.base_define_const = {
 Blockly.Blocks.base_code = {
   init: function() {
     this.setHelpUrl(Blockly.Msg.TEXT_TEXT_HELPURL);
-    this.setColour("#00979D");
+    this.setColour(Blockly.Blocks.arduino_base.HUE);
     this.appendDummyInput()
         .appendField(Blockly.Msg.ARDUINO_BASE_CODE)
         .appendField(new Blockly.FieldTextInput(''), 'TEXT');
@@ -109,7 +115,7 @@ Blockly.Blocks.base_code = {
 Blockly.Blocks.base_end = {
   init: function() {
     this.setHelpUrl('');
-    this.setColour("#00979D");
+    this.setColour(Blockly.Blocks.arduino_base.HUE);
     this.appendDummyInput()
         .appendField(Blockly.Msg.ARDUINO_BASE_END);
     this.setPreviousStatement(true, null);
@@ -119,7 +125,7 @@ Blockly.Blocks.base_end = {
 
 Blockly.Blocks.millis = {
   init: function() {
-    this.setColour("#00979D");
+    this.setColour(Blockly.Blocks.arduino_base.HUE);
 	this.setHelpUrl(Blockly.Msg.ARDUINO_SINCE_PROGRAM_STARTED_HELPURL);
     this.appendDummyInput("")
          .appendField(Blockly.Msg.ARDUINO_SINCE_PROGRAM_STARTED);
@@ -130,7 +136,7 @@ Blockly.Blocks.millis = {
 
 Blockly.Blocks.millis_sec = {
   init: function() {
-    this.setColour("#00979D");
+    this.setColour(Blockly.Blocks.arduino_base.HUE);
 	this.setHelpUrl(Blockly.Msg.ARDUINO_SINCE_PROGRAM_STARTED_HELPURL);
     this.appendDummyInput("")
          .appendField(Blockly.Msg.ARDUINO_SINCE_PROGRAM_STARTED_SEC);
@@ -141,7 +147,7 @@ Blockly.Blocks.millis_sec = {
 
 Blockly.Blocks.var_random = {
   init: function() {
-    this.setColour("#00979D");
+    this.setColour(Blockly.Blocks.arduino_base.HUE);
     this.setHelpUrl("");
     this.appendValueInput("rand_min")
         .setCheck("Number")
@@ -157,7 +163,7 @@ Blockly.Blocks.var_random = {
 
 Blockly.Blocks.base_delay = {
   init: function() {
-    this.setColour("#00979D");
+    this.setColour(Blockly.Blocks.arduino_base.HUE);
     this.setHelpUrl(Blockly.Msg.ARDUINO_BASE_DELAY_HELPURL);
     this.appendValueInput("DELAY_TIME", 'Number')
         .appendField(Blockly.Msg.ARDUINO_BASE_DELAY_DELAY_TIME)
@@ -171,7 +177,7 @@ Blockly.Blocks.base_delay = {
 
 Blockly.Blocks.base_delay_sec = {
   init: function() {
-    this.setColour("#00979D");
+    this.setColour(Blockly.Blocks.arduino_base.HUE);
     this.setHelpUrl(Blockly.Msg.ARDUINO_BASE_DELAY_HELPURL);
     this.appendValueInput("DELAY_TIME", 'Number')
         .appendField(Blockly.Msg.ARDUINO_BASE_DELAY_DELAY_TIME_SEC)
@@ -185,7 +191,7 @@ Blockly.Blocks.base_delay_sec = {
 
 Blockly.Blocks.base_map = {
   init: function() {
-    this.setColour("#00979D");
+    this.setColour(Blockly.Blocks.arduino_base.HUE);
     this.setHelpUrl(Blockly.Msg.ARDUINO_BASE_MAP_HELPURL);
     this.appendValueInput("NUM", 'Number')
         .appendField(Blockly.Msg.ARDUINO_BASE_MAP_NUM)
@@ -203,7 +209,7 @@ Blockly.Blocks.base_map = {
 
 Blockly.Blocks.various_constrain = {
   init: function() {
-    this.setColour("#00979D");
+    this.setColour(Blockly.Blocks.arduino_base.HUE);
     this.setHelpUrl(Blockly.Msg.ARDUINO_CONSTRAIN_HELPURL);
     this.appendDummyInput()
         .appendField(Blockly.Msg.ARDUINO_CONSTRAIN);
@@ -225,7 +231,7 @@ Blockly.Blocks.various_constrain = {
 //@pbra 20160607
 Blockly.Blocks.inout_digital_mode = {
   init: function() {
-    this.setColour("#00979D");
+    this.setColour(Blockly.Blocks.arduino_base.HUE);
     this.setHelpUrl(Blockly.Msg.ARDUINO_INOUT_DIGITAL_MODE_HELPURL);
 	this.appendValueInput("PIN", 'Number')
         .setAlign(Blockly.ALIGN_RIGHT)
@@ -244,7 +250,7 @@ Blockly.Blocks.inout_digital_mode = {
 // @pbra dropdown pinmode
 Blockly.Blocks['pinmode'] = {
   init: function() {
-    this.setColour("#00979D");
+    this.setColour(Blockly.Blocks.arduino_base.HUE);
 	this.setHelpUrl(Blockly.Msg.ARDUINO_INOUT_DIGITAL_MODE_HELPURL);
     this.appendDummyInput("")
         .appendField(new Blockly.FieldDropdown(Blockly.Msg.ARDUINO_INOUT_DIGITAL_MODE_DROPDOWN), 'PINMODE');
@@ -261,7 +267,7 @@ Blockly.Blocks['biblio_include'] = {
     this.setInputsInline(true);
     this.setPreviousStatement(true);
     this.setNextStatement(true);
-    this.setColour("#00979D");
+    this.setColour(Blockly.Blocks.arduino_base.HUE);
     this.setTooltip('');
     this.setHelpUrl('https://www.arduino.cc/en/Reference/Libraries');
   }

@@ -4,10 +4,7 @@
 goog.provide('Blockly.Blocks.mhk');
 
 goog.require('Blockly.Blocks');
-
-// define blocks
-
-Blockly.Blocks.mhk.HUE = "#FF6B37";
+goog.require('Blockly.Types');
 
 Blockly.Blocks['mhk_ultrason'] = {
   init: function() {

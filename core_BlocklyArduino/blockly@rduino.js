@@ -376,6 +376,7 @@ BlocklyDuino.bindFunctions = function() {
 	$('#btn_valid_config').on("click", BlocklyDuino.changeToolbox);
 	$('#btn_validConfigGlobale').on("click", BlocklyDuino.validateConfigGlobal);
 	$('#btn_card_picture_change').on("click", BlocklyDuino.validateConfigOffline);
+	$('#textSize').on("click", BlocklyDuino.tailleFonte);
 	
 	$('#btn_valid_msg').on("click", function() {
 		if ($('#ajax_msg').prop("checked")) {

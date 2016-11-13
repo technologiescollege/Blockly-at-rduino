@@ -24,9 +24,14 @@
  */
 'use strict';
 
+goog.provide('Blockly.Blocks.arduino_conversion');
+
+goog.require('Blockly.Blocks');
+goog.require('Blockly.Types');
+
 Blockly.Blocks['conversion_tochar'] = {
   init: function() {
-    this.setColour("#00979D");
+    this.setColour(Blockly.Blocks.arduino_conversion.HUE);
     this.appendValueInput("NAME")
 		//.setCheck('Number')
         .setAlign(Blockly.ALIGN_RIGHT)
@@ -39,7 +44,7 @@ Blockly.Blocks['conversion_tochar'] = {
 
 Blockly.Blocks['conversion_tobyte'] = {
   init: function() {
-    this.setColour("#00979D");
+    this.setColour(Blockly.Blocks.arduino_conversion.HUE);
     this.appendValueInput("NAME")
 		//.setCheck('Number')
         .appendField(Blockly.Msg.CONV_tobyte);
@@ -51,7 +56,7 @@ Blockly.Blocks['conversion_tobyte'] = {
 
 Blockly.Blocks['conversion_toint'] = {
   init: function() {
-    this.setColour("#00979D");
+    this.setColour(Blockly.Blocks.arduino_conversion.HUE);
     this.appendValueInput("NAME")
 		//.setCheck('Number')
         .appendField(Blockly.Msg.CONV_toint);
@@ -63,7 +68,7 @@ Blockly.Blocks['conversion_toint'] = {
 
 Blockly.Blocks['conversion_tofloat'] = {
   init: function() {
-    this.setColour("#00979D");
+    this.setColour(Blockly.Blocks.arduino_conversion.HUE);
     this.appendValueInput("NAME")
 		//.setCheck('Number')
         .appendField(Blockly.Msg.CONV_tofloat);

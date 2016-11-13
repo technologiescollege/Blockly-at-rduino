@@ -21,10 +21,11 @@
 goog.provide('Blockly.Blocks.Zumo_auto');
 
 goog.require('Blockly.Blocks');
+goog.require('Blockly.Types');
 
 Blockly.Blocks['Zumo_line_follower'] = {
   init: function() {
-    this.setColour("#00138b");
+    this.setColour(Blockly.Blocks.Zumo_auto.HUE);
     this.appendDummyInput()
         .appendField(Blockly.Msg.ROBOTS_MOTORS_ZUMO_FCT_FOLLOWER);
     this.appendValueInput("ERROR")
@@ -38,7 +39,7 @@ Blockly.Blocks['Zumo_line_follower'] = {
 
 Blockly.Blocks['Zumo_SensorCalibration'] = {
   init: function() {
-    this.setColour("#00138b");
+    this.setColour(Blockly.Blocks.Zumo_auto.HUE);
     this.appendDummyInput()
         .appendField(Blockly.Msg.ROBOTS_MOTORS_ZUMO_FCT_SENSORCALIBRATION);
     this.setTooltip(Blockly.Msg.ROBOTS_MOTORS_ZUMO_FCT_SENSORCALIBRATION_TOOLTIP);

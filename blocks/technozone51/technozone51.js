@@ -1,12 +1,16 @@
 ﻿//www.technozone51.fr
 
-// define blocks
 'use strict';
+
+goog.provide('Blockly.Blocks.technozone51');
+
+goog.require('Blockly.Blocks');
+goog.require('Blockly.Types');
 
 //btn1white OK
 Blockly.Blocks['technozone_btn1white'] = {
   init: function() {
-    this.setColour("#646464");
+    this.setColour(Blockly.Blocks.technozone51.HUE);
     this.setHelpUrl('http://www.techno-zone-51.fr/dokuwiki2/doku.php?id=documentation:btn1');
 	this.appendDummyInput("")
         .appendField(Blockly.Msg.TECHNOZONE51_TEXT5)
@@ -27,7 +31,7 @@ Blockly.Blocks['technozone_btn1white'] = {
 //btn1black OK
 Blockly.Blocks['technozone_btn1black'] = {
   init: function() {
-    this.setColour("#646464");
+    this.setColour(Blockly.Blocks.technozone51.HUE);
     this.setHelpUrl('http://www.techno-zone-51.fr/dokuwiki2/doku.php?id=documentation:btn1');
 	this.appendDummyInput("")
         .appendField(Blockly.Msg.TECHNOZONE51_TEXT5)
@@ -48,7 +52,7 @@ Blockly.Blocks['technozone_btn1black'] = {
 //btn1green OK
 Blockly.Blocks['technozone_btn1green'] = {
   init: function() {
-    this.setColour("#646464");
+    this.setColour(Blockly.Blocks.technozone51.HUE);
 	this.setHelpUrl('http://www.techno-zone-51.fr/dokuwiki2/doku.php?id=documentation:btn1');
     this.appendDummyInput("")
         .appendField(Blockly.Msg.TECHNOZONE51_TEXT5)
@@ -69,7 +73,7 @@ Blockly.Blocks['technozone_btn1green'] = {
 //btn1red OK
 Blockly.Blocks['technozone_btn1red'] = {
   init: function() {
-    this.setColour("#646464");
+    this.setColour(Blockly.Blocks.technozone51.HUE);
 	this.setHelpUrl('http://www.techno-zone-51.fr/dokuwiki2/doku.php?id=documentation:btn1');
     this.appendDummyInput("")
         .appendField(Blockly.Msg.TECHNOZONE51_TEXT5)
@@ -90,7 +94,7 @@ Blockly.Blocks['technozone_btn1red'] = {
 //Switch1 OK
 Blockly.Blocks['technozone_switch1'] = {
   init: function() {
-    this.setColour("#646464");
+    this.setColour(Blockly.Blocks.technozone51.HUE);
 	this.setHelpUrl('http://www.techno-zone-51.fr/dokuwiki2/doku.php?id=documentation:switch1');
     this.appendDummyInput("")
         .appendField(Blockly.Msg.TECHNOZONE51_TEXT11)
@@ -111,7 +115,7 @@ Blockly.Blocks['technozone_switch1'] = {
 //ils1 OK
 Blockly.Blocks['technozone_ils1'] = {
   init: function() {
-    this.setColour("#646464");
+    this.setColour(Blockly.Blocks.technozone51.HUE);
 	this.setHelpUrl('http://www.techno-zone-51.fr/dokuwiki2/doku.php?id=documentation:ils1');
     this.appendDummyInput("")
         .appendField(Blockly.Msg.TECHNOZONE51_TEXT1)
@@ -132,7 +136,7 @@ Blockly.Blocks['technozone_ils1'] = {
 //proxi1 OK
 Blockly.Blocks['technozone_proxi1'] = {
   init: function() {
-    this.setColour("#646464");
+    this.setColour(Blockly.Blocks.technozone51.HUE);
 	this.setHelpUrl('http://www.techno-zone-51.fr/dokuwiki2/doku.php?id=documentation:proxi1');
     this.appendDummyInput("")
         .appendField(Blockly.Msg.TECHNOZONE51_TEXT15)
@@ -145,7 +149,7 @@ Blockly.Blocks['technozone_proxi1'] = {
         .setAlign(Blockly.ALIGN_RIGHT)
         .appendField(Blockly.Msg.TECHNOZONE51_TEXT16);
     this.setInputsInline(true);
-    this.setOutput(true, 'Number');
+    this.setOutput(true, 'Boolean');
     this.setTooltip(Blockly.Msg.TECHNOZONE51_TEXT17);
   }
 };
@@ -153,7 +157,7 @@ Blockly.Blocks['technozone_proxi1'] = {
 //bari1 OK
 Blockly.Blocks['technozone_bari1'] = {
   init: function() {
-    this.setColour("#646464");
+    this.setColour(Blockly.Blocks.technozone51.HUE);
 	this.setHelpUrl('http://www.techno-zone-51.fr/dokuwiki2/doku.php?id=documentation:bari1');
     this.appendDummyInput("")
         .appendField(Blockly.Msg.TECHNOZONE51_TEXT18)
@@ -174,7 +178,7 @@ Blockly.Blocks['technozone_bari1'] = {
 //Détecteur de ligne OK
 Blockly.Blocks['technozone_lig1'] = {
   init: function() {
-    this.setColour("#646464");
+    this.setColour(Blockly.Blocks.technozone51.HUE);
 	this.setHelpUrl('http://www.techno-zone-51.fr/dokuwiki2/doku.php?id=documentation:lig1');
     this.appendDummyInput("")
         .appendField(Blockly.Msg.TECHNOZONE51_TEXT1)
@@ -195,7 +199,7 @@ Blockly.Blocks['technozone_lig1'] = {
 //cmouv1 OK
 Blockly.Blocks['technozone_cmouv1'] = {
   init: function() {
-    this.setColour("#646464");
+    this.setColour(Blockly.Blocks.technozone51.HUE);
 	this.setHelpUrl('http://www.techno-zone-51.fr/dokuwiki2/doku.php?id=documentation:cmouv1');
     this.appendDummyInput("")
         .appendField(Blockly.Msg.TECHNOZONE51_TEXT1)
@@ -218,7 +222,7 @@ Blockly.Blocks['technozone_cmouv1'] = {
 //potar1 OK
 Blockly.Blocks['technozone_potar1'] = {
   init: function() {
-    this.setColour("#646464");
+    this.setColour(Blockly.Blocks.technozone51.HUE);
 	this.setHelpUrl('http://www.techno-zone-51.fr/dokuwiki2/doku.php?id=documentation:potar1');
     this.appendDummyInput("")
         .appendField(Blockly.Msg.TECHNOZONE51_TEXT22)
@@ -235,7 +239,7 @@ Blockly.Blocks['technozone_potar1'] = {
 //ctn1 OK
 Blockly.Blocks['technozone_ctn1'] = {
   init: function() {
-    this.setColour("#646464");
+    this.setColour(Blockly.Blocks.technozone51.HUE);
 	this.setHelpUrl('http://www.techno-zone-51.fr/dokuwiki2/doku.php?id=documentation:ctn1');
     this.appendDummyInput("")
         .appendField(Blockly.Msg.TECHNOZONE51_TEXT24)
@@ -252,7 +256,7 @@ Blockly.Blocks['technozone_ctn1'] = {
 //ldr1 OK
 Blockly.Blocks['technozone_ldr1'] = {
   init: function() {
-    this.setColour("#646464");
+    this.setColour(Blockly.Blocks.technozone51.HUE);
 	this.setHelpUrl('http://www.techno-zone-51.fr/dokuwiki2/doku.php?id=documentation:ldr1');
     this.appendDummyInput("")
         .appendField(Blockly.Msg.TECHNOZONE51_TEXT26)
@@ -269,7 +273,7 @@ Blockly.Blocks['technozone_ldr1'] = {
 //sonar1 OK
 Blockly.Blocks['technozone_sonar1'] = {
   init: function() {
-    this.setColour("#646464");
+    this.setColour(Blockly.Blocks.technozone51.HUE);
 	this.setHelpUrl('http://www.techno-zone-51.fr/dokuwiki2/doku.php?id=documentation:sonar1');
     this.appendDummyInput("")
 	    .appendField(Blockly.Msg.TECHNOZONE51_TEXT28)
@@ -290,7 +294,7 @@ Blockly.Blocks['technozone_sonar1'] = {
 //led1red OK
 Blockly.Blocks['technozone_led1red'] = {
   init: function() {
-    this.setColour("#646464");
+    this.setColour(Blockly.Blocks.technozone51.HUE);
 	this.setHelpUrl('http://www.techno-zone-51.fr/dokuwiki2/doku.php?id=documentation:led1');
     this.appendDummyInput("")
         .appendField(new Blockly.FieldDropdown([[Blockly.Msg.TECHNOZONE51_TEXT33, "HIGH"], [Blockly.Msg.TECHNOZONE51_TEXT34, "LOW"]]), "STAT")
@@ -309,7 +313,7 @@ Blockly.Blocks['technozone_led1red'] = {
 //led1green OK
 Blockly.Blocks['technozone_led1green'] = {
   init: function() {
-    this.setColour("#646464");
+    this.setColour(Blockly.Blocks.technozone51.HUE);
 	this.setHelpUrl('http://www.techno-zone-51.fr/dokuwiki2/doku.php?id=documentation:led1');
     this.appendDummyInput("")
         .appendField(new Blockly.FieldDropdown([[Blockly.Msg.TECHNOZONE51_TEXT33, "HIGH"], [Blockly.Msg.TECHNOZONE51_TEXT34, "LOW"]]), "STAT")
@@ -328,7 +332,7 @@ Blockly.Blocks['technozone_led1green'] = {
 //led1yellow OK
 Blockly.Blocks['technozone_led1yellow'] = {
   init: function() {
-    this.setColour("#646464");
+    this.setColour(Blockly.Blocks.technozone51.HUE);
 	this.setHelpUrl('http://www.techno-zone-51.fr/dokuwiki2/doku.php?id=documentation:led1');
     this.appendDummyInput("")
         .appendField(new Blockly.FieldDropdown([[Blockly.Msg.TECHNOZONE51_TEXT33, "HIGH"], [Blockly.Msg.TECHNOZONE51_TEXT34, "LOW"]]), "STAT")
@@ -346,7 +350,7 @@ Blockly.Blocks['technozone_led1yellow'] = {
 
 Blockly.Blocks['technozone_relay1'] = {
   init: function() {
-    this.setColour("#646464");
+    this.setColour(Blockly.Blocks.technozone51.HUE);
 	this.setHelpUrl('http://www.techno-zone-51.fr/dokuwiki2/doku.php?id=documentation:relay1');
     this.appendDummyInput("")
         .appendField(new Blockly.FieldDropdown([[Blockly.Msg.TECHNOZONE51_TEXT40, "LOW"], [Blockly.Msg.TECHNOZONE51_TEXT41, "HIGH"]]), "STAT")
@@ -364,7 +368,7 @@ Blockly.Blocks['technozone_relay1'] = {
 
 Blockly.Blocks['technozone_buzzer1'] = {
   init: function() {
-    this.setColour("#646464");
+    this.setColour(Blockly.Blocks.technozone51.HUE);
 	this.setHelpUrl('http://www.techno-zone-51.fr/dokuwiki2/doku.php?id=documentation:buzzer1');
     this.appendDummyInput("")
 		.appendField(Blockly.Msg.TECHNOZONE51_TEXT43)
@@ -391,7 +395,7 @@ Blockly.Blocks['technozone_buzzer1'] = {
 //mot1easycon1 OK
 Blockly.Blocks['technozone_mot1easycon1'] = {
   init: function() {
-    this.setColour("#646464");
+    this.setColour(Blockly.Blocks.technozone51.HUE);
 	this.setHelpUrl('http://www.techno-zone-51.fr/dokuwiki2/doku.php?id=documentation:easybot1');
     this.appendDummyInput("")
         .appendField(Blockly.Msg.TECHNOZONE51_TEXT51)
@@ -417,7 +421,7 @@ Blockly.Blocks['technozone_mot1easycon1'] = {
 //mot1easybot1 OK
 Blockly.Blocks['technozone_mot1easybot1'] = {
   init: function() {
-    this.setColour("#646464");
+    this.setColour(Blockly.Blocks.technozone51.HUE);
 	this.setHelpUrl('http://www.techno-zone-51.fr/dokuwiki2/doku.php?id=documentation:easybot1');
     this.appendDummyInput("")
         .appendField(Blockly.Msg.TECHNOZONE51_TEXT51)
@@ -443,7 +447,7 @@ Blockly.Blocks['technozone_mot1easybot1'] = {
 //mot2 OK
 Blockly.Blocks['technozone_mot2'] = {
   init: function() {
-    this.setColour("#646464");
+    this.setColour(Blockly.Blocks.technozone51.HUE);
 	this.setHelpUrl('http://www.techno-zone-51.fr/dokuwiki2/doku.php?id=documentation:mot2');
     this.appendDummyInput("")
         .appendField(Blockly.Msg.TECHNOZONE51_TEXT51)
@@ -476,7 +480,7 @@ Blockly.Blocks['technozone_mot2'] = {
 //pap1init OK
 Blockly.Blocks['technozone_pap1init'] = {
   init: function() {
-    this.setColour("#646464");
+    this.setColour(Blockly.Blocks.technozone51.HUE);
 	this.setHelpUrl('http://www.techno-zone-51.fr/dokuwiki2/doku.php?id=documentation:pap1');
     this.appendDummyInput("")
         .appendField(Blockly.Msg.TECHNOZONE51_TEXT63)
@@ -500,7 +504,7 @@ Blockly.Blocks['technozone_pap1init'] = {
 //pap1cc OK
 Blockly.Blocks['technozone_pap1cc'] = {
   init: function() {
-    this.setColour("#646464");
+    this.setColour(Blockly.Blocks.technozone51.HUE);
 	this.setHelpUrl('http://www.techno-zone-51.fr/dokuwiki2/doku.php?id=documentation:pap1');
     this.appendDummyInput("")
         .appendField(Blockly.Msg.TECHNOZONE51_TEXT69)
@@ -529,7 +533,7 @@ Blockly.Blocks['technozone_pap1cc'] = {
 //pap1relatif OK
 Blockly.Blocks['technozone_pap1relatif'] = {
   init: function() {
-    this.setColour("#646464");
+    this.setColour(Blockly.Blocks.technozone51.HUE);
 	this.setHelpUrl('http://www.techno-zone-51.fr/dokuwiki2/doku.php?id=documentation:pap1');
     this.appendDummyInput("")
         .appendField(Blockly.Msg.TECHNOZONE51_TEXT71)
@@ -562,7 +566,7 @@ Blockly.Blocks['technozone_pap1relatif'] = {
 //pap1busy OK
 Blockly.Blocks['technozone_pap1busy'] = {
   init: function() {
-    this.setColour("#646464");
+    this.setColour(Blockly.Blocks.technozone51.HUE);
 	this.setHelpUrl('http://www.techno-zone-51.fr/dokuwiki2/doku.php?id=documentation:pap1');
     this.appendDummyInput("")
         .appendField(Blockly.Msg.TECHNOZONE51_TEXT73)
@@ -580,7 +584,7 @@ Blockly.Blocks['technozone_pap1busy'] = {
 //servo1 OK
 Blockly.Blocks['technozone_servo1'] = {
   init: function() {
-    this.setColour("#646464")
+    this.setColour(Blockly.Blocks.technozone51.HUE)
 	this.setHelpUrl('http://www.techno-zone-51.fr/dokuwiki2/doku.php?id=documentation:servo1')
     this.appendDummyInput("")
         .appendField(Blockly.Msg.TECHNOZONE51_TEXT47)
@@ -604,7 +608,7 @@ Blockly.Blocks['technozone_servo1'] = {
 //read_servo1 OK
 Blockly.Blocks['technozone_read_servo1'] = {
   init: function() {
-    this.setColour("#646464");
+    this.setColour(Blockly.Blocks.technozone51.HUE);
 	this.setHelpUrl('http://www.techno-zone-51.fr/dokuwiki2/doku.php?id=documentation:servo1');
     this.appendDummyInput("")
         .appendField(Blockly.Msg.TECHNOZONE51_TEXT50)
@@ -621,7 +625,7 @@ Blockly.Blocks['technozone_read_servo1'] = {
 //lcdinit OK
 Blockly.Blocks['technozone_lcdinit'] = {
   init: function() {
-    this.setColour("#646464");
+    this.setColour(Blockly.Blocks.technozone51.HUE);
 	this.setHelpUrl('http://www.techno-zone-51.fr/dokuwiki2/doku.php?id=documentation:lcd1');
     this.appendDummyInput("")
         .appendField(Blockly.Msg.TECHNOZONE51_TEXT74)
@@ -659,7 +663,7 @@ Blockly.Blocks['technozone_lcdinit'] = {
 //lcdspecial OK
 Blockly.Blocks['technozone_lcdspecial'] = {
   init: function() {
-    this.setColour("#646464");
+    this.setColour(Blockly.Blocks.technozone51.HUE);
 	this.setHelpUrl('http://www.techno-zone-51.fr/dokuwiki2/doku.php?id=documentation:lcd1');
     this.appendDummyInput("")
         .appendField(Blockly.Msg.TECHNOZONE51_TEXT82)
@@ -675,7 +679,7 @@ Blockly.Blocks['technozone_lcdspecial'] = {
 //lcdclear OK
 Blockly.Blocks['technozone_lcdclear'] = {
   init: function() {
-    this.setColour("#646464");
+    this.setColour(Blockly.Blocks.technozone51.HUE);
 	this.setHelpUrl('http://www.techno-zone-51.fr/dokuwiki2/doku.php?id=documentation:lcd1');
     this.appendDummyInput("")
         .appendField(Blockly.Msg.TECHNOZONE51_TEXT92)
@@ -689,7 +693,7 @@ Blockly.Blocks['technozone_lcdclear'] = {
 //lcdwrite OK
 Blockly.Blocks['technozone_lcdwrite'] = {
   init: function() {
-    this.setColour("#646464");
+    this.setColour(Blockly.Blocks.technozone51.HUE);
 	this.setHelpUrl('http://www.techno-zone-51.fr/dokuwiki2/doku.php?id=documentation:lcd1');
     this.appendDummyInput("")
         .appendField(Blockly.Msg.TECHNOZONE51_TEXT94)
@@ -717,7 +721,7 @@ Blockly.Blocks['technozone_lcdwrite'] = {
 //telecsetup OK
 Blockly.Blocks['technozone_telecsetup'] = {
   init: function() {
-    this.setColour("#646464");
+    this.setColour(Blockly.Blocks.technozone51.HUE);
 	this.setHelpUrl('http://www.techno-zone-51.fr/dokuwiki2/doku.php?id=documentation:irf1');
     this.appendDummyInput("")
         .appendField(Blockly.Msg.TECHNOZONE51_TEXT100)
@@ -737,7 +741,7 @@ Blockly.Blocks['technozone_telecsetup'] = {
 //telecflush OK
 Blockly.Blocks['technozone_telecflush'] = {
   init: function() {
-    this.setColour("#646464");
+    this.setColour(Blockly.Blocks.technozone51.HUE);
 	this.setHelpUrl('http://www.techno-zone-51.fr/dokuwiki2/doku.php?id=documentation:irf1');
     this.appendDummyInput("")
         .appendField(Blockly.Msg.TECHNOZONE51_TEXT102)
@@ -753,7 +757,7 @@ Blockly.Blocks['technozone_telecflush'] = {
 //telecint OK
 Blockly.Blocks['technozone_telecinit'] = {
   init: function() {
-    this.setColour("#646464");
+    this.setColour(Blockly.Blocks.technozone51.HUE);
 	this.setHelpUrl('http://www.techno-zone-51.fr/dokuwiki2/doku.php?id=documentation:irf1');
     this.appendDummyInput("")
         .appendField(Blockly.Msg.TECHNOZONE51_TEXT104)
@@ -768,7 +772,7 @@ Blockly.Blocks['technozone_telecinit'] = {
 //telec2 OK
 Blockly.Blocks['technozone_telec2'] = {
   init: function() {
-    this.setColour("#646464");
+    this.setColour(Blockly.Blocks.technozone51.HUE);
 	this.setHelpUrl('http://www.techno-zone-51.fr/dokuwiki2/doku.php?id=documentation:telec2');
     this.appendDummyInput("")
         .appendField(Blockly.Msg.TECHNOZONE51_TEXT106)
@@ -794,7 +798,7 @@ Blockly.Blocks['technozone_telec2'] = {
 //telec1 OK
 Blockly.Blocks['technozone_telec1'] = {
   init: function() {
-    this.setColour("#646464");
+    this.setColour(Blockly.Blocks.technozone51.HUE);
 	this.setHelpUrl('http://www.techno-zone-51.fr/dokuwiki2/doku.php?id=documentation:telec1');
     this.appendDummyInput("")
         .appendField(Blockly.Msg.TECHNOZONE51_TEXT106)
@@ -820,7 +824,7 @@ Blockly.Blocks['technozone_telec1'] = {
 //speech_init OK
 Blockly.Blocks['technozone_speech_init'] = {
   init: function() {
-    this.setColour("#646464");
+    this.setColour(Blockly.Blocks.technozone51.HUE);
 	this.setHelpUrl('http://www.techno-zone-51.fr/dokuwiki2/doku.php?id=parole:faire_parler_vos_cartes_arduino');
     this.appendDummyInput("")
         .appendField(Blockly.Msg.TECHNOZONE51_TEXT167); 
@@ -848,7 +852,7 @@ Blockly.Blocks['technozone_speech_init'] = {
 //speech_say
 Blockly.Blocks['technozone_speech_say'] = {
   init: function() {
-    this.setColour("#646464");
+    this.setColour(Blockly.Blocks.technozone51.HUE);
 	this.setHelpUrl('http://www.techno-zone-51.fr/dokuwiki2/doku.php?id=parole:faire_parler_vos_cartes_arduino');
     this.appendDummyInput("")
         .appendField(Blockly.Msg.TECHNOZONE51_TEXT167);
@@ -865,7 +869,7 @@ Blockly.Blocks['technozone_speech_say'] = {
 //bt_init OK
 Blockly.Blocks['technozone_bt_init'] = {
   init: function() {
-    this.setColour("#646464");
+    this.setColour(Blockly.Blocks.technozone51.HUE);
 	this.setHelpUrl('http://www.techno-zone-51.fr/dokuwiki2/doku.php?id=documentation:btihm1');
     this.appendDummyInput("")
         .appendField(Blockly.Msg.TECHNOZONE51_TEXT157);
@@ -892,7 +896,7 @@ Blockly.Blocks['technozone_bt_init'] = {
 //robot_bt_available OK
 Blockly.Blocks['technozone_robot_bt_available'] = {
   init: function() {
-    this.setColour("#646464");
+    this.setColour(Blockly.Blocks.technozone51.HUE);
 	this.setHelpUrl('http://www.techno-zone-51.fr/dokuwiki2/doku.php?id=documentation:btihm1');
     this.appendDummyInput("")	
         .setAlign(Blockly.ALIGN_RIGHT)
@@ -905,7 +909,7 @@ Blockly.Blocks['technozone_robot_bt_available'] = {
 //robot_bt_read OK
 Blockly.Blocks['technozone_robot_bt_read'] = {
   init: function() {
-    this.setColour("#646464");
+    this.setColour(Blockly.Blocks.technozone51.HUE);
 	this.setHelpUrl('http://www.techno-zone-51.fr/dokuwiki2/doku.php?id=documentation:btihm1');
     this.appendDummyInput("")	
         .setAlign(Blockly.ALIGN_RIGHT)
@@ -918,7 +922,7 @@ Blockly.Blocks['technozone_robot_bt_read'] = {
 //robot_bt_write
 Blockly.Blocks['technozone_robot_bt_write'] = {
   init: function() {
-    this.setColour("#646464");
+    this.setColour(Blockly.Blocks.technozone51.HUE);
 	this.setHelpUrl('http://www.techno-zone-51.fr/dokuwiki2/doku.php?id=documentation:btihm1');
     this.appendValueInput("TEXT")
 		.setCheck('String')
@@ -933,7 +937,7 @@ Blockly.Blocks['technozone_robot_bt_write'] = {
 //ihm_init OK
 Blockly.Blocks['technozone_ihm_init'] = {
   init: function() {
-    this.setColour("#646464");
+    this.setColour(Blockly.Blocks.technozone51.HUE);
 	this.setHelpUrl('http://www.techno-zone-51.fr/dokuwiki2/doku.php?id=documentation:bt1');
     this.appendDummyInput("")
         .appendField(Blockly.Msg.TECHNOZONE51_TEXT111)
@@ -962,7 +966,7 @@ Blockly.Blocks['technozone_ihm_init'] = {
 //robot_ihm_available OK
 Blockly.Blocks['technozone_robot_ihm_available'] = {
   init: function() {
-    this.setColour("#646464");
+    this.setColour(Blockly.Blocks.technozone51.HUE);
 	this.setHelpUrl('http://www.techno-zone-51.fr/dokuwiki2/doku.php?id=documentation:btihm1');
     this.appendDummyInput("")
         .setAlign(Blockly.ALIGN_RIGHT)
@@ -975,7 +979,7 @@ Blockly.Blocks['technozone_robot_ihm_available'] = {
 //robot_ihm_change OK
 Blockly.Blocks['technozone_robot_ihm_change'] = {
   init: function() {
-    this.setColour("#646464");
+    this.setColour(Blockly.Blocks.technozone51.HUE);
 	this.setHelpUrl('http://www.techno-zone-51.fr/dokuwiki2/doku.php?id=documentation:btihm1');
     this.appendDummyInput("")
         .appendField(Blockly.Msg.TECHNOZONE51_TEXT116);
@@ -987,7 +991,7 @@ Blockly.Blocks['technozone_robot_ihm_change'] = {
 //robot_ihm_led_def OK
 Blockly.Blocks['technozone_robot_ihm_led_def'] = {
   init: function() {
-    this.setColour("#646464");
+    this.setColour(Blockly.Blocks.technozone51.HUE);
 	this.setHelpUrl('http://www.techno-zone-51.fr/dokuwiki2/doku.php?id=documentation:btihm1');
     this.appendDummyInput("")
         .appendField(Blockly.Msg.TECHNOZONE51_TEXT118)
@@ -1008,7 +1012,7 @@ Blockly.Blocks['technozone_robot_ihm_led_def'] = {
 //robot_ihm_led_on OK
 Blockly.Blocks['technozone_robot_ihm_led_on'] = {
   init: function() {
-    this.setColour("#646464");
+    this.setColour(Blockly.Blocks.technozone51.HUE);
 	this.setHelpUrl('http://www.techno-zone-51.fr/dokuwiki2/doku.php?id=documentation:btihm1');
     this.appendDummyInput("")
         .appendField(Blockly.Msg.TECHNOZONE51_TEXT122)
@@ -1028,7 +1032,7 @@ Blockly.Blocks['technozone_robot_ihm_led_on'] = {
 //robot_ihm_btn_def OK
 Blockly.Blocks['technozone_robot_ihm_btn_def'] = {
   init: function() {
-    this.setColour("#646464");
+    this.setColour(Blockly.Blocks.technozone51.HUE);
 	this.setHelpUrl('http://www.techno-zone-51.fr/dokuwiki2/doku.php?id=documentation:btihm1');
     this.appendDummyInput("")
         .appendField(Blockly.Msg.TECHNOZONE51_TEXT131)
@@ -1049,7 +1053,7 @@ Blockly.Blocks['technozone_robot_ihm_btn_def'] = {
 //robot_ihm_btn_read OK
 Blockly.Blocks['technozone_robot_ihm_btn_read'] = {
   init: function() {
-    this.setColour("#646464");
+    this.setColour(Blockly.Blocks.technozone51.HUE);
 	this.setHelpUrl('http://www.techno-zone-51.fr/dokuwiki2/doku.php?id=documentation:btihm1');
     this.appendDummyInput("")
         .appendField(Blockly.Msg.TECHNOZONE51_TEXT5)
@@ -1067,7 +1071,7 @@ Blockly.Blocks['technozone_robot_ihm_btn_read'] = {
 //robot_ihm_inter_def OK
 Blockly.Blocks['technozone_robot_ihm_inter_def'] = {
   init: function() {
-    this.setColour("#646464");
+    this.setColour(Blockly.Blocks.technozone51.HUE);
 	this.setHelpUrl('http://www.techno-zone-51.fr/dokuwiki2/doku.php?id=documentation:btihm1');
     this.appendDummyInput("")
         .appendField(Blockly.Msg.TECHNOZONE51_TEXT134)
@@ -1088,7 +1092,7 @@ Blockly.Blocks['technozone_robot_ihm_inter_def'] = {
 //robot_ihm_inter_on OK
 Blockly.Blocks['technozone_robot_ihm_inter_on'] = {
   init: function() {
-    this.setColour("#646464");
+    this.setColour(Blockly.Blocks.technozone51.HUE);
 	this.setHelpUrl('http://www.techno-zone-51.fr/dokuwiki2/doku.php?id=documentation:btihm1');
     this.appendDummyInput("")
         .appendField(new Blockly.FieldDropdown([[Blockly.Msg.TECHNOZONE51_TEXT136, "1"], [Blockly.Msg.TECHNOZONE51_TEXT137, "0"]]), "COLOR")
@@ -1107,7 +1111,7 @@ Blockly.Blocks['technozone_robot_ihm_inter_on'] = {
 //robot_ihm_inter_read OK
 Blockly.Blocks['technozone_robot_ihm_inter_read'] = {
   init: function() {
-    this.setColour("#646464");
+    this.setColour(Blockly.Blocks.technozone51.HUE);
 	this.setHelpUrl('http://www.techno-zone-51.fr/dokuwiki2/doku.php?id=documentation:btihm1');
     this.appendDummyInput("")
         .appendField(Blockly.Msg.TECHNOZONE51_TEXT138)
@@ -1123,7 +1127,7 @@ Blockly.Blocks['technozone_robot_ihm_inter_read'] = {
 //robot_ihm_potar_def OK
 Blockly.Blocks['technozone_robot_ihm_potar_def'] = {
   init: function() {
-    this.setColour("#646464");
+    this.setColour(Blockly.Blocks.technozone51.HUE);
 	this.setHelpUrl('http://www.techno-zone-51.fr/dokuwiki2/doku.php?id=documentation:btihm1');
     this.appendDummyInput("")
         .appendField(Blockly.Msg.TECHNOZONE51_TEXT142)
@@ -1160,7 +1164,7 @@ Blockly.Blocks['technozone_robot_ihm_potar_def'] = {
 //robot_ihm_potar_read OK
 Blockly.Blocks['technozone_robot_ihm_potar_read'] = {
   init: function() {
-    this.setColour("#646464");
+    this.setColour(Blockly.Blocks.technozone51.HUE);
 	this.setHelpUrl('http://www.techno-zone-51.fr/dokuwiki2/doku.php?id=documentation:BTIHM1');
     this.appendDummyInput("")
         .appendField(Blockly.Msg.TECHNOZONE51_TEXT148)
@@ -1174,7 +1178,7 @@ Blockly.Blocks['technozone_robot_ihm_potar_read'] = {
 //robot_ihm_gauge_def
 Blockly.Blocks['technozone_robot_ihm_gauge_def'] = {
   init: function() {
-    this.setColour("#646464");
+    this.setColour(Blockly.Blocks.technozone51.HUE);
 	this.setHelpUrl('http://www.techno-zone-51.fr/dokuwiki2/doku.php?id=documentation:btihm1');
     this.appendDummyInput("")
         .appendField(Blockly.Msg.TECHNOZONE51_TEXT150)
@@ -1203,7 +1207,7 @@ Blockly.Blocks['technozone_robot_ihm_gauge_def'] = {
 //robot_ihm_gauge_write
 Blockly.Blocks['technozone_robot_ihm_gauge_write'] = {
   init: function() {
-    this.setColour("#646464");
+    this.setColour(Blockly.Blocks.technozone51.HUE);
 	this.setHelpUrl('http://www.techno-zone-51.fr/dokuwiki2/doku.php?id=documentation:pap1');
     this.appendDummyInput("")
         .appendField(Blockly.Msg.TECHNOZONE51_TEXT154)
@@ -1227,7 +1231,7 @@ Blockly.Blocks['technozone_robot_ihm_gauge_write'] = {
 
 Blockly.Blocks['technozone_robot_move'] = {
   init: function() {
-    this.setColour("#646464");
+    this.setColour(Blockly.Blocks.technozone51.HUE);
 	this.setHelpUrl('http://www.techno-zone-51.fr/dokuwiki2/doku.php?id=documentation:pap1');
     this.appendDummyInput("")
         .appendField("faire ")
@@ -1252,7 +1256,7 @@ Blockly.Blocks['technozone_robot_move'] = {
 
 Blockly.Blocks['technozone_robot_turn'] = {
   init: function() {
-    this.setColour("#646464");
+    this.setColour(Blockly.Blocks.technozone51.HUE);
 	this.setHelpUrl('http://www.techno-zone-51.fr/dokuwiki2/doku.php?id=documentation:pap1');
     this.appendDummyInput("")
         .appendField("faire tourner le robot à ")
@@ -1277,7 +1281,7 @@ Blockly.Blocks['technozone_robot_turn'] = {
 
 Blockly.Blocks['technozone_robot_stop'] = {
   init: function() {
-    this.setColour("#646464");
+    this.setColour(Blockly.Blocks.technozone51.HUE);
 	this.setHelpUrl('http://www.techno-zone-51.fr/dokuwiki2/doku.php?id=documentation:pap1');
     this.appendDummyInput("")
         .appendField("stopper le robot")
@@ -1289,7 +1293,7 @@ Blockly.Blocks['technozone_robot_stop'] = {
 
 Blockly.Blocks['technozone_robot_btn'] = {
   init: function() {
-    this.setColour("#646464");
+    this.setColour(Blockly.Blocks.technozone51.HUE);
 	this.setHelpUrl('http://www.techno-zone-51.fr/dokuwiki2/doku.php?id=documentation:btn1');
     this.appendDummyInput("")
         .appendField("le bouton RUN/STOP est appuyé ?");
@@ -1300,7 +1304,7 @@ Blockly.Blocks['technozone_robot_btn'] = {
 
 Blockly.Blocks['technozone_robot_irsend'] = {
   init: function() {
-    this.setColour("#646464");
+    this.setColour(Blockly.Blocks.technozone51.HUE);
 	this.setHelpUrl('http://www.techno-zone-51.fr/dokuwiki2/doku.php?id=documentation:buzzer1');
     this.appendDummyInput("")
 		.appendField("déclencher une détection d'obstacles");  
@@ -1313,7 +1317,7 @@ Blockly.Blocks['technozone_robot_irsend'] = {
 
 Blockly.Blocks['technozone_robot_irleft'] = {
   init: function() {
-    this.setColour("#646464");
+    this.setColour(Blockly.Blocks.technozone51.HUE);
 	this.setHelpUrl('http://www.techno-zone-51.fr/dokuwiki2/doku.php?id=documentation:btn1');
     this.appendDummyInput("")
         .appendField("un obstacle a été détecté à gauche ?");
@@ -1324,7 +1328,7 @@ Blockly.Blocks['technozone_robot_irleft'] = {
 
 Blockly.Blocks['technozone_robot_ircenter'] = {
   init: function() {
-    this.setColour("#646464");
+    this.setColour(Blockly.Blocks.technozone51.HUE);
 	this.setHelpUrl('http://www.techno-zone-51.fr/dokuwiki2/doku.php?id=documentation:btn1');
     this.appendDummyInput("")
         .appendField("un obstacle a été détecté au centre ?");
@@ -1335,7 +1339,7 @@ Blockly.Blocks['technozone_robot_ircenter'] = {
 
 Blockly.Blocks['technozone_robot_irright'] = {
   init: function() {
-    this.setColour("#646464");
+    this.setColour(Blockly.Blocks.technozone51.HUE);
 	this.setHelpUrl('http://www.techno-zone-51.fr/dokuwiki2/doku.php?id=documentation:btn1');
     this.appendDummyInput("")
         .appendField("un obstacle a été détecté à droite ?");
@@ -1346,7 +1350,7 @@ Blockly.Blocks['technozone_robot_irright'] = {
 
 Blockly.Blocks['technozone_robot_ligleft'] = {
   init: function() {
-    this.setColour("#646464");
+    this.setColour(Blockly.Blocks.technozone51.HUE);
 	this.setHelpUrl('http://www.techno-zone-51.fr/dokuwiki2/doku.php?id=documentation:btn1');
     this.appendDummyInput("")
         .appendField("une ligne a été détecté à gauche ?");
@@ -1357,7 +1361,7 @@ Blockly.Blocks['technozone_robot_ligleft'] = {
 
 Blockly.Blocks['technozone_robot_ligright'] = {
   init: function() {
-    this.setColour("#646464");
+    this.setColour(Blockly.Blocks.technozone51.HUE);
 	this.setHelpUrl('http://www.techno-zone-51.fr/dokuwiki2/doku.php?id=documentation:btn1');
     this.appendDummyInput("")
         .appendField("une ligne a été détecté à droite ?");
@@ -1368,7 +1372,7 @@ Blockly.Blocks['technozone_robot_ligright'] = {
 
 Blockly.Blocks['technozone_robot_buzzer_tone'] = {
   init: function() {
-    this.setColour("#646464");
+    this.setColour(Blockly.Blocks.technozone51.HUE);
 	this.setHelpUrl('http://www.techno-zone-51.fr/dokuwiki2/doku.php?id=documentation:buzzer1');
     this.appendValueInput("FREQUENCE")
         .appendField("émettre un son d'une fréquence ")
@@ -1387,7 +1391,7 @@ Blockly.Blocks['technozone_robot_buzzer_tone'] = {
 
 Blockly.Blocks['technozone_robot_lcdclear'] = {
   init: function() {
-    this.setColour("#646464");
+    this.setColour(Blockly.Blocks.technozone51.HUE);
 	this.setHelpUrl('http://www.techno-zone-51.fr/dokuwiki2/doku.php?id=documentation:lcd1');
     this.appendDummyInput("")
         .appendField("effacer l'écran LCD")
@@ -1400,7 +1404,7 @@ Blockly.Blocks['technozone_robot_lcdclear'] = {
 
 Blockly.Blocks['technozone_robot_lcdwrite'] = {
   init: function() {
-    this.setColour("#646464");
+    this.setColour(Blockly.Blocks.technozone51.HUE);
 	this.setHelpUrl('http://www.techno-zone-51.fr/dokuwiki2/doku.php?id=documentation:lcd1');
     this.appendDummyInput("")
         .appendField("écrire sur l'écran LCD")
@@ -1428,7 +1432,7 @@ Blockly.Blocks['technozone_robot_lcdwrite'] = {
 
 Blockly.Blocks['technozone_robot_lcdspecial'] = {
   init: function() {
-    this.setColour("#646464");
+    this.setColour(Blockly.Blocks.technozone51.HUE);
 	this.setHelpUrl('http://www.techno-zone-51.fr/dokuwiki2/doku.php?id=documentation:lcd1');
     this.appendDummyInput("")
         .appendField("fonctions spéciales de l'écran LCD")
@@ -1443,7 +1447,7 @@ Blockly.Blocks['technozone_robot_lcdspecial'] = {
 
 Blockly.Blocks['technozone_robot_ihm_init'] = {
   init: function() {
-    this.setColour("#646464");
+    this.setColour(Blockly.Blocks.technozone51.HUE);
 	this.setHelpUrl('http://www.techno-zone-51.fr/dokuwiki2/doku.php?id=documentation:btn1');
     this.appendDummyInput("")
         .appendField("initialiser la console IHM");

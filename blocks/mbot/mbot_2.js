@@ -2,15 +2,16 @@
 
 'use strict';
 
-goog.provide('Blockly.Arduino.mBot');
+goog.provide('Blockly.Blocks.mBot_2');
 
-goog.require('Blockly.Arduino');
+goog.require('Blockly.Blocks');
+goog.require('Blockly.Types');
 
 // define blocks
 
 Blockly.Blocks['mbot_mot_left'] = {
   init: function() {
-    this.setColour("#33C7F2");
+    this.setColour(Blockly.Blocks.mBot_2.HUE);
 	this.appendValueInput("PWM", 'Number')
         .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/mbot/mot_left.jpg', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize))
         .setCheck('Number')
@@ -30,7 +31,7 @@ Blockly.Blocks['mbot_mot_left'] = {
 
 Blockly.Blocks['mbot_mot_right'] = {
   init: function() {
-    this.setColour("#33C7F2");
+    this.setColour(Blockly.Blocks.mBot_2.HUE);
 	this.appendValueInput("PWM", 'Number')
         .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/mbot/mot_right.jpg', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize))
         .setCheck('Number')

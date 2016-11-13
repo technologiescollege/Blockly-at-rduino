@@ -1,3 +1,9 @@
+'use strict';
+
+goog.provide('Blockly.Arduino.ledRGB_WS2812B');
+
+goog.require('Blockly.Arduino');
+
 Blockly.Arduino.lp2i_ledRGB_WS2812B_init = function() {
   var pin_ledrgb = Blockly.Arduino.valueToCode(this, 'Pin_LedRGB_init', Blockly.Arduino.ORDER_ATOMIC);
   var numpixels = Blockly.Arduino.valueToCode(this, 'Number_of_Pixels', Blockly.Arduino.ORDER_ATOMIC);

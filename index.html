@@ -10,12 +10,15 @@
 <script type="text/javascript" src="core_Ardublockly/type.js"></script>
 <script type="text/javascript" src="core_Ardublockly/types.js"></script>
 <script type="text/javascript" src="core_Ardublockly/static_typing.js"></script>
+<script type="text/javascript" src="core_Ardublockly/instances.js"></script>
+<script type="text/javascript" src="core_Ardublockly/field_instance.js"></script>
 <script type="text/javascript" src="generators/generator_arduino.js"></script>
 
 <script type="text/javascript" src="core_BlocklyArduino/blockly@rduino.js"></script>
 <script type="text/javascript" src="core_BlocklyArduino/blockly@rduino_boards.js"></script>
 <script type="text/javascript" src="core_BlocklyArduino/blockly@rduino_tools.js"></script>
 <script type="text/javascript" src="core_BlocklyArduino/blockly@rduino_visual.js"></script>
+<script type="text/javascript" src="core_BlocklyArduino/jscolor.js"></script>
 <script type="text/javascript" src="core_BlocklyArduino/spin.js"></script>
 <script type="text/javascript" src="core_BlocklyArduino/jquery-2.1.3.min.js"></script>
 <script type="text/javascript" src="core_BlocklyArduino/bootstrap.min.3.3.6.js"></script>
@@ -32,6 +35,7 @@
 <script type="text/javascript" src="blocks/blocklyarduino/text.js"></script>
 <script type="text/javascript" src="blocks/blocklyarduino/variables.js"></script>
 <script type="text/javascript" src="blocks/arduino_resume.js"></script>
+<script type="text/javascript" src="blocks/blocks_colors.js"></script>
 
 <!--use core_Ardublock type function, add it to blocks from Blockly, must be LAST BLOCKS js-->
 <script type="text/javascript" src="blocks/blocks_typing.js"></script>
@@ -174,7 +178,15 @@
 		   </a>
 		   <a id="btn_tuto" class='btn btn-success btn-info text-left' href="http://blockly.technologiescollege.fr/forum/" target=_blank role='button'>
 		       <span class="glyphicon glyphicon-question-sign"></span>
-		   </a>
+		   </a>		   
+			<!--input class="jscolor {hash:true}" onchange="update(this.jscolor)">
+			<script>
+					function update(jscolor) {
+						// 'jscolor' instance can be used as a string
+						document.getElementById('menuPanel').style.backgroundColor = jscolor;
+						Blockly.Blocks.APDS9960.HUE = "#" + jscolor;
+					}
+			</script-->
 		</div>       
     </div>
 
@@ -301,7 +313,7 @@
 			  <br /> - Codebender - CompilerFlasher : (<a href='https://codebender.cc' target='blank'>https://codebender.cc</a>)
               <br /> - JQuerry (<a href='https://jquery.com' target='blank'>https://jquery.com)</a>
 			  <br />
-			  <br /><i>version 9-11-2016 - v2.1 "SuperUpload"</i>
+			  <br /><i>version 23-11-2016 - v2.1 "SuperUpload"</i>
 			  <br />
 			  <br />
 			  <div align="center" id="paypal_about">
@@ -528,6 +540,7 @@
 				<div class="arduino_card_mini_picture_div"><img id="arduino_card_mini_picture" width=150px></div>
 				<div class="modal-body-config-global_left">
 					<label id="span_languageMenu"> </label>  <select id="languageMenu"></select><br/>
+					<!--label id="textSize" class="mod">tototo</label><input name="textSizeSelect" class="form-control" style="" min="0" max="30" step="1" value="12" type="number"></input-->
 					<div id="divCard">
 							<label id="labelArduinoCard"></label>
 							<div id="pinout_AIO_off"></div>
@@ -560,15 +573,15 @@
 						<a id="btn_MyArduino" class='btn btn-primary text-left' href="https://github.com/technologiescollege/arduino" target="_blank" role='button'>
 						  <span class="glyphicon glyphicon-download"></span>
 						  <span id="span_Download_Arduino"> </span>
-						 </a>
+						</a>
 						<a id="btn_Help_Offline" class='btn btn-arduino text-left' href="https://github.com/technologiescollege/Blockly-rduino-communication" target="_blank" role='button'>
 						  <span class="glyphicon glyphicon-download"></span>
 						  <span id="span_Download_local"> </span>
-						 </a>
+						</a>
 						<a id="btn_Help_Online" class='btn btn-codebender text-left' href="https://codebender.cc/static/plugin" target="_blank" role='button'>
 						  <span class="glyphicon glyphicon-download"></span>
 						  <span id="span_Download_codebender"> </span>
-						 </a>
+						</a>
 					</div>
 				</div>
 			</div>  

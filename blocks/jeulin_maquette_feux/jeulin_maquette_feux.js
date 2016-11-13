@@ -3,10 +3,15 @@
 // define blocks
 'use strict';
 
+goog.provide('Blockly.Blocks.jeulin_appel_pieton');
+
+goog.require('Blockly.Blocks');
+goog.require('Blockly.Types');
+
 //appel_pieton_voie1 OK
 Blockly.Blocks['jeulin_appel_pieton_voie1'] = {
   init: function() {
-    this.setColour("#0099FF");
+    this.setColour(Blockly.Blocks.jeulin_appel_pieton.HUE);
     this.setHelpUrl('http://www.techno-zone-51.fr/dokuwiki2/doku.php?id=documentation:btn1');
 	this.appendDummyInput("")
         .appendField(Blockly.Msg.TECHNOZONE51_TEXT183)
@@ -27,7 +32,7 @@ Blockly.Blocks['jeulin_appel_pieton_voie1'] = {
 //appel_pieton_voie2 OK
 Blockly.Blocks['jeulin_appel_pieton_voie2'] = {
   init: function() {
-    this.setColour("#0099FF");
+    this.setColour(Blockly.Blocks.jeulin_appel_pieton.HUE);
     this.setHelpUrl('http://www.techno-zone-51.fr/dokuwiki2/doku.php?id=documentation:btn1');
 	this.appendDummyInput("")
         .appendField(Blockly.Msg.TECHNOZONE51_TEXT184)
@@ -48,7 +53,7 @@ Blockly.Blocks['jeulin_appel_pieton_voie2'] = {
 //detection_magnetique_ils1 OK
 Blockly.Blocks['jeulin_detection_magnetique_ils1'] = {
   init: function() {
-    this.setColour("#0099FF");
+    this.setColour(Blockly.Blocks.jeulin_appel_pieton.HUE);
 	this.setHelpUrl('http://www.techno-zone-51.fr/dokuwiki2/doku.php?id=documentation:ils1');
     this.appendDummyInput("")
         .appendField(Blockly.Msg.TECHNOZONE51_TEXT185)
@@ -69,7 +74,7 @@ Blockly.Blocks['jeulin_detection_magnetique_ils1'] = {
 //detection_infrarouge_bari1 OK
 Blockly.Blocks['jeulin_detection_infrarouge_bari1'] = {
   init: function() {
-    this.setColour("#0099FF");
+    this.setColour(Blockly.Blocks.jeulin_appel_pieton.HUE);
 	this.setHelpUrl('http://www.techno-zone-51.fr/dokuwiki2/doku.php?id=documentation:bari1');
     this.appendDummyInput("")
         .appendField(Blockly.Msg.TECHNOZONE51_TEXT186)
@@ -90,7 +95,7 @@ Blockly.Blocks['jeulin_detection_infrarouge_bari1'] = {
 //detection_luminosite_ldr1 OK
 Blockly.Blocks['jeulin_detection_luminosite_ldr1'] = {
   init: function() {
-    this.setColour("#0099FF");
+    this.setColour(Blockly.Blocks.jeulin_appel_pieton.HUE);
 	this.setHelpUrl('http://www.techno-zone-51.fr/dokuwiki2/doku.php?id=documentation:ldr1');
     this.appendDummyInput("")
         .appendField(Blockly.Msg.TECHNOZONE51_TEXT187)

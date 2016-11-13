@@ -1,6 +1,11 @@
 ﻿// define blocks
 'use strict';
 
+goog.provide('Blockly.Blocks.u8g');
+
+goog.require('Blockly.Blocks');
+goog.require('Blockly.Types');
+
 Blockly.Blocks['lp2i_u8g_draw_string'] = {
  init: function() {
     this.appendDummyInput()
@@ -21,7 +26,7 @@ Blockly.Blocks['lp2i_u8g_draw_string'] = {
     this.setInputsInline(false);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    this.setColour("#1B2944");
+    this.setColour(Blockly.Blocks.u8g.HUE);
     this.setTooltip('');
     this.setHelpUrl('http://blogpeda.ac-poitiers.fr/techno-jean-mace/2016/02/07/utilisation-dun-afficheur-oled-128x64-i2c-avec-blockly-arduino/');
   }
@@ -52,7 +57,7 @@ Blockly.Blocks['lp2i_u8g_draw_4strings'] = {
     this.setInputsInline(false);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    this.setColour("#1B2944");
+    this.setColour(Blockly.Blocks.u8g.HUE);
     this.setTooltip('');
     this.setHelpUrl('http://blogpeda.ac-poitiers.fr/techno-jean-mace/2016/02/07/utilisation-dun-afficheur-oled-128x64-i2c-avec-blockly-arduino/');
   }
@@ -77,7 +82,7 @@ Blockly.Blocks['lp2i_u8g_print'] = {
     this.setInputsInline(false);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    this.setColour("#1B2944");
+    this.setColour(Blockly.Blocks.u8g.HUE);
     this.setTooltip('');
     this.setHelpUrl('http://blogpeda.ac-poitiers.fr/techno-jean-mace/2016/02/07/utilisation-dun-afficheur-oled-128x64-i2c-avec-blockly-arduino/');
   }
@@ -125,7 +130,7 @@ Blockly.Blocks['lp2i_u8g_4draw_print'] = {
     this.setInputsInline(false);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    this.setColour("#1B2944");
+    this.setColour(Blockly.Blocks.u8g.HUE);
     this.setTooltip('');
     this.setHelpUrl('http://blogpeda.ac-poitiers.fr/techno-jean-mace/2016/02/07/utilisation-dun-afficheur-oled-128x64-i2c-avec-blockly-arduino/');
   }

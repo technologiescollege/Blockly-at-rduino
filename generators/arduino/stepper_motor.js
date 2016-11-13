@@ -9,7 +9,7 @@
  */
 'use strict';
 
-goog.provide('Blockly.Arduino.stepper');
+goog.provide('Blockly.Arduino.stepper_motor');
 
 goog.require('Blockly.Arduino');
 

@@ -26,6 +26,8 @@
  * @author gasolin@gmail.com (Fred Lin)
  */
 
+'use strict';
+ 
 goog.provide('Blockly.Arduino.grove');
 
 goog.require('Blockly.Arduino');

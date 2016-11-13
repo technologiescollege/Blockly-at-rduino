@@ -24,9 +24,10 @@
  */
 'use strict';
 
-goog.provide('Blockly.Blocks.softserial');
+goog.provide('Blockly.Blocks.arduino_softserial');
 
 goog.require('Blockly.Blocks');
+goog.require('Blockly.Types');
 
 
 /**
@@ -35,7 +36,7 @@ goog.require('Blockly.Blocks');
 
 Blockly.Blocks['soft_init'] = {
   init: function() {
-    this.setColour("#00979D");
+    this.setColour(Blockly.Blocks.arduino_softserial.HUE);
 	this.setHelpUrl('http://arduino.cc/en/Reference/AnalogWrite');
     this.appendDummyInput()
 		.appendField(Blockly.Msg.SSERIAL_Init)
@@ -57,7 +58,7 @@ Blockly.Blocks['soft_init'] = {
 
 Blockly.Blocks['soft_read'] = {
   init: function() {
-    this.setColour("#00979D");
+    this.setColour(Blockly.Blocks.arduino_softserial.HUE);
 	this.setHelpUrl('');
 	this.appendDummyInput("")
 		.appendField(Blockly.Msg.SSERIAL_RX)
@@ -80,7 +81,7 @@ Blockly.Blocks['soft_read'] = {
 Blockly.Blocks['soft_print'] = {
   init: function() {
 	this.setHelpUrl('http://www.arduino.cc/en/Serial/Print');
-    this.setColour("#00979D");
+    this.setColour(Blockly.Blocks.arduino_softserial.HUE);
 	this.appendDummyInput("")
 		.appendField(Blockly.Msg.SSERIAL_RX)
         .appendField(new Blockly.FieldTextInput(''), 'RX_ss');
@@ -97,7 +98,7 @@ Blockly.Blocks['soft_print'] = {
 Blockly.Blocks['soft_write'] = {
   init: function() {
 	this.setHelpUrl('http://www.arduino.cc/en/Serial/Print');
-    this.setColour("#00979D");
+    this.setColour(Blockly.Blocks.arduino_softserial.HUE);
 	this.appendDummyInput("")
 		.appendField(Blockly.Msg.SSERIAL_RX)
         .appendField(new Blockly.FieldTextInput(''), 'RX_ss');
@@ -114,7 +115,7 @@ Blockly.Blocks['soft_write'] = {
 Blockly.Blocks['soft_available'] = {
   init: function() {
 	this.setHelpUrl('');
-    this.setColour("#00979D");
+    this.setColour(Blockly.Blocks.arduino_softserial.HUE);
 	this.appendDummyInput("")
 		.appendField(Blockly.Msg.SSERIAL_RX)
         .appendField(new Blockly.FieldTextInput(''), 'RX_ss')
@@ -127,7 +128,7 @@ Blockly.Blocks['soft_available'] = {
 
 Blockly.Blocks['soft_flush'] = {
   init: function() {
-    this.setColour("#00979D");
+    this.setColour(Blockly.Blocks.arduino_softserial.HUE);
 	this.setHelpUrl('http://arduino.cc/en/Serial/Flush');
 	this.appendDummyInput("")
 		.appendField(Blockly.Msg.SSERIAL_RX)

@@ -23,7 +23,7 @@
  */
 'use strict';
 
-goog.provide('Blockly.Arduino.multi-function');
+goog.provide('Blockly.Arduino.multifunction');
 
 goog.require('Blockly.Arduino');
 

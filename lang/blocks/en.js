@@ -553,6 +553,8 @@ Blockly.Msg.CAT_ESUS_MOTORS = "Motors control";
 
 Blockly.Msg.CAT_APDS_9960_RGB_Gesture = "color + movement"; //added 9 october 2016
 
+Blockly.Msg.CAT_BT_ELECTRONICS = "Bluetooth Electronics"; //added 13 november 2016
+
 
 //**********************************blocks***********************************************
 //**********************************blocks***********************************************
@@ -1267,6 +1269,7 @@ Blockly.Msg.FISCHERTECHNIK_TEXT13 = "broche de commande de la Vitesse (PWM~)";
 Blockly.Msg.FISCHERTECHNIK_TEXT14 = "sens horaire (255) ou Antihoraire (0)?";
 Blockly.Msg.FISCHERTECHNIK_TEXT15 = "vitesse MAX (VRAI) ou nulle (FAUX)";
 Blockly.Msg.FISCHERTECHNIK_TEXT16 = "Carte de commande de deux moteurs CC";
+Blockly.Msg.FISCHERTECHNIK_TEXT17 = " est appuyée ?";
 
 //Added April 19th 2016
 Blockly.Msg.MBOT_HELPURL = "http://www.makeblock.cc/mbot/";
@@ -1282,7 +1285,6 @@ Blockly.Msg.MBOT_MOTOR_SENS = "1 : avancer | 0 : reculer";
 Blockly.Msg.MBOT_MOTOR_LEFT_SENS = "moteur gauche : sens";
 Blockly.Msg.MBOT_MOTOR_LEFT_PWM = "moteur gauche : puissance";
 Blockly.Msg.MBOT_MOTOR_RIGHT_SENS = "moteur droit : sens";
-Blockly.Msg.FISCHERTECHNIK_TEXT17 = " est appuyée ?";
 
 //Added May 1rst 2016
 Blockly.Msg.ROMEO_HELPURL = "http://www.dfrobot.com/wiki/index.php/Romeo_V2-All_in_one_Controller_%28R3%29_%28SKU:DFR0225%29";
@@ -1412,3 +1414,13 @@ Blockly.Msg.ARDUINO_INOUT_DIGITAL_MODE_INPUT2 = "to";
 Blockly.Msg.ARDUINO_INOUT_DIGITAL_MODE_DROPDOWN = [["INPUT", "INPUT"], ["OUTPUT", "OUTPUT"], ["INPUT_PULLUP", "INPUT_PULLUP"]];
 Blockly.Msg.ARDUINO_INOUT_DIGITAL_MODE_TOOLTIP = "Configures the specified pin to behave either as an input or an output";
 
+//******** Bluetotth Electronics example http://www.keuwl.com/electronics.html
+Blockly.Msg.BT_ELEC_Init_HELPURL = "https://play.google.com/store/apps/details?id=com.keuwl.arduinobluetooth&hl=fr";
+Blockly.Msg.BT_ELEC_init_text = "QR Code link to Android application:";
+Blockly.Msg.BT_ELEC_TOOLTIP = "download Android application";
+Blockly.Msg.BT_ELEC_LED_brightness_HELPURL = "http://www.keuwl.com/electronics/rduino/bluet/02-pwm-leds/";
+Blockly.Msg.BT_ELEC_LED_brightness_text = "control the brightness of 3 LEDs";
+Blockly.Msg.BT_ELEC_LED_brightness_TOOLTIP = "see demo in Help";
+Blockly.Msg.BT_ELEC_RC_car_HELPURL = "http://www.keuwl.com/electronics/rduino/bluet/01-rc-car/";
+Blockly.Msg.BT_ELEC_RC_car_text = "4 buttons controlling a RC car";
+Blockly.Msg.BT_ELEC_RC_car_TOOLTIP = "see demo in Help";

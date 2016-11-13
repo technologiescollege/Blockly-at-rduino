@@ -2,15 +2,16 @@
 
 'use strict';
 
-goog.provide('Blockly.Arduino.mBot');
+goog.provide('Blockly.Blocks.mBot_3');
 
-goog.require('Blockly.Arduino');
+goog.require('Blockly.Blocks');
+goog.require('Blockly.Types');
 
 // define blocks
 
 Blockly.Blocks['mbot_left_sens'] = {
   init: function() {
-    this.setColour("#33C7F2");
+    this.setColour(Blockly.Blocks.mBot_3.HUE);
 	this.appendDummyInput()
         .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/mbot/mot_left.jpg', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize))
 		.setAlign(Blockly.ALIGN_RIGHT)
@@ -28,7 +29,7 @@ Blockly.Blocks['mbot_left_sens'] = {
 
 Blockly.Blocks['mbot_left_PWM'] = {
   init: function() {
-    this.setColour("#33C7F2");
+    this.setColour(Blockly.Blocks.mBot_3.HUE);
 	this.appendValueInput("PWM", 'Number')
         .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/mbot/mot_left.jpg', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize))
         .setCheck('Number')
@@ -43,7 +44,7 @@ Blockly.Blocks['mbot_left_PWM'] = {
 
 Blockly.Blocks['mbot_right_sens'] = {
   init: function() {
-    this.setColour("#33C7F2");
+    this.setColour(Blockly.Blocks.mBot_3.HUE);
 	this.appendDummyInput()
         .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/mbot/mot_right.jpg', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize))
 		.setAlign(Blockly.ALIGN_RIGHT)
@@ -61,7 +62,7 @@ Blockly.Blocks['mbot_right_sens'] = {
 
 Blockly.Blocks['mbot_right_PWM'] = {
   init: function() {
-    this.setColour("#33C7F2");
+    this.setColour(Blockly.Blocks.mBot_3.HUE);
 	this.appendValueInput("PWM", 'Number')
         .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/mbot/mot_right.jpg', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize))
         .setCheck('Number')

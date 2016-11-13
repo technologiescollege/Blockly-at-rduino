@@ -6,7 +6,6 @@ goog.require('Blockly.Blocks');
 /**
  * Common HSV hue for all blocks in this category.
  */ 
-Blockly.Blocks.EsusBoard.HUE = "#2475FA";
 
 Blockly.Blocks['EsusBoard_init'] = {
   init: function() {

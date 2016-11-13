@@ -24,7 +24,7 @@
  * @author erickennedy@outlook.com  Eric Kennedy
  */
 
-goog.provide('Blockly.Arduino.sensors');
+goog.provide('Blockly.Arduino.robots_sensors');
 
 goog.require('Blockly.Arduino');
 

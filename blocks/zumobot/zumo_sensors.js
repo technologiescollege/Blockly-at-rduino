@@ -28,10 +28,11 @@
 goog.provide('Blockly.Blocks.Zumo_sensors');
 
 goog.require('Blockly.Blocks');
+goog.require('Blockly.Types');
 
 Blockly.Blocks['Zumo_setup_button_wait_il'] = {
   init: function() {
-    this.setColour("#00138b");
+    this.setColour(Blockly.Blocks.Zumo_sensors.HUE);
     this.appendDummyInput()
         .appendField("1 Time wait - push")/*
         //.appendField(new Blockly.FieldImage("http://", Blockly.Arduino.imageSize, Blockly.Arduino.imageSize))
@@ -46,7 +47,7 @@ Blockly.Blocks['Zumo_setup_button_wait_il'] = {
 
 Blockly.Blocks['Zumo_setup_button_wait_iph'] = {
   init: function() {
-    this.setColour("#00138b");
+    this.setColour(Blockly.Blocks.Zumo_sensors.HUE);
     this.appendDummyInput()
         .appendField("1 Time wait - pull")/*
         //.appendField(new Blockly.FieldImage("http://", Blockly.Arduino.imageSize, Blockly.Arduino.imageSize))
@@ -61,7 +62,7 @@ Blockly.Blocks['Zumo_setup_button_wait_iph'] = {
 
 Blockly.Blocks['Zumo_wait_button_push'] = {
   init: function() {
-    this.setColour("#00138b");
+    this.setColour(Blockly.Blocks.Zumo_sensors.HUE);
     this.appendDummyInput()
         .appendField("attendre appui sur le bouton");
     this.setTooltip("tant qu'on n'appuie pas sur le bouton le programe est en attente");

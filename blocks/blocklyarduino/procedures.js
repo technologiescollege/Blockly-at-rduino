@@ -28,10 +28,6 @@ goog.provide('Blockly.Blocks.procedures');
 
 goog.require('Blockly.Blocks');
 
-
-/**
- * Common HSV hue for all blocks in this category.
- */
 Blockly.Blocks.procedures.HUE = "#632D99";
 
 Blockly.Blocks['procedures_defnoreturn'] = {

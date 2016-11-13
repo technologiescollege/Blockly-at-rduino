@@ -25,13 +25,14 @@
  * @author erickennedy@outlook.com  Eric Kennedy
  */
 
-goog.provide('Blockly.Blocks.sensors');
+goog.provide('Blockly.Blocks.robots_sensors');
 
 goog.require('Blockly.Blocks');
+goog.require('Blockly.Types');
 
 Blockly.Blocks['IR_serial_decoder'] = {
   init: function() {
-    this.setColour("#00979D");
+    this.setColour(Blockly.Blocks.robots_sensors.HUE);
     this.appendDummyInput()
         .appendField(Blockly.Msg.ROBOTS_MISC_IR_DECODE_TITLE)
         .appendField(Blockly.Msg.ROBOTS_MISC_IR_SENSOR_PIN)
@@ -44,7 +45,7 @@ Blockly.Blocks['IR_serial_decoder'] = {
 
 Blockly.Blocks['IR_get_blink'] = {
   init: function() {
-    this.setColour("#00979D");
+    this.setColour(Blockly.Blocks.robots_sensors.HUE);
 	this.appendValueInput("IR_NUM")
        .setCheck('Number')
         .appendField(Blockly.Msg.ROBOTS_MISC_IR_GET_BLINK_TITLE)
@@ -67,7 +68,7 @@ Blockly.Blocks['IR_get_blink'] = {
 
 Blockly.Blocks['IR_get'] = {
   init: function() {
-    this.setColour("#00979D");
+    this.setColour(Blockly.Blocks.robots_sensors.HUE);
 	this.appendDummyInput()
 		.appendField(Blockly.Msg.ROBOTS_MISC_IR_GET_TITLE)
 	    .appendField(Blockly.Msg.ROBOTS_MISC_IR_SENSOR_PIN)

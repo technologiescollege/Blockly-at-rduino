@@ -24,7 +24,7 @@
  * @author erickennedy@outlook.com  Eric Kennedy
  */
 
-goog.provide('Blockly.Arduino.motors');
+goog.provide('Blockly.Arduino.Zumo_motors');
 
 goog.require('Blockly.Arduino');
 

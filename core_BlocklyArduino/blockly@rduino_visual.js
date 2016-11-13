@@ -252,3 +252,8 @@ BlocklyDuino.OnOffLine = function() {
 		$('#pinout_AIO_off').prepend($('#pinout'));	  
   }
 };
+
+ 
+BlocklyDuino.tailleFonte = function(taille) {
+	document.getElementsByClass("mod")[0].style.fontSize = taille + "[b]px[/b]";	
+}

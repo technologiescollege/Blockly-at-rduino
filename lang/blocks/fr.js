@@ -543,6 +543,8 @@ Blockly.Msg.CAT_ESUS_MOTORS = "commandes moteurs";
 
 Blockly.Msg.CAT_APDS_9960_RGB_Gesture = "couleur + mouvement"; //added 9 october 2016
 
+Blockly.Msg.CAT_BT_ELECTRONICS = "Bluetooth Electronics"; //added 13 november 2016
+
 Blockly.Msg.FIELDDROPDOWN = [["1 (état haut)", "HIGH"], ["0 (état bas)", "LOW"]];
 Blockly.Msg.FIELDDROPDOWN_ONOFF = [["marche", "ON"], ["arrêt", "OFF"]]
 Blockly.Msg.INOUT_HIGH_LEVEL = "1 (état haut)";
@@ -1405,3 +1407,14 @@ Blockly.Msg.ARDUINO_INOUT_DIGITAL_MODE_INPUT1 = "Changer le mode de fonctionneme
 Blockly.Msg.ARDUINO_INOUT_DIGITAL_MODE_INPUT2 = "à";
 Blockly.Msg.ARDUINO_INOUT_DIGITAL_MODE_DROPDOWN = [["ENTREE", "INPUT"], ["SORTIE", "OUTPUT"], ["ENTREE_PULLUP", "INPUT_PULLUP"]];
 Blockly.Msg.ARDUINO_INOUT_DIGITAL_MODE_TOOLTIP = "Configurer la broche spécifée pour fonctionner comme une entrée ou une sortie";
+
+//******** Bluetotth Electronics example http://www.keuwl.com/electronics.html
+Blockly.Msg.BT_ELEC_Init_HELPURL = "https://play.google.com/store/apps/details?id=com.keuwl.arduinobluetooth&hl=fr";
+Blockly.Msg.BT_ELEC_init_text = "photographier le QR code pour télécharger l'app Android :";
+Blockly.Msg.BT_ELEC_TOOLTIP = "téléchargement de l'application pour Android";
+Blockly.Msg.BT_ELEC_LED_brightness_HELPURL = "http://www.keuwl.com/electronics/rduino/bluet/02-pwm-leds/";
+Blockly.Msg.BT_ELEC_LED_brightness_text = "contrôle de la luminosité de 3 DEL";
+Blockly.Msg.BT_ELEC_LED_brightness_TOOLTIP = "voir la démo dans l'aide";
+Blockly.Msg.BT_ELEC_RC_car_HELPURL = "http://www.keuwl.com/electronics/rduino/bluet/01-rc-car/";
+Blockly.Msg.BT_ELEC_RC_car_text = "télécommande d'un véhicule par le téléphone";
+Blockly.Msg.BT_ELEC_RC_car_TOOLTIP = "voir la démo dans l'aide";

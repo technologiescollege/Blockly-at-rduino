@@ -1,7 +1,11 @@
 ﻿//www.technozone51fr
 
-// define blocks
 'use strict';
+
+goog.provide('Blockly.Blocks.technozone51_barbot');
+
+goog.require('Blockly.Blocks');
+goog.require('Blockly.Types');
 
 //btn1white OK
 Blockly.Blocks['technozone_btn1white'] = {

@@ -7,11 +7,7 @@
 goog.provide('Blockly.Blocks.flycam');
 
 goog.require('Blockly.Blocks');
-
-/**
- * Common HSV hue for all blocks in this category.
- */
-Blockly.Blocks.flycam.HUE = '#46C286';
+goog.require('Blockly.Types');
 
 Blockly.Blocks.flycam_switch = {
   init: function() {

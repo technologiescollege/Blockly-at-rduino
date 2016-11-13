@@ -1,6 +1,11 @@
 ﻿// define blocks
 'use strict';
 
+goog.provide('Blockly.Blocks.ledRGB_WS2812B');
+
+goog.require('Blockly.Blocks');
+goog.require('Blockly.Types');
+
 Blockly.Blocks['lp2i_ledRGB_WS2812B_init'] = {
   init: function() {
     this.appendDummyInput()
@@ -17,7 +22,7 @@ Blockly.Blocks['lp2i_ledRGB_WS2812B_init'] = {
     this.setInputsInline(false);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    this.setColour("#CAC7BE");
+    this.setColour(Blockly.Blocks.ledRGB_WS2812B.HUE);
     this.setTooltip('');
     this.setHelpUrl('http://blogpeda.ac-poitiers.fr/techno-jean-mace/2016/02/07/utilisation-de-modules-led-rgb-ws2812b-avec-blockly-arduino/');
   }
@@ -51,7 +56,7 @@ Blockly.Blocks['lp2i_ledRGB_WS2812B_setPixelColor'] = {
     this.setInputsInline(false);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    this.setColour("#CAC7BE");
+    this.setColour(Blockly.Blocks.ledRGB_WS2812B.HUE);
     this.setTooltip('');
     this.setHelpUrl('http://blogpeda.ac-poitiers.fr/techno-jean-mace/2016/02/07/utilisation-de-modules-led-rgb-ws2812b-avec-blockly-arduino/');
   }
@@ -73,7 +78,7 @@ Blockly.Blocks['lp2i_ledRGB_WS2812B_setBrightness'] = {
     this.setInputsInline(false);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    this.setColour("#CAC7BE");
+    this.setColour(Blockly.Blocks.ledRGB_WS2812B.HUE);
     this.setTooltip('');
     this.setHelpUrl('http://blogpeda.ac-poitiers.fr/techno-jean-mace/2016/02/07/utilisation-de-modules-led-rgb-ws2812b-avec-blockly-arduino/');
   }

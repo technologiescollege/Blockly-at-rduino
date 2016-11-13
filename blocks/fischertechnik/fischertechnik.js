@@ -1,17 +1,17 @@
-
 //http://www.fischertechnik.de/en/Home.aspx
 
 'use strict';
 
-goog.provide('Blockly.Arduino.fischertechnik');
+goog.provide('Blockly.Blocks.fischertechnik');
 
-goog.require('Blockly.Arduino');
+goog.require('Blockly.Blocks');
+goog.require('Blockly.Types');
 
 // define blocks
 
 Blockly.Blocks['fischertechnik_feu_rouge'] = {
   init: function() {
-    this.setColour("#778E9A");
+    this.setColour(Blockly.Blocks.fischertechnik.HUE);
 	this.setHelpUrl(Blockly.Msg.FISCHERTECHNIK_HELPURL);
 	this.appendDummyInput()
         .appendField(Blockly.Msg.FISCHERTECHNIK_INOUT_LED_INPUT1)
@@ -33,7 +33,7 @@ Blockly.Blocks['fischertechnik_feu_rouge'] = {
 
 Blockly.Blocks['fischertechnik_feu_orange'] = {
   init: function() {
-    this.setColour("#778E9A");
+    this.setColour(Blockly.Blocks.fischertechnik.HUE);
 	this.setHelpUrl(Blockly.Msg.FISCHERTECHNIK_HELPURL);
 	this.appendDummyInput()
         .appendField(Blockly.Msg.FISCHERTECHNIK_INOUT_LED_INPUT4)
@@ -55,7 +55,7 @@ Blockly.Blocks['fischertechnik_feu_orange'] = {
 
 Blockly.Blocks['fischertechnik_feu_vert'] = {
   init: function() {
-    this.setColour("#778E9A");
+    this.setColour(Blockly.Blocks.fischertechnik.HUE);
 	this.setHelpUrl(Blockly.Msg.FISCHERTECHNIK_HELPURL);
 	this.appendDummyInput()
         .appendField(Blockly.Msg.FISCHERTECHNIK_INOUT_LED_INPUT5)
@@ -77,7 +77,7 @@ Blockly.Blocks['fischertechnik_feu_vert'] = {
 
 Blockly.Blocks['fischertechnik_barriere_lumineuse'] = {
   init: function() {
-    this.setColour("#778E9A");
+    this.setColour(Blockly.Blocks.fischertechnik.HUE);
 	this.setHelpUrl(Blockly.Msg.FISCHERTECHNIK_HELPURL);
 	this.appendDummyInput()
         .appendField(Blockly.Msg.FISCHERTECHNIK_INOUT_LED_INPUT6)
@@ -99,7 +99,7 @@ Blockly.Blocks['fischertechnik_barriere_lumineuse'] = {
 
 Blockly.Blocks['fischertechnik_buzzer'] = {
   init: function() {
-    this.setColour("#778E9A");	
+    this.setColour(Blockly.Blocks.fischertechnik.HUE);	
 	this.setHelpUrl(Blockly.Msg.FISCHERTECHNIK_HELPURL);
     this.appendDummyInput()
 		.appendField(Blockly.Msg.FISCHERTECHNIK_TEXT1)
@@ -123,7 +123,7 @@ Blockly.Blocks['fischertechnik_buzzer'] = {
 
 Blockly.Blocks['fischertechnik_BP_capteur_de_presence'] = {
   init: function() {
-    this.setColour("#778E9A");
+    this.setColour(Blockly.Blocks.fischertechnik.HUE);
 	this.setHelpUrl(Blockly.Msg.FISCHERTECHNIK_HELPURL);
     this.appendDummyInput("")
         .appendField(Blockly.Msg.FISCHERTECHNIK_TEXT4)
@@ -143,7 +143,7 @@ Blockly.Blocks['fischertechnik_BP_capteur_de_presence'] = {
 
 Blockly.Blocks['fischertechnik_capteur_magnetique'] = {
   init: function() {
-    this.setColour("#778E9A");
+    this.setColour(Blockly.Blocks.fischertechnik.HUE);
 	this.setHelpUrl(Blockly.Msg.FISCHERTECHNIK_HELPURL);
     this.appendDummyInput("")
         .appendField(Blockly.Msg.FISCHERTECHNIK_TEXT8)
@@ -163,7 +163,7 @@ Blockly.Blocks['fischertechnik_capteur_magnetique'] = {
 
 Blockly.Blocks['fischertechnik_capteur_de_lumiere'] = {
   init: function() {
-    this.setColour("#778E9A");
+    this.setColour(Blockly.Blocks.fischertechnik.HUE);
 	this.setHelpUrl(Blockly.Msg.FISCHERTECHNIK_HELPURL);
     this.appendDummyInput("")
         .appendField(Blockly.Msg.FISCHERTECHNIK_LUX_TITLE1)
@@ -180,7 +180,7 @@ Blockly.Blocks['fischertechnik_capteur_de_lumiere'] = {
 
 Blockly.Blocks['fischertechnik_moteurs_CC'] = {
   init: function() {
-    this.setColour("#778E9A");
+    this.setColour(Blockly.Blocks.fischertechnik.HUE);
 	this.setHelpUrl(Blockly.Msg.FISCHERTECHNIK_HELPURL);
     this.appendDummyInput("")
         .appendField(Blockly.Msg.FISCHERTECHNIK_TEXT9)

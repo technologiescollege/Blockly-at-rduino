@@ -1,16 +1,13 @@
 ﻿//http://www.dfrobot.com/wiki/index.php/Romeo_V2-All_in_one_Controller_%28R3%29_%28SKU:DFR0225%29
 
-'use strict';
+goog.provide('Blockly.Blocks.RoMeo2');
 
-goog.provide('Blockly.Arduino.RoMeo');
-
-goog.require('Blockly.Arduino');
-
-// define blocks
+goog.require('Blockly.Blocks');
+goog.require('Blockly.Types');
 
 Blockly.Blocks['romeo_mot_left'] = {
   init: function() {
-    this.setColour("#F39800");
+    this.setColour(Blockly.Blocks.RoMeo2.HUE);
 	this.appendValueInput("PWM")
         .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/dfrobot_romeo_v2/mot_left.jpg', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize))
         .setCheck('Number')
@@ -30,7 +27,7 @@ Blockly.Blocks['romeo_mot_left'] = {
 
 Blockly.Blocks['romeo_mot_right'] = {
   init: function() {
-    this.setColour("#F39800");
+    this.setColour(Blockly.Blocks.RoMeo2.HUE);
 	this.appendValueInput("PWM")
         .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/dfrobot_romeo_v2/mot_right.jpg', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize))
         .setCheck('Number')

@@ -2,15 +2,14 @@
 
 'use strict';
 
-goog.provide('Blockly.Arduino.RoMeo');
+goog.provide('Blockly.Blocks.RoMeo3');
 
-goog.require('Blockly.Arduino');
-
-// define blocks
+goog.require('Blockly.Blocks');
+goog.require('Blockly.Types');
 
 Blockly.Blocks['romeo_left_sens'] = {
   init: function() {
-    this.setColour("#F39800");
+    this.setColour(Blockly.Blocks.RoMeo3.HUE);
 	this.appendDummyInput()
         .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/dfrobot_romeo_v2/mot_left_sens.jpg', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize))
 		.setAlign(Blockly.ALIGN_RIGHT)
@@ -28,7 +27,7 @@ Blockly.Blocks['romeo_left_sens'] = {
 
 Blockly.Blocks['romeo_left_PWM'] = {
   init: function() {
-    this.setColour("#F39800");
+    this.setColour(Blockly.Blocks.RoMeo3.HUE);
 	this.appendValueInput("PWM")
         .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/dfrobot_romeo_v2/mot_left_pwm.jpg', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize))
         .setCheck('Number')
@@ -43,7 +42,7 @@ Blockly.Blocks['romeo_left_PWM'] = {
 
 Blockly.Blocks['romeo_right_sens'] = {
   init: function() {
-    this.setColour("#F39800");
+    this.setColour(Blockly.Blocks.RoMeo3.HUE);
 	this.appendDummyInput()
         .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/dfrobot_romeo_v2/mot_right_sens.jpg', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize))
 		.setAlign(Blockly.ALIGN_RIGHT)
@@ -61,7 +60,7 @@ Blockly.Blocks['romeo_right_sens'] = {
 
 Blockly.Blocks['romeo_right_PWM'] = {
   init: function() {
-    this.setColour("#F39800");
+    this.setColour(Blockly.Blocks.RoMeo3.HUE);
 	this.appendValueInput("PWM")
         .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/dfrobot_romeo_v2/mot_right_pwm.jpg', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize))
         .setCheck('Number')

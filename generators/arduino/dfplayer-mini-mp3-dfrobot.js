@@ -1,3 +1,8 @@
+'use strict';
+
+goog.provide('Blockly.Arduino.dfplayer');
+
+goog.require('Blockly.Arduino');
 
 Blockly.Arduino.lp2i_mp3_init = function() {
   var pin_rx = Blockly.Arduino.valueToCode(this, 'Pin_Rx', Blockly.Arduino.ORDER_ATOMIC);

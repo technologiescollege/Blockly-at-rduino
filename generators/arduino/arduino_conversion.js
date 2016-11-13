@@ -1,7 +1,8 @@
-goog.provide('Blockly.Blocks.conversion');
+'use strict';
+
+goog.provide('Blockly.Blocks.arduino_conversion');
 
 goog.require('Blockly.Blocks');
-
 
 Blockly.Arduino['conversion_tochar'] = function(block) {
 	var value_name = Blockly.Arduino.valueToCode(block, 'NAME', Blockly.Arduino.ORDER_ATOMIC);

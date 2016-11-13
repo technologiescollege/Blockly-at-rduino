@@ -1,5 +1,5 @@
+//http://www.fischertechnik.de/en/Home.aspx
 
-http://www.fischertechnik.de/en/Home.aspx
 'use strict';
 
 goog.provide('Blockly.Arduino.fischertechnik');

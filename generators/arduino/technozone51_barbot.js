@@ -1,3 +1,9 @@
+'use strict';
+
+goog.provide('Blockly.Arduino.technozone51_barbot');
+
+goog.require('Blockly.Arduino');
+
 Blockly.Arduino.technozone_lcdinit = function() {
   var dropdown_I2C_adress = this.getTitleValue('I2C_adress');
   var dropdown_nbcol = this.getTitleValue('nbcol');

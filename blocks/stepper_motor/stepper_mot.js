@@ -18,10 +18,6 @@ goog.provide('Blockly.Blocks.stepper');
 goog.require('Blockly.Blocks');
 goog.require('Blockly.Types');
 
-
-/** Common HSV hue for all blocks in this category. */
-Blockly.Blocks.stepper.HUE = "#8CA55B";
-
 Blockly.Blocks['stepper_config'] = {
   init: function() {
     this.setHelpUrl('http://arduino.cc/en/Reference/StepperConstructor');

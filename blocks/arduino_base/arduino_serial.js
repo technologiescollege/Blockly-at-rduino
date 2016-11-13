@@ -24,9 +24,10 @@
  */
 'use strict';
 
-goog.provide('Blockly.Blocks.serial');
+goog.provide('Blockly.Blocks.arduino_serial');
 
 goog.require('Blockly.Blocks');
+goog.require('Blockly.Types');
 
 
 /**
@@ -35,7 +36,7 @@ goog.require('Blockly.Blocks');
 
  Blockly.Blocks['serial_init'] = {
   init: function() {
-    this.setColour("#00979D");
+    this.setColour(Blockly.Blocks.arduino_serial.HUE);
 	this.setHelpUrl('http://arduino.cc/en/Serial');
 	this.setInputsInline(true);
     this.appendDummyInput("")
@@ -49,7 +50,7 @@ goog.require('Blockly.Blocks');
  
 Blockly.Blocks['serial_printfor'] = {
   init: function() {
-    this.setColour("#00979D");
+    this.setColour(Blockly.Blocks.arduino_serial.HUE);
 	this.setHelpUrl('http://arduino.cc/en/Serial/Println');
 	this.setInputsInline(true);
     this.appendValueInput("CONTENT")
@@ -64,7 +65,7 @@ Blockly.Blocks['serial_printfor'] = {
 
 Blockly.Blocks['serial_read'] = {
   init: function() {
-    this.setColour("#00979D");
+    this.setColour(Blockly.Blocks.arduino_serial.HUE);
 	this.setHelpUrl('http://arduino.cc/en/Serial/read');
 	this.appendDummyInput("")
 	    .appendField(Blockly.Msg.Serial_read);
@@ -76,7 +77,7 @@ Blockly.Blocks['serial_read'] = {
 
 Blockly.Blocks['serial_available'] = {
   init: function() {
-    this.setColour("#00979D");
+    this.setColour(Blockly.Blocks.arduino_serial.HUE);
 	this.setHelpUrl('http://arduino.cc/en/Serial/available');
 	this.appendDummyInput("")
 	    .appendField(Blockly.Msg.Serial_avai);
@@ -88,7 +89,7 @@ Blockly.Blocks['serial_available'] = {
 
 Blockly.Blocks['serial_print'] = {
   init: function() {
-    this.setColour("#00979D");
+    this.setColour(Blockly.Blocks.arduino_serial.HUE);
 	this.setHelpUrl(Blockly.Msg.ARDUINO_SERIAL_PRINT_HELPURL);
     this.appendValueInput("CONTENT")
 		.setCheck('String')
@@ -101,7 +102,7 @@ Blockly.Blocks['serial_print'] = {
 
 Blockly.Blocks['serial_print_tab'] = {
   init: function() {
-    this.setColour("#00979D");
+    this.setColour(Blockly.Blocks.arduino_serial.HUE);
 	this.setHelpUrl(Blockly.Msg.ARDUINO_SERIAL_PRINT_HELPURL);
     this.appendValueInput("CONTENT")
 		.setCheck('String')
@@ -114,7 +115,7 @@ Blockly.Blocks['serial_print_tab'] = {
 
 Blockly.Blocks['serial_println'] = {
   init: function() {
-    this.setColour("#00979D");
+    this.setColour(Blockly.Blocks.arduino_serial.HUE);
 	this.setHelpUrl(Blockly.Msg.ARDUINO_SERIAL_PRINT_HELPURL);
     this.appendValueInput("CONTENT")
 		.setCheck('String')
@@ -127,7 +128,7 @@ Blockly.Blocks['serial_println'] = {
 
 Blockly.Blocks['serial_print_var'] = {
   init: function() {
-    this.setColour("#00979D");
+    this.setColour(Blockly.Blocks.arduino_serial.HUE);
 	this.setHelpUrl(Blockly.Msg.ARDUINO_SERIAL_PRINT_HELPURL);
     this.appendValueInput("Text")
 		.setCheck('String')
@@ -149,7 +150,7 @@ Blockly.Blocks['serial_print_var'] = {
 
 Blockly.Blocks['serial_write'] = {
   init: function() {
-    this.setColour("#00979D");
+    this.setColour(Blockly.Blocks.arduino_serial.HUE);
 	this.setHelpUrl('');
     this.appendValueInput("CONTENT")
 		.setCheck('String')
@@ -164,7 +165,7 @@ Blockly.Blocks['serial_write'] = {
 Blockly.Blocks['serial_write_out'] = {
   init: function() {
     this.setHelpUrl('');
-    this.setColour("#00979D");
+    this.setColour(Blockly.Blocks.arduino_serial.HUE);
     this.appendValueInput("valeur")
 		.setCheck('String')		
         .appendField(Blockly.Msg.Serial_write_out);
@@ -176,7 +177,7 @@ Blockly.Blocks['serial_write_out'] = {
 
 Blockly.Blocks['serial_flush'] = {
   init: function() {
-    this.setColour("#00979D");
+    this.setColour(Blockly.Blocks.arduino_serial.HUE);
 	this.setHelpUrl('http://arduino.cc/en/Serial/Flush');
 	this.appendDummyInput("")
 	    .appendField(Blockly.Msg.Serial_flush);

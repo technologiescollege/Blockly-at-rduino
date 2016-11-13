@@ -318,6 +318,33 @@ Blockly.Blocks.lp2i_mp3_init.getBlockType = function() {
 Blockly.Blocks.romeo_forward.getBlockType = function() {
 	return Blockly.Types.NUMBER;
 };
+Blockly.Blocks.romeo_backward.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.romeo_turn_left.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.romeo_turn_right.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.romeo_mot_left.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.romeo_mot_right.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.romeo_left_sens.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.romeo_left_PWM.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.romeo_right_sens.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.romeo_right_PWM.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
 
 //***********************************************************************************
 //								display-oled-128x64-i2c
@@ -844,7 +871,7 @@ Blockly.Blocks.technozone_ils1.getBlockType = function() {
 	return Blockly.Types.BOOLEAN;
 };
 Blockly.Blocks.technozone_proxi1.getBlockType = function() {
-	return Blockly.Types.NUMBER;
+	return Blockly.Types.BOOLEAN;
 };
 Blockly.Blocks.technozone_bari1.getBlockType = function() {
 	return Blockly.Types.BOOLEAN;

@@ -2,15 +2,16 @@
 //www.technologieservices.fr/fr/a-a1000022060-edc1000003/article/RUSA-Robot-RobUno-a-servomoteurs.html
 'use strict';
 
-goog.provide('Blockly.Arduino.robuno');
+goog.provide('Blockly.Blocks.robuno');
 
-goog.require('Blockly.Arduino');
+goog.require('Blockly.Blocks');
+goog.require('Blockly.Types');
 
 // define blocks
 
 Blockly.Blocks['robuno_led_rouge'] = {
   init: function() {
-    this.setColour("#1A1BFF");
+    this.setColour(Blockly.Blocks.robuno.HUE);
 	this.setHelpUrl(Blockly.Msg.ROBUNO_HELPURL);
 	this.appendDummyInput()
         .appendField(Blockly.Msg.ROBUNO_INOUT_LED_INPUT1)
@@ -32,7 +33,7 @@ Blockly.Blocks['robuno_led_rouge'] = {
 
 Blockly.Blocks['robuno_led_blanche'] = {
   init: function() {
-    this.setColour("#1A1BFF");
+    this.setColour(Blockly.Blocks.robuno.HUE);
 	this.setHelpUrl(Blockly.Msg.ROBUNO_HELPURL);
 	this.appendDummyInput()
         .appendField(Blockly.Msg.ROBUNO_INOUT_LED_INPUT4)
@@ -54,7 +55,7 @@ Blockly.Blocks['robuno_led_blanche'] = {
 
 Blockly.Blocks['robuno_buzzer'] = {
   init: function() {
-    this.setColour("#1A1BFF");	
+    this.setColour(Blockly.Blocks.robuno.HUE);	
 	this.setHelpUrl(Blockly.Msg.ROBUNO_HELPURL);
     this.appendDummyInput()
 		.appendField(Blockly.Msg.ROBUNO_TEXT1)
@@ -78,7 +79,7 @@ Blockly.Blocks['robuno_buzzer'] = {
 
 Blockly.Blocks['robuno_servomoteur_gauche'] = {
   init: function() {
-    this.setColour("#1A1BFF");
+    this.setColour(Blockly.Blocks.robuno.HUE);
 	this.setHelpUrl(Blockly.Msg.ROBUNO_HELPURL);
     this.appendDummyInput()
         .appendField(Blockly.Msg.ROBUNO_SERVO2_TITLEA)
@@ -103,7 +104,7 @@ Blockly.Blocks['robuno_servomoteur_gauche'] = {
 
 Blockly.Blocks['robuno_servomoteur_droite'] = {
   init: function() {
-    this.setColour("#1A1BFF");
+    this.setColour(Blockly.Blocks.robuno.HUE);
 	this.setHelpUrl(Blockly.Msg.ROBUNO_HELPURL);
     this.appendDummyInput()
         .appendField(Blockly.Msg.ROBUNO_SERVO2_TITLED)
@@ -128,7 +129,7 @@ Blockly.Blocks['robuno_servomoteur_droite'] = {
 
 Blockly.Blocks['robuno_capteur_collision_gauche'] = {
   init: function() {
-    this.setColour("#1A1BFF");
+    this.setColour(Blockly.Blocks.robuno.HUE);
 	this.setHelpUrl(Blockly.Msg.ROBUNO_HELPURL);
     this.appendDummyInput("")
         .appendField(Blockly.Msg.ROBUNO_TEXT4)
@@ -148,7 +149,7 @@ Blockly.Blocks['robuno_capteur_collision_gauche'] = {
 
 Blockly.Blocks['robuno_capteur_collision_droite'] = {
   init: function() {
-    this.setColour("#1A1BFF");
+    this.setColour(Blockly.Blocks.robuno.HUE);
 	this.setHelpUrl(Blockly.Msg.ROBUNO_HELPURL);
     this.appendDummyInput("")
         .appendField(Blockly.Msg.ROBUNO_TEXT8)
@@ -168,7 +169,7 @@ Blockly.Blocks['robuno_capteur_collision_droite'] = {
 
 Blockly.Blocks['robuno_ldr_gauche'] = {
   init: function() {
-    this.setColour("#1A1BFF");
+    this.setColour(Blockly.Blocks.robuno.HUE);
 	this.setHelpUrl(Blockly.Msg.ROBUNO_HELPURL);
     this.appendDummyInput("")
         .appendField(Blockly.Msg.ROBUNO_LUX_TITLE1)
@@ -184,7 +185,7 @@ Blockly.Blocks['robuno_ldr_gauche'] = {
 
 Blockly.Blocks['robuno_ldr_droite'] = {
   init: function() {
-    this.setColour("#1A1BFF");
+    this.setColour(Blockly.Blocks.robuno.HUE);
 	this.setHelpUrl(Blockly.Msg.ROBUNO_HELPURL);
     this.appendDummyInput("")
         .appendField(Blockly.Msg.ROBUNO_LUX_TITLE2)
@@ -200,7 +201,7 @@ Blockly.Blocks['robuno_ldr_droite'] = {
 
 Blockly.Blocks['robuno_moteurs_CC'] = {
   init: function() {
-    this.setColour("#1A1BFF");
+    this.setColour(Blockly.Blocks.robuno.HUE);
 	this.setHelpUrl(Blockly.Msg.ROBUNO_HELPURL);
     this.appendDummyInput("")
         .appendField(Blockly.Msg.ROBUNO_TEXT9)

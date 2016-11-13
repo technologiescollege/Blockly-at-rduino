@@ -1,6 +1,6 @@
 'use strict';
 
-goog.provide('Blockly.Arduino.base');
+goog.provide('Blockly.Arduino.arduino_serial');
 
 goog.require('Blockly.Arduino');
 

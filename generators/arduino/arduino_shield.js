@@ -4,7 +4,9 @@
  * 
  * Didier Dumas - 2016
  */
+'use strict';
 
+goog.provide('Blockly.Arduino.arduino_shield');
 
 goog.require('Blockly.Arduino');
 

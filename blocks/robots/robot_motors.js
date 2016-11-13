@@ -25,14 +25,15 @@
  * @author erickennedy@outlook.com  Eric Kennedy
  */
 
-goog.provide('Blockly.Blocks.motors');
+goog.provide('Blockly.Blocks.robots_motors');
 
 goog.require('Blockly.Blocks');
+goog.require('Blockly.Types');
 
 Blockly.Blocks['ardu_motor'] = {
   init: function() {
 	this.setHelpUrl(Blockly.Msg.ROBOTS_MOTORS_ARDUMOTOR_HELPURL);
-    this.setColour("#5b99a5");
+    this.setColour(Blockly.Blocks.robots_motors.HUE);
     this.appendDummyInput()
         .appendField(Blockly.Msg.ROBOTS_MOTORS_ARDUMOTOR_TITLE )
         .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/robots/09815-01.jpg', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize))
@@ -46,7 +47,7 @@ Blockly.Blocks['ardu_motor'] = {
 Blockly.Blocks['ardu_motor_s'] = {
   init: function() {
 	this.setHelpUrl(Blockly.Msg.ROBOTS_MOTORS_ARDUMOTOR_HELPURL);
-    this.setColour("#5b99a5");
+    this.setColour(Blockly.Blocks.robots_motors.HUE);
 	this.setInputsInline(false) ; 
 	this.appendDummyInput()
 		.appendField(Blockly.Msg.ROBOTS_MOTORS_ARDUMOTOR_S_TITLE )
@@ -78,7 +79,7 @@ Blockly.Blocks['ardu_motor_s'] = {
 Blockly.Blocks['arduino_s'] = {
    init: function() {
 	this.setHelpUrl(Blockly.Msg.ROBOTS_MOTORS_ARDUNIO_S_HELPURL);
-    this.setColour("#5b99a5");
+    this.setColour(Blockly.Blocks.robots_motors.HUE);
 	this.setInputsInline(false) ; 
 	this.appendDummyInput()
 		.appendField(Blockly.Msg.ROBOTS_MOTORS_ARDUNIO_S_TITLE)
@@ -110,7 +111,7 @@ Blockly.Blocks['arduino_s'] = {
 Blockly.Blocks['pololu_drv8835_s'] = {
   init: function() {
 	this.setHelpUrl('https://www.pololu.com/product/2511/resources');
-    this.setColour("#5b99a5");
+    this.setColour(Blockly.Blocks.robots_motors.HUE);
 	this.setInputsInline(false) ; 
     this.appendDummyInput()
         .appendField(Blockly.Msg.ROBOTS_MOTORS_POLOLU8835_S_TITLE)
@@ -143,7 +144,7 @@ Blockly.Blocks['pololu_drv8835_s'] = {
 Blockly.Blocks['radio_shack_s'] = {
   init: function() {
 	this.setHelpUrl(Blockly.Msg.ROBOTS_MOTORS_RADIOSHACK_S_HELPURL);
-    this.setColour("#5b99a5");
+    this.setColour(Blockly.Blocks.robots_motors.HUE);
 	this.setInputsInline(false) ; 
     this.appendDummyInput()
         .appendField(Blockly.Msg.ROBOTS_MOTORS_RADIOSHACK_S_TITLE )
@@ -175,7 +176,7 @@ Blockly.Blocks['radio_shack_s'] = {
 Blockly.Blocks['dfrobot_s'] = {
   init: function() {
 	this.setHelpUrl(Blockly.Msg.ROBOTS_MOTORS_DFROBOT_S_HELPURL);
-    this.setColour("#5b99a5");
+    this.setColour(Blockly.Blocks.robots_motors.HUE);
 	this.setInputsInline(false) ; 
     this.appendDummyInput()
         .appendField(Blockly.Msg.ROBOTS_MOTORS_DFROBOT_S_TITLE)
@@ -206,7 +207,7 @@ Blockly.Blocks['dfrobot_s'] = {
 
 Blockly.Blocks['generic_motor_s'] = {
   init: function() {
-    this.setColour("#5b99a5");
+    this.setColour(Blockly.Blocks.robots_motors.HUE);
 	this.appendDummyInput()
 		.appendField(Blockly.Msg.ROBOTS_MOTORS_GENERIC_MOTOR_S_TITLE)
 		.appendField(
@@ -251,7 +252,7 @@ Blockly.Blocks['generic_motor_s'] = {
 //@pbra 20160613
 Blockly.Blocks['l298n_motor_init'] = {
   init: function() {
-    this.setColour("#5b99a5");
+    this.setColour(Blockly.Blocks.robots_motors.HUE);
 	this.appendDummyInput()
 		.appendField(Blockly.Msg.ROBOTS_MOTORS_L298N_MOTOR_INIT_TITLE)
 		.appendField(new Blockly.FieldImage("blocks/robots/l298n.jpg", Blockly.Arduino.imageSize, Blockly.Arduino.imageSize))
@@ -281,7 +282,7 @@ Blockly.Blocks['l298n_motor_init'] = {
 //@pbra 20160613
 Blockly.Blocks['l298n_motor'] = {
   init: function() {
-    this.setColour("#5b99a5");
+    this.setColour(Blockly.Blocks.robots_motors.HUE);
 	this.appendDummyInput()
 		.appendField(Blockly.Msg.ROBOTS_MOTORS_L298N_MOTOR_TITLE)
 		.appendField(new Blockly.FieldImage("blocks/robots/l298n.jpg", Blockly.Arduino.imageSize, Blockly.Arduino.imageSize))
@@ -310,7 +311,7 @@ Blockly.Blocks['l298n_motor'] = {
 
 Blockly.Blocks['generic_motor'] = {
   init: function() {
-    this.setColour("#5b99a5");
+    this.setColour(Blockly.Blocks.robots_motors.HUE);
 	this.appendDummyInput()
 		.appendField(Blockly.Msg.ROBOTS_MOTORS_GENERIC_MOTOR_TITLE)
 		.appendField(

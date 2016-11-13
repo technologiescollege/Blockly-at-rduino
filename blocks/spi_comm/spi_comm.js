@@ -16,10 +16,6 @@ goog.provide('Blockly.Blocks.spi');
 goog.require('Blockly.Blocks');
 goog.require('Blockly.Types');
 
-
-/** Common HSV hue for all blocks in this category. */
-Blockly.Blocks.spi.HUE = 170;
-
 Blockly.Blocks['spi_setup'] = {
   /**
    * Block for the spi configuration. Info in the setHelpUrl link.
@@ -64,16 +60,6 @@ Blockly.Blocks['spi_setup'] = {
    */
   getSpiSetupInstance: function() {
     return this.getFieldValue('SPI_ID');
-  },
-  /**
-   * Updates the content of the the board SPI related fields.
-   * @this Blockly.Block
-   */
-  updateFields: function() {
-    Blockly.Arduino.Boards.refreshBlockFieldDropdown(
-        this, 'SPI_ID', 'spi');
-    Blockly.Arduino.Boards.refreshBlockFieldDropdown(
-        this, 'SPI_CLOCK_DIVIDE', 'spiClockDivide');
   }
 };
 
