@@ -21,7 +21,7 @@ Blockly.Blocks['bq_led'] = {
         .setCheck('Number')
         .setAlign(Blockly.ALIGN_RIGHT)
         .appendField(Blockly.Msg.GROVE_INOUT_LED_INPUT2);		
-    this.setInputsInline(true);
+    this.setInputsInline(false);
 	this.appendDummyInput()
 		.setAlign(Blockly.ALIGN_RIGHT)
       	.appendField(Blockly.Msg.GROVE_INOUT_LED_INPUT3)
@@ -49,7 +49,7 @@ Blockly.Blocks['bq_buzzer'] = {
     this.appendValueInput("TPS")
         .appendField(Blockly.Msg.TECHNOZONE51_TEXT45)
         .setCheck('Number');
-    this.setInputsInline(true);
+    this.setInputsInline(false);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setTooltip(Blockly.Msg.BQ_BUZZER1_TOOLTIP);

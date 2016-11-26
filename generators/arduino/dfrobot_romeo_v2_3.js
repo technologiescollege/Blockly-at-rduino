@@ -4,7 +4,7 @@ goog.provide('Blockly.Arduino.RoMeo3');
 
 goog.require('Blockly.Arduino');
 
-Blockly.Arduino.romeo_left_sens = function() {
+Blockly.Arduino.romeo_right_sens = function() {
 	var pindir1 = 7;
 	var pinpwm1 = 6;
 	//var value_sens1 = false;
@@ -17,7 +17,7 @@ Blockly.Arduino.romeo_left_sens = function() {
 	return code;
 };
 
-Blockly.Arduino.romeo_left_PWM = function() {
+Blockly.Arduino.romeo_right_PWM = function() {
 	var pindir1 = 7;
 	var pinpwm1 = 6;
 	//var value_sens1 = false;
@@ -30,7 +30,7 @@ Blockly.Arduino.romeo_left_PWM = function() {
 	return code;
 };
 
-Blockly.Arduino.romeo_right_sens = function() {
+Blockly.Arduino.romeo_left_sens = function() {
 	var pindir2 = 4;
 	var pinpwm2 = 5;
 	//var value_sens2 = false;
@@ -43,7 +43,7 @@ Blockly.Arduino.romeo_right_sens = function() {
 	return code;
 };
 
-Blockly.Arduino.romeo_right_PWM = function() {
+Blockly.Arduino.romeo_left_PWM = function() {
 	var pindir2 = 4;
 	var pinpwm2 = 5;
 	//var value_sens2 = false;

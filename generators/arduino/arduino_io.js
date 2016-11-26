@@ -206,3 +206,10 @@ Blockly.Arduino.inout_detachInterrupt = function() {
   var code = 'detachInterrupt('+dropdown_pin+');\n'
   return code;
 };
+
+Blockly.Arduino.inout_pullup = function() {
+  var dropdown_pin = Blockly.Arduino.valueToCode(this, 'PIN', Blockly.Arduino.ORDER_ATOMIC);
+  Blockly.Arduino.setups_['setup_input_' + dropdown_pin ] = 'pinMode(' + dropdown_pin + ', INPUT_PULLUP);';
+  var code = 'digitalRead(' + dropdown_pin + ')' ;
+  return [code, Blockly.Arduino.ORDER_ATOMIC];
+};

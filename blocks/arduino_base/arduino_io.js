@@ -359,3 +359,16 @@ Blockly.Blocks.inout_detachInterrupt = {
 	this.setTooltip(Blockly.Msg.LKL_TOOLTIP_INOUT_DETACHINTERRUPT);
   }
 };
+
+Blockly.Blocks.inout_pullup = {
+   init: function() {
+   this.setColour(Blockly.Blocks.arduino_io.HUE);
+   this.setHelpUrl("https://www.arduino.cc/en/Tutorial/DigitalPins");
+   this.appendValueInput("PIN", 'Number')
+        .setCheck('Number')
+        .setAlign(Blockly.ALIGN_RIGHT)
+        .appendField("valeur de la broche");
+    this.setOutput(true, 'Boolean');
+    this.setTooltip("");
+    }
+};
