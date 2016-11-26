@@ -189,3 +189,19 @@ Blockly.Arduino.mbot_right_PWM = function() {
 	var code="analogWrite("+pinpwm2+","+value_vitesse2+");\n";
 	return code;
 };
+
+Blockly.Arduino.mbot_rgb_onboard = function() {
+  Blockly.Arduino.includes_['include_mbot'] = //'#include <Arduino.h>\n'
+	  //+ '#include <Wire.h>\n'
+	  //+ '#include <SoftwareSerial.h>\n'
+	  '#include <MeMCore.h>';
+  Blockly.Arduino.definitions_['define_mbot_rgb'] = 'MeRGBLed rgbled_7(7, 7==7?2:4);';
+  var pixel_number = this.getFieldValue('Pixel_number') || '\'\'';
+  var red = Blockly.Arduino.valueToCode(this, 'Red', Blockly.Arduino.ORDER_ATOMIC);
+  var green = Blockly.Arduino.valueToCode(this, 'Green', Blockly.Arduino.ORDER_ATOMIC);
+  var blue = Blockly.Arduino.valueToCode(this, 'Blue', Blockly.Arduino.ORDER_ATOMIC);
+  
+  var code = 'rgbled_7.setColor(' + pixel_number + ', ' + red + ','+green+', '+blue+');\n'
+			+ 'rgbled_7.show();';
+  return code;
+};
