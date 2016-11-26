@@ -585,6 +585,9 @@ Blockly.Blocks.mbot_right_sens.getBlockType = function() {
 Blockly.Blocks.mbot_right_PWM.getBlockType = function() {
 	return Blockly.Types.NUMBER;
 };
+Blockly.Blocks.mbot_rgb_onboard.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
 
 //***********************************************************************************
 //								My Human Kit

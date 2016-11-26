@@ -1285,6 +1285,11 @@ Blockly.Msg.MBOT_MOTOR_SENS = "1 : avancer | 0 : reculer";
 Blockly.Msg.MBOT_MOTOR_LEFT_SENS = "moteur gauche : sens";
 Blockly.Msg.MBOT_MOTOR_LEFT_PWM = "moteur gauche : puissance";
 Blockly.Msg.MBOT_MOTOR_RIGHT_SENS = "moteur droit : sens";
+Blockly.Msg.MBOT_RGB_ONBOARD_INTRO = "colore onboard RGB LEDs ";
+Blockly.Msg.MBOT_RGB_ONBOARD_RED = "red (255 max) =";
+Blockly.Msg.MBOT_RGB_ONBOARD_BLUE = "blue (255 max) =";
+Blockly.Msg.MBOT_RGB_ONBOARD_GREEN = "green (255 max) =";
+Blockly.Msg.MBOT_RGB_ONBOARD_FIELDDROPDOWN = [["0 (les deux leds)", "0"], ["1 (led gauche)", 1], ["2 (led droite)", 2]];
 
 //Added May 1rst 2016
 Blockly.Msg.ROMEO_HELPURL = "http://www.dfrobot.com/wiki/index.php/Romeo_V2-All_in_one_Controller_%28R3%29_%28SKU:DFR0225%29";
