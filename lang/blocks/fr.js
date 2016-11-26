@@ -1279,11 +1279,11 @@ Blockly.Msg.MBOT_MOTOR_LEFT_SENS = "moteur gauche : sens";
 Blockly.Msg.MBOT_MOTOR_LEFT_PWM = "moteur gauche : puissance";
 Blockly.Msg.MBOT_MOTOR_RIGHT_SENS = "moteur droit : sens";
 Blockly.Msg.MBOT_MOTOR_RIGHT_PWM = "moteur droit : puissance";
-Blockly.Msg.MBOT_RGB_ONBOARD_INTRO = "colorier les leds RGB";
+Blockly.Msg.MBOT_RGB_ONBOARD_INTRO = "colorier les DEL RGB";
 Blockly.Msg.MBOT_RGB_ONBOARD_RED = "rouge (255 max) =";
 Blockly.Msg.MBOT_RGB_ONBOARD_BLUE = "bleu (255 max) =";
 Blockly.Msg.MBOT_RGB_ONBOARD_GREEN = "vert (255 max) =";
-Blockly.Msg.MBOT_RGB_ONBOARD_PIXEL_NUMBER = "broche =";
+Blockly.Msg.MBOT_RGB_ONBOARD_PIXEL_NUMBER = "choix ";
 Blockly.Msg.MBOT_RGB_ONBOARD_FIELDDROPDOWN = [["0 (les deux leds)", "0"], ["1 (led gauche)", 1], ["2 (led droite)", 2]];
 
 //Added May 1rst 2016

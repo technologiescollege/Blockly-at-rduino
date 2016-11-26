@@ -79,7 +79,7 @@ Blockly.Blocks['mbot_rgb_onboard'] = {
   init: function() {
     this.appendDummyInput()
         .appendField(Blockly.Msg.MBOT_RGB_ONBOARD_INTRO)
-		.appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/mbot/led-rgb-mbot.jpg', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize));
+		.appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/mbot/led-rgb-mbot.jpg', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize/3));
     this.appendValueInput("Red")
 		.setCheck('Number')
         .setAlign(Blockly.ALIGN_RIGHT)

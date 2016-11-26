@@ -1598,7 +1598,23 @@
 				</shadow>
 			</value>
 		</block>
-		<block type="mbot_rgb_onboard"></block>
+		<block type="mbot_rgb_onboard">
+			<value name="Red">
+				<shadow type="math_number">
+					<field name="NUM">127</field>
+				</shadow>
+			</value>
+			<value name="Green">
+				<shadow type="math_number">
+					<field name="NUM">127</field>
+				</shadow>
+			</value>
+			<value name="Blue">
+				<shadow type="math_number">
+					<field name="NUM">127</field>
+				</shadow>
+			</value>
+		</block>
 	</category>
 	<category name="CAT_ARDUINO_SERVO" colour="#191919">
 		<block type="servo_move">
