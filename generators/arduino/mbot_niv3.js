@@ -216,8 +216,7 @@ Blockly.Arduino.mbot_buzzer = function() {
   var pixel_number = this.getFieldValue('octave') || '\'\'';
   var pixel_number = this.getFieldValue('delay') || '\'\'';
   
-  
-  var code = 'buzzer.tone(' + tone + ', ' + delay + ');\n'
+  var code = 'buzzer.tone(' + tone*2^octave + ', ' + delay + ');\n'
 			+ 'delay(20);';
   return code;
 };
