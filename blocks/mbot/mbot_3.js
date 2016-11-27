@@ -104,3 +104,25 @@ Blockly.Blocks['mbot_rgb_onboard'] = {
     this.setHelpUrl('http://blogpeda.ac-poitiers.fr/techno-jean-mace/2016/02/07/utilisation-de-modules-led-rgb-ws2812b-avec-blockly-arduino/');
   }
 };
+
+Blockly.Blocks['mbot_buzzer'] = {
+  init: function() {
+    this.appendDummyInput()
+        .appendField(Blockly.Msg.MBOT_BUZZER_INTRO) // texte pour le message d'intro du bloc
+		.appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/mbot/buzzer_mbot.jpg', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize)); //ajouter une image
+	this.appendDummyInput()
+		.setAlign(Blockly.ALIGN_RIGHT)
+      	.appendField(Blockly.Msg.MBOT_BUZZER_TONE) //texte pour la variable
+		.appendField(new Blockly.FieldDropdown(Blockly.Msg.MBOT_BUZZER_FIELDDROPDOWN_TONE), "tone") // menu déroulant pour la note
+		.appendField(Blockly.Msg.MBOT_BUZZER_OCTAVE) //texte pour la variable
+		.appendField(new Blockly.FieldDropdown(Blockly.Msg.MBOT_BUZZER_FIELDDROPDOWN_OCTAVE), "tone") // menu déroulant pour la note
+      	.appendField(Blockly.Msg.MBOT_BUZZER_DELAY) //texte pour la variable
+		.appendField(new Blockly.FieldDropdown(Blockly.Msg.MBOT_BUZZER_FIELDDROPDOWN_DELAY), "delay"); // menu déroulant pour la durée
+	this.setInputsInline(false); //bloc en ligne ou vertical
+    this.setPreviousStatement(true, null); //téton sur le bloc au-dessus
+    this.setNextStatement(true, null); //téton sur le bloc en dessous
+    this.setColour(Blockly.Blocks.mBot_3.HUE); //couleur du bloc
+    this.setTooltip('Blockly.Msg.MBOT_BUZZER_TOOLTIP'); //message quand on passe la souris
+    this.setHelpUrl('Blockly.Msg.MBOT_BUZZER_HELPURL'); //message quand on clique sur le menu déroulant aide
+  }
+};

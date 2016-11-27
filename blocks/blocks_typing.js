@@ -587,6 +587,9 @@ Blockly.Blocks.mbot_right_PWM.getBlockType = function() {
 };
 Blockly.Blocks.mbot_rgb_onboard.getBlockType = function() {
 	return Blockly.Types.NUMBER;
+
+Blockly.Blocks.mbot_buzzer.getBlockType = function() {
+	return Blockly.Types.NUMBER;
 };
 
 //***********************************************************************************

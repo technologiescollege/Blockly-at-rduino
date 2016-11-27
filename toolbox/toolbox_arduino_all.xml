@@ -1615,6 +1615,7 @@
 				</shadow>
 			</value>
 		</block>
+		<block type="mbot_buzzer"></block>
 	</category>
 	<category name="CAT_ARDUINO_SERVO" colour="#191919">
 		<block type="servo_move">

@@ -1285,6 +1285,13 @@ Blockly.Msg.MBOT_RGB_ONBOARD_BLUE = "bleu (255 max) =";
 Blockly.Msg.MBOT_RGB_ONBOARD_GREEN = "vert (255 max) =";
 Blockly.Msg.MBOT_RGB_ONBOARD_PIXEL_NUMBER = "choix ";
 Blockly.Msg.MBOT_RGB_ONBOARD_FIELDDROPDOWN = [["0 (les deux leds)", "0"], ["1 (led gauche)", 1], ["2 (led droite)", 2]];
+Blockly.Msg.MBOT_BUZZER_INTRO = "jouer un son";
+Blockly.Msg.MBOT_BUZZER_TONE = "note";
+Blockly.Msg.MBOT_BUZZER_FIELDDROPDOWN_TONE = [["C", "16352"], ["D", "65"], ["E", "65"], ["F", "65"], ["G", "65"], ["A", "65"], ["B", "65"]];
+Blockly.Msg.MBOT_BUZZER_OCTAVE = "#";
+Blockly.Msg.MBOT_BUZZER_FIELDDROPDOWN_OCTAVE = [["2", "16352"], ["3", "65"], ["4", "65"], ["5", "65"], ["6", "65"], ["7", "65"], ["8", "65"]];
+Blockly.Msg.MBOT_BUZZER_DELAY = "durée";
+Blockly.Msg.MBOT_BUZZER_FIELDDROPDOWN_DELAY = [["un demi", "500"], ["un quart", "250"], ["un huitième", "125"], ["tout", "1000"], ["double", "2000"], ["zéro", "0"]];
 
 //Added May 1rst 2016
 Blockly.Msg.ROMEO_HELPURL = "http://www.dfrobot.com/wiki/index.php/Romeo_V2-All_in_one_Controller_%28R3%29_%28SKU:DFR0225%29";
