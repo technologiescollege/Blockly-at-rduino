@@ -115,7 +115,7 @@ Blockly.Blocks['mbot_buzzer'] = {
       	.appendField(Blockly.Msg.MBOT_BUZZER_TONE) //texte pour la variable
 		.appendField(new Blockly.FieldDropdown(Blockly.Msg.MBOT_BUZZER_FIELDDROPDOWN_TONE), "tone") // menu déroulant pour la note
 		.appendField(Blockly.Msg.MBOT_BUZZER_OCTAVE) //texte pour la variable
-		.appendField(new Blockly.FieldDropdown(Blockly.Msg.MBOT_BUZZER_FIELDDROPDOWN_OCTAVE), "tone") // menu déroulant pour la note
+		.appendField(new Blockly.FieldDropdown(Blockly.Msg.MBOT_BUZZER_FIELDDROPDOWN_OCTAVE), "octave") // menu déroulant pour la note
       	.appendField(Blockly.Msg.MBOT_BUZZER_DELAY) //texte pour la variable
 		.appendField(new Blockly.FieldDropdown(Blockly.Msg.MBOT_BUZZER_FIELDDROPDOWN_DELAY), "delay"); // menu déroulant pour la durée
 	this.setInputsInline(false); //bloc en ligne ou vertical

@@ -207,16 +207,25 @@ Blockly.Arduino.mbot_rgb_onboard = function() {
 };
 
 Blockly.Arduino.mbot_buzzer = function() {
+  var tone_number = this.getFieldValue('tone') || '\'\'';
+  var octave_number = this.getFieldValue('octave') || '\'\'';
+  var delay_number = this.getFieldValue('delay') || '\'\'';
+  
   Blockly.Arduino.includes_['include_mbot'] = '#include <Arduino.h>\n'
 	  + '#include <Wire.h>\n'
 	  + '#include <SoftwareSerial.h>\n'
-	  '#include <MeMCore.h>';
+	  + '#include <MeMCore.h>';
   Blockly.Arduino.definitions_['define_mbot_buzzer'] = 'MeBuzzer buzzer;';
+<<<<<<< HEAD
   var pixel_number = this.getFieldValue('tone') || '\'\'';
   var pixel_number = this.getFieldValue('octave') || '\'\'';
   var pixel_number = this.getFieldValue('delay') || '\'\'';
   
   var code = 'buzzer.tone(' + tone*2^octave + ', ' + delay + ');\n'
+=======
+  
+  var code = 'buzzer.tone(' + tone_number + '*2^' + octave_number + ', ' + delay_number + ');\n'
+>>>>>>> a10c7819dafaaaab8c0addcfe04ad2145643e047
 			+ 'delay(20);';
   return code;
 };
