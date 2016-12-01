@@ -48,6 +48,13 @@ Blockly.Types.NUMBER = new Blockly.Type({
   compatibleTypes: []    // Circular dependencies, add after all declarations
 });
 
+/** Volatile integer number. */
+Blockly.Types.VOLATIL_NUMBER = new Blockly.Type({
+  typeId: 'Volatil Number',
+  typeMsgName: 'ARD_TYPE_VOLATILE',
+  compatibleTypes: []    // Circular dependencies, add after all declarations
+});
+
 /** Large integer number. */
 Blockly.Types.LARGE_NUMBER = new Blockly.Type({
   typeId: 'Large Number',
@@ -114,7 +121,13 @@ Blockly.Types.LARGE_NUMBER.addCompatibleTypes([
     Blockly.Types.SHORT_NUMBER,
     Blockly.Types.NUMBER,
     Blockly.Types.DECIMAL]);
-
+	
+Blockly.Types.VOLATIL_NUMBER.addCompatibleTypes([
+    Blockly.Types.BOOLEAN,
+    Blockly.Types.SHORT_NUMBER,
+    Blockly.Types.LARGE_NUMBER,
+    Blockly.Types.NUMBER,
+    Blockly.Types.DECIMAL]);
 
 /**
  * Adds another type to the Blockly.Types collection.
@@ -166,7 +179,7 @@ Blockly.Types.getChildBlockType = function(block) {
   // Only checks first input block, so it decides the type. Incoherences amongst
   // multiple inputs dealt at a per-block level with their own block warnings
   while (nextBlock && (nextBlock.getBlockType === undefined) &&
-         (nextBlock.inputList.length > 0)) {
+         (nextBlock.inputList.length > 0) && (nextBlock.inputList[0].connection != null)) {
     nextBlock = nextBlock.inputList[0].connection.targetBlock();
   }
   if (nextBlock === block) {

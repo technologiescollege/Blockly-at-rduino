@@ -1287,11 +1287,7 @@ Blockly.Msg.MBOT_RGB_ONBOARD_PIXEL_NUMBER = "choix ";
 Blockly.Msg.MBOT_RGB_ONBOARD_FIELDDROPDOWN = [["0 (les deux leds)", "0"], ["1 (led gauche)", 1], ["2 (led droite)", 2]];
 Blockly.Msg.MBOT_BUZZER_INTRO = "jouer un son";
 Blockly.Msg.MBOT_BUZZER_TONE = "note";
-<<<<<<< HEAD
-Blockly.Msg.MBOT_BUZZER_FIELDDROPDOWN_TONE = [["C", "16.352"], ["D", "18.354"], ["E", "20.602"], ["F", "21.827"], ["G", "24.5"], ["A", "27.5"], ["B", "30.868"]];
-=======
 Blockly.Msg.MBOT_BUZZER_FIELDDROPDOWN_TONE = [["A", "27.5"], ["B", "30.868"], ["C", "16.352"], ["D", "18.354"], ["E", "20.602"], ["F", "21.827"], ["G", "24.5"]];
->>>>>>> a10c7819dafaaaab8c0addcfe04ad2145643e047
 Blockly.Msg.MBOT_BUZZER_OCTAVE = "#";
 Blockly.Msg.MBOT_BUZZER_FIELDDROPDOWN_OCTAVE = [["2", "2"], ["3", "3"], ["4", "4"], ["5", "5"], ["6", "6"], ["7", "7"], ["8", "8"]];
 Blockly.Msg.MBOT_BUZZER_DELAY = "durée";
@@ -1299,6 +1295,15 @@ Blockly.Msg.MBOT_BUZZER_FIELDDROPDOWN_DELAY = [["un demi", "500"], ["un quart", 
 
 //Added May 1rst 2016
 Blockly.Msg.ROMEO_HELPURL = "http://www.dfrobot.com/wiki/index.php/Romeo_V2-All_in_one_Controller_%28R3%29_%28SKU:DFR0225%29";
+Blockly.Msg.ROMEO3_MOTOR1_SENS = "moteur M1 : sens";
+Blockly.Msg.ROMEO3_MOTOR2_SENS = "moteur M2 : sens";
+Blockly.Msg.ROMEO3_MOTOR_SENS = "1 : avancer | 0 : reculer";
+Blockly.Msg.ROMEO3_MOTOR1_PWM = "moteur M1 : puissance (0~255)";
+Blockly.Msg.ROMEO3_MOTOR2_PWM = "moteur M2 : puissance (0~255)";
+Blockly.Msg.ROMEO3_MOTOR_TOOLTIP = "gestion individuelle des moteurs";
+Blockly.Msg.ROMEO3_SWITCH = "appui sur le bouton";
+Blockly.Msg.ROMEO_SWITCH_FIELDDROPDOWN = [["S1", "0"], ["S2", "147"], ["S3", "333"], ["S4", "510"], ["S5", "745"], ["aucun", "1023"]];
+Blockly.Msg.ROMEO3_SWITCH_TOOLTIP = "Vérifier le switch S1-S5 !!! Lire la valeur sur l'entrée Analogique A0 : 0 pour S1, 147 pour S2, 333 pour S3, 510 pour S4, 745 pour S5, 1023 si aucun";
 
 
 //Added august 20th 2016

@@ -44,7 +44,8 @@
 //---------------------------------array--------------------------------------------
 
 	Blockly.Blocks.array_create_with.getBlockType = function() {
-		return this.inputList[1].connection.targetBlock().getBlockType();
+		return Blockly.Types.ARRAY;
+		//return this.inputList[1].connection.targetBlock().getBlockType();
 	};
 	Blockly.Blocks.array_getIndex.getBlockType = function() {
 		return this.inputList[1].connection.targetBlock().getBlockType();
@@ -315,6 +316,9 @@ Blockly.Blocks.lp2i_mp3_init.getBlockType = function() {
 
 //---------------------------------dfrobot_romeo_v2.js-------------------------------------
 
+Blockly.Blocks.romeo_switch.getBlockType = function() {
+	return Blockly.Types.BOOLEAN;
+};
 Blockly.Blocks.romeo_forward.getBlockType = function() {
 	return Blockly.Types.NUMBER;
 };

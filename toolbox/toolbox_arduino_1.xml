@@ -125,7 +125,8 @@
 		<block type="romeo_forward"></block>
 		<block type="romeo_backward"></block>	
 		<block type="romeo_turn_left"></block>	
-		<block type="romeo_turn_right"></block>	
+		<block type="romeo_turn_right"></block>		
+		<block type="romeo_switch"></block>
 	</category>
 	<category name="CAT_KIT_VELO_1" colour="#C88330">
 		<block type="kit_velo_niv1_chenillard"></block>

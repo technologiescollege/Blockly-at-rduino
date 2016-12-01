@@ -1176,7 +1176,8 @@
 						<field name="NUM">127</field>
 					</shadow>
 				</value>
-			</block>
+			</block>	
+			<block type="romeo_switch"></block>
 		</category>
 		<category name="CAT_DFPLAYER" colour="#F39800">
 			<block type="lp2i_mp3_init">

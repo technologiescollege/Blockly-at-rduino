@@ -4,7 +4,7 @@ goog.provide('Blockly.Arduino.RoMeo2');
 
 goog.require('Blockly.Arduino');
 
-Blockly.Arduino.romeo_mot_right = function() {
+Blockly.Arduino.romeo_mot_M2 = function() {
 	var pindir1 = 7;
 	var pinpwm1 = 6;
 	//var value_sens1 = false;
@@ -22,7 +22,7 @@ Blockly.Arduino.romeo_mot_right = function() {
 	return code;
 };
 
-Blockly.Arduino.romeo_mot_left = function() {
+Blockly.Arduino.romeo_mot_M1 = function() {
 	var pindir2 = 4;
 	var pinpwm2 = 5;
 	//var value_sens2 = false;

@@ -1300,7 +1300,15 @@ Blockly.Msg.MBOT_BUZZER_FIELDDROPDOWN_DELAY = [["un demi", "500"], ["un quart", 
 
 //Added May 1rst 2016
 Blockly.Msg.ROMEO_HELPURL = "http://www.dfrobot.com/wiki/index.php/Romeo_V2-All_in_one_Controller_%28R3%29_%28SKU:DFR0225%29";
-
+Blockly.Msg.ROMEO3_MOTOR1_SENS = "motor M1 : direction";
+Blockly.Msg.ROMEO3_MOTOR2_SENS = "motor M2 : direction";
+Blockly.Msg.ROMEO3_MOTOR_SENS = "1 : forward | 0 : backward";
+Blockly.Msg.ROMEO3_MOTOR1_PWM = "motor M1 : PWM (0~255)";
+Blockly.Msg.ROMEO3_MOTOR2_PWM = "motor M2 : PWM (0~255)";
+Blockly.Msg.ROMEO3_MOTOR_TOOLTIP = "motor control individually";
+Blockly.Msg.ROMEO3_SWITCH = "press button";
+Blockly.Msg.ROMEO_SWITCH_FIELDDROPDOWN = [["S1", "0"], ["S2", "147"], ["S3", "333"], ["S4", "510"], ["S5", "745"], ["aucun", "1023"]];
+Blockly.Msg.ROMEO3_SWITCH_TOOLTIP = "Bware of switch ! Verify analog read on A0 : 0 for S1, 147 for S2, 333 for S3, 510 for S4, 745 for S5, 1023 if none";
 
 //Added august 20th 2016
 Blockly.Msg.FLYCAM_SWITCH_HELPURL = "http://tic.technologiescollege.fr/wiki/doku.php/fr/arduino/flycam";
