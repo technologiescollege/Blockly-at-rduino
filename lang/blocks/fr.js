@@ -1287,11 +1287,7 @@ Blockly.Msg.MBOT_RGB_ONBOARD_PIXEL_NUMBER = "choix ";
 Blockly.Msg.MBOT_RGB_ONBOARD_FIELDDROPDOWN = [["0 (les deux leds)", "0"], ["1 (led gauche)", 1], ["2 (led droite)", 2]];
 Blockly.Msg.MBOT_BUZZER_INTRO = "jouer un son";
 Blockly.Msg.MBOT_BUZZER_TONE = "note";
-<<<<<<< HEAD
-Blockly.Msg.MBOT_BUZZER_FIELDDROPDOWN_TONE = [["C", "16.352"], ["D", "18.354"], ["E", "20.602"], ["F", "21.827"], ["G", "24.5"], ["A", "27.5"], ["B", "30.868"]];
-=======
 Blockly.Msg.MBOT_BUZZER_FIELDDROPDOWN_TONE = [["A", "27.5"], ["B", "30.868"], ["C", "16.352"], ["D", "18.354"], ["E", "20.602"], ["F", "21.827"], ["G", "24.5"]];
->>>>>>> a10c7819dafaaaab8c0addcfe04ad2145643e047
 Blockly.Msg.MBOT_BUZZER_OCTAVE = "#";
 Blockly.Msg.MBOT_BUZZER_FIELDDROPDOWN_OCTAVE = [["2", "2"], ["3", "3"], ["4", "4"], ["5", "5"], ["6", "6"], ["7", "7"], ["8", "8"]];
 Blockly.Msg.MBOT_BUZZER_DELAY = "durée";
