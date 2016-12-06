@@ -240,21 +240,38 @@ BlocklyDuino.validateConfigGlobal = function () {
 	
 	//change Arduino card
 	$("#pinout").blur();
+	var kitornot = false;
+	if ($("#pinout").val().substring(0,4) == "kit_") {
+		kitornot = true;
+	}
 	if (window.profile["defaultBoard"]!=window.profile[$("#pinout").val()])
-		{
+		{		
 		if (window.confirm(MSG['arduino_card']+' '+window.profile[$("#pinout").val()].description+' ?'))
 			{
 			BlocklyDuino.workspace.clear();				  
 			if (search.length <= 1) {
 					search = '?card=' + $("#pinout").val();
-				  } else if (search.match(/[?&]card=[^&]*/)) {
+			} else if (search.match(/[?&]card=[^&]*/)) {
 					search = search.replace(/([?&]card=)[^&]*/, '$1' + $("#pinout").val());
-				  } else {
+				} else {
 					search = search.replace(/\?/, '?card=' + $("#pinout").val() + '&');
-				  }
-			} else {
+				}
+			//recherche d'une maquette (toolbox) dans l'URL pour une maquette câblée complète, qui bloquera ensuite dans loadToolboxDefinition le bouton des configuration des catégories
+
+			if (kitornot) {
+				if (search.length <= 1) {
+						search = '?toolbox=' + $("#toolboxes").val();
+				} else if (search.match(/[?&]toolbox=[^&]*/)) {
+						search = search.replace(/([?&]toolbox=)[^&]*/, '$1' + $("#pinout").val());
+					} else {
+						search = search.replace(/\?/, '?toolbox=' + $("#pinout").val() + '&');
+					}				
+				} else {
+					search = search.replace(/([?&]toolbox=)[^&]*/, '?toolbox=toolbox_algo');
+				}
+		} else {
 				$("#pinout").val(BlocklyDuino.selectedCard);
-			}
+		}
 	}	
 	  
 	//change language

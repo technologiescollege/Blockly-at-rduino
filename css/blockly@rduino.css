@@ -267,6 +267,7 @@ html[dir="RTL"] #languageMenu {
 	position: absolute;
 	right: 15px;
 	top: 0px;
+	z-index: 10;
 }
 
 html[dir="RTL"] #btn_size {
@@ -277,36 +278,42 @@ html[dir="RTL"] #btn_size {
 	position: absolute;
 	right: 150px;
 	top: 0px;
+	z-index: 10;
 }
 
 #btn_undo {
 	position: absolute;
 	right: 330px;
 	top: 0px;
+	z-index: 10;
 }
 
 #btn_redo {
 	position: absolute;
 	right: 285px;
 	top: 0px;
+	z-index: 10;
 }
 
 #btn_blocs_picture_mini {
 	position: absolute;
 	right: 240px;
 	top: 0px;
+	z-index: 10;
 }
 
 #btn_blocs_picture_maxi {
 	position: absolute;
 	right: 195px;
 	top: 0px;
+	z-index: 10;
 }
 
 #btn_preview {
 	position: absolute;
 	right: 60px;
 	top: 0px;
+	z-index: 10;
 }
 
 html[dir="RTL"] #btn_preview {
@@ -317,6 +324,7 @@ html[dir="RTL"] #btn_preview {
     position: absolute;
     right: 105px;
     top: 0px;
+	z-index: 10;
 }
 
 html[dir="RTL"] #btn_inline {
@@ -343,6 +351,7 @@ html[dir="RTL"] #toggle {
 	position: absolute;
 	right: 100px;
 	bottom: 40px;
+	z-index: 10;
 }
 
 html[dir="RTL"] #btn_delete {

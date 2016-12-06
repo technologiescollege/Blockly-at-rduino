@@ -102,10 +102,11 @@ BlocklyDuino.cardPicture_mini = function() {
 };
 
 BlocklyDuino.cardPicture_change_AIO = function() {
-	var pinoutCard = $("#pinout").val();
-	window.profile["TEMP"]=window.profile[$("#pinout").val()];
-	$('#arduino_card_picture').attr("src", profile.TEMP['picture']);
-	$('#arduino_card_mini_picture').attr("src", profile.TEMP['picture']);
+	if ($("#pinout").val()) {
+		$('#arduino_card_mini_picture').attr("src", profile[$("#pinout").val()]['picture']);
+	} else {
+		$('#arduino_card_mini_picture').attr("src", "");
+	}
 };
 
 /**

@@ -186,7 +186,7 @@ var profile = {
 		serialPin: [["0 (Rx)", "0"], ["1 (Tx)", "1"]],
 		upload_arg: "arduino:avr:leonardo",
 	},
-	microfeux: {
+	kit_microfeux: {
 	    description: "Micro-feux Jeulin",
 	    digital: ["1",  "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13"],
 		dropdownDigital: [["1", "1"], ["2", "2"], ["3", "3"], ["4", "4"], ["5", "5"], ["6", "6"], ["7", "7"], ["8", "8"], ["9", "9"], ["10", "10"], ["11", "11"], ["12", "12"], ["13", "13"]],

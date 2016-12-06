@@ -61,8 +61,7 @@ fieldset[disabled] .btn-codebender.active {
 .btn-arduino:active, 
 .btn-arduino.active, 
 .open .dropdown-toggle.btn-arduino { 
-  color: #ffffff; 
-  background-color: #7FCBCD; 
+  color: #ffffff;
   border-color: #130269; 
 } 
  

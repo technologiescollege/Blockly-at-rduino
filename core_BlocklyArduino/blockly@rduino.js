@@ -219,14 +219,15 @@ BlocklyDuino.setArduinoCard =  function () {
 	var cardId = BlocklyDuino.getStringParamFromUrl('card', '');
 	if (!cardId) {
 		cardId = "arduino_uno";
-		$("#pinout").val(cardId);
 	}
+	$("#pinout").val(cardId);
 	
 	// set the card from url parameters
-	window.profile["defaultBoard"]=window.profile[cardId];
+	profile["defaultBoard"]=profile[cardId];
 	$('#arduino_card_picture').attr("src", profile.defaultBoard['picture']);
 	$('#arduino_card_miniPicture').attr("src", profile.defaultBoard['miniPicture']);	
 	$('#pictureModalLabel').text(profile.defaultBoard['description']);
+	BlocklyDuino.cardPicture_change_AIO();
 };
 
 /**
@@ -353,6 +354,11 @@ BlocklyDuino.bindFunctions = function() {
 	$('#pinout').on("focus", function() {
 		BlocklyDuino.selectedCard = $(this).val();
 	});
+	
+	$('#configModalGlobal').on("hidden.bs.modal", function() {
+		$("#pinout").val(BlocklyDuino.selectedCard);
+		BlocklyDuino.cardPicture_change_AIO();
+	});	
 	
 	$('#toolboxes').on("change", BlocklyDuino.changeToolboxDefinition);	
 
@@ -606,14 +612,17 @@ BlocklyDuino.buildToolbox = function() {
  */
 BlocklyDuino.loadToolboxDefinition = function() {
 	var toolboxFile = BlocklyDuino.getStringParamFromUrl('toolbox', '');
-
+	
 	if (toolboxFile) {
-		$("#toolboxes").val(toolboxFile);
+		$("#toolboxes").val(toolboxFile);		
+		if (toolboxFile.substring(0,4) == "kit_") {
+			$("#btn_config").prop("disabled", true);
+		}
 	}
 	
 	$.ajax( {
 				type: "GET",
-				url: "./" + $("#toolboxes").val() + ".xml",
+				url: "./toolbox/" + toolboxFile + ".xml",
 				dataType: "xml",
 				async : false
 			}).done(function(data) {
@@ -621,9 +630,8 @@ BlocklyDuino.loadToolboxDefinition = function() {
 				toolboxXml += $(data).find('toolbox').html();
 				toolboxXml += '</xml>';
 				$('body').append(toolboxXml);	
-			});
-			
-}
+			});			
+};
 
 /**
  * Change toolbox definition
