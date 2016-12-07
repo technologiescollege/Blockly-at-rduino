@@ -489,11 +489,12 @@
 		<div id="divToolbox">
 			<label id="labelToolboxDefinition"></label> 
 			<select id="toolboxes">
+				<option value="toolbox_none" selected="selected">...</option>
 				<option value="toolbox_algo">Algorithme simple</option>
 				<option value="toolbox_arduino_1">Arduino pour débutants</option>
 				<option value="toolbox_arduino_2">Arduino pour habitués</option>
 				<option value="toolbox_arduino_3">Arduino pour experts</option>
-				<option value="toolbox_arduino_all" selected="selected">TOUT</option>
+				<option value="toolbox_arduino_all">TOUT</option>
 			</select>
 		</div>
       <input type="checkbox" name="select_all" id="select_all"/> <span id="span_select_all"> </span>
@@ -545,7 +546,7 @@
 							<label id="labelArduinoCard"></label>
 							<div id="pinout_AIO_off"></div>
 							<select id="pinout" onmousemove="BlocklyDuino.cardPicture_change_AIO();" onchange="BlocklyDuino.cardPicture_change_AIO();">
-								<option value="">...</option>
+								<option value="none">...</option>
 								<option value="arduino_leonardo">Arduino/Genuino LEONARDO</option>
 								<option value="arduino_mega">Arduino/Genuino MEGA</option>
 								<option value="arduino_micro">Arduino/Genuino MICRO</option>

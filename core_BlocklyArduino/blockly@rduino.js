@@ -27,8 +27,7 @@ BlocklyDuino.inlineBool = true;
 BlocklyDuino.withImage = true;
 BlocklyDuino.ajaxOK = true;
 BlocklyDuino.toolboxInIndexHtml = false;
-BlocklyDuino.pluginCodebender_found = navigator.plugins['Codebender.cc'] !== undefined
-|| navigator.plugins['Codebendercc'] !== undefined;
+BlocklyDuino.pluginCodebender_found = navigator.plugins['Codebender.cc'] !== undefined || navigator.plugins['Codebendercc'] !== undefined;
 
 /**
  * Blockly's main workspace.
@@ -218,7 +217,7 @@ BlocklyDuino.backupBlocks = function () {
 BlocklyDuino.setArduinoCard =  function () {
 	var cardId = BlocklyDuino.getStringParamFromUrl('card', '');
 	if (!cardId) {
-		cardId = "arduino_uno";
+		cardId = "none";
 	}
 	$("#pinout").val(cardId);
 	
@@ -640,11 +639,11 @@ BlocklyDuino.changeToolboxDefinition =  function (){
   var search = window.location.search;
   if (search.length <= 1) {
 	search = '?toolbox=' + $("#toolboxes").val();
-  } else if (search.match(/[?&]toolbox=[^&]*/)) {
-	search = search.replace(/([?&]toolbox=)[^&]*/, '$1' + $("#toolboxes").val());
-  } else {
-	search = search.replace(/\?/, '?toolbox=' + $("#toolboxes").val() + '&');
-  }
+  } else 	if (search.match(/[?&]toolbox=[^&]*/)) {
+				search = search.replace(/([?&]toolbox=)[^&]*/, '$1' + $("#toolboxes").val());
+			} else {
+				search = search.replace(/\?/, '?toolbox=' + $("#toolboxes").val() + '&');
+			}
 
   window.location = window.location.protocol + '//' +
 	  window.location.host + window.location.pathname + search + "&openConfigToolbox=true";
