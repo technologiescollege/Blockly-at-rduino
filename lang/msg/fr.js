@@ -4,6 +4,7 @@ var MSG = {
   btn_switch: " modifier orientation du menu",
   span_card_picture_change: "changer",
   span_config: " configurer les blocs",
+  span_config_kit: "configurer la maquette",
   span_picture: " afficher la carte",
   span_supervision: " supervision de la carte",
   span_delete: " effacer TOUS les blocs",

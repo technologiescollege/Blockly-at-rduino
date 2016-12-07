@@ -158,6 +158,7 @@ Code.initLanguage = function() {
   $('#btn_switch').attr('title', MSG['btn_switch']);
 
   $('#span_config').text(MSG['span_config']);
+  $('#span_config_kit').text(MSG['span_config_kit']);
   $('#labelArduinoCard').text(MSG['labelArduinoCard']);
 
   $('#btn_preview').attr('title', MSG['btn_preview']);

@@ -4,6 +4,7 @@ var MSG = {
   btn_switch: " modify menu orientation",
   span_card_picture_change: "change",
   span_config: " configure blocks",
+  span_config_kit: "configure kit",
   span_picture: " show Arduino card",
   span_supervision: " card supervision",
   span_delete: " delete ALL blocks",

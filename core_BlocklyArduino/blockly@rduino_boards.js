@@ -33,6 +33,23 @@ goog.require('Blockly.Generator');
  */
 
 var profile = {
+	none: {
+	    description: "",
+	    digital: [],
+		PWM : [],
+		dropdownPWM: [],
+		analog : [],
+		dropdownAnalog: [],
+		/*irqonchange: [],*/
+		I2C: [],
+		SPI: [],
+		interrupt: [],
+		picture : "media/Arduino_none.jpg",
+		miniPicture : "media/Arduino_none_mini.jpg",
+		serial: [],
+		serialPin: [],
+		upload_arg: "none",
+	},
 	arduino_leonardo: {
 	    description: "Arduino Leonardo",
 	    digital: ["1",  "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13"],
@@ -207,11 +224,12 @@ var profile = {
                 ['115200', '115200']],
 		serialPin: [["0 (Rx)", "0"], ["1 (Tx)", "1"]],
 		upload_arg: "arduino:avr:uno",
+		help_link: "https://www.qwant.com/?q=microfeux%20jeulin&t=all",
 	},
 };
 
 //set default profile to arduino standard-compatible board
-profile.defaultBoard = profile["arduino_uno"];
+profile.defaultBoard = profile["none"];
 
 /**
  * Ensure that PIN number exists in Digital array.
