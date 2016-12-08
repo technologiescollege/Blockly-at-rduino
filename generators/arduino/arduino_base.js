@@ -103,7 +103,7 @@ Blockly.Arduino.base_delay = function() {
 
 Blockly.Arduino.base_delay_sec = function() {
   var delay_time = Blockly.Arduino.valueToCode(this, 'DELAY_TIME', Blockly.Arduino.ORDER_ATOMIC);
-  var code = 'delay(1000*' + delay_time + ');\n';
+  var code = 'delay(' + 1000*delay_time + ');\n';
   return code;
 };
 

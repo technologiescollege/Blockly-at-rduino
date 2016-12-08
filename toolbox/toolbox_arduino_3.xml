@@ -361,7 +361,7 @@
 		<block type="APDS9960_ColorSensor_green"></block>
 		<block type="APDS9960_ColorSensor_blue"></block>
 	</category>
-	<category name="CAT_SPI_COMM" colour=170>
+	<category name="CAT_SPI_COMM" colour="#1B2944">
 		<block type="spi_setup"></block>
 		<block type="spi_transfer"></block>
 		<block type="spi_transfer_return"></block>
