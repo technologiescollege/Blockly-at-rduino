@@ -267,7 +267,7 @@ BlocklyDuino.validateConfigGlobal = function () {
 						search = search.replace(/\?/, '?toolbox=' + $("#pinout").val() + '&');
 					}				
 				} else {
-					search = search.replace(/([?&]toolbox=)[^&]*/, '?toolbox=toolbox_algo');
+					search = search.replace(/(toolbox=)/, 'toolbox=toolbox_algo');
 				}
 		} else {
 				$("#pinout").val(BlocklyDuino.selectedCard);
