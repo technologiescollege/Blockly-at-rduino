@@ -44,8 +44,8 @@
 //---------------------------------array--------------------------------------------
 
 	Blockly.Blocks.array_create_with.getBlockType = function() {
-		return Blockly.Types.ARRAY;
-		//return this.inputList[1].connection.targetBlock().getBlockType();
+		//return Blockly.Types.ARRAY;
+		return this.inputList[1].connection.targetBlock().getBlockType();
 	};
 	Blockly.Blocks.array_getIndex.getBlockType = function() {
 		return this.inputList[1].connection.targetBlock().getBlockType();
@@ -77,7 +77,7 @@ Blockly.Blocks.math_number_property.getBlockType = function() {
 	return Blockly.Types.BOOLEAN;
 };
 Blockly.Blocks.math_change.getBlockType = function() {
-	return Blockly.Types.NUMBER;
+	return [this.getFieldValue('VAR')];
 };
 Blockly.Blocks.math_round.getBlockType = function() {
 	return Blockly.Types.DECIMAL;

@@ -832,6 +832,16 @@ BlocklyDuino.init = function() {
 					} else {
 					$("#btn_create_example").attr("href","./examples/examples.html?lang=" + Code.LANG);	
 					}
+	
+	/*debug from Codebender or from Python server*/
+	if ($('#toggle-LocalCodebender').prop('checked')) {
+		$("#debug_arduino").addClass("hidden");
+		$("#local_debug").removeClass("hidden");
+		$('#local_debug iframe').prop('src', "http://127.0.0.1:5005"); 
+	} else {
+		$("#debug_arduino").removeClass("hidden");
+		$("#local_debug").addClass("hidden");
+	}
 };
 
 

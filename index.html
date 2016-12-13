@@ -12,6 +12,8 @@
 <script type="text/javascript" src="core_Ardublockly/static_typing.js"></script>
 <script type="text/javascript" src="core_Ardublockly/instances.js"></script>
 <script type="text/javascript" src="core_Ardublockly/field_instance.js"></script>
+<script type="text/javascript" src="core_Ardublockly/block.js"></script>
+<!--Arduino generator, must be defined now-->
 <script type="text/javascript" src="generators/generator_arduino.js"></script>
 
 <script type="text/javascript" src="core_BlocklyArduino/blockly@rduino.js"></script>
@@ -24,29 +26,14 @@
 <script type="text/javascript" src="core_BlocklyArduino/bootstrap.min.3.3.6.js"></script>
 <script type="text/javascript" src="core_BlocklyArduino/bootstrap-toggle.min.js"></script>
 <script type="text/javascript" src="core_BlocklyArduino/prettify.js"></script>
-
-<!--script type="text/javascript" src="blocks/blocklyarduino/colour.js"></script>
-<script type="text/javascript" src="blocks/blocklyarduino/lists.js"></script-->
-<script type="text/javascript" src="blocks/blocklyarduino/array.js"></script>
-<script type="text/javascript" src="blocks/blocklyarduino/logic.js"></script>
-<script type="text/javascript" src="blocks/blocklyarduino/loops.js"></script>
-<script type="text/javascript" src="blocks/blocklyarduino/math.js"></script>
-<script type="text/javascript" src="blocks/blocklyarduino/procedures.js"></script>
-<script type="text/javascript" src="blocks/blocklyarduino/text.js"></script>
-<script type="text/javascript" src="blocks/blocklyarduino/variables.js"></script>
+<!-- define all blocks from one resumer-->
 <script type="text/javascript" src="blocks/arduino_resume.js"></script>
 <script type="text/javascript" src="blocks/blocks_colors.js"></script>
 
 <!--use core_Ardublock type function, add it to blocks from Blockly, must be LAST BLOCKS js-->
 <script type="text/javascript" src="blocks/blocks_typing.js"></script>
 
-<script type="text/javascript" src="generators/blocklyarduino/control.js"></script>
-<script type="text/javascript" src="generators/blocklyarduino/logic.js"></script>
-<script type="text/javascript" src="generators/blocklyarduino/math.js"></script>
-<script type="text/javascript" src="generators/blocklyarduino/text.js"></script>
-<script type="text/javascript" src="generators/blocklyarduino/variables.js"></script>
-<script type="text/javascript" src="generators/blocklyarduino/array.js"></script>
-<script type="text/javascript" src="generators/blocklyarduino/procedures.js"></script>
+<!--contain list of generators for function in blocks-->
 <script type="text/javascript" src="generators/arduino_resume.js"></script>
 
 <!--TechnoZone51-->
@@ -273,7 +260,9 @@
 				<img id="LocalCodebenderLogo" height="35">
                 <pre id="pre_arduino"></pre>
                 <div id="debug_arduino"></div>
-				<div id="debug_arduino_local"></div>
+				<div id="local_debug">
+					<iframe id="rDuino_uploader" width="100%" height="100%" frameborder="0"></iframe>
+				</div>
             </div>
             <div id="content_term" class="tab-pane">
                 <select id="cb_cf_baud_rates"></select>

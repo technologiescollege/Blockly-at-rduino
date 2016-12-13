@@ -1,4 +1,30 @@
 <xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="variables_set" id="1" inline="true" x="87" y="-88">
+    <field name="VAR">LumG</field>
+    <value name="VALUE">
+      <block type="inout_analog_read_validator" id="cXHX:e#4P7XW@HbIW[O{">
+        <field name="PIN">A1</field>
+        <comment pinned="true" h="78" w="193">capteur lumière gauche
+valeur &gt; 800 sol banc
+valeur &lt; 800 sol noir
+        </comment>
+      </block>
+    </value>
+    <next>
+      <block type="variables_set" id="3" inline="true">
+        <field name="VAR">LumD</field>
+        <value name="VALUE">
+          <block type="inout_analog_read_validator" id="PZCN4`|aMw{nuFMgOmsV">
+            <field name="PIN">A0</field>
+            <comment pinned="false" h="96" w="260">capteur lumière droite
+valeur &gt; 800 sol blanc
+valeur &lt; 800 sol noir
+            </comment>
+          </block>
+        </value>
+      </block>
+    </next>
+  </block>
   <block type="procedures_defnoreturn" id="5" x="864" y="-113">
     <field name="NAME">reculer</field>
     <statement name="STACK">
@@ -32,64 +58,7 @@
       </block>
     </statement>
   </block>
-  <block type="variables_set" id="1" inline="true" x="10" y="56">
-    <field name="VAR">LumG</field>
-    <value name="VALUE">
-      <block type="inout_analog_read_validator" id="cXHX:e#4P7XW@HbIW[O{">
-        <field name="PIN">A1</field>
-        <comment pinned="true" h="78" w="193">capteur lumière gauche
-valeur &gt; 800 sol banc
-valeur &lt; 800 sol noir
-        </comment>
-      </block>
-    </value>
-    <next>
-      <block type="variables_set" id="3" inline="true">
-        <field name="VAR">LumD</field>
-        <value name="VALUE">
-          <block type="inout_analog_read_validator" id="PZCN4`|aMw{nuFMgOmsV">
-            <field name="PIN">A0</field>
-            <comment pinned="true" h="96" w="260">capteur lumière droite
-valeur &gt; 800 sol blanc
-valeur &lt; 800 sol noir
-            </comment>
-          </block>
-        </value>
-      </block>
-    </next>
-  </block>
-  <block type="procedures_defnoreturn" id="58" x="867" y="196">
-    <field name="NAME">avancer</field>
-    <statement name="STACK">
-      <block type="servo_move" id="59" inline="false">
-        <value name="PIN">
-          <block type="math_number" id="60">
-            <field name="NUM">5</field>
-          </block>
-        </value>
-        <value name="DEGREE">
-          <block type="math_number" id="61">
-            <field name="NUM">180</field>
-          </block>
-        </value>
-        <next>
-          <block type="servo_move" id="62" inline="false">
-            <value name="PIN">
-              <block type="math_number" id="63">
-                <field name="NUM">6</field>
-              </block>
-            </value>
-            <value name="DEGREE">
-              <block type="math_number" id="64">
-                <field name="NUM">0</field>
-              </block>
-            </value>
-          </block>
-        </next>
-      </block>
-    </statement>
-  </block>
-  <block type="inout_digital_write" id="10" x="26" y="326">
+  <block type="inout_digital_write" id="10" x="87" y="37">
     <value name="PIN">
       <block type="math_number" id="b?2cA1?DRtPv6erX?7Q3">
         <field name="NUM">2</field>
@@ -324,6 +293,37 @@ valeur &lt; 800 sol noir
       </block>
     </next>
   </block>
+  <block type="procedures_defnoreturn" id="58" x="867" y="196">
+    <field name="NAME">avancer</field>
+    <statement name="STACK">
+      <block type="servo_move" id="59" inline="false">
+        <value name="PIN">
+          <block type="math_number" id="60">
+            <field name="NUM">5</field>
+          </block>
+        </value>
+        <value name="DEGREE">
+          <block type="math_number" id="61">
+            <field name="NUM">180</field>
+          </block>
+        </value>
+        <next>
+          <block type="servo_move" id="62" inline="false">
+            <value name="PIN">
+              <block type="math_number" id="63">
+                <field name="NUM">6</field>
+              </block>
+            </value>
+            <value name="DEGREE">
+              <block type="math_number" id="64">
+                <field name="NUM">0</field>
+              </block>
+            </value>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
   <block type="procedures_defnoreturn" id="74" x="869" y="518">
     <field name="NAME">stop</field>
     <statement name="STACK">
@@ -355,7 +355,7 @@ valeur &lt; 800 sol noir
       </block>
     </statement>
   </block>
-  <block type="procedures_defnoreturn" id="147" x="462" y="838">
+  <block type="procedures_defnoreturn" id="147" x="87" y="638">
     <field name="NAME">tourneD</field>
     <statement name="STACK">
       <block type="servo_move" id="148" inline="false">
@@ -386,7 +386,7 @@ valeur &lt; 800 sol noir
       </block>
     </statement>
   </block>
-  <block type="procedures_defnoreturn" id="140" x="866" y="834">
+  <block type="procedures_defnoreturn" id="140" x="488" y="637">
     <field name="NAME">tourneG</field>
     <statement name="STACK">
       <block type="servo_move" id="141" inline="false">

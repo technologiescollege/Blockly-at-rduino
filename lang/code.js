@@ -324,7 +324,9 @@ Code.initLanguageSupervision = function() {
 //Load the Code demo's language strings.
 //document.write('<script src="lang/msg/fr.js"></script>\n');
 // Load Blockly's language strings.
-//document.write('<script src="lang/blocks/fr.js"></script>\n');
+//document.write('<script src="lang/Blockly/fr.js"></script>\n');
+// Load Blockly@rduino specific block's language strings.
+document.write('<script src="lang/BlocklyArduino/fr.js"></script>\n');
 // Load Supervision's language strings.
 //document.write('<script src="lang/supervision/fr.js"></script>\n');
 
@@ -332,6 +334,8 @@ Code.initLanguageSupervision = function() {
 //Load the Code demo's language strings.
 document.write('<script src="lang/msg/' + Code.LANG + '.js"></script>\n');
 // Load Blockly's language strings.
-document.write('<script src="lang/blocks/' + Code.LANG + '.js"></script>\n');
+document.write('<script src="lang/Blockly/' + Code.LANG + '.js"></script>\n');
+// Load Blockly@rduino specific block's language strings.
+document.write('<script src="lang/BlocklyArduino/' + Code.LANG + '.js"></script>\n');
 // Load Supervision's language strings.
 document.write('<script src="lang/supervision/' + Code.LANG + '.js"></script>\n');

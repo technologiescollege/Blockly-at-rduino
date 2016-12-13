@@ -35,10 +35,10 @@ Blockly.Blocks['stepper_config'] = {
                                       Blockly.Msg.STEPPER_DEFAULT_NAME,
                                       true, true, false),
             'STEPPER_NAME')
-        .appendField(Blockly.Msg.STEPPER_MOTOR);/*
+        .appendField(Blockly.Msg.STEPPER_MOTOR);
     this.appendDummyInput()
         .appendField(Blockly.Msg.STEPPER_SETUP)
-        .appendField(Blockly.Msg.STEPPER_MOTOR);*/
+        .appendField(Blockly.Msg.STEPPER_MOTOR);
     this.appendDummyInput()
         .setAlign(Blockly.ALIGN_RIGHT)
         .appendField(Blockly.Msg.STEPPER_PIN1);
