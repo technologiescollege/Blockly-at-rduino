@@ -1,0 +1,66 @@
+[
+    {
+        "source_url": "./blink/blink.xml",
+        "source_text": "le tout premier exercice : faire clignoter une diode",
+        "image": "./blink/blink_fritzing.jpg",
+        "link_url": "",
+        "link_text": "",
+        "visible": true
+    },
+    {
+        "source_url": "./servo_potentio/servo_potentio.xml",
+        "source_text": "faire varier l'angle d'un servomoteur proportionnellement au potentiomètre",
+        "image": "./servo_potentio/servo_potentio_fritzing.jpg",
+        "link_url": "",
+        "link_text": "",
+        "visible": true
+    },
+    {
+        "source_url": "./grenouille/grenouille.xml",
+        "source_text": "faire avancer un robot qui stoppe quand un objet est à moins de 10cm",
+        "image": "./grenouille/grenouille.jpg",
+        "link_url": "http://fablabo.net/wiki/FablabJunior_Automne_2015/Projet4",
+        "link_text": "sur Fablabo",
+        "visible": true
+    },
+    {
+        "source_url": "./suiveur_de_ligne/suiveur_de_ligne.xml",
+        "source_text": "les détecteurs mesurent l'intensité lumineuse renvoyée par la table de chaque côté, puis stoppent ou font tourner les servomoteurs",
+        "image": "./suiveur_de_ligne/suiveur_de_ligne_fritzing.jpg",
+        "link_url": "http://fablabo.net/wiki/FablabJunior_Automne_2015/Projet2",
+        "link_text": "sur Fablabo",
+        "visible": true
+    },
+    {
+        "source_url": "./BT_PAF_Nantes/BT_PAF_Nantes.xml",
+        "source_text": "voici comment connecter une carte Bluetooth pour commencer à recueillir des informations envoyées",
+        "image": "./BT_PAF_Nantes/BT_PAF_Nantes_fritzing.jpg",
+        "link_url": "",
+        "link_text": "",
+        "visible": true
+    },
+    {
+        "source_url": "./BT_piloter_DEL/BT_piloter_DEL.xml",
+        "source_text": "suite à la connection Bluetooth, voici comment piloter une DEL par Android",
+        "image": "./BT_piloter_DEL/BT_piloter_DEL_fritzing.jpg",
+        "link_url": "https://www.youtube-nocookie.com/embed/vlJl28qE5vg?list=PLwy0yw3Oq4-uFJl0j-efUAAlfCbqtcTMr",
+        "link_text": "tutos vidéo",
+        "visible": true
+    },
+    {
+        "source_url": "./gant_sonar/gant_sonar1.xml",
+        "source_text": "simulation d'un gant sonar 1 : une détection d'un obstacle fait vibrer un moteur",
+        "image": "./gant_sonar/gant_sonar1.png",
+        "link_url": "",
+        "link_text": "",
+        "visible": true
+    },
+    {
+        "source_url": "./gant_sonar/gant_sonar2.xml",
+        "source_text": "simulation d'un gant sonar 2 : une détection d'un obstacle à gauche ou à droite fait vibrer un moteur droit ou gauche",
+        "image": "./gant_sonar/gant_sonar2.png",
+        "link_url": "",
+        "link_text": "",
+        "visible": true
+    }
+]

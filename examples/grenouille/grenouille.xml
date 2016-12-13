@@ -1,5 +1,5 @@
 <xml xmlns="http://www.w3.org/1999/xhtml">
-  <block type="variables_set" id="1" inline="true" x="102" y="109">
+  <block type="variables_set" id="1" inline="true" x="438" y="88">
     <field name="VAR">distance</field>
     <value name="VALUE">
       <block type="bq_ultrason" id="2" inline="false">
@@ -33,7 +33,7 @@
               <block type="controls_if" id="9" inline="false">
                 <mutation elseif="1"></mutation>
                 <value name="IF0">
-                  <block type="logic_compare" id="10" inline="true">
+                  <block type="logic_compare" id="10">
                     <field name="OP">LT</field>
                     <value name="A">
                       <block type="variables_get" id="11">
@@ -53,7 +53,7 @@
                   </block>
                 </statement>
                 <value name="IF1">
-                  <block type="logic_compare" id="14" inline="true">
+                  <block type="logic_compare" id="14">
                     <field name="OP">GT</field>
                     <value name="A">
                       <block type="variables_get" id="15">
@@ -80,7 +80,6 @@
     </next>
   </block>
   <block type="procedures_defnoreturn" id="18" x="1028" y="94">
-    <mutation></mutation>
     <field name="NAME">reculer</field>
     <statement name="STACK">
       <block type="servo_move" id="19" inline="false">
@@ -114,7 +113,6 @@
     </statement>
   </block>
   <block type="procedures_defnoreturn" id="25" x="1021" y="438">
-    <mutation></mutation>
     <field name="NAME">avancer</field>
     <statement name="STACK">
       <block type="servo_move" id="26" inline="false">
@@ -148,7 +146,6 @@
     </statement>
   </block>
   <block type="procedures_defnoreturn" id="32" x="452" y="583">
-    <mutation></mutation>
     <field name="NAME">stop</field>
     <statement name="STACK">
       <block type="servo_move" id="33" inline="false">
