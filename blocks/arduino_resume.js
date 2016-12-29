@@ -1,7 +1,6 @@
 $('head').append($('<script>').attr('type', 'text/javascript').attr('src', "blocks/Blockly/logic.js"));
 $('head').append($('<script>').attr('type', 'text/javascript').attr('src', "blocks/Blockly/loops.js"));
 $('head').append($('<script>').attr('type', 'text/javascript').attr('src', "blocks/Blockly/math.js"));
-$('head').append($('<script>').attr('type', 'text/javascript').attr('src', "blocks/Blockly/procedures.js"));
 $('head').append($('<script>').attr('type', 'text/javascript').attr('src', "blocks/Blockly/text.js"));
 //$('head').append($('<script>').attr('type', 'text/javascript').attr('src', "blocks/Blockly/variables.js"));
 
@@ -9,6 +8,7 @@ $('head').append($('<script>').attr('type', 'text/javascript').attr('src', "bloc
 $('head').append($('<script>').attr('type', 'text/javascript').attr('src', "blocks/BlocklyArduino/array.js"));
 $('head').append($('<script>').attr('type', 'text/javascript').attr('src', "blocks/BlocklyArduino/logic.js"));
 $('head').append($('<script>').attr('type', 'text/javascript').attr('src', "blocks/BlocklyArduino/math.js"));
+$('head').append($('<script>').attr('type', 'text/javascript').attr('src', "blocks/BlocklyArduino/procedures.js"));
 $('head').append($('<script>').attr('type', 'text/javascript').attr('src', "blocks/BlocklyArduino/text.js"));
 $('head').append($('<script>').attr('type', 'text/javascript').attr('src', "blocks/BlocklyArduino/variables.js"));
 
@@ -47,10 +47,9 @@ $('head').append($('<script>').attr('type', 'text/javascript').attr('src', "bloc
 $('head').append($('<script>').attr('type', 'text/javascript').attr('src', "blocks/robots/robot_misc.js"));
 $('head').append($('<script>').attr('type', 'text/javascript').attr('src', "blocks/robuno/robuno.js"));
 $('head').append($('<script>').attr('type', 'text/javascript').attr('src', "blocks/servo/servo.js"));
-$('head').append($('<script>').attr('type', 'text/javascript').attr('src', "blocks/spi_comm/spi_comm.js"));
 $('head').append($('<script>').attr('type', 'text/javascript').attr('src', "blocks/stepper_motor/stepper_motor.js"));
 $('head').append($('<script>').attr('type', 'text/javascript').attr('src', "blocks/technozone51/technozone51.js"));
-//$('head').append($('<script>').attr('type', 'text/javascript').attr('src', "blocks/technozone51/technozone51_barbot.js"));
 $('head').append($('<script>').attr('type', 'text/javascript').attr('src', "blocks/zumobot/zumo_auto.js"));
 $('head').append($('<script>').attr('type', 'text/javascript').attr('src', "blocks/zumobot/zumo_motors.js"));
 $('head').append($('<script>').attr('type', 'text/javascript').attr('src', "blocks/zumobot/zumo_sensors.js"));
+//$('head').append($('<script>').attr('type', 'text/javascript').attr('src', "blocks/spi_comm/spi_comm.js"));

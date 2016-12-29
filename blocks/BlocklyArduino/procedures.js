@@ -404,6 +404,10 @@ Blockly.Blocks['procedures_mutatorarg'] = {
   init: function() {
     var field = new Blockly.FieldTextInput('x', this.validator_);
     this.appendDummyInput()
+        .appendField(Blockly.Msg.PROCEDURES_MUTATORARG_TYPE)
+        .appendField(new Blockly.FieldDropdown(
+                         Blockly.Types.getValidTypeArray()),
+                     'VARIABLE_SETTYPE_TYPE')
         .appendField(Blockly.Msg.PROCEDURES_MUTATORARG_TITLE)
         .appendField(field, 'NAME');
     this.setPreviousStatement(true);
