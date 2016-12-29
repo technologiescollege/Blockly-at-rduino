@@ -71,13 +71,13 @@ Blockly.Blocks['stepper_step'] = {
   init: function() {
     this.setHelpUrl('http://arduino.cc/en/Reference/StepperStep');
     this.setColour(Blockly.Blocks.stepper_motor.HUE);
-    /*this.appendDummyInput()
+    this.appendDummyInput()
         .appendField(Blockly.Msg.STEPPER_STEP)
         .appendField(
             new Blockly.FieldInstance('Stepper',
                                       Blockly.Msg.STEPPER_DEFAULT_NAME,
                                       false, true, false),
-            'STEPPER_NAME');*/
+            'STEPPER_NAME');
     this.appendValueInput('STEPPER_STEPS')
         .setCheck(Blockly.Types.NUMBER.checkList);
     this.appendDummyInput()
@@ -91,7 +91,7 @@ Blockly.Blocks['stepper_step'] = {
    * It checks/warns if the selected stepper instance has a config block.
    * @this Blockly.Block
    */
-  /*onchange: function() {
+  onchange: function() {
     if (!this.workspace) return;  // Block has been deleted.
 
     var instanceName = this.getFieldValue('STEPPER_NAME')
@@ -104,5 +104,5 @@ Blockly.Blocks['stepper_step'] = {
             '%1', Blockly.Msg.STEPPER_COMPONENT).replace(
                 '%2', instanceName));
     }
-  }*/
+  }
 };

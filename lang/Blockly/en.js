@@ -289,7 +289,9 @@ Blockly.Msg.PROCEDURES_HIGHLIGHT_DEF = "Highlight function definition";
 Blockly.Msg.PROCEDURES_IFRETURN_HELPURL = "http://c2.com/cgi/wiki?GuardClause";
 Blockly.Msg.PROCEDURES_IFRETURN_TOOLTIP = "If a value is true, then return a second value.";
 Blockly.Msg.PROCEDURES_IFRETURN_WARNING = "Warning: This block may be used only within a function definition.";
-Blockly.Msg.PROCEDURES_MUTATORARG_TITLE = "input name:";
+
+Blockly.Msg.PROCEDURES_MUTATORARG_TYPE = "input type";
+Blockly.Msg.PROCEDURES_MUTATORARG_TITLE = "input name";
 Blockly.Msg.PROCEDURES_MUTATORARG_TOOLTIP = "Add an input to the function.";
 Blockly.Msg.PROCEDURES_MUTATORCONTAINER_TITLE = "inputs";
 Blockly.Msg.PROCEDURES_MUTATORCONTAINER_TOOLTIP = "Add, remove, or reorder inputs to this function.";

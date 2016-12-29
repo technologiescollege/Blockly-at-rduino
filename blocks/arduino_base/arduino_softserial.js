@@ -38,14 +38,28 @@ Blockly.Blocks['soft_init'] = {
   init: function() {
     this.setColour(Blockly.Blocks.arduino_softserial.HUE);
 	this.setHelpUrl('http://arduino.cc/en/Reference/AnalogWrite');
-    this.appendDummyInput()
-		.appendField(Blockly.Msg.SSERIAL_Init)
-        .appendField(Blockly.Msg.SSERIAL_RX)
-		.appendField(new Blockly.FieldDropdown([['2', '2'],['3', '3'],['4', '4'],['5', '5'],['6', '6'],['7', '7'],['8', '8'],['9', '9'],['10', '10'],['11', '11'],['12', '12'],['13', '13']]), "PIN1");
-		//.appendField(new Blockly.FieldDropdown(profile.defaultBoard.digitalPins), "PIN1");
-    this.appendDummyInput()
-        .appendField(Blockly.Msg.SSERIAL_TX)
-	    .appendField(new Blockly.FieldDropdown([['2', '2'],['3', '3'],['4', '4'],['5', '5'],['6', '6'],['7', '7'],['8', '8'],['9', '9'],['10', '10'],['11', '11'],['12', '12'],['13', '13']]), "PIN2");
+	//only arduino mega admit multi softserial connection
+	if (window.profile.defaultBoard != window.profile["mega"]) {
+		this.appendDummyInput()
+			.appendField(Blockly.Msg.SSERIAL_Init)
+			.appendField(
+				new Blockly.FieldInstance('SoftSerial',
+										  Blockly.Msg.STEPPER_DEFAULT_NAME,
+										  true, true, false),
+				'SOFTSERIAL_NAME')
+			.appendField(Blockly.Msg.SSERIAL_RX)
+			.appendField(new Blockly.FieldDropdown(profile.defaultBoard.serialPin), "PIN1");
+	} else {
+		this.appendDummyInput()
+			.appendField(Blockly.Msg.SSERIAL_Init)
+			.appendField(
+				new Blockly.FieldInstance('SoftSerial',
+										  Blockly.Msg.STEPPER_DEFAULT_NAME,
+										  true, false, false),
+				'SOFTSERIAL_NAME')
+			.appendField(Blockly.Msg.SSERIAL_RX)
+			.appendField(new Blockly.FieldDropdown(profile.defaultBoard.serialPin), "PIN1");
+		};
     this.appendDummyInput()
 	    .appendField(Blockly.Msg.SSERIAL_SPEED)
      	.appendField(new Blockly.FieldDropdown(profile.defaultBoard.serial), "SPEED");
@@ -60,21 +74,36 @@ Blockly.Blocks['soft_read'] = {
   init: function() {
     this.setColour(Blockly.Blocks.arduino_softserial.HUE);
 	this.setHelpUrl('');
-	this.appendDummyInput("")
+	if (window.profile.defaultBoard != window.profile["mega"]) {
+		this.appendDummyInput()
+			.appendField(Blockly.Msg.SSERIAL_Init)
+			.appendField(
+				new Blockly.FieldInstance('SoftSerial',
+										  Blockly.Msg.STEPPER_DEFAULT_NAME,
+										  true, true, false),
+				'SOFTSERIAL_NAME')
+			.appendField(Blockly.Msg.SSERIAL_RX)
+			.appendField(new Blockly.FieldDropdown(profile.defaultBoard.serialPin), "RX_ss")
+			.appendTitle(Blockly.Msg.SSERIAL_Read);
+	} else {
+		this.appendDummyInput()
+			.appendField(Blockly.Msg.SSERIAL_Init)
+			.appendField(
+				new Blockly.FieldInstance('SoftSerial',
+										  Blockly.Msg.STEPPER_DEFAULT_NAME,
+										  true, false, false),
+				'SOFTSERIAL_NAME')
+			.appendField(Blockly.Msg.SSERIAL_RX)
+			.appendField(new Blockly.FieldDropdown(profile.defaultBoard.serialPin), "RX_ss")
+			.appendTitle(Blockly.Msg.SSERIAL_Read);
+		};
+	/*this.appendDummyInput("")
 		.appendField(Blockly.Msg.SSERIAL_RX)
         .appendField(new Blockly.FieldTextInput(''), 'RX_ss')
-	    .appendTitle(Blockly.Msg.SSERIAL_Read);
+	    .appendTitle(Blockly.Msg.SSERIAL_Read);*/
     this.setInputsInline(false);
     this.setOutput(true, 'String');
     this.setTooltip('');
-  },
-  /**
-   * Assigns a type to the block based on the selected type to cast.
-   * @return {!string} Blockly type for this block configuration.
-   * @this Blockly.Block
-   */
-  getBlockType: function() {
-    return Blockly.Types.CHARACTER;
   }
 };
 
