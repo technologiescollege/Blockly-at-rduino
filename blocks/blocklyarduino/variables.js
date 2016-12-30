@@ -27,7 +27,12 @@
 goog.provide('Blockly.Blocks.variables');
 
 goog.require('Blockly.Blocks');
+goog.require('Blockly.Types');
 
+
+/**
+ * Common HSV hue for all blocks in this category.
+ */
 Blockly.Blocks.variables.HUE = "#EE7D16";
 
 Blockly.Blocks['variables_get'] = {
@@ -44,26 +49,6 @@ Blockly.Blocks['variables_get'] = {
     this.setOutput(true);
     this.setTooltip(Blockly.Msg.VARIABLES_GET_TOOLTIP);
     this.contextMenuMsg_ = Blockly.Msg.VARIABLES_GET_CREATE_SET;
-  },
-  /**
-   * Return all variables referenced by this block.
-   * @return {!Array.<string>} List of variable names.
-   * @this Blockly.Block
-   */
-  getVars: function() {
-    return [this.getFieldValue('VAR')];
-  },
-  /**
-   * Notification that a variable is renaming.
-   * If the name matches one of this block's variables, rename it.
-   * @param {string} oldName Previous name of variable.
-   * @param {string} newName Renamed variable.
-   * @this Blockly.Block
-   */
-  renameVar: function(oldName, newName) {
-    if (Blockly.Names.equals(oldName, this.getFieldValue('VAR'))) {
-      this.setFieldValue(newName, 'VAR');
-    }
   },
   contextMenuType_: 'variables_set',
   /**
@@ -98,7 +83,7 @@ Blockly.Blocks['variables_get'] = {
    */
   getVarType: function(varName) {
     return [Blockly.Types.UNDEF, this.getFieldValue('VAR')];
-  }
+  },
 };
 
 Blockly.Blocks['variables_set'] = {
@@ -128,26 +113,6 @@ Blockly.Blocks['variables_set'] = {
     });
     this.contextMenuMsg_ = Blockly.Msg.VARIABLES_SET_CREATE_GET;
   },
-  /**
-   * Return all variables referenced by this block.
-   * @return {!Array.<string>} List of variable names.
-   * @this Blockly.Block
-   */
-  getVars: function() {
-    return [this.getFieldValue('VAR')];
-  },
-  /**
-   * Notification that a variable is renaming.
-   * If the name matches one of this block's variables, rename it.
-   * @param {string} oldName Previous name of variable.
-   * @param {string} newName Renamed variable.
-   * @this Blockly.Block
-   */
-  renameVar: function(oldName, newName) {
-    if (Blockly.Names.equals(oldName, this.getFieldValue('VAR'))) {
-      this.setFieldValue(newName, 'VAR');
-    }
-  },
   contextMenuType_: 'variables_get',
   customContextMenu: Blockly.Blocks['variables_get'].customContextMenu,
   /**
@@ -158,5 +123,33 @@ Blockly.Blocks['variables_set'] = {
    */
   getVarType: function(varName) {
     return Blockly.Types.getChildBlockType(this);
+  }
+};
+
+Blockly.Blocks['variables_set_type'] = {
+  /**
+   * Block for variable casting.
+   * @this Blockly.Block
+   */
+  init: function() {
+    this.setHelpUrl('http://arduino.cc/en/Reference/HomePage');
+    this.setColour(Blockly.Blocks.variables.HUE);
+    this.appendDummyInput()
+        .appendField(new Blockly.FieldDropdown(
+                         Blockly.Types.getValidTypeArray()),
+                     'VARIABLE_SETTYPE_TYPE');
+    this.appendValueInput('VARIABLE_SETTYPE_INPUT');
+    this.setInputsInline(true);
+    this.setOutput(true);
+    this.setTooltip(Blockly.Msg.ARD_VAR_AS_TIP);
+  },
+  /**
+   * Assigns a type to the block based on the selected type to cast.
+   * @return {!string} Blockly type for this block configuration.
+   * @this Blockly.Block
+   */
+  getBlockType: function() {
+    var blocklyTypeKey = this.getFieldValue('VARIABLE_SETTYPE_TYPE');
+    return Blockly.Types[blocklyTypeKey];
   }
 };

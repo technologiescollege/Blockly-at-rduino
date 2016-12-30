@@ -104,8 +104,10 @@ BlocklyDuino.cardPicture_mini = function() {
 BlocklyDuino.cardPicture_change_AIO = function() {
 	if ($("#pinout").val()) {
 		$('#arduino_card_mini_picture').attr("src", profile[$("#pinout").val()]['picture']);
+		$('#arduino_card_picture').attr("src", profile[$("#pinout").val()]['picture']);
 	} else {
 		$('#arduino_card_mini_picture').attr("src", "");
+		$('#arduino_card_picture').attr("src", "");
 	}
 };
 

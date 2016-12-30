@@ -334,6 +334,7 @@ html[dir="RTL"] #btn_inline {
 #toggle {
 	width: 25%;
 	position: absolute;
+	z-index: 1;
 	right: 25px;
 	top: 50px;
 	bottom: 100px;
@@ -430,6 +431,18 @@ html[dir="RTL"] #select_all {
 	word-break: break-all;
 	word-wrap: break-word;
 	white-space: pre-wrap;
+}
+
+#local_debug {
+	height: 25%;
+	width: 100%;
+	border-width: 2px;
+	border-color: black;
+	background-color: rgba(8, 8, 8, 1);
+	color: rgba(29, 147, 47, 1);
+	overflow: auto;
+	word-break: break-all;
+	word-wrap: break-word;
 }
 
 .blocklyToolboxDiv {

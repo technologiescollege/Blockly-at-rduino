@@ -1,3 +1,12 @@
+$('head').append($('<script>').attr('type', 'text/javascript').attr('src', "generators/BlocklyArduino/array.js"));
+$('head').append($('<script>').attr('type', 'text/javascript').attr('src', "generators/BlocklyArduino/control.js"));
+$('head').append($('<script>').attr('type', 'text/javascript').attr('src', "generators/BlocklyArduino/lists.js"));
+$('head').append($('<script>').attr('type', 'text/javascript').attr('src', "generators/BlocklyArduino/logic.js"));
+$('head').append($('<script>').attr('type', 'text/javascript').attr('src', "generators/BlocklyArduino/math.js"));
+$('head').append($('<script>').attr('type', 'text/javascript').attr('src', "generators/BlocklyArduino/procedures.js"));
+$('head').append($('<script>').attr('type', 'text/javascript').attr('src', "generators/BlocklyArduino/text.js"));
+$('head').append($('<script>').attr('type', 'text/javascript').attr('src', "generators/BlocklyArduino/variables.js"));
+
 $('head').append($('<script>').attr('type', 'text/javascript').attr('src', "generators/arduino/arduino_base.js"));
 $('head').append($('<script>').attr('type', 'text/javascript').attr('src', "generators/arduino/arduino_io.js"));
 $('head').append($('<script>').attr('type', 'text/javascript').attr('src', "generators/arduino/arduino_conversion.js"));

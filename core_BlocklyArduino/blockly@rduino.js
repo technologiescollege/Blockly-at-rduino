@@ -1,5 +1,5 @@
 /**
- * BlocklyDuino
+ * Blockly@rduino
  */
 
 'use strict';
@@ -322,7 +322,10 @@ BlocklyDuino.discard = function () {
   var count = BlocklyDuino.workspace.getAllBlocks().length;
   if (count < 2 || window.confirm(MSG['discard'].replace('%1', count))) {
     BlocklyDuino.workspace.clear();
-    BlocklyDuino.renderContent();
+    var search = window.location.search;
+    search = search.replace(/([?&]url=)[^&]*/, '');
+	window.location = window.location.protocol + '//' + window.location.host + window.location.pathname + search;
+    //BlocklyDuino.renderContent();
   }
 };
 
@@ -832,6 +835,16 @@ BlocklyDuino.init = function() {
 					} else {
 					$("#btn_create_example").attr("href","./examples/examples.html?lang=" + Code.LANG);	
 					}
+	
+	/*debug from Codebender or from Python server*/
+	if ($('#toggle-LocalCodebender').prop('checked')) {
+		$("#debug_arduino").addClass("hidden");
+		$("#local_debug").removeClass("hidden");
+		$('#local_debug iframe').prop('src', "http://127.0.0.1:5005"); 
+	} else {
+		$("#debug_arduino").removeClass("hidden");
+		$("#local_debug").addClass("hidden");
+	}
 };
 
 
@@ -856,6 +869,10 @@ BlocklyDuino.initCompilerFlasher = function() {
  * Create content for modal example
  */
 BlocklyDuino.buildExamples = function() {
+	var search = window.location.search;	
+	// remove values from url
+	search = search.replace(/([?&]url=)[^&]*/, '');
+	
 	$.ajax({
 	    cache: false,
 	    url: "./examples/examples.json",
@@ -865,7 +882,7 @@ BlocklyDuino.buildExamples = function() {
 				$.each(data, function(i, example){
 					if (example.visible) {
 						var line = "<tr>"
-								   + "<td><a href='index.html?lang=fr&url=./examples/"+example.source_url+"'>"
+								   + "<td><a href='" + search + "&url=./examples/"+example.source_url+"'>"
 								   + example.source_text
 								   + "</a></td>"
 								   + "<td>"

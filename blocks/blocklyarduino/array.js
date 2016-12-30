@@ -38,11 +38,22 @@ Blockly.Blocks['array_create_with'] = {
   init: function() {
     this.setHelpUrl(Blockly.Msg.ARRAY_CREATE_WITH_HELPURL);
     this.setColour(Blockly.Blocks.array.HUE);
+    this.appendDummyInput()
+        .appendField(Blockly.Msg.ARRAY_CREATE_WITH_INPUT_WITH);
     this.itemCount_ = 3;
     this.updateShape_();
     this.setOutput(true, 'Array');
     this.setMutator(new Blockly.Mutator(['array_create_with_item']));
     this.setTooltip(Blockly.Msg.ARRAY_CREATE_WITH_TOOLTIP);
+  },
+  /**
+   * Assigns a type to the block based on the selected type to cast.
+   * @return {!string} Blockly type for this block configuration.
+   * @this Blockly.Block
+   */
+  getBlockType: function() {
+    var blocklyTypeKey = this.getFieldValue('VARIABLE_SETTYPE_TYPE');
+    return Blockly.Types[blocklyTypeKey];
   },
   /**
    * Create XML to represent list inputs.
@@ -147,7 +158,7 @@ Blockly.Blocks['array_create_with'] = {
       for (var i = 0; i < this.itemCount_; i++) {
         var input = this.appendValueInput('ADD' + i);
         if (i == 0) {
-          input.appendField(Blockly.Msg.ARRAY_CREATE_WITH_INPUT_WITH);
+          input.appendField(Blockly.Msg.ARRAY_CREATE_WITH);
         }
       }
     }
@@ -162,7 +173,7 @@ Blockly.Blocks['array_create_with_item'] = {
   init: function() {
     this.setColour(Blockly.Blocks.array.HUE);
     this.appendDummyInput()
-      .appendField(Blockly.Msg.ARRAY_CREATE_WITH_ITEM_TITLE);
+        .appendField(Blockly.Msg.ARRAY_CREATE_WITH_ITEM_TITLE);
     this.setPreviousStatement(true);
     this.setNextStatement(true);
     this.setTooltip(Blockly.Msg.ARRAY_CREATE_WITH_ITEM_TOOLTIP);
