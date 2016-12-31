@@ -326,6 +326,7 @@ BlocklyDuino.discard = function () {
 	var search = window.location.search;
     var newsearch = search.replace(/([?&]url=)[^&]*/, '');
 	window.history.pushState(search, "Title", newsearch);
+    BlocklyDuino.renderContent();
   }
 };
 

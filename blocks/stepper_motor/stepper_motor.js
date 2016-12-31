@@ -85,7 +85,7 @@ Blockly.Blocks['stepper_step'] = {
     this.setPreviousStatement(true);
     this.setNextStatement(true);
     this.setTooltip(Blockly.Msg.STEPPER_STEP_TIP);
-  }
+  },
   /**
    * Called whenever anything on the workspace changes.
    * It checks/warns if the selected stepper instance has a config block.

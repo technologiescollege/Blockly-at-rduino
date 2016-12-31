@@ -77,7 +77,7 @@ Blockly.Blocks.math_number_property.getBlockType = function() {
 	return Blockly.Types.BOOLEAN;
 };
 Blockly.Blocks.math_change.getBlockType = function() {
-	return [this.getFieldValue('VAR')];
+	return [thisBlock.getFieldValue('VAR')];
 };
 Blockly.Blocks.math_round.getBlockType = function() {
 	return Blockly.Types.DECIMAL;
@@ -473,6 +473,24 @@ Blockly.Blocks.grove_bluetooth_slave.getBlockType = function() {
 Blockly.Blocks.grove_dht_read.getBlockType = function() {
 	return Blockly.Types.NUMBER;
 };
+
+//***********************************************************************************
+//								ICN
+//***********************************************************************************
+
+//---------------------------------icn.js-------------------------------------
+
+Blockly.Blocks.hcsr04.getBlockType = function() {
+	return Blockly.Types.DECIMAL;
+};
+Blockly.Blocks.ds18b20_search.getBlockType = function() {
+	return Blockly.Types.BOOLEAN;
+};
+Blockly.Blocks.ds18b20_temp.getBlockType = function() {
+	return Blockly.Types.DECIMAL;
+};
+	
+	
 //***********************************************************************************
 //								JEULIN maquette de feux
 //***********************************************************************************

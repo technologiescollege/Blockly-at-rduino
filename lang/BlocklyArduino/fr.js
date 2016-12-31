@@ -171,6 +171,8 @@ Blockly.Msg.CAT_APDS_9960_RGB_Gesture = "couleur + mouvement"; //added 9 october
 
 Blockly.Msg.CAT_BT_ELECTRONICS = "Bluetooth Electronics"; //added 13 november 2016
 
+Blockly.Msg.CAT_ICN = "ICN";  //added 3 january 2017
+
 Blockly.Msg.FIELDDROPDOWN = [["1 (état haut)", "HIGH"], ["0 (état bas)", "LOW"]];
 Blockly.Msg.FIELDDROPDOWN_ONOFF = [["marche", "ON"], ["arrêt", "OFF"]]
 Blockly.Msg.INOUT_HIGH_LEVEL = "1 (état haut)";

@@ -28,8 +28,11 @@ goog.provide('Blockly.Blocks.variables');
 
 goog.require('Blockly.Blocks');
 
-Blockly.Blocks.variables.HUE = "#EE7D16";
 
+/**
+ * Common HSV hue for all blocks in this category.
+ */
+Blockly.Blocks.variables.HUE = 330;
 
 Blockly.Blocks['variables_get'] = {
   /**

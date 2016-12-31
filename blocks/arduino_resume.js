@@ -1,12 +1,10 @@
 $('head').append($('<script>').attr('type', 'text/javascript').attr('src', "blocks/Blockly/logic.js"));
-$('head').append($('<script>').attr('type', 'text/javascript').attr('src', "blocks/Blockly/loops.js"));
 $('head').append($('<script>').attr('type', 'text/javascript').attr('src', "blocks/Blockly/math.js"));
 $('head').append($('<script>').attr('type', 'text/javascript').attr('src', "blocks/Blockly/text.js"));
-//$('head').append($('<script>').attr('type', 'text/javascript').attr('src', "blocks/Blockly/variables.js"));
-
 //specific block added to original Blockly one
 $('head').append($('<script>').attr('type', 'text/javascript').attr('src', "blocks/BlocklyArduino/array.js"));
 $('head').append($('<script>').attr('type', 'text/javascript').attr('src', "blocks/BlocklyArduino/logic.js"));
+$('head').append($('<script>').attr('type', 'text/javascript').attr('src', "blocks/BlocklyArduino/loops.js"));
 $('head').append($('<script>').attr('type', 'text/javascript').attr('src', "blocks/BlocklyArduino/math.js"));
 $('head').append($('<script>').attr('type', 'text/javascript').attr('src', "blocks/BlocklyArduino/procedures.js"));
 $('head').append($('<script>').attr('type', 'text/javascript').attr('src', "blocks/BlocklyArduino/text.js"));
@@ -34,6 +32,7 @@ $('head').append($('<script>').attr('type', 'text/javascript').attr('src', "bloc
 $('head').append($('<script>').attr('type', 'text/javascript').attr('src', "blocks/fischertechnik/fischertechnik.js"));
 $('head').append($('<script>').attr('type', 'text/javascript').attr('src', "blocks/flycamone-eco-v2/flycamone-eco-v2.js"));
 $('head').append($('<script>').attr('type', 'text/javascript').attr('src', "blocks/grove/grove.js"));
+$('head').append($('<script>').attr('type', 'text/javascript').attr('src', "blocks/icn/icn.js"));
 $('head').append($('<script>').attr('type', 'text/javascript').attr('src', "blocks/jeulin_maquette_feux/jeulin_maquette_feux.js"));
 $('head').append($('<script>').attr('type', 'text/javascript').attr('src', "blocks/kit_velo/kit_velo_niv1.js"));
 $('head').append($('<script>').attr('type', 'text/javascript').attr('src', "blocks/kit_velo/kit_velo_niv2.js"));

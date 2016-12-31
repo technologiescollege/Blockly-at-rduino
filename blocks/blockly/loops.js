@@ -28,7 +28,11 @@ goog.provide('Blockly.Blocks.loops');
 
 goog.require('Blockly.Blocks');
 
-Blockly.Blocks.loops.HUE = "#C88330";
+
+/**
+ * Common HSV hue for all blocks in this category.
+ */
+Blockly.Blocks.loops.HUE = 120;
 
 Blockly.Blocks['controls_repeat_ext'] = {
   /**
@@ -253,7 +257,7 @@ Blockly.Blocks['controls_flow_statements'] = {
    * @this Blockly.Block
    */
   onchange: function(e) {
-    if (this.workspace.isDragging()) {
+    if (!this.workspace.isDragging || this.workspace.isDragging()) {
       return;  // Don't change state at the start of a drag.
     }
     var legal = false;

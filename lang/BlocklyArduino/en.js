@@ -176,6 +176,8 @@ Blockly.Msg.CAT_APDS_9960_RGB_Gesture = "color + movement"; //added 9 october 20
 
 Blockly.Msg.CAT_BT_ELECTRONICS = "Bluetooth Electronics"; //added 13 november 2016
 
+Blockly.Msg.CAT_ICN = "ICN";  //added 3 january 2017
+
 
 //**********************************blocks***********************************************
 //**********************************blocks***********************************************
