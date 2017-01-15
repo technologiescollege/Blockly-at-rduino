@@ -1,14 +1,14 @@
-$('head').append($('<script>').attr('type', 'text/javascript').attr('src', "blocks/Blockly/logic.js"));
+/*$('head').append($('<script>').attr('type', 'text/javascript').attr('src', "blocks/Blockly/logic.js"));
 $('head').append($('<script>').attr('type', 'text/javascript').attr('src', "blocks/Blockly/math.js"));
-$('head').append($('<script>').attr('type', 'text/javascript').attr('src', "blocks/Blockly/text.js"));
+$('head').append($('<script>').attr('type', 'text/javascript').attr('src', "blocks/Blockly/text.js"));*/
 //specific block added to original Blockly one
-$('head').append($('<script>').attr('type', 'text/javascript').attr('src', "blocks/BlocklyArduino/array.js"));
+/*$('head').append($('<script>').attr('type', 'text/javascript').attr('src', "blocks/BlocklyArduino/array.js"));
 $('head').append($('<script>').attr('type', 'text/javascript').attr('src', "blocks/BlocklyArduino/logic.js"));
 $('head').append($('<script>').attr('type', 'text/javascript').attr('src', "blocks/BlocklyArduino/loops.js"));
 $('head').append($('<script>').attr('type', 'text/javascript').attr('src', "blocks/BlocklyArduino/math.js"));
 $('head').append($('<script>').attr('type', 'text/javascript').attr('src', "blocks/BlocklyArduino/procedures.js"));
 $('head').append($('<script>').attr('type', 'text/javascript').attr('src', "blocks/BlocklyArduino/text.js"));
-$('head').append($('<script>').attr('type', 'text/javascript').attr('src', "blocks/BlocklyArduino/variables.js"));
+$('head').append($('<script>').attr('type', 'text/javascript').attr('src', "blocks/BlocklyArduino/variables.js"));*/
 
 $('head').append($('<script>').attr('type', 'text/javascript').attr('src', "blocks/arduino_base/arduino_base.js"));
 $('head').append($('<script>').attr('type', 'text/javascript').attr('src', "blocks/arduino_base/arduino_io.js"));
