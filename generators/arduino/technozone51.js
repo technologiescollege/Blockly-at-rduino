@@ -993,8 +993,8 @@ Blockly.Arduino.technozone_cmouv1 = function() {
 };
 
 Blockly.Arduino.technozone_potar1 = function() {
-  var dropdown_pin = Blockly.Arduino.valueToCode(this, 'PIN', Blockly.Arduino.ORDER_ATOMIC);;
-    Blockly.Arduino.setups_['setup_potar1_'+dropdown_pin] = 'pinMode('+dropdown_pin+', INPUT);';
+  var dropdown_pin = Blockly.Arduino.valueToCode(this, 'PIN', Blockly.Arduino.ORDER_ATOMIC);
+  //  Blockly.Arduino.setups_['setup_potar1_'+dropdown_pin] = 'pinMode('+dropdown_pin+', INPUT);';
   var code = 'analogRead('+dropdown_pin+')';
   return [code, Blockly.Arduino.ORDER_ATOMIC];
 };
@@ -1004,14 +1004,14 @@ Blockly.Arduino.technozone_ctn1 = function() {
   /*
 	  temperature=round(-134*Analog_read/1023+116);
   */
-  Blockly.Arduino.setups_['setup_ctn1_'+dropdown_pin] = 'pinMode('+dropdown_pin+', INPUT);';
+  //Blockly.Arduino.setups_['setup_ctn1_'+dropdown_pin] = 'pinMode('+dropdown_pin+', INPUT);';
   var code = 'round(- 0.525641025*(analogRead('+dropdown_pin+')/4)+ 116.0897436)';
   return [code, Blockly.Arduino.ORDER_ATOMIC];
 };
 
 Blockly.Arduino.technozone_ldr1 = function() {
   var dropdown_pin = Blockly.Arduino.valueToCode(this, 'PIN', Blockly.Arduino.ORDER_ATOMIC);
-  Blockly.Arduino.setups_['setup_ldr1_'+dropdown_pin] = 'pinMode('+dropdown_pin+', INPUT);';
+  //Blockly.Arduino.setups_['setup_ldr1_'+dropdown_pin] = 'pinMode('+dropdown_pin+', INPUT);';
   var code = 'round(1517.288685*exp(-64.822510*analogRead('+dropdown_pin+')/10000))';
   return [code, Blockly.Arduino.ORDER_ATOMIC];
 };

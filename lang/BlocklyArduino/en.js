@@ -517,6 +517,7 @@ Blockly.Msg.ROBOTS_MISC_BUZZER_NOTE = "Note";
 //updated july 24th 2015
 Blockly.Msg.TECHNOZONE51_TEXT1 = "The sensor ";
 Blockly.Msg.TECHNOZONE51_TEXT2 = "on the pin ";
+Blockly.Msg.TECHNOZONE51_TEXT2bis = "on Analog pin A";
 Blockly.Msg.TECHNOZONE51_TEXT3 = " is on the line ?";
 Blockly.Msg.TECHNOZONE51_TEXT4 = "a line detector (réf : LIG1)";
 Blockly.Msg.TECHNOZONE51_TEXT5 = "the button ";

@@ -230,7 +230,7 @@ Blockly.Blocks['technozone_potar1'] = {
     this.appendValueInput("PIN")
 		.setCheck('Number')
         .setAlign(Blockly.ALIGN_RIGHT)
-        .appendField(Blockly.Msg.TECHNOZONE51_TEXT2)
+        .appendField(Blockly.Msg.TECHNOZONE51_TEXT2bis)
     this.setOutput(true, 'Number');
     this.setTooltip(Blockly.Msg.TECHNOZONE51_TEXT23);
   }
@@ -247,7 +247,7 @@ Blockly.Blocks['technozone_ctn1'] = {
     this.appendValueInput("PIN")
 		.setCheck('Number')
         .setAlign(Blockly.ALIGN_RIGHT)
-        .appendField(Blockly.Msg.TECHNOZONE51_TEXT2)
+        .appendField(Blockly.Msg.TECHNOZONE51_TEXT2bis)
     this.setOutput(true, 'Number');
     this.setTooltip(Blockly.Msg.TECHNOZONE51_TEXT25);
   }
@@ -264,7 +264,7 @@ Blockly.Blocks['technozone_ldr1'] = {
     this.appendValueInput("PIN")
 		.setCheck('Number')
         .setAlign(Blockly.ALIGN_RIGHT)
-        .appendField(Blockly.Msg.TECHNOZONE51_TEXT2)
+        .appendField(Blockly.Msg.TECHNOZONE51_TEXT2bis)
     this.setOutput(true, 'Number');
     this.setTooltip(Blockly.Msg.TECHNOZONE51_TEXT27);
   }

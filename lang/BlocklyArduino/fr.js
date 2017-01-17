@@ -515,6 +515,7 @@ Blockly.Msg.ROBOTS_MISC_BUZZER_NOTE = "note";
 //TECHNOZONE updated July 24th 2015
 Blockly.Msg.TECHNOZONE51_TEXT1 = "Le capteur ";
 Blockly.Msg.TECHNOZONE51_TEXT2 = "sur la broche ";
+Blockly.Msg.TECHNOZONE51_TEXT2bis = "sur la broche Analogique A";
 Blockly.Msg.TECHNOZONE51_TEXT3 = " détecte une ligne ?";
 Blockly.Msg.TECHNOZONE51_TEXT4 = "Entrée Détecteur de ligne (réf : LIG1)";
 Blockly.Msg.TECHNOZONE51_TEXT5 = "le bouton ";
