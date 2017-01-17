@@ -369,6 +369,8 @@ Blockly.Arduino.scrub_ = function(block, code) {
  */
 Blockly.Arduino.getArduinoType_ = function(typeBlockly) {
   switch (typeBlockly.typeId) {
+	case Blockly.Types.VOLATIL_NUMBER.typeId:
+      return 'volatile int';
     case Blockly.Types.SHORT_NUMBER.typeId:
       return 'char';
     case Blockly.Types.NUMBER.typeId:

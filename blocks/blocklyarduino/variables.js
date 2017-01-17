@@ -86,7 +86,7 @@ Blockly.Blocks['variables_get'] = {
   },
 };
 
-Blockly.Blocks['variables_set'] = {
+Blockly.Blocks['variables_set_and_type'] = {
   /**
    * Block for variable setter.
    * @this Blockly.Block
@@ -123,6 +123,40 @@ Blockly.Blocks['variables_set'] = {
    */
   getVarType: function(varName) {
     return Blockly.Types.getChildBlockType(this);
+  }
+};
+
+Blockly.Blocks['variables_set'] = {
+  /**
+   * Block for adding to a variable in place.
+   * @this Blockly.Block
+   */
+  init: function() {
+    this.jsonInit({
+      "message0": Blockly.Msg.MATH_CHANGE_TITLE,
+      "args0": [
+        {
+          "type": "field_variable",
+          "name": "VAR",
+          "variable": Blockly.Msg.MATH_CHANGE_TITLE_ITEM
+        },
+        {
+          "type": "input_value",
+          "name": "DELTA",
+          "check": "Number"
+        }
+      ],
+      "previousStatement": null,
+      "nextStatement": null,
+      "colour": Blockly.Blocks.math.HUE,
+      "helpUrl": Blockly.Msg.MATH_CHANGE_HELPURL
+    });
+    // Assign 'this' to a variable for use in the tooltip closure below.
+    var thisBlock = this;
+    this.setTooltip(function() {
+      return Blockly.Msg.MATH_CHANGE_TOOLTIP.replace('%1',
+          thisBlock.getFieldValue('VAR'));
+    });
   }
 };
 

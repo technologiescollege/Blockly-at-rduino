@@ -341,8 +341,8 @@ Blockly.Blocks.inout_attachInterrupt = {
 	this.appendStatementInput('DO')
         .appendField(Blockly.Msg.CONTROLS_SWITCH_MSG_DO);
     this.setInputsInline(true);
-    this.setPreviousStatement(true);
-    this.setNextStatement(true);
+    this.setPreviousStatement(false);
+    this.setNextStatement(false);
 	this.setTooltip(Blockly.Msg.LKL_TOOLTIP_INOUT_ATTACHINTERRUPT);
   }
 };

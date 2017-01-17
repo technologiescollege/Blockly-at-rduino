@@ -258,6 +258,7 @@ Blockly.Blocks['pinmode'] = {
     this.setTooltip(Blockly.Msg.ARDUINO_INOUT_DIGITAL_MODE_TOOLTIP);
   }
 };
+
 Blockly.Blocks['biblio_include'] = {
   init: function() {
     this.appendDummyInput()

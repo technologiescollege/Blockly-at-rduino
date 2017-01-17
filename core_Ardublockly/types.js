@@ -123,11 +123,9 @@ Blockly.Types.LARGE_NUMBER.addCompatibleTypes([
     Blockly.Types.DECIMAL]);
 	
 Blockly.Types.VOLATIL_NUMBER.addCompatibleTypes([
-    Blockly.Types.BOOLEAN,
     Blockly.Types.SHORT_NUMBER,
     Blockly.Types.LARGE_NUMBER,
-    Blockly.Types.NUMBER,
-    Blockly.Types.DECIMAL]);
+    Blockly.Types.NUMBER]);
 
 /**
  * Adds another type to the Blockly.Types collection.
