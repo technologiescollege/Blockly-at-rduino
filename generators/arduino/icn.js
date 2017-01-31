@@ -1,6 +1,6 @@
 /**
  * Block pour composants robot icn
- * http://www.ebay.fr/cln/dam74999/robot-arduino/271320303014
+ * http://www.ebay.fr/cln/dvarrel/robot-arduino/271320303014
  * @author Damien VARREL (damien@varrel.fr)
  */
 'use strict';
@@ -16,7 +16,8 @@ Blockly.Arduino['tb6612_setup'] = function() {
   var AIN2_pin = this.getFieldValue('AIN2');
   var BIN1_pin = this.getFieldValue('BIN1');
   var BIN2_pin = this.getFieldValue('BIN2');
-  var STDBY_pin = this.getFieldValue('STDBY');  
+  var STDBY_pin = this.getFieldValue('STDBY');
+  
 
   Blockly.Arduino.definitions_['define_tb6612'] =
   '#define STDBY '+ STDBY_pin + ' //standby\n'
@@ -50,30 +51,30 @@ Blockly.Arduino['tb6612_controller'] = function() {
 
   Blockly.Arduino.definitions_['tb6612_motor_function'] =
   'void tb6612_motors(int speedA,int speedB,boolean state) {\n'
-  + '  if (not state) {\n'
-  + '    digitalWrite(AIN1,LOW);digitalWrite(AIN2,LOW);\n'
-  + '    digitalWrite(BIN1,LOW);digitalWrite(BIN2,LOW);\n'
-  + '    return;\n'
-  + '  }\n'
-  + '  if (speedA>0) {\n'
-  + '    digitalWrite(AIN1,HIGH);digitalWrite(AIN2,LOW);\n'
-  + '  }else{\n'
-  + '    digitalWrite(AIN1,LOW);digitalWrite(AIN2,HIGH);\n'
-  + '  }\n'
-  + '  analogWrite(PWMA,abs(speedA));\n'
-  + '  if (speedB>0) {\n'
-  + '    digitalWrite(BIN1,HIGH);digitalWrite(BIN2,LOW);\n'
-  + '  }else{\n'
-  + '    digitalWrite(BIN1,LOW);digitalWrite(BIN2,HIGH);\n'
-  + '  }\n'
-  + '  analogWrite(PWMB,abs(speedB));\n'
+  + '	if (not state) {\n'
+  + '		digitalWrite(AIN1,LOW);digitalWrite(AIN2,LOW);\n'
+  + '		digitalWrite(BIN1,LOW);digitalWrite(BIN2,LOW);\n'
+  + '		return;\n'
+  + '	}\n'
+  + '	if (speedA>0) {\n'
+  + '		digitalWrite(AIN1,HIGH);digitalWrite(AIN2,LOW);\n'
+  + '	}else{\n'
+  + '		digitalWrite(AIN1,LOW);digitalWrite(AIN2,HIGH);\n'
+  + '	}\n'
+  + '	analogWrite(PWMA,abs(speedA));\n'
+  + '	if (speedB>0) {\n'
+  + '		digitalWrite(BIN1,HIGH);digitalWrite(BIN2,LOW);\n'
+  + '	}else{\n'
+  + '		digitalWrite(BIN1,LOW);digitalWrite(BIN2,HIGH);\n'
+  + '	}\n'
+  + '	analogWrite(PWMB,abs(speedB));\n'
   + '}';
   var code = 'tb6612_motors('+MOTORA+','+MOTORB+','+STATE+');\n';
   return code;
 };
 
 Blockly.Arduino['hcsr04'] = function() {
-  var pin = Blockly.Arduino.valueToCode(this, 'hcsr04_pin', Blockly.Arduino.ORDER_ATOMIC); 
+  var pin = this.getFieldValue('hcsr04_pin');
   Blockly.Arduino.definitions_['define_distance_cm'] =
 	'float ultrasonic_dist_cm(byte pin) {\n'
 	+ '  pinMode(pin,OUTPUT);\n'
@@ -90,11 +91,36 @@ Blockly.Arduino['hcsr04'] = function() {
   return [code, Blockly.Arduino.ORDER_ATOMIC];
 };
 
+Blockly.Arduino['servomotor_angle'] = function() {
+  var servo_pin = this.getFieldValue('servo_pin');
+  var servo_angle = Blockly.Arduino.valueToCode(this, 'servo_angle', Blockly.Arduino.ORDER_ATOMIC); 
+  Blockly.Arduino.includes_['define_servo'] = '#include <Servo.h>\n';
+  Blockly.Arduino.definitions_['var_servo' + servo_pin] = 'Servo servo_' + servo_pin + ';\n';
+  Blockly.Arduino.setups_['setup_servo_' + servo_pin] = 'servo_' + servo_pin + '.attach(' + servo_pin + ');\n';
+  var code = 'servo_' + servo_pin + '.write(' + servo_angle + ');\n';
+  return code;
+};
+Blockly.Arduino['servomotor_detach'] = function() {
+  var servo_pin = this.getFieldValue('servo_pin');
+  var code = 'servo_' + servo_pin + '.detach();\n';
+  return code;
+};
+Blockly.Arduino['servomotor_attach'] = function() {
+  var servo_pin = this.getFieldValue('servo_pin');
+  var code = 'servo_' + servo_pin + '.attach(' + servo_pin + ');\n';
+  return code;
+};
+Blockly.Arduino['servomotor_attached'] = function() {
+  var servo_pin = this.getFieldValue('servo_pin');
+  var code = 'servo_' + servo_pin + '.attached()';
+  return [code, Blockly.Arduino.ORDER_ATOMIC];
+};
+
 Blockly.Arduino['ds18b20_search'] = function() {
   var ds18b20_pin = this.getFieldValue('ds18b20_pin');
   var addr = this.getFieldValue('address');
-  Blockly.Arduino.includes_['ds_include'] = '#include <OneWire.h>';
-  Blockly.Arduino.definitions_['ds_def'] = 'OneWire ds('+ds18b20_pin+');  // on pin '+ds18b20_pin+' (a 4.7K resistor is necessary)'
+  Blockly.Arduino.includes_['ds_include'] = '#include <OneWire.h>\n';
+  Blockly.Arduino.definitions_['ds_def'] = 'OneWire  ds('+ds18b20_pin+');  // on pin '+ds18b20_pin+' (a 4.7K resistor is necessary)\n'
   Blockly.Arduino.definitions_['ds_def'+addr+''] = 'byte addr'+addr+'[8];\n';
   var code = 'ds.search(addr'+addr+')';
   return [code, Blockly.Arduino.ORDER_ATOMIC];

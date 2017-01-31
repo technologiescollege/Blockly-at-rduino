@@ -304,6 +304,7 @@ Blockly.Msg.Serial_avai="une donnée est disponible sur le port série ?";
 Blockly.Msg.Serial_flush="attente de fin de transmission par le port série";
 
 //SOFTWARE SERIAL
+Blockly.Msg.SSERIAL_DEFAULT_NAME="COMserie_1";
 Blockly.Msg.SSERIAL_Init="initialisation :";
 Blockly.Msg.SSERIAL_SPEED="vitesse";
 Blockly.Msg.SSERIAL_TX="TX ";
@@ -995,16 +996,17 @@ Blockly.Msg.SPI_TRANS_TIP = "Send a SPI message to an specified slave device.";
 Blockly.Msg.SPI_TRANS_VAL = "transfer";
 Blockly.Msg.SPI_TRANS_WARN1 = "A setup block for %1 must be added to the workspace to use this block!";
 Blockly.Msg.SPI_TRANS_WARN2 = "Old pin value %1 is no longer available.";
+
 Blockly.Msg.STEPPER_DEFAULT_NAME = "moteur_PaP";
-Blockly.Msg.STEPPER_MOTOR = "stepper motor:";
-Blockly.Msg.STEPPER_PIN1 = "pin1#";
-Blockly.Msg.STEPPER_PIN2 = "pin2#";
-Blockly.Msg.STEPPER_REVOLVS = "how many steps per revolution";
-Blockly.Msg.STEPPER_SETUP = "Setup";
+Blockly.Msg.STEPPER_MOTOR = "moteur pas à pas";
+Blockly.Msg.STEPPER_PIN1 = "broche 1 :";
+Blockly.Msg.STEPPER_PIN2 = "broche 2 :";
+Blockly.Msg.STEPPER_REVOLVS = "nombre de pas par tour";
+Blockly.Msg.STEPPER_SETUP = "définis le";
 Blockly.Msg.STEPPER_SETUP_TIP = "Configures a stepper motor pinout and other settings.";
-Blockly.Msg.STEPPER_SPEED = "set speed (rpm) to";
-Blockly.Msg.STEPPER_STEP = "move stepper";
-Blockly.Msg.STEPPER_STEPS = "steps";
+Blockly.Msg.STEPPER_SPEED = "vitesse (tr/min) :";
+Blockly.Msg.STEPPER_STEP = "avancer le moteur PàP";
+Blockly.Msg.STEPPER_STEPS = "pas";
 Blockly.Msg.STEPPER_STEP_TIP = "Turns the stepper motor a specific number of steps.";
 Blockly.Msg.STEPPER_STEP_WARN1 = "A STEPPER configuration block must be added to use this block!";
 Blockly.Msg.STEPPER_STEP_WARN2 = "A Name input must be added to the Stepper configuration block!";

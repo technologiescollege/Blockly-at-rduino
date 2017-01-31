@@ -30,22 +30,16 @@ Blockly.Blocks['stepper_config'] = {
     this.setColour(Blockly.Blocks.stepper_motor.HUE);
     this.appendDummyInput()
         .appendField(Blockly.Msg.STEPPER_SETUP)
+        .appendField(Blockly.Msg.STEPPER_MOTOR)
         .appendField(
             new Blockly.FieldInstance('Stepper',
                                       Blockly.Msg.STEPPER_DEFAULT_NAME,
                                       true, true, false),
-            'STEPPER_NAME')
-        .appendField(Blockly.Msg.STEPPER_MOTOR);
-    this.appendDummyInput()
-        .appendField(Blockly.Msg.STEPPER_SETUP)
-        .appendField(Blockly.Msg.STEPPER_MOTOR);
-    this.appendDummyInput()
-        .setAlign(Blockly.ALIGN_RIGHT)
-        .appendField(Blockly.Msg.STEPPER_PIN1);
+            'STEPPER_NAME');
     this.appendValueInput('STEPPER_PIN1')
         .setCheck(Blockly.Types.NUMBER.checkList)
         .setAlign(Blockly.ALIGN_RIGHT)
-        .appendField(Blockly.Msg.STEPPER_REVOLVS);
+        .appendField(Blockly.Msg.STEPPER_PIN1);
     this.appendValueInput('STEPPER_PIN2')
         .setCheck(Blockly.Types.NUMBER.checkList)
         .setAlign(Blockly.ALIGN_RIGHT)

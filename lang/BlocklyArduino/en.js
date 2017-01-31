@@ -305,6 +305,7 @@ Blockly.Msg.Serial_avai="Serial Available?";
 Blockly.Msg.Serial_flush="Serial flush";
 
 //SOFTWARE SERIAL
+Blockly.Msg.SSERIAL_DEFAULT_NAME="SoftSerial";
 Blockly.Msg.SSERIAL_Init="INIT";
 Blockly.Msg.SSERIAL_SPEED="speed";
 Blockly.Msg.SSERIAL_TX="TX#";
@@ -994,6 +995,7 @@ Blockly.Msg.SPI_TRANS_TIP = "Send a SPI message to an specified slave device.";
 Blockly.Msg.SPI_TRANS_VAL = "transfer";
 Blockly.Msg.SPI_TRANS_WARN1 = "A setup block for %1 must be added to the workspace to use this block!";
 Blockly.Msg.SPI_TRANS_WARN2 = "Old pin value %1 is no longer available.";
+
 Blockly.Msg.STEPPER_DEFAULT_NAME = "MyStepperMotor";
 Blockly.Msg.STEPPER_MOTOR = "stepper motor:";
 Blockly.Msg.STEPPER_PIN1 = "pin1#";

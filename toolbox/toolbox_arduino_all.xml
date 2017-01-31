@@ -628,6 +628,17 @@
 		<sep></sep>
 	</category>
 	<category name="CAT_ICN" colour="#FF8C00">
+		<block type="hcsr04"></block>
+		<block type="servomotor_angle">
+			<value name="servo_angle">
+				<shadow type="math_number">
+					<field name="NUM">90</field>
+				</shadow>
+			</value>
+		</block>
+		<block type="servomotor_detach"></block>
+		<block type="servomotor_attach"></block>
+		<block type="servomotor_attached"></block>
 		<block type="tb6612_setup"></block>
 		<block type="tb6612_controller">
 			<value name="MOTORA">
@@ -638,13 +649,6 @@
 			<value name="MOTORB">
 				<shadow type="math_number">
 					<field name="NUM">-60</field>
-				</shadow>
-			</value>
-		</block>
-		<block type="hcsr04">
-			<value name="hcsr04_pin">
-				<shadow type="math_number">
-					<field name="NUM">12</field>
 				</shadow>
 			</value>
 		</block>

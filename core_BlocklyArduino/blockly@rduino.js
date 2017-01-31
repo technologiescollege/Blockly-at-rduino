@@ -915,7 +915,7 @@ BlocklyDuino.testAjax = function() {
 	    url: "./index.html",
 	    dataType : 'text',
 	    error: function(){
-	    	if (!window.sessionStorage.msg_ajax_seen) {
+	    	if (window.sessionStorage && !window.sessionStorage.msg_ajax_seen) {
 	    		$('#ajaxModal').modal('show');	    		
 	    	}
 			BlocklyDuino.ajaxOK = false;
@@ -936,7 +936,7 @@ BlocklyDuino.clearLocalStorage = function () {
 BlocklyDuino.firstBlocklyArduino = function() {
 	if (BlocklyDuino.getStringParamFromUrl('AIO', '') == 'on') {
 		$('#firstModal').addClass('draggable');
-	} else if (!window.sessionStorage.msg_first_seen) {
+	} else if (window.sessionStorage && !window.sessionStorage.msg_first_seen) {
 		$('#firstModal iframe').prop('src', "https://player.vimeo.com/video/179569437?autoplay=1&title=0&byline=0&portrait=0"); 
 		$('#firstModal').modal('show');	
 	}

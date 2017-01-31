@@ -1,6 +1,6 @@
 /**
  * Block pour composants robot icn
- * http://www.ebay.fr/cln/dam74999/robot-arduino/271320303014
+ * http://www.ebay.fr/cln/dvarrel/robot-arduino/271320303014
  * @author Damien VARREL (damien@varrel.fr)
  */
 'use strict';
@@ -11,6 +11,7 @@ goog.require('Blockly.Blocks');
 goog.require('Blockly.Types');
 
 //Blockly.Blocks.icn.HUE = '#FF8C00';
+Blockly.Blocks.icn.HelpUrl="http://www.ebay.fr/cln/dvarrel/robot-arduino/271320303014";
 
 Blockly.Blocks['tb6612_setup'] = {
   init: function() {
@@ -20,6 +21,7 @@ Blockly.Blocks['tb6612_setup'] = {
         .appendField('TB6612 Setup')
 		.appendField('STDBY#')
         .appendField(new Blockly.FieldTextInput('10',  Blockly.Arduino.pinDualValidator), 'STDBY');
+
     this.appendDummyInput()
 	    .appendField('PWMA#')
 		.appendField(new Blockly.FieldTextInput('3',  Blockly.Arduino.pinPWMValidator), 'PWMA')
@@ -40,7 +42,7 @@ Blockly.Blocks['tb6612_setup'] = {
     this.setNextStatement(true, null);
     this.setTooltip('tb6612 controller setup');
     this.setColour(Blockly.Blocks.icn.HUE);
-    this.setHelpUrl("http://www.ebay.fr/cln/dam74999/robot-arduino/271320303014");
+    this.setHelpUrl(Blockly.Blocks.icn.HelpUrl);
   }
 };
 
@@ -61,7 +63,7 @@ Blockly.Blocks['tb6612_controller'] = {
     this.setNextStatement(true, null);
     this.setTooltip('tb6612 controller -255<speed<255');
     this.setColour(Blockly.Blocks.icn.HUE);
-    this.setHelpUrl("http://www.ebay.fr/cln/dam74999/robot-arduino/271320303014");
+    this.setHelpUrl(Blockly.Blocks.icn.HelpUrl);
   }
 };
 
@@ -71,14 +73,73 @@ Blockly.Blocks['hcsr04'] = {
     	.setAlign(Blockly.ALIGN_LEFT)
         .appendField('HC-SR04')
         .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/icn/hc-sr04.svg', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize));
-	this.appendValueInput('hcsr04_pin')
-    	.setAlign(Blockly.ALIGN_RIGHT)
-        .setCheck('Number')
-	    .appendField('TRIG-ECHO#');
+	this.appendDummyInput()
+	    .appendField('TRIG-ECHO#')
+		.appendField(new Blockly.FieldTextInput('2',  Blockly.Arduino.pinDualValidator), 'hcsr04_pin')
+		.setAlign(Blockly.ALIGN_RIGHT);
 	this.setOutput(true, 'Number');
 	this.setTooltip('ultrasonic sensor - return float distance');
     this.setColour(Blockly.Blocks.icn.HUE);
-    this.setHelpUrl("http://www.ebay.fr/cln/dam74999/robot-arduino/271320303014");
+    this.setHelpUrl(Blockly.Blocks.icn.HelpUrl);
+  }
+};
+
+Blockly.Blocks['servomotor_angle'] = {
+  init: function() {
+    this.appendDummyInput()
+    	.setAlign(Blockly.ALIGN_LEFT)
+        .appendField('servo')
+        .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/icn/servo.svg', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize))
+	    .appendField('CONTROL#')
+		.appendField(new Blockly.FieldTextInput('A4',  Blockly.Arduino.pinDualValidator), 'servo_pin');
+	this.appendValueInput("servo_angle")
+        .setCheck('Number')
+        .setAlign(Blockly.ALIGN_RIGHT)
+        .appendField('angle (0~180°)');
+	this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+	this.setTooltip('servomotor (0~180°)');
+    this.setColour(Blockly.Blocks.icn.HUE);
+    this.setHelpUrl(Blockly.Blocks.icn.HelpUrl);
+  }
+};
+
+Blockly.Blocks['servomotor_detach'] = {
+  init: function() {
+    this.appendDummyInput()
+    	.setAlign(Blockly.ALIGN_RIGHT)
+        .appendField('detach servo CONTROL#')
+		.appendField(new Blockly.FieldTextInput('A4',  Blockly.Arduino.pinDualValidator), 'servo_pin');
+	this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+	this.setTooltip('detach servomotor and allow pin 9&10 for PWM');
+    this.setColour(Blockly.Blocks.icn.HUE);
+    this.setHelpUrl(Blockly.Blocks.icn.HelpUrl);
+  }
+};
+Blockly.Blocks['servomotor_attach'] = {
+  init: function() {
+    this.appendDummyInput()
+    	.setAlign(Blockly.ALIGN_RIGHT)
+        .appendField('attach servo CONTROL#')
+		.appendField(new Blockly.FieldTextInput('A4',  Blockly.Arduino.pinDualValidator), 'servo_pin');
+	this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+	this.setTooltip('attach servomotor');
+    this.setColour(Blockly.Blocks.icn.HUE);
+    this.setHelpUrl(Blockly.Blocks.icn.HelpUrl);
+  }
+};
+Blockly.Blocks['servomotor_attached'] = {
+  init: function() {
+    this.appendDummyInput()
+    	.setAlign(Blockly.ALIGN_RIGHT)
+        .appendField('servo CONTROL#')
+		.appendField(new Blockly.FieldTextInput('A4',  Blockly.Arduino.pinDualValidator), 'servo_pin');
+	this.setOutput(true, 'Boolean');
+	this.setTooltip('return TRUE if servomotor is attached');
+    this.setColour(Blockly.Blocks.icn.HUE);
+    this.setHelpUrl(Blockly.Blocks.icn.HelpUrl);
   }
 };
 
@@ -94,7 +155,7 @@ Blockly.Blocks['ds18b20_search'] = {
 	this.setOutput(true, 'Boolean');
 	this.setTooltip('temperature sensor - return true if found');
     this.setColour(Blockly.Blocks.icn.HUE);
-    this.setHelpUrl("http://www.ebay.fr/cln/dam74999/robot-arduino/271320303014");
+    this.setHelpUrl(Blockly.Blocks.icn.HelpUrl);
   }
 };
 
@@ -108,6 +169,11 @@ Blockly.Blocks['ds18b20_temp'] = {
 	this.setOutput(true, 'Number');
 	this.setTooltip('temperature sensor - return float temp');
     this.setColour(Blockly.Blocks.icn.HUE);
-    this.setHelpUrl("http://www.ebay.fr/cln/dam74999/robot-arduino/271320303014");
+    this.setHelpUrl(Blockly.Blocks.icn.HelpUrl);
   }
 };
+
+
+
+
+

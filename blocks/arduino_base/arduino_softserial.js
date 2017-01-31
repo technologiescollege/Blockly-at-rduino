@@ -44,7 +44,7 @@ Blockly.Blocks['soft_init'] = {
 			.appendField(Blockly.Msg.SSERIAL_Init)
 			.appendField(
 				new Blockly.FieldInstance('SoftSerial',
-										  Blockly.Msg.STEPPER_DEFAULT_NAME,
+										  Blockly.Msg.SSERIAL_DEFAULT_NAME,
 										  true, true, false),
 				'SOFTSERIAL_NAME');
 	} else {
@@ -52,7 +52,7 @@ Blockly.Blocks['soft_init'] = {
 			.appendField(Blockly.Msg.SSERIAL_Init)
 			.appendField(
 				new Blockly.FieldInstance('SoftSerial',
-										  Blockly.Msg.STEPPER_DEFAULT_NAME,
+										  Blockly.Msg.SSERIAL_DEFAULT_NAME,
 										  true, false, false),
 				'SOFTSERIAL_NAME');
 		};
@@ -82,7 +82,7 @@ Blockly.Blocks['soft_read'] = {
 		this.appendDummyInput()
 			.appendField(
 				new Blockly.FieldInstance('SoftSerial',
-										  Blockly.Msg.STEPPER_DEFAULT_NAME,
+										  Blockly.Msg.SSERIAL_DEFAULT_NAME,
 										  true, true, false),
 				'SOFTSERIAL_NAME')
 			.appendField(Blockly.Msg.SSERIAL_Read);
@@ -90,7 +90,7 @@ Blockly.Blocks['soft_read'] = {
 		this.appendDummyInput()
 			.appendField(
 				new Blockly.FieldInstance('SoftSerial',
-										  Blockly.Msg.STEPPER_DEFAULT_NAME,
+										  Blockly.Msg.SSERIAL_DEFAULT_NAME,
 										  true, false, false),
 				'SOFTSERIAL_NAME')
 			.appendField(Blockly.Msg.SSERIAL_Read);
@@ -101,6 +101,25 @@ Blockly.Blocks['soft_read'] = {
   },
   getSerialSetupInstance: function() {
     return this.getFieldValue('SOFTSERIAL_NAME');
+  },
+  /**
+   * Called whenever anything on the workspace changes.
+   * It checks/warns if the selected stepper instance has a config block.
+   * @this Blockly.Block
+   */
+  onchange: function() {
+    if (!this.workspace) return;  // Block has been deleted.
+
+    var instanceName = this.getFieldValue('STEPPER_NAME')
+    if (Blockly.Instances.isInstancePresent(instanceName, 'Stepper', this)) {
+      this.setWarningText(null);
+    } else {
+      // Set a warning to select a valid stepper config block
+      this.setWarningText(
+        Blockly.Msg.ARD_COMPONENT_WARN1.replace(
+            '%1', Blockly.Msg.STEPPER_COMPONENT).replace(
+                '%2', instanceName));
+    }
   }
 };
 
@@ -112,7 +131,7 @@ Blockly.Blocks['soft_print'] = {
 		this.appendValueInput("CONTENT")
 			.appendField(
 				new Blockly.FieldInstance('SoftSerial',
-										  Blockly.Msg.STEPPER_DEFAULT_NAME,
+										  Blockly.Msg.SSERIAL_DEFAULT_NAME,
 										  true, true, false),
 				'SOFTSERIAL_NAME')
 			.setCheck('String')
@@ -121,7 +140,7 @@ Blockly.Blocks['soft_print'] = {
 		this.appendValueInput("CONTENT")
 			.appendField(
 				new Blockly.FieldInstance('SoftSerial',
-										  Blockly.Msg.STEPPER_DEFAULT_NAME,
+										  Blockly.Msg.SSERIAL_DEFAULT_NAME,
 										  true, false, false),
 				'SOFTSERIAL_NAME')
 			.setCheck('String')
@@ -161,7 +180,7 @@ Blockly.Blocks['soft_write'] = {
 		this.appendValueInput("CONTENT")
 			.appendField(
 				new Blockly.FieldInstance('SoftSerial',
-										  Blockly.Msg.STEPPER_DEFAULT_NAME,
+										  Blockly.Msg.SSERIAL_DEFAULT_NAME,
 										  true, true, false),
 				'SOFTSERIAL_NAME')
 			.setCheck('String')
@@ -170,7 +189,7 @@ Blockly.Blocks['soft_write'] = {
 		this.appendValueInput("CONTENT")
 			.appendField(
 				new Blockly.FieldInstance('SoftSerial',
-										  Blockly.Msg.STEPPER_DEFAULT_NAME,
+										  Blockly.Msg.SSERIAL_DEFAULT_NAME,
 										  true, false, false),
 				'SOFTSERIAL_NAME')
 			.setCheck('String')
@@ -210,7 +229,7 @@ Blockly.Blocks['soft_available'] = {
 		this.appendDummyInput("")
 			.appendField(
 				new Blockly.FieldInstance('SoftSerial',
-										  Blockly.Msg.STEPPER_DEFAULT_NAME,
+										  Blockly.Msg.SSERIAL_DEFAULT_NAME,
 										  true, true, false),
 				'SOFTSERIAL_NAME')
 			.appendField(Blockly.Msg.SSERIAL_Avai);
@@ -218,7 +237,7 @@ Blockly.Blocks['soft_available'] = {
 		this.appendDummyInput("")
 			.appendField(
 				new Blockly.FieldInstance('SoftSerial',
-										  Blockly.Msg.STEPPER_DEFAULT_NAME,
+										  Blockly.Msg.SSERIAL_DEFAULT_NAME,
 										  true, false, false),
 				'SOFTSERIAL_NAME')
 			.appendField(Blockly.Msg.SSERIAL_Avai);
@@ -256,7 +275,7 @@ Blockly.Blocks['soft_flush'] = {
 		this.appendDummyInput()
 			.appendField(
 				new Blockly.FieldInstance('SoftSerial',
-										  Blockly.Msg.STEPPER_DEFAULT_NAME,
+										  Blockly.Msg.SSERIAL_DEFAULT_NAME,
 										  true, true, false),
 				'SOFTSERIAL_NAME')
 			.appendField(Blockly.Msg.Serial_flush);
@@ -264,7 +283,7 @@ Blockly.Blocks['soft_flush'] = {
 		this.appendDummyInput()
 			.appendField(
 				new Blockly.FieldInstance('SoftSerial',
-										  Blockly.Msg.STEPPER_DEFAULT_NAME,
+										  Blockly.Msg.SSERIAL_DEFAULT_NAME,
 										  true, false, false),
 				'SOFTSERIAL_NAME')
 			.appendField(Blockly.Msg.Serial_flush);
