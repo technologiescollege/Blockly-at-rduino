@@ -241,11 +241,26 @@ BlocklyDuino.setArduinoCard =  function () {
  */
 BlocklyDuino.saveXmlFile = function () {
 	  var xml = Blockly.Xml.workspaceToDom(Blockly.mainWorkspace);
+	
+	var loadIds = window.localStorage.toolboxids;
+
+	// set the default toolbox if none
+	if (loadIds === undefined || loadIds === "") {
+		if ($('#defaultCategories').length) {
+			loadIds = $('#defaultCategories').html();
+		} else {
+			loadIds = '';
+		}
+	}
+
+	var newel = document.createElement("defaultCategories");
+	newel.appendChild(document.createTextNode(loadIds));
+	xml.insertBefore(newel, xml.childNodes[0]);
+	
 	  var data = Blockly.Xml.domToPrettyText(xml);
 	  var datenow = Date.now();
 	  var uri = 'data:text/xml;charset=utf-8,' + encodeURIComponent(data);
-	  $(this)
-	            .attr({
+	$(this).attr({
 	            'download': "blockly_arduino"+datenow+".xml",
 	                'href': uri,
 	                'target': '_blank'
@@ -576,6 +591,16 @@ BlocklyDuino.changeToolbox = function () {
 	
 	search = search.replace(/&openConfigToolbox=true/g, '');
 	
+	if (search.length <= 1) {
+		search = '?toolbox=' + $("#toolboxes").val();
+	} else if (search.match(/[?&]toolbox=[^&]*/)) {
+		search = search.replace(/([?&]toolbox=)[^&]*/, '$1'
+				+ $("#toolboxes").val());
+	} else {
+		search = search
+				.replace(/\?/, '?toolbox=' + $("#toolboxes").val() + '&');
+	}
+	
 	window.location = window.location.protocol + '//'
 	+ window.location.host + window.location.pathname + search;
 };
@@ -619,8 +644,10 @@ BlocklyDuino.buildToolbox = function() {
 /**
  * load the xml toolbox definition
  */
-BlocklyDuino.loadToolboxDefinition = function() {
-	var toolboxFile = BlocklyDuino.getStringParamFromUrl('toolbox', '');
+BlocklyDuino.loadToolboxDefinition = function(toolboxFile) {
+	if (!toolboxFile) {
+		toolboxFile = BlocklyDuino.getStringParamFromUrl('toolbox', '');
+	}
 	
 	if (toolboxFile) {
 		$("#toolboxes").val(toolboxFile);
@@ -635,7 +662,16 @@ BlocklyDuino.loadToolboxDefinition = function() {
 				var toolboxXml = '<xml id="toolbox" style="display: none">';
 				toolboxXml += $(data).find('toolbox').html();
 				toolboxXml += '</xml>';
+				$("#toolbox").remove();
 				$('body').append(toolboxXml);	
+				  $("xml").find("category").each(function() {
+						// add attribute ID to keep categorie code
+						if (!$(this).attr('id')) {
+							$(this).attr('id', $(this).attr('name'));
+							$(this).attr('name', Blockly.Msg[$(this).attr('name')]);
+						}
+					  });
+
 			});			
 };
 
@@ -643,17 +679,8 @@ BlocklyDuino.loadToolboxDefinition = function() {
  * Change toolbox definition
  */
 BlocklyDuino.changeToolboxDefinition =  function (){
-  var search = window.location.search;
-  if (search.length <= 1) {
-	search = '?toolbox=' + $("#toolboxes").val();
-  } else 	if (search.match(/[?&]toolbox=[^&]*/)) {
-				search = search.replace(/([?&]toolbox=)[^&]*/, '$1' + $("#toolboxes").val());
-			} else {
-				search = search.replace(/\?/, '?toolbox=' + $("#toolboxes").val() + '&');
-			}
-
-  window.location = window.location.protocol + '//' +
-	  window.location.host + window.location.pathname + search + "&openConfigToolbox=true";
+	BlocklyDuino.loadToolboxDefinition($("#toolboxes").val());
+	BlocklyDuino.openConfigToolbox();
 }; 
 
 

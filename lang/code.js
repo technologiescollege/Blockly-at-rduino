@@ -251,8 +251,10 @@ Code.initLanguage = function() {
   
   $("xml").find("category").each(function() {
 	// add attribute ID to keep categorie code
+		if (!$(this).attr('id')) {
 	$(this).attr('id', $(this).attr('name'));
 	$(this).attr('name', Blockly.Msg[$(this).attr('name')]);
+		}
   });
 
 };
