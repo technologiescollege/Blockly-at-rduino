@@ -209,11 +209,11 @@ Code.initLanguage = function() {
   $('#configModalGlobalLabel').text(MSG['configModalGlobalLabel']);
   $('#btn_closeConfigGlobale').text(MSG['btn_close']);
   $('#btn_validConfigGlobale').text(MSG['btn_valid']);
-  $('#span_toolbox_algo').text(MSG['span_toolbox_algo']);
-  $('#span_toolbox_arduino_1').text(MSG['span_toolbox_arduino_1']);
-  $('#span_toolbox_arduino_2').text(MSG['span_toolbox_arduino_2']);
-  $('#span_toolbox_arduino_3').text(MSG['span_toolbox_arduino_3']);
-  $('#span_toolbox_all').text(MSG['span_toolbox_all']);  
+  $('#toolboxes option[value="toolbox_algo"]').text(MSG['span_toolbox_algo']);
+  $('#toolboxes option[value="toolbox_arduino_1"]').text(MSG['span_toolbox_arduino_1']);
+  $('#toolboxes option[value="toolbox_arduino_2"]').text(MSG['span_toolbox_arduino_2']);
+  $('#toolboxes option[value="toolbox_arduino_3"]').text(MSG['span_toolbox_arduino_3']);
+  $('#toolboxes option[value="toolbox_arduino_all"]').text(MSG['span_toolbox_all']);
   $('#span_languageMenu').text(MSG['span_languageMenu']);
   $('#span_OnOffLine').text(MSG['span_OnOffLine']);
   $('#toggle-WebAccess').prop('data-on', MSG['span_OnLine']);
