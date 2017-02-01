@@ -1,51 +1,60 @@
-$('head').append($('<script>').attr('type', 'text/javascript').attr('src', "generators/BlocklyArduino/array.js"));
-$('head').append($('<script>').attr('type', 'text/javascript').attr('src', "generators/BlocklyArduino/control.js"));
-$('head').append($('<script>').attr('type', 'text/javascript').attr('src', "generators/BlocklyArduino/lists.js"));
-$('head').append($('<script>').attr('type', 'text/javascript').attr('src', "generators/BlocklyArduino/logic.js"));
-$('head').append($('<script>').attr('type', 'text/javascript').attr('src', "generators/BlocklyArduino/math.js"));
-$('head').append($('<script>').attr('type', 'text/javascript').attr('src', "generators/BlocklyArduino/procedures.js"));
-$('head').append($('<script>').attr('type', 'text/javascript').attr('src', "generators/BlocklyArduino/text.js"));
-$('head').append($('<script>').attr('type', 'text/javascript').attr('src', "generators/BlocklyArduino/variables.js"));
+head.load(
+"generators/BlocklyArduino/array.js",
+"generators/BlocklyArduino/control.js",
+//"generators/BlocklyArduino/lists.js",
+"generators/BlocklyArduino/logic.js",
+"generators/BlocklyArduino/math.js",
+"generators/BlocklyArduino/procedures.js",
+"generators/BlocklyArduino/text.js",
+"generators/BlocklyArduino/variables.js",
+function() {
+    // Call a function when done
+    console.log("Done loading BlocklyArduino Generators");
+});
 
-$('head').append($('<script>').attr('type', 'text/javascript').attr('src', "generators/arduino/arduino_base.js"));
-$('head').append($('<script>').attr('type', 'text/javascript').attr('src', "generators/arduino/arduino_io.js"));
-$('head').append($('<script>').attr('type', 'text/javascript').attr('src', "generators/arduino/arduino_conversion.js"));
-$('head').append($('<script>').attr('type', 'text/javascript').attr('src', "generators/arduino/arduino_serial.js"));
-$('head').append($('<script>').attr('type', 'text/javascript').attr('src', "generators/arduino/arduino_softserial.js"));
-$('head').append($('<script>').attr('type', 'text/javascript').attr('src', "generators/arduino/arduino_set_type.js"));
-
-$('head').append($('<script>').attr('type', 'text/javascript').attr('src', "generators/arduino/adafruit_motorshield.js"));
-$('head').append($('<script>').attr('type', 'text/javascript').attr('src', "generators/arduino/APDS-9960_RGB_Gesture.js"));
-$('head').append($('<script>').attr('type', 'text/javascript').attr('src', "generators/arduino/arduino_shield.js"));
-$('head').append($('<script>').attr('type', 'text/javascript').attr('src', "generators/arduino/bitbloq.js"));
-$('head').append($('<script>').attr('type', 'text/javascript').attr('src', "generators/arduino/Bluetooth_Electronics.js"));
-$('head').append($('<script>').attr('type', 'text/javascript').attr('src', "generators/arduino/dfplayer-mini-mp3-dfrobot.js"));
-$('head').append($('<script>').attr('type', 'text/javascript').attr('src', "generators/arduino/dfrobot_romeo_v2_1.js"));
-$('head').append($('<script>').attr('type', 'text/javascript').attr('src', "generators/arduino/dfrobot_romeo_v2_2.js"));
-$('head').append($('<script>').attr('type', 'text/javascript').attr('src', "generators/arduino/dfrobot_romeo_v2_3.js"));
-$('head').append($('<script>').attr('type', 'text/javascript').attr('src', "generators/arduino/display-oled-128x64-i2c.js"));
-$('head').append($('<script>').attr('type', 'text/javascript').attr('src', "generators/arduino/EsusBoard.js"));
-$('head').append($('<script>').attr('type', 'text/javascript').attr('src', "generators/arduino/fischertechnik.js"));
-$('head').append($('<script>').attr('type', 'text/javascript').attr('src', "generators/arduino/flycamone-eco-v2.js"));
-$('head').append($('<script>').attr('type', 'text/javascript').attr('src', "generators/arduino/grove.js"));
-$('head').append($('<script>').attr('type', 'text/javascript').attr('src', "generators/arduino/icn.js"));
-$('head').append($('<script>').attr('type', 'text/javascript').attr('src', "generators/arduino/jeulin_maquette_feux.js"));
-$('head').append($('<script>').attr('type', 'text/javascript').attr('src', "generators/arduino/kit_velo_niv1.js"));
-$('head').append($('<script>').attr('type', 'text/javascript').attr('src', "generators/arduino/kit_velo_niv2.js"));
-$('head').append($('<script>').attr('type', 'text/javascript').attr('src', "generators/arduino/led-rgb-ws2812b.js"));
-$('head').append($('<script>').attr('type', 'text/javascript').attr('src', "generators/arduino/mbot_niv1.js"));
-$('head').append($('<script>').attr('type', 'text/javascript').attr('src', "generators/arduino/mbot_niv2.js"));
-$('head').append($('<script>').attr('type', 'text/javascript').attr('src', "generators/arduino/mbot_niv3.js"));
-$('head').append($('<script>').attr('type', 'text/javascript').attr('src', "generators/arduino/multi-function.js"));
-$('head').append($('<script>').attr('type', 'text/javascript').attr('src', "generators/arduino/myhumankit.js"));
-$('head').append($('<script>').attr('type', 'text/javascript').attr('src', "generators/arduino/robot_motors.js"));
-$('head').append($('<script>').attr('type', 'text/javascript').attr('src', "generators/arduino/robot_misc.js"));
-$('head').append($('<script>').attr('type', 'text/javascript').attr('src', "generators/arduino/robuno.js"));
-$('head').append($('<script>').attr('type', 'text/javascript').attr('src', "generators/arduino/servo.js"));
-$('head').append($('<script>').attr('type', 'text/javascript').attr('src', "generators/arduino/spi_comm.js"));
-$('head').append($('<script>').attr('type', 'text/javascript').attr('src', "generators/arduino/stepper_motor.js"));
-$('head').append($('<script>').attr('type', 'text/javascript').attr('src', "generators/arduino/technozone51.js"));
-//$('head').append($('<script>').attr('type', 'text/javascript').attr('src', "generators/arduino/technozone51_barbot.js"));
-$('head').append($('<script>').attr('type', 'text/javascript').attr('src', "generators/arduino/zumo_auto.js"));
-$('head').append($('<script>').attr('type', 'text/javascript').attr('src', "generators/arduino/zumo_motors.js"));
-$('head').append($('<script>').attr('type', 'text/javascript').attr('src', "generators/arduino/zumo_sensors.js"));
+head.load(
+"generators/arduino/arduino_base.js",
+"generators/arduino/arduino_io.js",
+"generators/arduino/arduino_conversion.js",
+"generators/arduino/arduino_serial.js",
+"generators/arduino/arduino_softserial.js",
+"generators/arduino/arduino_set_type.js",
+"generators/arduino/adafruit_motorshield.js",
+"generators/arduino/APDS-9960_RGB_Gesture.js",
+"generators/arduino/arduino_shield.js",
+"generators/arduino/bitbloq.js",
+"generators/arduino/Bluetooth_Electronics.js",
+"generators/arduino/dfplayer-mini-mp3-dfrobot.js",
+"generators/arduino/dfrobot_romeo_v2_1.js",
+"generators/arduino/dfrobot_romeo_v2_2.js",
+"generators/arduino/dfrobot_romeo_v2_3.js",
+"generators/arduino/display-oled-128x64-i2c.js",
+"generators/arduino/EsusBoard.js",
+"generators/arduino/fischertechnik.js",
+"generators/arduino/flycamone-eco-v2.js",
+"generators/arduino/grove.js",
+"generators/arduino/icn.js",
+"generators/arduino/jeulin_maquette_feux.js",
+"generators/arduino/kit_velo_niv1.js",
+"generators/arduino/kit_velo_niv2.js",
+"generators/arduino/led-rgb-ws2812b.js",
+"generators/arduino/mbot_niv1.js",
+"generators/arduino/mbot_niv2.js",
+"generators/arduino/mbot_niv3.js",
+"generators/arduino/multi-function.js",
+"generators/arduino/myhumankit.js",
+"generators/arduino/robot_motors.js",
+"generators/arduino/robot_misc.js",
+"generators/arduino/robuno.js",
+"generators/arduino/servo.js",
+"generators/arduino/spi_comm.js",
+"generators/arduino/stepper_motor.js",
+"generators/arduino/technozone51.js",
+//"generators/arduino/technozone51_barbot.js",
+"generators/arduino/zumo_auto.js",
+"generators/arduino/zumo_motors.js",
+"generators/arduino/zumo_sensors.js",
+function() {
+    // Call a function when done
+    console.log("Done loading Various Arduino Generators");
+});
