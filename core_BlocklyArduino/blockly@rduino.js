@@ -937,7 +937,7 @@ BlocklyDuino.firstBlocklyArduino = function() {
 	if (BlocklyDuino.getStringParamFromUrl('AIO', '') == 'on') {
 		$('#firstModal').addClass('draggable');
 	} else if (window.sessionStorage && !window.sessionStorage.msg_first_seen) {
-		$('#firstModal iframe').prop('src', "https://player.vimeo.com/video/179569437?autoplay=1&title=0&byline=0&portrait=0"); 
+		$('#videoFirstModal').prop('src', "https://player.vimeo.com/video/179569437?autoplay=1&title=0&byline=0&portrait=0"); 
 		$('#firstModal').modal('show');	
 	}
 };

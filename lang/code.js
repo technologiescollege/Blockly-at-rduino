@@ -216,10 +216,10 @@ Code.initLanguage = function() {
   $('#span_toolbox_all').text(MSG['span_toolbox_all']);  
   $('#span_languageMenu').text(MSG['span_languageMenu']);
   $('#span_OnOffLine').text(MSG['span_OnOffLine']);
-  $('#span_OnLine').text(MSG['span_OnLine']);
-  $('#span_OffLine').text(MSG['span_OffLine']);
-  $('#span_LocalCodebender_Code').text(MSG['span_LocalCodebender_Code']);
-  $('#span_LocalCodebender_Local').text(MSG['span_LocalCodebender_Local']);
+  $('#toggle-WebAccess').prop('data-on', MSG['span_OnLine']);
+  $('#toggle-WebAccess').prop('data-off', MSG['span_OffLine']);
+  $('#toggle-LocalCodebender').prop('data-on', MSG['span_LocalCodebender_Code']);
+  $('#toggle-LocalCodebender').prop('data-off', MSG['span_LocalCodebender_Local']);
   $('#span_Upload').text(MSG['span_Upload']);
   $('#span_Upload_local').text(MSG['span_Upload_local']);
   $('#span_Upload_codebender').text(MSG['span_Upload_codebender']);
