@@ -49,18 +49,34 @@ Blockly.StaticTyping.prototype.collectVarsWithTypes = function(workspace) {
       // If the type comes from a variable, so it's not directly defined, it
       // returns an Array<String(block type), String(source variable name)>
       if (goog.isArray(variableType)) {
-        if (this.varTypeDict[variableType[1]]) {
-          variableType = this.varTypeDict[variableType[1]];
-        } else {
-          // Dependant variable undefined, add this var to the pending list
-          if (!goog.isArray(this.pendingVarTypeDict[variableType[1]])) {
-            this.pendingVarTypeDict[variableType[1]] = [variableName];
-          } else {
-            this.pendingVarTypeDict[variableType[1]].push(variableName);
-          }
-          variableType = Blockly.Types.UNDEF;
-        }
-      }
+    	if (variableType[1].substr(variableType[1].lastIndexOf('_')) == '_AGI') {
+    		// if variable is the result of block "array_getIndex"
+    		// his type is determined by the array type 
+    		var varAGI = variableType[1].substr(0, variableType[1].lastIndexOf('_'));
+    		variableType = this.varTypeDict[varAGI];
+    		if (!variableType) {
+    			variableType = Blockly.Types.UNDEF;
+    		} else if (variableType.arrayType && variableType.arrayType.length == 2) {
+    			// arrayType is a variable, so get his type
+				variableType = this.varTypeDict[variableType.arrayType[1]];
+    		} else {
+    			// the array type is stored in arrayType property
+    			variableType = variableType.arrayType;
+    		}
+    	} else {
+	        if (this.varTypeDict[variableType[1]]) {
+	          variableType = this.varTypeDict[variableType[1]];
+	        } else {
+	          // Dependant variable undefined, add this var to the pending list
+	          if (!goog.isArray(this.pendingVarTypeDict[variableType[1]])) {
+	            this.pendingVarTypeDict[variableType[1]] = [variableName];
+	          } else {
+	            this.pendingVarTypeDict[variableType[1]].push(variableName);
+	          }
+	          variableType = Blockly.Types.UNDEF;
+		      }
+	        }
+	    }
       this.assignTypeToVars(blocks[i], variableName, variableType);
     }
   }

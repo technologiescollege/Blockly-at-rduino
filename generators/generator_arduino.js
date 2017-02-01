@@ -59,6 +59,9 @@ Blockly.Arduino.ORDER_LOGICAL_AND = 11;   // &&
 Blockly.Arduino.ORDER_LOGICAL_OR = 12;    // ||
 Blockly.Arduino.ORDER_CONDITIONAL = 13;   // expr ? expr : expr
 Blockly.Arduino.ORDER_ASSIGNMENT = 14;    // = *= /= ~/= %= += -= <<= >>= &= ^= |=
+Blockly.Arduino.ORDER_COMMA = 15;    // ,
+Blockly.Arduino.ORDER_UNARY_NEGATION = 16;
+Blockly.Arduino.ORDER_MEMBER = 17;
 Blockly.Arduino.ORDER_NONE = 99;          // (...)
 
 /**
@@ -119,10 +122,90 @@ Blockly.Arduino.init = function(workspace) {
   Blockly.Arduino.StaticTyping.setProcedureArgs(workspace, varsWithTypes);
 
   // Set variable declarations with their Arduino type in the defines dictionary
-  for (var varName in varsWithTypes) {
-    Blockly.Arduino.addVariable(varName,
-        Blockly.Arduino.getArduinoType_(varsWithTypes[varName]) +' ' +
-        Blockly.Arduino.variableDB_.getName(varName, Blockly.Variables.NAME_TYPE) + ';');
+  for ( var varName in varsWithTypes) {
+	if (varsWithTypes[varName].arrayType) {
+		  var varType = Blockly.Arduino.recurseArrayType(varName, varsWithTypes);
+		  Blockly.Arduino.addVariable(varName,
+				  varType 
+				  + ' '
+				  + Blockly.Arduino.variableDB_.getName(varName, Blockly.Variables.NAME_TYPE)
+				  + ';');
+	} else {
+		Blockly.Arduino.addVariable(varName,
+				Blockly.Arduino	.getArduinoType_(varsWithTypes[varName])
+				+ ' '
+				+ Blockly.Arduino.variableDB_.getName(varName, Blockly.Variables.NAME_TYPE)
+				+ ';');
+
+	}
+  }
+};
+
+/**
+ * Recurse array construction to determine Arduino type and dimension
+ * 
+ * @param {string} var name
+ * @param {array} All vars collected
+ * @return {string} Array type, in a string format (varName[x]).
+ */
+Blockly.Arduino.recurseArrayType = function(varName, varsWithTypes) {
+	if (!varsWithTypes[varName].arrayType
+			|| varsWithTypes[varName].arrayType instanceof Blockly.Type) {
+		// The var is directly defined by an array block with childblock
+		var arrayDimension = '';
+		if (varsWithTypes[varName].arrayType) {
+			// if array block is constructed with array blocks
+			var subArray = varsWithTypes[varName].arrayType;
+			// build array dimension(s)
+			arrayDimension = '[' + varsWithTypes[varName].arraySize + ']';
+			while (subArray.arrayType) {
+				arrayDimension += '[' + subArray.arraySize + ']';
+				subArray = subArray.arrayType;
+			}
+			// if the final block is a variable
+			if (!(subArray instanceof Blockly.Type)) {
+				varName = subArray[1];
+				if (varsWithTypes[varName].arrayType) {
+					var varType = Blockly.Arduino.recurseArrayType(varName,	varsWithTypes);
+					// if the var is an array
+					// 1- get the type
+					// 2- apply the dimensions already built
+					// 3- add the dimension of this array
+					return varType.substr(0, varType.indexOf('['))
+							+ arrayDimension
+							+ varType.substr(varType.indexOf('['));
+				}
+			}
+		}
+		
+		return Blockly.Arduino.getArduinoType_(varsWithTypes[varName]) + arrayDimension;
+	} else {
+		// the var is inderectly defined by an array block with variable on
+		// input
+		var varTab = varsWithTypes[varName].arrayType[1];
+		if (varTab == varName) {
+			// prevent direct recursive calls
+			// don't prevent undirect use of the same variable
+			return 'undefined';
+		} else {
+			var varType = Blockly.Arduino.recurseArrayType(varTab, varsWithTypes);
+			return Blockly.Arduino.insertParentArraySize(varType, varsWithTypes[varName].arraySize);
+		}
+	}
+};
+
+/**
+ * Insert parent array dimension in the current array type
+ * 
+ * @param {string} var type (like varName[x])
+ * @param {array} All vars collected
+ * @return {string} Array type, in a string format (varName[y][x]).
+ */
+Blockly.Arduino.insertParentArraySize = function(varType, parentArraySize) {
+	if (varType.indexOf('[') >= 0) {
+		return varType.substr(0, varType.indexOf('[')) + '[' + parentArraySize + ']' + varType.substr(varType.indexOf('['));
+	} else {
+		return varType + '[' + parentArraySize + ']';
   }
 };
 
@@ -387,6 +470,8 @@ Blockly.Arduino.getArduinoType_ = function(typeBlockly) {
       return 'boolean';
     case Blockly.Types.NULL.typeId:
       return 'void';
+    case Blockly.Types.ARRAY.typeId:
+    	return Blockly.Arduino.getArduinoType_(typeBlockly.arrayType);
     case Blockly.Types.UNDEF.typeId:
       return 'undefined';
     case Blockly.Types.CHILD_BLOCK_MISSING.typeId:

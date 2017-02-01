@@ -44,11 +44,45 @@
 //---------------------------------array--------------------------------------------
 
 	Blockly.Blocks.array_create_with.getBlockType = function() {
-		//return Blockly.Types.ARRAY;
-		return this.inputList[1].connection.targetBlock().getBlockType();
+		// define an new blocktype for each array
+		var blockType = new Blockly.Type({
+			  typeId: 'Array',
+			  typeMsgName: 'ARD_TYPE_ARRAY',
+			  compatibleTypes: []
+			});
+		// add 2 properties 
+		// the size
+		blockType.arraySize = this.itemCount_;
+		// type of elements
+		blockType.arrayType = Blockly.Types.UNDEF;
+		var j = 1;
+		while ( j <= this.itemCount_) {
+			// the first input with a block determine the type of the elements  
+			if (this.inputList[j].connection && this.inputList[j].connection.targetBlock()) {
+				blockType.arrayType = this.inputList[j].connection.targetBlock().getBlockType();
+				j = this.itemCount_ + 1;
+			} else {
+				j++;
+			}
+		}
+		return blockType;
 	};
+	
 	Blockly.Blocks.array_getIndex.getBlockType = function() {
-		return this.inputList[1].connection.targetBlock().getBlockType();
+		if (this.inputList[1].connection && this.inputList[1].connection.targetBlock()) {
+			var blockType = this.inputList[1].connection.targetBlock().getBlockType();
+			if (blockType instanceof Blockly.Type) {
+				return blockType.arrayType;
+			} else {
+				// in case the input is a variable, we need to identify it
+				// otherwise we just get the type of this variable
+				// and not the type of the elements
+				// so we add the suffix '_AGI' that will be used by the static_typing
+				return [blockType[0], blockType[1]+'_AGI'];
+			}
+		} else {
+			return Blockly.Types.UNDEF;
+		}
 	};
 
 

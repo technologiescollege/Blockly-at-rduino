@@ -47,15 +47,6 @@ Blockly.Blocks['array_create_with'] = {
     this.setTooltip(Blockly.Msg.ARRAY_CREATE_WITH_TOOLTIP);
   },
   /**
-   * Assigns a type to the block based on the selected type to cast.
-   * @return {!string} Blockly type for this block configuration.
-   * @this Blockly.Block
-   */
-  getBlockType: function() {
-    var blocklyTypeKey = this.getFieldValue('VARIABLE_SETTYPE_TYPE');
-    return Blockly.Types[blocklyTypeKey];
-  },
-  /**
    * Create XML to represent list inputs.
    * @return {Element} XML storage element.
    * @this Blockly.Block
@@ -203,7 +194,7 @@ Blockly.Blocks['array_getIndex'] = {
     this.appendValueInput("AT")
 		.setCheck("Number")
 		.appendField(Blockly.Msg.ARRAY_GETINDEX_AT);
-    this.appendValueInput("ITEM")
+    this.appendValueInput("VAR")
 		.setCheck('Array')
 		.appendField(Blockly.Msg.ARRAY_GETINDEX_ITEM);
     this.setInputsInline(true);
