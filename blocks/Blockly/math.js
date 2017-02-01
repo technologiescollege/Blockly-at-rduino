@@ -32,7 +32,7 @@ goog.require('Blockly.Blocks');
 /**
  * Common HSV hue for all blocks in this category.
  */
-Blockly.Blocks.math.HUE = "#5CB712";
+Blockly.Blocks.math.HUE = 230;
 
 Blockly.Blocks['math_number'] = {
   /**
@@ -325,7 +325,7 @@ Blockly.Blocks['math_change'] = {
       ],
       "previousStatement": null,
       "nextStatement": null,
-      "colour": Blockly.Blocks.math.HUE,
+      "colour": Blockly.Blocks.variables.HUE,
       "helpUrl": Blockly.Msg.MATH_CHANGE_HELPURL
     });
     // Assign 'this' to a variable for use in the tooltip closure below.

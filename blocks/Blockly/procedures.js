@@ -40,7 +40,8 @@ Blockly.Blocks['procedures_defnoreturn'] = {
    * @this Blockly.Block
    */
   init: function() {
-    var nameField = new Blockly.FieldTextInput('',
+    var nameField = new Blockly.FieldTextInput(
+        Blockly.Msg.PROCEDURES_DEFNORETURN_PROCEDURE,
         Blockly.Procedures.rename);
     nameField.setSpellcheck(false);
     this.appendDummyInput()
@@ -333,7 +334,8 @@ Blockly.Blocks['procedures_defreturn'] = {
    * @this Blockly.Block
    */
   init: function() {
-    var nameField = new Blockly.FieldTextInput('',
+    var nameField = new Blockly.FieldTextInput(
+        Blockly.Msg.PROCEDURES_DEFRETURN_PROCEDURE,
         Blockly.Procedures.rename);
     nameField.setSpellcheck(false);
     this.appendDummyInput()
@@ -441,8 +443,8 @@ Blockly.Blocks['procedures_mutatorarg'] = {
    */
   createNewVar_: function(newText) {
     var source = this.sourceBlock_;
-    if (source && source.workspace && source.workspace.options &&
-        source.workspace.options.parentWorkspace) {
+    if (source && source.workspace && source.workspace.options
+        && source.workspace.options.parentWorkspace) {
       source.workspace.options.parentWorkspace.createVariable(newText);
     }
   }
@@ -841,7 +843,7 @@ Blockly.Blocks['procedures_ifreturn'] = {
    * @this Blockly.Block
    */
   onchange: function(e) {
-    if (!this.workspace.isDragging || this.workspace.isDragging()) {
+    if (this.workspace.isDragging()) {
       return;  // Don't change state at the start of a drag.
     }
     var legal = false;

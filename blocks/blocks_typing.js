@@ -77,7 +77,7 @@ Blockly.Blocks.math_number_property.getBlockType = function() {
 	return Blockly.Types.BOOLEAN;
 };
 Blockly.Blocks.math_change.getBlockType = function() {
-	return [thisBlock.getFieldValue('VAR')];
+	return [this.getFieldValue('VAR')];
 };
 Blockly.Blocks.math_round.getBlockType = function() {
 	return Blockly.Types.DECIMAL;

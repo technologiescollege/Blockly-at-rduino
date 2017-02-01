@@ -1,3 +1,10 @@
+Blockly.Blocks.array.HUE = "#58B5DC";
+Blockly.Blocks.logic.HUE = "#E1A91A";
+Blockly.Blocks.loops.HUE = "#C88330";
+Blockly.Blocks.math.HUE = "#5CB712";
+Blockly.Blocks.procedures.HUE = "#632D99";
+Blockly.Blocks.texts.HUE = "#8A55D7";
+Blockly.Blocks.variables.HUE = "#EE7D16";
 Blockly.Blocks.adafruit_motorshield_v1.HUE = "#2D7F4F";
 Blockly.Blocks.adafruit_motorshield_v2.HUE = "#005D9D";
 Blockly.Blocks.APDS9960.HUE = "#D9242D";
