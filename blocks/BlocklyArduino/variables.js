@@ -157,6 +157,16 @@ Blockly.Blocks['variables_set'] = {
       return Blockly.Msg.MATH_CHANGE_TOOLTIP.replace('%1',
           thisBlock.getFieldValue('VAR'));
     });
+  },
+  /**
+   * Gets the stored type of the variable indicated in the argument. As only one
+   * variable is stored in this block, no need to check input
+   * @this Blockly.
+   * @param {!string} varName Name of this block variable to check type.
+   * @return {!string} String to indicate the type of this block.
+   */
+  getVarType: function(varName) {
+    return [Blockly.Types.UNDEF, this.getFieldValue('VAR')];
   }
 };
 

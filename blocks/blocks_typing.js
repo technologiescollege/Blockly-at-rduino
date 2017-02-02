@@ -77,8 +77,8 @@
 				// in case the input is a variable, we need to identify it
 				// otherwise we just get the type of this variable
 				// and not the type of the elements
-				// so we add the suffix '_AGI' that will be used by the static_typing
-				return [blockType[0], blockType[1]+'_AGI'];
+				// so we set the type to Blockly.Types.ARRAY
+				return [Blockly.Types.ARRAY, blockType[1]];
 			}
 		} else {
 			return Blockly.Types.UNDEF;

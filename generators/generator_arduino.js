@@ -123,22 +123,28 @@ Blockly.Arduino.init = function(workspace) {
 
   // Set variable declarations with their Arduino type in the defines dictionary
   for ( var varName in varsWithTypes) {
-	if (varsWithTypes[varName].arrayType) {
-		  var varType = Blockly.Arduino.recurseArrayType(varName, varsWithTypes);
-		  Blockly.Arduino.addVariable(varName,
-				  varType 
-				  + ' '
-				  + Blockly.Arduino.variableDB_.getName(varName, Blockly.Variables.NAME_TYPE)
-				  + ';');
-	} else {
-		Blockly.Arduino.addVariable(varName,
-				Blockly.Arduino	.getArduinoType_(varsWithTypes[varName])
-				+ ' '
-				+ Blockly.Arduino.variableDB_.getName(varName, Blockly.Variables.NAME_TYPE)
-				+ ';');
-
-	}
-  }
+	if (varsWithTypes[varName]) {
+		if (varsWithTypes[varName].arrayType) {
+			  var varType = Blockly.Arduino.recurseArrayType(varName, varsWithTypes);
+			  Blockly.Arduino.addVariable(varName,
+					  varType 
+					  + ' '
+					  + Blockly.Arduino.variableDB_.getName(varName, Blockly.Variables.NAME_TYPE)
+					  + ';');
+		} else {
+			Blockly.Arduino.addVariable(varName,
+					Blockly.Arduino	.getArduinoType_(varsWithTypes[varName])
+					+ ' '
+					+ Blockly.Arduino.variableDB_.getName(varName, Blockly.Variables.NAME_TYPE)
+					+ ';');
+			}
+		} else {
+				Blockly.Arduino.addVariable(varName,
+						'undefined '
+						+ Blockly.Arduino.variableDB_.getName(varName, Blockly.Variables.NAME_TYPE)
+						+ ';');
+		}
+  	}
 };
 
 /**
@@ -183,7 +189,7 @@ Blockly.Arduino.recurseArrayType = function(varName, varsWithTypes) {
 		// the var is inderectly defined by an array block with variable on
 		// input
 		var varTab = varsWithTypes[varName].arrayType[1];
-		if (varTab == varName) {
+		if (varTab == varName || !varsWithTypes[varTab]) {
 			// prevent direct recursive calls
 			// don't prevent undirect use of the same variable
 			return 'undefined';

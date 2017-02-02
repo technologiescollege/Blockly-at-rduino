@@ -41,7 +41,7 @@ Blockly.Arduino.array_create_with = function() {
 Blockly.Arduino.array_getIndex = function() {
   var at = Blockly.Arduino.valueToCode(this, 'AT',
                                           Blockly.Arduino.ORDER_UNARY_NEGATION) || '1';
-  var list = Blockly.Arduino.valueToCode(this, 'ITEM',
+  var list = Blockly.Arduino.valueToCode(this, 'VAR',
                                             Blockly.Arduino.ORDER_MEMBER) || '[]';
 
   if (Blockly.isNumber(at)) {
