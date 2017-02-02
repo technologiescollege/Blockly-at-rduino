@@ -47,6 +47,7 @@ var MSG = {
   span_toolbox_arduino_1: "Arduino level 1",
   span_toolbox_arduino_2: "Arduino level 2",
   span_toolbox_arduino_3: "Arduino level 3",
+  span_toolbox_arduino_4: "Arduino level 4",
   span_toolbox_all: "Arduino all!",
   span_OnOffLine: "Web access? ",
   span_OnLine: "Yes",

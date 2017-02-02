@@ -45,10 +45,10 @@ Blockly.Arduino.variables_declare = function() {
 };
 
 Blockly.Arduino.variables_set = function(block) {
-  // Variable setter.
-  var argument0 = Blockly.Arduino.valueToCode(this, 'VALUE', Blockly.Arduino.ORDER_ASSIGNMENT) || '0';
-  var varName = this.getFieldValue('VAR');
-  return varName + ' = ' + argument0 + ';\n';
+  var argument0 = Blockly.Arduino.valueToCode(this, 'DELTA', Blockly.Arduino.ORDER_ADDITIVE) || '0';
+  var varName = Blockly.Arduino.variableDB_.getName(this.getFieldValue('VAR'), Blockly.Variables.NAME_TYPE);
+  var code = varName + ' = ' + varName + ' + ' + argument0 + ';\n';
+  return code;
 };
 
 Blockly.Arduino.variables_set_and_type = function(block) {
