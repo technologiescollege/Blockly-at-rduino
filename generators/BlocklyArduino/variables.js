@@ -34,14 +34,13 @@ Blockly.Arduino.variables_get = function(block) {
   return [code, Blockly.Arduino.ORDER_ATOMIC];
 };
 
-Blockly.Arduino.variables_declare = function() {
-  // Variable setter.
-  var dropdown_type = this.getFieldValue('TYPE');
-  //TODO: settype to variable
-  var argument0 = Blockly.Arduino.valueToCode(this, 'VALUE',Blockly.Arduino.ORDER_ASSIGNMENT) || '0';
-  var varName = Blockly.Arduino.variableDB_.getName(this.getFieldValue('VAR'), Blockly.Variables.NAME_TYPE);
-  Blockly.Arduino.setups_['setup_var' + varName] = varName + ' = ' + argument0 + ';\n';
-  return '';
+Blockly.Arduino['variables_set_type'] = function(block) {
+  var argument0 = Blockly.Arduino.valueToCode(block, 'VARIABLE_SETTYPE_INPUT',
+      Blockly.Arduino.ORDER_ASSIGNMENT) || '0';
+  var varType = Blockly.Arduino.getArduinoType_(
+      Blockly.Types[block.getFieldValue('VARIABLE_SETTYPE_TYPE')]);
+  var code = '(' + varType + ')(' + argument0 + ')';
+  return [code, Blockly.Arduino.ORDER_ATOMIC];
 };
 
 Blockly.Arduino.variables_set = function(block) {

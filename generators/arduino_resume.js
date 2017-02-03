@@ -1,7 +1,6 @@
 head.load(
 "generators/BlocklyArduino/array.js",
 "generators/BlocklyArduino/control.js",
-//"generators/BlocklyArduino/lists.js",
 "generators/BlocklyArduino/logic.js",
 "generators/BlocklyArduino/math.js",
 "generators/BlocklyArduino/procedures.js",
@@ -18,7 +17,6 @@ head.load(
 "generators/arduino/arduino_conversion.js",
 "generators/arduino/arduino_serial.js",
 "generators/arduino/arduino_softserial.js",
-"generators/arduino/arduino_set_type.js",
 "generators/arduino/adafruit_motorshield.js",
 "generators/arduino/APDS-9960_RGB_Gesture.js",
 "generators/arduino/arduino_shield.js",

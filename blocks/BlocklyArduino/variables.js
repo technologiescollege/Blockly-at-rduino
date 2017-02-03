@@ -178,14 +178,15 @@ Blockly.Blocks['variables_set_type'] = {
   init: function() {
     this.setHelpUrl('http://arduino.cc/en/Reference/HomePage');
     this.setColour(Blockly.Blocks.variables.HUE);
+    this.appendValueInput('VARIABLE_SETTYPE_INPUT');
     this.appendDummyInput()
+        .appendField(Blockly.Msg.VARIABLES_AS)
         .appendField(new Blockly.FieldDropdown(
                          Blockly.Types.getValidTypeArray()),
                      'VARIABLE_SETTYPE_TYPE');
-    this.appendValueInput('VARIABLE_SETTYPE_INPUT');
     this.setInputsInline(true);
     this.setOutput(true);
-    this.setTooltip(Blockly.Msg.ARD_VAR_AS_TIP);
+    this.setTooltip('Sets a value to a specific type');
   },
   /**
    * Assigns a type to the block based on the selected type to cast.
