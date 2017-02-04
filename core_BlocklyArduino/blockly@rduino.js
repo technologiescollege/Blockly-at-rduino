@@ -240,31 +240,40 @@ BlocklyDuino.setArduinoCard =  function () {
  * prompts the users to save it into their local file system.
  */
 BlocklyDuino.saveXmlFile = function () {
-	  var xml = Blockly.Xml.workspaceToDom(Blockly.mainWorkspace);
+	var xml = Blockly.Xml.workspaceToDom(Blockly.mainWorkspace);
 	
-	var loadIds = window.localStorage.toolboxids;
-
-	// set the default toolbox if none
-	if (loadIds === undefined || loadIds === "") {
+	var toolbox = window.localStorage.toolbox;
+	if (!toolbox) {
+		toolbox = $("#toolboxes").val();
+	}
+	
+	if (toolbox) {
+		var newel = document.createElement("toolbox");
+		newel.appendChild(document.createTextNode(toolbox));
+		xml.insertBefore(newel, xml.childNodes[0]);
+	}
+	
+	var toolboxids = window.localStorage.toolboxids;
+	if (toolboxids === undefined || toolboxids === "") {
 		if ($('#defaultCategories').length) {
-			loadIds = $('#defaultCategories').html();
-		} else {
-			loadIds = '';
+			toolboxids = $('#defaultCategories').html();
 		}
 	}
-
-	var newel = document.createElement("defaultCategories");
-	newel.appendChild(document.createTextNode(loadIds));
-	xml.insertBefore(newel, xml.childNodes[0]);
 	
-	  var data = Blockly.Xml.domToPrettyText(xml);
-	  var datenow = Date.now();
-	  var uri = 'data:text/xml;charset=utf-8,' + encodeURIComponent(data);
+	if (toolboxids) {
+		var newel = document.createElement("toolboxcategories");
+		newel.appendChild(document.createTextNode(toolboxids));
+		xml.insertBefore(newel, xml.childNodes[0]);
+	}
+	
+	var data = Blockly.Xml.domToPrettyText(xml);
+	var datenow = Date.now();
+	var uri = 'data:text/xml;charset=utf-8,' + encodeURIComponent(data);
 	$(this).attr({
 	            'download': "blockly_arduino"+datenow+".xml",
-	                'href': uri,
-	                'target': '_blank'
-	        });
+				'href': uri,
+				'target': '_blank'
+	});
 };
 
 /**
@@ -322,6 +331,37 @@ BlocklyDuino.load = function (event) {
       Blockly.Xml.domToWorkspace(BlocklyDuino.workspace, xml);
       BlocklyDuino.selectedTab = 'blocks';
       BlocklyDuino.renderContent();
+      
+	  // load toolbox
+      var elem = xml.getElementsByTagName("toolbox")[0];
+      if (elem != undefined) {
+		var node = elem.childNodes[0];
+		window.localStorage.toolbox = node.nodeValue;
+		$("#toolboxes").val(node.nodeValue);
+		
+		// load toolbox categories
+		elem = xml.getElementsByTagName("toolboxategories")[0];
+		if (elem != undefined) {
+			node = elem.childNodes[0];
+			window.localStorage.toolboxids = node.nodeValue;
+		}
+
+		var search = window.location.search;
+		if (search.length <= 1) {
+			search = '?toolbox=' + $("#toolboxes").val();
+		} else if (search.match(/[?&]toolbox=[^&]*/)) {
+			search = search.replace(/([?&]toolbox=)[^&]*/, '$1'
+					+ $("#toolboxes").val());
+		} else {
+			search = search.replace(/\?/, '?toolbox='
+					+ $("#toolboxes").val() + '&');
+		}
+		
+		window.location = window.location.protocol + '//'
+				+ window.location.host + window.location.pathname
+				+ search;
+	}
+
     }
     // Reset value of input after loading because Chrome will not fire
     // a 'change' event if the same file is loaded again.
