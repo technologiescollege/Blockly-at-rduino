@@ -110,8 +110,8 @@ Blockly.Blocks.math_constant.getBlockType = function() {
 Blockly.Blocks.math_number_property.getBlockType = function() {
 	return Blockly.Types.BOOLEAN;
 };
-Blockly.Blocks.math_change.getBlockType = function() {
-	return [this.getFieldValue('VAR')];
+Blockly.Blocks.math_change.getVarType = function() {
+    return [Blockly.Types.UNDEF, this.getFieldValue('VAR')];
 };
 Blockly.Blocks.math_round.getBlockType = function() {
 	return Blockly.Types.DECIMAL;

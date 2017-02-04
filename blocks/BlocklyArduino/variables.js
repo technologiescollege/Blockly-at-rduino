@@ -86,7 +86,7 @@ Blockly.Blocks['variables_get'] = {
   },
 };
 
-Blockly.Blocks['variables_set_and_type'] = {
+Blockly.Blocks['variables_set'] = {
   /**
    * Block for variable setter.
    * @this Blockly.Block
@@ -123,50 +123,6 @@ Blockly.Blocks['variables_set_and_type'] = {
    */
   getVarType: function(varName) {
     return Blockly.Types.getChildBlockType(this);
-  }
-};
-
-Blockly.Blocks['variables_set'] = {
-  /**
-   * Block for adding to a variable in place.
-   * @this Blockly.Block
-   */
-  init: function() {
-    this.jsonInit({
-      "message0": Blockly.Msg.MATH_CHANGE_TITLE,
-      "args0": [
-        {
-          "type": "field_variable",
-          "name": "VAR",
-          "variable": Blockly.Msg.MATH_CHANGE_TITLE_ITEM
-        },
-        {
-          "type": "input_value",
-          "name": "DELTA",
-          "check": "Number"
-        }
-      ],
-      "previousStatement": null,
-      "nextStatement": null,
-      "colour": Blockly.Blocks.variables.HUE,
-      "helpUrl": Blockly.Msg.MATH_CHANGE_HELPURL
-    });
-    // Assign 'this' to a variable for use in the tooltip closure below.
-    var thisBlock = this;
-    this.setTooltip(function() {
-      return Blockly.Msg.MATH_CHANGE_TOOLTIP.replace('%1',
-          thisBlock.getFieldValue('VAR'));
-    });
-  },
-  /**
-   * Gets the stored type of the variable indicated in the argument. As only one
-   * variable is stored in this block, no need to check input
-   * @this Blockly.
-   * @param {!string} varName Name of this block variable to check type.
-   * @return {!string} String to indicate the type of this block.
-   */
-  getVarType: function(varName) {
-    return [Blockly.Types.UNDEF, this.getFieldValue('VAR')];
   }
 };
 
