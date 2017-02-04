@@ -589,7 +589,8 @@ BlocklyDuino.changeToolbox = function () {
 		search = search.replace(/([?&]toolboxids=)[^&]*/, '');
 	}
 	
-	search = search.replace(/&openConfigToolbox=true/g, '');
+	// store toolboxe id in session
+	window.localStorage.toolbox = $("#toolboxes").val();
 	
 	if (search.length <= 1) {
 		search = '?toolbox=' + $("#toolboxes").val();
@@ -647,6 +648,10 @@ BlocklyDuino.buildToolbox = function() {
 BlocklyDuino.loadToolboxDefinition = function(toolboxFile) {
 	if (!toolboxFile) {
 		toolboxFile = BlocklyDuino.getStringParamFromUrl('toolbox', '');
+	}
+	
+	if (!toolboxFile) {
+		toolboxFile = window.localStorage.toolbox;
 	}
 	
 	if (toolboxFile) {
@@ -776,18 +781,6 @@ BlocklyDuino.init = function() {
     // Hook a save function onto unload.
 	window.addEventListener('unload', BlocklyDuino.backupBlocks, false);
 
-	// open ConfigToolbox modal
-	if (BlocklyDuino.getStringParamFromUrl('openConfigToolbox', '') != '') {
-		delete window.localStorage.toolboxids;
-		BlocklyDuino.openConfigToolbox();
-		$("#configModal .close").hide();
-		$('#btn_close_config').hide();
-		$("#configModal").modal({ backdrop: 'static', keyboard: false });
-//		$("#configModalGlobal .close").hide();
-//		$('#btn_close_config_global').hide();
-//		$("#configModalGlobal").modal({ backdrop: 'static', keyboard: false });
-	}
-	
 	BlocklyDuino.initCompilerFlasher();
 	
 	//global config
