@@ -1,5 +1,5 @@
 1. pour chaque bloc définir un getBlockType
-2. pour les blocs gérant des variables (comme math_change), getVarType va chercher le typage de la variable interne au bloc en fouillant l typage des blocs annexés/fils.
+2. pour les blocs gérant des variables (comme math_change), getVarType va chercher le typage de la variable interne au bloc en fouillant le typage des blocs annexés/fils.
 
 Blockly.Types.CHARACTER				// Single character
 Blockly.Types.TEXT					// General text string type

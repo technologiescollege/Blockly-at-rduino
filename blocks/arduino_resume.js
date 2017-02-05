@@ -56,6 +56,7 @@ head.load(
 "blocks/mbot/mbot_1.js",
 "blocks/mbot/mbot_2.js",
 "blocks/mbot/mbot_3.js",
+"blocks/mbot/mbot_4.js",
 "blocks/multi-function/multi-function.js",
 "blocks/myhumankit/myhumankit.js",
 "blocks/robots/robot_motors.js",

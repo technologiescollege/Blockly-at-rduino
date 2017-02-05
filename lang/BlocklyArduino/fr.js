@@ -153,6 +153,7 @@ Blockly.Msg.CAT_KIT_VELO_3 = "OBC33 kit vélo";  //added april 8th 2016
 Blockly.Msg.CAT_MBOT_1 = "mBot";
 Blockly.Msg.CAT_MBOT_2 = "mBot";
 Blockly.Msg.CAT_MBOT_3 = "mBot"; //added april 8th 2016
+Blockly.Msg.CAT_MBOT_4 = "mBot"; //added february 13th 2017
 
 Blockly.Msg.CAT_ROMEO_1 = "RoMeo v2";
 Blockly.Msg.CAT_ROMEO_2 = "RoMeo v2";
@@ -172,6 +173,15 @@ Blockly.Msg.CAT_APDS_9960_RGB_Gesture = "couleur + mouvement"; //added 9 october
 Blockly.Msg.CAT_BT_ELECTRONICS = "Bluetooth Electronics"; //added 13 november 2016
 
 Blockly.Msg.CAT_ICN = "ICN";  //added 3 january 2017
+
+Blockly.Msg.CAT_LCD_SCREEN = "écrans LCD";  //added 12 february 2017
+Blockly.Msg.CAT_LCD_DFRobot_SHIELD_LCDKEYPAD = "DFRobot LCD Keypad shield";
+Blockly.Msg.CAT_LCD_GROVE_LCD = "écran LCD Grove";
+Blockly.Msg.CAT_LCD_TECHNOZONE_LCD = "écran LCD TZ51";
+Blockly.Msg.CAT_LCD_TECHNOZONE_ROBOT_LCD = "écran LCD Barbot";
+Blockly.Msg.CAT_BLUETOOTH_MISC = "bluetooth divers";
+Blockly.Msg.CAT_BT_GROVE_COMM = "Grove";
+Blockly.Msg.CAT_BT_TECHNOZONE_BT = "TechnoZone51";
 
 Blockly.Msg.FIELDDROPDOWN = [["1 (état haut)", "HIGH"], ["0 (état bas)", "LOW"]];
 Blockly.Msg.FIELDDROPDOWN_ONOFF = [["marche", "ON"], ["arrêt", "OFF"]]
@@ -911,9 +921,17 @@ Blockly.Msg.MBOT_MOTOR_LEFT_TITLE = "moteur à gauche : puissance";
 Blockly.Msg.MBOT_MOTOR_RIGHT_TITLE = "moteur à droite : puissance";
 Blockly.Msg.MBOT_MOTOR_SENS = "1 : avancer | 0 : reculer";
 Blockly.Msg.MBOT_MOTOR_LEFT_SENS = "moteur gauche : sens";
+Blockly.Msg.MBOT_MOTOR_LEFT_SENS_PIN = "moteur gauche : activer sens (broche 7)";
+Blockly.Msg.MBOT_MOTOR_LEFT_SENS_CHANGE = "moteur gauche : sens";
 Blockly.Msg.MBOT_MOTOR_LEFT_PWM = "moteur gauche : puissance";
+Blockly.Msg.MBOT_MOTOR_LEFT_PWM_PIN = "moteur gauche : activer PWM (broche 6)";
+Blockly.Msg.MBOT_MOTOR_LEFT_PWM_CHANGE = "moteur gauche : puissance";
 Blockly.Msg.MBOT_MOTOR_RIGHT_SENS = "moteur droit : sens";
+Blockly.Msg.MBOT_MOTOR_RIGHT_SENS_PIN = "moteur droit : activer sens (broche 4)";
+Blockly.Msg.MBOT_MOTOR_RIGHT_SENS_CHANGE = "moteur droit : sens";
 Blockly.Msg.MBOT_MOTOR_RIGHT_PWM = "moteur droit : puissance";
+Blockly.Msg.MBOT_MOTOR_RIGHT_PWM_PIN = "moteur droit : activer PWM (broche 5)";
+Blockly.Msg.MBOT_MOTOR_RIGHT_PWM_CHANGE = "moteur droit : puissance";
 Blockly.Msg.MBOT_RGB_ONBOARD_INTRO = "colorier les DEL RGB";
 Blockly.Msg.MBOT_RGB_ONBOARD_RED = "rouge (255 max) =";
 Blockly.Msg.MBOT_RGB_ONBOARD_BLUE = "bleu (255 max) =";

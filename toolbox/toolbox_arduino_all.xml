@@ -354,6 +354,136 @@
 		</category>
 		<sep></sep>
 	</category>
+	<category name="CAT_LCD_SCREEN" colour="#57663B">
+		<category name="CAT_LCD_DFRobot_SHIELD_LCDKEYPAD" colour="#F39800">
+			<block type="LCD_Keypad_Shield_DFR_09">
+				<value name="TEXT1">
+					<shadow type="text">
+						<field name="TEXT"></field>
+					</shadow>
+				</value>
+				<value name="TEXT2">
+					<shadow type="text">
+						<field name="TEXT"></field>
+					</shadow>
+				</value>
+				<value name="DELAY_TIME">
+					<shadow type="math_number">
+						<field name="NUM">1000</field>
+					</shadow>
+				</value>
+			</block>
+			<block type="LCD_Keypad_Shield_DFR_09_lc">
+				<value name="ligne">
+					<shadow type="math_number">
+						<field name="NUM">1</field>
+					</shadow>
+				</value>
+				<value name="colonne">
+					<shadow type="math_number">
+						<field name="NUM">1</field>
+					</shadow>
+				</value>
+				<value name="TEXT4">
+					<shadow type="text">
+						<field name="TEXT"></field>
+					</shadow>
+				</value>
+			</block>
+			<block type="LCD_Keypad_Shield_DFR_09_RAZ">
+			</block>
+		</category>
+		<category name="CAT_LCD_GROVE_LCD" colour="#8ec31f">
+			<block type="grove_serial_lcd_print">
+				<value name="TEXT">
+					<shadow type="text">
+						<field name="TEXT"></field>
+					</shadow>
+				</value>
+				<value name="TEXT2">
+					<shadow type="text">
+						<field name="TEXT"></field>
+					</shadow>
+				</value>
+				<value name="DELAY_TIME">
+					<shadow type="math_number">
+						<field name="NUM">1000</field>
+					</shadow>
+				</value>
+			</block>
+			<block type="grove_serial_lcd_power"></block>
+			<block type="grove_serial_lcd_effect"></block>
+		</category>		
+		<category name="CAT_LCD_TECHNOZONE_LCD" colour="#646464">
+			<block type="technozone_lcdinit"></block>
+			<block type="technozone_lcdspecial"></block>
+			<block type="technozone_lcdclear"></block>
+			<block type="technozone_lcdwrite">
+				<value name="COL">
+					<shadow type="math_number">
+						<field name="NUM">0</field>
+					</shadow>
+				</value>
+				<value name="LIG">
+					<shadow type="math_number">
+						<field name="NUM">0</field>
+					</shadow>
+				</value>
+				<value name="TEXT">
+					<shadow type="text">
+						<field name="TEXT"></field>
+					</shadow>
+				</value>
+			</block>
+		</category>
+		<category name="CAT_LCD_TECHNOZONE_ROBOT_LCD" colour="#646464">
+			<block type="technozone_robot_lcdclear"></block>
+			<block type="technozone_robot_lcdwrite">
+				<value name="COL">
+					<shadow type="math_number">
+						<field name="NUM">0</field>
+					</shadow>
+				</value>
+				<value name="LIG">
+					<shadow type="math_number">
+						<field name="NUM">0</field>
+					</shadow>
+				</value>
+				<value name="TEXT">
+					<shadow type="text">
+						<field name="TEXT"></field>
+					</shadow>
+				</value>
+			</block>
+			<block type="technozone_robot_lcdspecial"></block>
+		</category>
+		<sep></sep>
+	</category>
+	<category name="CAT_BLUETOOTH_MISC" colour="#6981F9">
+		<category name="CAT_BT_GROVE_COMM" colour="#8ec31f">
+			<block type="grove_bluetooth_slave"></block>
+			<block type="Bluetooth_Shield_duinoFun">
+				<value name="BT_RX">
+					<shadow type="math_number">
+						<field name="NUM">7</field>
+					</shadow>
+				</value>
+				<value name="BT_TX">
+					<shadow type="math_number">
+						<field name="NUM">6</field>
+					</shadow>
+				</value>
+			</block>
+			<block type="ArduiLed"></block>
+		</category>
+		<category name="CAT_BT_TECHNOZONE_BT" colour="#646464">
+			<block type="technozone_bt_init"></block>
+			<block type="technozone_robot_bt_available"></block>
+			<block type="technozone_robot_bt_read"></block>
+			<block type="technozone_robot_bt_write"></block>
+		</category>
+		<sep></sep>
+	</category>
 	<category name="CAT_ROBOT_MISC" colour="#00979D">
 		<block type="IR_serial_decoder"></block>
 		<block type="IR_get_blink"></block>
@@ -1603,6 +1733,28 @@
 		</block>
 		<block type="generic_motor"></block>
 	</category>
+	<category name="CAT_MBOT_1" colour="#33C7F2">
+		<block type="mbot_forward"></block>
+		<block type="mbot_backward"></block>	
+		<block type="mbot_turn_left"></block>	
+		<block type="mbot_turn_right"></block>	
+	</category>
+	<category name="CAT_MBOT_2" colour="#33C7F2">
+		<block type="mbot_mot_left">
+			<value name="PWM">
+				<shadow type="math_number">
+					<field name="NUM">127</field>
+				</shadow>
+			</value>
+		</block>
+		<block type="mbot_mot_right">
+			<value name="PWM">
+				<shadow type="math_number">
+					<field name="NUM">127</field>
+				</shadow>
+			</value>
+		</block>
+	</category>
 	<category name="CAT_MBOT_3" colour="#33C7F2">
 		<block type="mbot_left_sens"></block>
 		<block type="mbot_left_PWM">
@@ -1637,6 +1789,20 @@
 				</shadow>
 			</value>
 		</block>
+		<block type="mbot_buzzer"></block>
+	</category>
+	<category name="CAT_MBOT_4" colour="#33C7F2">
+		<block type="mbot_onoff_pin_left_sens"></block>
+		<block type="mbot_onoff_pin_left_PWM"></block>
+		<block type="mbot_onoff_pin_right_sens"></block>
+		<block type="mbot_onoff_pin_right_PWM"></block>
+		<sep></sep>
+		<block type="mbot_change_pin_left_sens"></block>
+		<block type="mbot_change_pin_left_PWM"></block>
+		<block type="mbot_change_pin_right_sens"></block>
+		<block type="mbot_change_pin_right_PWM"></block>
+		<sep></sep>
+		<block type="mbot_rgb_onboard"></block>
 		<block type="mbot_buzzer"></block>
 	</category>
 	<category name="CAT_ARDUINO_SERVO" colour="#191919">

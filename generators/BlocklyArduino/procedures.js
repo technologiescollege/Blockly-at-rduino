@@ -43,11 +43,20 @@ Blockly.Arduino.procedures_defreturn = function() {
     returnValue = '  return ' + returnValue + ';\n';
   }
   var returnType = returnValue ? 'Dynamic' : 'void';
-  var args = [];
+  var args = '';
   for (var x = 0; x < this.arguments_.length; x++) {
-    args[x] = Blockly.Arduino.variableDB_.getName(this.arguments_[x], Blockly.Variables.NAME_TYPE);
+	  var arg = '';
+	  var argType = '';
+	  if (this.argumentsTypes_[x]) {
+		  argType = Blockly.Arduino.getArduinoType_(this.argumentsTypes_[x]);
+	  } else {
+		  argType = Blockly.Arduino.getArduinoType_(Blockly.Types.UNDEF);
+	  }
+    arg = Blockly.Arduino.variableDB_.getName(this.arguments_[x], Blockly.Variables.NAME_TYPE);
+    args += argType + ' ' + arg + ', ';
   }
-  var code = returnType + ' ' + funcName + '(' + args.join(', ') + ') {\n' +
+  
+  var code = returnType + ' ' + funcName + '(' + args.slice(0, -2) + ') {\n' +
       branch + returnValue + '}\n';
   code = Blockly.Arduino.scrub_(this, code);
   Blockly.Arduino.definitions_[funcName] = code;

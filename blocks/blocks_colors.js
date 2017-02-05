@@ -1,4 +1,4 @@
-Blockly.Blocks.array.HUE = "#58B5DC";
+﻿Blockly.Blocks.array.HUE = "#58B5DC";
 Blockly.Blocks.logic.HUE = "#E1A91A";
 Blockly.Blocks.loops.HUE = "#C88330";
 Blockly.Blocks.math.HUE = "#5CB712";
@@ -31,6 +31,7 @@ Blockly.Blocks.ledRGB_WS2812B.HUE = "#CAC7BE";
 Blockly.Blocks.mBot_1.HUE = "#33C7F2";
 Blockly.Blocks.mBot_2.HUE = "#33C7F2";
 Blockly.Blocks.mBot_3.HUE = "#33C7F2";
+Blockly.Blocks.mBot_4.HUE = "#33C7F2";
 Blockly.Blocks.multifunction.HUE = "#0152AB";
 Blockly.Blocks.mhk.HUE = "#FF6B37";
 Blockly.Blocks.robots_sensors.HUE = "#00979D";
