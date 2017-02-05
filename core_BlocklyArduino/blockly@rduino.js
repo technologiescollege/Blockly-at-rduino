@@ -170,6 +170,24 @@ BlocklyDuino.getStringParamFromUrl = function(name, defaultValue) {
 };
 
 /**
+ * Add or replace a parameter to the URL.
+ * 
+ * @param {string} name The name of the parameter.
+ * @param {string} value Value to set
+ * @return {string} The url completed with parameter and value
+ */
+BlocklyDuino.addReplaceParamToUrl = function(url, param, value) {
+	var re = new RegExp("([?&])" + param + "=.*?(&|$)", "i");
+	var separator = url.indexOf('?') !== -1 ? "&" : "?";
+	if (url.match(re)) {
+		return url.replace(re, '$1' + param + "=" + value + '$2');
+	}
+	else {
+		return url + separator + param + "=" + value;
+	}
+};
+
+/**
  * Load blocks saved on App Engine Storage or in session/local storage.
  * 
  * @param {string}
@@ -340,23 +358,13 @@ BlocklyDuino.load = function (event) {
 		$("#toolboxes").val(node.nodeValue);
 		
 		// load toolbox categories
-		elem = xml.getElementsByTagName("toolboxategories")[0];
+		elem = xml.getElementsByTagName("toolboxcategories")[0];
 		if (elem != undefined) {
 			node = elem.childNodes[0];
 			window.localStorage.toolboxids = node.nodeValue;
 		}
 
-		var search = window.location.search;
-		if (search.length <= 1) {
-			search = '?toolbox=' + $("#toolboxes").val();
-		} else if (search.match(/[?&]toolbox=[^&]*/)) {
-			search = search.replace(/([?&]toolbox=)[^&]*/, '$1'
-					+ $("#toolboxes").val());
-		} else {
-			search = search.replace(/\?/, '?toolbox='
-					+ $("#toolboxes").val() + '&');
-		}
-		
+		var search = BlocklyDuino.addReplaceParamToUrl(window.location.search, 'toolbox', $("#toolboxes").val());
 		window.location = window.location.protocol + '//'
 				+ window.location.host + window.location.pathname
 				+ search;
@@ -619,11 +627,7 @@ BlocklyDuino.changeToolbox = function () {
 	var search = window.location.search;
 	if ($("#put_in_url").prop('checked')) {
 		// put id's in url
-		if (search.length <= 1) {
-			search = '?toolboxids=' + toolboxIds;
-		} else {
-			search = search + '&toolboxids=' + toolboxIds;
-		}
+		search = BlocklyDuino.addReplaceParamToUrl(search, 'toolboxids', toolboxIds);
 	} else {
 		// remove id's from url
 		search = search.replace(/([?&]toolboxids=)[^&]*/, '');
@@ -632,15 +636,7 @@ BlocklyDuino.changeToolbox = function () {
 	// store toolboxe id in session
 	window.localStorage.toolbox = $("#toolboxes").val();
 	
-	if (search.length <= 1) {
-		search = '?toolbox=' + $("#toolboxes").val();
-	} else if (search.match(/[?&]toolbox=[^&]*/)) {
-		search = search.replace(/([?&]toolbox=)[^&]*/, '$1'
-				+ $("#toolboxes").val());
-	} else {
-		search = search
-				.replace(/\?/, '?toolbox=' + $("#toolboxes").val() + '&');
-	}
+	search = BlocklyDuino.addReplaceParamToUrl(search, 'toolbox', $("#toolboxes").val());
 	
 	window.location = window.location.protocol + '//'
 	+ window.location.host + window.location.pathname + search;
