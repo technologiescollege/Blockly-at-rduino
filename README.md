@@ -1,3 +1,14 @@
+***[Thanks for donation with Paypal to help me improve this software.](https://www.paypal.com/fr/cgi-bin/webscr?cmd=_flow&SESSION=o8z3KNFl16Tjlxhk1mBekCcRsG_3_NDe0CfWh8b1vfSYIbMxJnwa92YwM3y&dispatch=5885d80a13c0db1f8e263663d3faee8d4fe1dd75ca3bd4f11d72275b28239088)***
+
+![enter image description here](https://www.paypalobjects.com/fr_FR/FR/i/btn/btn_donateCC_LG.gif)
+
+----------
+
+**PROFS FRANCAIS & ASSOCIATIONS**
+----------------------------------
+*vous pouvez aussi me demander une facture pour que votre établissement me fasse un 'don' officiel par virement bancaire. Je ne fais pas payer de licence mais je compte sur vous pour aider du montant auquel vous estimez ce travail.*
+----------
+
 ### WIKI !!! [http://info.technologiescollege.fr/wiki/doku.php/en/blockly_rduino/](http://info.technologiescollege.fr/wiki/doku.php/en/blockly_rduino/)
 
 ### FORUM !!! [http://blockly.technologiescollege.fr/forum](http://blockly.technologiescollege.fr/forum)
@@ -86,3 +97,6 @@ _Frédéric PICARD : bitbloq, maquette Jeulin, vidéos, etc_
 _Spanish translation : José Manuel Ruiz Gutteriez ([blog](http://josemanuelruizgutierrez.blogspot.com.es/))_
 
 _Daniel PERS ([site](http://blogpeda.ac-poitiers.fr/techno-jean-mace/)) : FDPlayer, OLED, RGB LED_
+
+_Bernard REMOND [site](https://online.nbremond.net/) : téléversement local_
+
