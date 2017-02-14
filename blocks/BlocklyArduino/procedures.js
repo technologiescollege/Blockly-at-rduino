@@ -429,6 +429,10 @@ Blockly.Blocks['procedures_mutatorarg'] = {
     var blocklyTypeKey = this.getFieldValue('VARIABLE_SETTYPE_TYPE');
     return Blockly.Types[blocklyTypeKey];
   },
+  getBlockType: function() {
+    var blocklyTypeKey = this.getFieldValue('VARIABLE_SETTYPE_TYPE');
+    return Blockly.Types[blocklyTypeKey];
+  },
   /**
    * Obtain a valid name for the procedure.
    * Merge runs of whitespace.  Strip leading and trailing whitespace.
