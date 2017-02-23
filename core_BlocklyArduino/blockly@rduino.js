@@ -21,6 +21,7 @@ var BlocklyDuino = {};
 Blockly.pathToBlockly = './';
 Blockly.pathToMedia = './media/';
 
+BlocklyDuino.backupToolbox = '';
 BlocklyDuino.selectedTab = 'blocks';
 BlocklyDuino.selectedCard = 'arduino_uno';
 BlocklyDuino.inlineBool = true;
@@ -432,7 +433,15 @@ BlocklyDuino.bindFunctions = function() {
 		BlocklyDuino.cardPicture_change_AIO();
 	});	
 	
+	$('#toolboxes').on("focus", function() {
+		BlocklyDuino.backupToolbox = $(this).val();
+	});
+	
 	$('#toolboxes').on("change", BlocklyDuino.changeToolboxDefinition);	
+
+	$('#configModal').on('hidden.bs.modal', function(e) {
+		BlocklyDuino.loadToolboxDefinition(BlocklyDuino.backupToolbox);
+	})
 
 	$('#load').on("change", BlocklyDuino.load);
 	$('#btn_fakeload').on("click", function() {
