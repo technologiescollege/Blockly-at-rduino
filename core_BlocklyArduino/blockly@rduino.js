@@ -441,7 +441,7 @@ BlocklyDuino.bindFunctions = function() {
 
 	$('#configModal').on('hidden.bs.modal', function(e) {
 		BlocklyDuino.loadToolboxDefinition(BlocklyDuino.backupToolbox);
-	})
+	});
 
 	$('#load').on("change", BlocklyDuino.load);
 	$('#btn_fakeload').on("click", function() {
@@ -1047,6 +1047,7 @@ Blockly.Variables.flyoutCategory = function(workspace) {
       block.appendChild(field);
       xmlList.push(block);
     }
+    // override to inject variables_set_type block
     if (Blockly.Blocks['variables_set_type']) {
     	var block = goog.dom.createDom('block');
     	block.setAttribute('type', 'variables_set_type');
@@ -1057,6 +1058,7 @@ Blockly.Variables.flyoutCategory = function(workspace) {
     	}
     	xmlList.push(block);
     }
+    // end override
     if (Blockly.Blocks['math_change']) {
       // <block type="math_change">
       //   <value name="DELTA">
