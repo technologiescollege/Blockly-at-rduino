@@ -512,3 +512,82 @@ Blockly.Arduino.grove_dht_read = function() {
 */
   return [code, Blockly.Arduino.ORDER_ATOMIC];
 };
+
+Blockly.Arduino.grove_lcd_rgb_print = function() {
+  var text1 = Blockly.Arduino.valueToCode(this, 'TEXT',
+      Blockly.Arduino.ORDER_UNARY_POSTFIX) || '\'\'';
+  var text2 = Blockly.Arduino.valueToCode(this, 'TEXT2',
+      Blockly.Arduino.ORDER_UNARY_POSTFIX) || '\'\'';
+	  
+  if(text1.length>16||text2.length>16){
+      alert("16 char maxi !");
+  }
+
+  Blockly.Arduino.includes_['define_lcd_rgb'] = '#include <rgb_lcd.h>\n';
+  Blockly.Arduino.includes_['define_Wire'] = '#include <Wire.h>\n';
+
+  Blockly.Arduino.definitions_['var_lcd_rgb'] = 'rgb_lcd LCD_RGB;';
+  
+  Blockly.Arduino.setups_['setup_lcd_rgb'] = 'LCD_RGB.begin(16, 2);\n';
+  
+  var code = 'LCD_RGB.setCursor(0,0);\n';
+  code    += 'LCD_RGB.print('+text1+');\n';
+  code    += 'LCD_RGB.setCursor(0,1);\n';
+  code    += 'LCD_RGB.print('+text2+');\n';
+  return code;
+};
+
+Blockly.Arduino.grove_lcd_rgb_power = function() {
+  var dropdown_stat = this.getFieldValue('STAT');
+
+  Blockly.Arduino.includes_['define_lcd_rgb'] = '#include <rgb_lcd.h>';
+  Blockly.Arduino.includes_['define_Wire'] = '#include <Wire.h>';
+
+  Blockly.Arduino.definitions_['var_lcd_rgb'] = 'rgb_lcd LCD_RGB;';
+  
+  Blockly.Arduino.setups_['setup_lcd_rgb'] = 'LCD_RGB.begin(16, 2);\n';
+  
+  var code = 'LCD_RGB';
+  if(dropdown_stat==="ON"){
+    code += '.display();\n';
+  } else {
+    code += '.noDisplay();\n';
+  }
+  return code;
+};
+
+Blockly.Arduino.grove_lcd_rgb_clean = function() {
+  var dropdown_stat = this.getFieldValue('STAT');
+
+  Blockly.Arduino.includes_['define_lcd_rgb'] = '#include <rgb_lcd.h>';
+  Blockly.Arduino.includes_['define_Wire'] = '#include <Wire.h>';
+
+  Blockly.Arduino.definitions_['var_lcd_rgb'] = 'rgb_lcd LCD_RGB;';
+  
+  Blockly.Arduino.setups_['setup_lcd_rgb'] = 'LCD_RGB.begin(16, 2);\n';
+  
+  var code = 'LCD_RGB.clear();\n';
+  
+  return code;
+};
+
+Blockly.Arduino.grove_lcd_rgb_effect = function() {
+  var dropdown_stat = this.getFieldValue('STAT');
+
+  Blockly.Arduino.includes_['define_lcd_rgb'] = '#include <rgb_lcd.h>\n';
+  Blockly.Arduino.includes_['define_Wire'] = '#include <Wire.h>\n';
+
+  Blockly.Arduino.definitions_['var_lcd_rgb'] = 'rgb_lcd LCD_RGB;';
+  
+  Blockly.Arduino.setups_['setup_lcd_rgb'] = 'LCD_RGB.begin(16, 2);\n';
+  
+  var code = 'LCD_RGB';
+  if(dropdown_stat==="LEFT"){
+    code += '.scrollDisplayLeft();\n';
+  } else if(dropdown_stat==="RIGHT"){
+    code += '.scrollDisplayRight();\n';
+  } else {
+    code += '.autoscroll();\n';
+  }
+  return code;
+};

@@ -183,6 +183,8 @@ Blockly.Msg.CAT_BLUETOOTH_MISC = "bluetooth divers";
 Blockly.Msg.CAT_BT_GROVE_COMM = "Grove";
 Blockly.Msg.CAT_BT_TECHNOZONE_BT = "TechnoZone51";
 
+Blockly.Msg.CAT_jfblocks = "trames"; // added february 28th, 2017
+
 Blockly.Msg.FIELDDROPDOWN = [["1 (état haut)", "HIGH"], ["0 (état bas)", "LOW"]];
 Blockly.Msg.FIELDDROPDOWN_ONOFF = [["marche", "ON"], ["arrêt", "OFF"]]
 Blockly.Msg.INOUT_HIGH_LEVEL = "1 (état haut)";
@@ -379,6 +381,7 @@ Blockly.Msg.GROVE_INOUT_MOISTURE_HELPURL = "http://www.seeedstudio.com/wiki/Grov
 Blockly.Msg.GROVE_INOUT_MOISTURE_TEXT = "l'humidité";
 Blockly.Msg.GROVE_INOUT_MOISTURE_INPUT = "mesurée sur la broche";
 Blockly.Msg.GROVE_INOUT_MOISTURE_TOOLTIP = "renvoie le niveau d'humidité";
+Blockly.Msg.GROVE_INOUT_LCD_RGB_HELPURL = "http://wiki.seeed.cc/Grove-LCD_RGB_Backlight/";
 Blockly.Msg.GROVE_INOUT_LCD_PRINT_HELPURL = "http://www.seeedstudio.com/wiki/index.php?title=GROVE_-_Starter_Bundle_V1.0b#Serial_LCD";
 Blockly.Msg.GROVE_INOUT_LCD_PRINT_TEXT = "écran LCD";
 Blockly.Msg.GROVE_INOUT_LCD_PRINT_INPUT1 = "sur la broche";
@@ -393,6 +396,7 @@ Blockly.Msg.GROVE_INOUT_LCD_POWER_STATE = "mettre sur";
 Blockly.Msg.GROVE_INOUT_LCD_POWER_TOOLTIP = "éclairage de l'écran LCD on/off";
 Blockly.Msg.GROVE_INOUT_LCD_EFFECT_HELPURL = "http://www.seeedstudio.com/wiki/index.php?title=GROVE_-_Starter_Bundle_V1.0b#LED";
 Blockly.Msg.GROVE_INOUT_LCD_EFFECT_TEXT = "écran LCD";
+Blockly.Msg.GROVE_INOUT_LCD_EFFECT_CLEAN = "effacer l'écran";
 Blockly.Msg.GROVE_INOUT_LCD_EFFECT_INPUT = "sur la broche";
 Blockly.Msg.GROVE_INOUT_LCD_EFFECT_EFFECT = "écrit avec l'effet";
 Blockly.Msg.GROVE_INOUT_LCD_EFFECT_EFFECT_EFFECT = [["défilement à gauche", "LEFT"], ["défilement à droite", "RIGHT"], ["défilement automatique", "AUTO"]];
@@ -1085,7 +1089,7 @@ Blockly.Msg.ARDUINO_INOUT_DIGITAL_MODE_INPUT2 = "à";
 Blockly.Msg.ARDUINO_INOUT_DIGITAL_MODE_DROPDOWN = [["ENTREE", "INPUT"], ["SORTIE", "OUTPUT"], ["ENTREE_PULLUP", "INPUT_PULLUP"]];
 Blockly.Msg.ARDUINO_INOUT_DIGITAL_MODE_TOOLTIP = "Configurer la broche spécifée pour fonctionner comme une entrée ou une sortie";
 
-//******** Bluetotth Electronics example http://www.keuwl.com/electronics.html
+//******** Bluetooth Electronics example http://www.keuwl.com/electronics.html
 Blockly.Msg.BT_ELEC_Init_HELPURL = "https://play.google.com/store/apps/details?id=com.keuwl.arduinobluetooth&hl=fr";
 Blockly.Msg.BT_ELEC_init_text = "photographier le QR code pour télécharger l'app Android :";
 Blockly.Msg.BT_ELEC_TOOLTIP = "téléchargement de l'application pour Android";
@@ -1095,3 +1099,19 @@ Blockly.Msg.BT_ELEC_LED_brightness_TOOLTIP = "voir la démo dans l'aide";
 Blockly.Msg.BT_ELEC_RC_car_HELPURL = "http://www.keuwl.com/electronics/rduino/bluet/01-rc-car/";
 Blockly.Msg.BT_ELEC_RC_car_text = "télécommande d'un véhicule par le téléphone";
 Blockly.Msg.BT_ELEC_RC_car_TOOLTIP = "voir la démo dans l'aide";
+
+// --- jfblocks
+Blockly.Msg.jfblocks_Init_HELPURL = "http://jfbegot.free.fr";
+Blockly.Msg.jfblocks_TOOLTIP = "pour décoder des trames Bluetooth Electronics";
+Blockly.Msg.jfblocks_last_value_tooltip = "valeur reçue dans la dernière trame décodée";
+Blockly.Msg.jfblocks_last_value_titre = "dernière valeur";
+Blockly.Msg.jfblocks_decode_tooltip = "décode une trame recue au format:\n<start char><nombre en ASCII><end char>\nex: D145F";
+Blockly.Msg.jfblocks_decode_titre = "quand une trame est reçue";
+Blockly.Msg.jfblocks_action_tooltip = "à placer dans 'quand une trame est reçue'\nle caractère de fin peut être tout sauf numérique";
+Blockly.Msg.jfblocks_action_start_code = "si le caractère de début vaut";
+Blockly.Msg.jfblocks_action_do = "alors faire";
+Blockly.Msg.jfblocks_tx_tooltip = "envoie une trame au format:\n<start char><nombre en ASCII><end char>\nex: D145F";
+Blockly.Msg.jfblocks_tx_titre = "émettre une trame";
+Blockly.Msg.jfblocks_tx_start_code = "Start Code";
+Blockly.Msg.jfblocks_tx_data = "donnée";
+Blockly.Msg.jfblocks_tx_end_code = "End Code";

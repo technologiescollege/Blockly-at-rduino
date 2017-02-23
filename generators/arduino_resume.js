@@ -32,6 +32,7 @@ head.load(
 "generators/arduino/flycamone-eco-v2.js",
 "generators/arduino/grove.js",
 "generators/arduino/icn.js",
+"generators/arduino/jfblocks.js",
 "generators/arduino/jeulin_maquette_feux.js",
 "generators/arduino/kit_velo_niv1.js",
 "generators/arduino/kit_velo_niv2.js",

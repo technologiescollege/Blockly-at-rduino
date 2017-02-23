@@ -49,6 +49,7 @@ head.load(
 "blocks/flycamone-eco-v2/flycamone-eco-v2.js",
 "blocks/grove/grove.js",
 "blocks/icn/icn.js",
+"blocks/jfblocks/jfblocks.js",
 "blocks/jeulin_maquette_feux/jeulin_maquette_feux.js",
 "blocks/kit_velo/kit_velo_niv1.js",
 "blocks/kit_velo/kit_velo_niv2.js",

@@ -393,7 +393,8 @@
 			<block type="LCD_Keypad_Shield_DFR_09_RAZ">
 			</block>
 		</category>
-		<category name="CAT_LCD_GROVE_LCD" colour="#8ec31f">
+		<category name="CAT_GROVE_LCD" colour="#8ec31f">
+			<block type="grove_serial_lcd_power"></block>
 			<block type="grove_serial_lcd_print">
 				<value name="TEXT">
 					<shadow type="text">
@@ -411,9 +412,28 @@
 					</shadow>
 				</value>
 			</block>
-			<block type="grove_serial_lcd_power"></block>
 			<block type="grove_serial_lcd_effect"></block>
-		</category>		
+			<block type="grove_lcd_rgb_power"></block>
+			<block type="grove_lcd_rgb_print">
+				<value name="TEXT">
+					<shadow type="text">
+						<field name="TEXT"></field>
+					</shadow>
+				</value>
+				<value name="TEXT2">
+					<shadow type="text">
+						<field name="TEXT"></field>
+					</shadow>
+				</value>
+				<value name="DELAY_TIME">
+					<shadow type="math_number">
+						<field name="NUM">1000</field>
+					</shadow>
+				</value>
+			</block>
+			<block type="grove_lcd_rgb_clean"></block>
+			<block type="grove_lcd_rgb_effect"></block>
+		</category>
 		<category name="CAT_LCD_TECHNOZONE_LCD" colour="#646464">
 			<block type="technozone_lcdinit"></block>
 			<block type="technozone_lcdspecial"></block>
@@ -1180,6 +1200,7 @@
 			<block type="grove_rgb_led"></block>
 		</category>
 		<category name="CAT_GROVE_LCD" colour="#8ec31f">
+			<block type="grove_serial_lcd_power"></block>
 			<block type="grove_serial_lcd_print">
 				<value name="TEXT">
 					<shadow type="text">
@@ -1197,8 +1218,27 @@
 					</shadow>
 				</value>
 			</block>
-			<block type="grove_serial_lcd_power"></block>
 			<block type="grove_serial_lcd_effect"></block>
+			<block type="grove_lcd_rgb_power"></block>
+			<block type="grove_lcd_rgb_print">
+				<value name="TEXT">
+					<shadow type="text">
+						<field name="TEXT"></field>
+					</shadow>
+				</value>
+				<value name="TEXT2">
+					<shadow type="text">
+						<field name="TEXT"></field>
+					</shadow>
+				</value>
+				<value name="DELAY_TIME">
+					<shadow type="math_number">
+						<field name="NUM">1000</field>
+					</shadow>
+				</value>
+			</block>
+			<block type="grove_lcd_rgb_clean"></block>
+			<block type="grove_lcd_rgb_effect"></block>
 		</category>
 		<category name="CAT_GROVE_COMM" colour="#8ec31f">
 			<block type="grove_bluetooth_slave"></block>
@@ -1932,7 +1972,10 @@
 		<block type="BT_ELEC_LED_brightness"></block>
 		<block type="BT_ELEC_RC_car"></block>
 	</category>
+	<category name="CAT_jfblocks" colour="#006666">
+		<block type="jfblocks_decode"></block>
+		<block type="jfblocks_action"></block>
+		<block type="jfblocks_tx"></block>
+		<block type="jfblocks_last_value"></block>
+	</category>
 </toolbox>
-
-
-

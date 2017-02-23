@@ -404,3 +404,73 @@ Blockly.Blocks['grove_dht_read'] = {
     this.setTooltip(Blockly.Msg.GROVE_INOUT_DHT_READ_TOOLTIP);
   }
 };
+
+Blockly.Blocks['grove_lcd_rgb_print'] = {
+  init: function() {
+    this.setColour(Blockly.Blocks.grove.HUE);
+	this.setHelpUrl(Blockly.Msg.GROVE_INOUT_LCD_RGB_HELPURL);
+    this.appendDummyInput()
+        .appendField(Blockly.Msg.GROVE_INOUT_LCD_PRINT_TEXT)
+        .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/grove/400px-LCD_RGB_backlight.jpg', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize));
+    this.appendValueInput("TEXT")
+        .setCheck('String')
+        .setAlign(Blockly.ALIGN_RIGHT)
+        .appendField(Blockly.Msg.GROVE_INOUT_LCD_PRINT_INPUT2);
+    this.appendValueInput("TEXT2")
+        .setCheck('String')
+        .setAlign(Blockly.ALIGN_RIGHT)
+        .appendField(Blockly.Msg.GROVE_INOUT_LCD_PRINT_INPUT3);
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setTooltip(Blockly.Msg.GROVE_INOUT_LCD_PRINT_TOOLTIP);
+  }
+};
+
+//grove lcd power on/off
+Blockly.Blocks['grove_lcd_rgb_power'] = {
+  init: function() {
+    this.setColour(Blockly.Blocks.grove.HUE);
+	this.setHelpUrl(Blockly.Msg.GROVE_INOUT_LCD_RGB_HELPURL);
+    this.appendDummyInput()
+        .appendField(Blockly.Msg.GROVE_INOUT_LCD_POWER_TEXT)
+        .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/grove/400px-LCD_RGB_backlight.jpg', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize));
+    this.appendDummyInput()
+        .setAlign(Blockly.ALIGN_RIGHT)
+        .appendField(Blockly.Msg.GROVE_INOUT_LCD_POWER_STATE)
+        .appendField(new Blockly.FieldDropdown(Blockly.Msg.FIELDDROPDOWN_ONOFF), "STAT");
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setTooltip(Blockly.Msg.GROVE_INOUT_LCD_POWER_TOOLTIP);
+  }
+};
+
+//scroll left/right/no scroll/blink/noblink
+Blockly.Blocks['grove_lcd_rgb_effect'] = {
+  init: function() {
+    this.setColour(Blockly.Blocks.grove.HUE);
+	this.setHelpUrl(Blockly.Msg.GROVE_INOUT_LCD_RGB_HELPURL);
+    this.appendDummyInput()
+        .appendField(Blockly.Msg.GROVE_INOUT_LCD_EFFECT_TEXT)
+        .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/grove/400px-LCD_RGB_backlight.jpg', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize));
+    this.appendDummyInput()
+        .setAlign(Blockly.ALIGN_RIGHT)
+        .appendField(Blockly.Msg.GROVE_INOUT_LCD_EFFECT_EFFECT)
+        .appendField(new Blockly.FieldDropdown(Blockly.Msg.GROVE_INOUT_LCD_EFFECT_EFFECT_EFFECT), "STAT");
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setTooltip(Blockly.Msg.GROVE_INOUT_LCD_EFFECT_TOOLTIP);
+  }
+};
+
+Blockly.Blocks['grove_lcd_rgb_clean'] = {
+  init: function() {
+    this.setColour(Blockly.Blocks.grove.HUE);
+	this.setHelpUrl(Blockly.Msg.GROVE_INOUT_LCD_RGB_HELPURL);
+    this.appendDummyInput()
+        .appendField(Blockly.Msg.GROVE_INOUT_LCD_EFFECT_CLEAN)
+        .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/grove/400px-LCD_RGB_backlight.jpg', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize));
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setTooltip(Blockly.Msg.GROVE_INOUT_LCD_EFFECT_TOOLTIP);
+  }
+};

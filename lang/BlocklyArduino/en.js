@@ -188,6 +188,8 @@ Blockly.Msg.CAT_BLUETOOTH_MISC = "bluetooth misc.";
 Blockly.Msg.CAT_BT_GROVE_COMM = "Grove";
 Blockly.Msg.CAT_BT_TECHNOZONE_BT = "TechnoZone51";
 
+Blockly.Msg.CAT_jfblocks = "frames"; // added february 28th, 2017
+
 
 //**********************************blocks***********************************************
 //**********************************blocks***********************************************
@@ -381,6 +383,7 @@ Blockly.Msg.GROVE_INOUT_MOISTURE_HELPURL = "http://www.seeedstudio.com/wiki/Grov
 Blockly.Msg.GROVE_INOUT_MOISTURE_TEXT = "Moisture Sensor";
 Blockly.Msg.GROVE_INOUT_MOISTURE_INPUT = "PIN#";
 Blockly.Msg.GROVE_INOUT_MOISTURE_TOOLTIP = "return number of moisture";
+Blockly.Msg.GROVE_INOUT_LCD_RGB_HELPURL = "http://wiki.seeed.cc/Grove-LCD_RGB_Backlight/";
 Blockly.Msg.GROVE_INOUT_LCD_PRINT_HELPURL = "http://www.seeedstudio.com/wiki/index.php?title=GROVE_-_Starter_Bundle_V1.0b#Serial_LCD";
 Blockly.Msg.GROVE_INOUT_LCD_PRINT_TEXT = "Serial LCD";
 Blockly.Msg.GROVE_INOUT_LCD_PRINT_INPUT1 = "PIN#";
@@ -395,6 +398,7 @@ Blockly.Msg.GROVE_INOUT_LCD_POWER_STATE = "Power";
 Blockly.Msg.GROVE_INOUT_LCD_POWER_TOOLTIP = "Turn LCD power on/off";
 Blockly.Msg.GROVE_INOUT_LCD_EFFECT_HELPURL = "http://www.seeedstudio.com/wiki/index.php?title=GROVE_-_Starter_Bundle_V1.0b#LED";
 Blockly.Msg.GROVE_INOUT_LCD_EFFECT_TEXT = "Serial LCD";
+Blockly.Msg.GROVE_INOUT_LCD_EFFECT_CLEAN = "clean LCD";
 Blockly.Msg.GROVE_INOUT_LCD_EFFECT_INPUT = "PIN#";
 Blockly.Msg.GROVE_INOUT_LCD_EFFECT_EFFECT = "Effect";
 Blockly.Msg.GROVE_INOUT_LCD_EFFECT_EFFECT_EFFECT = [["Scroll Left", "LEFT"], ["Scroll Right", "RIGHT"], ["Scroll Auto", "AUTO"]];
@@ -1095,3 +1099,20 @@ Blockly.Msg.BT_ELEC_LED_brightness_TOOLTIP = "see demo in Help";
 Blockly.Msg.BT_ELEC_RC_car_HELPURL = "http://www.keuwl.com/electronics/rduino/bluet/01-rc-car/";
 Blockly.Msg.BT_ELEC_RC_car_text = "4 buttons controlling a RC car";
 Blockly.Msg.BT_ELEC_RC_car_TOOLTIP = "see demo in Help";
+
+
+// --- jfblocks
+Blockly.Msg.jfblocks_Init_HELPURL = "http://jfbegot.free.fr";
+Blockly.Msg.jfblocks_TOOLTIP = "pour décoder des trames Bluetooth Electronics";
+Blockly.Msg.jfblocks_last_value_tooltip = "valeur reçue dans la dernière trame décodée";
+Blockly.Msg.jfblocks_last_value_titre = "dernière valeur JFBlock";
+Blockly.Msg.jfblocks_decode_tooltip = "décode une trame recue au format:\n<start char><nombre en ASCII><end char>\nex: D145F";
+Blockly.Msg.jfblocks_decode_titre = "quand une trame est reçue";
+Blockly.Msg.jfblocks_action_tooltip = "à placer dans 'Quand trame recue'\nLe caractere de fin peut être tout sauf numérique";
+Blockly.Msg.jfblocks_action_start_code = "si le caractère de début vaut";
+Blockly.Msg.jfblocks_action_do = "alors faire";
+Blockly.Msg.jfblocks_tx_tooltip = "envoie une trame au format:\n<start char><nombre en ASCII><end char>\nex: D145F";
+Blockly.Msg.jfblocks_tx_titre = "émettre une trame";
+Blockly.Msg.jfblocks_tx_start_code = "Start Code";
+Blockly.Msg.jfblocks_tx_data = "donnée";
+Blockly.Msg.jfblocks_tx_end_code = "End Code";

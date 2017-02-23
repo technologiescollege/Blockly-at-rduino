@@ -16,6 +16,7 @@ Blockly.Blocks.arduino_softserial.HUE = "#00979D";
 Blockly.Blocks.arduino_shield.HUE = "#F39800";
 Blockly.Blocks.bq.HUE = "#608621";
 Blockly.Blocks.BT_ELEC.HUE = "#142D5E";
+Blockly.Blocks.jfblocks.HUE = "#006666";
 Blockly.Blocks.dfplayer.HUE = "#F39800";
 Blockly.Blocks.RoMeo1.HUE = "#F39800";
 Blockly.Blocks.RoMeo2.HUE = "#F39800";

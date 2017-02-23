@@ -1153,3 +1153,9 @@ Blockly.Blocks.APDS9960_ColorSensor_green.getBlockType = function() {
 Blockly.Blocks.APDS9960_ColorSensor_blue.getBlockType = function() {
 	return Blockly.Types.NUMBER;
 };
+
+//---------------------------------JFBlocks.js-------------------------------------
+
+Blockly.Blocks.jfblocks_decode.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
