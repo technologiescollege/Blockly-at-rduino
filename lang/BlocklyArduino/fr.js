@@ -314,7 +314,7 @@ Blockly.Msg.Serial_avai="une donnée est disponible sur le port série ?";
 Blockly.Msg.Serial_flush="attente de fin de transmission par le port série";
 
 //SOFTWARE SERIAL
-Blockly.Msg.SSERIAL_DEFAULT_NAME="COMserie_1";
+Blockly.Msg.SSERIAL_DEFAULT_NAME="COMserie";
 Blockly.Msg.SSERIAL_Init="initialisation :";
 Blockly.Msg.SSERIAL_SPEED="vitesse";
 Blockly.Msg.SSERIAL_TX="TX ";

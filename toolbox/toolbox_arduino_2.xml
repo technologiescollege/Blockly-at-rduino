@@ -146,10 +146,10 @@
 		</value> <value name="COLOUR2"> <block type="colour_picker"> <field name="COLOUR">#3333ff</field> 
 		</block> </value> <value name="RATIO"> <block type="math_number"> <field 
 		name="NUM">0.5</field> </block> </value> </block> </category> -->
-	<category name="CAT_VARIABLES" colour="#EE7D16">
-        <block type="math_change"></block>
+	<category name="CAT_VARIABLES" custom="VARIABLE" colour="#EE7D16">
+        <!--block type="math_change"></block>
 		<block type="variables_set"></block>
-		<block type="variables_get"></block>
+		<block type="variables_get"></block-->
 	</category>
 	<category name="CAT_FUNCTIONS" custom="PROCEDURE" colour="#632D99"></category>
 	<sep></sep>
