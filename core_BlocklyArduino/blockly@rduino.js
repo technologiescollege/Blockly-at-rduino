@@ -21,6 +21,7 @@ var BlocklyDuino = {};
 Blockly.pathToBlockly = './';
 Blockly.pathToMedia = './media/';
 
+BlocklyDuino.defaultToolbox = "toolbox_none";
 BlocklyDuino.backupToolbox = '';
 BlocklyDuino.selectedTab = 'blocks';
 BlocklyDuino.selectedCard = 'arduino_uno';
@@ -699,9 +700,11 @@ BlocklyDuino.loadToolboxDefinition = function(toolboxFile) {
 		toolboxFile = window.localStorage.toolbox;
 	}
 	
-	if (toolboxFile) {
-		$("#toolboxes").val(toolboxFile);
+	if (!toolboxFile) {
+		toolboxFile = BlocklyDuino.defaultToolbox;
 	}
+	
+	$("#toolboxes").val(toolboxFile);
 	
 	$.ajax( {
 				type: "GET",
