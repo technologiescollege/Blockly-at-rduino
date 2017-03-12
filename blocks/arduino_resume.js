@@ -39,6 +39,7 @@ head.load(
 "blocks/arduino_shield/arduino_shield.js",
 "blocks/bitbloq/bitbloq.js",
 "blocks/Bluetooth_Electronics/Bluetooth_Electronics.js",
+"blocks/collyc/collyc.js",
 "blocks/dfplayer-mini-mp3-dfrobot/dfplayer-mini-mp3-dfrobot.js",
 "blocks/dfrobot_romeo_v2/dfrobot_romeo_v2_1.js",
 "blocks/dfrobot_romeo_v2/dfrobot_romeo_v2_2.js",

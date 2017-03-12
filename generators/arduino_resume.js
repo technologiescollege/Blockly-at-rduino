@@ -22,6 +22,7 @@ head.load(
 "generators/arduino/arduino_shield.js",
 "generators/arduino/bitbloq.js",
 "generators/arduino/Bluetooth_Electronics.js",
+"generators/arduino/collyc.js",
 "generators/arduino/dfplayer-mini-mp3-dfrobot.js",
 "generators/arduino/dfrobot_romeo_v2_1.js",
 "generators/arduino/dfrobot_romeo_v2_2.js",

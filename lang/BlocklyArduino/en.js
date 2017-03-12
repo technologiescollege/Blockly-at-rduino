@@ -777,6 +777,7 @@ Blockly.Msg.lp2i_ledRGB_WS2812B_init = "Led RGB WS2812B Init";
 Blockly.Msg.lp2i_ledRGB_WS2812B_init_Pin = "Pin =";
 Blockly.Msg.lp2i_ledRGB_WS2812B_init_Number_of_Pixels = "Number of pixels =";
 Blockly.Msg.lp2i_ledRGB_WS2812B_Brightness = "Brightness =";
+Blockly.Msg.lp2i_ledRGB_WS2812B_DEFAULT_NAME = "NeoPixels";
 
 
 Blockly.Msg.lp2i_ledRGB_WS2812B_setPixelColor = "Led RGB WS2812B. Send color :";

@@ -185,6 +185,8 @@ Blockly.Msg.CAT_BT_TECHNOZONE_BT = "TechnoZone51";
 
 Blockly.Msg.CAT_jfblocks = "trames"; // added february 28th, 2017
 
+Blockly.Msg.CAT_COLLYC = "Collège-Lycée";
+
 Blockly.Msg.FIELDDROPDOWN = [["1 (état haut)", "HIGH"], ["0 (état bas)", "LOW"]];
 Blockly.Msg.FIELDDROPDOWN_ONOFF = [["marche", "ON"], ["arrêt", "OFF"]]
 Blockly.Msg.INOUT_HIGH_LEVEL = "1 (état haut)";
@@ -1115,3 +1117,16 @@ Blockly.Msg.jfblocks_tx_titre = "émettre une trame";
 Blockly.Msg.jfblocks_tx_start_code = "Start Code";
 Blockly.Msg.jfblocks_tx_data = "donnée";
 Blockly.Msg.jfblocks_tx_end_code = "End Code";
+
+//-- collyc
+Blockly.Msg.COLLYC_TOUCHE_HELPURL = '';
+Blockly.Msg.COLLYC_TOUCHE_TEXT = "Touche appuyée";
+Blockly.Msg.COLLYC_TOUCHE_LIGNES = "Lignes";
+Blockly.Msg.COLLYC_TOUCHE_TOOLTIP = "Retour le code ASCII de la touche appuyée ou 0 si aucune";
+Blockly.Msg.COLLYC_TOUCHE_LIGNE1 = "Ligne 1";
+Blockly.Msg.COLLYC_TOUCHE_LIGNE2 = "Ligne 2";
+Blockly.Msg.COLLYC_TOUCHE_LIGNE3 = "Ligne 3";
+Blockly.Msg.COLLYC_TOUCHE_LIGNE4 = "Ligne 4";
+Blockly.Msg.COLLYC_TOUCHE_COLONNE1 = "Colonne 1";
+Blockly.Msg.COLLYC_TOUCHE_COLONNE2 = "Colonne 2";
+Blockly.Msg.COLLYC_TOUCHE_COLONNE3 = "Colonne 3";

@@ -1159,3 +1159,9 @@ Blockly.Blocks.APDS9960_ColorSensor_blue.getBlockType = function() {
 Blockly.Blocks.jfblocks_decode.getBlockType = function() {
 	return Blockly.Types.NUMBER;
 };
+
+//---------------------------------collyc.js-------------------------------------
+
+Blockly.Blocks.collyc_clavier12_touche_appuyee.getBlockType = function () {
+	return Blockly.Types.CHARACTER;
+}
