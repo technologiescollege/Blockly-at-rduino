@@ -190,6 +190,20 @@ Blockly.Msg.CAT_BT_TECHNOZONE_BT = "TechnoZone51";
 
 Blockly.Msg.CAT_jfblocks = "frames"; // added february 28th, 2017
 
+Blockly.Msg.CAT_COLLYC = "Collège-Lycée";
+
+Blockly.Msg.CAT_SHARP = "Sharp IR";
+
+//**********************************FieldInstance messages***********************************************
+Blockly.Msg.COMPONENT_WARN = 'A %1 configuration block with the same %2 name must be added to use this block!';
+
+Blockly.Msg.SOFTSERIAL_COMPONENT = 'softserial';
+Blockly.Msg.STEPPER_COMPONENT = 'stepper';
+Blockly.Msg.NEOPIXEL_COMPONENT = 'Neopixel';
+Blockly.Msg.SERVO_COMPONENT = 'servomotor';
+Blockly.Msg.SERVO_DEFAULT_NAME = "SERVO";
+Blockly.Msg.SHARP_IR_COMPONENT = 'Sharp IR';
+
 
 //**********************************blocks***********************************************
 //**********************************blocks***********************************************
@@ -284,6 +298,8 @@ Blockly.Msg.ARDUINO_SERVO_ROT_CONTINUE_INPUT3 = "speed [0~90]";
 Blockly.Msg.ARDUINO_SERVO_ROT_CONTINUE_INPUT4 = "direction";
 Blockly.Msg.ARDUINO_SERVO_ROT_CONTINUE_TOOLTIP = "degrees for power : 0° -> max on left | 90° -> stop | 180° -> max on right";
 Blockly.Msg.ARDUINO_SERVO_PIN = "PIN#";
+Blockly.Msg.ARDUINO_SERVO_ATTACH1 = "attach servomotor";
+Blockly.Msg.ARDUINO_SERVO_ATTACH2 = "id#";
 Blockly.Msg.ARDUINO_SERVO_ATTACHED = "servo attached ?";
 Blockly.Msg.ARDUINO_SERVO_DETACH = "detach servo on PIN#";
 Blockly.Msg.ARDUINO_SERIAL_PRINT_HELPURL = "http://www.arduino.cc/en/Serial/Print";
@@ -776,6 +792,7 @@ Blockly.Msg.lp2i_u8g_4draw_print_N4 = "Number 4 (at end) ="
 Blockly.Msg.lp2i_ledRGB_WS2812B_init = "Led RGB WS2812B Init";
 Blockly.Msg.lp2i_ledRGB_WS2812B_init_Pin = "Pin =";
 Blockly.Msg.lp2i_ledRGB_WS2812B_init_Number_of_Pixels = "Number of pixels =";
+Blockly.Msg.lp2i_ledRGB_WS2812B_DEFAULT_NAME = "RGB_LED";
 Blockly.Msg.lp2i_ledRGB_WS2812B_Brightness = "Brightness =";
 Blockly.Msg.lp2i_ledRGB_WS2812B_DEFAULT_NAME = "NeoPixels";
 
@@ -883,7 +900,7 @@ Blockly.Msg.ROBUNO_LUX_TOOLTIP = "entrée Capteur de Luminosité";
 Blockly.Msg.ROBUNO_PIN_ANALOG = "sur la broche Analogique";
 Blockly.Msg.ROBUNO_HELPURL = "www.technologieservices.fr/fr/a-a1000022060-edc1000003/article/RUSA-Robot-RobUno-a-servomoteurs.html";
 
-//Added March 26th 2016
+//******** Added March 26th 2016
 Blockly.Msg.FISCHERTECHNIK_INOUT_LED_INPUT1 = "mettre le feu rouge";
 Blockly.Msg.FISCHERTECHNIK_INOUT_LED_INPUT2 = "sur la broche Numérique";
 Blockly.Msg.FISCHERTECHNIK_INOUT_LED_INPUT3 = "à l'état";
@@ -916,7 +933,7 @@ Blockly.Msg.FISCHERTECHNIK_TEXT15 = "vitesse MAX (VRAI) ou nulle (FAUX)";
 Blockly.Msg.FISCHERTECHNIK_TEXT16 = "Carte de commande de deux moteurs CC";
 Blockly.Msg.FISCHERTECHNIK_TEXT17 = " est appuyée ?";
 
-//Added April 19th 2016
+//******** Added April 19th 2016
 Blockly.Msg.MBOT_HELPURL = "http://www.makeblock.cc/mbot/";
 Blockly.Msg.MBOT_FORWARD_TOOLTIP = "avance";
 Blockly.Msg.MBOT_BACKWARD_TOOLTIP = "recule";
@@ -952,7 +969,7 @@ Blockly.Msg.MBOT_BUZZER_FIELDDROPDOWN_OCTAVE = [["2", "2"], ["3", "3"], ["4", "4
 Blockly.Msg.MBOT_BUZZER_DELAY = "during";
 Blockly.Msg.MBOT_BUZZER_FIELDDROPDOWN_DELAY = [["un demi", "500"], ["un quart", "250"], ["un huitième", "125"], ["tout", "1000"], ["double", "2000"], ["zéro", "0"]];
 
-//Added May 1rst 2016
+//******** Added May 1rst 2016
 Blockly.Msg.ROMEO_HELPURL = "http://www.dfrobot.com/wiki/index.php/Romeo_V2-All_in_one_Controller_%28R3%29_%28SKU:DFR0225%29";
 Blockly.Msg.ROMEO3_MOTOR1_SENS = "motor M1 : direction";
 Blockly.Msg.ROMEO3_MOTOR2_SENS = "motor M2 : direction";
@@ -964,7 +981,7 @@ Blockly.Msg.ROMEO3_SWITCH = "press button";
 Blockly.Msg.ROMEO_SWITCH_FIELDDROPDOWN = [["S1", "0"], ["S2", "147"], ["S3", "333"], ["S4", "510"], ["S5", "745"], ["aucun", "1023"]];
 Blockly.Msg.ROMEO3_SWITCH_TOOLTIP = "Bware of switch ! Verify analog read on A0 : 0 for S1, 147 for S2, 333 for S3, 510 for S4, 745 for S5, 1023 if none";
 
-//Added august 20th 2016
+//******** Added august 20th 2016
 Blockly.Msg.FLYCAM_SWITCH_HELPURL = "http://tic.technologiescollege.fr/wiki/doku.php/fr/arduino/flycam";
 Blockly.Msg.FLYCAM_SWITCH_TEXT = "change mode";
 Blockly.Msg.FLYCAM_SWITCH_INPUT = "of Flycam on PIN#";
@@ -979,7 +996,7 @@ Blockly.Msg.FLYCAM_STOP_INPUT = Blockly.Msg.FLYCAM_SWITCH_INPUT;
 Blockly.Msg.FLYCAM_STOP_TOOLTIP = "send order for 1s, like a servo=0°";
 
 
-//Added august 23th 2016
+//******** Added august 23th 2016
 Blockly.Msg.MHK_ULTRASON_HELPURL = "http://www.gotronic.fr/art-module-de-detection-us-hc-sr04-20912.htm";
 Blockly.Msg.MHK_ULTRASON1 = "distance measured in cm ";
 Blockly.Msg.MHK_ULTRASON2 = "TRIG on the PIN ";
@@ -1068,7 +1085,7 @@ Blockly.Msg.APDS9960_GREEN_TITLE = "RGB code for GREEN (0~255)";
 Blockly.Msg.APDS9960_BLUE_TITLE = "RGB code for BLUE (0~255)";
 Blockly.Msg.APDS9960_COLORSENSOR_TOOLTIP = "send value of color on 10 bits digit";
 
-//pbra 20160607 L298N
+//******** pbra 20160607 L298N
 Blockly.Msg.ROBOTS_MOTORS_L298N_MOTOR_TITLE = "L298N Motor Controller";
 Blockly.Msg.ROBOTS_MOTORS_L298N_MOTOR_INIT_TITLE = "L298N Motor Controller Init";
 Blockly.Msg.ROBOTS_MOTORS_L298N_ID = "Identication"
@@ -1083,7 +1100,7 @@ Blockly.Msg.ROBOTS_MOTORS_L298N_BRAKE = "brake";
 Blockly.Msg.ROBOTS_MOTORS_L298N_INIT_TOOLTIP = "L298N initialization block (1 for each motor)";
 Blockly.Msg.ROBOTS_MOTORS_L298N_TOOLTIP = "L298N block, use the same id as in the initialization block";
 
-//pbra 20160607 PinMode
+//******** pbra 20160607 PinMode
 Blockly.Msg.ARDUINO_INOUT_DIGITAL_MODE_HELPURL = "https://www.arduino.cc/en/Reference/PinMode";
 Blockly.Msg.ARDUINO_INOUT_DIGITAL_MODE_INPUT1 = "Set Pin Mode for pin";
 Blockly.Msg.ARDUINO_INOUT_DIGITAL_MODE_INPUT2 = "to";
@@ -1102,7 +1119,7 @@ Blockly.Msg.BT_ELEC_RC_car_text = "4 buttons controlling a RC car";
 Blockly.Msg.BT_ELEC_RC_car_TOOLTIP = "see demo in Help";
 
 
-// --- jfblocks
+//********  jfblocks
 Blockly.Msg.jfblocks_Init_HELPURL = "http://jfbegot.free.fr";
 Blockly.Msg.jfblocks_TOOLTIP = "pour décoder des trames Bluetooth Electronics";
 Blockly.Msg.jfblocks_last_value_tooltip = "valeur reçue dans la dernière trame décodée";
@@ -1117,3 +1134,15 @@ Blockly.Msg.jfblocks_tx_titre = "émettre une trame";
 Blockly.Msg.jfblocks_tx_start_code = "Start Code";
 Blockly.Msg.jfblocks_tx_data = "donnée";
 Blockly.Msg.jfblocks_tx_end_code = "End Code";
+
+//******** Sharp IR https://github.com/guillaume-rico/SharpIR
+
+Blockly.Msg.SHARP_IR_DEFAULT_NAME = 'IR_DIST';
+Blockly.Msg.Sharp_IR_HELPURL = 'https://github.com/guillaume-rico/SharpIR';
+Blockly.Msg.Sharp_IR_MODEL = "model";
+Blockly.Msg.Sharp_IR_ATTACH1 = 'attach IR Sharp';
+Blockly.Msg.Sharp_IR_ATTACH2 = 'id #';
+Blockly.Msg.Sharp_IR_INPUT1 = 'distance measured';
+Blockly.Msg.Sharp_IR_INPUT2 = 'analog pin #';
+Blockly.Msg.Sharp_IR_TOOLTIP1 = 'Analog input only';
+Blockly.Msg.Sharp_IR_TOOLTIP2 = 'distance in centimeters, add tempo between 2 measurement';

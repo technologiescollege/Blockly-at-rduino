@@ -787,6 +787,9 @@ Blockly.Blocks.robuno_moteurs_CC.getBlockType = function() {
 
 //---------------------------------servo.js-------------------------------------
 
+Blockly.Blocks.servo_attach.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
 Blockly.Blocks.servo_move.getBlockType = function() {
 	return Blockly.Types.NUMBER;
 };
@@ -1088,47 +1091,36 @@ Blockly.Blocks.Zumo_SensorCalibration.getBlockType = function() {
 Blockly.Blocks.EsusBoard_init.getBlockType = function() {
 	return Blockly.Types.NULL;
 };
-
 Blockly.Blocks.EsusBoard_motor1.getBlockType = function() {
 	return Blockly.Types.NULL;
 };
-
 Blockly.Blocks.EsusBoard_motor2.getBlockType = function() {
 	return Blockly.Types.NULL;
 };
-
 Blockly.Blocks.EsusBoard_analog.getBlockType = function() {
 	return Blockly.Types.NUMBER;
 };
-
 Blockly.Blocks.EsusBoard_WifiConfig.getBlockType = function() {
 	return Blockly.Types.NULL;
 };
-
 Blockly.Blocks.EsusBoard_WifiConfigIP.getBlockType = function() {
 	return Blockly.Types.NULL;
 };
-
 Blockly.Blocks.EsusBoard_WifiConfigAP.getBlockType = function() {
 	return Blockly.Types.NULL;
 };
-
 Blockly.Blocks.EsusBoard_ReadStream.getBlockType = function() {
 	return Blockly.Types.TEXT;
 };
-
 Blockly.Blocks.EsusBoard_dataWifiAvailable.getBlockType = function() {
 	return Blockly.Types.BOOLEAN;
 };
-
 Blockly.Blocks.EsusBoard_WifiContain.getBlockType = function() {
 	return Blockly.Types.TEXT;
 };
-
 Blockly.Blocks.EsusBoard_SendStream.getBlockType = function() {
 	return Blockly.Types.NULL;
 };
-
 Blockly.Blocks.EsusBoard_SendFloatStream.getBlockType = function() {
 	return Blockly.Types.NULL;
 };
@@ -1159,9 +1151,28 @@ Blockly.Blocks.APDS9960_ColorSensor_blue.getBlockType = function() {
 Blockly.Blocks.jfblocks_decode.getBlockType = function() {
 	return Blockly.Types.NUMBER;
 };
+Blockly.Blocks.jfblocks_action.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.jfblocks_tx.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.jfblocks_last_value.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
 
 //---------------------------------collyc.js-------------------------------------
 
 Blockly.Blocks.collyc_clavier12_touche_appuyee.getBlockType = function () {
 	return Blockly.Types.CHARACTER;
+};
+
+
+//---------------------------------Sharp_IR.js-------------------------------------
+
+Blockly.Blocks.Sharp_IR_attach.getBlockType = function () {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.Sharp_IR_read.getBlockType = function () {
+	return Blockly.Types.NUMBER;
 }

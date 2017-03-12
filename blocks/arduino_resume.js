@@ -65,6 +65,7 @@ head.load(
 "blocks/robots/robot_misc.js",
 "blocks/robuno/robuno.js",
 "blocks/servo/servo.js",
+"blocks/Sharp_IR/Sharp_IR.js",
 "blocks/stepper_motor/stepper_motor.js",
 "blocks/technozone51/technozone51.js",
 "blocks/zumobot/zumo_auto.js",

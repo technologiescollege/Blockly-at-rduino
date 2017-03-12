@@ -187,10 +187,22 @@ Blockly.Msg.CAT_jfblocks = "trames"; // added february 28th, 2017
 
 Blockly.Msg.CAT_COLLYC = "Collège-Lycée";
 
+Blockly.Msg.CAT_SHARP = "Sharp infrarouge";
+
 Blockly.Msg.FIELDDROPDOWN = [["1 (état haut)", "HIGH"], ["0 (état bas)", "LOW"]];
 Blockly.Msg.FIELDDROPDOWN_ONOFF = [["marche", "ON"], ["arrêt", "OFF"]]
 Blockly.Msg.INOUT_HIGH_LEVEL = "1 (état haut)";
 Blockly.Msg.INOUT_LOW_LEVEL = "0 (état bas)";
+
+//**********************************FieldInstance messages***********************************************
+Blockly.Msg.COMPONENT_WARN = 'A %1 configuration block with the same %2 name must be added to use this block!';
+
+Blockly.Msg.SOFTSERIAL_COMPONENT = 'softserial';
+Blockly.Msg.STEPPER_COMPONENT = 'stepper';
+Blockly.Msg.NEOPIXEL_COMPONENT = 'Neopixel';
+Blockly.Msg.SERVO_COMPONENT = 'servomoteur';
+Blockly.Msg.SERVO_DEFAULT_NAME = "SERVO";
+Blockly.Msg.SHARP_IR_COMPONENT = 'télémètre';
 
 //**********************************blocks***********************************************
 //**********************************blocks***********************************************
@@ -285,6 +297,8 @@ Blockly.Msg.ARDUINO_SERVO_ROT_CONTINUE_INPUT3 = "à la vitesse [0~90]";
 Blockly.Msg.ARDUINO_SERVO_ROT_CONTINUE_INPUT4 = "dans le sens";
 Blockly.Msg.ARDUINO_SERVO_ROT_CONTINUE_TOOLTIP = "utilise les degrés pour comme un indice de puissance : 0° -> à fond à gauche | 90° -> repos/équilibre | 180° -> à fond à droite";
 Blockly.Msg.ARDUINO_SERVO_PIN = "sur la broche";
+Blockly.Msg.ARDUINO_SERVO_ATTACH1 = "attacher un servomoteur";
+Blockly.Msg.ARDUINO_SERVO_ATTACH2 = "avec pour identifiant";
 Blockly.Msg.ARDUINO_SERVO_ATTACHED = "présence d'un servomoteur";
 Blockly.Msg.ARDUINO_SERVO_DETACH = "détacher le servomoteur de la broche";
 Blockly.Msg.ARDUINO_SERIAL_PRINT_HELPURL = "http://www.arduino.cc/en/Serial/Print";
@@ -775,6 +789,7 @@ Blockly.Msg.lp2i_u8g_4draw_print_N4 = "Nombre 4 (en fin de ligne) ="
 Blockly.Msg.lp2i_ledRGB_WS2812B_init = "Led RGB WS2812B Init";
 Blockly.Msg.lp2i_ledRGB_WS2812B_init_Pin = "Broche =";
 Blockly.Msg.lp2i_ledRGB_WS2812B_init_Number_of_Pixels = "Nombre de pixels =";
+Blockly.Msg.lp2i_ledRGB_WS2812B_DEFAULT_NAME = "DEL_RVB";
 Blockly.Msg.lp2i_ledRGB_WS2812B_Brightness = "Luminosité =";
 
 
@@ -1069,7 +1084,7 @@ Blockly.Msg.APDS9960_GREEN_TITLE = "code RVB de Vert (0~255)";
 Blockly.Msg.APDS9960_BLUE_TITLE = "code RVB de Bleu (0~255)";
 Blockly.Msg.APDS9960_COLORSENSOR_TOOLTIP = "renvoie une valeur codée sur 10 bits pour le mélange RVB classique";
 
-//pbra 20160613 L298N
+//******** pbra 20160613 L298N
 Blockly.Msg.ROBOTS_MOTORS_L298N_MOTOR_TITLE = "L298N Contrôleur Moteur";
 Blockly.Msg.ROBOTS_MOTORS_L298N_MOTOR_INIT_TITLE = "L298N Contrôleur Moteur Init";
 Blockly.Msg.ROBOTS_MOTORS_L298N_ID = "Identifiant"
@@ -1084,7 +1099,7 @@ Blockly.Msg.ROBOTS_MOTORS_L298N_BRAKE = "frein";
 Blockly.Msg.ROBOTS_MOTORS_L298N_INIT_TOOLTIP = "L298N, bloc d'initialisation (1 par moteur)";
 Blockly.Msg.ROBOTS_MOTORS_L298N_TOOLTIP = "Bloc L298N, utiliser le même id que dans le bloc d'initialisation";
 
-//pbra 20160607 PinMode
+//******** pbra 20160607 PinMode
 Blockly.Msg.ARDUINO_INOUT_DIGITAL_MODE_HELPURL = "https://www.arduino.cc/en/Reference/PinMode";
 Blockly.Msg.ARDUINO_INOUT_DIGITAL_MODE_INPUT1 = "Changer le mode de fonctionnement de la broche";
 Blockly.Msg.ARDUINO_INOUT_DIGITAL_MODE_INPUT2 = "à";
@@ -1102,7 +1117,7 @@ Blockly.Msg.BT_ELEC_RC_car_HELPURL = "http://www.keuwl.com/electronics/rduino/bl
 Blockly.Msg.BT_ELEC_RC_car_text = "télécommande d'un véhicule par le téléphone";
 Blockly.Msg.BT_ELEC_RC_car_TOOLTIP = "voir la démo dans l'aide";
 
-// --- jfblocks
+//******** jfblocks
 Blockly.Msg.jfblocks_Init_HELPURL = "http://jfbegot.free.fr";
 Blockly.Msg.jfblocks_TOOLTIP = "pour décoder des trames Bluetooth Electronics";
 Blockly.Msg.jfblocks_last_value_tooltip = "valeur reçue dans la dernière trame décodée";
@@ -1118,7 +1133,7 @@ Blockly.Msg.jfblocks_tx_start_code = "Start Code";
 Blockly.Msg.jfblocks_tx_data = "donnée";
 Blockly.Msg.jfblocks_tx_end_code = "End Code";
 
-//-- collyc
+//******** collyc
 Blockly.Msg.COLLYC_TOUCHE_HELPURL = '';
 Blockly.Msg.COLLYC_TOUCHE_TEXT = "Touche appuyée";
 Blockly.Msg.COLLYC_TOUCHE_LIGNES = "Lignes";
@@ -1130,3 +1145,16 @@ Blockly.Msg.COLLYC_TOUCHE_LIGNE4 = "Ligne 4";
 Blockly.Msg.COLLYC_TOUCHE_COLONNE1 = "Colonne 1";
 Blockly.Msg.COLLYC_TOUCHE_COLONNE2 = "Colonne 2";
 Blockly.Msg.COLLYC_TOUCHE_COLONNE3 = "Colonne 3";
+
+
+//******** Sharp IR https://github.com/guillaume-rico/SharpIR
+
+Blockly.Msg.SHARP_IR_DEFAULT_NAME = 'TELEM';
+Blockly.Msg.Sharp_IR_HELPURL = 'https://github.com/guillaume-rico/SharpIR';
+Blockly.Msg.Sharp_IR_MODEL = "modèle";
+Blockly.Msg.Sharp_IR_ATTACH1 = 'attacher un télémètre';
+Blockly.Msg.Sharp_IR_ATTACH2 = 'avec pour identifiant';
+Blockly.Msg.Sharp_IR_INPUT1 = 'la distance mesurée par le télémètre';
+Blockly.Msg.Sharp_IR_INPUT2 = 'sur la broche Analogique';
+Blockly.Msg.Sharp_IR_TOOLTIP1 = 'uniquement sur une entrée Analogique';
+Blockly.Msg.Sharp_IR_TOOLTIP2 = 'distance mesurée en cm, penser à temporiser entre 2 mesures';

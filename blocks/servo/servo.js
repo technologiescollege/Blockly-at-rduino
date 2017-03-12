@@ -27,9 +27,35 @@ goog.provide('Blockly.Blocks.servo');
 
 goog.require('Blockly.Blocks');
 goog.require('Blockly.Types');
+goog.require('Blockly.FieldInstance');
 
 //servo block
 //http://www.seeedstudio.com/depot/emax-9g-es08a-high-sensitive-mini-servo-p-760.html?cPath=170_171
+
+Blockly.Blocks.servo_attach = {
+  init: function() {
+    this.setColour(Blockly.Blocks.servo.HUE);
+	this.setHelpUrl(Blockly.Msg.ARDUINO_SERVO_MOVE_HELPURL);
+    this.appendDummyInput("")
+        .appendField(Blockly.Msg.ARDUINO_SERVO_ATTACH1)
+        .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/servo/servomoteur.jpg', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize));
+    this.appendDummyInput("")
+        .setAlign(Blockly.ALIGN_RIGHT)
+        .appendField(Blockly.Msg.ARDUINO_SERVO_ATTACH2)
+        .appendField(
+            new Blockly.FieldInstance('Servo',
+                                      Blockly.Msg.SERVO_DEFAULT_NAME,
+                                      true, true, false),
+            'SERVO_NAME');
+	this.appendValueInput("PIN")
+        .setCheck('Number')
+        .setAlign(Blockly.ALIGN_RIGHT)
+        .appendField(Blockly.Msg.ARDUINO_SERVO_MOVE_INPUT2);
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setTooltip(Blockly.Msg.ARDUINO_SERVO_MOVE_TOOLTIP);
+  }
+};
 
 Blockly.Blocks.servo_move = {
   init: function() {
@@ -38,10 +64,13 @@ Blockly.Blocks.servo_move = {
     this.appendDummyInput("")
         .appendField(Blockly.Msg.ARDUINO_SERVO_MOVE_INPUT1)
         .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/servo/servomoteur.jpg', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize));
-	this.appendValueInput("PIN")
-        .setCheck('Number')
+    this.appendDummyInput("")
         .setAlign(Blockly.ALIGN_RIGHT)
-        .appendField(Blockly.Msg.ARDUINO_SERVO_MOVE_INPUT2);
+        .appendField(
+            new Blockly.FieldInstance('Servo',
+                                      Blockly.Msg.SERVO_DEFAULT_NAME,
+                                      true, true, false),
+            'SERVO_NAME');
     this.appendValueInput("DEGREE")
         .setCheck('Number')
         .setAlign(Blockly.ALIGN_RIGHT)
@@ -49,6 +78,25 @@ Blockly.Blocks.servo_move = {
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setTooltip(Blockly.Msg.ARDUINO_SERVO_MOVE_TOOLTIP);
+  },
+  /**
+   * Called whenever anything on the workspace changes.
+   * It checks/warns if the selected stepper instance has a config block.
+   * @this Blockly.Block
+   */
+  onchange: function() {
+    if (!this.workspace) return;  // Block has been deleted.
+
+    var instanceName = this.getFieldValue('SERVO_NAME')
+    if (Blockly.Instances.isInstancePresent(instanceName, 'Servo', this)) {
+      this.setWarningText(null);
+    } else {
+      // Set a warning to select a valid stepper config block
+      this.setWarningText(
+        Blockly.Msg.COMPONENT_WARN.replace(
+            '%1', Blockly.Msg.SERVO_COMPONENT).replace(
+                '%2', instanceName));
+    }
   }
 };
 
@@ -59,12 +107,34 @@ Blockly.Blocks.servo_read_degrees = {
     this.appendDummyInput("")
         .appendField(Blockly.Msg.ARDUINO_SERVO_READ_DEGREES_INPUT1)
         .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/servo/servomoteur.jpg', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize));
-	this.appendValueInput("PIN")
-        .setCheck('Number')
-		.setAlign(Blockly.ALIGN_RIGHT)
-        .appendField(Blockly.Msg.ARDUINO_SERVO_READ_DEGREES_INPUT2);    
+    this.appendDummyInput("")
+        .setAlign(Blockly.ALIGN_RIGHT)
+        .appendField(
+            new Blockly.FieldInstance('Servo',
+                                      Blockly.Msg.SERVO_DEFAULT_NAME,
+                                      true, true, false),
+            'SERVO_NAME');
 	this.setOutput(true, 'Number');
     this.setTooltip(Blockly.Msg.ARDUINO_SERVO_READ_DEGREES_TOOLTIP);
+  },
+  /**
+   * Called whenever anything on the workspace changes.
+   * It checks/warns if the selected stepper instance has a config block.
+   * @this Blockly.Block
+   */
+  onchange: function() {
+    if (!this.workspace) return;  // Block has been deleted.
+
+    var instanceName = this.getFieldValue('SERVO_NAME')
+    if (Blockly.Instances.isInstancePresent(instanceName, 'Servo', this)) {
+      this.setWarningText(null);
+    } else {
+      // Set a warning to select a valid stepper config block
+      this.setWarningText(
+        Blockly.Msg.COMPONENT_WARN.replace(
+            '%1', Blockly.Msg.SERVO_COMPONENT).replace(
+                '%2', instanceName));
+    }
   }
 };
 
@@ -72,13 +142,37 @@ Blockly.Blocks.servo_attached = {
   init: function() {
 	this.setColour(Blockly.Blocks.servo.HUE);
 	this.setHelpUrl('http://www.arduino.cc/playground/ComponentLib/servo');
-    this.appendValueInput("PIN")
-		.setCheck('Number')
+    this.appendDummyInput("")
         .appendField(Blockly.Msg.ARDUINO_SERVO_ATTACHED)
-        .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/servo/servomoteur.jpg', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize))
-        .appendField(Blockly.Msg.ARDUINO_SERVO_PIN);
+        .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/servo/servomoteur.jpg', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize));
+    this.appendDummyInput("")
+        .setAlign(Blockly.ALIGN_RIGHT)
+        .appendField(
+            new Blockly.FieldInstance('Servo',
+                                      Blockly.Msg.SERVO_DEFAULT_NAME,
+                                      true, true, false),
+            'SERVO_NAME');
     this.setOutput(true, 'Boolean');
     this.setTooltip('true if the servo is attached to pin; false otherwise. ');
+  },
+  /**
+   * Called whenever anything on the workspace changes.
+   * It checks/warns if the selected stepper instance has a config block.
+   * @this Blockly.Block
+   */
+  onchange: function() {
+    if (!this.workspace) return;  // Block has been deleted.
+
+    var instanceName = this.getFieldValue('SERVO_NAME')
+    if (Blockly.Instances.isInstancePresent(instanceName, 'Servo', this)) {
+      this.setWarningText(null);
+    } else {
+      // Set a warning to select a valid stepper config block
+      this.setWarningText(
+        Blockly.Msg.COMPONENT_WARN.replace(
+            '%1', Blockly.Msg.SERVO_COMPONENT).replace(
+                '%2', instanceName));
+    }
   }
 };
 
@@ -87,13 +181,38 @@ Blockly.Blocks.servo_detach = {
     this.setColour(Blockly.Blocks.servo.HUE);
 	this.setHelpUrl('http://www.arduino.cc/playground/ComponentLib/servo');
 	this.setInputsInline(false);
-    this.appendValueInput("PIN")
-		.setCheck('Number')
+    this.appendDummyInput("")
         .appendField(Blockly.Msg.ARDUINO_SERVO_DETACH)
         .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/servo/servomoteur.jpg', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize));
+    this.appendDummyInput("")
+        .setAlign(Blockly.ALIGN_RIGHT)
+        .appendField(
+            new Blockly.FieldInstance('Servo',
+                                      Blockly.Msg.SERVO_DEFAULT_NAME,
+                                      true, true, false),
+            'SERVO_NAME');
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setTooltip('Release a pin from servo driving.');
+  },
+  /**
+   * Called whenever anything on the workspace changes.
+   * It checks/warns if the selected stepper instance has a config block.
+   * @this Blockly.Block
+   */
+  onchange: function() {
+    if (!this.workspace) return;  // Block has been deleted.
+
+    var instanceName = this.getFieldValue('SERVO_NAME')
+    if (Blockly.Instances.isInstancePresent(instanceName, 'Servo', this)) {
+      this.setWarningText(null);
+    } else {
+      // Set a warning to select a valid stepper config block
+      this.setWarningText(
+        Blockly.Msg.COMPONENT_WARN.replace(
+            '%1', Blockly.Msg.SERVO_COMPONENT).replace(
+                '%2', instanceName));
+    }
   }
 };
 
@@ -104,10 +223,13 @@ Blockly.Blocks.servo_rot_continue = {
 	this.appendDummyInput()
 		.appendField(Blockly.Msg.ARDUINO_SERVO_ROT_CONTINUE_TEXT)
 		.appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/servo/servomoteur_rot_continue.jpg', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize));
-	this.appendValueInput("PIN")
+    this.appendDummyInput("")
         .setAlign(Blockly.ALIGN_RIGHT)
-		.setCheck('Number')
-        .appendField(Blockly.Msg.ARDUINO_SERVO_ROT_CONTINUE_INPUT1);
+        .appendField(
+            new Blockly.FieldInstance('Servo',
+                                      Blockly.Msg.SERVO_DEFAULT_NAME,
+                                      true, true, false),
+            'SERVO_NAME');
     this.setInputsInline(true);
 	this.appendValueInput("SPEED")
 		.setCheck('Number')
@@ -117,6 +239,25 @@ Blockly.Blocks.servo_rot_continue = {
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setTooltip(Blockly.Msg.ARDUINO_SERVO_ROT_CONTINUE_TOOLTIP);
+  },
+  /**
+   * Called whenever anything on the workspace changes.
+   * It checks/warns if the selected stepper instance has a config block.
+   * @this Blockly.Block
+   */
+  onchange: function() {
+    if (!this.workspace) return;  // Block has been deleted.
+
+    var instanceName = this.getFieldValue('SERVO_NAME')
+    if (Blockly.Instances.isInstancePresent(instanceName, 'Servo', this)) {
+      this.setWarningText(null);
+    } else {
+      // Set a warning to select a valid stepper config block
+      this.setWarningText(
+        Blockly.Msg.COMPONENT_WARN.replace(
+            '%1', Blockly.Msg.SERVO_COMPONENT).replace(
+                '%2', instanceName));
+    }
   }
 };
 
@@ -127,10 +268,13 @@ Blockly.Blocks.servo_rot_continue_param = {
 	this.appendDummyInput()
 		.appendField(Blockly.Msg.ARDUINO_SERVO_ROT_CONTINUE_TEXT)
 		.appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/servo/servomoteur_rot_continue.jpg', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize));
-	this.appendValueInput("PIN")
+    this.appendDummyInput("")
         .setAlign(Blockly.ALIGN_RIGHT)
-		.setCheck('Number')
-        .appendField(Blockly.Msg.ARDUINO_SERVO_ROT_CONTINUE_INPUT1);
+        .appendField(
+            new Blockly.FieldInstance('Servo',
+                                      Blockly.Msg.SERVO_DEFAULT_NAME,
+                                      true, true, false),
+            'SERVO_NAME');
     this.setInputsInline(true);
 	this.appendValueInput("SPEED")
 		.setCheck('Number')
@@ -144,5 +288,24 @@ Blockly.Blocks.servo_rot_continue_param = {
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setTooltip(Blockly.Msg.ARDUINO_SERVO_ROT_CONTINUE_TOOLTIP);
+  },
+  /**
+   * Called whenever anything on the workspace changes.
+   * It checks/warns if the selected stepper instance has a config block.
+   * @this Blockly.Block
+   */
+  onchange: function() {
+    if (!this.workspace) return;  // Block has been deleted.
+
+    var instanceName = this.getFieldValue('SERVO_NAME')
+    if (Blockly.Instances.isInstancePresent(instanceName, 'Servo', this)) {
+      this.setWarningText(null);
+    } else {
+      // Set a warning to select a valid stepper config block
+      this.setWarningText(
+        Blockly.Msg.COMPONENT_WARN.replace(
+            '%1', Blockly.Msg.SERVO_COMPONENT).replace(
+                '%2', instanceName));
+    }
   }
 };

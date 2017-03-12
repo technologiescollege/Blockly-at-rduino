@@ -8,19 +8,19 @@ Blockly.Arduino.lp2i_ledRGB_WS2812B_init = function() {
   var pin_ledrgb = Blockly.Arduino.valueToCode(this, 'Pin_LedRGB_init', Blockly.Arduino.ORDER_ATOMIC);
   var numpixels = Blockly.Arduino.valueToCode(this, 'Number_of_Pixels', Blockly.Arduino.ORDER_ATOMIC);
   var lumin = Blockly.Arduino.valueToCode(this, 'Brightness', Blockly.Arduino.ORDER_ATOMIC);
-  var dropdown_name = this.getFieldValue('SOFTSERIAL_NAME');
+  var dropdown_name = this.getFieldValue('NEOPIXEL_NAME');
   Blockly.Arduino.includes_['define_ledRGB_WS2812B'] = '#include <Adafruit_NeoPixel.h>';
-  Blockly.Arduino.definitions_['define_ledRGB_WS2812B'+pin_ledrgb] = 'Adafruit_NeoPixel pixels_'+dropdown_name+ ' = Adafruit_NeoPixel('+numpixels+', '+pin_ledrgb+', NEO_GRB + NEO_KHZ800);';
+  Blockly.Arduino.definitions_['define_ledRGB_WS2812B' + dropdown_name] = 'Adafruit_NeoPixel pixels_'+dropdown_name+ ' = Adafruit_NeoPixel('+numpixels+', '+pin_ledrgb+', NEO_GRB + NEO_KHZ800);';
   //dans le setup
-  Blockly.Arduino.setups_['setup_pin_ledrgb'+pin_ledrgb] = 'pinMode('+pin_ledrgb+', OUTPUT);';
-  Blockly.Arduino.setups_['setup_ledRGB_WS2812B'+pin_ledrgb] = 'pixels_'+dropdown_name+'.begin();';
-    return '';
+  Blockly.Arduino.setups_['setup_pin_ledrgb'+dropdown_name] = 'pinMode('+pin_ledrgb+', OUTPUT);';
+  Blockly.Arduino.setups_['setup_ledRGB_WS2812B'+dropdown_name] = 'pixels_'+dropdown_name+'.begin();';
+  return '';
 };
 
 Blockly.Arduino.lp2i_ledRGB_WS2812B_setPixelColor = function() {
   var pin = Blockly.Arduino.valueToCode(this, 'Pin_LedRGB', Blockly.Arduino.ORDER_ATOMIC);
   var pixel_number = Blockly.Arduino.valueToCode(this, 'Pixel_number', Blockly.Arduino.ORDER_ATOMIC) || '\'\'';
-  var dropdown_name = this.getFieldValue('SOFTSERIAL_NAME');
+  var dropdown_name = this.getFieldValue('NEOPIXEL_NAME');
   var red = Blockly.Arduino.valueToCode(this, 'Red', Blockly.Arduino.ORDER_ATOMIC);
   var green = Blockly.Arduino.valueToCode(this, 'Green', Blockly.Arduino.ORDER_ATOMIC);
   var blue = Blockly.Arduino.valueToCode(this, 'Blue', Blockly.Arduino.ORDER_ATOMIC);
@@ -32,7 +32,7 @@ Blockly.Arduino.lp2i_ledRGB_WS2812B_setPixelColor = function() {
 
 Blockly.Arduino.lp2i_ledRGB_WS2812B_setBrightness = function() {
   //var pin_ledrgb = Blockly.Arduino.valueToCode(this, 'Pin_LedRGB', Blockly.Arduino.ORDER_ATOMIC);
-  var dropdown_name = this.getFieldValue('SOFTSERIAL_NAME');
+  var dropdown_name = this.getFieldValue('NEOPIXEL_NAME');
   var lumin = Blockly.Arduino.valueToCode(this, 'Brightness', Blockly.Arduino.ORDER_ATOMIC);
   //dans le setup
   var code = 'pixels_'+dropdown_name+'.setBrightness('+lumin+');\n';
