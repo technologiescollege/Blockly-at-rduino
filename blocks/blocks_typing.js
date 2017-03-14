@@ -259,7 +259,7 @@ Blockly.Blocks.serial_write_out.getBlockType = function() {
 //---------------------------------arduino_softserial.js-------------------------------------
 
 Blockly.Blocks.soft_read.getBlockType = function() {
-	return Blockly.Types.CHARACTER;
+	return Blockly.Types.TEXT;
 };
 Blockly.Blocks.soft_print.getBlockType = function() {
 	return Blockly.Types.NUMBER;
@@ -507,6 +507,21 @@ Blockly.Blocks.grove_bluetooth_slave.getBlockType = function() {
 Blockly.Blocks.grove_dht_read.getBlockType = function() {
 	return Blockly.Types.NUMBER;
 };
+Blockly.Blocks.grove_mini_driver_error.getBlockType = function () {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.grove_bluetooth_slave_AT.getBlockType = function() {
+   return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.grove_FIN_COURSE.getBlockType = function() {
+   return Blockly.Types.BOOLEAN;
+};
+Blockly.Blocks.grove_EMETTEUR_IR.getBlockType = function() {
+   return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.grove_RECEPTEUR_IR.getBlockType = function() {
+   return Blockly.Types.BOOLEAN;
+};
 
 //***********************************************************************************
 //								ICN
@@ -611,6 +626,12 @@ Blockly.Blocks.MatrixLED_WS2812B_setPixelColor.getBlockType = function() {
 	return Blockly.Types.NUMBER;
 };
 Blockly.Blocks.MatrixLED_WS2812B_setBrightness.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.MatrixLED_WS2812B_CLEAN.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.MatrixLED_WS2812B_draw.getBlockType = function() {
 	return Blockly.Types.NUMBER;
 };
 
@@ -1176,7 +1197,7 @@ Blockly.Blocks.jfblocks_last_value.getBlockType = function() {
 //---------------------------------collyc.js-------------------------------------
 
 Blockly.Blocks.collyc_clavier12_touche_appuyee.getBlockType = function () {
-	return Blockly.Types.CHARACTER;
+	return Blockly.Types.TEXT;
 };
 
 
@@ -1187,4 +1208,4 @@ Blockly.Blocks.Sharp_IR_attach.getBlockType = function () {
 };
 Blockly.Blocks.Sharp_IR_read.getBlockType = function () {
 	return Blockly.Types.NUMBER;
-}
+};

@@ -156,6 +156,7 @@
 	<sep></sep>
 	<category name="CAT_ARDUINO" colour="#00979D">
 		<block type="base_setup"></block>
+		<block type="base_loop"></block>
 		<block type="base_setup_loop"></block>
 		<block type="base_define_const"></block>
 		<block type="base_const"></block>
@@ -482,6 +483,7 @@
 	<category name="CAT_BLUETOOTH_MISC" colour="#6981F9">
 		<category name="CAT_BT_GROVE_COMM" colour="#8ec31f">
 			<block type="grove_bluetooth_slave"></block>
+			<block type="grove_bluetooth_slave_AT"></block>
 			<block type="Bluetooth_Shield_duinoFun">
 				<value name="BT_RX">
 					<shadow type="math_number">
@@ -711,7 +713,14 @@
 					<field name="NUM">255</field>
 				</shadow>
 			</value>
+			<value name="Brightness">
+				<shadow type="math_number">
+					<field name="NUM">127</field>
+				</shadow>
+			</value>
 		</block>
+		<block type="MatrixLED_WS2812B_draw"></block>
+		<block type="MatrixLED_WS2812B_CLEAN"></block>
 	</category>
 	<category name="CAT_DFRobot" colour="#F39800">
 		<category name="CAT_ROMEO_3" colour="#F39800">
@@ -1229,6 +1238,8 @@
 			<block type="grove_line_finder"></block>
 			<block type="grove_ultrasonic_ranger"></block>
 			<block type="grove_thumb_joystick"></block>
+			<block type="grove_RECEPTEUR_IR"></block>
+			<block type="grove_FIN_COURSE"></block>
 		</category>
 		<category name="CAT_GROVE_OUT" colour="#8ec31f">
 			<block type="grove_led"></block>
@@ -1236,6 +1247,28 @@
 			<block type="grove_relay"></block>
 			<block type="grove_motor_shield"></block>
 			<block type="grove_rgb_led"></block>
+			<block type="grove_EMETTEUR_IR"></block>
+			<block type="grove_driver13_motor">
+				<value name="I2CADDRESS">
+					<shadow type="math_number">
+						<field name="NUM">15</field>
+					</shadow>
+				</value>
+				<value name="SPEED">
+					<shadow type="math_number">
+						<field name="NUM">100</field>
+					</shadow>
+				</value>
+			</block>
+			<block type="grove_mini_driver_motor">
+				<value name="SPEED">
+					<shadow type="math_number">
+						<field name="NUM">100</field>
+					</shadow>
+				</value>
+			</block>
+			<block type="grove_mini_driver_stop"></block>
+			<block type="grove_mini_driver_error"></block>
 		</category>
 		<category name="CAT_GROVE_LCD" colour="#8ec31f">
 			<block type="grove_serial_lcd_power"></block>
@@ -1280,6 +1313,7 @@
 		</category>
 		<category name="CAT_GROVE_COMM" colour="#8ec31f">
 			<block type="grove_bluetooth_slave"></block>
+			<block type="grove_bluetooth_slave_AT"></block>
 			<block type="Bluetooth_Shield_duinoFun">
 				<value name="BT_RX">
 					<shadow type="math_number">

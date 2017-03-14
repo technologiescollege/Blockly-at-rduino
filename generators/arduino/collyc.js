@@ -14,7 +14,7 @@ Blockly.Arduino.collyc_clavier12_touche_appuyee = function() {
   var value_pin_c3 = Blockly.Arduino.valueToCode(this, 'C3', Blockly.Arduino.ORDER_ATOMIC);
   var idKeyPad =  value_pin_l1 + value_pin_l2 + value_pin_l3 + value_pin_l4 + value_pin_c1 + value_pin_c2 + value_pin_c3;
 
-  Blockly.Arduino.includes_['define_collyc'] = '#include <Keypad.h>\n';
+  Blockly.Arduino.includes_['define_collyc_keypad12'] = '#include <Keypad.h>';
   Blockly.Arduino.definitions_['collyc_const_keypad_rows'] = 'const byte ROWS12 = 4; // Four rows';
   Blockly.Arduino.definitions_['collyc_const_keypad_cols'] = 'const byte COLS12 = 3; // Three columns';
   Blockly.Arduino.definitions_['collyc_const_keypad_keys12'] = "const char keys12[ROWS12][COLS12] = {\n" + 

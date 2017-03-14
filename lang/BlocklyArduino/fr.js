@@ -463,6 +463,61 @@ Blockly.Msg.GROVE_INOUT_BT_COMM5 = "envoyer";
 Blockly.Msg.GROVE_INOUT_BT_COMM6 = "recevoir";
 Blockly.Msg.GROVE_INOUT_BT_TOOLTIP = "Bluetooth V2.0 + EDR esclave. Supporte un seul esclave par carte";
 
+//************************************** ajouté 20/03/2017 \lang\BlocklyArduino **********************************************************
+Blockly.Msg.GROVE_EMETTEUR_IR_TEXT = "Led Infra rouge IR";
+Blockly.Msg.GROVE_EMETTEUR_IR_INPUT1 = "émettre un signal Infra Rouge sur la broche";
+Blockly.Msg.GROVE_EMETTEUR_IR_INPUT2 = "d'une fréquence (Hz) 38000 ";
+Blockly.Msg.GROVE_EMETTEUR_IR_HELPURL = "http://wiki.seeed.cc/Grove-Infrared_Emitter/";
+Blockly.Msg.GROVE_EMETTEUR_IR_TOOLTIP = "Emission d'un signal infra rouge";
+
+//************************************** ajouté 20/03/2017 \lang\BlocklyArduino **********************************************************
+Blockly.Msg.GROVE_RECEPTEUR_IR_HELPURL = "http://wiki.seeed.cc/Grove-Infrared_Receiver/";
+Blockly.Msg.GROVE_RECEPTEUR_IR_TEXT = "l'état du récepteur IR";
+Blockly.Msg.GROVE_RECEPTEUR_IR_INPUT = "sur la broche";
+Blockly.Msg.GROVE_RECEPTEUR_IR_TOOLTIP = "entrée numérique classique en lecture";
+
+//************************************** ajouté 20/03/2017 \lang\BlocklyArduino **********************************************************
+Blockly.Msg.GROVE_FIN_COURSE_HELPURL = "http://www.technologieservices.fr/fr/a-a1000024681-edc1000003/article/GROV201-Module-Grove-Interrupteur-fin-de-course.html";
+Blockly.Msg.GROVE_FIN_COURSE_TEXT = "l'état du capteur fin de course";
+Blockly.Msg.GROVE_FIN_COURSE_INPUT = "sur la broche";
+Blockly.Msg.GROVE_FIN_COURSE_TOOLTIP = "entrée numérique classique en lecture";
+
+//************************************** ajoute 16/03/2017 \lang\BlocklyArduino **********************************************************
+Blockly.Msg.GROVE_INOUT_BT_AT_HELPURL = "http://wiki.seeed.cc/Grove-Serial_Bluetooth_v3.0/";
+Blockly.Msg.GROVE_INOUT_BT_AT_COMM1 = "liaison Bluetooth";
+Blockly.Msg.GROVE_INOUT_BT_AT_COMM2 = "sur la broche";
+Blockly.Msg.GROVE_INOUT_BT_AT_COMM3 = "nom du périphérique";
+Blockly.Msg.GROVE_INOUT_BT_AT_COMM4 = "code secret";
+Blockly.Msg.GROVE_INOUT_BT_AT_COMM5 = "recevoir";
+Blockly.Msg.GROVE_INOUT_BT_AT_COMM6 = "envoyer";
+Blockly.Msg.GROVE_INOUT_BT_AT_TOOLTIP = "Bluetooth V3.0 + EDR esclave. Supporte un seul esclave par carte";
+
+//******** Grove commun à tous les drivers moteur Cdo 2017 03 19*/
+Blockly.Msg.GROVE_DRIVER_MOTOR1 = "Moteur 1";
+Blockly.Msg.GROVE_DRIVER_MOTOR2 = "Moteur 2";
+Blockly.Msg.GROVE_DRIVER_MOTOR3 = "Moteur 3";
+Blockly.Msg.GROVE_DRIVER_MOTOR4 = "Moteur 4";
+Blockly.Msg.GROVE_DRIVER_MOTOR_SPEED = "Vitesse";
+//******** Grove driver13 */
+Blockly.Msg.GROVE_DRIVER13_HELPURL = "http://wiki.seeed.cc/Grove-I2C_Motor_Driver_V1.3/";
+Blockly.Msg.GROVE_DRIVER13_MOTOR_TITLE = "Contrôleur Moteur V1.3";
+Blockly.Msg.GROVE_DRIVER13_MOTOR_I2C_ADDRESS = "Adresse I2C";
+Blockly.Msg.GROVE_DRIVER13_TOOLTIP = "Contrôleur Moteur - " + 
+                            "l'adresse I2C est entre 0 et 15 (0x0F) selon la configuation mise sur la carte, " + 
+                            "la vitesse du moteur choisi est entre -100 et +100, 0 = arrêt";
+//******** Grove minimoto */
+Blockly.Msg.GROVE_MINI_DRIVER_TITLE = "Contrôleur Mini Moteur";
+Blockly.Msg.GROVE_MINI_DRIVER_HELPURL = "http://wiki.seeed.cc/Grove-Mini_I2C_Motor_Driver_v1.0/";
+Blockly.Msg.GROVE_MINI_DRIVER_MOTOR_MSG = "Vitesse";
+Blockly.Msg.GROVE_MINI_DRIVER_MOTOR_TOOLTIP = "Contrôleur Mini Moteur - " + 
+                            "la vitesse du moteur choisi est entre -100 et +100";
+Blockly.Msg.GROVE_MINI_DRIVER_STOP_MSG = "Arrêt";
+Blockly.Msg.GROVE_MINI_DRIVER_STOP_TOOLTIP = "Contrôleur Mini Moteur - " + 
+                            "Arrête le moteur choisi";
+Blockly.Msg.GROVE_MINI_DRIVER_ERROR_MSG = "Etat";
+Blockly.Msg.GROVE_MINI_DRIVER_ERROR_TOOLTIP = "Contrôleur Mini Moteur - " + 
+                            "Retour l'état du moteur choisi (0: OK, 3 et 17: sur-intensité, 9: sous-tension, 5: sur-chauffe)";
+
 //added April 3rd 2015 ESK
 Blockly.Msg.ROBOTS_MOTORS_FORWARD = "avance";
 Blockly.Msg.ROBOTS_MOTORS_BACKWARD = "recule";
@@ -1136,10 +1191,10 @@ Blockly.Msg.jfblocks_tx_data = "donnée";
 Blockly.Msg.jfblocks_tx_end_code = "End Code";
 
 //******** collyc
-Blockly.Msg.COLLYC_TOUCHE_HELPURL = '';
+Blockly.Msg.COLLYC_TOUCHE_HELPURL = 'https://www.adafruit.com/products/419';
 Blockly.Msg.COLLYC_TOUCHE_TEXT = "Touche appuyée";
 Blockly.Msg.COLLYC_TOUCHE_LIGNES = "Lignes";
-Blockly.Msg.COLLYC_TOUCHE_TOOLTIP = "Retour le code ASCII de la touche appuyée ou 0 si aucune";
+Blockly.Msg.COLLYC_TOUCHE_TOOLTIP = "Retourne la touche appuyée ou une chaine vide si aucune";
 Blockly.Msg.COLLYC_TOUCHE_LIGNE1 = "Ligne 1";
 Blockly.Msg.COLLYC_TOUCHE_LIGNE2 = "Ligne 2";
 Blockly.Msg.COLLYC_TOUCHE_LIGNE3 = "Ligne 3";
@@ -1164,15 +1219,17 @@ Blockly.Msg.Sharp_IR_TOOLTIP2 = 'distance mesurée en cm, penser à temporiser e
 
 //******** Matrix Neopixel DEL RGB 8 x 8 http://smartduinos.com/arduino-tutorial-8x8-rgb-led-matrix-with-ws8212-driver-with-arduino-uno-from-banggood-com/
 
-Blockly.Msg.MatrixLED_WS2812B_init = "Led RGB WS2812B Init";
-Blockly.Msg.MatrixLED_WS2812B_init_Pin = "Broche =";
+Blockly.Msg.MatrixLED_WS2812B_init = "Matrice DEL RGB : initialisation";
+Blockly.Msg.MatrixLED_WS2812B_clean = "Eteindre la matrice";
+Blockly.Msg.MatrixLED_WS2812B_init_Pin = "sur la broche =";
 Blockly.Msg.MatrixLED_WS2812B_init_Number_of_Pixels = "Nombre de pixels =";
 Blockly.Msg.MatrixLED_WS2812B_DEFAULT_NAME = "MATRICE_RVB";
-Blockly.Msg.MatrixLED_WS2812B_Brightness = "Luminosité =";
+Blockly.Msg.MatrixLED_WS2812B_setBrightness = "Sur la matrice DEL RGB";
+Blockly.Msg.MatrixLED_WS2812B_Brightness = "régler la luminosité à";
 Blockly.Msg.MatrixLED_WS2812B_URL = "http://smartduinos.com/arduino-tutorial-8x8-rgb-led-matrix-with-ws8212-driver-with-arduino-uno-from-banggood-com/";
 
-Blockly.Msg.MatrixLED_WS2812B_setPixelColor = "Led RGB WS2812B. Envoyer couleur :";
-Blockly.Msg.MatrixLED_WS2812B_setPixelColor_Red = "Rouge (255 max) =";
-Blockly.Msg.MatrixLED_WS2812B_setPixelColor_Green = "Vert (255 max) =";
-Blockly.Msg.MatrixLED_WS2812B_setPixelColor_Blue = "Bleu (255 max) =";
-Blockly.Msg.MatrixLED_WS2812B_setPixelColor_Pixel_Number = "pour le pixel numéro (à partir de 0) =";
+Blockly.Msg.MatrixLED_WS2812B_setPixelColor = "Sur la matrice DEL RGB";
+Blockly.Msg.MatrixLED_WS2812B_setPixelColor_Red = "régler le rouge (255 max) =";
+Blockly.Msg.MatrixLED_WS2812B_setPixelColor_Green = "régler le vert (255 max) =";
+Blockly.Msg.MatrixLED_WS2812B_setPixelColor_Blue = "régler le bleu (255 max) =";
+Blockly.Msg.MatrixLED_WS2812B_setPixelColor_Pixel_Number = "du pixel numéro (à partir de 0) =";
