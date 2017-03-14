@@ -1164,15 +1164,17 @@ Blockly.Msg.Sharp_IR_TOOLTIP2 = 'distance mesurée en cm, penser à temporiser e
 
 //******** Matrix Neopixel DEL RGB 8 x 8 http://smartduinos.com/arduino-tutorial-8x8-rgb-led-matrix-with-ws8212-driver-with-arduino-uno-from-banggood-com/
 
-Blockly.Msg.MatrixLED_WS2812B_init = "Led RGB WS2812B Init";
-Blockly.Msg.MatrixLED_WS2812B_init_Pin = "Broche =";
+Blockly.Msg.MatrixLED_WS2812B_init = "Matrice DEL RGB : initialisation";
+Blockly.Msg.MatrixLED_WS2812B_clean = "Eteindre la matrice";
+Blockly.Msg.MatrixLED_WS2812B_init_Pin = "sur la broche =";
 Blockly.Msg.MatrixLED_WS2812B_init_Number_of_Pixels = "Nombre de pixels =";
 Blockly.Msg.MatrixLED_WS2812B_DEFAULT_NAME = "MATRICE_RVB";
-Blockly.Msg.MatrixLED_WS2812B_Brightness = "Luminosité =";
+Blockly.Msg.MatrixLED_WS2812B_setBrightness = "Sur la matrice DEL RGB";
+Blockly.Msg.MatrixLED_WS2812B_Brightness = "régler la luminosité à";
 Blockly.Msg.MatrixLED_WS2812B_URL = "http://smartduinos.com/arduino-tutorial-8x8-rgb-led-matrix-with-ws8212-driver-with-arduino-uno-from-banggood-com/";
 
-Blockly.Msg.MatrixLED_WS2812B_setPixelColor = "Led RGB WS2812B. Envoyer couleur :";
-Blockly.Msg.MatrixLED_WS2812B_setPixelColor_Red = "Rouge (255 max) =";
-Blockly.Msg.MatrixLED_WS2812B_setPixelColor_Green = "Vert (255 max) =";
-Blockly.Msg.MatrixLED_WS2812B_setPixelColor_Blue = "Bleu (255 max) =";
-Blockly.Msg.MatrixLED_WS2812B_setPixelColor_Pixel_Number = "pour le pixel numéro (à partir de 0) =";
+Blockly.Msg.MatrixLED_WS2812B_setPixelColor = "Sur la matrice DEL RGB";
+Blockly.Msg.MatrixLED_WS2812B_setPixelColor_Red = "régler le rouge (255 max) =";
+Blockly.Msg.MatrixLED_WS2812B_setPixelColor_Green = "régler le vert (255 max) =";
+Blockly.Msg.MatrixLED_WS2812B_setPixelColor_Blue = "régler le bleu (255 max) =";
+Blockly.Msg.MatrixLED_WS2812B_setPixelColor_Pixel_Number = "du pixel numéro (à partir de 0) =";
