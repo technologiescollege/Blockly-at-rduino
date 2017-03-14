@@ -346,6 +346,167 @@
 		<block type="IR_get_blink"></block>
 		<block type="IR_get"></block>
 	</category>
+	<category name="APDS-9960_RGB_Gesture" colour="#D9242D">
+		<block type="APDS9960_ColorSensor_init"></block>
+		<block type="APDS9960_ColorSensor_test"></block>
+		<block type="APDS9960_ColorSensor_ambient"></block>
+		<block type="APDS9960_ColorSensor_red"></block>
+		<block type="APDS9960_ColorSensor_green"></block>
+		<block type="APDS9960_ColorSensor_blue"></block>
+	</category>
+	<category name="CAT_OLED_U8G" colour="#1B2944">
+		<block type="lp2i_u8g_draw_string" colour="#1B2944">
+			<value name="Text">
+				<shadow type="text">
+					<field name="TEXT">Exemple</field>
+				</shadow>
+			</value>
+			<value name="X">
+				<shadow type="math_number">
+					<field name="NUM">0</field>
+				</shadow>
+			</value>
+			<value name="Y">
+				<shadow type="math_number">
+					<field name="NUM">12</field>
+				</shadow>
+			</value>
+		</block>
+		<block type="lp2i_u8g_draw_4strings" colour="#1B2944">
+			<value name="Text_line1">
+				<shadow type="text">
+					<field name="TEXT">Exemple ligne 1</field>
+				</shadow>
+			</value>
+			<value name="Text_line2">
+				<shadow type="text">
+					<field name="TEXT">Exemple ligne 2</field>
+				</shadow>
+			</value>
+			<value name="Text_line3">
+				<shadow type="text">
+					<field name="TEXT">Exemple ligne 3</field>
+				</shadow>
+			</value>
+			<value name="Text_line4">
+				<shadow type="text">
+					<field name="TEXT">Exemple ligne 4</field>
+				</shadow>
+			</value>
+		</block>
+		<block type="lp2i_u8g_print" colour="#1B2944">
+			<value name="N">
+				<shadow type="math_number">
+					<field name="Num">0</field>
+				</shadow>
+			</value>
+			<value name="X">
+				<shadow type="math_number">
+					<field name="NUM">0</field>
+				</shadow>
+			</value>
+			<value name="Y">
+				<shadow type="math_number">
+					<field name="NUM">12</field>
+				</shadow>
+			</value>
+		</block>
+		<block type="lp2i_u8g_4draw_print" colour="#1B2944">
+			<value name="Text_line1">
+				<shadow type="text">
+					<field name="TEXT">Exemple ligne 1</field>
+				</shadow>
+			</value>
+			<value name="N1">
+				<shadow type="math_number">
+					<field name="Num">0</field>
+				</shadow>
+			</value>
+			<value name="Text_line2">
+				<shadow type="text">
+					<field name="TEXT"></field>
+				</shadow>
+			</value>
+			<value name="N2">
+				<shadow type="math_number">
+					<field name="Num"></field>
+				</shadow>
+			</value>
+			<value name="Text_line3">
+				<shadow type="text">
+					<field name="TEXT"></field>
+				</shadow>
+			</value>
+			<value name="N3">
+				<shadow type="math_number">
+					<field name="Num"></field>
+				</shadow>
+			</value>
+			<value name="Text_line4">
+				<shadow type="text">
+					<field name="TEXT"></field>
+				</shadow>
+			</value>
+			<value name="N4">
+				<shadow type="math_number">
+					<field name="Num"></field>
+				</shadow>
+			</value>
+		</block>
+	</category>
+	<category name="CAT_LED_RGB_CHAIN" colour="#C9D7E2">
+		<block type="lp2i_ledRGB_WS2812B_init">
+			<value name="Pin_LedRGB_init">
+				<shadow type="math_number">
+					<field name="NUM">6</field>
+				</shadow>
+			</value>
+			<value name="Number_of_Pixels">
+				<shadow type="math_number">
+					<field name="NUM">1</field>
+				</shadow>
+			</value>
+		</block>
+		<block type="lp2i_ledRGB_WS2812B_setBrightness">
+			<value name="Pin_LedRGB">
+				<shadow type="math_number">
+					<field name="NUM">6</field>
+				</shadow>
+			</value>
+			<value name="Brightness">
+				<shadow type="math_number">
+					<field name="NUM">127</field>
+				</shadow>
+			</value>
+		</block>
+		<block type="lp2i_ledRGB_WS2812B_setPixelColor">
+			<value name="Pin_LedRGB">
+				<shadow type="math_number">
+					<field name="NUM">6</field>
+				</shadow>
+			</value>
+			<value name="Pixel_number">
+				<shadow type="math_number">
+					<field name="NUM">0</field>
+				</shadow>
+			</value>
+			<value name="Red">
+				<shadow type="math_number">
+					<field name="NUM">255</field>
+				</shadow>
+			</value>
+			<value name="Green">
+				<shadow type="math_number">
+					<field name="NUM">255</field>
+				</shadow>
+			</value>
+			<value name="Blue">
+				<shadow type="math_number">
+					<field name="NUM">255</field>
+				</shadow>
+			</value>
+		</block>
+	</category>
 	<category name="CAT_ARDUINO_SERVO" colour="#191919">
 		<block type="servo_attach"></block>
 		<block type="servo_move">

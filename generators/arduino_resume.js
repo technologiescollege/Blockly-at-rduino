@@ -38,6 +38,7 @@ head.load(
 "generators/arduino/kit_velo_niv1.js",
 "generators/arduino/kit_velo_niv2.js",
 "generators/arduino/led-rgb-ws2812b.js",
+"generators/arduino/matrix-led-rgb-ws2812.js",
 "generators/arduino/mbot_niv1.js",
 "generators/arduino/mbot_niv2.js",
 "generators/arduino/mbot_niv3.js",

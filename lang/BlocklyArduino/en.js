@@ -194,6 +194,8 @@ Blockly.Msg.CAT_COLLYC = "Collège-Lycée";
 
 Blockly.Msg.CAT_SHARP = "Sharp IR";
 
+Blockly.Msg.CAT_MATRIX_LED_RGB = "Matrix RGB LED 8x8";
+
 //**********************************FieldInstance messages***********************************************
 Blockly.Msg.COMPONENT_WARN = 'A %1 configuration block with the same %2 name must be added to use this block!';
 
@@ -1146,3 +1148,21 @@ Blockly.Msg.Sharp_IR_INPUT1 = 'distance measured';
 Blockly.Msg.Sharp_IR_INPUT2 = 'analog pin #';
 Blockly.Msg.Sharp_IR_TOOLTIP1 = 'Analog input only';
 Blockly.Msg.Sharp_IR_TOOLTIP2 = 'distance in centimeters, add tempo between 2 measurement';
+
+
+//******** Matrix Neopixel DEL RGB 8 x 8 http://smartduinos.com/arduino-tutorial-8x8-rgb-led-matrix-with-ws8212-driver-with-arduino-uno-from-banggood-com/
+
+
+Blockly.Msg.MatrixLED_WS2812B_init = "Led RGB WS2812B Init";
+Blockly.Msg.MatrixLED_WS2812B_init_Pin = "Pin =";
+Blockly.Msg.MatrixLED_WS2812B_init_Number_of_Pixels = "Number of pixels =";
+Blockly.Msg.MatrixLED_WS2812B_DEFAULT_NAME = "MATRIX_RGB";
+Blockly.Msg.MatrixLED_WS2812B_Brightness = "Brightness =";
+Blockly.Msg.MatrixLED_WS2812B_URL = "http://smartduinos.com/arduino-tutorial-8x8-rgb-led-matrix-with-ws8212-driver-with-arduino-uno-from-banggood-com/";
+
+
+Blockly.Msg.MatrixLED_WS2812B_setPixelColor = "Led RGB WS2812B. Send color :";
+Blockly.Msg.MatrixLED_WS2812B_setPixelColor_Red = "Red (255 max) =";
+Blockly.Msg.MatrixLED_WS2812B_setPixelColor_Green = "Green (255 max) =";
+Blockly.Msg.MatrixLED_WS2812B_setPixelColor_Blue = "Blue (255 max) =";
+Blockly.Msg.MatrixLED_WS2812B_setPixelColor_Pixel_Number = "for pixel number (0 first) =";

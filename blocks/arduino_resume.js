@@ -55,6 +55,7 @@ head.load(
 "blocks/kit_velo/kit_velo_niv1.js",
 "blocks/kit_velo/kit_velo_niv2.js",
 "blocks/led-rgb-ws2812b/led-rgb-ws2812b.js",
+"blocks/matrix-led-rgb-ws2812/matrix-led-rgb-ws2812.js",
 "blocks/mbot/mbot_1.js",
 "blocks/mbot/mbot_2.js",
 "blocks/mbot/mbot_3.js",

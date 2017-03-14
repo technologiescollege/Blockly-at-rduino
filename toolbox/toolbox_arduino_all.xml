@@ -670,6 +670,49 @@
 			</value>
 		</block>
 	</category>
+	<category name="CAT_MATRIX_LED_RGB" colour="#8F8CB6">
+		<block type="MatrixLED_WS2812B_init">
+			<value name="Pin_Matrix_init">
+				<shadow type="math_number">
+					<field name="NUM">6</field>
+				</shadow>
+			</value>
+			<value name="Number_of_Pixels">
+				<shadow type="math_number">
+					<field name="NUM">1</field>
+				</shadow>
+			</value>
+		</block>
+		<block type="MatrixLED_WS2812B_setBrightness">
+			<value name="Brightness">
+				<shadow type="math_number">
+					<field name="NUM">127</field>
+				</shadow>
+			</value>
+		</block>
+		<block type="MatrixLED_WS2812B_setPixelColor">
+			<value name="Pixel_number">
+				<shadow type="math_number">
+					<field name="NUM">0</field>
+				</shadow>
+			</value>
+			<value name="Red">
+				<shadow type="math_number">
+					<field name="NUM">255</field>
+				</shadow>
+			</value>
+			<value name="Green">
+				<shadow type="math_number">
+					<field name="NUM">255</field>
+				</shadow>
+			</value>
+			<value name="Blue">
+				<shadow type="math_number">
+					<field name="NUM">255</field>
+				</shadow>
+			</value>
+		</block>
+	</category>
 	<category name="CAT_DFRobot" colour="#F39800">
 		<category name="CAT_ROMEO_3" colour="#F39800">
 			<block type="romeo_M1_sens"></block>
