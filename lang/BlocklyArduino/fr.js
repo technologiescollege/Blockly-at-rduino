@@ -4,6 +4,15 @@ goog.provide('Blockly.Msg.fr');
 
 goog.require('Blockly.Msg');
 
+head.load(
+"lang/BlocklyArduino/user/user_en.js",
+"lang/BlocklyArduino/user/user_fr.js",
+function() {
+    // Call a function when done
+    console.log("Done loading USER language file");
+});
+
+
 Blockly.Msg.ARRAY_CREATE_EMPTY_TITLE = 'vide !';
 Blockly.Msg.ARRAY_CREATE_WITH = "constituée de";
 Blockly.Msg.ARRAY_CREATE_WITH_CONTAINER_TITLE_ADD = "liste ou tableau";

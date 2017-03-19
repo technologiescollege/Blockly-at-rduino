@@ -1,0 +1,104 @@
+//***********************************************************************************
+//								GOOGLE Blockly
+//***********************************************************************************
+
+
+//***********************************************************************************
+//								Autoduino
+//***********************************************************************************
+
+//---------------------------------zumo_motors.js-------------------------------------
+
+Blockly.Blocks.autoduino_button.getBlockType = function() {
+	return Blockly.Types.BOOLEAN;
+};
+Blockly.Blocks.autoduino_rotary_angle.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.autoduino_rotary_push.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.autoduino_potentiometer.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.autoduino_dht_read.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.autoduino_temperature_sensor.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.autoduino_moisture_sensor.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.autoduino_tilt_switch.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.autoduino_ils_switch.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.autoduino_pir_motion_sensor.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.autoduino_ultrasonic_ranger.getBlockType = function() {
+	return Blockly.Types.BOOLEAN;
+};
+Blockly.Blocks.autoduino_LDR_sensor.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.autoduino_line_finder.getBlockType = function() {
+	return Blockly.Types.BOOLEAN;
+};
+Blockly.Blocks.autoduino_ir_switch.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.autoduino_digital_temperature_sensor.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.autoduino_rc.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.autoduino_ir_code_detection.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.autoduino_edge_detection.getBlockType = function() {
+	return Blockly.Types.BOOLEAN;
+};
+
+
+//***********************************************************************************
+//								Makeblock
+//***********************************************************************************
+Blockly.Blocks.makeblock_button.getBlockType = function() {
+	return Blockly.Types.BOOLEAN;
+};
+Blockly.Blocks.makeblock_potentiometer.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.makeblock_ils_switch.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.makeblock_pir_motion_sensor.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.makeblock_ultrasonic_ranger.getBlockType = function() {
+	return Blockly.Types.BOOLEAN;
+};
+Blockly.Blocks.makeblock_LDR_sensor.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.makeblock_line_finder.getBlockType = function() {
+	return Blockly.Types.BOOLEAN;
+};
+Blockly.Blocks.makeblock_digital_temperature_sensor.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.makeblock_rc.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.makeblock_ir_code_detection.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.makeblock_edge_detection.getBlockType = function() {
+	return Blockly.Types.BOOLEAN;
+};
+

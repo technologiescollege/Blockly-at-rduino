@@ -49,6 +49,7 @@ var MSG = {
   span_toolbox_arduino_3: "Arduino pour confirmés",
   span_toolbox_arduino_4: "Arduino pour experts",
   span_toolbox_all: "TOUT",
+  span_toolbox_user: "Boite à outil locale",
   span_OnOffLine: "avez-vous accès à Internet ? ",
   span_OnLine: "Accès web",
   span_OffLine: "Hors ligne",

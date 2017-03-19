@@ -84,3 +84,10 @@ function() {
 	// Call a function when done
 	console.log("Done loading Blocks Configuration");
 });
+
+head.load(
+"blocks/user/arduino_user_resume.js",
+function() {
+	// Call a function when done
+	console.log("Done exploring USER Blocks folder");
+});
