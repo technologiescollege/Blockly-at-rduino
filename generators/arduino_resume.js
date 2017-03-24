@@ -64,7 +64,6 @@ function() {
 
 head.load(
 "generators/arduino/user/autoduino.js",
-"generators/arduino/user/makebloc.js",
 function() {
     // Call a function when done
     console.log("Done loading USER arduino Generators");

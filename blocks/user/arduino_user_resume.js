@@ -1,6 +1,5 @@
 head.load(
 "blocks/user/autoduino/autoduino.js",
-"blocks/user/makeblock/makeblock.js",
 function() {
     // Call a function when done
     console.log("Done loading Various USER Blocks");

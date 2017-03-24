@@ -443,57 +443,5 @@
 			<block type="autoduino_edge_detection"></block>
 		</category>
 	</category>	
-	<category name="CAT_MAKEBLOCK">
-		<category name="CAT_MAKEBLOCK_IN">
-			<block type="makeblock_button"></block>
-			<block type="makeblock_potentiometer"></block>
-			<block type="makeblock_ils_switch"></block>
-			<block type="makeblock_pir_motion_sensor"></block>
-			<block type="makeblock_ultrasonic_ranger"></block>
-			<block type="makeblock_LDR_sensor"></block>
-			<block type="makeblock_line_finder"></block>
-			<block type="makeblock_digital_temperature_sensor"></block>
-		</category>
-		<category name="CAT_MAKEBLOCK_OUT">
-			<block type="makeblock_led"></block>
-			<block type="makeblock_output"></block>
-			<block type="makeblock_IR_led"></block>
-			<block type="makeblock_rgb_led"></block>
-			<block type="makeblock_rgb_led2"></block>
-			<block type="makeblock_piezo_buzzer"></block>
-			<block type="makeblock_motor_builtin"></block>
-		</category>
-		<category name="CAT_MAKEBLOCK_COMM">
-			<block type="makeblock_bluetooth_slave"></block>
-			<block type="makeblock_rc"></block>
-			<block type="makeblock_ir_code_detection"></block>
-		</category>
-		<category name="CAT_MAKEBLOCK_UTIL">
-			<block type="makeblock_edge_detection"></block>
-		</category>
-	</category>	
-	<category name="CAT_MAKEBLOCK_TARGET_MBOT">
-		<category name="CAT_MAKEBLOCK_IN">
-			<block type="makeblock_button"></block>
-			<block type="makeblock_ultrasonic_ranger"></block>
-			<block type="makeblock_LDR_sensor"></block>
-			<block type="makeblock_line_finder"></block>
-		</category>
-		<category name="CAT_MAKEBLOCK_OUT">
-			<block type="makeblock_led"></block>
-			<block type="makeblock_output"></block>
-			<block type="makeblock_rgb_led"></block>
-			<block type="makeblock_rgb_led2"></block>
-			<block type="makeblock_piezo_buzzer"></block>
-			<block type="makeblock_motor_builtin"></block>
-		</category>
-		<category name="CAT_MAKEBLOCK_COMM">
-			<block type="makeblock_rc"></block>
-			<block type="makeblock_ir_code_detection"></block>
-		</category>
-		<category name="CAT_MAKEBLOCK_UTIL">
-			<block type="makeblock_edge_detection"></block>
-		</category>
-	</category>	
 	<sep></sep>
 </toolbox>
