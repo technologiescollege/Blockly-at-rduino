@@ -465,6 +465,60 @@ Blockly.Msg.GROVE_INOUT_BT_COMM5 = "send";
 Blockly.Msg.GROVE_INOUT_BT_COMM6 = "receive";
 Blockly.Msg.GROVE_INOUT_BT_TOOLTIP = "Bluetooth V2.0+EDR slave. Support single slave per board";
 
+//************************************** ajoute 16/03/2017 \lang\BlocklyArduino **********************************************************
+Blockly.Msg.GROVE_INOUT_BT_AT_HELPURL = "http://wiki.seeed.cc/Grove-Serial_Bluetooth_v3.0/";
+Blockly.Msg.GROVE_INOUT_BT_AT_COMM1 = "Bluetooth";
+Blockly.Msg.GROVE_INOUT_BT_AT_COMM2 = "PIN#";
+Blockly.Msg.GROVE_INOUT_BT_AT_COMM3 = "name";
+Blockly.Msg.GROVE_INOUT_BT_AT_COMM4 = "pin code";
+Blockly.Msg.GROVE_INOUT_BT_AT_COMM5 = "receive";
+Blockly.Msg.GROVE_INOUT_BT_AT_COMM6 = "send";
+Blockly.Msg.GROVE_INOUT_BT_AT_TOOLTIP = "Bluetooth V3.0 + EDR slave. Support single slave per board";
+
+//************************************** ajouté 20/03/2017 \lang\BlocklyArduino **********************************************************
+Blockly.Msg.GROVE_EMETTEUR_IR_TEXT = "Led IR";
+Blockly.Msg.GROVE_EMETTEUR_IR_INPUT1 = "Emetter signal IR on PIN";
+Blockly.Msg.GROVE_EMETTEUR_IR_INPUT2 = "Frequency (Hz) 38000 ";
+Blockly.Msg.GROVE_EMETTEUR_IR_HELPURL = "http://wiki.seeed.cc/Grove-Infrared_Emitter/";
+
+//************************************** ajouté 20/03/2017 \lang\BlocklyArduino **********************************************************
+Blockly.Msg.GROVE_RECEPTEUR_IR_HELPURL = "http://wiki.seeed.cc/Grove-Infrared_Receiver/";
+Blockly.Msg.GROVE_RECEPTEUR_IR_TEXT = "state receiver IR";
+Blockly.Msg.GROVE_RECEPTEUR_IR_INPUT = "on the PIN";
+Blockly.Msg.GROVE_RECEPTEUR_IR_TOOLTIP = "input numeric";
+
+//************************************** ajouté 20/03/2017 \lang\BlocklyArduino **********************************************************
+Blockly.Msg.GROVE_FIN_COURSE_HELPURL = "http://www.technologieservices.fr/fr/a-a1000024681-edc1000003/article/GROV201-Module-Grove-Interrupteur-fin-de-course.html";
+Blockly.Msg.GROVE_FIN_COURSE_TEXT = "sensor end of course";
+Blockly.Msg.GROVE_FIN_COURSE_INPUT = "on the PIN";
+Blockly.Msg.GROVE_FIN_COURSE_TOOLTIP = "input numeric";
+
+//******** Grove commun � tous les drivers moteur Cdo 2017 03 19*/
+Blockly.Msg.GROVE_DRIVER_MOTOR1 = "Motor 1";
+Blockly.Msg.GROVE_DRIVER_MOTOR2 = "Motor 2";
+Blockly.Msg.GROVE_DRIVER_MOTOR3 = "Motor 3";
+Blockly.Msg.GROVE_DRIVER_MOTOR4 = "Motor 4";
+Blockly.Msg.GROVE_DRIVER_MOTOR_SPEED = "Speed";
+//******** collyc Grove driver13 */
+Blockly.Msg.GROVE_DRIVER13_HELPURL = "http://wiki.seeed.cc/Grove-I2C_Motor_Driver_V1.3/";
+Blockly.Msg.GROVE_DRIVER13_MOTOR_TITLE = "Motor Driver V1.3";
+Blockly.Msg.GROVE_DRIVER13_MOTOR_I2C_ADDRESS = "I2C Address";
+Blockly.Msg.GROVE_DRIVER13_TOOLTIP = "Motor Driver - " + 
+                            "I2C Address in range 0, 15 (0x0F) depending on the card configuration, " + 
+                            "Motor speed in range -100, 100; 0 eq stop";
+//******** collyc Grove minimoto */
+Blockly.Msg.GROVE_MINI_DRIVER_TITLE = "Motor Mini Driver";
+Blockly.Msg.GROVE_MINI_DRIVER_HELPURL = "http://wiki.seeed.cc/Grove-Mini_I2C_Motor_Driver_v1.0/";
+Blockly.Msg.GROVE_MINI_DRIVER_MOTOR_MSG = "Speed";
+Blockly.Msg.GROVE_MINI_DRIVER_MOTOR_TOOLTIP = "Motor Mini Driver - " + 
+                            "Motor speed in range -100, 100";
+Blockly.Msg.GROVE_MINI_DRIVER_STOP_MSG = "Stop";
+Blockly.Msg.GROVE_MINI_DRIVER_STOP_TOOLTIP = "Motor Mini Driver - " + 
+                            "Stops the selected motor";
+Blockly.Msg.GROVE_MINI_DRIVER_ERROR_MSG = "Status";
+Blockly.Msg.GROVE_MINI_DRIVER_ERROR_TOOLTIP = "Grove Motor Mini Driver - " + 
+                            "Returns select motor status (0: OK, 3 et 17: overcurrent, 9: under voltage, 5: over heat)";
+
 //added April 3rd 2015 ESK
 Blockly.Msg.ROBOTS_MOTORS_FORWARD = "Forward";
 Blockly.Msg.ROBOTS_MOTORS_BACKWARD = "Backward";
@@ -1136,6 +1190,19 @@ Blockly.Msg.jfblocks_tx_titre = "émettre une trame";
 Blockly.Msg.jfblocks_tx_start_code = "Start Code";
 Blockly.Msg.jfblocks_tx_data = "donnée";
 Blockly.Msg.jfblocks_tx_end_code = "End Code";
+
+//******** collyc
+Blockly.Msg.COLLYC_TOUCHE_HELPURL = 'https://www.adafruit.com/products/419';
+Blockly.Msg.COLLYC_TOUCHE_TEXT = "Key pressed";
+Blockly.Msg.COLLYC_TOUCHE_LIGNES = "Rows";
+Blockly.Msg.COLLYC_TOUCHE_TOOLTIP = "Returns keypressed, empty string otherwise";
+Blockly.Msg.COLLYC_TOUCHE_LIGNE1 = "Row 1";
+Blockly.Msg.COLLYC_TOUCHE_LIGNE2 = "Row 2";
+Blockly.Msg.COLLYC_TOUCHE_LIGNE3 = "Row 3";
+Blockly.Msg.COLLYC_TOUCHE_LIGNE4 = "Row 4";
+Blockly.Msg.COLLYC_TOUCHE_COLONNE1 = "Column 1";
+Blockly.Msg.COLLYC_TOUCHE_COLONNE2 = "Column 2";
+Blockly.Msg.COLLYC_TOUCHE_COLONNE3 = "Column 3";
 
 //******** Sharp IR https://github.com/guillaume-rico/SharpIR
 

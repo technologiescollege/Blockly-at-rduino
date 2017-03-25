@@ -475,6 +475,75 @@ Blockly.Arduino.grove_bluetooth_slave = function() {
   return code;
 };
 
+Blockly.Arduino.grove_bluetooth_slave_AT = function() {
+  var dropdown_pin = this.getFieldValue('PIN');
+  var NextPIN = _get_next_pin(dropdown_pin);
+  var name = this.getFieldValue('NAME');
+  var pincode = this.getFieldValue('PINCODE');
+  var statement_receive = Blockly.Arduino.statementToCode(this, "RCV");
+  var statement_send = Blockly.Arduino.statementToCode(this, "SNT");
+  /* if(pincode.length != 4){
+    alert("pincode length should be 4");
+  } */
+  Blockly.Arduino.definitions_['define_softwareserial'] = '#include <SoftwareSerial.h>\n';
+  Blockly.Arduino.definitions_['var_bluetooth_'+dropdown_pin] = 'SoftwareSerial blueToothSerial_'+dropdown_pin+'('+dropdown_pin+','+NextPIN+');\n';
+
+  Blockly.Arduino.setups_['setup_bluetooth_'+dropdown_pin] = 'Serial.begin(9600);\n';
+  Blockly.Arduino.setups_['setup_bluetooth_'+dropdown_pin] += '  pinMode('+dropdown_pin+', INPUT);\n';
+  Blockly.Arduino.setups_['setup_bluetooth_'+dropdown_pin] += '  pinMode('+NextPIN+', OUTPUT);\n';
+  Blockly.Arduino.setups_['setup_bluetooth_'+dropdown_pin] += '  setupBlueToothConnection_'+dropdown_pin+'();\n';
+
+  Blockly.Arduino.definitions_['define_setupBlueToothConnection_'+dropdown_pin] = 'void setupBlueToothConnection_'+dropdown_pin+'()\n'+
+  '{\n'+
+  '  blueToothSerial_'+dropdown_pin+'.begin(9600); 		//Set BluetoothBee BaudRate to default baud rate 9600;\n'+
+  '  blueToothSerial_'+dropdown_pin+'.print("AT"); 		//set the bluetooth work in slave mode ;\n'+
+  '  delay(1000); 		// This delay is required.;\n'+
+  '  blueToothSerial_'+dropdown_pin+'.print("AT+NAME'+name+'"); 	//set the bluetooth name as "'+name+'";\n'+
+  '  delay(1000); // This delay is required.;\n'+
+  '  blueToothSerial_'+dropdown_pin+'.print("AT+PIN'+pincode+'");		//Set SLAVE pincode"'+pincode+'";\n'+
+  '  delay(1000); // This delay is required.;\n'+
+  '  blueToothSerial_'+dropdown_pin+'.print("AT+AUTH1"); // Permit Paired device to connect me;\n'+
+  '  delay(1000); // This delay is required.;\n'+
+  '  blueToothSerial_'+dropdown_pin+'.flush();\n'+
+  '}\n';
+  var code = 'char recvChar_'+dropdown_pin+';\n'+
+  'while(1) {\n'+
+  '  if(blueToothSerial_'+dropdown_pin+'.available()) {//check if there is any data sent from the remote bluetooth shield\n'+
+  '    recvChar_'+dropdown_pin+' = blueToothSerial_'+dropdown_pin+'.read();\n'+
+  '    Serial.print(recvChar_'+dropdown_pin+');\n'+
+       statement_receive+
+  '  }\n'+
+  '  if(Serial.available()){//check if there is any data sent from the local serial terminal, you can add the other applications here\n'+
+  '    recvChar_'+dropdown_pin+' = Serial.read();\n'+
+  '    blueToothSerial_'+dropdown_pin+'.print(recvChar_'+dropdown_pin+');\n'+
+       statement_send+
+  '  }\n'+
+  '}\n';
+  return code;
+};
+
+Blockly.Arduino.grove_EMETTEUR_IR = function() {
+  var value_pin = Blockly.Arduino.valueToCode(this, 'PIN', Blockly.Arduino.ORDER_ATOMIC);
+  var value_num = Blockly.Arduino.valueToCode(this, 'NUM', Blockly.Arduino.ORDER_ATOMIC);
+  Blockly.Arduino.setups_['setup_output'+value_pin] = 'pinMode('+value_pin+', OUTPUT);';
+  var code = 'tone('+value_pin+','+value_num+');\n';
+  return code;
+};
+
+Blockly.Arduino.grove_RECEPTEUR_IR = function() {
+  var dropdown_pin = this.getFieldValue('PIN');
+  Blockly.Arduino.setups_['setup_button_'+dropdown_pin] = 'pinMode('+dropdown_pin+', INPUT);';
+  var code = 'digitalRead('+dropdown_pin+')';
+  return [code, Blockly.Arduino.ORDER_ATOMIC];
+};
+
+Blockly.Arduino.grove_FIN_COURSE = function() {
+  var dropdown_pin = this.getFieldValue('PIN');
+  Blockly.Arduino.setups_['setup_button_'+dropdown_pin] = 'pinMode('+dropdown_pin+', INPUT);';
+  var code = 'digitalRead('+dropdown_pin+')';
+  return [code, Blockly.Arduino.ORDER_ATOMIC];
+};
+
 Blockly.Arduino.grove_dht_read = function() {
   var sensor = this.getFieldValue('SENSOR');
   var pin = this.getFieldValue('PIN');
@@ -591,3 +660,47 @@ Blockly.Arduino.grove_lcd_rgb_effect = function() {
   }
   return code;
 };
+
+//*****   Driver moteur Grove V1.3 Cdo 2017 03 19 */
+function grove_driver13_genere_inc_def(value_i2c_address) {
+  Blockly.Arduino.includes_['define_grove_driver13'] = '#include <Grove_I2C_Motor_Driver.h>\n';
+  Blockly.Arduino.definitions_['grove_driver13_motor' + value_i2c_address] = 
+                      "// Create a variable even there is a global variable named Motor. \n" +
+                      "I2CMotorDriver Motor_" + value_i2c_address + ";"
+  Blockly.Arduino.setups_['grove_setup_DRIVER13_' + value_i2c_address] = 'Motor_' + value_i2c_address + '.begin(' + value_i2c_address + ');\n';
+}
+
+Blockly.Arduino.grove_driver13_motor = function() {
+  var value_i2c_address = Blockly.Arduino.valueToCode(this, 'I2CADDRESS', Blockly.Arduino.ORDER_ATOMIC);
+  var value_MotorNum = this.getFieldValue('NUMMOTOR');
+  var value_speed = Blockly.Arduino.valueToCode(this, 'SPEED', Blockly.Arduino.ORDER_ATOMIC);
+
+  grove_driver13_genere_inc_def (value_i2c_address);
+  return "Motor_" + value_i2c_address + ".speed(" + value_MotorNum + ", "+ value_speed + ");\n";
+};
+
+//*****   grove mini Driver moteur Grove  */
+function grove_mini_driver_genere_inc_def(value_i2c_address) {
+  Blockly.Arduino.includes_['define_grove_mini_driver'] = '#include <SparkFunMiniMoto.h>\n';
+  Blockly.Arduino.definitions_['grove_mini_driver_motor' + value_i2c_address] = 
+                      "MiniMoto Motor_" + value_i2c_address + " (" + value_i2c_address + ");"
+}
+Blockly.Arduino.grove_mini_driver_motor = function() {
+  var value_i2c_address = this.getFieldValue('I2CADDRESS');
+  var value_speed = Blockly.Arduino.valueToCode(this, 'SPEED', Blockly.Arduino.ORDER_ATOMIC);
+
+  grove_mini_driver_genere_inc_def (value_i2c_address);
+  return "Motor_" + value_i2c_address + ".drive(" + value_speed + ");\n";
+};
+Blockly.Arduino.grove_mini_driver_stop = function() {
+  var value_i2c_address = this.getFieldValue('I2CADDRESS');
+
+  grove_mini_driver_genere_inc_def (value_i2c_address);
+  return "Motor_" + value_i2c_address + ".stop();\n";
+};
+Blockly.Arduino.grove_mini_driver_error = function() {
+  var value_i2c_address = this.getFieldValue('I2CADDRESS');
+
+  grove_mini_driver_genere_inc_def (value_i2c_address);
+var code = '(Motor_' + value_i2c_address + '.getFault())';
+  return [code, Blockly.Arduino.ORDER_ATOMIC];};
