@@ -493,7 +493,7 @@ Blockly.Msg.GROVE_FIN_COURSE_TEXT = "sensor end of course";
 Blockly.Msg.GROVE_FIN_COURSE_INPUT = "on the PIN";
 Blockly.Msg.GROVE_FIN_COURSE_TOOLTIP = "input numeric";
 
-//******** Grove commun à  tous les drivers moteur Cdo 2017 03 19*/
+//******** Grove commun ï¿½ tous les drivers moteur Cdo 2017 03 19*/
 Blockly.Msg.GROVE_DRIVER_MOTOR1 = "Motor 1";
 Blockly.Msg.GROVE_DRIVER_MOTOR2 = "Motor 2";
 Blockly.Msg.GROVE_DRIVER_MOTOR3 = "Motor 3";
