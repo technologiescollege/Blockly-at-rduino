@@ -61,3 +61,10 @@ function() {
     // Call a function when done
     console.log("Done loading Various Arduino Generators");
 });
+
+head.load(
+"generators/arduino/user/autoduino.js",
+function() {
+    // Call a function when done
+    console.log("Done loading USER arduino Generators");
+});

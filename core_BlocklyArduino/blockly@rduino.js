@@ -302,7 +302,8 @@ BlocklyDuino.saveXmlFile = function () {
 BlocklyDuino.saveArduinoFile = function () {
 	  var data = Blockly.Arduino.workspaceToCode();
 	  var datenow = Date.now();
-	  var uri = 'data:text/plain;charset=utf-8,' + encodeURIComponent(data);
+//NBR	  var uri = 'data:text/plain;charset=utf-8,' + encodeURIComponent(data);  
+	  var uri = 'data:text/ino;charset=utf-8,' + encodeURIComponent(data); // NBR: set INO as data type to force the browser to propose to load directly the code into the arduino IDE
 	  $(this)
 	            .attr({
 	            'download': "arduino"+datenow+".ino",
