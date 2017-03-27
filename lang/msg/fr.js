@@ -41,7 +41,8 @@ var MSG = {
   videoModalLabel2: "Blockly@rduino & AppInventor par Bluetooth",
   videoModalLabel3: "Principe de la supervision",
   videoModalLabel4: "Principe du téléversement hors ligne",
-  configModalGlobalLabel: "Configuration globale",
+  configModalGlobalLabel: "configuration globale",
+  configGlobalLabel: "configuration globale",
   span_languageMenu: "choix de la langue : ",
   span_toolbox_algo: "Algorithme simple",
   span_toolbox_arduino_1: "Arduino pour débutants",
@@ -49,6 +50,7 @@ var MSG = {
   span_toolbox_arduino_3: "Arduino pour confirmés",
   span_toolbox_arduino_4: "Arduino pour experts",
   span_toolbox_all: "TOUT",
+  span_toolbox_user: "Boite à outil locale",
   span_OnOffLine: "avez-vous accès à Internet ? ",
   span_OnLine: "Accès web",
   span_OffLine: "Hors ligne",
@@ -73,7 +75,7 @@ var MSG = {
   a_term:" console Série",
   a_xml:" traduction XML",
   configModalLabel:"choix des catégories de blocs",
-  span_select_all:"toutes les catégories",
+  span_select_all:"toutes les rubriques",
   span_put_in_url:"ajouter dans l'url",
   btn_close:"fermer",
   btn_valid:"valider",
@@ -109,5 +111,6 @@ var MSG = {
 	+ "\n\n"
 	+ "Pour Chrome, veuillez vérifier sur la page suivante :\n"
 	+ "http://www.chrome-allow-file-access-from-file.com\n",
-  span_ajax_msg:"Ne plus afficher ce message."
+  span_ajax_msg:"Ne plus afficher ce message.",
+  span_forms:"QUI ETES VOUS ???"
 };

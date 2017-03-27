@@ -46,6 +46,23 @@ Blockly.Blocks.base_setup = {
 	}
 };
 
+Blockly.Blocks.base_loop = {
+  init: function () {
+        this.setColour(Blockly.Blocks.arduino_base.HUE);
+		this.setHelpUrl(Blockly.Msg.ARDUINO_BASE_SETUP_LOOP_HELPURL);
+		this.appendDummyInput()
+			.appendField(Blockly.Msg.ARDUINO_BASE_LOOP);
+		this.appendStatementInput('LOOP');
+		this.setInputsInline(false);
+        this.setTooltip("Exécuté seulement dans le 'Loop'");
+		this.contextMenu = false;
+    },
+	/** @return {!boolean} True if the block instance is in the workspace. */
+	getArduinoLoopsInstance: function() {
+    return true;
+	}
+};
+
 Blockly.Blocks.base_setup_loop = {
   init: function () {
         this.setColour(Blockly.Blocks.arduino_base.HUE);

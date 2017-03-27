@@ -22,6 +22,7 @@ head.load(
 "generators/arduino/arduino_shield.js",
 "generators/arduino/bitbloq.js",
 "generators/arduino/Bluetooth_Electronics.js",
+"generators/arduino/collyc.js",
 "generators/arduino/dfplayer-mini-mp3-dfrobot.js",
 "generators/arduino/dfrobot_romeo_v2_1.js",
 "generators/arduino/dfrobot_romeo_v2_2.js",
@@ -32,10 +33,12 @@ head.load(
 "generators/arduino/flycamone-eco-v2.js",
 "generators/arduino/grove.js",
 "generators/arduino/icn.js",
+"generators/arduino/jfblocks.js",
 "generators/arduino/jeulin_maquette_feux.js",
 "generators/arduino/kit_velo_niv1.js",
 "generators/arduino/kit_velo_niv2.js",
 "generators/arduino/led-rgb-ws2812b.js",
+"generators/arduino/matrix-led-rgb-ws2812.js",
 "generators/arduino/mbot_niv1.js",
 "generators/arduino/mbot_niv2.js",
 "generators/arduino/mbot_niv3.js",
@@ -46,6 +49,7 @@ head.load(
 "generators/arduino/robot_misc.js",
 "generators/arduino/robuno.js",
 "generators/arduino/servo.js",
+"generators/arduino/Sharp_IR.js",
 "generators/arduino/spi_comm.js",
 "generators/arduino/stepper_motor.js",
 "generators/arduino/technozone51.js",
@@ -56,4 +60,11 @@ head.load(
 function() {
     // Call a function when done
     console.log("Done loading Various Arduino Generators");
+});
+
+head.load(
+"generators/arduino/user/autoduino.js",
+function() {
+    // Call a function when done
+    console.log("Done loading USER arduino Generators");
 });

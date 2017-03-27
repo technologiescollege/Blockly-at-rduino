@@ -156,6 +156,7 @@
 	<sep></sep>
 	<category name="CAT_ARDUINO" colour="#00979D">
 		<block type="base_setup"></block>
+		<block type="base_loop"></block>
 		<block type="base_setup_loop"></block>
 		<block type="base_define_const"></block>
 		<block type="base_const"></block>
@@ -393,7 +394,8 @@
 			<block type="LCD_Keypad_Shield_DFR_09_RAZ">
 			</block>
 		</category>
-		<category name="CAT_LCD_GROVE_LCD" colour="#8ec31f">
+		<category name="CAT_GROVE_LCD" colour="#8ec31f">
+			<block type="grove_serial_lcd_power"></block>
 			<block type="grove_serial_lcd_print">
 				<value name="TEXT">
 					<shadow type="text">
@@ -411,9 +413,28 @@
 					</shadow>
 				</value>
 			</block>
-			<block type="grove_serial_lcd_power"></block>
 			<block type="grove_serial_lcd_effect"></block>
-		</category>		
+			<block type="grove_lcd_rgb_power"></block>
+			<block type="grove_lcd_rgb_print">
+				<value name="TEXT">
+					<shadow type="text">
+						<field name="TEXT"></field>
+					</shadow>
+				</value>
+				<value name="TEXT2">
+					<shadow type="text">
+						<field name="TEXT"></field>
+					</shadow>
+				</value>
+				<value name="DELAY_TIME">
+					<shadow type="math_number">
+						<field name="NUM">1000</field>
+					</shadow>
+				</value>
+			</block>
+			<block type="grove_lcd_rgb_clean"></block>
+			<block type="grove_lcd_rgb_effect"></block>
+		</category>
 		<category name="CAT_LCD_TECHNOZONE_LCD" colour="#646464">
 			<block type="technozone_lcdinit"></block>
 			<block type="technozone_lcdspecial"></block>
@@ -462,6 +483,7 @@
 	<category name="CAT_BLUETOOTH_MISC" colour="#6981F9">
 		<category name="CAT_BT_GROVE_COMM" colour="#8ec31f">
 			<block type="grove_bluetooth_slave"></block>
+			<block type="grove_bluetooth_slave_AT"></block>
 			<block type="Bluetooth_Shield_duinoFun">
 				<value name="BT_RX">
 					<shadow type="math_number">
@@ -496,11 +518,6 @@
 		<block type="APDS9960_ColorSensor_red"></block>
 		<block type="APDS9960_ColorSensor_green"></block>
 		<block type="APDS9960_ColorSensor_blue"></block>
-	</category>
-	<category name="CAT_SPI_COMM" colour="170">
-		<block type="spi_setup"></block>
-		<block type="spi_transfer"></block>
-		<block type="spi_transfer_return"></block>
 	</category>
 	<category name="CAT_OLED_U8G" colour="#1B2944">
 		<block type="lp2i_u8g_draw_string" colour="#1B2944">
@@ -654,6 +671,56 @@
 				</shadow>
 			</value>
 		</block>
+	</category>
+	<category name="CAT_MATRIX_LED_RGB" colour="#8F8CB6">
+		<block type="MatrixLED_WS2812B_init">
+			<value name="Pin_Matrix_init">
+				<shadow type="math_number">
+					<field name="NUM">6</field>
+				</shadow>
+			</value>
+			<value name="Number_of_Pixels">
+				<shadow type="math_number">
+					<field name="NUM">1</field>
+				</shadow>
+			</value>
+		</block>
+		<block type="MatrixLED_WS2812B_setBrightness">
+			<value name="Brightness">
+				<shadow type="math_number">
+					<field name="NUM">127</field>
+				</shadow>
+			</value>
+		</block>
+		<block type="MatrixLED_WS2812B_setPixelColor">
+			<value name="Pixel_number">
+				<shadow type="math_number">
+					<field name="NUM">0</field>
+				</shadow>
+			</value>
+			<value name="Red">
+				<shadow type="math_number">
+					<field name="NUM">255</field>
+				</shadow>
+			</value>
+			<value name="Green">
+				<shadow type="math_number">
+					<field name="NUM">255</field>
+				</shadow>
+			</value>
+			<value name="Blue">
+				<shadow type="math_number">
+					<field name="NUM">255</field>
+				</shadow>
+			</value>
+			<value name="Brightness">
+				<shadow type="math_number">
+					<field name="NUM">127</field>
+				</shadow>
+			</value>
+		</block>
+		<block type="MatrixLED_WS2812B_draw"></block>
+		<block type="MatrixLED_WS2812B_CLEAN"></block>
 	</category>
 	<category name="CAT_DFRobot" colour="#F39800">
 		<category name="CAT_ROMEO_3" colour="#F39800">
@@ -1171,6 +1238,8 @@
 			<block type="grove_line_finder"></block>
 			<block type="grove_ultrasonic_ranger"></block>
 			<block type="grove_thumb_joystick"></block>
+			<block type="grove_RECEPTEUR_IR"></block>
+			<block type="grove_FIN_COURSE"></block>
 		</category>
 		<category name="CAT_GROVE_OUT" colour="#8ec31f">
 			<block type="grove_led"></block>
@@ -1178,8 +1247,31 @@
 			<block type="grove_relay"></block>
 			<block type="grove_motor_shield"></block>
 			<block type="grove_rgb_led"></block>
+			<block type="grove_EMETTEUR_IR"></block>
+			<block type="grove_driver13_motor">
+				<value name="I2CADDRESS">
+					<shadow type="math_number">
+						<field name="NUM">15</field>
+					</shadow>
+				</value>
+				<value name="SPEED">
+					<shadow type="math_number">
+						<field name="NUM">100</field>
+					</shadow>
+				</value>
+			</block>
+			<block type="grove_mini_driver_motor">
+				<value name="SPEED">
+					<shadow type="math_number">
+						<field name="NUM">100</field>
+					</shadow>
+				</value>
+			</block>
+			<block type="grove_mini_driver_stop"></block>
+			<block type="grove_mini_driver_error"></block>
 		</category>
 		<category name="CAT_GROVE_LCD" colour="#8ec31f">
+			<block type="grove_serial_lcd_power"></block>
 			<block type="grove_serial_lcd_print">
 				<value name="TEXT">
 					<shadow type="text">
@@ -1197,11 +1289,31 @@
 					</shadow>
 				</value>
 			</block>
-			<block type="grove_serial_lcd_power"></block>
 			<block type="grove_serial_lcd_effect"></block>
+			<block type="grove_lcd_rgb_power"></block>
+			<block type="grove_lcd_rgb_print">
+				<value name="TEXT">
+					<shadow type="text">
+						<field name="TEXT"></field>
+					</shadow>
+				</value>
+				<value name="TEXT2">
+					<shadow type="text">
+						<field name="TEXT"></field>
+					</shadow>
+				</value>
+				<value name="DELAY_TIME">
+					<shadow type="math_number">
+						<field name="NUM">1000</field>
+					</shadow>
+				</value>
+			</block>
+			<block type="grove_lcd_rgb_clean"></block>
+			<block type="grove_lcd_rgb_effect"></block>
 		</category>
 		<category name="CAT_GROVE_COMM" colour="#8ec31f">
 			<block type="grove_bluetooth_slave"></block>
+			<block type="grove_bluetooth_slave_AT"></block>
 			<block type="Bluetooth_Shield_duinoFun">
 				<value name="BT_RX">
 					<shadow type="math_number">
@@ -1806,6 +1918,7 @@
 		<block type="mbot_buzzer"></block>
 	</category>
 	<category name="CAT_ARDUINO_SERVO" colour="#191919">
+		<block type="servo_attach"></block>
 		<block type="servo_move">
 			<value name="DEGREE">
 				<shadow type="inout_angle">
@@ -1932,7 +2045,59 @@
 		<block type="BT_ELEC_LED_brightness"></block>
 		<block type="BT_ELEC_RC_car"></block>
 	</category>
+	<category name="CAT_jfblocks" colour="#006666">
+		<block type="jfblocks_decode"></block>
+		<block type="jfblocks_action"></block>
+		<block type="jfblocks_tx"></block>
+		<block type="jfblocks_last_value"></block>
+	</category>
+	<category name="CAT_COLLYC" colour="#46C286">
+		<block type="collyc_clavier12_touche_appuyee">
+			<value name="L1">
+				<shadow type="math_number">
+					<field name="NUM">9</field>
+				</shadow>
+			</value>
+			<value name="L2">
+				<shadow type="math_number">
+					<field name="NUM">8</field>
+				</shadow>
+			</value>
+			<value name="L3">
+				<shadow type="math_number">
+					<field name="NUM">7</field>
+				</shadow>
+			</value>
+			<value name="L4">
+				<shadow type="math_number">
+					<field name="NUM">6</field>
+				</shadow>
+			</value>
+			<value name="C1">
+				<shadow type="math_number">
+					<field name="NUM">5</field>
+				</shadow>
+			</value>
+			<value name="C2">
+				<shadow type="math_number">
+					<field name="NUM">4</field>
+				</shadow>
+			</value>
+			<value name="C3">
+				<shadow type="math_number">
+					<field name="NUM">3</field>
+				</shadow>
+			</value>
+		</block>
+	</category>
+	<category name="CAT_SHARP" colour="#000000">
+		<block type="Sharp_IR_attach">
+				<value name="PIN">
+					<shadow type="math_number">
+						<field name="NUM"></field>
+					</shadow>
+				</value>
+		</block>
+		<block type="Sharp_IR_read"></block>
+	</category>
 </toolbox>
-
-
-

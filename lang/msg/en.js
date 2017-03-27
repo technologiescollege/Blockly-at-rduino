@@ -41,7 +41,8 @@ var MSG = {
   videoModalLabel2: "Blockly@rduino & AppInventor: Bluetooth connect",
   videoModalLabel3: "Supervision how-to",
   videoModalLabel4: "Upload off-line how-to",
-  configModalGlobalLabel: "Global Configuration",
+  configModalGlobalLabel: "global configuration",
+  configGlobalLabel: "global configuration",
   span_languageMenu: "language: ",
   span_toolbox_algo: "Algorithm only",
   span_toolbox_arduino_1: "Arduino level 1",
@@ -49,6 +50,7 @@ var MSG = {
   span_toolbox_arduino_3: "Arduino level 3",
   span_toolbox_arduino_4: "Arduino level 4",
   span_toolbox_all: "Arduino all!",
+  span_toolbox_user: "User toolbox",
   span_OnOffLine: "Web access? ",
   span_OnLine: "Yes",
   span_OffLine: "No",
@@ -109,5 +111,6 @@ var MSG = {
 	+ "\n\n"
 	+ "For Chrome, please check here :\n"
 	+ "http://www.chrome-allow-file-access-from-file.com\n",
-  span_ajax_msg:"Do not show this message again"
+  span_ajax_msg:"Do not show this message again",
+  span_forms:"WHO ARE YOU ???"
 };

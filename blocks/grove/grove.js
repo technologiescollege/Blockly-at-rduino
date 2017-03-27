@@ -368,7 +368,7 @@ Blockly.Blocks['grove_bluetooth_slave'] = {
     this.appendDummyInput()
       .setAlign(Blockly.ALIGN_RIGHT)
       .appendField(Blockly.Msg.GROVE_INOUT_BT_COMM3)
-      .appendField(new Blockly.FieldTextInput('blocklyduino'), 'NAME');
+      .appendField(new Blockly.FieldTextInput('bluetooth'), 'NAME');
     this.appendDummyInput()
       .setAlign(Blockly.ALIGN_RIGHT)
       .appendField(Blockly.Msg.GROVE_INOUT_BT_COMM4)
@@ -382,6 +382,91 @@ Blockly.Blocks['grove_bluetooth_slave'] = {
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setTooltip(Blockly.Msg.GROVE_INOUT_BT_TOOLTIP);
+  }
+};
+
+Blockly.Blocks['grove_bluetooth_slave_AT'] = {
+  init: function() {
+    this.setColour(Blockly.Blocks.grove.HUE);
+	this.setHelpUrl(Blockly.Msg.GROVE_INOUT_BT_AT_HELPURL);
+    this.appendDummyInput()
+      .appendField(Blockly.Msg.GROVE_INOUT_BT_AT_COMM1)
+      .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/grove/grove_v3.jpg', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize))
+      .appendField(Blockly.Msg.GROVE_INOUT_BT_AT_COMM2)
+      .appendField(new Blockly.FieldTextInput('2',  Blockly.Arduino.pinGroveDigitalValidator), 'PIN');
+    this.appendDummyInput()
+      .setAlign(Blockly.ALIGN_RIGHT)
+      .appendField(Blockly.Msg.GROVE_INOUT_BT_AT_COMM3)
+      .appendField(new Blockly.FieldTextInput('bluetooth'), 'NAME');
+    this.appendDummyInput()
+      .setAlign(Blockly.ALIGN_RIGHT)
+      .appendField(Blockly.Msg.GROVE_INOUT_BT_AT_COMM4)
+      .appendField(new Blockly.FieldTextInput('0000'), 'PINCODE');
+    this.appendStatementInput("RCV")
+      .setAlign(Blockly.ALIGN_RIGHT)
+      .appendField(Blockly.Msg.GROVE_INOUT_BT_AT_COMM5);
+    this.appendStatementInput("SNT")
+      .setAlign(Blockly.ALIGN_RIGHT)
+      .appendField(Blockly.Msg.GROVE_INOUT_BT_AT_COMM6);
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setTooltip(Blockly.Msg.GROVE_INOUT_BT_AT_TOOLTIP);
+  }
+};
+
+Blockly.Blocks['grove_EMETTEUR_IR'] = {
+  init: function() {
+    this.setColour(Blockly.Blocks.grove.HUE);
+    this.setHelpUrl(Blockly.Msg.GROVE_EMETTEUR_IR_HELPURL);
+	this.appendDummyInput()
+      .appendField(Blockly.Msg.GROVE_EMETTEUR_IR_TEXT);
+    this.appendDummyInput()
+      .appendField(Blockly.Msg.GROVE_EMETTEUR_IR)
+	  .setAlign(Blockly.ALIGN_CENTRE)
+      .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/grove/400px-LED_IR.jpg', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize))
+	this.appendValueInput("PIN")
+		.setCheck('Number')
+        .setAlign(Blockly.ALIGN_RIGHT)
+        .appendField(Blockly.Msg.GROVE_EMETTEUR_IR_INPUT1);
+    this.appendValueInput("NUM")
+        .setAlign(Blockly.ALIGN_RIGHT)
+        .appendField(Blockly.Msg.GROVE_EMETTEUR_IR_INPUT2)
+        .setCheck('Number');
+    this.setInputsInline(false);
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setTooltip(Blockly.Msg.GROVE_EMETTEUR_IR_TOOLTIP);
+  }
+};
+
+
+Blockly.Blocks['grove_RECEPTEUR_IR'] = {
+  init: function() {
+    this.setColour(Blockly.Blocks.grove.HUE);
+    this.setHelpUrl(Blockly.Msg.GROVE_RECEPTEUR_IR_HELPURL);
+	this.appendDummyInput()
+        .appendField(Blockly.Msg.GROVE_RECEPTEUR_IR_TEXT)
+        .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/grove/400px-Infrared_Receiver.jpg', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize))
+		.appendField(Blockly.Msg.GROVE_RECEPTEUR_IR_INPUT)
+		.appendField(new Blockly.FieldTextInput('', Blockly.Arduino.pinDigitalValidator), 'PIN');
+    this.setInputsInline(true);
+    this.setOutput(true, 'Boolean');
+    this.setTooltip(Blockly.Msg.GROVE_RECEPTEUR_IR_TOOLTIP);
+  }
+};
+
+Blockly.Blocks['grove_FIN_COURSE'] = {
+  init: function() {
+    this.setColour(Blockly.Blocks.grove.HUE);
+    this.setHelpUrl(Blockly.Msg.GROVE_FIN_COURSE_HELPURL);
+	this.appendDummyInput()
+        .appendField(Blockly.Msg.GROVE_FIN_COURSE_TEXT)
+        .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/grove/400px-fincourse.jpg', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize))
+		.appendField(Blockly.Msg.GROVE_FIN_COURSE_INPUT)
+		.appendField(new Blockly.FieldTextInput('', Blockly.Arduino.pinDigitalValidator), 'PIN');
+    this.setInputsInline(true);
+    this.setOutput(true, 'Boolean');
+    this.setTooltip(Blockly.Msg.GROVE_FIN_COURSE_TOOLTIP);
   }
 };
 
@@ -402,5 +487,213 @@ Blockly.Blocks['grove_dht_read'] = {
     this.setInputsInline(true);
     this.setOutput(true, 'Number');
     this.setTooltip(Blockly.Msg.GROVE_INOUT_DHT_READ_TOOLTIP);
+  }
+};
+
+Blockly.Blocks['grove_lcd_rgb_print'] = {
+  init: function() {
+    this.setColour(Blockly.Blocks.grove.HUE);
+	this.setHelpUrl(Blockly.Msg.GROVE_INOUT_LCD_RGB_HELPURL);
+    this.appendDummyInput()
+        .appendField(Blockly.Msg.GROVE_INOUT_LCD_PRINT_TEXT)
+        .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/grove/400px-LCD_RGB_backlight.jpg', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize));
+    this.appendValueInput("TEXT")
+        .setCheck('String')
+        .setAlign(Blockly.ALIGN_RIGHT)
+        .appendField(Blockly.Msg.GROVE_INOUT_LCD_PRINT_INPUT2);
+    this.appendValueInput("TEXT2")
+        .setCheck('String')
+        .setAlign(Blockly.ALIGN_RIGHT)
+        .appendField(Blockly.Msg.GROVE_INOUT_LCD_PRINT_INPUT3);
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setTooltip(Blockly.Msg.GROVE_INOUT_LCD_PRINT_TOOLTIP);
+  }
+};
+
+//grove lcd power on/off
+Blockly.Blocks['grove_lcd_rgb_power'] = {
+  init: function() {
+    this.setColour(Blockly.Blocks.grove.HUE);
+	this.setHelpUrl(Blockly.Msg.GROVE_INOUT_LCD_RGB_HELPURL);
+    this.appendDummyInput()
+        .appendField(Blockly.Msg.GROVE_INOUT_LCD_POWER_TEXT)
+        .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/grove/400px-LCD_RGB_backlight.jpg', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize));
+    this.appendDummyInput()
+        .setAlign(Blockly.ALIGN_RIGHT)
+        .appendField(Blockly.Msg.GROVE_INOUT_LCD_POWER_STATE)
+        .appendField(new Blockly.FieldDropdown(Blockly.Msg.FIELDDROPDOWN_ONOFF), "STAT");
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setTooltip(Blockly.Msg.GROVE_INOUT_LCD_POWER_TOOLTIP);
+  }
+};
+
+//scroll left/right/no scroll/blink/noblink
+Blockly.Blocks['grove_lcd_rgb_effect'] = {
+  init: function() {
+    this.setColour(Blockly.Blocks.grove.HUE);
+	this.setHelpUrl(Blockly.Msg.GROVE_INOUT_LCD_RGB_HELPURL);
+    this.appendDummyInput()
+        .appendField(Blockly.Msg.GROVE_INOUT_LCD_EFFECT_TEXT)
+        .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/grove/400px-LCD_RGB_backlight.jpg', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize));
+    this.appendDummyInput()
+        .setAlign(Blockly.ALIGN_RIGHT)
+        .appendField(Blockly.Msg.GROVE_INOUT_LCD_EFFECT_EFFECT)
+        .appendField(new Blockly.FieldDropdown(Blockly.Msg.GROVE_INOUT_LCD_EFFECT_EFFECT_EFFECT), "STAT");
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setTooltip(Blockly.Msg.GROVE_INOUT_LCD_EFFECT_TOOLTIP);
+  }
+};
+
+Blockly.Blocks['grove_lcd_rgb_clean'] = {
+  init: function() {
+    this.setColour(Blockly.Blocks.grove.HUE);
+	this.setHelpUrl(Blockly.Msg.GROVE_INOUT_LCD_RGB_HELPURL);
+    this.appendDummyInput()
+        .appendField(Blockly.Msg.GROVE_INOUT_LCD_EFFECT_CLEAN)
+        .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/grove/400px-LCD_RGB_backlight.jpg', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize));
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setTooltip(Blockly.Msg.GROVE_INOUT_LCD_EFFECT_TOOLTIP);
+  }
+};
+
+//@CD 20170318
+Blockly.Blocks['grove_driver13_motor'] = {
+  init: function() {
+    this.setColour(Blockly.Blocks.grove.HUE);
+    this.setHelpUrl(Blockly.Msg.GROVE_DRIVER13_HELPURL);
+	this.appendDummyInput()
+		.appendField(Blockly.Msg.GROVE_DRIVER13_MOTOR_TITLE);
+	this.appendDummyInput()
+        .setAlign(Blockly.ALIGN_CENTRE)
+		.appendField(new Blockly.FieldImage("blocks/grove/I2CMotorDriver_V13.jpg", Blockly.Arduino.imageSize, Blockly.Arduino.imageSize));
+    /*this.appendDummyInput()
+        .appendField(new Blockly.FieldNumber('15', 0, 15, 1), "I2CADDRESS")*/
+	this.appendValueInput("I2CADDRESS")
+        .setCheck(Blockly.Types.NUMBER.checkList)
+        .setAlign(Blockly.ALIGN_RIGHT)
+        .appendField(Blockly.Msg.GROVE_DRIVER13_MOTOR_I2C_ADDRESS);
+    this.appendValueInput("SPEED", 'Number')
+        .appendField(
+				new Blockly.FieldDropdown([
+						[ Blockly.Msg.GROVE_DRIVER_MOTOR1, "MOTOR1" ],
+						[ Blockly.Msg.GROVE_DRIVER_MOTOR2, "MOTOR2" ]]),
+				"NUMMOTOR")
+        .setCheck('Number')
+        .setAlign(Blockly.ALIGN_RIGHT)
+        .appendField(Blockly.Msg.GROVE_DRIVER_SPEED);
+	this.setInputsInline(false);
+	this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+	this.setTooltip(Blockly.Msg.GROVE_DRIVER13_TOOLTIP);
+  }/*,
+  onchange: function(changeEvent) {
+    if (this.getInput('I2CADDRESS').connection.targetBlock()) {
+        var adresse = this.getFieldValue('I2CADDRESS');
+        console.log (adresse);
+        if ((adresse < 0) ||(adresse > 15)) {
+            this.setWarningText("L'adresse doit être entre 0 et 15 (0x0F)");
+        } else {
+            this.setWarningText(null);
+        }
+    } else {
+      this.setWarningText('Must have an input block.');
+    }
+  }*/
+};
+
+//@CD 20170318
+Blockly.Blocks.grove_mini_driver_motor = {
+  init: function() {
+    this.setColour(Blockly.Blocks.grove.HUE);
+    this.setHelpUrl(Blockly.Msg.GROVE_MINI_DRIVER_HELPURL);
+	this.appendDummyInput()
+		.appendField(Blockly.Msg.GROVE_MINI_DRIVER_TITLE);
+	this.appendDummyInput()
+        .setAlign(Blockly.ALIGN_CENTRE)
+		.appendField(Blockly.Msg.GROVE_MINI_DRIVER_MOTOR_MSG);
+	this.appendDummyInput()
+        .setAlign(Blockly.ALIGN_CENTRE)
+		.appendField(new Blockly.FieldImage("blocks/grove/Mini_I2C_motor_2.png", Blockly.Arduino.imageSize, Blockly.Arduino.imageSize));
+    this.appendValueInput("SPEED", 'Number')
+        .appendField(
+				new Blockly.FieldDropdown([
+						[ Blockly.Msg.GROVE_DRIVER_MOTOR1, "0xC0" ],
+						[ Blockly.Msg.GROVE_DRIVER_MOTOR2, "0xC4" ],
+						[ Blockly.Msg.GROVE_DRIVER_MOTOR3, "0xCC" ],
+						[ Blockly.Msg.GROVE_DRIVER_MOTOR4, "0xD0" ]]),
+				"I2CADDRESS")
+        .setCheck('Number')
+        .setAlign(Blockly.ALIGN_RIGHT)
+        .appendField(Blockly.Msg.GROVE_DRIVER_SPEED);
+	this.setInputsInline(false);
+	//	this.setInputsInline(true);
+	this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+	this.setTooltip(Blockly.Msg.GROVE_MINI_DRIVER_MOTOR_TOOLTIP);
+  }
+};
+
+Blockly.Blocks.grove_mini_driver_stop = {
+  init: function() {
+    this.setColour(Blockly.Blocks.grove.HUE);
+    this.setHelpUrl(Blockly.Msg.GROVE_MINI_DRIVER_HELPURL);
+	this.appendDummyInput()
+		.appendField(Blockly.Msg.GROVE_MINI_DRIVER_TITLE);
+	this.appendDummyInput()
+        .setAlign(Blockly.ALIGN_CENTRE)
+		.appendField(Blockly.Msg.GROVE_MINI_DRIVER_STOP_MSG);
+	this.appendDummyInput()
+        .setAlign(Blockly.ALIGN_CENTRE)
+		.appendField(new Blockly.FieldImage("blocks/grove/Mini_I2C_motor_2.png", Blockly.Arduino.imageSize, Blockly.Arduino.imageSize));
+	this.appendDummyInput()
+        .appendField(
+				new Blockly.FieldDropdown([
+						[ Blockly.Msg.GROVE_DRIVER_MOTOR1, "0xC0" ],
+						[ Blockly.Msg.GROVE_DRIVER_MOTOR2, "0xC4" ],
+						[ Blockly.Msg.GROVE_DRIVER_MOTOR3, "0xCC" ],
+						[ Blockly.Msg.GROVE_DRIVER_MOTOR4, "0xD0" ]]),
+				"I2CADDRESS")
+        .setAlign(Blockly.ALIGN_RIGHT);
+	this.setInputsInline(false);
+	//	this.setInputsInline(true);
+	this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+	this.setTooltip(Blockly.Msg.GROVE_MINI_DRIVER_STOP_TOOLTIP);
+  }
+};
+
+Blockly.Blocks.grove_mini_driver_error = {
+  init: function() {
+    this.setColour(Blockly.Blocks.grove.HUE);
+    this.setHelpUrl(Blockly.Msg.GROVE_MINI_DRIVER_HELPURL);
+	this.appendDummyInput()
+		.appendField(Blockly.Msg.GROVE_MINI_DRIVER_TITLE);
+	this.appendDummyInput()
+        .setAlign(Blockly.ALIGN_CENTRE)
+		.appendField(Blockly.Msg.GROVE_MINI_DRIVER_ERROR_MSG);
+	this.appendDummyInput()
+        .setAlign(Blockly.ALIGN_CENTRE)
+		.appendField(new Blockly.FieldImage("blocks/grove/Mini_I2C_motor_2.png", Blockly.Arduino.imageSize, Blockly.Arduino.imageSize));
+	this.appendDummyInput()
+        .appendField(
+				new Blockly.FieldDropdown([
+						[ Blockly.Msg.GROVE_DRIVER_MOTOR1, "0xC0" ],
+						[ Blockly.Msg.GROVE_DRIVER_MOTOR2, "0xC4" ],
+						[ Blockly.Msg.GROVE_DRIVER_MOTOR3, "0xCC" ],
+						[ Blockly.Msg.GROVE_DRIVER_MOTOR4, "0xD0" ]]),
+				"I2CADDRESS")
+        .setAlign(Blockly.ALIGN_RIGHT);
+	this.setInputsInline(false);
+	//	this.setInputsInline(true);
+	this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+  	this.setOutput(true, Blockly.Types.NUMBER.checkList);
+    this.setPreviousStatement(false, null);
+    this.setNextStatement(false, null);
+	this.setTooltip(Blockly.Msg.GROVE_MINI_DRIVER_ERROR_TOOLTIP);
   }
 };

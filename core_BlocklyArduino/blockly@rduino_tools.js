@@ -45,14 +45,25 @@ BlocklyDuino.initGlobalConfig = function () {
 BlocklyDuino.ArduinoIDEClick = function() {
     var code = $('#pre_arduino').text();
     
-    var url = "http://127.0.0.1:5005/openIDE";
+    /*var url = "http://127.0.0.1:5005/openIDE";
     var method = "POST";
     var async = true;
-	var request = new XMLHttpRequest();
+	var request = new XMLHttpRequest();*/
+var filename = "leCodeGenere.ino";
+ 
+  var element = document.createElement('a');
+  element.setAttribute('href', 'data:text/ino;charset=utf-8,' + encodeURIComponent(code)); // put INO in data type to force direct upload to arduino IDE
+  element.setAttribute('download', filename);
+//  element.hidden = true;
 
-	request.open(method, url, async);
+  element.style.display = 'none';
+  document.body.appendChild(element);
+element.click();
+  document.body.removeChild(element);
+
+  /*request.open(method, url, async);
 	request.setRequestHeader("Content-Type", "text/plain;charset=UTF-8");
-	request.send(code);	
+	request.send(code);	*/
 };
 
 BlocklyDuino.uploadClick = function() {

@@ -28,11 +28,8 @@ goog.provide('Blockly.Blocks.arduino_softserial');
 
 goog.require('Blockly.Blocks');
 goog.require('Blockly.Types');
+goog.require('Blockly.FieldInstance');
 
-
-/**
- * Common HSV hue for all blocks in this category.
- */
 
 Blockly.Blocks['soft_init'] = {
   init: function() {
@@ -99,9 +96,6 @@ Blockly.Blocks['soft_read'] = {
     this.setOutput(true, 'String');
     this.setTooltip('');
   },
-  getSerialSetupInstance: function() {
-    return this.getFieldValue('SOFTSERIAL_NAME');
-  },
   /**
    * Called whenever anything on the workspace changes.
    * It checks/warns if the selected stepper instance has a config block.
@@ -110,14 +104,13 @@ Blockly.Blocks['soft_read'] = {
   onchange: function() {
     if (!this.workspace) return;  // Block has been deleted.
 
-    var instanceName = this.getFieldValue('STEPPER_NAME')
-    if (Blockly.Instances.isInstancePresent(instanceName, 'Stepper', this)) {
+    var instanceName = this.getFieldValue('SOFTSERIAL_NAME')
+    if (Blockly.Instances.isInstancePresent(instanceName, 'SoftSerial', this)) {
       this.setWarningText(null);
     } else {
-      // Set a warning to select a valid stepper config block
       this.setWarningText(
-        Blockly.Msg.ARD_COMPONENT_WARN1.replace(
-            '%1', Blockly.Msg.STEPPER_COMPONENT).replace(
+        Blockly.Msg.COMPONENT_WARN.replace(
+            '%1', Blockly.Msg.SOFTSERIAL_COMPONENT).replace(
                 '%2', instanceName));
     }
   }
@@ -151,23 +144,22 @@ Blockly.Blocks['soft_print'] = {
     this.setNextStatement(true, null);
     this.setTooltip('');
   },
+  /**
+   * Called whenever anything on the workspace changes.
+   * It checks/warns if the selected stepper instance has a config block.
+   * @this Blockly.Block
+   */
   onchange: function() {
-    if (!this.workspace) { return; }  // Block has been deleted.
+    if (!this.workspace) return;  // Block has been deleted.
 
-    // Get the Serial instance from this block
-    var thisInstanceName = this.getFieldValue('SOFTSERIAL_NAME');
-
-    // Iterate through top level blocks to find setup instance for the serial id
-    var blocks = Blockly.mainWorkspace.getTopBlocks();
-    var setupInstancePresent = false;
-    for (var x = 0; x < blocks.length; x++) {
-      var func = blocks[x].getSerialSetupInstance;
-      if (func) {
-        var setupBlockInstanceName = func.call(blocks[x]);
-        if (thisInstanceName == setupBlockInstanceName) {
-          setupInstancePresent = true;
-        }
-      }
+    var instanceName = this.getFieldValue('SOFTSERIAL_NAME')
+    if (Blockly.Instances.isInstancePresent(instanceName, 'SoftSerial', this)) {
+      this.setWarningText(null);
+    } else {
+      this.setWarningText(
+        Blockly.Msg.COMPONENT_WARN.replace(
+            '%1', Blockly.Msg.SOFTSERIAL_COMPONENT).replace(
+                '%2', instanceName));
     }
   }
 };
@@ -200,23 +192,22 @@ Blockly.Blocks['soft_write'] = {
     this.setNextStatement(true, null);
     this.setTooltip('');
   },
+  /**
+   * Called whenever anything on the workspace changes.
+   * It checks/warns if the selected stepper instance has a config block.
+   * @this Blockly.Block
+   */
   onchange: function() {
-    if (!this.workspace) { return; }  // Block has been deleted.
+    if (!this.workspace) return;  // Block has been deleted.
 
-    // Get the Serial instance from this block
-    var thisInstanceName = this.getFieldValue('SOFTSERIAL_NAME');
-
-    // Iterate through top level blocks to find setup instance for the serial id
-    var blocks = Blockly.mainWorkspace.getTopBlocks();
-    var setupInstancePresent = false;
-    for (var x = 0; x < blocks.length; x++) {
-      var func = blocks[x].getSerialSetupInstance;
-      if (func) {
-        var setupBlockInstanceName = func.call(blocks[x]);
-        if (thisInstanceName == setupBlockInstanceName) {
-          setupInstancePresent = true;
-        }
-      }
+    var instanceName = this.getFieldValue('SOFTSERIAL_NAME')
+    if (Blockly.Instances.isInstancePresent(instanceName, 'SoftSerial', this)) {
+      this.setWarningText(null);
+    } else {
+      this.setWarningText(
+        Blockly.Msg.COMPONENT_WARN.replace(
+            '%1', Blockly.Msg.SOFTSERIAL_COMPONENT).replace(
+                '%2', instanceName));
     }
   }
 };
@@ -246,23 +237,22 @@ Blockly.Blocks['soft_available'] = {
     this.setOutput(true, 'Boolean');
     this.setTooltip('');
   },
+  /**
+   * Called whenever anything on the workspace changes.
+   * It checks/warns if the selected stepper instance has a config block.
+   * @this Blockly.Block
+   */
   onchange: function() {
-    if (!this.workspace) { return; }  // Block has been deleted.
+    if (!this.workspace) return;  // Block has been deleted.
 
-    // Get the Serial instance from this block
-    var thisInstanceName = this.getFieldValue('SOFTSERIAL_NAME');
-
-    // Iterate through top level blocks to find setup instance for the serial id
-    var blocks = Blockly.mainWorkspace.getTopBlocks();
-    var setupInstancePresent = false;
-    for (var x = 0; x < blocks.length; x++) {
-      var func = blocks[x].getSerialSetupInstance;
-      if (func) {
-        var setupBlockInstanceName = func.call(blocks[x]);
-        if (thisInstanceName == setupBlockInstanceName) {
-          setupInstancePresent = true;
-        }
-      }
+    var instanceName = this.getFieldValue('SOFTSERIAL_NAME')
+    if (Blockly.Instances.isInstancePresent(instanceName, 'SoftSerial', this)) {
+      this.setWarningText(null);
+    } else {
+      this.setWarningText(
+        Blockly.Msg.COMPONENT_WARN.replace(
+            '%1', Blockly.Msg.SOFTSERIAL_COMPONENT).replace(
+                '%2', instanceName));
     }
   }
 };
@@ -293,23 +283,22 @@ Blockly.Blocks['soft_flush'] = {
     this.setNextStatement(true, null);
     this.setTooltip('Waits for the transmission of outgoing serial data to complete.');
   },
+  /**
+   * Called whenever anything on the workspace changes.
+   * It checks/warns if the selected stepper instance has a config block.
+   * @this Blockly.Block
+   */
   onchange: function() {
-    if (!this.workspace) { return; }  // Block has been deleted.
+    if (!this.workspace) return;  // Block has been deleted.
 
-    // Get the Serial instance from this block
-    var thisInstanceName = this.getFieldValue('SOFTSERIAL_NAME');
-
-    // Iterate through top level blocks to find setup instance for the serial id
-    var blocks = Blockly.mainWorkspace.getTopBlocks();
-    var setupInstancePresent = false;
-    for (var x = 0; x < blocks.length; x++) {
-      var func = blocks[x].getSerialSetupInstance;
-      if (func) {
-        var setupBlockInstanceName = func.call(blocks[x]);
-        if (thisInstanceName == setupBlockInstanceName) {
-          setupInstancePresent = true;
-        }
-      }
+    var instanceName = this.getFieldValue('SOFTSERIAL_NAME')
+    if (Blockly.Instances.isInstancePresent(instanceName, 'SoftSerial', this)) {
+      this.setWarningText(null);
+    } else {
+      this.setWarningText(
+        Blockly.Msg.COMPONENT_WARN.replace(
+            '%1', Blockly.Msg.SOFTSERIAL_COMPONENT).replace(
+                '%2', instanceName));
     }
   }
 };

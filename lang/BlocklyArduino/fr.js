@@ -4,6 +4,15 @@ goog.provide('Blockly.Msg.fr');
 
 goog.require('Blockly.Msg');
 
+head.load(
+"lang/BlocklyArduino/user/user_en.js",
+"lang/BlocklyArduino/user/user_fr.js",
+function() {
+    // Call a function when done
+    console.log("Done loading USER language file");
+});
+
+
 Blockly.Msg.ARRAY_CREATE_EMPTY_TITLE = 'vide !';
 Blockly.Msg.ARRAY_CREATE_WITH = "constituée de";
 Blockly.Msg.ARRAY_CREATE_WITH_CONTAINER_TITLE_ADD = "liste ou tableau";
@@ -183,10 +192,28 @@ Blockly.Msg.CAT_BLUETOOTH_MISC = "bluetooth divers";
 Blockly.Msg.CAT_BT_GROVE_COMM = "Grove";
 Blockly.Msg.CAT_BT_TECHNOZONE_BT = "TechnoZone51";
 
+Blockly.Msg.CAT_jfblocks = "trames"; // added february 28th, 2017
+
+Blockly.Msg.CAT_COLLYC = "Collège-Lycée";
+
+Blockly.Msg.CAT_SHARP = "Sharp infrarouge";
+
+Blockly.Msg.CAT_MATRIX_LED_RGB = "Matrice 8x8 DEL RVB";
+
 Blockly.Msg.FIELDDROPDOWN = [["1 (état haut)", "HIGH"], ["0 (état bas)", "LOW"]];
 Blockly.Msg.FIELDDROPDOWN_ONOFF = [["marche", "ON"], ["arrêt", "OFF"]]
 Blockly.Msg.INOUT_HIGH_LEVEL = "1 (état haut)";
 Blockly.Msg.INOUT_LOW_LEVEL = "0 (état bas)";
+
+//**********************************FieldInstance messages***********************************************
+Blockly.Msg.COMPONENT_WARN = 'A %1 configuration block with the same %2 name must be added to use this block!';
+
+Blockly.Msg.SOFTSERIAL_COMPONENT = 'softserial';
+Blockly.Msg.STEPPER_COMPONENT = 'stepper';
+Blockly.Msg.NEOPIXEL_COMPONENT = 'Neopixel';
+Blockly.Msg.SERVO_COMPONENT = 'servomoteur';
+Blockly.Msg.SERVO_DEFAULT_NAME = "SERVO";
+Blockly.Msg.SHARP_IR_COMPONENT = 'télémètre';
 
 //**********************************blocks***********************************************
 //**********************************blocks***********************************************
@@ -281,6 +308,8 @@ Blockly.Msg.ARDUINO_SERVO_ROT_CONTINUE_INPUT3 = "à la vitesse [0~90]";
 Blockly.Msg.ARDUINO_SERVO_ROT_CONTINUE_INPUT4 = "dans le sens";
 Blockly.Msg.ARDUINO_SERVO_ROT_CONTINUE_TOOLTIP = "utilise les degrés pour comme un indice de puissance : 0° -> à fond à gauche | 90° -> repos/équilibre | 180° -> à fond à droite";
 Blockly.Msg.ARDUINO_SERVO_PIN = "sur la broche";
+Blockly.Msg.ARDUINO_SERVO_ATTACH1 = "attacher un servomoteur";
+Blockly.Msg.ARDUINO_SERVO_ATTACH2 = "avec pour identifiant";
 Blockly.Msg.ARDUINO_SERVO_ATTACHED = "présence d'un servomoteur";
 Blockly.Msg.ARDUINO_SERVO_DETACH = "détacher le servomoteur de la broche";
 Blockly.Msg.ARDUINO_SERIAL_PRINT_HELPURL = "http://www.arduino.cc/en/Serial/Print";
@@ -379,6 +408,7 @@ Blockly.Msg.GROVE_INOUT_MOISTURE_HELPURL = "http://www.seeedstudio.com/wiki/Grov
 Blockly.Msg.GROVE_INOUT_MOISTURE_TEXT = "l'humidité";
 Blockly.Msg.GROVE_INOUT_MOISTURE_INPUT = "mesurée sur la broche";
 Blockly.Msg.GROVE_INOUT_MOISTURE_TOOLTIP = "renvoie le niveau d'humidité";
+Blockly.Msg.GROVE_INOUT_LCD_RGB_HELPURL = "http://wiki.seeed.cc/Grove-LCD_RGB_Backlight/";
 Blockly.Msg.GROVE_INOUT_LCD_PRINT_HELPURL = "http://www.seeedstudio.com/wiki/index.php?title=GROVE_-_Starter_Bundle_V1.0b#Serial_LCD";
 Blockly.Msg.GROVE_INOUT_LCD_PRINT_TEXT = "écran LCD";
 Blockly.Msg.GROVE_INOUT_LCD_PRINT_INPUT1 = "sur la broche";
@@ -393,6 +423,7 @@ Blockly.Msg.GROVE_INOUT_LCD_POWER_STATE = "mettre sur";
 Blockly.Msg.GROVE_INOUT_LCD_POWER_TOOLTIP = "éclairage de l'écran LCD on/off";
 Blockly.Msg.GROVE_INOUT_LCD_EFFECT_HELPURL = "http://www.seeedstudio.com/wiki/index.php?title=GROVE_-_Starter_Bundle_V1.0b#LED";
 Blockly.Msg.GROVE_INOUT_LCD_EFFECT_TEXT = "écran LCD";
+Blockly.Msg.GROVE_INOUT_LCD_EFFECT_CLEAN = "effacer l'écran";
 Blockly.Msg.GROVE_INOUT_LCD_EFFECT_INPUT = "sur la broche";
 Blockly.Msg.GROVE_INOUT_LCD_EFFECT_EFFECT = "écrit avec l'effet";
 Blockly.Msg.GROVE_INOUT_LCD_EFFECT_EFFECT_EFFECT = [["défilement à gauche", "LEFT"], ["défilement à droite", "RIGHT"], ["défilement automatique", "AUTO"]];
@@ -440,6 +471,61 @@ Blockly.Msg.GROVE_INOUT_BT_COMM4 = "code secret";
 Blockly.Msg.GROVE_INOUT_BT_COMM5 = "envoyer";
 Blockly.Msg.GROVE_INOUT_BT_COMM6 = "recevoir";
 Blockly.Msg.GROVE_INOUT_BT_TOOLTIP = "Bluetooth V2.0 + EDR esclave. Supporte un seul esclave par carte";
+
+//************************************** ajouté 20/03/2017 \lang\BlocklyArduino **********************************************************
+Blockly.Msg.GROVE_EMETTEUR_IR_TEXT = "Led Infra rouge IR";
+Blockly.Msg.GROVE_EMETTEUR_IR_INPUT1 = "émettre un signal Infra Rouge sur la broche";
+Blockly.Msg.GROVE_EMETTEUR_IR_INPUT2 = "d'une fréquence (Hz) 38000 ";
+Blockly.Msg.GROVE_EMETTEUR_IR_HELPURL = "http://wiki.seeed.cc/Grove-Infrared_Emitter/";
+Blockly.Msg.GROVE_EMETTEUR_IR_TOOLTIP = "Emission d'un signal infra rouge";
+
+//************************************** ajouté 20/03/2017 \lang\BlocklyArduino **********************************************************
+Blockly.Msg.GROVE_RECEPTEUR_IR_HELPURL = "http://wiki.seeed.cc/Grove-Infrared_Receiver/";
+Blockly.Msg.GROVE_RECEPTEUR_IR_TEXT = "l'état du récepteur IR";
+Blockly.Msg.GROVE_RECEPTEUR_IR_INPUT = "sur la broche";
+Blockly.Msg.GROVE_RECEPTEUR_IR_TOOLTIP = "entrée numérique classique en lecture";
+
+//************************************** ajouté 20/03/2017 \lang\BlocklyArduino **********************************************************
+Blockly.Msg.GROVE_FIN_COURSE_HELPURL = "http://www.technologieservices.fr/fr/a-a1000024681-edc1000003/article/GROV201-Module-Grove-Interrupteur-fin-de-course.html";
+Blockly.Msg.GROVE_FIN_COURSE_TEXT = "l'état du capteur fin de course";
+Blockly.Msg.GROVE_FIN_COURSE_INPUT = "sur la broche";
+Blockly.Msg.GROVE_FIN_COURSE_TOOLTIP = "entrée numérique classique en lecture";
+
+//************************************** ajoute 16/03/2017 \lang\BlocklyArduino **********************************************************
+Blockly.Msg.GROVE_INOUT_BT_AT_HELPURL = "http://wiki.seeed.cc/Grove-Serial_Bluetooth_v3.0/";
+Blockly.Msg.GROVE_INOUT_BT_AT_COMM1 = "liaison Bluetooth";
+Blockly.Msg.GROVE_INOUT_BT_AT_COMM2 = "sur la broche";
+Blockly.Msg.GROVE_INOUT_BT_AT_COMM3 = "nom du périphérique";
+Blockly.Msg.GROVE_INOUT_BT_AT_COMM4 = "code secret";
+Blockly.Msg.GROVE_INOUT_BT_AT_COMM5 = "recevoir";
+Blockly.Msg.GROVE_INOUT_BT_AT_COMM6 = "envoyer";
+Blockly.Msg.GROVE_INOUT_BT_AT_TOOLTIP = "Bluetooth V3.0 + EDR esclave. Supporte un seul esclave par carte";
+
+//******** Grove commun à tous les drivers moteur Cdo 2017 03 19*/
+Blockly.Msg.GROVE_DRIVER_MOTOR1 = "Moteur 1";
+Blockly.Msg.GROVE_DRIVER_MOTOR2 = "Moteur 2";
+Blockly.Msg.GROVE_DRIVER_MOTOR3 = "Moteur 3";
+Blockly.Msg.GROVE_DRIVER_MOTOR4 = "Moteur 4";
+Blockly.Msg.GROVE_DRIVER_MOTOR_SPEED = "Vitesse";
+//******** Grove driver13 */
+Blockly.Msg.GROVE_DRIVER13_HELPURL = "http://wiki.seeed.cc/Grove-I2C_Motor_Driver_V1.3/";
+Blockly.Msg.GROVE_DRIVER13_MOTOR_TITLE = "Contrôleur Moteur V1.3";
+Blockly.Msg.GROVE_DRIVER13_MOTOR_I2C_ADDRESS = "Adresse I2C";
+Blockly.Msg.GROVE_DRIVER13_TOOLTIP = "Contrôleur Moteur - " + 
+                            "l'adresse I2C est entre 0 et 15 (0x0F) selon la configuation mise sur la carte, " + 
+                            "la vitesse du moteur choisi est entre -100 et +100, 0 = arrêt";
+//******** Grove minimoto */
+Blockly.Msg.GROVE_MINI_DRIVER_TITLE = "Contrôleur Mini Moteur";
+Blockly.Msg.GROVE_MINI_DRIVER_HELPURL = "http://wiki.seeed.cc/Grove-Mini_I2C_Motor_Driver_v1.0/";
+Blockly.Msg.GROVE_MINI_DRIVER_MOTOR_MSG = "Vitesse";
+Blockly.Msg.GROVE_MINI_DRIVER_MOTOR_TOOLTIP = "Contrôleur Mini Moteur - " + 
+                            "la vitesse du moteur choisi est entre -100 et +100";
+Blockly.Msg.GROVE_MINI_DRIVER_STOP_MSG = "Arrêt";
+Blockly.Msg.GROVE_MINI_DRIVER_STOP_TOOLTIP = "Contrôleur Mini Moteur - " + 
+                            "Arrête le moteur choisi";
+Blockly.Msg.GROVE_MINI_DRIVER_ERROR_MSG = "Etat";
+Blockly.Msg.GROVE_MINI_DRIVER_ERROR_TOOLTIP = "Contrôleur Mini Moteur - " + 
+                            "Retour l'état du moteur choisi (0: OK, 3 et 17: sur-intensité, 9: sous-tension, 5: sur-chauffe)";
 
 //added April 3rd 2015 ESK
 Blockly.Msg.ROBOTS_MOTORS_FORWARD = "avance";
@@ -769,6 +855,7 @@ Blockly.Msg.lp2i_u8g_4draw_print_N4 = "Nombre 4 (en fin de ligne) ="
 Blockly.Msg.lp2i_ledRGB_WS2812B_init = "Led RGB WS2812B Init";
 Blockly.Msg.lp2i_ledRGB_WS2812B_init_Pin = "Broche =";
 Blockly.Msg.lp2i_ledRGB_WS2812B_init_Number_of_Pixels = "Nombre de pixels =";
+Blockly.Msg.lp2i_ledRGB_WS2812B_DEFAULT_NAME = "DEL_RVB";
 Blockly.Msg.lp2i_ledRGB_WS2812B_Brightness = "Luminosité =";
 
 
@@ -1063,7 +1150,7 @@ Blockly.Msg.APDS9960_GREEN_TITLE = "code RVB de Vert (0~255)";
 Blockly.Msg.APDS9960_BLUE_TITLE = "code RVB de Bleu (0~255)";
 Blockly.Msg.APDS9960_COLORSENSOR_TOOLTIP = "renvoie une valeur codée sur 10 bits pour le mélange RVB classique";
 
-//pbra 20160613 L298N
+//******** pbra 20160613 L298N
 Blockly.Msg.ROBOTS_MOTORS_L298N_MOTOR_TITLE = "L298N Contrôleur Moteur";
 Blockly.Msg.ROBOTS_MOTORS_L298N_MOTOR_INIT_TITLE = "L298N Contrôleur Moteur Init";
 Blockly.Msg.ROBOTS_MOTORS_L298N_ID = "Identifiant"
@@ -1078,14 +1165,14 @@ Blockly.Msg.ROBOTS_MOTORS_L298N_BRAKE = "frein";
 Blockly.Msg.ROBOTS_MOTORS_L298N_INIT_TOOLTIP = "L298N, bloc d'initialisation (1 par moteur)";
 Blockly.Msg.ROBOTS_MOTORS_L298N_TOOLTIP = "Bloc L298N, utiliser le même id que dans le bloc d'initialisation";
 
-//pbra 20160607 PinMode
+//******** pbra 20160607 PinMode
 Blockly.Msg.ARDUINO_INOUT_DIGITAL_MODE_HELPURL = "https://www.arduino.cc/en/Reference/PinMode";
 Blockly.Msg.ARDUINO_INOUT_DIGITAL_MODE_INPUT1 = "Changer le mode de fonctionnement de la broche";
 Blockly.Msg.ARDUINO_INOUT_DIGITAL_MODE_INPUT2 = "à";
 Blockly.Msg.ARDUINO_INOUT_DIGITAL_MODE_DROPDOWN = [["ENTREE", "INPUT"], ["SORTIE", "OUTPUT"], ["ENTREE_PULLUP", "INPUT_PULLUP"]];
 Blockly.Msg.ARDUINO_INOUT_DIGITAL_MODE_TOOLTIP = "Configurer la broche spécifée pour fonctionner comme une entrée ou une sortie";
 
-//******** Bluetotth Electronics example http://www.keuwl.com/electronics.html
+//******** Bluetooth Electronics example http://www.keuwl.com/electronics.html
 Blockly.Msg.BT_ELEC_Init_HELPURL = "https://play.google.com/store/apps/details?id=com.keuwl.arduinobluetooth&hl=fr";
 Blockly.Msg.BT_ELEC_init_text = "photographier le QR code pour télécharger l'app Android :";
 Blockly.Msg.BT_ELEC_TOOLTIP = "téléchargement de l'application pour Android";
@@ -1095,3 +1182,63 @@ Blockly.Msg.BT_ELEC_LED_brightness_TOOLTIP = "voir la démo dans l'aide";
 Blockly.Msg.BT_ELEC_RC_car_HELPURL = "http://www.keuwl.com/electronics/rduino/bluet/01-rc-car/";
 Blockly.Msg.BT_ELEC_RC_car_text = "télécommande d'un véhicule par le téléphone";
 Blockly.Msg.BT_ELEC_RC_car_TOOLTIP = "voir la démo dans l'aide";
+
+//******** jfblocks
+Blockly.Msg.jfblocks_Init_HELPURL = "http://jfbegot.free.fr";
+Blockly.Msg.jfblocks_TOOLTIP = "pour décoder des trames Bluetooth Electronics";
+Blockly.Msg.jfblocks_last_value_tooltip = "valeur reçue dans la dernière trame décodée";
+Blockly.Msg.jfblocks_last_value_titre = "dernière valeur";
+Blockly.Msg.jfblocks_decode_tooltip = "décode une trame recue au format:\n<start char><nombre en ASCII><end char>\nex: D145F";
+Blockly.Msg.jfblocks_decode_titre = "quand une trame est reçue";
+Blockly.Msg.jfblocks_action_tooltip = "à placer dans 'quand une trame est reçue'\nle caractère de fin peut être tout sauf numérique";
+Blockly.Msg.jfblocks_action_start_code = "si le caractère de début vaut";
+Blockly.Msg.jfblocks_action_do = "alors faire";
+Blockly.Msg.jfblocks_tx_tooltip = "envoie une trame au format:\n<start char><nombre en ASCII><end char>\nex: D145F";
+Blockly.Msg.jfblocks_tx_titre = "émettre une trame";
+Blockly.Msg.jfblocks_tx_start_code = "Start Code";
+Blockly.Msg.jfblocks_tx_data = "donnée";
+Blockly.Msg.jfblocks_tx_end_code = "End Code";
+
+//******** collyc
+Blockly.Msg.COLLYC_TOUCHE_HELPURL = 'https://www.adafruit.com/products/419';
+Blockly.Msg.COLLYC_TOUCHE_TEXT = "Touche appuyée";
+Blockly.Msg.COLLYC_TOUCHE_LIGNES = "Lignes";
+Blockly.Msg.COLLYC_TOUCHE_TOOLTIP = "Retourne la touche appuyée ou une chaine vide si aucune";
+Blockly.Msg.COLLYC_TOUCHE_LIGNE1 = "Ligne 1";
+Blockly.Msg.COLLYC_TOUCHE_LIGNE2 = "Ligne 2";
+Blockly.Msg.COLLYC_TOUCHE_LIGNE3 = "Ligne 3";
+Blockly.Msg.COLLYC_TOUCHE_LIGNE4 = "Ligne 4";
+Blockly.Msg.COLLYC_TOUCHE_COLONNE1 = "Colonne 1";
+Blockly.Msg.COLLYC_TOUCHE_COLONNE2 = "Colonne 2";
+Blockly.Msg.COLLYC_TOUCHE_COLONNE3 = "Colonne 3";
+
+
+//******** Sharp IR https://github.com/guillaume-rico/SharpIR
+
+Blockly.Msg.SHARP_IR_DEFAULT_NAME = 'TELEM';
+Blockly.Msg.Sharp_IR_HELPURL = 'https://github.com/guillaume-rico/SharpIR';
+Blockly.Msg.Sharp_IR_MODEL = "modèle";
+Blockly.Msg.Sharp_IR_ATTACH1 = 'attacher un télémètre';
+Blockly.Msg.Sharp_IR_ATTACH2 = 'avec pour identifiant';
+Blockly.Msg.Sharp_IR_INPUT1 = 'la distance mesurée par le télémètre';
+Blockly.Msg.Sharp_IR_INPUT2 = 'sur la broche Analogique';
+Blockly.Msg.Sharp_IR_TOOLTIP1 = 'uniquement sur une entrée Analogique';
+Blockly.Msg.Sharp_IR_TOOLTIP2 = 'distance mesurée en cm, penser à temporiser entre 2 mesures';
+
+
+//******** Matrix Neopixel DEL RGB 8 x 8 http://smartduinos.com/arduino-tutorial-8x8-rgb-led-matrix-with-ws8212-driver-with-arduino-uno-from-banggood-com/
+
+Blockly.Msg.MatrixLED_WS2812B_init = "Matrice DEL RGB : initialisation";
+Blockly.Msg.MatrixLED_WS2812B_clean = "Eteindre la matrice";
+Blockly.Msg.MatrixLED_WS2812B_init_Pin = "sur la broche =";
+Blockly.Msg.MatrixLED_WS2812B_init_Number_of_Pixels = "Nombre de pixels =";
+Blockly.Msg.MatrixLED_WS2812B_DEFAULT_NAME = "MATRICE_RVB";
+Blockly.Msg.MatrixLED_WS2812B_setBrightness = "Sur la matrice DEL RGB";
+Blockly.Msg.MatrixLED_WS2812B_Brightness = "régler la luminosité à";
+Blockly.Msg.MatrixLED_WS2812B_URL = "http://smartduinos.com/arduino-tutorial-8x8-rgb-led-matrix-with-ws8212-driver-with-arduino-uno-from-banggood-com/";
+
+Blockly.Msg.MatrixLED_WS2812B_setPixelColor = "Sur la matrice DEL RGB";
+Blockly.Msg.MatrixLED_WS2812B_setPixelColor_Red = "régler le rouge (255 max) =";
+Blockly.Msg.MatrixLED_WS2812B_setPixelColor_Green = "régler le vert (255 max) =";
+Blockly.Msg.MatrixLED_WS2812B_setPixelColor_Blue = "régler le bleu (255 max) =";
+Blockly.Msg.MatrixLED_WS2812B_setPixelColor_Pixel_Number = "du pixel numéro (à partir de 0) =";

@@ -122,6 +122,15 @@ BlocklyDuino.renderSupervisionContent = function() {
 		$("#tabs-3").append(pinLine);
 	}
 
+	// tabs-4
+	/*var pinTemplate4 = $("#template_tabs4").html();
+	var analogNumbers = window.profile["defaultBoard"].analog;
+	for (var i in analogNumbers) {
+		var pinNumber = analogNumbers[i].substring(1);
+		var pinLine = pinTemplate4.replace(/#pin_number#/g, pinNumber);
+		$("#tabs-4").append(pinLine);
+	}*/
+
 	Code.initLanguageSupervision();
 	
 	$.getScript("./supervision/s2aio_iot.js" );
@@ -302,7 +311,8 @@ BlocklyDuino.saveXmlFile = function () {
 BlocklyDuino.saveArduinoFile = function () {
 	  var data = Blockly.Arduino.workspaceToCode();
 	  var datenow = Date.now();
-	  var uri = 'data:text/plain;charset=utf-8,' + encodeURIComponent(data);
+//NBR	  var uri = 'data:text/plain;charset=utf-8,' + encodeURIComponent(data);  
+	  var uri = 'data:text/ino;charset=utf-8,' + encodeURIComponent(data); // NBR: set INO as data type to force the browser to propose to load directly the code into the arduino IDE
 	  $(this)
 	            .attr({
 	            'download': "arduino"+datenow+".ino",

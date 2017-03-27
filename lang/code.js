@@ -151,7 +151,8 @@ Code.initLanguage = function() {
   $('#span_card_picture_change').text(MSG['span_card_picture_change']);
   $('#span_example').text(MSG['span_example']);
   $('#span_create_example').text(MSG['span_create_example']);
-  $('#span_picture').text(MSG['span_picture']);
+  //$('#span_picture').text(MSG['span_picture']);
+  $('#arduino_card_miniPicture').attr('title', MSG['span_picture']);
   $('#aboutModalLabel').text(MSG['aboutModalLabel']);
   $('#aboutBody').html(MSG['aboutBody']);
   
@@ -207,6 +208,7 @@ Code.initLanguage = function() {
   $('#videoModalLabel4').text(MSG['videoModalLabel4']);
   
   $('#configModalGlobalLabel').text(MSG['configModalGlobalLabel']);
+  $('#configGlobalLabel').text(MSG['configGlobalLabel']);
   $('#btn_closeConfigGlobale').text(MSG['btn_close']);
   $('#btn_validConfigGlobale').text(MSG['btn_valid']);
   $('#toolboxes option[value="toolbox_algo"]').text(MSG['span_toolbox_algo']);
@@ -215,6 +217,7 @@ Code.initLanguage = function() {
   $('#toolboxes option[value="toolbox_arduino_3"]').text(MSG['span_toolbox_arduino_3']);
   $('#toolboxes option[value="toolbox_arduino_4"]').text(MSG['span_toolbox_arduino_4']);
   $('#toolboxes option[value="toolbox_arduino_all"]').text(MSG['span_toolbox_all']);
+  $('#toolboxes option[value="toolbox_user"]').text(MSG['span_toolbox_user']);
   $('#span_languageMenu').text(MSG['span_languageMenu']);
   $('#span_OnOffLine').text(MSG['span_OnOffLine']);
   $('#toggle-WebAccess').prop('data-on', MSG['span_OnLine']);
@@ -228,6 +231,7 @@ Code.initLanguage = function() {
   $('#span_Download_Arduino').text(MSG['span_Download_Arduino']);
   $('#span_Download_local').text(MSG['span_Download_local']);
   $('#span_Download_codebender').text(MSG['span_Download_codebender']);
+  $('#span_forms').text(MSG['span_forms']);
   
   $('#btn_configGlobal').attr('title', MSG['span_configGlobal']);
   $('#btn_RGB').attr('title', MSG['span_RGB']);

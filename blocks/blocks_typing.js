@@ -259,7 +259,7 @@ Blockly.Blocks.serial_write_out.getBlockType = function() {
 //---------------------------------arduino_softserial.js-------------------------------------
 
 Blockly.Blocks.soft_read.getBlockType = function() {
-	return Blockly.Types.CHARACTER;
+	return Blockly.Types.TEXT;
 };
 Blockly.Blocks.soft_print.getBlockType = function() {
 	return Blockly.Types.NUMBER;
@@ -507,6 +507,21 @@ Blockly.Blocks.grove_bluetooth_slave.getBlockType = function() {
 Blockly.Blocks.grove_dht_read.getBlockType = function() {
 	return Blockly.Types.NUMBER;
 };
+Blockly.Blocks.grove_mini_driver_error.getBlockType = function () {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.grove_bluetooth_slave_AT.getBlockType = function() {
+   return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.grove_FIN_COURSE.getBlockType = function() {
+   return Blockly.Types.BOOLEAN;
+};
+Blockly.Blocks.grove_EMETTEUR_IR.getBlockType = function() {
+   return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.grove_RECEPTEUR_IR.getBlockType = function() {
+   return Blockly.Types.BOOLEAN;
+};
 
 //***********************************************************************************
 //								ICN
@@ -599,6 +614,24 @@ Blockly.Blocks.lp2i_ledRGB_WS2812B_setPixelColor.getBlockType = function() {
 	return Blockly.Types.NUMBER;
 };
 Blockly.Blocks.lp2i_ledRGB_WS2812B_setBrightness.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+
+//---------------------------------matrix-led-rgb-ws2812b.js-------------------------------------
+
+Blockly.Blocks.MatrixLED_WS2812B_init.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.MatrixLED_WS2812B_setPixelColor.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.MatrixLED_WS2812B_setBrightness.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.MatrixLED_WS2812B_CLEAN.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.MatrixLED_WS2812B_draw.getBlockType = function() {
 	return Blockly.Types.NUMBER;
 };
 
@@ -787,6 +820,9 @@ Blockly.Blocks.robuno_moteurs_CC.getBlockType = function() {
 
 //---------------------------------servo.js-------------------------------------
 
+Blockly.Blocks.servo_attach.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
 Blockly.Blocks.servo_move.getBlockType = function() {
 	return Blockly.Types.NUMBER;
 };
@@ -1088,47 +1124,36 @@ Blockly.Blocks.Zumo_SensorCalibration.getBlockType = function() {
 Blockly.Blocks.EsusBoard_init.getBlockType = function() {
 	return Blockly.Types.NULL;
 };
-
 Blockly.Blocks.EsusBoard_motor1.getBlockType = function() {
 	return Blockly.Types.NULL;
 };
-
 Blockly.Blocks.EsusBoard_motor2.getBlockType = function() {
 	return Blockly.Types.NULL;
 };
-
 Blockly.Blocks.EsusBoard_analog.getBlockType = function() {
 	return Blockly.Types.NUMBER;
 };
-
 Blockly.Blocks.EsusBoard_WifiConfig.getBlockType = function() {
 	return Blockly.Types.NULL;
 };
-
 Blockly.Blocks.EsusBoard_WifiConfigIP.getBlockType = function() {
 	return Blockly.Types.NULL;
 };
-
 Blockly.Blocks.EsusBoard_WifiConfigAP.getBlockType = function() {
 	return Blockly.Types.NULL;
 };
-
 Blockly.Blocks.EsusBoard_ReadStream.getBlockType = function() {
 	return Blockly.Types.TEXT;
 };
-
 Blockly.Blocks.EsusBoard_dataWifiAvailable.getBlockType = function() {
 	return Blockly.Types.BOOLEAN;
 };
-
 Blockly.Blocks.EsusBoard_WifiContain.getBlockType = function() {
 	return Blockly.Types.TEXT;
 };
-
 Blockly.Blocks.EsusBoard_SendStream.getBlockType = function() {
 	return Blockly.Types.NULL;
 };
-
 Blockly.Blocks.EsusBoard_SendFloatStream.getBlockType = function() {
 	return Blockly.Types.NULL;
 };
@@ -1151,5 +1176,36 @@ Blockly.Blocks.APDS9960_ColorSensor_green.getBlockType = function() {
 	return Blockly.Types.NUMBER;
 };
 Blockly.Blocks.APDS9960_ColorSensor_blue.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+
+//---------------------------------JFBlocks.js-------------------------------------
+
+Blockly.Blocks.jfblocks_decode.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.jfblocks_action.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.jfblocks_tx.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.jfblocks_last_value.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+
+//---------------------------------collyc.js-------------------------------------
+
+Blockly.Blocks.collyc_clavier12_touche_appuyee.getBlockType = function () {
+	return Blockly.Types.TEXT;
+};
+
+
+//---------------------------------Sharp_IR.js-------------------------------------
+
+Blockly.Blocks.Sharp_IR_attach.getBlockType = function () {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.Sharp_IR_read.getBlockType = function () {
 	return Blockly.Types.NUMBER;
 };

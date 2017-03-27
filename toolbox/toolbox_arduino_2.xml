@@ -698,6 +698,27 @@
 			<block type="grove_relay"></block>
 			<block type="grove_motor_shield"></block>
 			<block type="grove_rgb_led"></block>
+			<block type="grove_driver13_motor">
+				<value name="I2CADDRESS">
+					<shadow type="math_number">
+						<field name="NUM">15</field>
+					</shadow>
+				</value>
+				<value name="SPEED">
+					<shadow type="math_number">
+						<field name="NUM">100</field>
+					</shadow>
+				</value>
+			</block>
+			<block type="grove_mini_driver_motor">
+				<value name="SPEED">
+					<shadow type="math_number">
+						<field name="NUM">100</field>
+					</shadow>
+				</value>
+			</block>
+			<block type="grove_mini_driver_stop"></block>
+			<block type="grove_mini_driver_error"></block>
 		</category>
 		<category name="CAT_GROVE_LCD" colour="#8ec31f">
 			<block type="grove_serial_lcd_print">
@@ -1221,5 +1242,44 @@
 		<block type="kit_velo_niv2_notone"></block>	
 		<block type="kit_velo_niv2_test_BP"></block>			
 		<block type="kit_velo_niv2_pot"></block>		
+	</category>
+	<category name="CAT_COLLYC" colour="#46C286">
+		<block type="collyc_clavier12_touche_appuyee">
+			<value name="L1">
+				<shadow type="math_number">
+					<field name="NUM">9</field>
+				</shadow>
+			</value>
+			<value name="L2">
+				<shadow type="math_number">
+					<field name="NUM">8</field>
+				</shadow>
+			</value>
+			<value name="L3">
+				<shadow type="math_number">
+					<field name="NUM">7</field>
+				</shadow>
+			</value>
+			<value name="L4">
+				<shadow type="math_number">
+					<field name="NUM">6</field>
+				</shadow>
+			</value>
+			<value name="C1">
+				<shadow type="math_number">
+					<field name="NUM">5</field>
+				</shadow>
+			</value>
+			<value name="C2">
+				<shadow type="math_number">
+					<field name="NUM">4</field>
+				</shadow>
+			</value>
+			<value name="C3">
+				<shadow type="math_number">
+					<field name="NUM">3</field>
+				</shadow>
+			</value>
+		</block>
 	</category>
 </toolbox>
