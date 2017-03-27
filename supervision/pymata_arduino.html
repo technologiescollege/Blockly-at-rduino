@@ -153,25 +153,31 @@
 			   style="width: 500px;" disabled="disabled"/>
 		<br>
 		<br>
-		<canvas id="mycanvas" width="800" height="400"></canvas>
-		<!--div class="canvas-group">
-			<label class="radio-inline">
-				<input type="radio" name="p#pin_number#_tab4" value="0" id="in_ana_#pin_number#" onclick="clicked(this.id);" checked="checked">
-				<span id="span_supervision_disabled_e#pin_number#_tab4"> </span>
-			</label>
-			<label class="radio-inline">
-				<input type="radio" name="p#pin_number#_tab4" value="1" id="out_ana_#pin_number#" onclick="clicked(this.id);">
-				<span id="span_supervision_enabled_e#pin_number#_tab4"> </span>
-			</label>
-			<label><span id="span_supervision_pin_e#pin_number#_tab4"> </span> A#pin_number#</label>
-		</div-->
+		<canvas id="CanvasGraph" width="800" height="400"></canvas>
+		
+		<div id="template_tabs4" style="display:none">
+			<div class="form-inline">
+				<div class="form-group">
+					<label class="radio-inline">
+						<input type="radio" name="p#pin_number#_tab4" value="0" id="in_ana_#pin_number#_tab4" onclick="clicked(this.id);" checked="checked">
+						<span id="span_supervision_disabled_e#pin_number#_tab4"> </span>
+					</label>
+					<label class="radio-inline">
+						<input type="radio" name="p#pin_number#_tab4" value="1" id="out_ana_#pin_number#_tab4" onclick="clicked(this.id);">
+						<span id="span_supervision_enabled_e#pin_number#_tab4"> </span>
+					</label>
+					<label><span id="span_supervision_pin_e#pin_number#_tab4"> </span> A #pin_number# :</label>
+					<input id="ia#pin_number#_tab4" name="pin" class="form-control" type="text" value="0" size="1" disabled="disabled"/>
+				</div>
+			</div>
+		</div>
 		<script type="text/javascript">
 			var smoothie = new SmoothieChart({
 			  grid: { strokeStyle:'rgb(255, 255, 255)', fillStyle:'rgb(60, 0, 0)',
 					  lineWidth: 1, millisPerLine: 1000, verticalSections: 6, },
 			  labels: { fillStyle:'rgb(0, 0, 255)' }
 			});
-			smoothie.streamTo(document.getElementById("mycanvas")); 
+			smoothie.streamTo(document.getElementById("CanvasGraph")); 
 			// Data
 			var line1 = new TimeSeries();
 			var line2 = new TimeSeries();

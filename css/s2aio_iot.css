@@ -30,6 +30,18 @@ body {
     width: 100%;
 }
 
+/* Layout graph
+----------------------------------*/
+#template_tabs4 {
+	position: relative;
+    left: 30px;
+}
+
+#CanvasGraph {
+	position: relative;
+    left: 300px;
+}
+
 /* Layout helpers
 ----------------------------------*/
 .ui-helper-hidden {

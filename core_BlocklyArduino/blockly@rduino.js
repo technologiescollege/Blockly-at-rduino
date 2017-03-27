@@ -115,21 +115,21 @@ BlocklyDuino.renderSupervisionContent = function() {
 
 	// tabs-3
 	var pinTemplate3 = $("#template_tabs3").html();
-	var analogNumbers = window.profile["defaultBoard"].analog;
-	for (var i in analogNumbers) {
-		var pinNumber = analogNumbers[i].substring(1);
+	var analogNumbers3 = window.profile["defaultBoard"].analog;
+	for (var i in analogNumbers3) {
+		var pinNumber = analogNumbers3[i].substring(1);
 		var pinLine = pinTemplate3.replace(/#pin_number#/g, pinNumber);
 		$("#tabs-3").append(pinLine);
 	}
 
 	// tabs-4
-	/*var pinTemplate4 = $("#template_tabs4").html();
-	var analogNumbers = window.profile["defaultBoard"].analog;
-	for (var i in analogNumbers) {
-		var pinNumber = analogNumbers[i].substring(1);
+	var pinTemplate4 = $("#template_tabs4").html();
+	var analogNumbers4 = window.profile["defaultBoard"].analog;
+	for (var i in analogNumbers4){
+		var pinNumber = analogNumbers4[i].substring(1);
 		var pinLine = pinTemplate4.replace(/#pin_number#/g, pinNumber);
 		$("#tabs-4").append(pinLine);
-	}*/
+	}
 
 	Code.initLanguageSupervision();
 	
