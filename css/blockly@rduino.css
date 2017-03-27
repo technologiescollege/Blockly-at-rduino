@@ -545,3 +545,16 @@ html[dir="RTL"] .colors_category {
 }
 .draggable {
 }
+
+
+/* Layout graph
+----------------------------------*/
+.template_tabs4 {
+	position: relative;
+    left: 0px;
+}
+
+#CanvasGraph {
+	position: relative;
+    left: 300px;
+}

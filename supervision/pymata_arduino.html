@@ -155,22 +155,6 @@
 		<br>
 		<canvas id="CanvasGraph" width="800" height="400"></canvas>
 		
-		<div id="template_tabs4" style="display:none">
-			<div class="form-inline">
-				<div class="form-group">
-					<label class="radio-inline">
-						<input type="radio" name="p#pin_number#_tab4" value="0" id="in_ana_#pin_number#_tab4" onclick="clicked(this.id);" checked="checked">
-						<span id="span_supervision_disabled_e#pin_number#_tab4"> </span>
-					</label>
-					<label class="radio-inline">
-						<input type="radio" name="p#pin_number#_tab4" value="1" id="out_ana_#pin_number#_tab4" onclick="clicked(this.id);">
-						<span id="span_supervision_enabled_e#pin_number#_tab4"> </span>
-					</label>
-					<label><span id="span_supervision_pin_e#pin_number#_tab4"> </span> A #pin_number# :</label>
-					<input id="ia#pin_number#_tab4" name="pin" class="form-control" type="text" value="0" size="1" disabled="disabled"/>
-				</div>
-			</div>
-		</div>
 		<script type="text/javascript">
 			var smoothie = new SmoothieChart({
 			  grid: { strokeStyle:'rgb(255, 255, 255)', fillStyle:'rgb(60, 0, 0)',
@@ -181,18 +165,42 @@
 			// Data
 			var line1 = new TimeSeries();
 			var line2 = new TimeSeries();
+			var line3 = new TimeSeries();
+			var line4 = new TimeSeries();
+			var line5 = new TimeSeries();
+			var line6 = new TimeSeries();
+			var line7 = new TimeSeries();
 
 			// Add a random value to each line every second
 			setInterval(function() {
 			  line1.append(new Date().getTime(), $("#ia1").val());
-			  line2.append(new Date().getTime(), Math.random());
+			  line2.append(new Date().getTime(), $("#ia2").val());
+			  line3.append(new Date().getTime(), $("#ia3").val());
+			  line4.append(new Date().getTime(), $("#ia4").val());
+			  line5.append(new Date().getTime(), $("#ia5").val());
+			  line6.append(new Date().getTime(), $("#ia6").val());
+			  line7.append(new Date().getTime(), Math.random());
 			}, 1000);
 
 			// Add to SmoothieChart
-			smoothie.addTimeSeries(line1);
-			smoothie.addTimeSeries(line2,
-				{ strokeStyle:'rgb(0, 255, 0)', fillStyle:'rgba(0, 255, 0, 0.4)', lineWidth:3 });
+			function graph(MyCheckBox) {
+				//if clicked(out_ana_1_tab4) smoothie.addTimeSeries(line1);
+				if((MycheckBox.name == "p0_tab4") && (MycheckBox.checked)) smoothie.addTimeSeries(line7,{ strokeStyle:'rgb(0, 255, 0)', fillStyle:'rgba(0, 255, 0, 0.4)', lineWidth:3 });
+			}
 		</script>
+		
+		<div id="template_tabs4" style="display:none">
+			<div class="form-inline">
+				<div class="form-group">
+					<label class="chekbox-inline">
+						<input type="checkbox" name="p#pin_number#_tab4" id="out_ana_#pin_number#_tab4" value="checkbox#pin_number#_tab4" onclick="graph(this)">
+						<span id="span_supervision_enabled_e#pin_number#_tab4"> </span>
+					</label>
+					<label><span id="span_supervision_pin_e#pin_number#_tab4"> </span> A #pin_number# :</label>
+					<input id="ia#pin_number#_tab4" name="pin" class="form-control" type="text" value="0" size="1" disabled="disabled"/>
+				</div>
+			</div>
+		</div>
 	</div>
 	<!-- FirmataPlus -->
 	<div id="tabs-5" class="tab-pane">
