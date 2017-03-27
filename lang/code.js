@@ -151,7 +151,8 @@ Code.initLanguage = function() {
   $('#span_card_picture_change').text(MSG['span_card_picture_change']);
   $('#span_example').text(MSG['span_example']);
   $('#span_create_example').text(MSG['span_create_example']);
-  $('#span_picture').text(MSG['span_picture']);
+  //$('#span_picture').text(MSG['span_picture']);
+  $('#arduino_card_miniPicture').attr('title', MSG['span_picture']);
   $('#aboutModalLabel').text(MSG['aboutModalLabel']);
   $('#aboutBody').html(MSG['aboutBody']);
   
@@ -207,6 +208,7 @@ Code.initLanguage = function() {
   $('#videoModalLabel4').text(MSG['videoModalLabel4']);
   
   $('#configModalGlobalLabel').text(MSG['configModalGlobalLabel']);
+  $('#configGlobalLabel').text(MSG['configGlobalLabel']);
   $('#btn_closeConfigGlobale').text(MSG['btn_close']);
   $('#btn_validConfigGlobale').text(MSG['btn_valid']);
   $('#toolboxes option[value="toolbox_algo"]').text(MSG['span_toolbox_algo']);

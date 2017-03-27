@@ -43,6 +43,7 @@
 <script type="text/javascript" src="http://codebender.cc/embed/compilerflasher.js"></script-->
 <!--offline plugin-->
 <script type="text/javascript" src="core_BlocklyArduino/compilerflasher.js"></script>
+<script type="text/javascript" src="core_BlocklyArduino/smoothie.js"></script>
 
 <link rel="stylesheet" type="text/css" href="css/blockly@rduino.css"/>
 <!--link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"-->
@@ -75,12 +76,22 @@
 	<!-- 		<button id="btn_switch" class="btn btn-default"> -->
 	<!-- 			<span class="glyphicon glyphicon-retweet"> </span> -->
 	<!-- 		</button> -->
+			<!--outdated
 			<button id="btn_picture" class="btn btn-danger btn-block text-left">
 				<span class="glyphicon glyphicon-alert"> </span>
 				<span id="span_picture"> </span>
+			</button> -->
+			<button id="btn_configGlobal" class="btn btn-danger btn-block text-left" data-toggle="modal" data-target="#configModalGlobal">
+				<span class="glyphicon glyphicon-alert"> </span>
+				<span id="configGlobalLabel"> </span>
 			</button>
+				<div id="div_miniPicture">
+					<a id="miniCard">
+						<img id="arduino_card_miniPicture" />
+					</a>
+				</div>
 			<button id="btn_config" class="text-left btn btn-warning btn-block " data-toggle="modal" data-target="#configModal">
-				<span class="glyphicon glyphicon-th-list"> </span>
+				<span class="glyphicon glyphicon-cog"> </span>
 				<span id="span_config"> </span>
 			</button>
 			<a href="#" id="btn_config_kit" target="_blank" class="text-left btn btn-warning btn-block hidden" role='button'>
@@ -142,13 +153,8 @@
 				<span id="span_create_example"> </span>
 			</a>
 		</div> 
-		<div id="div_miniPicture">
-		    <a id="miniCard">
-		        <img id="arduino_card_miniPicture" />
-		    </a>
-		</div>
 		<div id="div_tools_button">
-			<button id="btn_configGlobal" class="btn btn-warning text-left" data-toggle="modal" data-target="#configModalGlobal">
+			<button id="btn_MiniconfigGlobal" class="btn btn-warning text-left" data-toggle="modal" data-target="#configModalGlobal">
 		       <span class="glyphicon glyphicon-cog"> </span>
 		   </button>
 			<button id="btn_RGB" class="btn btn-primary text-left">

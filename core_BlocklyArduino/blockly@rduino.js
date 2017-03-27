@@ -122,6 +122,15 @@ BlocklyDuino.renderSupervisionContent = function() {
 		$("#tabs-3").append(pinLine);
 	}
 
+	// tabs-4
+	/*var pinTemplate4 = $("#template_tabs4").html();
+	var analogNumbers = window.profile["defaultBoard"].analog;
+	for (var i in analogNumbers) {
+		var pinNumber = analogNumbers[i].substring(1);
+		var pinLine = pinTemplate4.replace(/#pin_number#/g, pinNumber);
+		$("#tabs-4").append(pinLine);
+	}*/
+
 	Code.initLanguageSupervision();
 	
 	$.getScript("./supervision/s2aio_iot.js" );

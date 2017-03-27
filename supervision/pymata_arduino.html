@@ -5,7 +5,7 @@
 	<li role="presentation"><a href="#tabs-4" aria-controls="tabs-4" role="tab" data-toggle="tab"><span id="span_supervision_tab4"> </span></a></li>
 	<li role="presentation"><a href="#tabs-5" aria-controls="tabs-5" role="tab" data-toggle="tab"><span id="span_supervision_tab5"> </span></a></li>
 	<li role="presentation"><a href="#tabs-6" aria-controls="tabs-6" role="tab" data-toggle="tab"><span id="span_supervision_tab6"> </span></a></li>
-	<!--li role="presentation"><a href="#tabs-7" aria-controls="tabs-7" role="tab" data-toggle="tab"><span id="span_supervision_tab7"> </span></a></li-->
+	<li role="presentation"><a href="#tabs-7" aria-controls="tabs-7" role="tab" data-toggle="tab"><span id="span_supervision_tab7"> </span></a></li>
 	<li role="presentation"><a href="#tabs-8" aria-controls="tabs-8" role="tab" data-toggle="tab"><span id="span_supervision_tab8"> </span></a></li>
 </ul>
 
@@ -153,6 +153,40 @@
 			   style="width: 500px;" disabled="disabled"/>
 		<br>
 		<br>
+		<canvas id="mycanvas" width="800" height="400"></canvas>
+		<!--div class="canvas-group">
+			<label class="radio-inline">
+				<input type="radio" name="p#pin_number#_tab4" value="0" id="in_ana_#pin_number#" onclick="clicked(this.id);" checked="checked">
+				<span id="span_supervision_disabled_e#pin_number#_tab4"> </span>
+			</label>
+			<label class="radio-inline">
+				<input type="radio" name="p#pin_number#_tab4" value="1" id="out_ana_#pin_number#" onclick="clicked(this.id);">
+				<span id="span_supervision_enabled_e#pin_number#_tab4"> </span>
+			</label>
+			<label><span id="span_supervision_pin_e#pin_number#_tab4"> </span> A#pin_number#</label>
+		</div-->
+		<script type="text/javascript">
+			var smoothie = new SmoothieChart({
+			  grid: { strokeStyle:'rgb(255, 255, 255)', fillStyle:'rgb(60, 0, 0)',
+					  lineWidth: 1, millisPerLine: 1000, verticalSections: 6, },
+			  labels: { fillStyle:'rgb(0, 0, 255)' }
+			});
+			smoothie.streamTo(document.getElementById("mycanvas")); 
+			// Data
+			var line1 = new TimeSeries();
+			var line2 = new TimeSeries();
+
+			// Add a random value to each line every second
+			setInterval(function() {
+			  line1.append(new Date().getTime(), $("#ia1").val());
+			  line2.append(new Date().getTime(), Math.random());
+			}, 1000);
+
+			// Add to SmoothieChart
+			smoothie.addTimeSeries(line1);
+			smoothie.addTimeSeries(line2,
+				{ strokeStyle:'rgb(0, 255, 0)', fillStyle:'rgba(0, 255, 0, 0.4)', lineWidth:3 });
+		</script>
 	</div>
 	<!-- FirmataPlus -->
 	<div id="tabs-5" class="tab-pane">

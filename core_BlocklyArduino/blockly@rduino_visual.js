@@ -245,11 +245,13 @@ BlocklyDuino.OnOffLine = function() {
   }
   if (AIO == 'on') {
 		$("#btn_configGlobal").addClass("hidden");
+		$("#btn_MiniconfigGlobal").addClass("hidden");
 		$("#pictureModalLabel").addClass("hidden");
 		$("#btn_card_picture_change").removeClass("hidden");
 		$('#pinout_AIO_on').prepend($('#pinout'));	  
   } else {
 		$("#btn_configGlobal").removeClass("hidden");
+		$("#btn_MiniconfigGlobal").removeClass("hidden");
 		$("#pictureModalLabel").removeClass("hidden");
 		$("#btn_card_picture_change").addClass("hidden");
 		$('#pinout_AIO_off').prepend($('#pinout'));	  
