@@ -18,7 +18,7 @@ head.load(
 "blocks/BlocklyArduino/variables.js",
 function() {
     // Call a function when done
-    console.log("Done loading Arduino Blocks");
+    console.log("Done loading Blockly@rduino Blocks");
 });
 
 head.load(
@@ -68,6 +68,7 @@ head.load(
 "blocks/servo/servo.js",
 "blocks/Sharp_IR/Sharp_IR.js",
 "blocks/stepper_motor/stepper_motor.js",
+"blocks/storage/storage.js",
 "blocks/technozone51/technozone51.js",
 "blocks/zumobot/zumo_auto.js",
 "blocks/zumobot/zumo_motors.js",

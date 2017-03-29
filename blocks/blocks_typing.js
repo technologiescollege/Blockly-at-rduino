@@ -271,6 +271,24 @@ Blockly.Blocks.soft_available.getBlockType = function() {
 	return Blockly.Types.BOOLEAN;
 };
 
+//---------------------------------storage.js-------------------------------------
+
+Blockly.Blocks.storage_sd_write.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.storage_eeprom_write_long.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.storage_eeprom_read_long.getBlockType = function() {
+	return Blockly.Types.LARGE_NUMBER;
+};
+Blockly.Blocks.storage_eeprom_write_byte.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.storage_eeprom_read_byte.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+
 //---------------------------------robot_misc.js-------------------------------------
 
 Blockly.Blocks.IR_get.getBlockType = function() {

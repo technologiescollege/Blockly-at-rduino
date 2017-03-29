@@ -43,6 +43,7 @@ Blockly.Blocks.robuno.HUE = "#1A1BFF";
 Blockly.Blocks.servo.HUE = "#191919";
 Blockly.Blocks.Sharp_IR.HUE = "#000000";
 Blockly.Blocks.stepper_motor.HUE = "#8CA55B";
+Blockly.Blocks.storage.HUE = "#00979D";
 Blockly.Blocks.technozone51.HUE = "#646464";
 Blockly.Blocks.Zumo_auto.HUE = "#00138B";
 Blockly.Blocks.Zumo_motors.HUE = "#00138B";
