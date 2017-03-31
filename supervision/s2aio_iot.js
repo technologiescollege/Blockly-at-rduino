@@ -203,7 +203,7 @@ function clicked(id) {
 		case 'pwm':
 			// next = pin_number
 			// show the pwm value field
-			if ($("#"+id).prop("checked")) {
+			if ($("#"+id).prop("checked")) {				
 				$("#v"+next).show();				
 			} else {
 				$("#v"+next).hide();				
@@ -234,6 +234,11 @@ function clicked(id) {
 					break;
 				case 'ana':
 					disableAnalogReporting(pin_number);
+					$("#out_ana_" + pin_number + "_tab4").addClass('hidden');
+					$("#span_supervision_visible_" + pin_number + "_tab4").addClass('hidden');
+					$("#span_supervision_pin_e" + pin_number + "_tab4").addClass('hidden');
+					$("#ia" + pin_number + "_tab4").addClass('hidden');
+					document.getElementById("span_supervision_pin_e" + pin_number + "_tab4").style.display = "none";
 					break;
 			}
 			break;
@@ -247,6 +252,10 @@ function clicked(id) {
 					break;
 				case 'ana':
 					setPinMode(pin_number, analogMode);
+					$("#out_ana_" + pin_number + "_tab4").removeClass('hidden');
+					$("#span_supervision_visible_" + pin_number + "_tab4").removeClass('hidden');
+					$("#span_supervision_pin_e" + pin_number + "_tab4").removeClass('hidden');
+					$("#ia" + pin_number + "_tab4").removeClass('hidden');
 					break;
 			}
 			break;

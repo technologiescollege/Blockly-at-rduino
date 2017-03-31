@@ -12,6 +12,7 @@ Blockly.Msg.SV_tab5 = "FirmataPlus Features";
 Blockly.Msg.SV_tab6 = "i2c";
 Blockly.Msg.SV_tab7 = "Web HTTP";
 Blockly.Msg.SV_tab8 = "Reports";
+Blockly.Msg.SV_visible_tab4 = "visualize";
 Blockly.Msg.SV_alert1 = "WebSocket is supported by your Browser!";
 Blockly.Msg.SV_alert2 = "WebSocket NOT supported by your Browser!";
 Blockly.Msg.SV_onOpen = 'Supervision Has Successfully Connected';

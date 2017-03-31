@@ -549,12 +549,13 @@ html[dir="RTL"] .colors_category {
 
 /* Layout graph
 ----------------------------------*/
-.template_tabs4 {
+#template_tabs4_pin {
 	position: relative;
     left: 0px;
+	top: -500px;
 }
 
 #CanvasGraph {
 	position: relative;
-    left: 300px;
+    left: 200px;
 }
