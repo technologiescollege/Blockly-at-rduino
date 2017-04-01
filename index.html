@@ -44,6 +44,8 @@
 <!--offline plugin-->
 <script type="text/javascript" src="core_BlocklyArduino/compilerflasher.js"></script>
 <script type="text/javascript" src="core_BlocklyArduino/smoothie.js"></script>
+<script type="text/javascript" src="core_BlocklyArduino/clipboard.min.js"></script> 
+
 
 <link rel="stylesheet" type="text/css" href="css/blockly@rduino.css"/>
 <!--link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"-->
@@ -154,9 +156,10 @@
 			</a>
 		</div> 
 		<div id="div_tools_button">
-			<button id="btn_MiniconfigGlobal" class="btn btn-warning text-left" data-toggle="modal" data-target="#configModalGlobal">
-		       <span class="glyphicon glyphicon-cog"> </span>
-		   </button>
+			<button id="btn_Wiring" class="btn btn-primary text-left">
+		       <!--span class="glyphicon glyphicon-briefcase"> </span-->
+		       <span class="glyphicon glyphicon-blackboard"> </span>
+		    </button>
 			<button id="btn_RGB" class="btn btn-primary text-left">
 		       <span class="glyphicon glyphicon-th"> </span>
 		    </button>
@@ -219,8 +222,20 @@
                     <span id="icon_btn_inline" class="glyphicon glyphicon-option-vertical"> </span>
                 </button>
 				<div id="toggle" class="modal-content" style="display: none;">
-					<pre id="pre_previewArduino"></pre>
+					<pre id="pre_previewArduino"></pre>			
+					<button id="btn_CopyCode" class="btn btn-warning" data-clipboard-action="copy" data-clipboard-target="toggle">
+						<span class="glyphicon glyphicon-duplicate"> </span>
+					</button>
 				</div>
+					<script>
+					var clipboard = new Clipboard('.btn_CopyCode');
+					clipboard.on('success', function(e) {
+						console.log(e);
+					});
+					clipboard.on('error', function(e) {
+						console.log(e);
+					});
+					</script>
 			</div>
 			<div id="content_arduino" class="tab-pane">
 				<select id="cb_cf_boards"></select>

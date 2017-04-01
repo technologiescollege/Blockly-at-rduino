@@ -77,6 +77,12 @@ html[dir="RTL"] .menuPanel-ver {
 	text-align: center;
 }
 
+#btn_CopyCode {
+	position: absolute;
+	top: 5px;
+	right: 5px;
+}
+
 #btn_card_picture_mini {
 	padding-right: 10px;	
 	float: left;

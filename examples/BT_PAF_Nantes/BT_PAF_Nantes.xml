@@ -1,13 +1,24 @@
 <xml xmlns="http://www.w3.org/1999/xhtml">
+  <toolboxcategories>CAT_LOGIC,CAT_LOOPS,CAT_MATH,CAT_ARRAY,CAT_TEXT,CAT_VARIABLES,CAT_FUNCTIONS,CAT_ARDUINO,CAT_LCD_SCREEN,CAT_BLUETOOTH_MISC,CAT_ROBOT_MISC,CAT_APDS_9960_RGB_Gesture,CAT_OLED_U8G,CAT_LED_RGB_CHAIN,CAT_MATRIX_LED_RGB,CAT_DFRobot,CAT_ICN,CAT_ROBUNO,CAT_FISCHERTECHNIK,CAT_FLYCAMONE,CAT_MHK,CAT_BQ,CAT_JEULIN,CAT_GROVE,CAT_MULTIFUNCTION,CAT_TECHNOZONE,CAT_TECHNOZONE_ROBOT,CAT_ZUMO,CAT_ROBOTS_MOTORS,CAT_MBOT_1,CAT_MBOT_2,CAT_MBOT_3,CAT_MBOT_4,CAT_ARDUINO_SERVO,CAT_STEPPER,CAT_ESUS,CAT_BT_ELECTRONICS,CAT_jfblocks,CAT_COLLYC,CAT_SHARP</toolboxcategories>
+  <toolbox>toolbox_arduino_all</toolbox>
   <block type="soft_init" id="guH2}bQ1PY*n}eU_A^@)" x="75" y="64">
-    <field name="PIN1">10</field>
-    <field name="PIN2">11</field>
-    <field name="SPEED">300</field>
+    <field name="SOFTSERIAL_NAME">COMserie</field>
+    <field name="SPEED">9600</field>
+    <value name="PIN1">
+      <block type="math_number" id="$`7wZh|Z]S(9!^Tg6P:V">
+        <field name="NUM">10</field>
+      </block>
+    </value>
+    <value name="PIN2">
+      <block type="math_number" id="E?yqq^5eVt|q|Gtgo]D~">
+        <field name="NUM">11</field>
+      </block>
+    </value>
     <next>
       <block type="controls_if" id="d.ka}d|(1VyxV:Y`S_{v">
         <value name="IF0">
           <block type="soft_available" id=":`zWf6lT1gADg~6U|p@n">
-            <field name="RX_ss">10</field>
+            <field name="SOFTSERIAL_NAME">COMserie</field>
           </block>
         </value>
         <statement name="DO0">
@@ -15,7 +26,7 @@
             <field name="VAR">bluetooth</field>
             <value name="VALUE">
               <block type="soft_read" id="5b.Wem?5_8uw;_zQf!sB">
-                <field name="RX_ss">10</field>
+                <field name="SOFTSERIAL_NAME">COMserie</field>
               </block>
             </value>
             <next>

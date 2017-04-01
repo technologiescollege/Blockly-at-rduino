@@ -230,15 +230,16 @@ function clicked(id) {
 			var pin_number = next.substring(id.indexOf('_') + 1);
 			switch (mode) {
 				case 'dig':
+					$("#scrute_out_dig_" + pin_number + "_tab4").addClass("hidden"); //checkbox
+					document.getElementById($("#scrute_span_supervision_pin_e#pin_number#" + pin_number + "_tab4")).style.display = "none"; //label
+					document.getElementById($("#scrute_ip" + pin_number + "_tab4")).style.display = "none"; //input
 					disableDigitalReporting(pin_number);
 					break;
 				case 'ana':
+					$("#scrute_out_ana_" + pin_number + "_tab4").addClass("hidden"); //checkbox
+					document.getElementById("#scrute_span_supervision_pin_e" + pin_number + "_tab4")).style.display = "none"; //label
+					document.getElementById("#scrute_ia" + pin_number + "_tab4")).style.display = "none"; //input
 					disableAnalogReporting(pin_number);
-					$("#out_ana_" + pin_number + "_tab4").addClass('hidden');
-					$("#span_supervision_visible_" + pin_number + "_tab4").addClass('hidden');
-					$("#span_supervision_pin_e" + pin_number + "_tab4").addClass('hidden');
-					$("#ia" + pin_number + "_tab4").addClass('hidden');
-					document.getElementById("span_supervision_pin_e" + pin_number + "_tab4").style.display = "none";
 					break;
 			}
 			break;
@@ -248,14 +249,17 @@ function clicked(id) {
 			var pin_number = next.substring(id.indexOf('_') + 1);
 			switch (mode) {
 				case 'dig':
+					$("#scrute_out_dig_" + pin_number + "_tab4").removeClass("hidden"); //checkbox
+					document.getElementById($("#scrute_span_supervision_pin_e#pin_number#" + pin_number + "_tab4")).style.display = "inline-block"; //label
+					document.getElementById($("#scrute_ip" + pin_number + "_tab4")).style.display = "inline-block"; //input
+					disableDigitalReporting(pin_number);
 					setPinMode(pin_number, inputMode);
 					break;
 				case 'ana':
+					$("#scrute_out_ana_" + pin_number + "_tab4").removeClass("hidden");
+					document.getElementById($("#scrute_span_supervision_pin_e" + pin_number + "_tab4")).style.display = "inline-block"; //label
+					document.getElementById($("#scrute_ia" + pin_number + "_tab4")).style.display = "inline-blok"; //input
 					setPinMode(pin_number, analogMode);
-					$("#out_ana_" + pin_number + "_tab4").removeClass('hidden');
-					$("#span_supervision_visible_" + pin_number + "_tab4").removeClass('hidden');
-					$("#span_supervision_pin_e" + pin_number + "_tab4").removeClass('hidden');
-					$("#ia" + pin_number + "_tab4").removeClass('hidden');
 					break;
 			}
 			break;

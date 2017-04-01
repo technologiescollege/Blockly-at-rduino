@@ -82,6 +82,7 @@ BlocklyDuino.renderContent = function() {
 
 		case 'content_supervision':
 			$("#content_supervision").load('./supervision/pymata_arduino.html', BlocklyDuino.renderSupervisionContent);
+			
 		}
 	}	
 };
@@ -1010,6 +1011,23 @@ BlocklyDuino.clearLocalStorage = function () {
 
 
 /**
+ * iFrame for wiring
+*/ 
+BlocklyDuino.iframeWiring = function() {
+    $.ajax({
+        url: ("https://fr.robom.ru"),
+		cache: false,
+		success: function(c){	$("#content").html(c);}
+		});
+	return false;
+	/*$('#content_area').load("https://fr.robom.ru");
+	BlocklyDuino.workspace.setVisible(false);
+	$("#content_supervision").load('./supervision/pymata_arduino.html', BlocklyDuino.renderSupervisionContent);
+	*/
+};
+
+
+/**
  * Modal first connection -> info
  */
 BlocklyDuino.firstBlocklyArduino = function() {
@@ -1124,4 +1142,3 @@ Blockly.Variables.flyoutCategory = function(workspace) {
   }
   return xmlList;
 };
-
