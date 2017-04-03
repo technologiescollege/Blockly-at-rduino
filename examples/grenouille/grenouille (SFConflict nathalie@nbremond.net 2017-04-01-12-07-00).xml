@@ -1,0 +1,184 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="variables_set" id="1" inline="true" x="102" y="109">
+    <field name="VAR">distance</field>
+    <value name="VALUE">
+      <block type="bq_ultrason" id="2" inline="false">
+        <value name="TRIGER">
+          <block type="math_number" id="3">
+            <field name="NUM">4</field>
+          </block>
+        </value>
+        <value name="DIST">
+          <block type="math_number" id="4">
+            <field name="NUM">5</field>
+          </block>
+        </value>
+      </block>
+    </value>
+    <next>
+      <block type="serial_print" id="5" inline="false">
+        <value name="CONTENT">
+          <block type="text" id="6">
+            <field name="TEXT">distance =</field>
+          </block>
+        </value>
+        <next>
+          <block type="serial_print" id="7" inline="false">
+            <value name="CONTENT">
+              <block type="variables_get" id="8">
+                <field name="VAR">distance</field>
+              </block>
+            </value>
+            <next>
+              <block type="controls_if" id="9" inline="false">
+                <mutation elseif="1"></mutation>
+                <value name="IF0">
+                  <block type="logic_compare" id="10" inline="true">
+                    <field name="OP">LT</field>
+                    <value name="A">
+                      <block type="variables_get" id="11">
+                        <field name="VAR">distance</field>
+                      </block>
+                    </value>
+                    <value name="B">
+                      <block type="math_number" id="12">
+                        <field name="NUM">10</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <statement name="DO0">
+                  <block type="procedures_callnoreturn" id="13">
+                    <mutation name="stop"></mutation>
+                  </block>
+                </statement>
+                <value name="IF1">
+                  <block type="logic_compare" id="14" inline="true">
+                    <field name="OP">GT</field>
+                    <value name="A">
+                      <block type="variables_get" id="15">
+                        <field name="VAR">distance</field>
+                      </block>
+                    </value>
+                    <value name="B">
+                      <block type="math_number" id="16">
+                        <field name="NUM">10</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <statement name="DO1">
+                  <block type="procedures_callnoreturn" id="17">
+                    <mutation name="avancer"></mutation>
+                  </block>
+                </statement>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+  <block type="procedures_defnoreturn" id="18" x="1028" y="94">
+    <mutation></mutation>
+    <field name="NAME">reculer</field>
+    <statement name="STACK">
+      <block type="servo_move" id="19" inline="false">
+        <comment pinned="true" h="80" w="160">gauche</comment>
+        <value name="PIN">
+          <block type="math_number" id="20">
+            <field name="NUM">6</field>
+          </block>
+        </value>
+        <value name="DEGREE">
+          <block type="math_number" id="21">
+            <field name="NUM">180</field>
+          </block>
+        </value>
+        <next>
+          <block type="servo_move" id="22" inline="false">
+            <comment pinned="true" h="80" w="160">droite</comment>
+            <value name="PIN">
+              <block type="math_number" id="23">
+                <field name="NUM">7</field>
+              </block>
+            </value>
+            <value name="DEGREE">
+              <block type="math_number" id="24">
+                <field name="NUM">0</field>
+              </block>
+            </value>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+  <block type="procedures_defnoreturn" id="25" x="1021" y="438">
+    <mutation></mutation>
+    <field name="NAME">avancer</field>
+    <statement name="STACK">
+      <block type="servo_move" id="26" inline="false">
+        <comment pinned="true" h="80" w="160">gauche</comment>
+        <value name="PIN">
+          <block type="math_number" id="27">
+            <field name="NUM">6</field>
+          </block>
+        </value>
+        <value name="DEGREE">
+          <block type="math_number" id="28">
+            <field name="NUM">0</field>
+          </block>
+        </value>
+        <next>
+          <block type="servo_move" id="29" inline="false">
+            <comment pinned="true" h="80" w="160">droite</comment>
+            <value name="PIN">
+              <block type="math_number" id="30">
+                <field name="NUM">7</field>
+              </block>
+            </value>
+            <value name="DEGREE">
+              <block type="math_number" id="31">
+                <field name="NUM">180</field>
+              </block>
+            </value>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+  <block type="procedures_defnoreturn" id="32" x="452" y="583">
+    <mutation></mutation>
+    <field name="NAME">stop</field>
+    <statement name="STACK">
+      <block type="servo_move" id="33" inline="false">
+        <comment pinned="true" h="80" w="160">gauche</comment>
+        <value name="PIN">
+          <block type="math_number" id="34">
+            <field name="NUM">6</field>
+          </block>
+        </value>
+        <value name="DEGREE">
+          <block type="math_number" id="35">
+            <field name="NUM">90</field>
+          </block>
+        </value>
+        <next>
+          <block type="servo_move" id="36" inline="false">
+            <comment pinned="true" h="80" w="160">droite</comment>
+            <value name="PIN">
+              <block type="math_number" id="37">
+                <field name="NUM">7</field>
+              </block>
+            </value>
+            <value name="DEGREE">
+              <block type="math_number" id="38">
+                <field name="NUM">90</field>
+              </block>
+            </value>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+</xml>

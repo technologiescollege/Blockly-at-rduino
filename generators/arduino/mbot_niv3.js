@@ -62,7 +62,7 @@ Blockly.Arduino.mbot_rgb_onboard = function() {
   Blockly.Arduino.includes_['include_mbot'] = '#include <Arduino.h>\n'
 	  + '#include <Wire.h>\n'
 	  + '#include <SoftwareSerial.h>\n'
-	  '#include <MeMCore.h>';
+	  + '#include <MeMCore.h>';
   Blockly.Arduino.definitions_['define_mbot_rgb'] = 'MeRGBLed rgbled_7(7, 7==7?2:4);';
   var pixel_number = this.getFieldValue('Pixel_number') || '\'\'';
   var red = Blockly.Arduino.valueToCode(this, 'Red', Blockly.Arduino.ORDER_ATOMIC);

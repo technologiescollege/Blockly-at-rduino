@@ -1,0 +1,15 @@
+1. pour chaque bloc définir un getBlockType
+2. pour les blocs gérant des variables (comme math_change), getVarType va chercher le typage de la variable interne au bloc en fouillant l typage des blocs annexés/fils.
+
+Blockly.Types.CHARACTER				// Single character
+Blockly.Types.TEXT					// General text string type
+Blockly.Types.BOOLEAN				// Can only have two values, generally 0 for false, or 1 for true
+Blockly.Types.NUMBER				// A general number type
+Blockly.Types.VOLATIL_NUMBER		// Volatil specific for interruption
+Blockly.Types.SHORT_NUMBER			// Short integer number
+Blockly.Types.LARGE_NUMBER			// Number in a large range
+Blockly.Types.DECIMAL				// Number type for numbers with a fractional part
+Blockly.Types.ARRAY					// Array of any type of items
+Blockly.Types.NULL					// Used as a "no type" wild card natively
+Blockly.Types.UNDEF					// Can be used to delegate type assignment
+Blockly.Types.CHILD_BLOCK_MISSING	// Set when no child block (meant to define the variable type) is connected
