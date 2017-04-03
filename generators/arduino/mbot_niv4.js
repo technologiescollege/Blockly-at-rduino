@@ -14,7 +14,7 @@ Blockly.Arduino.mbot_onoff_pin_left_sens = function() {
 
 Blockly.Arduino.mbot_change_pin_left_sens = function() {
 	var value_sens1 = Blockly.Arduino.valueToCode(this, 'STAT', Blockly.Arduino.ORDER_ATOMIC);
-	var code="digitalWrite(7," + value_sens1 + ");\n";
+	var code="digitalWrite(7,!" + value_sens1 + ");\n"; //NBR sens was reversed on left motor... so I added a not (!)
 	return code;
 };
 

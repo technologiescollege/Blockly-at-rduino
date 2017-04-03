@@ -17,7 +17,7 @@ Blockly.Arduino.mbot_mot_left = function() {
 	"  pinMode("+pinpwm1+",OUTPUT);\n";
 	Blockly.Arduino.definitions_['define_mBot_cmd_mot_left'] = "void cmd_mBot_mot_left(byte dirpin,byte pwmpin,boolean sens,byte vitesse)\n"+
 		"{\n"+
-		"  digitalWrite(dirpin,sens);\n"+
+		"  digitalWrite(dirpin,!sens);\n"+ //NBR sens was reversed on left motor... so I added a not (!)
 		"  analogWrite(pwmpin,vitesse);\n"+
 		"}\n";
 	var code="cmd_mBot_mot_left("+pindir1+","+pinpwm1+","+value_sens1+","+value_vitesse1+");\n";

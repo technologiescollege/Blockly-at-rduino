@@ -21,7 +21,7 @@ Blockly.Arduino.mbot_forward = function() {
 	"  pinMode("+pinpwm2+",OUTPUT);\n";
 	Blockly.Arduino.definitions_['define_mBot_cmd_mot'] = "void cmd_mBot_mot(byte dirpin1,byte pwmpin1,boolean sens1,byte vitesse1,byte dirpin2,byte pwmpin2,boolean sens2,byte vitesse2)\n"+
     "{\n"+
-    "  digitalWrite(dirpin1,sens1);\n"+
+    "  digitalWrite(dirpin1,!sens1);\n"+ //NBR sens was reversed on left motor... so I added a not (!)
     "  analogWrite(pwmpin1,vitesse1);\n"+
     "  digitalWrite(dirpin2,sens2);\n"+
     "  analogWrite(pwmpin2,vitesse2);\n"+
@@ -45,7 +45,7 @@ Blockly.Arduino.mbot_backward = function() {
 	"  pinMode("+pinpwm2+",OUTPUT);\n";
 	Blockly.Arduino.definitions_['define_mBot_cmd_mot'] = "void cmd_mBot_mot(byte dirpin1,byte pwmpin1,boolean sens1,byte vitesse1,byte dirpin2,byte pwmpin2,boolean sens2,byte vitesse2)\n"+
     "{\n"+
-    "  digitalWrite(dirpin1,sens1);\n"+
+    "  digitalWrite(dirpin1,!sens1);\n"+ //NBR sens was reversed on left motor... so I added a not (!)
     "  analogWrite(pwmpin1,vitesse1);\n"+
     "  digitalWrite(dirpin2,sens2);\n"+
     "  analogWrite(pwmpin2,vitesse2);\n"+
@@ -69,7 +69,7 @@ Blockly.Arduino.mbot_turn_left = function() {
 	"  pinMode("+pinpwm2+",OUTPUT);\n";
 	Blockly.Arduino.definitions_['define_mBot_cmd_mot'] = "void cmd_mBot_mot(byte dirpin1,byte pwmpin1,boolean sens1,byte vitesse1,byte dirpin2,byte pwmpin2,boolean sens2,byte vitesse2)\n"+
     "{\n"+
-    "  digitalWrite(dirpin1,sens1);\n"+
+    "  digitalWrite(dirpin1,!sens1);\n"+ //NBR sens was reversed on left motor... so I added a not (!)
     "  analogWrite(pwmpin1,vitesse1);\n"+
     "  digitalWrite(dirpin2,sens2);\n"+
     "  analogWrite(pwmpin2,vitesse2);\n"+
@@ -93,7 +93,7 @@ Blockly.Arduino.mbot_turn_right = function() {
 	"  pinMode("+pinpwm2+",OUTPUT);\n";
 	Blockly.Arduino.definitions_['define_mBot_cmd_mot'] = "void cmd_mBot_mot(byte dirpin1,byte pwmpin1,boolean sens1,byte vitesse1,byte dirpin2,byte pwmpin2,boolean sens2,byte vitesse2)\n"+
     "{\n"+
-    "  digitalWrite(dirpin1,sens1);\n"+
+    "  digitalWrite(dirpin1,!sens1);\n"+ //NBR sens was reversed on left motor... so I added a not (!)
     "  analogWrite(pwmpin1,vitesse1);\n"+
     "  digitalWrite(dirpin2,sens2);\n"+
     "  analogWrite(pwmpin2,vitesse2);\n"+
