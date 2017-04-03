@@ -85,7 +85,9 @@ Blockly.Arduino.mbot_buzzer = function() {
 	  + '#include <MeMCore.h>';
   Blockly.Arduino.definitions_['define_mbot_buzzer'] = 'MeBuzzer buzzer;';
   
-  var code = 'buzzer.tone(' + tone_number + '*2^' + octave_number + ', ' + delay_number + ');\n'
+//  var code = 'buzzer.tone(' + tone_number + '*2^' + octave_number + ', ' + delay_number + ');\n'
+//			+ 'delay(20);';
+  var code = 'buzzer.tone(' + tone_number + '*pow(2,' + octave_number + '), ' + delay_number + ');\n' // arduino IDE compiler needs pow(x,y) instead of x^y
 			+ 'delay(20);';
   return code;
 };
