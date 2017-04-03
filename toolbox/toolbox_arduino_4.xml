@@ -742,7 +742,15 @@
 		</category>
 		<sep></sep>
 	</category>
-	<category name="CAT_BLUETOOTH_MISC" colour="#6981F9">
+	<category name="CAT_BLUETOOTH_MISC" colour="#6981F9">	
+		<category name="CAT_ARDUINO_COMM_SOFTSERIAL" colour="#00979D">
+			<block type="soft_init"></block>
+			<block type="soft_flush"></block>
+			<block type="soft_print"></block>
+			<block type="soft_write"></block>
+			<block type="soft_available"></block>
+			<block type="soft_read"></block>
+		</category>
 		<category name="CAT_BT_GROVE_COMM" colour="#8ec31f">
 			<block type="grove_bluetooth_slave"></block>
 			<block type="Bluetooth_Shield_duinoFun">

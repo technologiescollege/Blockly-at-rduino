@@ -1,0 +1,53 @@
+<html>
+<head>
+<title>Test acces mot</title>
+<script type="text/javascript">
+  function makeHttpObject() {
+  try {return new XMLHttpRequest();}
+  catch (erreur) {}
+  try {return new ActiveXObject("Msxml2.XMLHTTP");}
+  catch (erreur) {}
+  try {return new ActiveXObject("Microsoft.XMLHTTP");}
+  catch (erreur) {}
+
+  throw new Error("La création de l’objet pour les requêtes HTTP n’a pas pu avoir lieu.");
+}
+
+function translatecmd(s){
+ var nbmot=Math.floor((s.length+1)/8);
+ var data="";
+ //alert(nbmot);
+ //alert(s);
+ //extraire tous les mots un à un de la base de donnée
+ for (i=0;i<nbmot;i++) {
+   var lemot=s.substr(i*8,7);
+   var requete = makeHttpObject();
+   requete.open("GET", "http://www.technozone51.fr/BlocklyDuinotest/translate.php?code="+lemot, false);
+   requete.send(null);
+   var ligne=requete.responseText.split(/\n/g)[0];
+   if (ligne.indexOf("Invalid")!=-1) {
+    alert("Invalid result");
+    } else {
+    data +=lemot;
+    data +="{";
+    data +=ligne.substr(4);
+    data +="}\n";
+   // alert(ligne.substr(4));
+    }
+
+     }
+        alert(data); 
+}
+
+
+   
+var commande="W015904;W027150;W004533;W136671;";
+translatecmd(commande);
+   
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

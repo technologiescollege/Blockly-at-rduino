@@ -25,7 +25,7 @@ Blockly.Arduino.lp2i_ledRGB_WS2812B_setPixelColor = function() {
   var green = Blockly.Arduino.valueToCode(this, 'Green', Blockly.Arduino.ORDER_ATOMIC);
   var blue = Blockly.Arduino.valueToCode(this, 'Blue', Blockly.Arduino.ORDER_ATOMIC);
 
-  var code = 'pixels_'+dropdown_name+'.setPixelColor('+pixel_number+', pixels'+pin+'.Color('+red+','+green+','+blue+'));\n'
+  var code = 'pixels_'+dropdown_name+'.setPixelColor('+pixel_number+', pixels_'+dropdown_name+'.Color('+red+','+green+','+blue+'));\n'
 			+ 'pixels_'+dropdown_name+'.show();\n';
   return code;
 };

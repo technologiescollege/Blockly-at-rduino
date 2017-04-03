@@ -713,7 +713,7 @@ BlocklyDuino.loadToolboxDefinition = function(toolboxFile) {
 	if (!toolboxFile) {
 		toolboxFile = BlocklyDuino.selectedToolbox;
 	}
-	
+
 	$("#toolboxes").val(toolboxFile);
 	
 	$.ajax( {

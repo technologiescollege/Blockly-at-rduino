@@ -33,8 +33,8 @@
 <script type="text/javascript" src="generators/arduino_resume.js"></script>
 
 <!--TechnoZone51-->
-<script type="text/javascript" src="core_BlocklyArduino/TZ51/html2canvas.js"></script>
-<script type="text/javascript" src="core_BlocklyArduino/TZ51/canvas2image.js"></script>
+<script type="text/javascript" src="core_BlocklyArduino/html2canvas.js"></script>
+<script type="text/javascript" src="core_BlocklyArduino/canvas2image.js"></script>
 <!--Fin TZ51-->
 
 <script type="text/javascript" src="lang/code.js"></script>
@@ -47,7 +47,7 @@
 <script type="text/javascript" src="core_BlocklyArduino/clipboard.min.js"></script> 
 
 
-<link rel="stylesheet" type="text/css" href="css/blockly@rduino.css"/>
+<link rel="stylesheet" type="text/css" href="css/blockly@rduino_test.css"/>
 <!--link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"-->
 <link rel="stylesheet" type="text/css" href="css/bootstrap.min.SEB.css"/>
 <link rel="stylesheet" type="text/css" href="css/bootstrap-toggle.min.css" />
@@ -67,6 +67,35 @@
 		</a> 
 		<b>Blockly@rduino</b> : 
 		<span id="title"></span>
+		<div id="btn_levels_1">
+			<button id="btn_Algo" type="button" class="btn btn-info dropdown-toggle">
+				<b><span id="span_btn_Algo"> </span></b>
+				<span class="glyphicon glyphicon-list"></span>		
+			</button>
+		</div>
+		<div id="btn_levels_2">
+			<button id="btn_ArduinoLevels" type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				<b><span id="span_btn_ArduinoLevels"> </span></b><span class="caret"></span>
+				<span class="glyphicon glyphicon-list"></span>		
+			</button>
+				  <ul class="dropdown-menu">
+					<li><a href="#">1</a></li>
+					<li><a href="#">2</a></li>
+					<li><a href="#">3</a></li>
+					<li><a href="#">4</a></li>
+					<li><a href="#">ALL</a></li>
+				  </ul>
+		</div>
+		<div id="btn_levels_3">
+			<button id="btn_LevelPerso" type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				<b><span id="span_LevelPerso"> </span></b><span class="caret"></span>
+				<span class="glyphicon glyphicon-list"></span>		
+			</button>
+				  <ul class="dropdown-menu">
+					<li><a href="#">Boîte à outils locale</a></li>
+					<li><a href="#">Microfeux Jeulin</a></li>
+				  </ul>
+		</div>
 		<button id="btn_about" type="button" class="btn btn-default btn-sm" data-toggle="modal" data-target="#aboutModal">
 			<b><span id="span_about"> </span></b>
 			<span class="glyphicon glyphicon-user"></span>		
