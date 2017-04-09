@@ -525,10 +525,11 @@ BlocklyDuino.bindFunctions = function() {
 	$('#btn_videos').on('click', function() {
 		$('#videoModal').css("z-index", 1050);
 		$('#videoModal').css("display", "inline-block");
-		$('#videoModal1').prop('src', "https://www.youtube-nocookie.com/embed/nXWwNrwVFXM?list=PLwy0yw3Oq4-uFNmgedXx9_L_TJNORo-4N");
-		$('#videoModal2').prop('src', "https://www.youtube-nocookie.com/embed/vlJl28qE5vg?list=PLwy0yw3Oq4-uFJl0j-efUAAlfCbqtcTMr");
-		$('#videoModal3').prop('src', "https://player.vimeo.com/video/177939950?byline=0&portrait=0");
-		$('#videoModal4').prop('src', "https://player.vimeo.com/video/179961741?byline=0&portrait=0");
+		$('#videoModal1').prop('src', "https://mediacad.ac-nantes.fr/m/2018/d/i");
+		$('#videoModal2').prop('src', "https://mediacad.ac-nantes.fr/m/2017/d/i");
+		$('#videoModal3').prop('src', "https://mediacad.ac-nantes.fr/m/2016/d/i");
+		$('#videoModal4').prop('src', "https://mediacad.ac-nantes.fr/m/2020/d/i");
+		$('#videoModal5').prop('src', "https://www.youtube-nocookie.com/embed/vlJl28qE5vg?list=PLwy0yw3Oq4-uFJl0j-efUAAlfCbqtcTMr");
 	});
 
 	$('#videoModal button.close').on('click', function() {

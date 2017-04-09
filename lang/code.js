@@ -206,6 +206,7 @@ Code.initLanguage = function() {
   $('#videoModalLabel2').text(MSG['videoModalLabel2']);
   $('#videoModalLabel3').text(MSG['videoModalLabel3']);
   $('#videoModalLabel4').text(MSG['videoModalLabel4']);
+  $('#videoModalLabel5').text(MSG['videoModalLabel5']);
   
   $('#configModalGlobalLabel').text(MSG['configModalGlobalLabel']);
   $('#configGlobalLabel').text(MSG['configGlobalLabel']);
