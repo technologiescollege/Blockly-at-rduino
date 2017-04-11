@@ -223,19 +223,10 @@
                 </button>
 				<div id="toggle" class="modal-content" style="display: none;">
 					<pre id="pre_previewArduino"></pre>			
-					<button id="btn_CopyCode" class="btn btn-warning" data-clipboard-action="copy" data-clipboard-target="toggle">
+					<button id="btn_CopyCode" class="btn btn-warning" data-clipboard-action="copy" data-clipboard-target="#pre_previewArduino">
 						<span class="glyphicon glyphicon-duplicate"> </span>
 					</button>
 				</div>
-					<script>
-					var clipboard = new Clipboard('.btn_CopyCode');
-					clipboard.on('success', function(e) {
-						console.log(e);
-					});
-					clipboard.on('error', function(e) {
-						console.log(e);
-					});
-					</script>
 			</div>
 			<div id="content_arduino" class="tab-pane">
 				<select id="cb_cf_boards"></select>

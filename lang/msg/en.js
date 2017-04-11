@@ -17,6 +17,7 @@ var MSG = {
   span_videos: " videos tutorials",
   span_undo: "undo (ctrl+z)",
   span_redo: "redo (ctrl+y)",
+  span_copycode: "copy code",
   span_configGlobal: " Global configuration",
   span_RGB: " convert color <-> RGB values",
   span_convert: " convert text <-> binary",

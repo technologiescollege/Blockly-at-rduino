@@ -421,7 +421,7 @@ BlocklyDuino.Redo = function () {
 BlocklyDuino.bindFunctions = function() {
 	
 	$('#clearLink').on("click", BlocklyDuino.clearLocalStorage);
-	
+	var clipboard = new Clipboard('#btn_CopyCode');
 	// Navigation buttons
 	$('#btn_delete').on("click", BlocklyDuino.discard);
 	$('#btn_undo').on("click", BlocklyDuino.Undo);
