@@ -206,6 +206,7 @@ Code.initLanguage = function() {
   $('#videoModalLabel2').text(MSG['videoModalLabel2']);
   $('#videoModalLabel3').text(MSG['videoModalLabel3']);
   $('#videoModalLabel4').text(MSG['videoModalLabel4']);
+  $('#videoModalLabel5').text(MSG['videoModalLabel5']);
   
   $('#configModalGlobalLabel').text(MSG['configModalGlobalLabel']);
   $('#configGlobalLabel').text(MSG['configGlobalLabel']);
@@ -287,7 +288,8 @@ Code.initLanguageSupervision = function() {
 	  $('span[id^="span_supervision_low_s"]').text(Blockly.Msg.SV_low_s);  
 	  $('span[id^="span_supervision_high_s"]').text(Blockly.Msg.SV_high_s);
 	  $('span[id^="span_supervision_PWM"]').text(Blockly.Msg.SV_PWM);
-	  $('span[id^="span_supervision_read_pin').text(Blockly.Msg.SV_read_pin);	  
+	  $('span[id^="span_supervision_read_pin').text(Blockly.Msg.SV_read_pin);	   
+	  $('#span_supervision_visible').text(Blockly.Msg.SV_visible_tab4); 
 	  $('#span_supervision_get_analog_map').text(Blockly.Msg.SV_get_analog_map);
 	  $('#span_supervision_get_capability').text(Blockly.Msg.SV_get_capability);
 	  $('#span_supervision_get_firmware').text(Blockly.Msg.SV_get_firmware);

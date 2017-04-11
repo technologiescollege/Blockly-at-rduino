@@ -198,7 +198,9 @@ Blockly.Msg.CAT_COLLYC = "Collège-Lycée";
 
 Blockly.Msg.CAT_SHARP = "Sharp infrarouge";
 
-Blockly.Msg.CAT_MATRIX_LED_RGB = "Matrice 8x8 DEL RVB";
+Blockly.Msg.CAT_MATRIX_LED_RGB = "Matrice 8x8 DEL RVB"; //added 25 march 2017
+
+Blockly.Msg.CAT_STORAGE_EEPROM = "stockage de données"; //added 29 march 2017
 
 Blockly.Msg.FIELDDROPDOWN = [["1 (état haut)", "HIGH"], ["0 (état bas)", "LOW"]];
 Blockly.Msg.FIELDDROPDOWN_ONOFF = [["marche", "ON"], ["arrêt", "OFF"]]
@@ -1242,3 +1244,17 @@ Blockly.Msg.MatrixLED_WS2812B_setPixelColor_Red = "régler le rouge (255 max) ="
 Blockly.Msg.MatrixLED_WS2812B_setPixelColor_Green = "régler le vert (255 max) =";
 Blockly.Msg.MatrixLED_WS2812B_setPixelColor_Blue = "régler le bleu (255 max) =";
 Blockly.Msg.MatrixLED_WS2812B_setPixelColor_Pixel_Number = "du pixel numéro (à partir de 0) =";
+
+
+//******** Storage : SD card + EEPROM
+https://www.arduino.cc/en/Reference/EEPROM
+
+Blockly.Msg.STORAGE_WRITE_SD_FILE = "Carte SD, enregistrer sous ";
+Blockly.Msg.STORAGE_SD_DATA = "la donnée";
+Blockly.Msg.STORAGE_SD_NEWLINE = "avec un saut de ligne ?";
+Blockly.Msg.STORAGE_EEPROM_WRITE_LONG = "EEPROM écrire à l'adresse";
+Blockly.Msg.STORAGE_DATA_LONG = "la donnée (long int)";
+Blockly.Msg.STORAGE_EEPROM_READ_LONG = "EEPROM - donnée (long) lue à l'adresse";
+Blockly.Msg.STORAGE_EEPROM_WRITE_BYTE = "EEPROM écrire à l'adresse";
+Blockly.Msg.STORAGE_DATA_BYTE = "la donnée (byte)";
+Blockly.Msg.STORAGE_EEPROM_READ_BYTE = "EEPROM - donnée (byte) lue à l'adresse";

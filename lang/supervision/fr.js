@@ -12,6 +12,7 @@ Blockly.Msg.SV_tab5 = "Pilotage de matériels";
 Blockly.Msg.SV_tab6 = "Bus i2c";
 Blockly.Msg.SV_tab7 = "Requêtes HTTP";
 Blockly.Msg.SV_tab8 = "Rapports";
+Blockly.Msg.SV_visible_tab4 = "Visualiser";
 Blockly.Msg.SV_alert1 = "Votre navigateur est compatible avec les websockets";
 Blockly.Msg.SV_alert2 = "Votre navigateur n'est pas compatible avec les websockets";
 Blockly.Msg.SV_onOpen = " La supervision est connectée à la carte";

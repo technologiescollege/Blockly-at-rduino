@@ -77,6 +77,12 @@ html[dir="RTL"] .menuPanel-ver {
 	text-align: center;
 }
 
+#btn_CopyCode {
+	position: absolute;
+	top: 5px;
+	right: 5px;
+}
+
 #btn_card_picture_mini {
 	padding-right: 10px;	
 	float: left;
@@ -544,4 +550,18 @@ html[dir="RTL"] .colors_category {
   cursor: move;
 }
 .draggable {
+}
+
+
+/* Layout graph
+----------------------------------*/
+#template_tabs4_pin {
+	position: relative;
+    left: 0px;
+	top: -500px;
+}
+
+#CanvasGraph {
+	position: relative;
+    left: 200px;
 }

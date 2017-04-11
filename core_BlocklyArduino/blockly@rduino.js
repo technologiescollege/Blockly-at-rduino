@@ -82,6 +82,7 @@ BlocklyDuino.renderContent = function() {
 
 		case 'content_supervision':
 			$("#content_supervision").load('./supervision/pymata_arduino.html', BlocklyDuino.renderSupervisionContent);
+			
 		}
 	}	
 };
@@ -115,21 +116,21 @@ BlocklyDuino.renderSupervisionContent = function() {
 
 	// tabs-3
 	var pinTemplate3 = $("#template_tabs3").html();
-	var analogNumbers = window.profile["defaultBoard"].analog;
-	for (var i in analogNumbers) {
-		var pinNumber = analogNumbers[i].substring(1);
+	var analogNumbers3 = window.profile["defaultBoard"].analog;
+	for (var i in analogNumbers3) {
+		var pinNumber = analogNumbers3[i].substring(1);
 		var pinLine = pinTemplate3.replace(/#pin_number#/g, pinNumber);
 		$("#tabs-3").append(pinLine);
 	}
 
 	// tabs-4
-	/*var pinTemplate4 = $("#template_tabs4").html();
-	var analogNumbers = window.profile["defaultBoard"].analog;
-	for (var i in analogNumbers) {
-		var pinNumber = analogNumbers[i].substring(1);
+	var pinTemplate4 = $("#template_tabs4").html();
+	var analogNumbers4 = window.profile["defaultBoard"].analog;
+	for (var i in analogNumbers4){
+		var pinNumber = analogNumbers4[i].substring(1);
 		var pinLine = pinTemplate4.replace(/#pin_number#/g, pinNumber);
 		$("#tabs-4").append(pinLine);
-	}*/
+	}
 
 	Code.initLanguageSupervision();
 	
@@ -524,10 +525,11 @@ BlocklyDuino.bindFunctions = function() {
 	$('#btn_videos').on('click', function() {
 		$('#videoModal').css("z-index", 1050);
 		$('#videoModal').css("display", "inline-block");
-		$('#videoModal1').prop('src', "https://www.youtube-nocookie.com/embed/nXWwNrwVFXM?list=PLwy0yw3Oq4-uFNmgedXx9_L_TJNORo-4N");
-		$('#videoModal2').prop('src', "https://www.youtube-nocookie.com/embed/vlJl28qE5vg?list=PLwy0yw3Oq4-uFJl0j-efUAAlfCbqtcTMr");
-		$('#videoModal3').prop('src', "https://player.vimeo.com/video/177939950?byline=0&portrait=0");
-		$('#videoModal4').prop('src', "https://player.vimeo.com/video/179961741?byline=0&portrait=0");
+		$('#videoModal1').prop('src', "https://mediacad.ac-nantes.fr/m/2018/d/i");
+		$('#videoModal2').prop('src', "https://mediacad.ac-nantes.fr/m/2017/d/i");
+		$('#videoModal3').prop('src', "https://mediacad.ac-nantes.fr/m/2016/d/i");
+		$('#videoModal4').prop('src', "https://mediacad.ac-nantes.fr/m/2020/d/i");
+		$('#videoModal5').prop('src', "https://www.youtube-nocookie.com/embed/vlJl28qE5vg?list=PLwy0yw3Oq4-uFJl0j-efUAAlfCbqtcTMr");
 	});
 
 	$('#videoModal button.close').on('click', function() {
@@ -712,7 +714,7 @@ BlocklyDuino.loadToolboxDefinition = function(toolboxFile) {
 	if (!toolboxFile) {
 		toolboxFile = BlocklyDuino.selectedToolbox;
 	}
-	
+
 	$("#toolboxes").val(toolboxFile);
 	
 	$.ajax( {
@@ -1010,6 +1012,23 @@ BlocklyDuino.clearLocalStorage = function () {
 
 
 /**
+ * iFrame for wiring
+*/ 
+BlocklyDuino.iframeWiring = function() {
+    $.ajax({
+        url: ("https://fr.robom.ru"),
+		cache: false,
+		success: function(c){	$("#content").html(c);}
+		});
+	return false;
+	/*$('#content_area').load("https://fr.robom.ru");
+	BlocklyDuino.workspace.setVisible(false);
+	$("#content_supervision").load('./supervision/pymata_arduino.html', BlocklyDuino.renderSupervisionContent);
+	*/
+};
+
+
+/**
  * Modal first connection -> info
  */
 BlocklyDuino.firstBlocklyArduino = function() {
@@ -1124,4 +1143,3 @@ Blockly.Variables.flyoutCategory = function(workspace) {
   }
   return xmlList;
 };
-

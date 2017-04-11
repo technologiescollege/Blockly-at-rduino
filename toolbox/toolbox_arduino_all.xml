@@ -353,6 +353,18 @@
 			<block type="soft_available"></block>
 			<block type="soft_read"></block>
 		</category>
+		<category name="CAT_STORAGE_EEPROM" colour="#00979D">
+			<block type="storage_sd_write">
+			</block>
+			<block type="storage_eeprom_write_long">
+			</block>
+			<block type="storage_eeprom_read_long">
+			</block>
+			<block type="storage_eeprom_write_byte">
+			</block>
+			<block type="storage_eeprom_read_byte">
+			</block>
+		</category>
 		<sep></sep>
 	</category>
 	<category name="CAT_LCD_SCREEN" colour="#57663B">
@@ -480,7 +492,15 @@
 		</category>
 		<sep></sep>
 	</category>
-	<category name="CAT_BLUETOOTH_MISC" colour="#6981F9">
+	<category name="CAT_BLUETOOTH_MISC" colour="#6981F9">	
+		<category name="CAT_ARDUINO_COMM_SOFTSERIAL" colour="#00979D">
+			<block type="soft_init"></block>
+			<block type="soft_flush"></block>
+			<block type="soft_print"></block>
+			<block type="soft_write"></block>
+			<block type="soft_available"></block>
+			<block type="soft_read"></block>
+		</category>
 		<category name="CAT_BT_GROVE_COMM" colour="#8ec31f">
 			<block type="grove_bluetooth_slave"></block>
 			<block type="grove_bluetooth_slave_AT"></block>

@@ -1,23 +1,31 @@
 <xml xmlns="http://www.w3.org/1999/xhtml">
-  <block type="servo_move" id="2" inline="false" x="41" y="9">
+  <toolboxcategories>CAT_LOGIC,CAT_LOOPS,CAT_MATH,CAT_ARRAY,CAT_TEXT,CAT_VARIABLES,CAT_FUNCTIONS,CAT_ARDUINO,CAT_LCD_SCREEN,CAT_BLUETOOTH_MISC,CAT_ROBOT_MISC,CAT_APDS_9960_RGB_Gesture,CAT_OLED_U8G,CAT_LED_RGB_CHAIN,CAT_MATRIX_LED_RGB,CAT_DFRobot,CAT_ICN,CAT_ROBUNO,CAT_FISCHERTECHNIK,CAT_FLYCAMONE,CAT_MHK,CAT_BQ,CAT_JEULIN,CAT_GROVE,CAT_MULTIFUNCTION,CAT_TECHNOZONE,CAT_TECHNOZONE_ROBOT,CAT_ZUMO,CAT_ROBOTS_MOTORS,CAT_MBOT_1,CAT_MBOT_2,CAT_MBOT_3,CAT_MBOT_4,CAT_ARDUINO_SERVO,CAT_STEPPER,CAT_ESUS,CAT_BT_ELECTRONICS,CAT_jfblocks,CAT_COLLYC,CAT_SHARP</toolboxcategories>
+  <toolbox>toolbox_arduino_all</toolbox>
+  <block type="servo_attach" id="CbPdf4BIw,kND?sFBufw" x="38" y="13">
+    <field name="SERVO_NAME">SERVO</field>
     <value name="PIN">
-      <block type="math_number" id="3">
+      <block type="math_number" id="ZGw2xWK}/whIYfYJ_mNE">
         <field name="NUM">6</field>
       </block>
     </value>
-    <value name="DEGREE">
-      <block type="base_map" id="28">
-        <value name="NUM">
-          <block type="inout_analog_read_validator" id="DtXa~88{J:U]mW%?-yOa">
-            <field name="PIN">A1</field>
-          </block>
-        </value>
-        <value name="DMAX">
-          <block type="math_number" id="30">
-            <field name="NUM">180</field>
+    <next>
+      <block type="servo_move" id="2" inline="false">
+        <field name="SERVO_NAME">SERVO</field>
+        <value name="DEGREE">
+          <block type="base_map" id="28">
+            <value name="NUM">
+              <block type="inout_analog_read_validator" id="DtXa~88{J:U]mW%?-yOa">
+                <field name="PIN">A1</field>
+              </block>
+            </value>
+            <value name="DMAX">
+              <block type="math_number" id="30">
+                <field name="NUM">180</field>
+              </block>
+            </value>
           </block>
         </value>
       </block>
-    </value>
+    </next>
   </block>
 </xml>

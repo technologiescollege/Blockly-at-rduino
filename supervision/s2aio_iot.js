@@ -1,4 +1,3 @@
-// connect to the server
 var ipAddress = "localhost";
 var ipPort = "9000";
 
@@ -203,7 +202,7 @@ function clicked(id) {
 		case 'pwm':
 			// next = pin_number
 			// show the pwm value field
-			if ($("#"+id).prop("checked")) {
+			if ($("#"+id).prop("checked")) {				
 				$("#v"+next).show();				
 			} else {
 				$("#v"+next).hide();				
@@ -231,9 +230,15 @@ function clicked(id) {
 			switch (mode) {
 				case 'dig':
 					disableDigitalReporting(pin_number);
+					/*$("#scrute_out_dig_" + pin_number + "_tab4").addClass("hidden"); //checkbox
+					document.getElementById($("#scrute_span_supervision_pin_e#pin_number#" + pin_number + "_tab4")).style.display = "none"; //label
+					document.getElementById($("#scrute_ip" + pin_number + "_tab4")).style.display = "none"; //input*/
 					break;
 				case 'ana':
 					disableAnalogReporting(pin_number);
+					/*$("#scrute_out_ana_" + pin_number + "_tab4").addClass("hidden"); //checkbox
+					document.getElementById("#scrute_span_supervision_pin_e" + pin_number + "_tab4")).style.display = "none"; //label
+					document.getElementById("#scrute_ia" + pin_number + "_tab4")).style.display = "none"; //input*/
 					break;
 			}
 			break;
@@ -244,9 +249,15 @@ function clicked(id) {
 			switch (mode) {
 				case 'dig':
 					setPinMode(pin_number, inputMode);
+					/*$("#scrute_out_dig_" + pin_number + "_tab4").removeClass("hidden"); //checkbox
+					document.getElementById($("#scrute_span_supervision_pin_e#pin_number#" + pin_number + "_tab4")).style.display = "inline-block"; //label
+					document.getElementById($("#scrute_ip" + pin_number + "_tab4")).style.display = "inline-block"; //input*/
 					break;
 				case 'ana':
 					setPinMode(pin_number, analogMode);
+					/*$("#scrute_out_ana_" + pin_number + "_tab4").removeClass("hidden");
+					document.getElementById($("#scrute_span_supervision_pin_e" + pin_number + "_tab4")).style.display = "inline-block"; //label
+					document.getElementById($("#scrute_ia" + pin_number + "_tab4")).style.display = "inline-blok"; //input*/
 					break;
 			}
 			break;

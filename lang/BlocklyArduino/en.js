@@ -194,7 +194,9 @@ Blockly.Msg.CAT_COLLYC = "Collège-Lycée";
 
 Blockly.Msg.CAT_SHARP = "Sharp IR";
 
-Blockly.Msg.CAT_MATRIX_LED_RGB = "Matrix RGB LED 8x8";
+Blockly.Msg.CAT_MATRIX_LED_RGB = "Matrix RGB LED 8x8"; //added 25 march 2017
+
+Blockly.Msg.CAT_STORAGE_EEPROM = "storage"; //added 29 march 2017
 
 //**********************************FieldInstance messages***********************************************
 Blockly.Msg.COMPONENT_WARN = 'A %1 configuration block with the same %2 name must be added to use this block!';
@@ -1233,3 +1235,17 @@ Blockly.Msg.MatrixLED_WS2812B_setPixelColor_Red = "set red (255 max) =";
 Blockly.Msg.MatrixLED_WS2812B_setPixelColor_Green = "set green (255 max) =";
 Blockly.Msg.MatrixLED_WS2812B_setPixelColor_Blue = "set blue (255 max) =";
 Blockly.Msg.MatrixLED_WS2812B_setPixelColor_Pixel_Number = "for pixel number (0 first) =";
+
+
+//******** Storage : SD card + EEPROM
+https://www.arduino.cc/en/Reference/EEPROM
+
+Blockly.Msg.STORAGE_WRITE_SD_FILE = "SD Card, write file";
+Blockly.Msg.STORAGE_SD_DATA = "with data";
+Blockly.Msg.STORAGE_SD_NEWLINE = "newline?";
+Blockly.Msg.STORAGE_EEPROM_WRITE_LONG = "EEPROM write (long) adress";
+Blockly.Msg.STORAGE_DATA_LONG = "data";
+Blockly.Msg.STORAGE_EEPROM_READ_LONG = "EEPROM - read (long) adress";
+Blockly.Msg.STORAGE_EEPROM_WRITE_BYTE = "EEPROM - write (byte) adress";
+Blockly.Msg.STORAGE_DATA_BYTE = "data";
+Blockly.Msg.STORAGE_EEPROM_READ_BYTE = "EEPROM - write (byte) adress";

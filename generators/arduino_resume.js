@@ -52,6 +52,7 @@ head.load(
 "generators/arduino/Sharp_IR.js",
 "generators/arduino/spi_comm.js",
 "generators/arduino/stepper_motor.js",
+"generators/arduino/storage.js",
 "generators/arduino/technozone51.js",
 //"generators/arduino/technozone51_barbot.js",
 "generators/arduino/zumo_auto.js",
