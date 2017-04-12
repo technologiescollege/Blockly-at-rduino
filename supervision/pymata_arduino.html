@@ -182,6 +182,10 @@
 			  line6.append(new Date().getTime(), Math.random());
 			}, 1000);
 
+			function update(jscolor) {
+				// 'jscolor' instance can be used as a string
+				document.getElementById('menuPanel').style.backgroundColor = jscolor;
+			}
 			// Add to SmoothieChart
 			function graph(MyCheckBox) {
 				var num_MyCheckBox = MyCheckBox.substring(MyCheckBox.indexOf("ana_",0) + 4,MyCheckBox.indexOf("_tab4",0));
@@ -226,7 +230,13 @@
 					</label>
 					<label id="scrute_span_supervision_pin_e#pin_number#_tab4"style="display: none"> A #pin_number# :</label>
 					<input id="scrute_ia#pin_number#_tab4" name="pin" class="form-control" type="text" value="0" size="1" disabled="disabled" style="display: none"/>
-					<input id="Graph_pickcolor_A#pin_number#" class="jscolor" size="1" value="ab2567"/>
+					<input id="Graph_pickcolor_A#pin_number#" class="jscolor {hash:true}" onchange="update(this.jscolor)"><script>
+					function update(jscolor) {
+						// 'jscolor' instance can be used as a string
+						document.getElementById('menuPanel').style.backgroundColor = jscolor;
+						Blockly.Blocks.APDS9960.HUE = "#" + jscolor;
+					}
+			</script>
 					
 					<!--label class="chekbox-inline">
 						<input type="checkbox" name="scrute_e#pin_number#_tab4" id="scrute_out_dig_#pin_number#_tab4" value="1" oncheck="graph(this.id)">

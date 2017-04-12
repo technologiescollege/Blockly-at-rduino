@@ -160,9 +160,23 @@
 		       <!--span class="glyphicon glyphicon-briefcase"> </span-->
 		       <span class="glyphicon glyphicon-text-height"> </span>
 		    </button>
-			<button id="btn_colors" class="btn btn-warning text-left">
+			<button id="btn_colors" class="btn btn-warning text-left jscolor {valueElement:null,value:'F0AD4E'}" onchange="update(this.jscolor)">
 		       <span class="glyphicon glyphicon-tint"> </span>
 		    </button>
+			<script>
+					function update(jscolor) {
+						// 'jscolor' instance can be used as a string
+						document.getElementById('menuPanel').style.backgroundColor = jscolor;
+					}
+			</script>	   
+			<!--input class="jscolor {hash:true}" onchange="update(this.jscolor)">
+			<script>
+					function update(jscolor) {
+						// 'jscolor' instance can be used as a string
+						document.getElementById('menuPanel').style.backgroundColor = jscolor;
+						Blockly.Blocks.APDS9960.HUE = "#" + jscolor;
+					}
+			</script-->
 		</div>
 		<div id="div_tools_button">
 			<button id="btn_Wiring" class="btn btn-primary text-left">
@@ -185,15 +199,7 @@
 		   </a>
 		   <a id="btn_tuto" class='btn btn-success btn-info text-left' href="http://blockly.technologiescollege.fr/forum/" target="_blank" role='button'>
 		       <span class="glyphicon glyphicon-question-sign"></span>
-		   </a>		   
-			<!--input class="jscolor {hash:true}" onchange="update(this.jscolor)">
-			<script>
-					function update(jscolor) {
-						// 'jscolor' instance can be used as a string
-						document.getElementById('menuPanel').style.backgroundColor = jscolor;
-						Blockly.Blocks.APDS9960.HUE = "#" + jscolor;
-					}
-			</script-->
+		   </a>	
 		</div>       
     </div>
 
