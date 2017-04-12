@@ -132,8 +132,8 @@ BlocklyDuino.renderSupervisionContent = function() {
 		$("#tabs-4").append(pinLine);
 	}
 
-	Code.initLanguageSupervision();
-	
+	Code.initLanguageSupervision();	
+	$.getScript("./core_BlocklyArduino/jscolor.js" );
 	$.getScript("./supervision/s2aio_iot.js" );
 };
 
@@ -421,6 +421,8 @@ BlocklyDuino.Redo = function () {
 BlocklyDuino.bindFunctions = function() {
 	
 	$('#clearLink').on("click", BlocklyDuino.clearLocalStorage);
+
+	$('#btn_reset').on("click", BlocklyDuino.clearLocalStorage);
 	
 	var clipboard = new Clipboard('#btn_CopyCode');
 	
@@ -513,7 +515,6 @@ BlocklyDuino.bindFunctions = function() {
 	});
 
 	$('#btn_example').on("click", BlocklyDuino.buildExamples);
-	$('#btn_Wiring').on("click", BlocklyDuino.iframeWiring);
 
 	$('#miniCard, #btn_picture').on('click', function() {
 		$('#showcardModal').css("z-index", 1040);
@@ -542,6 +543,7 @@ BlocklyDuino.bindFunctions = function() {
 		$('#videoModal2').prop('src', "");
 		$('#videoModal3').prop('src', "");
 		$('#videoModal4').prop('src', "");
+		$('#videoModal5').prop('src', "");
 		$('#videoModal').hide();
 	});
 	
@@ -554,7 +556,7 @@ BlocklyDuino.bindFunctions = function() {
 		$('#convertModal').css("z-index", 0);
 		$('#convertModal').hide();
 	});
-
+	
 	$('#btn_RGB').on('click', function() {
 		$('#RGB_modal').css("z-index", 1070);
 		$('#RGB_modal').css("display", "inline-block");
@@ -1012,17 +1014,6 @@ BlocklyDuino.testAjax = function() {
 BlocklyDuino.clearLocalStorage = function () {
 	window.removeEventListener('unload', BlocklyDuino.backupBlocks, false);
 	localStorage.clear();
-};
-
-
-/**
- * iFrame for wiring
-*/ 
-
-BlocklyDuino.iframeWiring = function() {
-	$("#iframeWiring iframe").prop('src', "https://fr.robom.ru");
-	$("#content_blocks").toggle();
-	$("#iframeWiring").toggle();
 };
 
 

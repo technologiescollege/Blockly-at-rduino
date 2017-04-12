@@ -103,6 +103,12 @@
 	    </div>
 	    <div id="menuPanelBlockly" class="margin-top-5">
 	            <ul id="ul_nav" role="tablist">
+	            <li role="presentation" id="tab_wiring">
+	                 <a href="#content_wiring" aria-controls="content_wiring" role="tab" data-toggle="tab">
+	                     <span class="glyphicon glyphicon-blackboard"></span>
+	                     <span id="a_wiring"> </span>
+	                 </a>
+	            </li>
 	            <li role="presentation" id="tab_supervision">
 	                 <a href="#content_supervision" aria-controls="content_supervision" role="tab" data-toggle="tab">
 	                     <span class="glyphicon glyphicon-transfer"></span>
@@ -171,10 +177,9 @@
 			</script>
 		</div>
 		<div id="div_tools_button">
-			<button id="btn_Wiring" class="btn btn-primary text-left">
-		       <!--span class="glyphicon glyphicon-briefcase"> </span-->
-		       <span class="glyphicon glyphicon-blackboard"> </span>
-		    </button>
+			<a href="./index.html" id="btn_reset" class="btn btn-danger text-left">
+				   <span class="glyphicon glyphicon-off"> </span>
+			</a>
 			<button id="btn_RGB" class="btn btn-primary text-left">
 		       <span class="glyphicon glyphicon-th"> </span>
 		    </button>
@@ -198,11 +203,10 @@
     <!-- Nav tabs -->
     <div id="divTabpanel" role="tabpanel">
         <!-- Tab panes -->
-        <div id="content_area" class="tab-content">
-	        <div id="iframeWiring" style="display: none;">
-				<iframe width="100%" height="100%" frameborder="0"></iframe>
-			</div>
-        
+        <div id="content_area" class="tab-content">        
+			<div id="content_wiring" class="tab-pane">
+				<iframe width="100%" height="100%" frameborder="0" src="https://fr.robom.ru"></iframe>
+            </div>
 			<div id="content_blocks" class="tab-pane active" style="position: relative;">
 				<button id="btn_delete" class="btn btn-danger">
 					<span class="glyphicon glyphicon-erase"> </span>
@@ -295,9 +299,9 @@
             </div>
             <div id="content_supervision" class="tab-pane">
             </div>
-            <div id="content_xml" class="tab-pane">
+            <!--div id="content_xml" class="tab-pane">
                 <pre id="pre_xml"></pre>
-            </div>
+            </div-->
         </div>
     </div>
     </div>
