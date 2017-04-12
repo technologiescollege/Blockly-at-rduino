@@ -490,6 +490,7 @@ BlocklyDuino.bindFunctions = function() {
 			window.sessionStorage.msg_first_seen = true;
 		}
 		$('#firstModal').modal('hide');
+		$('#videoFirstModal').remove;
 	});
 
 	$('#firstModal').on('hidden.bs.modal', function (e) {
@@ -1036,10 +1037,11 @@ BlocklyDuino.iframeWiring = function() {
 BlocklyDuino.firstBlocklyArduino = function() {
 	if (BlocklyDuino.getStringParamFromUrl('AIO', '') == 'on') {
 		$('#firstModal').addClass('draggable');
+		$('#videoFirstModal').prop('src', "https://mediacad.ac-nantes.fr/m/2047/d/i"); 
 	} else if (window.sessionStorage && !window.sessionStorage.msg_first_seen) {
-		$('#videoFirstModal').prop('src', "https://player.vimeo.com/video/179569437?autoplay=1&title=0&byline=0&portrait=0"); 
-		$('#firstModal').modal('show');	
+		$('#videoFirstModal').prop('src', "https://player.vimeo.com/video/179569437?autoplay=0&title=0&byline=0&portrait=0"); 
 	}
+	$('#firstModal').modal('show');
 };
 
 /**
