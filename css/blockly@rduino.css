@@ -127,6 +127,13 @@ html[dir="RTL"] .menuPanel-ver {
     text-align: center;
 }
 
+#div_accessibility_button {
+    width: 200px;
+    bottom: 90px;
+    position: absolute;
+    text-align: center;
+}
+
 .div_help_button-hor {
     padding-left: 0px;
     bottom: 10px;
