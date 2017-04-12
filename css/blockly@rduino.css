@@ -561,7 +561,18 @@ html[dir="RTL"] .colors_category {
 	top: -500px;
 }
 
+#CanvasGraph_title {
+	position: relative;
+    left: 0px;
+}
+
+#CanvasGraph_button_div {
+	position: relative;
+    left: 0px;
+}
+
 #CanvasGraph {
 	position: relative;
+	top: -30px;
     left: 200px;
 }
