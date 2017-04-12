@@ -225,39 +225,43 @@ function clicked(id) {
 			break;
 		case 'in' :
 			// next = mode + pin_number
-			var mode = next.substring(0, id.indexOf('_'));
-			var pin_number = next.substring(id.indexOf('_') + 1);
+			var mode = next.substring(0, next.indexOf('_'));
+			var pin_number = next.substring(next.indexOf('_') + 1);
 			switch (mode) {
 				case 'dig':
 					disableDigitalReporting(pin_number);
-					/*$("#scrute_out_dig_" + pin_number + "_tab4").addClass("hidden"); //checkbox
-					document.getElementById($("#scrute_span_supervision_pin_e#pin_number#" + pin_number + "_tab4")).style.display = "none"; //label
-					document.getElementById($("#scrute_ip" + pin_number + "_tab4")).style.display = "none"; //input*/
+					$("#scrute_out_dig_" + pin_number + "_tab4").hide(); //checkbox
+					$("#scrute_span_supervision_pin_e" + pin_number + "_tab4").hide(); //label
+					$("#scrute_ip" + pin_number + "_tab4").hide(); //input
+					$("Graph_pickcolor_D" + pin_number).hide(); //color
 					break;
 				case 'ana':
 					disableAnalogReporting(pin_number);
-					/*$("#scrute_out_ana_" + pin_number + "_tab4").addClass("hidden"); //checkbox
-					document.getElementById("#scrute_span_supervision_pin_e" + pin_number + "_tab4")).style.display = "none"; //label
-					document.getElementById("#scrute_ia" + pin_number + "_tab4")).style.display = "none"; //input*/
+					$("#scrute_out_ana_" + pin_number + "_tab4").hide(); //checkbox
+					$("#scrute_span_supervision_pin_e" + pin_number + "_tab4").hide(); //label
+					$("#scrute_ia" + pin_number + "_tab4").hide(); //input
+					$("Graph_pickcolor_A" + pin_number).hide(); //color
 					break;
 			}
 			break;
 		case 'out' :
 			// next = mode + pin_number
-			var mode = next.substring(0, id.indexOf('_'));
-			var pin_number = next.substring(id.indexOf('_') + 1);
+			var mode = next.substring(0, next.indexOf('_'));
+			var pin_number = next.substring(next.indexOf('_') + 1);
 			switch (mode) {
 				case 'dig':
 					setPinMode(pin_number, inputMode);
-					/*$("#scrute_out_dig_" + pin_number + "_tab4").removeClass("hidden"); //checkbox
-					document.getElementById($("#scrute_span_supervision_pin_e#pin_number#" + pin_number + "_tab4")).style.display = "inline-block"; //label
-					document.getElementById($("#scrute_ip" + pin_number + "_tab4")).style.display = "inline-block"; //input*/
+					$("#scrute_out_dig_" + pin_number + "_tab4").show(); //checkbox
+					$("#scrute_span_supervision_pin_e" + pin_number + "_tab4").show(); //label
+					$("#scrute_ip" + pin_number + "_tab4").show(); //input
+					$("Graph_pickcolor_D" + pin_number).show(); //color
 					break;
 				case 'ana':
 					setPinMode(pin_number, analogMode);
-					/*$("#scrute_out_ana_" + pin_number + "_tab4").removeClass("hidden");
-					document.getElementById($("#scrute_span_supervision_pin_e" + pin_number + "_tab4")).style.display = "inline-block"; //label
-					document.getElementById($("#scrute_ia" + pin_number + "_tab4")).style.display = "inline-blok"; //input*/
+					$("#scrute_out_ana_" + pin_number + "_tab4").show();
+					$("#scrute_span_supervision_pin_e" + pin_number + "_tab4").show(); //label
+					$("#scrute_ia" + pin_number + "_tab4").show(); //input
+					$("Graph_pickcolor_A" + pin_number).show(); //color
 					break;
 			}
 			break;

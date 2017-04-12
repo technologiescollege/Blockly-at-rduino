@@ -155,6 +155,15 @@
 				<span id="span_create_example"> </span>
 			</a>
 		</div> 
+		<div id="div_accessibility_button">
+			<button id="btn_font" class="btn btn-warning text-left">
+		       <!--span class="glyphicon glyphicon-briefcase"> </span-->
+		       <span class="glyphicon glyphicon-text-height"> </span>
+		    </button>
+			<button id="btn_colors" class="btn btn-warning text-left">
+		       <span class="glyphicon glyphicon-tint"> </span>
+		    </button>
+		</div>
 		<div id="div_tools_button">
 			<button id="btn_Wiring" class="btn btn-primary text-left">
 		       <!--span class="glyphicon glyphicon-briefcase"> </span-->
@@ -223,19 +232,10 @@
                 </button>
 				<div id="toggle" class="modal-content" style="display: none;">
 					<pre id="pre_previewArduino"></pre>			
-					<button id="btn_CopyCode" class="btn btn-warning" data-clipboard-action="copy" data-clipboard-target="toggle">
+					<button id="btn_CopyCode" class="btn btn-warning" data-clipboard-action="copy" data-clipboard-target="#pre_previewArduino">
 						<span class="glyphicon glyphicon-duplicate"> </span>
 					</button>
 				</div>
-					<script>
-					var clipboard = new Clipboard('.btn_CopyCode');
-					clipboard.on('success', function(e) {
-						console.log(e);
-					});
-					clipboard.on('error', function(e) {
-						console.log(e);
-					});
-					</script>
 			</div>
 			<div id="content_arduino" class="tab-pane">
 				<select id="cb_cf_boards"></select>
@@ -326,7 +326,7 @@
               <br /> - JQuerry (<a href='https://jquery.com' target='blank'>https://jquery.com)</a>
               <br /> - HeadJS (<a href='http://headjs.com/' target='blank'>http://headjs.com/)</a>
 			  <br />
-			  <br /><i>version 26-03-2017 - v2.3 "Kit Cat"</i>
+			  <br /><i>version 12-04-2017 - v2.4 "Oscillo"</i>
 			  <br />
 			  <br />
 			  <div align="center" id="paypal_about">
