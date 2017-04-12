@@ -513,6 +513,7 @@ BlocklyDuino.bindFunctions = function() {
 	});
 
 	$('#btn_example').on("click", BlocklyDuino.buildExamples);
+	$('#btn_Wiring').on("click", BlocklyDuino.iframeWiring);
 
 	$('#miniCard, #btn_picture').on('click', function() {
 		$('#showcardModal').css("z-index", 1040);
@@ -1017,17 +1018,11 @@ BlocklyDuino.clearLocalStorage = function () {
 /**
  * iFrame for wiring
 */ 
+
 BlocklyDuino.iframeWiring = function() {
-    $.ajax({
-        url: ("https://fr.robom.ru"),
-		cache: false,
-		success: function(c){	$("#content").html(c);}
-		});
-	return false;
-	/*$('#content_area').load("https://fr.robom.ru");
-	BlocklyDuino.workspace.setVisible(false);
-	$("#content_supervision").load('./supervision/pymata_arduino.html', BlocklyDuino.renderSupervisionContent);
-	*/
+	$("#iframeWiring iframe").prop('src', "https://fr.robom.ru");
+	$("#content_blocks").toggle();
+	$("#iframeWiring").toggle();
 };
 
 
@@ -1038,10 +1033,11 @@ BlocklyDuino.firstBlocklyArduino = function() {
 	if (BlocklyDuino.getStringParamFromUrl('AIO', '') == 'on') {
 		$('#firstModal').addClass('draggable');
 		$('#videoFirstModal').prop('src', "https://mediacad.ac-nantes.fr/m/2047/d/i"); 
+		$('#firstModal').modal('show');
 	} else if (window.sessionStorage && !window.sessionStorage.msg_first_seen) {
 		$('#videoFirstModal').prop('src', "https://player.vimeo.com/video/179569437?autoplay=0&title=0&byline=0&portrait=0"); 
+		$('#firstModal').modal('show');
 	}
-	$('#firstModal').modal('show');
 };
 
 /**
