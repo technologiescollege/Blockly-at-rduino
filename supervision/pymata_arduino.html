@@ -193,18 +193,20 @@
 				/*var numline = 'line' + num_MyCheckBox;
 				alert(numline);*/
 				if((num_MyCheckBox == 0) && $("#" + MyCheckBox).prop('checked')) smoothie.addTimeSeries(line0,{ strokeStyle:'#00ff00', fillStyle:'rgba(0, 0, 0, 0.4)', lineWidth:3 });
-					else smoothie.addTimeSeries(line0,{ strokeStyle:'none', lineWidth:3 });
+					else smoothie.removeTimeSeries(line0);
 				if((num_MyCheckBox == 1) && $("#" + MyCheckBox).prop('checked')) smoothie.addTimeSeries(line1,{ strokeStyle:'#0000CC', fillStyle:'rgba(0, 0, 0, 0.4)', lineWidth:3 });
-					else smoothie.addTimeSeries(line1,{ strokeStyle:'none', lineWidth:3 });
+					else smoothie.removeTimeSeries(line1);
 				if((num_MyCheckBox == 2) && $("#" + MyCheckBox).prop('checked')) smoothie.addTimeSeries(line2,{ strokeStyle:'#FF0033', fillStyle:'rgba(0, 0, 0, 0.4)', lineWidth:3 });
-					else smoothie.addTimeSeries(line2,{ strokeStyle:'none', lineWidth:3 });
+					else smoothie.removeTimeSeries(line2);
 				if((num_MyCheckBox == 3) && $("#" + MyCheckBox).prop('checked')) smoothie.addTimeSeries(line3,{ strokeStyle:'#FFFF00', fillStyle:'rgba(0, 0, 0, 0.4)', lineWidth:3 });
-					else smoothie.addTimeSeries(line3,{ strokeStyle:'none', lineWidth:3 });
+					else smoothie.removeTimeSeries(line3);
 				if((num_MyCheckBox == 4) && $("#" + MyCheckBox).prop('checked')) smoothie.addTimeSeries(line4,{ strokeStyle:'#660066', fillStyle:'rgba(0, 0, 0, 0.4)', lineWidth:3 });
-					else smoothie.addTimeSeries(line4,{ strokeStyle:'none', lineWidth:3 });
+					else smoothie.removeTimeSeries(line4);
 				if((num_MyCheckBox == 5) && $("#" + MyCheckBox).prop('checked')) smoothie.addTimeSeries(line5,{ strokeStyle:'#CC66FF', fillStyle:'rgba(0, 0, 0, 0.4)', lineWidth:3 });
-					else smoothie.addTimeSeries(line5,{ strokeStyle:'none', lineWidth:3 });
+					else smoothie.removeTimeSeries(line5);
+			smoothie.streamTo(document.getElementById("CanvasGraph"),500);
 			};
+			
 			smoothie.streamTo(document.getElementById("CanvasGraph"),500);
 			
 			//pause & run
