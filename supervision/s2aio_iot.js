@@ -233,14 +233,16 @@ function clicked(id) {
 					$("#scrute_out_dig_" + pin_number + "_tab4").hide(); //checkbox
 					$("#scrute_span_supervision_pin_e" + pin_number + "_tab4").hide(); //label
 					$("#scrute_ip" + pin_number + "_tab4").hide(); //input
-					$("Graph_pickcolor_D" + pin_number).hide(); //color
+					$("#Graph_pickcolor_D" + pin_number).hide(); //color
+					$("#Graph_pickcolor_button_D" + pin_number).hide(); //color
 					break;
 				case 'ana':
 					disableAnalogReporting(pin_number);
 					$("#scrute_out_ana_" + pin_number + "_tab4").hide(); //checkbox
 					$("#scrute_span_supervision_pin_e" + pin_number + "_tab4").hide(); //label
 					$("#scrute_ia" + pin_number + "_tab4").hide(); //input
-					$("Graph_pickcolor_A" + pin_number).hide(); //color
+					$("#Graph_pickcolor_A" + pin_number).hide(); //color
+					$("#Graph_pickcolor_button_A" + pin_number).hide(); //color
 					break;
 			}
 			break;
@@ -254,14 +256,16 @@ function clicked(id) {
 					$("#scrute_out_dig_" + pin_number + "_tab4").show(); //checkbox
 					$("#scrute_span_supervision_pin_e" + pin_number + "_tab4").show(); //label
 					$("#scrute_ip" + pin_number + "_tab4").show(); //input
-					$("Graph_pickcolor_D" + pin_number).show(); //color
+					$("#Graph_pickcolor_D" + pin_number).show(); //color
+					$("#Graph_pickcolor_button_D" + pin_number).show(); //color
 					break;
 				case 'ana':
 					setPinMode(pin_number, analogMode);
 					$("#scrute_out_ana_" + pin_number + "_tab4").show();
 					$("#scrute_span_supervision_pin_e" + pin_number + "_tab4").show(); //label
 					$("#scrute_ia" + pin_number + "_tab4").show(); //input
-					$("Graph_pickcolor_A" + pin_number).show(); //color
+					$("#Graph_pickcolor_A" + pin_number).show(); //color
+					$("#Graph_pickcolor_button_A" + pin_number).show(); //color
 					break;
 			}
 			break;

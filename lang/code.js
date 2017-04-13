@@ -170,6 +170,7 @@ Code.initLanguage = function() {
   $('#span_saveXML').text(MSG['span_saveXML']);
   $('#span_fakeload').text(MSG['span_fakeload']);
 
+  $('#a_wiring').text(MSG['span_wiring']);
   $('#a_supervision').text(MSG['span_supervision']);
   $('#a_blocks').text(MSG['a_blocks']);
   $('#a_arduino').text(MSG['a_arduino']);
@@ -221,10 +222,15 @@ Code.initLanguage = function() {
   $('#toolboxes option[value="toolbox_user"]').text(MSG['span_toolbox_user']);
   $('#span_languageMenu').text(MSG['span_languageMenu']);
   $('#span_OnOffLine').text(MSG['span_OnOffLine']);
-  $('#toggle-WebAccess').prop('data-on', MSG['span_OnLine']);
+  
+  $('#toggle-WebAccess-on').text(MSG['span_OnLine']);
+  $('#toggle-WebAccess-off').text(MSG['span_OffLine']);
+  $('#toggle-LocalCodebender-on').text(MSG['span_LocalCodebender_Code']);
+  $('#toggle-LocalCodebender-off').text(MSG['span_LocalCodebender_Local']);
+  /*$('#toggle-WebAccess').prop('data-on', MSG['span_OnLine']);
   $('#toggle-WebAccess').prop('data-off', MSG['span_OffLine']);
   $('#toggle-LocalCodebender').prop('data-on', MSG['span_LocalCodebender_Code']);
-  $('#toggle-LocalCodebender').prop('data-off', MSG['span_LocalCodebender_Local']);
+  $('#toggle-LocalCodebender').prop('data-off', MSG['span_LocalCodebender_Local']);*/
   $('#span_Upload').text(MSG['span_Upload']);
   $('#span_Upload_local').text(MSG['span_Upload_local']);
   $('#span_Upload_codebender').text(MSG['span_Upload_codebender']);
@@ -235,6 +241,9 @@ Code.initLanguage = function() {
   $('#span_forms').text(MSG['span_forms']);
   
   $('#btn_configGlobal').attr('title', MSG['span_configGlobal']);
+  $('#btn_font').attr('title', MSG['span_font']);
+  $('#btn_colors').attr('title', MSG['span_colors']);
+  $('#btn_reset').attr('title', MSG['span_reset']);
   $('#btn_RGB').attr('title', MSG['span_RGB']);
   $('#btn_convert').attr('title', MSG['span_convert']);
   $('#btn_doc').attr('title', MSG['span_doc']);  
