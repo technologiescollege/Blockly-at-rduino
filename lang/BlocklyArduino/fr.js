@@ -1138,6 +1138,46 @@ Blockly.Msg.ESUS_WIFI_AP_IP = "adresse IP :";
 Blockly.Msg.ESUS_WIFI_SEND_STREAM = "envoyer donnée WiFi (texte)";
 Blockly.Msg.ESUS_WIFI_SEND_FLOAT_STREAM = "envoyer donnée WiFi (nombre)";
 
+//******** Robot MRduino (Mace Robotics)
+Blockly.Msg.CAT_MRDUINO = "MRduino Robot";
+Blockly.Msg.MRduino_init="Initialisation robot MRduino";
+Blockly.Msg.MRduino_forward="Avancer";
+Blockly.Msg.MRduino_forward_mm="Avancer distance";
+Blockly.Msg.MRduino_controlEnable="Activer controle";
+Blockly.Msg.MRduino_controlDisable="Désactiver controle";
+Blockly.Msg.MRduino_stop="Stop";
+Blockly.Msg.MRduino_back="reculer";
+Blockly.Msg.MRduino_back_mm="reculer distance";
+Blockly.Msg.MRduino_turnLeft="Tourner à gauche";
+Blockly.Msg.MRduino_turnLeft_degree="Tourner à gauche degré";
+Blockly.Msg.MRduino_turnRight="Tourner à droite";
+Blockly.Msg.MRduino_turnRight_degree="Tourner à droite degré";
+Blockly.Msg.MRduino_proxSensor1="Capteur proximité 1";
+Blockly.Msg.MRduino_proxSensor2="Capteur proximité 2";
+Blockly.Msg.MRduino_proxSensor3="Capteur proximité 3";
+Blockly.Msg.MRduino_proxSensor4="Capteur proximité 4";
+Blockly.Msg.MRduino_proxSensor5="Capteur proximité 5";
+Blockly.Msg.MRduino_proxSensor6="Capteur proximité 6";
+Blockly.Msg.MRduino_ambiantLight1="Capteur de lumière 1";
+Blockly.Msg.MRduino_ambiantLight2="Capteur de lumière 2";
+Blockly.Msg.MRduino_ambiantLight3="Capteur de lumière 3";
+Blockly.Msg.MRduino_ambiantLight4="Capteur de lumière 4";
+Blockly.Msg.MRduino_ambiantLight5="Capteur de lumière 5";
+Blockly.Msg.MRduino_ambiantLight6="Capteur de lumière 6";
+Blockly.Msg.MRduino_groundSensor1="Capteur de sol 1";
+Blockly.Msg.MRduino_groundSensor2="Capteur de sol 2";
+Blockly.Msg.MRduino_groundSensor3="Capteur de sol 3";
+Blockly.Msg.MRduino_led1On="led n°1 allumer";
+Blockly.Msg.MRduino_led2On="led n°2 allumer";
+Blockly.Msg.MRduino_led3On="led n°3 allumer";
+Blockly.Msg.MRduino_led1Off="led n°1 éteindre";
+Blockly.Msg.MRduino_led2Off="led n°2 éteindre";
+Blockly.Msg.MRduino_led3Off="led n°3 éteindre";
+Blockly.Msg.MRduino_led1Toggle="led n°1 toggle";
+Blockly.Msg.MRduino_led2Toggle="led n°2 toggle";
+Blockly.Msg.MRduino_led3Toggle="led n°3 toggle";
+Blockly.Msg.MRduino_battery="tension de la batterie";
+Blockly.Msg.MRduino_temperature="temperature";
 
 //******** APDS9960 couleurs et mouvements
 Blockly.Msg.APDS9960_MISC_HELPURL = "https://www.sparkfun.com/products/12787";

@@ -43,6 +43,7 @@ head.load(
 "generators/arduino/mbot_niv2.js",
 "generators/arduino/mbot_niv3.js",
 "generators/arduino/mbot_niv4.js",
+"generators/arduino/MRduino.js",
 "generators/arduino/multi-function.js",
 "generators/arduino/myhumankit.js",
 "generators/arduino/robot_motors.js",

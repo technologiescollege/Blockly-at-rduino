@@ -1,41 +1,14 @@
-/**
- * @license
- * Visual Blocks Editor
- *
- * Copyright 2012 Google Inc.
- * https://developers.google.com/blockly/
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *   http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
-
-/**
- * @fileoverview Colour blocks for Blockly.
- * @author fraser@google.com (Neil Fraser)
- */
 'use strict';
 
-goog.provide('Blockly.Blocks.serial');
+goog.provide('Blockly.Blocks.MRduino');
 
 goog.require('Blockly.Blocks');
+goog.require('Blockly.Types');
 
-
-/**
- * Common HSV hue for all blocks in this category.
- */
 
  Blockly.Blocks['MRduino_init'] = {
   init: function() {
-    this.setColour("#00979D");
+    this.setColour(Blockly.Blocks.MRduino.HUE);
 	this.setHelpUrl('http://www.macerobotics.com');
 	this.setInputsInline(true);
     this.appendDummyInput("")
@@ -48,7 +21,7 @@ goog.require('Blockly.Blocks');
 
 Blockly.Blocks['MRduino_forward'] = {
   init: function() {
-    this.setColour("#33C7F2");
+    this.setColour(Blockly.Blocks.MRduino.HUE);
 	this.appendValueInput("PWM", 'Number')
         .setCheck('Number')
         .setAlign(Blockly.ALIGN_RIGHT)
@@ -61,7 +34,7 @@ Blockly.Blocks['MRduino_forward'] = {
 
  Blockly.Blocks['MRduino_controlEnable'] = {
   init: function() {
-    this.setColour("#ee5411");
+    this.setColour(Blockly.Blocks.MRduino.HUE);
 	this.setHelpUrl('http://www.macerobotics.com');
 	this.setInputsInline(true);
     this.appendDummyInput("")
@@ -74,7 +47,7 @@ Blockly.Blocks['MRduino_forward'] = {
 
  Blockly.Blocks['MRduino_controlDisable'] = {
   init: function() {
-    this.setColour("#ee5411");
+    this.setColour(Blockly.Blocks.MRduino.HUE);
 	this.setHelpUrl('http://www.macerobotics.com');
 	this.setInputsInline(true);
     this.appendDummyInput("")
@@ -87,7 +60,7 @@ Blockly.Blocks['MRduino_forward'] = {
 
 Blockly.Blocks['MRduino_forward_mm'] = {
   init: function() {
-    this.setColour("#ee5411");
+    this.setColour(Blockly.Blocks.MRduino.HUE);
 	this.appendValueInput("PWM", 'Number')
         .setCheck('Number')
         .setAlign(Blockly.ALIGN_RIGHT)
@@ -101,7 +74,7 @@ Blockly.Blocks['MRduino_forward_mm'] = {
 
  Blockly.Blocks['MRduino_stop'] = {
   init: function() {
-    this.setColour("#33C7F2");
+    this.setColour(Blockly.Blocks.MRduino.HUE);
 	this.setHelpUrl('http://www.macerobotics.com');
 	this.setInputsInline(true);
     this.appendDummyInput("")
@@ -114,7 +87,7 @@ Blockly.Blocks['MRduino_forward_mm'] = {
 
  Blockly.Blocks['MRduino_back'] = {
   init: function() {
-    this.setColour("#33C7F2");
+    this.setColour(Blockly.Blocks.MRduino.HUE);
 	this.appendValueInput("PWM", 'Number')
         .setCheck('Number')
         .setAlign(Blockly.ALIGN_RIGHT)
@@ -127,7 +100,7 @@ Blockly.Blocks['MRduino_forward_mm'] = {
 
 Blockly.Blocks['MRduino_back_mm'] = {
   init: function() {
-    this.setColour("#ee5411");
+    this.setColour(Blockly.Blocks.MRduino.HUE);
 	this.appendValueInput("PWM", 'Number')
         .setCheck('Number')
         .setAlign(Blockly.ALIGN_RIGHT)
@@ -140,7 +113,7 @@ Blockly.Blocks['MRduino_back_mm'] = {
 
  Blockly.Blocks['MRduino_turnLeft'] = {
   init: function() {
-    this.setColour("#33C7F2");
+    this.setColour(Blockly.Blocks.MRduino.HUE);
 	this.appendValueInput("PWM", 'Number')
         .setCheck('Number')
         .setAlign(Blockly.ALIGN_RIGHT)
@@ -153,7 +126,7 @@ Blockly.Blocks['MRduino_back_mm'] = {
 
  Blockly.Blocks['MRduino_turnLeft_degree'] = {
   init: function() {
-    this.setColour("#ee5411");
+    this.setColour(Blockly.Blocks.MRduino.HUE);
 	this.appendValueInput("PWM", 'Number')
         .setCheck('Number')
         .setAlign(Blockly.ALIGN_RIGHT)
@@ -166,7 +139,7 @@ Blockly.Blocks['MRduino_back_mm'] = {
 
  Blockly.Blocks['MRduino_turnRight_degree'] = {
   init: function() {
-    this.setColour("#ee5411");
+    this.setColour(Blockly.Blocks.MRduino.HUE);
 	this.appendValueInput("PWM", 'Number')
         .setCheck('Number')
         .setAlign(Blockly.ALIGN_RIGHT)
@@ -179,7 +152,7 @@ Blockly.Blocks['MRduino_back_mm'] = {
 
  Blockly.Blocks['MRduino_turnRight'] = {
   init: function() {
-    this.setColour("#33C7F2");
+    this.setColour(Blockly.Blocks.MRduino.HUE);
 	this.appendValueInput("PWM", 'Number')
         .setCheck('Number')
         .setAlign(Blockly.ALIGN_RIGHT)
@@ -192,7 +165,7 @@ Blockly.Blocks['MRduino_back_mm'] = {
 
  Blockly.Blocks['MRduino_proxSensor1'] = {
   init: function() {
-    this.setColour("#778E9A");
+    this.setColour(Blockly.Blocks.MRduino.HUE);
 	this.setHelpUrl('http://www.macerobotics.com');
 	this.setInputsInline(true);
     this.appendDummyInput("")
@@ -206,7 +179,7 @@ Blockly.Blocks['MRduino_back_mm'] = {
 
  Blockly.Blocks['MRduino_proxSensor2'] = {
   init: function() {
-    this.setColour("#778E9A");
+    this.setColour(Blockly.Blocks.MRduino.HUE);
 	this.setHelpUrl('http://www.macerobotics.com');
 	this.setInputsInline(true);
     this.appendDummyInput("")
@@ -220,7 +193,7 @@ Blockly.Blocks['MRduino_back_mm'] = {
 
  Blockly.Blocks['MRduino_proxSensor3'] = {
   init: function() {
-    this.setColour("#778E9A");
+    this.setColour(Blockly.Blocks.MRduino.HUE);
 	this.setHelpUrl('http://www.macerobotics.com');
 	this.setInputsInline(true);
     this.appendDummyInput("")
@@ -234,7 +207,7 @@ Blockly.Blocks['MRduino_back_mm'] = {
 
  Blockly.Blocks['MRduino_proxSensor4'] = {
   init: function() {
-    this.setColour("#778E9A");
+    this.setColour(Blockly.Blocks.MRduino.HUE);
 	this.setHelpUrl('http://www.macerobotics.com');
 	this.setInputsInline(true);
     this.appendDummyInput("")
@@ -248,7 +221,7 @@ Blockly.Blocks['MRduino_back_mm'] = {
 
  Blockly.Blocks['MRduino_proxSensor5'] = {
   init: function() {
-    this.setColour("#778E9A");
+    this.setColour(Blockly.Blocks.MRduino.HUE);
 	this.setHelpUrl('http://www.macerobotics.com');
 	this.setInputsInline(true);
     this.appendDummyInput("")
@@ -262,7 +235,7 @@ Blockly.Blocks['MRduino_back_mm'] = {
 
 Blockly.Blocks['MRduino_proxSensor6'] = {
   init: function() {
-    this.setColour("#778E9A");
+    this.setColour(Blockly.Blocks.MRduino.HUE);
 	this.setHelpUrl('http://www.macerobotics.com');
 	this.setInputsInline(true);
     this.appendDummyInput("")
@@ -276,7 +249,7 @@ Blockly.Blocks['MRduino_proxSensor6'] = {
 
  Blockly.Blocks['MRduino_ambiantLight1'] = {
   init: function() {
-    this.setColour("#778E9A");
+    this.setColour(Blockly.Blocks.MRduino.HUE);
 	this.setHelpUrl('http://www.macerobotics.com');
 	this.setInputsInline(true);
     this.appendDummyInput("")
@@ -290,7 +263,7 @@ Blockly.Blocks['MRduino_proxSensor6'] = {
 
  Blockly.Blocks['MRduino_ambiantLight2'] = {
   init: function() {
-    this.setColour("#778E9A");
+    this.setColour(Blockly.Blocks.MRduino.HUE);
 	this.setHelpUrl('http://www.macerobotics.com');
 	this.setInputsInline(true);
     this.appendDummyInput("")
@@ -304,7 +277,7 @@ Blockly.Blocks['MRduino_proxSensor6'] = {
 
  Blockly.Blocks['MRduino_ambiantLight3'] = {
   init: function() {
-    this.setColour("#778E9A");
+    this.setColour(Blockly.Blocks.MRduino.HUE);
 	this.setHelpUrl('http://www.macerobotics.com/');
 	this.setInputsInline(true);
     this.appendDummyInput("")
@@ -316,23 +289,9 @@ Blockly.Blocks['MRduino_proxSensor6'] = {
   }
 };
 
- Blockly.Blocks['MRduino_ambiantLight3'] = {
+Blockly.Blocks['MRduino_ambiantLight4'] = {
   init: function() {
-    this.setColour("#778E9A");
-	this.setHelpUrl('http://www.macerobotics.com/');
-	this.setInputsInline(true);
-    this.appendDummyInput("")
-	    .appendField(Blockly.Msg.MRduino_ambiantLight3)
-    this.setPreviousStatement(false, null);
-    this.setNextStatement(false, null);
-	this.setOutput(true, 'int');
-    this.setTooltip('ambiantLight3');
-  }
-};
-
- Blockly.Blocks['MRduino_ambiantLight4'] = {
-  init: function() {
-    this.setColour("#778E9A");
+    this.setColour(Blockly.Blocks.MRduino.HUE);
 	this.setHelpUrl('http://www.macerobotics.com/');
 	this.setInputsInline(true);
     this.appendDummyInput("")
@@ -346,7 +305,7 @@ Blockly.Blocks['MRduino_proxSensor6'] = {
 
  Blockly.Blocks['MRduino_ambiantLight5'] = {
   init: function() {
-    this.setColour("#778E9A");
+    this.setColour(Blockly.Blocks.MRduino.HUE);
 	this.setHelpUrl('http://www.macerobotics.com/');
 	this.setInputsInline(true);
     this.appendDummyInput("")
@@ -360,7 +319,7 @@ Blockly.Blocks['MRduino_proxSensor6'] = {
 
  Blockly.Blocks['MRduino_ambiantLight6'] = {
   init: function() {
-    this.setColour("#778E9A");
+    this.setColour(Blockly.Blocks.MRduino.HUE);
 	this.setHelpUrl('http://www.macerobotics.com/');
 	this.setInputsInline(true);
     this.appendDummyInput("")
@@ -375,7 +334,7 @@ Blockly.Blocks['MRduino_proxSensor6'] = {
 
 Blockly.Blocks['MRduino_groundSensor1'] = {
   init: function() {
-    this.setColour("#778E9A");
+    this.setColour(Blockly.Blocks.MRduino.HUE);
 	this.setHelpUrl('http://www.macerobotics.com');
 	this.setInputsInline(true);
     this.appendDummyInput("")
@@ -389,7 +348,7 @@ Blockly.Blocks['MRduino_groundSensor1'] = {
 
 Blockly.Blocks['MRduino_groundSensor2'] = {
   init: function() {
-    this.setColour("#778E9A");
+    this.setColour(Blockly.Blocks.MRduino.HUE);
 	this.setHelpUrl('http://www.macerobotics.com');
 	this.setInputsInline(true);
     this.appendDummyInput("")
@@ -403,7 +362,7 @@ Blockly.Blocks['MRduino_groundSensor2'] = {
 
 Blockly.Blocks['MRduino_groundSensor3'] = {
   init: function() {
-    this.setColour("#778E9A");
+    this.setColour(Blockly.Blocks.MRduino.HUE);
 	this.setHelpUrl('http://www.macerobotics.com');
 	this.setInputsInline(true);
     this.appendDummyInput("")
@@ -417,7 +376,7 @@ Blockly.Blocks['MRduino_groundSensor3'] = {
 
  Blockly.Blocks['MRduino_led1On'] = {
   init: function() {
-    this.setColour("#8ec31f");
+    this.setColour(Blockly.Blocks.MRduino.HUE);
 	this.setHelpUrl('http://www.macerobotics.com');
 	this.setInputsInline(true);
     this.appendDummyInput("")
@@ -430,7 +389,7 @@ Blockly.Blocks['MRduino_groundSensor3'] = {
 
  Blockly.Blocks['MRduino_led2On'] = {
   init: function() {
-    this.setColour("#8ec31f");
+    this.setColour(Blockly.Blocks.MRduino.HUE);
 	this.setHelpUrl('http://www.macerobotics.com');
 	this.setInputsInline(true);
     this.appendDummyInput("")
@@ -443,7 +402,7 @@ Blockly.Blocks['MRduino_groundSensor3'] = {
 
  Blockly.Blocks['MRduino_led3On'] = {
   init: function() {
-    this.setColour("#8ec31f");
+    this.setColour(Blockly.Blocks.MRduino.HUE);
 	this.setHelpUrl('http://www.macerobotics.com');
 	this.setInputsInline(true);
     this.appendDummyInput("")
@@ -456,7 +415,7 @@ Blockly.Blocks['MRduino_groundSensor3'] = {
 
  Blockly.Blocks['MRduino_led1Off'] = {
   init: function() {
-    this.setColour("#8ec31f");
+    this.setColour(Blockly.Blocks.MRduino.HUE);
 	this.setHelpUrl('http://www.macerobotics.com');
 	this.setInputsInline(true);
     this.appendDummyInput("")
@@ -469,7 +428,7 @@ Blockly.Blocks['MRduino_groundSensor3'] = {
 
  Blockly.Blocks['MRduino_led2Off'] = {
   init: function() {
-    this.setColour("#8ec31f");
+    this.setColour(Blockly.Blocks.MRduino.HUE);
 	this.setHelpUrl('http://www.macerobotics.com');
 	this.setInputsInline(true);
     this.appendDummyInput("")
@@ -482,7 +441,7 @@ Blockly.Blocks['MRduino_groundSensor3'] = {
 
  Blockly.Blocks['MRduino_led3Off'] = {
   init: function() {
-    this.setColour("#8ec31f");
+    this.setColour(Blockly.Blocks.MRduino.HUE);
 	this.setHelpUrl('http://www.macerobotics.com');
 	this.setInputsInline(true);
     this.appendDummyInput("")
@@ -495,7 +454,7 @@ Blockly.Blocks['MRduino_groundSensor3'] = {
 
  Blockly.Blocks['MRduino_led1Toggle'] = {
   init: function() {
-    this.setColour("#8ec31f");
+    this.setColour(Blockly.Blocks.MRduino.HUE);
 	this.setHelpUrl('http://www.macerobotics.com');
 	this.setInputsInline(true);
     this.appendDummyInput("")
@@ -508,7 +467,7 @@ Blockly.Blocks['MRduino_groundSensor3'] = {
 
  Blockly.Blocks['MRduino_led2Toggle'] = {
   init: function() {
-    this.setColour("#8ec31f");
+    this.setColour(Blockly.Blocks.MRduino.HUE);
 	this.setHelpUrl('http://www.macerobotics.com');
 	this.setInputsInline(true);
     this.appendDummyInput("")
@@ -521,7 +480,7 @@ Blockly.Blocks['MRduino_groundSensor3'] = {
 
  Blockly.Blocks['MRduino_led3Toggle'] = {
   init: function() {
-    this.setColour("#8ec31f");
+    this.setColour(Blockly.Blocks.MRduino.HUE);
 	this.setHelpUrl('http://www.macerobotics.com');
 	this.setInputsInline(true);
     this.appendDummyInput("")
@@ -534,7 +493,7 @@ Blockly.Blocks['MRduino_groundSensor3'] = {
 
 Blockly.Blocks['MRduino_battery'] = {
   init: function() {
-    this.setColour("#778E9A");
+    this.setColour(Blockly.Blocks.MRduino.HUE);
 	this.setHelpUrl('http://www.macerobotics.com');
 	this.setInputsInline(true);
     this.appendDummyInput("")
@@ -548,7 +507,7 @@ Blockly.Blocks['MRduino_battery'] = {
 
 Blockly.Blocks['MRduino_temperature'] = {
   init: function() {
-    this.setColour("#778E9A");
+    this.setColour(Blockly.Blocks.MRduino.HUE);
 	this.setHelpUrl('http://www.macerobotics.com');
 	this.setInputsInline(true);
     this.appendDummyInput("")

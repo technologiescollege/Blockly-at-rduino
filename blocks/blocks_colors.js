@@ -23,6 +23,7 @@ Blockly.Blocks.RoMeo2.HUE = "#F39800";
 Blockly.Blocks.RoMeo3.HUE = "#F39800";
 Blockly.Blocks.u8g.HUE = "#1B2944";
 Blockly.Blocks.EsusBoard.HUE = "#2475FA";
+Blockly.Blocks.MRduino.HUE = "#2475FA";
 Blockly.Blocks.fischertechnik.HUE = "#778E9A";
 Blockly.Blocks.flycam.HUE = "#46C286";
 Blockly.Blocks.grove.HUE = "#8EC31F";
