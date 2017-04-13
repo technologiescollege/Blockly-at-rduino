@@ -118,5 +118,5 @@ var MSG = {
 	+ "Pour Chrome, veuillez vérifier sur la page suivante :\n"
 	+ "http://www.chrome-allow-file-access-from-file.com\n",
   span_ajax_msg:"Ne plus afficher ce message.",
-  span_forms:"QUI ETES VOUS ???"
+  span_forms:"UTILISATEUR, QUI ETES VOUS ???"
 };

@@ -238,7 +238,8 @@ Code.initLanguage = function() {
   $('#span_Download_Arduino').text(MSG['span_Download_Arduino']);
   $('#span_Download_local').text(MSG['span_Download_local']);
   $('#span_Download_codebender').text(MSG['span_Download_codebender']);
-  $('#span_forms').text(MSG['span_forms']);
+  $('#span_forms_videomodal').text(MSG['span_forms']);
+  $('#span_forms_about').text(MSG['span_forms']);
   
   $('#btn_configGlobal').attr('title', MSG['span_configGlobal']);
   $('#btn_font').attr('title', MSG['span_font']);
