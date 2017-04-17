@@ -225,8 +225,8 @@ Code.initLanguage = function() {
   
   $('#toggle-WebAccess-on').text(MSG['span_OnLine']);
   $('#toggle-WebAccess-off').text(MSG['span_OffLine']);
-  $('#toggle-LocalCodebender-on').text(MSG['span_LocalCodebender_Code']);
-  $('#toggle-LocalCodebender-off').text(MSG['span_LocalCodebender_Local']);
+  $('#toggle-LocalCodebender-on').text(MSG['span_LocalCodebender_Local']);
+  $('#toggle-LocalCodebender-off').text(MSG['span_LocalCodebender_Code']);
   /*$('#toggle-WebAccess').prop('data-on', MSG['span_OnLine']);
   $('#toggle-WebAccess').prop('data-off', MSG['span_OffLine']);
   $('#toggle-LocalCodebender').prop('data-on', MSG['span_LocalCodebender_Code']);
