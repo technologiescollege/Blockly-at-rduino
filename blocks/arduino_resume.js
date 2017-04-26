@@ -45,6 +45,7 @@ head.load(
 "blocks/dfrobot_romeo_v2/dfrobot_romeo_v2_2.js",
 "blocks/dfrobot_romeo_v2/dfrobot_romeo_v2_3.js",
 "blocks/display-oled-128x64-i2c/display-oled-128x64-i2c.js",
+"blocks/drone/drone.js",
 "blocks/EsusBoard/EsusBoard.js",
 "blocks/fischertechnik/fischertechnik.js",
 "blocks/flycamone-eco-v2/flycamone-eco-v2.js",

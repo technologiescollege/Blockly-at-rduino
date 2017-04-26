@@ -742,6 +742,20 @@
 		<block type="MatrixLED_WS2812B_draw"></block>
 		<block type="MatrixLED_WS2812B_CLEAN"></block>
 	</category>
+	<category name="CAT_DRONE" colour="#AFABAC">
+		<block type="drone_ESC_pwm">
+			<value name="PIN">
+				<shadow type="math_number">
+					<field name="NUM">6</field>
+				</shadow>
+			</value>
+			<value name="PWM">
+				<shadow type="math_number">
+					<field name="NUM">127</field>
+				</shadow>
+			</value>
+		</block>
+	</category>
 	<category name="CAT_DFRobot" colour="#F39800">
 		<category name="CAT_ROMEO_3" colour="#F39800">
 			<block type="romeo_M1_sens"></block>

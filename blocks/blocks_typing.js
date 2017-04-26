@@ -1344,3 +1344,10 @@ Blockly.Blocks.Sharp_IR_attach.getBlockType = function () {
 Blockly.Blocks.Sharp_IR_read.getBlockType = function () {
 	return Blockly.Types.NUMBER;
 };
+
+
+//---------------------------------drone.js-------------------------------------
+
+Blockly.Blocks.drone_ESC_pwm.getBlockType = function () {
+	return Blockly.Types.NUMBER;
+};

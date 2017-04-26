@@ -198,6 +198,8 @@ Blockly.Msg.CAT_MATRIX_LED_RGB = "Matrix RGB LED 8x8"; //added 25 march 2017
 
 Blockly.Msg.CAT_STORAGE_EEPROM = "storage"; //added 29 march 2017
 
+Blockly.Msg.CAT_DRONE = "drone"; //added 26 april 2017
+
 //**********************************FieldInstance messages***********************************************
 Blockly.Msg.COMPONENT_WARN = 'A %1 configuration block with the same %2 name must be added to use this block!';
 
@@ -1289,3 +1291,12 @@ Blockly.Msg.STORAGE_EEPROM_READ_LONG = "EEPROM - read (long) adress";
 Blockly.Msg.STORAGE_EEPROM_WRITE_BYTE = "EEPROM - write (byte) adress";
 Blockly.Msg.STORAGE_DATA_BYTE = "data";
 Blockly.Msg.STORAGE_EEPROM_READ_BYTE = "EEPROM - write (byte) adress";
+
+
+//******** ESC controller for brushless motor
+
+Blockly.Msg.DRONE_INTRO = "Motor control";
+Blockly.Msg.DRONE_PIN = "pin  #";
+Blockly.Msg.DRONE_PWM = "pwm [0~255]";
+Blockly.Msg.DRONE_HELPURL = "http://www.instructables.com/id/ESC-Programming-on-Arduino-Hobbyking-ESC/";
+Blockly.Msg.DRONE_TOOLTIP = "controller must be in good mode";

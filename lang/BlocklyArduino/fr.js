@@ -202,6 +202,8 @@ Blockly.Msg.CAT_MATRIX_LED_RGB = "Matrice 8x8 DEL RVB"; //added 25 march 2017
 
 Blockly.Msg.CAT_STORAGE_EEPROM = "stockage de données"; //added 29 march 2017
 
+Blockly.Msg.CAT_DRONE = "drone"; //added 26 april 2017
+
 Blockly.Msg.FIELDDROPDOWN = [["1 (état haut)", "HIGH"], ["0 (état bas)", "LOW"]];
 Blockly.Msg.FIELDDROPDOWN_ONOFF = [["marche", "ON"], ["arrêt", "OFF"]]
 Blockly.Msg.INOUT_HIGH_LEVEL = "1 (état haut)";
@@ -1286,8 +1288,7 @@ Blockly.Msg.MatrixLED_WS2812B_setPixelColor_Blue = "régler le bleu (255 max) ="
 Blockly.Msg.MatrixLED_WS2812B_setPixelColor_Pixel_Number = "du pixel numéro (à partir de 0) =";
 
 
-//******** Storage : SD card + EEPROM
-https://www.arduino.cc/en/Reference/EEPROM
+//******** Storage : SD card + EEPROM https://www.arduino.cc/en/Reference/EEPROM
 
 Blockly.Msg.STORAGE_WRITE_SD_FILE = "Carte SD, enregistrer sous ";
 Blockly.Msg.STORAGE_SD_DATA = "la donnée";
@@ -1298,3 +1299,12 @@ Blockly.Msg.STORAGE_EEPROM_READ_LONG = "EEPROM - donnée (long) lue à l'adresse
 Blockly.Msg.STORAGE_EEPROM_WRITE_BYTE = "EEPROM écrire à l'adresse";
 Blockly.Msg.STORAGE_DATA_BYTE = "la donnée (byte)";
 Blockly.Msg.STORAGE_EEPROM_READ_BYTE = "EEPROM - donnée (byte) lue à l'adresse";
+
+
+//******** ESC controller for brushless motor
+
+Blockly.Msg.DRONE_INTRO = "Contrôleur du moteur";
+Blockly.Msg.DRONE_PIN = "sur la broche";
+Blockly.Msg.DRONE_PWM = "à la puissance [0~255]";
+Blockly.Msg.DRONE_HELPURL = "http://www.instructables.com/id/ESC-Programming-on-Arduino-Hobbyking-ESC/";
+Blockly.Msg.DRONE_TOOLTIP = "le contrôleur doit être dans le bon mode";

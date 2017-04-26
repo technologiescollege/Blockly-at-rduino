@@ -50,3 +50,4 @@ Blockly.Blocks.Zumo_auto.HUE = "#00138B";
 Blockly.Blocks.Zumo_motors.HUE = "#00138B";
 Blockly.Blocks.Zumo_sensors.HUE = "#00138B";
 Blockly.Blocks.collyc.HUE = "#46C286";
+Blockly.Blocks.drone.HUE = "#AFABAC";

@@ -28,6 +28,7 @@ head.load(
 "generators/arduino/dfrobot_romeo_v2_2.js",
 "generators/arduino/dfrobot_romeo_v2_3.js",
 "generators/arduino/display-oled-128x64-i2c.js",
+"generators/arduino/drone.js",
 "generators/arduino/EsusBoard.js",
 "generators/arduino/fischertechnik.js",
 "generators/arduino/flycamone-eco-v2.js",
