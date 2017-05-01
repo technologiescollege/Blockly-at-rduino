@@ -77,81 +77,83 @@ Blockly.Msg.CAT_ARRAY = "listes - tableaux";
 Blockly.Msg.CAT_COLOR = "couleurs";
 Blockly.Msg.CAT_VARIABLES = "variables";
 Blockly.Msg.CAT_FUNCTIONS = "procédures & fonctions";
+
+
 Blockly.Msg.CAT_ARDUINO = "arduino";
-Blockly.Msg.CAT_ARDUINO_IN = "entrées";
-Blockly.Msg.CAT_ARDUINO_OUT = "sorties";
-Blockly.Msg.CAT_ARDUINO_CONVERSION = "conversions";
-Blockly.Msg.CAT_ARDUINO_TIME = "temps & durées";
-Blockly.Msg.CAT_ARDUINO_COMM_SERIAL = "communication série";
-Blockly.Msg.CAT_ARDUINO_COMM_SOFTSERIAL = "communication logicielle";
+Blockly.Msg.CAT_ARDUINO_IN = " - entrées";
+Blockly.Msg.CAT_ARDUINO_OUT = " - sorties";
+Blockly.Msg.CAT_ARDUINO_CONVERSION = " - conversions";
+Blockly.Msg.CAT_ARDUINO_TIME = " - temps & durées";
+Blockly.Msg.CAT_ARDUINO_COMM_SERIAL = " - communication USB";
+Blockly.Msg.CAT_ARDUINO_COMM_SOFTSERIAL = " - communication logicielle";
 Blockly.Msg.CAT_ARDUINO_SERVO = "servo-moteur";
 
 Blockly.Msg.CAT_ADAFRUIT_MOTORSHIELD = "Adafruit Motorshield";
-Blockly.Msg.CAT_ADAFRUIT_MOTORSHIELD_v1 = "Adafruit Motorshield v1";
-Blockly.Msg.CAT_ADAFRUIT_MOTORSHIELD_v2 = "Adafruit Motorshield v2";
-Blockly.Msg.CAT_ADAFRUIT_JOYSTICK = "Joystick";
+Blockly.Msg.CAT_ADAFRUIT_MOTORSHIELD_v1 = " - Adafruit Motorshield v1";
+Blockly.Msg.CAT_ADAFRUIT_MOTORSHIELD_v2 = " - Adafruit Motorshield v2";
+Blockly.Msg.CAT_ADAFRUIT_JOYSTICK = " - Joystick";
 
 Blockly.Msg.CAT_DFRobot = "DFRobot";
-Blockly.Msg.CAT_DFRobot_SHIELD_LCDKEYPAD = "carte LCD keypad"; //Added february 27th 2016
-Blockly.Msg.CAT_DFPLAYER = "DFPlayer mini MP3";
+Blockly.Msg.CAT_DFRobot_SHIELD_LCDKEYPAD = " - carte LCD keypad"; //Added february 27th 2016
+Blockly.Msg.CAT_DFPLAYER = " - DFPlayer mini MP3";
 
 Blockly.Msg.CAT_LED_RGB_CHAIN = "DEL RGB en série";
 Blockly.Msg.CAT_OLED_U8G = "afficheur OLED I2C";
 
 Blockly.Msg.CAT_ROBUNO = "RobUno";  //added march 17th 2016
-Blockly.Msg.CAT_ROBUNO_IN = "capteurs";
-Blockly.Msg.CAT_ROBUNO_OUT = "actionneurs";
-Blockly.Msg.CAT_ROBUNO_MOTORS_CC = "moteurs CC";
+Blockly.Msg.CAT_ROBUNO_IN = " - capteurs";
+Blockly.Msg.CAT_ROBUNO_OUT = " - actionneurs";
+Blockly.Msg.CAT_ROBUNO_MOTORS_CC = " - moteurs CC";
 
 Blockly.Msg.CAT_FISCHERTECHNIK = "fischertechnik";  //added march 26th 2016
-Blockly.Msg.CAT_FISCHERTECHNIK_IN = "capteurs";
-Blockly.Msg.CAT_FISCHERTECHNIK_OUT = "actionneurs";
-Blockly.Msg.CAT_FISCHERTECHNIK_MOTORS_CC = "moteurs CC";
+Blockly.Msg.CAT_FISCHERTECHNIK_IN = " - capteurs";
+Blockly.Msg.CAT_FISCHERTECHNIK_OUT = " - actionneurs";
+Blockly.Msg.CAT_FISCHERTECHNIK_MOTORS_CC = " - moteurs CC";
 
 Blockly.Msg.CAT_FLYCAMONE = "FlyCamOne Eco v2"; //added august 20th 2016
 
 Blockly.Msg.CAT_GROVE = "Grove";  //added march 9th 2015
-Blockly.Msg.CAT_GROVE_IN = "capteurs";
-Blockly.Msg.CAT_GROVE_OUT = "actionneurs";
-Blockly.Msg.CAT_GROVE_LCD = "écran LCD";
-Blockly.Msg.CAT_GROVE_COMM = "communication";
+Blockly.Msg.CAT_GROVE_IN = " - capteurs";
+Blockly.Msg.CAT_GROVE_OUT = " - actionneurs";
+Blockly.Msg.CAT_GROVE_LCD = " - écran LCD";
+Blockly.Msg.CAT_GROVE_COMM = " - communication";
 
 Blockly.Msg.CAT_TECHNOZONE = "TechnoZone51";  //added march 11th 2015
-Blockly.Msg.CAT_TECHNOZONE_IN = "capteurs";
-Blockly.Msg.CAT_TECHNOZONE_OUT = "actionneurs";
-Blockly.Msg.CAT_TECHNOZONE_MOTORS_PAP = "moteurs PAP";
-Blockly.Msg.CAT_TECHNOZONE_MOTORS_CC = "moteurs CC";
-Blockly.Msg.CAT_TECHNOZONE_SERVO = "servo-moteurs";
-Blockly.Msg.CAT_TECHNOZONE_LCD = "écran LCD";
-Blockly.Msg.CAT_TECHNOZONE_TELEC = "télécommande";
-Blockly.Msg.CAT_TECHNOZONE_IHM = "console IHM";
-Blockly.Msg.CAT_TECHNOZONE_BT = "bluetooth";
-Blockly.Msg.CAT_TECHNOZONE_SPEECH = "synthèse vocale";
+Blockly.Msg.CAT_TECHNOZONE_IN = " - capteurs";
+Blockly.Msg.CAT_TECHNOZONE_OUT = " - actionneurs";
+Blockly.Msg.CAT_TECHNOZONE_MOTORS_PAP = " - moteurs PAP";
+Blockly.Msg.CAT_TECHNOZONE_MOTORS_CC = " - moteurs CC";
+Blockly.Msg.CAT_TECHNOZONE_SERVO = " - servo-moteurs";
+Blockly.Msg.CAT_TECHNOZONE_LCD = " - écran LCD";
+Blockly.Msg.CAT_TECHNOZONE_TELEC = " - télécommande";
+Blockly.Msg.CAT_TECHNOZONE_IHM = " - console IHM";
+Blockly.Msg.CAT_TECHNOZONE_BT = " - bluetooth";
+Blockly.Msg.CAT_TECHNOZONE_SPEECH = " - synthèse vocale";
 Blockly.Msg.CAT_TECHNOZONE_ROBOT = "TZ51 robot Barbot";
-Blockly.Msg.CAT_TECHNOZONE_ROBOT_MOT = "moteurs";
-Blockly.Msg.CAT_TECHNOZONE_ROBOT_IN = "capteurs";
-Blockly.Msg.CAT_TECHNOZONE_ROBOT_OUT = "actionneurs";
-Blockly.Msg.CAT_TECHNOZONE_ROBOT_LCD = "écran LCD";
-Blockly.Msg.CAT_TECHNOZONE_ROBOT_BT = "bluetooth";
-Blockly.Msg.CAT_TECHNOZONE_ROBOT_IHM = "console IHM";
+Blockly.Msg.CAT_TECHNOZONE_ROBOT_MOT = " - moteurs";
+Blockly.Msg.CAT_TECHNOZONE_ROBOT_IN = " - capteurs";
+Blockly.Msg.CAT_TECHNOZONE_ROBOT_OUT = " - actionneurs";
+Blockly.Msg.CAT_TECHNOZONE_ROBOT_LCD = " - écran LCD";
+Blockly.Msg.CAT_TECHNOZONE_ROBOT_BT = " - bluetooth";
+Blockly.Msg.CAT_TECHNOZONE_ROBOT_IHM = " - console IHM";
 
 Blockly.Msg.CAT_ZUMO = "ZumoBot";	//added april 6th 2015
-Blockly.Msg.CAT_ZUMO_MOTORS = "moteurs";
-Blockly.Msg.CAT_ZUMO_SENSORS = "divers";
-Blockly.Msg.CAT_ZUMO_FUNCTION = "fonctions";
+Blockly.Msg.CAT_ZUMO_MOTORS = " - moteurs";
+Blockly.Msg.CAT_ZUMO_SENSORS = " - divers";
+Blockly.Msg.CAT_ZUMO_FUNCTION = " - fonctions";
 
 Blockly.Msg.CAT_ROBOTS = "robots & cartes diverses"; //Added April 7 2015 ESK
 Blockly.Msg.CAT_ROBOTS_MOTORS = "cartes moteurs";
 Blockly.Msg.CAT_ROBOT_MISC = "infrarouge";
 
 Blockly.Msg.CAT_BQ = "bitbloq";  //added july 14th 2015
-Blockly.Msg.CAT_BQ_IN = "capteurs";
-Blockly.Msg.CAT_BQ_OUT = "actionneurs";
-Blockly.Msg.CAT_BQ_COMM = "communication";
+Blockly.Msg.CAT_BQ_IN = " - capteurs";
+Blockly.Msg.CAT_BQ_OUT = " - actionneurs";
+Blockly.Msg.CAT_BQ_COMM = " - communication";
 
 Blockly.Msg.CAT_JEULIN = "feux de carrefour";  //added january 11th 2016
-Blockly.Msg.CAT_JEULIN_IN = "capteurs";
-Blockly.Msg.CAT_JEULIN_OUT = "actionneurs";
+Blockly.Msg.CAT_JEULIN_IN = " - capteurs";
+Blockly.Msg.CAT_JEULIN_OUT = " - actionneurs";
 
 Blockly.Msg.CAT_MULTIFUNCTION = "multi-fonction";  //added march 9th 2016
 
@@ -164,9 +166,9 @@ Blockly.Msg.CAT_MBOT_2 = "mBot";
 Blockly.Msg.CAT_MBOT_3 = "mBot"; //added april 8th 2016
 Blockly.Msg.CAT_MBOT_4 = "mBot"; //added february 13th 2017
 
-Blockly.Msg.CAT_ROMEO_1 = "RoMeo v2";
-Blockly.Msg.CAT_ROMEO_2 = "RoMeo v2";
-Blockly.Msg.CAT_ROMEO_3 = "RoMeo v2"; //added may 1st 2016
+Blockly.Msg.CAT_ROMEO_1 = " - RoMeo v2";
+Blockly.Msg.CAT_ROMEO_2 = " - RoMeo v2";
+Blockly.Msg.CAT_ROMEO_3 = " - RoMeo v2"; //added may 1st 2016
 
 Blockly.Msg.CAT_SPI_COMM = "ISP communication";
 Blockly.Msg.CAT_STEPPER = "Moteurs pas à pas"; //added august 28th 2016
@@ -174,8 +176,8 @@ Blockly.Msg.CAT_STEPPER = "Moteurs pas à pas"; //added august 28th 2016
 Blockly.Msg.CAT_MHK = "MyHumanKit"; //added august 23th 2016
 
 Blockly.Msg.CAT_ESUS = "carte Esus"; //added 8 october 2016
-Blockly.Msg.CAT_ESUS_WIFI = "WiFi";
-Blockly.Msg.CAT_ESUS_MOTORS = "commandes moteurs";
+Blockly.Msg.CAT_ESUS_WIFI = " - WiFi";
+Blockly.Msg.CAT_ESUS_MOTORS = " - moteurs";
 
 Blockly.Msg.CAT_APDS_9960_RGB_Gesture = "couleur + mouvement"; //added 9 october 2016
 
@@ -184,13 +186,13 @@ Blockly.Msg.CAT_BT_ELECTRONICS = "Bluetooth Electronics"; //added 13 november 20
 Blockly.Msg.CAT_ICN = "ICN";  //added 3 january 2017
 
 Blockly.Msg.CAT_LCD_SCREEN = "écrans LCD";  //added 12 february 2017
-Blockly.Msg.CAT_LCD_DFRobot_SHIELD_LCDKEYPAD = "DFRobot LCD Keypad shield";
-Blockly.Msg.CAT_LCD_GROVE_LCD = "écran LCD Grove";
-Blockly.Msg.CAT_LCD_TECHNOZONE_LCD = "écran LCD TZ51";
-Blockly.Msg.CAT_LCD_TECHNOZONE_ROBOT_LCD = "écran LCD Barbot";
+Blockly.Msg.CAT_LCD_DFRobot_SHIELD_LCDKEYPAD = " - DFRobot LCD Keypad";
+Blockly.Msg.CAT_LCD_GROVE_LCD = " - écran LCD Grove";
+Blockly.Msg.CAT_LCD_TECHNOZONE_LCD = " - écran LCD TZ51";
+Blockly.Msg.CAT_LCD_TECHNOZONE_ROBOT_LCD = " - écran LCD Barbot";
 Blockly.Msg.CAT_BLUETOOTH_MISC = "bluetooth divers";
-Blockly.Msg.CAT_BT_GROVE_COMM = "Grove";
-Blockly.Msg.CAT_BT_TECHNOZONE_BT = "TechnoZone51";
+Blockly.Msg.CAT_BT_GROVE_COMM = " - Grove";
+Blockly.Msg.CAT_BT_TECHNOZONE_BT = " - TechnoZone51";
 
 Blockly.Msg.CAT_jfblocks = "trames"; // added february 28th, 2017
 
@@ -200,7 +202,7 @@ Blockly.Msg.CAT_SHARP = "Sharp infrarouge";
 
 Blockly.Msg.CAT_MATRIX_LED_RGB = "Matrice 8x8 DEL RVB"; //added 25 march 2017
 
-Blockly.Msg.CAT_STORAGE_EEPROM = "stockage de données"; //added 29 march 2017
+Blockly.Msg.CAT_STORAGE_EEPROM = " - stockage de données"; //added 29 march 2017
 
 Blockly.Msg.CAT_DRONE = "drone"; //added 26 april 2017
 

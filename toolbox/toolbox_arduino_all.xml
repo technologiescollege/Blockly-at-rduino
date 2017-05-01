@@ -992,6 +992,7 @@
 				</value>
 			</block>
 		</category>
+		<sep></sep>
 	</category>
 	<category name="CAT_FISCHERTECHNIK" colour="#778E9A">
 		<category name="CAT_FISCHERTECHNIK_IN" colour="#778E9A">
@@ -1066,6 +1067,7 @@
 			<block type="fischertechnik_moteurs_CC">
 			</block>
 		</category>
+		<sep></sep>
 	</category>
 	<category name="CAT_FLYCAMONE" colour="#46C286">
 		<block type="flycam_switch">
@@ -1956,6 +1958,8 @@
 		<block type="stepper_step"></block>
 	</category>
 	<category name="CAT_ESUS" colour="#2475FA">
+		<block type="EsusBoard_init"></block>
+		<block type="EsusBoard_analog"></block>
 		<category name="CAT_ESUS_MOTORS" colour="#2475FA">
 			<block type="EsusBoard_motor1">
 					<value name="NEW_LINE">
@@ -2055,8 +2059,7 @@
 				</value>
 			</block>
 		</category>
-		<block type="EsusBoard_init"></block>
-		<block type="EsusBoard_analog"></block>
+		<sep></sep>
 	</category>
 	<category name="CAT_MRDUINO" colour="#2475FA">
 		<block type="MRduino_init"></block>
@@ -2174,6 +2177,7 @@
 				</shadow>
 			</value>
 		</block>
+		<sep></sep>
 	</category>
 	<category name="CAT_ARDUINO_SERVO" colour="#191919">
 		<block type="servo_attach"></block>
