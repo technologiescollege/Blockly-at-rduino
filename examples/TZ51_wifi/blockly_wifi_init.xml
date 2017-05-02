@@ -1,0 +1,45 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="technozone_wf_init" id="150" x="115" y="49">
+    <field name="RXpin">10</field>
+    <field name="TXpin">9</field>
+    <next>
+      <block type="technozone_wf_setup" id="183" inline="false">
+        <value name="SSID">
+          <block type="text" id="184">
+            <field name="TEXT">entrez votre ssid</field>
+          </block>
+        </value>
+        <value name="PASSWD">
+          <block type="text" id="185">
+            <field name="TEXT">entrez votre passwd</field>
+          </block>
+        </value>
+        <value name="SERVERIP">
+          <block type="text" id="186">
+            <field name="TEXT">192.168.0.150</field>
+          </block>
+        </value>
+        <value name="GATEWAYIP">
+          <block type="text" id="187">
+            <field name="TEXT">192.168.0.1</field>
+          </block>
+        </value>
+        <value name="SUBNETIP">
+          <block type="text" id="188">
+            <field name="TEXT">255.255.255.0</field>
+          </block>
+        </value>
+        <next>
+          <block type="controls_whileUntil" id="199" inline="false">
+            <field name="MODE">WHILE</field>
+            <value name="BOOL">
+              <block type="logic_boolean" id="206">
+                <field name="BOOL">TRUE</field>
+              </block>
+            </value>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+</xml>

@@ -1,4 +1,3 @@
-
 'use strict';
 
 goog.provide('Blockly.Arduino.technozone51');
