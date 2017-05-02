@@ -1300,3 +1300,18 @@ Blockly.Msg.DRONE_PIN = "pin  #";
 Blockly.Msg.DRONE_PWM = "pwm [0~255]";
 Blockly.Msg.DRONE_HELPURL = "http://www.instructables.com/id/ESC-Programming-on-Arduino-Hobbyking-ESC/";
 Blockly.Msg.DRONE_TOOLTIP = "controller must be in good mode";
+
+
+//******** gyroscope + temperature ADXL362
+
+Blockly.Msg.ADXL362_MISC_HELPURL = "http://annem.github.io/ADXL362/";
+Blockly.Msg.ADXL362_INIT_TITLE = "connect gyroscop (/!\\ 3,3 V /!\\)";
+Blockly.Msg.ADXL362_INIT_TOOLTIP = "bus SPI Arduino card, this Pro Mini is just an exAmple";
+Blockly.Msg.ADXL362_XVALUE_TITLE = "X orientation";
+Blockly.Msg.ADXL362_XVALUE_TOOLTIP = "look at X/Y on ADXL362 card";
+Blockly.Msg.ADXL362_YVALUE_TITLE = "Y orientation";
+Blockly.Msg.ADXL362_YVALUE_TOOLTIP = "look at X/Y on ADXL362 card";
+Blockly.Msg.ADXL362_ZVALUE_TITLE = "Z orientation";
+Blockly.Msg.ADXL362_ZVALUE_TOOLTIP = "look at X/Y on ADXL362 card";
+Blockly.Msg.ADXL362_TEMPVALUE_TITLE = temperature";
+Blockly.Msg.ADXL362_TEMPVALUE_TOOLTIP = "test";

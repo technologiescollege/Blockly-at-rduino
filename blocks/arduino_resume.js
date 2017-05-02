@@ -35,6 +35,7 @@ function() {
 head.load(
 "blocks/adafruit_motorshield/adafruit_motorshield_v1.js",
 "blocks/adafruit_motorshield/adafruit_motorshield_v2.js",
+"blocks/ADXL362_gyroscope/ADXL362_gyroscope.js",
 "blocks/APDS-9960_RGB_Gesture/APDS-9960_RGB_Gesture.js",
 "blocks/arduino_shield/arduino_shield.js",
 "blocks/bitbloq/bitbloq.js",

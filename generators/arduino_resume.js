@@ -18,6 +18,7 @@ head.load(
 "generators/arduino/arduino_serial.js",
 "generators/arduino/arduino_softserial.js",
 "generators/arduino/adafruit_motorshield.js",
+"generators/arduino/ADXL362_gyroscope.js",
 "generators/arduino/APDS-9960_RGB_Gesture.js",
 "generators/arduino/arduino_shield.js",
 "generators/arduino/bitbloq.js",

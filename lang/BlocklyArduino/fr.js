@@ -206,6 +206,8 @@ Blockly.Msg.CAT_STORAGE_EEPROM = " - stockage de données"; //added 29 march 201
 
 Blockly.Msg.CAT_DRONE = "drone"; //added 26 april 2017
 
+Blockly.Msg.CAT_ADXL362 = "gyroscope ADXL362"; //added 2 may 2017
+
 Blockly.Msg.FIELDDROPDOWN = [["1 (état haut)", "HIGH"], ["0 (état bas)", "LOW"]];
 Blockly.Msg.FIELDDROPDOWN_ONOFF = [["marche", "ON"], ["arrêt", "OFF"]]
 Blockly.Msg.INOUT_HIGH_LEVEL = "1 (état haut)";
@@ -1310,3 +1312,18 @@ Blockly.Msg.DRONE_PIN = "sur la broche";
 Blockly.Msg.DRONE_PWM = "à la puissance [0~255]";
 Blockly.Msg.DRONE_HELPURL = "http://www.instructables.com/id/ESC-Programming-on-Arduino-Hobbyking-ESC/";
 Blockly.Msg.DRONE_TOOLTIP = "le contrôleur doit être dans le bon mode";
+
+
+//******** gyroscope + temperature ADXL362
+
+Blockly.Msg.ADXL362_MISC_HELPURL = "http://annem.github.io/ADXL362/";
+Blockly.Msg.ADXL362_INIT_TITLE = "connecter le gyroscope (/!\\ 3,3 V /!\\)";
+Blockly.Msg.ADXL362_INIT_TOOLTIP = "bus SPI de la carte Arduino, la Pro Mini est en exemple";
+Blockly.Msg.ADXL362_XVALUE_TITLE = "valeur de l'orientation sur X";
+Blockly.Msg.ADXL362_XVALUE_TOOLTIP = "regarder le repère X/Y sur la carte";
+Blockly.Msg.ADXL362_YVALUE_TITLE = "valeur de l'orientation sur Y";
+Blockly.Msg.ADXL362_YVALUE_TOOLTIP = "regarder le repère X/Y sur la carte";
+Blockly.Msg.ADXL362_ZVALUE_TITLE = "valeur de l'orientation sur Z";
+Blockly.Msg.ADXL362_ZVALUE_TOOLTIP = "regarder le repère X/Y sur la carte";
+Blockly.Msg.ADXL362_TEMPVALUE_TITLE = "valeur de la température";
+Blockly.Msg.ADXL362_TEMPVALUE_TOOLTIP = "valeurs à tester, abaque obligatoire";

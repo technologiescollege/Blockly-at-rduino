@@ -7,6 +7,7 @@ Blockly.Blocks.texts.HUE = "#8A55D7";
 Blockly.Blocks.variables.HUE = "#EE7D16";
 Blockly.Blocks.adafruit_motorshield_v1.HUE = "#2D7F4F";
 Blockly.Blocks.adafruit_motorshield_v2.HUE = "#005D9D";
+Blockly.Blocks.ADXL362.HUE = "#184EA4";
 Blockly.Blocks.APDS9960.HUE = "#D9242D";
 Blockly.Blocks.arduino_base.HUE = "#00979D";
 Blockly.Blocks.arduino_conversion.HUE = "#00979D";

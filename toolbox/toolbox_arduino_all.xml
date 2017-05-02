@@ -2301,6 +2301,14 @@
 		<block type="EsusBoard_init"></block>
 		<block type="EsusBoard_analog"></block>
 	</category>
+	<category name="CAT_ADXL362" colour="#142D5E">
+		<block type="ADXL362_init" disabled="true"></block>
+		<sep></sep>
+		<block type="ADXL362_XValue"></block>
+		<block type="ADXL362_YValue"></block>
+		<block type="ADXL362_ZValue"></block>
+		<block type="ADXL362_TempValue"></block>
+	</category>
 	<category name="CAT_BT_ELECTRONICS" colour="#142D5E">
 		<block type="BT_ELEC_Init" disabled="true"></block>
 		<sep></sep>
