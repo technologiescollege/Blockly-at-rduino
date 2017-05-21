@@ -17,7 +17,7 @@
 
 ### Internet Explorer banni ! Attention à la compatibilité de votre navigateur avec le plugin Codebender.
 
-**Multilingual** version of Blockly@rduinoo
+**Multilingual version of Blockly@rduino**
 =====
 
 Blockly@rduino est un programme web, un **webware graphique permettant la programmation graphique pour [Arduino](http://www.arduino.cc/) et sa _traduction en code_**.
@@ -26,7 +26,7 @@ Blockly@rduino est un programme web, un **webware graphique permettant la progra
 
 Blockly@rduino est basé sur [Blockly](https://developers.google.com/blockly/), un éditeur de programme graphique par une interface web. Il fournit un seul type de traduction de la programmation graphique _(contrairement à Blockly qui traduit en Python, en JavaScript, etc et permet de le simuler en ligne : [exemple](http://www.technologiescollege.fr/blockly/code/demos/code/index.html?lang=fr))_, pour générer du code à copier coller dans l'IDE Arduino.
 
-Blockly@rduino ne possèdait à l'origine qu'une bibliothèque de blocs pour les modules [Grove](http://www.seeedstudio.com/wiki/GROVE_System), particulièrement adaptée à la découverte des micro-contrôleurs et aux expérimentations de systèmes mécatroniques.
+Blockly@rduino ne possèdait à l'origine qu'une bibliothèque de blocs pour les modules [Grove](http://wiki.seeed.cc/Grove_System/), particulièrement adaptée à la découverte des micro-contrôleurs et aux expérimentations de systèmes mécatroniques.
 
 Libre à vous d'en rajouter autant que voulu grâce à cette notice explicative : [http://info.technologiescollege.fr/wiki/doku.php/fr/arduino/blockly_rduino/creerblocsmultiling](http://info.technologiescollege.fr/wiki/doku.php/fr/arduino/blockly_rduino/creerblocsmultiling)
 
@@ -43,7 +43,7 @@ Cette version a été réorganisée et améliorée pour la faire utiliser au mie
 * téléversement et console série depuis l'interface web,
 * sauvegarde/lecture de fichiers INO et XML
 * création d'exemples
-* supervision de la carte en temps réel grâce au serveur PyMata-AIO (accessible depuis le [panneau de contrôle s2aio](https://github.com/technologiescollege/s2aio-control-panel)
+* supervision de la carte en temps réel grâce au serveur PyMata-AIO (accessible depuis le [panneau de contrôle](https://github.com/technologiescollege/Blockly-rduino-communication)
 
 ## IMPORTANT Arduino
 
@@ -54,16 +54,16 @@ _For uploading in Arduino card directly from your Internet browser, you must ins
 ## Démos
 
 Blockly@rduino est un outil web, un webware par référence aux software, hardware, etc. Vous pouvez le tester/utiliser à l'adresse suivante :
-[Technologies/Blockly@rduino](http://blocklyarduino.technologiescollege.fr/) 
+[http://blocklyarduino.technologiescollege.fr/](http://blocklyarduino.technologiescollege.fr/) 
 
 Vous pouvez donc aussi lier directement l'ouverture de la page à l'ouverture d'un fichier XML hébergé (_ou tout en local_) :
-* [démo 1 : faire clignoter une diode](http://blocklyarduino.technologiescollege.fr/index.html?url=./examples/blink/blink.xml)
-* [démo 2 : faire varier un servo-moteur proportionnellement à une consigne de potentiomètre](http://blocklyarduino.technologiescollege.fr/index.html?url=./examples/servo_potentio/servo_potentio.xml)
+* [démo 1 : faire clignoter une diode](http://technologiescollege.github.io/Blockly-at-rduino/?lang=fr&card=arduino_uno&url=./examples/./blink/blink.xml)
+* [démo 2 : faire varier un servo-moteur proportionnellement à une consigne de potentiomètre](http://technologiescollege.github.io/Blockly-at-rduino/?lang=fr&card=arduino_uno&url=./examples/./servo_potentio/servo_potentio.xml)
 
 
 ## Utiliser en local dans son navigateur web
 
-Si vous préfréez l'utiliser en local, il vous suffit de télécharger le code depuis Github (_[Download Zip](https://github.com/technologiescollege/Blockly-at-rduino/archive/master.zip)_) et d'ouvrir le fichier `index.html` dans votre navigateur.
+Si vous préfréez l'utiliser en local, il vous suffit de télécharger le code depuis Github (_[Download Zip](https://github.com/technologiescollege/Blockly-at-rduino/archive/gh-pages.zip)_) et d'ouvrir le fichier `index.html` dans votre navigateur.
 
 Vous pouvez l'héberger sur un serveur, et ainsi y faire accéder de nombreux postes en pointant vers ce fichier 'index.html'.
 
@@ -82,9 +82,9 @@ Programme Blockly : [https://developers.google.com/blockly/](https://developers.
 
 Concept d'origine BlocklyDuino : Fred Lin (@gasolin [https://github.com/gasolin/BlocklyDuino](https://github.com/gasolin/BlocklyDuino)).
 
-Fonctions de typage ArduBlockly : Carlos Pereira Atencio ([https://github.com/carlosperate/ardublockly](https://github.com/carlosperate/ardublockly)).
-
 Son projet s'est aussi inspiré de [ardublock](https://github.com/taweili/ardublock) et [modkit](http://www.modk.it/).
+
+Fonctions de typage ArduBlockly : Carlos Pereira Atencio ([https://github.com/carlosperate/ardublockly](https://github.com/carlosperate/ardublockly)).
 
 Intégration de CodeBender : Julien Rat [https://github.com/julienrat](https://github.com/julienrat)
 
