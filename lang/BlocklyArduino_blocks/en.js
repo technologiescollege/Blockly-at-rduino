@@ -1335,5 +1335,5 @@ Blockly.Msg.ADXL362_YVALUE_TITLE = "Y orientation";
 Blockly.Msg.ADXL362_YVALUE_TOOLTIP = "look at X/Y on ADXL362 card";
 Blockly.Msg.ADXL362_ZVALUE_TITLE = "Z orientation";
 Blockly.Msg.ADXL362_ZVALUE_TOOLTIP = "look at X/Y on ADXL362 card";
-Blockly.Msg.ADXL362_TEMPVALUE_TITLE = temperature";
+Blockly.Msg.ADXL362_TEMPVALUE_TITLE = "temperature";
 Blockly.Msg.ADXL362_TEMPVALUE_TOOLTIP = "test";
