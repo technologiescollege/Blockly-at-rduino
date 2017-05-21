@@ -680,6 +680,16 @@ Blockly.Blocks.mbot_mot_left.getBlockType = function() {
 Blockly.Blocks.mbot_mot_right.getBlockType = function() {
 	return Blockly.Types.NUMBER;
 };
+//NBR added on 2017-04-05
+Blockly.Blocks.mbot_line_finder.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.mbot_ultrasonic_ranger.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.mbot_IR_receiver.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
 
 //---------------------------------mbot3.js-------------------------------------
 

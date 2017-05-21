@@ -1041,6 +1041,27 @@ Blockly.Msg.MBOT_BUZZER_FIELDDROPDOWN_OCTAVE = [["2", "2"], ["3", "3"], ["4", "4
 Blockly.Msg.MBOT_BUZZER_DELAY = "durée";
 Blockly.Msg.MBOT_BUZZER_FIELDDROPDOWN_DELAY = [["un demi", "500"], ["un quart", "250"], ["un huitième", "125"], ["tout", "1000"], ["double", "2000"], ["zéro", "0"]];
 
+//NBR added on 2017-04-05
+Blockly.Msg.MBOT_PORT_CHOICE = [["Port 1", "PORT_1"],  ["Port 2", "PORT_2"],  ["Port 3", "PORT_3"],  ["Port 4", "PORT_4"],  ["Port 5", "PORT_5"],  ["Port 6", "PORT_6"],  ["Port 7", "PORT_7"],  ["Port 8", "PORT_8"]];
+
+Blockly.Msg.MBOT_INOUT_LINE_HELPURL = "http://learn.makeblock.com/en/me-line-follower/";
+Blockly.Msg.MBOT_INOUT_LINE_TEXT = "Capteur de suivi de ligne";
+Blockly.Msg.MBOT_INOUT_LINE_INPUT = "sur";
+Blockly.Msg.MBOT_INOUT_LINE_TOOLTIP = "Valeur permettant au robot de suivre une ligne tracée au sol";
+
+Blockly.Msg.MBOT_INOUT_ULTRASONIC_HELPURL = "http://learn.makeblock.com/en/me-ultrasonic-sensor/";
+Blockly.Msg.MBOT_INOUT_ULTRASONIC_TEXT = "Capteur Ultrasonique de distance";
+Blockly.Msg.MBOT_INOUT_ULTRASONIC_INPUT = "sur";
+Blockly.Msg.MBOT_INOUT_ULTRASONIC_UNIT = "unit";
+Blockly.Msg.MBOT_INOUT_ULTRASONIC_UNIT_CHOICE = [["cm", "cm"],  ["inch", "inch"]];
+Blockly.Msg.MBOT_INOUT_ULTRASONIC_TOOLTIP = "Mesure de distance cans contact";
+
+Blockly.Msg.MBOT_IR_PORT_CHOICE = [["Interne", "0"],  ["Port 1", "PORT_1"],  ["Port 2", "PORT_2"],  ["Port 3", "PORT_3"],  ["Port 4", "PORT_4"],  ["Port 5", "PORT_5"],  ["Port 6", "PORT_6"],  ["Port 7", "PORT_7"],  ["Port 8", "PORT_8"]];
+Blockly.Msg.MBOT_RECEPTEUR_IR_HELPURL = "http://learn.makeblock.com/en/me-infrared-reciver-decode/";
+Blockly.Msg.MBOT_RECEPTEUR_IR_TEXT = "Récepteur IR";
+Blockly.Msg.MBOT_RECEPTEUR_IR_INPUT = "sur";
+Blockly.Msg.MBOT_RECEPTEUR_IR_TOOLTIP = "Retourne la valeur de code IR reçu";
+
 //Added May 1rst 2016
 Blockly.Msg.ROMEO_HELPURL = "http://www.dfrobot.com/wiki/index.php/Romeo_V2-All_in_one_Controller_%28R3%29_%28SKU:DFR0225%29";
 Blockly.Msg.ROMEO3_MOTOR1_SENS = "moteur M1 : sens";

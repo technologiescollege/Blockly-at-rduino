@@ -8,9 +8,17 @@
         "visible": true
     },
     {
-        "source_url": "./servo_potentio/servo_potentio.xml",
-        "source_text": "faire varier l'angle d'un servomoteur proportionnellement au potentiomètre",
-        "image": "./servo_potentio/servo_potentio_fritzing.jpg",
+        "source_url": "./mbot/mbot-suiveur-ligne.xml",
+        "source_text": "Robot mBot suiveur de ligne",
+        "image": "./mbot/mbot-suiveur-ligne.jpg",
+        "link_url": "",
+        "link_text": "",
+        "visible": true
+    },
+    {
+        "source_url": "./mbot/eviter obstacles.xml",
+        "source_text": "Robot mBot éviteur obstacles",
+        "image": "./mbot/mbot.jpg",
         "link_url": "",
         "link_text": "",
         "visible": true
@@ -21,6 +29,14 @@
         "image": "./grenouille/grenouille.jpg",
         "link_url": "http://fablabo.net/wiki/FablabJunior_Automne_2015/Projet4",
         "link_text": "sur Fablabo",
+        "visible": true
+    },
+    {
+        "source_url": "./servo_potentio/servo_potentio.xml",
+        "source_text": "faire varier l'angle d'un servomoteur proportionnellement au potentiomètre",
+        "image": "./servo_potentio/servo_potentio_fritzing.jpg",
+        "link_url": "",
+        "link_text": "",
         "visible": true
     },
     {

@@ -1,0 +1,219 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <toolboxcategories>CAT_LOGIC,CAT_LOOPS,CAT_MATH,CAT_ARRAY,CAT_TEXT,CAT_VARIABLES,CAT_FUNCTIONS,CAT_ARDUINO,CAT_MBOT_1,CAT_MBOT_2,CAT_MBOT_3,CAT_MBOT_4</toolboxcategories>
+  <toolbox>toolbox_arduino_all</toolbox>
+  <block type="base_loop" id="_Nr;+C1Q,mQX_}$YU+$." x="-88" y="263">
+    <statement name="LOOP">
+      <block type="controls_if" id="ivV_C2}}o@BbQZy~+rRB">
+        <mutation elseif="2" else="1"></mutation>
+        <value name="IF0">
+          <block type="logic_compare" id="S^7XW8XY!6EmYbmgC+Rr">
+            <field name="OP">EQ</field>
+            <comment pinned="false" h="80" w="160">Vers la Droite</comment>
+            <value name="A">
+              <block type="math_number" id="[0B.!IQHIzbq8IOlH!$t">
+                <field name="NUM">2</field>
+              </block>
+            </value>
+            <value name="B">
+              <block type="mbot_line_finder" id="8-QeMgzXnpmu]Ph(T.1P">
+                <field name="PIN">PORT_2</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO0">
+          <block type="mbot_mot_left" id="e8l9n=30H3X,vDjgb2zj">
+            <field name="STAT">HIGH</field>
+            <value name="PWM">
+              <shadow type="math_number" id="cKst$V.b#Wo3|z`5:J#$">
+                <field name="NUM">127</field>
+              </shadow>
+            </value>
+            <next>
+              <block type="mbot_mot_right" id="xX(A5:Gmr19?1HO5un/w">
+                <field name="STAT">LOW</field>
+                <value name="PWM">
+                  <shadow type="math_number" id="DeV%RSFMFApGN.r]p5!y">
+                    <field name="NUM">127</field>
+                  </shadow>
+                </value>
+                <next>
+                  <block type="mbot_rgb_onboard" id="Ble=R`tSe,/sE3om+`V!">
+                    <field name="Pixel_number">0</field>
+                    <value name="Red">
+                      <shadow type="math_number" id="g1==L:2+k~b}V+ZcG~NW">
+                        <field name="NUM">127</field>
+                      </shadow>
+                    </value>
+                    <value name="Green">
+                      <shadow type="math_number" id="j(2jgdT*u$IGPRK2H+;u">
+                        <field name="NUM">0</field>
+                      </shadow>
+                    </value>
+                    <value name="Blue">
+                      <shadow type="math_number" id="mhD5SsajE!a[!W5lFUPB">
+                        <field name="NUM">0</field>
+                      </shadow>
+                    </value>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </statement>
+        <value name="IF1">
+          <block type="logic_compare" id="%4AMAj2VA0Ge^h9EcRqX">
+            <field name="OP">EQ</field>
+            <comment pinned="false" h="80" w="160">Vers la gauche</comment>
+            <value name="A">
+              <block type="math_number" id="FUKfrY.UOi6[d[Zt3e;e">
+                <field name="NUM">1</field>
+              </block>
+            </value>
+            <value name="B">
+              <block type="mbot_line_finder" id="!HX#5uns0:ob.g~@2Cmi">
+                <field name="PIN">PORT_2</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO1">
+          <block type="mbot_mot_left" id="#?`d$5cg~$}OPj_CppsY">
+            <field name="STAT">LOW</field>
+            <value name="PWM">
+              <shadow type="math_number" id=".9lRnqM5mn.UB4eO/`Po">
+                <field name="NUM">127</field>
+              </shadow>
+            </value>
+            <next>
+              <block type="mbot_mot_right" id="jWH}kxN#/WUHQy#FuLSk">
+                <field name="STAT">HIGH</field>
+                <value name="PWM">
+                  <shadow type="math_number" id="10tx?nq);}H#-jw6JX^-">
+                    <field name="NUM">127</field>
+                  </shadow>
+                </value>
+                <next>
+                  <block type="mbot_rgb_onboard" id="[,{1;)mn%=79;rCo64{0">
+                    <field name="Pixel_number">0</field>
+                    <value name="Red">
+                      <shadow type="math_number" id="wha*N6XW:/5hwgP0GpVT">
+                        <field name="NUM">0</field>
+                      </shadow>
+                    </value>
+                    <value name="Green">
+                      <shadow type="math_number" id="~{fG1Eqy.FFE9:xk(MpJ">
+                        <field name="NUM">127</field>
+                      </shadow>
+                    </value>
+                    <value name="Blue">
+                      <shadow type="math_number" id="phCT+VwadNTlLsjSfLvR">
+                        <field name="NUM">0</field>
+                      </shadow>
+                    </value>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </statement>
+        <value name="IF2">
+          <block type="logic_compare" id="]AOHT)SBq#{w[[fH5n#j">
+            <field name="OP">EQ</field>
+            <comment pinned="false" h="80" w="160">STOP</comment>
+            <value name="A">
+              <block type="math_number" id="4xL*(V,0,gB1nVn-92#.">
+                <field name="NUM">0</field>
+              </block>
+            </value>
+            <value name="B">
+              <block type="mbot_line_finder" id="g#wbV7Jzw{W~2b;NO7]g">
+                <field name="PIN">PORT_2</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO2">
+          <block type="mbot_mot_left" id="8k2;Wc=y0LImHB!)[!qD">
+            <field name="STAT">LOW</field>
+            <value name="PWM">
+              <shadow type="math_number" id="|!Cp!Xp1.I8J+7#K$1PR">
+                <field name="NUM">0</field>
+              </shadow>
+            </value>
+            <next>
+              <block type="mbot_mot_right" id="3c!?[qwqLbIM;z{6I@jm">
+                <field name="STAT">LOW</field>
+                <value name="PWM">
+                  <shadow type="math_number" id="R^2]In|;D9Y2S1I],}Xz">
+                    <field name="NUM">0</field>
+                  </shadow>
+                </value>
+                <next>
+                  <block type="mbot_rgb_onboard" id="enB2u,WYCcH9d:Kj:qEI">
+                    <field name="Pixel_number">0</field>
+                    <value name="Red">
+                      <shadow type="math_number" id="{IwE!ed:FL~XB;b7SJ}1">
+                        <field name="NUM">127</field>
+                      </shadow>
+                    </value>
+                    <value name="Green">
+                      <shadow type="math_number" id="!5qR(Vs6(3{S#ITxR_jC">
+                        <field name="NUM">127</field>
+                      </shadow>
+                    </value>
+                    <value name="Blue">
+                      <shadow type="math_number" id="](!_hY#LzfyE9KSC{{9z">
+                        <field name="NUM">0</field>
+                      </shadow>
+                    </value>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </statement>
+        <statement name="ELSE">
+          <block type="mbot_mot_left" id="f.(FRmVy1)wG[9{EgvNE">
+            <field name="STAT">HIGH</field>
+            <value name="PWM">
+              <shadow type="math_number" id="te6*i(?kyR-[Z3A2f~og">
+                <field name="NUM">127</field>
+              </shadow>
+            </value>
+            <next>
+              <block type="mbot_mot_right" id="j1TlCFg+)@imX8t3Ei?1">
+                <field name="STAT">HIGH</field>
+                <value name="PWM">
+                  <shadow type="math_number" id="DW~o-)FK#gM!R{9XX#SA">
+                    <field name="NUM">127</field>
+                  </shadow>
+                </value>
+                <next>
+                  <block type="mbot_rgb_onboard" id="uFGFE9:hUd4[3d|8O?*$">
+                    <field name="Pixel_number">0</field>
+                    <value name="Red">
+                      <shadow type="math_number" id="l0.pg70nj]L3wHZ0Wh7K">
+                        <field name="NUM">127</field>
+                      </shadow>
+                    </value>
+                    <value name="Green">
+                      <shadow type="math_number" id="b^js_6yKla-4Bve%](D7">
+                        <field name="NUM">127</field>
+                      </shadow>
+                    </value>
+                    <value name="Blue">
+                      <shadow type="math_number" id=")u2kh6{SZo,#^voq9/fo">
+                        <field name="NUM">127</field>
+                      </shadow>
+                    </value>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </statement>
+      </block>
+    </statement>
+  </block>
+</xml>

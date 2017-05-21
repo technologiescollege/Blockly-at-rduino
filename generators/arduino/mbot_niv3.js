@@ -15,7 +15,7 @@ Blockly.Arduino.mbot_left_sens = function() {
 	//var value_vitesse1 = Blockly.Arduino.valueToCode(this, 'PWM', Blockly.Arduino.ORDER_ATOMIC);
 	Blockly.Arduino.setups_["setup_mBot_mot_left"] = "pinMode("+pindir1+",OUTPUT);\n"+
 	"  pinMode("+pinpwm1+",OUTPUT);\n";
-	var code="digitalWrite("+pindir1+","+value_sens1+");\n";
+	var code="digitalWrite("+pindir1+",!"+value_sens1+");\n"; //NBR sens was reversed on left motor... so I added a not (!)
 	return code;
 };
 
@@ -62,7 +62,7 @@ Blockly.Arduino.mbot_rgb_onboard = function() {
   Blockly.Arduino.includes_['include_mbot'] = '#include <Arduino.h>\n'
 	  + '#include <Wire.h>\n'
 	  + '#include <SoftwareSerial.h>\n'
-	  '#include <MeMCore.h>';
+	  + '#include <MeMCore.h>';
   Blockly.Arduino.definitions_['define_mbot_rgb'] = 'MeRGBLed rgbled_7(7, 7==7?2:4);';
   var pixel_number = this.getFieldValue('Pixel_number') || '\'\'';
   var red = Blockly.Arduino.valueToCode(this, 'Red', Blockly.Arduino.ORDER_ATOMIC);
@@ -85,7 +85,9 @@ Blockly.Arduino.mbot_buzzer = function() {
 	  + '#include <MeMCore.h>';
   Blockly.Arduino.definitions_['define_mbot_buzzer'] = 'MeBuzzer buzzer;';
   
-  var code = 'buzzer.tone(' + tone_number + '*2^' + octave_number + ', ' + delay_number + ');\n'
+//  var code = 'buzzer.tone(' + tone_number + '*2^' + octave_number + ', ' + delay_number + ');\n'
+//			+ 'delay(20);';
+  var code = 'buzzer.tone(' + tone_number + '*pow(2,' + octave_number + '), ' + delay_number + ');\n' // arduino IDE compiler needs pow(x,y) instead of x^y
 			+ 'delay(20);';
   return code;
 };

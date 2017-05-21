@@ -17,7 +17,7 @@ Blockly.Arduino.mbot_mot_left = function() {
 	"  pinMode("+pinpwm1+",OUTPUT);\n";
 	Blockly.Arduino.definitions_['define_mBot_cmd_mot_left'] = "void cmd_mBot_mot_left(byte dirpin,byte pwmpin,boolean sens,byte vitesse)\n"+
 		"{\n"+
-		"  digitalWrite(dirpin,sens);\n"+
+		"  digitalWrite(dirpin,!sens);\n"+ //NBR sens was reversed on left motor... so I added a not (!)
 		"  analogWrite(pwmpin,vitesse);\n"+
 		"}\n";
 	var code="cmd_mBot_mot_left("+pindir1+","+pinpwm1+","+value_sens1+","+value_vitesse1+");\n";
@@ -40,4 +40,67 @@ Blockly.Arduino.mbot_mot_right = function() {
 		"}\n";
 	var code="cmd_mBot_mot_right("+pindir2+","+pinpwm2+","+value_sens2+","+value_vitesse2+");\n";
 	return code;
+};
+
+//NBR added on 2017-04-05
+Blockly.Arduino.mbot_line_finder = function() {
+  var dropdown_pin = this.getFieldValue('PIN');
+  Blockly.Arduino.includes_['include_mbot'] = '#include <Arduino.h>\n'
+	  + '#include <Wire.h>\n'
+	  + '#include <SoftwareSerial.h>\n'
+	  + '#include <MeMCore.h>';
+
+  Blockly.Arduino.definitions_['var_lineFollower_'+dropdown_pin] = 'MeLineFollower lineFinder_'+dropdown_pin+'('+dropdown_pin+');\n';
+
+  var code = 'lineFinder_'+dropdown_pin+'.readSensors()\n';
+//  var code = '/*test*/'
+			
+  return [code, Blockly.Arduino.ORDER_ATOMIC];
+};
+
+//NBR added on 2017-04-05
+Blockly.Arduino.mbot_ultrasonic_ranger = function() {
+  var dropdown_pin = this.getFieldValue('PIN');
+  var dropdown_unit = this.getFieldValue('UNIT');
+  Blockly.Arduino.includes_['include_mbot'] = '#include <Arduino.h>\n'
+      + '#include <Wire.h>\n'
+	  + '#include <SoftwareSerial.h>\n'
+	  + '#include <MeMCore.h>';
+
+  Blockly.Arduino.definitions_['var_ultrasonic_'+dropdown_pin] = 'MeUltrasonicSensor ultraSensor_'+dropdown_pin+'('+dropdown_pin+');\n';
+
+  var code = '((int)ultraSensor_'+dropdown_pin;
+//  var code = '/*test*/'
+  if(dropdown_unit==="cm"){
+    code += '.distanceCm())\n';
+  } else {
+    code += '.distanceInch())\n';
+ }
+			
+  return [code, Blockly.Arduino.ORDER_ATOMIC];
+};
+
+//NBR added on 2017-04-05
+Blockly.Arduino.mbot_IR_receiver = function() {
+  var dropdown_pin = this.getFieldValue('PIN');
+  Blockly.Arduino.includes_['include_mbot'] = '#include <Arduino.h>\n'
+	  + '#include <Wire.h>\n'
+	  + '#include <SoftwareSerial.h>\n'
+	  + '#include <MeMCore.h>';
+
+  Blockly.Arduino.includes_['function_IR_Receiver_'+dropdown_pin] = '\nint infraredReceive_'+dropdown_pin+'(MeInfraredReceiver p) {\n' +
+  '    int value = -1;\n' +
+  '    if (p.available() ) {\n' +
+  '      value = p.read();\n' +
+  '    }\n' +
+  '    return(value);\n' +
+  '}\n\n';
+  
+  Blockly.Arduino.definitions_['var_IR_Receiver_'+dropdown_pin] = 'MeInfraredReceiver infraredReceiverDecode_'+dropdown_pin+'('+dropdown_pin+');\n';
+  Blockly.Arduino.setups_['setup_IR_Receiver_'+dropdown_pin] = 'infraredReceiverDecode_'+dropdown_pin+'.begin();\n';
+
+  var code = 'infraredReceive_'+dropdown_pin+'(infraredReceiverDecode_'+dropdown_pin+')';
+//  var code = '/*test*/'
+			
+  return [code, Blockly.Arduino.ORDER_ATOMIC];
 };

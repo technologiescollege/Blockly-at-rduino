@@ -1174,6 +1174,9 @@
 				</shadow>
 			</value>
 		</block>
+		<block type="mbot_line_finder"></block>	
+		<block type="mbot_ultrasonic_ranger"></block>	
+		<block type="mbot_IR_receiver"></block>	
 	</category>
 	<category name="CAT_DFRobot" colour="#F39800">
 		<category name="CAT_ROMEO_2" colour="#F39800">
