@@ -41,7 +41,6 @@ Blockly.Arduino.base_setup = function () {
 };
 
 Blockly.Arduino.base_loop = function () {
-    var branch = Blockly.Arduino.statementToCode(this, 'DO');
 	var loop = Blockly.Arduino.statementToCode(this, 'LOOP');
     if (Blockly.Arduino.INFINITE_LOOP_TRAP) {
         branch = Blockly.Arduino.INFINITE_LOOP_TRAP.replace(/%1/g, '\'' + this.id + '\'') + branch;

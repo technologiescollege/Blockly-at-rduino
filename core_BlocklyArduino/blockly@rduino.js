@@ -1083,6 +1083,16 @@ Blockly.Variables.flyoutCategory = function(workspace) {
     	xmlList.push(block);
     }
     // end override
+    if (Blockly.Blocks['variables_set_init']) {
+    	var block = goog.dom.createDom('block');
+    	block.setAttribute('type', 'variables_set_init');
+    	if (Blockly.Blocks['variables_set_init']) {
+    		block.setAttribute('gap', 8);
+    	} else {
+    		block.setAttribute('gap', 24);
+    	}
+    	xmlList.push(block);
+    }
     if (Blockly.Blocks['math_change']) {
       // <block type="math_change">
       //   <value name="DELTA">
