@@ -19,6 +19,10 @@
  * @author gasolin@gmail.com (Fred Lin)
  */
 
+goog.provide('Blockly.Arduino.autoduino');
+
+goog.require('Blockly.Arduino');
+
 //---------------------------------------------------
 
 var autoduino_ir_code_detection_index = 0;
@@ -755,8 +759,7 @@ ISR(TIMER1_COMPA_vect) { // Timer interrupt vector.\n\
 
 //---------------------------------------------------
 
-
-var _get_next_pin = function(dropdown_pin) { // TO BE UPDATED
+var get_next_pin = function(dropdown_pin) {
   var pos = -1;
     //check if NextPIN in bound
   if(parseInt(dropdown_pin)){
@@ -767,7 +770,7 @@ var _get_next_pin = function(dropdown_pin) { // TO BE UPDATED
     pos = profile.defaultBoard.analog.indexOf(String(NextPIN));
   }
   if(pos < 0){
-//    alert("Autoduino Sensor needs PIN#+1 port, current setting is out of bound.");
+//    alert("Grove Sensor needs PIN#+1 port, current setting is out of bound.");
     return null;
   } else {
     return NextPIN;
@@ -779,12 +782,6 @@ function hexToR(h) {return parseInt((cutHex(h)).substring(0,2),16);};
 function hexToG(h) {return parseInt((cutHex(h)).substring(2,4),16);};
 function hexToB(h) {return parseInt((cutHex(h)).substring(4,6),16);};
 function cutHex(h) {return (h.charAt(0)=="#") ? h.substring(1,7):h;};
-
-
-goog.provide('Blockly.Arduino.autoduino');
-
-goog.require('Blockly.Arduino');
-
 
 function setAutoduinoOutput(pin, stat) {
     Blockly.Arduino.includes_['wire'] = "#include <Wire.h>";
@@ -1482,12 +1479,9 @@ Blockly.Arduino.autoduino_lcdclear = function() {
 
 /** ****************** COMMUNICATION ******************************/
 
-
-
-
 Blockly.Arduino.autoduino_bluetooth_slave = function() { // TO BE UPDATED
   var dropdown_pin = this.getFieldValue('PIN');
-  var NextPIN = _get_next_pin(dropdown_pin);
+  var NextPIN = get_next_pin(dropdown_pin);
   var name = this.getFieldValue('NAME');
 //  var pincode = this.getFieldValue('PINCODE');
   var statement_receive = Blockly.Arduino.statementToCode(this, "RCV");

@@ -531,6 +531,60 @@
 		<block type="IR_get_blink"></block>
 		<block type="IR_get"></block>
 	</category>
+	<category name="CAT_I2C" colour="#CC0033">
+		<block type="I2C_init">
+				<value name="Pin_SCL">
+					<shadow type="math_number">
+						<field name="NUM"></field>
+					</shadow>
+				</value>
+				<value name="Pin_SDA">
+					<shadow type="math_number">
+						<field name="NUM"></field>
+					</shadow>
+				</value>
+		</block>
+		<block type="I2C_start">
+				<value name="Address">
+					<shadow type="math_number">
+						<field name="NUM"></field>
+					</shadow>
+				</value>
+		</block>
+		<block type="I2C_restart">
+				<value name="Address">
+					<shadow type="math_number">
+						<field name="NUM"></field>
+					</shadow>
+				</value>
+		</block>
+		<block type="I2C_stop"></block>
+		<block type="I2C_write">
+				<value name="Data">
+					<shadow type="math_number">
+						<field name="NUM"></field>
+					</shadow>
+				</value>
+		</block>
+		<block type="I2C_read"></block>		
+	</category>
+	<category name="CAT_SPI" colour="#9999FF">
+		<block type="SPI_init">
+			<value name="Speed">
+					<shadow type="math_number">
+						<field name="NUM">1</field>
+					</shadow>
+			</value>
+		</block>
+		<block type="SPI_send">
+			<value name="Data">
+					<shadow type="math_number">
+						<field name="NUM"></field>
+					</shadow>
+			</value>
+		</block>
+		<block type="SPI_receive"></block>		
+	</category>
 	<category name="CAT_APDS_9960_RGB_Gesture" colour="#D9242D">
 		<block type="APDS9960_ColorSensor_init"></block>
 		<block type="APDS9960_ColorSensor_test"></block>
@@ -2196,113 +2250,6 @@
 		<block type="servo_detach"></block>
 		<block type="servo_rot_continue"></block>
 		<block type="servo_rot_continue_param"></block>
-	</category>
-	<category name="CAT_STEPPER" colour="#8CA55B">
-		<block type="stepper_config"></block>
-		<block type="stepper_step"></block>
-	</category>
-	<category name="CAT_ESUS" colour="#2475FA">
-		<category name="CAT_ESUS_MOTORS" colour="#2475FA">
-			<block type="EsusBoard_motor1">
-					<value name="NEW_LINE">
-						<shadow type="logic_boolean">1
-						</shadow>
-					</value>
-			</block>
-			<block type="EsusBoard_motor2">
-					<value name="NEW_LINE">
-						<shadow type="logic_boolean">1
-						</shadow>
-					</value>
-			</block>
-		</category>
-		<category name="CAT_ESUS_WIFI" colour="#4075F0">
-			<block type="EsusBoard_WifiConfigAP">
-					<value name="Text_ssid">
-						<shadow type="text">
-							<field name="TEXT"></field>
-						</shadow>
-					</value>
-					<value name="Text_password">
-						<shadow type="text">
-							<field name="TEXT">8 caractères minimum</field>
-						</shadow>
-					</value>
-					<value name="Text_ip1AP">
-						<shadow type="math_number">
-							<field name="NUM">192</field>
-						</shadow>
-					</value>
-					<value name="Text_ip2AP">
-						<shadow type="math_number">
-							<field name="NUM">168</field>
-						</shadow>
-					</value>
-					<value name="Text_ip3AP">
-						<shadow type="math_number">
-							<field name="NUM">1</field>
-						</shadow>
-					</value>
-					<value name="Text_ip4AP">
-						<shadow type="math_number">
-							<field name="NUM">22</field>
-						</shadow>
-					</value>
-			</block>
-			<block type="EsusBoard_WifiConfig">
-					<value name="Text_ssid">
-						<shadow type="text">
-							<field name="TEXT"></field>
-						</shadow>
-					</value>
-					<value name="Text_password">
-						<shadow type="text">
-							<field name="TEXT"></field>
-						</shadow>
-					</value>
-			</block>
-			<block type="EsusBoard_WifiConfigIP">
-					<value name="Text_ip1">
-						<shadow type="math_number">
-							<field name="NUM">192</field>
-						</shadow>
-					</value>
-					<value name="Text_ip2">
-						<shadow type="math_number">
-							<field name="NUM">168</field>
-						</shadow>
-					</value>
-					<value name="Text_ip3">
-						<shadow type="math_number">
-							<field name="NUM">1</field>
-						</shadow>
-					</value>
-					<value name="Text_ip4">
-						<shadow type="math_number">
-							<field name="NUM">12</field>
-						</shadow>
-					</value>
-			</block>
-			<block type="EsusBoard_ReadStream"></block>
-			<block type="EsusBoard_WifiContain"></block>
-			<block type="EsusBoard_dataWifiAvailable"></block>
-			<block type="EsusBoard_SendStream">
-				<value name="Text_send">
-					<shadow type="text">
-						<field name="TEXT"></field>
-					</shadow>
-				</value>
-			</block>
-			<block type="EsusBoard_SendFloatStream">
-				<value name="sendFloat">
-					<shadow type="math_number">
-						<field name="NUM"></field>
-					</shadow>
-				</value>
-			</block>
-		</category>
-		<block type="EsusBoard_init"></block>
-		<block type="EsusBoard_analog"></block>
 	</category>
 	<category name="CAT_ADXL362" colour="#142D5E">
 		<block type="ADXL362_init" disabled="true"></block>

@@ -9,7 +9,7 @@ var MSG = {
   span_wiring: " plan de câblage",
   span_supervision: " supervision de la carte",
   span_delete: " effacer TOUS les blocs",
-  span_saveXML:" sauver en fichier XML",
+  span_saveXML:" sauvegarder en XML",
   span_fakeload:" charger un fichier XML",
   span_example: " ouvrir un exemple",
   span_create_example: " gérer les exemples",

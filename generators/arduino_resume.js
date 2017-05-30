@@ -21,6 +21,7 @@ head.load(
 "generators/arduino/ADXL362_gyroscope.js",
 "generators/arduino/APDS-9960_RGB_Gesture.js",
 "generators/arduino/arduino_shield.js",
+"generators/arduino/autoduino.js",
 "generators/arduino/bitbloq.js",
 "generators/arduino/Bluetooth_Electronics.js",
 "generators/arduino/collyc.js",
@@ -34,6 +35,7 @@ head.load(
 "generators/arduino/fischertechnik.js",
 "generators/arduino/flycamone-eco-v2.js",
 "generators/arduino/grove.js",
+"generators/arduino/I2C.js",
 "generators/arduino/icn.js",
 "generators/arduino/jfblocks.js",
 "generators/arduino/jeulin_maquette_feux.js",
@@ -53,7 +55,7 @@ head.load(
 "generators/arduino/robuno.js",
 "generators/arduino/servo.js",
 "generators/arduino/Sharp_IR.js",
-"generators/arduino/spi_comm.js",
+"generators/arduino/SPI.js",
 "generators/arduino/stepper_motor.js",
 "generators/arduino/storage.js",
 "generators/arduino/technozone51.js",
@@ -63,11 +65,4 @@ head.load(
 function() {
     // Call a function when done
     console.log("Done loading Various Arduino Generators");
-});
-
-head.load(
-"generators/arduino/user/autoduino.js",
-function() {
-    // Call a function when done
-    console.log("Done loading USER arduino Generators");
 });
