@@ -77,3 +77,32 @@ Blockly.Blocks['conversion_tofloat'] = {
     this.setHelpUrl('https://www.arduino.cc/en/Reference/floatCast');
   }
 };
+
+Blockly.Blocks.conversion_map = {
+  init: function() {
+    this.setColour(Blockly.Blocks.arduino_conversion.HUE);
+    this.setHelpUrl(Blockly.Msg.CONVERSION_MAP_HELPURL);
+    this.appendValueInput("NUM")
+        .appendField(Blockly.Msg.CONVERSION_MAP_NUM)
+        .setCheck('Number');
+    this.appendValueInput("IN_MIN")
+        .appendField(Blockly.Msg.CONVERSION_MAP_IN_MIN)
+        .setAlign(Blockly.ALIGN_RIGHT)
+        .setCheck('Number');
+    this.appendValueInput("IN_MAX")
+        .appendField(Blockly.Msg.CONVERSION_MAP_IN_MAX)
+        .setAlign(Blockly.ALIGN_RIGHT)
+        .setCheck('Number');
+    this.appendValueInput("OUT_MIN")
+        .appendField(Blockly.Msg.CONVERSION_MAP_OUT_MIN)
+        .setAlign(Blockly.ALIGN_RIGHT)
+        .setCheck('Number');
+    this.appendValueInput("OUT_MAX")
+        .appendField(Blockly.Msg.CONVERSION_MAP_OUT_MAX)
+        .setAlign(Blockly.ALIGN_RIGHT)
+        .setCheck('Number');
+    this.setInputsInline(false);
+    this.setOutput(true);
+    this.setTooltip(Blockly.Msg.CONVERSION_MAP_TOOLTIP);
+  }
+};

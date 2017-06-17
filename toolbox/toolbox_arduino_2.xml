@@ -234,6 +234,7 @@
 			<block type="conversion_tobyte"></block>
 			<block type="conversion_toint"></block>
 			<block type="conversion_tofloat"></block>
+			<block type="conversion_map"></block>
 		</category>
 		<category name="CAT_ARDUINO_OUT" colour="#00979D">
 			<block type="inout_buildin_led"></block>

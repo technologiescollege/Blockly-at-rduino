@@ -360,6 +360,13 @@ Blockly.Msg.CONV_tochar="Convert to char ";
 Blockly.Msg.CONV_tobyte="Convert to Byte ";
 Blockly.Msg.CONV_toint="Convert to Int ";
 Blockly.Msg.CONV_tofloat="Convert to Float ";
+Blockly.Msg.CONVERSION_MAP_HELPURL = "https://www.arduino.cc/en/Reference/Map";
+Blockly.Msg.CONVERSION_MAP_NUM = "re-maps value";
+Blockly.Msg.CONVERSION_MAP_IN_MIN = "from low";
+Blockly.Msg.CONVERSION_MAP_IN_MAX = "and from Max";
+Blockly.Msg.CONVERSION_MAP_OUT_MIN = "to low";
+Blockly.Msg.CONVERSION_MAP_OUT_MAX = "and to Max";
+Blockly.Msg.CONVERSION_MAP_TOOLTIP = "re-maps a number from one range to another";
 
 //added april 6th 2015
 Blockly.Msg.GROVE_INOUT_DHT_HELPURL = "https://github.com/adafruit/DHT-sensor-library";

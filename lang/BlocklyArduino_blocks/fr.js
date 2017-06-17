@@ -381,6 +381,13 @@ Blockly.Msg.CONV_tochar="convertir en char ";
 Blockly.Msg.CONV_tobyte="convertir en Byte ";
 Blockly.Msg.CONV_toint="convertir en Int ";
 Blockly.Msg.CONV_tofloat="convertir en Float ";
+Blockly.Msg.CONVERSION_MAP_HELPURL = "http://www.mon-club-elec.fr/pmwiki_reference_arduino/pmwiki.php?n=Main.Map";
+Blockly.Msg.CONVERSION_MAP_NUM = "la valeur ré-étalonnée depuis :";
+Blockly.Msg.CONVERSION_MAP_IN_MIN = "comprise entre le minimum :";
+Blockly.Msg.CONVERSION_MAP_IN_MAX = "et le maximum :";
+Blockly.Msg.CONVERSION_MAP_OUT_MIN = "vers un minimum de :";
+Blockly.Msg.CONVERSION_MAP_OUT_MAX = "et un maximum de :";
+Blockly.Msg.CONVERSION_MAP_TOOLTIP = "ré-étalonne un nombre d'une fourchette de valeur vers une autre fourchette";
 
 //added april 6th 2015
 Blockly.Msg.GROVE_INOUT_DHT_HELPURL = "https://github.com/adafruit/DHT-sensor-library";
