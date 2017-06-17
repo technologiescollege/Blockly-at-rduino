@@ -15,11 +15,11 @@ Blockly.Blocks.storage_sd_write = {
         .appendField(new Blockly.FieldTextInput(''), 'FILE')
         .appendField(this.newQuote_(false));
     this.appendValueInput("DATA")
-        .setCheck([String,Number])
+        .setCheck(["String","Number"])
         .setAlign(Blockly.ALIGN_RIGHT)
         .appendField(Blockly.Msg.STORAGE_SD_DATA);
     this.appendValueInput("NEWLINE")
-        .setCheck(Boolean)
+        .setCheck("Boolean")
         .setAlign(Blockly.ALIGN_RIGHT)
         .appendField(Blockly.Msg.STORAGE_SD_NEWLINE);
     this.setPreviousStatement(true, null);
@@ -39,10 +39,10 @@ Blockly.Blocks.storage_eeprom_write_long = {
   init: function() {
     this.setColour(Blockly.Blocks.storage.HUE);
     this.appendValueInput("ADDRESS")
-		.setCheck(Number)
+		.setCheck("Number")
         .appendField(Blockly.Msg.STORAGE_EEPROM_WRITE_LONG);
     this.appendValueInput("DATA")
-        .setCheck(Number)
+        .setCheck("Number")
         .setAlign(Blockly.ALIGN_RIGHT)
         .appendField(Blockly.Msg.STORAGE_DATA_LONG);
     this.setPreviousStatement(true, null);
@@ -54,7 +54,7 @@ Blockly.Blocks.storage_eeprom_read_long = {
   init: function() {
     this.setColour(Blockly.Blocks.storage.HUE);
     this.appendValueInput("ADDRESS")
-		.setCheck(Number)
+		.setCheck("Number")
         .appendField(Blockly.Msg.STORAGE_EEPROM_READ_LONG);
     this.setOutput(true, Number);
   }
@@ -65,10 +65,10 @@ Blockly.Blocks.storage_eeprom_write_byte = {
   init: function() {
     this.setColour(Blockly.Blocks.storage.HUE);
     this.appendValueInput("ADDRESS")
-		.setCheck(Number)
+		.setCheck("Number")
         .appendField(Blockly.Msg.STORAGE_EEPROM_WRITE_BYTE);
     this.appendValueInput("DATA")
-        .setCheck(Number)
+        .setCheck("Number")
         .setAlign(Blockly.ALIGN_RIGHT)
         .appendField(Blockly.Msg.STORAGE_DATA_BYTE);
     this.setPreviousStatement(true, null);
@@ -80,7 +80,7 @@ Blockly.Blocks.storage_eeprom_read_byte = {
   init: function() {
     this.setColour(Blockly.Blocks.storage.HUE);
     this.appendValueInput("ADDRESS")
-		.setCheck(Number)
+		.setCheck("Number")
         .appendField(Blockly.Msg.STORAGE_EEPROM_READ_BYTE);
     this.setOutput(true, Number);
   }
