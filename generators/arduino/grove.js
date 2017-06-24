@@ -50,8 +50,7 @@ Blockly.Arduino.grove_button = function() {
 
 Blockly.Arduino.grove_rotary_angle = function() {
   var dropdown_pin = this.getFieldValue('PIN');
-  Blockly.Arduino.setups_['setup_button_'+dropdown_pin] = 'pinMode('+dropdown_pin+', INPUT);';
-  var code = 'analogRead('+dropdown_pin+')';
+  var code = 'analogRead('+dropdown_pin.substring(1,2)+')';
   return [code, Blockly.Arduino.ORDER_ATOMIC];
 };
 
@@ -85,15 +84,13 @@ Blockly.Arduino.grove_temporature_sensor = function() {
   resistance=(float)(1023-a)*10000/a;
   temperature=1/(log(resistance/10000)/B+1/298.15)-273.15;
   */
-  var code = 'round( 1/(log((float)(1023-analogRead('+dropdown_pin+'))*10000/analogRead('+dropdown_pin+')/10000)/3975+1/298.15)-273.15'+')';
-  Blockly.Arduino.setups_['setup_temporature_sensor_'+dropdown_pin] = 'pinMode('+dropdown_pin+', INPUT);';
+  var code = 'round( 1/(log((float)(1023-analogRead('+dropdown_pin.substring(1,2)+'))*10000/analogRead('+dropdown_pin.substring(1,2)+')/10000)/3975+1/298.15)-273.15'+')';
   return [code, Blockly.Arduino.ORDER_ATOMIC];
 };
 
 Blockly.Arduino.grove_moisture_sensor = function() {
   var dropdown_pin = this.getFieldValue('PIN');
-  var code = 'analogRead('+dropdown_pin+')';
-  Blockly.Arduino.setups_['setup_moisture_sensor_'+dropdown_pin] = 'pinMode('+dropdown_pin+', INPUT);';
+  var code = 'analogRead('+dropdown_pin.substring(1,2)+')';
   return [code, Blockly.Arduino.ORDER_ATOMIC];
 };
 
@@ -208,8 +205,7 @@ Blockly.Arduino.grove_serial_lcd_effect = function() {
 
 Blockly.Arduino.grove_sound_sensor = function() {
   var dropdown_pin = this.getFieldValue('PIN');
-  var code = 'analogRead('+dropdown_pin+')';
-  Blockly.Arduino.setups_['setup_sound_sensor_'+dropdown_pin] = 'pinMode('+dropdown_pin+', INPUT);';
+  var code = 'analogRead('+dropdown_pin.substring(1,2)+')';
   return [code, Blockly.Arduino.ORDER_ATOMIC];
 };
 
@@ -316,8 +312,7 @@ Blockly.Arduino.grove_thumb_joystick =  function() {
   } else {
     stickPIN = dropdown_pin;
   }
-  var code = 'analogRead('+stickPIN+')';
-  Blockly.Arduino.setups_['setup_input_'+dropdown_pin] = 'pinMode('+dropdown_pin+', INPUT);';
+  var code = 'analogRead('+stickPIN.substring(1,2)+')';
   return [code, Blockly.Arduino.ORDER_ATOMIC];
 };
 
