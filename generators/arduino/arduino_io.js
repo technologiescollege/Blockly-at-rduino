@@ -116,7 +116,6 @@ Blockly.Arduino.inout_analog_write = function() {
 Blockly.Arduino.inout_analog_write_validator = function() {
   var dropdown_pin = this.getFieldValue('PIN');
   var value_num = Blockly.Arduino.valueToCode(this, 'NUM', Blockly.Arduino.ORDER_ATOMIC);
-  Blockly.Arduino.setups_['setup_output'+dropdown_pin] = 'pinMode('+dropdown_pin+', OUTPUT);';
   var code = 'analogWrite(' + dropdown_pin + ', ' + value_num + ');\n';
   return code;
 };
@@ -129,7 +128,7 @@ Blockly.Arduino.inout_analog_read = function() {
 
 Blockly.Arduino.inout_analog_read_validator = function() {
   var dropdown_pin = this.getFieldValue('PIN');
-  var code = 'analogRead(' + dropdown_pin + ')';
+  var code = 'analogRead(' + dropdown_pin.substring(1,2) + ')';
   return [code, Blockly.Arduino.ORDER_ATOMIC];
 };
 

@@ -232,7 +232,7 @@ Blockly.Blocks.inout_analog_write_validator = {
     this.setHelpUrl(Blockly.Msg.ARDUINO_INOUT_ANALOG_WRITE_HELPURL);
     this.appendDummyInput("")
         .appendField(Blockly.Msg.ARDUINO_INOUT_ANALOG_WRITE_INPUT1)
-        .appendField(new Blockly.FieldTextInput('',  Blockly.Arduino.pinAnalogValidator), 'PIN');
+        .appendField(new Blockly.FieldTextInput('',  Blockly.Arduino.pinPWMValidator), 'PIN');
     this.appendValueInput("NUM")
         .appendField(Blockly.Msg.ARDUINO_INOUT_ANALOG_WRITE_INPUT2)
         .setCheck('Number');
