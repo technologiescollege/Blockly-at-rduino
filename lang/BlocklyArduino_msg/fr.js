@@ -18,6 +18,7 @@ var MSG = {
   span_videos: "tutoriels vidéos",
   span_undo: "annuler (ctrl+z)",
   span_redo: "rétablir (ctrl+y)",
+  span_block_capture: "capture d'écran des blocs",
   span_copycode: "copier le code",
   span_configGlobal: " Configuration globale",
   span_font: " choix de police",

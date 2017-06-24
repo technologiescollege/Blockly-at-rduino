@@ -252,6 +252,7 @@ Code.initLanguage = function() {
   $('#btn_videos').attr('title', MSG['span_videos']);
   $('#btn_undo').attr('title', MSG['span_undo']);
   $('#btn_redo').attr('title', MSG['span_redo']);
+  $('#btn_block_capture').attr('title', MSG['span_block_capture']);
   $('#btn_CopyCode').attr('title', MSG['span_copycode']);
   $('#span_txt2bin').text(MSG['span_txt2bin']);
   $('#span_bin2txt').text(MSG['span_bin2txt']);

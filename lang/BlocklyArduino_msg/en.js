@@ -18,6 +18,7 @@ var MSG = {
   span_videos: " videos tutorials",
   span_undo: "undo (ctrl+z)",
   span_redo: "redo (ctrl+y)",
+  span_block_capture: "blocks screen capture",
   span_copycode: "copy code",
   span_configGlobal: " Global configuration",
   span_font: " font choice",

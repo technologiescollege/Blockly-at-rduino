@@ -430,6 +430,7 @@ BlocklyDuino.bindFunctions = function() {
 	$('#btn_delete').on("click", BlocklyDuino.discard);
 	$('#btn_undo').on("click", BlocklyDuino.Undo);
 	$('#btn_redo').on("click", BlocklyDuino.Redo);
+	$('#btn_block_capture').on("click", BlocklyDuino.workspace_capture);
 	$('#btn_saveXML').on("click", BlocklyDuino.saveXmlFile);
 	$('#btn_saveArduino').on("click", BlocklyDuino.saveArduinoFile);	
 	$('#btn_pasteIDEArduino').on("click", BlocklyDuino.ArduinoIDEClick);	

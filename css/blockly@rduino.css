@@ -296,12 +296,19 @@ html[dir="RTL"] #btn_size {
 
 #btn_undo {
 	position: absolute;
-	right: 330px;
+	right: 375px;
 	top: 0px;
 	z-index: 10;
 }
 
 #btn_redo {
+	position: absolute;
+	right: 330px;
+	top: 0px;
+	z-index: 10;
+}
+
+#btn_block_capture {
 	position: absolute;
 	right: 285px;
 	top: 0px;
