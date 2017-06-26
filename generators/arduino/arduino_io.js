@@ -192,7 +192,7 @@ Blockly.Arduino.inout_attachInterrupt = function() {
   var dropdown_mode = this.getFieldValue('mode');
   var funcName='attachInterrupt_'+dropdown_pin;
   Blockly.Arduino.setups_['setup_Interrupt_'+dropdown_pin] = 'pinMode('+dropdown_pin+', INPUT);\n'
-  + 'attachInterrupt('+dropdown_pin+','+'attachInterrupt_'+dropdown_pin+','+dropdown_mode+');\n';
+  + '  attachInterrupt(digitalPinToInterrupt('+dropdown_pin+'),'+'attachInterrupt_'+dropdown_pin+','+dropdown_mode+');\n';
   
   var branch = Blockly.Arduino.statementToCode(this, 'DO' );
   var code2='void'+ ' ' + funcName + '() {\n' + branch + '}\n';
