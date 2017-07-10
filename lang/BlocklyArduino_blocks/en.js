@@ -190,7 +190,7 @@ Blockly.Msg.CAT_BT_TECHNOZONE_BT = "TechnoZone51";
 
 Blockly.Msg.CAT_jfblocks = "frames"; // added february 28th, 2017
 
-Blockly.Msg.CAT_COLLYC = "Collège-Lycée";
+Blockly.Msg.CAT_KEYPAD = "Keypad";
 Blockly.Msg.CAT_AUTODUINO = "Autoduino";
 
 Blockly.Msg.CAT_SHARP = "Sharp IR";
@@ -511,14 +511,14 @@ Blockly.Msg.GROVE_DRIVER_MOTOR2 = "Motor 2";
 Blockly.Msg.GROVE_DRIVER_MOTOR3 = "Motor 3";
 Blockly.Msg.GROVE_DRIVER_MOTOR4 = "Motor 4";
 Blockly.Msg.GROVE_DRIVER_MOTOR_SPEED = "Speed";
-//******** collyc Grove driver13 */
+//******** KEYPAD Grove driver13 */
 Blockly.Msg.GROVE_DRIVER13_HELPURL = "http://wiki.seeed.cc/Grove-I2C_Motor_Driver_V1.3/";
 Blockly.Msg.GROVE_DRIVER13_MOTOR_TITLE = "Motor Driver V1.3";
 Blockly.Msg.GROVE_DRIVER13_MOTOR_I2C_ADDRESS = "I2C Address";
 Blockly.Msg.GROVE_DRIVER13_TOOLTIP = "Motor Driver - " + 
                             "I2C Address in range 0, 15 (0x0F) depending on the card configuration, " + 
                             "Motor speed in range -100, 100; 0 eq stop";
-//******** collyc Grove minimoto */
+//******** KEYPAD Grove minimoto */
 Blockly.Msg.GROVE_MINI_DRIVER_TITLE = "Motor Mini Driver";
 Blockly.Msg.GROVE_MINI_DRIVER_HELPURL = "http://wiki.seeed.cc/Grove-Mini_I2C_Motor_Driver_v1.0/";
 Blockly.Msg.GROVE_MINI_DRIVER_MOTOR_MSG = "Speed";
@@ -1265,18 +1265,18 @@ Blockly.Msg.jfblocks_tx_start_code = "Start Code";
 Blockly.Msg.jfblocks_tx_data = "donnée";
 Blockly.Msg.jfblocks_tx_end_code = "End Code";
 
-//******** collyc
-Blockly.Msg.COLLYC_TOUCHE_HELPURL = 'https://www.adafruit.com/products/419';
-Blockly.Msg.COLLYC_TOUCHE_TEXT = "Key pressed";
-Blockly.Msg.COLLYC_TOUCHE_LIGNES = "Rows";
-Blockly.Msg.COLLYC_TOUCHE_TOOLTIP = "Returns keypressed, empty string otherwise";
-Blockly.Msg.COLLYC_TOUCHE_LIGNE1 = "Row 1";
-Blockly.Msg.COLLYC_TOUCHE_LIGNE2 = "Row 2";
-Blockly.Msg.COLLYC_TOUCHE_LIGNE3 = "Row 3";
-Blockly.Msg.COLLYC_TOUCHE_LIGNE4 = "Row 4";
-Blockly.Msg.COLLYC_TOUCHE_COLONNE1 = "Column 1";
-Blockly.Msg.COLLYC_TOUCHE_COLONNE2 = "Column 2";
-Blockly.Msg.COLLYC_TOUCHE_COLONNE3 = "Column 3";
+//******** KEYPAD
+Blockly.Msg.KEYPAD_TOUCHE_HELPURL = 'https://www.adafruit.com/products/419';
+Blockly.Msg.KEYPAD_TOUCHE_TEXT = "Key pressed";
+Blockly.Msg.KEYPAD_TOUCHE_LIGNES = "Rows";
+Blockly.Msg.KEYPAD_TOUCHE_TOOLTIP = "Returns keypressed, empty string otherwise";
+Blockly.Msg.KEYPAD_TOUCHE_LIGNE1 = "Row 1";
+Blockly.Msg.KEYPAD_TOUCHE_LIGNE2 = "Row 2";
+Blockly.Msg.KEYPAD_TOUCHE_LIGNE3 = "Row 3";
+Blockly.Msg.KEYPAD_TOUCHE_LIGNE4 = "Row 4";
+Blockly.Msg.KEYPAD_TOUCHE_COLONNE1 = "Column 1";
+Blockly.Msg.KEYPAD_TOUCHE_COLONNE2 = "Column 2";
+Blockly.Msg.KEYPAD_TOUCHE_COLONNE3 = "Column 3";
 
 //******** Sharp IR https://github.com/guillaume-rico/SharpIR
 

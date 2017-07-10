@@ -196,7 +196,7 @@ Blockly.Msg.CAT_BT_TECHNOZONE_BT = " - TechnoZone51";
 
 Blockly.Msg.CAT_jfblocks = "trames"; // added february 28th, 2017
 
-Blockly.Msg.CAT_COLLYC = "Collège-Lycée";
+Blockly.Msg.CAT_KEYPAD = "clavier tactile";
 
 Blockly.Msg.CAT_SHARP = "Sharp infrarouge";
 
@@ -1285,18 +1285,18 @@ Blockly.Msg.jfblocks_tx_start_code = "Start Code";
 Blockly.Msg.jfblocks_tx_data = "donnée";
 Blockly.Msg.jfblocks_tx_end_code = "End Code";
 
-//******** collyc
-Blockly.Msg.COLLYC_TOUCHE_HELPURL = 'https://www.adafruit.com/products/419';
-Blockly.Msg.COLLYC_TOUCHE_TEXT = "Touche appuyée";
-Blockly.Msg.COLLYC_TOUCHE_LIGNES = "Lignes";
-Blockly.Msg.COLLYC_TOUCHE_TOOLTIP = "Retourne la touche appuyée ou une chaine vide si aucune";
-Blockly.Msg.COLLYC_TOUCHE_LIGNE1 = "Ligne 1";
-Blockly.Msg.COLLYC_TOUCHE_LIGNE2 = "Ligne 2";
-Blockly.Msg.COLLYC_TOUCHE_LIGNE3 = "Ligne 3";
-Blockly.Msg.COLLYC_TOUCHE_LIGNE4 = "Ligne 4";
-Blockly.Msg.COLLYC_TOUCHE_COLONNE1 = "Colonne 1";
-Blockly.Msg.COLLYC_TOUCHE_COLONNE2 = "Colonne 2";
-Blockly.Msg.COLLYC_TOUCHE_COLONNE3 = "Colonne 3";
+//******** KEYPAD
+Blockly.Msg.KEYPAD_TOUCHE_HELPURL = 'https://www.adafruit.com/products/419';
+Blockly.Msg.KEYPAD_TOUCHE_TEXT = "Touche appuyée";
+Blockly.Msg.KEYPAD_TOUCHE_LIGNES = "Lignes";
+Blockly.Msg.KEYPAD_TOUCHE_TOOLTIP = "Retourne la touche appuyée ou une chaine vide si aucune";
+Blockly.Msg.KEYPAD_TOUCHE_LIGNE1 = "Ligne 1";
+Blockly.Msg.KEYPAD_TOUCHE_LIGNE2 = "Ligne 2";
+Blockly.Msg.KEYPAD_TOUCHE_LIGNE3 = "Ligne 3";
+Blockly.Msg.KEYPAD_TOUCHE_LIGNE4 = "Ligne 4";
+Blockly.Msg.KEYPAD_TOUCHE_COLONNE1 = "Colonne 1";
+Blockly.Msg.KEYPAD_TOUCHE_COLONNE2 = "Colonne 2";
+Blockly.Msg.KEYPAD_TOUCHE_COLONNE3 = "Colonne 3";
 
 
 //******** Sharp IR https://github.com/guillaume-rico/SharpIR

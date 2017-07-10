@@ -41,7 +41,7 @@ head.load(
 "blocks/autoduino/autoduino.js",
 "blocks/bitbloq/bitbloq.js",
 "blocks/Bluetooth_Electronics/Bluetooth_Electronics.js",
-"blocks/collyc/collyc.js",
+"blocks/keypad/keypad.js",
 "blocks/dfplayer-mini-mp3-dfrobot/dfplayer-mini-mp3-dfrobot.js",
 "blocks/dfrobot_romeo_v2/dfrobot_romeo_v2_1.js",
 "blocks/dfrobot_romeo_v2/dfrobot_romeo_v2_2.js",
@@ -90,11 +90,4 @@ head.load(
 function() {
 	// Call a function when done
 	console.log("Done loading Blocks Configuration");
-});
-
-head.load(
-"blocks/user/arduino_user_resume.js",
-function() {
-	// Call a function when done
-	console.log("Done exploring USER Blocks folder");
 });

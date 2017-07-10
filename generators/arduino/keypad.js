@@ -1,10 +1,10 @@
 'use strict';
 
-goog.provide('Blockly.Arduino.collyc');
+goog.provide('Blockly.Arduino.keypad');
 
 goog.require('Blockly.Arduino');
 
-Blockly.Arduino.collyc_clavier12_touche_appuyee = function() {
+Blockly.Arduino.keypad_touche_appuyee = function() {
   var value_pin_l1 = Blockly.Arduino.valueToCode(this, 'L1', Blockly.Arduino.ORDER_ATOMIC);
   var value_pin_l2 = Blockly.Arduino.valueToCode(this, 'L2', Blockly.Arduino.ORDER_ATOMIC);
   var value_pin_l3 = Blockly.Arduino.valueToCode(this, 'L3', Blockly.Arduino.ORDER_ATOMIC);

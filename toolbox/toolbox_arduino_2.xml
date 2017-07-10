@@ -1247,8 +1247,8 @@
 		<block type="kit_velo_niv2_test_BP"></block>			
 		<block type="kit_velo_niv2_pot"></block>		
 	</category>
-	<category name="CAT_COLLYC" colour="#46C286">
-		<block type="collyc_clavier12_touche_appuyee">
+	<category name="CAT_KEYPAD" colour="#46C286">
+		<block type="keypad_touche_appuyee">
 			<value name="L1">
 				<shadow type="math_number">
 					<field name="NUM">9</field>

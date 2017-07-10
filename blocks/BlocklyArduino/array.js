@@ -202,3 +202,45 @@ Blockly.Blocks['array_getIndex'] = {
     this.setTooltip(Blockly.Msg.ARRAY_GETINDEX_TOOLTIP);
   }
 };
+
+Blockly.Blocks['array_declare'] = {
+  init: function() {
+    this.setColour(Blockly.Blocks.array.HUE);
+    this.appendDummyInput()
+        .appendField("définir")
+        .appendField(new Blockly.FieldVariable(Blockly.Msg.VARIABLES_DEFAULT_NAME), 'VAR');
+    this.appendDummyInput()
+        .setAlign(Blockly.ALIGN_RIGHT)
+        .appendField("comme un tableau de")
+        .appendField(new Blockly.FieldDropdown(Blockly.Types.getValidTypeArray()), 'type');
+    this.appendValueInput("dim")
+        .setCheck("Number")
+        .setAlign(Blockly.ALIGN_RIGHT)
+        .appendField("de dimension(s)");
+    this.setInputsInline(false);
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setTooltip('crée un tableau de dimension et de type indiqués');
+    this.setHelpUrl('http://www.mon-club-elec.fr/pmwiki_reference_arduino/pmwiki.php?n=Main.Tableaux');
+  }
+};
+
+Blockly.Blocks['array_modify'] = {
+  init: function() {
+    this.setColour(Blockly.Blocks.array.HUE);
+	this.appendValueInput("indice")
+        .setCheck("Number")
+		.appendField("affecter à l'élément de rang");
+    this.appendValueInput("var")
+        .setAlign(Blockly.ALIGN_RIGHT)
+        .appendField("du tableau");
+    this.appendValueInput("valeur")
+        .setAlign(Blockly.ALIGN_RIGHT)
+        .appendField("la valeur");
+    this.setInputsInline(false);
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setTooltip('affecte une valeur à un élément du tableau');
+    this.setHelpUrl('http://www.mon-club-elec.fr/pmwiki_reference_arduino/pmwiki.php?n=Main.Tableaux');
+  }
+};

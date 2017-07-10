@@ -39,10 +39,8 @@ Blockly.Arduino.array_create_with = function() {
 };
 
 Blockly.Arduino.array_getIndex = function() {
-  var at = Blockly.Arduino.valueToCode(this, 'AT',
-                                          Blockly.Arduino.ORDER_UNARY_NEGATION) || '1';
-  var list = Blockly.Arduino.valueToCode(this, 'VAR',
-                                            Blockly.Arduino.ORDER_MEMBER) || '[]';
+  var at = Blockly.Arduino.valueToCode(this, 'AT', Blockly.Arduino.ORDER_UNARY_NEGATION) || '1';
+  var list = Blockly.Arduino.valueToCode(this, 'VAR', Blockly.Arduino.ORDER_MEMBER) || '[]';
 
   if (Blockly.isNumber(at)) {
     // If the index is a naked number, decrement it right now.
@@ -50,4 +48,20 @@ Blockly.Arduino.array_getIndex = function() {
   }
   var code = list + '[' + at + ']';
   return [code, Blockly.Arduino.ORDER_MEMBER];
+};
+
+Blockly.Arduino['array_declare'] = function(block) {
+  var variable_var = Blockly.Arduino.variableDB_.getName(this.getFieldValue('VAR'), Blockly.Variables.NAME_TYPE);
+  var dropdown_type = Blockly.Arduino.getArduinoType_(Blockly.Types[block.getFieldValue('type')]);
+  var value_dim = Blockly.Arduino.valueToCode(block, 'dim', Blockly.Arduino.ORDER_ATOMIC);
+  Blockly.Arduino.definitions_[variable_var]=dropdown_type+" "+variable_var+"["+value_dim+"];";
+  return "";
+};
+
+Blockly.Arduino['array_modify'] = function(block) {
+  var variable_var = Blockly.Arduino.valueToCode(block, 'var', Blockly.Arduino.ORDER_ATOMIC);
+  var value_indice = Blockly.Arduino.valueToCode(block, 'indice', Blockly.Arduino.ORDER_ATOMIC);
+  var value_valeur = Blockly.Arduino.valueToCode(block, 'valeur', Blockly.Arduino.ORDER_ATOMIC);
+  var code = variable_var+'['+value_indice+']='+value_valeur+';\n';
+  return code;
 };

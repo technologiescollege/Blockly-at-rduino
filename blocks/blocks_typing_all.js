@@ -32,10 +32,10 @@
 //---------------------------------loops--------------------------------------------
 
 	Blockly.Blocks.controls_for.getVarType = function() {
-		return this.inputList[1].connection.targetBlock().getBlockType();
+		return Blockly.Types.NULL;
 	};
 	Blockly.Blocks.controls_forEach.getVars = function() {
-		return [this.getFieldValue('VAR')];	
+		return Blockly.Types.NULL;
 	};
 	Blockly.Blocks.controls_forEach.getVarType = function() {
 		return this.inputList[1].connection.targetBlock().getBlockType();
@@ -43,6 +43,12 @@
 	
 //---------------------------------array--------------------------------------------
 
+	Blockly.Blocks.array_declare.getBlockType = function() {
+		return [this.getFieldValue('VAR')];	
+	};
+	Blockly.Blocks.array_modify.getBlockType = function() {
+		return this.inputList[1].connection.targetBlock().getBlockType();
+	};
 	Blockly.Blocks.array_create_with.getBlockType = function() {
 		// define an new blocktype for each array
 		var blockType = new Blockly.Type({
@@ -188,6 +194,9 @@ Blockly.Blocks.conversion_toint.getBlockType = function() {
 };
 Blockly.Blocks.conversion_tofloat.getBlockType = function() {
 	return Blockly.Types.DECIMAL;
+};
+Blockly.Blocks.conversion_map.getBlockType = function() {
+	return Blockly.Types.NUMBER;
 };
 
 //---------------------------------arduino_io.js-------------------------------------
@@ -1339,9 +1348,9 @@ Blockly.Blocks.jfblocks_last_value.getBlockType = function() {
 	return Blockly.Types.NUMBER;
 };
 
-//---------------------------------collyc.js-------------------------------------
+//---------------------------------keypad.js-------------------------------------
 
-Blockly.Blocks.collyc_clavier12_touche_appuyee.getBlockType = function () {
+Blockly.Blocks.keypad_touche_appuyee.getBlockType = function () {
 	return Blockly.Types.TEXT;
 };
 
@@ -1376,4 +1385,95 @@ Blockly.Blocks.ADXL362_ZValue.getBlockType = function () {
 };
 Blockly.Blocks.ADXL362_TempValue.getBlockType = function () {
 	return Blockly.Types.NUMBER;
+};
+
+//---------------------------------Fresnel.js  I2C-------------------------------------
+
+Blockly.Blocks.I2C_init.getBlockType = function () {
+	return Blockly.Types.NULL;
+};
+Blockly.Blocks.I2C_start.getBlockType = function () { 
+	return Blockly.Types.NULL;
+};
+Blockly.Blocks.I2C_restart.getBlockType = function () { 
+	return Blockly.Types.NULL;
+};
+Blockly.Blocks.I2C_stop.getBlockType = function () { 
+	return Blockly.Types.NULL;
+};
+Blockly.Blocks.I2C_write.getBlockType = function () { 
+	//return Blockly.Types.BOOLEAN;
+	return Blockly.Types.NULL;
+};
+Blockly.Blocks.I2C_read.getBlockType = function () { 
+	return Blockly.Types.NUMBER;
+};
+//---------------------------------Fresnel.js  SPI-------------------------------------
+Blockly.Blocks.SPI_init.getBlockType = function () { 
+	return Blockly.Types.NULL;
+};
+Blockly.Blocks.SPI_send.getBlockType = function () { 
+	return Blockly.Types.NULL;
+};
+Blockly.Blocks.SPI_receive.getBlockType = function () { 
+	return Blockly.Types.NUMBER;
+};
+
+//***********************************************************************************
+//								Autoduino
+//***********************************************************************************
+
+Blockly.Blocks.autoduino_button.getBlockType = function() {
+	return Blockly.Types.BOOLEAN;
+};
+Blockly.Blocks.autoduino_rotary_angle.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.autoduino_rotary_push.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.autoduino_potentiometer.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.autoduino_dht_read.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.autoduino_temperature_sensor.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.autoduino_moisture_sensor.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.autoduino_tilt_switch.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.autoduino_ils_switch.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.autoduino_pir_motion_sensor.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.autoduino_ultrasonic_ranger.getBlockType = function() {
+	return Blockly.Types.BOOLEAN;
+};
+Blockly.Blocks.autoduino_LDR_sensor.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.autoduino_line_finder.getBlockType = function() {
+	return Blockly.Types.BOOLEAN;
+};
+Blockly.Blocks.autoduino_ir_switch.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.autoduino_digital_temperature_sensor.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.autoduino_rc.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.autoduino_ir_code_detection.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.autoduino_edge_detection.getBlockType = function() {
+	return Blockly.Types.BOOLEAN;
 };
