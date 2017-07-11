@@ -17,3 +17,6 @@ Blockly.Blocks.I2C_write.getBlockType = function () {
 Blockly.Blocks.I2C_read.getBlockType = function () { 
 	return Blockly.Types.NUMBER;
 };
+Blockly.Blocks.I2C_scan.getBlockType = function () {
+	return Blockly.Types.NULL;
+};

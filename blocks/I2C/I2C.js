@@ -127,3 +127,16 @@ Blockly.Blocks.I2C_read = {
 	this.setInputsInline(false);
   }
 };
+
+Blockly.Blocks.I2C_scan = {
+	init: function() {
+    this.appendDummyInput()
+        .appendField(Blockly.Msg.I2C_SCAN_TEXT); 
+    this.setInputsInline(false);
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setColour(Blockly.Blocks.I2C.HUE);
+    this.setTooltip(Blockly.Msg.I2C_SCAN_TOOLTIP);
+    this.setHelpUrl(Blockly.Msg.I2C_SCAN_HELPURL);
+  }
+};

@@ -569,7 +569,8 @@
 					</shadow>
 				</value>
 		</block>
-		<block type="I2C_read"></block>		
+		<block type="I2C_read"></block>
+		<block type="I2C_scan"></block>
 	</category>
 	<category name="CAT_SPI" colour="#9999FF">
 		<block type="SPI_init">

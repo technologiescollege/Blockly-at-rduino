@@ -11,30 +11,30 @@ Blockly.Arduino.technozone_lcdinit = function() {
   var dropdown_cursor = this.getFieldValue('cursor');
   var dropdown_blink = this.getFieldValue('blink');
   var dropdown_backlight = this.getFieldValue('backlight');
-  Blockly.Arduino.includes_['define_Wire'] = '#include <Wire.h>\n';
-  Blockly.Arduino.includes_['define_LiquidCrystal_I2C_TechnoZone51'] = '#include <LiquidCrystal_I2C_TechnoZone51.h>\n';
-  Blockly.Arduino.definitions_['var_lcd'] = 'LiquidCrystal_I2C lcd('+dropdown_I2C_adress+','+dropdown_nbcol+','+dropdown_nblig+');\n';
-  var mysetup='lcd.init();\n';
+  Blockly.Arduino.includes_['define_Wire'] = '#include <Wire.h>';
+  Blockly.Arduino.includes_['define_LiquidCrystal_I2C'] = '#include <LiquidCrystal_I2C.h>';
+  Blockly.Arduino.definitions_['var_lcd'] = 'LiquidCrystal_I2C lcd('+dropdown_I2C_adress+', 2, 1, 0, 4, 5, 6, 7, 3, POSITIVE);';
+  var mysetup='lcd.begin('+dropdown_nbcol+','+dropdown_nblig+');\n';
   if (dropdown_backlight=="TRUE")
   {
-    mysetup+='lcd.backlight();\n';
+    mysetup+='  lcd.backlight();\n';
   } else
   {
-    mysetup+='lcd.noBacklight();\n';
+    mysetup+='  lcd.noBacklight();\n';
   }
   if (dropdown_cursor=="TRUE")
   {
-    mysetup+='lcd.cursor();\n';
+    mysetup+='  lcd.cursor();\n';
   } else
   {
-    mysetup+='lcd.noCursor();\n';
+    mysetup+='  lcd.noCursor();\n';
   }
   if (dropdown_blink=="TRUE")
   {
-    mysetup+='lcd.blink();\n';
+    mysetup+='  lcd.blink();\n';
   } else
   {
-    mysetup+='lcd.noBlink();\n';
+    mysetup+='  lcd.noBlink();\n';
   }
   Blockly.Arduino.setups_['setup_lcd'] = mysetup;
   var code="";
@@ -72,9 +72,9 @@ Blockly.Arduino.technozone_robot_lcdwrite = function() {
   var dropdown_lig = Blockly.Arduino.valueToCode(this, 'LIG',
       Blockly.Arduino.ORDER_UNARY_POSTFIX);
   Blockly.Arduino.includes_['define_LiquidCrystal'] = '#include <ShiftRegLCD123.h>\n'; 
-  Blockly.Arduino.definitions_['var_lcd'] = 'ShiftRegLCD123 lcd(12,13,SRLCD123);\n';
+  Blockly.Arduino.definitions_['var_lcd_robot'] = 'ShiftRegLCD123 lcd(12,13,SRLCD123);\n';
   //dans le setup    
-  Blockly.Arduino.setups_["setup_lcd"] = "lcd.begin(16,2);";
+  Blockly.Arduino.setups_["setup_lcd_robot"] = "lcd.begin(16,2);";
   var code = 'lcd.setCursor('+dropdown_col+','+dropdown_lig+');\n'+
   'lcd.print('+text+');\n';
   return code;
@@ -84,18 +84,18 @@ Blockly.Arduino.technozone_robot_lcdspecial = function() {
   var dropdown_special = this.getFieldValue('special');
   var code="lcd."+dropdown_special+"();";
   Blockly.Arduino.includes_['define_LiquidCrystal'] = '#include <ShiftRegLCD123.h>\n'; 
-  Blockly.Arduino.definitions_['var_lcd'] = 'ShiftRegLCD123 lcd(12,13,SRLCD123);\n';
+  Blockly.Arduino.definitions_['var_lcd_robot'] = 'ShiftRegLCD123 lcd(12,13,SRLCD123);\n';
   //dans le setup    
-  Blockly.Arduino.setups_["setup_lcd"] = "lcd.begin(16,2);";    
+  Blockly.Arduino.setups_["setup_lcd_robot"] = "lcd.begin(16,2);";    
   return code;
 };
 
 Blockly.Arduino.technozone_robot_lcdclear = function() {
   var code = 'lcd.clear();';
   Blockly.Arduino.includes_['define_LiquidCrystal'] = '#include <LiquidCrystal.h>\n'; 
-  Blockly.Arduino.definitions_['var_lcd'] = 'LiquidCrystal lcd(12,11,5,13,3,2);\n';  
+  Blockly.Arduino.definitions_['var_lcd_robot'] = 'LiquidCrystal lcd(12,11,5,13,3,2);\n';  
   //dans le setup    
-  Blockly.Arduino.setups_["setup_lcd"] = "lcd.begin(16,2);";    
+  Blockly.Arduino.setups_["setup_lcd_robot"] = "lcd.begin(16,2);";    
   return code;
 };
 

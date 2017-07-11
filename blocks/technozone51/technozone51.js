@@ -633,7 +633,7 @@ Blockly.Blocks['technozone_lcdinit'] = {
     this.appendDummyInput("")
         .setAlign(Blockly.ALIGN_RIGHT)
 		.appendField(Blockly.Msg.TECHNOZONE51_TEXT75)
-        .appendField(new Blockly.FieldDropdown([["39", "39"], ["63", "63"]]),"I2C_adress");
+        .appendField(new Blockly.FieldDropdown([["0x27", "0x27"], ["0x68", "0x68"]]),"I2C_adress");
     this.appendDummyInput("")
         .setAlign(Blockly.ALIGN_RIGHT)
         .appendField(Blockly.Msg.TECHNOZONE51_TEXT76)
