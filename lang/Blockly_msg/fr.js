@@ -6,11 +6,11 @@ goog.provide('Blockly.Msg.fr');
 
 goog.require('Blockly.Msg');
 
-Blockly.Msg.ADD_COMMENT = "Ajouter un commentaire";
+Blockly.Msg.ADD_COMMENT = "ajouter un commentaire";
 Blockly.Msg.CHANGE_VALUE_TITLE = "Modifier la valeur :";
 Blockly.Msg.CLEAN_UP = "Nettoyer les blocs";
-Blockly.Msg.COLLAPSE_ALL = "Réduire les blocs";
-Blockly.Msg.COLLAPSE_BLOCK = "Réduire le bloc";
+Blockly.Msg.COLLAPSE_ALL = "réduire tous les blocs";
+Blockly.Msg.COLLAPSE_BLOCK = "réduire le bloc";
 Blockly.Msg.COLOUR_BLEND_COLOUR1 = "couleur 1";
 Blockly.Msg.COLOUR_BLEND_COLOUR2 = "couleur 2";
 Blockly.Msg.COLOUR_BLEND_HELPURL = "http://meyerweb.com/eric/tools/color-blend/";

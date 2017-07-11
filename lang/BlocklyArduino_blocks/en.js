@@ -19,6 +19,14 @@ Blockly.Msg.ARRAY_GETINDEX_AT2 = "index";
 Blockly.Msg.ARRAY_GETINDEX_HELPURL = "";
 Blockly.Msg.ARRAY_GETINDEX_ITEM = "in Array";
 Blockly.Msg.ARRAY_GETINDEX_TOOLTIP = "";
+Blockly.Msg.ARRAY_DECLARE_NAME = "create array";
+Blockly.Msg.ARRAY_DECLARE_TYPE = "type";
+Blockly.Msg.ARRAY_DECLARE_SIZE = "number of elements";
+Blockly.Msg.ARRAY_DECLARE_TOOLTIP = "create an array of specific type and number of elements";
+Blockly.Msg.ARRAY_MODIFY_INDICE = "set element nb";
+Blockly.Msg.ARRAY_MODIFY_NAME = "in array";
+Blockly.Msg.ARRAY_MODIFY_VALUE = "value";
+Blockly.Msg.ARRAY_MODIFY_TOOLTIP = "set a specific value to an elemnt of an array";
 
 //ESK 6/13/2015 SWITCH CASE
 Blockly.Msg.CONTROLS_SWITCH_CASEBREAK_TOOLTIP = "Add a condition to the case block.";

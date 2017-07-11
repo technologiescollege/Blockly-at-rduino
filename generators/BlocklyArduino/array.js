@@ -51,17 +51,17 @@ Blockly.Arduino.array_getIndex = function() {
 };
 
 Blockly.Arduino['array_declare'] = function(block) {
-  var variable_var = Blockly.Arduino.variableDB_.getName(this.getFieldValue('VAR'), Blockly.Variables.NAME_TYPE);
-  var dropdown_type = Blockly.Arduino.getArduinoType_(Blockly.Types[block.getFieldValue('type')]);
-  var value_dim = Blockly.Arduino.valueToCode(block, 'dim', Blockly.Arduino.ORDER_ATOMIC);
-  Blockly.Arduino.definitions_[variable_var]=dropdown_type+" "+variable_var+"["+value_dim+"];";
-  return "";
+  var var_name = Blockly.Arduino.valueToCode(block, 'NAME', Blockly.Arduino.ORDER_ATOMIC);
+  var varType = Blockly.Arduino.getArduinoType_(Blockly.Types[block.getFieldValue('type')]);
+  var value = Blockly.Arduino.valueToCode(block, 'taille', Blockly.Arduino.ORDER_ATOMIC);
+  Blockly.Arduino.definitions_[var_name] = varType+" "+var_name+"["+value+"];";
+  return '';
 };
 
 Blockly.Arduino['array_modify'] = function(block) {
-  var variable_var = Blockly.Arduino.valueToCode(block, 'var', Blockly.Arduino.ORDER_ATOMIC);
   var value_indice = Blockly.Arduino.valueToCode(block, 'indice', Blockly.Arduino.ORDER_ATOMIC);
-  var value_valeur = Blockly.Arduino.valueToCode(block, 'valeur', Blockly.Arduino.ORDER_ATOMIC);
-  var code = variable_var+'['+value_indice+']='+value_valeur+';\n';
+  var value_name = Blockly.Arduino.valueToCode(block, 'name', Blockly.Arduino.ORDER_ATOMIC);
+  var value_value = Blockly.Arduino.valueToCode(block, 'value', Blockly.Arduino.ORDER_ATOMIC);
+  var code = value_name+'['+value_indice+'] = '+value_value+';\n';
   return code;
 };

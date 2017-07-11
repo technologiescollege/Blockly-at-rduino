@@ -28,6 +28,14 @@ Blockly.Msg.ARRAY_GETINDEX_AT2 = "rang";
 Blockly.Msg.ARRAY_GETINDEX_HELPURL = "";
 Blockly.Msg.ARRAY_GETINDEX_ITEM = "dans la liste";
 Blockly.Msg.ARRAY_GETINDEX_TOOLTIP = "";
+Blockly.Msg.ARRAY_DECLARE_NAME = "créer un tableau nommé";
+Blockly.Msg.ARRAY_DECLARE_TYPE = "de types";
+Blockly.Msg.ARRAY_DECLARE_SIZE = "d'un nombre d'éléments";
+Blockly.Msg.ARRAY_DECLARE_TOOLTIP = "crée un tableau de dimension et de type indiqués";
+Blockly.Msg.ARRAY_MODIFY_INDICE = "affecter à l'élément de rang";
+Blockly.Msg.ARRAY_MODIFY_NAME = "dans le tableau";
+Blockly.Msg.ARRAY_MODIFY_VALUE = "la valeur";
+Blockly.Msg.ARRAY_MODIFY_TOOLTIP = "affecte une valeur à un élément du tableau";
 
 //ESK 6/13/2015 SWITCH CASE
 Blockly.Msg.CONTROLS_SWITCH_CASEBREAK_TOOLTIP = "Ajoute une condition au bloc 'suivant que'.";
@@ -1408,6 +1416,7 @@ Blockly.Msg.I2C_READ_LAST = "Last? : ";
 Blockly.Msg.I2C_READ_FIELDDROPDOWN = [["non","false"], ["oui","true"]];
 Blockly.Msg.I2C_READ_TOOLTIP = "Reçoit un octet de donnée avec l'envoi d'un paramètre last = oui pour le dernier";
 Blockly.Msg.I2C_READ_HELPURL = "http://playground.arduino.cc/Main/SoftwareI2CLibrary";
+Blockly.Msg.I2C_SCAN_TEXT = "lister les périphériques I²C dans la console série";
 Blockly.Msg.I2C_SCAN_TOOLTIP = "Scanne les périphériques et retourne les adresses dans la console à régler sur 115200 bauds";
 Blockly.Msg.I2C_SCAN_HELPURL = "http://info.technologiescollege.fr/wiki/doku.php/fr/arduino/lcd-i2c";
 
