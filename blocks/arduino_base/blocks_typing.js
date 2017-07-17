@@ -36,6 +36,9 @@ Blockly.Blocks.conversion_toint.getBlockType = function() {
 Blockly.Blocks.conversion_tofloat.getBlockType = function() {
 	return Blockly.Types.DECIMAL;
 };
+Blockly.Blocks.conversion_toString.getBlockType = function() {
+	return Blockly.Types.TEXT;
+};
 Blockly.Blocks.conversion_map.getBlockType = function() {
 	return Blockly.Types.NUMBER;
 };

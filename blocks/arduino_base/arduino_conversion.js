@@ -78,6 +78,18 @@ Blockly.Blocks['conversion_tofloat'] = {
   }
 };
 
+Blockly.Blocks['conversion_toString'] = {
+  init: function() {
+    this.setColour(Blockly.Blocks.arduino_conversion.HUE);
+    this.appendValueInput("NAME")
+		//.setCheck('Number')
+        .appendField(Blockly.Msg.CONV_toString);
+    this.setOutput(true, 'String');
+    this.setTooltip('');
+    this.setHelpUrl('https://www.arduino.cc/en/Reference/StringConstructor');
+  }
+};
+
 Blockly.Blocks.conversion_map = {
   init: function() {
     this.setColour(Blockly.Blocks.arduino_conversion.HUE);

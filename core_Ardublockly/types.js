@@ -62,6 +62,16 @@ Blockly.Types.LARGE_NUMBER = new Blockly.Type({
   compatibleTypes: []    // Circular dependencies, add after all declarations
 });
 
+/** Large unsigned integer number. */
+Blockly.Types.LARGE_UNS_NUMBER = new Blockly.Type({
+  typeId: 'Unisgned Large Number',
+  typeMsgName: 'ARD_TYPE_UNS_LONG',
+  compatibleTypes: [
+                    Blockly.Types.SHORT_NUMBER,
+                    Blockly.Types.NUMBER,
+                    Blockly.Types.LARGE_NUMBER]
+});
+
 /** Decimal/floating point number. */
 Blockly.Types.DECIMAL = new Blockly.Type({
   typeId: 'Decimal',
@@ -120,6 +130,13 @@ Blockly.Types.LARGE_NUMBER.addCompatibleTypes([
     Blockly.Types.BOOLEAN,
     Blockly.Types.SHORT_NUMBER,
     Blockly.Types.NUMBER,
+    Blockly.Types.DECIMAL]);
+
+Blockly.Types.LARGE_UNS_NUMBER.addCompatibleTypes([
+    Blockly.Types.BOOLEAN,
+    Blockly.Types.SHORT_NUMBER,
+    Blockly.Types.NUMBER,
+    Blockly.Types.LARGE_NUMBER,
     Blockly.Types.DECIMAL]);
 	
 Blockly.Types.VOLATIL_NUMBER.addCompatibleTypes([

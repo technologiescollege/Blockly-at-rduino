@@ -28,6 +28,12 @@ Blockly.Arduino['conversion_tofloat'] = function(block) {
   return [code, Blockly.Arduino.ORDER_ATOMIC];
 };
 
+Blockly.Arduino['conversion_toString'] = function(block) {
+	var value_name = Blockly.Arduino.valueToCode(block, 'NAME', Blockly.Arduino.ORDER_ATOMIC);
+	var code = 'String('+value_name+')';
+  return [code, Blockly.Arduino.ORDER_ATOMIC];
+};
+
 Blockly.Arduino.conversion_map = function() {
   var value_num = Blockly.Arduino.valueToCode(this, 'NUM', Blockly.Arduino.ORDER_NONE);
   var value_imin = Blockly.Arduino.valueToCode(this, 'IN_MIN', Blockly.Arduino.ORDER_ATOMIC);
