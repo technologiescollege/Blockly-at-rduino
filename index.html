@@ -48,6 +48,7 @@
 
 
 <link rel="stylesheet" type="text/css" href="css/blockly@rduino.css"/>
+<link rel="stylesheet" type="text/css" href="css/roundButtons.css">
 <!--link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"-->
 <link rel="stylesheet" type="text/css" href="css/bootstrap.min.SEB.css"/>
 <link rel="stylesheet" type="text/css" href="css/bootstrap-toggle.min.css" />
@@ -63,10 +64,34 @@
 <body onload="BlocklyDuino.init()">
 <div class="loading"></div>
     <div id="divTitre">
-		<a href="./index.html"><img id="clearLink" src="media/logo-mini.png" border="0" height="36px" onclick="" />
-		</a> 
+		<a href="./index.html"><img id="clearLink" src="media/logo-mini.png" border="0" height="36px" onclick="" /></a> 
 		<b>Blockly@rduino</b> : 
 		<span id="title"></span>
+		<a href="#" id="btn_Level0" class="btn btn-default" role='button'>0</a>
+		<a href="#" id="btn_Level1" class="btn btn-default" role='button'>1</a>
+		<a href="#" id="btn_Level2" class="btn btn-default" role='button'>2</a>
+		<a href="#" id="btn_Level3" class="btn btn-default" role='button'>3</a>
+		<a href="#" id="btn_Level4" class="btn btn-default" role='button'>4</a>
+		<a href="#" id="btn_Level4" class="btn btn-default" role='button'>TOUT</a>
+		<label id="labelToolboxDefinition"></label> 
+		<select id="toolboxes">
+			<option value="toolbox_none" selected="selected">...</option>
+			<option value="toolbox_algo"></option>
+			<option value="toolbox_arduino_1"></option>
+			<option value="toolbox_arduino_2"></option>
+			<option value="toolbox_arduino_3"></option>
+			<option value="toolbox_arduino_4"></option>
+			<option value="toolbox_user"></option> <!-- NBR added -->
+			<option value="toolbox_arduino_all"></option>
+		</select>
+			<navLevel>
+				<ul class="navLevel">
+					<li><a href="#" class="icon-Level-home"></a></li>
+					<li><a href="#" class="icon-Level-cog"></a></li>
+					<li><a href="#" class="icon-Level-cw"></a></li>
+					<li><a href="#" class="icon-Level-location"></a></li>
+				</ul>
+			</navLevel>
 		<button id="btn_about" type="button" class="btn btn-default btn-sm" data-toggle="modal" data-target="#aboutModal">
 			<b><span id="span_about"> </span></b>
 			<span class="glyphicon glyphicon-user"></span>		
@@ -87,11 +112,11 @@
 				<span class="glyphicon glyphicon-alert"> </span>
 				<span id="configGlobalLabel"> </span>
 			</button>
-				<div id="div_miniPicture">
-					<a id="miniCard">
-						<img id="arduino_card_miniPicture" />
-					</a>
-				</div>
+			<div id="div_miniPicture">
+				<a id="miniCard">
+					<img id="arduino_card_miniPicture" />
+				</a>
+			</div>
 			<button id="btn_config" class="text-left btn btn-warning btn-block " data-toggle="modal" data-target="#configModal">
 				<span class="glyphicon glyphicon-cog"> </span>
 				<span id="span_config"> </span>

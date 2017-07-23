@@ -1,0 +1,100 @@
+@font-face {
+  font-family: 'fontello';
+  src: url('../fonts/fontello.eot');
+  src: url('../fonts/fontello.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/fontello.woff') format('woff'),
+       url('../fonts/fontello.ttf') format('truetype'),
+       url('../fonts/fontello.svg#fontello') format('svg');
+  font-weight: normal; font-style: normal;
+}
+
+[class*="icon-Level-"] {
+  font-family: 'fontello';
+  font-style: normal;
+  font-size: 20px;
+  speak: none;
+}
+
+.icon-Level-home:after { content: "1"; } 
+.icon-Level-cog:after { content: "2"; } 
+.icon-Level-cw:after { content: "3"; } 
+.icon-Level-location:after { content: "4"; } 
+
+* { 
+  -webkit-box-sizing: border-box; 
+  -moz-box-sizing:    border-box; 
+  box-sizing:         border-box; 
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #DD6C4F;
+}
+
+a:hover {
+  text-decoration:underline;
+}
+
+a:focus { 
+  outline: none;
+}
+
+.navLevel li {
+  position: relative;
+  display: inline-block;
+  margin-right: -4px; /* See: http://css-tricks.com/fighting-the-space-between-inline-block-elements/ */
+}
+
+.navLevel li:before {
+  content: "";
+  display: block;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #fff;
+  width: 100%;
+  height: 1px;
+  position: absolute;
+  top: 50%;
+  z-index: -1;
+}
+
+.navLevel a {
+  display: block;
+  background-color: #f7f7f7;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#f7f7f7), to(#e7e7e7));
+  background-image: -webkit-linear-gradient(top, #f7f7f7, #e7e7e7); 
+  background-image: -moz-linear-gradient(top, #f7f7f7, #e7e7e7); 
+  background-image: -ms-linear-gradient(top, #f7f7f7, #e7e7e7); 
+  background-image: -o-linear-gradient(top, #f7f7f7, #e7e7e7); 
+  color: #a7a7a7;
+  margin: 24px;
+  width: 36px;
+  height: 36px;
+  position: relative;
+  text-align: center;
+  line-height: 36px;
+  border-radius: 50%;
+  box-shadow: 0px 3px 8px #aaa, inset 0px 2px 3px #fff;
+}
+
+.navLevel a:before {
+  content: "";
+  display: block;
+  background: #fff;
+  border-top: 2px solid #ddd;
+  position: absolute;
+  top: -8px;
+  left: -8px;
+  bottom: -8px;
+  right: -8px;
+  z-index: -1;
+  border-radius: 50%;
+  box-shadow: inset 0px 8px 12px #ddd;
+}
+
+.navLevel a:hover {
+  text-decoration: none;
+  color: #555;
+  background: #f5f5f5;
+}
