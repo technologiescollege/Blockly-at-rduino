@@ -528,7 +528,7 @@ BlocklyDuino.bindFunctions = function() {
 		$('#showcardModal').hide();
 	});
 
-	$('#btn_videos').on('click', function() {
+	/*$('#btn_videos').on('click', function() {
 		$('#videoModal').css("z-index", 1050);
 		$('#videoModal').css("display", "inline-block");
 		$('#videoModal1').prop('src', "https://mediacad.ac-nantes.fr/m/2018/d/i");
@@ -536,7 +536,7 @@ BlocklyDuino.bindFunctions = function() {
 		$('#videoModal3').prop('src', "https://mediacad.ac-nantes.fr/m/2016/d/i");
 		$('#videoModal4').prop('src', "https://mediacad.ac-nantes.fr/m/2020/d/i");
 		$('#videoModal5').prop('src', "https://www.youtube-nocookie.com/embed/vlJl28qE5vg?list=PLwy0yw3Oq4-uFJl0j-efUAAlfCbqtcTMr");
-	});
+	});*/
 
 	$('#videoModal button.close').on('click', function() {
 		$('#videoModal').css("z-index", 0);
@@ -1024,11 +1024,25 @@ BlocklyDuino.clearLocalStorage = function () {
 BlocklyDuino.firstBlocklyArduino = function() {
 	if (BlocklyDuino.getStringParamFromUrl('AIO', '') == 'on') {
 		$('#firstModal').addClass('draggable');
-		$('#videoFirstModal').prop('src', "https://mediacad.ac-nantes.fr/m/2047/d/i"); 
-		$('#firstModal').modal('show');
-	} else if (window.sessionStorage && !window.sessionStorage.msg_first_seen) {
-		$('#videoFirstModal').prop('src', "https://player.vimeo.com/video/179569437?autoplay=0&title=0&byline=0&portrait=0"); 
-		$('#firstModal').modal('show');
+		//$('#videoFirstModal').prop('src', "https://mediacad.ac-nantes.fr/m/2047/d/i"); 
+		//$('#firstModal').modal('show');
+		$('#btn_videos').on('click', function() {
+			window.open('http://info.technologiescollege.fr/wiki/doku.php/fr/arduino/blockly_rduino/tutosvideos');
+		});
+	} else {
+		$('#btn_videos').on('click', function() {
+			$('#videoModal').css("z-index", 1050);
+			$('#videoModal').css("display", "inline-block");
+			$('#videoModal1').prop('src', "https://mediacad.ac-nantes.fr/m/2018/d/i");
+			$('#videoModal2').prop('src', "https://mediacad.ac-nantes.fr/m/2017/d/i");
+			$('#videoModal3').prop('src', "https://mediacad.ac-nantes.fr/m/2016/d/i");
+			$('#videoModal4').prop('src', "https://mediacad.ac-nantes.fr/m/2020/d/i");
+			$('#videoModal5').prop('src', "https://www.youtube-nocookie.com/embed/vlJl28qE5vg?list=PLwy0yw3Oq4-uFJl0j-efUAAlfCbqtcTMr");
+		});
+		if (window.sessionStorage && !window.sessionStorage.msg_first_seen) {
+			$('#videoFirstModal').prop('src', "https://player.vimeo.com/video/179569437?autoplay=0&title=0&byline=0&portrait=0"); 
+			$('#firstModal').modal('show');
+			}
 	}
 };
 
