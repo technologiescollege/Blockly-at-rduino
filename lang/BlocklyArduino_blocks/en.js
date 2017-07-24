@@ -91,6 +91,10 @@ Blockly.Msg.CAT_ADAFRUIT_MOTORSHIELD_v1 = "Adafruit Motorshield v1";
 Blockly.Msg.CAT_ADAFRUIT_MOTORSHIELD_v2 = "Adafruit Motorshield v2";
 Blockly.Msg.CAT_ADAFRUIT_JOYSTICK = "Joystick";
 
+Blockly.Msg.CAT_BLYNK_CC = "BLYNK_CC"; //Added by M. Leroy July 24th 2017
+Blockly.Msg.CAT_Blynk_Arduino_Connexion =" - connection mode";
+Blockly.Msg.CAT_Blynk_Widget = " - widget";
+
 Blockly.Msg.CAT_DFRobot = "DFRobot";
 Blockly.Msg.CAT_DFRobot_SHIELD_LCDKEYPAD = "Shield LCD Keypad"; //Added february 27th 2016
 Blockly.Msg.CAT_DFPLAYER = "DFPlayer mini MP3";
@@ -154,6 +158,8 @@ Blockly.Msg.CAT_JEULIN_IN = "Sensors";
 Blockly.Msg.CAT_JEULIN_OUT = "Actuators";
 
 Blockly.Msg.CAT_MULTIFUNCTION = "multi-fonction";  //added march 9th 2016
+
+Blockly.Msg.CAT_RFID = "RFID";  //added april 13th 2017
 
 Blockly.Msg.CAT_KIT_VELO_1 = "OBC33 kit vélo";
 Blockly.Msg.CAT_KIT_VELO_2 = "OBC33 kit vélo";
@@ -942,6 +948,34 @@ Blockly.Msg.multifunction_segment_INPUT3 = "3ème chiffre";
 Blockly.Msg.multifunction_segment_INPUT4 = "4ème chiffre";
 Blockly.Msg.multifunction_segment_TOOLTIP = "afficher 4 chifres sur les 7 segments";
 
+// Module RFID (Added April 13th 2017)
+Blockly.Msg.RFID_module_TEXT = "Initialize RFID module";
+Blockly.Msg.RFID_module_INPUT1 = "SDA";
+Blockly.Msg.RFID_module_INPUT2 = "SCK";
+Blockly.Msg.RFID_module_INPUT3 = "MOSI";
+Blockly.Msg.RFID_module_INPUT4 = "MISO";
+Blockly.Msg.RFID_module_INPUT5 = "RST";
+Blockly.Msg.RFID_module_TOOLTIP = "Used to initialize the connection between the RFID module and the arduino board";
+Blockly.Msg.RFID_detection_TEXT = "Detecting a card or badge";
+Blockly.Msg.RFID_detection_TOOLTIP = "Whether or not a card (or badge) is presented in front of our RFID module. If so, a connection is opened between the 2.";
+Blockly.Msg.RFID_reception_cle_TEXT = "Information sent by card or badge";
+Blockly.Msg.RFID_reception_cle_TOOLTIP = "Permet de savoir si oui ou non une information est envoyée à notre module RFID";
+Blockly.Msg.RFID_lecture_cle_TEXT = "Lecture de l'information envoyée par le tag RFID";
+Blockly.Msg.RFID_lecture_cle_TOOLTIP = "Whether or not information is sent to our RFID module";
+Blockly.Msg.RFID_fermeture_TEXT = "Closing the Open RFID Connection";
+Blockly.Msg.RFID_fermeture_TOOLTIP = "Allows you to close the open connection between the RFID module and the card (or badge).";
+Blockly.Msg.RFID_valeur_cle_TEXT = "Value of the information sent by the RFID tag";
+Blockly.Msg.RFID_valeur_cle_TOOLTIP = "Enables us to know the value of the information sent to our RFID module";
+Blockly.Msg.RFID_code_acces_TEXT = "Initialize the access code";
+Blockly.Msg.RFID_code_acces_INPUT1 = "Value 1";
+Blockly.Msg.RFID_code_acces_INPUT2 = "Value 2";
+Blockly.Msg.RFID_code_acces_INPUT3 = "Value 3";
+Blockly.Msg.RFID_code_acces_INPUT4 = "Value 4";
+Blockly.Msg.RFID_code_acces_INPUT5 = "Value 5";
+Blockly.Msg.RFID_code_acces_TOOLTIP = "Allows you to set the authorized access code";
+Blockly.Msg.RFID_acces_autorise_TEXT = "Authorized access code";
+Blockly.Msg.RFID_acces_autorise_TOOLTIP = "Whether or not the access code received by the RFID module matches the one that has been defined.";
+
 //Added March 18th 2016
 Blockly.Msg.ROBUNO_INOUT_LED_INPUT1 = "mettre la DEL Rouge";
 Blockly.Msg.ROBUNO_INOUT_LED_INPUT2 = "sur la broche Numérique";
@@ -1630,3 +1664,9 @@ Blockly.Msg.AUTODUINO_TEXT99 = "Ecrire sur l'écran LCD (réf : LCD1)";
 Blockly.Msg.AUTODUINO_EDGE_TEXT = "détection ";
 Blockly.Msg.AUTODUINO_EDGE_INPUT = "sur l'entrée";
 Blockly.Msg.AUTODUINO_EDGE_UP_DOWN = [["front montant", "UP"], ["front descedant", "DOWN"]];
+
+//**** BLYNK**www.Blync.cc***Added**by**Mr**leroy**July**24th**************************************************************
+Blockly.Msg.BLYNK_CC_usb_HELPURL = 'http://docs.blynk.cc/';
+Blockly.Msg.BLYNK_CC_usb_TEXT ='Arduino Uno linked in USB';
+Blockly.Msg.BLYNK_CC_usb_INPUT ='Input your  Token';
+Blockly.Msg.BlYNK_CC_usb_TOOLTIP = "Arduino Uno and USB";

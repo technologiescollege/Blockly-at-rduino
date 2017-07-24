@@ -1131,7 +1131,68 @@
 		<block type="multifunction_segment_number" colour="#0152AB"></block>
 		<block type="multifunction_PWM_write" colour="#0152AB"></block>
 	</category>
-
+	<category name="CAT_RFID" colour="#9BACB4">
+		<block type="RFID_module" colour="#9BACB4">
+			<value name="SDA">
+				<shadow type="math_number">
+					<field name="NUM">10</field>
+				</shadow>
+			</value>
+			<value name="SCK">
+				<shadow type="math_number">
+					<field name="NUM">13</field>
+				</shadow>
+			</value>
+			<value name="MOSI">
+				<shadow type="math_number">
+					<field name="NUM">11</field>
+				</shadow>
+			</value>
+			<value name="MISO">
+				<shadow type="math_number">
+					<field name="NUM">12</field>
+				</shadow>
+			</value>
+			<value name="RST">
+				<shadow type="math_number">
+					<field name="NUM">9</field>
+				</shadow>
+			</value>
+		</block>
+		<block type="RFID_code_acces" colour="#9BACB4">
+			<value name="VAL1">
+				<shadow type="math_number">
+					<field name="NUM">1</field>
+				</shadow>
+			</value>
+			<value name="VAL2">
+				<shadow type="math_number">
+					<field name="NUM">1</field>
+				</shadow>
+			</value>
+			<value name="VAL3">
+				<shadow type="math_number">
+					<field name="NUM">1</field>
+				</shadow>
+			</value>
+			<value name="VAL4">
+				<shadow type="math_number">
+					<field name="NUM">1</field>
+				</shadow>
+			</value>
+			<value name="VAL5">
+				<shadow type="math_number">
+					<field name="NUM">1</field>
+				</shadow>
+			</value>
+		</block>
+		<block type="RFID_detection" colour="#9BACB4"></block>
+		<block type="RFID_reception_cle" colour="#9BACB4"></block>
+		<block type="RFID_valeur_cle" colour="#9BACB4"></block>
+		<block type="RFID_acces_autorise" colour="#9BACB4"></block>
+		<block type="RFID_lecture_cle" colour="#9BACB4"></block>
+		<block type="RFID_fermeture" colour="#9BACB4"></block>
+	</category>
 	<category name="CAT_TECHNOZONE" colour="#646464">
 		<category name="CAT_TECHNOZONE_IN" colour="#646464">
 			<block type="technozone_btn1white"></block>

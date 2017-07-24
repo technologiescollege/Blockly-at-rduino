@@ -102,6 +102,11 @@ Blockly.Msg.CAT_ADAFRUIT_MOTORSHIELD_v1 = " - Adafruit Motorshield v1";
 Blockly.Msg.CAT_ADAFRUIT_MOTORSHIELD_v2 = " - Adafruit Motorshield v2";
 Blockly.Msg.CAT_ADAFRUIT_JOYSTICK = " - Joystick";
 
+Blockly.Msg.CAT_BLYNK_CC = "BLYNK.CC"; //Added by M. Leroy July 24th 2017
+Blockly.Msg.CAT_Blynk_Arduino_Connexion =" - mode de Connexion";
+Blockly.Msg.CAT_Blynk_Widget = " - widget";
+
+
 Blockly.Msg.CAT_DFRobot = "DFRobot";
 Blockly.Msg.CAT_DFRobot_SHIELD_LCDKEYPAD = " - carte LCD keypad"; //Added february 27th 2016
 Blockly.Msg.CAT_DFPLAYER = " - DFPlayer mini MP3";
@@ -165,6 +170,8 @@ Blockly.Msg.CAT_JEULIN_IN = " - capteurs";
 Blockly.Msg.CAT_JEULIN_OUT = " - actionneurs";
 
 Blockly.Msg.CAT_MULTIFUNCTION = "multi-fonction";  //added march 9th 2016
+
+Blockly.Msg.CAT_RFID = "RFID";  //added april 13th 2017
 
 Blockly.Msg.CAT_KIT_VELO_1 = "OBC33 kit vélo";
 Blockly.Msg.CAT_KIT_VELO_2 = "OBC33 kit vélo";
@@ -962,6 +969,34 @@ Blockly.Msg.multifunction_segment_INPUT3 = "3ème chiffre";
 Blockly.Msg.multifunction_segment_INPUT4 = "4ème chiffre";
 Blockly.Msg.multifunction_segment_TOOLTIP = "afficher 4 chifres sur les 7 segments";
 
+// Module RFID (Added April 13th 2017)
+Blockly.Msg.RFID_module_TEXT = "Initialiser le module RFID";
+Blockly.Msg.RFID_module_INPUT1 = "SDA";
+Blockly.Msg.RFID_module_INPUT2 = "SCK";
+Blockly.Msg.RFID_module_INPUT3 = "MOSI";
+Blockly.Msg.RFID_module_INPUT4 = "MISO";
+Blockly.Msg.RFID_module_INPUT5 = "RST";
+Blockly.Msg.RFID_module_TOOLTIP = "Permet d'initialiser la connexion entre le module RFID et la carte arduino";
+Blockly.Msg.RFID_detection_TEXT = "Détection d'une carte ou d'un badge";
+Blockly.Msg.RFID_detection_TOOLTIP = "Permet de savoir si oui ou non une carte (ou un badge) est présentée devant notre module RFID. Si oui, une connexion est ouverte entre les 2.";
+Blockly.Msg.RFID_reception_cle_TEXT = "Information envoyée par la carte ou le badge";
+Blockly.Msg.RFID_reception_cle_TOOLTIP = "Permet de savoir si oui ou non une information est envoyée à notre module RFID";
+Blockly.Msg.RFID_lecture_cle_TEXT = "Lecture de l'information envoyée par le tag RFID";
+Blockly.Msg.RFID_lecture_cle_TOOLTIP = "Permet de lire l'information envoyée à notre module RFID";
+Blockly.Msg.RFID_fermeture_TEXT = "Fermeture de la connexion RFID ouverte";
+Blockly.Msg.RFID_fermeture_TOOLTIP = "Permet de fermer la connexion ouverte entre le module RFID et la carte (ou le badge).";
+Blockly.Msg.RFID_valeur_cle_TEXT = "Valeur de l'information envoyée par le tag RFID";
+Blockly.Msg.RFID_valeur_cle_TOOLTIP = "Permet de connaitre la valeur de l'information envoyée à notre module RFID";
+Blockly.Msg.RFID_code_acces_TEXT = "Initialiser le code d'accès";
+Blockly.Msg.RFID_code_acces_INPUT1 = "Valeur 1";
+Blockly.Msg.RFID_code_acces_INPUT2 = "Valeur 2";
+Blockly.Msg.RFID_code_acces_INPUT3 = "Valeur 3";
+Blockly.Msg.RFID_code_acces_INPUT4 = "Valeur 4";
+Blockly.Msg.RFID_code_acces_INPUT5 = "Valeur 5";
+Blockly.Msg.RFID_code_acces_TOOLTIP = "Permet de définir le code d'accès autorisé";
+Blockly.Msg.RFID_acces_autorise_TEXT = "Code d'accès autorisé";
+Blockly.Msg.RFID_acces_autorise_TOOLTIP = "Permet de savoir si oui ou non le code d'accès reçu par le module RFID correspond à celui que l'on a défini.";
+
 //Added March 18th 2016
 Blockly.Msg.ROBUNO_INOUT_LED_INPUT1 = "mettre la DEL Rouge";
 Blockly.Msg.ROBUNO_INOUT_LED_INPUT2 = "sur la broche Numérique";
@@ -1708,3 +1743,9 @@ Blockly.Msg.AUTODUINO_TEXT99 = "Ecrire sur l'écran LCD (réf : LCD1)";
 Blockly.Msg.AUTODUINO_EDGE_TEXT = "détection ";
 Blockly.Msg.AUTODUINO_EDGE_INPUT = "sur l'entrée";
 Blockly.Msg.AUTODUINO_EDGE_UP_DOWN = [["front montant", "UP"], ["front descedant", "DOWN"]];
+
+//**** BLYNK**www.Blync.cc***Added**by**Mr**leroy**July**24th**************************************************************
+Blockly.Msg.BLYNK_CC_usb_HELPURL = 'http://docs.blynk.cc/';
+Blockly.Msg.BLYNK_CC_usb_TEXT ='uniquement pour un Arduino Uno connecté en USB';
+Blockly.Msg.BLYNK_CC_usb_INPUT ='veuillez entrer votre Jeton de connexion';
+Blockly.Msg.BlYNK_CC_usb_TOOLTIP = "Arduino uno et USB";
