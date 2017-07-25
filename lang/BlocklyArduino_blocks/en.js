@@ -92,7 +92,7 @@ Blockly.Msg.CAT_ADAFRUIT_MOTORSHIELD_v2 = "Adafruit Motorshield v2";
 Blockly.Msg.CAT_ADAFRUIT_JOYSTICK = "Joystick";
 
 Blockly.Msg.CAT_BLYNK_CC = "BLYNK.CC"; //Added by M. Leroy July 24th 2017
-Blockly.Msg.CAT_Blynk_Arduino_Connexion =" - Mode de Connexion";
+Blockly.Msg.CAT_Blynk_Arduino_Connexion =" - Connection type";
 Blockly.Msg.CAT_Blynk_Widget = " - Widget";
 Blockly.Msg.CAT_Blynk_Programmation = " - Programming";
 
@@ -1676,7 +1676,7 @@ Blockly.Msg.BLYNK_usb_TEXT ='Arduino Uno linked in USB';
 Blockly.Msg.BLYNK_usb_INPUT ='Input your  Token';
 Blockly.Msg.BlYNK_usb_TOOLTIP = "Arduino Uno and USB";
 Blockly.Msg.BLYNK_AUTH = "Auth";
-Blockly.Msg.BLYNK_CONNECT_TITLE = "Connectted";
+Blockly.Msg.BLYNK_CONNECT_TITLE = "Connect to Blynk Server";
 Blockly.Msg.BLYNK_CONNECT_TOOLTIP = "Check connection";
 Blockly.Msg.BLYNK_EMAIL_TITLE = "Send Email";
 Blockly.Msg.BLYNK_EMAIL_TOOLTIP = "";
