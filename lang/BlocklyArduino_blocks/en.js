@@ -216,6 +216,10 @@ Blockly.Msg.CAT_STORAGE_EEPROM = "storage"; //added 29 march 2017
 
 Blockly.Msg.CAT_DRONE = "drone"; //added 26 april 2017
 
+Blockly.Msg.CAT_ETHERNET = "ethernet"; //added 25 july 2017
+Blockly.Msg.CAT_ETHERNET_INIT = "initialisation";
+Blockly.Msg.CAT_ETHERNET_CLIENT = "client";
+
 //**********************************FieldInstance messages***********************************************
 Blockly.Msg.COMPONENT_WARN = 'A %1 configuration block with the same %2 name must be added to use this block!';
 
@@ -1670,3 +1674,71 @@ Blockly.Msg.BLYNK_CC_usb_HELPURL = 'http://docs.blynk.cc/';
 Blockly.Msg.BLYNK_CC_usb_TEXT ='Arduino Uno linked in USB';
 Blockly.Msg.BLYNK_CC_usb_INPUT ='Input your  Token';
 Blockly.Msg.BlYNK_CC_usb_TOOLTIP = "Arduino Uno and USB";
+Blockly.Msg.BLYNK_AUTH = "Auth";
+Blockly.Msg.BLYNK_CONNECT_TITLE = "Connectted";
+Blockly.Msg.BLYNK_CONNECT_TOOLTIP = "Check connection";
+Blockly.Msg.BLYNK_EMAIL_TITLE = "Send Email";
+Blockly.Msg.BLYNK_EMAIL_TOOLTIP = "";
+Blockly.Msg.BLYNK_ETHERNET_BEGIN_TITLE = "Begin";
+Blockly.Msg.BLYNK_ETHERNET_BEGIN_TOOLTIP = "";
+Blockly.Msg.BLYNK_HELPURL = "https://github.com/blynkkk/blynk-library";
+Blockly.Msg.BLYNK_NOTIFY_TITLE = "Push Notify";
+Blockly.Msg.BLYNK_NOTIFY_TOOLTIP = "";
+Blockly.Msg.BLYNK_TWEET_TITLE = "Tweet";
+Blockly.Msg.BLYNK_TWEET_TOOPTIP = "";
+Blockly.Msg.BLYNK_VIRTUAL_WRITE_TITLE = "Send Virtual Value";
+Blockly.Msg.BLYNK_VIRTUAL_WRITE_TOOLTIP = "";
+Blockly.Msg.BLYNK_WRITE_TITLE = "Get Virtual Action";
+Blockly.Msg.BLYNK_WRITE_TOOLTIP = "";
+Blockly.Msg.BLYNK_ETHERNET_VERSION_1 = "Eternet";
+Blockly.Msg.BLYNK_ETHERNET_VERSION_2 = "Eternet2";
+Blockly.Msg.BLYNK_MAC_ADDRESS = "Mac Address";
+Blockly.Msg.BLYNK_VALUE = "Value";
+Blockly.Msg.BLYNK_EMAIL_ADDRESS = "Address";
+Blockly.Msg.BLYNK_EMAIL_BODY = "Body";
+Blockly.Msg.BLYNK_EMAIL_TITLE = "Title";
+Blockly.Msg.BLYNK_TEXT = "Text";
+
+//**** ETHERNET *****************************************************************************//
+
+
+Blockly.Msg.ETHERNET_AVAILABLE_HELPURL = "https://www.arduino.cc/en/Reference/ClientAvailable";
+Blockly.Msg.ETHERNET_AVAILABLE_TITLE = "Client.availalbe";
+Blockly.Msg.ETHERNET_AVAILABLE_TOOLTIP = "Returns the number of bytes available for reading (that is, the amount of data that has been written to the client by the server it is connected to).";
+Blockly.Msg.ETHERNET_BEGIN_DHCP_TITLE = "Begin (DHCP)";
+Blockly.Msg.ETHERNET_BEGIN_DHCP_TOOLTIP = "Using Ethernet.begin(mac) with the proper network setup, the Ethernet shield will automatically obtain an IP address.";
+Blockly.Msg.ETHERNET_BEGIN_HELPURL = "https://www.arduino.cc/en/Reference/EthernetBegin";
+Blockly.Msg.ETHERNET_BEGIN_TITLE = "Begin";
+Blockly.Msg.ETHERNET_BEGIN_TOOLTIP = "Initializes the ethernet library and network settings.";
+Blockly.Msg.ETHERNET_CLIENT_PRINTLN_HELPURL = "https://www.arduino.cc/en/Reference/ClientPrintln";
+Blockly.Msg.ETHERNET_CLIENT_PRINTLN_TITLE = "Client.Println";
+Blockly.Msg.ETHERNET_CLIENT_PRINTLN_TOOLTIP = "Print data, followed by a carriage return and newline, to the server a client is connected to. Prints numbers as a sequence of digits, each an ASCII character (e.g. the number 123 is sent as the three characters '1', '2', '3').";
+Blockly.Msg.ETHERNET_CLIENT_PRINT_HELPURL = "https://www.arduino.cc/en/Reference/ClientPrint";
+Blockly.Msg.ETHERNET_CLIENT_PRINT_TITLE = "Client.Print";
+Blockly.Msg.ETHERNET_CLIENT_PRINT_TOOLTIP = "Print data to the server that a client is connected to. Prints numbers as a sequence of digits, each an ASCII character (e.g. the number 123 is sent as the three characters '1', '2', '3').";
+Blockly.Msg.ETHERNET_CONNECTED_HELPURL = "https://www.arduino.cc/en/Reference/ClientConnected";
+Blockly.Msg.ETHERNET_CONNECTED_TITLE = "Client.Connected";
+Blockly.Msg.ETHERNET_CONNECTED_TOOLTIP = "Returns true if the client is connected, false if not.";
+Blockly.Msg.ETHERNET_CONNECT_HELPURL = "https://www.arduino.cc/en/Reference/ClientConnect";
+Blockly.Msg.ETHERNET_CONNECT_TITLE = "Client.Connect";
+Blockly.Msg.ETHERNET_CONNECT_TOOLTIP = "Connects to a specified IP address and port. The return value indicates success or failure. Also supports DNS lookups when using a domain name.";
+Blockly.Msg.ETHERNET_GET_REQUEST_HELPURL = "";
+Blockly.Msg.ETHERNET_GET_REQUEST_TITLE = "GET Request";
+Blockly.Msg.ETHERNET_GET_REQUEST_TOOLTIP = "Create GET Request.";
+Blockly.Msg.ETHERNET_LOCALIP_HELPURL = "https://www.arduino.cc/en/Reference/EthernetLocalIP";
+Blockly.Msg.ETHERNET_LOCALIP_TITLE = "localIP";
+Blockly.Msg.ETHERNET_LOCALIP_TOOLTIP = "Returns the IP address of the Ethernet shield";
+Blockly.Msg.ETHERNET_MAC_ADDRESS_TOOLTIP = "Edit Mac Address";
+Blockly.Msg.ETHERNET_POST_DATA = "Data";
+Blockly.Msg.ETHERNET_POST_REQUEST_HELPURL = "";
+Blockly.Msg.ETHERNET_POST_REQUEST_TITLE = "POST Request";
+Blockly.Msg.ETHERNET_POST_REQUEST_TOOLTIP = "Create POST Request.";
+Blockly.Msg.ETHERNET_READ_HELPURL = "https://www.arduino.cc/en/Reference/ClientRead";
+Blockly.Msg.ETHERNET_READ_TITLE = "Client.Read";
+Blockly.Msg.ETHERNET_READ_TOOLTIP = "Read the next byte received from the server the client is connected to (after the last call to read()).";
+Blockly.Msg.ETHERNET_STOP_HELPURL = "https://www.arduino.cc/en/Reference/ClientStop";
+Blockly.Msg.ETHERNET_STOP_TITLE = "Client.Stop";
+Blockly.Msg.ETHERNET_STOP_TOOLTIP = "Disconnect from the server.";
+Blockly.Msg.ETHERNET_VERSION_1 = "Ethernet";
+Blockly.Msg.ETHERNET_VERSION_2 = "Ethernet2";
+Blockly.Msg.ETHERNET_VERSION_V2 = "Ethernet_v2";

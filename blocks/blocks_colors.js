@@ -22,6 +22,7 @@ Blockly.Blocks.BT_ELEC.HUE = "#142D5E";
 Blockly.Blocks.dfplayer.HUE = "#F39800";
 Blockly.Blocks.drone.HUE = "#AFABAC";
 Blockly.Blocks.EsusBoard.HUE = "#2475FA";
+Blockly.Blocks.ethernet.HUE = "#FFCC66";
 Blockly.Blocks.fischertechnik.HUE = "#778E9A";
 Blockly.Blocks.flycam.HUE = "#46C286";
 Blockly.Blocks.grove.HUE = "#8EC31F";

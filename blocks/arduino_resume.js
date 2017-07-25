@@ -50,6 +50,7 @@ head.load(
 "blocks/display-oled-128x64-i2c/display-oled-128x64-i2c.js",
 "blocks/drone/drone.js",
 "blocks/EsusBoard/EsusBoard.js",
+"blocks/ethernet/ethernet.js",
 "blocks/fischertechnik/fischertechnik.js",
 "blocks/flycamone-eco-v2/flycamone-eco-v2.js",
 "blocks/grove/grove.js",

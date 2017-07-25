@@ -33,6 +33,7 @@ head.load(
 "generators/arduino/display-oled-128x64-i2c.js",
 "generators/arduino/drone.js",
 "generators/arduino/EsusBoard.js",
+"generators/arduino/ethernet.js",
 "generators/arduino/fischertechnik.js",
 "generators/arduino/flycamone-eco-v2.js",
 "generators/arduino/grove.js",

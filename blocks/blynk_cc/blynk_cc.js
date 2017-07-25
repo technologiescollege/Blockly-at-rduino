@@ -32,3 +32,137 @@ Blockly.Blocks.blynk_cc_uno_cnx_usb = {
     this.setTooltip(Blockly.Msg.BLYNK_CC_usb_TOOlTIP);
   }
 };
+
+Blockly.Blocks['blynk_cc_connect'] = {
+  init: function() {
+    this.setHelpUrl(Blockly.Msg.BLYNK_HELPURL);
+    this.setColour(Blockly.Blocks.blynk_cc.HUE);
+    this.appendDummyInput()
+		.appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/blynk_cc/blynk_logo.jpg', 64, 64))
+		.appendField(Blockly.Msg.BLYNK_CONNECT_TITLE);
+    this.setOutput(true);
+    this.setTooltip(Blockly.Msg.BLYNK_CONNECT_TOOLTIP);
+  }
+};
+
+Blockly.Blocks['blynk_cc_ethernet_begin'] = {
+  init: function() {
+    this.setHelpUrl(Blockly.Msg.BLYNK_HELPURL);
+    this.setColour(Blockly.Blocks.blynk_cc.HUE);
+    this.appendDummyInput()
+		.appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/blynk_cc/blynk_logo.jpg', 64, 64))
+		.appendField(Blockly.Msg.BLYNK_ETHERNET_BEGIN_TITLE)
+    //  .appendField(new Blockly.FieldDropdown([[Blockly.Msg.BLYNK_ETHERNET_VERSION_1,""],[Blockly.Msg.BLYNK_ETHERNET_VERSION_2,"2"]]), 'VERSION')
+		.appendField(new Blockly.FieldDropdown([[Blockly.Msg.BLYNK_ETHERNET_VERSION_1,""]], 'VERSION'));
+    this.appendValueInput("AUTH")
+		.setCheck("String")
+		.setAlign(Blockly.ALIGN_RIGHT)
+		.appendField(Blockly.Msg.BLYNK_AUTH);
+    this.appendValueInput("MAC_ADDRESS")
+		.setCheck("String")
+		.setAlign(Blockly.ALIGN_RIGHT)
+		.appendField(Blockly.Msg.BLYNK_MAC_ADDRESS);
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setTooltip(Blockly.Msg.BLYNK_ETHERNET_BEGIN_TOOLTIP);
+  }
+};
+
+Blockly.Blocks['blynk_cc_write'] = {
+  init: function() {
+    this.setHelpUrl(Blockly.Msg.BLYNK_HELPURL);
+    this.setColour(Blockly.Blocks.blynk_cc.HUE);
+    this.appendDummyInput()
+		.appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/blynk_cc/blynk_logo.jpg', 64, 64))
+		.appendField(Blockly.Msg.BLYNK_WRITE_TITLE);
+    this.appendDummyInput()
+		.appendField("V")
+		.appendField(new Blockly.FieldTextInput("0"),"PIN");
+    this.appendStatementInput("ACTION")
+		.setCheck(null);
+    this.setInputsInline(true);
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setTooltip(Blockly.Msg.BLYNK_WRITE_TOOLTIP);
+  }
+};
+
+Blockly.Blocks['blynk_cc_virtual_write'] = {
+  init: function() {
+    this.setHelpUrl(Blockly.Msg.BLYNK_HELPURL);
+    this.setColour(Blockly.Blocks.blynk_cc.HUE);
+    this.appendDummyInput()
+		.appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/blynk_cc/blynk_logo.jpg', 64, 64))
+		.appendField(Blockly.Msg.BLYNK_VIRTUAL_WRITE_TITLE);
+    this.appendDummyInput()
+		.appendField("V")
+		.appendField(new Blockly.FieldTextInput("0"),"PIN");
+    this.appendValueInput("VALUE")
+		.setCheck("Number","Boolean")
+		.setAlign(Blockly.ALIGN_RIGHT)
+		.appendField(Blockly.Msg.BLYNK_VALUE);
+    this.setInputsInline(true);
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setTooltip(Blockly.Msg.BLYNK_VIRTUAL_WRITE_TOOLTIP);
+  }
+};
+
+Blockly.Blocks['blynk_cc_email'] = {
+  init: function() {
+    this.setHelpUrl(Blockly.Msg.BLYNK_HELPURL);
+    this.setColour(Blockly.Blocks.blynk_cc.HUE);
+    this.appendDummyInput()
+		.appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/blynk_cc/blynk_logo.jpg', 64, 64))
+		.appendField(Blockly.Msg.BLYNK_EMAIL_TITLE);
+    this.appendValueInput("ADDRESS")
+		.setCheck("String")
+		.setAlign(Blockly.ALIGN_RIGHT)
+		.appendField(Blockly.Msg.BLYNK_EMAIL_ADDRESS);
+    this.appendValueInput("TITLE")
+		.setCheck("String")
+		.setAlign(Blockly.ALIGN_RIGHT)
+		.appendField(Blockly.Msg.BLYNK_EMAIL_TITLE);
+    this.appendValueInput("BODY")
+		.setCheck("String")
+		.setAlign(Blockly.ALIGN_RIGHT)
+		.appendField(Blockly.Msg.BLYNK_EMAIL_BODY);
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setTooltip(Blockly.Msg.BLYNK_EMAIL_TOOLTIP);
+  }
+};
+
+Blockly.Blocks['blynk_cc_notify'] = {
+  init: function() {
+    this.setHelpUrl(Blockly.Msg.BLYNK_HELPURL);
+    this.setColour(Blockly.Blocks.blynk_cc.HUE);
+    this.appendDummyInput()
+      .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/blynk_cc/blynk_logo.jpg', 64, 64))
+      .appendField(Blockly.Msg.BLYNK_NOTIFY_TITLE);
+    this.appendValueInput("TEXT")
+      .setCheck("String")
+      .setAlign(Blockly.ALIGN_RIGHT)
+      .appendField(Blockly.Msg.BLYNK_TEXT);
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setTooltip(Blockly.Msg.BLYNK_EMAIL_TOOLTIP);
+  }
+};
+
+Blockly.Blocks['blynk_cc_tweet'] = {
+  init: function() {
+    this.setHelpUrl(Blockly.Msg.BLYNK_HELPURL);
+    this.setColour(Blockly.Blocks.blynk_cc.HUE);
+    this.appendDummyInput()
+      .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/blynk_cc/blynk_logo.jpg', 64, 64))
+      .appendField(Blockly.Msg.BLYNK_TWEET_TITLE);
+    this.appendValueInput("TEXT")
+      .setCheck("String")
+      .setAlign(Blockly.ALIGN_RIGHT)
+      .appendField(Blockly.Msg.BLYNK_TEXT);
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setTooltip(Blockly.Msg.BLYNK_TWEET_TOOLTIP);
+  }
+};

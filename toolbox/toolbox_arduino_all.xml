@@ -2388,9 +2388,99 @@
 		</block>
 		<block type="Sharp_IR_read"></block>
 	</category>
+	<category name="CAT_ETHERNET" colour="#FFCC66">
+		<category name="CAT_ETHERNET_INIT" colour="#FFCC66">
+			<block type="ethernet_begin_dhcp">
+				<value name="MAC_ADDRESS">
+					<block type="ethernet_mac_address"></block>
+				</value>
+			</block>
+			<block type="ethernet_localip"></block>
+		</category>
+		<category name="CAT_ETHERNET_CLIENT" colour="#FFCC66">
+			<block type="ethernet_client_begin"></block>
+			<block type="ethernet_connect">
+				<value name="SERVER">
+					<block type="text">
+						<field name="TEXT">www.google.com</field>
+					</block>
+				</value>
+			</block>
+			<block type="ethernet_stop"></block>
+			<block type="ethernet_connected"></block>
+			<block type="ethernet_available"></block>
+			<block type="ethernet_print">
+				<value name="TEXT">
+					<block type="text">
+						<field name="TEXT"></field>
+					</block>
+				</value>
+			</block>
+			<block type="ethernet_println">
+				<value name="TEXT">
+					<block type="text">
+						<field name="TEXT"></field>
+					</block>
+				</value>
+			</block>
+			<block type="ethernet_read"></block>
+			<block type="ethernet_get_request"></block>
+			<block type="ethernet_post_request"></block>
+		</category>
+	</category>	
 	<category name="CAT_BLYNK_CC" colour="#23C890">
 		<category name="CAT_Blynk_Arduino_Connexion" colour="#23C890">
-				<block type="blynk_cc_uno_cnx_usb"></block>
+			<block type="blynk_cc_uno_cnx_usb"></block>
+			<block type="blynk_cc_ethernet_begin">
+				<value name="AUTH">
+					<block type="text">
+						<field name="TEXT"></field>
+					</block>
+				</value>
+				<value name="MAC_ADDRESS">
+					<block type="ethernet_mac_address"></block>
+				</value>
+			</block>
+			<block type="blynk_cc_connect"></block>
+			<block type="blynk_cc_write"></block>
+			<block type="blynk_cc_virtual_write">
+				<value name="VALUE">
+					<block type="math_number">
+						<field name="NUM">1</field>
+					</block>
+				</value>
+			</block>
+			<block type="blynk_cc_email">
+				<value name="ADDRESS">
+					<block type="text">
+						<field name="TEXT"></field>
+					</block>
+				</value>
+				<value name="TITLE">
+					<block type="text">
+						<field name="TEXT"></field>
+					</block>
+				</value>
+				<value name="BODY">
+					<block type="text">
+						<field name="TEXT"></field>
+					</block>
+				</value>
+			</block>
+			<block type="blynk_cc_notify">
+				<value name="TEXT">
+					<block type="text">
+						<field name="TEXT"></field>
+					</block>
+				</value>
+			</block>
+			<block type="blynk_cc_tweet">
+				<value name="TEXT">
+					<block type="text">
+						<field name="TEXT"></field>
+					</block>
+				</value>
+			</block>
 		</category>
 		<category name="CAT_Blynk_Widget" colour="#23C890">
 		</category>

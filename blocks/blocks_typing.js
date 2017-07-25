@@ -15,6 +15,7 @@ head.load(
 "blocks/display-oled-128x64-i2c/blocks_typing.js",
 "blocks/drone/blocks_typing.js",
 "blocks/EsusBoard/blocks_typing.js",
+"blocks/ethernet/blocks_typing.js",
 "blocks/fischertechnik/blocks_typing.js",
 "blocks/flycamone-eco-v2/blocks_typing.js",
 "blocks/grove/blocks_typing.js",
