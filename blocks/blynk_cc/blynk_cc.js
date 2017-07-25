@@ -16,20 +16,21 @@ goog.require('Blockly.Types');
 Blockly.Blocks.blynk_cc_uno_cnx_usb = {
   init: function() {
     this.setColour(Blockly.Blocks.blynk_cc.HUE);
-	this.setHelpUrl(Blockly.Msg.BLYNK_CC_usb_HELPURL);
+	this.setHelpUrl(Blockly.Msg.BLYNK_HELPURL);
     this.appendDummyInput()
-		.appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/blynk_cc/blynk_logo.jpg', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize));
+		.appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/blynk_cc/blynk_logo.jpg', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize
+		));
     this.appendDummyInput()
-		.appendField(Blockly.Msg.BLYNK_CC_usb_TEXT);
+		.appendField(Blockly.Msg.BLYNK_usb_TEXT);
     this.appendDummyInput()
 		.setAlign(Blockly.ALIGN_RIGHT)
-		.appendField(Blockly.Msg.BLYNK_CC_usb_INPUT);
+		.appendField(Blockly.Msg.BLYNK_usb_INPUT);
     this.appendDummyInput()
 		.setAlign(Blockly.ALIGN_RIGHT)
 		.appendField(new Blockly.FieldTextInput('azertyuiopqsdfghjklmwxcvbnnbvcxw'), 'TOKEN');
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    this.setTooltip(Blockly.Msg.BLYNK_CC_usb_TOOlTIP);
+    this.setTooltip(Blockly.Msg.BLYNK_usb_TOOlTIP);
   }
 };
 

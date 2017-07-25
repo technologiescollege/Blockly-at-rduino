@@ -2441,15 +2441,8 @@
 					<block type="ethernet_mac_address"></block>
 				</value>
 			</block>
-			<block type="blynk_cc_connect"></block>
-			<block type="blynk_cc_write"></block>
-			<block type="blynk_cc_virtual_write">
-				<value name="VALUE">
-					<block type="math_number">
-						<field name="NUM">1</field>
-					</block>
-				</value>
-			</block>
+		</category>
+		<category name="CAT_Blynk_Widget" colour="#23C890">
 			<block type="blynk_cc_email">
 				<value name="ADDRESS">
 					<block type="text">
@@ -2466,7 +2459,7 @@
 						<field name="TEXT"></field>
 					</block>
 				</value>
-			</block>
+			</block>		
 			<block type="blynk_cc_notify">
 				<value name="TEXT">
 					<block type="text">
@@ -2482,7 +2475,16 @@
 				</value>
 			</block>
 		</category>
-		<category name="CAT_Blynk_Widget" colour="#23C890">
-		</category>
+		<category name="CAT_Blynk_Programmation" colour="#23C890">
+			<block type="blynk_cc_connect"></block>
+			<block type="blynk_cc_write"></block>
+			<block type="blynk_cc_virtual_write">
+				<value name="VALUE">
+					<block type="math_number">
+						<field name="NUM">1</field>
+					</block>
+				</value>
+			</block>
+		</category>		
 	</category>
 </toolbox>
