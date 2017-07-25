@@ -25,7 +25,9 @@ Blockly.Arduino.blynk_cc_uno_cnx_usb = function() {
   Blockly.Arduino.setups_['setup_BlynkSerial'] = 'BlynkSerial.begin(9600);';   
   Blockly.Arduino.setups_['setup_Serial_begin'] = 'Serial.begin(9600);'; 
   Blockly.Arduino.setups_['setup_Blynk_begin'] = 'Blynk.begin(Serial, auth);'; 
-
+ 
+  var code = 'Blynk.run();\n';
+  return code;
 };
 
 Blockly.Arduino.blynk_cc_connect = function () {
