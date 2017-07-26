@@ -67,12 +67,12 @@
 		<a href="./index.html"><img id="clearLink" src="media/logo-mini.png" border="0" height="36px" onclick="" /></a> 
 		<b>Blockly@rduino</b> : 
 		<span id="title"></span>
-		<a href="#" id="btn_Level0" class="btn btn-default" role='button'>0</a>
-		<a href="#" id="btn_Level1" class="btn btn-default" role='button'>1</a>
-		<a href="#" id="btn_Level2" class="btn btn-default" role='button'>2</a>
-		<a href="#" id="btn_Level3" class="btn btn-default" role='button'>3</a>
-		<a href="#" id="btn_Level4" class="btn btn-default" role='button'>4</a>
-		<a href="#" id="btn_Level4" class="btn btn-default" role='button'>TOUT</a>
+			<a href="#" id="toolbox_algo" class="btn btn-default" role='button' onclick="document.getElementById('toolboxes').value='toolbox_algo';">0</a>
+			<a href="#" id="toolbox_arduino_1" class="btn btn-default" role='button' onclick="document.getElementById('toolboxes').value='toolbox_arduino_1';">1</a>
+			<a href="#" id="toolbox_arduino_2" class="btn btn-default" role='button' onclick="document.getElementById('toolboxes').value='toolbox_arduino_2';">2</a>
+			<a href="#" id="toolbox_arduino_3" class="btn btn-default" role='button' onclick="document.getElementById('toolboxes').value='toolbox_arduino_3';">3</a>
+			<a href="#" id="toolbox_arduino_4" class="btn btn-default" role='button' onclick="document.getElementById('toolboxes').value='toolbox_arduino_4';">4</a>
+			<a href="#" id="toolbox_arduino_all" class="btn btn-default" role='button' onclick="document.getElementById('toolboxes').value='toolbox_arduino_all';">TOUT</a>
 		<label id="labelToolboxDefinition"></label> 
 		<select id="toolboxes">
 			<option value="toolbox_none" selected="selected">...</option>
@@ -80,7 +80,7 @@
 			<option value="toolbox_arduino_1"></option>
 			<option value="toolbox_arduino_2"></option>
 			<option value="toolbox_arduino_3"></option>
-			<option value="toolbox_arduino_4"></option><!-- NBR added -->
+			<option value="toolbox_arduino_4"></option>
 			<option value="toolbox_arduino_all"></option>
 		</select><!--
 			<navLevel>
@@ -566,7 +566,7 @@
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&#215;</span></button>
         <h4 class="modal-title" id="configModalLabel"></h4>
       </div>
-		<div id="divToolbox">
+		<!--div id="divToolbox">
 			<label id="labelToolboxDefinition"></label> 
 			<select id="toolboxes">
 				<option value="toolbox_none" selected="selected">...</option>
@@ -575,11 +575,11 @@
 				<option value="toolbox_arduino_2"></option>
 				<option value="toolbox_arduino_3"></option>
 				<option value="toolbox_arduino_4"></option>
-				<option value="toolbox_user"></option> <!-- NBR added -->
+				<option value="toolbox_user"></option>
 				<option value="toolbox_BT"></option>
 				<option value="toolbox_arduino_all"></option>
 			</select>
-		</div>
+		</div-->
       <input type="checkbox" name="select_all" id="select_all"/> <span id="span_select_all"> </span>
       <div style="float : right; margin-right : 5px;">
             <input type="checkbox" name="put_in_url" id="put_in_url"/> <span id="span_put_in_url"> </span>

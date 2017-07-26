@@ -36,6 +36,8 @@ BlocklyDuino.pluginCodebender_found = navigator.plugins['Codebender.cc'] !== und
  */
 BlocklyDuino.workspace = null;
 
+var BlocklyLevel = 'none';
+
 
 /**
  * Populate the currently selected pane with content generated from the blocks.
@@ -452,8 +454,16 @@ BlocklyDuino.bindFunctions = function() {
 	$('#toolboxes').on("focus", function() {
 		BlocklyDuino.selectedToolbox = $(this).val();
 	});
+	//menu déroulant
+	$('#toolboxes').on("change", BlocklyDuino.changeToolboxDefinition);
+	//bouton de niveaux
+	/*$('#toolbox_algo').on("click", document.getElementById("toolboxes").options.selectedIndex = 1);
+	$('#toolbox_arduino_1').on("click", document.getElementById("toolboxes").options.selectedIndex = 2);
+	$('#toolbox_arduino_2').on("click", document.getElementById("toolboxes").options.selectedIndex = 3);
+	$('#toolbox_arduino_3').on("click", document.getElementById("toolboxes").options.selectedIndex = 4);
+	$('#toolbox_arduino_4').on("click", document.getElementById("toolboxes").options.selectedIndex = 5);
+	$('#toolbox_arduino_all').on("click", document.getElementById("toolboxes").options.selectedIndex = 6);*/
 	
-	$('#toolboxes').on("change", BlocklyDuino.changeToolboxDefinition);	
 
 	$('#configModal').on('hidden.bs.modal', function(e) {
 		BlocklyDuino.loadToolboxDefinition(BlocklyDuino.selectedToolbox);
@@ -527,16 +537,6 @@ BlocklyDuino.bindFunctions = function() {
 		$('#showcardModal').css("z-index", 0);
 		$('#showcardModal').hide();
 	});
-
-	/*$('#btn_videos').on('click', function() {
-		$('#videoModal').css("z-index", 1050);
-		$('#videoModal').css("display", "inline-block");
-		$('#videoModal1').prop('src', "https://mediacad.ac-nantes.fr/m/2018/d/i");
-		$('#videoModal2').prop('src', "https://mediacad.ac-nantes.fr/m/2017/d/i");
-		$('#videoModal3').prop('src', "https://mediacad.ac-nantes.fr/m/2016/d/i");
-		$('#videoModal4').prop('src', "https://mediacad.ac-nantes.fr/m/2020/d/i");
-		$('#videoModal5').prop('src', "https://www.youtube-nocookie.com/embed/vlJl28qE5vg?list=PLwy0yw3Oq4-uFJl0j-efUAAlfCbqtcTMr");
-	});*/
 
 	$('#videoModal button.close').on('click', function() {
 		$('#videoModal').css("z-index", 0);
@@ -753,6 +753,11 @@ BlocklyDuino.loadToolboxDefinition = function(toolboxFile) {
  */
 BlocklyDuino.changeToolboxDefinition =  function (){
 	BlocklyDuino.loadToolboxDefinition($("#toolboxes").val());
+	BlocklyDuino.openConfigToolbox();
+}; 
+
+BlocklyDuino.changeLevelToolboxDefinition =  function (level){
+	BlocklyDuino.loadToolboxDefinition(level);
 	BlocklyDuino.openConfigToolbox();
 }; 
 
