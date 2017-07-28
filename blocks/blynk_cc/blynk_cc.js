@@ -22,14 +22,15 @@ Blockly.Blocks.blynk_cc_uno_cnx_usb = {
 		));
     this.appendDummyInput()
 		.appendField(Blockly.Msg.BLYNK_usb_TEXT);
-    this.appendDummyInput()
-		.setAlign(Blockly.ALIGN_RIGHT)
+    this.appendValueInput("AUTH")
 		.appendField(Blockly.Msg.BLYNK_usb_INPUT);
-    this.appendDummyInput()
+		.setCheck("String")
 		.setAlign(Blockly.ALIGN_RIGHT)
-		.appendField(new Blockly.FieldTextInput('azertyuiopqsdfghjklmwxcvbnnbvcxw'), 'TOKEN');
-    this.setPreviousStatement(true, null);
-    this.setNextStatement(true, null);
+		.appendField(Blockly.Msg.BLYNK_AUTH);
+	this.appendStatementInput("ACTION")
+		.setCheck(null);
+	this.setPreviousStatement(false, null);
+    this.setNextStatement(false, null);
     this.setTooltip(Blockly.Msg.BLYNK_usb_TOOlTIP);
   }
 };
@@ -63,8 +64,10 @@ Blockly.Blocks['blynk_cc_ethernet_begin'] = {
 		.setCheck("String")
 		.setAlign(Blockly.ALIGN_RIGHT)
 		.appendField(Blockly.Msg.BLYNK_MAC_ADDRESS);
-    this.setPreviousStatement(true, null);
-    this.setNextStatement(true, null);
+	this.appendStatementInput("ACTION")
+		.setCheck(null);
+    this.setPreviousStatement(false, null);
+    this.setNextStatement(false, null);
     this.setTooltip(Blockly.Msg.BLYNK_ETHERNET_BEGIN_TOOLTIP);
   }
 };
@@ -123,7 +126,7 @@ Blockly.Blocks['blynk_cc_email'] = {
     this.appendValueInput("TITLE")
 		.setCheck("String")
 		.setAlign(Blockly.ALIGN_RIGHT)
-		.appendField(Blockly.Msg.BLYNK_EMAIL_TITLE);
+		.appendField(Blockly.Msg.BLYNK_EMAIL_TITLE_2);
     this.appendValueInput("BODY")
 		.setCheck("String")
 		.setAlign(Blockly.ALIGN_RIGHT)

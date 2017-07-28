@@ -104,8 +104,13 @@ Blockly.Msg.CAT_ADAFRUIT_JOYSTICK = " - Joystick";
 
 Blockly.Msg.CAT_BLYNK_CC = "BLYNK.CC"; //Added by M. Leroy July 24th 2017
 Blockly.Msg.CAT_Blynk_Arduino_Connexion =" - Mode de Connexion";
-Blockly.Msg.CAT_Blynk_Widget = " - Widget";
-Blockly.Msg.CAT_Blynk_Programmation = " - Programmation";
+Blockly.Msg.CAT_Blynk_Controllers = " - Controlleurs";
+Blockly.Msg.CAT_Blynk_Dysplays = " - Affichage";
+Blockly.Msg.CAT_Blynk_Interface = " - Interface";
+Blockly.Msg.CAT_Blynk_Notifications = " - Notification";
+Blockly.Msg.CAT_Blynk_Programmation = " - Programming";
+Blockly.Msg.CAT_Blynk_Other = " - Autre";
+Blockly.Msg.CAT_Blynk_Sensors = " - Capteurs du Smartphone";
 
 
 Blockly.Msg.CAT_DFRobot = "DFRobot";
@@ -1752,7 +1757,7 @@ Blockly.Msg.AUTODUINO_EDGE_UP_DOWN = [["front montant", "UP"], ["front descedant
 //**** BLYNK**www.Blync.cc***Added**by**Mr**leroy**July**24th**************************************************************
 Blockly.Msg.BLYNK_HELPURL = 'http://docs.blynk.cc/';
 Blockly.Msg.BLYNK_usb_TEXT ='Arduino Uno connecté en USB';
-Blockly.Msg.BLYNK_usb_INPUT ='Veuillez entrer votre Jeton de connexion';
+Blockly.Msg.BLYNK_usb_INPUT ='Token';
 Blockly.Msg.BlYNK_usb_TOOLTIP = "Arduino uno et USB";
 Blockly.Msg.BLYNK_AUTH = "Auth";
 Blockly.Msg.BLYNK_CONNECT_TITLE = "Connecter le serveur Blynk";
@@ -1769,9 +1774,9 @@ Blockly.Msg.BLYNK_PARAM_TITLE = "Get Parameter";
 Blockly.Msg.BLYNK_PARAM_TOOLTIP = "";
 Blockly.Msg.BLYNK_TWEET_TITLE = "Tweeter";
 Blockly.Msg.BLYNK_TWEET_TOOPTIP = "";
-Blockly.Msg.BLYNK_VIRTUAL_WRITE_TITLE = "Envoyer sur la Broche Virtuel V";
+Blockly.Msg.BLYNK_VIRTUAL_WRITE_TITLE = "Envoyer sur la Broche Virtuel ";
 Blockly.Msg.BLYNK_VIRTUAL_WRITE_TOOLTIP = "";
-Blockly.Msg.BLYNK_WRITE_TITLE = "Lire la Broche Virtuel V";
+Blockly.Msg.BLYNK_WRITE_TITLE = "Lire la Broche Virtuel ";
 Blockly.Msg.BLYNK_WRITE_TOOLTIP = "";
 Blockly.Msg.BLYNK_ETHERNET_VERSION_1 = "Ethernet";
 Blockly.Msg.BLYNK_ETHERNET_VERSION_2 = "Ethernet2";
@@ -1779,7 +1784,7 @@ Blockly.Msg.BLYNK_MAC_ADDRESS = "Addresse Mac";
 Blockly.Msg.BLYNK_VALUE = "Valeur";
 Blockly.Msg.BLYNK_EMAIL_ADDRESS = "Addresse";
 Blockly.Msg.BLYNK_EMAIL_BODY = "Corps";
-Blockly.Msg.BLYNK_EMAIL_TITLE = "Titre";
+Blockly.Msg.BLYNK_EMAIL_TITLE_2  = "Objet";
 Blockly.Msg.BLYNK_TEXT = "Texte";
 
 //**** ETHERNET *****************************************************************************//
