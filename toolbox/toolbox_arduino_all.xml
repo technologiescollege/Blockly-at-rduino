@@ -2430,11 +2430,13 @@
 	</category>	
 	<category name="CAT_BLYNK_CC" colour="#23C890">
 		<category name="CAT_Blynk_Arduino_Connexion" colour="#23C890">
-			<block type="blynk_cc_uno_cnx_usb"></block>
+			<block type="blynk_cc_uno_cnx_usb">
 				<value name="AUTH">
 					<block type="text">
 						<field name="TEXT"></field>
-					</block>			
+					</block>
+				</value>	
+			</block>		
 			<block type="blynk_cc_ethernet_begin">
 				<value name="AUTH">
 					<block type="text">
