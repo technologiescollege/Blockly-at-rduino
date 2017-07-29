@@ -1678,7 +1678,7 @@ Blockly.Msg.AUTODUINO_EDGE_UP_DOWN = [["front montant", "UP"], ["front descedant
 //**** BLYNK**www.Blync.cc***Added**by**Mr**leroy**July**24th**************************************************************
 Blockly.Msg.BLYNK_HELPURL = 'http://docs.blynk.cc/';
 Blockly.Msg.BLYNK_usb_TEXT ='Arduino Uno linked in USB';
-Blockly.Msg.BLYNK_usb_INPUT ='Input your  Token';
+Blockly.Msg.BLYNK_usb_INPUT ='Input your ';
 Blockly.Msg.BlYNK_usb_TOOLTIP = "Arduino Uno and USB";
 Blockly.Msg.BLYNK_AUTH = "Auth";
 Blockly.Msg.BLYNK_CONNECT_TITLE = "Connect to Blynk Server";
