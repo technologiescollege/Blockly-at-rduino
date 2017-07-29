@@ -22,10 +22,8 @@ Blockly.Blocks.blynk_cc_uno_cnx_usb = {
 		));
     this.appendDummyInput()
 		.appendField(Blockly.Msg.BLYNK_usb_TEXT);
-	this.appendDummyInput()	
-		.appendField(Blockly.Msg.BLYNK_usb_INPUT);	
     this.appendValueInput("AUTH")
-	.setAlign(Blockly.ALIGN_LEFT)	
+		.setAlign(Blockly.ALIGN_LEFT)	
 		.appendField(Blockly.Msg.BLYNK_usb_INPUT)
 		.setCheck("String")
 		.setAlign(Blockly.ALIGN_RIGHT)
