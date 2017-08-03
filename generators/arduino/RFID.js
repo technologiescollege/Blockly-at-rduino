@@ -90,6 +90,6 @@ Blockly.Arduino.RFID_code_acces = function() {
 };
 
 Blockly.Arduino.RFID_acces_autorise = function() {
-  var code = 'UID[0] == MASTERKEY[0] && UID[1] == MASTERKEY[1] && UID[2] == MASTERKEY[2] && UID[3] == MASTERKEY[3] && UID[4] == MASTERKEY[4]';
+  var code = '(UID[0] == MASTERKEY[0] && UID[1] == MASTERKEY[1] && UID[2] == MASTERKEY[2] && UID[3] == MASTERKEY[3] && UID[4] == MASTERKEY[4])';
   return [code, Blockly.Arduino.ORDER_ATOMIC];
 };
