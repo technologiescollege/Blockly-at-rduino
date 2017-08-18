@@ -1462,6 +1462,9 @@ Blockly.Msg.I2C_SCAN_TOOLTIP = "Scanne les périphériques et retourne les adres
 Blockly.Msg.I2C_SCAN_HELPURL = "http://info.technologiescollege.fr/wiki/doku.php/fr/arduino/lcd-i2c";
 
 
+Blockly.Msg.icn_HelpUrl = "http://www.ebay.fr/cln/dvarrel/robot-arduino/271320303014";
+Blockly.Msg.icn_ds18b20_HelpUrl = "https://www.carnetdumaker.net/articles/mesurer-une-temperature-avec-un-capteur-1-wire-ds18b20-et-une-carte-arduino-genuino";
+
 
 Blockly.Msg.SPI_INIT_TEXT = "SPI_INIT";
 Blockly.Msg.SPI_INIT_SPEED = "fréquence (MHz)"

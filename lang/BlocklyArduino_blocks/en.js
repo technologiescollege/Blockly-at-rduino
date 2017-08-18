@@ -1394,6 +1394,77 @@ Blockly.Msg.ADXL362_ZVALUE_TOOLTIP = "look at X/Y on ADXL362 card";
 Blockly.Msg.ADXL362_TEMPVALUE_TITLE = "temperature";
 Blockly.Msg.ADXL362_TEMPVALUE_TOOLTIP = "test";
 
+
+
+
+//******** FRESNEL : Implementation I2CSoftwareLibrary   http://playground.arduino.cc/Main/SoftwareI2CLibrary
+//******** FRESNEL : SPI 
+
+Blockly.Msg.I2C_INIT_TEXT = "I2C_INIT";
+Blockly.Msg.I2C_INIT_PIN_SCL = "PIN_SCL";
+Blockly.Msg.I2C_INIT_PORT_SCL = "PORT_SCL";
+Blockly.Msg.I2C_INIT_FIELDDROPDOWN_SCL = [["A", "A"], ["B", "B"], ["C", "C"], ["D", "D"], ["E", "E"]];
+Blockly.Msg.I2C_INIT_PIN_SDA = "PIN_SDA";
+Blockly.Msg.I2C_INIT_PORT_SDA = "PORT_SDA";
+Blockly.Msg.I2C_INIT_FIELDDROPDOWN_SDA = [["A", "A"], ["B", "B"], ["C", "C"], ["D", "D"], ["E", "E"]];
+Blockly.Msg.I2C_INIT_TOOLTIP = "configure les broches SDA et SCL";
+Blockly.Msg.I2C_INIT_HELPURL = "http://playground.arduino.cc/Main/SoftwareI2CLibrary";     
+
+Blockly.Msg.I2C_START_TEXT = "I2C_START";
+Blockly.Msg.I2C_START_ADRESS = "adresse";
+Blockly.Msg.I2C_START_RW = "R/W";
+Blockly.Msg.I2C_START_TOOLTIP = "envoi un Start + adresse de l'esclave + R/W";
+Blockly.Msg.I2C_START_HELPURL = "http://playground.arduino.cc/Main/SoftwareI2CLibrary";
+Blockly.Msg.I2C_START_FIELDDROPDOWN = [["W (écriture)", "I2C_WRITE"], ["R (lecture)", "I2C_READ"]];
+
+Blockly.Msg.I2C_RESTART_TEXT = "I2C_RESTART";
+Blockly.Msg.I2C_RESTART_ADRESS = "adresse";
+Blockly.Msg.I2C_RESTART_RW = "R/W";
+Blockly.Msg.I2C_RESTART_FIELDDROPDOWN = [["W (écriture)", "I2C_WRITE"], ["R (lecture)", "I2C_READ"]];
+Blockly.Msg.I2C_RESTART_TOOLTIP = "envoi un REStart + adresse de l'esclave + R/W";
+Blockly.Msg.I2C_RESTART_HELPURL = "http://playground.arduino.cc/Main/SoftwareI2CLibrary";
+
+Blockly.Msg.I2C_STOP_TEXT = "I2C_STOP";
+Blockly.Msg.I2C_STOP_TOOLTIP = "envoi un Stop et donc libère le bus";
+Blockly.Msg.I2C_STOP_HELPURL = "http://playground.arduino.cc/Main/SoftwareI2CLibrary";
+
+Blockly.Msg.I2C_WRITE_TEXT = "I2C_WRITE";
+Blockly.Msg.I2C_WRITE_DATA = "data";
+Blockly.Msg.I2C_WRITE_TOOLTIP = "écrit un octet de donnée";
+Blockly.Msg.I2C_WRITE_HELPURL = "http://playground.arduino.cc/Main/SoftwareI2CLibrary";
+
+Blockly.Msg.I2C_READ_TEXT = "I2C_READ";
+Blockly.Msg.I2C_READ_LAST = "Last? : ";
+Blockly.Msg.I2C_READ_FIELDDROPDOWN = [["non","false"], ["oui","true"]];
+Blockly.Msg.I2C_READ_TOOLTIP = "Reçoit un octet de donnée avec l'envoi d'un paramètre last = oui pour le dernier";
+Blockly.Msg.I2C_READ_HELPURL = "http://playground.arduino.cc/Main/SoftwareI2CLibrary";
+Blockly.Msg.I2C_SCAN_TEXT = "lister les périphériques I²C dans la console série";
+Blockly.Msg.I2C_SCAN_TOOLTIP = "Scanne les périphériques et retourne les adresses dans la console à régler sur 115200 bauds";
+Blockly.Msg.I2C_SCAN_HELPURL = "http://info.technologiescollege.fr/wiki/doku.php/fr/arduino/lcd-i2c";
+
+
+Blockly.Msg.icn_HelpUrl = "http://www.ebay.fr/cln/dvarrel/robot-arduino/271320303014";
+Blockly.Msg.icn_ds18b20_HelpUrl = "https://www.carnetdumaker.net/articles/mesurer-une-temperature-avec-un-capteur-1-wire-ds18b20-et-une-carte-arduino-genuino";
+
+
+Blockly.Msg.SPI_INIT_TEXT = "SPI_INIT";
+Blockly.Msg.SPI_INIT_SPEED = "fréquence (MHz)"
+Blockly.Msg.SPI_INIT_MODE = "mode";  
+Blockly.Msg.SPI_INIT_MODE_FIELDDROPDOWN = [["mode 0 (0,0)", "SPI_MODE0"], ["mode 1 (0,1)", "SPI_MODE1"], ["mode 2 (1,0)", "SPI_MODE2"], ["mode 3 (1,1)", "SPI_MODE3"]];
+Blockly.Msg.SPI_INIT_BITORDER = "ordre des bits";
+Blockly.Msg.SPI_INIT_BITORDER_FIELDDROPDOWN = [["MSB -> LSB", "MSBFIRST"], ["LSB -> MSB", "LSBFIRST"]];
+Blockly.Msg.SPI_INIT_TOOLTIP = " configuration de la liaison SPI" ; 
+Blockly.Msg.SPI_INIT_HELPURL = " " ;
+
+Blockly.Msg.SPI_SEND_TEXT = "SPI_SEND";
+Blockly.Msg.SPI_SEND_DATA = "donnée";
+Blockly.Msg.SPI_SEND_TOOLTIP = " envoi de la donnée par bus SPI";
+Blockly.Msg.SPI_SEND_HELPURL = "";
+
+Blockly.Msg.SPI_RECEIVE_TEXT = "SPI_RECEIVE";
+Blockly.Msg.SPI_RECEIVE_TOOLTIP = "récupère une donnée";
+Blockly.Msg.SPI_RECEIVE_HELPURL = "" ;
+
 //**** AUTODUINO ************************************************************************************
 
 // definition of the categories

@@ -10,9 +10,6 @@ goog.provide('Blockly.Blocks.icn');
 goog.require('Blockly.Blocks');
 goog.require('Blockly.Types');
 
-//Blockly.Blocks.icn.HUE = '#FF8C00';
-Blockly.Blocks.icn.HelpUrl="http://www.ebay.fr/cln/dvarrel/robot-arduino/271320303014";
-
 Blockly.Blocks['tb6612_setup'] = {
   init: function() {
     this.appendDummyInput()
@@ -21,7 +18,6 @@ Blockly.Blocks['tb6612_setup'] = {
         .appendField('TB6612 Setup')
 		.appendField('STDBY#')
         .appendField(new Blockly.FieldTextInput('10',  Blockly.Arduino.pinDualValidator), 'STDBY');
-
     this.appendDummyInput()
 	    .appendField('PWMA#')
 		.appendField(new Blockly.FieldTextInput('3',  Blockly.Arduino.pinPWMValidator), 'PWMA')
@@ -42,7 +38,7 @@ Blockly.Blocks['tb6612_setup'] = {
     this.setNextStatement(true, null);
     this.setTooltip('tb6612 controller setup');
     this.setColour(Blockly.Blocks.icn.HUE);
-    this.setHelpUrl(Blockly.Blocks.icn.HelpUrl);
+    this.setHelpUrl(Blockly.Msg.icn_HelpUrl);
   }
 };
 
@@ -63,7 +59,7 @@ Blockly.Blocks['tb6612_controller'] = {
     this.setNextStatement(true, null);
     this.setTooltip('tb6612 controller -255<speed<255');
     this.setColour(Blockly.Blocks.icn.HUE);
-    this.setHelpUrl(Blockly.Blocks.icn.HelpUrl);
+    this.setHelpUrl(Blockly.Msg.icn_HelpUrl);
   }
 };
 
@@ -80,7 +76,7 @@ Blockly.Blocks['hcsr04'] = {
 	this.setOutput(true, 'Number');
 	this.setTooltip('ultrasonic sensor - return float distance');
     this.setColour(Blockly.Blocks.icn.HUE);
-    this.setHelpUrl(Blockly.Blocks.icn.HelpUrl);
+    this.setHelpUrl(Blockly.Msg.icn_HelpUrl);
   }
 };
 
@@ -100,7 +96,7 @@ Blockly.Blocks['servomotor_angle'] = {
     this.setNextStatement(true, null);
 	this.setTooltip('servomotor (0~180°)');
     this.setColour(Blockly.Blocks.icn.HUE);
-    this.setHelpUrl(Blockly.Blocks.icn.HelpUrl);
+    this.setHelpUrl(Blockly.Msg.icn_HelpUrl);
   }
 };
 
@@ -114,7 +110,7 @@ Blockly.Blocks['servomotor_detach'] = {
     this.setNextStatement(true, null);
 	this.setTooltip('detach servomotor and allow pin 9&10 for PWM');
     this.setColour(Blockly.Blocks.icn.HUE);
-    this.setHelpUrl(Blockly.Blocks.icn.HelpUrl);
+    this.setHelpUrl(Blockly.Msg.icn_HelpUrl);
   }
 };
 Blockly.Blocks['servomotor_attach'] = {
@@ -127,7 +123,7 @@ Blockly.Blocks['servomotor_attach'] = {
     this.setNextStatement(true, null);
 	this.setTooltip('attach servomotor');
     this.setColour(Blockly.Blocks.icn.HUE);
-    this.setHelpUrl(Blockly.Blocks.icn.HelpUrl);
+    this.setHelpUrl(Blockly.Msg.icn_HelpUrl);
   }
 };
 Blockly.Blocks['servomotor_attached'] = {
@@ -139,7 +135,7 @@ Blockly.Blocks['servomotor_attached'] = {
 	this.setOutput(true, 'Boolean');
 	this.setTooltip('return TRUE if servomotor is attached');
     this.setColour(Blockly.Blocks.icn.HUE);
-    this.setHelpUrl(Blockly.Blocks.icn.HelpUrl);
+    this.setHelpUrl(Blockly.Msg.icn_HelpUrl);
   }
 };
 
@@ -155,7 +151,7 @@ Blockly.Blocks['ds18b20_search'] = {
 	this.setOutput(true, 'Boolean');
 	this.setTooltip('temperature sensor - return true if found');
     this.setColour(Blockly.Blocks.icn.HUE);
-    this.setHelpUrl(Blockly.Blocks.icn.HelpUrl);
+    this.setHelpUrl(Blockly.Msg.icn_ds18b20_HelpUrl);
   }
 };
 
@@ -169,11 +165,6 @@ Blockly.Blocks['ds18b20_temp'] = {
 	this.setOutput(true, 'Number');
 	this.setTooltip('temperature sensor - return float temp');
     this.setColour(Blockly.Blocks.icn.HUE);
-    this.setHelpUrl(Blockly.Blocks.icn.HelpUrl);
+    this.setHelpUrl(Blockly.Msg.icn_ds18b20_HelpUrl);
   }
 };
-
-
-
-
-

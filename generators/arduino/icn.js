@@ -119,27 +119,27 @@ Blockly.Arduino['servomotor_attached'] = function() {
 Blockly.Arduino['ds18b20_search'] = function() {
   var ds18b20_pin = this.getFieldValue('ds18b20_pin');
   var addr = this.getFieldValue('address');
-  Blockly.Arduino.includes_['ds_include'] = '#include <OneWire.h>\n';
-  Blockly.Arduino.definitions_['ds_def'] = 'OneWire  ds('+ds18b20_pin+');  // on pin '+ds18b20_pin+' (a 4.7K resistor is necessary)\n'
-  Blockly.Arduino.definitions_['ds_def'+addr+''] = 'byte addr'+addr+'[8];\n';
-  var code = 'ds.search(addr'+addr+')';
+  Blockly.Arduino.includes_['ds18b20_include'] = '#include <OneWire.h>';
+  Blockly.Arduino.definitions_['ds18b20_def'] = 'OneWire ds18b20('+ds18b20_pin+'); // on pin'+ds18b20_pin+' (a 4.7K resistor is necessary)\n'
+  Blockly.Arduino.definitions_['ds18b20_def_'+addr] = 'byte addr_ds18b20_' + addr + '['+addr+'];\n';
+  var code = 'ds18b20.search(addr_ds18b20_' + addr + ')';
   return [code, Blockly.Arduino.ORDER_ATOMIC];
 };
 
 Blockly.Arduino['ds18b20_temp'] = function() {
   var addr = this.getFieldValue('address');
   Blockly.Arduino.definitions_['ds_temp'] =
-	'float dstemp(byte addr[8]) {\n'
+	'float dstemp(byte addr[]) {\n'
 	+ '  byte data[12],i;\n'
-	+ '   ds.reset();\n'
-    + '   ds.select(addr);\n'
-    + '   ds.write(0x44,0);//start conversion\n'
+	+ '   ds18b20.reset();\n'
+    + '   ds18b20.select(addr);\n'
+    + '   ds18b20.write(0x44,0);//start conversion\n'
     + '   delay(1000);     // maybe 750ms is enough, maybe not  \n'
-    + '   ds.reset();\n'
-    + '   ds.select(addr);    \n'
-    + '   ds.write(0xBE);         // Read Scratchpad\n'
+    + '   ds18b20.reset();\n'
+    + '   ds18b20.select(addr);    \n'
+    + '   ds18b20.write(0xBE);         // Read Scratchpad\n'
     + '   for ( i = 0; i < 9; i++) {           // we need 9 bytes\n'
-    + '    data[i] = ds.read();\n'
+    + '    data[i] = ds18b20.read();\n'
     + '   }\n'
     + '   int16_t raw = (data[1] << 8) | data[0];\n'
     + '   byte cfg = (data[4] & 0x60);\n'
@@ -148,6 +148,6 @@ Blockly.Arduino['ds18b20_temp'] = function() {
     + '   else if (cfg == 0x40) raw = raw & ~1; // 11 bit res, 375 ms\n'
     + '   return (float)raw / 16.0;\n'
 	+ '}';
-  var code = 'dstemp(addr'+addr+')';
+  var code = 'dstemp('+addr+')';
   return [code, Blockly.Arduino.ORDER_ATOMIC];
 };
