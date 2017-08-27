@@ -89,3 +89,8 @@ Blockly.Arduino['serial_flush'] = function() {
   var code = 'Serial.flush();\n';
   return code;
 };
+
+Blockly.Arduino.serial_line = function(block) {
+    var code = '"\\n"';
+    return [code, Blockly.Arduino.ORDER_ATOMIC]
+};

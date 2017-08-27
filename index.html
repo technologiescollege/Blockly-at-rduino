@@ -49,6 +49,7 @@
 
 <link rel="stylesheet" type="text/css" href="css/blockly@rduino.css"/>
 <link rel="stylesheet" type="text/css" href="css/roundButtons.css"/>
+<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css"/>
 <!--link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/-->
 <link rel="stylesheet" type="text/css" href="css/bootstrap.min.SEB.css"/>
 <link rel="stylesheet" type="text/css" href="css/bootstrap-toggle.min.css" />
@@ -117,7 +118,7 @@
 				</a>
 			</div>
 			<button id="btn_config" class="text-left btn btn-warning btn-block " data-toggle="modal" data-target="#configModal">
-				<span class="glyphicon glyphicon-cog"> </span>
+				<span class="fa fa-cogs"> </span>
 				<span id="span_config"> </span>
 			</button>
 			<a href="#" id="btn_config_kit" target="_blank" class="text-left btn btn-warning btn-block hidden" role='button'>
@@ -141,13 +142,14 @@
 	            </li>
 	            <li role="presentation" id="tab_blocks" class="active">
 	                 <a href="#content_blocks" aria-controls="content_blocks" role="tab" data-toggle="tab">
-	                     <span class="glyphicon glyphicon-home"></span>
+						 <span class="fa fa-puzzle-piece"></span>
 	                     <span id="a_blocks"> </span>
 	                 </a>
 	            </li>
 	            <li role="presentation" id="tab_arduino">
 	                 <a href="#content_arduino" aria-controls="content_arduino" role="tab" data-toggle="tab">
-	                     <span class="glyphicon glyphicon-check"></span>
+	                     <span class="fa fa-code"></span>					 
+	                     <!--span class="glyphicon glyphicon-education"></span-->
 	                    <span id="a_arduino"></span>
 	                 </a>
 	            </li>
@@ -168,16 +170,18 @@
 		</div>
 		<div id="menuPanelFiles">
 			<a id="btn_saveXML" class='btn btn-success btn-block text-left' href="#" role='button'>
-			  <span class="glyphicon glyphicon-cloud-download"></span>
-			  <span id="span_saveXML"> </span>
+				<span class="fa fa-cloud-download"></span>
+				<!--span class="glyphicon glyphicon-cloud-download"></span-->
+				<span id="span_saveXML"> </span>
 			 </a>
 			<button id="btn_fakeload" class="btn btn-success btn-block">
-				<span class="glyphicon glyphicon-cloud-upload"></span>
+				<span class="fa fa-cloud-upload"></span>
+				<!--span class="glyphicon glyphicon-cloud-upload"></span-->
 				<span id="span_fakeload"> </span>
 			</button>
 			<input type="file" id="load" style="display: none;" />
 			<button id="btn_example" class="btn btn-info btn-block" data-toggle="modal" data-target="#exampleModal">
-				<span class="glyphicon glyphicon-share"> </span>
+				<span class="glyphicon glyphicon-list-alt"> </span>
 				<span id="span_example"> </span>
 			</button>
 			<a id="btn_create_example" class="btn btn-info btn-block" href="" target="_blank">
@@ -213,7 +217,7 @@
 		</div>
 		<div id="div_help_button">
 		   <button id="btn_videos" class="btn btn-danger text-left">
-		       <span class="glyphicon glyphicon-expand"> </span>
+		       <span class="fa fa-film"> </span>
 		   </button>
 		   <a id="btn_doc" class='btn btn-success btn-info text-left' href="http://info.technologiescollege.fr/wiki/doku.php/fr/arduino/blockly_rduino" target="_blank" role='button'>
 		       <span class="glyphicon glyphicon-info-sign"></span>
@@ -237,10 +241,10 @@
 					<span id="span_delete"> </span>
 				</button>
 				<button id="btn_undo" class="btn btn-default">
-					<span class="glyphicon glyphicon-menu-left"> </span>
+					<span class="fa fa-undo"> </span>
 				</button>
 				<button id="btn_redo" class="btn btn-default">
-					<span class="glyphicon glyphicon-menu-right"> </span>
+					<span class="fa fa-repeat"> </span>
 				</button>
 				<button id="btn_block_capture" class="btn btn-default">
 					<span id="icon_btn_block_capture" class="glyphicon glyphicon-camera"> </span>
@@ -286,7 +290,7 @@
 					<span id="span_saveIno"> </span>
 				</a>		
 				<button id="cb_cf_verify_btn" class="btn btn-codebender">
-					<span class="glyphicon glyphicon-ok"> </span>
+					<span class="fa fa-check-square-o"> </span>
 					<span id="span_verify_codebender"> </span>
 				</button>			
                 <button id="cb_cf_flash_btn" class="btn btn-codebender">
@@ -294,11 +298,11 @@
 					<span id="span_flash_codebender"> </span>
 				</button>			
 				<button id="btn_verify_local" class="btn btn-arduino">
-					<span class="glyphicon glyphicon-ok"> </span>
+					<span class="fa fa-check-square-o"> </span>
 					<span id="span_verify_local"> </span>
 				</button>							
 				<a id="btn_flash_local" class='btn btn-arduino' href="#" role='button'>
-					<span class="glyphicon glyphicon-log-in"> </span>
+	                <span class="fa fa-microchip"></span>					 
 					<span id="span_flash_local"> </span>
 				</a>		
 				<!--a id="btn_getResult" class='btn btn-arduino' href="http://127.0.0.1:5005" role='button' target='_blank'>
@@ -306,7 +310,7 @@
 					<span id="span_flash_local_result"> </span>
 				</a-->
                 <button id="btn_pasteIDEArduino" class="btn btn-arduino">
-					<span class="glyphicon glyphicon-random"> </span>
+					<span class="fa fa-folder-open"> </span>
 					<span id="span_pasteIDEArduino"> </span>
 				</button>
 				<img id="LocalCodebenderLogo" height="35"/>
@@ -355,6 +359,7 @@
               <br /> - Bernard REMOND - rDuino-Compiler-Uploader-Server : (<a href='https://github.com/nbremond77' target='blank'>https://github.com/nbremond77</a>)
               <br /> - Blockly : (<a href='https://developers.google.com/blockly' target='blank'>https://developers.google.com/blockly</a>)
               <br /> - Bootstrap (<a href='http://getbootstrap.com' target='blank'>http://getbootstrap.com</a>)
+              <br /> - Font Awesome Icons (<a href='http://fontawesome.io' target='blank'>http://fontawesome.io</a>)
               <br /> - Bootstrap Toggle (<a href='http://www.bootstraptoggle.com/' target='blank'>http://www.bootstraptoggle.com/</a>)
 			  <br /> - Codebender - CompilerFlasher : (<a href='https://codebender.cc' target='blank'>https://codebender.cc</a>)
               <br /> - JQuerry (<a href='https://jquery.com' target='blank'>https://jquery.com)</a>
@@ -624,11 +629,11 @@
 				<div class="arduino_card_mini_picture_div">
 				    <img id="arduino_card_mini_picture" width="150px"/>
 				</div>
-				<div class="modal-body-config-global_left">
-					<label id="span_languageMenu"> </label>  <select id="languageMenu"></select><br/>
+				<div class="modal-body-config-global_left">					
+	                <span class="fa fa-language"></span>  <label id="span_languageMenu"> </label>  <select id="languageMenu"></select><br/>
 					<!--label id="textSize" class="mod">tototo</label><input name="textSizeSelect" class="form-control" style="" min="0" max="30" step="1" value="12" type="number"></input-->
 					<div id="divCard">
-							<label id="labelArduinoCard"></label>
+							<span class="fa fa-microchip"></span>  <label id="labelArduinoCard"></label>
 							<div id="pinout_AIO_off"></div>
 							<select id="pinout" onmousemove="BlocklyDuino.cardPicture_change_AIO();" onchange="BlocklyDuino.cardPicture_change_AIO();">
 								<option value="none">...</option>

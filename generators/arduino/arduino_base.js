@@ -27,6 +27,9 @@ goog.provide('Blockly.Arduino.arduino_base');
 
 goog.require('Blockly.Arduino');
 
+Blockly.Arduino.base_begin = function(block) {
+    return ""
+};
 
 Blockly.Arduino.base_setup = function () {
     var branch = Blockly.Arduino.statementToCode(this, 'DO');

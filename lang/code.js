@@ -195,7 +195,13 @@ Code.initLanguage = function() {
   $('#btn_close_config').text(MSG['btn_close']);
   $('#btn_valid_config').text(MSG['btn_valid']);
   $('#btn_close_msg').text(MSG['btn_close']);
-  $('#btn_valid_msg').text(MSG['btn_valid']);
+  $('#btn_valid_msg').text(MSG['btn_valid']);  
+  
+  $('#toolbox_algo').attr('title', MSG['span_toolbox_algo']);
+  $('#toolbox_arduino_1').attr('title', MSG['span_toolbox_arduino_1']);
+  $('#toolbox_arduino_2').attr('title', MSG['span_toolbox_arduino_2']);
+  $('#toolbox_arduino_3').attr('title', MSG['span_toolbox_arduino_3']);
+  $('#toolbox_arduino_4').attr('title', MSG['span_toolbox_arduino_4']);
 
   $('#editModalLabel').text(MSG['editModalLabel']);
   $('#showcardLabel').text(MSG['showcardLabel']);

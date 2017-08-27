@@ -186,3 +186,14 @@ Blockly.Blocks['serial_flush'] = {
     this.setTooltip('Waits for the transmission of outgoing serial data to complete.');
   }
 };
+
+Blockly.Blocks.serial_line = {
+    init: function() {
+		this.setColour(Blockly.Blocks.arduino_serial.HUE);
+        this.setHelpUrl(Blockly.Msg.HELPURL);
+        this.appendDummyInput("").appendField("un saut de ligne");
+        this.setInputsInline(true);
+        this.setOutput(true, "String");
+        this.setTooltip("permet d'aller à ligne sur le moniteur série")
+    }
+};

@@ -1,5 +1,11 @@
 //---------------------------------arduino_base.js-------------------------------------
 
+Blockly.Blocks.base_begin.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.base_end.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
 Blockly.Blocks.millis.getBlockType = function() {
 	return Blockly.Types.LARGE_NUMBER;
 };
@@ -57,6 +63,9 @@ Blockly.Blocks.inout_pulsein_timeout.getBlockType = function() {
 Blockly.Blocks.inout_digital_read.getBlockType = function() {
 	return Blockly.Types.BOOLEAN;
 };
+Blockly.Blocks.inout_digital_read_check.getBlockType = function() {
+	return Blockly.Types.BOOLEAN;
+};
 Blockly.Blocks.inout_digital_read_validator.getBlockType = function() {
 	return Blockly.Types.BOOLEAN;
 };
@@ -107,6 +116,9 @@ Blockly.Blocks.serial_write.getBlockType = function() {
 };
 Blockly.Blocks.serial_write_out.getBlockType = function() {
 	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.serial_line.getBlockType = function() {
+	return Blockly.Types.TEXT;
 };
 
 //---------------------------------arduino_softserial.js-------------------------------------

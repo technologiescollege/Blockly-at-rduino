@@ -46,6 +46,7 @@
 		<block type="math_number"></block>
 		<block type="inout_angle_maths"></block>
 		<block type="math_arithmetic"></block>
+		<block type="math_interval"></block>
 		<block type="math_single"></block>
 		<block type="math_trig"></block>
 		<block type="math_constant"></block>
@@ -156,6 +157,7 @@
 	<category name="CAT_FUNCTIONS" custom="PROCEDURE" colour="#632D99"></category>
 	<sep></sep>
 	<category name="CAT_ARDUINO" colour="#00979D">
+		<block type="base_begin"></block>
 		<block type="base_setup"></block>
 		<block type="base_setup_loop"></block>
 		<block type="base_define_const"></block>
@@ -333,7 +335,8 @@
 			</block>
 			<block type="serial_write_out"></block>
 			<block type="serial_available"></block>
-			<block type="serial_read"></block>
+			<block type="serial_read"></block>			
+			<block type="serial_line"></block>
 		</category>
 		<category name="CAT_ARDUINO_COMM_SOFTSERIAL" colour="#00979D">
 			<block type="soft_init"></block>
@@ -342,6 +345,7 @@
 			<block type="soft_write"></block>
 			<block type="soft_available"></block>
 			<block type="soft_read"></block>
+			<block type="serial_line"></block>
 		</category>
 		<category name="CAT_STORAGE_EEPROM" colour="#00979D">
 			<block type="storage_sd_write">

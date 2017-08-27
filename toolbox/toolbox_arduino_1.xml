@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <toolbox>
-	<parametre id="defaultCategories">CAT_LOGIC,CAT_LOOPS,CAT_MATH,CAT_ARRAY,CAT_TEXT,CAT_VARIABLES,CAT_FUNCTIONS
+	<parametre id="defaultCategories">CAT_LOGIC,CAT_LOOPS,CAT_MATH,CAT_ARRAY,CAT_TEXT,CAT_VARIABLES,CAT_FUNCTIONS,CAT_ARDUINO
 	</parametre>
 	<category name="CAT_LOGIC" colour="#E1A91A">
 		<block type="controls_if"></block>
@@ -46,6 +46,7 @@
 		<block type="math_number"></block>
 		<block type="inout_angle_maths"></block>
 		<block type="math_arithmetic"></block>
+		<block type="math_interval"></block>
 		<block type="math_single"></block>
 		<block type="math_trig"></block>
 		<block type="math_constant"></block>
@@ -113,6 +114,140 @@
 		<block type="mbot_backward"></block>	
 		<block type="mbot_turn_left"></block>	
 		<block type="mbot_turn_right"></block>	
+	</category>
+	<category name="CAT_ARDUINO" colour="#00979D">
+		<block type="base_begin"></block>
+		<block type="base_setup_loop"></block>
+		<block type="base_define_const"></block>
+		<block type="base_const"></block>
+		<block type="biblio_include"></block>
+		<block type="base_end"></block>
+		<category name="CAT_ARDUINO_IN" colour="#00979D">
+			<block type="inout_analog_read_validator"></block>
+			<block type="inout_digital_read_validator"></block>
+			<block type="inout_digital_read_check"></block>
+			<block type="inout_onoff"></block>
+			<block type="inout_angle"></block>
+			<block type="inout_button_wait_il"></block>
+			<block type="inout_button_wait_iph"></block>
+			<block type="var_random">
+				<value name="rand_min">
+					<shadow type="math_number">
+						<field name="NUM">0</field>
+					</shadow>
+				</value>
+				<value name="rand_max">
+					<shadow type="math_number">
+						<field name="NUM">100</field>
+					</shadow>
+				</value>
+			</block>
+			<block type="base_map">
+				<value name="NUM">
+					<shadow type="math_number">
+						<field name="NUM">0</field>
+					</shadow>
+				</value>
+				<value name="DMAX">
+					<shadow type="math_number">
+						<field name="NUM">0</field>
+					</shadow>
+				</value>
+			</block>
+			<block type="various_constrain">
+				<value name="a">
+					<shadow type="math_number">
+						<field name="NUM">0</field>
+					</shadow>
+				</value>
+				<value name="b">
+					<shadow type="math_number">
+						<field name="NUM">100</field>
+					</shadow>
+				</value>
+			</block>
+			<block type="inout_attachInterrupt"></block>
+			<block type="inout_detachInterrupt"></block>
+		</category>
+		<category name="CAT_ARDUINO_TIME" colour="#00979D">
+			<block type="millis"></block>
+			<block type="millis_sec"></block>
+			<block type="inout_pulsein"></block>
+			<block type="inout_pulsein_timeout"></block>
+			<block type="base_delay">
+				<value name="DELAY_TIME">
+					<shadow type="math_number">
+						<field name="NUM">1000</field>
+					</shadow>
+				</value>
+			</block>
+			<block type="base_delay_sec">
+				<value name="DELAY_TIME">
+					<shadow type="math_number">
+						<field name="NUM">5</field>
+					</shadow>
+				</value>
+			</block>
+		</category>
+		<category name="CAT_ARDUINO_CONVERSION" colour="#00979D">
+			<block type="conversion_tochar"></block>
+			<block type="conversion_tobyte"></block>
+			<block type="conversion_toint"></block>
+			<block type="conversion_tofloat"></block>
+			<block type="conversion_toString"></block>
+			<block type="conversion_map"></block>
+		</category>
+		<category name="CAT_ARDUINO_OUT" colour="#00979D">
+			<block type="inout_buildin_led"></block>
+			<block type="inout_digital_write_validator"></block>
+			<block type="inout_PWM_write_validator">
+				<value name="NUM">
+					<shadow type="math_number">
+						<field name="NUM">0</field>
+					</shadow>
+				</value>
+			</block>
+			<block type="inout_analog_write_validator">
+				<value name="NUM">
+					<shadow type="math_number">
+						<field name="NUM">0</field>
+					</shadow>
+				</value>
+			</block>
+			<block type="inout_digital_write">
+				<value name="STAT">
+					<shadow type="inout_onoff"></shadow>
+				</value>
+			</block>
+			<block type="inout_PWM_write">
+				<value name="NUM">
+					<shadow type="math_number">
+						<field name="NUM">0</field>
+					</shadow>
+				</value>
+			</block>
+			<block type="inout_analog_write">
+				<value name="NUM">
+					<shadow type="math_number">
+						<field name="NUM">0</field>
+					</shadow>
+				</value>
+			</block>
+			<block type="tone">
+				<value name="NUM">
+					<shadow type="math_number">
+						<field name="NUM">0</field>
+					</shadow>
+				</value>
+				<value name="TPS">
+					<shadow type="math_number">
+						<field name="NUM">0</field>
+					</shadow>
+				</value>
+			</block>
+			<block type="notone"></block>
+		</category>
+		<sep></sep>
 	</category>
 	<category name="CAT_ROMEO_1" colour="#F39800">
 		<block type="romeo_forward"></block>

@@ -31,6 +31,16 @@ goog.require('Blockly.Types');
 
 //To support syntax defined in http://arduino.cc/en/Reference/HomePage
 
+Blockly.Blocks.base_begin = {
+    init: function() {
+        this.setColour(Blockly.Blocks.arduino_base.HUE);
+        this.appendDummyInput().appendField(Blockly.Msg.ARDUINO_BASE_BEGIN);
+        this.setNextStatement(true, null);
+        this.setTooltip(Blockly.Msg.ARDUINO_BASE_BEGIN_TOOLTIP);
+        this.setHelpUrl("")
+    }
+};
+
 Blockly.Blocks.base_setup = {
   init: function () {
         this.setColour(Blockly.Blocks.arduino_base.HUE);

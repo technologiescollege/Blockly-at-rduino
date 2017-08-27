@@ -94,6 +94,9 @@ Blockly.Blocks.inout_angle_maths.getBlockType = function() {
 Blockly.Blocks.math_arithmetic.getBlockType = function() {
 	return Blockly.Types.NUMBER;
 };
+Blockly.Blocks.math_interval.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
 Blockly.Blocks.math_single.getBlockType = function() {
 	return Blockly.Types.DECIMAL;
 };

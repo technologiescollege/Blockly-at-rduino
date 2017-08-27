@@ -46,6 +46,7 @@
 		<block type="math_number"></block>
 		<block type="inout_angle_maths"></block>
 		<block type="math_arithmetic"></block>
+		<block type="math_interval"></block>
 		<block type="math_single"></block>
 		<block type="math_trig"></block>
 		<block type="math_constant"></block>
