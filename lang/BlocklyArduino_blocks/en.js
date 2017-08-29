@@ -91,9 +91,15 @@ Blockly.Msg.CAT_ADAFRUIT_MOTORSHIELD_v1 = "Adafruit Motorshield v1";
 Blockly.Msg.CAT_ADAFRUIT_MOTORSHIELD_v2 = "Adafruit Motorshield v2";
 Blockly.Msg.CAT_ADAFRUIT_JOYSTICK = "Joystick";
 
-Blockly.Msg.CAT_BLYNK_CC = "BLYNK_CC"; //Added by M. Leroy July 24th 2017
-Blockly.Msg.CAT_Blynk_Arduino_Connexion =" - connection mode";
-Blockly.Msg.CAT_Blynk_Widget = " - widget";
+Blockly.Msg.CAT_BLYNK_CC = "BLYNK.CC"; //Added by M. Leroy July 24th 2017
+Blockly.Msg.CAT_Blynk_Arduino_Connexion =" - Connection type";
+Blockly.Msg.CAT_Blynk_Controllers = " - Controllers";
+Blockly.Msg.CAT_Blynk_Dysplays = " - Dysplays";
+Blockly.Msg.CAT_Blynk_Interface = " - Interface";
+Blockly.Msg.CAT_Blynk_Notifications = " - Notification";
+Blockly.Msg.CAT_Blynk_Programmation = " - Programming";
+Blockly.Msg.CAT_Blynk_Other = " - Other";
+Blockly.Msg.CAT_Blynk_Sensors = " - Smartphone Sensors";
 
 Blockly.Msg.CAT_DFRobot = "DFRobot";
 Blockly.Msg.CAT_DFRobot_SHIELD_LCDKEYPAD = "Shield LCD Keypad"; //Added february 27th 2016
@@ -1745,33 +1751,32 @@ Blockly.Msg.AUTODUINO_EDGE_INPUT = "sur l'entrée";
 Blockly.Msg.AUTODUINO_EDGE_UP_DOWN = [["front montant", "UP"], ["front descedant", "DOWN"]];
 
 //**** BLYNK**www.Blync.cc***Added**by**Mr**leroy**July**24th**************************************************************
-Blockly.Msg.BLYNK_CC_usb_HELPURL = 'http://docs.blynk.cc/';
-Blockly.Msg.BLYNK_CC_usb_TEXT ='Arduino Uno linked in USB';
-Blockly.Msg.BLYNK_CC_usb_INPUT ='Input your  Token';
-Blockly.Msg.BlYNK_CC_usb_TOOLTIP = "Arduino Uno and USB";
+Blockly.Msg.BLYNK_HELPURL = 'http://docs.blynk.cc/';
+Blockly.Msg.BLYNK_usb_TEXT ='Arduino Uno linked in USB';
+Blockly.Msg.BLYNK_usb_INPUT ='Input your ';
+Blockly.Msg.BlYNK_usb_TOOLTIP = "Arduino Uno and USB";
 Blockly.Msg.BLYNK_AUTH = "Auth";
-Blockly.Msg.BLYNK_CONNECT_TITLE = "Connectted";
+Blockly.Msg.BLYNK_CONNECT_TITLE = "Connect to Blynk Server";
 Blockly.Msg.BLYNK_CONNECT_TOOLTIP = "Check connection";
-Blockly.Msg.BLYNK_EMAIL_TITLE = "Send Email";
+Blockly.Msg.BLYNK_EMAIL_TITLE = "Send a Email";
 Blockly.Msg.BLYNK_EMAIL_TOOLTIP = "";
-Blockly.Msg.BLYNK_ETHERNET_BEGIN_TITLE = "Begin";
+Blockly.Msg.BLYNK_ETHERNET_BEGIN_TITLE = "Arduino Uno linked in ";
 Blockly.Msg.BLYNK_ETHERNET_BEGIN_TOOLTIP = "";
-Blockly.Msg.BLYNK_HELPURL = "https://github.com/blynkkk/blynk-library";
 Blockly.Msg.BLYNK_NOTIFY_TITLE = "Push Notify";
 Blockly.Msg.BLYNK_NOTIFY_TOOLTIP = "";
 Blockly.Msg.BLYNK_TWEET_TITLE = "Tweet";
 Blockly.Msg.BLYNK_TWEET_TOOPTIP = "";
-Blockly.Msg.BLYNK_VIRTUAL_WRITE_TITLE = "Send Virtual Value";
+Blockly.Msg.BLYNK_VIRTUAL_WRITE_TITLE = "Send to Virtual PIN";
 Blockly.Msg.BLYNK_VIRTUAL_WRITE_TOOLTIP = "";
-Blockly.Msg.BLYNK_WRITE_TITLE = "Get Virtual Action";
+Blockly.Msg.BLYNK_WRITE_TITLE = "Get from Virtual PIN";
 Blockly.Msg.BLYNK_WRITE_TOOLTIP = "";
-Blockly.Msg.BLYNK_ETHERNET_VERSION_1 = "Eternet";
-Blockly.Msg.BLYNK_ETHERNET_VERSION_2 = "Eternet2";
+Blockly.Msg.BLYNK_ETHERNET_VERSION_1 = "Ethernet";
+Blockly.Msg.BLYNK_ETHERNET_VERSION_2 = "Ethernet2";
 Blockly.Msg.BLYNK_MAC_ADDRESS = "Mac Address";
 Blockly.Msg.BLYNK_VALUE = "Value";
 Blockly.Msg.BLYNK_EMAIL_ADDRESS = "Address";
 Blockly.Msg.BLYNK_EMAIL_BODY = "Body";
-Blockly.Msg.BLYNK_EMAIL_TITLE = "Title";
+Blockly.Msg.BLYNK_EMAIL_TITLE_2 = "Title";
 Blockly.Msg.BLYNK_TEXT = "Text";
 
 //**** ETHERNET *****************************************************************************//

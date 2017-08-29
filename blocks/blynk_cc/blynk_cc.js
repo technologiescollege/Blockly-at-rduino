@@ -16,20 +16,23 @@ goog.require('Blockly.Types');
 Blockly.Blocks.blynk_cc_uno_cnx_usb = {
   init: function() {
     this.setColour(Blockly.Blocks.blynk_cc.HUE);
-	this.setHelpUrl(Blockly.Msg.BLYNK_CC_usb_HELPURL);
+	this.setHelpUrl(Blockly.Msg.BLYNK_HELPURL);
     this.appendDummyInput()
-		.appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/blynk_cc/blynk_logo.jpg', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize));
+		.appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/blynk_cc/blynk_logo.jpg', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize
+		));
     this.appendDummyInput()
-		.appendField(Blockly.Msg.BLYNK_CC_usb_TEXT);
-    this.appendDummyInput()
+		.appendField(Blockly.Msg.BLYNK_usb_TEXT);
+    this.appendValueInput("AUTH")
+		.setAlign(Blockly.ALIGN_LEFT)	
+		.appendField(Blockly.Msg.BLYNK_usb_INPUT)
+		.setCheck("String")
 		.setAlign(Blockly.ALIGN_RIGHT)
-		.appendField(Blockly.Msg.BLYNK_CC_usb_INPUT);
-    this.appendDummyInput()
-		.setAlign(Blockly.ALIGN_RIGHT)
-		.appendField(new Blockly.FieldTextInput('azertyuiopqsdfghjklmwxcvbnnbvcxw'), 'TOKEN');
-    this.setPreviousStatement(true, null);
-    this.setNextStatement(true, null);
-    this.setTooltip(Blockly.Msg.BLYNK_CC_usb_TOOlTIP);
+		.appendField(Blockly.Msg.BLYNK_AUTH);
+	this.appendStatementInput("ACTION")
+		.setCheck(null);
+	this.setPreviousStatement(false, null);
+    this.setNextStatement(false, null);
+    this.setTooltip(Blockly.Msg.BLYNK_usb_TOOlTIP);
   }
 };
 
@@ -62,8 +65,10 @@ Blockly.Blocks['blynk_cc_ethernet_begin'] = {
 		.setCheck("String")
 		.setAlign(Blockly.ALIGN_RIGHT)
 		.appendField(Blockly.Msg.BLYNK_MAC_ADDRESS);
-    this.setPreviousStatement(true, null);
-    this.setNextStatement(true, null);
+	this.appendStatementInput("ACTION")
+		.setCheck(null);
+    this.setPreviousStatement(false, null);
+    this.setNextStatement(false, null);
     this.setTooltip(Blockly.Msg.BLYNK_ETHERNET_BEGIN_TOOLTIP);
   }
 };
@@ -122,7 +127,7 @@ Blockly.Blocks['blynk_cc_email'] = {
     this.appendValueInput("TITLE")
 		.setCheck("String")
 		.setAlign(Blockly.ALIGN_RIGHT)
-		.appendField(Blockly.Msg.BLYNK_EMAIL_TITLE);
+		.appendField(Blockly.Msg.BLYNK_EMAIL_TITLE_2);
     this.appendValueInput("BODY")
 		.setCheck("String")
 		.setAlign(Blockly.ALIGN_RIGHT)

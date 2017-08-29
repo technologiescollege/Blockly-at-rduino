@@ -2435,7 +2435,13 @@
 	</category>	
 	<category name="CAT_BLYNK_CC" colour="#23C890">
 		<category name="CAT_Blynk_Arduino_Connexion" colour="#23C890">
-			<block type="blynk_cc_uno_cnx_usb"></block>
+			<block type="blynk_cc_uno_cnx_usb">
+				<value name="AUTH">
+					<block type="text">
+						<field name="TEXT"></field>
+					</block>
+				</value>	
+			</block>		
 			<block type="blynk_cc_ethernet_begin">
 				<value name="AUTH">
 					<block type="text">
@@ -2446,15 +2452,8 @@
 					<block type="ethernet_mac_address"></block>
 				</value>
 			</block>
-			<block type="blynk_cc_connect"></block>
-			<block type="blynk_cc_write"></block>
-			<block type="blynk_cc_virtual_write">
-				<value name="VALUE">
-					<block type="math_number">
-						<field name="NUM">1</field>
-					</block>
-				</value>
-			</block>
+		</category>
+		<category name="CAT_Blynk_Notifications" colour="#23C890">
 			<block type="blynk_cc_email">
 				<value name="ADDRESS">
 					<block type="text">
@@ -2471,7 +2470,7 @@
 						<field name="TEXT"></field>
 					</block>
 				</value>
-			</block>
+			</block>		
 			<block type="blynk_cc_notify">
 				<value name="TEXT">
 					<block type="text">
@@ -2487,7 +2486,16 @@
 				</value>
 			</block>
 		</category>
-		<category name="CAT_Blynk_Widget" colour="#23C890">
-		</category>
+		<category name="CAT_Blynk_Programmation" colour="#23C890">
+			<block type="blynk_cc_connect"></block>
+			<block type="blynk_cc_write"></block>
+			<block type="blynk_cc_virtual_write">
+				<value name="VALUE">
+					<block type="math_number">
+						<field name="NUM">1</field>
+					</block>
+				</value>
+			</block>
+		</category>		
 	</category>
 </toolbox>
