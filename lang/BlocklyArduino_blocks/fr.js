@@ -103,14 +103,14 @@ Blockly.Msg.CAT_ADAFRUIT_MOTORSHIELD_v2 = " - Adafruit Motorshield v2";
 Blockly.Msg.CAT_ADAFRUIT_JOYSTICK = " - Joystick";
 
 Blockly.Msg.CAT_BLYNK_CC = "BLYNK.CC"; //Added by M. Leroy July 24th 2017
-Blockly.Msg.CAT_Blynk_Arduino_Connexion =" - Mode de Connexion";
-Blockly.Msg.CAT_Blynk_Controllers = " - Controlleurs";
-Blockly.Msg.CAT_Blynk_Dysplays = " - Affichage";
-Blockly.Msg.CAT_Blynk_Interface = " - Interface";
-Blockly.Msg.CAT_Blynk_Notifications = " - Notification";
-Blockly.Msg.CAT_Blynk_Programmation = " - Programming";
-Blockly.Msg.CAT_Blynk_Other = " - Autre";
-Blockly.Msg.CAT_Blynk_Sensors = " - Capteurs du Smartphone";
+Blockly.Msg.CAT_Blynk_Arduino_Connexion =" - mode de connexion";
+Blockly.Msg.CAT_Blynk_Controllers = " - contrôleurs";
+Blockly.Msg.CAT_Blynk_Dysplays = " - affichage";
+Blockly.Msg.CAT_Blynk_Interface = " - interface";
+Blockly.Msg.CAT_Blynk_Notifications = " - notification";
+Blockly.Msg.CAT_Blynk_Programmation = " - programmation";
+Blockly.Msg.CAT_Blynk_Other = " - autre";
+Blockly.Msg.CAT_Blynk_Sensors = " - capteurs du Smartphone";
 
 
 Blockly.Msg.CAT_DFRobot = "DFRobot";
@@ -1763,36 +1763,36 @@ Blockly.Msg.AUTODUINO_EDGE_UP_DOWN = [["front montant", "UP"], ["front descedant
 
 //**** BLYNK**www.Blync.cc***Added**by**Mr**leroy**July**24th**************************************************************
 Blockly.Msg.BLYNK_HELPURL = 'http://docs.blynk.cc/';
-Blockly.Msg.BLYNK_usb_TEXT ='Arduino Uno connecté en USB';
-Blockly.Msg.BLYNK_usb_INPUT ='Votre  code ';
-Blockly.Msg.BlYNK_usb_TOOLTIP = "Arduino uno et USB";
+Blockly.Msg.BLYNK_usb_TEXT ='carte Arduino connectée en USB';
+Blockly.Msg.BLYNK_usb_INPUT ='votre code ';
+Blockly.Msg.BlYNK_usb_TOOLTIP = "carte Arduino et USB";
 Blockly.Msg.BLYNK_AUTH = "Auth";
-Blockly.Msg.BLYNK_CONNECT_TITLE = "Connecter le serveur Blynk";
-Blockly.Msg.BLYNK_CONNECT_TOOLTIP = "Vérifier la connection";
-Blockly.Msg.BLYNK_EMAIL_TITLE = "Envoyer un Email";
+Blockly.Msg.BLYNK_CONNECT_TITLE = "connecter le serveur Blynk";
+Blockly.Msg.BLYNK_CONNECT_TOOLTIP = "vérifier la connection";
+Blockly.Msg.BLYNK_EMAIL_TITLE = "envoyer un courriel";
 Blockly.Msg.BLYNK_EMAIL_TOOLTIP = "";
-Blockly.Msg.BLYNK_ETHERNET_BEGIN_TITLE = "Carte";
+Blockly.Msg.BLYNK_ETHERNET_BEGIN_TITLE = "carte";
 Blockly.Msg.BLYNK_ETHERNET_BEGIN_TOOLTIP = "";
 Blockly.Msg.BLYNK_MERGE_PARAM_TITLE = "Get Merge Parameter";
 Blockly.Msg.BLYNK_MERGE_PARAM_TOOLTIP = "";
-Blockly.Msg.BLYNK_NOTIFY_TITLE = "Widget Notification";
+Blockly.Msg.BLYNK_NOTIFY_TITLE = "Widget de notification";
 Blockly.Msg.BLYNK_NOTIFY_TOOLTIP = "";
 Blockly.Msg.BLYNK_PARAM_TITLE = "Get Parameter";
 Blockly.Msg.BLYNK_PARAM_TOOLTIP = "";
 Blockly.Msg.BLYNK_TWEET_TITLE = "Tweeter";
 Blockly.Msg.BLYNK_TWEET_TOOPTIP = "";
-Blockly.Msg.BLYNK_VIRTUAL_WRITE_TITLE = "Envoyer sur la Broche Virtuel ";
+Blockly.Msg.BLYNK_VIRTUAL_WRITE_TITLE = "envoyer sur la broche virtuelle ";
 Blockly.Msg.BLYNK_VIRTUAL_WRITE_TOOLTIP = "";
-Blockly.Msg.BLYNK_WRITE_TITLE = "Lire la Broche Virtuel ";
+Blockly.Msg.BLYNK_WRITE_TITLE = "lire sur la Broche Virtuel ";
 Blockly.Msg.BLYNK_WRITE_TOOLTIP = "";
-Blockly.Msg.BLYNK_ETHERNET_VERSION_1 = "Ethernet";
-Blockly.Msg.BLYNK_ETHERNET_VERSION_2 = "Ethernet2";
-Blockly.Msg.BLYNK_MAC_ADDRESS = "Addresse Mac";
-Blockly.Msg.BLYNK_VALUE = "Valeur";
-Blockly.Msg.BLYNK_EMAIL_ADDRESS = "Addresse";
-Blockly.Msg.BLYNK_EMAIL_BODY = "Corps";
-Blockly.Msg.BLYNK_EMAIL_TITLE_2  = "Objet";
-Blockly.Msg.BLYNK_TEXT = "Texte";
+Blockly.Msg.BLYNK_ETHERNET_VERSION_1 = "ethernet";
+Blockly.Msg.BLYNK_ETHERNET_VERSION_2 = "ethernet2";
+Blockly.Msg.BLYNK_MAC_ADDRESS = "adresse Mac";
+Blockly.Msg.BLYNK_VALUE = "valeur";
+Blockly.Msg.BLYNK_EMAIL_ADDRESS = "adresse";
+Blockly.Msg.BLYNK_EMAIL_BODY = "corps";
+Blockly.Msg.BLYNK_EMAIL_TITLE_2  = "objet";
+Blockly.Msg.BLYNK_TEXT = "texte";
 
 //**** ETHERNET *****************************************************************************//
 

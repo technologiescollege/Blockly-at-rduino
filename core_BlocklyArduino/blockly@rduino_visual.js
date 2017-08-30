@@ -313,14 +313,14 @@ BlocklyDuino.tailleFonte = function(taille) {
  *
  */
 BlocklyDuino.workspace_capture = function() {
-	var ws = BlocklyDuino.workspace.svgBlockCanvas_.cloneNode(true);
+	var ws = BlocklyDuino.workspace.getCanvas().cloneNode(true);
 	ws.removeAttribute("width");
 	ws.removeAttribute("height");
 	ws.removeAttribute("transform");
 	var styleElem = document.createElementNS("http://www.w3.org/2000/svg", "style");
 	styleElem.textContent = Blockly.Css.CONTENT.join('') ;
 	ws.insertBefore(styleElem, ws.firstChild);
-	var bbox = BlocklyDuino.workspace.svgBlockCanvas_.getBBox();
+	var bbox = BlocklyDuino.workspace.getCanvas().getBBox();
 	var canvas = document.createElement( "canvas" );
 	canvas.width = Math.ceil(bbox.width+10);
 	canvas.height = Math.ceil(bbox.height+10);
@@ -338,5 +338,5 @@ BlocklyDuino.workspace_capture = function() {
 		a.href = canvasdata;
 		document.body.appendChild(a);
 		a.click();
-	}	
+	} 
 };
