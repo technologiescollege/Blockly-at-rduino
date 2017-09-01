@@ -6,6 +6,12 @@ Blockly.Blocks.base_begin.getBlockType = function() {
 Blockly.Blocks.base_end.getBlockType = function() {
 	return Blockly.Types.NUMBER;
 };
+Blockly.Blocks.base_define.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.base_define_bloc.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
 Blockly.Blocks.millis.getBlockType = function() {
 	return Blockly.Types.LARGE_NUMBER;
 };

@@ -64,7 +64,7 @@ Blockly.Arduino.base_setup_loop = function () {
     return [loop, Blockly.Arduino.ORDER_ATOMIC];
 };
 
-Blockly.Arduino.base_const = function () {
+Blockly.Arduino.base_define_bloc = function () {
     var branch = Blockly.Arduino.statementToCode(this, 'DO');
     if (Blockly.Arduino.INFINITE_LOOP_TRAP) {
         branch = Blockly.Arduino.INFINITE_LOOP_TRAP.replace(/%1/g, '\'' + this.id + '\'') + branch;
@@ -76,7 +76,7 @@ Blockly.Arduino.base_const = function () {
     return "";
 };
 
-Blockly.Arduino.base_define_const = function() {
+Blockly.Arduino.base_define = function() {
   // Text value.
   var value_text1 = Blockly.Arduino.valueToCode(this, 'TEXT1', Blockly.Arduino.ORDER_ATOMIC);
   var value_text2 = this.getFieldValue('TEXT2');

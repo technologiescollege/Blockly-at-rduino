@@ -160,8 +160,8 @@
 		<block type="base_begin"></block>
 		<block type="base_setup"></block>
 		<block type="base_setup_loop"></block>
-		<block type="base_define_const"></block>
-		<block type="base_const"></block>
+		<block type="base_define"></block>
+		<block type="base_define_bloc"></block>
 		<block type="biblio_include"></block>
 		<block type="base_code"></block>
 		<block type="base_end"></block>

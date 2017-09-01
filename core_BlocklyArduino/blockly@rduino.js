@@ -1091,6 +1091,22 @@ Blockly.Variables.flyoutCategory = function(workspace) {
       block.appendChild(field);
       xmlList.push(block);
     }
+    if (Blockly.Blocks['variables_const']) {
+      // <block type="variables_const" gap="20">
+      //   <field name="VAR">item</field>
+      // </block>
+      var block = goog.dom.createDom('block');
+      block.setAttribute('type', 'variables_const');
+      if (Blockly.Blocks['variables_set_type']) {
+        block.setAttribute('gap', 8);
+      } else {
+        block.setAttribute('gap', 24);
+      }
+      var field = goog.dom.createDom('field', null, variableList[0]);
+      field.setAttribute('name', 'VAR');
+      block.appendChild(field);
+      xmlList.push(block);
+    }
     // override to inject variables_set_type block
     if (Blockly.Blocks['variables_set_type']) {
     	var block = goog.dom.createDom('block');

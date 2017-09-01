@@ -155,6 +155,42 @@ Blockly.Blocks['variables_set_type'] = {
   }
 };
 
+Blockly.Blocks['variables_const'] = {
+  /**
+   * Block for variable setter.
+   * @this Blockly.Block
+   */  
+  init: function() {
+    this.setHelpUrl(Blockly.Msg.VARIABLES_GET_HELPURL);
+    this.setColour(Blockly.Blocks.variables.HUE);
+    this.appendDummyInput()
+		.appendField("constante")
+        .appendField(new Blockly.FieldVariable(Blockly.Msg.VARIABLES_DEFAULT_NAME), 'VAR');
+    this.appendDummyInput()
+        .appendField(Blockly.Msg.VARIABLES_AS)
+        .appendField(new Blockly.FieldDropdown(Blockly.Types.getValidTypeArray()),
+                     'VARIABLE_SETTYPE_TYPE');
+    this.appendValueInput("VAL_CONST")
+        .setAlign(Blockly.ALIGN_RIGHT)
+        .appendField("de valeur");
+    this.setInputsInline(true);
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setTooltip('définir une variable comme une constante');
+  },
+  contextMenuType_: 'variables_get',
+  customContextMenu: Blockly.Blocks['variables_get'].customContextMenu,
+  /**
+   * Searches through the nested blocks to find a variable type.
+   * @this Blockly.Block
+   * @param {!string} varName Name of this block variable to check type.
+   * @return {string} String to indicate the type of this block.
+   */
+  getVarType: function(varName) {
+    return Blockly.Types.getChildBlockType(this);
+  }
+};
+
 Blockly.Blocks['variables_set_init'] = {
   /**
    * Block for variable casting.

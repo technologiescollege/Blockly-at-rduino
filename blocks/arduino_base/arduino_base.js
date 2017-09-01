@@ -93,7 +93,7 @@ Blockly.Blocks.base_setup_loop = {
 	}
 };
 
-Blockly.Blocks.base_const = {
+Blockly.Blocks.base_define_bloc = {
   init: function () {
         this.setColour(Blockly.Blocks.arduino_base.HUE);
 		this.setHelpUrl(Blockly.Msg.ARDUINO_BASE_DEFINE_HELPURL);
@@ -105,7 +105,7 @@ Blockly.Blocks.base_const = {
     }
 };
 
-Blockly.Blocks.base_define_const = {
+Blockly.Blocks.base_define = {
   init: function() {
     //this.setHelpUrl(Blockly.Msg.ARDUINO_BASE_DEFINE_CONST_HELPURL); A faire
 	this.setHelpUrl('https://www.arduino.cc/en/Reference/Define');
