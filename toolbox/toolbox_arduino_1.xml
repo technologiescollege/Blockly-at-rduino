@@ -127,6 +127,7 @@
 			<block type="inout_digital_read_validator"></block>
 			<block type="inout_digital_read_check"></block>
 			<block type="inout_onoff"></block>
+			<block type="base_toggle"></block>
 			<block type="inout_angle"></block>
 			<block type="inout_button_wait_il"></block>
 			<block type="inout_button_wait_iph"></block>
@@ -188,6 +189,7 @@
 					</shadow>
 				</value>
 			</block>
+			<block type="tempo_no_delay"></block>
 		</category>
 		<category name="CAT_ARDUINO_CONVERSION" colour="#00979D">
 			<block type="conversion_tochar"></block>

@@ -295,6 +295,13 @@ Blockly.Msg.ARDUINO_BASE_DEFINE_TOOLTIP = "Définition de constantes & biblioth�
 Blockly.Msg.ARDUINO_BASE_END = 'attente infinie (FIN de programme)';
 Blockly.Msg.ARDUINO_BASE_BEGIN_TOOLTIP = "ce bloc permet de définir l'ordre dans lequel le programme doit s'exécuter";
 Blockly.Msg.ARDUINO_BASE_BEGIN = "DÉBUT du programme";
+Blockly.Msg.ARDUINO_BASE_TEMPO1 = "quand";
+Blockly.Msg.ARDUINO_BASE_TEMPO2 = "se sont écoulées";
+Blockly.Msg.ARDUINO_BASE_TEMPO_TIME = [["microsecondes", "µs"],["millisecondes", "ms"],["secondes", "s"]];
+Blockly.Msg.ARDUINO_BASE_TEMPO_TOOLTIP = "Ce bloc vérifie si le temps indiqué est arrivé, si c'est le cas alors il éxécute les blocs placés à l'intérieur. Contrairement au bloc 'attendre' celui-ci n'est pas bloquant.";
+Blockly.Msg.ARDUINO_BASE_TEMPO_HELPURL = "http://www.mon-club-elec.fr/pmwiki_reference_arduino/pmwiki.php?n=Main.ExempleBlinkWithoutDelay";
+Blockly.Msg.ARDUINO_BASE_TOGGLE = "basculer l'état de la broche";
+Blockly.Msg.ARDUINO_BASE_TOGGLE_TOOLTIP = "Toggle :\nécrire un état logique 0 si auparavant il y avait un état 1 (et inversement) sur la sortie spécifiée";
 Blockly.Msg.ARDUINO_CONSTRAIN = "limiter";
 Blockly.Msg.ARDUINO_CONSTRAIN_X = " le nombre";
 Blockly.Msg.ARDUINO_CONSTRAIN_A = "entre A = ";

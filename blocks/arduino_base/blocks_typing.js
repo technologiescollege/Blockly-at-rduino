@@ -33,6 +33,12 @@ Blockly.Blocks.base_map.getBlockType = function() {
 Blockly.Blocks.various_constrain.getBlockType = function() {
 	return Blockly.Types.NUMBER;
 };
+Blockly.Blocks.tempo_no_delay.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.base_toggle.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
 
 //---------------------------------arduino_conversion.js-------------------------------------
 

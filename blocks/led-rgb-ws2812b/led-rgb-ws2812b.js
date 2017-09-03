@@ -17,7 +17,7 @@ Blockly.Blocks['lp2i_ledRGB_WS2812B_init'] = {
 										  Blockly.Msg.lp2i_ledRGB_WS2812B_DEFAULT_NAME,
 										  true, true, false),
 				'NEOPIXEL_NAME')
-		.appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/led-rgb-ws2812b/led-rgb-ws2812b.jpg', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize));
+		.appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/led-rgb-ws2812b/led-rgb-ws2812b.svg', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize));
     this.appendValueInput("Pin_LedRGB_init")
 		.setCheck('Number')
         .setAlign(Blockly.ALIGN_RIGHT)
@@ -44,7 +44,7 @@ Blockly.Blocks['lp2i_ledRGB_WS2812B_setPixelColor'] = {
 										  Blockly.Msg.lp2i_ledRGB_WS2812B_DEFAULT_NAME,
 										  true, true, false),
 				'NEOPIXEL_NAME')
-		.appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/led-rgb-ws2812b/led-rgb-ws2812b.jpg', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize));
+		.appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/led-rgb-ws2812b/led-rgb-ws2812b.svg', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize));
     this.appendValueInput("Red")
 		.setCheck('Number')
         .setAlign(Blockly.ALIGN_RIGHT)
@@ -97,7 +97,7 @@ Blockly.Blocks['lp2i_ledRGB_WS2812B_setBrightness'] = {
 										  Blockly.Msg.lp2i_ledRGB_WS2812B_DEFAULT_NAME,
 										  true, true, false),
 				'NEOPIXEL_NAME')
-		.appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/led-rgb-ws2812b/led-rgb-ws2812b.jpg', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize));
+		.appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/led-rgb-ws2812b/led-rgb-ws2812b.svg', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize));
     this.appendValueInput("Brightness")
 		.setCheck('Number')
         .setAlign(Blockly.ALIGN_RIGHT)

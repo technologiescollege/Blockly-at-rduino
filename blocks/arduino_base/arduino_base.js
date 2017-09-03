@@ -300,3 +300,35 @@ Blockly.Blocks['biblio_include'] = {
     this.setHelpUrl('https://www.arduino.cc/en/Reference/Libraries');
   }
 };
+
+//@JP Fontaine 02092017
+Blockly.Blocks.tempo_no_delay = {
+	init: function() {
+		this.appendValueInput("DELAY_TIME")
+			.setCheck("Number")
+			.appendField(Blockly.Msg.ARDUINO_BASE_TEMPO1);
+		this.appendDummyInput()
+			.appendField(new Blockly.FieldDropdown(Blockly.Msg.ARDUINO_BASE_TEMPO_TIME), "unite")
+			.appendField(Blockly.Msg.ARDUINO_BASE_TEMPO2);
+		this.appendStatementInput("branche");
+		this.setInputsInline(true);
+		this.setPreviousStatement(true, null);
+		this.setNextStatement(true, null);
+		this.setColour(Blockly.Blocks.arduino_base.HUE);
+		this.setTooltip(Blockly.Msg.ARDUINO_BASE_TEMPO_TOOLTIP);
+		this.setHelpUrl(Blockly.Msg.ARDUINO_BASE_TEMPO_HELPURL);
+	}
+};
+
+Blockly.Blocks.base_toggle = {
+    init: function() {
+		this.setColour(Blockly.Blocks.arduino_base.HUE);
+        this.appendValueInput("PIN", "Number")
+			.setCheck("Number")
+			.appendField(Blockly.Msg.ARDUINO_BASE_TOGGLE);
+        this.setPreviousStatement(true, null);
+        this.setNextStatement(true, null);
+		this.setHelpUrl(Blockly.Msg.ARDUINO_BASE_TEMPO_HELPURL);
+        this.setTooltip(Blockly.Msg.ARDUINO_BASE_TOGGLE_TOOLTIP);
+    }
+};

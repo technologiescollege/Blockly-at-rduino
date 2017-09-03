@@ -171,3 +171,33 @@ Blockly.Arduino['biblio_include'] = function() {
   Blockly.Arduino.includes_[funcInclude] = '#include <'+text_file+'.h>';
   return "";
 };
+
+
+//@JP Fontaine 02092017
+Blockly.Arduino.base_toggle = function(block) {
+    var dropdown_pin = Blockly.Arduino.valueToCode(block, "PIN", Blockly.Arduino.ORDER_ATOMIC);
+	Blockly.Arduino.definitions_["toggle"+dropdown_pin] = "boolean etat_" + dropdown_pin + "=LOW;";
+    Blockly.Arduino.setups_["setup_output_" + dropdown_pin] = "pinMode(" + dropdown_pin + ", OUTPUT);";
+    var code = "digitalWrite(" + dropdown_pin + ", etat_" + dropdown_pin + ");\netat_"+ dropdown_pin + "=!etat_"+ dropdown_pin + ";\n";
+    return code
+};
+
+Blockly.Arduino.tempo_no_delay = function(block) {
+    var _u = block.getFieldValue("unite");
+    var delay_time = Blockly.Arduino.valueToCode(block, "DELAY_TIME", Blockly.Arduino.ORDER_ATOMIC);
+	var faire = Blockly.Arduino.statementToCode(block, "branche");
+	var temps = "temps"+delay_time;
+	Blockly.Arduino.definitions_["temporisation"+delay_time] = "long "+temps+" = 0 ;";
+    switch (_u) {
+        case "µs":
+            var code = "if ((micros()-"+temps+")>=" + delay_time + ") {\n  "+temps+"=micros();\n"+faire+"}\n";
+            break;
+        case "ms":
+            var code = "if ((millis()-"+temps+")>=" + delay_time + ") {\n  "+temps+"=millis();\n"+faire+"}\n";
+            break;
+        case "s":
+            code = "if ((millis()-"+temps+")>=" + delay_time + "*1000) {\n  "+temps+"=millis();\n"+faire+"}\n";
+            break
+    };
+    return code
+};
