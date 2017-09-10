@@ -560,7 +560,7 @@ Blockly.Blocks['autoduino_lcdinit'] = {
 	this.setHelpUrl('');
     this.appendDummyInput("")
         .appendField(Blockly.Msg.AUTODUINO_TEXT74)
-        .appendField(new Blockly.FieldImage("blocks/autoduino/media/I2C_LCD.jpg", Blockly.Arduino.imageSize, Blockly.Arduino.imageSize));
+        .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + "blocks/autoduino/media/I2C_LCD.jpg", Blockly.Arduino.imageSize, Blockly.Arduino.imageSize));
     this.appendDummyInput("")
         .setAlign(Blockly.ALIGN_RIGHT)
 		.appendField(Blockly.Msg.AUTODUINO_TEXT75)
@@ -599,7 +599,7 @@ Blockly.Blocks['autoduino_lcdspecial'] = {
     this.appendDummyInput("")
         .appendField(Blockly.Msg.AUTODUINO_TEXT82);
     this.appendDummyInput("")
-        .appendField(new Blockly.FieldImage("blocks/autoduino/media/I2C_LCD.jpg", Blockly.Arduino.imageSize, Blockly.Arduino.imageSize))
+        .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + "blocks/autoduino/media/I2C_LCD.jpg", Blockly.Arduino.imageSize, Blockly.Arduino.imageSize))
         .appendField(new Blockly.FieldDropdown([[Blockly.Msg.AUTODUINO_TEXT83, "backlight"], [Blockly.Msg.AUTODUINO_TEXT84, "noBacklight"],[Blockly.Msg.AUTODUINO_TEXT85, "cursor"],[Blockly.Msg.AUTODUINO_TEXT86, "noCursor"],[Blockly.Msg.AUTODUINO_TEXT87, "blink"],[Blockly.Msg.AUTODUINO_TEXT88, "noBlink"],[Blockly.Msg.AUTODUINO_TEXT89, "display"],[Blockly.Msg.AUTODUINO_TEXT90, "noDisplay"]]),"special");
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
@@ -614,7 +614,7 @@ Blockly.Blocks['autoduino_lcdclear'] = {
     this.setHelpUrl('');
     this.appendDummyInput("")
         .appendField(Blockly.Msg.AUTODUINO_TEXT92)
-        .appendField(new Blockly.FieldImage("blocks/autoduino/media/I2C_LCD.jpg", Blockly.Arduino.imageSize, Blockly.Arduino.imageSize));   
+        .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + "blocks/autoduino/media/I2C_LCD.jpg", Blockly.Arduino.imageSize, Blockly.Arduino.imageSize));   
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setTooltip(Blockly.Msg.AUTODUINO_TEXT93);
@@ -628,7 +628,7 @@ Blockly.Blocks['autoduino_lcdwrite'] = {
     this.setHelpUrl('');
     this.appendDummyInput("")
         .appendField(Blockly.Msg.AUTODUINO_TEXT94)
-        .appendField(new Blockly.FieldImage("blocks/autoduino/media/I2C_LCD.jpg", Blockly.Arduino.imageSize, Blockly.Arduino.imageSize));
+        .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + "blocks/autoduino/media/I2C_LCD.jpg", Blockly.Arduino.imageSize, Blockly.Arduino.imageSize));
     this.appendValueInput('TEXT', 'String')
         .setAlign(Blockly.ALIGN_RIGHT)
         .appendField(Blockly.Msg.AUTODUINO_TEXT98);
@@ -654,7 +654,7 @@ Blockly.Blocks['autoduino_lcdprint'] = {
     this.setHelpUrl('');
     this.appendDummyInput("")
         .appendField(Blockly.Msg.AUTODUINO_TEXT94)
-        .appendField(new Blockly.FieldImage("blocks/autoduino/media/I2C_LCD.jpg", Blockly.Arduino.imageSize, Blockly.Arduino.imageSize));
+        .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + "blocks/autoduino/media/I2C_LCD.jpg", Blockly.Arduino.imageSize, Blockly.Arduino.imageSize));
     this.appendValueInput("TEXT")
         .setCheck("String")
         .setAlign(Blockly.ALIGN_RIGHT)

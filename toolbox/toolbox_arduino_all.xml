@@ -2500,4 +2500,42 @@
 			</block>
 		</category>		
 	</category>
+    <category name="CAT_AUTODUINO">
+        <category name="CAT_AUTODUINO_IN">
+            <block type="autoduino_button"></block>
+            <block type="autoduino_rotary_angle"></block>
+            <block type="autoduino_potentiometer"></block>
+            <block type="autoduino_dht_read"></block>
+            <block type="autoduino_temperature_sensor"></block>
+            <block type="autoduino_moisture_sensor"></block>
+            <block type="autoduino_tilt_switch"></block>
+            <block type="autoduino_ils_switch"></block>
+            <block type="autoduino_pir_motion_sensor"></block>
+            <block type="autoduino_ultrasonic_ranger"></block>
+            <block type="autoduino_LDR_sensor"></block>
+            <block type="autoduino_line_finder"></block>
+            <block type="autoduino_ir_switch"></block>
+        </category>
+        <category name="CAT_AUTODUINO_OUT">
+            <block type="autoduino_led"></block>
+            <block type="autoduino_led_eclairage"></block>
+            <block type="autoduino_IR_led"></block>
+            <block type="autoduino_rgb_led"></block>
+            <block type="autoduino_piezo_buzzer"></block>
+            <block type="autoduino_relay"></block>
+            <block type="autoduino_motor"></block>
+            <block type="autoduino_motor_builtin"></block>
+        </category>
+        <category name="CAT_AUTODUINO_LCD">
+            <block type="autoduino_lcdinit"></block>
+            <block type="autoduino_lcdspecial"></block>
+            <block type="autoduino_lcdclear"></block>
+            <block type="autoduino_lcdwrite"></block>
+            <block type="autoduino_lcdprint"></block>
+        </category>
+        <category name="CAT_AUTODUINO_COMM">
+            <block type="autoduino_bluetooth_slave"></block>
+            <block type="autoduino_rc"></block>
+        </category>
+    </category>
 </toolbox>

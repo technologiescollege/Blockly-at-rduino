@@ -52,3 +52,18 @@ Blockly.Blocks.autoduino_ir_code_detection.getBlockType = function() {
 Blockly.Blocks.autoduino_edge_detection.getBlockType = function() {
 	return Blockly.Types.BOOLEAN;
 };
+Blockly.Blocks.autoduino_lcdinit.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.autoduino_lcdspecial.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.autoduino_lcdclear.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.autoduino_lcdwrite.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.autoduino_lcdprint.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
