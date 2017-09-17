@@ -1,0 +1,31 @@
+<head>
+	<meta http-equiv="Content-Type" content="application/xhtml+xml; charset=utf-8" />
+	<script type="text/javascript" src="prototype.js"> </script>
+	<script type="text/javascript" src="effects.js"> </script>
+	<script type="text/javascript" src="window.js"> </script>
+	<script type="text/javascript" src="window_effects.js"> </script>
+	<script type="text/javascript" src="debug.js"> </script>
+	<link href="themes/default.css" rel="stylesheet" type="text/css"/>
+	<link href="themes/alert.css" rel="stylesheet" type="text/css"/>
+	<link href="themes/alphacube.css" rel="stylesheet" type="text/css"/>
+  <style type="text/css">
+    .popup_effect {
+      background:#11455A;
+      opacity: 0.2;
+    }    
+  </style>	
+</head>
+
+<body>
+
+<input type=button onclick="openDialog(this)" value="open"/> a window with <tt>className: "popup_effect"</tt> <br/>   <br/>
+
+<script type="text/javascript">  
+  function openDialog(html) {
+    var effect = new PopupEffect(html, {className: "popup_effect"});
+    var win = new Window({className:"alphacube", width: 600, height:400, url: "https://fr.robom.ru/", showEffect:effect.show.bind(effect), hideEffect:effect.hide.bind(effect)});
+    win.show();
+  }                     
+</script>
+</body>
+</html>

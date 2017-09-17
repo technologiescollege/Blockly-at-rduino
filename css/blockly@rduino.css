@@ -590,3 +590,10 @@ html[dir="RTL"] .colors_category {
 	top: -30px;
     left: 200px;
 }
+
+/* Prototype window
+----------------------------------*/
+.popup_effect {
+  background:#11455A;
+  opacity: 0.2;
+}

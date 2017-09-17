@@ -124,7 +124,7 @@ BlocklyDuino.verify_local_Click = function() {
 BlocklyDuino.toggleWeb = function() {
 	// checked = online
 	if ($('#toggle-WebAccess').prop('checked')) {
-		$("#tab_wiring").removeClass('hidden');
+		$("#btn_wiring").removeClass('hidden');
 		$("#btn_Help_Online").removeClass('hidden');
 		$("#tab_term").removeClass('hidden');
 		$("#content_term").removeClass('hidden');
@@ -135,7 +135,7 @@ BlocklyDuino.toggleWeb = function() {
 				$('#toggle-LocalCodebender').bootstrapToggle('disable');
 			}
 	} else {
-		$("#tab_wiring").addClass('hidden');
+		$("#btn_wiring").addClass('hidden');
 		$("#btn_Help_Online").addClass('hidden');
 		$("#tab_term").addClass('hidden');
 		$("#content_term").addClass('hidden');

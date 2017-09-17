@@ -27,6 +27,11 @@
 <script type="text/javascript" src="core_BlocklyArduino/bootstrap-toggle.min.js"></script>
 <script type="text/javascript" src="core_BlocklyArduino/prettify.js"></script>
 <script type="text/javascript" src="core_BlocklyArduino/head.load.min.js"></script>
+	<!--script type="text/javascript" src="core_BlocklyArduino/prototype_window/prototype.js"></script>
+	<script type="text/javascript" src="core_BlocklyArduino/prototype_window/effects.js"></script>
+	<script type="text/javascript" src="core_BlocklyArduino/prototype_window/window.js"></script>
+	<script type="text/javascript" src="core_BlocklyArduino/prototype_window/window_effects.js"></script>
+	<script type="text/javascript" src="core_BlocklyArduino/prototype_window/debug.js"></script-->
 
 <!-- define all additional blocks from one resumer-->
 <script type="text/javascript" src="blocks/arduino_resume.js"></script>
@@ -52,8 +57,11 @@
 <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css"/>
 <!--link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/-->
 <link rel="stylesheet" type="text/css" href="css/bootstrap.min.SEB.css"/>
-<link rel="stylesheet" type="text/css" href="css/bootstrap-toggle.min.css" />
+<link rel="stylesheet" type="text/css" href="css/bootstrap-toggle.min.css"/>
 <link rel="stylesheet" type="text/css" href="css/prettify.css"/>
+<link rel="stylesheet" type="text/css" href="css/prototype_window/default.css"/>
+<link rel="stylesheet" type="text/css" href="css/prototype_window/alert.css" />
+<link rel="stylesheet" type="text/css" href="css/prototype_window/alphacube.css"/>
 
 <script type="text/javascript">
 	$(window).load(function() {
@@ -125,6 +133,14 @@
 				<span class="glyphicon glyphicon-th-list"> </span>
 				<span id="span_config_kit"> </span>
 			</a>
+			<input type=button onclick="openDialog(this)" value="Câblage"/><br/>
+				<script type="text/javascript">  
+				  function openDialog(html) {
+					var effect = new PopupEffect(html, {className: "popup_effect"});
+					var win = new Window({className:"alphacube", width: 600, height:400, url: "https://fr.robom.ru/", showEffect:effect.show.bind(effect), hideEffect:effect.hide.bind(effect)});
+					win.show();
+				  }                     
+				</script>
 	    </div>
 	    <div id="menuPanelBlockly" class="margin-top-5">
 	            <ul id="ul_nav" role="tablist">

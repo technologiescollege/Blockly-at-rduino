@@ -453,6 +453,7 @@ BlocklyDuino.bindFunctions = function() {
 	$('#toolboxes').on("focus", function() {
 		BlocklyDuino.selectedToolbox = $(this).val();
 	});
+	
 	//menu déroulant
 	$('#toolboxes').on("change", BlocklyDuino.changeToolboxDefinition);
 	//bouton de niveaux
