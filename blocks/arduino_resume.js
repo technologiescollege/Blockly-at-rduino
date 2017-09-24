@@ -23,6 +23,7 @@ function() {
 
 head.load(
 "blocks/arduino_base/arduino_base.js",
+"blocks/arduino_base/arduino_BT.js",
 "blocks/arduino_base/arduino_io.js",
 "blocks/arduino_base/arduino_conversion.js",
 "blocks/arduino_base/arduino_serial.js",

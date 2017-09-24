@@ -20,6 +20,7 @@ function() {
 
 head.load(
 "generators/arduino/arduino_base.js",
+"generators/arduino/arduino_BT.js",
 "generators/arduino/arduino_io.js",
 "generators/arduino/arduino_conversion.js",
 "generators/arduino/arduino_serial.js",

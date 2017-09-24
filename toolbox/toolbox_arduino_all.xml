@@ -504,6 +504,8 @@
 		<sep></sep>
 	</category>
 	<category name="CAT_BLUETOOTH_MISC" colour="#6981F9">	
+		<block type="arduino_BT_send"></block>
+		<block type="arduino_BT_verify_send"></block>
 		<category name="CAT_ARDUINO_COMM_SOFTSERIAL" colour="#00979D">
 			<block type="soft_init"></block>
 			<block type="soft_flush"></block>

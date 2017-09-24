@@ -165,3 +165,12 @@ Blockly.Blocks.storage_eeprom_write_byte.getBlockType = function() {
 Blockly.Blocks.storage_eeprom_read_byte.getBlockType = function() {
 	return Blockly.Types.NUMBER;
 };
+
+//---------------------------------arduino_BT.js-------------------------------------
+
+Blockly.Blocks.arduino_BT_send.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.arduino_BT_verify_send.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
