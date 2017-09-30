@@ -40,6 +40,7 @@ Blockly.Blocks['IR_serial_decoder'] = {
     this.setTooltip(Blockly.Msg.ROBOTS_MISC_IR_DECODE_TOOLTIP);
 	this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
+	this.setHelpUrl("http://www.instructables.com/id/The-Easiest-Way-to-Use-Any-IR-Remote-with-Ardiuno/");
  }
 };
 
@@ -63,6 +64,7 @@ Blockly.Blocks['IR_get_blink'] = {
 	this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setTooltip(Blockly.Msg.ROBOTS_MISC_IR_GET_BLINK_TOOLTIP);
+	this.setHelpUrl("http://www.instructables.com/id/The-Easiest-Way-to-Use-Any-IR-Remote-with-Ardiuno/");
   }
 };
 
@@ -77,5 +79,6 @@ Blockly.Blocks['IR_get'] = {
 		this.setInputsInline(false);
 	this.setOutput(true, 'Number');
     this.setTooltip(Blockly.Msg.ROBOTS_MISC_IR_GET_TOOLTIP);
+	this.setHelpUrl("http://www.instructables.com/id/The-Easiest-Way-to-Use-Any-IR-Remote-with-Ardiuno/");
   }
 };
