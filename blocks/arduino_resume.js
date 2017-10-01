@@ -39,6 +39,7 @@ head.load(
 "blocks/ADXL362_gyroscope/ADXL362_gyroscope.js",
 "blocks/APDS-9960_RGB_Gesture/APDS-9960_RGB_Gesture.js",
 "blocks/arduino_shield/arduino_shield.js",
+"blocks/anemo_rotation/anemo_rotation.js",
 "blocks/autoduino/autoduino.js",
 "blocks/bitbloq/bitbloq.js",
 "blocks/Bluetooth_Electronics/Bluetooth_Electronics.js",

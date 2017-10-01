@@ -86,6 +86,9 @@ Blockly.Msg.CAT_ARDUINO_COMM_SERIAL = "serial communication";
 Blockly.Msg.CAT_ARDUINO_COMM_SOFTSERIAL = "softserial lib";
 Blockly.Msg.CAT_ARDUINO_SERVO = "Servo-Motor";
 
+Blockly.Msg.CAT_ANEMOROTATION = "Anemometer with cups"; //added september 16th 2017
+
+
 Blockly.Msg.CAT_ADAFRUIT_MOTORSHIELD = "Adafruit Motorshield";
 Blockly.Msg.CAT_ADAFRUIT_MOTORSHIELD_v1 = "Adafruit Motorshield v1";
 Blockly.Msg.CAT_ADAFRUIT_MOTORSHIELD_v2 = "Adafruit Motorshield v2";
@@ -1135,6 +1138,14 @@ Blockly.Msg.ROMEO3_MOTOR_TOOLTIP = "motor control individually";
 Blockly.Msg.ROMEO3_SWITCH = "press button";
 Blockly.Msg.ROMEO_SWITCH_FIELDDROPDOWN = [["S1", "0"], ["S2", "147"], ["S3", "333"], ["S4", "510"], ["S5", "745"], ["aucun", "1023"]];
 Blockly.Msg.ROMEO3_SWITCH_TOOLTIP = "Bware of switch ! Verify analog read on A0 : 0 for S1, 147 for S2, 333 for S3, 510 for S4, 745 for S5, 1023 if none";
+
+
+//Added september 16th 2017
+Blockly.Msg.VITESSE_ROTATION_HELPURL = "on going redaction";
+Blockly.Msg.VITESSE_ROTATION_TEXT = "the rotational speed ";
+Blockly.Msg.VITESSE_ROTATION_INPUT = "of the cups (revolutions/minute) on the spindle n°";
+Blockly.Msg.VITESSE_ROTATION_TOOLTIP = "Measuring the rotational speed of the cups in revolutions per minute (tr/min)";
+
 
 //******** Added august 20th 2016
 Blockly.Msg.FLYCAM_SWITCH_HELPURL = "http://tic.technologiescollege.fr/wiki/doku.php/fr/arduino/flycam";

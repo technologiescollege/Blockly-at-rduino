@@ -378,6 +378,15 @@
 		</category>
 		<sep></sep>
 	</category>
+	<category name="CAT_ANEMOROTATION" colour="#856D4D">
+		<block type="vitesse_rotation">
+			<value name="PIN">
+				<shadow type="math_number">
+					<field name="NUM">2</field>
+				</shadow>
+			</value>
+		</block>	
+	</category>
 	<category name="CAT_LCD_SCREEN" colour="#57663B">
 		<category name="CAT_LCD_DFRobot_SHIELD_LCDKEYPAD" colour="#F39800">
 			<block type="LCD_Keypad_Shield_DFR_09">

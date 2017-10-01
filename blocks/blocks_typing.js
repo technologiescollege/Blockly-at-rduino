@@ -4,6 +4,7 @@ head.load(
 "blocks/adafruit_motorshield/blocks_typing.js",
 "blocks/ADXL362_gyroscope/blocks_typing.js",
 "blocks/APDS-9960_RGB_Gesture/APDS-blocks_typing.js",
+"blocks/anemo_rotation/blocks_typing.js",
 "blocks/arduino_base/blocks_typing.js",
 "blocks/arduino_shield/blocks_typing.js",
 "blocks/autoduino/blocks_typing.js",

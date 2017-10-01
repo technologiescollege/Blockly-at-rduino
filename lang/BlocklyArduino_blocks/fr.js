@@ -87,6 +87,7 @@ Blockly.Msg.CAT_COLOR = "couleurs";
 Blockly.Msg.CAT_VARIABLES = "variables";
 Blockly.Msg.CAT_FUNCTIONS = "procédures & fonctions";
 
+Blockly.Msg.CAT_ANEMOROTATION = "anémomètre à coupelles"; //added september 16th 2017
 
 Blockly.Msg.CAT_ARDUINO = "arduino";
 Blockly.Msg.CAT_ARDUINO_IN = " - entrées";
@@ -1156,6 +1157,12 @@ Blockly.Msg.ROMEO3_MOTOR_TOOLTIP = "gestion individuelle des moteurs";
 Blockly.Msg.ROMEO3_SWITCH = "appui sur le bouton";
 Blockly.Msg.ROMEO_SWITCH_FIELDDROPDOWN = [["S1", "0"], ["S2", "147"], ["S3", "333"], ["S4", "510"], ["S5", "745"], ["aucun", "1023"]];
 Blockly.Msg.ROMEO3_SWITCH_TOOLTIP = "Vérifier le switch S1-S5 !!! Lire la valeur sur l'entrée Analogique A0 : 0 pour S1, 147 pour S2, 333 pour S3, 510 pour S4, 745 pour S5, 1023 si aucun";
+
+//Added september 16th 2017
+Blockly.Msg.VITESSE_ROTATION_HELPURL = "En cours de rédaction";
+Blockly.Msg.VITESSE_ROTATION_TEXT = "la vitesse de rotation";
+Blockly.Msg.VITESSE_ROTATION_INPUT = "des coupelles (en tours/minute) sur la broche n°";
+Blockly.Msg.VITESSE_ROTATION_TOOLTIP = "Mesure de la vitesse de rotation des coupelles en tours par minute (tr/min)";
 
 
 //Added august 20th 2016
