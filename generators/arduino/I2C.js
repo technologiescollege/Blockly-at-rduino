@@ -14,11 +14,11 @@ Blockly.Arduino.I2C_init = function() {
 	var Pin_SDA = Blockly.Arduino.valueToCode(this, 'Pin_SDA', Blockly.Arduino.ORDER_ATOMIC);
 	var Port_SDA = this.getFieldValue('Port_SDA');	
 	
-	Blockly.Arduino.includes_['define_pin_SCL']  = '#define SCL_PIN '+Pin_SCL;
-	Blockly.Arduino.includes_['define_port_SCL'] = '#define SCL_PORT PORT'+Port_SCL;
-	Blockly.Arduino.includes_['define_pin_SDA']  = '#define SDA_PIN '+Pin_SDA;
-	Blockly.Arduino.includes_['define_port_SDA'] = '#define SDA_PORT PORT'+Port_SDA;
 	Blockly.Arduino.includes_['define_I2C_soft'] = '#include <SoftI2CMaster.h>';
+	Blockly.Arduino.variables_['define_pin_SCL']  = '#define SCL_PIN '+Pin_SCL;
+	Blockly.Arduino.variables_['define_port_SCL'] = '#define SCL_PORT PORT'+Port_SCL;
+	Blockly.Arduino.variables_['define_pin_SDA']  = '#define SDA_PIN '+Pin_SDA;
+	Blockly.Arduino.variables_['define_port_SDA'] = '#define SDA_PORT PORT'+Port_SDA;	
 	Blockly.Arduino.setups_['setup_I2C'] = 'i2c_init(); \n';
 		
 	return "";
