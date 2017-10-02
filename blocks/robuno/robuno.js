@@ -212,11 +212,11 @@ Blockly.Blocks['robuno_moteurs_CC'] = {
     this.appendValueInput("SENS")
 		.setCheck('Boolean')
         .setAlign(Blockly.ALIGN_RIGHT)
-        .appendField(Blockly.Msg.ROBUNO_TEXT15);
+        .appendField(Blockly.Msg.ROBUNO_TEXT14);  // inversion TEXT 14 -15 
     this.appendValueInput("VITESSE")
 		.setCheck('Number')
         .setAlign(Blockly.ALIGN_RIGHT)
-        .appendField(Blockly.Msg.ROBUNO_TEXT14);          
+        .appendField(Blockly.Msg.ROBUNO_TEXT15);  // inversion TEXT 14 -15         
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setTooltip(Blockly.Msg.ROBUNO_TEXT16);
