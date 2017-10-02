@@ -1045,8 +1045,8 @@ Blockly.Msg.ROBUNO_TEXT10 = "du shield Moteurs CC";
 Blockly.Msg.ROBUNO_TEXT11 = "sur les broches";
 Blockly.Msg.ROBUNO_TEXT12 = "broche de commande de Direction (DIR)";
 Blockly.Msg.ROBUNO_TEXT13 = "broche de commande de la Vitesse (PWM~)";
-Blockly.Msg.ROBUNO_TEXT14 = "sens horaire (255) ou antihoraire (0)?";
-Blockly.Msg.ROBUNO_TEXT15 = "vitesse MAX (VRAI) ou nulle (FAUX)";
+Blockly.Msg.ROBUNO_TEXT14 = "sens horaire (1) ou antihoraire (0)?";  // True/false me parait plus logique que 255/0 sachant qu'on attend un boolean
+Blockly.Msg.ROBUNO_TEXT15 = "vitesse MAX (255) ou nulle (0)";		// idem à l'envers
 Blockly.Msg.ROBUNO_TEXT16 = "Carte de commande de deux moteurs CC";
 
 Blockly.Msg.ROBUNO_LUX_TITLE1 = "la luminosité lue sur la LDR Gauche";
