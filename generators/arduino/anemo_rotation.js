@@ -6,9 +6,10 @@
 goog.provide('Blockly.Arduino.anemometre');
 goog.require('Blockly.Arduino');
 
-Blockly.Arduino.vitesse_rotation = function() {
+Blockly.Arduino.anemometre_init_mesure_rotation = function() {
   Blockly.Arduino.includes_['anemo_lib'] = '#include <PinChangeInt.h>';
   Blockly.Arduino.definitions_['var_anemo'] = 'unsigned long dureeDebut;\n' +
+	'int nombreTourSec = 0;\n' +
 	'int nombreTourMin = 0;\n' +
 	'volatile unsigned int comptageILS = 0;\n' +
 	'const unsigned long dureeAntiRebond = 1;';
@@ -26,10 +27,17 @@ Blockly.Arduino.vitesse_rotation = function() {
 	'  PCintPort::attachInterrupt(' + PIN_ANEMO + ', interruptILS, FALLING);\n' +
 	'  dureeDebut = millis();';
  
-  var code = 'if ((millis() - dureeDebut) > 1000) { // durée de 1 seconde\n' +
-    '  nombreTourMin = comptageILS * 60; //comptage du nombre de tours par minute\n' +
+  var code = 'if ((millis() - dureeDebut) > 5000) { // durée de 5 secondes\n' +
+    '  nombreTourSec = comptageILS/5; //comptage du nombre de tours par seconde\n' +
+    '  nombreTourMin = nombreTourSec * 60; //comptage du nombre de tours par minute\n' +
     '  comptageILS = 0; // réinitialisation du comptage\n' +
     '  dureeDebut = millis();\n' +
-	'}';
+	'}' +
+	'return nombreTourMin;';
+  return [code, Blockly.Arduino.ORDER_ATOMIC];
+};
+
+Blockly.Arduino.vitesse_rotation = function() { 
+  var code = 'AnemoNombreTourMin()';
   return [code, Blockly.Arduino.ORDER_ATOMIC];
 };
