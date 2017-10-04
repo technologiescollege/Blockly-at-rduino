@@ -91,6 +91,37 @@ Blockly.Blocks['ethernet_client_begin'] = {
   }
 };
 
+Blockly.Blocks['ethernet_begin_dhcp_server'] = {		// by BZH
+  init: function() {
+    this.setHelpUrl(Blockly.Msg.ETHERNET_BEGIN_HELPURL); // a finir
+    this.setColour(Blockly.Blocks.ethernet.HUE);
+    this.appendDummyInput()
+      .appendField(Blockly.Msg.ETHERNET_BEGIN_DHCP_SERVER_TITLE)
+      .appendField(new Blockly.FieldDropdown([[Blockly.Msg.ETHERNET_VERSION_1,""],[Blockly.Msg.ETHERNET_VERSION_2,"2"]]), 'VERSION');
+    this.appendValueInput("MAC_ADDRESS")
+      .setCheck("String")
+      .setAlign(Blockly.ALIGN_RIGHT)
+      .appendField(Blockly.Msg.ETHERNET_MAC_ADDRESS);
+	this.appendDummyInput()
+      .appendField(Blockly.Msg.ETHERNET_PORT)
+      .appendField(new Blockly.FieldTextInput("80"),"PORT");
+	this.setPreviousStatement(true);
+    this.setNextStatement(true);
+	this.setInputsInline(false);
+    this.setTooltip(Blockly.Msg.ETHERNET_BEGIN_DHCP_TOOLTIP); // à finir
+  }
+};
+
+Blockly.Blocks['ethernet_client_for_server'] = { // by BZH
+  init: function() {
+    this.setColour(Blockly.Blocks.ethernet.HUE);
+    this.appendDummyInput()
+      .appendField(Blockly.Msg.ETHERNET_CLIENT_FOR_SERVER_TITLE);
+    this.setOutput(true, 'Boolean');
+    this.setTooltip(Blockly.Msg.ETHERNET_CLIENT_FOR_SERVER_TOOLTIP);
+  }
+};
+
 Blockly.Blocks['ethernet_localip'] = {
   init: function() {
     this.setHelpUrl(Blockly.Msg.ETHERNET_LOCALIP_HELPURL);
