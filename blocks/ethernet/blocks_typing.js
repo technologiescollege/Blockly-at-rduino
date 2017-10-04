@@ -13,6 +13,11 @@ Blockly.Blocks.ethernet_mac_address.getBlockType = function() {
 Blockly.Blocks.ethernet_client_begin.getBlockType = function() {
    return Blockly.Types.NUMBER;
 };
+
+Blockly.Blocks.ethernet_client_for_server.getBlockType = function() {
+   return Blockly.Types.BOOLEAN;
+};
+
 Blockly.Blocks.ethernet_localip.getBlockType = function() {
    return Blockly.Types.NUMBER;
 };
