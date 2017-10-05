@@ -42,6 +42,31 @@ Blockly.Arduino.ethernet_begin_dhcp = function() {
   return [code, Blockly.Arduino.ORDER_ATOMIC];
 };
 
+Blockly.Arduino.ethernet_begin_dhcp_server = function() {
+  var version = this.getFieldValue('VERSION');
+  var mac = Blockly.Arduino.valueToCode(this, 'MAC_ADDRESS', Blockly.Arduino.ORDER_ATOMIC) || '0xDE, 0xAD, 0xBE, 0xEF, 0xFE, 0xED'
+  mac = mac.replace(/"/g, "");
+  var port = this.getFieldValue('PORT'); 
+
+  Blockly.Arduino.includes_['define_spi'] = '#include <SPI.h>';
+  Blockly.Arduino.includes_['define_ethernet'] = '#include <Ethernet' + version + '.h>';
+  Blockly.Arduino.definitions_['define_ethernet_server'] = 'EthernetServer server('+port+');';
+  Blockly.Arduino.definitions_['define_arduino_mac'] = 'byte mac[] = {' + mac + '};\n';
+  Blockly.Arduino.setups_['begin'] = 'Ethernet.begin(mac);';
+  Blockly.Arduino.setups_['serveur_start'] = 'server.begin();';
+  
+  var code = '';    // pas terrible mais je ne sais pas faire autrement
+  return code;
+};
+
+Blockly.Arduino.ethernet_client_for_server = function() {
+
+  Blockly.Arduino.includes_['define_ethernet_client'] = 'EthernetClient client;'; // en cas d'utilisation de procedure
+  
+  var code = 'EthernetClient client = server.available()';   
+  return [code, Blockly.Arduino.ORDER_ATOMIC];
+};
+
 Blockly.Arduino.ethernet_mac_address = function () {
   var mac1 = this.getFieldValue('MAC_ADDRESS_1');
   var mac2 = this.getFieldValue('MAC_ADDRESS_2');
