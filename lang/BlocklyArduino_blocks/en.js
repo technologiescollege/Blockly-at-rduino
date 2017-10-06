@@ -228,6 +228,7 @@ Blockly.Msg.CAT_DRONE = "drone"; //added 26 april 2017
 Blockly.Msg.CAT_ETHERNET = "ethernet"; //added 25 july 2017
 Blockly.Msg.CAT_ETHERNET_INIT = "initialisation";
 Blockly.Msg.CAT_ETHERNET_CLIENT = "client";
+Blockly.Msg.CAT_ETHERNET_SERVER = "server";
 
 //**********************************FieldInstance messages***********************************************
 Blockly.Msg.COMPONENT_WARN = 'A %1 configuration block with the same %2 name must be added to use this block!';
@@ -1803,11 +1804,14 @@ Blockly.Msg.BLYNK_TEXT = "Text";
 Blockly.Msg.ETHERNET_AVAILABLE_HELPURL = "https://www.arduino.cc/en/Reference/ClientAvailable";
 Blockly.Msg.ETHERNET_AVAILABLE_TITLE = "Client.availalbe";
 Blockly.Msg.ETHERNET_AVAILABLE_TOOLTIP = "Returns the number of bytes available for reading (that is, the amount of data that has been written to the client by the server it is connected to).";
-Blockly.Msg.ETHERNET_BEGIN_DHCP_TITLE = "Begin (DHCP)";
+Blockly.Msg.ETHERNET_BEGIN_DHCP_TITLE = "Begin (DHCP) Client";
+Blockly.Msg.ETHERNET_BEGIN_DHCP_SERVER_TITLE = "Begin (DHCP) Server";
 Blockly.Msg.ETHERNET_BEGIN_DHCP_TOOLTIP = "Using Ethernet.begin(mac) with the proper network setup, the Ethernet shield will automatically obtain an IP address.";
 Blockly.Msg.ETHERNET_BEGIN_HELPURL = "https://www.arduino.cc/en/Reference/EthernetBegin";
 Blockly.Msg.ETHERNET_BEGIN_TITLE = "Begin";
 Blockly.Msg.ETHERNET_BEGIN_TOOLTIP = "Initializes the ethernet library and network settings.";
+Blockly.Msg.ETHERNET_CLIENT_FOR_SERVER_TITLE = "Client Request"; 
+Blockly.Msg.ETHERNET_CLIENT_FOR_SERVER_TOOLTIP = "A client has sent a request"; 
 Blockly.Msg.ETHERNET_CLIENT_PRINTLN_HELPURL = "https://www.arduino.cc/en/Reference/ClientPrintln";
 Blockly.Msg.ETHERNET_CLIENT_PRINTLN_TITLE = "Client.Println";
 Blockly.Msg.ETHERNET_CLIENT_PRINTLN_TOOLTIP = "Print data, followed by a carriage return and newline, to the server a client is connected to. Prints numbers as a sequence of digits, each an ASCII character (e.g. the number 123 is sent as the three characters '1', '2', '3').";
