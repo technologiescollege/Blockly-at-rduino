@@ -71,6 +71,7 @@ head.load(
 "blocks/MRduino/MRduino.js",
 "blocks/multi-function/multi-function.js",
 "blocks/myhumankit/myhumankit.js",
+"blocks/null/null.js",
 "blocks/RFID/RFID.js",
 "blocks/robots/robot_motors.js",
 "blocks/robots/robot_misc.js",

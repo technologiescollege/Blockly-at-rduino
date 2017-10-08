@@ -132,8 +132,11 @@ Blockly.Blocks.inout_digital_read_check = {
     init: function() {
 		this.setColour(Blockly.Blocks.arduino_io.HUE);
         this.setHelpUrl(Blockly.Msg.ARDUINO_INOUT_DIGITAL_READ_HELPURL);
-        this.appendValueInput("PIN", "Number").appendField(Blockly.Msg.ARDUINO_INOUT_DIGITAL_READ_INPUT);
-        this.appendDummyInput().setAlign(Blockly.ALIGN_RIGHT).appendField(new Blockly.FieldCheckbox("FALSE"), "pullup").appendField(Blockly.Msg.ARDUINO_INOUT_DIGITAL_READ_PULL_UP);
+        this.appendValueInput("PIN", "Number")
+			.appendField(Blockly.Msg.ARDUINO_INOUT_DIGITAL_READ_INPUT);
+        this.appendDummyInput()
+			.setAlign(Blockly.ALIGN_RIGHT).appendField(new Blockly.FieldCheckbox("FALSE"), "pullup")
+			.appendField(Blockly.Msg.ARDUINO_INOUT_DIGITAL_READ_PULL_UP);
         this.setInputsInline(false);
         this.setOutput(true, "Boolean");
         this.setTooltip(Blockly.Msg.ARDUINO_INOUT_DIGITAL_READ_PULL_UP_TOOLTIP);

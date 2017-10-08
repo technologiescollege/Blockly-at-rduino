@@ -153,4 +153,16 @@
 		<block type="variables_get"></block>
 	</category>
 	<category name="CAT_FUNCTIONS" custom="PROCEDURE" colour="#632D99"></category>
+	<category name="CAT_NULL" colour="#00979D">
+		<block type="null_start"></block>
+		<block type="null_in"></block>
+		<block type="null_out"></block>
+		<block type="null_in_out"></block>
+		<block type="null_end"></block>
+		<block type="null_loop"></block>
+		<block type="null_loop_inside"></block>
+		<block type="null_loop_inside_in"></block>
+		<block type="null_loop_do_inside"></block>
+		<block type="null_loop_do_inside_in"></block>
+	</category>
 </toolbox>

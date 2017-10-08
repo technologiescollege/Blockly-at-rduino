@@ -246,6 +246,8 @@ Blockly.Msg.CAT_AUTODUINO_UTIL = " - utile";
 Blockly.Msg.CAT_I2C = "I2C"; //added 26/05/2017
 Blockly.Msg.CAT_SPI = "SPI"; //added 26/05/2017
 
+Blockly.Msg.CAT_NULL = "libre"; //added 8/10/2017
+
 Blockly.Msg.FIELDDROPDOWN = [["1 (état haut)", "HIGH"], ["0 (état bas)", "LOW"]];
 Blockly.Msg.FIELDDROPDOWN_ONOFF = [["marche", "ON"], ["arrêt", "OFF"]]
 Blockly.Msg.INOUT_HIGH_LEVEL = "1 (état haut)";
@@ -1855,3 +1857,6 @@ Blockly.Msg.ETHERNET_STOP_TOOLTIP = "Disconnect from the server.";
 Blockly.Msg.ETHERNET_VERSION_1 = "Ethernet";
 Blockly.Msg.ETHERNET_VERSION_2 = "Ethernet2";
 Blockly.Msg.ETHERNET_VERSION_V2 = "Ethernet_v2";
+
+//********************null*************//
+Blockly.Msg.NULL_TOOLTIP = "texte libre pour description d'algorithmes";

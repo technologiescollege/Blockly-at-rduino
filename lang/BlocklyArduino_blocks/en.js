@@ -230,6 +230,8 @@ Blockly.Msg.CAT_ETHERNET_INIT = "initialisation";
 Blockly.Msg.CAT_ETHERNET_CLIENT = "client";
 Blockly.Msg.CAT_ETHERNET_SERVER = "server";
 
+Blockly.Msg.CAT_NULL = "free"; //added 8/10/2017
+
 //**********************************FieldInstance messages***********************************************
 Blockly.Msg.COMPONENT_WARN = 'A %1 configuration block with the same %2 name must be added to use this block!';
 
@@ -1844,3 +1846,7 @@ Blockly.Msg.ETHERNET_STOP_TOOLTIP = "Disconnect from the server.";
 Blockly.Msg.ETHERNET_VERSION_1 = "Ethernet";
 Blockly.Msg.ETHERNET_VERSION_2 = "Ethernet2";
 Blockly.Msg.ETHERNET_VERSION_V2 = "Ethernet_v2";
+
+
+//********************null*************//
+Blockly.Msg.NULL_TOOLTIP = "free text to describe or create algorithms";
