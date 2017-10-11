@@ -402,6 +402,83 @@
 		</category>
 		<sep></sep>
 	</category>
+	<category name="CAT_ANEMOROTATION" colour="#856D4D">
+		<block type="anemometre_vitesse_rotation">
+			<value name="PIN">
+				<shadow type="math_number">
+					<field name="NUM">2</field>
+				</shadow>
+			</value>
+		</block>
+		<block type="anemometre_vitesse_ventms">
+			<value name="PIN">
+				<shadow type="math_number">
+					<field name="NUM">2</field>
+				</shadow>
+			</value>
+			<value name="RAYONBRAS">
+				<shadow type="math_number">
+					<field name="NUM">7</field>
+				</shadow>
+			</value>
+			<value name="COEFETAL">
+				<shadow type="math_number">
+					<field name="NUM">1</field>
+				</shadow>
+			</value>
+		</block>	
+		<block type="anemometre_vitesse_ventkmh">
+			<value name="PIN">
+				<shadow type="math_number">
+					<field name="NUM">2</field>
+				</shadow>
+			</value>
+			<value name="RAYONBRAS">
+				<shadow type="math_number">
+					<field name="NUM">7</field>
+				</shadow>
+			</value>
+			<value name="COEFETAL">
+				<shadow type="math_number">
+					<field name="NUM">1</field>
+				</shadow>
+			</value>
+		</block>	
+		<block type="anemometre_vitesse_ventnoeud">
+			<value name="PIN">
+				<shadow type="math_number">
+					<field name="NUM">2</field>
+				</shadow>
+			</value>
+			<value name="RAYONBRAS">
+				<shadow type="math_number">
+					<field name="NUM">7</field>
+				</shadow>
+			</value>
+			<value name="COEFETAL">
+				<shadow type="math_number">
+					<field name="NUM">1</field>
+				</shadow>
+			</value>
+		</block>
+		<block type="anemometre_force_Beaufort">
+			<value name="PIN">
+				<shadow type="math_number">
+					<field name="NUM">2</field>
+				</shadow>
+			</value>
+			<value name="RAYONBRAS">
+				<shadow type="math_number">
+					<field name="NUM">7</field>
+				</shadow>
+			</value>
+			<value name="COEFETAL">
+				<shadow type="math_number">
+					<field name="NUM">1</field>
+				</shadow>
+			</value>
+		</block>		
+	</category>
 	<category name="CAT_ROBOT_MISC" colour="#00979D">
 		<block type="IR_serial_decoder"></block>
 		<block type="IR_get_blink"></block>

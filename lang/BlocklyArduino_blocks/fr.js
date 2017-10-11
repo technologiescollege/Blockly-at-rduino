@@ -1163,10 +1163,38 @@ Blockly.Msg.ROMEO3_SWITCH_TOOLTIP = "Vérifier le switch S1-S5 !!! Lire la valeu
 
 //Added september 16th 2017
 Blockly.Msg.VITESSE_ROTATION_HELPURL = "En cours de rédaction";
-Blockly.Msg.VITESSE_ROTATION_TEXT = "la vitesse de rotation";
-Blockly.Msg.VITESSE_ROTATION_INPUT = "des coupelles (en tours/minute) sur la broche n°";
-Blockly.Msg.VITESSE_ROTATION_TOOLTIP = "Mesure de la vitesse de rotation des coupelles en tours par minute (tr/min)";
+Blockly.Msg.VITESSE_ROTATION_TEXT = "vitesse de rotation (en tours/minute)";
+Blockly.Msg.VITESSE_ROTATION_INPUT = "des coupelles sur la broche n°";
+Blockly.Msg.VITESSE_ROTATION_TOOLTIP = "Mesure de la vitesse de rotation des coupelles (avec un interrupteur reed) en tours par minute (tr/min) toutes les 5 secondes";
 
+Blockly.Msg.VITESSE_VENTMS_HELPURL = "En cours de rédaction";
+Blockly.Msg.VITESSE_VENTMS_TEXT = "vitesse du vent (en m/s)";
+Blockly.Msg.VITESSE_VENTMS_INPUT = "du capteur connecté sur la broche n°";
+Blockly.Msg.VITESSE_VENTMS_RAYON = "Rayon des bras de l'anémomètre (en cm)";
+Blockly.Msg.VITESSE_VENTMS_COEFF = "Coefficient d'étalonnage ";
+Blockly.Msg.VITESSE_VENTMS_TOOLTIP = "Mesure de la vitesse du vent (avec un interrupteur reed) en mètres par seconde (m/s) toutes les 5 secondes";
+
+Blockly.Msg.VITESSE_VENTKMH_HELPURL = "En cours de rédaction";
+Blockly.Msg.VITESSE_VENTKMH_TEXT = "vitesse du vent (en km/h)";
+Blockly.Msg.VITESSE_VENTKMH_INPUT = "du capteur connecté sur la broche n°";
+Blockly.Msg.VITESSE_VENTKMH_RAYON = "Rayon des bras de l'anémomètre (en cm)";
+Blockly.Msg.VITESSE_VENTKMH_COEFF = "Coefficient d'étalonnage ";
+Blockly.Msg.VITESSE_VENTKMH_TOOLTIP = "Mesure de la vitesse du vent (avec un interrupteur reed) en kilomètre par heure (km/h) toutes les 5 secondes";
+
+Blockly.Msg.VITESSE_VENTNOEUD_HELPURL = "En cours de rédaction";
+Blockly.Msg.VITESSE_VENTNOEUD_TEXT = "vitesse du vent (en noeuds)";
+Blockly.Msg.VITESSE_VENTNOEUD_INPUT = "du capteur connecté sur la broche n°";
+Blockly.Msg.VITESSE_VENTNOEUD_RAYON = "Rayon des bras de l'anémomètre (en cm)";
+Blockly.Msg.VITESSE_VENTNOEUD_COEFF = "Coefficient d'étalonnage ";
+Blockly.Msg.VITESSE_VENTNOEUD_TOOLTIP = "Mesure de la vitesse du vent (avec un interrupteur reed) en noeuds toutes les 5 secondes";
+
+Blockly.Msg.FORCE_BEAUFORT_HELPURL = "En cours de rédaction";
+Blockly.Msg.FORCE_BEAUFORT_TEXT1 = "force du vent en degré de Beaufort";
+Blockly.Msg.FORCE_BEAUFORT_TEXT2 = "(la mesure envoie un nombre entier de 0 à 12)";
+Blockly.Msg.FORCE_BEAUFORT_INPUT = "Capteur connecté sur la broche n°";
+Blockly.Msg.FORCE_BEAUFORT_RAYON = "Rayon des bras de l'anémomètre (en cm)";
+Blockly.Msg.FORCE_BEAUFORT_COEFF = "Coefficient d'étalonnage ";
+Blockly.Msg.FORCE_BEAUFORT_TOOLTIP = "Mesure de la force du vent (avec un interrupteur reed) en degré de Beaufort toutes les 5 secondes";
 
 //Added august 20th 2016
 Blockly.Msg.FLYCAM_SWITCH_HELPURL = "http://tic.technologiescollege.fr/wiki/doku.php/fr/arduino/flycam";

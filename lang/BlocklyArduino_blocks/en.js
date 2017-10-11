@@ -1147,8 +1147,36 @@ Blockly.Msg.ROMEO3_SWITCH_TOOLTIP = "Bware of switch ! Verify analog read on A0 
 Blockly.Msg.VITESSE_ROTATION_HELPURL = "on going redaction";
 Blockly.Msg.VITESSE_ROTATION_TEXT = "the rotational speed ";
 Blockly.Msg.VITESSE_ROTATION_INPUT = "of the cups (revolutions/minute) on the spindle n°";
-Blockly.Msg.VITESSE_ROTATION_TOOLTIP = "Measuring the rotational speed of the cups in revolutions per minute (tr/min)";
+Blockly.Msg.VITESSE_ROTATION_TOOLTIP = "Measurement of the rotation speed of the cups (with a reed switch) in revolutions per minute (rpm) every 5 seconds";
 
+Blockly.Msg.VITESSE_VENTMS_HELPURL = "on going redaction";
+Blockly.Msg.VITESSE_VENTMS_TEXT = "Measuring wind speed (in m/s)";
+Blockly.Msg.VITESSE_VENTMS_INPUT = "Sensor connected to the spindle n°";
+Blockly.Msg.VITESSE_VENTMS_RAYON = "Radius of the anemometer arms (in cm)";
+Blockly.Msg.VITESSE_VENTMS_COEFF = "Calibration coefficient ";
+Blockly.Msg.VITESSE_VENTMS_TOOLTIP = "Measurement of wind speed (with a reed switch) in meter per second (m/s) every 5 seconds";
+
+Blockly.Msg.VITESSE_VENTKMH_HELPURL = "on going redaction";
+Blockly.Msg.VITESSE_VENTKMH_TEXT = "Measuring wind speed (in km/h)";
+Blockly.Msg.VITESSE_VENTKMH_INPUT = "Sensor connected to the spindle n°";
+Blockly.Msg.VITESSE_VENTKMH_RAYON = "Radius of the anemometer arms (in cm)";
+Blockly.Msg.VITESSE_VENTKMH_COEFF = "Calibration coefficient ";
+Blockly.Msg.VITESSE_VENTKMH_TOOLTIP = "Measurement of wind speed (with a reed switch) in kilometers per hour (km/h) every 5 seconds";
+
+Blockly.Msg.VITESSE_VENTNOEUD_HELPURL = "on going redaction";
+Blockly.Msg.VITESSE_VENTNOEUD_TEXT = "Measuring wind speed (in knot)";
+Blockly.Msg.VITESSE_VENTNOEUD_INPUT = "Sensor connected to the spindle n°";
+Blockly.Msg.VITESSE_VENTNOEUD_RAYON = "Radius of the anemometer arms (in cm)";
+Blockly.Msg.VITESSE_VENTNOEUD_COEFF = "Calibration coefficient ";
+Blockly.Msg.VITESSE_VENTNOEUD_TOOLTIP = "Measurement of wind speed (with a reed switch) in knot every 5 seconds";
+
+Blockly.Msg.FORCE_BEAUFORT_HELPURL = "on going redaction";
+Blockly.Msg.FORCE_BEAUFORT_TEXT1 = "Wind force measurement in Beaufort";
+Blockly.Msg.FORCE_BEAUFORT_TEXT2= "the measurement sends an integer from 0 to 12";
+Blockly.Msg.FORCE_BEAUFORT_INPUT = "Sensor connected to the spindle n°";
+Blockly.Msg.FORCE_BEAUFORT_RAYON = "Radius of the anemometer arms (in cm)";
+Blockly.Msg.FORCE_BEAUFORT_COEFF = "Calibration coefficient ";
+Blockly.Msg.FORCE_BEAUFORT_TOOLTIP = "Wind force measurement (with a reed switch) in Beaufort Degree every 5 seconds";
 
 //******** Added august 20th 2016
 Blockly.Msg.FLYCAM_SWITCH_HELPURL = "http://tic.technologiescollege.fr/wiki/doku.php/fr/arduino/flycam";

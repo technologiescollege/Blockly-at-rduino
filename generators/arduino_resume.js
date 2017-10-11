@@ -19,7 +19,7 @@ function() {
 });
 
 head.load(
-"generators/arduino/anemo_rotation.js",
+"generators/arduino/anemometer.js",
 "generators/arduino/arduino_base.js",
 "generators/arduino/arduino_BT.js",
 "generators/arduino/arduino_io.js",

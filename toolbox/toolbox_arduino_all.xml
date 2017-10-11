@@ -379,13 +379,81 @@
 		<sep></sep>
 	</category>
 	<category name="CAT_ANEMOROTATION" colour="#856D4D">
-		<block type="vitesse_rotation">
+		<block type="anemometre_vitesse_rotation">
 			<value name="PIN">
 				<shadow type="math_number">
 					<field name="NUM">2</field>
 				</shadow>
 			</value>
+		</block>
+		<block type="anemometre_vitesse_ventms">
+			<value name="PIN">
+				<shadow type="math_number">
+					<field name="NUM">2</field>
+				</shadow>
+			</value>
+			<value name="RAYONBRAS">
+				<shadow type="math_number">
+					<field name="NUM">7</field>
+				</shadow>
+			</value>
+			<value name="COEFETAL">
+				<shadow type="math_number">
+					<field name="NUM">1</field>
+				</shadow>
+			</value>
 		</block>	
+		<block type="anemometre_vitesse_ventkmh">
+			<value name="PIN">
+				<shadow type="math_number">
+					<field name="NUM">2</field>
+				</shadow>
+			</value>
+			<value name="RAYONBRAS">
+				<shadow type="math_number">
+					<field name="NUM">7</field>
+				</shadow>
+			</value>
+			<value name="COEFETAL">
+				<shadow type="math_number">
+					<field name="NUM">1</field>
+				</shadow>
+			</value>
+		</block>	
+		<block type="anemometre_vitesse_ventnoeud">
+			<value name="PIN">
+				<shadow type="math_number">
+					<field name="NUM">2</field>
+				</shadow>
+			</value>
+			<value name="RAYONBRAS">
+				<shadow type="math_number">
+					<field name="NUM">7</field>
+				</shadow>
+			</value>
+			<value name="COEFETAL">
+				<shadow type="math_number">
+					<field name="NUM">1</field>
+				</shadow>
+			</value>
+		</block>
+		<block type="anemometre_force_Beaufort">
+			<value name="PIN">
+				<shadow type="math_number">
+					<field name="NUM">2</field>
+				</shadow>
+			</value>
+			<value name="RAYONBRAS">
+				<shadow type="math_number">
+					<field name="NUM">7</field>
+				</shadow>
+			</value>
+			<value name="COEFETAL">
+				<shadow type="math_number">
+					<field name="NUM">1</field>
+				</shadow>
+			</value>
+		</block>		
 	</category>
 	<category name="CAT_LCD_SCREEN" colour="#57663B">
 		<category name="CAT_LCD_DFRobot_SHIELD_LCDKEYPAD" colour="#F39800">
