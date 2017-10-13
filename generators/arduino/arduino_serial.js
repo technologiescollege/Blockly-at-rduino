@@ -94,3 +94,17 @@ Blockly.Arduino.serial_line = function(block) {
     var code = '"\\n"';
     return [code, Blockly.Arduino.ORDER_ATOMIC]
 };
+
+Blockly.Arduino.serial_print_multi = function() {
+  var value_n = Blockly.Arduino.valueToCode(this, 'N', Blockly.Arduino.ORDER_ATOMIC);
+  var new_line = this.getFieldValue('newline');
+  if (new_line =="true")
+	{
+		var code =  'Serial.println('+value_n+');\n';
+	}
+	else
+	{
+		var code =  'Serial.print('+value_n+');\n';
+	}
+  return code;
+};
