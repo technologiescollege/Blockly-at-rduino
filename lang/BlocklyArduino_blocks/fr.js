@@ -1502,12 +1502,12 @@ Blockly.Msg.I2C_STOP_TEXT = "I2C_STOP";
 Blockly.Msg.I2C_STOP_TOOLTIP = "envoi un Stop et donc libère le bus";
 Blockly.Msg.I2C_STOP_HELPURL = "http://playground.arduino.cc/Main/SoftwareI2CLibrary";
 
-Blockly.Msg.I2C_WRITE_TEXT = "I2C_WRITE";
+Blockly.Msg.I2C_WRITE_TEXT = "I2C_SEND";
 Blockly.Msg.I2C_WRITE_DATA = "data";
 Blockly.Msg.I2C_WRITE_TOOLTIP = "écrit un octet de donnée";
 Blockly.Msg.I2C_WRITE_HELPURL = "http://playground.arduino.cc/Main/SoftwareI2CLibrary";
 
-Blockly.Msg.I2C_READ_TEXT = "I2C_READ";
+Blockly.Msg.I2C_READ_TEXT = "I2C_RECEIVE";
 Blockly.Msg.I2C_READ_LAST = "Last? : ";
 Blockly.Msg.I2C_READ_FIELDDROPDOWN = [["non","false"], ["oui","true"]];
 Blockly.Msg.I2C_READ_TOOLTIP = "Reçoit un octet de donnée avec l'envoi d'un paramètre last = oui pour le dernier";
