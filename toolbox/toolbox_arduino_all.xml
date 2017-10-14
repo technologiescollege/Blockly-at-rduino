@@ -2524,7 +2524,15 @@
 			<block type="ethernet_post_request"></block>
 		</category>
 		<category name="CAT_ETHERNET_SERVER" colour="#FFCC66">
-			<block type="ethernet_client_for_server"></block>			
+			<block type="ethernet_client_for_server"></block>
+			<block type="ethernet_HEADER_send"></block>
+			<block type="ethernet_HTML_send">
+				<value name="html">
+					<block type="text">
+						<field name="TEXT"></field>
+					</block>
+				</value>			
+			</block>	
 		</category>
 	</category>	
 	<category name="CAT_BLYNK_CC" colour="#23C890">
