@@ -271,3 +271,34 @@ Blockly.Blocks['ethernet_post_request'] = {
     this.setTooltip(Blockly.Msg.ETHERNET_POST_REQUEST_TOOLTIP);
   }
 };
+
+Blockly.Blocks['ethernet_HTML_send'] = {
+  init: function() {
+	this.setColour(Blockly.Blocks.ethernet.HUE);
+    this.appendDummyInput()
+        .appendField(Blockly.Msg.ETHERNET_HTML_SEND_TITLE);
+    this.appendValueInput("html")
+        .setCheck("String")
+        .setAlign(Blockly.ALIGN_RIGHT)
+        .appendField(Blockly.Msg.ETHERNET_HTML_SEND_HTMLJS);
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+ this.setTooltip("");
+ this.setHelpUrl("");
+  }
+};
+
+Blockly.Blocks['ethernet_HEADER_send'] = {
+  init: function() {
+	this.setColour(Blockly.Blocks.ethernet.HUE);
+    this.appendDummyInput()
+        .appendField(Blockly.Msg.ETHERNET_HEADER_SEND_TITLE);
+	this.appendDummyInput()
+        .appendField("type de la donnée :")   
+        .appendField(new Blockly.FieldDropdown(Blockly.Msg.ETHERNET_HEADER_SEND_FIELDDROPDOWN), 'datatype');
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+ this.setTooltip("");
+ this.setHelpUrl("");
+  }
+};
