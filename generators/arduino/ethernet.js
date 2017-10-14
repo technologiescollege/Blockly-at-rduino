@@ -173,3 +173,30 @@ Blockly.Arduino.ethernet_post_request = function() {
 
   return code;
 };
+
+Blockly.Arduino.ethernet_HTML_send = function() {
+  var page_html = Blockly.Arduino.valueToCode(this, 'html', Blockly.Arduino.ORDER_ATOMIC);
+  
+  page_html = page_html.replace(/\"/g, "\\\"");
+  
+  var code ='client.println("'+page_html+'");\n';
+  code +='delay(1);\n';
+  return code;
+};
+
+Blockly.Arduino.ethernet_HEADER_send = function() {
+  var datatype = this.getFieldValue('datatype');	
+  if (datatype =="text")
+	{
+		var code = 'client.println("HTTP/1.1 200 OK");\n';
+		code +='client.println("Content-Type: text/html");\n';
+		code +='client.println("");\n';  
+	}
+  if (datatype =="png")
+	{
+		var code = 'client.println("HTTP/1.1 200 OK");\n';
+		code +='client.println("Content-Type: image/png");\n';
+		code +='client.println("");\n';  
+	}
+  return code;
+};
