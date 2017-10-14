@@ -194,6 +194,23 @@ Blockly.Blocks.serial_line = {
         this.appendDummyInput("").appendField("un saut de ligne");
         this.setInputsInline(true);
         this.setOutput(true, "String");
-        this.setTooltip("permet d'aller à ligne sur le moniteur série")
+        this.setTooltip("permet d'aller Ã  ligne sur le moniteur sÃ©rie")
     }
+};
+
+Blockly.Blocks['serial_print_multi'] = {
+  init: function() {
+    this.setColour(Blockly.Blocks.arduino_serial.HUE);
+	this.setHelpUrl(Blockly.Msg.ARDUINO_SERIAL_PRINT_HELPURL);
+    this.appendValueInput("N")
+		.setCheck(['Number','String'])
+        .setAlign(Blockly.ALIGN_RIGHT)
+        .appendField(Blockly.Msg.ARDUINO_SERIAL_PRINT_MULTI_NUMBER);			
+	this.appendDummyInput()
+        .appendField(Blockly.Msg.ARDUINO_SERIAL_PRINT_MULTI_NEWLINE)   
+        .appendField(new Blockly.FieldDropdown(Blockly.Msg.ARDUINO_SERIAL_PRINT_MULTI_FIELDDROPDOWN), 'newline');
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setTooltip(Blockly.Msg.ARDUINO_SERIAL_PRINT_TOOLTIP);
+  }
 };
