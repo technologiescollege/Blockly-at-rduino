@@ -354,6 +354,11 @@
 			<block type="serial_available"></block>
 			<block type="serial_read"></block>
 			<block type="serial_line"></block>
+			<block type="serial_print_multi">
+				<value name="N">
+					
+				</value>
+			</block>
 		</category>
 		<category name="CAT_ARDUINO_COMM_SOFTSERIAL" colour="#00979D">
 			<block type="soft_init"></block>
