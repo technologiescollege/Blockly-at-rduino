@@ -379,6 +379,9 @@ Blockly.Msg.ARDUINO_SERIAL_PRINT_TOOLTIP = "envoie des données sur le port sér
 Blockly.Msg.ARDUINO_SERIAL_PRINT_VAR_TEXT = "afficher sur le port série le texte :";
 Blockly.Msg.ARDUINO_SERIAL_PRINT_VAR_NUMBER = "suivi du nombre :";
 Blockly.Msg.ARDUINO_SERIAL_PRINT_VAR_NEW_LINE = "puis d'un saut de ligne ?";
+Blockly.Msg.ARDUINO_SERIAL_PRINT_MULTI_NUMBER = "Afficher sur le port Série :";
+Blockly.Msg.ARDUINO_SERIAL_PRINT_MULTI_NEWLINE = "Nouvelle ligne?";
+Blockly.Msg.ARDUINO_SERIAL_PRINT_MULTI_FIELDDROPDOWN = [["oui", "true"], ["non", "false"]];
 
 Blockly.Msg.LKL_ATTACHINTERRUPT_PIN = 'quand une interruption externe sur la broche';
 Blockly.Msg.LKL_DETACHINTERRUPT_PIN = "désactiver l'interruption externe de la broche";
