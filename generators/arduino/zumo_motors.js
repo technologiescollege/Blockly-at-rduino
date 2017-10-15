@@ -50,8 +50,8 @@ Blockly.Arduino['zumo_motors_FN'] = function() {
 "{\n"+
      "  analogWrite(9,"+speed+");//input a simulation value to set the speed\n"+
      "  analogWrite(10,"+speed+");\n"+
-     "  digitalWrite(7,HIGH);//turn DC Motor B move clockwise\n"+
-     "  digitalWrite(8,LOW);//turn DC Motor A move anti-clockwise\n"+
+     "  digitalWrite(7,LOW);//turn DC Motor B move clockwise\n"+
+     "  digitalWrite(8,HIGH);//turn DC Motor A move anti-clockwise\n"+
 "}\n\n";
     code="right();\n";
   } else if (dropdown_direction=="left") {
@@ -59,8 +59,8 @@ Blockly.Arduino['zumo_motors_FN'] = function() {
 "{\n"+
      "  analogWrite(9,"+speed+");//input a simulation value to set the speed\n"+
      "  analogWrite(10,"+speed+");\n"+
-     "  digitalWrite(7,LOW);//turn DC Motor B move anticlockwise\n"+
-     "  digitalWrite(8,HIGH);//turn DC Motor A move clockwise\n"+
+     "  digitalWrite(7,HIGH);//turn DC Motor B move anticlockwise\n"+
+     "  digitalWrite(8,LOW);//turn DC Motor A move clockwise\n"+
 "}\n\n";
     code="left();\n";
   } else if (dropdown_direction=="backward"){
@@ -95,7 +95,7 @@ Blockly.Arduino.zumo_motors_FL = function() {
 "{\n"+
      "  analogWrite(9,"+speed+");//input a simulation value to set the speed\n"+
      "  analogWrite(10,"+speed+");\n"+
-     "  digitalWrite(7,HIGH);//turn DC Motor B move clockwise\n"+
+     "  digitalWrite(7,LOW);//turn DC Motor B move clockwise\n"+
      "  digitalWrite(8,LOW);//turn DC Motor A move clockwise\n"+
 "}\n";
     code="forward();\n";
@@ -105,7 +105,7 @@ Blockly.Arduino.zumo_motors_FL = function() {
      "  analogWrite(9,"+speed+");//input a simulation value to set the speed\n"+
      "  analogWrite(10,"+speed+");\n"+
      "  digitalWrite(7,LOW);//turn DC Motor B move clockwise\n"+
-     "  digitalWrite(8,LOW);//turn DC Motor A move anti-clockwise\n"+
+     "  digitalWrite(8,HIGH);//turn DC Motor A move anti-clockwise\n"+
 "}\n\n";
     code="right();\n";
   } else if (dropdown_direction==="left") {
@@ -114,7 +114,7 @@ Blockly.Arduino.zumo_motors_FL = function() {
      "  analogWrite(9,"+speed+");//input a simulation value to set the speed\n"+
      "  analogWrite(10,"+speed+");\n"+
      "  digitalWrite(7,HIGH);//turn DC Motor B move anticlockwise\n"+
-     "  digitalWrite(8,HIGH);//turn DC Motor A move clockwise\n"+
+     "  digitalWrite(8,LOW);//turn DC Motor A move clockwise\n"+
 "}\n\n";
     code="left();\n";
   } else if (dropdown_direction==="backward"){
@@ -122,7 +122,7 @@ Blockly.Arduino.zumo_motors_FL = function() {
 "{\n"+
      "  analogWrite(9,"+speed+");//input a simulation value to set the speed\n"+
      "  analogWrite(10,"+speed+");\n"+
-     "  digitalWrite(7,LOW);//turn DC Motor B move anticlockwise\n"+
+     "  digitalWrite(7,HIGH);//turn DC Motor B move anticlockwise\n"+
      "  digitalWrite(8,HIGH);//turn DC Motor A move anticlockwise\n"+
 "}\n\n";
     code="backward();\n";
@@ -151,7 +151,7 @@ Blockly.Arduino.zumo_motors_FR = function() {
      "  analogWrite(9,"+speed+");//input a simulation value to set the speed\n"+
      "  analogWrite(10,"+speed+");\n"+
      "  digitalWrite(7,LOW);//turn DC Motor B move clockwise\n"+
-     "  digitalWrite(8,HIGH);//turn DC Motor A move clockwise\n"+
+     "  digitalWrite(8,LOW);//turn DC Motor A move clockwise\n"+
 "}\n";
     code="forward();\n";
   } else if (dropdown_direction==="right") {
@@ -159,7 +159,7 @@ Blockly.Arduino.zumo_motors_FR = function() {
 "{\n"+
      "  analogWrite(9,"+speed+");//input a simulation value to set the speed\n"+
      "  analogWrite(10,"+speed+");\n"+
-     "  digitalWrite(7,HIGH);//turn DC Motor B move clockwise\n"+
+     "  digitalWrite(7,LOW);//turn DC Motor B move clockwise\n"+
      "  digitalWrite(8,HIGH);//turn DC Motor A move anti-clockwise\n"+
 "}\n\n";
     code="right();\n";
@@ -168,7 +168,7 @@ Blockly.Arduino.zumo_motors_FR = function() {
 "{\n"+
      "  analogWrite(9,"+speed+");//input a simulation value to set the speed\n"+
      "  analogWrite(10,"+speed+");\n"+
-     "  digitalWrite(7,LOW);//turn DC Motor B move anticlockwise\n"+
+     "  digitalWrite(7,HIGH);//turn DC Motor B move anticlockwise\n"+
      "  digitalWrite(8,LOW);//turn DC Motor A move clockwise\n"+
 "}\n\n";
     code="left();\n";
@@ -178,7 +178,7 @@ Blockly.Arduino.zumo_motors_FR = function() {
      "  analogWrite(9,"+speed+");//input a simulation value to set the speed\n"+
      "  analogWrite(10,"+speed+");\n"+
      "  digitalWrite(7,HIGH);//turn DC Motor B move anticlockwise\n"+
-     "  digitalWrite(8,LOW);//turn DC Motor A move anticlockwise\n"+
+     "  digitalWrite(8,HIGH);//turn DC Motor A move anticlockwise\n"+
 "}\n\n";
     code="backward();\n";
   } else if (dropdown_direction==="stop"){
@@ -205,8 +205,8 @@ Blockly.Arduino.zumo_motors_FB = function() {
 "{\n"+
      "  analogWrite(9,"+speed+");//input a simulation value to set the speed\n"+
      "  analogWrite(10,"+speed+");\n"+
-     "  digitalWrite(7,HIGH);//turn DC Motor B move clockwise\n"+
-     "  digitalWrite(8,HIGH);//turn DC Motor A move clockwise\n"+
+     "  digitalWrite(7,LOW);//turn DC Motor B move clockwise\n"+
+     "  digitalWrite(8,LOW);//turn DC Motor A move clockwise\n"+
 "}\n";
     code="forward();\n";
   } else if (dropdown_direction==="right") {
@@ -232,8 +232,8 @@ Blockly.Arduino.zumo_motors_FB = function() {
 "{\n"+
      "  analogWrite(9,"+speed+");//input a simulation value to set the speed\n"+
      "  analogWrite(10,"+speed+");\n"+
-     "  digitalWrite(7,LOW);//turn DC Motor B move anticlockwise\n"+
-     "  digitalWrite(8,LOW);//turn DC Motor A move anticlockwise\n"+
+     "  digitalWrite(7,HIGH);//turn DC Motor B move anticlockwise\n"+
+     "  digitalWrite(8,HIGH);//turn DC Motor A move anticlockwise\n"+
 "}\n\n";
     code="backward();\n";
   } else if (dropdown_direction==="stop"){
@@ -270,8 +270,8 @@ Blockly.Arduino.zumo_motors_FNs = function() {
 "{\n"+
      "  analogWrite(9,"+speedA+");//Motor A speed\n"+
      "  analogWrite(10,"+speedB+");//Motor B speed\n"+
-     "  digitalWrite(7,HIGH);//turn DC Motor B (right) move clockwise\n"+
-     "  digitalWrite(8,LOW);//turn DC Motor A (left) move anti-clockwise\n"+
+     "  digitalWrite(7,LOW);//turn DC Motor B (right) move clockwise\n"+
+     "  digitalWrite(8,HIGH);//turn DC Motor A (left) move anti-clockwise\n"+
 "}\n\n";
     code="right();\n";
   } else if (dropdown_direction==="left") {
@@ -279,8 +279,8 @@ Blockly.Arduino.zumo_motors_FNs = function() {
 "{\n"+
      "  analogWrite(9,"+speedA+");//Motor A speed\n"+
      "  analogWrite(10,"+speedB+");//Motor B speed\n"+
-     "  digitalWrite(7,LOW);//turn DC Motor B (right) move anticlockwise\n"+
-     "  digitalWrite(8,HIGH);//turn DC Motor A (left) move clockwise\n"+
+     "  digitalWrite(7,HIGH);//turn DC Motor B (right) move anticlockwise\n"+
+     "  digitalWrite(8,LOW);//turn DC Motor A (left) move clockwise\n"+
 "}\n\n";
     code="left();\n";
   } else if (dropdown_direction==="backward"){
@@ -317,7 +317,7 @@ Blockly.Arduino.zumo_motors_FLs = function() {
 "{\n"+
      "  analogWrite(9,"+speedA+");//Motor A speed\n"+
      "  analogWrite(10,"+speedB+");//Motor B speed\n"+
-     "  digitalWrite(7,HIGH);//turn DC Motor B (right) move clockwise\n"+
+     "  digitalWrite(7,LOW);//turn DC Motor B (right) move clockwise\n"+
      "  digitalWrite(8,LOW);//turn DC Motor A (left) move clockwise\n"+
 "}\n";
     code="forward();\n";
@@ -327,7 +327,7 @@ Blockly.Arduino.zumo_motors_FLs = function() {
      "  analogWrite(9,"+speedA+");//Motor A speed\n"+
      "  analogWrite(10,"+speedB+");//Motor B speed\n"+
      "  digitalWrite(7,LOW);//turn DC Motor B (right) move clockwise\n"+
-     "  digitalWrite(8,LOW);//turn DC Motor A (left) move anti-clockwise\n"+
+     "  digitalWrite(8,HIGH);//turn DC Motor A (left) move anti-clockwise\n"+
 "}\n\n";
     code="right();\n";
   } else if (dropdown_direction==="left") {
@@ -336,7 +336,7 @@ Blockly.Arduino.zumo_motors_FLs = function() {
      "  analogWrite(9,"+speedA+");//Motor A speed\n"+
      "  analogWrite(10,"+speedB+");//Motor B speed\n"+
      "  digitalWrite(7,HIGH);//turn DC Motor B (right) move anticlockwise\n"+
-     "  digitalWrite(8,HIGH);//turn DC Motor A (left) move clockwise\n"+
+     "  digitalWrite(8,LOW);//turn DC Motor A (left) move clockwise\n"+
 "}\n\n";
     code="left();\n";
   } else if (dropdown_direction==="backward"){
@@ -344,7 +344,7 @@ Blockly.Arduino.zumo_motors_FLs = function() {
 "{\n"+
      "  analogWrite(9,"+speedA+");//Motor A speed\n"+
      "  analogWrite(10,"+speedB+");//Motor B speed\n"+
-     "  digitalWrite(7,LOW);//turn DC Motor B (right) move anticlockwise\n"+
+     "  digitalWrite(7,HIGH);//turn DC Motor B (right) move anticlockwise\n"+
      "  digitalWrite(8,HIGH);//turn DC Motor A (left) move anticlockwise\n"+
 "}\n\n";
     code="backward();\n";
@@ -374,7 +374,7 @@ Blockly.Arduino.zumo_motors_FRs = function() {
      "  analogWrite(9,"+speedA+");//Motor A speed\n"+
      "  analogWrite(10,"+speedB+");//Motor B speed\n"+
      "  digitalWrite(7,LOW);//turn DC Motor B (right) move clockwise\n"+
-     "  digitalWrite(8,HIGH);//turn DC Motor A (left) move clockwise\n"+
+     "  digitalWrite(8,LOW);//turn DC Motor A (left) move clockwise\n"+
 "}\n";
     code="forward();\n";
   } else if (dropdown_direction==="right") {
@@ -382,7 +382,7 @@ Blockly.Arduino.zumo_motors_FRs = function() {
 "{\n"+
      "  analogWrite(9,"+speedA+");//Motor A speed\n"+
      "  analogWrite(10,"+speedB+");//Motor B speed\n"+
-     "  digitalWrite(7,HIGH);//turn DC Motor B (right) move clockwise\n"+
+     "  digitalWrite(7,LOW);//turn DC Motor B (right) move clockwise\n"+
      "  digitalWrite(8,HIGH);//turn DC Motor A (left) move anti-clockwise\n"+
 "}\n\n";
     code="right();\n";
@@ -391,7 +391,7 @@ Blockly.Arduino.zumo_motors_FRs = function() {
 "{\n"+
      "  analogWrite(9,"+speedA+");//Motor A speed\n"+
      "  analogWrite(10,"+speedB+");//Motor B speed\n"+
-     "  digitalWrite(7,LOW);//turn DC Motor B (right) move anticlockwise\n"+
+     "  digitalWrite(7,HIGH);//turn DC Motor B (right) move anticlockwise\n"+
      "  digitalWrite(8,LOW);//turn DC Motor A (left) move clockwise\n"+
 "}\n\n";
     code="left();\n";
@@ -401,7 +401,7 @@ Blockly.Arduino.zumo_motors_FRs = function() {
      "  analogWrite(9,"+speedA+");//Motor A speed\n"+
      "  analogWrite(10,"+speedB+");//Motor B speed\n"+
      "  digitalWrite(7,HIGH);//turn DC Motor B (right) move anticlockwise\n"+
-     "  digitalWrite(8,LOW);//turn DC Motor A (left) move anticlockwise\n"+
+     "  digitalWrite(8,HIGH);//turn DC Motor A (left) move anticlockwise\n"+
 "}\n\n";
     code="backward();\n";
   } else if (dropdown_direction==="stop"){
@@ -429,8 +429,8 @@ Blockly.Arduino.zumo_motors_FBs = function() {
 "{\n"+
      "  analogWrite(9,"+speedA+");//Motor A speed\n"+
      "  analogWrite(10,"+speedB+");//Motor B speed\n"+
-     "  digitalWrite(7,HIGH);//turn DC Motor B (right) move clockwise\n"+
-     "  digitalWrite(8,HIGH);//turn DC Motor A (left) move clockwise\n"+
+     "  digitalWrite(7,LOW);//turn DC Motor B (right) move clockwise\n"+
+     "  digitalWrite(8,LOW);//turn DC Motor A (left) move clockwise\n"+
 "}\n";
     code="forward();\n";
   } else if (dropdown_direction==="right") {
@@ -456,8 +456,8 @@ Blockly.Arduino.zumo_motors_FBs = function() {
 "{\n"+
      "  analogWrite(9,"+speedA+");//Motor A speed\n"+
      "  analogWrite(10,"+speedB+");//Motor B speed\n"+
-     "  digitalWrite(7,LOW);//turn DC Motor B (right) move anticlockwise\n"+
-     "  digitalWrite(8,LOW);//turn DC Motor A (left) move anticlockwise\n"+
+     "  digitalWrite(7,HIGH);//turn DC Motor B (right) move anticlockwise\n"+
+     "  digitalWrite(8,HIGH);//turn DC Motor A (left) move anticlockwise\n"+
 "}\n\n";
     code="backward();\n";
   } else if (dropdown_direction==="stop"){
