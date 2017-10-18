@@ -171,8 +171,7 @@ BlocklyDuino.changeSize = function() {
   // remove url file
   search = search.replace(/([?&]url=)[^&]*/, '');
 
-  window.location = window.location.protocol + '//' +
-      window.location.host + window.location.pathname + search;
+  window.location = window.location.protocol + '//' + window.location.host + window.location.pathname + search;
 };
 
 

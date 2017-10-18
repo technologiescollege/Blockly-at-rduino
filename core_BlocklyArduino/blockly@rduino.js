@@ -834,21 +834,18 @@ BlocklyDuino.init = function() {
 
 	if (BlocklyDuino.getSize() == 'max') {
 		// place div on top
-		$("#divBody").css("top", "0px");
-
+		$("#divBody").css("top", "0px");		
+		$("#menuPanel").css({"display" : "none"});
 		// maximize div
 		$("#divTabpanel").css( {"width" : "100%",
 										"height" : "100%",
 										"position" : "absolute",
-										"top" : "0px",
+										"top" : "36px",
 										"marginLeft" : "0px"});
-		// hide Title
-		$("#divTitre").css("display", "none");
-
 		$('#btn_size').attr("title", MSG['btn_size_min']);
 	} else {
 		$('#btn_size').attr("title", MSG['btn_size_max']);
-
+		$("#menuPanel").css({"display" : ""});
 	}
 
 	BlocklyDuino.setArduinoCard();
