@@ -219,9 +219,9 @@ Blockly.Instances.appendToName_ = function(instanceName, nameList) {
     return Blockly.Instances.generateUniqueName(workspace);
   } else {
     var newName = instanceName;
-    var nameSuffix = 2;
+    var nameSuffix = 1;
 
-    if (instanceName.match(/_\d+$/)) {
+/*    if (instanceName.match(/_\d+$/)) {
       // instanceName ends with and underscore and a number, so increase count
       var instanceNameSuffix = instanceName.match(/\d+$/)[0];
       instanceName = instanceName.slice(
@@ -229,7 +229,7 @@ Blockly.Instances.appendToName_ = function(instanceName, nameList) {
       nameSuffix = parseInt(instanceNameSuffix, 10) + 1;
       newName = instanceName + '_' + nameSuffix;
     }
-
+*/
     while (nameList.indexOf(newName) !== -1) {
       newName = instanceName + '_' + nameSuffix++;
     }
