@@ -52,6 +52,7 @@ Blockly.Arduino.array_getIndex = function() {
 
 Blockly.Arduino['array_declare'] = function(block) {
   var var_name = Blockly.Arduino.valueToCode(block, 'NAME', Blockly.Arduino.ORDER_ATOMIC);
+  var_name = var_name.substring(1, var_name.length - 1);
   var varType = Blockly.Arduino.getArduinoType_(Blockly.Types[block.getFieldValue('type')]);
   var value = Blockly.Arduino.valueToCode(block, 'taille', Blockly.Arduino.ORDER_ATOMIC);
   Blockly.Arduino.definitions_[var_name] = varType+" "+var_name+"["+value+"];";
