@@ -242,13 +242,11 @@ BlocklyDuino.validateConfigGlobal = function () {
 	search = search.replace(/([?&]webaccess=)[^&]*/, '');
 	search = search.replace(/([?&]localcodebender=)[^&]*/, '');
 	
-	if ($("#put_config_in_url").prop('checked')) {
-		// put values in url
-		if (search.length <= 1) {
-			search = '?webaccess=' + window.localStorage.webAccess + '&localcodebender=' + window.localStorage.localCodebender;
-		} else {
-			search = search + '&webaccess=' + window.localStorage.webAccess + '&localcodebender=' + window.localStorage.localCodebender;
-		}
+	// put values in url
+	if (search.length <= 1) {
+		search = '?webaccess=' + window.localStorage.webAccess + '&localcodebender=' + window.localStorage.localCodebender;
+	} else {
+		search = search + '&webaccess=' + window.localStorage.webAccess + '&localcodebender=' + window.localStorage.localCodebender;
 	}
 	
 	//change Arduino card
@@ -269,7 +267,7 @@ BlocklyDuino.validateConfigGlobal = function () {
 				} else {
 					search = search.replace(/\?/, '?card=' + $("#pinout").val() + '&');
 				}
-			//recherche d'une maquette (toolbox) dans l'URL pour une maquette câblée complète, qui bloquera ensuite dans loadToolboxDefinition le bouton des configuration des catégories
+			//recherche d'une maquette (toolbox) dans l'URL pour une maquette cï¿½blï¿½e complï¿½te, qui bloquera ensuite dans loadToolboxDefinition le bouton des configuration des catï¿½gories
 
 			if (kitornot) {
 				if (search.length <= 1) {

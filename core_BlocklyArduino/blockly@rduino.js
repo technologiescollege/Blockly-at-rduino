@@ -454,7 +454,7 @@ BlocklyDuino.bindFunctions = function() {
 		BlocklyDuino.selectedToolbox = $(this).val();
 	});
 	
-	//menu déroulant
+	//menu dï¿½roulant
 	$('#toolboxes').on("change", BlocklyDuino.changeToolboxDefinition);
 	//bouton de niveaux
 	$('#toolbox_algo').on("click", function() {
@@ -707,13 +707,8 @@ BlocklyDuino.changeToolbox = function () {
 	window.localStorage.toolboxids = toolboxIds;
 	
 	var search = window.location.search;
-	if ($("#put_in_url").prop('checked')) {
-		// put id's in url
-		search = BlocklyDuino.addReplaceParamToUrl(search, 'toolboxids', toolboxIds);
-	} else {
-		// remove id's from url
-		search = search.replace(/([?&]toolboxids=)[^&]*/, '');
-	}
+	// put id's in url
+	search = BlocklyDuino.addReplaceParamToUrl(search, 'toolboxids', toolboxIds);
 	
 	// store toolboxe id in session
 	window.localStorage.toolbox = $("#toolboxes").val();
