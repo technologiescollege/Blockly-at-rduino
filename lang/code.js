@@ -170,7 +170,6 @@ Code.initLanguage = function() {
   $('#span_saveXML').text(MSG['span_saveXML']);
   $('#span_fakeload').text(MSG['span_fakeload']);
 
-  $('#a_wiring').text(MSG['span_wiring']);
   $('#a_supervision').text(MSG['span_supervision']);
   $('#a_blocks').text(MSG['a_blocks']);
   $('#a_arduino').text(MSG['a_arduino']);
@@ -253,6 +252,7 @@ Code.initLanguage = function() {
   $('#btn_reset').attr('title', MSG['span_reset']);
   $('#btn_RGB').attr('title', MSG['span_RGB']);
   $('#btn_convert').attr('title', MSG['span_convert']);
+  $('#btn_wiring').attr('title', MSG['span_wiring']);
   $('#btn_doc').attr('title', MSG['span_doc']);  
   $('#btn_tuto').attr('title', MSG['span_tuto']);
   $('#btn_videos').attr('title', MSG['span_videos']);

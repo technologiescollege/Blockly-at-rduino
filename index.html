@@ -133,38 +133,9 @@
 				<span class="glyphicon glyphicon-th-list"> </span>
 				<span id="span_config_kit"> </span>
 			</a>
-			<input type=button onclick="openDialog(this)" value="Câblage"/><br/>
-				<!--script type="text/javascript">  
-				  function openDialog(html) {
-					var effect = new PopupEffect(html, {className: "popup_effect"});
-					var win = new Window({className:"alphacube", width: 600, height:400, url: "https://fr.robom.ru/", showEffect:effect.show.bind(effect), hideEffect:effect.hide.bind(effect)});
-					win.show();
-				  }                     
-				</script-->
-				<script type="text/javascript">
-                        function openDialog() {
-							width = 800;
-                            height = 600;
-                            if(window.innerWidth) {
-									var left = (window.innerWidth-width)/2;
-									var top = (window.innerHeight-height)/2;
-                                }
-                                else {
-									var left = (document.body.clientWidth-width)/2;
-									var top = (document.body.clientHeight-height)/2;
-                                }                            
-							window.open('http://fr.robom.ru','Blockly@rduino - câblage', 'toolbar=no, location=no, menubar=no, scrollbars=no, status=no, top='+top+', left='+left+', width='+width+', height='+height+'');
-                        }
-                </script>
 	    </div>
 	    <div id="menuPanelBlockly" class="margin-top-5">
 	            <ul id="ul_nav" role="tablist">
-	            <li role="presentation" id="tab_wiring">
-	                 <a href="#content_wiring" aria-controls="content_wiring" role="tab" data-toggle="tab">
-	                     <span class="glyphicon glyphicon-blackboard"></span>
-	                     <span id="a_wiring"> </span>
-	                 </a>
-	            </li>
 	            <li role="presentation" id="tab_supervision">
 	                 <a href="#content_supervision" aria-controls="content_supervision" role="tab" data-toggle="tab">
 	                     <span class="glyphicon glyphicon-transfer"></span>
@@ -221,8 +192,10 @@
 			</a>
 		</div> 
 		<div id="div_accessibility_button">
+			<a href="./index.html" id="btn_reset" class="btn btn-danger text-left">
+				   <span class="glyphicon glyphicon-off"> </span>
+			</a>
 			<button id="btn_font" class="btn btn-warning text-left">
-		       <!--span class="glyphicon glyphicon-briefcase"> </span-->
 		       <span class="glyphicon glyphicon-text-height"> </span>
 		    </button>
 			<button id="btn_colors" class="btn btn-warning text-left jscolor {valueElement:null,value:'F0AD4E'}" onchange="update(this.jscolor)">
@@ -236,9 +209,24 @@
 			</script>
 		</div>
 		<div id="div_tools_button">
-			<a href="./index.html" id="btn_reset" class="btn btn-danger text-left">
-				   <span class="glyphicon glyphicon-off"> </span>
-			</a>
+			<button id="btn_wiring" class="text-left btn btn-primary" onclick="openDialog(this)">
+				<span class="glyphicon glyphicon-blackboard"></span>
+				<script type="text/javascript">
+                        function openDialog() {
+							width = 800;
+                            height = 600;
+                            if(window.innerWidth) {
+									var left = (window.innerWidth-width)/2;
+									var top = (window.innerHeight-height)/2;
+                                }
+                                else {
+									var left = (document.body.clientWidth-width)/2;
+									var top = (document.body.clientHeight-height)/2;
+                                }                            
+							window.open('http://fr.robom.ru','Blockly@rduino - câblage', 'toolbar=no, location=no, menubar=no, scrollbars=no, status=no, top='+top+', left='+left+', width='+width+', height='+height+'');
+                        }
+                </script>
+			</button>
 			<button id="btn_RGB" class="btn btn-primary text-left">
 		       <span class="glyphicon glyphicon-th"> </span>
 		    </button>
@@ -262,10 +250,7 @@
     <!-- Nav tabs -->
     <div id="divTabpanel" role="tabpanel">
         <!-- Tab panes -->
-        <div id="content_area" class="tab-content">        
-			<div id="content_wiring" class="tab-pane">
-				<iframe width="100%" height="100%" frameborder="0" src="https://fr.robom.ru"></iframe>
-            </div>
+        <div id="content_area" class="tab-content">
 			<div id="content_blocks" class="tab-pane active" style="position: relative;">
 				<button id="btn_delete" class="btn btn-danger">
 					<span class="glyphicon glyphicon-erase"> </span>
