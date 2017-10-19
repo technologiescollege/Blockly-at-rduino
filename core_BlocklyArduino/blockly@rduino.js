@@ -566,6 +566,7 @@ BlocklyDuino.bindFunctions = function() {
 	
 	$('#btn_inline').on("click", BlocklyDuino.inline);
 	$('#btn_blocs_picture').on("click", BlocklyDuino.blockPicture);	
+	$('#btn_blocs_picture').on("click", BlocklyDuino.blockPicture);	
 	$('#btn_blocs_picture_mini').on("click", BlocklyDuino.blockPicture_mini);
 	$('#btn_blocs_picture_maxi').on("click", BlocklyDuino.blockPicture_maxi);
 	
@@ -581,7 +582,7 @@ BlocklyDuino.bindFunctions = function() {
 
 	$('#btn_example').on("click", BlocklyDuino.buildExamples);
 
-	$('#miniCard, #btn_picture').on('click', function() {
+	$('#miniCard, #btn_picture, #miniCardMenu').on('click', function() {
 		$('#showcardModal').css("z-index", 1040);
 		$('#showcardModal').css("display", "inline-block");
 		Blockly.Arduino.cardSize = 200;
