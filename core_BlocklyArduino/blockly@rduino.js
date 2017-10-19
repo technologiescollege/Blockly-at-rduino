@@ -255,7 +255,8 @@ BlocklyDuino.setArduinoCard =  function () {
 	// set the card from url parameters
 	profile["defaultBoard"]=profile[cardId];
 	$('#arduino_card_picture').attr("src", profile.defaultBoard['picture']);
-	$('#arduino_card_miniPicture').attr("src", profile.defaultBoard['miniPicture']);	
+	$('#arduino_card_miniPicture').attr("src", profile.defaultBoard['miniPicture']);
+	$('#arduino_card_miniPicture_Menu').attr("src", profile.defaultBoard['miniPicture']);	
 	$('#pictureModalLabel').text(profile.defaultBoard['description']);
 	if ($("#pinout").val().substring(0,4) == "kit_") {
 		$("#btn_config").remove();
@@ -454,7 +455,7 @@ BlocklyDuino.bindFunctions = function() {
 		BlocklyDuino.selectedToolbox = $(this).val();
 	});
 	
-	//menu d�roulant
+	//menu déroulant
 	$('#toolboxes').on("change", BlocklyDuino.changeToolboxDefinition);
 	//bouton de niveaux
 	$('#toolbox_algo').on("click", function() {
