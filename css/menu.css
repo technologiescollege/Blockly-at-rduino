@@ -39,6 +39,7 @@ header {
   -webkit-perspective: 1555px;
   -moz-perspective: 1555px;
   perspective: 1555px;
+  width: 100%;
 }
 
 #main {
@@ -133,6 +134,7 @@ nav a {
   -webkit-transition: all 0.2s ease;
   -moz-transition: all 0.2s ease;
   transition: all 0.2s ease;
+  height: 36px;
 }
 nav a i[class*="caret"] {
   color: #3b536b;

@@ -843,9 +843,15 @@ BlocklyDuino.init = function() {
 										"top" : "36px",
 										"marginLeft" : "0px"});
 		$('#btn_size').attr("title", MSG['btn_size_min']);
+		$('#nav_hor').removeClass("hidden");
+		$('#icon_btn_size').removeClass('glyphicon-resize-full');
+		$('#icon_btn_size').addClass('glyphicon-resize-small');
 	} else {
 		$('#btn_size').attr("title", MSG['btn_size_max']);
 		$("#menuPanel").css({"display" : ""});
+		$('#nav_hor').addClass("hidden");
+		$('#icon_btn_size').addClass('glyphicon-resize-full');
+		$('#icon_btn_size').removeClass('glyphicon-resize-small');
 	}
 
 	BlocklyDuino.setArduinoCard();
