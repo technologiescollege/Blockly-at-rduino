@@ -232,6 +232,8 @@ Blockly.Msg.CAT_ETHERNET_SERVER = "server";
 
 Blockly.Msg.CAT_NULL = "free"; //added 8/10/2017
 
+Blockly.Msg.CAT_HX711 = "load cell"; //added 23/10/2017
+
 //**********************************FieldInstance messages***********************************************
 Blockly.Msg.COMPONENT_WARN = 'A %1 configuration block with the same %2 name must be added to use this block!';
 
@@ -1878,3 +1880,12 @@ Blockly.Msg.ETHERNET_VERSION_V2 = "Ethernet_v2";
 
 //********************null*************//
 Blockly.Msg.NULL_TOOLTIP = "free text to describe or create algorithms";
+
+
+//********************HX711 Load cell*************//
+Blockly.Msg.HX711_HELPURL = "https://learn.sparkfun.com/tutorials/load-cell-amplifier-hx711-breakout-hookup-guide?_ga=2.253088841.1374984898.1508777134-607511387.1508777134";
+Blockly.Msg.HX711_INIT_TITLE = "load sensor calibration, read calibration factor in serial console, open it";
+Blockly.Msg.HX711_INIT_TOOLTIP = "without weight on it";
+Blockly.Msg.HX711_READ_TITLE = "weight (kg)";
+Blockly.Msg.HX711_READ_TEXT = "with factor correction";
+Blockly.Msg.HX711_READ_TOOLTIP = "correction factor from calibration block";

@@ -46,6 +46,7 @@ head.load(
 "generators/arduino/fischertechnik.js",
 "generators/arduino/flycamone-eco-v2.js",
 "generators/arduino/grove.js",
+"generators/arduino/HX711.js",
 "generators/arduino/I2C.js",
 "generators/arduino/icn.js",
 "generators/arduino/jfblocks.js",

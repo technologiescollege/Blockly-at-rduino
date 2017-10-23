@@ -56,6 +56,7 @@ head.load(
 "blocks/fischertechnik/fischertechnik.js",
 "blocks/flycamone-eco-v2/flycamone-eco-v2.js",
 "blocks/grove/grove.js",
+"blocks/HX711_Load_Cell_Amplifier/HX711.js",
 "blocks/I2C/I2C.js",
 "blocks/icn/icn.js",
 "blocks/jfblocks/jfblocks.js",

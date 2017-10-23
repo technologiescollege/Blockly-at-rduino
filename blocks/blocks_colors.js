@@ -28,6 +28,7 @@ Blockly.Blocks.ethernet.HUE = "#FFCC66";
 Blockly.Blocks.fischertechnik.HUE = "#778E9A";
 Blockly.Blocks.flycam.HUE = "#46C286";
 Blockly.Blocks.grove.HUE = "#8EC31F";
+Blockly.Blocks.HX711.HUE = "#D9242D";
 Blockly.Blocks.I2C.HUE = "#CC0033";
 Blockly.Blocks.icn.HUE = "#FF8C00";
 Blockly.Blocks.jeulin_appel_pieton.HUE = "#0099FF";

@@ -4,15 +4,6 @@ goog.provide('Blockly.Msg.fr');
 
 goog.require('Blockly.Msg');
 
-head.load(
-"lang/BlocklyArduino/user/user_en.js",
-"lang/BlocklyArduino/user/user_fr.js",
-function() {
-    // Call a function when done
-    console.log("Done loading USER language file");
-});
-
-
 Blockly.Msg.ARRAY_CREATE_EMPTY_TITLE = 'vide !';
 Blockly.Msg.ARRAY_CREATE_WITH = "constituée de";
 Blockly.Msg.ARRAY_CREATE_WITH_CONTAINER_TITLE_ADD = "liste ou tableau";
@@ -247,6 +238,8 @@ Blockly.Msg.CAT_I2C = "I2C"; //added 26/05/2017
 Blockly.Msg.CAT_SPI = "SPI"; //added 26/05/2017
 
 Blockly.Msg.CAT_NULL = "libre"; //added 8/10/2017
+
+Blockly.Msg.CAT_HX711 = "capteur de poids"; //added 23/10/2017
 
 Blockly.Msg.FIELDDROPDOWN = [["1 (état haut)", "HIGH"], ["0 (état bas)", "LOW"]];
 Blockly.Msg.FIELDDROPDOWN_ONOFF = [["marche", "ON"], ["arrêt", "OFF"]]
@@ -1891,3 +1884,12 @@ Blockly.Msg.ETHERNET_VERSION_V2 = "Ethernet_v2";
 
 //********************null*************//
 Blockly.Msg.NULL_TOOLTIP = "texte libre pour description d'algorithmes";
+
+
+//********************HX711 Load cell*************//
+Blockly.Msg.HX711_HELPURL = "https://learn.sparkfun.com/tutorials/load-cell-amplifier-hx711-breakout-hookup-guide?_ga=2.253088841.1374984898.1508777134-607511387.1508777134";
+Blockly.Msg.HX711_INIT_TITLE = "calibrage du capteur";
+Blockly.Msg.HX711_INIT_TOOLTIP = "point de référence pour les mesures, avec ou sans charge réelle, lire la valeur de calibrage dans la console série à ouvrir";
+Blockly.Msg.HX711_READ_TITLE = "poids lu (kg)";
+Blockly.Msg.HX711_READ_TEXT = "avec une correction de";
+Blockly.Msg.HX711_READ_TOOLTIP = "le facteur de correction est celui renvoyé sur la console série par le bloc de calibrage";

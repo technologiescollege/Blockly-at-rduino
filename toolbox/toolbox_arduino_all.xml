@@ -689,6 +689,10 @@
 		<block type="APDS9960_ColorSensor_green"></block>
 		<block type="APDS9960_ColorSensor_blue"></block>
 	</category>
+	<category name="CAT_HX711" colour="#D9242D">
+		<block type="HX711_init"></block>
+		<block type="HX711_read"></block>
+	</category>
 	<category name="CAT_OLED_U8G" colour="#1B2944">
 		<block type="lp2i_u8g_draw_string" colour="#1B2944">
 			<value name="Text">
