@@ -614,7 +614,7 @@ BlocklyDuino.bindFunctions = function() {
 		$('#convertModal').hide();
 	});
 	
-	$('#btn_RGB').on('click', function() {
+	$('#btn_RGB, #btn_menu_RGB').on('click', function() {
 		$('#RGB_modal').css("z-index", 1070);
 		$('#RGB_modal').css("display", "inline-block");
 	});
