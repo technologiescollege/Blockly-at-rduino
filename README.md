@@ -9,7 +9,7 @@
 *vous pouvez aussi me demander une facture pour que votre établissement me fasse un 'don' officiel par virement bancaire. Je ne fais pas payer de licence mais je compte sur vous pour aider du montant auquel vous estimez ce travail.*
 ----------
 
-### WIKI !!! [http://info.technologiescollege.fr/wiki/doku.php/en/blockly_rduino/](http://info.technologiescollege.fr/wiki/doku.php/en/blockly_rduino/)
+### WIKI !!! [http://www.libreduc.cc/wiki/doku.php/en/blockly_rduino](http://www.libreduc.cc/wiki/doku.php/en/blockly_rduino)
 
 ### FORUM !!! [http://blockly.technologiescollege.fr/forum](http://blockly.technologiescollege.fr/forum)
 
@@ -28,7 +28,7 @@ Blockly@rduino est basé sur [Blockly](https://developers.google.com/blockly/), 
 
 Blockly@rduino ne possèdait à l'origine qu'une bibliothèque de blocs pour les modules [Grove](http://wiki.seeed.cc/Grove_System/), particulièrement adaptée à la découverte des micro-contrôleurs et aux expérimentations de systèmes mécatroniques.
 
-Libre à vous d'en rajouter autant que voulu grâce à cette notice explicative : [http://info.technologiescollege.fr/wiki/doku.php/fr/arduino/blockly_rduino/creerblocsmultiling](http://info.technologiescollege.fr/wiki/doku.php/fr/arduino/blockly_rduino/creerblocsmultiling)
+Libre à vous d'en rajouter autant que voulu grâce à cette notice explicative : [http://www.libreduc.cc/wiki/doku.php/fr/arduino/blockly_rduino/creerblocsmultiling](http://www.libreduc.cc/wiki/doku.php/fr/arduino/blockly_rduino/creerblocsmultiling)
 
 Cette version a été réorganisée et améliorée pour la faire utiliser au mieux par des élèves débutants dans le code.
 
