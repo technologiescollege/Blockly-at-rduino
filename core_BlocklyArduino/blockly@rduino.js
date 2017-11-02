@@ -840,18 +840,21 @@ BlocklyDuino.init = function() {
 		$("#menuPanel").css({"display" : "none"});
 		// maximize div
 		$("#divTabpanel").css( {"width" : "100%",
-										"height" : "100%",
-										"position" : "absolute",
-										"top" : "36px",
-										"marginLeft" : "0px"});
+								"top" : "36px",
+								"height" : "100%",
+								"position" : "absolute",
+								"marginLeft" : "0px"});
 		$('#btn_size').attr("title", MSG['btn_size_min']);
-		$('#nav_hor').removeClass("hidden");
+		$('#divTitre').addClass("hidden");
+		$('#divTitreMenu').removeClass("hidden");
+		$('#divTitreMenu').css( {"background" : "#00969C"});
 		$('#icon_btn_size').removeClass('glyphicon-resize-full');
 		$('#icon_btn_size').addClass('glyphicon-resize-small');
 	} else {
 		$('#btn_size').attr("title", MSG['btn_size_max']);
 		$("#menuPanel").css({"display" : ""});
-		$('#nav_hor').addClass("hidden");
+		$('#divTitre').removeClass("hidden");
+		$('#divTitreMenu').addClass("hidden");
 		$('#icon_btn_size').addClass('glyphicon-resize-full');
 		$('#icon_btn_size').removeClass('glyphicon-resize-small');
 	}

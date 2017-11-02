@@ -156,7 +156,7 @@ BlocklyDuino.getSize = function() {
  */
 BlocklyDuino.changeSize = function() {
   // Store the blocks for the duration of the reload.
-	BlocklyDuino.backupBlocks();
+  BlocklyDuino.backupBlocks();
 
   var search = window.location.search;
   if (search.length <= 1) {

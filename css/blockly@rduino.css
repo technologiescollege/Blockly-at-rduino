@@ -32,16 +32,30 @@ body {
 	-ms-transform: rotate(90deg);
 }
 
+#logo_Titre {
+	height: 36px;
+	left: 0px;
+	vertical-align: top;
+	position: fixed;
+	background: #FFFFFF;
+}
+
 #divTitre {
 	height: 36px;
+	left: 205px;
 	vertical-align: top;
-	position: relative;
+	position: absolute;
 	width: 100%;
 	background: #00969C;
 }
 
 #divTitre p {
 	font-size: 15px;
+}
+
+#btn_levels {
+	position: absolute;
+	left: 5px;
 }
 
 #divBody {
@@ -128,9 +142,9 @@ html[dir="RTL"] .menuPanel-ver {
     text-align: center;
 }
 
-#div_accessibility_button {
+#div_about {
     width: 200px;
-    bottom: 90px;
+    bottom: 130px;
     position: absolute;
     text-align: center;
 }
@@ -138,6 +152,13 @@ html[dir="RTL"] .menuPanel-ver {
 .div_help_button-hor {
     padding-left: 0px;
     bottom: 10px;
+    position: absolute;
+    text-align: center;
+}
+
+#div_accessibility_button {
+    width: 200px;
+    bottom: 90px;
     position: absolute;
     text-align: center;
 }
@@ -242,7 +263,7 @@ html[dir="RTL"] .divConfig-hor {
     padding-right: 10px;
 }
 
-#btn_about, #btn_logout {
+#btn_logout {
     position: absolute;
     top: 3px;
 }
@@ -274,7 +295,6 @@ html[dir="RTL"] #languageMenu {
 #content_area,#content_blocks,#content_term,#content_xml {
 	height: 100%;
 	width: 100%;
-	padding-right: 5px;
 }
 
 #btn_size {
@@ -286,6 +306,13 @@ html[dir="RTL"] #languageMenu {
 
 html[dir="RTL"] #btn_size {
 	left: 15px;
+}
+
+#tools_blocks {
+	position: absolute;
+	right: 0px;
+	top: 5px;
+	z-index: 10;
 }
 
 #btn_blocs_picture {
@@ -467,7 +494,7 @@ html[dir="RTL"] #select_all {
 }
 
 .blocklyToolboxDiv {
-	background-color: #e9f9f9 !important;
+	background-color: #EDFAFA !important;
 }
 
 .blocklyFlyoutBackground {

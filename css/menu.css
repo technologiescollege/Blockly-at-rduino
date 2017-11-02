@@ -119,6 +119,7 @@ nav li {
   position: relative;
   display: inline-block;
   float: left;
+  left: 205px;
 }
 nav a {
   position: relative;

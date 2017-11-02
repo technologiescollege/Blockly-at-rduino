@@ -3,12 +3,8 @@
 <link rel="icon" type="image/png" href="favicon.png" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Blockly@rduino</title>
-<!--menu-->
-	<link href='https://fonts.googleapis.com/css?family=Raleway:400,600,900' rel='stylesheet' type='text/css'>
-	<link href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">  
-	<link rel="stylesheet" href="css/menu.css">
-<!--menu-->
+<!--load first for menus-->
+<link rel="stylesheet" href="css/menu.css">
 <!--script type="text/javascript" src="core_Blockly/blockly_uncompressed.js"></script-->
 <script type="text/javascript" src="core_Blockly/blockly_compressed.js"></script>
 
@@ -78,12 +74,12 @@
 
 <body onload="BlocklyDuino.init()">
 <div class="loading"></div>
-    <div id="divTitre">
-		<nav id="nav_hor" class="hidden">		
+	<div id="logo_Titre">
+		<a href="./index.html"><img id="clearLink" src="media/logo-mini.png" border="0" height="36px" onclick="" /></a>
+	</div>
+    <div id="divTitreMenu" class="hidden">
+		<nav id="nav_hor">	
 		  <ul id="main-menu">
-			<li>
-				<a href="./index.html"><img id="clearLink" src="media/logo-mini.jpg" border="0" height="20px" onclick="" /></a> 
-			</li>
 			<li>
 			  <a href="#"><i class="fa fa-user"></i> <span id="span_menu_1"> </span> <i class="fa fa-caret-down"></i></a>
 				<ul class="submenu">
@@ -140,22 +136,21 @@
 				</ul>  
 			</li>
 			<li><a href="#0" id="btn_menu_about" data-toggle="modal" data-target="#aboutModal"> <span id="span_menu_6"> </span> </a></li>
-			<li>
-				<a id="miniCardMenu">
-					<img id="arduino_card_miniPicture_Menu" class="rotate90" border="0" height="35px" />
-				</a>
-			</li>
 		  </ul>
 		</nav>
-		<a href="./index.html"><img id="clearLink" src="media/logo-mini.png" border="0" height="36px" onclick="" /></a> 
-		<b>Blockly@rduino</b> : 
-		<span id="title"></span>
+		<a id="miniCardMenu">
+			<img id="arduino_card_miniPicture_Menu" class="rotate90" border="0" height="35px" />
+		</a>
+	</div>
+	<div id="divTitre">
+		<div id="btn_levels">
 			<a href="#" id="toolbox_algo" class="btn btn-default" role='button' onclick="document.getElementById('toolboxes').value='toolbox_algo';">0</a>
 			<a href="#" id="toolbox_arduino_1" class="btn btn-default" role='button' onclick="document.getElementById('toolboxes').value='toolbox_arduino_1';">1</a>
 			<a href="#" id="toolbox_arduino_2" class="btn btn-default" role='button' onclick="document.getElementById('toolboxes').value='toolbox_arduino_2';">2</a>
 			<a href="#" id="toolbox_arduino_3" class="btn btn-default" role='button' onclick="document.getElementById('toolboxes').value='toolbox_arduino_3';">3</a>
 			<a href="#" id="toolbox_arduino_4" class="btn btn-default" role='button' onclick="document.getElementById('toolboxes').value='toolbox_arduino_4';">4</a>
 			<a href="#" id="toolbox_arduino_all" class="btn btn-default" role='button' onclick="document.getElementById('toolboxes').value='toolbox_arduino_all';">TOUT</a>
+		</div>
 		<label id="labelToolboxDefinition"></label> 
 		<select id="toolboxes" class="hidden">
 			<option value="toolbox_none" selected="selected">...</option>
@@ -166,249 +161,252 @@
 			<option value="toolbox_arduino_4"></option>
 			<option value="toolbox_arduino_all"></option>
 		</select>
-		<button id="btn_about" type="button" class="btn btn-default btn-sm" data-toggle="modal" data-target="#aboutModal">
-			<b><span id="span_about"> </span></b>
-			<span class="glyphicon glyphicon-user"></span>		
+    </div>	
+	<div id="tools_blocks" class="tab-pane active"">
+		<button id="btn_undo" class="btn btn-default">
+			<span class="fa fa-undo"> </span>
 		</button>
-    </div>
-    <div id="divBody">
-    <div id="menuPanel">
-	    <div id="menuPanelConfig">
-			<button id="btn_configGlobal" class="btn btn-danger btn-block text-left" data-toggle="modal" data-target="#configModalGlobal">
-				<span class="glyphicon glyphicon-alert"> </span>
-				<span id="configGlobalLabel"> </span>
+		<button id="btn_redo" class="btn btn-default">
+			<span class="fa fa-repeat"> </span>
+		</button>
+		<button id="btn_block_capture" class="btn btn-default">
+			<span id="icon_btn_block_capture" class="glyphicon glyphicon-camera"> </span>
+		</button>
+		<button id="btn_blocs_picture_mini" class="btn btn-default">
+			<span id="icon_btn_blocs_picture_mini" class="glyphicon glyphicon-zoom-out"> </span>
+		</button>
+		<button id="btn_blocs_picture_maxi" class="btn btn-default">
+			<span id="icon_btn_blocs_picture_maxi" class="glyphicon glyphicon-zoom-in"> </span>
+		</button>
+		<button id="btn_blocs_picture" class="btn btn-default">
+			<span id="icon_btn_blocs_picture" class="glyphicon glyphicon-eye-open"> </span>
+		</button>
+		<button id="btn_size" class="btn btn-default">
+			<span id="icon_btn_size" class="glyphicon"> </span>
+		</button>
+		<button id="btn_preview" class="btn btn-default">
+			<span id="icon_btn_preview" class="glyphicon glyphicon-sunglasses"> </span>
+		</button>
+		<button id="btn_inline" class="btn btn-default">
+			<span id="icon_btn_inline" class="glyphicon glyphicon-option-vertical"> </span>
+		</button>
+		<div id="toggle" class="modal-content" style="display: none;">
+			<pre id="pre_previewArduino"></pre>			
+			<button id="btn_CopyCode" class="btn btn-warning" data-clipboard-action="copy" data-clipboard-target="#pre_previewArduino">
+				<span class="glyphicon glyphicon-duplicate"> </span>
 			</button>
-			<div id="div_miniPicture">
-				<a id="miniCard">
-					<img id="arduino_card_miniPicture" />
+		</div>
+	</div>
+    <div id="divBody">
+		<div id="menuPanel">
+			<div id="menuPanelConfig">
+				<button id="btn_configGlobal" class="btn btn-danger btn-block text-left" data-toggle="modal" data-target="#configModalGlobal">
+					<span class="glyphicon glyphicon-alert"> </span>
+					<span id="configGlobalLabel"> </span>
+				</button>
+				<div id="div_miniPicture">
+					<a id="miniCard">
+						<img id="arduino_card_miniPicture" />
+					</a>
+				</div>
+				<button id="btn_config" class="text-left btn btn-warning btn-block " data-toggle="modal" data-target="#configModal">
+					<span class="fa fa-cogs"> </span>
+					<span id="span_config"> </span>
+				</button>
+				<a href="#" id="btn_config_kit" target="_blank" class="text-left btn btn-warning btn-block hidden" role='button'>
+					<span class="glyphicon glyphicon-th-list"> </span>
+					<span id="span_config_kit"> </span>
 				</a>
 			</div>
-			<button id="btn_config" class="text-left btn btn-warning btn-block " data-toggle="modal" data-target="#configModal">
-				<span class="fa fa-cogs"> </span>
-				<span id="span_config"> </span>
-			</button>
-			<a href="#" id="btn_config_kit" target="_blank" class="text-left btn btn-warning btn-block hidden" role='button'>
-				<span class="glyphicon glyphicon-th-list"> </span>
-				<span id="span_config_kit"> </span>
-			</a>
-	    </div>
-	    <div id="menuPanelBlockly" class="margin-top-5">
-	            <ul id="ul_nav" role="tablist">
-	            <li role="presentation" id="tab_supervision">
-	                 <a href="#content_supervision" aria-controls="content_supervision" role="tab" data-toggle="tab">
-	                     <span class="glyphicon glyphicon-transfer"></span>
-	                     <span id="a_supervision"> </span>
-	                 </a>
-	            </li>
-	            <li role="presentation" id="tab_blocks" class="active">
-	                 <a href="#content_blocks" aria-controls="content_blocks" role="tab" data-toggle="tab">
-						 <span class="fa fa-puzzle-piece"></span>
-	                     <span id="a_blocks"> </span>
-	                 </a>
-	            </li>
-	            <li role="presentation" id="tab_arduino">
-	                 <a href="#content_arduino" aria-controls="content_arduino" role="tab" data-toggle="tab">
-	                     <span class="fa fa-code"></span>					 
-	                     <!--span class="glyphicon glyphicon-education"></span-->
-	                    <span id="a_arduino"></span>
-	                 </a>
-	            </li>
-	            <li role="presentation" id="tab_term">
-	                 <a href="#content_term" aria-controls="content_term" role="tab" data-toggle="tab">
-	                     <span  class="glyphicon glyphicon-log-out"></span>
-	                     <span id="a_term"> </span>
-	                 </a>
-	            </li>
-	            <!--only to see XML translation online -->
-				<!--li role="presentation" id="tab_xml">
-	                 <a href="#content_xml" aria-controls="content_xml" role="tab" data-toggle="tab">
-	                     <span  class="glyphicon glyphicon-file"></span>
-	                     <span id="a_xml"></span>
-	                 </a>
-	             </li-->
-	        </ul>
+			<div id="menuPanelBlockly" class="margin-top-5">
+					<ul id="ul_nav" role="tablist">
+					<li role="presentation" id="tab_supervision">
+						 <a href="#content_supervision" aria-controls="content_supervision" role="tab" data-toggle="tab">
+							 <span class="glyphicon glyphicon-transfer"></span>
+							 <span id="a_supervision"> </span>
+						 </a>
+					</li>
+					<li role="presentation" id="tab_blocks" class="active">
+						 <a href="#content_blocks" aria-controls="content_blocks" role="tab" data-toggle="tab">
+							 <span class="fa fa-puzzle-piece"></span>
+							 <span id="a_blocks"> </span>
+						 </a>
+					</li>
+					<li role="presentation" id="tab_arduino">
+						 <a href="#content_arduino" aria-controls="content_arduino" role="tab" data-toggle="tab">
+							 <span class="fa fa-code"></span>					 
+							 <!--span class="glyphicon glyphicon-education"></span-->
+							<span id="a_arduino"></span>
+						 </a>
+					</li>
+					<li role="presentation" id="tab_term">
+						 <a href="#content_term" aria-controls="content_term" role="tab" data-toggle="tab">
+							 <span  class="glyphicon glyphicon-log-out"></span>
+							 <span id="a_term"> </span>
+						 </a>
+					</li>
+					<!--only to see XML translation online -->
+					<!--li role="presentation" id="tab_xml">
+						 <a href="#content_xml" aria-controls="content_xml" role="tab" data-toggle="tab">
+							 <span  class="glyphicon glyphicon-file"></span>
+							 <span id="a_xml"></span>
+						 </a>
+					 </li-->
+				</ul>
+			</div>
+			<div id="menuPanelFiles">
+				<a id="btn_saveXML" class='btn btn-success btn-block text-left' href="#" role='button'>
+					<span class="fa fa-cloud-download"></span>
+					<!--span class="glyphicon glyphicon-cloud-download"></span-->
+					<span id="span_saveXML"> </span>
+				 </a>
+				<button id="btn_fakeload" class="btn btn-success btn-block">
+					<span class="fa fa-cloud-upload"></span>
+					<!--span class="glyphicon glyphicon-cloud-upload"></span-->
+					<span id="span_fakeload"> </span>
+				</button>
+				<input type="file" id="load" style="display: none;" />
+				<button id="btn_example" class="btn btn-info btn-block" data-toggle="modal" data-target="#exampleModal">
+					<span class="glyphicon glyphicon-list-alt"> </span>
+					<span id="span_example"> </span>
+				</button>
+				<a id="btn_create_example" class="btn btn-info btn-block" href="" target="_blank">
+					<span class="glyphicon glyphicon-wrench"> </span>
+					<span id="span_create_example"> </span>
+				</a>
+			</div> 
+			<div id="div_about">
+				<button id="btn_about" type="button" class="btn btn-default btn-sm" data-toggle="modal" data-target="#aboutModal" width="130px">
+					<b><span id="span_about"> </span></b>
+					<span class="glyphicon glyphicon-user"></span>		
+				</button>
+			</div>
+			<div id="div_accessibility_button">
+				<a href="./index.html" id="btn_reset" class="btn btn-danger text-left">
+					   <span class="glyphicon glyphicon-off"> </span>
+				</a>
+				<button id="btn_font" class="btn btn-warning text-left">
+				   <span class="glyphicon glyphicon-text-height"> </span>
+				</button>
+				<button id="btn_colors" class="btn btn-warning text-left jscolor {valueElement:null,value:'F0AD4E'}" onchange="update(this.jscolor)">
+				   <span class="glyphicon glyphicon-tint"> </span>
+				</button>
+				<script>
+						function update(jscolor) {
+							// 'jscolor' instance can be used as a string
+							document.getElementById('menuPanel').style.backgroundColor = jscolor;
+						}
+				</script>
+			</div>
+			<div id="div_tools_button">
+				<button id="btn_wiring" class="text-left btn btn-primary" onclick="openDialog(this)">
+					<span class="glyphicon glyphicon-blackboard"></span>
+					<script type="text/javascript">
+						function openDialog() {
+							width = 800;
+							height = 600;
+							if(window.innerWidth) {
+									var left = (window.innerWidth-width)/2;
+									var top = (window.innerHeight-height)/2;
+								}
+								else {
+									var left = (document.body.clientWidth-width)/2;
+									var top = (document.body.clientHeight-height)/2;
+								}                            
+							window.open('http://fr.robom.ru','Blockly@rduino - câblage', 'toolbar=no, location=no, menubar=no, scrollbars=no, status=no, top='+top+', left='+left+', width='+width+', height='+height+'');
+						}
+					</script>
+				</button>
+				<button id="btn_RGB" class="btn btn-primary text-left">
+				   <span class="glyphicon glyphicon-th"> </span>
+				</button>
+				<button id="btn_convert" class="btn btn-primary text-left">
+				   <span class="glyphicon glyphicon-superscript"> </span>
+			   </button>
+			</div>
+			<div id="div_help_button">
+			   <button id="btn_videos" class="btn btn-danger text-left">
+				   <span class="fa fa-film"> </span>
+			   </button>
+			   <a id="btn_doc" class='btn btn-success btn-info text-left' href="http://www.libreduc.cc/wiki/doku.php/fr/arduino/blockly_rduino" target="_blank" role='button'>
+				   <span class="glyphicon glyphicon-info-sign"></span>
+			   </a>
+			   <a id="btn_tuto" class='btn btn-success btn-info text-left' href="http://blockly.astuce.technology/forum/" target="_blank" role='button'>
+				   <span class="glyphicon glyphicon-question-sign"></span>
+			   </a>	
+			</div>       
 		</div>
-		<div id="menuPanelFiles">
-			<a id="btn_saveXML" class='btn btn-success btn-block text-left' href="#" role='button'>
-				<span class="fa fa-cloud-download"></span>
-				<!--span class="glyphicon glyphicon-cloud-download"></span-->
-				<span id="span_saveXML"> </span>
-			 </a>
-			<button id="btn_fakeload" class="btn btn-success btn-block">
-				<span class="fa fa-cloud-upload"></span>
-				<!--span class="glyphicon glyphicon-cloud-upload"></span-->
-				<span id="span_fakeload"> </span>
-			</button>
-			<input type="file" id="load" style="display: none;" />
-			<button id="btn_example" class="btn btn-info btn-block" data-toggle="modal" data-target="#exampleModal">
-				<span class="glyphicon glyphicon-list-alt"> </span>
-				<span id="span_example"> </span>
-			</button>
-			<a id="btn_create_example" class="btn btn-info btn-block" href="" target="_blank">
-				<span class="glyphicon glyphicon-wrench"> </span>
-				<span id="span_create_example"> </span>
-			</a>
-		</div> 
-		<div id="div_accessibility_button">
-			<a href="./index.html" id="btn_reset" class="btn btn-danger text-left">
-				   <span class="glyphicon glyphicon-off"> </span>
-			</a>
-			<button id="btn_font" class="btn btn-warning text-left">
-		       <span class="glyphicon glyphicon-text-height"> </span>
-		    </button>
-			<button id="btn_colors" class="btn btn-warning text-left jscolor {valueElement:null,value:'F0AD4E'}" onchange="update(this.jscolor)">
-		       <span class="glyphicon glyphicon-tint"> </span>
-		    </button>
-			<script>
-					function update(jscolor) {
-						// 'jscolor' instance can be used as a string
-						document.getElementById('menuPanel').style.backgroundColor = jscolor;
-					}
-			</script>
-		</div>
-		<div id="div_tools_button">
-			<button id="btn_wiring" class="text-left btn btn-primary" onclick="openDialog(this)">
-				<span class="glyphicon glyphicon-blackboard"></span>
-				<script type="text/javascript">
-					function openDialog() {
-						width = 800;
-						height = 600;
-						if(window.innerWidth) {
-								var left = (window.innerWidth-width)/2;
-								var top = (window.innerHeight-height)/2;
-							}
-							else {
-								var left = (document.body.clientWidth-width)/2;
-								var top = (document.body.clientHeight-height)/2;
-							}                            
-						window.open('http://fr.robom.ru','Blockly@rduino - câblage', 'toolbar=no, location=no, menubar=no, scrollbars=no, status=no, top='+top+', left='+left+', width='+width+', height='+height+'');
-					}
-                </script>
-			</button>
-			<button id="btn_RGB" class="btn btn-primary text-left">
-		       <span class="glyphicon glyphicon-th"> </span>
-		    </button>
-			<button id="btn_convert" class="btn btn-primary text-left">
-		       <span class="glyphicon glyphicon-superscript"> </span>
-		   </button>
-		</div>
-		<div id="div_help_button">
-		   <button id="btn_videos" class="btn btn-danger text-left">
-		       <span class="fa fa-film"> </span>
-		   </button>
-		   <a id="btn_doc" class='btn btn-success btn-info text-left' href="http://www.libreduc.cc/wiki/doku.php/fr/arduino/blockly_rduino" target="_blank" role='button'>
-		       <span class="glyphicon glyphicon-info-sign"></span>
-		   </a>
-		   <a id="btn_tuto" class='btn btn-success btn-info text-left' href="http://blockly.astuce.technology/forum/" target="_blank" role='button'>
-		       <span class="glyphicon glyphicon-question-sign"></span>
-		   </a>	
-		</div>       
-    </div>
-
-    <!-- Nav tabs -->
-    <div id="divTabpanel" role="tabpanel">
-        <!-- Tab panes -->
-        <div id="content_area" class="tab-content">
-			<div id="content_blocks" class="tab-pane active" style="position: relative;">
-				<button id="btn_delete" class="btn btn-danger">
-					<span class="glyphicon glyphicon-erase"> </span>
-					<span id="span_delete"> </span>
-				</button>
-				<button id="btn_undo" class="btn btn-default">
-					<span class="fa fa-undo"> </span>
-				</button>
-				<button id="btn_redo" class="btn btn-default">
-					<span class="fa fa-repeat"> </span>
-				</button>
-				<button id="btn_block_capture" class="btn btn-default">
-					<span id="icon_btn_block_capture" class="glyphicon glyphicon-camera"> </span>
-				</button>
-				<button id="btn_blocs_picture_mini" class="btn btn-default">
-					<span id="icon_btn_blocs_picture_mini" class="glyphicon glyphicon-zoom-out"> </span>
-				</button>
-				<button id="btn_blocs_picture_maxi" class="btn btn-default">
-					<span id="icon_btn_blocs_picture_maxi" class="glyphicon glyphicon-zoom-in"> </span>
-				</button>
-				<button id="btn_blocs_picture" class="btn btn-default">
-					<span id="icon_btn_blocs_picture" class="glyphicon glyphicon-eye-open"> </span>
-				</button>
-				<button id="btn_size" class="btn btn-default">
-					<span id="icon_btn_size" class="glyphicon"> </span>
-				</button>
-				<button id="btn_preview" class="btn btn-default">
-					<span id="icon_btn_preview" class="glyphicon glyphicon-sunglasses"> </span>
-				</button>
-                <button id="btn_inline" class="btn btn-default">
-                    <span id="icon_btn_inline" class="glyphicon glyphicon-option-vertical"> </span>
-                </button>
-				<div id="toggle" class="modal-content" style="display: none;">
-					<pre id="pre_previewArduino"></pre>			
-					<button id="btn_CopyCode" class="btn btn-warning" data-clipboard-action="copy" data-clipboard-target="#pre_previewArduino">
-						<span class="glyphicon glyphicon-duplicate"> </span>
+		<!-- Nav tabs -->
+		<div id="divTabpanel" role="tabpanel">
+			<!-- Tab panes -->
+			<div id="content_area" class="tab-content">
+				<div id="content_blocks" class="tab-pane active" style="position: relative;">
+					<button id="btn_delete" class="btn btn-danger">
+						<span class="glyphicon glyphicon-erase"> </span>
+						<span id="span_delete"> </span>
 					</button>
 				</div>
-			</div>
-			<div id="content_arduino" class="tab-pane">
-				<select id="cb_cf_boards"></select>
-				<select id="cb_cf_ports"></select>
-				<a id="btn_plugin_codebender" class='btn btn-danger' href="https://codebender.cc/static/plugin" target="_blank" role='button'>
-					<span class="glyphicon glyphicon-new-window"></span>
-					<span id="span_plugin_codebender"> </span>
-				</a>		
-				<button id="btn_edit_code" class="btn btn-primary" data-toggle="modal" data-target="#editModal">
-                    <span id="icon_edit_btn" class="glyphicon glyphicon-edit"> </span>
-                    <span id="span_edit_code"> </span>
-                </button>						
-				<a id="btn_saveArduino" class='btn btn-primary' href="#" role='button'>
-					<span class="glyphicon glyphicon-save"> </span>
-					<span id="span_saveIno"> </span>
-				</a>		
-				<button id="cb_cf_verify_btn" class="btn btn-codebender">
-					<span class="fa fa-check-square-o"> </span>
-					<span id="span_verify_codebender"> </span>
-				</button>			
-                <button id="cb_cf_flash_btn" class="btn btn-codebender">
-					<span class="glyphicon glyphicon-log-in"> </span>
-					<span id="span_flash_codebender"> </span>
-				</button>			
-				<button id="btn_verify_local" class="btn btn-arduino">
-					<span class="fa fa-check-square-o"> </span>
-					<span id="span_verify_local"> </span>
-				</button>							
-				<a id="btn_flash_local" class='btn btn-arduino' href="#" role='button'>
-	                <span class="fa fa-microchip"></span>					 
-					<span id="span_flash_local"> </span>
-				</a>		
-				<!--a id="btn_getResult" class='btn btn-arduino' href="http://127.0.0.1:5005" role='button' target='_blank'>
-					<span class="glyphicon glyphicon-list-alt"> </span>
-					<span id="span_flash_local_result"> </span>
-				</a-->
-                <button id="btn_pasteIDEArduino" class="btn btn-arduino">
-					<span class="fa fa-folder-open"> </span>
-					<span id="span_pasteIDEArduino"> </span>
-				</button>
-				<img id="LocalCodebenderLogo" height="35"/>
-                <pre id="pre_arduino"></pre>
-                <div id="debug_arduino"></div>
-				<div id="local_debug">
-					<iframe id="rDuino_uploader" width="100%" height="100%" frameborder="0"></iframe>
+				<div id="content_arduino" class="tab-pane">
+					<select id="cb_cf_boards"></select>
+					<select id="cb_cf_ports"></select>
+					<a id="btn_plugin_codebender" class='btn btn-danger' href="https://codebender.cc/static/plugin" target="_blank" role='button'>
+						<span class="glyphicon glyphicon-new-window"></span>
+						<span id="span_plugin_codebender"> </span>
+					</a>		
+					<button id="btn_edit_code" class="btn btn-primary" data-toggle="modal" data-target="#editModal">
+						<span id="icon_edit_btn" class="glyphicon glyphicon-edit"> </span>
+						<span id="span_edit_code"> </span>
+					</button>						
+					<a id="btn_saveArduino" class='btn btn-primary' href="#" role='button'>
+						<span class="glyphicon glyphicon-save"> </span>
+						<span id="span_saveIno"> </span>
+					</a>		
+					<button id="cb_cf_verify_btn" class="btn btn-codebender">
+						<span class="fa fa-check-square-o"> </span>
+						<span id="span_verify_codebender"> </span>
+					</button>			
+					<button id="cb_cf_flash_btn" class="btn btn-codebender">
+						<span class="glyphicon glyphicon-log-in"> </span>
+						<span id="span_flash_codebender"> </span>
+					</button>			
+					<button id="btn_verify_local" class="btn btn-arduino">
+						<span class="fa fa-check-square-o"> </span>
+						<span id="span_verify_local"> </span>
+					</button>							
+					<a id="btn_flash_local" class='btn btn-arduino' href="#" role='button'>
+						<span class="fa fa-microchip"></span>					 
+						<span id="span_flash_local"> </span>
+					</a>		
+					<!--a id="btn_getResult" class='btn btn-arduino' href="http://127.0.0.1:5005" role='button' target='_blank'>
+						<span class="glyphicon glyphicon-list-alt"> </span>
+						<span id="span_flash_local_result"> </span>
+					</a-->
+					<button id="btn_pasteIDEArduino" class="btn btn-arduino">
+						<span class="fa fa-folder-open"> </span>
+						<span id="span_pasteIDEArduino"> </span>
+					</button>
+					<img id="LocalCodebenderLogo" height="35"/>
+					<pre id="pre_arduino"></pre>
+					<div id="debug_arduino"></div>
+					<div id="local_debug">
+						<iframe id="rDuino_uploader" width="100%" height="100%" frameborder="0"></iframe>
+					</div>
 				</div>
-            </div>
-            <div id="content_term" class="tab-pane">
-                <select id="cb_cf_baud_rates"></select>
-                <button id="cb_cf_serial_monitor_connect" class="btn btn-codebender">
-					<span class="glyphicon glyphicon-transfer"> </span>
-					<span id="span_connect_serial"> </span>				
-				</button>
-                <div id="cb_cf_serial_monitor"></div>
-            </div>
-            <div id="content_supervision" class="tab-pane">
-            </div>
-            <!--div id="content_xml" class="tab-pane">
-                <pre id="pre_xml"></pre>
-            </div-->
-        </div>
-    </div>
+				<div id="content_term" class="tab-pane">
+					<select id="cb_cf_baud_rates"></select>
+					<button id="cb_cf_serial_monitor_connect" class="btn btn-codebender">
+						<span class="glyphicon glyphicon-transfer"> </span>
+						<span id="span_connect_serial"> </span>				
+					</button>
+					<div id="cb_cf_serial_monitor"></div>
+				</div>
+				<div id="content_supervision" class="tab-pane">
+				</div>
+				<!--div id="content_xml" class="tab-pane">
+					<pre id="pre_xml"></pre>
+				</div-->
+			</div>
+		</div>
     </div>
 <!-- Modals -->
 <!-- about modal -->
@@ -419,42 +417,45 @@
       <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&#215;</span></button>
         <h4 class="modal-title" id="aboutModalLabel"></h4>
       </div>
-      <div class="modal-body">
-              <b>Forum</b> : <a href='http://blockly.technologiescollege.fr/forum' target='blank'>http://blockly.technologiescollege.fr/forum</a>
-			  <br />
-			  <br /><b>Documentation :</b> <a href="http://www.libreduc/wiki/doku.php" target='blank'>Wiki</a>
-			  <br />
-			  <br />
-			  <span><b>Blockly@rduino</b></span> (<a href="https://github.com/technologiescollege/Blockly-at-rduino" target='blank'>Github</a>)
-              <span id="aboutBody" style="font-style: italic;"> </span>
-              <br /> - Fred LIN (@gasolin) - BlocklyDuino : (<a href='https://github.com/BlocklyDuino/BlocklyDuino' target='blank'>'https://github.com/BlocklyDuino/BlocklyDuino</a>)
-              <br /> - Alan YORINKS - PyMata-aio : (<a href='http://mryslab.blogspot.fr' target='blank'>http://mryslab.blogspot.fr</a>)
-			  <br /> - Carlos PEREIRA ATENCIO - Ardublockly : (<a href='https://github.com/carlosperate/ardublockly' target='blank'>https://github.com/carlosperate/ardublockly</a>)
-              <br /> - Bernard REMOND - rDuino-Compiler-Uploader-Server : (<a href='https://github.com/nbremond77' target='blank'>https://github.com/nbremond77</a>)
-              <br /> - Blockly : (<a href='https://developers.google.com/blockly' target='blank'>https://developers.google.com/blockly</a>)
-              <br /> - Bootstrap (<a href='http://getbootstrap.com' target='blank'>http://getbootstrap.com</a>)
-              <br /> - Font Awesome Icons (<a href='http://fontawesome.io' target='blank'>http://fontawesome.io</a>)
-              <br /> - Bootstrap Toggle (<a href='http://www.bootstraptoggle.com/' target='blank'>http://www.bootstraptoggle.com/</a>)
-			  <br /> - Codebender - CompilerFlasher : (<a href='https://codebender.cc' target='blank'>https://codebender.cc</a>)
-              <br /> - JQuerry (<a href='https://jquery.com' target='blank'>https://jquery.com)</a>
-              <br /> - HeadJS (<a href='http://headjs.com/' target='blank'>http://headjs.com/)</a>
-              <br /> - SmoothieCharts (<a href='http://smoothiecharts.org/' target='blank'>http://smoothiecharts.org/)</a>
-              <br /> - ROBOM.RU (<a href='https://robom.ru/' target='blank'>https://robom.ru/)</a>		
-			  <br />	  
-			  <b><div align="center"><a href="http://framaforms.org/blocklyrduino-utilisateurs-1490560876" target='blank'><font size="12"><span id="span_forms_about" style="font-style: bold;"> </span></font></a></div></b>
-			  <br />
-			  <br /><i>version 31-10-2017 - v2.4 "Wiring"</i>
-			  <br />
-			  <br />
-			  <div align="center" id="paypal_about">
-				<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top" >
-				<input type="hidden" name="cmd" value="_s-xclick"/>
-				<input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----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-----END PKCS7-----
-				"/>
-				<input type="image" src="https://www.paypalobjects.com/fr_FR/FR/i/btn/btn_donateCC_LG.gif" name="submit" alt="PayPal, le réflexe sécurité pour payer en ligne"/>
-				<img alt="" border="0" src="https://www.paypalobjects.com/fr_FR/i/scr/pixel.gif" width="1" height="1"/>
-				</form>
-			  </div>
+      <div class="modal-body">              
+		<span id="title"></span>
+		  <br />
+		  <br />
+		  <b>Forum</b> : <a href='http://blockly.technologiescollege.fr/forum' target='blank'>http://blockly.technologiescollege.fr/forum</a>
+		  <br />
+		  <br /><b>Documentation :</b> <a href="http://www.libreduc.cc/wiki/doku.php" target='blank'>wiki</a>
+		  <br />
+		  <br />
+		  <span><b>Blockly@rduino</b></span> (<a href="https://github.com/technologiescollege/Blockly-at-rduino" target='blank'>Github</a>)
+		  <span id="aboutBody" style="font-style: italic;"> </span>
+		  <br /> - Fred LIN (@gasolin) - BlocklyDuino : (<a href='https://github.com/BlocklyDuino/BlocklyDuino' target='blank'>'https://github.com/BlocklyDuino/BlocklyDuino</a>)
+		  <br /> - Alan YORINKS - PyMata-aio : (<a href='http://mryslab.blogspot.fr' target='blank'>http://mryslab.blogspot.fr</a>)
+		  <br /> - Carlos PEREIRA ATENCIO - Ardublockly : (<a href='https://github.com/carlosperate/ardublockly' target='blank'>https://github.com/carlosperate/ardublockly</a>)
+		  <br /> - Bernard REMOND - rDuino-Compiler-Uploader-Server : (<a href='https://github.com/nbremond77' target='blank'>https://github.com/nbremond77</a>)
+		  <br /> - Blockly : (<a href='https://developers.google.com/blockly' target='blank'>https://developers.google.com/blockly</a>)
+		  <br /> - Bootstrap (<a href='http://getbootstrap.com' target='blank'>http://getbootstrap.com</a>)
+		  <br /> - Font Awesome Icons (<a href='http://fontawesome.io' target='blank'>http://fontawesome.io</a>)
+		  <br /> - Bootstrap Toggle (<a href='http://www.bootstraptoggle.com/' target='blank'>http://www.bootstraptoggle.com/</a>)
+		  <br /> - Codebender - CompilerFlasher : (<a href='https://codebender.cc' target='blank'>https://codebender.cc</a>)
+		  <br /> - JQuerry (<a href='https://jquery.com' target='blank'>https://jquery.com)</a>
+		  <br /> - HeadJS (<a href='http://headjs.com/' target='blank'>http://headjs.com/)</a>
+		  <br /> - SmoothieCharts (<a href='http://smoothiecharts.org/' target='blank'>http://smoothiecharts.org/)</a>
+		  <br /> - ROBOM.RU (<a href='https://robom.ru/' target='blank'>https://robom.ru/)</a>		
+		  <br />	  
+		  <b><div align="center"><a href="http://framaforms.org/blocklyrduino-utilisateurs-1490560876" target='blank'><font size="12"><span id="span_forms_about" style="font-style: bold;"> </span></font></a></div></b>
+		  <br />
+		  <br /><i>version 02-11-2017 - v2.5 "Menus"</i>
+		  <br />
+		  <br />
+		  <div align="center" id="paypal_about">
+			<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top" >
+			<input type="hidden" name="cmd" value="_s-xclick"/>
+			<input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----MIIHRwYJKoZIhvcNAQcEoIIHODCCBzQCAQExggEwMIIBLAIBADCBlDCBjjELMAkGA1UEBhMCVVMxCzAJBgNVBAgTAkNBMRYwFAYDVQQHEw1Nb3VudGFpbiBWaWV3MRQwEgYDVQQKEwtQYXlQYWwgSW5jLjETMBEGA1UECxQKbGl2ZV9jZXJ0czERMA8GA1UEAxQIbGl2ZV9hcGkxHDAaBgkqhkiG9w0BCQEWDXJlQHBheXBhbC5jb20CAQAwDQYJKoZIhvcNAQEBBQAEgYAJgrlyKFLvrPLE466I/C6ixXUGcjCFWFDL8g8X1fvVuJzH6Oas51725FWmM2lj/qnlMC1OXDsQ5t+gZdtOHT/aNGKMGVKAwunuzdXunh12K6B/IyviY/t92zr4MNAzKUPbFEedz+KhPof+qHLtbggsH838JNZkI/C/IT2ywYjaVTELMAkGBSsOAwIaBQAwgcQGCSqGSIb3DQEHATAUBggqhkiG9w0DBwQI1IdcWrDXciiAgaBz6D0isbpRuJMLj/+WkYtJeIqWf5gWhgO6ZQuqIty98fGcIo4o++FnUPhVP7zNzLRnvQDEPBh2kmYKSeZzKKjhrftr4JUaf/kQ7ZlKrvZSI/9m9tRRhSXrLyPCdhG7WQpypTC5Zt8PENDPx6pUfpYGhmAQ/jaS+OHb8+XQbddJJWcNhP5NDPuNSyI3aAGNonqFkw+QhWtsZNfOlZYfWfIMoIIDhzCCA4MwggLsoAMCAQICAQAwDQYJKoZIhvcNAQEFBQAwgY4xCzAJBgNVBAYTAlVTMQswCQYDVQQIEwJDQTEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEUMBIGA1UEChMLUGF5UGFsIEluYy4xEzARBgNVBAsUCmxpdmVfY2VydHMxETAPBgNVBAMUCGxpdmVfYXBpMRwwGgYJKoZIhvcNAQkBFg1yZUBwYXlwYWwuY29tMB4XDTA0MDIxMzEwMTMxNVoXDTM1MDIxMzEwMTMxNVowgY4xCzAJBgNVBAYTAlVTMQswCQYDVQQIEwJDQTEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEUMBIGA1UEChMLUGF5UGFsIEluYy4xEzARBgNVBAsUCmxpdmVfY2VydHMxETAPBgNVBAMUCGxpdmVfYXBpMRwwGgYJKoZIhvcNAQkBFg1yZUBwYXlwYWwuY29tMIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDBR07d/ETMS1ycjtkpkvjXZe9k+6CieLuLsPumsJ7QC1odNz3sJiCbs2wC0nLE0uLGaEtXynIgRqIddYCHx88pb5HTXv4SZeuv0Rqq4+axW9PLAAATU8w04qqjaSXgbGLP3NmohqM6bV9kZZwZLR/klDaQGo1u9uDb9lr4Yn+rBQIDAQABo4HuMIHrMB0GA1UdDgQWBBSWn3y7xm8XvVk/UtcKG+wQ1mSUazCBuwYDVR0jBIGzMIGwgBSWn3y7xm8XvVk/UtcKG+wQ1mSUa6GBlKSBkTCBjjELMAkGA1UEBhMCVVMxCzAJBgNVBAgTAkNBMRYwFAYDVQQHEw1Nb3VudGFpbiBWaWV3MRQwEgYDVQQKEwtQYXlQYWwgSW5jLjETMBEGA1UECxQKbGl2ZV9jZXJ0czERMA8GA1UEAxQIbGl2ZV9hcGkxHDAaBgkqhkiG9w0BCQEWDXJlQHBheXBhbC5jb22CAQAwDAYDVR0TBAUwAwEB/zANBgkqhkiG9w0BAQUFAAOBgQCBXzpWmoBa5e9fo6ujionW1hUhPkOBakTr3YCDjbYfvJEiv/2P+IobhOGJr85+XHhN0v4gUkEDI8r2/rNk1m0GA8HKddvTjyGw/XqXa+LSTlDYkqI8OwR8GEYj4efEtcRpRYBxV8KxAW93YDWzFGvruKnnLbDAF6VR5w/cCMn5hzGCAZowggGWAgEBMIGUMIGOMQswCQYDVQQGEwJVUzELMAkGA1UECBMCQ0ExFjAUBgNVBAcTDU1vdW50YWluIFZpZXcxFDASBgNVBAoTC1BheVBhbCBJbmMuMRMwEQYDVQQLFApsaXZlX2NlcnRzMREwDwYDVQQDFAhsaXZlX2FwaTEcMBoGCSqGSIb3DQEJARYNcmVAcGF5cGFsLmNvbQIBADAJBgUrDgMCGgUAoF0wGAYJKoZIhvcNAQkDMQsGCSqGSIb3DQEHATAcBgkqhkiG9w0BCQUxDxcNMTYwMzIxMTMwODA1WjAjBgkqhkiG9w0BCQQxFgQUD4sqb6CSRovMjw9qLI8TrSfQnLUwDQYJKoZIhvcNAQEBBQAEgYAALAeXJN42x54w5ygTV8/zzkLlvngOIaU9kaOXfiS3iMkUil4AiOSyyVLWRzc9NdyHdZjCGq4YVSufHpOnreGQAfiOQHp1zwMQ+pr2kzhCDIfa+TIjvD8+5T0QHLsjniH/y3qxkXNjEOoL/sI1/Bp/f+r33W17UifHwZDVoOsT/w==-----END PKCS7-----
+			"/>
+			<input type="image" src="https://www.paypalobjects.com/fr_FR/FR/i/btn/btn_donateCC_LG.gif" name="submit" alt="PayPal, le réflexe sécurité pour payer en ligne"/>
+			<img alt="" border="0" src="https://www.paypalobjects.com/fr_FR/i/scr/pixel.gif" width="1" height="1"/>
+			</form>
+		  </div>
       </div>
     </div>
   </div>
