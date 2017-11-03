@@ -68,6 +68,7 @@ head.load(
 "generators/arduino/robot_motors.js",
 "generators/arduino/robot_misc.js",
 "generators/arduino/robuno.js",
+"generators/arduino/sensor_actuator.js",
 "generators/arduino/servo.js",
 "generators/arduino/Sharp_IR.js",
 "generators/arduino/SPI.js",

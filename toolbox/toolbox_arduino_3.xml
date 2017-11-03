@@ -1820,7 +1820,7 @@
 					</value>
 					<value name="Text_password">
 						<shadow type="text">
-							<field name="TEXT">8 caractères minimum</field>
+							<field name="TEXT">8 caractÃ¨res minimum</field>
 						</shadow>
 					</value>
 					<value name="Text_ip1AP">

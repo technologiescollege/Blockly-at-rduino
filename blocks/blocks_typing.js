@@ -37,6 +37,7 @@ head.load(
 "blocks/RFID/blocks_typing.js",
 "blocks/robots/blocks_typing.js",
 "blocks/robuno/blocks_typing.js",
+"blocks/sensor_actuator/blocks_typing.js",
 "blocks/servo/blocks_typing.js",
 "blocks/Sharp_IR/blocks_typing.js",
 "blocks/SPI/blocks_typing.js",

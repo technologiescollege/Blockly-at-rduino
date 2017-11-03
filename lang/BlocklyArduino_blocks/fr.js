@@ -241,10 +241,22 @@ Blockly.Msg.CAT_NULL = "libre"; //added 8/10/2017
 
 Blockly.Msg.CAT_HX711 = "capteur de poids"; //added 23/10/2017
 
+Blockly.Msg.CAT_ACTIONNEURS = "actionneurs"; //added 03/11/2017
+Blockly.Msg.CAT_CAPTEURS = "capteurs";
+Blockly.Msg.CAT_ACTIONNEURS_del = " - DEL";
+Blockly.Msg.CAT_ACTIONNEURS_ARDUINO_matrice8x8 = " - matrice";
+Blockly.Msg.CAT_ACTIONNEURS_DFRobot_SHIELD_LCDKEYPAD = " - écran LCD";
+Blockly.Msg.CAT_ACTIONNEURS_ARDUINO_moteur = " - moteur";
+Blockly.Msg.CAT_ACTIONNEURS_DFPLAYER = " - audio";
+
 Blockly.Msg.FIELDDROPDOWN = [["1 (état haut)", "HIGH"], ["0 (état bas)", "LOW"]];
-Blockly.Msg.FIELDDROPDOWN_ONOFF = [["marche", "ON"], ["arrêt", "OFF"]]
-Blockly.Msg.INOUT_HIGH_LEVEL = "1 (état haut)";
-Blockly.Msg.INOUT_LOW_LEVEL = "0 (état bas)";
+Blockly.Msg.FIELDDROPDOWN_ONOFF = [["allumer", "ON"], ["éteindre", "OFF"]];
+Blockly.Msg.FIELDDROPDOWN_0_1 = [["HAUT", "HIGH"], ["BAS", "LOW"]];
+Blockly.Msg.ligne = [["1", "1"], ["2", "2"]];
+Blockly.Msg.colonne = [["1", "1"],["2", "2"],["3", "3"],["4", "4"],["5", "5"],["6", "6"],["7", "7"],["8", "8"],["9", "9"],["10", "10"],["11", "11"],["12", "12"],["14", "14"],["14", "14"],["15", "15"],["16", "16"]];
+Blockly.Msg.FIELDDROPDOWN_av_ar = [["avant", "HIGH"], ["arrière", "LOW"]];
+Blockly.Msg.INOUT_HIGH_LEVEL = "1(état haut)";
+Blockly.Msg.INOUT_LOW_LEVEL = "0(état bas)";
 
 //**********************************FieldInstance messages***********************************************
 Blockly.Msg.COMPONENT_WARN = 'A %1 configuration block with the same %2 name must be added to use this block!';
@@ -1893,3 +1905,13 @@ Blockly.Msg.HX711_INIT_TOOLTIP = "point de référence pour les mesures, avec ou
 Blockly.Msg.HX711_READ_TITLE = "poids lu (kg)";
 Blockly.Msg.HX711_READ_TEXT = "avec une correction de";
 Blockly.Msg.HX711_READ_TOOLTIP = "le facteur de correction est celui renvoyé sur la console série par le bloc de calibrage";
+
+
+//********************SENSORS ACTUATORS*************//
+Blockly.Msg.lm35_1 = "température mesurée";
+Blockly.Msg.lm35_2 = "renvoie la température mesurée par un LM35 en degré celcius(de 0 à 80°)";
+Blockly.Msg.matrice8x8 = "symbole de la matrice";
+Blockly.Msg.matrice8x8_symbole_TOOLTIP = "définition d'un symbole pour la matrice :\n 0 éteint une DEL\n 1 allume une DEL";
+Blockly.Msg.ultrason_distance1 = "distance mesurée";
+Blockly.Msg.ultrason_distance2 = "retourne la distance mesurée (de 0 à 100 cm)";
+Blockly.Msg.lp2i_mp3_prev = "lire le fichier mp3 précédent";

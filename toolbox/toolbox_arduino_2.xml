@@ -292,6 +292,55 @@
 		</category>
 		<sep></sep>
 	</category>
+	<category name="CAT_ACTIONNEURS" colour="#00929F">	
+		<category name="CAT_ACTIONNEURS_del" colour="#00929F">			
+			<block type="SENSOR_ACTUATOR_inout_buildin_led"></block>
+			<block type="SENSOR_ACTUATOR_blink"></block>
+			<block type="SENSOR_ACTUATOR_digital_write"></block>
+			<block type="SENSOR_ACTUATOR_bargraphe"></block>
+		</category>
+		<category name="CAT_ACTIONNEURS_ARDUINO_matrice8x8" colour="#00929F">
+			<block type="SENSOR_ACTUATOR_matrice8x8_init"></block>
+			<block type="SENSOR_ACTUATOR_matrice8x8_symbole"></block>
+			<block type="SENSOR_ACTUATOR_matrice8x8"></block>
+			<block type="SENSOR_ACTUATOR_matrice8x8_aff"></block>
+			<block type="SENSOR_ACTUATOR_matrice_nombre_0_30"></block>
+		</category>
+		<category name="CAT_ACTIONNEURS_DFRobot_SHIELD_LCDKEYPAD" colour="#00929F">
+			<block type="SENSOR_ACTUATOR_lcd"></block>
+			<block type="SENSOR_ACTUATOR_lcd_i2c"></block>
+			<block type="SENSOR_ACTUATOR_LCD_Keypad_Shield_DFR_09"></block>
+			<block type="SENSOR_ACTUATOR_LCD_Keypad_Shield_DFR_09_lc"></block>
+			<block type="SENSOR_ACTUATOR_LCD_Keypad_Shield_DFR_09_RAZ"></block>
+		</category> 
+		<category name="CAT_ACTIONNEURS_ARDUINO_moteur" colour="#00979D">
+			<block type="SENSOR_ACTUATOR_moteur_action"></block>
+			<block type="SENSOR_ACTUATOR_moteur_stop"></block>
+			<block type="SENSOR_ACTUATOR_moteur3v"></block>
+			<block type="SENSOR_ACTUATOR_moteur_dc"></block>
+			<block type="SENSOR_ACTUATOR_dagu_rs027"></block>
+		</category>
+		<category name="CAT_ACTIONNEURS_DFPLAYER" colour="#00929F">
+			<block type="SENSOR_ACTUATOR_lp2i_mp3_init"></block>
+			<block type="SENSOR_ACTUATOR_lp2i_mp3_volume"></block>
+			<block type="SENSOR_ACTUATOR_lp2i_mp3_next"></block>
+			<block type="SENSOR_ACTUATOR_lp2i_mp3_prev"></block>
+			<block type="SENSOR_ACTUATOR_lp2i_mp3_pause"></block>
+			<block type="SENSOR_ACTUATOR_lp2i_mp3_play"></block>
+			<block type="SENSOR_ACTUATOR_tone"></block>
+			<block type="SENSOR_ACTUATOR_notone"></block>
+		</category>	
+	</category>
+	<category name="CAT_CAPTEURS" colour="#00929F">
+		<block type="SENSOR_ACTUATOR_inout_bp"></block>
+		<block type="SENSOR_ACTUATOR_lm35"></block>
+		<block type="SENSOR_ACTUATOR_ultrason_distance"></block>
+		<block type="SENSOR_ACTUATOR_potentiometre"></block>
+		<block type="SENSOR_ACTUATOR_dht11"></block>
+		<block type="SENSOR_ACTUATOR_suiveur_ligne"></block>
+		<block type="SENSOR_ACTUATOR_light_sensor"></block>
+		<block type="SENSOR_ACTUATOR_bluetooth_b"></block>
+	</category>
 	<category name="CAT_LED_RGB_CHAIN" colour="#C9D7E2">
 		<block type="lp2i_ledRGB_WS2812B_init">
 			<value name="Pin_LedRGB_init">
