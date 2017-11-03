@@ -170,35 +170,6 @@
 			<block type="inout_attachInterrupt"></block>
 			<block type="inout_detachInterrupt"></block>
 		</category>
-		<category name="CAT_ARDUINO_TIME" colour="#00979D">
-			<block type="millis"></block>
-			<block type="millis_sec"></block>
-			<block type="inout_pulsein"></block>
-			<block type="inout_pulsein_timeout"></block>
-			<block type="base_delay">
-				<value name="DELAY_TIME">
-					<shadow type="math_number">
-						<field name="NUM">1000</field>
-					</shadow>
-				</value>
-			</block>
-			<block type="base_delay_sec">
-				<value name="DELAY_TIME">
-					<shadow type="math_number">
-						<field name="NUM">5</field>
-					</shadow>
-				</value>
-			</block>
-			<block type="tempo_no_delay"></block>
-		</category>
-		<category name="CAT_ARDUINO_CONVERSION" colour="#00979D">
-			<block type="conversion_tochar"></block>
-			<block type="conversion_tobyte"></block>
-			<block type="conversion_toint"></block>
-			<block type="conversion_tofloat"></block>
-			<block type="conversion_toString"></block>
-			<block type="conversion_map"></block>
-		</category>
 		<category name="CAT_ARDUINO_OUT" colour="#00979D">
 			<block type="inout_buildin_led"></block>
 			<block type="inout_digital_write_validator"></block>
@@ -248,6 +219,35 @@
 				</value>
 			</block>
 			<block type="notone"></block>
+		</category>
+		<category name="CAT_ARDUINO_TIME" colour="#00979D">
+			<block type="millis"></block>
+			<block type="millis_sec"></block>
+			<block type="inout_pulsein"></block>
+			<block type="inout_pulsein_timeout"></block>
+			<block type="base_delay">
+				<value name="DELAY_TIME">
+					<shadow type="math_number">
+						<field name="NUM">1000</field>
+					</shadow>
+				</value>
+			</block>
+			<block type="base_delay_sec">
+				<value name="DELAY_TIME">
+					<shadow type="math_number">
+						<field name="NUM">5</field>
+					</shadow>
+				</value>
+			</block>
+			<block type="tempo_no_delay"></block>
+		</category>
+		<category name="CAT_ARDUINO_CONVERSION" colour="#00979D">
+			<block type="conversion_tochar"></block>
+			<block type="conversion_tobyte"></block>
+			<block type="conversion_toint"></block>
+			<block type="conversion_tofloat"></block>
+			<block type="conversion_toString"></block>
+			<block type="conversion_map"></block>
 		</category>
 		<sep></sep>
 	</category>

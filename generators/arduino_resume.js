@@ -53,6 +53,7 @@ head.load(
 "generators/arduino/jeulin_maquette_feux.js",
 "generators/arduino/kit_velo_niv1.js",
 "generators/arduino/kit_velo_niv2.js",
+"generators/arduino/lcd_i2c.js",
 "generators/arduino/led-rgb-ws2812b.js",
 "generators/arduino/matrix-led-rgb-ws2812.js",
 "generators/arduino/mbot_niv1.js",

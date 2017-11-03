@@ -230,6 +230,8 @@ Blockly.Msg.CAT_ETHERNET_INIT = "initialisation";
 Blockly.Msg.CAT_ETHERNET_CLIENT = "client";
 Blockly.Msg.CAT_ETHERNET_SERVER = "server";
 
+Blockly.Msg.CAT_LCD_I2C = "LCD I²C"; //added 18/08/2017
+
 Blockly.Msg.CAT_NULL = "free"; //added 8/10/2017
 
 Blockly.Msg.CAT_HX711 = "load cell"; //added 23/10/2017

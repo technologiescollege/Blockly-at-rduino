@@ -113,7 +113,7 @@ Blockly.Blocks.base_define = {
 	this.appendValueInput("TEXT1", 'Null')
         .setAlign(Blockly.ALIGN_RIGHT)
     //  	.appendField(Blockly.Msg.ARDUINO_BASE_DEFINE_CONST_INPUT1); A faire
-		.appendField('Définir');
+		.appendField('définir');
     this.appendDummyInput()
     //   .appendField(Blockly.Msg.ARDUINO_BASE_DEFINE_CONST_INPUT2) A faire
 		.appendField('comme étant')

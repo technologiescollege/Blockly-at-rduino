@@ -381,7 +381,7 @@ html[dir="RTL"] #btn_inline {
 
 #toggle {
 	width: 25%;
-	position: absolute;
+	position: fixed;
 	z-index: 1;
 	right: 25px;
 	top: 50px;
