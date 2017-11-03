@@ -44,7 +44,7 @@ body {
 	height: 36px;
 	left: 205px;
 	vertical-align: top;
-	position: absolute;
+	position: relative;
 	width: 100%;
 	background: #00969C;
 }
