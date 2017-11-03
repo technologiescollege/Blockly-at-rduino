@@ -68,17 +68,10 @@ Blockly.Arduino.HX711_read = function() {
   "HX711 scale(DOUT, CLK);";
   
   Blockly.Arduino.setups_['setup_HX711_read'] = 
-  "Serial.begin(9600);\n" +
-  '  Serial.println("HX711 scale demo");\n' +
-  "  scale.set_scale(calibration_factor); //This value is obtained by using the SparkFun_HX711_Calibration sketch\n" +
-  "  scale.tare(); //Assuming there is no weight on the scale at start up, reset the scale to 0\n" +
-  '  Serial.println("Readings:");';
+  "scale.set_scale(calibration_factor); //This value is obtained by using the SparkFun_HX711_Calibration sketch\n" +
+  "  scale.tare(); //Assuming there is no weight on the scale at start up, reset the scale to 0";
   
-  var code = 
-  'Serial.print("Reading: ");\n' +
-  'Serial.print(scale.get_units(), 1); //scale.get_units() returns a float\n' +
-  'Serial.print(" kg");\n' +
-  'Serial.println()';
+  var code = "scale.get_units()";
   
   return [code, Blockly.Arduino.ORDER_ATOMIC];
 };
