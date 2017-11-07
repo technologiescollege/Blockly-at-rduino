@@ -1,13 +1,20 @@
 @CHARSET "UTF-8";
 
+@font-face {
+	font-family: "OpenDyslexic";
+	src: url('fonts\OpenDyslexic3-Regular.ttf');
+}
+
 html,body {
 	height: 100%;
+	font-family: "OpenDyslexic";
 }
 
 body {
 	background-color: #fff;
-    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    //font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
 	margin: 0;
+	font-family: "OpenDyslexic";
 }
 
 .rotate180 {
@@ -40,17 +47,18 @@ body {
 	background: #FFFFFF;
 }
 
-#divTitre {
+#divTitre, #divTitreMenu {
 	height: 36px;
-	left: 205px;
-	vertical-align: top;
-	position: relative;
 	width: 100%;
+	vertical-align: top;
+	position: absolute;
+	margin-left: 205px;
 	background: #00969C;
 }
 
 #divTitre p {
 	font-size: 15px;
+	font-family: "OpenDyslexic";
 }
 
 #btn_levels {
@@ -175,7 +183,7 @@ html[dir="RTL"] .navbar-right {
 
 .divTabpanel-ver {
     height: 100%;
-    margin-left:205px;
+    width: 100%;
 }
 
 html[dir="RTL"] .divTabpanel-ver {
@@ -460,10 +468,6 @@ html[dir="RTL"] #select_all {
 #span_select_all {
 	font-weight: bold;
 }
-
-/* .nav-tabs { */
-/* 	border-bottom: none !important; */
-/* } */
 
 .blocklySvg {
 	border-top: none !important;

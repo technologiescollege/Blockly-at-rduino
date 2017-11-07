@@ -20,13 +20,6 @@ ul {
   margin: 0;
 }
 
-body {
-  font-family: "Raleway";
-  font-weight: 400;
-  color: #34495E;
-  background: #f0f0f0;
-}
-
 header {
   background: #00969C;
   padding: 0 7%;
@@ -114,12 +107,28 @@ header {
 #main .menu-chks label:hover {
   cursor: pointer;
 }
-
+/*defined in \css\blockly@rduino.css line 43
+#divTitreMenu {
+  position: absolute;
+  left: 205px;
+  width: 100%;
+  background: #00969C;  
+}*/
+#divTitreMenu_miniCard, #divTitreMenu_menu {
+    display: inline-block;
+}
+#divTitreMenu_menu {
+	float: left;
+}
+ 
+#divTitreMenu_miniCard {   overflow:auto;
+    margin-left: 0px;
+}
+  
 nav li {
   position: relative;
   display: inline-block;
   float: left;
-  left: 205px;
 }
 nav a {
   position: relative;

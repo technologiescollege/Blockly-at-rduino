@@ -80,7 +80,11 @@
 			return Blockly.Types.UNDEF;
 		}
 	};
-
+	
+	Blockly.Blocks.creer_tableau.getBlockType = function() {
+    var numString = this.getFieldValue('NUM');
+    return Blockly.Types.identifyNumber(numString);
+	};
 
 //---------------------------------maths--------------------------------------------
 

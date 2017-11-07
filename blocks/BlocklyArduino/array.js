@@ -244,3 +244,22 @@ Blockly.Blocks['array_modify'] = {
     this.setTooltip(Blockly.Msg.ARRAY_MODIFY_TOOLTIP);    this.setHelpUrl('http://www.mon-club-elec.fr/pmwiki_reference_arduino/pmwiki.php?n=Main.Tableaux');
   }
 };
+
+Blockly.Blocks["creer_tableau"]={init: function(){
+	this.appendDummyInput()
+		.appendField(Blockly.Msg.ARRAY_create)
+		.appendField(new Blockly.FieldVariable("liste"), 'VAR');
+	this.appendDummyInput()
+		.setAlign(Blockly.ALIGN_RIGHT)
+		.appendField(Blockly.Msg.VARIABLES_AS)
+		.appendField(new Blockly.FieldDropdown(Blockly.Types.getValidTypeArray()), "type");
+	this.appendValueInput("contenu")
+		.setAlign(Blockly.ALIGN_RIGHT)
+		.appendField(new Blockly.FieldDropdown([[Blockly.Msg.ARRAY_taille,"c1"],[Blockly.Msg.ARRAY_contenu,"c2"]]), "choix");
+	this.setInputsInline(false);
+	this.setPreviousStatement(true, null);
+	this.setNextStatement(true, null);
+	this.setColour("#804000");
+	this.setTooltip(Blockly.Msg.ARRAY_GETINDEX_TOOLTIP2);
+	this.setHelpUrl(Blockly.Msg.HELPURL);}
+};

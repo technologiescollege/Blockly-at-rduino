@@ -256,7 +256,7 @@ BlocklyDuino.setArduinoCard =  function () {
 	profile["defaultBoard"]=profile[cardId];
 	$('#arduino_card_picture').attr("src", profile.defaultBoard['picture']);
 	$('#arduino_card_miniPicture').attr("src", profile.defaultBoard['miniPicture']);
-	$('#arduino_card_miniPicture_Menu').attr("src", profile.defaultBoard['miniPicture']);	
+	$('#arduino_card_miniPicture_Menu').attr("src", profile.defaultBoard['miniPicture_hor']);	
 	$('#pictureModalLabel').text(profile.defaultBoard['description']);
 	if ($("#pinout").val().substring(0,4) == "kit_") {
 		$("#btn_config").remove();
@@ -433,7 +433,7 @@ BlocklyDuino.bindFunctions = function() {
 	$('#btn_undo').on("click", BlocklyDuino.Undo);
 	$('#btn_redo').on("click", BlocklyDuino.Redo);
 	$('#btn_block_capture').on("click", BlocklyDuino.workspace_capture);
-	$('#btn_saveXML').on("click", BlocklyDuino.saveXmlFile);
+	$('#btn_saveXML, #menu_12').on("click", BlocklyDuino.saveXmlFile);
 	$('#btn_saveArduino').on("click", BlocklyDuino.saveArduinoFile);	
 	$('#btn_pasteIDEArduino').on("click", BlocklyDuino.ArduinoIDEClick);	
 	$('#btn_flash_local').on("click", BlocklyDuino.uploadClick);
@@ -525,7 +525,7 @@ BlocklyDuino.bindFunctions = function() {
 	});
 
 	$('#load').on("change", BlocklyDuino.load);
-	$('#btn_fakeload').on("click", function() {
+	$('#btn_fakeload, #menu_11').on("click", function() {
 		$('#load').click();
 	});
 
@@ -581,9 +581,9 @@ BlocklyDuino.bindFunctions = function() {
 		$("#toggle").toggle("slide");
 	});
 
-	$('#btn_example').on("click", BlocklyDuino.buildExamples);
+	$('#btn_example, #menu_131').on("click", BlocklyDuino.buildExamples);
 
-	$('#miniCard, #btn_picture, #miniCardMenu').on('click', function() {
+	$('#miniCard, #btn_picture, #miniCard_Menu').on('click', function() {
 		$('#showcardModal').css("z-index", 1040);
 		$('#showcardModal').css("display", "inline-block");
 		Blockly.Arduino.cardSize = 200;
@@ -604,7 +604,7 @@ BlocklyDuino.bindFunctions = function() {
 		$('#videoModal').hide();
 	});
 	
-	$('#btn_convert').on('click', function() {
+	$('#btn_convert, #menu_31').on('click', function() {
 		$('#convertModal').css("z-index", 1060);
 		$('#convertModal').css("display", "inline-block");
 	});
@@ -614,7 +614,7 @@ BlocklyDuino.bindFunctions = function() {
 		$('#convertModal').hide();
 	});
 	
-	$('#btn_RGB, #btn_menu_RGB').on('click', function() {
+	$('#btn_RGB, #menu_32').on('click', function() {
 		$('#RGB_modal').css("z-index", 1070);
 		$('#RGB_modal').css("display", "inline-block");
 	});
@@ -835,24 +835,19 @@ BlocklyDuino.init = function() {
 	Code.initLanguage();
 
 	if (BlocklyDuino.getSize() == 'max') {
-		// place div on top
-		$("#divBody").css("top", "0px");		
 		$("#menuPanel").css({"display" : "none"});
 		// maximize div
-		$("#divTabpanel").css( {"width" : "100%",
-								"top" : "36px",
-								"height" : "100%",
-								"position" : "absolute",
-								"marginLeft" : "0px"});
+		$("#divTabpanel").css({"margin-left" : "0px"});
 		$('#btn_size').attr("title", MSG['btn_size_min']);
 		$('#divTitre').addClass("hidden");
 		$('#divTitreMenu').removeClass("hidden");
-		$('#divTitreMenu').css( {"background" : "#00969C"});
 		$('#icon_btn_size').removeClass('glyphicon-resize-full');
 		$('#icon_btn_size').addClass('glyphicon-resize-small');
 	} else {
-		$('#btn_size').attr("title", MSG['btn_size_max']);
 		$("#menuPanel").css({"display" : ""});
+		// minimize div
+		$("#divTabpanel").css({"margin-left" : "205px"});
+		$('#btn_size').attr("title", MSG['btn_size_max']);
 		$('#divTitre').removeClass("hidden");
 		$('#divTitreMenu').addClass("hidden");
 		$('#icon_btn_size').addClass('glyphicon-resize-full');
@@ -982,9 +977,9 @@ BlocklyDuino.init = function() {
         $(this).find("span").css("color", "#000000");
     });*/
 	if (window.location.protocol == 'http:') {
-					$("#btn_create_example").attr("href","./examples/examples.php?lang=" + Code.LANG);
+					$("#btn_create_example, menu_132").attr("href","./examples/examples.php?lang=" + Code.LANG);
 					} else {
-					$("#btn_create_example").attr("href","./examples/examples.html?lang=" + Code.LANG);	
+					$("#btn_create_example, menu_132").attr("href","./examples/examples.html?lang=" + Code.LANG);	
 					}
 	
 	/*debug from Codebender or from Python server*/
@@ -1088,11 +1083,11 @@ BlocklyDuino.firstBlocklyArduino = function() {
 		$('#firstModal').addClass('draggable');
 		//$('#videoFirstModal').prop('src', "https://mediacad.ac-nantes.fr/m/2047/d/i"); 
 		//$('#firstModal').modal('show');
-		$('#btn_videos').on('click', function() {
+		$('#btn_videos, #menu_51').on('click', function() {
 			window.open('http://info.technologiescollege.fr/wiki/doku.php/fr/arduino/blockly_rduino/tutosvideos');
 		});
 	} else {
-		$('#btn_videos').on('click', function() {
+		$('#btn_videos, #menu_51').on('click', function() {
 			$('#videoModal').css("z-index", 1050);
 			$('#videoModal').css("display", "inline-block");
 			$('#videoModal1').prop('src', "https://mediacad.ac-nantes.fr/m/2018/d/i");

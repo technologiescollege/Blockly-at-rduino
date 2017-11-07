@@ -66,3 +66,19 @@ Blockly.Arduino['array_modify'] = function(block) {
   var code = value_name+'['+value_indice+'] = '+value_value+';\n';
   return code;
 };
+
+Blockly.Arduino['creer_tableau'] = function(block) {
+    var argument0 = Blockly.Arduino.valueToCode(block, 'contenu', Blockly.Arduino.ORDER_ASSIGNMENT) ;
+	var varName = Blockly.Arduino.variableDB_.getName(block.getFieldValue('VAR'), Blockly.Variables.NAME_TYPE);
+	var typeBlock = Blockly.Arduino.getArduinoType_(Blockly.Types[block.getFieldValue('type')]);
+	var menu = block.getFieldValue("choix");
+	switch (menu) {
+        case "c1":
+            Blockly.Arduino.variables_[varName] = typeBlock + ' ' + varName + '['+argument0+'] ;';
+			break;
+        case "c2":
+            Blockly.Arduino.variables_[varName] = typeBlock + ' ' + varName + '[] = '+argument0+' ;';
+			break;
+	}
+	return '';
+};
