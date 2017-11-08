@@ -1356,8 +1356,8 @@ Blockly.Msg.APDS9960_BLUE_TITLE = "code RVB de Bleu (0~255)";
 Blockly.Msg.APDS9960_COLORSENSOR_TOOLTIP = "renvoie une valeur codée sur 10 bits pour le mélange RVB classique";
 
 //******** pbra 20160613 L298N
-Blockly.Msg.ROBOTS_MOTORS_L298N_MOTOR_TITLE = "L298N Contrôleur Moteur";
-Blockly.Msg.ROBOTS_MOTORS_L298N_MOTOR_INIT_TITLE = "L298N Contrôleur Moteur Init";
+Blockly.Msg.ROBOTS_MOTORS_L298N_MOTOR_TITLE = "L298N contrôleur moteur";
+Blockly.Msg.ROBOTS_MOTORS_L298N_MOTOR_INIT_TITLE = "L298N Contrôleur Moteur Initialisation";
 Blockly.Msg.ROBOTS_MOTORS_L298N_ID = "Identifiant"
 Blockly.Msg.ROBOTS_MOTORS_L298N_MOTOR_SPEED = "Vitesse";
 Blockly.Msg.ROBOTS_MOTORS_L298N_MOTOR_PIN_IN1 = "Broche IN1 (direction)";

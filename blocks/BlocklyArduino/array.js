@@ -259,7 +259,7 @@ Blockly.Blocks["creer_tableau"]={init: function(){
 	this.setInputsInline(false);
 	this.setPreviousStatement(true, null);
 	this.setNextStatement(true, null);
-	this.setColour("#804000");
+	this.setColour(Blockly.Blocks.array.HUE);
 	this.setTooltip(Blockly.Msg.ARRAY_GETINDEX_TOOLTIP2);
 	this.setHelpUrl(Blockly.Msg.HELPURL);}
 };

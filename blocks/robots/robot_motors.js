@@ -271,7 +271,6 @@ Blockly.Blocks['l298n_motor_init'] = {
         .appendField(new Blockly.FieldTextInput('0',  Blockly.Arduino.pinDualValidator), 'PIN-IN2')
 	    .setAlign(Blockly.ALIGN_RIGHT);
 	this.setInputsInline(false);
-	//	this.setInputsInline(true);
 	this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
 	this.setTooltip(Blockly.Msg.ROBOTS_MOTORS_L298N_INIT_TOOLTIP);
@@ -302,7 +301,6 @@ Blockly.Blocks['l298n_motor'] = {
         .setAlign(Blockly.ALIGN_RIGHT)
         .appendField(Blockly.Msg.ROBOTS_MOTORS_L298N_MOTOR_SPEED);
 	this.setInputsInline(false);
-	//	this.setInputsInline(true);
 	this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
 	this.setTooltip(Blockly.Msg.ROBOTS_MOTORS_L298N_TOOLTIP);
