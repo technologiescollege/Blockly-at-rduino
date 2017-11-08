@@ -39,21 +39,23 @@ body {
 	-ms-transform: rotate(90deg);
 }
 
-#logo_Titre {
+#header {
+	background: #00969C;
 	height: 36px;
-	left: 0px;
-	vertical-align: top;
-	position: fixed;
+}
+
+#logo_Titre {
 	background: #FFFFFF;
+	float: left;
+}
+
+#header_titres {
+	margin-left: 205px;
+	position: absolute;
 }
 
 #divTitre, #divTitreMenu {
-	height: 36px;
-	width: 100%;
-	vertical-align: top;
-	position: absolute;
-	margin-left: 205px;
-	background: #00969C;
+	float: left;
 }
 
 #divTitre p {
@@ -61,9 +63,16 @@ body {
 	font-family: "OpenDyslexic";
 }
 
-#btn_levels {
-	position: absolute;
-	left: 5px;
+#div_toolboxes {
+	float: left;
+	margin-top: 5px;
+	margin-left: 5px;
+}
+
+#tools_blocks {
+	float: right;
+	margin-top: 5px;
+	margin-right: 10px;
 }
 
 #divBody {
@@ -183,7 +192,7 @@ html[dir="RTL"] .navbar-right {
 
 .divTabpanel-ver {
     height: 100%;
-    width: 100%;
+	margin-left:205px;
 }
 
 html[dir="RTL"] .divTabpanel-ver {
@@ -300,91 +309,9 @@ html[dir="RTL"] #languageMenu {
 	right: auto;
 }
 
-#content_area,#content_blocks,#content_term,#content_xml {
+#content_area,#content_blocks,#content_term,#content_xml,#content_supervision {
 	height: 100%;
 	width: 100%;
-}
-
-#btn_size {
-	position: absolute;
-	right: 15px;
-	top: 0px;
-	z-index: 10;
-}
-
-html[dir="RTL"] #btn_size {
-	left: 15px;
-}
-
-#tools_blocks {
-	position: absolute;
-	right: 0px;
-	top: 5px;
-	z-index: 10;
-}
-
-#btn_blocs_picture {
-	position: absolute;
-	right: 150px;
-	top: 0px;
-	z-index: 10;
-}
-
-#btn_undo {
-	position: absolute;
-	right: 375px;
-	top: 0px;
-	z-index: 10;
-}
-
-#btn_redo {
-	position: absolute;
-	right: 330px;
-	top: 0px;
-	z-index: 10;
-}
-
-#btn_block_capture {
-	position: absolute;
-	right: 285px;
-	top: 0px;
-	z-index: 10;
-}
-
-#btn_blocs_picture_mini {
-	position: absolute;
-	right: 240px;
-	top: 0px;
-	z-index: 10;
-}
-
-#btn_blocs_picture_maxi {
-	position: absolute;
-	right: 195px;
-	top: 0px;
-	z-index: 10;
-}
-
-#btn_preview {
-	position: absolute;
-	right: 60px;
-	top: 0px;
-	z-index: 10;
-}
-
-html[dir="RTL"] #btn_preview {
-    left: 60px;
-}
-
-#btn_inline {
-    position: absolute;
-    right: 105px;
-    top: 0px;
-	z-index: 10;
-}
-
-html[dir="RTL"] #btn_inline {
-    left: 105px;
 }
 
 #toggle {

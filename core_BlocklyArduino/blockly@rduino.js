@@ -457,73 +457,44 @@ BlocklyDuino.bindFunctions = function() {
 	
 	//menu déroulant
 	$('#toolboxes').on("change", BlocklyDuino.changeToolboxDefinition);
+		
 	//bouton de niveaux
-	$('#toolbox_algo').on("click", function() {
+	$('#toolbox_algo, #menu_420').on("click", function(e) {
+		e.preventDefault();
 		document.getElementById("toolboxes").options.selectedIndex = 1;
 		BlocklyDuino.changeToolboxDefinition();
-		$(this).addClass("active");
-		$('#toolbox_arduino_1').removeClass("active");
-		$('#toolbox_arduino_2').removeClass("active");
-		$('#toolbox_arduino_3').removeClass("active");
-		$('#toolbox_arduino_4').removeClass("active");
-		$('#toolbox_arduino_all').removeClass("active");
-	});
-	$('#toolbox_arduino_1').on("click", function() {
-		document.getElementById("toolboxes").options.selectedIndex = 2;
-		BlocklyDuino.changeToolboxDefinition();
-		$(this).addClass("active");
-		$('#toolbox_algo').removeClass("active");
-		$('#toolbox_arduino_2').removeClass("active");
-		$('#toolbox_arduino_3').removeClass("active");
-		$('#toolbox_arduino_4').removeClass("active");
-		$('#toolbox_arduino_all').removeClass("active");
-	});
-	$('#toolbox_arduino_2').on("click", function() {
-		document.getElementById("toolboxes").options.selectedIndex = 3;
-		BlocklyDuino.changeToolboxDefinition();
-		$(this).addClass("active");
-		$('#toolbox_arduino_1').removeClass("active");
-		$('#toolbox_algo').removeClass("active");
-		$('#toolbox_arduino_3').removeClass("active");
-		$('#toolbox_arduino_4').removeClass("active");
-		$('#toolbox_arduino_all').removeClass("active");
-	});
-	$('#toolbox_arduino_3').on("click", function() {
-		document.getElementById("toolboxes").options.selectedIndex = 4;
-		BlocklyDuino.changeToolboxDefinition();
-		$(this).addClass("active");
-		$('#toolbox_arduino_1').removeClass("active");
-		$('#toolbox_arduino_2').removeClass("active");
-		$('#toolbox_algo').removeClass("active");
-		$('#toolbox_arduino_4').removeClass("active");
-		$('#toolbox_arduino_all').removeClass("active");
-	});
-	$('#toolbox_arduino_4').on("click", function() {
-		document.getElementById("toolboxes").options.selectedIndex = 5;
-		BlocklyDuino.changeToolboxDefinition();
-		$(this).addClass("active");
-		$('#toolbox_arduino_1').removeClass("active");
-		$('#toolbox_arduino_2').removeClass("active");
-		$('#toolbox_arduino_3').removeClass("active");
-		$('#toolbox_algo').removeClass("active");
-		$('#toolbox_arduino_all').removeClass("active");
-	});
-	$('#toolbox_arduino_all').on("click", function() {
-		document.getElementById("toolboxes").options.selectedIndex = 6;
-		BlocklyDuino.changeToolboxDefinition();
-		$(this).addClass("active");
-		$('#toolbox_arduino_1').removeClass("active");
-		$('#toolbox_arduino_2').removeClass("active");
-		$('#toolbox_arduino_3').removeClass("active");
-		$('#toolbox_arduino_4').removeClass("active");
-		$('#toolbox_algo').removeClass("active");
 	});
 	
-
-	$('#configModal').on('hidden.bs.modal', function(e) {
-		BlocklyDuino.loadToolboxDefinition(BlocklyDuino.selectedToolbox);
+	$('#toolbox_arduino_1, #menu_421').on("click", function(e) {
+		e.preventDefault();
+		document.getElementById("toolboxes").options.selectedIndex = 2;
+		BlocklyDuino.changeToolboxDefinition();
 	});
-
+	
+	$('#toolbox_arduino_2, #menu_422').on("click", function(e) {
+		e.preventDefault();
+		document.getElementById("toolboxes").options.selectedIndex = 3;
+		BlocklyDuino.changeToolboxDefinition();
+	});
+	
+	$('#toolbox_arduino_3, #menu_423').on("click", function(e) {
+		e.preventDefault();
+		document.getElementById("toolboxes").options.selectedIndex = 4;
+		BlocklyDuino.changeToolboxDefinition();
+	});
+	
+	$('#toolbox_arduino_4, #menu_424').on("click", function(e) {
+		e.preventDefault();
+		document.getElementById("toolboxes").options.selectedIndex = 5;
+		BlocklyDuino.changeToolboxDefinition();
+	});
+	
+	$('#toolbox_arduino_all, #menu_429').on("click", function(e) {
+		e.preventDefault();
+		document.getElementById("toolboxes").options.selectedIndex = 6;
+		BlocklyDuino.changeToolboxDefinition();
+	});
+	
 	$('#load').on("change", BlocklyDuino.load);
 	$('#btn_fakeload, #menu_11').on("click", function() {
 		$('#load').click();
@@ -531,6 +502,11 @@ BlocklyDuino.bindFunctions = function() {
 
 	$('#menuPanelBlockly li[id^=tab_]').on("click", function() {
 		BlocklyDuino.selectedTab = $(this).attr('id').substring(4);
+		BlocklyDuino.renderContent();
+	});
+
+	$('#divTitreMenu_menu li[id^=mtab_]').on("click", function() {
+		BlocklyDuino.selectedTab = $(this).attr('id').substring(5);
 		BlocklyDuino.renderContent();
 	});
 
@@ -774,7 +750,15 @@ BlocklyDuino.loadToolboxDefinition = function(toolboxFile) {
 	}
 
 	$("#toolboxes").val(toolboxFile);
-	
+	// update buttons levels
+	$('#toolbox_algo').removeClass("active");
+	$('#toolbox_arduino_1').removeClass("active");
+	$('#toolbox_arduino_2').removeClass("active");
+	$('#toolbox_arduino_3').removeClass("active");
+	$('#toolbox_arduino_4').removeClass("active");
+	$('#toolbox_arduino_all').removeClass("active");
+	$('#'+toolboxFile).addClass("active");
+
 	$.ajax( {
 				type: "GET",
 				url: "./toolbox/" + toolboxFile + ".xml",
@@ -840,6 +824,7 @@ BlocklyDuino.init = function() {
 		$("#divTabpanel").css({"margin-left" : "0px"});
 		$('#btn_size').attr("title", MSG['btn_size_min']);
 		$('#divTitre').addClass("hidden");
+//		$('#div_toolboxes').addClass("hidden");
 		$('#divTitreMenu').removeClass("hidden");
 		$('#icon_btn_size').removeClass('glyphicon-resize-full');
 		$('#icon_btn_size').addClass('glyphicon-resize-small');
@@ -849,6 +834,7 @@ BlocklyDuino.init = function() {
 		$("#divTabpanel").css({"margin-left" : "205px"});
 		$('#btn_size').attr("title", MSG['btn_size_max']);
 		$('#divTitre').removeClass("hidden");
+//		$('#div_toolboxes').removeClass("hidden");
 		$('#divTitreMenu').addClass("hidden");
 		$('#icon_btn_size').addClass('glyphicon-resize-full');
 		$('#icon_btn_size').removeClass('glyphicon-resize-small');
