@@ -127,6 +127,7 @@ BlocklyDuino.toggleWeb = function() {
 		$("#btn_wiring").removeClass('hidden');
 		$("#btn_Help_Online").removeClass('hidden');
 		$("#tab_term").removeClass('hidden');
+		$("#menu_25").removeClass('hidden');
 		$("#content_term").removeClass('hidden');
 		window.localStorage.webAccess = "true";
 		if (BlocklyDuino.pluginCodebender_found) $('#toggle-LocalCodebender').bootstrapToggle('enable');
@@ -138,6 +139,7 @@ BlocklyDuino.toggleWeb = function() {
 		$("#btn_wiring").addClass('hidden');
 		$("#btn_Help_Online").addClass('hidden');
 		$("#tab_term").addClass('hidden');
+		$("#menu_25").addClass('hidden');
 		$("#content_term").addClass('hidden');
 		window.localStorage.webAccess = "false";
 		$('#toggle-LocalCodebender').bootstrapToggle('on');

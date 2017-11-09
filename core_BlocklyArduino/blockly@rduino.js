@@ -824,7 +824,7 @@ BlocklyDuino.init = function() {
 		$("#divTabpanel").css({"margin-left" : "0px"});
 		$('#btn_size').attr("title", MSG['btn_size_min']);
 		$('#divTitre').addClass("hidden");
-//		$('#div_toolboxes').addClass("hidden");
+		$('#div_toolboxes').addClass("hidden");
 		$('#divTitreMenu').removeClass("hidden");
 		$('#icon_btn_size').removeClass('glyphicon-resize-full');
 		$('#icon_btn_size').addClass('glyphicon-resize-small');
@@ -834,7 +834,7 @@ BlocklyDuino.init = function() {
 		$("#divTabpanel").css({"margin-left" : "205px"});
 		$('#btn_size').attr("title", MSG['btn_size_max']);
 		$('#divTitre').removeClass("hidden");
-//		$('#div_toolboxes').removeClass("hidden");
+		$('#div_toolboxes').removeClass("hidden");
 		$('#divTitreMenu').addClass("hidden");
 		$('#icon_btn_size').addClass('glyphicon-resize-full');
 		$('#icon_btn_size').removeClass('glyphicon-resize-small');

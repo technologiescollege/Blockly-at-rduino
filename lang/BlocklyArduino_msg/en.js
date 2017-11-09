@@ -134,7 +134,7 @@ var MSG = {
   span_menu_24:"code",
   span_menu_25:"console",
   span_menu_3:"tools",
-  span_menu_31:"conversions...",
+  span_menu_31:"conversions",
   span_menu_32:"colors",
   span_menu_4:"options",
   span_menu_41:"global configuration",
