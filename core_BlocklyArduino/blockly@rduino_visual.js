@@ -306,6 +306,15 @@ BlocklyDuino.tailleFonte = function(taille) {
 	document.getElementsByClass("mod")[0].style.fontSize = taille + "[b]px[/b]";	
 };
 
+ 
+BlocklyDuino.miniMenuPanel = function() {
+	//$('#menuPanel').css({"width" : '45px'});
+	$(".btn").css({"color" : "#000000", "background-color" : "#FFFFFF"});
+	$(".nav-pills").css({"color" : "#000000", "background-color" : "#FFFFFF"});	
+	$("#header").css({"color" : "#000000", "background-color" : "#FFFFFF"});
+	$(".submenu").css({"color" : "#000000", "background-color" : "#FFFFFF"});
+};
+
 /**
  * Try to take a screen capture of all blocks on workspace
  * Thanks to fontaine.jp from forum http://blockly.technologiescollege.fr/forum/index.php/topic,128.msg635.html#new

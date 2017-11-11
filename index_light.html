@@ -222,7 +222,7 @@
 	<div id="divBody">
 		<div id="menuPanel">
 			<div id="menuPanelConfig">
-				<button id="btn_configGlobal" class="btn btn-danger btn-block text-left" data-toggle="modal" data-target="#configModalGlobal">
+				<button id="btn_configGlobal" class="btn btn-danger btn-block" data-toggle="modal" data-target="#configModalGlobal">
 					<span class="glyphicon glyphicon-alert"> </span>
 					<span id="configGlobalLabel"> </span>
 				</button>
@@ -231,11 +231,11 @@
 						<img id="arduino_card_miniPicture" />
 					</a>
 				</div>
-				<button id="btn_config" class="text-left btn btn-warning btn-block " data-toggle="modal" data-target="#configModal">
+				<button id="btn_config" class="btn btn-warning btn-block " data-toggle="modal" data-target="#configModal">
 					<span class="fa fa-cogs"> </span>
 					<span id="span_config"> </span>
 				</button>
-				<a href="#" id="btn_config_kit" target="_blank" class="text-left btn btn-warning btn-block hidden" role='button'>
+				<a href="#" id="btn_config_kit" target="_blank" class="btn btn-warning btn-block hidden" role='button'>
 					<span class="glyphicon glyphicon-th-list"> </span>
 					<span id="span_config_kit"> </span>
 				</a>
@@ -277,14 +277,12 @@
 				</ul>
 			</div>
 			<div id="menuPanelFiles">
-				<a id="btn_saveXML" class='btn btn-success btn-block text-left' href="#" role='button'>
+				<a id="btn_saveXML" class='btn btn-success btn-block' href="#" role='button'>
 					<span class="fa fa-cloud-download"></span>
-					<!--span class="glyphicon glyphicon-cloud-download"></span-->
 					<span id="span_saveXML"> </span>
 				 </a>
 				<button id="btn_fakeload" class="btn btn-success btn-block">
 					<span class="fa fa-cloud-upload"></span>
-					<!--span class="glyphicon glyphicon-cloud-upload"></span-->
 					<span id="span_fakeload"> </span>
 				</button>
 				<input type="file" id="load" style="display: none;" />
@@ -292,25 +290,28 @@
 					<span class="glyphicon glyphicon-list-alt"> </span>
 					<span id="span_example"> </span>
 				</button>
-				<a id="btn_create_example" class="btn btn-info btn-block" href="" target="_blank">
+				<a id="btn_create_example" class="btn btn-info btn-block" href="#" target="_blank" role='button'>
 					<span class="glyphicon glyphicon-wrench"> </span>
 					<span id="span_create_example"> </span>
 				</a>
 			</div> 
 			<div id="div_about">
-				<button id="btn_about" type="button" class="btn btn-default btn-sm" data-toggle="modal" data-target="#aboutModal" width="130px">
-					<b><span id="span_about"> </span></b>
+				<button id="btn_about" type="button" class="btn btn-default btn-sm btn-success" data-toggle="modal" data-target="#aboutModal">
+					<span id="span_about"> </span>
 					<span class="glyphicon glyphicon-user"></span>		
+				</button>
+				<button id="btn_miniMenuPanel" class="btn btn-default" >
+					<span class="glyphicon glyphicon-step-backward"> </span>		
 				</button>
 			</div>
 			<div id="div_accessibility_button">
-				<a href="./index.html" id="btn_reset" class="btn btn-danger text-left">
+				<a href="./index_light.html" id="btn_reset" class="btn btn-danger">
 					   <span class="glyphicon glyphicon-off"> </span>
 				</a>
-				<button id="btn_font" class="btn btn-warning text-left">
+				<button id="btn_font" class="btn btn-warning">
 				   <span class="glyphicon glyphicon-text-height"> </span>
 				</button>
-				<button id="btn_colors" class="btn btn-warning text-left jscolor {valueElement:null,value:'F0AD4E'}" onchange="update(this.jscolor)">
+				<button id="btn_colors" class="btn btn-warning jscolor {valueElement:null,value:'F0AD4E'}" onchange="update(this.jscolor)">
 				   <span class="glyphicon glyphicon-tint"> </span>
 				</button>
 				<script>
@@ -321,7 +322,7 @@
 				</script>
 			</div>
 			<div id="div_tools_button">
-				<!--button id="btn_wiring" class="text-left btn btn-primary" onclick="openDialog(this)">
+				<!--button id="btn_wiring" class="btn btn-primary" onclick="openDialog(this)">
 					<span class="glyphicon glyphicon-blackboard"></span>
 					<script type="text/javascript">
 						function openDialog() {
@@ -339,10 +340,10 @@
 						}
 					</script>
 				</button-->
-				<button id="btn_RGB" class="btn btn-primary text-left">
+				<button id="btn_RGB" class="btn btn-primary">
 				   <span class="glyphicon glyphicon-th"> </span>
 				</button>
-				<button id="btn_convert" class="btn btn-primary text-left">
+				<button id="btn_convert" class="btn btn-primary">
 				   <span class="glyphicon glyphicon-superscript"> </span>
 			   </button>
 			</div>

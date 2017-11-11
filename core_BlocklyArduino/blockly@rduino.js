@@ -50,10 +50,8 @@ BlocklyDuino.renderContent = function() {
 		// performed an incomplete rendering due to Blockly being invisible. Rerender.
 		BlocklyDuino.workspace.render();
 		$(".blocklyTreeSeparator").removeAttr("style");
-//		BlocklyDuino.workspace.setVisible(true);
 		$(".blocklyToolboxDiv").show();
 	} else {
-//		BlocklyDuino.workspace.setVisible(false);
 		$(".blocklyToolboxDiv").hide();
 		switch (content.prop('id')) {
 		case 'content_xml':
@@ -509,6 +507,8 @@ BlocklyDuino.bindFunctions = function() {
 		BlocklyDuino.selectedTab = $(this).attr('id').substring(5);
 		BlocklyDuino.renderContent();
 	});
+
+	$('#btn_miniMenuPanel, #menu_441').on("click", BlocklyDuino.miniMenuPanel);
 
 	$('#btn_size').on("click", BlocklyDuino.changeSize);
 	$('#btn_config').on("click", BlocklyDuino.openConfigToolbox);

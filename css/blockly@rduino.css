@@ -165,6 +165,9 @@ html[dir="RTL"] .menuPanel-ver {
     position: absolute;
     text-align: center;
 }
+#btn_about {
+    width: 83px;
+}
 
 .div_help_button-hor {
     padding-left: 0px;
@@ -186,7 +189,7 @@ html[dir="RTL"] .navbar-right {
 }
 
 .btn_ver {
-	text-align : left;
+	text-align : left !important;
 	margin: 5px 0;
 }
 
@@ -438,6 +441,10 @@ html[dir="RTL"] #select_all {
 
 .blocklyToolboxDiv .blocklyTreeRoot [role="treeitem"] {
 	position: relative;
+}
+
+.blocklyToolboxDiv_hide .blocklyTreeRoot_hide [role="treeitem"] {
+	position: fixed;
 }
 
 .blocklyToolboxDiv .blocklyTreeRoot [role="treeitem"]	.blocklyTreeRow {
