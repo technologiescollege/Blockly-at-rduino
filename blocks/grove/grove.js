@@ -138,6 +138,20 @@ Blockly.Blocks['grove_rotary_angle'] = {
   }
 };
 
+Blockly.Blocks['grove_ldr'] = {
+  init: function() {
+    this.setColour(Blockly.Blocks.grove.HUE);
+	this.setHelpUrl(Blockly.Msg.GROVE_INOUT_LDR_HELPURL);
+    this.appendDummyInput()
+        .appendField(Blockly.Msg.GROVE_INOUT_LDR_TEXT)
+        .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/grove/GROVE_LDR.jpg', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize))
+        .appendField(Blockly.Msg.GROVE_INOUT_LDR_INPUT)
+        .appendField(new Blockly.FieldTextInput('',  Blockly.Arduino.pinAnalogValidator), 'PIN');
+    this.setOutput(true, 'Number');
+    this.setTooltip(Blockly.Msg.GROVE_INOUT_LDR_TOOLTIP);
+  }
+};
+
 Blockly.Blocks['grove_tilt_switch'] = {
   init: function() {
     this.setColour(Blockly.Blocks.grove.HUE);

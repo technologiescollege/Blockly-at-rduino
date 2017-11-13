@@ -468,6 +468,10 @@ Blockly.Msg.GROVE_INOUT_ROT_ANGLE_HELPURL = "http://www.seeedstudio.com/wiki/ind
 Blockly.Msg.GROVE_INOUT_ROT_ANGLE_TEXT = "valeur du potentiomètre";
 Blockly.Msg.GROVE_INOUT_ROT_ANGLE_INPUT = "sur la broche";
 Blockly.Msg.GROVE_INOUT_ROT_ANGLE_TOOLTIP = "Lecture analogique dont le résultat varie entre 0 et 1023";
+Blockly.Msg.GROVE_INOUT_LDR_HELPURL = "https://www.seeedstudio.com/Grove-Light-Sensor-p-746.html";
+Blockly.Msg.GROVE_INOUT_LDR_TEXT = "valeur de la LDR";
+Blockly.Msg.GROVE_INOUT_LDR_INPUT = "sur la broche";
+Blockly.Msg.GROVE_INOUT_LDR_TOOLTIP = "Lecture analogique dont le résultat varie entre 0 et 1023";
 Blockly.Msg.GROVE_INOUT_TILT_HELPURL = "http://www.seeedstudio.com/wiki/index.php?title=GROVE_-_Starter_Bundle_V1.0b#Tilt_switch";
 Blockly.Msg.GROVE_INOUT_TILT_TEXT = "l'état de l'interrupteur à bascule";
 Blockly.Msg.GROVE_INOUT_TILT_INPUT = "sur la broche";
@@ -859,11 +863,22 @@ Blockly.Msg.TECHNOZONE51_TEXT163 = "envoyer sur le bluetooth le message ";
 Blockly.Msg.TECHNOZONE51_TEXT164 = "Envoyer un message sur la liaison Bluetooth (réf : BT1)";
 Blockly.Msg.TECHNOZONE51_TEXT165 = "connecté aux broches";
 Blockly.Msg.TECHNOZONE51_TEXT166 = "codes de la phrase à prononcer : ";
-Blockly.Msg.TECHNOZONE51_TEXT167 = "Synthétiseur vocal";
+Blockly.Msg.TECHNOZONE51_TEXT167 = "synthétiseur vocal";
 Blockly.Msg.TECHNOZONE51_TEXT168 = "(restrictions d'usage : clic droit -> aide)";
 Blockly.Msg.TECHNOZONE51_TEXT169 = "vitesse [0..1023] :";
 Blockly.Msg.TECHNOZONE51_TEXT170 = "hauteur [0..1023] :";
 Blockly.Msg.TECHNOZONE51_TEXT171 = "distortion [0..1023] :";
+
+Blockly.Msg.TECHNOZONE51_TEXT172 = "alarme piéton";
+Blockly.Msg.TECHNOZONE51_TEXT173 = "feu rouge piéton";
+Blockly.Msg.TECHNOZONE51_TEXT174 = "feu vert piéton";
+Blockly.Msg.TECHNOZONE51_TEXT175 = "sur la voie 1";
+Blockly.Msg.TECHNOZONE51_TEXT176 = "sur la voie 2";
+Blockly.Msg.TECHNOZONE51_TEXT177 = "appel piéton voie 1";
+Blockly.Msg.TECHNOZONE51_TEXT178 = "appel piéton voie 2";
+Blockly.Msg.TECHNOZONE51_TEXT179 = "le capteur ILS";
+Blockly.Msg.TECHNOZONE51_TEXT180 = "le capteur LDR";
+Blockly.Msg.TECHNOZONE51_TEXT181 = "le capteur IR";
 
 //added july 17th 2015
 Blockly.Msg.BQ_PIN = "sur la broche";

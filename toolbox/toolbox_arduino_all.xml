@@ -1441,6 +1441,7 @@
 		<category name="CAT_GROVE_IN" colour="#8ec31f">
 			<block type="grove_button"></block>
 			<block type="grove_rotary_angle"></block>
+			<block type="grove_ldr"></block>	
 			<block type="grove_tilt_switch"></block>
 			<block type="grove_temporature_sensor"></block>
 			<block type="grove_moisture_sensor"></block>

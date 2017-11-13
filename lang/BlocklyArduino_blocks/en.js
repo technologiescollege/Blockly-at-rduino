@@ -438,6 +438,10 @@ Blockly.Msg.GROVE_INOUT_ROT_ANGLE_HELPURL = "http://www.seeedstudio.com/wiki/ind
 Blockly.Msg.GROVE_INOUT_ROT_ANGLE_TEXT = "Rotary Angle";
 Blockly.Msg.GROVE_INOUT_ROT_ANGLE_INPUT = "PIN#";
 Blockly.Msg.GROVE_INOUT_ROT_ANGLE_TOOLTIP = "Analog input between 0 and 255";
+Blockly.Msg.GROVE_INOUT_LDR_HELPURL = "https://www.seeedstudio.com/Grove-Light-Sensor-p-746.html";
+Blockly.Msg.GROVE_INOUT_LDR_TEXT = "LDR Value";
+Blockly.Msg.GROVE_INOUT_LDR_INPUT = "PIN#";
+Blockly.Msg.GROVE_INOUT_LDR_TOOLTIP = "Analog input between 0 and 255";
 Blockly.Msg.GROVE_INOUT_TILT_HELPURL = "http://www.seeedstudio.com/wiki/index.php?title=GROVE_-_Starter_Bundle_V1.0b#Tilt_switch";
 Blockly.Msg.GROVE_INOUT_TILT_TEXT = "Tilt Switch";
 Blockly.Msg.GROVE_INOUT_TILT_INPUT = "PIN#";
@@ -833,6 +837,17 @@ Blockly.Msg.TECHNOZONE51_TEXT168 = "(information : right clic -> help)";
 Blockly.Msg.TECHNOZONE51_TEXT169 = "speed [0..1023] :";
 Blockly.Msg.TECHNOZONE51_TEXT170 = "level [0..1023] :";
 Blockly.Msg.TECHNOZONE51_TEXT171 = "distortion [0..1023] :";
+
+Blockly.Msg.TECHNOZONE51_TEXT172 = "pedestrian alarm";
+Blockly.Msg.TECHNOZONE51_TEXT173 = "pedestrian red traffic light";
+Blockly.Msg.TECHNOZONE51_TEXT174 = "pedestrian green traffic light";
+Blockly.Msg.TECHNOZONE51_TEXT175 = "on the way 1";
+Blockly.Msg.TECHNOZONE51_TEXT176 = "on the way 2";
+Blockly.Msg.TECHNOZONE51_TEXT177 = "button call pedestrian way 1";
+Blockly.Msg.TECHNOZONE51_TEXT178 = "button call pedestrian way 2";
+Blockly.Msg.TECHNOZONE51_TEXT179 = "ILS sensor";
+Blockly.Msg.TECHNOZONE51_TEXT180 = "LDR sensor";
+Blockly.Msg.TECHNOZONE51_TEXT181 = "IR sensor";
 
 //added july 17th 2015
 Blockly.Msg.BQ_PIN = "Pin #";

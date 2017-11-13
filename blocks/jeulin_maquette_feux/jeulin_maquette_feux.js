@@ -14,7 +14,7 @@ Blockly.Blocks['jeulin_appel_pieton_voie1'] = {
     this.setColour(Blockly.Blocks.jeulin_appel_pieton.HUE);
     this.setHelpUrl('http://www.techno-zone-51.fr/dokuwiki2/doku.php?id=documentation:btn1');
 	this.appendDummyInput("")
-        .appendField(Blockly.Msg.TECHNOZONE51_TEXT183)
+        .appendField(Blockly.Msg.TECHNOZONE51_TEXT177)
         .appendField(new Blockly.FieldImage("blocks/jeulin_maquette_feux/appel_pieton_voie1.jpg", Blockly.Arduino.imageSize, Blockly.Arduino.imageSize))
     this.appendValueInput("PIN")
 		.setCheck('Number')
@@ -35,7 +35,7 @@ Blockly.Blocks['jeulin_appel_pieton_voie2'] = {
     this.setColour(Blockly.Blocks.jeulin_appel_pieton.HUE);
     this.setHelpUrl('http://www.techno-zone-51.fr/dokuwiki2/doku.php?id=documentation:btn1');
 	this.appendDummyInput("")
-        .appendField(Blockly.Msg.TECHNOZONE51_TEXT184)
+        .appendField(Blockly.Msg.TECHNOZONE51_TEXT178)
         .appendField(new Blockly.FieldImage("blocks/jeulin_maquette_feux/appel_pieton_voie2.jpg", Blockly.Arduino.imageSize, Blockly.Arduino.imageSize))
     this.appendValueInput("PIN")
 		.setCheck('Number')
@@ -56,7 +56,7 @@ Blockly.Blocks['jeulin_detection_magnetique_ils1'] = {
     this.setColour(Blockly.Blocks.jeulin_appel_pieton.HUE);
 	this.setHelpUrl('http://www.techno-zone-51.fr/dokuwiki2/doku.php?id=documentation:ils1');
     this.appendDummyInput("")
-        .appendField(Blockly.Msg.TECHNOZONE51_TEXT185)
+        .appendField(Blockly.Msg.TECHNOZONE51_TEXT179)
         .appendField(new Blockly.FieldImage("blocks/jeulin_maquette_feux/detection_magnetique_ils1.jpg", Blockly.Arduino.imageSize, Blockly.Arduino.imageSize))
     this.appendValueInput("PIN")
 		.setCheck('Number')
@@ -77,7 +77,7 @@ Blockly.Blocks['jeulin_detection_infrarouge_bari1'] = {
     this.setColour(Blockly.Blocks.jeulin_appel_pieton.HUE);
 	this.setHelpUrl('http://www.techno-zone-51.fr/dokuwiki2/doku.php?id=documentation:bari1');
     this.appendDummyInput("")
-        .appendField(Blockly.Msg.TECHNOZONE51_TEXT186)
+        .appendField(Blockly.Msg.TECHNOZONE51_TEXT181)
         .appendField(new Blockly.FieldImage("blocks/jeulin_maquette_feux/detection_infrarouge_bari1.jpg", Blockly.Arduino.imageSize, Blockly.Arduino.imageSize))
     this.appendValueInput("PIN")
 		.setCheck('Number')
@@ -98,7 +98,7 @@ Blockly.Blocks['jeulin_detection_luminosite_ldr1'] = {
     this.setColour(Blockly.Blocks.jeulin_appel_pieton.HUE);
 	this.setHelpUrl('http://www.techno-zone-51.fr/dokuwiki2/doku.php?id=documentation:ldr1');
     this.appendDummyInput("")
-        .appendField(Blockly.Msg.TECHNOZONE51_TEXT187)
+        .appendField(Blockly.Msg.TECHNOZONE51_TEXT180)
         .appendField(new Blockly.FieldImage("blocks/jeulin_maquette_feux/detection_luminosite_ldr1.jpg", Blockly.Arduino.imageSize, Blockly.Arduino.imageSize))
     this.appendValueInput("PIN")
 		.setCheck('Number')
@@ -135,7 +135,7 @@ Blockly.Blocks['jeulin_feux_voie1_led1yellow'] = {
 	this.setHelpUrl('http://www.techno-zone-51.fr/dokuwiki2/doku.php?id=documentation:led1');
     this.appendDummyInput("")
         .appendField(new Blockly.FieldDropdown([[Blockly.Msg.TECHNOZONE51_TEXT33, "HIGH"], [Blockly.Msg.TECHNOZONE51_TEXT34, "LOW"]]), "STAT")
-        .appendField(Blockly.Msg.TECHNOZONE51_TEXT176)
+        .appendField(Blockly.Msg.TECHNOZONE51_TEXT175)
         .appendField(new Blockly.FieldImage("blocks/jeulin_maquette_feux/feux_voie1_led1yellow.jpg", Blockly.Arduino.imageSize, Blockly.Arduino.imageSize))
     this.appendValueInput("PIN")
 		.setCheck('Number')
@@ -154,7 +154,7 @@ Blockly.Blocks['jeulin_feux_voie1_led1green'] = {
 	this.setHelpUrl('http://www.techno-zone-51.fr/dokuwiki2/doku.php?id=documentation:led1');
     this.appendDummyInput("")
         .appendField(new Blockly.FieldDropdown([[Blockly.Msg.TECHNOZONE51_TEXT33, "HIGH"], [Blockly.Msg.TECHNOZONE51_TEXT34, "LOW"]]), "STAT")
-        .appendField(Blockly.Msg.TECHNOZONE51_TEXT177)
+        .appendField(Blockly.Msg.TECHNOZONE51_TEXT175)
         .appendField(new Blockly.FieldImage("blocks/jeulin_maquette_feux/feux_voie1_led1green.jpg", Blockly.Arduino.imageSize, Blockly.Arduino.imageSize))
     this.appendValueInput("PIN")
 		.setCheck('Number')
@@ -173,7 +173,7 @@ Blockly.Blocks['jeulin_feux_voie2_led1red'] = {
 	this.setHelpUrl('http://www.techno-zone-51.fr/dokuwiki2/doku.php?id=documentation:led1');
     this.appendDummyInput("")
         .appendField(new Blockly.FieldDropdown([[Blockly.Msg.TECHNOZONE51_TEXT33, "HIGH"], [Blockly.Msg.TECHNOZONE51_TEXT34, "LOW"]]), "STAT")
-        .appendField(Blockly.Msg.TECHNOZONE51_TEXT178)
+        .appendField(Blockly.Msg.TECHNOZONE51_TEXT176)
         .appendField(new Blockly.FieldImage("blocks/jeulin_maquette_feux/feux_voie2_led1red.jpg", Blockly.Arduino.imageSize, Blockly.Arduino.imageSize))
     this.appendValueInput("PIN")
 		.setCheck('Number')
@@ -192,7 +192,7 @@ Blockly.Blocks['jeulin_feux_voie2_led1yellow'] = {
 	this.setHelpUrl('http://www.techno-zone-51.fr/dokuwiki2/doku.php?id=documentation:led1');
     this.appendDummyInput("")
         .appendField(new Blockly.FieldDropdown([[Blockly.Msg.TECHNOZONE51_TEXT33, "HIGH"], [Blockly.Msg.TECHNOZONE51_TEXT34, "LOW"]]), "STAT")
-        .appendField(Blockly.Msg.TECHNOZONE51_TEXT179)
+        .appendField(Blockly.Msg.TECHNOZONE51_TEXT176)
         .appendField(new Blockly.FieldImage("blocks/jeulin_maquette_feux/feux_voie2_led1yellow.jpg", Blockly.Arduino.imageSize, Blockly.Arduino.imageSize))
     this.appendValueInput("PIN")
 		.setCheck('Number')
@@ -200,7 +200,7 @@ Blockly.Blocks['jeulin_feux_voie2_led1yellow'] = {
         .appendField(Blockly.Msg.TECHNOZONE51_TEXT2)
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    this.setTooltip(Blockly.Msg.TECHNOZONE51_TEXT172);
+    this.setTooltip(Blockly.Msg.TECHNOZONE51_TEXT37);
   }
 };
 
@@ -211,7 +211,7 @@ Blockly.Blocks['jeulin_feux_voie2_led1green'] = {
 	this.setHelpUrl('http://www.techno-zone-51.fr/dokuwiki2/doku.php?id=documentation:led1');
     this.appendDummyInput("")
         .appendField(new Blockly.FieldDropdown([[Blockly.Msg.TECHNOZONE51_TEXT33, "HIGH"], [Blockly.Msg.TECHNOZONE51_TEXT34, "LOW"]]), "STAT")
-        .appendField(Blockly.Msg.TECHNOZONE51_TEXT180)
+        .appendField(Blockly.Msg.TECHNOZONE51_TEXT176)
         .appendField(new Blockly.FieldImage("blocks/jeulin_maquette_feux/feux_voie2_led1green.jpg", Blockly.Arduino.imageSize, Blockly.Arduino.imageSize))
     this.appendValueInput("PIN")
 		.setCheck('Number')
@@ -219,7 +219,7 @@ Blockly.Blocks['jeulin_feux_voie2_led1green'] = {
         .appendField(Blockly.Msg.TECHNOZONE51_TEXT2)
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    this.setTooltip(Blockly.Msg.TECHNOZONE51_TEXT174);
+    this.setTooltip(Blockly.Msg.TECHNOZONE51_TEXT36);
   }
 };
 
@@ -230,7 +230,7 @@ Blockly.Blocks['jeulin_feu_pieton_led1red'] = {
 	this.setHelpUrl('http://www.techno-zone-51.fr/dokuwiki2/doku.php?id=documentation:led1');
     this.appendDummyInput("")
         .appendField(new Blockly.FieldDropdown([[Blockly.Msg.TECHNOZONE51_TEXT33, "HIGH"], [Blockly.Msg.TECHNOZONE51_TEXT34, "LOW"]]), "STAT")
-        .appendField(Blockly.Msg.TECHNOZONE51_TEXT181)
+        .appendField(Blockly.Msg.TECHNOZONE51_TEXT173)
         .appendField(new Blockly.FieldImage("blocks/jeulin_maquette_feux/feu_pieton_led1red.jpg", Blockly.Arduino.imageSize, Blockly.Arduino.imageSize))
     this.appendValueInput("PIN")
 		.setCheck('Number')
@@ -249,7 +249,7 @@ Blockly.Blocks['jeulin_feu_pieton_led1green'] = {
 	this.setHelpUrl('http://www.techno-zone-51.fr/dokuwiki2/doku.php?id=documentation:led1');
     this.appendDummyInput("")
         .appendField(new Blockly.FieldDropdown([[Blockly.Msg.TECHNOZONE51_TEXT33, "HIGH"], [Blockly.Msg.TECHNOZONE51_TEXT34, "LOW"]]), "STAT")
-        .appendField(Blockly.Msg.TECHNOZONE51_TEXT182)
+        .appendField(Blockly.Msg.TECHNOZONE51_TEXT174)
         .appendField(new Blockly.FieldImage("blocks/jeulin_maquette_feux/feu_pieton_led1green.jpg", Blockly.Arduino.imageSize, Blockly.Arduino.imageSize))
     this.appendValueInput("PIN")
 		.setCheck('Number')
@@ -267,7 +267,7 @@ Blockly.Blocks['jeulin_alarme_pieton_buzzer1'] = {
     this.setColour("#646464");
 	this.setHelpUrl('http://www.techno-zone-51.fr/dokuwiki2/doku.php?id=documentation:buzzer1');
     this.appendDummyInput("")
-		.appendField(Blockly.Msg.TECHNOZONE51_TEXT43)
+		.appendField(Blockly.Msg.TECHNOZONE51_TEXT172)
         .appendField(new Blockly.FieldImage("blocks/jeulin_maquette_feux/alarme_pieton_buzzer1.jpg", Blockly.Arduino.imageSize, Blockly.Arduino.imageSize))
     this.appendValueInput("PIN")
 		.setCheck('Number')

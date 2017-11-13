@@ -7,6 +7,9 @@ Blockly.Blocks.grove_button.getBlockType = function() {
 Blockly.Blocks.grove_rotary_angle.getBlockType = function() {
 	return Blockly.Types.NUMBER;
 };
+Blockly.Blocks.grove_ldr.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
 Blockly.Blocks.grove_tilt_switch.getBlockType = function() {
 	return Blockly.Types.BOOLEAN;
 };

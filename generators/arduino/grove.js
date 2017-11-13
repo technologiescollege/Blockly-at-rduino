@@ -54,6 +54,12 @@ Blockly.Arduino.grove_rotary_angle = function() {
   return [code, Blockly.Arduino.ORDER_ATOMIC];
 };
 
+Blockly.Arduino.grove_ldr = function() {
+  var dropdown_pin = this.getFieldValue('PIN');
+  var code = 'analogRead('+dropdown_pin.substring(1,2)+')';
+  return [code, Blockly.Arduino.ORDER_ATOMIC];
+};
+
 Blockly.Arduino.grove_tilt_switch = function() {
   var dropdown_pin = this.getFieldValue('PIN');
   Blockly.Arduino.setups_['setup_tilt_switch_'+dropdown_pin] = 'pinMode('+dropdown_pin+', INPUT);';
