@@ -1,1 +1,4 @@
-13112017
+[release]
+version=2.5
+[update]
+date=20112017
