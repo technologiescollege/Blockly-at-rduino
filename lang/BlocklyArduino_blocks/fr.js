@@ -207,6 +207,7 @@ Blockly.Msg.CAT_BT_ELECTRONICS = "Bluetooth Electronics"; //added 13 november 20
 Blockly.Msg.CAT_ICN = "ICN";  //added 3 january 2017
 
 Blockly.Msg.CAT_LCD_SCREEN = "écrans LCD";  //added 12 february 2017
+Blockly.Msg.CAT_LCD_I2C = " - LCD I2C"; //added 18/08/2017
 Blockly.Msg.CAT_LCD_DFRobot_SHIELD_LCDKEYPAD = " - DFRobot LCD Keypad";
 Blockly.Msg.CAT_LCD_GROVE_LCD = " - écran LCD Grove";
 Blockly.Msg.CAT_LCD_TECHNOZONE_LCD = " - écran LCD TZ51";
@@ -247,6 +248,10 @@ Blockly.Msg.CAT_LCD_I2C = " - écran LCD I²C"; //added 18/08/2017
 Blockly.Msg.CAT_NULL = "libre"; //added 8/10/2017
 
 Blockly.Msg.CAT_HX711 = "capteur de poids"; //added 23/10/2017
+
+Blockly.Msg.CAT_MESURE = "Appareils de mesure"; //added 22/11/2017
+Blockly.Msg.CAT_DS18B20 = "Thermomètre DS18B20"; //added 15/09/2017
+Blockly.Msg.CAT_TSL2561 = "Luxmètre"; //added november 21th 2017
 
 Blockly.Msg.CAT_ACTIONNEURS = "actionneurs"; //added 03/11/2017
 Blockly.Msg.CAT_CAPTEURS = "capteurs";
@@ -1568,6 +1573,14 @@ Blockly.Msg.SPI_SEND_HELPURL = "";
 Blockly.Msg.SPI_RECEIVE_TEXT = "SPI_RECEIVE";
 Blockly.Msg.SPI_RECEIVE_TOOLTIP = "récupère une donnée";
 Blockly.Msg.SPI_RECEIVE_HELPURL = "" ;
+
+//******** light sensor TSL2561
+
+Blockly.Msg.TSL2561_MISC_HELPURL = "https://learn.adafruit.com/tsl2561/wiring-the-tsl2561-sensor";
+Blockly.Msg.TSL2561_READ_TITLE = "l'éclairement en lux";
+Blockly.Msg.TSL2561_READ_TOOLTIP = "Renvoie la valeur de l'éclairement en lux (max 17 000 lux)";
+Blockly.Msg.TSL2561_INIT_TITLE = "Initialisation du capteur TSL2561";
+Blockly.Msg.TSL2561_INIT_TOOLTIP = "par défaut gain nul et temps d'intégration 13 ms";
 
 //**** AUTODUINO ************************************************************************************
 // definition of the different target mockups

@@ -14,6 +14,7 @@ head.load(
 "blocks/dfrobot_romeo_v2/blocks_typing.js",
 "blocks/display-oled-128x64-i2c/blocks_typing.js",
 "blocks/drone/blocks_typing.js",
+"blocks/ds18b20/blocks_typing.js",
 "blocks/EsusBoard/blocks_typing.js",
 "blocks/ethernet/blocks_typing.js",
 "blocks/fischertechnik/blocks_typing.js",
@@ -44,6 +45,7 @@ head.load(
 "blocks/stepper_motor/blocks_typing.js",
 "blocks/storage/blocks_typing.js",
 "blocks/technozone51/blocks_typing.js",
+"blocks/tsl2561/blocks_typing.js",
 "blocks/wiimote/blocks_typing.js",
 "blocks/zumobot/blocks_typing.js",
 function() {

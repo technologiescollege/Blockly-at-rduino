@@ -1792,6 +1792,17 @@
 		</category>
 		<sep></sep>
 	</category>
+	<category name="CAT_MESURE" colour="#B7A700">	
+		<category name="CAT_DS18B20" colour="#B7A700">
+			<block type="ds18b20_search1"></block>
+			<block type="ds18b20_temp1"></block>
+		</category>
+		<category name="CAT_TSL2561" colour="#B7A700">
+			<block type="tsl2561_init"></block>
+			<block type="tsl2561_read"></block>
+		</category>
+		<sep></sep>
+	</category>
 	<category name="CAT_TECHNOZONE_ROBOT" colour="#646464">
 		<category name="CAT_TECHNOZONE_ROBOT_IN" colour="#646464">
 			<block type="technozone_robot_btn"></block>

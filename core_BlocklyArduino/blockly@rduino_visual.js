@@ -309,6 +309,8 @@ BlocklyDuino.tailleFonte = function(taille) {
  
 BlocklyDuino.miniMenuPanel = function() {
 	//$('#menuPanel').css({"width" : '45px'});
+	$("#divTabpanel").css({"margin-left" : "0px"});
+	$(".blocklySvg").css({"margin-left" : "205px"});
 	$(".btn").css({"color" : "#000000", "background-color" : "#FFFFFF"});
 	$(".nav-pills").css({"color" : "#000000", "background-color" : "#FFFFFF"});	
 	$("#header").css({"color" : "#000000", "background-color" : "#FFFFFF"});

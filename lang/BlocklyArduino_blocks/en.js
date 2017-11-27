@@ -88,7 +88,6 @@ Blockly.Msg.CAT_ARDUINO_SERVO = "Servo-Motor";
 
 Blockly.Msg.CAT_ANEMOROTATION = "Anemometer with cups"; //added september 16th 2017
 
-
 Blockly.Msg.CAT_ADAFRUIT_MOTORSHIELD = "Adafruit Motorshield";
 Blockly.Msg.CAT_ADAFRUIT_MOTORSHIELD_v1 = "Adafruit Motorshield v1";
 Blockly.Msg.CAT_ADAFRUIT_MOTORSHIELD_v2 = "Adafruit Motorshield v2";
@@ -1473,6 +1472,11 @@ Blockly.Msg.ADXL362_TEMPVALUE_TITLE = "temperature";
 Blockly.Msg.ADXL362_TEMPVALUE_TOOLTIP = "test";
 
 
+Blockly.Msg.TSL2561_MISC_HELPURL = "https://learn.adafruit.com/tsl2561/wiring-the-tsl2561-sensor";
+Blockly.Msg.TSL2561_READ_TITLE = "light by lux";
+Blockly.Msg.TSL2561_READ_TOOLTIP = "returns light value in standard SI lux units, (max 17 000 lux)";
+Blockly.Msg.TSL2561_INIT_TITLE = "configuration of TSL2561 sensor";
+Blockly.Msg.TSL2561_INIT_TOOLTIP = "autogain is on and integration time is 13 ms";
 
 
 //******** FRESNEL : Implementation I2CSoftwareLibrary   http://playground.arduino.cc/Main/SoftwareI2CLibrary
