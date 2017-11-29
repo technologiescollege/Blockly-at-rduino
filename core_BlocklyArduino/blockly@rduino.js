@@ -81,7 +81,7 @@ BlocklyDuino.renderContent = function() {
 			break;
 
 		case 'content_supervision':
-			$("#content_supervision").load('./supervision/pymata_arduino.html', BlocklyDuino.renderSupervisionContent);
+			$("#content_supervision").load('./tools/supervision/pymata_arduino.html', BlocklyDuino.renderSupervisionContent);
 			
 		}
 	}	
@@ -134,7 +134,7 @@ BlocklyDuino.renderSupervisionContent = function() {
 
 	Code.initLanguageSupervision();	
 	jscolor.installByClassName("jscolor");
-	$.getScript("./supervision/s2aio_iot.js" );
+	$.getScript("./tools/supervision/s2aio_iot.js" );
 };
 
 /**
