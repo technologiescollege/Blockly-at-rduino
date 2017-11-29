@@ -1,0 +1,1433 @@
+<!DOCTYPE html>
+<!-- version du 23/06/2016  -->
+<!-- By technozone51  -->
+<html>
+
+
+<!-- Mirrored from www.technozone51.fr/logiciel/iotwebserver/composer.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 26 Nov 2017 01:13:37 GMT -->
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Administration WEB/IOT</title>
+    <link rel="stylesheet" type="text/css" href="src/css/jquery.gridster.css">
+    <link rel="stylesheet" type="text/css" href="src/css/demo.css">
+    <link rel="stylesheet" type="text/css" href="src/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="src/css/app.css">
+    <link rel="stylesheet" type="text/css" href="src/css/layout.css" />
+    <link rel="stylesheet" type="text/css" href="src/css/modal.css"/>
+
+    
+</head>
+
+<body style="">
+    
+     <!-- Fixed navbar -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#"><span class="glyphicon glyphicon-pencil"></span> Compositeur d'interface WEB pour IOT</a>
+          
+          
+          
+          
+        </div>
+        
+      </div>
+    </nav>
+    
+    
+    <!-- edit led form #1 -->
+        <a href="#x" class="overlay" id="edit_led_form"></a>
+        <div class="popup">
+            <strong>Properties ( LED<span id="led_id">1</span>)</strong><hr>
+            <div>
+                <label for="led_titre">Description</label>
+                <input type="text" id="led_titre" value="led" />
+            </div>
+            <div>
+             <label for="led_couleur">Couleur</label>
+              <SELECT name="led_color" size="1" id="led_couleur">
+                <OPTION value="none">Aucune</OPTION>
+                <OPTION value="red">rouge</OPTION>
+                <OPTION value="green">vert</OPTION>
+                <OPTION value="yellow">jaune</OPTION>
+                <OPTION value="orange">orange</OPTION>
+                <OPTION value="blue">bleu</OPTION>
+              </SELECT>
+            </div>
+            <input class="btn btn-primary btn-block" type="button" value="Valider" onclick="change_led();">
+            <a class="close" href="#close"></a>
+        </div>
+        
+    <!-- edit button form #1 -->
+        <a href="#x" class="overlay" id="edit_button_form"></a>
+        <div class="popup">
+            <strong>Properties ( BUTTON<span id="button_id">1</span>)</strong><hr>
+            <div>
+                <label for="button_titre">Description</label>
+                <input type="text" id="button_titre" value="bouton" />
+            </div>
+            <div>
+                <label for="button_text">Texte</label>
+                <input type="text" id="button_text" value="Bouton" />
+            </div>
+            <div>
+             <label for="button_couleur">Couleur</label>
+              <SELECT name="button_color" size="1" id="button_couleur">
+                <OPTION value="btn-default">Default</OPTION>
+                <OPTION value="btn-primary">Primary</OPTION>
+                <OPTION value="btn-success" selected>Success</OPTION>
+                <OPTION value="btn-info">Info</OPTION>
+                <OPTION value="btn-warning">Warning</OPTION>
+                <OPTION value="btn-danger">Danger</OPTION>
+                <OPTION value="btn-link">Link</OPTION>
+              </SELECT>
+            </div>
+            <div>
+             <label for="button_taille">Taille</label>
+              <SELECT name="button_size" size="1" id="button_taille">
+                <OPTION value="btn-lg">Large</OPTION>
+                <OPTION value="" selected>Normal</OPTION>
+                <OPTION value="btn-sm">Moyen</OPTION>
+                <OPTION value="btn-xs">Petit</OPTION>
+              </SELECT>
+            </div>
+            <div>
+             <label for="button_largeur">Largeur</label>
+              <SELECT name="button_with" size="1" id="button_largeur">
+                <OPTION value="" selected>Automatique</OPTION>
+                <OPTION value="btn-block">Pleine largeur</OPTION>
+              </SELECT>
+            </div>
+            <input class="btn btn-primary btn-block" type="button" value="Valider" onclick="change_bouton();">
+            <a class="close" href="#close"></a>
+        </div>
+    <!-- edit SWITCH form #1 -->
+        <a href="#x" class="overlay" id="edit_switch_form"></a>
+        <div class="popup">
+            <strong>Properties ( SWITCH<span id="switch_id">1</span>)</strong><hr>
+            <div>
+                <label for="switch_titre">Description</label>
+                <input type="text" id="switch_titre" value="interrupteur" />
+            </div>
+            <div>
+                <label for="switch_texte_on">Texte ON</label>
+                <input type="text" id="switch_texte_on" value="ON" />
+            </div>
+            <div>
+                <label for="switch_texte_off">Texte OFF</label>
+                <input type="text" id="switch_texte_off" value="OFF" />
+            </div>
+            <input class="btn btn-primary btn-block" type="button" value="Valider" onclick="change_switch();">
+            <a class="close" href="#close"></a>
+        </div>
+    <!-- edit potar form #1 -->
+        <a href="#x" class="overlay" id="edit_potar_form"></a>
+        <div class="popup">
+            <strong>Properties ( POTAR<span id="potar_id">1</span>)</strong><hr>
+            <div>
+                <label for="potar_titre">Description</label>
+                <input type="text" id="potar_titre" value="potentiomètre" />
+            </div>
+            <div>
+                <label for="potar_min">Min</label>
+                <input type="number" min="0" step="1" id="potar_min" value="0" />
+            </div>
+            <div>
+                <label for="potar_max">Max</label>
+                <input type="number" min="0" step="1" id="potar_max" value="100" />
+            </div>
+            <div>
+                <label for="potar_position">Position</label>
+                <input type="number" min="0" step="1" id="potar_position" value="0" />
+            </div>
+            <input class="btn btn-primary btn-block" type="button" value="Valider" onclick="change_potar();">
+            <a class="close" href="#close"></a>
+        </div>
+   <!-- edit gauge form #1 -->
+        <a href="#x" class="overlay" id="edit_gauge_form"></a>
+        <div class="popup">
+            <strong>Properties ( GAUGE<span id="gauge_id">1</span>)</strong><hr>
+            <div>
+                <label for="gauge_titreid">Description</label>
+                <input type="text" id="gauge_titreid" value="gauge" />
+            </div>
+            <div>
+                <label for="gauge_min">Min</label>
+                <input type="number" min="0" step="1" id="gauge_min" value="0" />
+            </div>
+            <div>
+                <label for="gauge_max">Max</label>
+                <input type="number" min="0" step="1" id="gauge_max" value="100" />
+            </div>
+            <div>
+                <label for="gauge_position">Position</label>
+                <input type="number" min="0" step="1" id="gauge_position" value="0" />
+            </div>
+            <div>
+                <label for="gauge_grad">Nombre de graduations</label>
+                <input type="number" min="0" step="1" id="gauge_grad" value="10" />
+            </div>
+            <div>
+                <label for="gauge_subgrad">Nombre de sous-graduation</label>
+                <input type="number" min="0" step="1" id="gauge_subgrad" value="5" />
+            </div>
+            <div>
+                <label for="gauge_titre">Titre</label>
+                <input type="text" id="gauge_titre" value="Température" />
+            </div>
+            <div>
+                <label for="gauge_stitre">Sous-titre</label>
+                <input type="text" id="gauge_stitre" value="(°C)" />
+            </div>
+            <input class="btn btn-primary btn-block" type="button" value="Valider" onclick="change_gauge();">
+            <a class="close" href="#close"></a>
+        </div>
+   <!-- edit label form #1 -->
+        <a href="#x" class="overlay" id="edit_label_form"></a>
+        <div class="popup"> 
+            <strong>Properties ( LABEL<span id="label_id">1</span>)</strong><hr>
+            <div>
+                <label for="label_titre">Description</label>
+                <input type="text" id="label_titre" value="label" />
+            </div>
+            <div>
+                <label for="label_texte">Texte</label>
+                <input type="text" id="label_texte" value="Label" />
+            </div>
+            <div>
+                <label for="label_couleur">Couleur du texte</label>
+                <input type="color" id="label_couleur" value="#000000" />
+            </div>
+            <div>
+                <label for="label_couleurfond">Couleur du fond</label>
+                <input type="color" id="label_couleurfond" value="#FFFFFF" />
+            </div>
+            <div>
+                <label for="label_taille">Taille du texte</label>
+                <input type="number" min="0" step="1" id="label_taille" value="100" />%
+            </div>
+            <input class="btn btn-primary btn-block" type="button" value="Valider" onclick="change_label();">
+            <a class="close" href="#close"></a>
+        </div>
+    <!-- edit edit form #1 -->
+        <a href="#x" class="overlay" id="edit_edit_form"></a>
+        <div class="popup">
+            <strong>Properties ( EDIT<span id="edit_id">1</span>)</strong><hr>
+            <div>
+                <label for="edit_titre">Description</label>
+                <input type="text" id="edit_titre" value="zone de saisie" />
+            </div>
+            <div>
+                <label for="edit_texte">Texte initiale</label>
+                <input type="text" id="edit_texte" value="Votre saisie ici..." />
+            </div>
+            <div>
+                <label for="edit_maxlength">Nombre de caractères max.</label>
+                <input type="number" min="0" step="1" id="edit_maxlength" value="20" />
+            </div>
+            <div>
+                <label for="edit_taille">Longueur du champ de saisie</label>
+                <input type="number" min="0" step="1" id="edit_taille" value="20" />
+            </div>
+             <div>
+             <label for="edit_type">Type de réponse</label>
+              <SELECT name="edit_type" size="1" id="edit_type">
+                <OPTION value="text" selected>Alphanumérique</OPTION>
+                <OPTION value="number">Numérique</OPTION>
+              </SELECT>
+            </div>
+            <div>
+                <label for="edit_min">Valeur minimale</label>
+                <input type="number" min="0" step="1" id="edit_min" value="0" />
+            </div>
+            <div>
+                <label for="edit_max">Valeur maximale</label>
+                <input type="number" min="0" step="1" id="edit_max" value="1000" />
+            </div>
+            <input class="btn btn-primary btn-block" type="button" value="Valider" onclick="change_edit();">
+            <a class="close" href="#close"></a>
+        </div>
+        
+    
+    <a href="index.html">Vers la page d'accueil</a>
+    <div class="row col-md-12">
+      <div class="graybox col-md-1" id="LED" style="min-height: 80px; text-align: center; vertical-align:middle;padding:8px;" draggable="true"><div class="led-none led-green"></div></div>
+      <div class="graybox col-md-1" id="BUTTON" style="min-height: 80px; text-align: center; vertical-align:middle;padding:15px;" draggable="true"><button type="button" class="btn btn-success">Bouton</button></div>
+      <div class="graybox col-md-1" id="SWITCH" style="min-height: 80px; text-align: center; vertical-align:middle;padding:10px;" draggable="true"><span class="checkbox">
+        <input type="checkbox">
+        <label data-on="ON" data-off="OFF"></label>
+    </span></div>
+      <div class="graybox col-md-1" id="POTAR" style="min-height: 80px;  text-align: center; vertical-align:middle; padding:15px;" draggable="true"><div class="item range range-assertive">
+       <input type="range" name="volume" value="0">       
+    </div></div>
+     <div class="graybox col-md-1" id="GAUGE" style="min-height: 80px; text-align: center; vertical-align:middle; padding:15px;" draggable="true"><img src="src/css/images/gauge.png" height="40"  draggable="false"></div>
+     <div class="graybox col-md-1" id="LABEL" style="min-height: 80px; text-align: center; vertical-align:middle; padding:15px;" draggable="true"><br>Label</div>
+     <div class="graybox col-md-1" id="EDIT" style="min-height: 80px; text-align: center; vertical-align:middle; padding15px;" draggable="true"><br><input type="text" maxlength="3" size="3" style="font-size: small;font-family: Arial Black;"><br>Edit</div>
+    <div class="row col-md-12">
+     <div class="col-md-12" style="min-height: 60px;"></col>
+    </div>
+                
+    <div id="maingrid" class="gridster">
+      <ul>  
+      </ul>
+    </div>
+    <hr>
+    <div data-role="fieldcontain">
+                        <label for="text1">Adresse du WebSocket :</label>
+                        <input type="text" id="websocket_ip" value="ws://10.10.10.10:81"/>
+    </div>
+    <strong><div id="connecstatus">Non connecté</div></strong><strong><div id="compteur"></div></strong>
+    <input type="file" id="fileLoader" name="files" title="Load File" style="display:none;"  accept=".xml"/>
+    <div class="btn-group" role="group" aria-label="...">
+        <button class="js-seralize btn btn-default"><span class="glyphicon glyphicon-floppy-disk"></span>    Sauvegarde XML</button>
+        <button class="btn btn-default" onclick="openfileDialog();"><span class="glyphicon glyphicon-folder-open"></span>    Charge XML</button>
+        <button class="js-upload btn btn-default"><span class="glyphicon glyphicon-globe"></span>    Téléverser dans l'ESP8266</button>
+    </div>
+    <div class="progress">
+      <div id="compteurprog" class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%">
+         0%
+       </div>
+     </div>
+    <!--Gridster Serialized Output visibility:hidden;-->
+    <textarea id="log" style="height:0px; visibility:hidden;"></textarea>
+
+    <hr>
+    <textarea id="bs-log" style="height:0px; width:100%;visibility:hidden;"></textarea>
+
+    <!--<h4>Prévisualisation de votre page</h4>-->
+    <div id="previewgrid" class="gridster"style="height:0px; width:100%;visibility:hidden;">
+      <ul>  
+      </ul>
+    </div>
+    
+
+    <script src="../../../ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script
+  src="../../../code.jquery.com/ui/1.12.1/jquery-ui.min.js"
+  integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
+  crossorigin="anonymous"></script>
+  <script>
+        /*!
+ * jQuery UI Touch Punch 0.2.3
+ *
+ * Copyright 2011–2014, Dave Furfero
+ * Dual licensed under the MIT or GPL Version 2 licenses.
+ *
+ * Depends:
+ *  jquery.ui.widget.js
+ *  jquery.ui.mouse.js
+ */
+!function(a){function f(a,b){if(!(a.originalEvent.touches.length>1)){a.preventDefault();var c=a.originalEvent.changedTouches[0],d=document.createEvent("MouseEvents");d.initMouseEvent(b,!0,!0,window,1,c.screenX,c.screenY,c.clientX,c.clientY,!1,!1,!1,!1,0,null),a.target.dispatchEvent(d)}}if(a.support.touch="ontouchend"in document,a.support.touch){var e,b=a.ui.mouse.prototype,c=b._mouseInit,d=b._mouseDestroy;b._touchStart=function(a){var b=this;!e&&b._mouseCapture(a.originalEvent.changedTouches[0])&&(e=!0,b._touchMoved=!1,f(a,"mouseover"),f(a,"mousemove"),f(a,"mousedown"))},b._touchMove=function(a){e&&(this._touchMoved=!0,f(a,"mousemove"))},b._touchEnd=function(a){e&&(f(a,"mouseup"),f(a,"mouseout"),this._touchMoved||f(a,"click"),e=!1)},b._mouseInit=function(){var b=this;b.element.bind({touchstart:a.proxy(b,"_touchStart"),touchmove:a.proxy(b,"_touchMove"),touchend:a.proxy(b,"_touchEnd")}),c.call(b)},b._mouseDestroy=function(){var b=this;b.element.unbind({touchstart:a.proxy(b,"_touchStart"),touchmove:a.proxy(b,"_touchMove"),touchend:a.proxy(b,"_touchEnd")}),d.call(b)}}}(jQuery);</script>
+
+
+    <script type="text/javascript" charset="utf-8" src="lib/jquery.gridster.js"></script>
+    <script type="text/javascript" src="lib/bootstrap.min.js"></script>
+    <script type="text/javascript" src="lib/AquaGauge.js"></script>
+    <script type="text/javascript" src="lib/FileSaver.js"></script>
+    <script type="text/javascript" src="lib/lodash.js"></script>
+
+    <script type="text/javascript">
+        
+        $(document).ready(function(){
+            
+            $('*[draggable="true"]').draggable({
+              revert: true
+            });
+            $('#maingrid').droppable({
+                
+              accept: '*',
+                
+              drop: function( e, ui ) {                  
+                  if (first) { 
+                     grid.remove_widget(temp,true);
+                     first=false;
+                 }
+                 new_widget(ui.helper.attr('id'),true); 
+              }
+            });
+            
+        });
+        
+    var grid;
+    var nomfichier='';
+    var first=true;
+    var gauge_colection = {};
+    var parametre={};
+    var widpossize={};
+    //pour l'upload vers l'ESP8266
+    var connexion;  
+    var fr;
+    var lines;
+    var uploadstate=0;
+    var ligne=0;
+    var tab_field= new Array(101).fill(0)
+    var index = 1;
+    
+    //Envoie la ligne suivante du fichier à uploader sinon termine l'upload
+    push_next_line = function() {
+      if (ligne<lines.length) {
+        //on envoie la ligne suivante
+        document.getElementById('compteur').innerHTML=ligne+"/"+(lines.length-1);
+        $('.progress-bar').css('width',(100*ligne/(lines.length-1))+'%').attr('aria-valuenow', ligne);
+        document.getElementById('compteurprog').innerHTML=Math.round(100*ligne/(lines.length-1))+"%";
+        connection.send(lines[ligne]+'\r');
+      } else {
+        //on envoie la fin du upload
+        connection.send("uploadstop");
+      }
+      
+    }
+     
+    function openfileDialog() {
+        $("#fileLoader").click();
+     }
+     
+     //Connection au websocket    
+    connec = function() {
+         connection = new WebSocket(document.getElementById('websocket_ip').value, ['arduino']);
+         connection.onmessage = function (event) {
+            console.log(event.data);
+            if (event.data=='Connected') {
+              document.getElementById('connecstatus').innerHTML="Connecté : upload en cours ..."; 
+              uploading();
+            }
+            if (event.data=='uploadstarted') {
+               uploadstate=1;
+               ligne=0;
+               push_next_line();
+            }
+            if (event.data=='uploadnext') {
+               uploadstate=1;
+               ligne=ligne+1;
+               push_next_line();
+            }
+            if (event.data=='uploadstopped') {
+               if (nomfichier=='interface.html') {
+                    //On envoie le fichier config.html
+                    nomfichier='config.html';
+                    uploadstate=0;
+                    ligne=0;
+                    genere_config();
+                    uploading();
+               } else     
+               {
+                 //On a tout envoyé ! on se déconnecte
+                 document.getElementById('connecstatus').innerHTML="Téléversement terminé !";
+                 deconnec();
+                 uploadstate=0;
+                 ligne=0;
+               } 
+            }
+            
+         }
+         document.getElementById('connecstatus').innerHTML="Connexion en cours";
+         
+     }   
+        
+    deconnec = function() {
+         connection.close();
+         document.getElementById('connecstatus').innerHTML="Téléversement terminé !";
+        
+    }        
+  
+    uploading=function(){
+      var res = document.getElementById('bs-log').value;
+      lines = res.split(/[\r\n]+/g); // tolerate both Windows and Unix linebreaks
+      connection.send("uploadstart:"+nomfichier);
+      $('.progress-bar').css('width', '0%').attr('aria-valuemax', lines.length);
+    }  
+    
+    televerse=function(){
+      connec();
+    }
+    
+    function parseReturnedXML(strToParse, strStart, strFinish)  //ajout TZ51
+    {
+      var str = strToParse.match(strStart + "(.*?)" + strFinish); 
+      if (str != null) {
+        return str[1];
+       }
+    }
+    
+    function allowDrop(ev) {
+      ev.preventDefault();
+    }
+
+    
+    
+    function new_widget(data,newone){
+      linkToRemove = '<button onclick="rem(this);" style="float: right;"><span class="glyphicon glyphicon-trash"></span></button>';
+      //linkToEdit = '<button onclick="editw(this,'+data+');" style="float: left;"><span class="glyphicon glyphicon-list-alt"></span></button>';
+      var wt="";
+      
+      if (data=="LED") {
+        tab_field[index]=1;
+        param= {"couleur": "none","id":index}
+        parametre['LED'+index+'_couleur']="none";
+        parametre['LED'+index+'_titre']="led";
+        insert = getHTML(0,param);
+        linkToEdit = '<button onclick="editw(this,0);" style="float: left;" id="btnedit'+index+'"><span class="glyphicon glyphicon-list-alt"></span></button>';	
+        if (newone==true) {
+           grid.add_widget(index,'LED','<div class="layout_block" id='+index+'><li title='+insert["title"]+' id=' + id + '><div class="editheader"><header>'+linkToEdit+insert["title"]+index+linkToRemove+' </header></div>' + insert["insert"] + '</li></div>', insert["width"], insert["height"]);
+        } else {
+           grid.add_widget(index,'LED','<div class="layout_block" id='+index+'><li title='+insert["title"]+' id=' + id + '><div class="editheader"><header>'+linkToEdit+insert["title"]+index+linkToRemove+' </header></div>' + insert["insert"] + '</li></div>', widpossize["size_x"], widpossize["size_y"],widpossize["col"],widpossize["row"]);
+        }
+        index=next_empty_field();
+        //index++;
+      }
+      if (data=="BUTTON") {
+        tab_field[index]=1;
+        param= {"id":index,"texte": "Bouton","couleur":"btn-success","taille":"","largeur":""}
+        parametre['BUTTON'+index+'_texte']="Bouton";
+        parametre['BUTTON'+index+'_couleur']="btn-success";
+        parametre['BUTTON'+index+'_taille']="";
+        parametre['BUTTON'+index+'_largeur']="";
+        parametre['BUTTON'+index+'_titre']="bouton";
+        insert = getHTML(1,param);	
+        linkToEdit = '<button onclick="editw(this,1);" style="float: left;" id="btnedit'+index+'"><span class="glyphicon glyphicon-list-alt"></span></button>';
+        if (newone==true) {
+           grid.add_widget(index,'BUTTON','<div class="layout_block" id='+index+'><li title='+insert["title"]+' id=' + id + '><div class="editheader"><header>'+linkToEdit+insert["title"]+index+linkToRemove+' </header></div>' + insert["insert"] + '</li></div>', insert["width"], insert["height"]);
+        } else {
+           grid.add_widget(index,'BUTTON','<div class="layout_block" id='+index+'><li title='+insert["title"]+' id=' + id + '><div class="editheader"><header>'+linkToEdit+insert["title"]+index+linkToRemove+' </header></div>' + insert["insert"] + '</li></div>', widpossize["size_x"], widpossize["size_y"],widpossize["col"],widpossize["row"]);
+        }
+        index=next_empty_field();
+        //index++;
+      }
+      if (data=="SWITCH") {
+        tab_field[index]=1;
+        param= {"id":index,"texteON": "ON","texteOFF":"OFF"}
+        parametre['SWITCH'+index+'_texteON']="ON";
+        parametre['SWITCH'+index+'_texteOFF']="OFF";
+        parametre['SWITCH'+index+'_titre']="interrupteur";
+        insert = getHTML(2,param);
+        linkToEdit = '<button onclick="editw(this,2);" style="float: left;" id="btnedit'+index+'"><span class="glyphicon glyphicon-list-alt"></span></button>';	
+        if (newone==true) {
+           grid.add_widget(index,'SWITCH','<div class="layout_block" id='+index+'><li title='+insert["title"]+' id=' + id + '><div class="editheader"><header>'+linkToEdit+insert["title"]+index+linkToRemove+' </header></div>' + insert["insert"] + '</li></div>', insert["width"], insert["height"]);
+        } else {
+           grid.add_widget(index,'SWITCH','<div class="layout_block" id='+index+'><li title='+insert["title"]+' id=' + id + '><div class="editheader"><header>'+linkToEdit+insert["title"]+index+linkToRemove+' </header></div>' + insert["insert"] + '</li></div>', widpossize["size_x"], widpossize["size_y"],widpossize["col"],widpossize["row"]);
+        }   
+        index=next_empty_field();
+        //index++;
+      }
+      if (data=="POTAR") {
+        tab_field[index]=1;
+        param= {"id":index,"min": "0","max":"100","position":"0"}
+        insert = getHTML(3,param);
+        parametre['POTAR'+index+'_min']="0";
+        parametre['POTAR'+index+'_max']="100";
+        parametre['POTAR'+index+'_position']="0";	
+        parametre['POTAR'+index+'_titre']="potentiomètre";
+        linkToEdit = '<button onclick="editw(this,3);" style="float: left;" id="btnedit'+index+'"><span class="glyphicon glyphicon-list-alt"></span></button>';
+        if (newone==true) {
+           grid.add_widget(index,'POTAR','<div class="layout_block" id='+index+'><li title='+insert["title"]+' id=' + id + '><div class="editheader"><header>'+linkToEdit+insert["title"]+index+linkToRemove+' </header></div>' + insert["insert"] + '</li></div>', insert["width"], insert["height"]);
+        } else {
+           grid.add_widget(index,'POTAR','<div class="layout_block" id='+index+'><li title='+insert["title"]+' id=' + id + '><div class="editheader"><header>'+linkToEdit+insert["title"]+index+linkToRemove+' </header></div>' + insert["insert"] + '</li></div>', widpossize["size_x"], widpossize["size_y"],widpossize["col"],widpossize["row"]);
+        }
+        index=next_empty_field();
+        //index++;
+      }
+      if (data=="GAUGE") {
+        tab_field[index]=1;
+        param= {"id": index}
+        parametre['GAUGE'+index+'_min']="0";
+        parametre['GAUGE'+index+'_max']="100";
+        parametre['GAUGE'+index+'_position']="0";
+        parametre['GAUGE'+index+'_titre']="Température";
+        parametre['GAUGE'+index+'_soustitre']="(°C)";
+        parametre['GAUGE'+index+'_tics']="10";
+        parametre['GAUGE'+index+'_subtics']="5";
+        parametre['GAUGE'+index+'_titreid']="gauge";
+        insert = getHTML(4,param);	
+        linkToEdit = '<button onclick="editw(this,4);" style="float: left;" id="btnedit'+index+'"><span class="glyphicon glyphicon-list-alt"></span></button>';
+        if (newone==true) {
+          grid.add_widget(index,'GAUGE','<div class="layout_block" id='+index+'><li title='+insert["title"]+' id=' + id + '><div class="editheader"><header>'+linkToEdit+insert["title"]+index+linkToRemove+' </header></div>' + insert["insert"] + '</li></div>', insert["width"], insert["height"]);
+        } else {
+          grid.add_widget(index,'GAUGE','<div class="layout_block" id='+index+'><li title='+insert["title"]+' id=' + id + '><div class="editheader"><header>'+linkToEdit+insert["title"]+index+linkToRemove+' </header></div>' + insert["insert"] + '</li></div>', widpossize["size_x"], widpossize["size_y"],widpossize["col"],widpossize["row"]);
+        }
+        //création de la gauge
+        gauge_colection['gauge'+index] = new AquaGauge('gauge'+index);
+        gauge_colection['gauge'+index].props.minValue = 0;
+        gauge_colection['gauge'+index].props.maxValue = 100;
+        gauge_colection['gauge'+index].props.dialTitle='Température';
+        gauge_colection['gauge'+index].props.dialSubTitle='(°C)';
+        gauge_colection['gauge'+index].props.noOfDivisions=10;
+        gauge_colection['gauge'+index].props.noOfSubDivisions=5;
+        gauge_colection['gauge'+index].props.showGlossiness=true;
+        gauge_colection['gauge'+index].refresh(0);
+        
+        index=next_empty_field();
+        //index++;
+      }
+      if (data=="LABEL") {
+        tab_field[index]=1;
+        param= {"id":index,"texte": "Label","couleur":"#000000","taille":"100","couleurfond":"#FFFFFF"}
+        insert = getHTML(5,param);
+        parametre['LABEL'+index+'_texte']="Label";
+        parametre['LABEL'+index+'_couleur']="#000000";
+        parametre['LABEL'+index+'_taille']="100";
+        parametre['LABEL'+index+'_couleurfond']="#FFFFFF";	
+        parametre['LABEL'+index+'_titre']="label";
+        linkToEdit = '<button onclick="editw(this,5);" style="float: left;" id="btnedit'+index+'"><span class="glyphicon glyphicon-list-alt"></span></button>';
+        if (newone==true) {
+          grid.add_widget(index,'LABEL','<div class="layout_block" id='+index+'><li title='+insert["title"]+' id=' + id + '><div class="editheader"><header>'+linkToEdit+insert["title"]+index+linkToRemove+' </header></div>' + insert["insert"] + '</li></div>', insert["width"], insert["height"]);
+        } else {
+          grid.add_widget(index,'LABEL','<div class="layout_block" id='+index+'><li title='+insert["title"]+' id=' + id + '><div class="editheader"><header>'+linkToEdit+insert["title"]+index+linkToRemove+' </header></div>' + insert["insert"] + '</li></div>', widpossize["size_x"], widpossize["size_y"],widpossize["col"],widpossize["row"]);
+        }
+        index=next_empty_field();
+        //index++;
+      }
+      if (data=="EDIT") {
+        tab_field[index]=1;
+        param= {"id": index,"texte":"Votre saisie ici...","maxlength":"20","type":"text","taille":"20","max":"1000","min":"0"}
+        parametre['EDIT'+index+'_texte']=param['texte'];
+        parametre['EDIT'+index+'_maxlength']=param['maxlength'];
+        parametre['EDIT'+index+'_max']=param['max'];
+        parametre['EDIT'+index+'_min']=param['min'];
+        parametre['EDIT'+index+'_type']=param['type'];  
+        parametre['EDIT'+index+'_taille']=param['taille'];
+        parametre['EDIT'+index+'_titre']="zone de saisie";
+        insert = getHTML(6,param);	
+        linkToEdit = '<button onclick="editw(this,6);" style="float: left;" id="btnedit'+index+'"><span class="glyphicon glyphicon-list-alt"></span></button>';
+        if (newone==true) {
+          grid.add_widget(index,'EDIT','<div class="layout_block" id='+index+'><li title='+insert["title"]+' id=' + id + '><div class="editheader"><header>'+linkToEdit+insert["title"]+index+linkToRemove+' </header></div>' + insert["insert"] + '</li></div>', insert["width"], insert["height"]);
+        } else {
+          grid.add_widget(index,'EDIT','<div class="layout_block" id='+index+'><li title='+insert["title"]+' id=' + id + '><div class="editheader"><header>'+linkToEdit+insert["title"]+index+linkToRemove+' </header></div>' + insert["insert"] + '</li></div>', widpossize["size_x"], widpossize["size_y"],widpossize["col"],widpossize["row"]);
+        }
+        index=next_empty_field();
+        //index++;
+      }    
+    }
+    
+    
+      function genere_config(){
+            var s = grid.serialize();
+            var chaine="";
+            $('#log').val(JSON.stringify(s));
+            //On vide puis recompose la prévisualisation
+            //previewgrid.remove_all_widgets();
+            //On compose la page HTML
+             var page="<html>\n";
+             page+=" <head>\n";
+             page+="  <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\n";
+             page+=" <\/head>\n";
+             page+=" <body style=\"\">\n";
+             page+=" <table border=\"1\">\n"
+             page+=" <tr><th>Champ n°<\/th><th>Type du widget<\/th><th>Description<\/th><\/tr>\n";
+             $.each(s, function() {
+                
+                page+="  <tr>\n";
+                if (this.wtype=="GAUGE") {
+                  chaine=parametre[this.wtype+this.identifier+'_titreid'];
+                } else {
+                  chaine=parametre[this.wtype+this.identifier+'_titre'];
+                }  
+                page+='<th>'+this.identifier+'<\/th><th>'+this.wtype+'<\/th><th>'+chaine+'<\/th>\n';
+                page+='<\/tr>\n';             
+             });
+            page+="<\/table>\n" 
+            page+=" <\/body>\n";
+            page+="<\/html>\n"; 
+            $('#bs-log').val(page);
+   } 
+ 
+   // flattens an object (recursively!), similarly to Array#flatten
+// e.g. flatten({ a: { b: { c: "hello!" } } }); // => "hello!"
+function flatten(object) {
+  var check = _.isPlainObject(object) && _.size(object) === 1;
+  return check ? flatten(_.values(object)[0]) : object;
+}
+
+function parse(xml) {
+  var data = {};
+
+  var isText = xml.nodeType === 3,
+      isElement = xml.nodeType === 1,
+      body = xml.textContent && xml.textContent.trim(),
+      hasChildren = xml.children && xml.children.length,
+      hasAttributes = xml.attributes && xml.attributes.length;
+
+  // if it's text just return it
+  if (isText) { return xml.nodeValue.trim(); }
+
+  // if it doesn't have any children or attributes, just return the contents
+  if (!hasChildren && !hasAttributes) { return body; }
+
+  // if it doesn't have children but _does_ have body content, we'll use that
+  if (!hasChildren && body.length) { data.text = body; }
+
+  // if it's an element with attributes, add them to data.attributes
+  if (isElement && hasAttributes) {
+    data.attributes = _.reduce(xml.attributes, function(obj, name, id) {
+      var attr = xml.attributes.item(id);
+      obj[attr.name] = attr.value;
+      return obj;
+    }, {});
+  }
+
+  // recursively call #parse over children, adding results to data
+  _.each(xml.children, function(child) {
+    var name = child.nodeName;
+
+    // if we've not come across a child with this nodeType, add it as an object
+    // and return here
+    if (!_.has(data, name)) {
+      data[name] = parse(child);
+      return;
+    }
+
+    // if we've encountered a second instance of the same nodeType, make our
+    // representation of it an array
+    if (!_.isArray(data[name])) { data[name] = [data[name]]; }
+
+    // and finally, append the new child
+    data[name].push(parse(child));
+  });
+
+  // if we can, let's fold some attributes into the body
+  _.each(data.attributes, function(value, key) {
+    if (data[key] != null) { return; }
+    data[key] = value;
+    delete data.attributes[key];
+  });
+
+  // if data.attributes is now empty, get rid of it
+  if (_.isEmpty(data.attributes)) { delete data.attributes; }
+
+  // simplify to reduce number of final leaf nodes and return
+  return flatten(data);
+}
+   
+   
+   function genere_XML(){
+            var s = grid.serialize();
+            $('#log').val(JSON.stringify(s));
+            //On vide puis recompose la prévisualisation
+            //previewgrid.remove_all_widgets();
+            //On compose la page XML
+             var page="<root>\n";
+             var liste_type="";
+            var liste_id="";
+            var creation_gauge="    //création des gauges\n";
+            $.each(s, function() {
+              if (this.wtype!="Undefined") { 
+                page+="    <widget>\n";
+                var chaine=this.htmlContent;
+                page+="          <field>"+this.identifier+"</field>\n";
+                page+="          <type>"+this.wtype+"</type>\n";
+                liste_id+=',"'+this.identifier+'"';
+                if (this.wtype=="LED") {
+                  page+="          <description>"+parametre['LED'+this.identifier+'_titre']+"</description>\n";
+                  page+="          <couleur>"+parametre['LED'+this.identifier+'_couleur']+"</couleur>\n";
+                }
+                if (this.wtype=="BUTTON") {
+                  page+="          <description>"+parametre['BUTTON'+this.identifier+'_titre']+"</description>\n";
+                  page+="          <couleur>"+parametre['BUTTON'+this.identifier+'_couleur']+"</couleur>\n";
+                  page+="          <texte>"+parametre['BUTTON'+this.identifier+'_texte']+"</texte>\n";
+                  page+="          <taille>"+parametre['BUTTON'+this.identifier+'_taille']+"</taille>\n";
+                  page+="          <largeur>"+parametre['BUTTON'+this.identifier+'_largeur']+"</largeur>\n";
+                }
+                if (this.wtype=="SWITCH") {
+                  page+="          <description>"+parametre['SWITCH'+this.identifier+'_titre']+"</description>\n";
+                  page+="          <texte_on>"+parametre['SWITCH'+this.identifier+'_texteON']+"</texte_on>\n";
+                  page+="          <texte_off>"+parametre['SWITCH'+this.identifier+'_texteOFF']+"</texte_off>\n";
+                }
+                if (this.wtype=="POTAR") {
+                  page+="          <description>"+parametre['POTAR'+this.identifier+'_titre']+"</description>\n";
+                  page+="          <min>"+parametre['POTAR'+this.identifier+'_min']+"</min>\n";
+                  page+="          <max>"+parametre['POTAR'+this.identifier+'_max']+"</max>\n";
+                  page+="          <position>"+parametre['POTAR'+this.identifier+'_position']+"</position>\n";
+                }
+                if (this.wtype=="GAUGE") {
+                  page+="          <description>"+parametre['GAUGE'+this.identifier+'_titreid']+"</description>\n";
+                  page+="          <min>"+gauge_colection['gauge'+this.identifier].props.minValue+"</min>\n";
+                  page+="          <max>"+gauge_colection['gauge'+this.identifier].props.maxValue+"</max>\n";
+                  page+="          <title>"+gauge_colection['gauge'+this.identifier].props.dialTitle+"</title>\n";
+                  page+="          <subtitle>"+gauge_colection['gauge'+this.identifier].props.dialSubTitle+"</subtitle>\n";
+                  page+="          <divisions>"+gauge_colection['gauge'+this.identifier].props.noOfDivisions+"</divisions>\n";
+                  page+="          <subdivisions>"+gauge_colection['gauge'+this.identifier].props.noOfSubDivisions+"</subdivisions>\n";
+                  page+="          <value>"+gauge_colection['gauge'+this.identifier].props.currentValue+"</value>\n";
+                  }
+                if (this.wtype=="LABEL") {
+                  page+="          <description>"+parametre['LABEL'+this.identifier+'_titre']+"</description>\n";
+                  page+="          <texte>"+parametre['LABEL'+this.identifier+'_texte']+"</texte>\n";
+                  page+="          <couleur>"+parametre['LABEL'+this.identifier+'_couleur']+"</couleur>\n";
+                  page+="          <taille>"+parametre['LABEL'+this.identifier+'_taille']+"</taille>\n";
+                  page+="          <couleurfond>"+parametre['LABEL'+this.identifier+'_couleurfond']+"</couleurfond>\n";
+                }
+                if (this.wtype=="EDIT") {
+                  page+="          <description>"+parametre['EDIT'+this.identifier+'_titre']+"</description>\n";
+                  page+="          <maxlength>"+parametre['EDIT'+this.identifier+'_maxlength']+"</maxlength>\n";
+                  page+="          <texte>"+parametre['EDIT'+this.identifier+'_texte']+"</texte>\n";
+                  page+="          <taille>"+parametre['EDIT'+this.identifier+'_taille']+"</taille>\n";
+                  page+="          <min>"+parametre['EDIT'+this.identifier+'_min']+"</min>\n";
+                  page+="          <max>"+parametre['EDIT'+this.identifier+'_max']+"</max>\n";
+                  page+="          <typesaisie>"+parametre['EDIT'+this.identifier+'_type']+"</typesaisie>\n";
+                 }
+                //on ne garde que le code HTML utile
+                page+="          <row>"+this.row+"</row>\n";
+                page+="          <col>"+this.col+"</col>\n";
+                page+="          <size_x>"+this.size_x+"</size_x>\n";
+                page+="          <size_y>"+this.size_y+"</size_y>\n";
+                page+="    </widget>\n";
+             }   
+            });
+             page+="    <widget>\n";
+             page+="          <field>x</field>\n";
+             page+="          <type>DUMMY</type>\n";
+             page+="    </widget>\n";
+             page+="</root>\n";
+             //enregistre le fichier XML
+             var file = new File([page], "IOT_Editor.html", {type: "text/plain;charset=utf-8"});
+              saveAs(file);
+   }
+    
+   function genere_HTML(){
+            var s = grid.serialize();
+            $('#log').val(JSON.stringify(s));
+            //On vide puis recompose la prévisualisation
+            previewgrid.remove_all_widgets();
+            //On compose la page HTML
+             var page="<html>\n";
+            page+=" <head>\n";
+            page+="  <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\n";
+            page+="  <title>Mon interface IOT</title>\n";
+            page+="  <link rel=\"stylesheet\" type=\"text/css\" href=\"src/css/jquery.gridster.css\">\n";
+            page+="  <link rel=\"stylesheet\" type=\"text/css\" href=\"src/css/demo.css\">\n";
+            page+="  <link rel=\"stylesheet\" type=\"text/css\" href=\"src/css/bootstrap.min.css\">\n";
+            page+="  <link rel=\"stylesheet\" type=\"text/css\" href=\"src/css/app.css\">\n";
+            page+="  <style type=\"text/css\">\n";
+            page+="    #log {\n";
+            page+="        display: block;\n";
+            page+="        width: 100%;\n";
+            page+="        height: 20px;\n";
+            page+="        margin-bottom: 20px;\n";
+            page+="        -webkit-transition: height 0.3s ease;\n";
+            page+="        -moz-transition: height 0.3s ease;\n";
+            page+="        -ms-transition: height 0.3s ease;\n";
+            page+="        -o-transition: height 0.3s ease;\n";
+            page+="        transition: height 0.3s ease;\n";
+            page+="    }\n";
+            page+="    #log:focus {\n";
+            page+="        height: 100px;\n";
+            page+="    }\n";
+            page+="  </style>\n";
+            page+="  <style type=\"text/css\"><\/style>\n";
+            page+=" <\/head>\n";
+            page+=" <body style=\"\">\n";
+
+            page+='<div id="previewgrid" class="gridster">\n';
+            page+="  <ul style=\"background-color: #FFFFFF;\">\n"; 
+            var liste_type="";
+            var liste_id="";
+            var creation_gauge="    //création des gauges\n";
+            $.each(s, function() {
+                var chaine=this.htmlContent;
+                //alert("Id:"+this.identifier+" type:"+this.wtype);
+                liste_type+="  field_type[\""+this.identifier+"\"]=\""+this.wtype+"\";\n";
+                liste_id+=',"'+this.identifier+'"';
+                if (this.wtype=="GAUGE") {
+                  creation_gauge+="  gauge_colection['gauge"+this.identifier+"'] = new AquaGauge('gauge"+this.identifier+"');\n";
+                  creation_gauge+="  gauge_colection['gauge"+this.identifier+"'].props.minValue = "+gauge_colection['gauge'+this.identifier].props.minValue+";\n";
+                  creation_gauge+="  gauge_colection['gauge"+this.identifier+"'].props.maxValue = "+gauge_colection['gauge'+this.identifier].props.maxValue+";\n";
+                  creation_gauge+="  gauge_colection['gauge"+this.identifier+"'].props.dialTitle='"+gauge_colection['gauge'+this.identifier].props.dialTitle+"';\n";
+                  creation_gauge+="  gauge_colection['gauge"+this.identifier+"'].props.dialSubTitle='"+gauge_colection['gauge'+this.identifier].props.dialSubTitle+"';\n";
+                  creation_gauge+="  gauge_colection['gauge"+this.identifier+"'].props.noOfDivisions="+gauge_colection['gauge'+this.identifier].props.noOfDivisions+";\n";
+                  creation_gauge+="  gauge_colection['gauge"+this.identifier+"'].props.noOfSubDivisions="+gauge_colection['gauge'+this.identifier].props.noOfSubDivisions+";\n";
+                  creation_gauge+="  gauge_colection['gauge"+this.identifier+"'].props.showGlossiness=true;\n";
+                  creation_gauge+="  gauge_colection['gauge"+this.identifier+"'].refresh("+gauge_colection['gauge'+this.identifier].props.currentValue+");\n";
+                  }
+                
+                //on ne garde que le code HTML utile
+                var n='    <li data-row="'+this.row+'" data-col="'+this.col+'" data-sizex="'+this.size_x+'" data-sizey="'+this.size_y+'">'+parseReturnedXML(chaine,"<begin>","</begin>")+"</li>";
+                page+=n+'\n';
+                //var n=chaine.replace(/<header[\s\S]*\/header>/,"");
+                previewgrid.add_widget(0,'whitebox',n, this.size_x, this.size_y, this.col, this.row);
+            });
+            previewgrid.disable();
+            page+="  </ul>\n";
+            page+="</div>\n";
+            //puis les scripts JS
+            page+="<script type=\"text/javascript\" src=\"lib/jquery-1.6.4.js\"><\/script>\n";
+            page+="  <script type=\"text/javascript\" charset=\"utf-8\" src=\"lib/jquery.gridster.js\"><\/script>\n";
+            page+="  <script type=\"text/javascript\" src=\"lib/bootstrap.min.js\"><\/script>\n";
+            page+="  <script type=\"text/javascript\" src=\"lib/AquaGauge.js\"><\/script>\n";
+            page+="  <script type=\"text/javascript\" src=\"lib/commun.js\"><\/script>\n";
+            page+="  <script type=\"text/javascript\">\n";
+            page+="\n";
+            page+="  var in_editor=false;\n";
+            page+="  var in_slide=false;\n";
+            page+="  var flag_init=0;\n";
+            page+="  var index_field=0;\n";
+            page+="  var field_type=[];\n";
+            page+="  var gauge_colection = {};\n";
+            page+="  var field_name=["+liste_id.substring(1)+"];\n";
+            page+=liste_type;
+            page+="\n";
+            page+=creation_gauge;
+            page+="\n";
+            page+="  begin_ws(\""+document.getElementById('websocket_ip').value+"\");\n";
+            page+="\n";
+            
+            
+            page+='  <\/script>\n';
+            page+=" <\/body>\n";
+            page+="<\/html>\n";
+            $('#bs-log').val(page);
+   } 
+    
+   
+		
+	  var grid = $("#maingrid ul").gridster({
+		widget_margins: [1, 1],
+		widget_base_dimensions: [80, 80],
+		max_cols: 12,
+    min_cols: 12,
+    min_rows:  2,
+		draggable: {
+		handle: 'header'
+		},
+		resize: {enabled: true}
+		}).data('gridster');
+		
+		var previewgrid = $("#previewgrid ul").gridster({
+		widget_margins: [0, 0],
+		widget_base_dimensions: [80, 50],
+		max_cols: 12,
+    min_cols: 12,
+    min_rows:  2
+		}).data('gridster');
+
+    $(function() {
+        $('.js-upload').on('click', function() {
+          $('.progress-bar').css('width', '0%').attr('aria-valuenow', 0);
+          genere_HTML();
+          nomfichier='interface.html';
+          televerse();
+         });
+    
+        $('.js-seralize').on('click', function() {
+            //génération du HTML
+            genere_XML();     
+        });
+    });
+    
+    
+ var id=1;
+
+ var temp=grid.add_widget(0,'Undefined','<li>DROP WIDGETS HERE TO BUILD YOUR INTERFACE !</li>', 12,1,1,1); 
+ var tempid=0;
+
+function next_empty_field(){
+ for(var i=1;i<101;i++) {
+  if (tab_field[i]==0) {return i;}
+ }
+}
+
+    
+function rem(idrem)
+  {
+    var  chaine=$(idrem).parents(".gs-w").html();
+    console.log("HTML : "+chaine); 
+    var subStr = chaine.match("</button>(.*)<button onclick");
+    
+    console.log("Widget :"+subStr[1]);
+    /([0-9]+)/.exec(subStr[1]);
+    var numero_field=RegExp.$1;
+    console.log("Field n°"+numero_field);
+    tab_field[numero_field]=0;  //Ce numéro de field est de nouveau libre
+    index=next_empty_field();
+    console.log("Index = "+index);
+    
+    var rem = grid.remove_widget($(idrem).parents(".gs-w"), true);
+  }
+
+function change_led()
+  {
+    var chaine=$(temp).parents(".gs-w").html();
+    var param= {"couleur": document.getElementById("led_couleur").value,
+                "titre": document.getElementById("led_titre").value,
+                 "id":tempid
+                }
+    parametre['LED'+tempid+'_couleur']=param['couleur'];  
+    parametre['LED'+tempid+'_titre']=param['titre'];          
+    var insert = getHTML(0,param);
+    var linkToEdit = '<button onclick="editw(this,0);" style="float: left;"><span class="glyphicon glyphicon-list-alt"></span></button>';	
+    chaine='<div class="layout_block" id='+tempid+'><li title='+insert["title"]+' id=' + tempid + '><div class="editheader"><header>'+linkToEdit+insert["title"]+tempid+linkToRemove+' </header></div>' + insert["insert"] + '</li></div>';
+    chaine+='<span class=\"gs-resize-handle gs-resize-handle-both\"></span>';
+    $(temp).parents(".gs-w").html(chaine);
+    document.location.href = '#close';
+  }
+  
+function charge_led()
+  {
+    document.getElementById("led_couleur").value=parametre['LED'+tempid+'_couleur'];
+    document.getElementById("led_titre").value=parametre['LED'+tempid+'_titre'];
+    document.getElementById("led_id").innerText=tempid;
+  }  
+  
+function change_bouton()
+  {
+    var chaine=$(temp).parents(".gs-w").html();
+    var param= {"couleur": document.getElementById("button_couleur").value,
+                 "titre": document.getElementById("button_titre").value,
+                 "texte": document.getElementById("button_text").value,
+                 "taille": document.getElementById("button_taille").value,
+                 "largeur": document.getElementById("button_largeur").value,
+                 "id":tempid
+                 }
+    parametre['BUTTON'+tempid+'_couleur']=param['couleur'];
+    parametre['BUTTON'+tempid+'_texte']=param['texte'];
+    parametre['BUTTON'+tempid+'_taille']=param['taille'];
+    parametre['BUTTON'+tempid+'_largeur']=param['largeur'];  
+    parametre['BUTTON'+tempid+'_titre']=param['titre'];           
+    var insert = getHTML(1,param);
+    var linkToEdit = '<button onclick="editw(this,1);" style="float: left;"><span class="glyphicon glyphicon-list-alt"></span></button>';	
+    chaine='<div class="layout_block" id='+tempid+'><li title='+insert["title"]+' id=' + tempid + '><div class="editheader"><header>'+linkToEdit+insert["title"]+tempid+linkToRemove+' </header></div>' + insert["insert"] + '</li></div>';
+    chaine+='<span class=\"gs-resize-handle gs-resize-handle-both\"></span>';
+    $(temp).parents(".gs-w").html(chaine);
+    document.location.href = '#close';
+  }  
+
+
+function charge_bouton()
+  {
+    document.getElementById("button_id").innerText=tempid;
+    document.getElementById("button_couleur").value=parametre['BUTTON'+tempid+'_couleur'];
+    document.getElementById("button_text").value=parametre['BUTTON'+tempid+'_texte'];
+    document.getElementById("button_taille").value=parametre['BUTTON'+tempid+'_taille'];
+    document.getElementById("button_largeur").value=parametre['BUTTON'+tempid+'_largeur'];
+    document.getElementById("button_titre").value=parametre['BUTTON'+tempid+'_titre'];
+  }  
+  
+function change_switch()
+  {
+    var chaine=$(temp).parents(".gs-w").html();
+    var param= {"texteON": document.getElementById("switch_texte_on").value,
+                 "titre": document.getElementById("switch_titre").value,
+                 "texteOFF": document.getElementById("switch_texte_off").value,
+                 "id": tempid
+                 }
+    parametre['SWITCH'+tempid+'_texteON']=param['texteON'];
+    parametre['SWITCH'+tempid+'_texteOFF']=param['texteOFF'];  
+    parametre['SWITCH'+tempid+'_titre']=param['titre'];            
+    var insert = getHTML(2,param);
+    var linkToEdit = '<button onclick="editw(this,2);" style="float: left;"><span class="glyphicon glyphicon-list-alt"></span></button>';	
+    chaine='<div class="layout_block" id='+tempid+'><li title='+insert["title"]+' id=' + tempid + '><div class="editheader"><header>'+linkToEdit+insert["title"]+tempid+linkToRemove+' </header></div>' + insert["insert"] + '</li></div>';
+    chaine+='<span class=\"gs-resize-handle gs-resize-handle-both\"></span>';
+    $(temp).parents(".gs-w").html(chaine);
+    document.location.href = '#close';
+  } 
+ 
+ function charge_switch()
+  { 
+    document.getElementById("switch_id").innerText=tempid;
+    document.getElementById("switch_texte_on").value=parametre['SWITCH'+tempid+'_texteON'];
+    document.getElementById("switch_texte_off").value=parametre['SWITCH'+tempid+'_texteOFF']; 
+    document.getElementById("switch_titre").value=parametre['SWITCH'+tempid+'_titre'];     
+   }
+  
+function change_potar()
+  {
+    var chaine=$(temp).parents(".gs-w").html();
+    var param= {"min": document.getElementById("potar_min").value,
+                 "max": document.getElementById("potar_max").value,
+                 "position": document.getElementById("potar_position").value,
+                 "titre": document.getElementById("potar_titre").value,
+                 "id": tempid
+                 }
+    parametre['POTAR'+tempid+'_min']=param['min'];
+    parametre['POTAR'+tempid+'_max']=param['max'];
+    parametre['POTAR'+tempid+'_position']=param['position'];
+    parametre['POTAR'+tempid+'_titre']=param['titre'];             
+    var insert = getHTML(3,param);
+    var linkToEdit = '<button onclick="editw(this,3);" style="float: left;"><span class="glyphicon glyphicon-list-alt"></span></button>';	
+    chaine='<div class="layout_block" id='+tempid+'><li title='+insert["title"]+' id=' + tempid + '><div class="editheader"><header>'+linkToEdit+insert["title"]+tempid+linkToRemove+' </header></div>' + insert["insert"] + '</li></div>';
+    chaine+='<span class=\"gs-resize-handle gs-resize-handle-both\"></span>';
+    $(temp).parents(".gs-w").html(chaine);
+    document.location.href = '#close';
+  }  
+  
+function charge_potar()
+  {
+        document.getElementById("potar_id").innerText=tempid;
+        document.getElementById("potar_min").value=parametre['POTAR'+tempid+'_min'];
+        document.getElementById("potar_max").value=parametre['POTAR'+tempid+'_max'];
+        document.getElementById("potar_position").value=parametre['POTAR'+tempid+'_position'];	
+        document.getElementById("potar_titre").value=parametre['POTAR'+tempid+'_titre'];
+   }
+  
+  
+ function change_label()
+  {
+    var chaine=$(temp).parents(".gs-w").html();
+    var param= {"texte": document.getElementById("label_texte").value,
+                 "couleur": document.getElementById("label_couleur").value,
+                 "taille": document.getElementById("label_taille").value,
+                 "couleurfond": document.getElementById("label_couleurfond").value,
+                 "titre": document.getElementById("label_titre").value,
+                 "id":tempid
+                 }
+    parametre['LABEL'+tempid+'_texte']=param['texte'];
+    parametre['LABEL'+tempid+'_couleur']=param['couleur'];
+    parametre['LABEL'+tempid+'_taille']=param['taille'];
+    parametre['LABEL'+tempid+'_couleurfond']=param['couleurfond']; 
+    parametre['LABEL'+tempid+'_titre']=param['titre'];              
+    var insert = getHTML(5,param);
+    var linkToEdit = '<button onclick="editw(this,3);" style="float: left;"><span class="glyphicon glyphicon-list-alt"></span></button>';	
+    chaine='<div class="layout_block" id='+tempid+'><li title='+insert["title"]+' id=' + tempid + '><div class="editheader"><header>'+linkToEdit+insert["title"]+tempid+linkToRemove+' </header></div>' + insert["insert"] + '</li></div>';
+    chaine+='<span class=\"gs-resize-handle gs-resize-handle-both\"></span>';
+    $(temp).parents(".gs-w").html(chaine);
+    document.location.href = '#close';
+  }   
+  
+  function change_edit()
+  {
+    var chaine=$(temp).parents(".gs-w").html();
+    var param= {"texte": document.getElementById("edit_texte").value,
+                 "maxlength": document.getElementById("edit_maxlength").value,
+                 "type": document.getElementById("edit_type").value,
+                 "taille": document.getElementById("edit_taille").value,
+                 "max": document.getElementById("edit_max").value,
+                 "min": document.getElementById("edit_min").value,
+                 "titre": document.getElementById("edit_titre").value,
+                 "id":tempid
+                 }
+    parametre['EDIT'+tempid+'_texte']=param['texte'];
+    parametre['EDIT'+tempid+'_maxlength']=param['maxlength'];
+    parametre['EDIT'+tempid+'_max']=param['max'];
+    parametre['EDIT'+tempid+'_min']=param['min'];
+    parametre['EDIT'+tempid+'_type']=param['type'];  
+    parametre['EDIT'+tempid+'_taille']=param['taille']; 
+    parametre['EDIT'+tempid+'_titre']=param['titre'];        
+    var insert = getHTML(6,param);
+    var linkToEdit = '<button onclick="editw(this,3);" style="float: left;"><span class="glyphicon glyphicon-list-alt"></span></button>';	
+    chaine='<div class="layout_block" id='+tempid+'><li title='+insert["title"]+' id=' + tempid + '><div class="editheader"><header>'+linkToEdit+insert["title"]+tempid+linkToRemove+' </header></div>' + insert["insert"] + '</li></div>';
+    chaine+='<span class=\"gs-resize-handle gs-resize-handle-both\"></span>';
+    $(temp).parents(".gs-w").html(chaine);
+    document.location.href = '#close';
+  }   
+  
+    function charge_edit()
+  {
+    document.getElementById("edit_id").innerText=tempid;
+    document.getElementById("edit_texte").value=parametre['EDIT'+tempid+'_texte'];
+    document.getElementById("edit_max").value=parametre['EDIT'+tempid+'_max'];
+    document.getElementById("edit_min").value=parametre['EDIT'+tempid+'_min'];
+    document.getElementById("edit_maxlength").value=parametre['EDIT'+tempid+'_maxlength'];
+    document.getElementById("edit_type").value=parametre['EDIT'+tempid+'_type']; 
+    document.getElementById("edit_taille").value=parametre['EDIT'+tempid+'_taille'];
+    document.getElementById("edit_titre").value=parametre['EDIT'+tempid+'_titre'];
+  } 
+  
+  function charge_label()
+  {
+        document.getElementById("label_id").innerText=tempid;
+        document.getElementById("label_texte").value=parametre['LABEL'+tempid+'_texte'];
+        document.getElementById("label_couleur").value=parametre['LABEL'+tempid+'_couleur'];
+        document.getElementById("label_taille").value=parametre['LABEL'+tempid+'_taille'];
+        document.getElementById("label_couleurfond").value=parametre['LABEL'+tempid+'_couleurfond'];	
+        document.getElementById("label_titre").value=parametre['LABEL'+tempid+'_titre'];
+  } 
+  
+ function change_gauge()
+  {
+    //effacement du canvas de la gauge
+    //var canvas = document.getElementById('gauge'+tempid);
+    //var context = canvas.getContext('2d');
+    //context.clearRect(0, 0, canvas.width, canvas.height);
+    console.log("Change_gauge()");
+    var chaine=$(temp).parents(".gs-w").html();
+    var param= {"id": tempid}
+    var insert = getHTML(4,param);
+    var linkToEdit = '<button onclick="editw(this,4);" style="float: left;"><span class="glyphicon glyphicon-list-alt"></span></button>';	
+    chaine='<div class="layout_block" id='+tempid+'><li title='+insert["title"]+' id=' + tempid + '><div class="editheader"><header>'+linkToEdit+insert["title"]+tempid+linkToRemove+' </header></div>' + insert["insert"] + '</li></div>';
+    chaine+='<span class=\"gs-resize-handle gs-resize-handle-both\"></span>';
+    $(temp).parents(".gs-w").html(chaine);
+    //destruction de l'ancienne gauge
+    gauge_colection['gauge'+tempid] = null;
+    delete gauge_colection['gauge'+tempid];
+    //On modifie les caractéristiques de la gauge
+    gauge_colection['gauge'+tempid] = new AquaGauge('gauge'+tempid);
+    gauge_colection['gauge'+tempid].props.minValue = document.getElementById("gauge_min").value;
+    gauge_colection['gauge'+tempid].props.maxValue = document.getElementById("gauge_max").value;
+    gauge_colection['gauge'+tempid].props.dialTitle=document.getElementById("gauge_titre").value;
+    gauge_colection['gauge'+tempid].props.dialSubTitle=document.getElementById("gauge_stitre").value;
+    gauge_colection['gauge'+tempid].props.noOfDivisions=document.getElementById("gauge_grad").value;
+    gauge_colection['gauge'+tempid].props.noOfSubDivisions=document.getElementById("gauge_subgrad").value;
+    gauge_colection['gauge'+tempid].props.showGlossiness=true;
+    gauge_colection['gauge'+tempid].refresh(document.getElementById("gauge_position").value);
+    parametre['GAUGE'+tempid+'_min']=gauge_colection['gauge'+tempid].props.minValue;
+    parametre['GAUGE'+tempid+'_max']=gauge_colection['gauge'+tempid].props.maxValue;
+    parametre['GAUGE'+tempid+'_position']=document.getElementById("gauge_position").value;
+    parametre['GAUGE'+tempid+'_titreid']=document.getElementById("gauge_titreid").value;
+    parametre['GAUGE'+tempid+'_titre']=gauge_colection['gauge'+tempid].props.dialTitle;
+    parametre['GAUGE'+tempid+'_soustitre']=gauge_colection['gauge'+tempid].props.dialSubTitle;
+    parametre['GAUGE'+tempid+'_tics']=gauge_colection['gauge'+tempid].props.noOfDivisions;
+    parametre['GAUGE'+tempid+'_subtics']=gauge_colection['gauge'+tempid].props.noOfSubDivisions;
+    document.location.href = '#close';
+  }   
+  
+  function charge_gauge()
+  {
+        document.getElementById("gauge_id").innerText=tempid;
+        document.getElementById("gauge_min").value=parametre['GAUGE'+tempid+'_min'];
+        document.getElementById("gauge_max").value=parametre['GAUGE'+tempid+'_max'];
+        document.getElementById("gauge_position").value=parametre['GAUGE'+tempid+'_position'];
+        document.getElementById("gauge_titre").value=parametre['GAUGE'+tempid+'_titre'];
+        document.getElementById("gauge_titreid").value=parametre['GAUGE'+tempid+'_titreid'];
+        document.getElementById("gauge_stitre").value=parametre['GAUGE'+tempid+'_soustitre'];
+        document.getElementById("gauge_grad").value=parametre['GAUGE'+tempid+'_tics'];
+        document.getElementById("gauge_subgrad").value=parametre['GAUGE'+tempid+'_subtics'];
+  }
+
+ function editw(idrem,t)
+{
+  temp=idrem; //On sauve le pointeur sur le widget
+  tempid=$(idrem).parents(".gs-w").data('identifier');
+	//console.log("Widget ID : "+$(idrem).parents(".gs-w").data('identifier'));
+	var swtype="LED";
+	swtype=$(idrem).parents(".gs-w").data('wtype');
+	//console.log("Widget Type : "+swtype);
+	switch(swtype) {              
+	 case "LED" :  charge_led();
+                  document.location.href = '#edit_led_form';
+                  break;
+   case "BUTTON" :  charge_bouton();
+                     document.location.href = '#edit_button_form';
+                  break;
+   case "SWITCH" :  charge_switch()
+                     document.location.href = '#edit_switch_form';
+                  break;
+   case "POTAR" :  charge_potar();
+                    document.location.href = '#edit_potar_form';
+                  break;
+   case "GAUGE" :  charge_gauge();
+                    document.location.href = '#edit_gauge_form';
+                  break;
+   case "LABEL" :  charge_label();
+                   document.location.href = '#edit_label_form';
+                  break;
+   case "EDIT" :  charge_edit();
+                   document.location.href = '#edit_edit_form';
+                  break;                                                              	
+	}
+}
+		
+function getHTML(id,param)
+{
+    if(id == 0)
+    {
+        html = '<begin><div id="LED'+param['id']+'"><div class="led-none led-'+param['couleur']+'"></div></div></begin>';
+        width= 1
+        height=1
+        title = "LED";
+    }
+    if(id == 1)
+    {
+        html = '<begin><button type="button" class="btn '+param['couleur']+' '+param['taille']+' '+param['largeur']+'" onclick="handlebutton('+param['id']+');">'+param['texte']+'</button></begin>';
+        width= 2
+        height=1
+        title = "BOUTON";
+    }
+    if(id == 2)
+    {
+        html = '<begin><span class="checkbox"><input id="check'+param['id']+'" type="checkbox"   onclick="handleClick(this,'+param['id']+');"><label data-on="'+param['texteON']+'" data-off="'+param['texteOFF']+'"></label></span></begin>';
+        width= 1
+        height=1
+        title = "SWITCH";
+    }
+    if(id == 3)
+    {
+        html = '<begin><div class="item range range-assertive"><input id="potar'+param['id']+'" type="range" name="volume" min="'+param['min']+'" max="'+param['max']+'" value="'+param['position']+'" ontouchstart="slide(true);" onmousedown="slide(true);" onchange="handlepot(this,'+param['id']+');"></div></begin>';
+        width= 3
+        height=1
+        title = "POTAR";
+    }
+    if(id == 4)
+    {
+        html = '<begin><canvas id="gauge'+param['id']+'" width="150" height="150">Browser not supported.</canvas></begin>';
+        width= 2
+        height=3
+        title = "GAUGE";
+    }
+    if(id == 5)
+    {
+        html = '<begin><div class="label"><span id="label'+param['id']+'" style="background-color:'+param['couleurfond']+';color: '+param['couleur']+';font-size:'+param['taille']+'%">'+param['texte']+'</span></div></begin>';
+        width= 1
+        height=1
+        title = "LABEL";
+    }
+    if(id == 6)
+    {
+        html = '<begin><div class="edit"><input id="edit'+param['id']+'" type="'+param['type']+'" size="'+param['taille']+'"\n placeholder="'+param['texte']+'" maxlength="'+param['maxlength']+'" min="'+param['min']+'" max="'+param['max']+'" style="font-size: small;font-family: Arial Black;"\n onmousedown="editor(true);" onblur="editor(false);"  onchange="handleeditor(this,'+param['id']+');"></div></begin>';
+        width= 3
+        height=1
+        title = "EDIT";
+    }
+    obj = {"title": title, "insert": html, "width": width, "height":height}
+    return obj;
+}
+
+    mysort = function(widgets) {
+        widgets = widgets.sort(function(a, b) {
+           if (a.row > b.row || a.row === b.row && a.col > b.col) {
+               return 1;
+           }
+           return -1;
+        });
+ 
+        return widgets;
+    };
+ 
+
+    window.onload = function() {
+    var f = document.getElementById('fileLoader');
+    f.onchange = function() {
+            file = f.files[0];
+            fr = new FileReader();
+             
+        fr.onprogress = function() {
+        };
+        fr.onerror = function() {
+        };
+        fr.onload = function() {
+            // use the DOMParser browser API to convert text to a Document
+            var XML = new DOMParser().parseFromString(fr.result, "text/xml");
+            // and then use #parse to convert it to a JS object
+            var obj = parse(XML);
+            //res.appendChild(document.createTextNode(JSON.stringify(obj)));
+            obj=mysort(obj);
+            //on vide la grille, on réinitialise les parametres, le tableau des gauges et l'index à 1
+            grid.remove_all_widgets(); 
+            grid.avoid_overlapped_widgets=false;
+            for (var i=1;i<101;i++) {
+              tab_field[i]=0;
+            }
+            index=1;
+            var max_index=0;
+            gauge_colection = {};
+            parametre={};
+            id=1;
+            first=false;
+            //On parcours l'XML 
+            for(var i= 0; i < obj.length; i++)
+            {
+             if (obj[i]['type']=='DUMMY') {} else
+             {
+               //On charge un widget
+               index=obj[i]['field'];
+               console.log("On charge le widget n°"+index);
+               tab_field[index]=1;
+               widpossize= {"row": Number(obj[i]['row']),
+                            "col": Number(obj[i]['col']),
+                            "size_x":Number(obj[i]['size_x']),
+                            "size_y":Number(obj[i]['size_y'])}
+               if (index>max_index) {max_index=index}          
+               new_widget(obj[i]['type'],false);
+               if (obj[i]['type']=='LED') {
+                 //Mise a jour d'une led
+                 document.getElementById("led_couleur").value=obj[i]['couleur'];
+                 document.getElementById("led_titre").value=obj[i]['description'];
+                 document.getElementById("led_id").innerText=obj[i]['field'];
+                 tempid=obj[i]['field'];
+                 temp=document.getElementById("btnedit"+obj[i]['field']);//pointe sur le bouton edit correspondant
+                 change_led();
+               }
+               if (obj[i]['type']=='BUTTON') {
+                 //Mise a jour d'un bouton
+                  document.getElementById("button_id").innerText=obj[i]['field'];
+                  document.getElementById("button_couleur").value=obj[i]['couleur'];
+                  document.getElementById("button_text").value=obj[i]['texte'];
+                  document.getElementById("button_taille").value=obj[i]['taille'];
+                  document.getElementById("button_largeur").value=obj[i]['largeur'];
+                  document.getElementById("button_titre").value=obj[i]['description'];
+                  tempid=obj[i]['field'];
+                  temp=document.getElementById("btnedit"+obj[i]['field']);//pointe sur le bouton edit correspondant
+                  change_bouton();
+               }
+               if (obj[i]['type']=='SWITCH') {
+                 //Mise a jour d'un interrupteur
+                  document.getElementById("switch_id").innerText=obj[i]['field'];
+                  document.getElementById("switch_texte_on").value=value=obj[i]['texte_on'];
+                  document.getElementById("switch_texte_off").value=value=obj[i]['texte_off']; 
+                  document.getElementById("switch_titre").value=obj[i]['description']; 
+                  tempid=obj[i]['field'];
+                  temp=document.getElementById("btnedit"+obj[i]['field']);//pointe sur le bouton edit correspondant
+                  change_switch();
+               }
+               if (obj[i]['type']=='POTAR') {
+                 //Mise a jour d'un interrupteur
+                  document.getElementById("potar_id").innerText=obj[i]['field'];
+                  document.getElementById("potar_min").value=obj[i]['min'];
+                  document.getElementById("potar_max").value=obj[i]['max'];
+                  document.getElementById("potar_position").value=	obj[i]['position'];
+                  document.getElementById("potar_titre").value=obj[i]['description'];
+                  tempid=obj[i]['field'];
+                  temp=document.getElementById("btnedit"+obj[i]['field']);//pointe sur le bouton edit correspondant
+                  change_potar();
+               }
+               if (obj[i]['type']=='GAUGE') {
+                 //Mise a jour d'une gauge
+                  document.getElementById("gauge_id").innerText=obj[i]['field'];
+                  document.getElementById("gauge_min").value=obj[i]['min'];
+                  document.getElementById("gauge_max").value=obj[i]['max'];
+                  document.getElementById("gauge_position").value=obj[i]['value'];
+                  document.getElementById("gauge_titre").value=obj[i]['title'];
+                  document.getElementById("gauge_titreid").value=obj[i]['description'];
+                  document.getElementById("gauge_stitre").value=obj[i]['subtitle'];
+                  document.getElementById("gauge_grad").value=obj[i]['divisions'];
+                  document.getElementById("gauge_subgrad").value=obj[i]['subdivisions'];
+                  tempid=obj[i]['field'];
+                  temp=document.getElementById("btnedit"+obj[i]['field']);//pointe sur le bouton edit correspondant
+                  console.log("Carge la gauge n°"+tempid);
+                  change_gauge();
+               }
+               if (obj[i]['type']=='LABEL') {
+                 //Mise a jour d'un label
+                  document.getElementById("label_id").innerText=obj[i]['field'];
+                  document.getElementById("label_texte").value=obj[i]['texte'];
+                  document.getElementById("label_couleur").value=obj[i]['couleur'];
+                  document.getElementById("label_taille").value=obj[i]['taille'];
+                  document.getElementById("label_couleurfond").value=	obj[i]['couleurfond'];
+                  document.getElementById("label_titre").value=obj[i]['description']; 
+                  tempid=obj[i]['field'];
+                  temp=document.getElementById("btnedit"+obj[i]['field']);//pointe sur le bouton edit correspondant
+                  change_label();
+               }
+               if (obj[i]['type']=='EDIT') {
+                 //Mise a jour d'un label
+                  document.getElementById("edit_id").innerText=obj[i]['field'];
+                  document.getElementById("edit_texte").value=obj[i]['texte'];
+                  document.getElementById("edit_max").value=obj[i]['max'];
+                  document.getElementById("edit_min").value=obj[i]['min'];
+                  document.getElementById("edit_maxlength").value=obj[i]['maxlength'];
+                  document.getElementById("edit_type").value= obj[i]['typesaisie'];
+                  document.getElementById("edit_taille").value=obj[i]['taille'];
+                  document.getElementById("edit_titre").value=obj[i]['description'];
+                  tempid=obj[i]['field'];
+                  temp=document.getElementById("btnedit"+obj[i]['field']);//pointe sur le bouton edit correspondant
+                  change_edit();
+               }
+             }
+             index=next_empty_field();
+            }
+        };
+         
+        fr.readAsText(file);
+    };
+};
+
+    </script>
+
+
+</body>
+
+
+<!-- Mirrored from www.technozone51.fr/logiciel/iotwebserver/composer.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 26 Nov 2017 01:13:44 GMT -->
+</html>

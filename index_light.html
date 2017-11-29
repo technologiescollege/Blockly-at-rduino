@@ -1,79 +1,62 @@
 <html>
 <head>
-<link rel="icon" type="image/png" href="favicon.png" />
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Blockly@rduino</title>
-<!--load first for menus-->
-<link rel="stylesheet" href="css/menu.css"/>
-<!--script type="text/javascript" src="core_Blockly/blockly_uncompressed.js"></script-->
-<script type="text/javascript" src="core_Blockly/blockly_compressed.js"></script>
+	<link rel="icon" type="image/png" href="favicon.png" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Blockly@rduino</title>
+	<!--load first for menus-->
+	<link rel="stylesheet" type="text/css" href="css/menu.css"/>
+	<script type="text/javascript" src="core_Blockly/blockly_compressed.js"></script>
+	<!-- needed for type of variable -->
+	<script type="text/javascript" src="core_Ardublockly/type.js"></script>
+	<script type="text/javascript" src="core_Ardublockly/types.js"></script>
+	<script type="text/javascript" src="core_Ardublockly/static_typing.js"></script>
+	<script type="text/javascript" src="core_Ardublockly/instances.js"></script>
+	<script type="text/javascript" src="core_Ardublockly/field_instance.js"></script>
+	<script type="text/javascript" src="core_Ardublockly/block.js"></script>
+	<!--Arduino generator, must be defined NOW-->
+	<script type="text/javascript" src="generators/generator_arduino.js"></script>
 
-<!-- needed for type of variable -->
-<script type="text/javascript" src="core_Ardublockly/type.js"></script>
-<script type="text/javascript" src="core_Ardublockly/types.js"></script>
-<script type="text/javascript" src="core_Ardublockly/static_typing.js"></script>
-<script type="text/javascript" src="core_Ardublockly/instances.js"></script>
-<script type="text/javascript" src="core_Ardublockly/field_instance.js"></script>
-<script type="text/javascript" src="core_Ardublockly/block.js"></script>
-<!--Arduino generator, must be defined NOW-->
-<script type="text/javascript" src="generators/generator_arduino.js"></script>
+	<script type="text/javascript" src="core_BlocklyArduino/blockly@rduino.js"></script>
+	<script type="text/javascript" src="core_BlocklyArduino/blockly@rduino_boards.js"></script>
+	<script type="text/javascript" src="core_BlocklyArduino/blockly@rduino_tools.js"></script>
+	<script type="text/javascript" src="core_BlocklyArduino/blockly@rduino_visual.js"></script>
+	<script type="text/javascript" src="core_BlocklyArduino/compilerflasher.js"></script>
+	<!--updated online plugin>
+	<script type="text/javascript" src="http://codebender.cc/embed/compilerflasher.js"></script-->
 
-<script type="text/javascript" src="core_BlocklyArduino/blockly@rduino.js"></script>
-<script type="text/javascript" src="core_BlocklyArduino/blockly@rduino_boards.js"></script>
-<script type="text/javascript" src="core_BlocklyArduino/blockly@rduino_tools.js"></script>
-<script type="text/javascript" src="core_BlocklyArduino/blockly@rduino_visual.js"></script>
-<script type="text/javascript" src="core_BlocklyArduino/jscolor.js"></script>
-<script type="text/javascript" src="core_BlocklyArduino/spin.js"></script>	
-<script type="text/javascript" src="core_BlocklyArduino/jquery-2.1.3.min.js"></script>
+	<script type="text/javascript" src="core_BlocklyArduino/libs/jquery-2.1.3.min.js"></script> 
+	<script type="text/javascript" src="core_BlocklyArduino/libs/jquery-ui.js"></script>
+	<script type="text/javascript" src="core_BlocklyArduino/libs/bootstrap.min.3.3.6.js"></script>
+	<script type="text/javascript" src="core_BlocklyArduino/libs/bootstrap-toggle.min.js"></script>
+	<script type="text/javascript" src="core_BlocklyArduino/libs/clipboard.min.js"></script>
+	<script type="text/javascript" src="core_BlocklyArduino/libs/head.load.min.js"></script>
+	<script type="text/javascript" src="core_BlocklyArduino/libs/jscolor.js"></script>
+	<script type="text/javascript" src="core_BlocklyArduino/libs/prettify.js"></script>
+	<script type="text/javascript" src="core_BlocklyArduino/libs/smoothie.js"></script>
 
-<link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<!--TechnoZone51-->
+	<script type="text/javascript" src="core_BlocklyArduino/TZ51/html2canvas.js"></script>
+	<script type="text/javascript" src="core_BlocklyArduino/TZ51/canvas2image.js"></script>
+	<!--Fin TZ51-->
 
-<script type="text/javascript" src="core_BlocklyArduino/bootstrap.min.3.3.6.js"></script>
-<script type="text/javascript" src="core_BlocklyArduino/bootstrap-toggle.min.js"></script>
-<script type="text/javascript" src="core_BlocklyArduino/prettify.js"></script>
-<script type="text/javascript" src="core_BlocklyArduino/head.load.min.js"></script>
-	<!--script type="text/javascript" src="core_BlocklyArduino/prototype_window/prototype.js"></script>
-	<script type="text/javascript" src="core_BlocklyArduino/prototype_window/effects.js"></script>
-	<script type="text/javascript" src="core_BlocklyArduino/prototype_window/window.js"></script>
-	<script type="text/javascript" src="core_BlocklyArduino/prototype_window/window_effects.js"></script>
-	<script type="text/javascript" src="core_BlocklyArduino/prototype_window/debug.js"></script-->
+	<!-- define all additional blocks from one resumer-->
+	<script type="text/javascript" src="blocks/arduino_resume.js"></script>
+	<script type="text/javascript" src="generators/arduino_resume.js"></script>
+	<script type="text/javascript" src="lang/code.js"></script>
 
-<!-- define all additional blocks from one resumer-->
-<script type="text/javascript" src="blocks/arduino_resume.js"></script>
-<script type="text/javascript" src="generators/arduino_resume.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/blockly@rduino.css"/>
+	<!--link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/-->
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.BlocklyArduino.css"/>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap-toggle.min.css"/>
+	<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css"/>
+	<link rel="stylesheet" type="text/css" href="css/jquery-ui.css"/>
+	<link rel="stylesheet" type="text/css" href="css/prettify.css"/>
 
-<!--TechnoZone51-->
-<script type="text/javascript" src="core_BlocklyArduino/TZ51/html2canvas.js"></script>
-<script type="text/javascript" src="core_BlocklyArduino/TZ51/canvas2image.js"></script>
-<!--Fin TZ51-->
-
-<script type="text/javascript" src="lang/code.js"></script>
-
-<!--updated plugin>
-<script type="text/javascript" src="http://codebender.cc/embed/compilerflasher.js"></script-->
-<!--offline plugin-->
-<script type="text/javascript" src="core_BlocklyArduino/compilerflasher.js"></script>
-<script type="text/javascript" src="core_BlocklyArduino/smoothie.js"></script>
-<script type="text/javascript" src="core_BlocklyArduino/clipboard.min.js"></script> 
-
-
-<link rel="stylesheet" type="text/css" href="css/blockly@rduino.css"/>
-<link rel="stylesheet" type="text/css" href="css/roundButtons.css"/>
-<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css"/>
-<!--link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/-->
-<link rel="stylesheet" type="text/css" href="css/bootstrap.min.BlocklyArduino.css"/>
-<link rel="stylesheet" type="text/css" href="css/bootstrap-toggle.min.css"/>
-<link rel="stylesheet" type="text/css" href="css/prettify.css"/>
-<link rel="stylesheet" type="text/css" href="css/prototype_window/default.css"/>
-<link rel="stylesheet" type="text/css" href="css/prototype_window/alert.css" />
-<link rel="stylesheet" type="text/css" href="css/prototype_window/alphacube.css"/>
-
-<script type="text/javascript">
-	$(window).load(function() {
-		$(".loading").fadeOut("slow");
-	});
-</script>
+	<script type="text/javascript">
+		$(window).load(function() {
+			$(".loading").fadeOut("slow");
+		});
+	</script>
 </head>
 
 <body onload="BlocklyDuino.init()">
@@ -226,7 +209,7 @@
 	<div id="divBody">
 		<div id="menuPanel">
 			<div id="menuPanelConfig">
-				<button id="btn_configGlobal" class="btn btn-danger btn-block" data-toggle="modal" data-target="#configModalGlobal">
+				<button id="btn_configGlobal" class="btn btn_ver btn-danger btn-block" data-toggle="modal" data-target="#configModalGlobal">
 					<span class="glyphicon glyphicon-alert"> </span>
 					<span id="configGlobalLabel"> </span>
 				</button>
@@ -294,7 +277,7 @@
 					<span class="glyphicon glyphicon-list-alt"> </span>
 					<span id="span_example"> </span>
 				</button>
-				<a id="btn_create_example" class="btn btn-info btn-block" href="#" target="_blank" role='button'>
+				<a id="btn_create_example" class="btn btn_ver btn-info btn-block" href="#" target="_blank" role='button'>
 					<span class="glyphicon glyphicon-wrench"> </span>
 					<span id="span_create_example"> </span>
 				</a>
@@ -318,14 +301,8 @@
 				<button id="btn_colors" class="btn btn-warning jscolor {valueElement:null,value:'F0AD4E'}" onchange="update(this.jscolor)">
 				   <span class="glyphicon glyphicon-tint"> </span>
 				</button>
-				<script>
-						function update(jscolor) {
-							// 'jscolor' instance can be used as a string
-							document.getElementById('menuPanel').style.backgroundColor = jscolor;
-						}
-				</script>
 			</div>
-			<div id="div_tools_button">		
+			<div id="div_tools_button">
 					<script type="text/javascript">
 					$( function openDialog() {
 						var iframe = $('<iframe frameborder="0" marginwidth="0" marginheight="0"></iframe>');
@@ -772,6 +749,10 @@
 								<option value="kit_microfeux">Micro-feux Jeulin</option>
 							</select>
 					</div>
+					<br />
+					<span class="glyphicon glyphicon-text-background"></span>  <label id="span_colorToggle"> </label>
+					<input id="toggle-Colors" data-toggle="toggle" data-off="<span id='span_colorBW'> </span>" data-on="<span id='span_colorColors'> </span>" data-onstyle="primary" data-offstyle="default" data-width="120" type="checkbox"/><br />
+					<br />				
 					<br />	        
 					<div style="clear : both;">
 						<a href="http://www.libreduc.cc/wiki/doku.php/fr/arduino/blockly_rduino/configglobale"  target='blank'><img src="media/codebenderOUarduino.jpg" height="35px"/></a><br/>

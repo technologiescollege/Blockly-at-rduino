@@ -261,6 +261,9 @@ Code.initLanguage = function() {
   $('#toolboxes option[value="toolbox_arduino_all"]').text(MSG['span_toolbox_all']);
   $('#toolboxes option[value="toolbox_user"]').text(MSG['span_toolbox_user']);
   $('#span_languageMenu').text(MSG['span_languageMenu']);
+  $('#span_colorToggle').text(MSG['span_colorToggle']);
+  $('#span_colorBW').text(MSG['span_colorBW']);
+  $('#span_colorColors').text(MSG['span_colorColors']);
   $('#span_OnOffLine').text(MSG['span_OnOffLine']);
   
   $('#toggle-WebAccess-on').text(MSG['span_OnLine']);

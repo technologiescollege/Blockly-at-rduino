@@ -437,6 +437,7 @@ BlocklyDuino.bindFunctions = function() {
 	$('#btn_flash_local').on("click", BlocklyDuino.uploadClick);
 	$('#btn_verify_local').on("click", BlocklyDuino.verify_local_Click);
 		
+	$('#toggle-Colors').on("change", BlocklyDuino.toggleTextColors);
 	$('#toggle-WebAccess').on("change", BlocklyDuino.toggleWeb);
 	$('#toggle-LocalCodebender').on("change", BlocklyDuino.toggleLocalCodeBender);
 
@@ -542,8 +543,7 @@ BlocklyDuino.bindFunctions = function() {
 	});
 	
 	$('#btn_inline').on("click", BlocklyDuino.inline);
-	$('#btn_blocs_picture').on("click", BlocklyDuino.blockPicture);	
-	$('#btn_blocs_picture').on("click", BlocklyDuino.blockPicture);	
+	$('#btn_blocs_picture').on("click", BlocklyDuino.blockPicture);
 	$('#btn_blocs_picture_mini').on("click", BlocklyDuino.blockPicture_mini);
 	$('#btn_blocs_picture_maxi').on("click", BlocklyDuino.blockPicture_maxi);
 	

@@ -169,7 +169,7 @@ BlocklyDuino.changeSize = function() {
   }
 
   // remove url file
-  search = search.replace(/([?&]url=)[^&]*/, '');
+  //search = search.replace(/([?&]url=)[^&]*/, '');
 
   window.location = window.location.protocol + '//' + window.location.host + window.location.pathname + search;
 };
@@ -301,6 +301,15 @@ BlocklyDuino.OnOffLine = function() {
   }
 };
 
+BlocklyDuino.toggleTextColors = function(taille) {
+	// checked = colors
+	if ($('#toggle-Colors').prop('checked')) {
+		$(".btn").css({"color" : "#000000", "background-color" : "#FFFFFF"});
+		$(".nav-pills").css({"color" : "#000000", "background-color" : "#FFFFFF"});	
+		$("#header").css({"color" : "#000000", "background-color" : "#FFFFFF"});
+		$(".submenu").css({"color" : "#000000", "background-color" : "#FFFFFF"});
+	}
+}
  
 BlocklyDuino.tailleFonte = function(taille) {
 	document.getElementsByClass("mod")[0].style.fontSize = taille + "[b]px[/b]";	
@@ -309,12 +318,10 @@ BlocklyDuino.tailleFonte = function(taille) {
  
 BlocklyDuino.miniMenuPanel = function() {
 	//$('#menuPanel').css({"width" : '45px'});
-	$("#divTabpanel").css({"margin-left" : "0px"});
+	$("#divTabpanel").css({"margin-left" : "50px"});
 	$(".blocklySvg").css({"margin-left" : "205px"});
-	$(".btn").css({"color" : "#000000", "background-color" : "#FFFFFF"});
-	$(".nav-pills").css({"color" : "#000000", "background-color" : "#FFFFFF"});	
-	$("#header").css({"color" : "#000000", "background-color" : "#FFFFFF"});
-	$(".submenu").css({"color" : "#000000", "background-color" : "#FFFFFF"});
+	$(".blocklyFlyout").css({"margin-left" : "155px"});
+	$(".blocklyWorkspace").css({"margin-left" : "205px"});
 };
 
 /**
