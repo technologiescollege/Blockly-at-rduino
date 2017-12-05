@@ -41,6 +41,6 @@ Blockly.Arduino.Sharp_IR_read = function() {
   var value_pin = Blockly.Arduino.valueToCode(this, 'PIN', Blockly.Arduino.ORDER_ATOMIC);
   var dropdown_name = this.getFieldValue('SHARP_IR_NAME');
 
-  var code = dropdown_name + '.distance()';
+  var code = dropdown_name + '.getDistance()';
   return [code, Blockly.Arduino.ORDER_ATOMIC];
 };
