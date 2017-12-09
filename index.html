@@ -35,8 +35,8 @@
 	<script type="text/javascript" src="core_BlocklyArduino/libs/smoothie.js"></script>
 
 	<!--TechnoZone51-->
-	<script type="text/javascript" src="core_BlocklyArduino/TZ51/html2canvas.js"></script>
-	<script type="text/javascript" src="core_BlocklyArduino/TZ51/canvas2image.js"></script>
+	<script type="text/javascript" src="tools/TZ51/html2canvas.js"></script>
+	<script type="text/javascript" src="tools/TZ51/canvas2image.js"></script>
 	<!--Fin TZ51-->
 
 	<!-- define all additional blocks from one resumer-->
@@ -468,7 +468,6 @@
 		  <br /> - JQuerry (<a href='https://jquery.com' target='blank'>https://jquery.com)</a>
 		  <br /> - HeadJS (<a href='http://headjs.com/' target='blank'>http://headjs.com/)</a>
 		  <br /> - SmoothieCharts (<a href='http://smoothiecharts.org/' target='blank'>http://smoothiecharts.org/)</a>
-		  <br /> - ROBOM.RU (<a href='https://robom.ru/' target='blank'>https://robom.ru/)</a>		
 		  <br />	  
 		  <b><div align="center"><a href="http://framaforms.org/blocklyrduino-utilisateurs-1490560876" target='blank'><font size="12"><span id="span_forms_about" style="font-style: bold;"> </span></font></a></div></b>
 		  <br />
@@ -611,7 +610,7 @@
         <h4 class="modal-title" id="RGBModalLabel"></h4>
       </div>
 	  <div class="modal-body text-center" id="frame_RGB">
-		<iframe width="550" height="700" src="./core_BlocklyArduino/RGB/RGB.html" frameborder="0"></iframe>
+		<iframe width="550" height="700" src="./tools/RGB/RGB.html" frameborder="0"></iframe>
 	  </div>
     </div>
 </div>
@@ -749,6 +748,10 @@
 								<option value="kit_microfeux">Micro-feux Jeulin</option>
 							</select>
 					</div>
+					<br />
+					<span class="glyphicon glyphicon-text-background"></span>  <label id="span_colorToggle"> </label>
+					<input id="toggle-Colors" data-toggle="toggle" data-off="<span id='span_colorBW'> </span>" data-on="<span id='span_colorColors'> </span>" data-onstyle="primary" data-offstyle="default" data-width="120" type="checkbox"/><br />
+					<br />				
 					<br />	        
 					<div style="clear : both;">
 						<a href="http://www.libreduc.cc/wiki/doku.php/fr/arduino/blockly_rduino/configglobale"  target='blank'><img src="media/codebenderOUarduino.jpg" height="35px"/></a><br/>
