@@ -261,6 +261,9 @@ Blockly.Msg.CAT_ACTIONNEURS_DFRobot_SHIELD_LCDKEYPAD = " - écran LCD";
 Blockly.Msg.CAT_ACTIONNEURS_ARDUINO_moteur = " - moteur";
 Blockly.Msg.CAT_ACTIONNEURS_DFPLAYER = " - audio";
 
+Blockly.Msg.CAT_POLOLU = "Pololu"; //added 24/01/2018 
+Blockly.Msg.CAT_POLOLU_QTR_1RC = " - QTR-1RC";
+
 Blockly.Msg.FIELDDROPDOWN = [["1 (état haut)", "HIGH"], ["0 (état bas)", "LOW"]];
 Blockly.Msg.FIELDDROPDOWN_ONOFF = [["allumer", "ON"], ["éteindre", "OFF"]];
 Blockly.Msg.FIELDDROPDOWN_0_1 = [["HAUT", "HIGH"], ["BAS", "LOW"]];

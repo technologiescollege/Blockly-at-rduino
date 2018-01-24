@@ -235,6 +235,10 @@ Blockly.Msg.CAT_NULL = "free"; //added 8/10/2017
 
 Blockly.Msg.CAT_HX711 = "load cell"; //added 23/10/2017
 
+Blockly.Msg.CAT_POLOLU = "Pololu"; //added 24/01/2018 
+Blockly.Msg.CAT_POLOLU_QTR_1RC = " - QTR-1RC";
+
+
 //**********************************FieldInstance messages***********************************************
 Blockly.Msg.COMPONENT_WARN = 'A %1 configuration block with the same %2 name must be added to use this block!';
 

@@ -1922,6 +1922,14 @@
 		<sep></sep>
 	</category>
 
+	<category name="CAT_POLOLU" colour="#00138b">
+		<category name="CAT_POLOLU_QTR_1RC" colour="#00138b">
+			<block type="QTR_1RC_calibration"></block>
+			<block type="QTR_1RC_attach"></block>
+			<block type="QTR_1RC_read"></block>
+		</category>
+	</category>
+
 	<category name="CAT_ZUMO" colour="#00138b">
 		<category name="CAT_ZUMO_MOTORS" colour="#00138b">
 			<block type="zumo_motors_FN"></block>

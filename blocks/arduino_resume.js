@@ -76,6 +76,7 @@ head.load(
 "blocks/myhumankit/myhumankit.js",
 "blocks/null/null.js",
 "blocks/RFID/RFID.js",
+"blocks/QTR-1RC/QTR-1RC.js",
 "blocks/robots/robot_motors.js",
 "blocks/robots/robot_misc.js",
 "blocks/robuno/robuno.js",

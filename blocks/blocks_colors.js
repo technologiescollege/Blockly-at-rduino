@@ -47,6 +47,7 @@ Blockly.Blocks.mhk.HUE = "#FF6B37";
 Blockly.Blocks.MRduino.HUE = "#2475FA";
 Blockly.Blocks.multifunction.HUE = "#0152AB";
 Blockly.Blocks.null.HUE = "#00979D";
+Blockly.Blocks.QTR_1RC.HUE = "#00138B";
 Blockly.Blocks.RFID.HUE = "#9BACB4";
 Blockly.Blocks.robots_sensors.HUE = "#00979D";
 Blockly.Blocks.robots_motors.HUE = "#5b99a5";

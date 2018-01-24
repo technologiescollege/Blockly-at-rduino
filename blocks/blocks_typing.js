@@ -35,6 +35,7 @@ head.load(
 "blocks/multi-function/blocks_typing.js",
 "blocks/myhumankit/blocks_typing.js",
 "blocks/null/blocks_typing.js",
+"blocks/QTR-1RC/blocks_typing.js",
 "blocks/RFID/blocks_typing.js",
 "blocks/robots/blocks_typing.js",
 "blocks/robuno/blocks_typing.js",
