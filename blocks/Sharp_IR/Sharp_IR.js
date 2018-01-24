@@ -77,7 +77,7 @@ Blockly.Blocks.Sharp_IR_read = {
   },
   /**
    * Called whenever anything on the workspace changes.
-   * It checks/warns if the selected stepper instance has a config block.
+   * It checks/warns if the selected instance has a config block.
    * @this Blockly.Block
    */
   onchange: function() {
@@ -87,7 +87,7 @@ Blockly.Blocks.Sharp_IR_read = {
     if (Blockly.Instances.isInstancePresent(instanceName, 'Sharp_IR', this)) {
       this.setWarningText(null);
     } else {
-      // Set a warning to select a valid stepper config block
+      // Set a warning to select a valid config block
       this.setWarningText(
         Blockly.Msg.COMPONENT_WARN.replace(
             '%1', Blockly.Msg.SHARP_IR_COMPONENT).replace(

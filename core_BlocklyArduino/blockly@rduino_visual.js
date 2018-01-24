@@ -145,7 +145,7 @@ BlocklyDuino.inline = function() {
  */
 BlocklyDuino.getSize = function() {
   var size = BlocklyDuino.getStringParamFromUrl('size', '');
-  if (size != 'max') {
+  if ((size != 'max')&&(size != 'miniMenu')) {
 	  size = '';
   }
   return size;
@@ -317,11 +317,22 @@ BlocklyDuino.tailleFonte = function(taille) {
 
  
 BlocklyDuino.miniMenuPanel = function() {
-	//$('#menuPanel').css({"width" : '45px'});
-	$("#divTabpanel").css({"margin-left" : "50px"});
-	$(".blocklySvg").css({"margin-left" : "205px"});
-	$(".blocklyFlyout").css({"margin-left" : "155px"});
-	$(".blocklyWorkspace").css({"margin-left" : "205px"});
+  // Store the blocks for the duration of the reload.
+  BlocklyDuino.backupBlocks();
+
+  var search = window.location.search;
+  if (search.length <= 1) {
+    search = '?size=miniMenu';
+  } else if (search.match(/[?&]size=[^&]*/)) {
+    search = search.replace(/([?&]size=)[^&]*/, '');
+    search = search.replace(/\&/, '?');
+  } else {
+    search = search.replace(/\?/, '?size=miniMenu&');
+  }
+
+  // remove url file
+  //search = search.replace(/([?&]url=)[^&]*/, '');
+  window.location = window.location.protocol + '//' + window.location.host + window.location.pathname + search;
 };
 
 /**

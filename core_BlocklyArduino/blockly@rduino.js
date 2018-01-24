@@ -818,16 +818,48 @@ BlocklyDuino.init = function() {
 	
 	Code.initLanguage();
 
-	if (BlocklyDuino.getSize() == 'max') {
-		$("#menuPanel").css({"display" : "none"});
-		// maximize div
-		$("#divTabpanel").css({"margin-left" : "0px"});
-		$('#btn_size').attr("title", MSG['btn_size_min']);
-		$('#divTitre').addClass("hidden");
-		$('#div_toolboxes').addClass("hidden");
-		$('#divTitreMenu').removeClass("hidden");
-		$('#icon_btn_size').removeClass('glyphicon-resize-full');
-		$('#icon_btn_size').addClass('glyphicon-resize-small');
+	if (BlocklyDuino.getSize() != '') {
+		if (BlocklyDuino.getSize() == 'max') {
+			$("#menuPanel").css({"display" : "none"});
+			// maximize div
+			$("#divTabpanel").css({"margin-left" : "0px"});
+			$('#btn_size').attr("title", MSG['btn_size_min']);
+			$('#divTitre').addClass("hidden");
+			$('#div_toolboxes').addClass("hidden");
+			$('#divTitreMenu').removeClass("hidden");
+			$('#icon_btn_size').removeClass('glyphicon-resize-full');
+			$('#icon_btn_size').addClass('glyphicon-resize-small');
+		}
+		if (BlocklyDuino.getSize() == 'miniMenu') {
+			$("#divTabpanel").css({"margin-left" : "50px"});
+			$(".blocklyFlyout").css({"margin-left" : "155px"});
+			$(".blocklySvg").css({"margin-left" : "205px"});
+			$(".blocklyWorkspace").css({"margin-left" : "205px"});
+			$("#configGlobalLabel").addClass("hidden");
+			$("#btn_configGlobal").removeClass("btn-block");
+			$("#divTitreMenu_miniCard").removeClass("hidden");
+			
+			
+			$("#span_config").addClass("hidden");
+			$("#btn_config").removeClass("btn-block");
+			
+			$(".nav").removeClass("display-block");
+			$("#a_supervision").addClass("hidden");
+			$("#a_blocks").addClass("hidden");
+			$("#a_arduino").addClass("hidden");
+			
+			$("#span_saveXML").addClass("hidden");
+			$("#btn_saveXML").removeClass("btn-block");
+			
+			$("#span_fakeload").addClass("hidden");
+			$("#btn_fakeload").removeClass("btn-block");
+			
+			$("#span_example").addClass("hidden");
+			$("#btn_example").removeClass("btn-block");
+			
+			$("#span_create_example").addClass("hidden");
+			$("#btn_create_example").removeClass("btn-block");
+		}
 	} else {
 		$("#menuPanel").css({"display" : ""});
 		// minimize div
@@ -838,8 +870,8 @@ BlocklyDuino.init = function() {
 		$('#divTitreMenu').addClass("hidden");
 		$('#icon_btn_size').addClass('glyphicon-resize-full');
 		$('#icon_btn_size').removeClass('glyphicon-resize-small');
-	}
-
+		}
+		
 	BlocklyDuino.setArduinoCard();
 	
 	// build Blockly ...
