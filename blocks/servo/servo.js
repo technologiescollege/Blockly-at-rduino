@@ -45,7 +45,7 @@ Blockly.Blocks.servo_attach = {
         .appendField(
             new Blockly.FieldInstance('Servo',
                                       Blockly.Msg.SERVO_DEFAULT_NAME,
-                                      true, true, false),
+                                      false, false, false),
             'SERVO_NAME');
 	this.appendValueInput("PIN")
         .setCheck('Number')
@@ -69,7 +69,7 @@ Blockly.Blocks.servo_move = {
         .appendField(
             new Blockly.FieldInstance('Servo',
                                       Blockly.Msg.SERVO_DEFAULT_NAME,
-                                      true, true, false),
+                                      false, false, false),
             'SERVO_NAME');
     this.appendValueInput("DEGREE")
         .setCheck('Number')
@@ -112,7 +112,7 @@ Blockly.Blocks.servo_read_degrees = {
         .appendField(
             new Blockly.FieldInstance('Servo',
                                       Blockly.Msg.SERVO_DEFAULT_NAME,
-                                      true, true, false),
+                                      false, false, false),
             'SERVO_NAME');
 	this.setOutput(true, 'Number');
     this.setTooltip(Blockly.Msg.ARDUINO_SERVO_READ_DEGREES_TOOLTIP);
@@ -150,7 +150,7 @@ Blockly.Blocks.servo_attached = {
         .appendField(
             new Blockly.FieldInstance('Servo',
                                       Blockly.Msg.SERVO_DEFAULT_NAME,
-                                      true, true, false),
+                                      false, false, false),
             'SERVO_NAME');
     this.setOutput(true, 'Boolean');
     this.setTooltip('true if the servo is attached to pin; false otherwise. ');
@@ -189,7 +189,7 @@ Blockly.Blocks.servo_detach = {
         .appendField(
             new Blockly.FieldInstance('Servo',
                                       Blockly.Msg.SERVO_DEFAULT_NAME,
-                                      true, true, false),
+                                      false, false, false),
             'SERVO_NAME');
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
@@ -228,7 +228,7 @@ Blockly.Blocks.servo_rot_continue = {
         .appendField(
             new Blockly.FieldInstance('Servo',
                                       Blockly.Msg.SERVO_DEFAULT_NAME,
-                                      true, true, false),
+                                      false, false, false),
             'SERVO_NAME');
     this.setInputsInline(true);
 	this.appendValueInput("SPEED")
@@ -273,7 +273,7 @@ Blockly.Blocks.servo_rot_continue_param = {
         .appendField(
             new Blockly.FieldInstance('Servo',
                                       Blockly.Msg.SERVO_DEFAULT_NAME,
-                                      true, true, false),
+                                      false, false, false),
             'SERVO_NAME');
     this.setInputsInline(true);
 	this.appendValueInput("SPEED")

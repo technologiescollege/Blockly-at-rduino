@@ -26,56 +26,57 @@ goog.require('Blockly.Types');
 Blockly.Blocks.QTR_1RC_calibration = {
   init: function() {
     this.setColour(Blockly.Blocks.QTR_1RC.HUE);
+	this.setHelpUrl(Blockly.Msg.QTR_1RC_HELPURL);
     this.appendDummyInput()
-        .appendField(Blockly.Msg.ROBOTS_MOTORS_ZUMO_FCT_SENSORCALIBRATION);
-    this.setTooltip(Blockly.Msg.ROBOTS_MOTORS_ZUMO_FCT_SENSORCALIBRATION_TOOLTIP);
+        .appendField(Blockly.Msg.QTR_1RC_SENSORCALIBRATION);
 	this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-	this.setHelpUrl(Blockly.Msg.ROBOTS_MOTORS_ZUMO_FCT_SENSORCALIBRATION_HELPURL);
+    this.setTooltip(Blockly.Msg.QTR_1RC_SENSORCALIBRATION_TOOLTIP);
  }
 };
 
 Blockly.Blocks.QTR_1RC_attach = {
   init: function() {
     this.setColour(Blockly.Blocks.QTR_1RC.HUE);
-	this.setHelpUrl(Blockly.Msg.ARDUINO_SERVO_MOVE_HELPURL);
+	this.setHelpUrl(Blockly.Msg.QTR_1RC_HELPURL);
     this.appendDummyInput("")
-        .appendField(Blockly.Msg.ARDUINO_SERVO_ATTACH1)
+        .appendField(Blockly.Msg.QTR_1RC_ATTACH1)
         .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/QTR-1RC/QTR-1RC.jpg', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize));
     this.appendDummyInput("")
         .setAlign(Blockly.ALIGN_RIGHT)
-        .appendField(Blockly.Msg.ARDUINO_SERVO_ATTACH2)
+        .appendField(Blockly.Msg.QTR_1RC_ATTACH2)
         .appendField(
             new Blockly.FieldInstance('QTR_1RC',
-                                      Blockly.Msg.SERVO_DEFAULT_NAME,
-                                      true, true, false),
+                                      Blockly.Msg.QTR_1RC_DEFAULT_NAME,
+                                      false, false, false),
             'QTR_1RC_NAME');
 	this.appendValueInput("PIN")
         .setCheck('Number')
         .setAlign(Blockly.ALIGN_RIGHT)
-        .appendField(Blockly.Msg.ARDUINO_SERVO_MOVE_INPUT2);
+        .appendField(Blockly.Msg.QTR_1RC_INPUT);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    this.setTooltip(Blockly.Msg.ARDUINO_SERVO_MOVE_TOOLTIP);
+    this.setTooltip(Blockly.Msg.QTR_1RC_ATTACH_TOOLTIP);
  }
 };
 
 Blockly.Blocks.QTR_1RC_read = {
   init: function() {
     this.setColour(Blockly.Blocks.QTR_1RC.HUE);
-	this.setHelpUrl(Blockly.Msg.ARDUINO_SERVO_READ_DEGREES_HELPURL);
+	this.setHelpUrl(Blockly.Msg.QTR_1RC_HELPURL);
     this.appendDummyInput("")
-        .appendField(Blockly.Msg.ARDUINO_SERVO_READ_DEGREES_INPUT1)
+        .appendField(Blockly.Msg.QTR_1RC_READ_INPUT1)
         .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/QTR-1RC/QTR-1RC.jpg', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize));
     this.appendDummyInput("")
         .setAlign(Blockly.ALIGN_RIGHT)
+        .appendField(Blockly.Msg.QTR_1RC_READ_INPUT2)
         .appendField(
             new Blockly.FieldInstance('QTR_1RC',
-                                      Blockly.Msg.SERVO_DEFAULT_NAME,
-                                      true, true, false),
+                                      Blockly.Msg.QTR_1RC_DEFAULT_NAME,
+                                      false, false, false),
             'QTR_1RC_NAME');
 	this.setOutput(true, 'Number');
-    this.setTooltip(Blockly.Msg.ARDUINO_SERVO_READ_DEGREES_TOOLTIP);
+    this.setTooltip(Blockly.Msg.QTR_1RC_READ_TOOLTIP);
   },
   /**
    * Called whenever anything on the workspace changes.
@@ -92,7 +93,7 @@ Blockly.Blocks.QTR_1RC_read = {
       // Set a warning to select a valid stepper config block
       this.setWarningText(
         Blockly.Msg.COMPONENT_WARN.replace(
-            '%1', Blockly.Msg.SERVO_COMPONENT).replace(
+            '%1', Blockly.Msg.QTR_1RC_COMPONENT).replace(
                 '%2', instanceName));
     }
   }

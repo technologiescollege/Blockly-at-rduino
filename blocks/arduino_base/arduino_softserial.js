@@ -42,7 +42,7 @@ Blockly.Blocks['soft_init'] = {
 			.appendField(
 				new Blockly.FieldInstance('SoftSerial',
 										  Blockly.Msg.SSERIAL_DEFAULT_NAME,
-										  true, true, false),
+										  false, true, false),
 				'SOFTSERIAL_NAME');
 	} else {
 		this.appendDummyInput()
@@ -50,7 +50,7 @@ Blockly.Blocks['soft_init'] = {
 			.appendField(
 				new Blockly.FieldInstance('SoftSerial',
 										  Blockly.Msg.SSERIAL_DEFAULT_NAME,
-										  true, false, false),
+										  false, false, false),
 				'SOFTSERIAL_NAME');
 		};
     this.appendValueInput("PIN1")
@@ -80,7 +80,7 @@ Blockly.Blocks['soft_read'] = {
 			.appendField(
 				new Blockly.FieldInstance('SoftSerial',
 										  Blockly.Msg.SSERIAL_DEFAULT_NAME,
-										  true, true, false),
+										  false, true, false),
 				'SOFTSERIAL_NAME')
 			.appendField(Blockly.Msg.SSERIAL_Read);
 	} else {
@@ -88,7 +88,7 @@ Blockly.Blocks['soft_read'] = {
 			.appendField(
 				new Blockly.FieldInstance('SoftSerial',
 										  Blockly.Msg.SSERIAL_DEFAULT_NAME,
-										  true, false, false),
+										  false, false, false),
 				'SOFTSERIAL_NAME')
 			.appendField(Blockly.Msg.SSERIAL_Read);
 		};
@@ -125,7 +125,7 @@ Blockly.Blocks['soft_print'] = {
 			.appendField(
 				new Blockly.FieldInstance('SoftSerial',
 										  Blockly.Msg.SSERIAL_DEFAULT_NAME,
-										  true, true, false),
+										  false, true, false),
 				'SOFTSERIAL_NAME')
 			.setCheck('String')
 			.appendField(Blockly.Msg.SSERIAL_Print);
@@ -134,7 +134,7 @@ Blockly.Blocks['soft_print'] = {
 			.appendField(
 				new Blockly.FieldInstance('SoftSerial',
 										  Blockly.Msg.SSERIAL_DEFAULT_NAME,
-										  true, false, false),
+										  false, false, false),
 				'SOFTSERIAL_NAME')
 			.setCheck('String')
 			.appendField(Blockly.Msg.SSERIAL_Print);
@@ -173,7 +173,7 @@ Blockly.Blocks['soft_write'] = {
 			.appendField(
 				new Blockly.FieldInstance('SoftSerial',
 										  Blockly.Msg.SSERIAL_DEFAULT_NAME,
-										  true, true, false),
+										  false, true, false),
 				'SOFTSERIAL_NAME')
 			.setCheck('String')
 			.appendField(Blockly.Msg.SSERIAL_Write);
@@ -182,7 +182,7 @@ Blockly.Blocks['soft_write'] = {
 			.appendField(
 				new Blockly.FieldInstance('SoftSerial',
 										  Blockly.Msg.SSERIAL_DEFAULT_NAME,
-										  true, false, false),
+										  false, false, false),
 				'SOFTSERIAL_NAME')
 			.setCheck('String')
 			.appendField(Blockly.Msg.SSERIAL_Write);
@@ -221,7 +221,7 @@ Blockly.Blocks['soft_available'] = {
 			.appendField(
 				new Blockly.FieldInstance('SoftSerial',
 										  Blockly.Msg.SSERIAL_DEFAULT_NAME,
-										  true, true, false),
+										  false, true, false),
 				'SOFTSERIAL_NAME')
 			.appendField(Blockly.Msg.SSERIAL_Avai);
 	} else {
@@ -229,7 +229,7 @@ Blockly.Blocks['soft_available'] = {
 			.appendField(
 				new Blockly.FieldInstance('SoftSerial',
 										  Blockly.Msg.SSERIAL_DEFAULT_NAME,
-										  true, false, false),
+										  false, false, false),
 				'SOFTSERIAL_NAME')
 			.appendField(Blockly.Msg.SSERIAL_Avai);
 		};
@@ -266,7 +266,7 @@ Blockly.Blocks['soft_flush'] = {
 			.appendField(
 				new Blockly.FieldInstance('SoftSerial',
 										  Blockly.Msg.SSERIAL_DEFAULT_NAME,
-										  true, true, false),
+										  false, true, false),
 				'SOFTSERIAL_NAME')
 			.appendField(Blockly.Msg.Serial_flush);
 	} else {
@@ -274,7 +274,7 @@ Blockly.Blocks['soft_flush'] = {
 			.appendField(
 				new Blockly.FieldInstance('SoftSerial',
 										  Blockly.Msg.SSERIAL_DEFAULT_NAME,
-										  true, false, false),
+										  false, false, false),
 				'SOFTSERIAL_NAME')
 			.appendField(Blockly.Msg.Serial_flush);
 		};

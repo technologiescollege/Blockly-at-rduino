@@ -46,7 +46,7 @@ Blockly.Blocks.Sharp_IR_attach = {
         .appendField(
             new Blockly.FieldInstance('Sharp_IR',
                                       Blockly.Msg.SHARP_IR_DEFAULT_NAME,
-                                      true, true, false),
+                                      false, false, false),
             'SHARP_IR_NAME');
 	this.appendValueInput("PIN")
         .setCheck('Number')
@@ -70,7 +70,7 @@ Blockly.Blocks.Sharp_IR_read = {
         .appendField(
             new Blockly.FieldInstance('Sharp_IR',
                                       Blockly.Msg.SHARP_IR_DEFAULT_NAME,
-                                      true, true, false),
+                                      false, false, false),
             'SHARP_IR_NAME');
 	this.setOutput(true, 'Number');
     this.setTooltip(Blockly.Msg.Sharp_IR_TOOLTIP2);

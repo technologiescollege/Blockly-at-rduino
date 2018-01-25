@@ -1914,3 +1914,18 @@ Blockly.Msg.HX711_INIT_TOOLTIP = "without weight on it";
 Blockly.Msg.HX711_READ_TITLE = "weight (kg)";
 Blockly.Msg.HX711_READ_TEXT = "with factor correction";
 Blockly.Msg.HX711_READ_TOOLTIP = "correction factor from calibration block";
+
+
+//********************Pololu QTR-1RC*************//
+Blockly.Msg.QTR_1RC_HELPURL = "https://ay128.lesusinesnouvelles.com/#!/projects/utilisation-de-capteur-qtr-1rc-avec-blockly";
+Blockly.Msg.QTR_1RC_SENSORCALIBRATION = "manual calibration for QTR-1RC";
+Blockly.Msg.QTR_1RC_SENSORCALIBRATION_TOOLTIP = "This has to be used at the start of the robot for calibrate the reading of the sensors.";
+Blockly.Msg.QTR_1RC_ATTACH1 = "attach QTR-1RC sensor";
+Blockly.Msg.QTR_1RC_ATTACH2 = "with name";
+Blockly.Msg.QTR_1RC_DEFAULT_NAME = "QTR-1RC";
+Blockly.Msg.QTR_1RC_INPUT = "PIN#";
+Blockly.Msg.QTR_1RC_ATTACH_TOOLTIP = "Create an object for your type of sensor (RC).";
+Blockly.Msg.QTR_1RC_READ_INPUT1 = "reflectance value of QTR-1RC";
+Blockly.Msg.QTR_1RC_READ_INPUT2 = "named";
+Blockly.Msg.QTR_1RC_READ_TOOLTIP = "Return value of sensors QTR-1RC.";
+Blockly.Msg.QTR_1RC_COMPONENT = "QTR-1RC";

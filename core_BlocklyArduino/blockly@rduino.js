@@ -551,10 +551,10 @@ BlocklyDuino.bindFunctions = function() {
 	$('#btn_card_picture_maxi').on("click", BlocklyDuino.cardPicture_maxi);
 	
 	$('#btn_preview').on("click", function() {
-		$("#toggle").toggle("slide");
+		$("#toggle").toggle("blind");
 	});
 	$('#pre_previewArduino').on("click", function() {
-		$("#toggle").toggle("slide");
+		$("#toggle").toggle("blind");
 	});
 
 	$('#btn_example, #menu_131').on("click", BlocklyDuino.buildExamples);
@@ -844,6 +844,7 @@ BlocklyDuino.init = function() {
 			$("#btn_config").removeClass("btn-block");
 			
 			$(".nav").removeClass("display-block");
+			$(".nav").css({"width" : "40px"});
 			$("#a_supervision").addClass("hidden");
 			$("#a_blocks").addClass("hidden");
 			$("#a_arduino").addClass("hidden");

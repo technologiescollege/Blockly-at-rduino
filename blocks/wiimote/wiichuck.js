@@ -15,7 +15,7 @@ Blockly.Blocks.wiichuck_init = {
 		.appendField(
 				new Blockly.FieldInstance('WS2812_fieldInstance',
 										  Blockly.Msg.lp2i_ledRGB_WS2812B_DEFAULT_NAME,
-										  true, true, false),
+										  false, false, false),
 				'NEOPIXEL_NAME')
 		.appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/led-rgb-ws2812b/led-rgb-ws2812b.jpg', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize));
     this.appendValueInput("Pin_LedRGB_init")
@@ -43,7 +43,7 @@ Blockly.Blocks.wiichuck_calibrate = {
 		.appendField(
 				new Blockly.FieldInstance('WS2812_fieldInstance',
 										  Blockly.Msg.lp2i_ledRGB_WS2812B_DEFAULT_NAME,
-										  true, true, false),
+										  false, false, false),
 				'NEOPIXEL_NAME')
 		.appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/led-rgb-ws2812b/led-rgb-ws2812b.jpg', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize));
     this.appendValueInput("Pin_LedRGB_init")
@@ -70,7 +70,7 @@ Blockly.Blocks.wiichuck_joy = {
 		.appendField(
 				new Blockly.FieldInstance('WS2812_fieldInstance',
 										  Blockly.Msg.lp2i_ledRGB_WS2812B_DEFAULT_NAME,
-										  true, true, false),
+										  false, false, false),
 				'NEOPIXEL_NAME')
 		.appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/led-rgb-ws2812b/led-rgb-ws2812b.jpg', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize));
     this.appendValueInput("Red")

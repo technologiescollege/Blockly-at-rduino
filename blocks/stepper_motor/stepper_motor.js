@@ -34,7 +34,7 @@ Blockly.Blocks['stepper_config'] = {
         .appendField(
             new Blockly.FieldInstance('Stepper',
                                       Blockly.Msg.STEPPER_DEFAULT_NAME,
-                                      true, true, false),
+                                      false, false, false),
             'STEPPER_NAME');
     this.appendValueInput('STEPPER_PIN1')
         .setCheck(Blockly.Types.NUMBER.checkList)
@@ -70,7 +70,7 @@ Blockly.Blocks['stepper_step'] = {
         .appendField(
             new Blockly.FieldInstance('Stepper',
                                       Blockly.Msg.STEPPER_DEFAULT_NAME,
-                                      false, true, false),
+                                      false, false, false),
             'STEPPER_NAME');
     this.appendValueInput('STEPPER_STEPS')
         .setCheck(Blockly.Types.NUMBER.checkList);

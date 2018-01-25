@@ -15,7 +15,7 @@ Blockly.Blocks.MatrixLED_WS2812B_init = {
 		.appendField(
 				new Blockly.FieldInstance('Matrix_WS2812_fieldInstance',
 										  Blockly.Msg.MatrixLED_WS2812B_DEFAULT_NAME,
-										  true, true, false),
+										  false, false, false),
 				'MATRIX_NEOPIXEL_NAME')
 		.appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/matrix-led-rgb-ws2812/matrix-led-rgb-ws2812.jpg', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize));
     this.appendValueInput("Pin_Matrix_init")
@@ -38,7 +38,7 @@ Blockly.Blocks.MatrixLED_WS2812B_setPixelColor = {
 		.appendField(
 				new Blockly.FieldInstance('Matrix_WS2812_fieldInstance',
 										  Blockly.Msg.MatrixLED_WS2812B_DEFAULT_NAME,
-										  true, true, false),
+										  false, false, false),
 				'MATRIX_NEOPIXEL_NAME')
 		.appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/matrix-led-rgb-ws2812/matrix-led-rgb-ws2812.jpg', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize));
     this.appendValueInput("Red")
@@ -95,7 +95,7 @@ Blockly.Blocks.MatrixLED_WS2812B_setBrightness = {
 		.appendField(
 				new Blockly.FieldInstance('Matrix_WS2812_fieldInstance',
 										  Blockly.Msg.MatrixLED_WS2812B_DEFAULT_NAME,
-										  true, true, false),
+										  false, false, false),
 				'MATRIX_NEOPIXEL_NAME')
 		.appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/matrix-led-rgb-ws2812/matrix-led-rgb-ws2812.jpg', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize));
     this.appendValueInput("Brightness")
@@ -136,7 +136,7 @@ Blockly.Blocks.MatrixLED_WS2812B_CLEAN = {
 		.appendField(
 				new Blockly.FieldInstance('Matrix_WS2812_fieldInstance',
 										  Blockly.Msg.MatrixLED_WS2812B_DEFAULT_NAME,
-										  true, true, false),
+										  false, false, false),
 				'MATRIX_NEOPIXEL_NAME')
 		.appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/matrix-led-rgb-ws2812/matrix-led-rgb-ws2812.jpg', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize));
     this.setInputsInline(false);
@@ -173,7 +173,7 @@ Blockly.Blocks.MatrixLED_WS2812B_draw = {
 		.appendField(
 				new Blockly.FieldInstance('Matrix_WS2812_fieldInstance',
 										  Blockly.Msg.MatrixLED_WS2812B_DEFAULT_NAME,
-										  true, true, false),
+										  false, false, false),
 				'MATRIX_NEOPIXEL_NAME')
 		.appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/matrix-led-rgb-ws2812/matrix-led-rgb-ws2812.jpg', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize));
     this.appendDummyInput()

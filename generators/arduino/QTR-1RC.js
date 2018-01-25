@@ -11,45 +11,17 @@ goog.require('Blockly.Arduino');
 
 Blockly.Arduino.QTR_1RC_calibration = function() {
   Blockly.Arduino.includes_["includes_QTR_1RC_SensorCalibration"] = 
-  "#include <QTRSensors.h>\n" +
-  "#include <ZumoReflectanceSensorArray.h>";
+  "#include <QTRSensors.h>";
   
   Blockly.Arduino.definitions_["defines_QTR_1RC_SensorCalibration"] =
-  "// Define an array for holding sensor values.\n" +
-  "#define NUM_SENSORS 6\n" +
-  "unsigned int sensorValues[NUM_SENSORS];";
-
-  Blockly.Arduino.definitions_["defines_QTR_1RC_Reflectance"] =
-  "ZumoReflectanceSensorArray reflectanceSensors;\n";
+  "// Create an object for your type of sensor (RC or Analog).\n" +
+  "QTRSensorsRC qtr((char[]) {8, 9}, 2);";
   
   Blockly.Arduino.setups_['setup_QTR_1RC_SensorCalibration'] = 
-  "reflectanceSensors.init();\n" +
-  "  delay(500);\n" +
-  "  pinMode(13, OUTPUT);\n" +
-  "  digitalWrite(13, HIGH);        // turn on LED to indicate we are in calibration mode\n" +  
-  "  unsigned long startTime = millis();\n" +
-  "  while(millis() - startTime < 10000)   // make the calibration take 10 seconds\n" +
-  "  {\n" +
-  "    reflectanceSensors.calibrate();\n" +
-  "  }\n" +
-  "  digitalWrite(13, LOW);         // turn off LED to indicate we are through with calibration\n" +
-  "  // print the calibration minimum values measured when emitters were on\n" +
-  "  Serial.begin(9600);\n" +
-  "  for (byte i = 0; i < NUM_SENSORS; i++)\n" +
-  "  {\n" +
-  "    Serial.print(reflectanceSensors.calibratedMinimumOn[i]);\n" +
-  "    Serial.print(' ');\n" +
-  "  }\n" +
-  "  Serial.println();\n" +  
-  "  // print the calibration maximum values measured when emitters were on\n" +
-  "  for (byte i = 0; i < NUM_SENSORS; i++)\n" +
-  "  {\n" +
-  "    Serial.print(reflectanceSensors.calibratedMaximumOn[i]);\n" +
-  "    Serial.print(' ');\n" +
-  "  }\n" +
-  "  Serial.println();\n" +
-  "  Serial.println();\n" +
-  "  delay(1000);\n";
+  "for (int i = 0; i < 400; i++)  // make the calibration take about 10 seconds\n" +
+  "    {\n" +
+  "    qtrrc.calibrate();       // reads all sensors 10 times at 2500 us per read (i.e. ~25 ms per call)\n" +
+  "    }";
   
   var code = 
   "unsigned int position = reflectanceSensors.readLine(sensorValues);\n" +
@@ -72,9 +44,8 @@ Blockly.Arduino.QTR_1RC_attach = function() {
   var value_degree = Blockly.Arduino.valueToCode(this, 'DEGREE', Blockly.Arduino.ORDER_ATOMIC);
   var dropdown_name = this.getFieldValue('QTR_1RC_NAME');
 
-  Blockly.Arduino.includes_['define_servo'] = '#include <Servo.h>';
-  Blockly.Arduino.definitions_['var_servo' + dropdown_name] = 'Servo ' + dropdown_name + ';';
-  Blockly.Arduino.setups_['setup_servo_' + dropdown_name] = dropdown_name + '.attach(' + value_pin + ');';
+  Blockly.Arduino.definitions_['var_QTR_1RC_' + dropdown_name] = 'Servo ' + dropdown_name + ';';
+  Blockly.Arduino.setups_['setup_QTR_1RC_' + dropdown_name] = dropdown_name + '.attach(' + value_pin + ');';
   return '';
 };
 
@@ -82,6 +53,7 @@ Blockly.Arduino.QTR_1RC_read = function() {
   var value_pin = Blockly.Arduino.valueToCode(this, 'PIN', Blockly.Arduino.ORDER_ATOMIC);
   var dropdown_name = this.getFieldValue('QTR_1RC_NAME');
 
-  var code = dropdown_name + '.read()';
+  var code = "unsigned int sensors[2]; // number of sensors\n" +
+  dropdown_name + '.read()';
   return [code, Blockly.Arduino.ORDER_ATOMIC];
 };

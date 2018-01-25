@@ -15,7 +15,7 @@ Blockly.Blocks['lp2i_ledRGB_WS2812B_init'] = {
 		.appendField(
 				new Blockly.FieldInstance('WS2812_fieldInstance',
 										  Blockly.Msg.lp2i_ledRGB_WS2812B_DEFAULT_NAME,
-										  true, true, false),
+										  false, false, false),
 				'NEOPIXEL_NAME')
 		.appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/led-rgb-ws2812b/led-rgb-ws2812b.svg', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize));
     this.appendValueInput("Pin_LedRGB_init")
@@ -42,7 +42,7 @@ Blockly.Blocks['lp2i_ledRGB_WS2812B_setPixelColor'] = {
 		.appendField(
 				new Blockly.FieldInstance('WS2812_fieldInstance',
 										  Blockly.Msg.lp2i_ledRGB_WS2812B_DEFAULT_NAME,
-										  true, true, false),
+										  false, false, false),
 				'NEOPIXEL_NAME')
 		.appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/led-rgb-ws2812b/led-rgb-ws2812b.svg', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize));
     this.appendValueInput("Red")
@@ -95,7 +95,7 @@ Blockly.Blocks['lp2i_ledRGB_WS2812B_setBrightness'] = {
 		.appendField(
 				new Blockly.FieldInstance('WS2812_fieldInstance',
 										  Blockly.Msg.lp2i_ledRGB_WS2812B_DEFAULT_NAME,
-										  true, true, false),
+										  false, false, false),
 				'NEOPIXEL_NAME')
 		.appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/led-rgb-ws2812b/led-rgb-ws2812b.svg', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize));
     this.appendValueInput("Brightness")

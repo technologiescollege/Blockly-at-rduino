@@ -1957,3 +1957,18 @@ Blockly.Msg.matrice8x8_symbole_TOOLTIP = "définition d'un symbole pour la matri
 Blockly.Msg.ultrason_distance1 = "distance mesurée";
 Blockly.Msg.ultrason_distance2 = "retourne la distance mesurée (de 0 à 100 cm)";
 Blockly.Msg.lp2i_mp3_prev = "lire le fichier mp3 précédent";
+
+
+//********************Pololu QTR-1RC*************//
+Blockly.Msg.QTR_1RC_HELPURL = "https://ay128.lesusinesnouvelles.com/#!/projects/utilisation-de-capteur-qtr-1rc-avec-blockly";
+Blockly.Msg.QTR_1RC_SENSORCALIBRATION = "calibrage manuel du capteur QTR-1RC";
+Blockly.Msg.QTR_1RC_SENSORCALIBRATION_TOOLTIP = "Au début du programme, passer les capteurs sur la ligne. Permet d'améliorer la mesure.";
+Blockly.Msg.QTR_1RC_ATTACH1 = "attacher un capteur QTR-1RC";
+Blockly.Msg.QTR_1RC_ATTACH2 = "identifié par";
+Blockly.Msg.QTR_1RC_DEFAULT_NAME = "QTR-1RC";
+Blockly.Msg.QTR_1RC_INPUT = "sur la broche";
+Blockly.Msg.QTR_1RC_ATTACH_TOOLTIP = "Crée un objet QTR-1RC, à attacher à une broche numérique.";
+Blockly.Msg.QTR_1RC_READ_INPUT1 = "valeur du capteur QTR-1RC";
+Blockly.Msg.QTR_1RC_READ_INPUT2 = "pour nom";
+Blockly.Msg.QTR_1RC_READ_TOOLTIP = "Lecture de la valeur du capteur QTR-1RC.";
+Blockly.Msg.QTR_1RC_COMPONENT = "QTR-1RC";
