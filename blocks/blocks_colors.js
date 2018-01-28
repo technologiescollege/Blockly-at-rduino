@@ -12,6 +12,7 @@ Blockly.Blocks.ADXL362.HUE = "#184EA4";
 Blockly.Blocks.APDS9960.HUE = "#D9242D";
 Blockly.Blocks.anemometre.HUE = "#856D4D";
 Blockly.Blocks.arduino_base.HUE = "#00979D";
+Blockly.Blocks.arduino_BT.HUE = "#6981F9";
 Blockly.Blocks.arduino_conversion.HUE = "#00979D";
 Blockly.Blocks.arduino_io.HUE = "#00979D";
 Blockly.Blocks.arduino_serial.HUE = "#00979D";

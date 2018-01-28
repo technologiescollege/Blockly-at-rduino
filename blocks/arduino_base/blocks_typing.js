@@ -171,6 +171,9 @@ Blockly.Blocks.storage_eeprom_read_byte.getBlockType = function() {
 Blockly.Blocks.arduino_BT_send.getBlockType = function() {
 	return Blockly.Types.NUMBER;
 };
-Blockly.Blocks.arduino_BT_verify_send.getBlockType = function() {
-	return Blockly.Types.NUMBER;
+Blockly.Blocks.arduino_BT_verify_send.getVars = function() {
+	return [this.getFieldValue('SWVAR')];
+};
+Blockly.Blocks.arduino_BT_verify_send.getVarType = function() {
+	return this.inputList[1].connection.targetBlock().getBlockType();
 };

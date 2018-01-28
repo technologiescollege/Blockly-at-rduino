@@ -4,8 +4,7 @@
 goog.provide('Blockly.Blocks.logic');
 
 goog.require('Blockly.Blocks');
-
-Blockly.Blocks.logic.HUE = "#E1A91A";
+goog.require('Blockly.Types');
 
 //ESK 6/13/2015 Case Switch 
 
@@ -108,17 +107,17 @@ Blockly.Blocks['controls_switch'] = {
    * @this Blockly.Block
    */
   decompose: function(workspace) {
-    var containerBlock = Blockly.Block.obtain(workspace, 'controls_switch_var');
+    var containerBlock = workspace.newBlock('controls_switch_var');
     containerBlock.initSvg();
     var connection = containerBlock.getInput('STACK').connection;
     for (var i = 1; i <= this.casebreakCount_; i++) {
-      var casebreakBlock = Blockly.Block.obtain(workspace, 'controls_case_break');
+      var casebreakBlock = workspace.newBlock('controls_case_break');
       casebreakBlock.initSvg();
       connection.connect(casebreakBlock.previousConnection);
       connection = casebreakBlock.nextConnection;
     }
     if (this.defaultCount_) {
-      var defaultBlock = Blockly.Block.obtain(workspace, 'controls_case_default');
+      var defaultBlock = workspace.newBlock('controls_case_default');
       defaultBlock.initSvg();
       connection.connect(defaultBlock.previousConnection);
     }

@@ -841,6 +841,8 @@ BlocklyDuino.init = function() {
 			$('#icon_btn_size').addClass('glyphicon-resize-full');
 			$('#icon_btn_size').removeClass('glyphicon-resize-small');
 			$("#div_miniPicture").addClass("hidden");
+			$("#btn_miniMenuPanel").removeClass("glyphicon-step-backward");
+			$("#btn_miniMenuPanel").addClass("glyphicon-step-forward");
 			
 			$("#span_config").addClass("hidden");
 			$("#btn_config").removeClass("btn-block");
@@ -862,6 +864,14 @@ BlocklyDuino.init = function() {
 			
 			$("#span_create_example").addClass("hidden");
 			$("#btn_create_example").removeClass("btn-block");
+			
+			$("#menuPanelConfig").addClass("btn-group-vertical");
+			$("#menuPanelFiles").addClass("btn-group-vertical");
+			$("#div_about").addClass("btn-group-vertical");
+			$("#div_accessibility_button").addClass("btn-group-vertical");
+			$("#div_tools_button").addClass("btn-group-vertical");
+			$("#div_help_button").addClass("btn-group-vertical");
+			
 		}
 	} else {
 		$("#menuPanel").css({"display" : ""});
@@ -875,6 +885,8 @@ BlocklyDuino.init = function() {
 		$("#div_miniPicture").removeClass("hidden");	
 		$('#icon_btn_size').addClass('glyphicon-resize-full');
 		$('#icon_btn_size').removeClass('glyphicon-resize-small');
+		$("#btn_miniMenuPanel").addClass("glyphicon-step-backward");
+		$("#btn_miniMenuPanel").removeClass("glyphicon-step-forward");
 		}
 		
 	BlocklyDuino.setArduinoCard();

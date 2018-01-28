@@ -3,6 +3,7 @@
 goog.provide('Blockly.Blocks.process');
 
 goog.require('Blockly.Blocks');
+goog.require('Blockly.Types');
 
 
 Blockly.Blocks['process'] = {
