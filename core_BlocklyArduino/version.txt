@@ -1,4 +1,4 @@
 [release]
 version=2.5
 [update]
-date=25012018
+date=28012018
