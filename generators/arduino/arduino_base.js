@@ -189,7 +189,7 @@ Blockly.Arduino.tempo_no_delay = function(block) {
 	var temps = "temps"+delay_time;
 	Blockly.Arduino.definitions_["temporisation"+delay_time] = "long "+temps+" = 0 ;";
     switch (_u) {
-        case "µs":
+        case "us":
             var code = "if ((micros()-"+temps+")>=" + delay_time + ") {\n  "+temps+"=micros();\n"+faire+"}\n";
             break;
         case "ms":

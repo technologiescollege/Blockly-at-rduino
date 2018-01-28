@@ -28,8 +28,6 @@ goog.provide('Blockly.Blocks.array');
 
 goog.require('Blockly.Blocks');
 
-Blockly.Blocks.array.HUE = "#58B5DC";
-
 Blockly.Blocks['array_create_with'] = {
   /**
    * Block for creating a list with any number of elements of any type.
@@ -158,7 +156,7 @@ Blockly.Blocks['array_create_with'] = {
 
 Blockly.Blocks['array_create_with_item'] = {
   /**
-   * Mutator bolck for adding items.
+   * Mutator block for adding items.
    * @this Blockly.Block
    */
   init: function() {
@@ -220,48 +218,28 @@ Blockly.Blocks['array_modify'] = {
     this.setInputsInline(false);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    this.setTooltip(Blockly.Msg.ARRAY_MODIFY_TOOLTIP);    this.setHelpUrl('http://www.mon-club-elec.fr/pmwiki_reference_arduino/pmwiki.php?n=Main.Tableaux');
+    this.setTooltip(Blockly.Msg.ARRAY_MODIFY_TOOLTIP);
+	this.setHelpUrl('http://www.mon-club-elec.fr/pmwiki_reference_arduino/pmwiki.php?n=Main.Tableaux');
   }
 };
 
-Blockly.Blocks["array_declare"]={init: function(){
-	this.appendDummyInput()
-		.appendField(Blockly.Msg.ARRAY_create)
-		.appendField(new Blockly.FieldVariable("liste"), 'VAR');
-	this.appendDummyInput()
-		.setAlign(Blockly.ALIGN_RIGHT)
-		.appendField(Blockly.Msg.VARIABLES_AS)
-		.appendField(new Blockly.FieldDropdown(Blockly.Types.getValidTypeArray()), "type");
-	this.appendValueInput("contenu")
-		.setAlign(Blockly.ALIGN_RIGHT)
-		.appendField(new Blockly.FieldDropdown([[Blockly.Msg.ARRAY_taille,"c1"],[Blockly.Msg.ARRAY_contenu,"c2"]]), "choix");
-	this.setInputsInline(false);
-	this.setPreviousStatement(true, null);
-	this.setNextStatement(true, null);
-	this.setColour(Blockly.Blocks.array.HUE);
-	this.setTooltip(Blockly.Msg.ARRAY_GETINDEX_TOOLTIP2);
-	this.setHelpUrl(Blockly.Msg.HELPURL);}
+Blockly.Blocks["array_declare"]={
+	init: function(){
+		this.appendDummyInput()
+			.appendField(Blockly.Msg.ARRAY_create)
+			.appendField(new Blockly.FieldVariable("liste"), 'VAR');
+		this.appendDummyInput()
+			.setAlign(Blockly.ALIGN_RIGHT)
+			.appendField(Blockly.Msg.VARIABLES_AS)
+			.appendField(new Blockly.FieldDropdown(Blockly.Types.getValidTypeArray()), "type");
+		this.appendValueInput("contenu")
+			.setAlign(Blockly.ALIGN_RIGHT)
+			.appendField(new Blockly.FieldDropdown([[Blockly.Msg.ARRAY_taille,"c1"],[Blockly.Msg.ARRAY_contenu,"c2"]]), "choix");
+		this.setInputsInline(false);
+		this.setPreviousStatement(true, null);
+		this.setNextStatement(true, null);
+		this.setColour(Blockly.Blocks.array.HUE);
+		this.setTooltip(Blockly.Msg.ARRAY_GETINDEX_TOOLTIP2);
+		this.setHelpUrl(Blockly.Msg.HELPURL);
+	}
 };
-
-/* deprecated version
-Blockly.Blocks['array_declare'] = {
-  init: function() {
-    this.setColour(Blockly.Blocks.array.HUE);
-    this.appendValueInput("NAME")
-		.setCheck(null)
-        .appendField(Blockly.Msg.ARRAY_DECLARE_NAME);
-	this.appendValueInput("taille")
-        .setCheck("Number")
-        .setAlign(Blockly.ALIGN_RIGHT)
-        .appendField(Blockly.Msg.ARRAY_DECLARE_SIZE);
-    this.appendDummyInput()
-        .setAlign(Blockly.ALIGN_RIGHT)
-        .appendField(Blockly.Msg.ARRAY_DECLARE_TYPE)
-        .appendField(new Blockly.FieldDropdown(Blockly.Types.getValidTypeArray()), "type");
-    this.setInputsInline(false);
-    this.setPreviousStatement(true, null);
-    this.setNextStatement(true, null);
-    this.setTooltip(Blockly.Msg.ARRAY_DECLARE_TOOLTIP);    this.setHelpUrl('http://www.mon-club-elec.fr/pmwiki_reference_arduino/pmwiki.php?n=Main.Tableaux');
-  }
-};
-*/

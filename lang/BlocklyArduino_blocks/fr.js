@@ -321,7 +321,7 @@ Blockly.Msg.ARDUINO_BASE_BEGIN_TOOLTIP = "ce bloc permet de définir l'ordre dan
 Blockly.Msg.ARDUINO_BASE_BEGIN = "DÉBUT du programme";
 Blockly.Msg.ARDUINO_BASE_TEMPO1 = "quand";
 Blockly.Msg.ARDUINO_BASE_TEMPO2 = "se sont écoulées";
-Blockly.Msg.ARDUINO_BASE_TEMPO_TIME = [["microsecondes", "µs"],["millisecondes", "ms"],["secondes", "s"]];
+Blockly.Msg.ARDUINO_BASE_TEMPO_TIME = [["microsecondes", "us"],["millisecondes", "ms"],["secondes", "s"]];
 Blockly.Msg.ARDUINO_BASE_TEMPO_TOOLTIP = "Ce bloc vérifie si le temps indiqué est arrivé, si c'est le cas alors il éxécute les blocs placés à l'intérieur. Contrairement au bloc 'attendre' celui-ci n'est pas bloquant.";
 Blockly.Msg.ARDUINO_BASE_TEMPO_HELPURL = "http://www.mon-club-elec.fr/pmwiki_reference_arduino/pmwiki.php?n=Main.ExempleBlinkWithoutDelay";
 Blockly.Msg.ARDUINO_BASE_TOGGLE = "basculer l'état de la broche";
@@ -1961,7 +1961,7 @@ Blockly.Msg.lp2i_mp3_prev = "lire le fichier mp3 précédent";
 
 //********************Pololu QTR-1RC*************//
 Blockly.Msg.QTR_1RC_HELPURL = "https://ay128.lesusinesnouvelles.com/#!/projects/utilisation-de-capteur-qtr-1rc-avec-blockly";
-Blockly.Msg.QTR_1RC_SENSORCALIBRATION = "calibrage manuel du capteur QTR-1RC";
+Blockly.Msg.QTR_1RC_SENSORCALIBRATION = "calibrage du capteur QTR-1RC";
 Blockly.Msg.QTR_1RC_SENSORCALIBRATION_TOOLTIP = "Au début du programme, passer les capteurs sur la ligne. Permet d'améliorer la mesure.";
 Blockly.Msg.QTR_1RC_ATTACH1 = "attacher un capteur QTR-1RC";
 Blockly.Msg.QTR_1RC_ATTACH2 = "identifié par";

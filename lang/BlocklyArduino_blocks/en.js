@@ -288,7 +288,7 @@ Blockly.Msg.ARDUINO_BASE_BEGIN_TOOLTIP = "help to show start and end of a progra
 Blockly.Msg.ARDUINO_BASE_BEGIN = "START program";
 Blockly.Msg.ARDUINO_BASE_TEMPO1 = "when";
 Blockly.Msg.ARDUINO_BASE_TEMPO2 = "elapsed";
-Blockly.Msg.ARDUINO_BASE_TEMPO_TIME = [["microsecondes", "µs"],["millisecondes", "ms"],["secondes", "s"]];
+Blockly.Msg.ARDUINO_BASE_TEMPO_TIME = [["microsecondes", "us"],["millisecondes", "ms"],["secondes", "s"]];
 Blockly.Msg.ARDUINO_BASE_TEMPO_TOOLTIP = "Verify if interval of time is elapsed, if so do instructions.";
 Blockly.Msg.ARDUINO_BASE_TEMPO_HELPURL = "http://www.mon-club-elec.fr/pmwiki_reference_arduino/pmwiki.php?n=Main.ExempleBlinkWithoutDelay";
 Blockly.Msg.ARDUINO_BASE_TOGGLE = "toggle PIN state";
@@ -1918,7 +1918,7 @@ Blockly.Msg.HX711_READ_TOOLTIP = "correction factor from calibration block";
 
 //********************Pololu QTR-1RC*************//
 Blockly.Msg.QTR_1RC_HELPURL = "https://ay128.lesusinesnouvelles.com/#!/projects/utilisation-de-capteur-qtr-1rc-avec-blockly";
-Blockly.Msg.QTR_1RC_SENSORCALIBRATION = "manual calibration for QTR-1RC";
+Blockly.Msg.QTR_1RC_SENSORCALIBRATION = "calibration for QTR-1RC";
 Blockly.Msg.QTR_1RC_SENSORCALIBRATION_TOOLTIP = "This has to be used at the start of the robot for calibrate the reading of the sensors.";
 Blockly.Msg.QTR_1RC_ATTACH1 = "attach QTR-1RC sensor";
 Blockly.Msg.QTR_1RC_ATTACH2 = "with name";

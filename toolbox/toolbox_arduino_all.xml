@@ -1924,9 +1924,9 @@
 
 	<category name="CAT_POLOLU" colour="#00138b">
 		<category name="CAT_POLOLU_QTR_1RC" colour="#00138b">
-			<block type="QTR_1RC_calibration"></block>
 			<block type="QTR_1RC_attach"></block>
-			<block type="QTR_1RC_read"></block>
+			<block type="QTR_1RC_calibration"></block>
+			<block type="QTR_1RC_readLine"></block>
 		</category>
 	</category>
 

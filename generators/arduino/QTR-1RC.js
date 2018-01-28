@@ -9,51 +9,46 @@
 goog.provide('Blockly.Arduino.QTR_1RC');
 goog.require('Blockly.Arduino');
 
+var QTR_nb_sensors =0;
+
 Blockly.Arduino.QTR_1RC_calibration = function() {
-  Blockly.Arduino.includes_["includes_QTR_1RC_SensorCalibration"] = 
-  "#include <QTRSensors.h>";
-  
-  Blockly.Arduino.definitions_["defines_QTR_1RC_SensorCalibration"] =
-  "// Create an object for your type of sensor (RC or Analog).\n" +
-  "QTRSensorsRC qtr((char[]) {8, 9}, 2);";
-  
-  Blockly.Arduino.setups_['setup_QTR_1RC_SensorCalibration'] = 
-  "for (int i = 0; i < 400; i++)  // make the calibration take about 10 seconds\n" +
-  "    {\n" +
-  "    qtrrc.calibrate();       // reads all sensors 10 times at 2500 us per read (i.e. ~25 ms per call)\n" +
-  "    }";
+  var dropdown_name = this.getFieldValue('QTR_1RC_NAME');
+ 
+  Blockly.Arduino.includes_["includes_QTR_1RC_SensorCalibration"] = "#include <QTRSensors.h>";
   
   var code = 
-  "unsigned int position = reflectanceSensors.readLine(sensorValues);\n" +
-  "// To get raw sensor values instead, call:  \n" +
-  "//reflectanceSensors.read(sensorValues);\n" +
-  "for (byte i = 0; i < NUM_SENSORS; i++)\n" +
-  "{\n" +
-  "  Serial.print(sensorValues[i]);\n" +
-  "  Serial.print(' ');\n" +
-  "}\n" +
-  "Serial.print('   ');\n" +
-  "Serial.println(position);\n" +  
-  "delay(250);";  
+  "for (int i = 0; i < 250; i++)  // make the calibration take about 10 seconds\n" +
+  "    {\n" +
+  "    VarQTR_" + dropdown_name + ".calibrate();       // reads all sensors 10 times at 2500 us per read (i.e. ~25 ms per call)\n" +
+  "    delay(20);\n" +	
+  "    }";  
   
   return code;
 };
 
 Blockly.Arduino.QTR_1RC_attach = function() {
-  var value_pin = Blockly.Arduino.valueToCode(this, 'PIN', Blockly.Arduino.ORDER_ATOMIC);
-  var value_degree = Blockly.Arduino.valueToCode(this, 'DEGREE', Blockly.Arduino.ORDER_ATOMIC);
   var dropdown_name = this.getFieldValue('QTR_1RC_NAME');
 
-  Blockly.Arduino.definitions_['var_QTR_1RC_' + dropdown_name] = 'Servo ' + dropdown_name + ';';
-  Blockly.Arduino.setups_['setup_QTR_1RC_' + dropdown_name] = dropdown_name + '.attach(' + value_pin + ');';
+  Blockly.Arduino.includes_["includes_QTR_1RC_SensorCalibration"] = "#include <QTRSensors.h>";
+  
+  var code = new Array(this.itemCount_);
+  QTR_nb_sensors = this.itemCount_;
+  for (var n = 0; n < this.itemCount_; n++) {
+    code[n] = Blockly.Arduino.valueToCode(this, 'ADD' + n, Blockly.Arduino.ORDER_COMMA) || 'null';
+  }
+    
+  Blockly.Arduino.definitions_["defines_QTR_1RC_SensorCalibration"] =
+  "// Create an object for your sensor.\n" +
+  "QTRSensorsRC VarQTR_" + dropdown_name + "((char[]) {" + code.join(", ") + "}, "+ this.itemCount_ + ");\n";
+  
   return '';
 };
 
-Blockly.Arduino.QTR_1RC_read = function() {
-  var value_pin = Blockly.Arduino.valueToCode(this, 'PIN', Blockly.Arduino.ORDER_ATOMIC);
+Blockly.Arduino.QTR_1RC_readLine = function() {
   var dropdown_name = this.getFieldValue('QTR_1RC_NAME');
 
-  var code = "unsigned int sensors[2]; // number of sensors\n" +
-  dropdown_name + '.read()';
+  Blockly.Arduino.definitions_["defines_QTR_1RC_SensorCalibration"] += "unsigned int sensors_" + dropdown_name + "[" + QTR_nb_sensors + "];\n";
+  
+  var code = "VarQTR_" + dropdown_name + '.readLine(sensors_' + dropdown_name + ')';
   return [code, Blockly.Arduino.ORDER_ATOMIC];
 };
