@@ -234,6 +234,7 @@ Blockly.Msg.CAT_ETHERNET = "ethernet"; //added 25 july 2017
 Blockly.Msg.CAT_ETHERNET_INIT = "initialisation";
 Blockly.Msg.CAT_ETHERNET_CLIENT = "client";
 Blockly.Msg.CAT_ETHERNET_SERVER = "serveur";
+Blockly.Msg.CAT_WIFI_INIT = "wifi esp8266"; // 30/01/2018
 
 Blockly.Msg.CAT_AUTODUINO = "Autoduino";
 Blockly.Msg.CAT_AUTODUINO_IN = " - capteurs";
@@ -1889,15 +1890,23 @@ Blockly.Msg.BLYNK_TEXT = "texte";
 
 
 Blockly.Msg.ETHERNET_AVAILABLE_HELPURL = "https://www.arduino.cc/en/Reference/ClientAvailable";
-Blockly.Msg.ETHERNET_AVAILABLE_TITLE = "Client.availalbe";
+Blockly.Msg.ETHERNET_AVAILABLE_TITLE = "Requête client en cours";
 Blockly.Msg.ETHERNET_AVAILABLE_TOOLTIP = "Returns the number of bytes available for reading (that is, the amount of data that has been written to the client by the server it is connected to).";
-Blockly.Msg.ETHERNET_BEGIN_DHCP_TITLE = "Begin (DHCP) Client";
+Blockly.Msg.ETHERNET_BEGIN_DHCP_CLIENT_TITLE = "Begin (DHCP) Client";
 Blockly.Msg.ETHERNET_BEGIN_DHCP_SERVER_TITLE = "Begin (DHCP) Server";
+Blockly.Msg.ETHERNET_BEGIN_STATICIP_SERVER_TITLE = "Begin (StaticIP) Server";
+Blockly.Msg.ETHERNET_BEGIN_STATICIP_CLIENT_TITLE = "Begin (StaticIP) Client";
+////
+Blockly.Msg.ETHERNET_STATICIP_IP = "IP fixe de la carte";
+Blockly.Msg.ETHERNET_STATICIP_DNS = "DNS local";
+Blockly.Msg.ETHERNET_STATICIP_GATEWAY = "Passerelle";
+Blockly.Msg.ETHERNET_STATICIP_SUBNET = "Masque sous-réseau";
+////
 Blockly.Msg.ETHERNET_BEGIN_DHCP_TOOLTIP = "Using Ethernet.begin(mac) with the proper network setup, the Ethernet shield will automatically obtain an IP address.";
 Blockly.Msg.ETHERNET_BEGIN_HELPURL = "https://www.arduino.cc/en/Reference/EthernetBegin";
 Blockly.Msg.ETHERNET_BEGIN_TITLE = "Begin";
 Blockly.Msg.ETHERNET_BEGIN_TOOLTIP = "Initializes the ethernet library and network settings.";
-Blockly.Msg.ETHERNET_CLIENT_FOR_SERVER_TITLE = "Requete Client"; 
+Blockly.Msg.ETHERNET_CLIENT_FOR_SERVER_TITLE = "Requête Client"; 
 Blockly.Msg.ETHERNET_CLIENT_FOR_SERVER_TOOLTIP = "Un client envoie une requete"; 
 Blockly.Msg.ETHERNET_CLIENT_PRINTLN_HELPURL = "https://www.arduino.cc/en/Reference/ClientPrintln";
 Blockly.Msg.ETHERNET_CLIENT_PRINTLN_TITLE = "Client.Println";
@@ -1914,27 +1923,56 @@ Blockly.Msg.ETHERNET_CONNECT_TOOLTIP = "Connects to a specified IP address and p
 Blockly.Msg.ETHERNET_GET_REQUEST_HELPURL = "";
 Blockly.Msg.ETHERNET_GET_REQUEST_TITLE = "GET Request";
 Blockly.Msg.ETHERNET_GET_REQUEST_TOOLTIP = "Create GET Request.";
-Blockly.Msg.ETHERNET_HTML_SEND_TITLE = "SEND HTML";
+Blockly.Msg.ETHERNET_GET_REQUEST_URL = "URL";
+Blockly.Msg.ETHERNET_GET_REQUEST_SERVER = "serveur hôte";
+////
+Blockly.Msg.ETHERNET_HTML_SEND_TITLE = "SEND HTML PAGE";
 Blockly.Msg.ETHERNET_HTML_SEND_HTMLJS = "page html/JS";
-Blockly.Msg.ETHERNET_HEADER_SEND_TITLE = "SEND HEADER";
+Blockly.Msg.ETHERNET_HEADER_SEND_TITLE = "SEND HEADER HTTP/1.1";
 Blockly.Msg.ETHERNET_HEADER_SEND_FIELDDROPDOWN = [["text/html", "text"], ["image/png", "png"]];
+////
+Blockly.Msg.ETHERNET_HEADER_SEND_FIELDDROPDOWN2 = [["OK", "200"], ["Pas de contenu", "204"], ["Erreur", "404"]];
+////
+Blockly.Msg.ETHERNET_PARSER_INIT_TITLE = "Initialisation Analyseur de requête";
+Blockly.Msg.ETHERNET_PARSER_PARSE_TITLE = "";
+Blockly.Msg.ETHERNET_PARSER_PARSE_INPUT = "Analyse de la requête";//"Requête reçue";
+Blockly.Msg.ETHERNET_PARSER_END_TITLE = "Fin de requête ?";
+Blockly.Msg.ETHERNET_PARSER_COUNT_TITLE = "nombre de paramètres détectés ?";
+Blockly.Msg.ETHERNET_PARSER_GETMYPARAM_TITLE = "recupère le contenu du paramètre : ";
+Blockly.Msg.ETHERNET_PARSER_GETMYPARAM_PARAM = "nom du paramètre: ";
+Blockly.Msg.ETHERNET_PARSER_PURGE_TITLE = "Fin de l'analyse";
+////
 Blockly.Msg.ETHERNET_LOCALIP_HELPURL = "https://www.arduino.cc/en/Reference/EthernetLocalIP";
-Blockly.Msg.ETHERNET_LOCALIP_TITLE = "localIP";
+Blockly.Msg.ETHERNET_LOCALIP_TITLE = "adresse IP locale";
 Blockly.Msg.ETHERNET_LOCALIP_TOOLTIP = "Returns the IP address of the Ethernet shield";
+Blockly.Msg.ETHERNET_MAC_ADDRESS = "MAC Address";
 Blockly.Msg.ETHERNET_MAC_ADDRESS_TOOLTIP = "Edit Mac Address";
+Blockly.Msg.ETHERNET_PORT = "Port";
 Blockly.Msg.ETHERNET_POST_DATA = "Data";
 Blockly.Msg.ETHERNET_POST_REQUEST_HELPURL = "";
 Blockly.Msg.ETHERNET_POST_REQUEST_TITLE = "POST Request";
+Blockly.Msg.ETHERNET_POST_REQUEST_URL = "URL";
+Blockly.Msg.ETHERNET_POST_REQUEST_SERVER = "serveur hôte";
+Blockly.Msg.ETHERNET_POST_REQUEST_DATA ="Données";
 Blockly.Msg.ETHERNET_POST_REQUEST_TOOLTIP = "Create POST Request.";
 Blockly.Msg.ETHERNET_READ_HELPURL = "https://www.arduino.cc/en/Reference/ClientRead";
-Blockly.Msg.ETHERNET_READ_TITLE = "Client.Read";
+Blockly.Msg.ETHERNET_READ_TITLE = "Texte de la requête en cours";
 Blockly.Msg.ETHERNET_READ_TOOLTIP = "Read the next byte received from the server the client is connected to (after the last call to read()).";
 Blockly.Msg.ETHERNET_STOP_HELPURL = "https://www.arduino.cc/en/Reference/ClientStop";
-Blockly.Msg.ETHERNET_STOP_TITLE = "Client.Stop";
-Blockly.Msg.ETHERNET_STOP_TOOLTIP = "Disconnect from the server.";
+Blockly.Msg.ETHERNET_STOP_TITLE = "Fermeture IPSocket";
+Blockly.Msg.ETHERNET_STOP_TOOLTIP = "Déconnexion du client";
 Blockly.Msg.ETHERNET_VERSION_1 = "Ethernet";
 Blockly.Msg.ETHERNET_VERSION_2 = "Ethernet2";
 Blockly.Msg.ETHERNET_VERSION_V2 = "Ethernet_v2";
+////// ETHERNET WIFI ESP8266 /////
+Blockly.Msg.ETHERNET_WIFI_BEGIN_SERVER_HELPURL = "https://www.arduino.cc/en/Reference/WiFi";
+Blockly.Msg.ETHERNET_WIFI_BEGIN_SERVER_TITLE = "Begin (DHCP) WIFI Server"; 
+Blockly.Msg.ETHERNET_WIFI_SSID = "SSID";
+Blockly.Msg.ETHERNET_WIFI_PASS = "PASS";
+Blockly.Msg.ETHERNET_WIFI_BEGIN_SERVER_TOOLTIP = "initialisation de la liaison WIFI";
+Blockly.Msg.ETHERNET_CLIENT_FOR_WIFI_SERVER_TITLE = "Requête Client sur serveur WIFI";
+Blockly.Msg.ETHERNET_WIFI_LOCALIP_TITLE = "adresse IP locale (WIFI)";
+Blockly.Msg.ETHERNET_WIFI_LOCALIP_TOOLTIP = "Retourne l'IP locale";
 
 //********************null*************//
 Blockly.Msg.NULL_TOOLTIP = "texte libre pour description d'algorithmes";
