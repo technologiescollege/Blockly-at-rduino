@@ -139,7 +139,7 @@ Blockly.Blocks['ethernet_available'] = {
     this.setColour(Blockly.Blocks.ethernet.HUE);
     this.appendDummyInput()
       .appendField(Blockly.Msg.ETHERNET_AVAILABLE_TITLE);
-    this.setOutput(true, 'Number');
+    this.setOutput(true, 'Boolean');
     this.setTooltip(Blockly.Msg.ETHERNET_AVAILABLE_TOOLTIP);
   }
 };
