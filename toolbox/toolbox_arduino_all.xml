@@ -139,7 +139,7 @@
 		<!-- </value> -->
 		<!-- </block> -->
 	</category>
-	<!-- <category name="CAT_COLOR" colour="#c09e8c"> <block type="colour_picker"></block>
+	<!-- <category name="CAT_colour" colour="#c09e8c"> <block type="colour_picker"></block>
 		<block type="colour_random"></block> <block type="colour_rgb"> <value name="RED">
 		<block type="math_number"> <field name="NUM">100</field> </block> </value>
 		<value name="GREEN"> <block type="math_number"> <field name="NUM">50</field>
@@ -704,12 +704,12 @@
 		<block type="SPI_receive"></block>		
 	</category>
 	<category name="CAT_APDS_9960_RGB_Gesture" colour="#D9242D">
-		<block type="APDS9960_ColorSensor_init"></block>
-		<block type="APDS9960_ColorSensor_test"></block>
-		<block type="APDS9960_ColorSensor_ambient"></block>
-		<block type="APDS9960_ColorSensor_red"></block>
-		<block type="APDS9960_ColorSensor_green"></block>
-		<block type="APDS9960_ColorSensor_blue"></block>
+		<block type="APDS9960_colourSensor_init"></block>
+		<block type="APDS9960_colourSensor_test"></block>
+		<block type="APDS9960_colourSensor_ambient"></block>
+		<block type="APDS9960_colourSensor_red"></block>
+		<block type="APDS9960_colourSensor_green"></block>
+		<block type="APDS9960_colourSensor_blue"></block>
 	</category>
 	<category name="CAT_HX711" colour="#D9242D">
 		<block type="HX711_init"></block>
@@ -840,7 +840,7 @@
 				</shadow>
 			</value>
 		</block>
-		<block type="lp2i_ledRGB_WS2812B_setPixelColor">
+		<block type="lp2i_ledRGB_WS2812B_setPixelcolour">
 			<value name="Pin_LedRGB">
 				<shadow type="math_number">
 					<field name="NUM">6</field>
@@ -888,7 +888,7 @@
 				</shadow>
 			</value>
 		</block>
-		<block type="MatrixLED_WS2812B_setPixelColor">
+		<block type="MatrixLED_WS2812B_setPixelcolour">
 			<value name="Pixel_number">
 				<shadow type="math_number">
 					<field name="NUM">0</field>
@@ -2607,6 +2607,7 @@
 			<block type="ethernet_client_for_wifi_server"></block>
 			<block type="ethernet_wifi_localip"></block>				
 		</category>
+		<sep></sep>
 	</category>	
 	<category name="CAT_BLYNK_CC" colour="#23C890">
 		<category name="CAT_Blynk_Arduino_Connexion" colour="#23C890">
@@ -2671,10 +2672,11 @@
 					</block>
 				</value>
 			</block>
-		</category>		
+		</category>
+		<sep></sep>		
 	</category>
-    <category name="CAT_AUTODUINO">
-        <category name="CAT_AUTODUINO_IN">
+    <category name="CAT_AUTODUINO" colour="#8B0000">
+        <category name="CAT_AUTODUINO_IN" colour="#8B0000">
             <block type="autoduino_button"></block>
             <block type="autoduino_rotary_angle"></block>
             <block type="autoduino_potentiometer"></block>
@@ -2689,7 +2691,7 @@
             <block type="autoduino_line_finder"></block>
             <block type="autoduino_ir_switch"></block>
         </category>
-        <category name="CAT_AUTODUINO_OUT">
+        <category name="CAT_AUTODUINO_OUT" colour="#8B0000">
             <block type="autoduino_led"></block>
             <block type="autoduino_led_eclairage"></block>
             <block type="autoduino_IR_led"></block>
@@ -2699,16 +2701,17 @@
             <block type="autoduino_motor"></block>
             <block type="autoduino_motor_builtin"></block>
         </category>
-        <category name="CAT_AUTODUINO_LCD">
+        <category name="CAT_AUTODUINO_LCD" colour="#8B0000">
             <block type="autoduino_lcdinit"></block>
             <block type="autoduino_lcdspecial"></block>
             <block type="autoduino_lcdclear"></block>
             <block type="autoduino_lcdwrite"></block>
             <block type="autoduino_lcdprint"></block>
         </category>
-        <category name="CAT_AUTODUINO_COMM">
+        <category name="CAT_AUTODUINO_COMM" colour="#8B0000">
             <block type="autoduino_bluetooth_slave"></block>
             <block type="autoduino_rc"></block>
         </category>
+		<sep></sep>
     </category>
 </toolbox>

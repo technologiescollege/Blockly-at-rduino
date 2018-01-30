@@ -139,7 +139,7 @@
 		<!-- </value> -->
 		<!-- </block> -->
 	</category>
-	<!-- <category name="CAT_COLOR" colour="#c09e8c"> <block type="colour_picker"></block> 
+	<!-- <category name="CAT_colour" colour="#c09e8c"> <block type="colour_picker"></block> 
 		<block type="colour_random"></block> <block type="colour_rgb"> <value name="RED"> 
 		<block type="math_number"> <field name="NUM">100</field> </block> </value> 
 		<value name="GREEN"> <block type="math_number"> <field name="NUM">50</field> 
@@ -435,12 +435,12 @@
 		<block type="IR_get"></block>
 	</category>
 	<category name="CAT_APDS_9960_RGB_Gesture" colour="#D9242D">
-		<block type="APDS9960_ColorSensor_init"></block>
-		<block type="APDS9960_ColorSensor_test"></block>
-		<block type="APDS9960_ColorSensor_ambient"></block>
-		<block type="APDS9960_ColorSensor_red"></block>
-		<block type="APDS9960_ColorSensor_green"></block>
-		<block type="APDS9960_ColorSensor_blue"></block>
+		<block type="APDS9960_colourSensor_init"></block>
+		<block type="APDS9960_colourSensor_test"></block>
+		<block type="APDS9960_colourSensor_ambient"></block>
+		<block type="APDS9960_colourSensor_red"></block>
+		<block type="APDS9960_colourSensor_green"></block>
+		<block type="APDS9960_colourSensor_blue"></block>
 	</category>
 	<category name="CAT_OLED_U8G" colour="#1B2944">
 		<block type="lp2i_u8g_draw_string" colour="#1B2944">
@@ -567,7 +567,7 @@
 				</shadow>
 			</value>
 		</block>
-		<block type="lp2i_ledRGB_WS2812B_setPixelColor">
+		<block type="lp2i_ledRGB_WS2812B_setPixelcolour">
 			<value name="Pin_LedRGB">
 				<shadow type="math_number">
 					<field name="NUM">6</field>
@@ -615,7 +615,7 @@
 				</shadow>
 			</value>
 		</block>
-		<block type="MatrixLED_WS2812B_setPixelColor">
+		<block type="MatrixLED_WS2812B_setPixelcolour">
 			<value name="Pixel_number">
 				<shadow type="math_number">
 					<field name="NUM">0</field>
@@ -2065,8 +2065,8 @@
 		</block>
 		<block type="Sharp_IR_read"></block>
 	</category>
-        	<category name="AUTODUINO_TARGET_AUTODUINO">
-		<category name="CAT_AUTODUINO_IN">
+    <category name="AUTODUINO_TARGET_AUTODUINO" colour="#8B0000">
+		<category name="CAT_AUTODUINO_IN" colour="#8B0000">
 			<block type="autoduino_button"></block>
 			<block type="autoduino_rotary_angle"></block>
 			<block type="autoduino_rotary_push"></block>
@@ -2083,7 +2083,7 @@
 			<block type="autoduino_ir_switch"></block>
 			<block type="autoduino_digital_temperature_sensor"></block>
 		</category>
-		<category name="CAT_AUTODUINO_OUT">
+		<category name="CAT_AUTODUINO_OUT" colour="#8B0000">
 			<block type="autoduino_led"></block>
 			<block type="autoduino_led_eclairage"></block>
 			<block type="autoduino_IR_led"></block>
@@ -2096,24 +2096,25 @@
 			<block type="autoduino_dual_motor"></block>
 			<block type="autoduino_motor_builtin"></block>
 		</category>
-		<category name="CAT_AUTODUINO_LCD">
+		<category name="CAT_AUTODUINO_LCD" colour="#8B0000">
 			<block type="autoduino_lcdwrite"></block>
 			<block type="autoduino_lcdprint"></block>
 			<block type="autoduino_lcdclear"></block>
 			<block type="autoduino_lcdspecial"></block>
 			<block type="autoduino_lcdinit"></block>
 		</category>
-		<category name="CAT_AUTODUINO_COMM">
+		<category name="CAT_AUTODUINO_COMM" colour="#8B0000">
 			<block type="autoduino_bluetooth_slave"></block>
 			<block type="autoduino_rc"></block>
 			<block type="autoduino_ir_code_detection"></block>
 		</category>
-		<category name="CAT_AUTODUINO_UTIL">
+		<category name="CAT_AUTODUINO_UTIL" colour="#8B0000">
 			<block type="autoduino_edge_detection"></block>
 		</category>
+		<sep></sep>
 	</category>	
-	<category name="AUTODUINO_TARGET_AUTOALARME">
-		<category name="CAT_AUTODUINO_IN">
+	<category name="AUTODUINO_TARGET_AUTOALARME" colour="#8B0000">
+		<category name="CAT_AUTODUINO_IN" colour="#8B0000">
 			<block type="autoduino_button"></block>
 			<block type="autoduino_rotary_angle"></block>
 			<block type="autoduino_rotary_push"></block>
@@ -2122,7 +2123,7 @@
 			<block type="autoduino_ultrasonic_ranger"></block>
 			<block type="autoduino_LDR_sensor"></block>
 		</category>
-		<category name="CAT_AUTODUINO_OUT">
+		<category name="CAT_AUTODUINO_OUT" colour="#8B0000">
 			<block type="autoduino_led"></block>
 			<block type="autoduino_led_eclairage"></block>
 			<block type="autoduino_output"></block>
@@ -2130,23 +2131,24 @@
 			<block type="autoduino_rgb_led2"></block>
 			<block type="autoduino_piezo_buzzer"></block>
 		</category>
-		<category name="CAT_AUTODUINO_LCD">
+		<category name="CAT_AUTODUINO_LCD" colour="#8B0000">
 			<block type="autoduino_lcdwrite"></block>
 			<block type="autoduino_lcdprint"></block>
 			<block type="autoduino_lcdclear"></block>
 			<block type="autoduino_lcdspecial"></block>
 			<block type="autoduino_lcdinit"></block>
 		</category>
-		<category name="CAT_AUTODUINO_COMM">
+		<category name="CAT_AUTODUINO_COMM" colour="#8B0000">
 			<block type="autoduino_rc"></block>
 			<block type="autoduino_ir_code_detection"></block>
 		</category>
-		<category name="CAT_AUTODUINO_UTIL">
+		<category name="CAT_AUTODUINO_UTIL" colour="#8B0000">
 			<block type="autoduino_edge_detection"></block>
 		</category>
+		<sep></sep>
 	</category>	
-	<category name="AUTODUINO_TARGET_AUTOLUMI">
-		<category name="CAT_AUTODUINO_IN">
+	<category name="AUTODUINO_TARGET_AUTOLUMI" colour="#8B0000">
+		<category name="CAT_AUTODUINO_IN" colour="#8B0000">
 			<block type="autoduino_button"></block>
 			<block type="autoduino_rotary_angle"></block>
 			<block type="autoduino_rotary_push"></block>
@@ -2155,7 +2157,7 @@
 			<block type="autoduino_ultrasonic_ranger"></block>
 			<block type="autoduino_LDR_sensor"></block>
 		</category>
-		<category name="CAT_AUTODUINO_OUT">
+		<category name="CAT_AUTODUINO_OUT" colour="#8B0000">
 			<block type="autoduino_led"></block>
 			<block type="autoduino_led_eclairage"></block>
 			<block type="autoduino_output"></block>
@@ -2163,23 +2165,24 @@
 			<block type="autoduino_rgb_led2"></block>
 			<block type="autoduino_piezo_buzzer"></block>
 		</category>
-		<category name="CAT_AUTODUINO_LCD">
+		<category name="CAT_AUTODUINO_LCD" colour="#8B0000">
 			<block type="autoduino_lcdwrite"></block>
 			<block type="autoduino_lcdprint"></block>
 			<block type="autoduino_lcdclear"></block>
 			<block type="autoduino_lcdspecial"></block>
 			<block type="autoduino_lcdinit"></block>
 		</category>
-		<category name="CAT_AUTODUINO_COMM">
+		<category name="CAT_AUTODUINO_COMM" colour="#8B0000">
 			<block type="autoduino_rc"></block>
 			<block type="autoduino_ir_code_detection"></block>
 		</category>
-		<category name="CAT_AUTODUINO_UTIL">
+		<category name="CAT_AUTODUINO_UTIL" colour="#8B0000">
 			<block type="autoduino_edge_detection"></block>
 		</category>
+		<sep></sep>
 	</category>	
-	<category name="AUTODUINO_TARGET_PORTAIL_1">
-		<category name="CAT_AUTODUINO_IN">
+	<category name="AUTODUINO_TARGET_PORTAIL_1" colour="#8B0000">
+		<category name="CAT_AUTODUINO_IN" colour="#8B0000">
 			<block type="autoduino_button"></block>
 			<block type="autoduino_rotary_angle"></block>
 			<block type="autoduino_rotary_push"></block>
@@ -2188,7 +2191,7 @@
 			<block type="autoduino_ultrasonic_ranger"></block>
 			<block type="autoduino_LDR_sensor"></block>
 		</category>
-		<category name="CAT_AUTODUINO_OUT">
+		<category name="CAT_AUTODUINO_OUT" colour="#8B0000">
 			<block type="autoduino_led"></block>
 			<block type="autoduino_led_eclairage"></block>
 			<block type="autoduino_output"></block>
@@ -2197,19 +2200,20 @@
 			<block type="autoduino_piezo_buzzer"></block>
 			<block type="autoduino_motor"></block>
 		</category>
-		<category name="CAT_AUTODUINO_LCD">
+		<category name="CAT_AUTODUINO_LCD" colour="#8B0000">
 			<block type="autoduino_lcdwrite"></block>
 			<block type="autoduino_lcdprint"></block>
 			<block type="autoduino_lcdclear"></block>
 			<block type="autoduino_lcdspecial"></block>
 			<block type="autoduino_lcdinit"></block>
 		</category>
-		<category name="CAT_AUTODUINO_COMM">
+		<category name="CAT_AUTODUINO_COMM" colour="#8B0000">
 			<block type="autoduino_rc"></block>
 			<block type="autoduino_ir_code_detection"></block>
 		</category>
-		<category name="CAT_AUTODUINO_UTIL">
+		<category name="CAT_AUTODUINO_UTIL" colour="#8B0000">
 			<block type="autoduino_edge_detection"></block>
 		</category>
+		<sep></sep>
 	</category>
 </toolbox>

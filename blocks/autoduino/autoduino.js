@@ -24,7 +24,7 @@ goog.require('Blockly.Types');
 
 Blockly.Blocks['autoduino_button'] = {
   init: function() {
-    this.setColour("#8B0000");
+    this.setColour(Blockly.Blocks.autoduino.HUE);
     this.setHelpUrl(Blockly.Msg.AUTODUINO_INOUT_BUTTON_HELPURL);
 	this.appendDummyInput()
         .appendField(Blockly.Msg.AUTODUINO_INOUT_BUTTON_TEXT)
@@ -41,7 +41,7 @@ Blockly.Blocks['autoduino_button'] = {
 
 Blockly.Blocks['autoduino_rotary_angle'] = {
   init: function() {
-    this.setColour("#8B0000");
+    this.setColour(Blockly.Blocks.autoduino.HUE);
 	this.setHelpUrl(Blockly.Msg.AUTODUINO_INOUT_ROT_ANGLE_HELPURL);
     this.appendDummyInput()
         .appendField(Blockly.Msg.AUTODUINO_INOUT_ROT_ANGLE_TEXT)
@@ -54,7 +54,7 @@ Blockly.Blocks['autoduino_rotary_angle'] = {
 
 Blockly.Blocks['autoduino_rotary_push'] = {
   init: function() {
-    this.setColour("#8B0000");
+    this.setColour(Blockly.Blocks.autoduino.HUE);
 	this.setHelpUrl(Blockly.Msg.AUTODUINO_INOUT_ROT_ANGLE_HELPURL);
     this.appendDummyInput()
         .appendField(Blockly.Msg.AUTODUINO_INOUT_ROT_PUSH_TEXT)
@@ -66,7 +66,7 @@ Blockly.Blocks['autoduino_rotary_push'] = {
 
 Blockly.Blocks['autoduino_potentiometer'] = {
   init: function() {
-    this.setColour("#8B0000");
+    this.setColour(Blockly.Blocks.autoduino.HUE);
 	this.setHelpUrl(Blockly.Msg.AUTODUINO_INOUT_POT_HELPURL);
     this.appendDummyInput()
         .appendField(Blockly.Msg.AUTODUINO_INOUT_POT_TEXT)
@@ -84,7 +84,7 @@ Blockly.Blocks['autoduino_potentiometer'] = {
 
 Blockly.Blocks['autoduino_dht_read'] = {
   init: function() {
-    this.setColour("#8B0000");
+    this.setColour(Blockly.Blocks.autoduino.HUE);
     this.setHelpUrl(Blockly.Msg.AUTODUINO_INOUT_DHT_HELPURL);
     this.appendDummyInput()
       .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/autoduino/media/700x560_K-AP-MHE-M.jpg', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize))
@@ -106,7 +106,7 @@ Blockly.Blocks['autoduino_dht_read'] = {
 
 Blockly.Blocks['autoduino_temperature_sensor'] = {
   init: function() {
-    this.setColour("#8B0000");
+    this.setColour(Blockly.Blocks.autoduino.HUE);
 	this.setHelpUrl(Blockly.Msg.AUTODUINO_INOUT_TEMP_HELPURL);
     this.appendDummyInput()
         .appendField(Blockly.Msg.AUTODUINO_INOUT_TEMP_TEXT)
@@ -122,7 +122,7 @@ Blockly.Blocks['autoduino_temperature_sensor'] = {
 
 Blockly.Blocks['autoduino_moisture_sensor'] = {
   init: function() {
-    this.setColour("#8B0000");
+    this.setColour(Blockly.Blocks.autoduino.HUE);
 	this.setHelpUrl(Blockly.Msg.AUTODUINO_INOUT_MOISTURE_HELPURL);
     this.appendDummyInput()
         .appendField(Blockly.Msg.AUTODUINO_INOUT_MOISTURE_TEXT)
@@ -139,7 +139,7 @@ Blockly.Blocks['autoduino_moisture_sensor'] = {
 
 Blockly.Blocks['autoduino_tilt_switch'] = {
   init: function() {
-    this.setColour("#8B0000");
+    this.setColour(Blockly.Blocks.autoduino.HUE);
 	this.setHelpUrl(Blockly.Msg.AUTODUINO_INOUT_TILT_HELPURL);
     this.appendDummyInput()
         .appendField(Blockly.Msg.AUTODUINO_INOUT_TILT_TEXT)
@@ -155,7 +155,7 @@ Blockly.Blocks['autoduino_tilt_switch'] = {
 
 Blockly.Blocks['autoduino_ils_switch'] = {
   init: function() {
-    this.setColour("#8B0000");
+    this.setColour(Blockly.Blocks.autoduino.HUE);
 	this.setHelpUrl(Blockly.Msg.AUTODUINO_INOUT_ILS_HELPURL);
     this.appendDummyInput()
         .appendField(Blockly.Msg.AUTODUINO_INOUT_ILS_TEXT)
@@ -171,7 +171,7 @@ Blockly.Blocks['autoduino_ils_switch'] = {
 
 Blockly.Blocks['autoduino_pir_motion_sensor'] = {
   init: function() {
-    this.setColour("#8B0000");
+    this.setColour(Blockly.Blocks.autoduino.HUE);
 	this.setHelpUrl(Blockly.Msg.AUTODUINO_INOUT_PIR_HELPURL);
     this.appendDummyInput()
         .appendField(Blockly.Msg.AUTODUINO_INOUT_PIR_TEXT)
@@ -188,7 +188,7 @@ Blockly.Blocks['autoduino_pir_motion_sensor'] = {
 
 Blockly.Blocks['autoduino_ultrasonic_ranger'] = {
   init: function() {
-    this.setColour("#8B0000");
+    this.setColour(Blockly.Blocks.autoduino.HUE);
 	this.setHelpUrl(Blockly.Msg.AUTODUINO_INOUT_ULTRASONIC_HELPURL);
     this.appendDummyInput()
 	    .appendField(Blockly.Msg.AUTODUINO_INOUT_ULTRASONIC_TEXT)
@@ -209,7 +209,7 @@ Blockly.Blocks['autoduino_ultrasonic_ranger'] = {
 
 Blockly.Blocks['autoduino_LDR_sensor'] = {
   init: function() {
-    this.setColour("#8B0000");
+    this.setColour(Blockly.Blocks.autoduino.HUE);
 	this.setHelpUrl(Blockly.Msg.AUTODUINO_INOUT_LDR_HELPURL);
     this.appendDummyInput()
         .appendField(Blockly.Msg.AUTODUINO_INOUT_LDR_TEXT)
@@ -225,7 +225,7 @@ Blockly.Blocks['autoduino_LDR_sensor'] = {
 
 Blockly.Blocks['autoduino_line_finder'] = {
   init: function() {
-    this.setColour("#8B0000");
+    this.setColour(Blockly.Blocks.autoduino.HUE);
 	this.setHelpUrl(Blockly.Msg.AUTODUINO_INOUT_LINE_HELPURL);
     this.appendDummyInput()
         .appendField(Blockly.Msg.AUTODUINO_INOUT_LINE_TEXT)
@@ -242,7 +242,7 @@ Blockly.Blocks['autoduino_line_finder'] = {
 
 Blockly.Blocks['autoduino_ir_switch'] = {
   init: function() {
-    this.setColour("#8B0000");
+    this.setColour(Blockly.Blocks.autoduino.HUE);
 	this.setHelpUrl(Blockly.Msg.AUTODUINO_INOUT_IR_HELPURL);
     this.appendDummyInput()
         .appendField(Blockly.Msg.AUTODUINO_INOUT_IR_TEXT)
@@ -259,7 +259,7 @@ Blockly.Blocks['autoduino_ir_switch'] = {
 
 Blockly.Blocks['autoduino_digital_temperature_sensor'] = {
   init: function() {
-    this.setColour("#8B0000");
+    this.setColour(Blockly.Blocks.autoduino.HUE);
 	this.setHelpUrl(Blockly.Msg.AUTODUINO_INOUT_TEMP_HELPURL);
     this.appendDummyInput()
         .appendField(Blockly.Msg.AUTODUINO_INOUT_TEMP_TEXT2)
@@ -280,7 +280,7 @@ Blockly.Blocks['autoduino_digital_temperature_sensor'] = {
 
 Blockly.Blocks['autoduino_led'] = {
   init: function() {
-    this.setColour("#8B0000");
+    this.setColour(Blockly.Blocks.autoduino.HUE);
 	this.setHelpUrl(Blockly.Msg.AUTODUINO_INOUT_LED_HELPURL);
     this.appendDummyInput()
         .appendField(Blockly.Msg.AUTODUINO_INOUT_LED_INPUT1)
@@ -302,7 +302,7 @@ Blockly.Blocks['autoduino_led'] = {
 
 Blockly.Blocks['autoduino_led_eclairage'] = {
   init: function() {
-    this.setColour("#8B0000");
+    this.setColour(Blockly.Blocks.autoduino.HUE);
 	this.setHelpUrl(Blockly.Msg.AUTODUINO_INOUT_LED_HELPURL);
     this.appendDummyInput()
         .appendField(Blockly.Msg.AUTODUINO_INOUT_LED_INPUT1)
@@ -324,7 +324,7 @@ Blockly.Blocks['autoduino_led_eclairage'] = {
 
 Blockly.Blocks['autoduino_IR_led'] = {
   init: function() {
-    this.setColour("#8B0000");
+    this.setColour(Blockly.Blocks.autoduino.HUE);
 	this.setHelpUrl(Blockly.Msg.AUTODUINO_INOUT_LED_HELPURL);
     this.appendDummyInput()
         .appendField(Blockly.Msg.AUTODUINO_INOUT_LED_INPUT1)
@@ -346,7 +346,7 @@ Blockly.Blocks['autoduino_IR_led'] = {
 
 Blockly.Blocks['autoduino_output'] = {
   init: function() {
-    this.setColour("#8B0000");
+    this.setColour(Blockly.Blocks.autoduino.HUE);
 	this.setHelpUrl(Blockly.Msg.AUTODUINO_INOUT_LED_HELPURL);
     this.appendDummyInput()
         .appendField(Blockly.Msg.AUTODUINO_INOUT_LED_INPUT1)
@@ -368,7 +368,7 @@ Blockly.Blocks['autoduino_output'] = {
 Blockly.Blocks['autoduino_rgb_led'] = {
   init: function() {
     this.setHelpUrl(Blockly.Msg.AUTODUINO_INOUT_RGBLED_HELPURL);
-    this.setColour("#8B0000");
+    this.setColour(Blockly.Blocks.autoduino.HUE);
     this.appendDummyInput()
         .appendField(Blockly.Msg.AUTODUINO_INOUT_RGBLED_TEXT);
     this.appendDummyInput()
@@ -404,7 +404,7 @@ Blockly.Blocks['autoduino_rgb_led'] = {
 Blockly.Blocks['autoduino_rgb_led2'] = {
   init: function() {
     this.setHelpUrl(Blockly.Msg.AUTODUINO_INOUT_RGBLED_HELPURL);
-    this.setColour("#8B0000");
+    this.setColour(Blockly.Blocks.autoduino.HUE);
     this.appendDummyInput()
         .appendField(Blockly.Msg.AUTODUINO_INOUT_RGBLED_TEXT);
     this.appendDummyInput()
@@ -432,7 +432,7 @@ Blockly.Blocks['autoduino_rgb_led2'] = {
 
 Blockly.Blocks['autoduino_piezo_buzzer'] = {
   init: function() {
-    this.setColour("#8B0000");
+    this.setColour(Blockly.Blocks.autoduino.HUE);
 	this.setHelpUrl(Blockly.Msg.AUTODUINO_INOUT_BUZZER_HELPURL);
     this.appendDummyInput()
         .appendField(Blockly.Msg.AUTODUINO_INOUT_BUZZER_TEXT1)
@@ -459,7 +459,7 @@ Blockly.Blocks['autoduino_piezo_buzzer'] = {
 
 Blockly.Blocks['autoduino_relay'] = {
   init: function() {
-    this.setColour("#8B0000");
+    this.setColour(Blockly.Blocks.autoduino.HUE);
 	this.setHelpUrl(Blockly.Msg.AUTODUINO_INOUT_RELAY_HELPURL);
     this.appendDummyInput()
         .appendField(Blockly.Msg.AUTODUINO_INOUT_RELAY_TEXT1)
@@ -480,7 +480,7 @@ Blockly.Blocks['autoduino_relay'] = {
 
 Blockly.Blocks['autoduino_motor'] = {
   init: function() {
-    this.setColour("#8B0000");
+    this.setColour(Blockly.Blocks.autoduino.HUE);
 	this.setHelpUrl(Blockly.Msg.AUTODUINO_INOUT_MOTOR_HELPURL);
     this.appendDummyInput()
         .appendField(Blockly.Msg.AUTODUINO_INOUT_MOTOR_TEXT)
@@ -502,7 +502,7 @@ Blockly.Blocks['autoduino_motor'] = {
 
 Blockly.Blocks['autoduino_dual_motor'] = {
   init: function() {
-    this.setColour("#8B0000");
+    this.setColour(Blockly.Blocks.autoduino.HUE);
 	this.setHelpUrl(Blockly.Msg.AUTODUINO_INOUT_MOTOR_HELPURL);
     this.appendDummyInput()
         .appendField(Blockly.Msg.AUTODUINO_INOUT_MOTOR_TEXT)
@@ -534,7 +534,7 @@ Blockly.Blocks['autoduino_dual_motor'] = {
 
 Blockly.Blocks['autoduino_motor_builtin'] = { // UPDATE PHOTO
   init: function() {
-    this.setColour("#8B0000");
+    this.setColour(Blockly.Blocks.autoduino.HUE);
 	this.setHelpUrl(Blockly.Msg.AUTODUINO_INOUT_MOTOR_BUILTIN_HELPURL);
     this.appendDummyInput()
         .appendField(Blockly.Msg.AUTODUINO_INOUT_MOTOR_BUILTIN_TEXT)
@@ -556,7 +556,7 @@ Blockly.Blocks['autoduino_motor_builtin'] = { // UPDATE PHOTO
 //lcdinit OK
 Blockly.Blocks['autoduino_lcdinit'] = {
   init: function() {
-    this.setColour("#8B0000");
+    this.setColour(Blockly.Blocks.autoduino.HUE);
 	this.setHelpUrl('');
     this.appendDummyInput("")
         .appendField(Blockly.Msg.AUTODUINO_TEXT74)
@@ -594,7 +594,7 @@ Blockly.Blocks['autoduino_lcdinit'] = {
 //lcdspecial OK
 Blockly.Blocks['autoduino_lcdspecial'] = {
   init: function() {
-    this.setColour("#8B0000");
+    this.setColour(Blockly.Blocks.autoduino.HUE);
     this.setHelpUrl('');
     this.appendDummyInput("")
         .appendField(Blockly.Msg.AUTODUINO_TEXT82);
@@ -610,7 +610,7 @@ Blockly.Blocks['autoduino_lcdspecial'] = {
 //lcdclear OK
 Blockly.Blocks['autoduino_lcdclear'] = {
   init: function() {
-    this.setColour("#8B0000");
+    this.setColour(Blockly.Blocks.autoduino.HUE);
     this.setHelpUrl('');
     this.appendDummyInput("")
         .appendField(Blockly.Msg.AUTODUINO_TEXT92)
@@ -624,7 +624,7 @@ Blockly.Blocks['autoduino_lcdclear'] = {
 //lcdwrite OK
 Blockly.Blocks['autoduino_lcdwrite'] = {
   init: function() {
-    this.setColour("#8B0000");
+    this.setColour(Blockly.Blocks.autoduino.HUE);
     this.setHelpUrl('');
     this.appendDummyInput("")
         .appendField(Blockly.Msg.AUTODUINO_TEXT94)
@@ -650,7 +650,7 @@ Blockly.Blocks['autoduino_lcdwrite'] = {
 //lcdwrite OK
 Blockly.Blocks['autoduino_lcdprint'] = {
   init: function() {
-    this.setColour("#8B0000");
+    this.setColour(Blockly.Blocks.autoduino.HUE);
     this.setHelpUrl('');
     this.appendDummyInput("")
         .appendField(Blockly.Msg.AUTODUINO_TEXT94)
@@ -678,7 +678,7 @@ Blockly.Blocks['autoduino_lcdprint'] = {
 
 Blockly.Blocks['autoduino_bluetooth_slave'] = {
   init: function() {
-    this.setColour("#8B0000");
+    this.setColour(Blockly.Blocks.autoduino.HUE);
 	this.setHelpUrl(Blockly.Msg.AUTODUINO_INOUT_BT_HELPURL);
     this.appendDummyInput()
       .appendField(Blockly.Msg.AUTODUINO_INOUT_BT_COMM1)
@@ -705,7 +705,7 @@ Blockly.Blocks['autoduino_bluetooth_slave'] = {
 
 Blockly.Blocks['autoduino_rc'] = {
   init: function() {
-    this.setColour("#8B0000");
+    this.setColour(Blockly.Blocks.autoduino.HUE);
 	this.setHelpUrl(Blockly.Msg.AUTODUINO_INOUT_IR_HELPURL);
     this.appendDummyInput()
         .appendField(Blockly.Msg.AUTODUINO_INOUT_IR_TEXT)
@@ -727,7 +727,7 @@ Blockly.Blocks['autoduino_rc'] = {
 
 Blockly.Blocks['autoduino_ir_code_detection'] = {
   init: function() {
-    this.setColour("#8B0000");
+    this.setColour(Blockly.Blocks.autoduino.HUE);
     this.appendValueInput("IRrecv")
         .setCheck("Number")
         .setAlign(Blockly.ALIGN_RIGHT)
@@ -748,7 +748,7 @@ Blockly.Blocks['autoduino_ir_code_detection'] = {
 
 Blockly.Blocks['autoduino_edge_detection'] = {
   init: function() {
-    this.setColour("#8B0000");
+    this.setColour(Blockly.Blocks.autoduino.HUE);
     this.appendDummyInput()
         .appendField(Blockly.Msg.AUTODUINO_EDGE_TEXT);
     this.appendDummyInput()

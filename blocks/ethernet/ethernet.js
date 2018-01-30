@@ -314,7 +314,7 @@ Blockly.Blocks['ethernet_HEADER_send'] = {
 Blockly.Blocks['ethernet_begin_staticIP_server'] = {		// by BZH
   init: function() {
     this.setHelpUrl(Blockly.Msg.ETHERNET_BEGIN_HELPURL); // a finir
-    this.setColour("#336699");
+    this.setColour(Blockly.Blocks.ethernet.HUE);
     this.appendDummyInput()
       .appendField(Blockly.Msg.ETHERNET_BEGIN_STATICIP_SERVER_TITLE)
       .appendField(new Blockly.FieldDropdown([[Blockly.Msg.ETHERNET_VERSION_1,""],[Blockly.Msg.ETHERNET_VERSION_2,"2"]]), 'VERSION');
@@ -407,7 +407,7 @@ Blockly.Blocks['ethernet_server_begin'] = {
 // PARSER
 Blockly.Blocks['ethernet_PARSER_init'] = {
   init: function() {
-	this.setColour("#333399");
+	this.setColour(Blockly.Blocks.ethernet.HUE);
     this.appendDummyInput()
 	    .appendField(Blockly.Msg.ETHERNET_PARSER_INIT_TITLE);
     this.setPreviousStatement(true, null);
@@ -419,7 +419,7 @@ Blockly.Blocks['ethernet_PARSER_init'] = {
 
 Blockly.Blocks['ethernet_PARSER_parse'] = {
   init: function() {
-	this.setColour("#333399");
+	this.setColour(Blockly.Blocks.ethernet.HUE);
     //this.appendDummyInput()
 	//    .appendField(Blockly.Msg.ETHERNET_PARSER_PARSE_TITLE);
 	this.appendValueInput("input")
@@ -434,7 +434,7 @@ Blockly.Blocks['ethernet_PARSER_parse'] = {
 
 Blockly.Blocks['ethernet_PARSER_end'] = {
   init: function() {
-	this.setColour("#333399");
+	this.setColour(Blockly.Blocks.ethernet.HUE);
     this.appendDummyInput()
 	    .appendField(Blockly.Msg.ETHERNET_PARSER_END_TITLE);
 	this.setOutput(true, 'Boolean');
@@ -445,7 +445,7 @@ Blockly.Blocks['ethernet_PARSER_end'] = {
 
 Blockly.Blocks['ethernet_PARSER_count'] = {
   init: function() {
-	this.setColour("#333399");
+	this.setColour(Blockly.Blocks.ethernet.HUE);
 	this.appendDummyInput()
 	    .appendField(Blockly.Msg.ETHERNET_PARSER_COUNT_TITLE);
 	this.setOutput(true, 'Number');
@@ -456,7 +456,7 @@ Blockly.Blocks['ethernet_PARSER_count'] = {
 
 Blockly.Blocks['ethernet_PARSER_getmyparam'] = {
   init: function() {
-	this.setColour("#333399");
+	this.setColour(Blockly.Blocks.ethernet.HUE);
     this.appendDummyInput()
 	    .appendField(Blockly.Msg.ETHERNET_PARSER_GETMYPARAM_TITLE);
 	this.appendValueInput("myparam")
@@ -471,7 +471,7 @@ Blockly.Blocks['ethernet_PARSER_getmyparam'] = {
 
 Blockly.Blocks['ethernet_PARSER_purge'] = {
   init: function() {
-	this.setColour("#333399");
+	this.setColour(Blockly.Blocks.ethernet.HUE);
     this.appendDummyInput()
 	    .appendField(Blockly.Msg.ETHERNET_PARSER_PURGE_TITLE);
 	this.setPreviousStatement(true, null);
@@ -485,7 +485,7 @@ Blockly.Blocks['ethernet_PARSER_purge'] = {
 Blockly.Blocks['ethernet_wifi_begin_server'] = {		// by BZH
   init: function() {
     this.setHelpUrl(Blockly.Msg.ETHERNET_WIFI_BEGIN_SERVER_HELPURL); 
-    this.setColour("#336699");
+    this.setColour(Blockly.Blocks.ethernet.HUE);
     this.appendDummyInput()
       .appendField(Blockly.Msg.ETHERNET_WIFI_BEGIN_SERVER_TITLE)
 	this.appendDummyInput()
