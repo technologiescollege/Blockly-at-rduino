@@ -1395,8 +1395,8 @@ Blockly.Msg.ROBOTS_MOTORS_L298N_TOOLTIP = "Bloc L298N, utiliser le même id que 
 
 //******** pbra 20160607 PinMode
 Blockly.Msg.ARDUINO_INOUT_DIGITAL_MODE_HELPURL = "https://www.arduino.cc/en/Reference/PinMode";
-Blockly.Msg.ARDUINO_INOUT_DIGITAL_MODE_INPUT1 = "changer le mode de fonctionnement de la broche";
-Blockly.Msg.ARDUINO_INOUT_DIGITAL_MODE_INPUT2 = "à";
+Blockly.Msg.ARDUINO_INOUT_DIGITAL_MODE_INPUT1 = "fixer le mode de fonctionnement de la broche";
+Blockly.Msg.ARDUINO_INOUT_DIGITAL_MODE_INPUT2 = "en";
 Blockly.Msg.ARDUINO_INOUT_DIGITAL_MODE_DROPDOWN = [["ENTREE", "INPUT"], ["SORTIE", "OUTPUT"], ["ENTREE_PULLUP", "INPUT_PULLUP"]];
 Blockly.Msg.ARDUINO_INOUT_DIGITAL_MODE_TOOLTIP = "Configurer la broche spécifée pour fonctionner comme une entrée ou une sortie";
 
