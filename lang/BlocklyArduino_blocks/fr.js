@@ -234,6 +234,7 @@ Blockly.Msg.CAT_ETHERNET = "ethernet"; //added 25 july 2017
 Blockly.Msg.CAT_ETHERNET_INIT = "initialisation";
 Blockly.Msg.CAT_ETHERNET_CLIENT = "client";
 Blockly.Msg.CAT_ETHERNET_SERVER = "serveur";
+Blockly.Msg.CAT_WIFI_INIT = "wifi esp8266"; // 30/01/2018
 
 Blockly.Msg.CAT_AUTODUINO = "Autoduino";
 Blockly.Msg.CAT_AUTODUINO_IN = " - capteurs";
