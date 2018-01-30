@@ -1942,7 +1942,7 @@ Blockly.Msg.ETHERNET_PARSER_GETMYPARAM_PARAM = "nom du paramètre: ";
 Blockly.Msg.ETHERNET_PARSER_PURGE_TITLE = "Fin de l'analyse";
 ////
 Blockly.Msg.ETHERNET_LOCALIP_HELPURL = "https://www.arduino.cc/en/Reference/EthernetLocalIP";
-Blockly.Msg.ETHERNET_LOCALIP_TITLE = "local IP";
+Blockly.Msg.ETHERNET_LOCALIP_TITLE = "adresse IP locale";
 Blockly.Msg.ETHERNET_LOCALIP_TOOLTIP = "Returns the IP address of the Ethernet shield";
 Blockly.Msg.ETHERNET_MAC_ADDRESS = "MAC Address";
 Blockly.Msg.ETHERNET_MAC_ADDRESS_TOOLTIP = "Edit Mac Address";
@@ -1970,7 +1970,7 @@ Blockly.Msg.ETHERNET_WIFI_SSID = "SSID";
 Blockly.Msg.ETHERNET_WIFI_PASS = "PASS";
 Blockly.Msg.ETHERNET_WIFI_BEGIN_SERVER_TOOLTIP = "initialisation de la liaison WIFI";
 Blockly.Msg.ETHERNET_CLIENT_FOR_WIFI_SERVER_TITLE = "Requête Client sur serveur WIFI";
-Blockly.Msg.ETHERNET_WIFI_LOCALIP_TITLE = "Local IP (WIFI)";
+Blockly.Msg.ETHERNET_WIFI_LOCALIP_TITLE = "adresse IP locale (WIFI)";
 Blockly.Msg.ETHERNET_WIFI_LOCALIP_TOOLTIP = "Retourne l'IP locale";
 
 //********************null*************//
