@@ -14,7 +14,7 @@ Blockly.Blocks.RFID_fermeture.getBlockType = function() {
 	return Blockly.Types.NULL;
 };
 Blockly.Blocks.RFID_valeur_cle.getBlockType = function() {
-	return Blockly.Types.BOOLEAN;
+	return Blockly.Types.TEXT;
 };
 Blockly.Blocks.RFID_code_acces.getBlockType = function() {
 	return Blockly.Types.NUMBER;
