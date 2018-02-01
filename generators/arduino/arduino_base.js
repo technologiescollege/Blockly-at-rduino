@@ -102,7 +102,7 @@ Blockly.Arduino.millis = function(block) {
 };
 
 Blockly.Arduino.millis_sec = function(block) {
-  var code = '1000*millis()';
+  var code = 'millis()/1000';
   return [code, Blockly.Arduino.ORDER_ATOMIC];
 };
 
