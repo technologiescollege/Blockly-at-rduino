@@ -82,7 +82,7 @@ Blockly.Blocks['serial_available'] = {
 	this.appendDummyInput("")
 	    .appendField(Blockly.Msg.Serial_avai);
     this.setInputsInline(true);
-    this.setOutput(true, "Number");
+    this.setOutput(true, "Boolean");
     this.setTooltip('Get the number of bytes (characters) available for reading from the serial port. This is data that s already arrived and stored in the serial receive buffer (which holds 64 bytes). ');
   }
 };
