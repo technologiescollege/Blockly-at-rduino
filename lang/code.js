@@ -311,6 +311,8 @@ Code.initLanguage = function() {
   $('#span_first_msg').text(MSG['span_first_msg']);
   $('#btn_valid_first_msg').text(MSG['btn_valid_first_msg']);
   
+  $('#BT_ELEC_BUTTON').text(MSG['CAT_BT_ELEC_BUTTON']);  
+  
   $("xml").find("category").each(function() {
 	// add attribute ID to keep categorie code
 		if (!$(this).attr('id')) {

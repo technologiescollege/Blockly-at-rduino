@@ -203,6 +203,7 @@ Blockly.Msg.CAT_ESUS_MOTORS = " - moteurs";
 Blockly.Msg.CAT_APDS_9960_RGB_Gesture = "couleur + mouvement"; //added 9 october 2016
 
 Blockly.Msg.CAT_BT_ELECTRONICS = "Bluetooth Electronics"; //added 13 november 2016
+Blockly.Msg.CAT_BT_ELEC_BUTTON = "lien vers l'application";
 
 Blockly.Msg.CAT_ICN = "ICN";  //added 3 january 2017
 

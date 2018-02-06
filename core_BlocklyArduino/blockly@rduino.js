@@ -780,7 +780,7 @@ BlocklyDuino.loadToolboxDefinition = function(toolboxFile) {
 
 			}).fail(function(data) {
 				$("#toolbox").remove();
-			});			
+			});
 };
 
 /**

@@ -2465,6 +2465,7 @@
 		<block type="ADXL362_TempValue"></block>
 	</category>
 	<category name="CAT_BT_ELECTRONICS" colour="#142D5E">
+		<button id="BT_ELEC_BUTTON" text="DL" callbackKey="BT_ELECTRONICS_DL"><span class="fa fa-undo"> </span></button>
 		<block type="BT_ELEC_Init" disabled="true"></block>
 		<sep></sep>
 		<block type="BT_ELEC_LED_brightness"></block>
