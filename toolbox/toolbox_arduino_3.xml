@@ -39,7 +39,6 @@
 				</shadow>
 			</value>
 		</block>
-		<block type="controls_forEach"></block>
 		<block type="controls_flow_statements"></block>
 	</category>
 	<category name="CAT_MATH" colour="#5CB712">

@@ -55,6 +55,7 @@ Blockly.Msg.CONTROLS_SWITCH_CASEBREAK_TOOLTIP = "Ajoute un bloc de commandes sou
 Blockly.Msg.CONTROLS_SWITCH_DEFAULT_TOOLTIP ="Ajoute un bloc d'actions par défaut";
 
 Blockly.Msg.VARIABLES_AS = "de type";
+Blockly.Msg.VARIABLES_SET_CONST = "constante %1 fixée à %2";
 Blockly.Msg.ARD_TYPE_CHAR = "caractère";
 Blockly.Msg.ARD_TYPE_TEXT = "texte";
 Blockly.Msg.ARD_TYPE_BOOL = "booléen ToR (Tout ou Rien)";

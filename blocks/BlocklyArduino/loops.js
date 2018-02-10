@@ -27,8 +27,7 @@
 goog.provide('Blockly.Blocks.loops');
 
 goog.require('Blockly.Blocks');
-
-Blockly.Blocks.loops.HUE = "#C88330";
+goog.require('Blockly.Types');
 
 Blockly.Blocks['controls_repeat_ext'] = {
   /**
@@ -182,54 +181,6 @@ Blockly.Blocks['controls_for'] = {
       options.push(option);
     }
   }
-};
-
-Blockly.Blocks['controls_forEach'] = {
-  /**
-   * Block for 'for each' loop.
-   * @this Blockly.Block
-   */
-  init: function() {
-    this.setHelpUrl(Blockly.Msg.CONTROLS_FOREACH_TITLE);
-    this.setColour(Blockly.Blocks.loops.HUE);
-	this.appendDummyInput()
-        .appendField(Blockly.Msg.CONTROLS_SWITCH_VAR_TITLE)
-        .appendField(new Blockly.FieldVariable(Blockly.Msg.VARIABLES_GET_ITEM), 'VAR');
-    this.appendValueInput('LIST')
-        .setCheck('Array')
-        .setAlign(Blockly.ALIGN_RIGHT)
-		.appendField(Blockly.Msg.CONTROLS_SWITCH_MSG_CASEBREAK);
-    this.setPreviousStatement(true);
-    this.setNextStatement(true);
-    /*this.jsonInit({
-      "message0": Blockly.Msg.CONTROLS_FOREACH_TITLE,
-      "args0": [
-        {
-          "type": "field_variable",
-          "name": "VAR",
-          "variable": null
-        },
-        {
-          "type": "input_value",
-          "name": "LIST",
-          "check": "Array"
-        }
-      ],
-      "previousStatement": null,
-      "nextStatement": null,
-      "colour": Blockly.Blocks.loops.HUE,
-      "helpUrl": Blockly.Msg.CONTROLS_FOREACH_HELPURL
-    });*/
-    this.appendStatementInput('DO')
-        .appendField(Blockly.Msg.CONTROLS_FOREACH_INPUT_DO);
-    // Assign 'this' to a variable for use in the tooltip closure below.
-    var thisBlock = this;
-    this.setTooltip(function() {
-      return Blockly.Msg.CONTROLS_FOREACH_TOOLTIP.replace('%1',
-          thisBlock.getFieldValue('VAR'));
-    });
-  },
-  customContextMenu: Blockly.Blocks['controls_for'].customContextMenu
 };
 
 Blockly.Blocks['controls_flow_statements'] = {

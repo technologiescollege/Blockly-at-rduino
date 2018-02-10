@@ -29,12 +29,6 @@ goog.provide('Blockly.Blocks.variables');
 goog.require('Blockly.Blocks');
 goog.require('Blockly.Types');
 
-
-/**
- * Common HSV hue for all blocks in this category.
- */
-Blockly.Blocks.variables.HUE = "#EE7D16";
-
 Blockly.Blocks['variables_get'] = {
   /**
    * Block for variable getter.
@@ -44,8 +38,7 @@ Blockly.Blocks['variables_get'] = {
     this.setHelpUrl(Blockly.Msg.VARIABLES_GET_HELPURL);
     this.setColour(Blockly.Blocks.variables.HUE);
     this.appendDummyInput()
-        .appendField(new Blockly.FieldVariable(
-        Blockly.Msg.VARIABLES_DEFAULT_NAME), 'VAR');
+        .appendField(new Blockly.FieldVariable(Blockly.Msg.VARIABLES_DEFAULT_NAME), 'VAR');
     this.setOutput(true);
     this.setTooltip(Blockly.Msg.VARIABLES_GET_TOOLTIP);
     this.contextMenuMsg_ = Blockly.Msg.VARIABLES_GET_CREATE_SET;
@@ -83,7 +76,7 @@ Blockly.Blocks['variables_get'] = {
    */
   getVarType: function(varName) {
     return [Blockly.Types.UNDEF, this.getFieldValue('VAR')];
-  },
+  }
 };
 
 Blockly.Blocks['variables_set'] = {
@@ -156,27 +149,27 @@ Blockly.Blocks['variables_set_type'] = {
 };
 
 Blockly.Blocks['variables_const'] = {
-  /**
-   * Block for variable setter.
-   * @this Blockly.Block
-   */  
   init: function() {
-    this.setHelpUrl(Blockly.Msg.VARIABLES_GET_HELPURL);
-    this.setColour(Blockly.Blocks.variables.HUE);
-    this.appendDummyInput()
-		.appendField("constante")
-        .appendField(new Blockly.FieldVariable(Blockly.Msg.VARIABLES_DEFAULT_NAME), 'VAR');
-    this.appendDummyInput()
-        .appendField(Blockly.Msg.VARIABLES_AS)
-        .appendField(new Blockly.FieldDropdown(Blockly.Types.getValidTypeArray()),
-                     'VARIABLE_SETTYPE_TYPE');
-    this.appendValueInput("VAL_CONST")
-        .setAlign(Blockly.ALIGN_RIGHT)
-        .appendField("de valeur");
-    this.setInputsInline(true);
-    this.setPreviousStatement(true, null);
-    this.setNextStatement(true, null);
-    this.setTooltip('définir une variable comme une constante');
+    this.jsonInit({
+      "message0": Blockly.Msg.VARIABLES_SET_CONST,
+      "args0": [
+        {
+          "type": "field_variable",
+          "name": "VAR",
+          "variable": Blockly.Msg.VARIABLES_DEFAULT_NAME
+        },
+        {
+          "type": "input_value",
+          "name": "VALUE"
+        }
+      ],
+      "previousStatement": null,
+      "nextStatement": null,
+      "colour": Blockly.Blocks.variables.HUE,
+      "tooltip": Blockly.Msg.VARIABLES_SET_TOOLTIP,
+      "helpUrl": Blockly.Msg.VARIABLES_SET_HELPURL
+    });
+    this.contextMenuMsg_ = Blockly.Msg.VARIABLES_SET_CREATE_GET;
   },
   contextMenuType_: 'variables_get',
   customContextMenu: Blockly.Blocks['variables_get'].customContextMenu,
@@ -192,10 +185,6 @@ Blockly.Blocks['variables_const'] = {
 };
 
 Blockly.Blocks['variables_set_init'] = {
-  /**
-   * Block for variable casting.
-   * @this Blockly.Block
-   */
   init: function() {
     this.jsonInit({
       "message0": Blockly.Msg.VARIABLES_SET_INIT,

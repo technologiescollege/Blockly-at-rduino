@@ -100,7 +100,7 @@ Blockly.Arduino.controls_if = function() {
 
 Blockly.Arduino.controls_repeat = function() {
   // Repeat n times.
-  var repeats = Number(this.getTitleValue('TIMES'));
+  var repeats = this.getFieldValue ('TIMES');
   var branch = Blockly.Arduino.statementToCode(this, 'DO');
   if (Blockly.Arduino.INFINITE_LOOP_TRAP) {
     branch = Blockly.Arduino.INFINITE_LOOP_TRAP.replace(/%1/g,
@@ -141,7 +141,7 @@ Blockly.Arduino.controls_whileUntil = function() {
     branch = Blockly.Arduino.INFINITE_LOOP_TRAP.replace(/%1/g,
         '\'' + this.id + '\'') + branch;
   }
-  if (this.getTitleValue('MODE') == 'UNTIL') {
+  if (this.getFieldValue ('MODE') == 'UNTIL') {
     if (!argument0.match(/^\w+$/)) {
       argument0 = '(' + argument0 + ')';
     }
@@ -150,25 +150,9 @@ Blockly.Arduino.controls_whileUntil = function() {
   return 'while (' + argument0 + ') {\n' + branch + '}\n';
 };
 
-Blockly.Arduino.controls_forEach = function() {
-  // For each loop.
-  var variable0 = Blockly.Arduino.variableDB_.getName(
-      this.getTitleValue('VAR'), Blockly.Variables.NAME_TYPE);
-  var argument0 = Blockly.Arduino.valueToCode(this, 'LIST',
-      Blockly.Arduino.ORDER_ASSIGNMENT) || '[]';
-  var branch = Blockly.Arduino.statementToCode(this, 'DO');
-  if (Blockly.Arduino.INFINITE_LOOP_TRAP) {
-    branch = Blockly.Arduino.INFINITE_LOOP_TRAP.replace(/%1/g,
-        '\'' + this.id + '\'') + branch;
-  }
-  var code = 'for (var ' + variable0 + ' in  ' + argument0 + ') {\n' +
-      branch + '}\n';
-  return code;
-};
-
 Blockly.Arduino.controls_flow_statements = function() {
   // Flow statements: continue, break.
-  switch (this.getTitleValue('FLOW')) {
+  switch (this.getFieldValue ('FLOW')) {
     case 'BREAK':
       return 'break;\n';
     case 'CONTINUE':

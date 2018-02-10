@@ -48,6 +48,7 @@ Blockly.Msg.CONTROLS_SWITCH_CASEBREAK_TOOLTIP = "Add additional case break do";
 Blockly.Msg.CONTROLS_SWITCH_DEFAULT_TOOLTIP ="Add optional default action";
 
 Blockly.Msg.VARIABLES_AS = "as";
+Blockly.Msg.VARIABLES_SET_CONST = "constant %1 set %2";
 Blockly.Msg.ARD_TYPE_ARRAY = "Array";
 Blockly.Msg.ARD_TYPE_BOOL = "Boolean";
 Blockly.Msg.ARD_TYPE_CHAR = "Character";

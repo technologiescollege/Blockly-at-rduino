@@ -1,6 +1,5 @@
 head.load(
 "blocks/Blockly/logic.js",
-"blocks/Blockly/loops.js",
 "blocks/Blockly/math.js",
 "blocks/Blockly/text.js",
 function() {

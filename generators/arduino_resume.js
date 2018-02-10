@@ -1,5 +1,4 @@
 head.load(
-"generators/Blockly/control.js",
 "generators/Blockly/logic.js",
 "generators/Blockly/math.js",
 "generators/Blockly/procedures.js",
@@ -11,6 +10,7 @@ function() {
 
 head.load(
 "generators/BlocklyArduino/array.js",
+"generators/BlocklyArduino/loops.js",
 "generators/BlocklyArduino/math.js",
 "generators/BlocklyArduino/variables.js",
 function() {

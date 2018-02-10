@@ -27,6 +27,7 @@
 goog.provide('Blockly.Blocks.array');
 
 goog.require('Blockly.Blocks');
+goog.require('Blockly.Types');
 
 Blockly.Blocks['array_create_with'] = {
   /**
@@ -178,7 +179,7 @@ Blockly.Blocks['array_create_with_container'] = {
   init: function() {
     this.setColour(Blockly.Blocks.array.HUE);
     this.appendDummyInput()
-      .appendField(Blockly.Msg.ARRAY_CREATE_WITH_CONTAINER_TITLE_ADD);
+		.appendField(Blockly.Msg.ARRAY_CREATE_WITH_CONTAINER_TITLE_ADD);
     this.appendStatementInput('STACK');
     this.setTooltip(Blockly.Msg.ARRAY_CREATE_WITH_CONTAINER_TOOLTIP);
     this.contextMenu = false;
