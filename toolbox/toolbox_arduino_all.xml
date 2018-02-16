@@ -828,23 +828,13 @@
 			</value>
 		</block>
 		<block type="lp2i_ledRGB_WS2812B_setBrightness">
-			<value name="Pin_LedRGB">
-				<shadow type="math_number">
-					<field name="NUM">6</field>
-				</shadow>
-			</value>
 			<value name="Brightness">
 				<shadow type="math_number">
 					<field name="NUM">127</field>
 				</shadow>
 			</value>
 		</block>
-		<block type="lp2i_ledRGB_WS2812B_setPixelcolour">
-			<value name="Pin_LedRGB">
-				<shadow type="math_number">
-					<field name="NUM">6</field>
-				</shadow>
-			</value>
+		<block type="lp2i_ledRGB_WS2812B_setPixelColor">
 			<value name="Pixel_number">
 				<shadow type="math_number">
 					<field name="NUM">0</field>
@@ -887,7 +877,7 @@
 				</shadow>
 			</value>
 		</block>
-		<block type="MatrixLED_WS2812B_setPixelcolour">
+		<block type="MatrixLED_WS2812B_setPixelColor">
 			<value name="Pixel_number">
 				<shadow type="math_number">
 					<field name="NUM">0</field>
