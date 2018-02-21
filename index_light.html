@@ -272,7 +272,6 @@
 					<span class="fa fa-cloud-upload"></span>
 					<span id="span_fakeload"> </span>
 				</button>
-				<input type="file" id="load" style="display: none;" />
 				<button id="btn_example" class="btn btn-info btn-block" data-toggle="modal" data-target="#exampleModal">
 					<span class="glyphicon glyphicon-list-alt"> </span>
 					<span id="span_example"> </span>
@@ -282,6 +281,7 @@
 					<span id="span_create_example"> </span>
 				</a>
 			</div> 
+			<input type="file" id="load" style="display: none;" />
 			<div id="div_about">
 				<button id="btn_about" type="button" class="btn btn-default btn-sm btn-success" data-toggle="modal" data-target="#aboutModal">
 					<span id="span_about"> </span>
@@ -303,33 +303,7 @@
 				</button>
 			</div>
 			<div id="div_tools_button">
-					<script type="text/javascript">
-					$( function openDialog() {
-						var iframe = $('<iframe frameborder="0" marginwidth="0" marginheight="0"></iframe>');
-						var dialog = $("<div></div>").append(iframe).appendTo("body").dialog({
-							autoOpen: false,
-							resizable: true,      show: {
-								effect: "slide",
-								duration: 1000
-							  },
-							  hide: {
-								effect: "drop",
-								duration: 1000
-							  },
-							width: "auto",
-							height: "auto"
-						});						 
-						$("#btn_wiring" ).on( "click", function() {
-							iframe.attr({
-								width: "640",
-								height: "480",
-								src: "https://fr.robom.ru"
-							});
-							dialog.dialog("option", "Blockly@rduino - câblage", title).dialog("open");
-						});
-					});
-					</script>
-				<button id="btn_wiring" class="btn btn-primary" onclick="openDialog(this)">
+				<button id="btn_wiring" class="btn btn-primary">
 					<span class="glyphicon glyphicon-blackboard"></span>
 				</button>
 				<button id="btn_RGB" class="btn btn-primary">
@@ -773,6 +747,10 @@
 			</div>	
 		</div>
 	</div>
+</div>
+<div id="wiring_dialog">
+	<iframe frameborder="0" marginwidth="0" marginheight="0">
+	</iframe>
 </div>
 </body>
 </html>
