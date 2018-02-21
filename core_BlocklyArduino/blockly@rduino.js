@@ -543,6 +543,7 @@ BlocklyDuino.bindFunctions = function() {
 	});
 	
 	$('#btn_inline').on("click", BlocklyDuino.inline);
+	$('#btn_wiring').on("click", BlocklyDuino.openWiringDialog);
 	$('#btn_blocs_picture').on("click", BlocklyDuino.blockPicture);
 	$('#btn_blocs_picture_mini').on("click", BlocklyDuino.blockPicture_mini);
 	$('#btn_blocs_picture_maxi').on("click", BlocklyDuino.blockPicture_maxi);
@@ -831,18 +832,20 @@ BlocklyDuino.init = function() {
 			$('#icon_btn_size').addClass('glyphicon-resize-small');
 		}
 		if (BlocklyDuino.getSize() == 'miniMenu') {
+			$("#menuPanel").css({"width" : "40px"});
 			$("#divTabpanel").css({"margin-left" : "50px"});
 			$(".blocklyFlyout").css({"margin-left" : "155px"});
 			$(".blocklySvg").css({"margin-left" : "205px"});
 			$(".blocklyWorkspace").css({"margin-left" : "205px"});
-			$("#configGlobalLabel").addClass("hidden");
+			$("#configGlobalLabel").remove();
 			$("#btn_configGlobal").removeClass("btn-block");
 			$("#divTitreMenu_miniCard").removeClass("hidden");			
 			$('#icon_btn_size').addClass('glyphicon-resize-full');
 			$('#icon_btn_size').removeClass('glyphicon-resize-small');
-			$("#div_miniPicture").addClass("hidden");
-			$("#btn_miniMenuPanel").removeClass("glyphicon-step-backward");
-			$("#btn_miniMenuPanel").addClass("glyphicon-step-forward");
+			$("#div_miniPicture").remove();
+			$("#btn_config_kit").remove();
+			$("#btn_miniMenuPanel > span").removeClass("glyphicon-step-backward");
+			$("#btn_miniMenuPanel > span").addClass("glyphicon-step-forward");
 			
 			$("#span_config").addClass("hidden");
 			$("#btn_config").removeClass("btn-block");
@@ -867,10 +870,21 @@ BlocklyDuino.init = function() {
 			
 			$("#menuPanelConfig").addClass("btn-group-vertical");
 			$("#menuPanelFiles").addClass("btn-group-vertical");
+			$("#menuPanelFiles").css({"margin-bottom" : "10px"});
 			$("#div_about").addClass("btn-group-vertical");
+			$("#div_about").css({"width" : "40px", "bottom" : "100px"});
+			$("#span_about").remove();
 			$("#div_accessibility_button").addClass("btn-group-vertical");
+			$("#div_accessibility_button").css({"width" : "40px", "bottom" : "10px"});
+			if (window.localStorage.webAccess != "true") {
+				$("#btn_wiring").remove();
+			}
 			$("#div_tools_button").addClass("btn-group-vertical");
+			$("#div_tools_button").removeClass("div_tools_button-ver");
+			$("#div_tools_button").css({"width" : "40px", "margin-bottom" : "10px"});
 			$("#div_help_button").addClass("btn-group-vertical");
+			$("#div_help_button").removeClass("div_help_button-ver");
+			$("#div_help_button").css({"width" : "40px"});
 			
 		}
 	} else {
@@ -885,8 +899,8 @@ BlocklyDuino.init = function() {
 		$("#div_miniPicture").removeClass("hidden");	
 		$('#icon_btn_size').addClass('glyphicon-resize-full');
 		$('#icon_btn_size').removeClass('glyphicon-resize-small');
-		$("#btn_miniMenuPanel").addClass("glyphicon-step-backward");
-		$("#btn_miniMenuPanel").removeClass("glyphicon-step-forward");
+		$("#btn_miniMenuPanel > span").addClass("glyphicon-step-backward");
+		$("#btn_miniMenuPanel > span").removeClass("glyphicon-step-forward");
 		}
 		
 	BlocklyDuino.setArduinoCard();
@@ -1266,4 +1280,30 @@ Blockly.Variables.flyoutCategory = function(workspace) {
     }
   }
   return xmlList;
+};
+
+BlocklyDuino.openWiringDialog = function() {
+	var iframe = $("#wiring_dialog > iframe");
+	var dialog = $("#wiring_dialog").dialog({
+		autoOpen: false,
+		resizable: true,      
+		show: {
+			effect: "slide",
+			duration: 1000
+		  },
+		hide: {
+			effect: "drop",
+			duration: 1000
+		  },
+		width: "auto",
+		height: "auto"
+	});
+	iframe.attr({
+		width: "640",
+		height: "480",
+		src: "https://fr.robom.ru"
+	});
+	if (!dialog.dialog("isOpen")) {
+		dialog.dialog("option", "Blockly@rduino - câblage", title).dialog("open");
+	}
 };

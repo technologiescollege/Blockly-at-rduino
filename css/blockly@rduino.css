@@ -165,9 +165,6 @@ html[dir="RTL"] .menuPanel-ver {
     position: absolute;
     text-align: center;
 }
-#btn_about {
-    width: 83px;
-}
 
 .div_help_button-hor {
     padding-left: 0px;
@@ -291,14 +288,6 @@ html[dir="RTL"] .divConfig-hor {
 #btn_doc-hor{
 	float : left;
 	bottom: 10px;
-}
-
-html[dir="LTR"] #btn_about, html[dir="LTR"] #btn_logout {
-    right: 15px;
-}
- 
-html[dir="RTL"] #btn_about, html[dir="RTL"] #btn_logout {
-	left: 15px;
 }
 
 #languageMenu {
