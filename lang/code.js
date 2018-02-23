@@ -259,7 +259,8 @@ Code.initLanguage = function() {
   $('#toolboxes option[value="toolbox_arduino_3"]').text(MSG['span_toolbox_arduino_3']);
   $('#toolboxes option[value="toolbox_arduino_4"]').text(MSG['span_toolbox_arduino_4']);
   $('#toolboxes option[value="toolbox_arduino_all"]').text(MSG['span_toolbox_all']);
-  $('#toolboxes option[value="toolbox_user"]').text(MSG['span_toolbox_user']);
+	$('#toolboxes option[value="toolbox_boumbot"]').text(MSG['span_toolbox_boumbot']);
+	$('#toolboxes option[value="toolbox_user"]').text(MSG['span_toolbox_user']);
   $('#span_languageMenu').text(MSG['span_languageMenu']);
   $('#span_colorToggle').text(MSG['span_colorToggle']);
   $('#span_colorBW').text(MSG['span_colorBW']);

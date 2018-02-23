@@ -81,6 +81,7 @@ head.load(
 "generators/arduino/zumo_auto.js",
 "generators/arduino/zumo_motors.js",
 "generators/arduino/zumo_sensors.js",
+"generators/Boumbot/Boumbot_blocks.js",
 function() {
     // Call a function when done
     console.log("Done loading Various Arduino Generators");

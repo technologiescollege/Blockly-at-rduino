@@ -6,6 +6,7 @@ goog.provide('Blockly.Msg.fr');
 
 goog.require('Blockly.Msg');
 
+
 Blockly.Msg.ADD_COMMENT = "ajouter un commentaire";
 Blockly.Msg.CHANGE_VALUE_TITLE = "Modifier la valeur :";
 Blockly.Msg.CLEAN_UP = "Nettoyer les blocs";

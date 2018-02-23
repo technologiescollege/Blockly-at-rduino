@@ -4,6 +4,59 @@ goog.provide('Blockly.Msg.fr');
 
 goog.require('Blockly.Msg');
 
+
+Blockly.Msg.CAT_BOUMBOT = "Boumbot";  		//added march 23rd 2017
+Blockly.Msg.CAT_BOUMBOT_INIT = "Initialisation";
+Blockly.Msg.CAT_BOUMBOT_DEPLACEMENT = "Déplacements";
+Blockly.Msg.CAT_BOUMBOT_IN = "Capteurs";
+Blockly.Msg.CAT_BOUMBOT_OUT = "Son et lumières";
+Blockly.Msg.Boumbot_Init001 = "Initialisation";
+Blockly.Msg.Boumbot_Init002 = "Procédue d'initialisation";
+Blockly.Msg.Boumbot_Avance001 = "Avancer";
+Blockly.Msg.Boumbot_Avance002 = "Fait avancer Boumbot";
+Blockly.Msg.Boumbot_Recule001 = "Reculer";
+Blockly.Msg.Boumbot_Recule002 = "Fait reculer Boumbot";
+Blockly.Msg.Boumbot_Stop001 = "Stop";
+Blockly.Msg.Boumbot_Stop002 = "Stop Boumbot";
+Blockly.Msg.Boumbot_tourne_gauche001 = "Tourner à gauche";
+Blockly.Msg.Boumbot_tourne_gauche002 = "Fait tourner Boumbot à gauche";
+Blockly.Msg.Boumbot_tourne_droite001 = "Tourner à droite";
+Blockly.Msg.Boumbot_tourne_droite002 = "Fait tourner Boumbot à droite";
+Blockly.Msg.Boumbot_pas_gauche001 = "Pas à gauche";
+Blockly.Msg.Boumbot_pas_gauche002 = "Fait tourner legerement Boumbot à gauche";
+Blockly.Msg.Boumbot_pas_droite001 = "Pas à droite";
+Blockly.Msg.Boumbot_pas_droite002 = "Fait tourner legerement Boumbot à droite";
+Blockly.Msg.Boumbot_vitesse_moteur_gauche001 = "Vitesse roue gauche";
+Blockly.Msg.Boumbot_vitesse_moteur_gauche002 = "Fixe la vitesse de la roue gauche";
+Blockly.Msg.Boumbot_vitesse_moteur_droit001 = "Vitesse roue droite";
+Blockly.Msg.Boumbot_vitesse_moteur_droit002 = "Fixe la vitesse de la roue droite";
+Blockly.Msg.Boumbot_obstacle001 = "Detection obstacle";
+Blockly.Msg.Boumbot_obstacle002 = "renvoie VRAI si un obstacle est devant BoumBot";
+Blockly.Msg.Boumbot_distance001 = "Detection distance";
+Blockly.Msg.Boumbot_distance002 = "renvoie la distance de l'obstacle";
+Blockly.Msg.Boumbot_ligne_gauche001 = "Detection ligne gauche";
+Blockly.Msg.Boumbot_ligne_gauche002 = "renvoie VRAI si le capteur gauche est sur une ligne noire";
+Blockly.Msg.Boumbot_ligne_droite001 = "Detection ligne gauche";
+Blockly.Msg.Boumbot_ligne_droite002 = "renvoie VRAI si le capteur droit est sur une ligne noire";
+Blockly.Msg.Boumbot_capteur_gauche001 = "Valeur capteur gauche";
+Blockly.Msg.Boumbot_capteur_gauche002 = "renvoie ce que voit BoumBot à gauche";
+Blockly.Msg.Boumbot_capteur_droit001 = "Valeur capteur droit";
+Blockly.Msg.Boumbot_capteur_droit002 = "renvoie ce que voit BoumBot à droite";
+Blockly.Msg.Boumbot_son001 = "émettre un son";
+Blockly.Msg.Boumbot_son002 = "d'une fréquence (Hz)";
+Blockly.Msg.Boumbot_son003 = "pendant une durée (ms) ";
+Blockly.Msg.Boumbot_son004 = "faire jouer un son au boumbot";
+Blockly.Msg.Boumbot_melody001 = "jouer une mélodie";
+Blockly.Msg.Boumbot_melody002 = "numero de la mélodie";
+Blockly.Msg.Boumbot_melody003 = "faire jouer une mélodie au boumbot";
+Blockly.Msg.Boumbot_led001 = "allumer une led";
+Blockly.Msg.Boumbot_led002 = "Rouge (255 max) =";
+Blockly.Msg.Boumbot_led003 = "Vert (255 max) =";
+Blockly.Msg.Boumbot_led004 = "Bleu (255 max) =";
+Blockly.Msg.Boumbot_led005 = "pour la led numéro (de 0 à 7) =";
+Blockly.Msg.Boumbot_led006 = "allume la led selectionnée";
+
+
 Blockly.Msg.ARRAY_CREATE_EMPTY_TITLE = 'vide !';
 Blockly.Msg.ARRAY_CREATE_WITH = "constituée de";
 Blockly.Msg.ARRAY_taille="de taille";
@@ -264,7 +317,7 @@ Blockly.Msg.CAT_ACTIONNEURS_DFRobot_SHIELD_LCDKEYPAD = " - écran LCD";
 Blockly.Msg.CAT_ACTIONNEURS_ARDUINO_moteur = " - moteur";
 Blockly.Msg.CAT_ACTIONNEURS_DFPLAYER = " - audio";
 
-Blockly.Msg.CAT_POLOLU = "Pololu"; //added 24/01/2018 
+Blockly.Msg.CAT_POLOLU = "Pololu"; //added 24/01/2018
 Blockly.Msg.CAT_POLOLU_QTR_1RC = " - QTR-1RC";
 
 Blockly.Msg.FIELDDROPDOWN = [["1 (état haut)", "HIGH"], ["0 (état bas)", "LOW"]];
@@ -608,20 +661,20 @@ Blockly.Msg.GROVE_DRIVER_MOTOR_SPEED = "Vitesse";
 Blockly.Msg.GROVE_DRIVER13_HELPURL = "http://wiki.seeed.cc/Grove-I2C_Motor_Driver_V1.3/";
 Blockly.Msg.GROVE_DRIVER13_MOTOR_TITLE = "Contrôleur Moteur V1.3";
 Blockly.Msg.GROVE_DRIVER13_MOTOR_I2C_ADDRESS = "Adresse I2C";
-Blockly.Msg.GROVE_DRIVER13_TOOLTIP = "Contrôleur Moteur - " + 
-                            "l'adresse I2C est entre 0 et 15 (0x0F) selon la configuation mise sur la carte, " + 
+Blockly.Msg.GROVE_DRIVER13_TOOLTIP = "Contrôleur Moteur - " +
+                            "l'adresse I2C est entre 0 et 15 (0x0F) selon la configuation mise sur la carte, " +
                             "la vitesse du moteur choisi est entre -100 et +100, 0 = arrêt";
 //******** Grove minimoto */
 Blockly.Msg.GROVE_MINI_DRIVER_TITLE = "Contrôleur Mini Moteur";
 Blockly.Msg.GROVE_MINI_DRIVER_HELPURL = "http://wiki.seeed.cc/Grove-Mini_I2C_Motor_Driver_v1.0/";
 Blockly.Msg.GROVE_MINI_DRIVER_MOTOR_MSG = "Vitesse";
-Blockly.Msg.GROVE_MINI_DRIVER_MOTOR_TOOLTIP = "Contrôleur Mini Moteur - " + 
+Blockly.Msg.GROVE_MINI_DRIVER_MOTOR_TOOLTIP = "Contrôleur Mini Moteur - " +
                             "la vitesse du moteur choisi est entre -100 et +100";
 Blockly.Msg.GROVE_MINI_DRIVER_STOP_MSG = "Arrêt";
-Blockly.Msg.GROVE_MINI_DRIVER_STOP_TOOLTIP = "Contrôleur Mini Moteur - " + 
+Blockly.Msg.GROVE_MINI_DRIVER_STOP_TOOLTIP = "Contrôleur Mini Moteur - " +
                             "Arrête le moteur choisi";
 Blockly.Msg.GROVE_MINI_DRIVER_ERROR_MSG = "Etat";
-Blockly.Msg.GROVE_MINI_DRIVER_ERROR_TOOLTIP = "Contrôleur Mini Moteur - " + 
+Blockly.Msg.GROVE_MINI_DRIVER_ERROR_TOOLTIP = "Contrôleur Mini Moteur - " +
                             "Retour l'état du moteur choisi (0: OK, 3 et 17: sur-intensité, 9: sous-tension, 5: sur-chauffe)";
 
 //added April 3rd 2015 ESK
@@ -1513,7 +1566,7 @@ Blockly.Msg.ADXL362_TEMPVALUE_TOOLTIP = "valeurs à tester, abaque obligatoire";
 
 
 //******** FRESNEL : Implementation I2CSoftwareLibrary   http://playground.arduino.cc/Main/SoftwareI2CLibrary
-//******** FRESNEL : SPI 
+//******** FRESNEL : SPI
 
 Blockly.Msg.I2C_INIT_TEXT = "I2C_INIT";
 Blockly.Msg.I2C_INIT_PIN_SCL = "PIN_SCL";
@@ -1523,7 +1576,7 @@ Blockly.Msg.I2C_INIT_PIN_SDA = "PIN_SDA";
 Blockly.Msg.I2C_INIT_PORT_SDA = "PORT_SDA";
 Blockly.Msg.I2C_INIT_FIELDDROPDOWN_SDA = [["A", "A"], ["B", "B"], ["C", "C"], ["D", "D"], ["E", "E"]];
 Blockly.Msg.I2C_INIT_TOOLTIP = "configure les broches SDA et SCL";
-Blockly.Msg.I2C_INIT_HELPURL = "http://playground.arduino.cc/Main/SoftwareI2CLibrary";     
+Blockly.Msg.I2C_INIT_HELPURL = "http://playground.arduino.cc/Main/SoftwareI2CLibrary";
 
 Blockly.Msg.I2C_START_TEXT = "I2C_START";
 Blockly.Msg.I2C_START_ADRESS = "adresse";
@@ -1564,11 +1617,11 @@ Blockly.Msg.icn_ds18b20_HelpUrl = "https://www.carnetdumaker.net/articles/mesure
 
 Blockly.Msg.SPI_INIT_TEXT = "SPI_INIT";
 Blockly.Msg.SPI_INIT_SPEED = "fréquence (MHz)"
-Blockly.Msg.SPI_INIT_MODE = "mode";  
+Blockly.Msg.SPI_INIT_MODE = "mode";
 Blockly.Msg.SPI_INIT_MODE_FIELDDROPDOWN = [["mode 0 (0,0)", "SPI_MODE0"], ["mode 1 (0,1)", "SPI_MODE1"], ["mode 2 (1,0)", "SPI_MODE2"], ["mode 3 (1,1)", "SPI_MODE3"]];
 Blockly.Msg.SPI_INIT_BITORDER = "ordre des bits";
 Blockly.Msg.SPI_INIT_BITORDER_FIELDDROPDOWN = [["MSB -> LSB", "MSBFIRST"], ["LSB -> MSB", "LSBFIRST"]];
-Blockly.Msg.SPI_INIT_TOOLTIP = " configuration de la liaison SPI" ; 
+Blockly.Msg.SPI_INIT_TOOLTIP = " configuration de la liaison SPI" ;
 Blockly.Msg.SPI_INIT_HELPURL = " " ;
 
 Blockly.Msg.SPI_SEND_TEXT = "SPI_SEND";
@@ -1908,8 +1961,8 @@ Blockly.Msg.ETHERNET_BEGIN_DHCP_TOOLTIP = "Using Ethernet.begin(mac) with the pr
 Blockly.Msg.ETHERNET_BEGIN_HELPURL = "https://www.arduino.cc/en/Reference/EthernetBegin";
 Blockly.Msg.ETHERNET_BEGIN_TITLE = "Begin";
 Blockly.Msg.ETHERNET_BEGIN_TOOLTIP = "Initializes the ethernet library and network settings.";
-Blockly.Msg.ETHERNET_CLIENT_FOR_SERVER_TITLE = "Requête Client"; 
-Blockly.Msg.ETHERNET_CLIENT_FOR_SERVER_TOOLTIP = "Un client envoie une requete"; 
+Blockly.Msg.ETHERNET_CLIENT_FOR_SERVER_TITLE = "Requête Client";
+Blockly.Msg.ETHERNET_CLIENT_FOR_SERVER_TOOLTIP = "Un client envoie une requete";
 Blockly.Msg.ETHERNET_CLIENT_PRINTLN_HELPURL = "https://www.arduino.cc/en/Reference/ClientPrintln";
 Blockly.Msg.ETHERNET_CLIENT_PRINTLN_TITLE = "Client.Println";
 Blockly.Msg.ETHERNET_CLIENT_PRINTLN_TOOLTIP = "Print data, followed by a carriage return and newline, to the server a client is connected to. Prints numbers as a sequence of digits, each an ASCII character (e.g. the number 123 is sent as the three characters '1', '2', '3').";
@@ -1968,7 +2021,7 @@ Blockly.Msg.ETHERNET_VERSION_2 = "Ethernet2";
 Blockly.Msg.ETHERNET_VERSION_V2 = "Ethernet_v2";
 ////// ETHERNET WIFI ESP8266 /////
 Blockly.Msg.ETHERNET_WIFI_BEGIN_SERVER_HELPURL = "https://www.arduino.cc/en/Reference/WiFi";
-Blockly.Msg.ETHERNET_WIFI_BEGIN_SERVER_TITLE = "Begin (DHCP) WIFI Server"; 
+Blockly.Msg.ETHERNET_WIFI_BEGIN_SERVER_TITLE = "Begin (DHCP) WIFI Server";
 Blockly.Msg.ETHERNET_WIFI_SSID = "SSID";
 Blockly.Msg.ETHERNET_WIFI_PASS = "PASS";
 Blockly.Msg.ETHERNET_WIFI_BEGIN_SERVER_TOOLTIP = "initialisation de la liaison WIFI";

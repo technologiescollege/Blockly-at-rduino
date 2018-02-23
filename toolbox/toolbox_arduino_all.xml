@@ -355,7 +355,7 @@
 			<block type="serial_line"></block>
 			<block type="serial_print_multi">
 				<value name="N">
-					
+
 				</value>
 			</block>
 		</category>
@@ -406,7 +406,7 @@
 					<field name="NUM">1</field>
 				</shadow>
 			</value>
-		</block>	
+		</block>
 		<block type="anemometre_vitesse_ventkmh">
 			<value name="PIN">
 				<shadow type="math_number">
@@ -423,7 +423,7 @@
 					<field name="NUM">1</field>
 				</shadow>
 			</value>
-		</block>	
+		</block>
 		<block type="anemometre_vitesse_ventnoeud">
 			<value name="PIN">
 				<shadow type="math_number">
@@ -457,7 +457,7 @@
 					<field name="NUM">1</field>
 				</shadow>
 			</value>
-		</block>		
+		</block>
 	</category>
 	<category name="CAT_LCD_SCREEN" colour="#87AD34">
 		<category name="CAT_LCD_I2C" colour="#87AD34">
@@ -606,7 +606,7 @@
 		</category>
 		<sep></sep>
 	</category>
-	<category name="CAT_BLUETOOTH_MISC" colour="#6981F9">	
+	<category name="CAT_BLUETOOTH_MISC" colour="#6981F9">
 		<block type="arduino_BT_send"></block>
 		<block type="arduino_BT_verify_send"></block>
 		<category name="CAT_ARDUINO_COMM_SOFTSERIAL" colour="#00979D">
@@ -700,7 +700,7 @@
 					</shadow>
 			</value>
 		</block>
-		<block type="SPI_receive"></block>		
+		<block type="SPI_receive"></block>
 	</category>
 	<category name="CAT_APDS_9960_RGB_Gesture" colour="#D9242D">
 		<block type="APDS9960_colourSensor_init"></block>
@@ -938,7 +938,7 @@
 						<field name="NUM">127</field>
 					</shadow>
 				</value>
-			</block>			
+			</block>
 			<block type="romeo_switch"></block>
 		</category>
 		<category name="CAT_DFPLAYER" colour="#F39800">
@@ -1255,7 +1255,7 @@
 					<field name="NUM">2</field>
 				</shadow>
 			</value>
-		</block>		
+		</block>
 	</category>
 	<category name="CAT_MHK" colour="#FF6B37">
 		<block type="mhk_ultrason">
@@ -1430,7 +1430,7 @@
 		<category name="CAT_GROVE_IN" colour="#8ec31f">
 			<block type="grove_button"></block>
 			<block type="grove_rotary_angle"></block>
-			<block type="grove_ldr"></block>	
+			<block type="grove_ldr"></block>
 			<block type="grove_tilt_switch"></block>
 			<block type="grove_temporature_sensor"></block>
 			<block type="grove_moisture_sensor"></block>
@@ -1607,7 +1607,7 @@
 		<block type="RFID_lecture_cle" colour="#9BACB4"></block>
 		<block type="RFID_fermeture" colour="#9BACB4"></block>
 	</category>
-	
+
 	<category name="CAT_TECHNOZONE" colour="#646464">
 		<category name="CAT_TECHNOZONE_IN" colour="#646464">
 			<block type="technozone_btn1white"></block>
@@ -1781,7 +1781,7 @@
 		</category>
 		<sep></sep>
 	</category>
-	<category name="CAT_MESURE" colour="#B7A700">	
+	<category name="CAT_MESURE" colour="#B7A700">
 		<category name="CAT_DS18B20" colour="#B7A700">
 			<block type="ds18b20_search1"></block>
 			<block type="ds18b20_temp1"></block>
@@ -2131,9 +2131,9 @@
 	</category>
 	<category name="CAT_MBOT_1" colour="#33C7F2">
 		<block type="mbot_forward"></block>
-		<block type="mbot_backward"></block>	
-		<block type="mbot_turn_left"></block>	
-		<block type="mbot_turn_right"></block>	
+		<block type="mbot_backward"></block>
+		<block type="mbot_turn_left"></block>
+		<block type="mbot_turn_right"></block>
 	</category>
 	<category name="CAT_MBOT_2" colour="#33C7F2">
 		<block type="mbot_mot_left">
@@ -2150,9 +2150,9 @@
 				</shadow>
 			</value>
 		</block>
-		<block type="mbot_line_finder"></block>	
-		<block type="mbot_ultrasonic_ranger"></block>	
-		<block type="mbot_IR_receiver"></block>	
+		<block type="mbot_line_finder"></block>
+		<block type="mbot_ultrasonic_ranger"></block>
+		<block type="mbot_IR_receiver"></block>
 	</category>
 	<category name="CAT_MBOT_3" colour="#33C7F2">
 		<block type="mbot_left_sens"></block>
@@ -2577,7 +2577,7 @@
 					<block type="text">
 						<field name="TEXT"></field>
 					</block>
-				</value>			
+				</value>
 			</block>
 			<block type="ethernet_PARSER_parse"></block>
 			<block type="ethernet_PARSER_init"></block>
@@ -2589,16 +2589,16 @@
 					<block type="text">
 						<field name="paramètre"></field>
 					</block>
-				</value>			
+				</value>
 			</block>
 		</category>
 		<category name="CAT_WIFI_INIT" colour="#FFCC66">
 			<block type="ethernet_wifi_begin_server"></block>
 			<block type="ethernet_client_for_wifi_server"></block>
-			<block type="ethernet_wifi_localip"></block>				
+			<block type="ethernet_wifi_localip"></block>
 		</category>
 		<sep></sep>
-	</category>	
+	</category>
 	<category name="CAT_BLYNK_CC" colour="#23C890">
 		<category name="CAT_Blynk_Arduino_Connexion" colour="#23C890">
 			<block type="blynk_cc_uno_cnx_usb">
@@ -2606,8 +2606,8 @@
 					<block type="text">
 						<field name="TEXT"></field>
 					</block>
-				</value>	
-			</block>		
+				</value>
+			</block>
 			<block type="blynk_cc_ethernet_begin">
 				<value name="AUTH">
 					<block type="text">
@@ -2636,7 +2636,7 @@
 						<field name="TEXT"></field>
 					</block>
 				</value>
-			</block>		
+			</block>
 			<block type="blynk_cc_notify">
 				<value name="TEXT">
 					<block type="text">
@@ -2663,7 +2663,7 @@
 				</value>
 			</block>
 		</category>
-		<sep></sep>		
+		<sep></sep>
 	</category>
     <category name="CAT_AUTODUINO" colour="#8B0000">
         <category name="CAT_AUTODUINO_IN" colour="#8B0000">
@@ -2704,4 +2704,33 @@
         </category>
 		<sep></sep>
     </category>
+		<category name="CAT_BOUMBOT" colour="#330033">
+			<category name="CAT_BOUMBOT_INIT" colour="#330033">
+				<block type="Boumbot_initialisation"></block>
+			</category>
+			<category name="CAT_BOUMBOT_DEPLACEMENT" colour="#330033">
+				<block type="Boumbot_avance"></block>
+				<block type="Boumbot_recule"></block>
+				<block type="Boumbot_stop"></block>
+				<block type="Boumbot_tourne_gauche"></block>
+				<block type="Boumbot_tourne_droite"></block>
+				<block type="Boumbot_pas_gauche"></block>
+				<block type="Boumbot_pas_droite"></block>
+				<block type="Boumbot_vitesse_moteur_gauche"></block>
+				<block type="Boumbot_vitesse_moteur_droit"></block>
+			</category>
+			<category name="CAT_BOUMBOT_IN" colour="#330033">
+				<block type="Boumbot_obstacle"></block>
+				<block type="Boumbot_distance"></block>
+				<block type="Boumbot_ligne_gauche"></block>
+				<block type="Boumbot_ligne_droite"></block>
+				<block type="Boumbot_capteur_gauche"></block>
+				<block type="Boumbot_capteur_droit"></block>
+			</category>
+			<category name="CAT_BOUMBOT_OUT" colour="#330033">
+				<block type="Boumbot_son"></block>
+				<block type="Boumbot_melody"></block>
+				<block type="Boumbot_led"></block>
+			</category>
+		</category>
 </toolbox>

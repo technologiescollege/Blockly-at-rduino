@@ -39,6 +39,7 @@ head.load(
 "blocks/APDS-9960_RGB_Gesture/APDS-9960_RGB_Gesture.js",
 "blocks/arduino_shield/arduino_shield.js",
 "blocks/anemometer/anemometer.js",
+"blocks/Boumbot/Boumbot_blocks.js",
 "blocks/autoduino/autoduino.js",
 "blocks/bitbloq/bitbloq.js",
 "blocks/Bluetooth_Electronics/Bluetooth_Electronics.js",

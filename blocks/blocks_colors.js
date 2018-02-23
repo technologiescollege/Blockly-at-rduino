@@ -19,7 +19,7 @@ Blockly.Blocks.arduino_serial.HUE = "#00979D";
 Blockly.Blocks.arduino_softserial.HUE = "#00979D";
 Blockly.Blocks.arduino_shield.HUE = "#F39800";
 Blockly.Blocks.autoduino.HUE = "#8B0000";
-Blockly.Blocks.blynk_cc.HUE = "#23C890"; //Added July 24th Mr leroy 
+Blockly.Blocks.blynk_cc.HUE = "#23C890"; //Added July 24th Mr leroy
 Blockly.Blocks.bq.HUE = "#608621";
 Blockly.Blocks.BT_ELEC.HUE = "#142D5E";
 Blockly.Blocks.dfplayer.HUE = "#F39800";
@@ -68,3 +68,6 @@ Blockly.Blocks.u8g.HUE = "#1B2944";
 Blockly.Blocks.Zumo_auto.HUE = "#00138B";
 Blockly.Blocks.Zumo_motors.HUE = "#00138B";
 Blockly.Blocks.Zumo_sensors.HUE = "#00138B";
+
+Blockly.Blocks.Boumbot.HUE = "#0099FF";
+Blockly.Blocks.Boumbot.HUE = "#330033";
