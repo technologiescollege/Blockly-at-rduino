@@ -420,6 +420,16 @@ BlocklyDuino.Redo = function () {
  */
 BlocklyDuino.bindFunctions = function() {
 	
+	var IDE_string_param = BlocklyDuino.getStringParamFromUrl('IDE', '');
+	if (IDE_string_param == '') 
+		{
+		IDE_string_param = 'off';
+		}
+		else 
+			{
+			IDE_string_param = 'on';
+			}
+		
 	$('#clearLink').on("click", BlocklyDuino.clearLocalStorage);
 
 	$('#btn_reset').on("click", BlocklyDuino.clearLocalStorage);
@@ -433,7 +443,7 @@ BlocklyDuino.bindFunctions = function() {
 	$('#btn_block_capture').on("click", BlocklyDuino.workspace_capture);
 	$('#btn_saveXML, #menu_12').on("click", BlocklyDuino.saveXmlFile);
 	$('#btn_saveArduino').on("click", BlocklyDuino.saveArduinoFile);	
-	$('#btn_pasteIDEArduino').on("click", BlocklyDuino.ArduinoIDEClick);	
+	$('#btn_pasteIDEArduino').on("click", BlocklyDuino.ArduinoIDEClick);
 	$('#btn_flash_local').on("click", BlocklyDuino.uploadClick);
 	$('#btn_verify_local').on("click", BlocklyDuino.verify_local_Click);
 		
@@ -829,7 +839,8 @@ BlocklyDuino.init = function() {
 			$('#div_toolboxes').addClass("hidden");
 			$('#divTitreMenu').removeClass("hidden");
 			$('#icon_btn_size').removeClass('glyphicon-resize-full');
-			$('#icon_btn_size').addClass('glyphicon-resize-small');
+			$('#icon_btn_size').addClass('glyphicon-resize-small');				
+			$('#div_toolboxes').prepend($('#toolboxes'));
 		}
 		if (BlocklyDuino.getSize() == 'miniMenu') {
 			$("#menuPanel").css({"width" : "40px"});
@@ -886,6 +897,24 @@ BlocklyDuino.init = function() {
 			$("#div_help_button").removeClass("div_help_button-ver");
 			$("#div_help_button").css({"width" : "40px"});
 			
+			$("#logo_Titre").css({'width' : '40px',
+				'position' : 'absolute',
+				'right' : '250px',
+				'bottom' : '40px',
+				'z-index' : '10'});
+			$("#header").css({"height" : "0px"});
+			$("#divBody").css({"top" : "0px"});
+			$("#logo_Titre").removeClass("hidden");
+			$("#btn_delete").css({"bottom" : "80px"});
+			$("#divTitreMenu_miniCard").css({'position' : 'fixed',
+				'top' : '480px',
+				'left' : '5px',
+				'z-index' : '10'});		
+			$("#tools_blocks").css({'position' : 'absolute',
+				'z-index' : '10',
+				'right' : '0px'});
+				
+			$('#div_toolboxes_miniMenu').prepend($('#toolboxes'));
 		}
 	} else {
 		$("#menuPanel").css({"display" : ""});

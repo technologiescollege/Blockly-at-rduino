@@ -432,7 +432,7 @@
 		  <br />	  
 		  <b><div align="center"><a href="http://framaforms.org/blocklyrduino-utilisateurs-1490560876" target='blank'><font size="12"><span id="span_forms_about" style="font-style: bold;"> </span></font></a></div></b>
 		  <br />
-		  <br /><i>version 27-02-2018 - v2.6 "mini Menus"</i>
+		  <br /><i>version 21-02-2018 - v2.6 "mini Menus"</i>
 		  <br />
 		  <br />
 		  <div align="center" id="paypal_about">
@@ -635,7 +635,20 @@
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&#215;</span></button>
         <h4 class="modal-title" id="configModalLabel"></h4>
       </div>
-	  <div id="div_toolboxes_miniMenu" style="margin-left : 15px;"></div>
+		<!--div id="divToolbox">
+			<label id="labelToolboxDefinition"></label> 
+			<select id="toolboxes">
+				<option value="toolbox_none" selected="selected">...</option>
+				<option value="toolbox_algo"></option>
+				<option value="toolbox_arduino_1"></option>
+				<option value="toolbox_arduino_2"></option>
+				<option value="toolbox_arduino_3"></option>
+				<option value="toolbox_arduino_4"></option>
+				<option value="toolbox_user"></option>
+				<option value="toolbox_BT"></option>
+				<option value="toolbox_arduino_all"></option>
+			</select>
+		</div-->
       <input type="checkbox" name="select_all" id="select_all"/> <span id="span_select_all"> </span>
       <div class="modal-body" id="modal-body-config"></div>
       <div class="modal-footer">

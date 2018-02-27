@@ -103,11 +103,15 @@ BlocklyDuino.cardPicture_mini = function() {
 
 BlocklyDuino.cardPicture_change_AIO = function() {
 	if ($("#pinout").val()) {
+		//$('#arduino_card_miniPicture').attr("src", profile[$("#pinout").val()]['picture']);
 		$('#arduino_card_mini_picture').attr("src", profile[$("#pinout").val()]['picture']);
 		$('#arduino_card_picture').attr("src", profile[$("#pinout").val()]['picture']);
+		$('#arduino_card_miniPicture_Menu').attr("src", profile[$("#pinout").val()]['picture']);
 	} else {
+		//$('#arduino_card_miniPicture').attr("src", "");
 		$('#arduino_card_mini_picture').attr("src", "");
 		$('#arduino_card_picture').attr("src", "");
+		$('#arduino_card_miniPicture_Menu').attr("src", "");
 	}
 };
 
@@ -282,23 +286,26 @@ BlocklyDuino.jsSimpleColorPickr = function(id) {
  * @return {int} selectd size.
  */
 BlocklyDuino.OnOffLine = function() {
-  var AIO = BlocklyDuino.getStringParamFromUrl('AIO', '');
-  if (AIO == '') {
+	var AIO = BlocklyDuino.getStringParamFromUrl('AIO', '');
+	if (AIO == '') {
 	  AIO = 'off';
-  }
-  if (AIO == 'on') {
-		$("#btn_configGlobal").addClass("hidden");
-		$("#btn_MiniconfigGlobal").addClass("hidden");
-		$("#pictureModalLabel").addClass("hidden");
-		$("#btn_card_picture_change").removeClass("hidden");
-		$('#pinout_AIO_on').prepend($('#pinout'));	  
-  } else {
-		$("#btn_configGlobal").removeClass("hidden");
-		$("#btn_MiniconfigGlobal").removeClass("hidden");
-		$("#pictureModalLabel").removeClass("hidden");
-		$("#btn_card_picture_change").addClass("hidden");
-		$('#pinout_AIO_off').prepend($('#pinout'));	  
-  }
+	}
+	if (AIO == 'IDE') {
+
+	
+	} else if (AIO == 'on') {
+				$("#btn_configGlobal").addClass("hidden");
+				$("#btn_MiniconfigGlobal").addClass("hidden");
+				$("#pictureModalLabel").addClass("hidden");
+				$("#btn_card_picture_change").removeClass("hidden");
+				$('#pinout_AIO_on').prepend($('#pinout'));
+			} else {
+					$("#btn_configGlobal").removeClass("hidden");
+					$("#btn_MiniconfigGlobal").removeClass("hidden");
+					$("#pictureModalLabel").removeClass("hidden");
+					$("#btn_card_picture_change").addClass("hidden");
+					$('#pinout_AIO_off').prepend($('#pinout'));
+			}
 };
 
 BlocklyDuino.toggleTextColors = function(taille) {
