@@ -118,6 +118,89 @@ BlocklyDuino.verify_local_Click = function() {
 	}, 2000);
 };
 
+
+/**
+ * Load Arduino code from component pre_arduino to webserver
+ * communicate with Java server launched from Arduino IDE
+ */
+
+BlocklyDuino.ArduinoIDEClick_IDE = function() {
+    var code = $('#pre_arduino').text();
+    
+    /*var url = "http://127.0.0.1:5005/openIDE";
+    var method = "POST";
+    var async = true;
+	var request = new XMLHttpRequest();*/
+	var filename = "leCodeGenere.ino";
+ 
+	var element = document.createElement('a');
+	element.setAttribute('href', 'data:text/ino;charset=utf-8,' + encodeURIComponent(code)); // put INO in data type to force direct upload to arduino IDE
+	element.setAttribute('download', filename);
+	//  element.hidden = true;
+
+	element.style.display = 'none';
+	document.body.appendChild(element);
+	element.click();
+	document.body.removeChild(element);
+
+  /*request.open(method, url, async);
+	request.setRequestHeader("Content-Type", "text/plain;charset=UTF-8");
+	request.send(code);	*/
+};
+
+BlocklyDuino.uploadClick_IDE = function() {
+	//first change board
+	var board = "board=" + profile.defaultBoard['upload_arg'];
+    var url = "http://127.0.0.1:5005/set_board";
+    var method = "POST";
+    var async = true;
+    var request = new XMLHttpRequest();
+    request.open(method, url, async);
+    request.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+	//Call a function when the state changes.
+	request.onreadystatechange = function() {
+		if(request.readyState == 4 && request.status == 200) {
+			alert(request.responseText);
+		}
+	}
+	request.send(board);
+    setTimeout( function() {		
+		//then send code after 1000ms
+		var code = $('#pre_arduino').text();
+		url = "http://127.0.0.1:5005/upload";
+		request.open(method, url, async);
+		request.setRequestHeader("Content-Type", "text/plain;charset=UTF-8");
+		request.send(code);
+	}, 2000);
+};
+
+BlocklyDuino.verify_local_Click_IDE = function() {
+	//first change board
+	var board = "board=" + profile.defaultBoard['upload_arg'];
+    var url = "http://127.0.0.1:5005/set_board";
+    var method = "POST";
+    var async = true;
+    var request = new XMLHttpRequest();
+    request.open(method, url, async);
+    request.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+	//Call a function when the state changes.
+    request.onreadystatechange = function() {
+		if(request.readyState == 4 && request.status == 200) {
+			alert(request.responseText);
+		}
+	}
+    request.send(board);
+    setTimeout( function() {		
+		//then send code after 1000ms
+		var code = $('#pre_arduino').text();
+		url = "http://127.0.0.1:5005/compile";
+		request.open(method, url, async);
+		request.setRequestHeader("Content-Type", "text/plain;charset=UTF-8");
+		request.send(code);
+	}, 2000);
+};
+
+
 /**
  * Configuration & modify buttons state inside modal config global
  */

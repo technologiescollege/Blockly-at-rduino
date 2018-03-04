@@ -443,9 +443,15 @@ BlocklyDuino.bindFunctions = function() {
 	$('#btn_block_capture').on("click", BlocklyDuino.workspace_capture);
 	$('#btn_saveXML, #menu_12').on("click", BlocklyDuino.saveXmlFile);
 	$('#btn_saveArduino').on("click", BlocklyDuino.saveArduinoFile);	
-	$('#btn_pasteIDEArduino').on("click", BlocklyDuino.ArduinoIDEClick);
-	$('#btn_flash_local').on("click", BlocklyDuino.uploadClick);
-	$('#btn_verify_local').on("click", BlocklyDuino.verify_local_Click);
+	if (IDE_string_param == 'on') {
+		$('#btn_verify_local').on("click", BlocklyDuino.verify_local_Click_IDE);
+		$('#btn_flash_local').on("click", BlocklyDuino.uploadClick_IDE);
+		$('#btn_pasteIDEArduino').on("click", BlocklyDuino.ArduinoIDEClick_IDE);
+		} else if (IDE_string_param == 'off') {
+			$('#btn_verify_local').on("click", BlocklyDuino.verify_local_Click);
+			$('#btn_flash_local').on("click", BlocklyDuino.uploadClick);
+			$('#btn_pasteIDEArduino').on("click", BlocklyDuino.ArduinoIDEClick);
+		}
 		
 	$('#toggle-Colors').on("change", BlocklyDuino.toggleTextColors);
 	$('#toggle-WebAccess').on("change", BlocklyDuino.toggleWeb);
