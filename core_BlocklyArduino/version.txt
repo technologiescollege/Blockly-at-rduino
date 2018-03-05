@@ -1,4 +1,4 @@
 [release]
-version=2.6
+version=2.7
 [update]
-date=21022018
+date=05032018

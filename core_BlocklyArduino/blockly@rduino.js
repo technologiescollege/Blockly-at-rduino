@@ -419,16 +419,6 @@ BlocklyDuino.Redo = function () {
  * Binds functions to each of the buttons, nav links, and related.
  */
 BlocklyDuino.bindFunctions = function() {
-	
-	var IDE_string_param = BlocklyDuino.getStringParamFromUrl('IDE', '');
-	if (IDE_string_param == '') 
-		{
-		IDE_string_param = 'off';
-		}
-		else 
-			{
-			IDE_string_param = 'on';
-			}
 		
 	$('#clearLink').on("click", BlocklyDuino.clearLocalStorage);
 
@@ -443,11 +433,15 @@ BlocklyDuino.bindFunctions = function() {
 	$('#btn_block_capture').on("click", BlocklyDuino.workspace_capture);
 	$('#btn_saveXML, #menu_12').on("click", BlocklyDuino.saveXmlFile);
 	$('#btn_saveArduino').on("click", BlocklyDuino.saveArduinoFile);	
-	if (IDE_string_param == 'on') {
+	if (BlocklyDuino.getStringParamFromUrl('IDE', '') == 'on') {
 		$('#btn_verify_local').on("click", BlocklyDuino.verify_local_Click_IDE);
 		$('#btn_flash_local').on("click", BlocklyDuino.uploadClick_IDE);
 		$('#btn_pasteIDEArduino').on("click", BlocklyDuino.ArduinoIDEClick_IDE);
-		} else if (IDE_string_param == 'off') {
+		$('#local_debug').remove();
+		$('#debug_arduino').remove();
+		$('#tab_supervision').remove();
+		document.getElementById("arduinoCodebender_toggles").style.visibility="hidden";
+		} else {
 			$('#btn_verify_local').on("click", BlocklyDuino.verify_local_Click);
 			$('#btn_flash_local').on("click", BlocklyDuino.uploadClick);
 			$('#btn_pasteIDEArduino').on("click", BlocklyDuino.ArduinoIDEClick);
@@ -1163,12 +1157,12 @@ BlocklyDuino.clearLocalStorage = function () {
  * Modal first connection -> info
  */
 BlocklyDuino.firstBlocklyArduino = function() {
-	if (BlocklyDuino.getStringParamFromUrl('AIO', '') == 'on') {
+	if ((BlocklyDuino.getStringParamFromUrl('AIO', '') == 'on')||(BlocklyDuino.getStringParamFromUrl('IDE', '') == 'on')) {
 		$('#firstModal').addClass('draggable');
 		//$('#videoFirstModal').prop('src', "https://mediacad.ac-nantes.fr/m/2047/d/i"); 
 		//$('#firstModal').modal('show');
 		$('#btn_videos, #menu_51').on('click', function() {
-			window.open('http://info.technologiescollege.fr/wiki/doku.php/fr/arduino/blockly_rduino/tutosvideos');
+			window.open('http://www.libreduc.cc/wiki/doku.php/fr/arduino/blockly_rduino/tutosvideos');
 		});
 	} else {
 		$('#btn_videos, #menu_51').on('click', function() {
