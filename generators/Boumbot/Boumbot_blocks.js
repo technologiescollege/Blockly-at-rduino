@@ -58,6 +58,9 @@ Blockly.Arduino.Boumbot_vitesse_moteur_droite = function() {
   return code;
 };
 
+Blockly.Arduino.Boumbot_led = function();
+
+
 // Blockly.Arduino.Sharp_IR_read = function() {
   // var value_pin = Blockly.Arduino.valueToCode(this, 'PIN', Blockly.Arduino.ORDER_ATOMIC);
   // var dropdown_name = this.getFieldValue('SHARP_IR_NAME');
