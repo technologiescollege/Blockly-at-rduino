@@ -437,6 +437,7 @@ BlocklyDuino.bindFunctions = function() {
 		$('#btn_verify_local').on("click", BlocklyDuino.verify_local_Click_IDE);
 		$('#btn_flash_local').on("click", BlocklyDuino.uploadClick_IDE);
 		$('#btn_pasteIDEArduino').on("click", BlocklyDuino.ArduinoIDEClick_IDE);
+		$('#btn_plugin_codebender').remove();
 		$('#local_debug').remove();
 		$('#debug_arduino').remove();
 		$('#tab_supervision').remove();

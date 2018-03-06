@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<versions>
+	<version>
+		<nom>2.7</nom>
+		<files>
+			<file>
+				<url>https://github.com/technologiescollege/Blockly-at-rduino/archive/gh-pages.zip</url>
+				<destination>/Blockly@rduino/</destination>
+			</file>
+		</files>
+	</version>
+</versions>
