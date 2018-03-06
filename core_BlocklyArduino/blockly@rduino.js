@@ -323,6 +323,18 @@ BlocklyDuino.saveArduinoFile = function () {
 	        });
 };
 
+BlocklyDuino.saveArduinoFile_IDE = function () {
+	var data = Blockly.Arduino.workspaceToCode();
+	var datenow = Date.now();
+//NBR	  var uri = 'data:text/plain;charset=utf-8,' + encodeURIComponent(data);  
+	var uri = 'data:text/ino;charset=utf-8,' + encodeURIComponent(data); // NBR: set INO as data type to force the browser to propose to load directly the code into the arduino IDE
+	if (BlocklyArduinoServer){
+        BlocklyArduinoServer.saveCode(data);
+		} else {
+            console.log("Server problem");
+	}
+};
+
 /**
  * Load Arduino code from component pre_arduino
  */
@@ -432,20 +444,22 @@ BlocklyDuino.bindFunctions = function() {
 	$('#btn_redo').on("click", BlocklyDuino.Redo);
 	$('#btn_block_capture').on("click", BlocklyDuino.workspace_capture);
 	$('#btn_saveXML, #menu_12').on("click", BlocklyDuino.saveXmlFile);
-	$('#btn_saveArduino').on("click", BlocklyDuino.saveArduinoFile);	
 	if (BlocklyDuino.getStringParamFromUrl('IDE', '') == 'on') {
 		$('#btn_verify_local').on("click", BlocklyDuino.verify_local_Click_IDE);
 		$('#btn_flash_local').on("click", BlocklyDuino.uploadClick_IDE);
 		$('#btn_pasteIDEArduino').on("click", BlocklyDuino.ArduinoIDEClick_IDE);
+		$('#btn_saveArduino').on("click", BlocklyDuino.saveArduinoFile_IDE);	
 		$('#btn_plugin_codebender').remove();
 		$('#local_debug').remove();
 		$('#debug_arduino').remove();
 		$('#tab_supervision').remove();
+		$('#pre_arduino').css({'height' : '95%'});
 		document.getElementById("arduinoCodebender_toggles").style.visibility="hidden";
 		} else {
 			$('#btn_verify_local').on("click", BlocklyDuino.verify_local_Click);
 			$('#btn_flash_local').on("click", BlocklyDuino.uploadClick);
 			$('#btn_pasteIDEArduino').on("click", BlocklyDuino.ArduinoIDEClick);
+			$('#btn_saveArduino').on("click", BlocklyDuino.saveArduinoFile);	
 		}
 		
 	$('#toggle-Colors').on("change", BlocklyDuino.toggleTextColors);
