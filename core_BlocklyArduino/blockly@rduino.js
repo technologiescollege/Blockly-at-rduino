@@ -512,6 +512,7 @@ BlocklyDuino.bindFunctions = function() {
 		$('#btn_saveXML, #menu_12').on("click", BlocklyDuino.saveXmlFile_IDE);
 		$('#load').on("change", BlocklyDuino.load_IDE);
 		$('#btn_CopyCode').remove();
+		$('#btn_verify_local').remove();
 		$('#btn_plugin_codebender').remove();
 		$('#local_debug').remove();
 		$('#debug_arduino').remove();
