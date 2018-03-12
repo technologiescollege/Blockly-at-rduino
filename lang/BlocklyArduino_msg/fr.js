@@ -1,5 +1,5 @@
 var MSG = {
-  title: "éditeur graphique pour aider à la programmation des interfaces Arduino",
+  title: "programmation graphique des interfaces Arduino, réécris depuis le travail de BlocklyDuino, basé sur Blockly",
   labelArduinoCard: "choix de la carte : ",
   btn_switch: " modifier orientation du menu",
   span_card_picture_change: "changer",
@@ -111,7 +111,7 @@ var MSG = {
   arduino_card:"supprimer tout et sélectionner une carte",
   span_about:"à propos",
   aboutModalLabel:"à propos ...",
-  aboutBody:"<br />- créations et améliorations par Sébastien Canet (<a href='mailto:sebastien.canet@ac-nantes.fr' traget=_blank>sebastien.canet@ac-nantes.fr</a>), énorme travail sur les fonctions JS et CSS par Olivier Métayer, intégration CodeBender par Julien Rat, merci à tous les contributeurs par mails ou sur le forum !" 
+  aboutBody:"<br />- développement et améliorations par Sébastien Canet (<a href='mailto:sebastien.canet@ac-nantes.fr' traget=_blank>sebastien.canet@ac-nantes.fr</a>), grâce à l'indispensable travail et les conseils d'Olivier Métayer, intégration de CodeBender par Julien Rat, merci à tous les contributeurs par mails ou sur le forum !" 
 	+ "<br />"
 	+ "<br />S'appuie sur :",
   msg_ajax_ko:"Requêtes AJAX non supportées par votre navigateur, les fonctionnalités\n"

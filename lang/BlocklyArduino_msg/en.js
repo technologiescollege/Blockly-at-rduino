@@ -1,5 +1,5 @@
 var MSG = {
-  title: "graphic editor helping Arduino interfaces programming",
+  title: "graphic editor helping Arduino interfaces programming, inspired by BlocklyDuino work, based upon Blockly",
   labelArduinoCard: "Card ",
   btn_switch: " modify menu orientation",
   span_card_picture_change: "change",
