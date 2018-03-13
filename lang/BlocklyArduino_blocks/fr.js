@@ -55,6 +55,9 @@ Blockly.Msg.Boumbot_led003 = "Vert (255 max) =";
 Blockly.Msg.Boumbot_led004 = "Bleu (255 max) =";
 Blockly.Msg.Boumbot_led005 = "pour la led numéro (de 0 à 7) =";
 Blockly.Msg.Boumbot_led006 = "allume la led selectionnée";
+Blockly.Msg.Boumbot_eteind001 = "éteindre une led";
+Blockly.Msg.Boumbot_eteind002 = "numéro de la led (de 0 à 7) =";
+Blockly.Msg.Boumbot_eteind003 = "éteind la led selectionnée";
 
 
 Blockly.Msg.ARRAY_CREATE_EMPTY_TITLE = 'vide !';

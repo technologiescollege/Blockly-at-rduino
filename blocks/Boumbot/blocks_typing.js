@@ -78,4 +78,9 @@ return Blockly.Types.BOOLEAN;
 
 Blockly.Blocks.Boumbot_led.getBlockType = function() {
 return Blockly.Types.BOOLEAN;
-};		
+};
+
+Blockly.Blocks.Boumbot_eteind.getBlockType = function() {
+    return Blockly.Types.BOOLEAN;
+};
+

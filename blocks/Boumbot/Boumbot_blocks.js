@@ -151,16 +151,16 @@ Blockly.Blocks['Boumbot_vitesse_moteur_droit'] = {
 
 //Boumbot sharp obstacle
 Blockly.Blocks['Boumbot_obstacle'] = {
-  init: function() {
-    this.setColour(Blockly.Blocks.Boumbot.HUE);
-    this.setHelpUrl('TBD');
-	this.appendDummyInput("")
-        .appendField(Blockly.Msg.Boumbot_obstacle001)
-        .appendField(new Blockly.FieldImage("blocks/Boumbot/img/obstacle.png", Blockly.Arduino.imageSize, Blockly.Arduino.imageSize));
-    this.setInputsInline(true);
-	this.setOutput(true, 'Boolean');
-    this.setTooltip(Blockly.Msg.Boumbot_obstacle002);
-  }
+     init: function() {
+        this.setColour(Blockly.Blocks.Boumbot.HUE);
+        this.setHelpUrl('TBD');
+        this.appendDummyInput("")
+            .appendField(Blockly.Msg.Boumbot_obstacle001)
+            .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/Boumbot/img/obstacle.png', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize));
+        this.setInputsInline(true);
+        this.setOutput(true, 'Boolean');
+        this.setTooltip(Blockly.Msg.Boumbot_obstacle002);
+    }
 };
 
 //Boumbot sharp distance
@@ -245,10 +245,10 @@ Blockly.Blocks['Boumbot_son'] = {
 		.setCheck('Number')
         .setAlign(Blockly.ALIGN_RIGHT)
         .appendField(Blockly.Msg.Boumbot_son002);
-    this.appendValueInput("TPS")
+    /*this.appendValueInput("TPS")
 		.setCheck('Number')
         .setAlign(Blockly.ALIGN_RIGHT)
-        .appendField(Blockly.Msg.Boumbot_son003);
+        .appendField(Blockly.Msg.Boumbot_son003);*/
     this.setInputsInline(false);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
@@ -304,4 +304,23 @@ Blockly.Blocks['Boumbot_led'] = {
     this.setNextStatement(true, null);
     this.setTooltip(Blockly.Msg.Boumbot_led006);
   }
+};
+
+//Boumbot eteind led
+Blockly.Blocks['Boumbot_eteind'] = {
+    init: function() {
+        this.setColour(Blockly.Blocks.Boumbot.HUE);
+        this.setHelpUrl('TBD');
+        this.appendDummyInput("")
+            .appendField(Blockly.Msg.Boumbot_eteind001)
+            .appendField(new Blockly.FieldImage("blocks/Boumbot/img/leds.png", Blockly.Arduino.imageSize, Blockly.Arduino.imageSize));
+        this.appendValueInput("NUM")
+            .setCheck('Number')
+            .setAlign(Blockly.ALIGN_RIGHT)
+            .appendField(Blockly.Msg.Boumbot_eteind002);
+        this.setInputsInline(false);
+        this.setPreviousStatement(true, null);
+        this.setNextStatement(true, null);
+        this.setTooltip(Blockly.Msg.Boumbot_eteind003);
+    }
 };

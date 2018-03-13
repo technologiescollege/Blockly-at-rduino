@@ -142,6 +142,7 @@
 			<block type="Boumbot_son"></block>
 			<block type="Boumbot_melody"></block>
 			<block type="Boumbot_led"></block>
+			<block type="Boumbot_eteind"></block>
 		</category>
 	</category>
 	<category name="CAT_ARDUINO" colour="#00979D">
