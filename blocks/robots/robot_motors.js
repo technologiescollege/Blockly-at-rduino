@@ -255,11 +255,12 @@ Blockly.Blocks['l298n_motor_init'] = {
     this.setColour(Blockly.Blocks.robots_motors.HUE);
 	this.appendDummyInput()
 		.appendField(Blockly.Msg.ROBOTS_MOTORS_L298N_MOTOR_INIT_TITLE)
-		.appendField(new Blockly.FieldImage("blocks/robots/l298n.jpg", Blockly.Arduino.imageSize, Blockly.Arduino.imageSize))
-	this.appendDummyInput()
-		.appendField(Blockly.Msg.ROBOTS_MOTORS_L298N_ID)
-        .appendField(new Blockly.FieldTextInput('ID'), 'ID')
-        .setAlign(Blockly.ALIGN_RIGHT);
+		.appendField(new Blockly.FieldImage("blocks/robots/l298n.jpg", Blockly.Arduino.imageSize, Blockly.Arduino.imageSize));
+    this.appendDummyInput("")
+        .setAlign(Blockly.ALIGN_RIGHT)
+        .appendField(Blockly.Msg.ROBOTS_MOTORS_L298N_ID)
+        .appendField(
+            new Blockly.FieldInstance('L298_ID', 'L298_ID', false, false, false), 'L298_NAME');
 	this.appendDummyInput()
 		.appendField(Blockly.Msg.ROBOTS_MOTORS_L298N_MOTOR_PIN_EN)
         .appendField(new Blockly.FieldTextInput('0',  Blockly.Arduino.pinPWMValidator), 'PIN-EN')
@@ -292,10 +293,11 @@ Blockly.Blocks['l298n_motor'] = {
 						[ Blockly.Msg.ROBOTS_MOTORS_L298N_BACKWARD, "backward" ],
 						[ Blockly.Msg.ROBOTS_MOTORS_L298N_BRAKE, "brake" ] ]),
 				"DIRECTION");
-    this.appendValueInput("ID", 'String')
-        .setCheck('String')
+    this.appendDummyInput("")
         .setAlign(Blockly.ALIGN_RIGHT)
-        .appendField(Blockly.Msg.ROBOTS_MOTORS_L298N_ID);
+        .appendField(Blockly.Msg.ROBOTS_MOTORS_L298N_ID)
+        .appendField(
+            new Blockly.FieldInstance('L298_ID', 'L298_ID', false, false, false), 'L298_NAME');
     this.appendValueInput("SPEED", 'Number')
         .setCheck('Number')
         .setAlign(Blockly.ALIGN_RIGHT)
@@ -304,6 +306,25 @@ Blockly.Blocks['l298n_motor'] = {
 	this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
 	this.setTooltip(Blockly.Msg.ROBOTS_MOTORS_L298N_TOOLTIP);
+  },
+  /**
+   * Called whenever anything on the workspace changes.
+   * It checks/warns if the selected instance has a config block.
+   * @this Blockly.Block
+   */
+  onchange: function() {
+    if (!this.workspace) return;  // Block has been deleted.
+    var instanceName = this.getFieldValue('L298_NAME')
+    if (Blockly.Instances.isInstancePresent(instanceName, 'L298_ID', this)) {
+      this.setWarningText(null);
+    } else {
+      // Set a warning to select a valid config block
+      this.setWarningText(
+        Blockly.Msg.COMPONENT_WARN.replace(
+            //'%1', Blockly.Msg.SERVO_COMPONENT).replace(
+            '%1', '').replace(
+                '%2', instanceName));
+    }
   }
 };
 

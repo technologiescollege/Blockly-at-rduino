@@ -81,7 +81,7 @@ Blockly.Blocks.servo_move = {
   },
   /**
    * Called whenever anything on the workspace changes.
-   * It checks/warns if the selected stepper instance has a config block.
+   * It checks/warns if the selected instance has a config block.
    * @this Blockly.Block
    */
   onchange: function() {
@@ -91,10 +91,11 @@ Blockly.Blocks.servo_move = {
     if (Blockly.Instances.isInstancePresent(instanceName, 'Servo', this)) {
       this.setWarningText(null);
     } else {
-      // Set a warning to select a valid stepper config block
+      // Set a warning to select a valid config block
       this.setWarningText(
         Blockly.Msg.COMPONENT_WARN.replace(
-            '%1', Blockly.Msg.SERVO_COMPONENT).replace(
+            //'%1', Blockly.Msg.SERVO_COMPONENT).replace(
+            '%1', '').replace(
                 '%2', instanceName));
     }
   }
@@ -119,7 +120,7 @@ Blockly.Blocks.servo_read_degrees = {
   },
   /**
    * Called whenever anything on the workspace changes.
-   * It checks/warns if the selected stepper instance has a config block.
+   * It checks/warns if the selected instance has a config block.
    * @this Blockly.Block
    */
   onchange: function() {
@@ -129,10 +130,11 @@ Blockly.Blocks.servo_read_degrees = {
     if (Blockly.Instances.isInstancePresent(instanceName, 'Servo', this)) {
       this.setWarningText(null);
     } else {
-      // Set a warning to select a valid stepper config block
+      // Set a warning to select a valid config block
       this.setWarningText(
         Blockly.Msg.COMPONENT_WARN.replace(
-            '%1', Blockly.Msg.SERVO_COMPONENT).replace(
+            //'%1', Blockly.Msg.SERVO_COMPONENT).replace(
+            '%1', '').replace(
                 '%2', instanceName));
     }
   }
@@ -157,7 +159,7 @@ Blockly.Blocks.servo_attached = {
   },
   /**
    * Called whenever anything on the workspace changes.
-   * It checks/warns if the selected stepper instance has a config block.
+   * It checks/warns if the selected instance has a config block.
    * @this Blockly.Block
    */
   onchange: function() {
@@ -167,10 +169,11 @@ Blockly.Blocks.servo_attached = {
     if (Blockly.Instances.isInstancePresent(instanceName, 'Servo', this)) {
       this.setWarningText(null);
     } else {
-      // Set a warning to select a valid stepper config block
+      // Set a warning to select a valid config block
       this.setWarningText(
         Blockly.Msg.COMPONENT_WARN.replace(
-            '%1', Blockly.Msg.SERVO_COMPONENT).replace(
+            //'%1', Blockly.Msg.SERVO_COMPONENT).replace(
+            '%1', '').replace(
                 '%2', instanceName));
     }
   }
@@ -197,7 +200,7 @@ Blockly.Blocks.servo_detach = {
   },
   /**
    * Called whenever anything on the workspace changes.
-   * It checks/warns if the selected stepper instance has a config block.
+   * It checks/warns if the selected instance has a config block.
    * @this Blockly.Block
    */
   onchange: function() {
@@ -207,10 +210,11 @@ Blockly.Blocks.servo_detach = {
     if (Blockly.Instances.isInstancePresent(instanceName, 'Servo', this)) {
       this.setWarningText(null);
     } else {
-      // Set a warning to select a valid stepper config block
+      // Set a warning to select a valid config block
       this.setWarningText(
         Blockly.Msg.COMPONENT_WARN.replace(
-            '%1', Blockly.Msg.SERVO_COMPONENT).replace(
+            //'%1', Blockly.Msg.SERVO_COMPONENT).replace(
+            '%1', '').replace(
                 '%2', instanceName));
     }
   }
@@ -242,7 +246,7 @@ Blockly.Blocks.servo_rot_continue = {
   },
   /**
    * Called whenever anything on the workspace changes.
-   * It checks/warns if the selected stepper instance has a config block.
+   * It checks/warns if the selected instance has a config block.
    * @this Blockly.Block
    */
   onchange: function() {
@@ -252,10 +256,11 @@ Blockly.Blocks.servo_rot_continue = {
     if (Blockly.Instances.isInstancePresent(instanceName, 'Servo', this)) {
       this.setWarningText(null);
     } else {
-      // Set a warning to select a valid stepper config block
+      // Set a warning to select a valid config block
       this.setWarningText(
         Blockly.Msg.COMPONENT_WARN.replace(
-            '%1', Blockly.Msg.SERVO_COMPONENT).replace(
+            //'%1', Blockly.Msg.SERVO_COMPONENT).replace(
+            '%1', '').replace(
                 '%2', instanceName));
     }
   }
@@ -291,7 +296,7 @@ Blockly.Blocks.servo_rot_continue_param = {
   },
   /**
    * Called whenever anything on the workspace changes.
-   * It checks/warns if the selected stepper instance has a config block.
+   * It checks/warns if the selected instance has a config block.
    * @this Blockly.Block
    */
   onchange: function() {
@@ -301,10 +306,11 @@ Blockly.Blocks.servo_rot_continue_param = {
     if (Blockly.Instances.isInstancePresent(instanceName, 'Servo', this)) {
       this.setWarningText(null);
     } else {
-      // Set a warning to select a valid stepper config block
+      // Set a warning to select a valid config block
       this.setWarningText(
         Blockly.Msg.COMPONENT_WARN.replace(
-            '%1', Blockly.Msg.SERVO_COMPONENT).replace(
+            //'%1', Blockly.Msg.SERVO_COMPONENT).replace(
+            '%1', '').replace(
                 '%2', instanceName));
     }
   }

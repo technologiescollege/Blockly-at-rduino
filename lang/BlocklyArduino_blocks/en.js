@@ -242,7 +242,7 @@ Blockly.Msg.CAT_POLOLU_QTR_1RC = " - QTR-1RC";
 
 
 //**********************************FieldInstance messages***********************************************
-Blockly.Msg.COMPONENT_WARN = 'A %1 configuration block with the same %2 name must be added to use this block!';
+Blockly.Msg.COMPONENT_WARN = "A %1 configuration block with the same '%2' name must be added to use this block!";
 
 Blockly.Msg.SOFTSERIAL_COMPONENT = 'softserial';
 Blockly.Msg.STEPPER_COMPONENT = 'stepper';

@@ -277,7 +277,7 @@ Blockly.Msg.INOUT_HIGH_LEVEL = "1(état haut)";
 Blockly.Msg.INOUT_LOW_LEVEL = "0(état bas)";
 
 //**********************************FieldInstance messages***********************************************
-Blockly.Msg.COMPONENT_WARN = 'A %1 configuration block with the same %2 name must be added to use this block!';
+Blockly.Msg.COMPONENT_WARN = "Un bloc de configuration %1 avec le même nom '%2' d'instance doit être ajouté pour utiliser ce bloc !";
 
 Blockly.Msg.SOFTSERIAL_COMPONENT = 'softserial';
 Blockly.Msg.STEPPER_COMPONENT = 'stepper';

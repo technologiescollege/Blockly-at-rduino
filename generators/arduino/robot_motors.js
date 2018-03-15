@@ -426,19 +426,19 @@ Blockly.Arduino.generic_motor_s = function() {
 
 // @pbra 20160613
 Blockly.Arduino.l298n_motor_init = function() {
-  var id = '_' + this.getFieldValue("ID").replace(/\s/g, '').replace(/['"]+/g, '').toLowerCase();
+  var id = this.getFieldValue('L298_NAME');
   var PinEN = this.getFieldValue("PIN-EN");
   var PinIN1 = this.getFieldValue("PIN-IN1");
   var PinIN2 = this.getFieldValue("PIN-IN2");
   var mysetup = "";
 
-  mysetup += " // pin assignation for L298N" + id + "\n";
-  mysetup += " pinMode("+PinIN1+",OUTPUT);//IN1" + id +" Pin\n" ;
-  mysetup += " pinMode("+PinIN2+",OUTPUT);//IN2" + id +" Pin\n";
-  mysetup += " pinMode("+PinEN+",OUTPUT);//PWM" + id +" Pin\n" ;
+  mysetup += "// pin assignation for L298N : " + id + "\n";
+  mysetup += " pinMode("+PinIN1+",OUTPUT);//IN1_" + id +" Pin\n" ;
+  mysetup += " pinMode("+PinIN2+",OUTPUT);//IN2_" + id +" Pin\n";
+  mysetup += " pinMode("+PinEN+",OUTPUT);//PWM_" + id +" Pin\n" ;
   Blockly.Arduino.setups_["setup_l298n_motor" + id] = mysetup;
-  Blockly.Arduino.definitions_["setup_l298n_motor" + id] = " // pin assignation for L298N" + id + "\n"+
-	" int l298n" + id + "[3] = {"+PinEN+", "+PinIN1+", "+PinIN2+"};";
+  Blockly.Arduino.definitions_["setup_l298n_motor" + id] = "// pin assignation for L298N : " + id + "\n"+
+	"int l298n_" + id + "[3] = {"+PinEN+", "+PinIN1+", "+PinIN2+"};\n";
   var code = "";
   return code;
 };
@@ -446,7 +446,7 @@ Blockly.Arduino.l298n_motor_init = function() {
 // @pbra 20160612
 Blockly.Arduino.l298n_motor = function() {
   var dropdown_direction = this.getFieldValue('DIRECTION'); 
-  var id = '_' + Blockly.Arduino.valueToCode(this, 'ID', Blockly.Arduino.ORDER_ATOMIC).replace(/\s/g, '').replace(/['"]+/g, '').toLowerCase();
+  var id = this.getFieldValue('L298_NAME');
   var speed = Blockly.Arduino.valueToCode(this, 'SPEED', Blockly.Arduino.ORDER_ATOMIC) || '127';
 
   var code = "";
@@ -457,7 +457,7 @@ Blockly.Arduino.l298n_motor = function() {
      "  digitalWrite(Pins[1],HIGH);//turn DC Motor move clockwise\n"+
      "  digitalWrite(Pins[2],LOW);//turn DC Motor move clockwise\n"+
 "}\n";
-    code="l298n_forward("+speed+", l298n" + id + ");\n";
+    code="l298n_forward("+speed+", l298n_" + id + ");\n";
   } else if (dropdown_direction==="backward") {
     Blockly.Arduino.definitions_['define_l298n_backward'] = "void l298n_backward(int speed,int Pins[3])\n"+
 "{\n"+
@@ -465,7 +465,7 @@ Blockly.Arduino.l298n_motor = function() {
      "  digitalWrite(Pins[1],LOW);//turn DC Motor move anti-clockwise\n"+
      "  digitalWrite(Pins[2],HIGH);//turn DC Motor move anti-clockwise\n"+
 "}\n\n";
-    code="l298n_backward("+speed+", l298n" + id + ");\n";
+    code="l298n_backward("+speed+", l298n_" + id + ");\n";
   } else if (dropdown_direction==="stop"){
     Blockly.Arduino.definitions_['define_l298n_stop'] = "void l298n_stop(int Pins[3])\n"+
 "{\n"+
@@ -473,7 +473,7 @@ Blockly.Arduino.l298n_motor = function() {
      "  digitalWrite(Pins[1],LOW);//turn DC Motor off\n"+
      "  digitalWrite(Pins[2],LOW);//turn DC Motor off\n"+
 "}\n\n";
-    code="l298n_stop(l298n" + id + ");\n";
+    code="l298n_stop(l298n_" + id + ");\n";
   } else if (dropdown_direction==="brake"){
     Blockly.Arduino.definitions_['define_l298n_brake'] = "void l298n_brake(int Pins[3])\n"+
 "{\n"+
@@ -481,7 +481,7 @@ Blockly.Arduino.l298n_motor = function() {
      "  digitalWrite(Pins[1],LOW);//turn DC Motor off\n"+
      "  digitalWrite(Pins[2],LOW);//turn DC Motor off\n"+
 "}\n\n";
-    code="l298n_brake(l298n" + id + ");\n";
+    code="l298n_brake(l298n_" + id + ");\n";
   }
   return code;
 };
