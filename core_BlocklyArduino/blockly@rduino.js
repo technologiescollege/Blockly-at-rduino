@@ -387,7 +387,8 @@ BlocklyDuino.load = function (event) {
   // FileReader
   var reader = new FileReader();
   reader.onloadend = function(event) {
-    var target = event.target;
+    
+	var target = event.target;
     // 2 == FileReader.DONE
     if (target.readyState == 2) {
       try {
@@ -420,6 +421,7 @@ BlocklyDuino.load = function (event) {
 		}
 
 		var search = BlocklyDuino.addReplaceParamToUrl(window.location.search, 'toolbox', $("#toolboxes").val());
+		search = search.replace(/([?&]url=)[^&]*/, '');
 		window.location = window.location.protocol + '//'
 				+ window.location.host + window.location.pathname
 				+ search;
@@ -427,7 +429,7 @@ BlocklyDuino.load = function (event) {
     }
     // Reset value of input after loading because Chrome will not fire
     // a 'change' event if the same file is loaded again.
-    $('#load').val('');
+    //$('#load').val('');
   };
   reader.readAsText(files[0]);
 };
