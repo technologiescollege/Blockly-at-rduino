@@ -493,6 +493,12 @@ BlocklyDuino.bindFunctions = function() {
 		document.getElementById("toolboxes").options.selectedIndex = 6;
 		BlocklyDuino.changeToolboxDefinition();
 	});
+
+    $('#toolbox_boumbot, #menu_429').on("click", function(e) {
+        e.preventDefault();
+        document.getElementById("toolboxes").options.selectedIndex = 7;
+        BlocklyDuino.changeToolboxDefinition();
+    });
 	
 	$('#load').on("change", BlocklyDuino.load);
 	$('#btn_fakeload, #menu_11').on("click", function() {
@@ -758,6 +764,7 @@ BlocklyDuino.loadToolboxDefinition = function(toolboxFile) {
 	$('#toolbox_arduino_3').removeClass("active");
 	$('#toolbox_arduino_4').removeClass("active");
 	$('#toolbox_arduino_all').removeClass("active");
+    $('#toolbox_boumbot').removeClass("active");
 	$('#'+toolboxFile).addClass("active");
 
 	$.ajax( {

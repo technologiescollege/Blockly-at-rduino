@@ -102,7 +102,7 @@ Blockly.Arduino.Boumbot_led = function() {
   var red = Blockly.Arduino.valueToCode(this, 'Red', Blockly.Arduino.ORDER_ATOMIC);
   var blue = Blockly.Arduino.valueToCode(this, 'Blue', Blockly.Arduino.ORDER_ATOMIC);
   var green = Blockly.Arduino.valueToCode(this, 'Green', Blockly.Arduino.ORDER_ATOMIC);
-  var Led = Blockly.Arduino.valueToCode(this, 'Index', Blockly.Arduino.ORDER_ATOMIC);
+  var Led = Blockly.Arduino.valueToCode(this, 'color', Blockly.Arduino.ORDER_ATOMIC);
 
   var code = 'boumbot.allume_rgb('+Led+', '+red+', '+green+', '+blue+');\n';
   return code;

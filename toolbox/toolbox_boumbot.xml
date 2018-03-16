@@ -115,65 +115,40 @@
 	</category>
 	<category name="CAT_FUNCTIONS" custom="PROCEDURE" colour="#632D99"></category>
 	<sep></sep>
-	<category name="CAT_BOUMBOT" colour="#330033">
-		<category name="CAT_BOUMBOT_INIT" colour="#330033">
-			<block type="Boumbot_initialisation"></block>
-		</category>
-		<category name="CAT_BOUMBOT_DEPLACEMENT" colour="#330033">
-			<block type="Boumbot_avance"></block>
-			<block type="Boumbot_recule"></block>
-			<block type="Boumbot_stop"></block>
-			<block type="Boumbot_tourne_gauche"></block>
-			<block type="Boumbot_tourne_droite"></block>
-			<block type="Boumbot_pas_gauche"></block>			
-			<block type="Boumbot_pas_droite"></block>
-			<block type="Boumbot_vitesse_moteur_gauche"></block>
-			<block type="Boumbot_vitesse_moteur_droit"></block>			
-		</category>		
-		<category name="CAT_BOUMBOT_IN" colour="#330033">
-			<block type="Boumbot_obstacle"></block>
-			<block type="Boumbot_distance"></block>
-			<block type="Boumbot_ligne_gauche"></block>
-			<block type="Boumbot_ligne_droite"></block>
-			<block type="Boumbot_capteur_gauche"></block>			
-			<block type="Boumbot_capteur_droit"></block>
-		</category>
-		<category name="CAT_BOUMBOT_OUT" colour="#330033">
-			<block type="Boumbot_son"></block>
-			<block type="Boumbot_melody"></block>
-			<block type="Boumbot_led"></block>
-			<block type="Boumbot_eteind"></block>
-		</category>
-	</category>
+
 	<category name="CAT_ARDUINO" colour="#00979D">
+		<block type="base_begin"></block>
 		<block type="base_setup"></block>
+		<block type="base_loop"></block>
 		<block type="base_setup_loop"></block>
-		<block type="base_define_const"></block>
-		<block type="base_const"></block>
+		<block type="base_define"></block>
+		<block type="base_define_bloc"></block>
 		<block type="biblio_include"></block>
 		<block type="base_code"></block>
 		<block type="base_end"></block>
-		<!-- @pbra 20160607 -->
-		<block type="inout_digital_mode">
-			<value name="PIN">
-				<shadow type="math_number">
-					<field name="NUM">0</field>
-				</shadow>
-			</value>
-			<value name="PINMODE">
-				<shadow type="pinmode"></shadow>
-			</value>
-		</block>
-		<!-- @pbra 20160607 END-->
 		<category name="CAT_ARDUINO_IN" colour="#00979D">
 			<block type="inout_analog_read_validator"></block>
 			<block type="inout_digital_read_validator"></block>
 			<block type="inout_analog_read"></block>
 			<block type="inout_digital_read"></block>
+			<block type="inout_digital_read_check"></block>
 			<block type="inout_onoff"></block>
+			<block type="base_toggle"></block>
 			<block type="inout_angle"></block>
 			<block type="inout_button_wait_il"></block>
 			<block type="inout_button_wait_iph"></block>
+			<!-- @pbra 20160607 -->
+			<block type="inout_digital_mode">
+				<value name="PIN">
+					<shadow type="math_number">
+						<field name="NUM">0</field>
+					</shadow>
+				</value>
+				<value name="PINMODE">
+					<shadow type="pinmode"></shadow>
+				</value>
+			</block>
+			<!-- @pbra 20160607 END-->
 			<block type="var_random">
 				<value name="rand_min">
 					<shadow type="math_number">
@@ -212,32 +187,6 @@
 			</block>
 			<block type="inout_attachInterrupt"></block>
 			<block type="inout_detachInterrupt"></block>
-		</category>
-		<category name="CAT_ARDUINO_TIME" colour="#00979D">
-			<block type="millis"></block>
-			<block type="millis_sec"></block>
-			<block type="inout_pulsein"></block>
-			<block type="inout_pulsein_timeout"></block>
-			<block type="base_delay">
-				<value name="DELAY_TIME">
-					<shadow type="math_number">
-						<field name="NUM">1000</field>
-					</shadow>
-				</value>
-			</block>
-			<block type="base_delay_sec">
-				<value name="DELAY_TIME">
-					<shadow type="math_number">
-						<field name="NUM">5</field>
-					</shadow>
-				</value>
-			</block>
-		</category>
-		<category name="CAT_ARDUINO_CONVERSION" colour="#00979D">
-			<block type="conversion_tochar"></block>
-			<block type="conversion_tobyte"></block>
-			<block type="conversion_toint"></block>
-			<block type="conversion_tofloat"></block>
 		</category>
 		<category name="CAT_ARDUINO_OUT" colour="#00979D">
 			<block type="inout_buildin_led"></block>
@@ -289,6 +238,35 @@
 			</block>
 			<block type="notone"></block>
 		</category>
+		<category name="CAT_ARDUINO_TIME" colour="#00979D">
+			<block type="millis"></block>
+			<block type="millis_sec"></block>
+			<block type="inout_pulsein"></block>
+			<block type="inout_pulsein_timeout"></block>
+			<block type="base_delay">
+				<value name="DELAY_TIME">
+					<shadow type="math_number">
+						<field name="NUM">1000</field>
+					</shadow>
+				</value>
+			</block>
+			<block type="base_delay_sec">
+				<value name="DELAY_TIME">
+					<shadow type="math_number">
+						<field name="NUM">5</field>
+					</shadow>
+				</value>
+			</block>
+			<block type="tempo_no_delay"></block>
+		</category>
+		<category name="CAT_ARDUINO_CONVERSION" colour="#00979D">
+			<block type="conversion_tochar"></block>
+			<block type="conversion_tobyte"></block>
+			<block type="conversion_toint"></block>
+			<block type="conversion_tofloat"></block>
+			<block type="conversion_toString"></block>
+			<block type="conversion_map"></block>
+		</category>
 		<category name="CAT_ARDUINO_COMM_SERIAL" colour="#00979D">
 			<block type="serial_init"></block>
 			<block type="serial_flush"></block>
@@ -334,6 +312,12 @@
 			<block type="serial_write_out"></block>
 			<block type="serial_available"></block>
 			<block type="serial_read"></block>
+			<block type="serial_line"></block>
+			<block type="serial_print_multi">
+				<value name="N">
+
+				</value>
+			</block>
 		</category>
 		<category name="CAT_ARDUINO_COMM_SOFTSERIAL" colour="#00979D">
 			<block type="soft_init"></block>
@@ -342,8 +326,76 @@
 			<block type="soft_write"></block>
 			<block type="soft_available"></block>
 			<block type="soft_read"></block>
+			<block type="serial_line"></block>
+		</category>
+		<category name="CAT_STORAGE_EEPROM" colour="#00979D">
+			<block type="storage_sd_write">
+			</block>
+			<block type="storage_eeprom_write_long">
+			</block>
+			<block type="storage_eeprom_read_long">
+			</block>
+			<block type="storage_eeprom_write_byte">
+			</block>
+			<block type="storage_eeprom_read_byte">
+			</block>
 		</category>
 		<sep></sep>
 	</category>
+
+	<sep></sep>
+	<category name="CAT_BOUMBOT" colour="#330033">
+		<category name="CAT_BOUMBOT_INIT" colour="#330033">
+			<block type="Boumbot_initialisation"></block>
+		</category>
+		<category name="CAT_BOUMBOT_DEPLACEMENT" colour="#330033">
+			<block type="Boumbot_avance"></block>
+			<block type="Boumbot_recule"></block>
+			<block type="Boumbot_stop"></block>
+			<block type="Boumbot_tourne_gauche"></block>
+			<block type="Boumbot_tourne_droite"></block>
+			<block type="Boumbot_pas_gauche"></block>			
+			<block type="Boumbot_pas_droite"></block>
+			<block type="Boumbot_vitesse_moteur_gauche"></block>
+			<block type="Boumbot_vitesse_moteur_droit"></block>			
+		</category>		
+		<category name="CAT_BOUMBOT_IN" colour="#330033">
+			<block type="Boumbot_obstacle"></block>
+			<block type="Boumbot_distance"></block>
+			<block type="Boumbot_ligne_gauche"></block>
+			<block type="Boumbot_ligne_droite"></block>
+			<block type="Boumbot_capteur_gauche"></block>			
+			<block type="Boumbot_capteur_droit"></block>
+		</category>
+		<category name="CAT_BOUMBOT_OUT" colour="#330033">
+			<block type="Boumbot_son"></block>
+			<block type="Boumbot_melody"></block>
+			<block type="Boumbot_led">
+				<value name="Red">
+					<shadow type="math_number">
+						<field name="NUM">127</field>
+					</shadow>
+				</value>
+				<value name="Green">
+					<shadow type="math_number">
+						<field name="NUM">127</field>
+					</shadow>
+				</value>
+				<value name="Blue">
+					<shadow type="math_number">
+						<field name="NUM">127</field>
+					</shadow>
+				</value>
+				<value name="Led">
+					<shadow type="math_number">
+						<field name="NUM">0</field>
+					</shadow>
+				</value>
+			</block>
+
+			<block type="Boumbot_eteind"></block>
+		</category>
+	</category>
+
 	
 </toolbox>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <toolbox>
-	<parametre id="defaultCategories">CAT_LOGIC,CAT_LOOPS,CAT_VARIABLES,CAT_FUNCTIONS,CAT_MATH,CAT_ARDUINO
+	<parametre id="defaultCategories">CAT_LOGIC,CAT_LOOPS,CAT_VARIABLES,CAT_FUNCTIONS,CAT_MATH,CAT_ARDUINO,CAT_BOUMBOT
 	</parametre>
 	<category name="CAT_LOGIC" colour="#E1A91A">
 		<block type="controls_if"></block>
@@ -2703,34 +2703,56 @@
             <block type="autoduino_rc"></block>
         </category>
 		<sep></sep>
-    </category>
-		<category name="CAT_BOUMBOT" colour="#330033">
-			<category name="CAT_BOUMBOT_INIT" colour="#330033">
-				<block type="Boumbot_initialisation"></block>
-			</category>
-			<category name="CAT_BOUMBOT_DEPLACEMENT" colour="#330033">
-				<block type="Boumbot_avance"></block>
-				<block type="Boumbot_recule"></block>
-				<block type="Boumbot_stop"></block>
-				<block type="Boumbot_tourne_gauche"></block>
-				<block type="Boumbot_tourne_droite"></block>
-				<block type="Boumbot_pas_gauche"></block>
-				<block type="Boumbot_pas_droite"></block>
-				<block type="Boumbot_vitesse_moteur_gauche"></block>
-				<block type="Boumbot_vitesse_moteur_droit"></block>
-			</category>
-			<category name="CAT_BOUMBOT_IN" colour="#330033">
-				<block type="Boumbot_obstacle"></block>
-				<block type="Boumbot_distance"></block>
-				<block type="Boumbot_ligne_gauche"></block>
-				<block type="Boumbot_ligne_droite"></block>
-				<block type="Boumbot_capteur_gauche"></block>
-				<block type="Boumbot_capteur_droit"></block>
-			</category>
-			<category name="CAT_BOUMBOT_OUT" colour="#330033">
-				<block type="Boumbot_son"></block>
-				<block type="Boumbot_melody"></block>
-				<block type="Boumbot_led"></block>
-			</category>
+	<category name="CAT_BOUMBOT" colour="#330033">
+		<category name="CAT_BOUMBOT_INIT" colour="#330033">
+			<block type="Boumbot_initialisation"></block>
 		</category>
+		<category name="CAT_BOUMBOT_DEPLACEMENT" colour="#330033">
+			<block type="Boumbot_avance"></block>
+			<block type="Boumbot_recule"></block>
+			<block type="Boumbot_stop"></block>
+			<block type="Boumbot_tourne_gauche"></block>
+			<block type="Boumbot_tourne_droite"></block>
+			<block type="Boumbot_pas_gauche"></block>
+			<block type="Boumbot_pas_droite"></block>
+			<block type="Boumbot_vitesse_moteur_gauche"></block>
+			<block type="Boumbot_vitesse_moteur_droit"></block>
+		</category>
+		<category name="CAT_BOUMBOT_IN" colour="#330033">
+			<block type="Boumbot_obstacle"></block>
+			<block type="Boumbot_distance"></block>
+			<block type="Boumbot_ligne_gauche"></block>
+			<block type="Boumbot_ligne_droite"></block>
+			<block type="Boumbot_capteur_gauche"></block>
+			<block type="Boumbot_capteur_droit"></block>
+		</category>
+		<category name="CAT_BOUMBOT_OUT" colour="#330033">
+			<block type="Boumbot_son"></block>
+			<block type="Boumbot_melody"></block>
+			<block type="Boumbot_led">
+				<value name="Red">
+					<shadow type="math_number">
+						<field name="NUM">127</field>
+					</shadow>
+				</value>
+				<value name="Green">
+					<shadow type="math_number">
+						<field name="NUM">127</field>
+					</shadow>
+				</value>
+				<value name="Blue">
+					<shadow type="math_number">
+						<field name="NUM">127</field>
+					</shadow>
+				</value>
+				<value name="Led">
+					<shadow type="math_number">
+						<field name="NUM">0</field>
+					</shadow>
+				</value>
+			</block>
+
+			<block type="Boumbot_eteind"></block>
+		</category>
+	</category>
 </toolbox>

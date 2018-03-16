@@ -295,10 +295,15 @@ Blockly.Blocks['Boumbot_led'] = {
 		.setCheck('Number')
         .setAlign(Blockly.ALIGN_RIGHT)
         .appendField(Blockly.Msg.Boumbot_led004);
-	this.appendValueInput("Index")
-		.setCheck('Number')
+	/*this.appendDummyInput("Index")
         .setAlign(Blockly.ALIGN_RIGHT)
-        .appendField(Blockly.Msg.Boumbot_led005);
+        .appendField(Blockly.Msg.Boumbot_led005)
+	    .appendField(new Blockly.FieldDropdown(["0", "1", "2", "3", "4", "5", "6", "7", "TOUT"]), "color");*/
+	//TODO : mettre un menu déroulant pour sélectionner la led
+      this.appendValueInput("Led")
+          .setCheck('Number')
+          .setAlign(Blockly.ALIGN_RIGHT)
+          .appendField(Blockly.Msg.Boumbot_led005);
     this.setInputsInline(false);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
@@ -313,7 +318,7 @@ Blockly.Blocks['Boumbot_eteind'] = {
         this.setHelpUrl('TBD');
         this.appendDummyInput("")
             .appendField(Blockly.Msg.Boumbot_eteind001)
-            .appendField(new Blockly.FieldImage("blocks/Boumbot/img/leds.png", Blockly.Arduino.imageSize, Blockly.Arduino.imageSize));
+            .appendField(new Blockly.FieldImage("blocks/Boumbot/img/leds.jpg", Blockly.Arduino.imageSize, Blockly.Arduino.imageSize));
         this.appendValueInput("NUM")
             .setCheck('Number')
             .setAlign(Blockly.ALIGN_RIGHT)
