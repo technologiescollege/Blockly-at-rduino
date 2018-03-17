@@ -163,6 +163,7 @@
 		<block type="base_define_bloc"></block>
 		<block type="biblio_include"></block>
 		<block type="base_code"></block>
+		<block type="base_comment"></block>
 		<block type="base_end"></block>
 		<category name="CAT_ARDUINO_IN" colour="#00979D">
 			<block type="inout_analog_read_validator"></block>

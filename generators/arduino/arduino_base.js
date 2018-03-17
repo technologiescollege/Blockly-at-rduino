@@ -90,6 +90,12 @@ Blockly.Arduino.base_code = function() {
   return code;
 };
 
+Blockly.Arduino.base_comment = function() {
+  // Text value.
+  var code = '// ' + this.getFieldValue('TEXT') + '\n';
+  return code;
+};
+
 Blockly.Arduino.base_end = function() {
   // Forever loop.
   var code = 'while(true);\n';

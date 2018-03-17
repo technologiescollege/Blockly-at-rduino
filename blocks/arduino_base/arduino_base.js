@@ -139,6 +139,19 @@ Blockly.Blocks.base_code = {
   }
 };
 
+Blockly.Blocks.base_comment = {
+  init: function() {
+    this.setHelpUrl(Blockly.Msg.ARDUINO_BASE_COMMENT_HELPURL);
+    this.setColour(Blockly.Blocks.arduino_base.HUE);
+    this.appendDummyInput()
+        .appendField(Blockly.Msg.ARDUINO_BASE_COMMENT_TEXT)
+        .appendField(new Blockly.FieldTextInput(''), 'TEXT');
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setTooltip(Blockly.Msg.TEXT_TEXT_TOOLTIP);
+  }
+};
+
 Blockly.Blocks.base_end = {
   init: function() {
     this.setHelpUrl('');
