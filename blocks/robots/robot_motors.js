@@ -259,8 +259,7 @@ Blockly.Blocks['l298n_motor_init'] = {
     this.appendDummyInput("")
         .setAlign(Blockly.ALIGN_RIGHT)
         .appendField(Blockly.Msg.ROBOTS_MOTORS_L298N_ID)
-        .appendField(
-            new Blockly.FieldInstance('L298_ID', 'L298_ID', false, false, false), 'L298_NAME');
+        .appendField(new Blockly.FieldInstance('L298_ID', 'L298_ID', false, false, false), 'L298_NAME');
 	this.appendDummyInput()
 		.appendField(Blockly.Msg.ROBOTS_MOTORS_L298N_MOTOR_PIN_EN)
         .appendField(new Blockly.FieldTextInput('0',  Blockly.Arduino.pinPWMValidator), 'PIN-EN')
@@ -296,8 +295,7 @@ Blockly.Blocks['l298n_motor'] = {
     this.appendDummyInput("")
         .setAlign(Blockly.ALIGN_RIGHT)
         .appendField(Blockly.Msg.ROBOTS_MOTORS_L298N_ID)
-        .appendField(
-            new Blockly.FieldInstance('L298_ID', 'L298_ID', false, false, false), 'L298_NAME');
+        .appendField(new Blockly.FieldInstance('L298_ID', 'L298_ID', false, false, false), 'L298_NAME');
     this.appendValueInput("SPEED", 'Number')
         .setCheck('Number')
         .setAlign(Blockly.ALIGN_RIGHT)

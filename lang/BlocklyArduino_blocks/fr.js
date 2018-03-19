@@ -1038,31 +1038,31 @@ Blockly.Msg.multifunction_segment_INPUT4 = "4ème chiffre";
 Blockly.Msg.multifunction_segment_TOOLTIP = "afficher 4 chifres sur les 7 segments";
 
 // Module RFID (Added April 13th 2017)
-Blockly.Msg.RFID_module_TEXT = "Initialiser le module RFID";
+Blockly.Msg.RFID_module_TEXT = "initialiser le module RFID";
 Blockly.Msg.RFID_module_INPUT1 = "SDA";
 Blockly.Msg.RFID_module_INPUT2 = "SCK";
 Blockly.Msg.RFID_module_INPUT3 = "MOSI";
 Blockly.Msg.RFID_module_INPUT4 = "MISO";
 Blockly.Msg.RFID_module_INPUT5 = "RST";
 Blockly.Msg.RFID_module_TOOLTIP = "Permet d'initialiser la connexion entre le module RFID et la carte arduino";
-Blockly.Msg.RFID_detection_TEXT = "Détection d'une carte ou d'un badge";
+Blockly.Msg.RFID_detection_TEXT = "détection d'une carte ou d'un badge";
 Blockly.Msg.RFID_detection_TOOLTIP = "Permet de savoir si oui ou non une carte (ou un badge) est présentée devant notre module RFID. Si oui, une connexion est ouverte entre les 2.";
-Blockly.Msg.RFID_reception_cle_TEXT = "Information envoyée par la carte ou le badge";
+Blockly.Msg.RFID_reception_cle_TEXT = "information envoyée par la carte ou le badge";
 Blockly.Msg.RFID_reception_cle_TOOLTIP = "Permet de savoir si oui ou non une information est envoyée à notre module RFID";
-Blockly.Msg.RFID_lecture_cle_TEXT = "Lecture de l'information envoyée par le tag RFID";
+Blockly.Msg.RFID_lecture_cle_TEXT = "lecture de l'information envoyée par le tag RFID";
 Blockly.Msg.RFID_lecture_cle_TOOLTIP = "Permet de lire l'information envoyée à notre module RFID";
-Blockly.Msg.RFID_fermeture_TEXT = "Fermeture de la connexion RFID ouverte";
+Blockly.Msg.RFID_fermeture_TEXT = "fermeture de la connexion RFID ouverte";
 Blockly.Msg.RFID_fermeture_TOOLTIP = "Permet de fermer la connexion ouverte entre le module RFID et la carte (ou le badge).";
-Blockly.Msg.RFID_valeur_cle_TEXT = "Valeur de l'information envoyée par le tag RFID";
+Blockly.Msg.RFID_valeur_cle_TEXT = "valeur de l'information envoyée par le tag RFID";
 Blockly.Msg.RFID_valeur_cle_TOOLTIP = "Permet de connaitre la valeur de l'information envoyée à notre module RFID";
-Blockly.Msg.RFID_code_acces_TEXT = "Initialiser le code d'accès";
-Blockly.Msg.RFID_code_acces_INPUT1 = "Valeur 1";
-Blockly.Msg.RFID_code_acces_INPUT2 = "Valeur 2";
-Blockly.Msg.RFID_code_acces_INPUT3 = "Valeur 3";
-Blockly.Msg.RFID_code_acces_INPUT4 = "Valeur 4";
-Blockly.Msg.RFID_code_acces_INPUT5 = "Valeur 5";
+Blockly.Msg.RFID_code_acces_TEXT = "initialiser le code d'accès";
+Blockly.Msg.RFID_code_acces_INPUT1 = "valeur 1";
+Blockly.Msg.RFID_code_acces_INPUT2 = "valeur 2";
+Blockly.Msg.RFID_code_acces_INPUT3 = "valeur 3";
+Blockly.Msg.RFID_code_acces_INPUT4 = "valeur 4";
+Blockly.Msg.RFID_code_acces_INPUT5 = "valeur 5";
 Blockly.Msg.RFID_code_acces_TOOLTIP = "Permet de définir le code d'accès autorisé";
-Blockly.Msg.RFID_acces_autorise_TEXT = "Code d'accès autorisé";
+Blockly.Msg.RFID_acces_autorise_TEXT = "code d'accès autorisé";
 Blockly.Msg.RFID_acces_autorise_TOOLTIP = "Permet de savoir si oui ou non le code d'accès reçu par le module RFID correspond à celui que l'on a défini.";
 
 //Added March 18th 2016

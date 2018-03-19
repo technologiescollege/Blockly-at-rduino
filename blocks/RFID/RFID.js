@@ -18,7 +18,7 @@ goog.provide('Blockly.Blocks.RFID');
 goog.require('Blockly.Blocks');
 goog.require('Blockly.Types');
 
-Blockly.Msg.RFID_HELPURL = ''
+Blockly.Msg.RFID_HELPURL = 'http://greich.fr'
 
 Blockly.Blocks.RFID_module = {
   init: function() {
@@ -118,7 +118,10 @@ Blockly.Blocks.RFID_code_acces = {
 	this.appendDummyInput()
 		.setAlign(Blockly.ALIGN_LEFT)
         .appendField(Blockly.Msg.RFID_code_acces_TEXT)
-        .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/RFID/badge_rfid.png', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize))
+        .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/RFID/badge_rfid.png', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize));
+    this.appendDummyInput("")
+        .setAlign(Blockly.ALIGN_RIGHT)
+        .appendField(new Blockly.FieldInstance('TAG_ID', 'TAG_ID', false, false, false), 'TAG_NAME');
 	this.appendValueInput("VAL1")
         .setAlign(Blockly.ALIGN_RIGHT)
         .appendField(Blockly.Msg.RFID_code_acces_INPUT1)
@@ -150,8 +153,28 @@ Blockly.Blocks.RFID_acces_autorise = {
     this.setColour(Blockly.Blocks.RFID.HUE);
     this.setHelpUrl(Blockly.Msg.RFID_HELPURL);
 	this.appendDummyInput()
-		.appendField(Blockly.Msg.RFID_acces_autorise_TEXT)
+        .appendField(new Blockly.FieldInstance('TAG_ID', 'TAG_ID', false, false, false), 'TAG_NAME')
+		.appendField(Blockly.Msg.RFID_acces_autorise_TEXT);
     this.setOutput(true, 'Boolean');
     this.setTooltip(Blockly.Msg.RFID_acces_autorise_TOOLTIP);
+  },
+  /**
+   * Called whenever anything on the workspace changes.
+   * It checks/warns if the selected instance has a config block.
+   * @this Blockly.Block
+   */
+  onchange: function() {
+    if (!this.workspace) return;  // Block has been deleted.
+    var instanceName = this.getFieldValue('TAG_NAME')
+    if (Blockly.Instances.isInstancePresent(instanceName, 'TAG_ID', this)) {
+      this.setWarningText(null);
+    } else {
+      // Set a warning to select a valid config block
+      this.setWarningText(
+        Blockly.Msg.COMPONENT_WARN.replace(
+            //'%1', Blockly.Msg.SERVO_COMPONENT).replace(
+            '%1', '').replace(
+                '%2', instanceName));
+    }
   }
 };
