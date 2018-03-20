@@ -306,7 +306,7 @@ html[dir="RTL"] #languageMenu {
 	width: 100%;
 }
 
-#toggle {
+#toggle_Code {
 	width: 25%;
 	position: fixed;
 	z-index: 1;
@@ -315,11 +315,11 @@ html[dir="RTL"] #languageMenu {
 	bottom: 100px;
 }
 
-html[dir="RTL"] #toggle {
+html[dir="RTL"] #toggle_Code {
     left: 25px;
 }
 
-#toggle pre {
+#toggle_Code pre {
 	height: 100%;
 }
 

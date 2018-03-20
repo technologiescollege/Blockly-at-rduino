@@ -138,7 +138,7 @@ BlocklyDuino.renderSupervisionContent = function() {
 };
 
 /**
- * Populate the the edit textarea "edit_code" with the pre arduino code
+ * Populate the edit textarea "edit_code" with the pre arduino code
  */
 BlocklyDuino.editArduinoCode = function() {
 	    $('#edit_code').val($('#pre_arduino').text());
@@ -495,9 +495,7 @@ BlocklyDuino.Redo = function () {
  */
 BlocklyDuino.bindFunctions = function() {
 		
-	$('#clearLink').on("click", BlocklyDuino.clearLocalStorage);
-
-	$('#btn_reset').on("click", BlocklyDuino.clearLocalStorage);
+	$('#clearLink', '#btn_reset').on("click", BlocklyDuino.clearLocalStorage);
 	
 	var clipboard = new Clipboard('#btn_CopyCode');
 	
@@ -513,6 +511,8 @@ BlocklyDuino.bindFunctions = function() {
 		$('#btn_block_capture').on("click", BlocklyDuino.workspace_capture_IDE);
 		$('#btn_saveXML, #menu_12').on("click", BlocklyDuino.saveXmlFile_IDE);
 		$('#load').on("change", BlocklyDuino.load_IDE);
+		$('#btn_preview').on("click", BlocklyDuino.DialogCode);		
+		$('#btn_validCode').on("click", BlocklyDuino.valideEditedCode_IDE);
 		$('#btn_CopyCode').remove();
 		$('#btn_verify_local').remove();
 		$('#btn_plugin_codebender').remove();
@@ -528,7 +528,14 @@ BlocklyDuino.bindFunctions = function() {
 			$('#btn_saveArduino').on("click", BlocklyDuino.saveArduinoFile);
 			$('#btn_block_capture').on("click", BlocklyDuino.workspace_capture);
 			$('#btn_saveXML, #menu_12').on("click", BlocklyDuino.saveXmlFile);
-			$('#load').on("change", BlocklyDuino.load);
+			$('#btn_validCode').on("click", BlocklyDuino.valideEditedCode);
+			$('#load').on("change", BlocklyDuino.load);	
+			$('#btn_preview').on("click", function() {
+				$("#toggle_Code").toggle("blind");
+			});
+			$('#pre_previewArduino').on("click", function() {
+				$("#toggle_Code").toggle("blind");
+			});
 		}
 		
 	$('#toggle-Colors').on("change", BlocklyDuino.toggleTextColors);
@@ -608,7 +615,6 @@ BlocklyDuino.bindFunctions = function() {
 	$('#btn_config').on("click", BlocklyDuino.openConfigToolbox);
 
 	$('#btn_edit_code').on("click", BlocklyDuino.editArduinoCode);
-	$('#btn_validCode').on("click", BlocklyDuino.valideEditedCode);
 
 	$('#select_all').on("click", BlocklyDuino.checkAll);
 	$('#btn_valid_config').on("click", BlocklyDuino.changeToolbox);
@@ -643,13 +649,6 @@ BlocklyDuino.bindFunctions = function() {
 	
 	$('#btn_card_picture_mini').on("click", BlocklyDuino.cardPicture_mini);
 	$('#btn_card_picture_maxi').on("click", BlocklyDuino.cardPicture_maxi);
-	
-	$('#btn_preview').on("click", function() {
-		$("#toggle").toggle("blind");
-	});
-	$('#pre_previewArduino').on("click", function() {
-		$("#toggle").toggle("blind");
-	});
 
 	$('#btn_example, #menu_131').on("click", BlocklyDuino.buildExamples);
 
@@ -1398,7 +1397,9 @@ BlocklyDuino.openWiringDialog = function() {
 	var iframe = $("#wiring_dialog > iframe");
 	var dialog = $("#wiring_dialog").dialog({
 		autoOpen: false,
-		resizable: true,      
+		resizable: true,
+		height: 600,
+		width: 800,
 		show: {
 			effect: "slide",
 			duration: 1000
@@ -1406,16 +1407,86 @@ BlocklyDuino.openWiringDialog = function() {
 		hide: {
 			effect: "drop",
 			duration: 1000
-		  },
-		width: "auto",
-		height: "auto"
+		  }
 	});
 	iframe.attr({
-		width: "640",
-		height: "480",
+		width: "100%",
+		height: "100%",
 		src: "https://fr.robom.ru"
 	});
 	if (!dialog.dialog("isOpen")) {
-		dialog.dialog("option", "Blockly@rduino - câblage", title).dialog("open");
+		dialog.dialog("open");
 	}
 };
+
+BlocklyDuino.DialogCode = function() {
+	var dialogCode = $("#pre_previewArduino").dialog({
+		//$('#arduino_IDE_code').html(prettyPrintOne($('#pre_arduino').html(), 'cpp'));
+		autoOpen: false,
+		resizable: true,
+		height: 600,
+		width: 400,
+		show: {
+			effect: "drop",
+			duration: 1000
+		},
+		hide: {
+			effect: "drop",
+			duration: 1000
+		},
+		position: {
+			my: "right top",
+			at: "right top",
+			of: "#content_blocks"
+		},
+		buttons: [
+			{
+				text: 'edit',
+				icons: {
+					primary: "ui-icon-cancel"
+					},
+				click: BlocklyDuino.DialogCode_edit,
+			},
+			{
+				text: 'edit_save',
+				icons: {
+					primary: "ui-icon-cancel"
+					},
+				click: BlocklyDuino.DialogCode_edit_save,
+			},
+			{
+				text: "copy-paste",
+				click: BlocklyDuino.ArduinoIDEClick_IDE,
+				icon: {
+					primary: "btn btn_ver btn-danger btn-block"
+					}, 
+				classes: {
+					"ui-button": "modal-footer"
+				}
+			},
+			{
+				text: 'save',
+				icons: {
+					primary: "ui-icon-cancel"
+					},
+				click: BlocklyDuino.saveArduinoFile_IDE,
+			},
+			{
+				text: 'upload',
+				icons: {
+					primary: "ui-icon-cancel"
+					},
+				click: BlocklyDuino.uploadClick_IDE,
+			}
+		]
+	});
+	if (!dialogCode.dialog("isOpen")) {
+		dialogCode.dialog("open").dialog( "option", "buttons" );
+	};      
+};
+
+BlocklyDuino.DialogCode_edit = function() {
+	$('#edit_code').val($('#pre_previewArduino').text());	
+	//$('#pre_previewArduino').addClass('hidden');
+	
+}

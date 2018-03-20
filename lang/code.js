@@ -291,6 +291,8 @@ Code.initLanguage = function() {
   $('#btn_RGB').attr('title', MSG['span_RGB']);
   $('#btn_convert').attr('title', MSG['span_convert']);
   $('#btn_wiring').attr('title', MSG['span_wiring']);
+  $('#wiring_dialog').attr('title', MSG['span_wiring']);
+  $('#pre_previewArduino').attr('title', MSG['a_arduino']);
   $('#btn_doc').attr('title', MSG['span_doc']);  
   $('#btn_tuto').attr('title', MSG['span_tuto']);
   $('#btn_videos').attr('title', MSG['span_videos']);

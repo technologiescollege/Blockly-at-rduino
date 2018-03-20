@@ -197,8 +197,8 @@
 		<button id="btn_size" class="btn btn-default">
 			<span id="icon_btn_size" class="glyphicon"> </span>
 		</button>
-		<div id="toggle" class="modal-content" style="display: none;">
-			<pre id="pre_previewArduino"></pre>			
+		<div id="toggle_Code" class="modal-content" style="display: none;">
+			<pre id="pre_previewArduino" title="Code"></pre>			
 			<button id="btn_CopyCode" class="btn btn-warning" data-clipboard-action="copy" data-clipboard-target="#pre_previewArduino">
 				<span class="glyphicon glyphicon-duplicate"> </span>
 			</button>
@@ -432,7 +432,7 @@
 		  <br />	  
 		  <b><div align="center"><a href="http://framaforms.org/blocklyrduino-utilisateurs-1490560876" target='blank'><font size="12"><span id="span_forms_about" style="font-style: bold;"> </span></font></a></div></b>
 		  <br />
-		  <br /><i>version 17-03-2018 - v2.7 "IDE compatible"</i>
+		  <br /><i>version 20-03-2018 - v2.7 "IDE compatible"</i>
 		  <br />
 		  <br />
 		  <!--div align="center" id="paypal_about">
@@ -735,9 +735,11 @@
 		</div>
 	</div>
 </div>
-<div id="wiring_dialog">
-	<iframe frameborder="0" marginwidth="0" marginheight="0">
-	</iframe>
-</div>
+	<!--only for IDE mode -->
+	<div id="wiring_dialog">
+		<iframe frameborder="0" marginwidth="0" marginheight="0">
+		</iframe>
+	</div>
+	<div id="arduino_IDE_code"> </div>
 </body>
 </html>
