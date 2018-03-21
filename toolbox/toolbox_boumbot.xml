@@ -44,11 +44,11 @@
 	</category>
 	<category name="CAT_MATH" colour="#5CB712">
 		<block type="math_number"></block>
-		<block type="inout_angle_maths"></block>
+		<!--<block type="inout_angle_maths"></block>-->
 		<block type="math_arithmetic"></block>
-		<block type="math_single"></block>
-		<block type="math_trig"></block>
-		<block type="math_constant"></block>
+		<!--<block type="math_single"></block>-->
+		<!--<block type="math_trig"></block>-->
+		<!--<block type="math_constant"></block>-->
 		<block type="math_number_property"></block>
 		<block type="math_change">
 			<value name="DELTA">
@@ -57,10 +57,10 @@
 				</shadow>
 			</value>
 		</block>
-		<block type="math_round"></block>
-		<block type="math_on_list"></block>
-		<block type="math_modulo"></block>
-		<block type="math_constrain">
+		<!--<block type="math_round"></block>-->
+		<!--<block type="math_on_list"></block>-->
+		<!--<block type="math_modulo"></block>-->
+		<!--<block type="math_constrain">
 			<value name="LOW">
 				<shadow type="math_number">
 					<field name="NUM">1</field>
@@ -71,7 +71,7 @@
 					<field name="NUM">100</field>
 				</shadow>
 			</value>
-		</block>
+		</block>-->
 		<block type="math_random_int">
 			<value name="FROM">
 				<shadow type="math_number">
@@ -84,9 +84,9 @@
 				</shadow>
 			</value>
 		</block>
-		<block type="math_random_float"></block>
+		<!--<block type="math_random_float"></block>-->
 	</category>
-	<category name="CAT_ARRAY" colour="#58B5DC">
+	<!--<category name="CAT_ARRAY" colour="#58B5DC">
 		<block type="array_create_with"></block>
 		<block type="array_getIndex">
 			<value name="AT">
@@ -95,8 +95,8 @@
 				</block>
 			</value>
 		</block>
-	</category>
-	<category name="CAT_TEXT" colour="#8A55D7">
+	</category>-->
+	<!--<category name="CAT_TEXT" colour="#8A55D7">
 		<block type="text"></block>
 		<block type="text_char"></block>
 		<block type="text_join"></block>
@@ -107,7 +107,7 @@
 		</block>
 		<block type="text_length"></block>
 		<block type="text_isEmpty"></block>
-	</category>
+	</category>-->
 	<category name="CAT_VARIABLES" colour="#EE7D16">
         <block type="math_change"></block>
 		<block type="variables_set"></block>
@@ -117,16 +117,16 @@
 	<sep></sep>
 
 	<category name="CAT_ARDUINO" colour="#00979D">
-		<block type="base_begin"></block>
+		<!--<block type="base_begin"></block>-->
 		<block type="base_setup"></block>
 		<block type="base_loop"></block>
 		<block type="base_setup_loop"></block>
-		<block type="base_define"></block>
-		<block type="base_define_bloc"></block>
-		<block type="biblio_include"></block>
-		<block type="base_code"></block>
-		<block type="base_end"></block>
-		<category name="CAT_ARDUINO_IN" colour="#00979D">
+		<!--<block type="base_define"></block>-->
+		<!--<block type="base_define_bloc"></block>-->
+		<!--<block type="biblio_include"></block>-->
+		<!--<block type="base_code"></block>-->
+		<!--<block type="base_end"></block>-->
+		<!--<category name="CAT_ARDUINO_IN" colour="#00979D">
 			<block type="inout_analog_read_validator"></block>
 			<block type="inout_digital_read_validator"></block>
 			<block type="inout_analog_read"></block>
@@ -136,9 +136,9 @@
 			<block type="base_toggle"></block>
 			<block type="inout_angle"></block>
 			<block type="inout_button_wait_il"></block>
-			<block type="inout_button_wait_iph"></block>
+			<block type="inout_button_wait_iph"></block>-->
 			<!-- @pbra 20160607 -->
-			<block type="inout_digital_mode">
+			<!--<block type="inout_digital_mode">
 				<value name="PIN">
 					<shadow type="math_number">
 						<field name="NUM">0</field>
@@ -147,9 +147,9 @@
 				<value name="PINMODE">
 					<shadow type="pinmode"></shadow>
 				</value>
-			</block>
+			</block>-->
 			<!-- @pbra 20160607 END-->
-			<block type="var_random">
+			<!--<block type="var_random">
 				<value name="rand_min">
 					<shadow type="math_number">
 						<field name="NUM">0</field>
@@ -187,8 +187,8 @@
 			</block>
 			<block type="inout_attachInterrupt"></block>
 			<block type="inout_detachInterrupt"></block>
-		</category>
-		<category name="CAT_ARDUINO_OUT" colour="#00979D">
+		</category>-->
+		<!--<category name="CAT_ARDUINO_OUT" colour="#00979D">
 			<block type="inout_buildin_led"></block>
 			<block type="inout_digital_write_validator"></block>
 			<block type="inout_PWM_write_validator">
@@ -237,12 +237,12 @@
 				</value>
 			</block>
 			<block type="notone"></block>
-		</category>
+		</category>-->
 		<category name="CAT_ARDUINO_TIME" colour="#00979D">
 			<block type="millis"></block>
 			<block type="millis_sec"></block>
-			<block type="inout_pulsein"></block>
-			<block type="inout_pulsein_timeout"></block>
+			<!--<block type="inout_pulsein"></block>-->
+			<!--<block type="inout_pulsein_timeout"></block>-->
 			<block type="base_delay">
 				<value name="DELAY_TIME">
 					<shadow type="math_number">
@@ -260,14 +260,14 @@
 			<block type="tempo_no_delay"></block>
 		</category>
 		<category name="CAT_ARDUINO_CONVERSION" colour="#00979D">
-			<block type="conversion_tochar"></block>
+			<!--<block type="conversion_tochar"></block>
 			<block type="conversion_tobyte"></block>
 			<block type="conversion_toint"></block>
 			<block type="conversion_tofloat"></block>
-			<block type="conversion_toString"></block>
+			<block type="conversion_toString"></block>-->
 			<block type="conversion_map"></block>
 		</category>
-		<category name="CAT_ARDUINO_COMM_SERIAL" colour="#00979D">
+		<!--<category name="CAT_ARDUINO_COMM_SERIAL" colour="#00979D">
 			<block type="serial_init"></block>
 			<block type="serial_flush"></block>
 			<block type="serial_write"></block>
@@ -318,8 +318,8 @@
 
 				</value>
 			</block>
-		</category>
-		<category name="CAT_ARDUINO_COMM_SOFTSERIAL" colour="#00979D">
+		</category>-->
+		<!--<category name="CAT_ARDUINO_COMM_SOFTSERIAL" colour="#00979D">
 			<block type="soft_init"></block>
 			<block type="soft_flush"></block>
 			<block type="soft_print"></block>
@@ -327,8 +327,8 @@
 			<block type="soft_available"></block>
 			<block type="soft_read"></block>
 			<block type="serial_line"></block>
-		</category>
-		<category name="CAT_STORAGE_EEPROM" colour="#00979D">
+		</category>-->
+		<!--<category name="CAT_STORAGE_EEPROM" colour="#00979D">
 			<block type="storage_sd_write">
 			</block>
 			<block type="storage_eeprom_write_long">
@@ -339,7 +339,7 @@
 			</block>
 			<block type="storage_eeprom_read_byte">
 			</block>
-		</category>
+		</category>-->
 		<sep></sep>
 	</category>
 
