@@ -323,6 +323,7 @@ Blockly.Blocks['Boumbot_eteind'] = {
             .setCheck('Number')
             .setAlign(Blockly.ALIGN_RIGHT)
             .appendField(Blockly.Msg.Boumbot_eteind002);
+		//TODO : mettre un menu déroulant pour sélectionner 1 led, ou toutes les leds
         this.setInputsInline(false);
         this.setPreviousStatement(true, null);
         this.setNextStatement(true, null);

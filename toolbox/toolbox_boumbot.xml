@@ -39,7 +39,7 @@
 				</shadow>
 			</value>
 		</block>
-		<block type="controls_forEach"></block>
+		<!--<block type="controls_forEach"></block> bug d'affichage et n'existe pas sur les toolbox arduino-->
 		<block type="controls_flow_statements"></block>
 	</category>
 	<category name="CAT_MATH" colour="#5CB712">
@@ -257,7 +257,7 @@
 					</shadow>
 				</value>
 			</block>
-			<block type="tempo_no_delay"></block>
+			<!--<block type="tempo_no_delay"></block>-->
 		</category>
 		<category name="CAT_ARDUINO_CONVERSION" colour="#00979D">
 			<!--<block type="conversion_tochar"></block>
@@ -267,9 +267,9 @@
 			<block type="conversion_toString"></block>-->
 			<block type="conversion_map"></block>
 		</category>
-		<!--<category name="CAT_ARDUINO_COMM_SERIAL" colour="#00979D">
+		<category name="CAT_ARDUINO_COMM_SERIAL" colour="#00979D">
 			<block type="serial_init"></block>
-			<block type="serial_flush"></block>
+			<!--<block type="serial_flush"></block>-->
 			<block type="serial_write"></block>
 			<block type="serial_printfor"></block>
 			<block type="serial_print">
@@ -369,8 +369,20 @@
 			<block type="Boumbot_capteur_droit"></block>
 		</category>
 		<category name="CAT_BOUMBOT_OUT" colour="#660066">
-			<block type="Boumbot_son"></block>
-			<block type="Boumbot_melody"></block>
+			<block type="Boumbot_son">
+				<value name="NUM">
+					<shadow type="math_number">
+						<field name="NUM">0</field>
+					</shadow>
+				</value>
+			</block>
+			<block type="Boumbot_melody">
+				<value name="NUM">
+					<shadow type="math_number">
+						<field name="NUM">0</field>
+					</shadow>
+				</value>
+			</block>
 			<block type="Boumbot_led">
 				<value name="Red">
 					<shadow type="math_number">
@@ -394,7 +406,13 @@
 				</value>
 			</block>
 
-			<block type="Boumbot_eteind"></block>
+			<block type="Boumbot_eteind">
+				<value name="NUM">
+					<shadow type="math_number">
+						<field name="NUM">0</field>
+					</shadow>
+				</value>
+			</block>
 		</category>
 	</category>
 
