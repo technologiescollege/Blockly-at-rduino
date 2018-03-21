@@ -6,7 +6,7 @@ goog.provide('Blockly.Arduino.Boumbot');
 goog.require('Blockly.Arduino');
 
 Blockly.Arduino.Boumbot_initialisation = function() {
-Blockly.Arduino.definitions_['define_boumbot'] = "//declaration des variables\n"+
+Blockly.Arduino.variables_['define_boumbot'] = "//declaration des variables\n"+
 												 "BoumBot_v2 boumbot;\n";
   Blockly.Arduino.includes_['define_boumbot'] = '#include <BoumBot_v2.h>';	//includes pour le bombot
   Blockly.Arduino.setups_['Boumbot_init'] = 'boumbot.initialise();'; //code à insérer dans le setup Arduino
