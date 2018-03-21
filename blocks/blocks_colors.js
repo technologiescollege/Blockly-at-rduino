@@ -70,4 +70,4 @@ Blockly.Blocks.Zumo_motors.HUE = "#00138B";
 Blockly.Blocks.Zumo_sensors.HUE = "#00138B";
 
 Blockly.Blocks.Boumbot.HUE = "#0099FF";
-Blockly.Blocks.Boumbot.HUE = "#330033";
+Blockly.Blocks.Boumbot.HUE = "#660066";
