@@ -510,7 +510,7 @@ BlocklyDuino.bindFunctions = function() {
 		$('#btn_saveArduino').on("click", BlocklyDuino.saveArduinoFile_IDE);
 		$('#btn_block_capture').on("click", BlocklyDuino.workspace_capture_IDE);
 		$('#btn_saveXML, #menu_12').on("click", BlocklyDuino.saveXmlFile_IDE);
-		$('#load').on("change", BlocklyDuino.load_IDE);
+		$('#btn_fakeload, #menu_11').on("click", BlocklyDuino.load_IDE);
 		$('#btn_preview').on("click", BlocklyDuino.DialogCode);		
 		$('#btn_validCode').on("click", BlocklyDuino.valideEditedCode_IDE);
 		$('#btn_CopyCode').remove();
@@ -519,6 +519,7 @@ BlocklyDuino.bindFunctions = function() {
 		$('#local_debug').remove();
 		$('#debug_arduino').remove();
 		$('#tab_supervision').remove();
+		$('#tab_arduino').remove();
 		$('#pre_arduino').css({'height' : '95%'});
 		document.getElementById("arduinoCodebender_toggles").style.visibility="hidden";
 		} else {
@@ -529,12 +530,15 @@ BlocklyDuino.bindFunctions = function() {
 			$('#btn_block_capture').on("click", BlocklyDuino.workspace_capture);
 			$('#btn_saveXML, #menu_12').on("click", BlocklyDuino.saveXmlFile);
 			$('#btn_validCode').on("click", BlocklyDuino.valideEditedCode);
-			$('#load').on("change", BlocklyDuino.load);	
+			$('#load').on("change", BlocklyDuino.load);
+			$('#btn_fakeload, #menu_11').on("click", function() {
+				$('#load').click();
+			});
 			$('#btn_preview').on("click", function() {
-				$("#toggle_Code").toggle("blind");
+				$("#toggle_code").toggle("blind");
 			});
 			$('#pre_previewArduino').on("click", function() {
-				$("#toggle_Code").toggle("blind");
+				$("#toggle_code").toggle("blind");
 			});
 		}
 		
@@ -593,10 +597,6 @@ BlocklyDuino.bindFunctions = function() {
 		e.preventDefault();
 		document.getElementById("toolboxes").options.selectedIndex = 6;
 		BlocklyDuino.changeToolboxDefinition();
-	});
-	
-	$('#btn_fakeload, #menu_11').on("click", function() {
-		$('#load').click();
 	});
 
 	$('#menuPanelBlockly li[id^=tab_]').on("click", function() {
@@ -1441,28 +1441,11 @@ BlocklyDuino.DialogCode = function() {
 		},
 		buttons: [
 			{
-				text: 'edit',
-				icons: {
-					primary: "ui-icon-cancel"
-					},
-				click: BlocklyDuino.DialogCode_edit,
-			},
-			{
-				text: 'edit_save',
-				icons: {
-					primary: "ui-icon-cancel"
-					},
-				click: BlocklyDuino.DialogCode_edit_save,
-			},
-			{
 				text: "copy-paste",
-				click: BlocklyDuino.ArduinoIDEClick_IDE,
 				icon: {
 					primary: "btn btn_ver btn-danger btn-block"
-					}, 
-				classes: {
-					"ui-button": "modal-footer"
-				}
+					},
+				click: BlocklyDuino.ArduinoIDEClick_IDE,
 			},
 			{
 				text: 'save',

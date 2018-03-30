@@ -128,7 +128,7 @@ BlocklyDuino.ArduinoIDEClick_IDE = function() {
 	if (!window.BlocklyArduinoServer) {
 		BlocklyArduinoServer = false;
 		}
-	var code = $('#pre_arduino').text();
+	var code = $('#pre_previewArduino').text();
 	if ((typeof BlocklyArduinoServer) != 'undefined' && BlocklyArduinoServer){
         BlocklyArduinoServer.pasteCode(code);
     }	
@@ -138,20 +138,10 @@ BlocklyDuino.uploadClick_IDE = function() {
 	if (!window.BlocklyArduinoServer) {
 		BlocklyArduinoServer = false;
 		}
-	var code = $('#pre_arduino').text();
+	var code = $('#pre_previewArduino').text();
 	if ((typeof BlocklyArduinoServer) != 'undefined' && BlocklyArduinoServer){
         BlocklyArduinoServer.uploadCode(code);
     }
-};
-
-BlocklyDuino.verify_local_Click_IDE = function() {
-	if (!window.BlocklyArduinoServer) {
-		BlocklyArduinoServer = false;
-		}
-	var code = $('#pre_arduino').text();
-	if ((typeof BlocklyArduinoServer) != 'undefined' && BlocklyArduinoServer){
-        BlocklyArduinoServer.verifyCode(code);
-    }	
 };
 
 
