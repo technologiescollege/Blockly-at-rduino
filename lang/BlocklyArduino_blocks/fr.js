@@ -267,6 +267,10 @@ Blockly.Msg.CAT_ACTIONNEURS_DFPLAYER = " - audio";
 Blockly.Msg.CAT_POLOLU = "Pololu"; //added 24/01/2018 
 Blockly.Msg.CAT_POLOLU_QTR_1RC = " - QTR-1RC";
 
+Blockly.Msg.CAT_WII = "Nintendo Wiimote"; //added (3/04)/2018
+
+//**********************************Dropdown menus messages***********************************************
+
 Blockly.Msg.FIELDDROPDOWN = [["1 (état haut)", "HIGH"], ["0 (état bas)", "LOW"]];
 Blockly.Msg.FIELDDROPDOWN_ONOFF = [["allumer", "ON"], ["éteindre", "OFF"]];
 Blockly.Msg.FIELDDROPDOWN_0_1 = [["HAUT", "HIGH"], ["BAS", "LOW"]];
@@ -275,6 +279,10 @@ Blockly.Msg.colonne = [["1", "1"],["2", "2"],["3", "3"],["4", "4"],["5", "5"],["
 Blockly.Msg.FIELDDROPDOWN_av_ar = [["avant", "HIGH"], ["arrière", "LOW"]];
 Blockly.Msg.INOUT_HIGH_LEVEL = "1(état haut)";
 Blockly.Msg.INOUT_LOW_LEVEL = "0(état bas)";
+Blockly.Msg.WII_JOY_DROPDOWN = [["horizontale", "H"], ["verticale", "V"]];
+Blockly.Msg.WII_ACCEL_DROPDOWN = [["X", "X"], ["Y", "Y"], ["Z", "Z"]];
+Blockly.Msg.WII_ACCEL_BUTTON = [["C", "C"], ["Z", "Z"]];
+Blockly.Msg.WII_ACCEL_BUTTON_STATE = [["pressé", "PRESSED"], ["relâché", "RELEASED"]];
 
 //**********************************FieldInstance messages***********************************************
 Blockly.Msg.COMPONENT_WARN = "Un bloc de configuration %1 avec le même nom '%2' d'instance doit être ajouté pour utiliser ce bloc !";
@@ -290,7 +298,7 @@ Blockly.Msg.SHARP_IR_COMPONENT = 'télémètre';
 //**********************************blocks***********************************************
 //**********************************blocks***********************************************
 
-/// Ardublockly instances
+// Ardublockly instances
 Blockly.Msg.NEW_INSTANCE = 'nouvelle instance';
 Blockly.Msg.RENAME_INSTANCE = 'renommer cette instance';
 Blockly.Msg.NEW_INSTANCE_TITLE = "nouveau nom d'instance:";
@@ -980,6 +988,8 @@ Blockly.Msg.LCD_SHIELD_PRINT_TEXT = "écran LCD Keypad Shield";
 Blockly.Msg.LCD_SHIELD_PRINT_INPUT1 = "écrire sur la ligne 1";
 Blockly.Msg.LCD_SHIELD_PRINT_INPUT2 = "écrire sur la ligne 2";
 Blockly.Msg.LCD_SHIELD_PRINT_INPUT3 = "pendant (ms)";
+Blockly.Msg.LCD_SHIELD_PRINT_INPUT4 = "appui sur le bouton";
+Blockly.Msg.LCD_SHIELD_BTN_CHOICE = [["haut (up)", "UP"], ["bas (down)", "DOWN"], ["gauche (left)", "LEFT"], ["droite (right)", "RIGHT"], ["sélection (select)", "SELECT"]];
 Blockly.Msg.LCD_SHIELD_PRINT_TOOLTIP = "écris le texte sur un écran LCD série de 2 lignes sur 16 caractères";
 
 //SHIELD ADAFRUIT
@@ -2014,3 +2024,18 @@ Blockly.Msg.QTR_1RC_READ_INPUT1 = "valeur du capteur QTR-1RC";
 Blockly.Msg.QTR_1RC_READ_INPUT2 = "pour nom";
 Blockly.Msg.QTR_1RC_READ_TOOLTIP = "Lecture de la valeur du capteur QTR-1RC.";
 Blockly.Msg.QTR_1RC_COMPONENT = "QTR-1RC";
+
+
+//********************Nintendo Wiimote nunchuck*************//
+Blockly.Msg.WII_JOYSTICK = "la valeur du joystick";
+Blockly.Msg.WII_JOYSTICK_AXE = "sur la direction";
+Blockly.Msg.WII_JOYSTICK_TOOLTIP = "les valeurs sont comprises entre 0 et 255";
+Blockly.Msg.WII_JOYSTICK_HELPURL = "http://www.pobot.org/Wii-Nunchuck-Arduino-controle-servomoteurs.html";
+Blockly.Msg.WII_ACCEL1 = "l'accélération";
+Blockly.Msg.WII_ACCEL2 = "autour de l'axe";
+Blockly.Msg.WII_ACCEL_TOOLTIP = "valeur des accélérations dans les 3 dimensions";
+Blockly.Msg.WII_BUTTON1 = "le bouton";
+Blockly.Msg.WII_BUTTON2 = "est";
+Blockly.Msg.WII_BUTTON_TOOLTIP = "test booléen inclus";
+Blockly.Msg.WII_UPDATE = "mise à jour des valeurs de la nunchuck";
+Blockly.Msg.WII_UPDATE_TOOLTIP = "I2C : borne D sur Data (SDA) et C sur Clock (SDC),\nexemple A4 & A5 pour une Uno";

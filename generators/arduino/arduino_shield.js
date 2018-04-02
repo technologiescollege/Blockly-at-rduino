@@ -20,9 +20,9 @@ Blockly.Arduino.LCD_Keypad_Shield_DFR_09 = function() {
   /*if(text.length>16||text2.length>16){
       alert("string is too long");
   }*/
-  Blockly.Arduino.includes_['define_LiquidCrystal'] = '#include <LiquidCrystal.h>\n';
+  Blockly.Arduino.includes_['define_LiquidCrystal'] = '#include <LiquidCrystal.h>';
   
-  Blockly.Arduino.definitions_['var_LiquidCrystal lcd'] = 'LiquidCrystal lcd(8, 9, 4, 5, 6, 7);\n';
+  Blockly.Arduino.definitions_['var_LiquidCrystal lcd'] = 'LiquidCrystal lcd(8, 9, 4, 5, 6, 7);';
 
    Blockly.Arduino.setups_['setup_lcd'] = 'lcd.begin(16, 2);\n';
   var code = 'lcd.clear(); \n';
@@ -40,8 +40,8 @@ Blockly.Arduino.LCD_Keypad_Shield_DFR_09_lc = function(block) {
   var value_num_colonne = Blockly.Arduino.valueToCode(this, 'colonne', Blockly.Arduino.ORDER_ATOMIC)-1;
   var text4 = Blockly.Arduino.valueToCode(this, 'TEXT4', Blockly.Arduino.ORDER_UNARY_POSTFIX) || '\'\'';
   
-  Blockly.Arduino.includes_['define_LiquidCrystal'] = '#include <LiquidCrystal.h>\n';
-  Blockly.Arduino.definitions_['var_LiquidCrystal lcd'] = 'LiquidCrystal lcd(8, 9, 4, 5, 6, 7);\n';
+  Blockly.Arduino.includes_['define_LiquidCrystal'] = '#include <LiquidCrystal.h>';
+  Blockly.Arduino.definitions_['var_LiquidCrystal lcd'] = 'LiquidCrystal lcd(8, 9, 4, 5, 6, 7);';
   Blockly.Arduino.setups_['setup_lcd'] = 'lcd.begin(16, 2);\n';
   
   var code = 'lcd.setCursor('+value_num_colonne+','+value_num_ligne+'); \n';
@@ -52,12 +52,23 @@ Blockly.Arduino.LCD_Keypad_Shield_DFR_09_lc = function(block) {
 
 Blockly.Arduino.LCD_Keypad_Shield_DFR_09_RAZ = function(block) {
   
-  Blockly.Arduino.includes_['define_LiquidCrystal'] = '#include <LiquidCrystal.h>\n';
-  Blockly.Arduino.definitions_['var_LiquidCrystal lcd'] = 'LiquidCrystal lcd(8, 9, 4, 5, 6, 7);\n';
+  Blockly.Arduino.includes_['define_LiquidCrystal'] = '#include <LiquidCrystal.h>';
+  Blockly.Arduino.definitions_['var_LiquidCrystal lcd'] = 'LiquidCrystal lcd(8, 9, 4, 5, 6, 7);';
   Blockly.Arduino.setups_['setup_lcd'] = 'lcd.begin(16, 2);\n';
   
   var code = 'lcd.clear(); \n';
   return code;
+};
+
+Blockly.Arduino.LCD_Keypad_Shield_DFR_09_Buttons = function(block) {
+	var dropdown_btn = this.getFieldValue('BTN');
+	var code;
+	if (dropdown_btn == 'RIGHT') code = "(bool)((analogRead(0) > 0) && (analogRead(0) < 50))";
+	if (dropdown_btn == 'UP') code = "(bool)((analogRead(0) > 50) && (analogRead(0) < 200))";
+	if (dropdown_btn == 'DOWN') code = "(bool)((analogRead(0) > 200) && (analogRead(0) < 400))";
+	if (dropdown_btn == 'LEFT') code = "(bool)((analogRead(0) > 400) && (analogRead(0) < 600))";
+	if (dropdown_btn == 'SELECT') code = "(bool)((analogRead(0) > 600) && (analogRead(0) < 900))";
+	return [code, Blockly.Arduino.ORDER_ATOMIC];
 };
 
 Blockly.Arduino.Bluetooth_Shield_duinoFun = function() {

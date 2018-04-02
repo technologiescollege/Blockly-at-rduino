@@ -518,8 +518,8 @@
 					</shadow>
 				</value>
 			</block>
-			<block type="LCD_Keypad_Shield_DFR_09_RAZ">
-			</block>
+			<block type="LCD_Keypad_Shield_DFR_09_RAZ"></block>
+			<block type="LCD_Keypad_Shield_DFR_09_Buttons"></block>
 		</category>
 		<category name="CAT_GROVE_LCD" colour="#8ec31f">
 			<block type="grove_serial_lcd_power"></block>
@@ -922,6 +922,12 @@
 			</value>
 		</block>
 	</category>
+	<category name="CAT_WII" colour="#E60012">
+		<block type="wiichuck_joy"></block>
+		<block type="wiichuck_accel"></block>
+		<block type="wiichuck_button"></block>
+		<block type="wiichuck_update"></block>
+	</category>
 	<category name="CAT_DFRobot" colour="#F39800">
 		<category name="CAT_ROMEO_3" colour="#F39800">
 			<block type="romeo_M1_sens"></block>
@@ -1019,8 +1025,8 @@
 					</shadow>
 				</value>
 			</block>
-			<block type="LCD_Keypad_Shield_DFR_09_RAZ">
-			</block>
+			<block type="LCD_Keypad_Shield_DFR_09_RAZ"></block>
+			<block type="LCD_Keypad_Shield_DFR_09_Buttons"></block>
 		</category>
 		<sep></sep>
 	</category>

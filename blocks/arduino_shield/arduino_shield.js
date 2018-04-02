@@ -11,7 +11,7 @@ goog.provide('Blockly.Blocks.arduino_shield');
 goog.require('Blockly.Blocks');
 goog.require('Blockly.Types');
 
-Blockly.Blocks['LCD_Keypad_Shield_DFR_09'] = {
+Blockly.Blocks.LCD_Keypad_Shield_DFR_09 = {
   init: function() {
     this.setColour(Blockly.Blocks.arduino_shield.HUE);
 	this.setHelpUrl(Blockly.Msg.LCD_SHIELD_PRINT_HELPURL);
@@ -42,8 +42,7 @@ Blockly.Blocks.LCD_Keypad_Shield_DFR_09_lc = {
 	this.setHelpUrl(Blockly.Msg.LCD_SHIELD_PRINT_HELPURL);
     this.appendDummyInput()
         .appendField(Blockly.Msg.LCD_SHIELD_PRINT_TEXT)
-        .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/arduino_shield/400px-LCD_Keypad_Shield.jpg', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize))
-    
+        .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/arduino_shield/400px-LCD_Keypad_Shield.jpg', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize));
 	this.appendValueInput("ligne")
         .setCheck("Number")
 		.setAlign(Blockly.ALIGN_RIGHT)
@@ -75,6 +74,22 @@ Blockly.Blocks.LCD_Keypad_Shield_DFR_09_RAZ = {
 		.appendField("Effacer l'écran")
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
+    this.setTooltip('');
+  }
+};
+
+Blockly.Blocks.LCD_Keypad_Shield_DFR_09_Buttons = {
+  init: function() {
+    this.setColour(Blockly.Blocks.arduino_shield.HUE);
+	this.setHelpUrl(Blockly.Msg.LCD_SHIELD_PRINT_HELPURL);
+    this.appendDummyInput()
+        .appendField(Blockly.Msg.LCD_SHIELD_PRINT_TEXT)
+        .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/arduino_shield/400px-LCD_Keypad_Shield.jpg', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize));
+    this.appendDummyInput()
+		.setAlign(Blockly.ALIGN_RIGHT)
+	    .appendField(Blockly.Msg.LCD_SHIELD_PRINT_INPUT4)
+        .appendField(new Blockly.FieldDropdown(Blockly.Msg.LCD_SHIELD_BTN_CHOICE), "BTN");
+    this.setOutput(true, 'Boolean');
     this.setTooltip('');
   }
 };

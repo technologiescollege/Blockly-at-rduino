@@ -47,7 +47,7 @@ head.load(
 "blocks/storage/blocks_typing.js",
 "blocks/technozone51/blocks_typing.js",
 "blocks/tsl2561/blocks_typing.js",
-"blocks/wiimote/blocks_typing.js",
+"blocks/wii/blocks_typing.js",
 "blocks/zumobot/blocks_typing.js",
 function() {
     // Call a function when done

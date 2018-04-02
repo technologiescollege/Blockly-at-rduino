@@ -78,6 +78,7 @@ head.load(
 "generators/arduino/storage.js",
 "generators/arduino/technozone51.js",
 "generators/arduino/tsl2561.js",
+"generators/arduino/wiichuck.js",
 "generators/arduino/zumo_auto.js",
 "generators/arduino/zumo_motors.js",
 "generators/arduino/zumo_sensors.js",

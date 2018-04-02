@@ -186,11 +186,6 @@ Blockly.Msg.CAT_ROMEO_3 = "RoMeo v2"; //added may 1st 2016
 Blockly.Msg.CAT_SPI_COMM = "SPI communication";
 Blockly.Msg.CAT_STEPPER = "Stepper motors"; //added august 28th 2016
 
-Blockly.Msg.FIELDDROPDOWN = [["HIGH", "HIGH"], ["LOW", "LOW"]];
-Blockly.Msg.FIELDDROPDOWN_ONOFF = [["ON", "ON"], ["OFF", "OFF"]];
-Blockly.Msg.INOUT_HIGH_LEVEL = "1 -> HIGH";
-Blockly.Msg.INOUT_LOW_LEVEL = "0 -> low";
-
 Blockly.Msg.CAT_MHK = "MyHumanKit"; //added august 23th 2016
 
 Blockly.Msg.CAT_ESUS = "Esus board"; //added 8 october 2016
@@ -240,6 +235,18 @@ Blockly.Msg.CAT_HX711 = "load cell"; //added 23/10/2017
 Blockly.Msg.CAT_POLOLU = "Pololu"; //added 24/01/2018 
 Blockly.Msg.CAT_POLOLU_QTR_1RC = " - QTR-1RC";
 
+Blockly.Msg.CAT_WII = "Nintendo Wiimote"; //added (3/04)/2018
+
+//**********************************Dropdown menus messages***********************************************
+
+Blockly.Msg.FIELDDROPDOWN = [["HIGH", "HIGH"], ["LOW", "LOW"]];
+Blockly.Msg.FIELDDROPDOWN_ONOFF = [["ON", "ON"], ["OFF", "OFF"]];
+Blockly.Msg.INOUT_HIGH_LEVEL = "1 -> HIGH";
+Blockly.Msg.INOUT_LOW_LEVEL = "0 -> low";
+Blockly.Msg.WII_JOY_DROPDOWN = [["horizontal", "H"], ["vertical", "V"]];
+Blockly.Msg.WII_ACCEL_DROPDOWN = [["X", "X"], ["Y", "Y"], ["Z", "Z"]];
+Blockly.Msg.WII_ACCEL_BUTTON = [["C", "C"], ["Z", "Z"]];
+Blockly.Msg.WII_ACCEL_BUTTON_STATE = [["pressed", "PRESSED"], ["released", "RELEASED"]];
 
 //**********************************FieldInstance messages***********************************************
 Blockly.Msg.COMPONENT_WARN = "A %1 configuration block with the same '%2' name must be added to use this block!";
@@ -256,7 +263,7 @@ Blockly.Msg.SHARP_IR_COMPONENT = 'Sharp IR';
 //**********************************blocks***********************************************
 //**********************************blocks***********************************************
 
-/// Ardublockly instances
+// Ardublockly instances
 Blockly.Msg.NEW_INSTANCE = 'nouvelle instance';
 Blockly.Msg.RENAME_INSTANCE = 'renommer cette instance';
 Blockly.Msg.NEW_INSTANCE_TITLE = 'New instance name:';
@@ -941,10 +948,12 @@ Blockly.Msg.lp2i_ledRGB_WS2812B_setPixelColor_Blue = "Blue (255 max) =";
 Blockly.Msg.lp2i_ledRGB_WS2812B_setPixelColor_Pixel_Number = "for pixel number (0 first) =";
 
 Blockly.Msg.LCD_SHIELD_PRINT_HELPURL = "http://www.dfrobot.com/wiki/index.php?title=Arduino_LCD_KeyPad_Shield_(SKU:_DFR0009)";
-Blockly.Msg.LCD_SHIELD_PRINT_TEXT = "écran LCD Keypad Shield";
-Blockly.Msg.LCD_SHIELD_PRINT_INPUT1 = "écrire sur la ligne 1";
-Blockly.Msg.LCD_SHIELD_PRINT_INPUT2 = "écrire sur la ligne 2";
-Blockly.Msg.LCD_SHIELD_PRINT_INPUT3 = "pendant (ms)";
+Blockly.Msg.LCD_SHIELD_PRINT_TEXT = "LCD Keypad Shield screen";
+Blockly.Msg.LCD_SHIELD_PRINT_INPUT1 = "text on line 1";
+Blockly.Msg.LCD_SHIELD_PRINT_INPUT2 = "text on line 2";
+Blockly.Msg.LCD_SHIELD_PRINT_INPUT3 = "for (ms)";
+Blockly.Msg.LCD_SHIELD_BTN_CHOICE = [["UP", "UP"], ["DOWN", "DOWN"], ["LEFT", "LEFT"], ["RIGHT", "RIGHT"], ["SELECT", "SELECT"]];
+Blockly.Msg.LCD_SHIELD_PRINT_TOOLTIP = "print text on LCD screen, 2 lines x 16 caracters";
 
 //SHIELD ADAFRUIT
 Blockly.Msg.ADAFRUIT_MOTORSHIELD_MOTOR1 = "v1 - Motor DC";
@@ -1933,3 +1942,18 @@ Blockly.Msg.QTR_1RC_READ_INPUT1 = "reflectance value of QTR-1RC";
 Blockly.Msg.QTR_1RC_READ_INPUT2 = "named";
 Blockly.Msg.QTR_1RC_READ_TOOLTIP = "Return value of sensors QTR-1RC.";
 Blockly.Msg.QTR_1RC_COMPONENT = "QTR-1RC";
+
+
+//********************Nintendo Wiimote nunchuck*************//
+Blockly.Msg.WII_JOYSTICK = "joystick";
+Blockly.Msg.WII_JOYSTICK_AXE = "direction";
+Blockly.Msg.WII_JOYSTICK_TOOLTIP = "read values between 0 and 255";
+Blockly.Msg.WII_JOYSTICK_HELPURL = "http://www.pobot.org/Wii-Nunchuck-Arduino-controle-servomoteurs.html";
+Blockly.Msg.WII_ACCEL1 = "acceleration";
+Blockly.Msg.WII_ACCEL2 = "on axis";
+Blockly.Msg.WII_ACCEL_TOOLTIP = "3D angular accelerations";
+Blockly.Msg.WII_BUTTON1 = "button";
+Blockly.Msg.WII_BUTTON2 = "is";
+Blockly.Msg.WII_BUTTON_TOOLTIP = "boolean test";
+Blockly.Msg.WII_UPDATE = "update nunchuck";
+Blockly.Msg.WII_UPDATE_TOOLTIP = "I2C bus: D is Data (SDA) and C is Clock (SDC),\nexample A4 & A5 for an Uno";

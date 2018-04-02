@@ -741,8 +741,8 @@
 					</shadow>
 				</value>
 			</block>
-			<block type="LCD_Keypad_Shield_DFR_09_RAZ">
-			</block>
+			<block type="LCD_Keypad_Shield_DFR_09_RAZ"></block>
+			<block type="LCD_Keypad_Shield_DFR_09_Buttons"></block>
 		</category>
 		<sep></sep>
 	</category>

@@ -984,8 +984,8 @@
 					</shadow>
 				</value>
 			</block>
-			<block type="LCD_Keypad_Shield_DFR_09_RAZ">
-			</block>
+			<block type="LCD_Keypad_Shield_DFR_09_RAZ"></block>
+			<block type="LCD_Keypad_Shield_DFR_09_Button"></block>
 		</category>
 		<category name="CAT_LCD_GROVE_LCD" colour="#8ec31f">
 			<block type="grove_serial_lcd_print">

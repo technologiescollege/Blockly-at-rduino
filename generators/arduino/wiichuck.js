@@ -1,40 +1,51 @@
 'use strict';
 
-goog.provide('Blockly.Arduino.ledRGB_WS2812B');
+goog.provide('Blockly.Arduino.wiichuck');
 
 goog.require('Blockly.Arduino');
 
-Blockly.Arduino.lp2i_ledRGB_WS2812B_init = function() {
-  var pin_ledrgb = Blockly.Arduino.valueToCode(this, 'Pin_LedRGB_init', Blockly.Arduino.ORDER_ATOMIC);
-  var numpixels = Blockly.Arduino.valueToCode(this, 'Number_of_Pixels', Blockly.Arduino.ORDER_ATOMIC);
-  var lumin = Blockly.Arduino.valueToCode(this, 'Brightness', Blockly.Arduino.ORDER_ATOMIC);
-  var dropdown_name = this.getFieldValue('NEOPIXEL_NAME');
-  Blockly.Arduino.includes_['define_ledRGB_WS2812B'] = '#include <Adafruit_NeoPixel.h>';
-  Blockly.Arduino.definitions_['define_ledRGB_WS2812B' + dropdown_name] = 'Adafruit_NeoPixel pixels_'+dropdown_name+ ' = Adafruit_NeoPixel('+numpixels+', '+pin_ledrgb+', NEO_GRB + NEO_KHZ800);';
-  //dans le setup
-  Blockly.Arduino.setups_['setup_pin_ledrgb'+dropdown_name] = 'pinMode('+pin_ledrgb+', OUTPUT);';
-  Blockly.Arduino.setups_['setup_ledRGB_WS2812B'+dropdown_name] = 'pixels_'+dropdown_name+'.begin();';
-  return '';
+Blockly.Arduino.wiichuck_joy = function() {
+	var direction = this.getFieldValue('DIRECTION'); 
+	Blockly.Arduino.includes_['define_wii'] = '#include <ArduinoNunchuk.h>';
+	Blockly.Arduino.includes_['define_wire'] = '#include <Wire.h>';
+	Blockly.Arduino.definitions_['var_wii_object'] = 'ArduinoNunchuk nunchuk = ArduinoNunchuk();';
+	Blockly.Arduino.setups_['setup_wii'] = 'nunchuk.init();';
+	var code = "nunchuk.analog";
+	if (direction == "H") code += "X";
+	if (direction == "V") code += "Y";
+	return [code, Blockly.Arduino.ORDER_ATOMIC];
 };
 
-Blockly.Arduino.lp2i_ledRGB_WS2812B_setPixelColor = function() {
-  var pin = Blockly.Arduino.valueToCode(this, 'Pin_LedRGB', Blockly.Arduino.ORDER_ATOMIC);
-  var pixel_number = Blockly.Arduino.valueToCode(this, 'Pixel_number', Blockly.Arduino.ORDER_ATOMIC) || '\'\'';
-  var dropdown_name = this.getFieldValue('NEOPIXEL_NAME');
-  var red = Blockly.Arduino.valueToCode(this, 'Red', Blockly.Arduino.ORDER_ATOMIC);
-  var green = Blockly.Arduino.valueToCode(this, 'Green', Blockly.Arduino.ORDER_ATOMIC);
-  var blue = Blockly.Arduino.valueToCode(this, 'Blue', Blockly.Arduino.ORDER_ATOMIC);
-
-  var code = 'pixels_'+dropdown_name+'.setPixelColor('+pixel_number+', pixels'+pin+'.Color('+red+','+green+','+blue+'));\n'
-			+ 'pixels_'+dropdown_name+'.show();\n';
-  return code;
+Blockly.Arduino.wiichuck_accel = function() {
+	var direction = this.getFieldValue('DIRECTION'); 
+	Blockly.Arduino.includes_['define_wii'] = '#include <ArduinoNunchuk.h>';
+	Blockly.Arduino.includes_['define_wire'] = '#include <Wire.h>';
+	Blockly.Arduino.definitions_['var_wii_object'] = 'ArduinoNunchuk nunchuk = ArduinoNunchuk();';
+	Blockly.Arduino.setups_['setup_wii'] = 'nunchuk.init();';
+	var code = "nunchuk.accel";
+	if (direction == "X") code += "X";
+	if (direction == "Y") code += "Y";
+	if (direction == "Z") code += "Z";
+	return [code, Blockly.Arduino.ORDER_ATOMIC];
 };
 
-Blockly.Arduino.lp2i_ledRGB_WS2812B_setBrightness = function() {
-  //var pin_ledrgb = Blockly.Arduino.valueToCode(this, 'Pin_LedRGB', Blockly.Arduino.ORDER_ATOMIC);
-  var dropdown_name = this.getFieldValue('NEOPIXEL_NAME');
-  var lumin = Blockly.Arduino.valueToCode(this, 'Brightness', Blockly.Arduino.ORDER_ATOMIC);
-  //dans le setup
-  var code = 'pixels_'+dropdown_name+'.setBrightness('+lumin+');\n';
-  return code;
+Blockly.Arduino.wiichuck_button = function(){
+	var button = this.getFieldValue('BUTTON');
+	var action = this.getFieldValue('ACTION');  
+	var code = "(bool)(nunchuk.";  
+	Blockly.Arduino.includes_['define_wii'] = '#include <ArduinoNunchuk.h>';
+	Blockly.Arduino.includes_['define_wire'] = '#include <Wire.h>';
+	Blockly.Arduino.definitions_['var_wii_object'] = 'ArduinoNunchuk nunchuk = ArduinoNunchuk();';
+	Blockly.Arduino.setups_['setup_wii'] = 'nunchuk.init();'
+
+	if ((button == "C")&&(action == "PRESSED")) code += "cButton == 1)";
+	if ((button == "C")&&(action == "RELEASED")) code += "cButton == 0)";
+	if ((button == "Z")&&(action == "PRESSED")) code += "zButton == 1)";
+	if ((button == "Z")&&(action == "RELEASED")) code += "zButton == 0)";
+	return [code, Blockly.Arduino.ORDER_ATOMIC];
+};
+
+Blockly.Arduino.wiichuck_update = function(){ 
+	var code = "nunchuk.update();\n";
+	return code;
 };
