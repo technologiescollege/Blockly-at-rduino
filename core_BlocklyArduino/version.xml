@@ -1,1 +1,116 @@
-[version]2.7[/version]
+<?xml version="1.0" ?>
+<UPDATEINFO>
+
+  <PROTECTION website="">
+    <REGISTRATION>
+      <LOCATION></LOCATION>
+    </REGISTRATION>
+    <HASHING>
+    </HASHING>
+  </PROTECTION>
+
+  <GENERAL>
+    <VERSION>2.7</VERSION>
+    <CLOSEAPPLICATION>false</CLOSEAPPLICATION>
+    <CHECKSEPARATELY>true</CHECKSEPARATELY>
+    <SHOWERRORS>true</SHOWERRORS>
+    <RESUMEDOWNLOADS>true</RESUMEDOWNLOADS>
+    <ENABLEROLLBACK>true</ENABLEROLLBACK>
+    <SELFUPDATE>true</SELFUPDATE>
+    <FORCEUPDATE>true</FORCEUPDATE>
+    <LICENSE></LICENSE>
+  </GENERAL>
+
+  <HTMLMESSAGE>
+    <URL></URL>
+    <TIME></TIME>
+  </HTMLMESSAGE>
+
+  <FILES>
+    <FILE name="CD Database" location="%app%\CD Database.exe" version="0.1.0.0" hash=""
+          check="" section="" date="">
+      <ACTION type="download">
+        <LOCATION>https://github.com/technologiescollege/Blockly-at-rduino/archive/gh-pages.zip</LOCATION>
+      </ACTION>
+      <ACTION type="copy">
+        <NEWLOCATION>%app%\B@dl.zip</NEWLOCATION>
+        <OVERWRITE>true</OVERWRITE>
+      </ACTION>
+    </FILE>
+  </FILES>
+
+  <CONSTANTS>
+  </CONSTANTS>
+
+  <SECTIONS>
+  </SECTIONS>
+
+  <FEATURES>
+  </FEATURES>
+
+  <INI>
+    <ITEM>
+      <LOCATION>%app%\settings.ini</LOCATION>
+      <GROUP>app_info</GROUP>
+      <KEY>version</KEY>
+      <VALUE>0.0.0.1</VALUE>
+    </ITEM>
+  </INI>
+
+  <REGISTRY>
+    <ITEM type="string">
+      <KEY></KEY>
+      <VALUE></VALUE>
+    </ITEM>
+  </REGISTRY>
+
+  <SHORTCUTS askuser="true">
+  </SHORTCUTS>
+
+  <POPUPMENU>
+  </POPUPMENU>
+
+  <EVENTS>
+    <ONOPEN>
+    </ONOPEN>
+    <ONNEWVERSION>
+      <ACTION type="setmode">
+        <MODE>full</MODE>
+      </ACTION>
+    </ONNEWVERSION>
+    <ONNONEWVERSION>
+      <ACTION type="close"></ACTION>
+    </ONNONEWVERSION>
+    <BEFOREHTMLMESSAGE>
+    </BEFOREHTMLMESSAGE>
+    <AFTERHTMLMESSAGE>
+    </AFTERHTMLMESSAGE>
+    <BEFORELICENSE>
+    </BEFORELICENSE>
+    <AFTERLICENSE>
+    </AFTERLICENSE>
+    <BEFOREPROTECTION>
+    </BEFOREPROTECTION>
+    <AFTERPROTECTION>
+    </AFTERPROTECTION>
+    <BEFORESELECTUPDATE>
+    </BEFORESELECTUPDATE>
+    <AFTERSELECTUPDATE>
+    </AFTERSELECTUPDATE>
+    <BEFOREDOWNLOAD>
+    </BEFOREDOWNLOAD>
+    <AFTERDOWNLOAD>
+    </AFTERDOWNLOAD>
+    <BEFOREINSTALL>
+    </BEFOREINSTALL>
+    <AFTERINSTALL>
+    </AFTERINSTALL>
+    <BEFOREROLLBACK>
+    </BEFOREROLLBACK>
+    <AFTERROLLBACK>
+    </AFTERROLLBACK>
+    <ONCLOSE>
+    </ONCLOSE>
+  </EVENTS>
+
+</UPDATEINFO>
