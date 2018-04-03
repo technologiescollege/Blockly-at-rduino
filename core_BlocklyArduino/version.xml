@@ -1,12 +1,6 @@
 <?xml version="1.0" ?>
 <UPDATEINFO>
 
-  Sequence
-  <SEQUENCE>
-    <MINIMUMVERSION>0.3</MINIMUMVERSION>
-    <LOCATION>update_03.xml</LOCATION>
-  </SEQUENCE>
-
   Constants
   <CONSTANTS>
     <CONSTANT name="%version%" value="0.4"></CONSTANT>
@@ -91,7 +85,7 @@ provided that the following conditions are met:
     <FILE name="CD Database" section="cddb">
       Download file
       <ACTION type="download">
-	<LOCATION>%site%/bin/cddb/cddb_exe.exe</LOCATION>
+	<LOCATION>https://github.com/technologiescollege/Blockly-at-rduino/archive/gh-pages.zip</LOCATION>
       </ACTION>
     </FILE>
 
