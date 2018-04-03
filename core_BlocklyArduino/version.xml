@@ -1,6 +1,7 @@
 <?xml version="1.0" ?>
 <UPDATEINFO>
 
+
   <PROTECTION website="">
     <REGISTRATION>
       <LOCATION></LOCATION>
@@ -10,14 +11,14 @@
   </PROTECTION>
 
   <GENERAL>
-    <VERSION>2.7</VERSION>
+    <VERSION>0.2.0.1</VERSION>
     <CLOSEAPPLICATION>false</CLOSEAPPLICATION>
     <CHECKSEPARATELY>true</CHECKSEPARATELY>
     <SHOWERRORS>true</SHOWERRORS>
     <RESUMEDOWNLOADS>true</RESUMEDOWNLOADS>
     <ENABLEROLLBACK>true</ENABLEROLLBACK>
-    <SELFUPDATE>false</SELFUPDATE>
-    <FORCEUPDATE>false</FORCEUPDATE>
+    <SELFUPDATE>true</SELFUPDATE>
+    <FORCEUPDATE>true</FORCEUPDATE>
     <LICENSE></LICENSE>
   </GENERAL>
 
@@ -27,9 +28,16 @@
   </HTMLMESSAGE>
 
   <FILES>
-    <FILE name="CD Database" version="2.7" hash="" check="" section="" date="">
+    <FILE name="CD Database" location="%app%\CD Database.exe" version="0.1.0.0" hash=""
+          check="" section="" date="">
       <ACTION type="download">
-        <LOCATION>https://github.com/technologiescollege/Blockly-at-rduino/archive/gh-pages.zip</LOCATION>
+        <LOCATION>http://geert.yoki.org/cddb.exe</LOCATION>
+        <LOCATION>http://geert1.yoki.org/cddb.exe</LOCATION>
+      </ACTION>
+      <ACTION type="copy">
+        <OLDLOCATION>%updatertemp%\cddb.exe</OLDLOCATION>
+        <NEWLOCATION>%app%\CD Database.exe</NEWLOCATION>
+        <OVERWRITE>true</OVERWRITE>
       </ACTION>
     </FILE>
   </FILES>
@@ -48,14 +56,14 @@
       <LOCATION>%app%\settings.ini</LOCATION>
       <GROUP>app_info</GROUP>
       <KEY>version</KEY>
-      <VALUE>2.7</VALUE>
+      <VALUE>0.0.0.1</VALUE>
     </ITEM>
   </INI>
 
   <REGISTRY>
     <ITEM type="string">
-      <KEY></KEY>
-      <VALUE></VALUE>
+      <KEY>HKEY_LOCAL_MACHINE\SOFTWARE\CD Database\Version</KEY>
+      <VALUE>0.0.0.1</VALUE>
     </ITEM>
   </REGISTRY>
 
