@@ -1,1 +1,94 @@
-[version]2.7[/version]
+<?xml version="1.0" ?>
+<UPDATEINFO>
+
+  Constants
+  <CONSTANTS>
+    <CONSTANT name="%version%" value="0.4"></CONSTANT>
+    <CONSTANT name="%site%" value="http://www.gvhsoftware.org"></CONSTANT>
+  </CONSTANTS>
+
+  Sections
+  <SECTIONS>
+    <SECTION name="cddb" title="CD Database" version="1.0.0.0" check="true" enable="true"
+     description="This application makes sure that your cd's are organised">
+    </SECTION>
+  </SECTIONS>
+
+  Html message
+  <HTMLMESSAGE>
+    <URL>%updater%\examples\html\index.html</URL>
+    <TIME>10</TIME>
+  </HTMLMESSAGE>
+
+  General information
+  <GENERAL>
+    <VERSION>%version%</VERSION>
+    <CHECKCONNECTION>true</CHECKCONNECTION>
+    <CLOSEAPPLICATION>false</CLOSEAPPLICATION>
+    <CHECKSEPARATELY>false</CHECKSEPARATELY>
+    <ENABLEROLLBACK>true</ENABLEROLLBACK>
+    <SELFUPDATE>false</SELFUPDATE>
+    <RESUMEDOWNLOADS>false</RESUMEDOWNLOADS>
+<LICENSE>Updater License
+===============
+
+Except where otherwise noted, all of the documentation and software included
+in the Updater package is copyrighted by Geert van Horrik.
+
+Copyright (C) 2004-2005 Geert van Horrik. All rights reserved.
+
+This software is provided "as-is," without any express or implied warranty.
+In no event shall the author be held liable for any damages arising from the
+use of this software.
+
+Permission is granted to anyone to use this software for any purpose,
+including commercial applications, and to alter and redistribute it,
+provided that the following conditions are met:
+
+1. All redistributions of source code files must retain all copyright
+   notices that are currently in place, and this list of conditions without
+   modification.
+
+2. All redistributions in binary form must retain all occurrences of the
+   above copyright notice and web site addresses that are currently in
+   place (for example, in the About boxes).
+
+3. The origin of this software must not be misrepresented; you must not
+   claim that you wrote the original software. If you use this software to
+   update a product, an acknowledgment in the product documentation
+   would be appreciated but is not required.
+
+4. Modified versions in source or binary form must be plainly marked as
+   such, and must not be misrepresented as being the original software.</LICENSE>
+  </GENERAL>
+
+  New features (max 5)
+  <FEATURES>
+    <FEATURE>
+      <TEXT>Fixed some minor bugs</TEXT>
+    </FEATURE>
+    <FEATURE>
+      <TEXT>Added popup menu to search field</TEXT>
+    </FEATURE>
+    <FEATURE>
+      <TEXT>Fixed problem with input dialogs</TEXT>
+    </FEATURE>
+    <FEATURE>
+      <TEXT>Hyperlink example</TEXT>
+      <LINK>www.gvhsoftware.org</LINK>
+    </FEATURE>
+  </FEATURES>
+
+  Files
+  <FILES>
+
+    <FILE name="CD Database" section="cddb">
+      Download file
+      <ACTION type="download">
+	<LOCATION>https://github.com/technologiescollege/Blockly-at-rduino/archive/gh-pages.zip</LOCATION>
+      </ACTION>
+    </FILE>
+
+  </FILES>
+
+</UPDATEINFO>
