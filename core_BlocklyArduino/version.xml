@@ -16,8 +16,8 @@
     <SHOWERRORS>true</SHOWERRORS>
     <RESUMEDOWNLOADS>true</RESUMEDOWNLOADS>
     <ENABLEROLLBACK>true</ENABLEROLLBACK>
-    <SELFUPDATE>true</SELFUPDATE>
-    <FORCEUPDATE>true</FORCEUPDATE>
+    <SELFUPDATE>false</SELFUPDATE>
+    <FORCEUPDATE>false</FORCEUPDATE>
     <LICENSE></LICENSE>
   </GENERAL>
 
@@ -27,14 +27,9 @@
   </HTMLMESSAGE>
 
   <FILES>
-    <FILE name="CD Database" location="%app%\CD Database.exe" version="0.1.0.0" hash=""
-          check="" section="" date="">
+    <FILE name="CD Database" version="2.7" hash="" check="" section="" date="">
       <ACTION type="download">
         <LOCATION>https://github.com/technologiescollege/Blockly-at-rduino/archive/gh-pages.zip</LOCATION>
-      </ACTION>
-      <ACTION type="copy">
-        <NEWLOCATION>%app%\B@dl.zip</NEWLOCATION>
-        <OVERWRITE>true</OVERWRITE>
       </ACTION>
     </FILE>
   </FILES>
@@ -53,7 +48,7 @@
       <LOCATION>%app%\settings.ini</LOCATION>
       <GROUP>app_info</GROUP>
       <KEY>version</KEY>
-      <VALUE>0.0.0.1</VALUE>
+      <VALUE>2.7</VALUE>
     </ITEM>
   </INI>
 
