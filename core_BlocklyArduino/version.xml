@@ -43,7 +43,7 @@
   </FEATURES>
   
   <FILES>
-    <FILE name="Blockly@rduino zip Github" location="%approot%\settings.ini" section="B@" check="date" date="2018-04-02">
+    <FILE name="Blockly@rduino zip Github" location="%approot%\settings.ini" section="B@" check="version" date="2018-04-02">
       <ACTION type="download">
 		<LOCATION>https://github.com/technologiescollege/Blockly-at-rduino/archive/gh-pages.zip</LOCATION>
       </ACTION>
