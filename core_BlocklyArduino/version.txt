@@ -1,4 +1,0 @@
-[release]
-version=2.7
-[update]
-date=03042018
