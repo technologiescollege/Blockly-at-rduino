@@ -47,6 +47,9 @@ Blockly.Msg.CONTROLS_SWITCH_VAR_TOOLTIP = "Drag from the left into here to add";
 Blockly.Msg.CONTROLS_SWITCH_CASEBREAK_TOOLTIP = "Add additional case break do";
 Blockly.Msg.CONTROLS_SWITCH_DEFAULT_TOOLTIP ="Add optional default action";
 
+Blockly.Msg.TEXT_CHAR_TOOLTIP = "character value that takes up 1 byte of memory";
+Blockly.Msg.TEXT_CHAR_HELPURL = "https://www.arduino.cc/reference/en/language/variables/data-types/string/";
+
 Blockly.Msg.VARIABLES_AS = "as";
 Blockly.Msg.VARIABLES_SET_CONST = "constant %1 set %2";
 Blockly.Msg.ARD_TYPE_ARRAY = "Array";

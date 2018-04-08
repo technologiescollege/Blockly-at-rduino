@@ -54,6 +54,9 @@ Blockly.Msg.CONTROLS_SWITCH_VAR_TOOLTIP = "Déplacer le bloc de gauche pour l'aj
 Blockly.Msg.CONTROLS_SWITCH_CASEBREAK_TOOLTIP = "Ajoute un bloc de commandes sous condition";
 Blockly.Msg.CONTROLS_SWITCH_DEFAULT_TOOLTIP ="Ajoute un bloc d'actions par défaut";
 
+Blockly.Msg.TEXT_CHAR_TOOLTIP = "caractère unique, codé sur 1 octet";
+Blockly.Msg.TEXT_CHAR_HELPURL = "https://www.arduino.cc/reference/en/language/variables/data-types/string/";
+
 Blockly.Msg.VARIABLES_AS = "de type";
 Blockly.Msg.VARIABLES_SET_CONST = "constante %1 fixée à %2";
 Blockly.Msg.ARD_TYPE_CHAR = "caractère";

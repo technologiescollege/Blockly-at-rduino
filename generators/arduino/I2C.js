@@ -76,11 +76,11 @@ Blockly.Arduino.I2C_scan = function() {
 	"	 Wire.beginTransmission (i);\n" +
 	"	 if (Wire.endTransmission () == 0)\n" +
 	"	   {\n" +
-	"	   Serial.print ('Found address: ');\n" +
+	'	   Serial.print ("Found address: ");\n' +
 	"	   Serial.print (i, DEC);\n" +
-	"	   Serial.print (' (0x');\n" +
+	'	   Serial.print (" (0x");\n' +
 	"	   Serial.print (i, HEX);\n" +
-	"	   Serial.println (')');\n" +
+	'	   Serial.println (")");\n' +
 	"	   count++;\n" +
 	"	   delay (1);\n" +
 	"	   } // end of good response\n" +
