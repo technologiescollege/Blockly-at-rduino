@@ -144,7 +144,7 @@ Blockly.Blocks['grove_ldr'] = {
 	this.setHelpUrl(Blockly.Msg.GROVE_INOUT_LDR_HELPURL);
     this.appendDummyInput()
         .appendField(Blockly.Msg.GROVE_INOUT_LDR_TEXT)
-        .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/grove/GROVE_LDR.jpg', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize))
+        .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/grove/400px-Light_Sensor.jpg', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize))
         .appendField(Blockly.Msg.GROVE_INOUT_LDR_INPUT)
         .appendField(new Blockly.FieldTextInput('',  Blockly.Arduino.pinAnalogValidator), 'PIN');
     this.setOutput(true, 'Number');
