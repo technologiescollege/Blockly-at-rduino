@@ -21,7 +21,7 @@ var BlocklyDuino = {};
 Blockly.pathToBlockly = './';
 Blockly.pathToMedia = './media/';
 
-BlocklyDuino.selectedToolbox = "toolbox_none";
+BlocklyDuino.selectedToolbox = "toolbox_boumbot";
 BlocklyDuino.selectedCard = 'kit_boumbot';
 BlocklyDuino.selectedTab = 'blocks';
 BlocklyDuino.inlineBool = true;
