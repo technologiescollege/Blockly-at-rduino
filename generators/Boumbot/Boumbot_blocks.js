@@ -94,7 +94,7 @@ Blockly.Arduino.Boumbot_son = function() {
   //var tps = Blockly.Arduino.valueToCode(this. 'TPS', Blockly.Arduino.ORDER_ATOMIC);
 
   var code = "boumbot.son("+num+");\n";
-  return code;
+  return [code, Blockly.Arduino.ORDER_ATOMIC];
 };
 
 
