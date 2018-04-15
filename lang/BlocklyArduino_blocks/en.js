@@ -1436,7 +1436,7 @@ Blockly.Msg.Sharp_IR_TOOLTIP1 = 'Analog input only';
 Blockly.Msg.Sharp_IR_TOOLTIP2 = 'distance in centimeters, add tempo between 2 measurement';
 
 
-//******** Matrix Neopixel DEL RGB 8 x 8 http://smartduinos.com/arduino-tutorial-8x8-rgb-led-matrix-with-ws8212-driver-with-arduino-uno-from-banggood-com/
+//******** Matrix Neopixel DEL RGB 8 x 8 https://www.dfrobot.com/wiki/index.php/8x8_RGB_LED_Matrix_SKU:_DFR0459
 
 Blockly.Msg.MatrixLED_WS2812B_init = "Led RGB WS2812B Init";
 Blockly.Msg.MatrixLED_WS2812B_clean = "Led RGB WS2812B shutdown";
@@ -1445,7 +1445,7 @@ Blockly.Msg.MatrixLED_WS2812B_init_Number_of_Pixels = "Number of pixels =";
 Blockly.Msg.MatrixLED_WS2812B_DEFAULT_NAME = "MATRIX_RGB";
 Blockly.Msg.MatrixLED_WS2812B_setBrightness = "Matrix";
 Blockly.Msg.MatrixLED_WS2812B_Brightness = "set brightness to";
-Blockly.Msg.MatrixLED_WS2812B_URL = "http://smartduinos.com/arduino-tutorial-8x8-rgb-led-matrix-with-ws8212-driver-with-arduino-uno-from-banggood-com/";
+Blockly.Msg.MatrixLED_WS2812B_URL = "https://www.dfrobot.com/wiki/index.php/8x8_RGB_LED_Matrix_SKU:_DFR0459";
 
 Blockly.Msg.MatrixLED_WS2812B_setPixelColor = "Matrix";
 Blockly.Msg.MatrixLED_WS2812B_setPixelColor_Red = "set red (255 max) =";

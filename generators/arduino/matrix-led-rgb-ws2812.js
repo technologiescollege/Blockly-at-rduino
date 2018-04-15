@@ -45,8 +45,10 @@ Blockly.Arduino.MatrixLED_WS2812B_draw = function() {
   
   var code = '';
   for (var i=0; i<64; i++) {
-	if (this.getFieldValue('Pixel' + i) == 'TRUE')
-		code += dropdown_name+'.setPixelColor('+ i +', ' + dropdown_name + '.Color(255,255,255));\n'
+	if (this.getFieldValue('Pixel' + i) != 'rgb(255, 255, 255)') {
+		var rgbHexa = this.getFieldValue('Pixel' + i).replace('#', '');
+		code += dropdown_name+'.setPixelColor('+ i +', 0x' + rgbHexa + ');\n'
+	}
   };
   code += dropdown_name+'.show();\n';
   return code;
