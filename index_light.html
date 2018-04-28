@@ -547,33 +547,18 @@
 </div>
 <!-- convert bin <-> text "modal" -->
 <div id="convertModal" class="modal-dialog" style="display:none">
-	<div class="modal-content">
-	  <div class="modal-header">
-        <button type="button" class="close" aria-label="Close"><span aria-hidden="true">&#215;</span></button>
-        <h4 class="modal-title" id="convertModalLabel"></h4>
-      </div>
-	  <div class="modal-body text-center" id="convert_content">
-		<input id="ti1" value="TEST" />
-		<button onclick="BlocklyDuino.text2bin();"><span id="span_txt2bin"> </span></button>
-		<input id="ti2" />
-		<br/>
-		<input id="ti3" value="01010101" />
-		<button onclick="BlocklyDuino.bin2text();"><span id="span_bin2txt"> </span></button>
-		<input id="ti4" />
-	  </div>
-	</div>
+	<input id="ti1" value="TEST" />
+	<button onclick="BlocklyDuino.text2bin();"><span id="span_txt2bin"> </span></button>
+	<input id="ti2" />
+	<br/>
+	<input id="ti3" value="01010101" />
+	<button onclick="BlocklyDuino.bin2text();"><span id="span_bin2txt"> </span></button>
+	<input id="ti4" />
 </div>
 <!-- convert RGB color code "modal" -->
-<div id="RGB_modal" class="modal-dialog" style="display:none">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" aria-label="Close"><span aria-hidden="true">&#215;</span></button>
-        <h4 class="modal-title" id="RGBModalLabel"></h4>
-      </div>
-	  <div class="modal-body text-center" id="frame_RGB">
-		<iframe width="550" height="700" src="./tools/RGB/RGB.html" frameborder="0"></iframe>
-	  </div>
-    </div>
+<div id="RGB_falsemodal" style="display:none">
+	<iframe frameborder="0" marginwidth="0" marginheight="0">
+	</iframe>
 </div>
 <!-- videos modal -->
 <div id="videoModal" class="modal-dialog" style="display:none;width: 700px;">

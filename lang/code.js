@@ -240,8 +240,8 @@ Code.initLanguage = function() {
   $('#editModalLabel').text(MSG['editModalLabel']);
   $('#showcardLabel').text(MSG['showcardLabel']);
   $('#exampleModalLabel').text(MSG['exampleModalLabel']);  
-  $('#convertModalLabel').text(MSG['convertModalLabel']);
-  $('#RGBModalLabel').text(MSG['RGBModalLabel']);
+  $('#convertModal').attr('title', MSG['convertModalLabel']);
+  $('#RGB_falsemodal').attr('title', MSG['RGBModalLabel']);
   $('#videoModalLabelTitle').text(MSG['videoModalLabelTitle']);
   $('#videoModalLabel1').text(MSG['videoModalLabel1']);
   $('#videoModalLabel2').text(MSG['videoModalLabel2']);
