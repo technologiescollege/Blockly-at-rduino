@@ -302,6 +302,29 @@ var profile = {
 		upload_arg: "arduino:avr:uno",
 		help_link: "https://www.qwant.com/?q=microfeux%20jeulin&t=all",
 	},
+	kit_petitbot: {
+	    description: "Petit Bot",
+	    digital: ["D0", "D1",  "D2", "D3", "D4", "D5", "D6", "D7", "D8"],
+		dropdownDigital: [["D0", "D0"], ["D1", "D1"], ["D2", "D2"], ["D3", "D3"], ["D4", "D4"], ["D5", "D5"], ["D6", "D6"], ["D7", "D7"], ["D8", "D8"]],
+		PWM : ["D0", "D1",  "D2", "D3", "D4", "D5", "D6", "D7", "D8"],
+		dropdownPWM: [["D0", "D0"], ["D1", "D1"], ["D2", "D2"], ["D3", "D3"], ["D4", "D4"], ["D5", "D5"], ["D6", "D6"], ["D7", "D7"], ["D8", "D8"]],
+		analog : ["A0"],
+		dropdownAnalog: [["A0", "A0"]],
+		I2C: ["D1",  "D2", "D3", "D4", "D5", "D6", "D7", "D8"],
+		SPI: ["D1",  "D2", "D3", "D4", "D5", "D6", "D7", "D8"],
+		interrupt: ["D2", "D3"],
+		picture : "media/petitbot_pinout_mini.jpg",
+		miniPicture : "media/petitbot.jpg",
+		miniPicture_hor : "media/petitbot_pinout_mini.jpg",
+		serial: [['300', '300'], ['600', '600'], ['1200', '1200'],
+                ['2400', '2400'], ['4800', '4800'], ['9600', '9600'],
+                ['14400', '14400'], ['19200', '19200'], ['28800', '28800'],
+                ['31250', '31250'], ['38400', '38400'], ['57600', '57600'],
+                ['115200', '115200']],
+		serialPin: [["Rx ; Tx", "0"]],
+		upload_arg: "arduino:avr:uno",
+		help_link: "https://github.com/julienrat/petitbot/blob/master/manuel_tech_petitbot.pdf",
+	}
 };
 
 //set default profile to arduino standard-compatible board

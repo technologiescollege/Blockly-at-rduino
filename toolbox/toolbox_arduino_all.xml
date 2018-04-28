@@ -1433,6 +1433,65 @@
 		<sep></sep>
 	</category>
 
+	<category name="CAT_PETITBOT" colour="#F6D52C">
+		<category name="CAT_PETITBOT_IN" colour="#F6D52C">
+			<block type="petitbot_hcsr04"></block>
+			<block type="petitbot_analog_read"></block>
+		</category>
+		<category name="CAT_PETITBOT_MOTORS" colour="#F6D52C">
+			<block type="petitbot_move_left">
+				<value name="VITESSE">
+					<shadow type="inout_angle">
+						<field name="NUM">127</field>
+					</shadow>
+				</value>
+			</block>
+			<block type="petitbot_move_right">
+				<value name="VITESSE">
+					<shadow type="inout_angle">
+						<field name="NUM">127</field>
+					</shadow>
+				</value>
+			</block>
+		</category>
+		<category name="CAT_PETITBOT_SERVO" colour="#F6D52C">
+			<block type="petitbot_move_1">
+				<value name="SENS">
+					<shadow type="inout_angle">
+						<field name="NUM">127</field>
+					</shadow>
+				</value>
+			</block>
+			<block type="petitbot_move_2">
+				<value name="SENS">
+					<shadow type="inout_angle">
+						<field name="NUM">127</field>
+					</shadow>
+				</value>
+			</block>
+			<block type="petitbot_move_3">
+				<value name="SENS">
+					<shadow type="inout_angle">
+						<field name="NUM">127</field>
+					</shadow>
+				</value>
+			</block>
+		</category>
+		<category name="CAT_PETITBOT_LED" colour="#F6D52C">
+			<block type="petitbot_digital_write_led1">
+				<value name="STAT">
+					<shadow type="inout_onoff"></shadow>
+				</value>
+			</block>
+			<block type="petitbot_digital_write_led2">
+				<value name="STAT">
+					<shadow type="inout_onoff"></shadow>
+				</value>
+			</block>
+		</category>
+		<sep></sep>
+	</category>
+
 	<category name="CAT_GROVE" colour="#8ec31f">
 		<category name="CAT_GROVE_IN" colour="#8ec31f">
 			<block type="grove_button"></block>

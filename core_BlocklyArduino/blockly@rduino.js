@@ -786,8 +786,7 @@ BlocklyDuino.changeToolbox = function () {
 	
 	search = BlocklyDuino.addReplaceParamToUrl(search, 'toolbox', $("#toolboxes").val());
 	
-	window.location = window.location.protocol + '//'
-	+ window.location.host + window.location.pathname + search;
+	window.location = window.location.protocol + '//'+ window.location.host + window.location.pathname + search;
 };
 
 /**

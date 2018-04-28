@@ -65,6 +65,7 @@ head.load(
 "generators/arduino/multi-function.js",
 "generators/arduino/myhumankit.js",
 "generators/arduino/null.js",
+"generators/arduino/petitbot.js",
 "generators/arduino/QTR-1RC.js",
 "generators/arduino/RFID.js",
 "generators/arduino/robot_motors.js",

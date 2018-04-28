@@ -270,7 +270,13 @@ Blockly.Msg.CAT_ACTIONNEURS_DFPLAYER = " - audio";
 Blockly.Msg.CAT_POLOLU = "Pololu"; //added 24/01/2018 
 Blockly.Msg.CAT_POLOLU_QTR_1RC = " - QTR-1RC";
 
-Blockly.Msg.CAT_WII = "Nintendo Wiimote"; //added (3/04)/2018
+Blockly.Msg.CAT_WII = "Nintendo Wiimote"; //added 3/04/2018
+
+Blockly.Msg.CAT_PETITBOT = "PetitBot"; //added 24/04/2018
+Blockly.Msg.CAT_PETITBOT_IN = "capteurs";
+Blockly.Msg.CAT_PETITBOT_MOTORS = "moteurs";
+Blockly.Msg.CAT_PETITBOT_SERVO = "servomoteurs";
+Blockly.Msg.CAT_PETITBOT_LED = "diodes";
 
 //**********************************Dropdown menus messages***********************************************
 
@@ -2042,3 +2048,29 @@ Blockly.Msg.WII_BUTTON2 = "est";
 Blockly.Msg.WII_BUTTON_TOOLTIP = "test booléen inclus";
 Blockly.Msg.WII_UPDATE = "mise à jour des valeurs de la nunchuck";
 Blockly.Msg.WII_UPDATE_TOOLTIP = "I2C : borne D sur Data (SDA) et C sur Clock (SDC),\nexemple A4 & A5 pour une Uno";
+
+//********************PetitBot*************//
+Blockly.Msg.PETITBOT_HELPURL = "https://github.com/julienrat/petitbot";
+Blockly.Msg.PETITBOT_HCSR04 = "distance mesurée par le télémètre";
+Blockly.Msg.PETITBOT_HCSR04_TOOLTIP = "distance en cm mesurée par le capteur HC-SR04";
+Blockly.Msg.PETITBOT_ANALOG = "la valeur mesurée sur l'entrée Analogique A0";
+Blockly.Msg.PETITBOT_ANALOG_READ_TOOLTIP = "lit la valeur (comprise entre 0 et 1023) sur la broche A0";
+Blockly.Msg.PETITBOT_SERVO1_TITLEA = "faire tourner le servomoteur gauche";
+Blockly.Msg.PETITBOT_SERVO1_TITLEB = "sens & puissance (0~180)";
+Blockly.Msg.PETITBOT_SERVO1_TOOLTIP = "returns a value between 0 and 1023, on A0 pin";
+Blockly.Msg.PETITBOT_SERVO2_TITLEA = "faire tourner le servomoteur droite";
+Blockly.Msg.PETITBOT_SERVO2_TITLEB = "sens & puissance (0~180)";
+Blockly.Msg.PETITBOT_SERVO2_TOOLTIP = "rotation possible entre 0~90° pour un sens, puis 90~180°";
+Blockly.Msg.PETITBOT_SERVO31_TITLEA = "orienter le servomoteur 1";
+Blockly.Msg.PETITBOT_SERVO31_TITLEB = "d'un angle (0~180°) de";
+Blockly.Msg.PETITBOT_SERVO31_TOOLTIP = "angle du servo1 connecté sur D8";
+Blockly.Msg.PETITBOT_SERVO32_TITLEA = "orienter le servomoteur 2";
+Blockly.Msg.PETITBOT_SERVO32_TITLEB = "d'un angle (0~180°) de";
+Blockly.Msg.PETITBOT_SERVO32_TOOLTIP = "angle du servo2 connecté sur D7";
+Blockly.Msg.PETITBOT_SERVO33_TITLEA = "orienter le servomoteur 3";
+Blockly.Msg.PETITBOT_SERVO33_TITLEB = "d'un angle (0~180°) de";
+Blockly.Msg.PETITBOT_SERVO33_TOOLTIP = "angle du servo3 connecté sur D6";
+Blockly.Msg.PETITBOT_LED_INPUT1 = "mettre la DEL 1 à l'état logique";
+Blockly.Msg.PETITBOT_LED_TOOLTIP1 = "allume/éteint la diode sur la broche D3";
+Blockly.Msg.PETITBOT_LED_INPUT2 = "mettre la DEL 2 à l'état logique";
+Blockly.Msg.PETITBOT_LED_TOOLTIP2 = "allume/éteint la diode sur la broche D4";

@@ -238,7 +238,13 @@ Blockly.Msg.CAT_HX711 = "load cell"; //added 23/10/2017
 Blockly.Msg.CAT_POLOLU = "Pololu"; //added 24/01/2018 
 Blockly.Msg.CAT_POLOLU_QTR_1RC = " - QTR-1RC";
 
-Blockly.Msg.CAT_WII = "Nintendo Wiimote"; //added (3/04)/2018
+Blockly.Msg.CAT_WII = "Nintendo Wiimote"; //added 3/04/2018
+
+Blockly.Msg.CAT_PETITBOT = "PetitBot"; //added 24/04/2018
+Blockly.Msg.CAT_PETITBOT_IN = "sensors";
+Blockly.Msg.CAT_PETITBOT_MOTORS = "motors";
+Blockly.Msg.CAT_PETITBOT_SERVO = "servomotors";
+Blockly.Msg.CAT_PETITBOT_LED = "LED";
 
 //**********************************Dropdown menus messages***********************************************
 
@@ -1960,3 +1966,31 @@ Blockly.Msg.WII_BUTTON2 = "is";
 Blockly.Msg.WII_BUTTON_TOOLTIP = "boolean test";
 Blockly.Msg.WII_UPDATE = "update nunchuck";
 Blockly.Msg.WII_UPDATE_TOOLTIP = "I2C bus: D is Data (SDA) and C is Clock (SDC),\nexample A4 & A5 for an Uno";
+
+
+//********************PetitBot*************//
+Blockly.Msg.PETITBOT_HELPURL = "https://github.com/julienrat/petitbot";
+Blockly.Msg.PETITBOT_HCSR04 = "distance value (cm)";
+Blockly.Msg.PETITBOT_HCSR04_TOOLTIP = "returns value distance in cm thanks to HC-SR04 sensor";
+Blockly.Msg.PETITBOT_ANALOG = "value read on A0";
+Blockly.Msg.PETITBOT_ANALOG_READ_TOOLTIP = "returns a value between 0 and 1023, on A0 pin";
+Blockly.Msg.PETITBOT_SERVO1_TITLEA = "rotate left servo";
+Blockly.Msg.PETITBOT_SERVO1_TITLEB = "direction";
+Blockly.Msg.PETITBOT_SERVO1_TITLEC = "direction & speed (0~180)";
+Blockly.Msg.PETITBOT_SERVO1_TOOLTIP = "returns a value between 0 and 1023, on A0 pin";
+Blockly.Msg.PETITBOT_SERVO2_TITLEA = "rotate right servo";
+Blockly.Msg.PETITBOT_SERVO2_TITLEB = "direction & speed (0~180)";
+Blockly.Msg.PETITBOT_SERVO2_TOOLTIP = "rotate in 0~90° in a direction, then 90~180° to another";
+Blockly.Msg.PETITBOT_SERVO31_TITLEA = "rotate servo 1";
+Blockly.Msg.PETITBOT_SERVO31_TITLEB = "angle (0~180°)";
+Blockly.Msg.PETITBOT_SERVO31_TOOLTIP = "angle of servo1 on D8";
+Blockly.Msg.PETITBOT_SERVO32_TITLEA = "rotate servo 2";
+Blockly.Msg.PETITBOT_SERVO32_TITLEB = "angle (0~180°)";
+Blockly.Msg.PETITBOT_SERVO32_TOOLTIP = "angle of servo2 on D7";
+Blockly.Msg.PETITBOT_SERVO33_TITLEA = "rotate servo 3";
+Blockly.Msg.PETITBOT_SERVO33_TITLEB = "angle (0~180°)";
+Blockly.Msg.PETITBOT_SERVO33_TOOLTIP = "angle of servo3 on D6";
+Blockly.Msg.PETITBOT_LED_INPUT1 = "switch LED1 to";
+Blockly.Msg.PETITBOT_LED_TOOLTIP1 = "swicth on/off LED on D3";
+Blockly.Msg.PETITBOT_LED_INPUT2 = "switch LED2 to";
+Blockly.Msg.PETITBOT_LED_TOOLTIP2 = "swicth on/off LED on D4";

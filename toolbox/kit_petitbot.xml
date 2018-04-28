@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <toolbox>
-	<parametre id="defaultCategories">CAT_LOGIC,CAT_LOOPS,CAT_MATH,CAT_ARRAY,CAT_TEXT,CAT_VARIABLES,CAT_FUNCTIONS
+	<parametre id="defaultCategories">CAT_LOGIC,CAT_LOOPS,CAT_MATH,CAT_ARRAY,CAT_TEXT,CAT_VARIABLES,CAT_FUNCTIONS,CAT_PETITBOT
 	</parametre>
 	<category name="CAT_LOGIC" colour="#E1A91A">
 		<block type="controls_if"></block>
@@ -114,7 +114,7 @@
 	</category>
 	<category name="CAT_FUNCTIONS" custom="PROCEDURE" colour="#632D99"></category>
 	<sep></sep>
-	<category name="CAT_JEULIN" colour="#C12542">
+	<category name="CAT_PETITBOT" colour="#C12542">
 		<category name="CAT_JEULIN_IN" colour="#C12542">
 			<block type="jeulin_appel_pieton_voie1"></block>
 			<block type="jeulin_appel_pieton_voie2"></block>
