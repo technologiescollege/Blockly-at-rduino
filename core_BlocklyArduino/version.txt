@@ -1,0 +1,4 @@
+[release]
+version=2.7
+[update]
+date=24042018

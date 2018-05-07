@@ -322,7 +322,7 @@ var profile = {
                 ['31250', '31250'], ['38400', '38400'], ['57600', '57600'],
                 ['115200', '115200']],
 		serialPin: [["Rx ; Tx", "0"]],
-		upload_arg: "arduino:avr:uno",
+		upload_arg: "B:\LiberkeyLivet\MyApps\arduino\portable\packages\esp8266\tools\esptool\0.4.8/esptool.exe -vv -cd nodemcu -cb 921600 -cp COM3 -ca 0x00000 -cf B:\LiberkeyLivet\MyApps\arduino\build/petitbot_v3.ino.bin ",
 		help_link: "https://github.com/julienrat/petitbot/blob/master/manuel_tech_petitbot.pdf",
 	}
 };
