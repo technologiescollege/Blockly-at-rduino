@@ -704,12 +704,12 @@
 		<block type="SPI_receive"></block>		
 	</category>
 	<category name="CAT_APDS_9960_RGB_Gesture" colour="#D9242D">
-		<block type="APDS9960_colourSensor_init"></block>
-		<block type="APDS9960_colourSensor_test"></block>
-		<block type="APDS9960_colourSensor_ambient"></block>
-		<block type="APDS9960_colourSensor_red"></block>
-		<block type="APDS9960_colourSensor_green"></block>
-		<block type="APDS9960_colourSensor_blue"></block>
+		<block type="APDS9960_ColorSensor_init"></block>
+		<block type="APDS9960_ColorSensor_test"></block>
+		<block type="APDS9960_ColorSensor_ambient"></block>
+		<block type="APDS9960_ColorSensor_red"></block>
+		<block type="APDS9960_ColorSensor_green"></block>
+		<block type="APDS9960_ColorSensor_blue"></block>
 	</category>
 	<category name="CAT_HX711" colour="#D9242D">
 		<block type="HX711_init"></block>
