@@ -35,6 +35,7 @@ head.load(
 "blocks/multi-function/blocks_typing.js",
 "blocks/myhumankit/blocks_typing.js",
 "blocks/petitbot/blocks_typing.js",
+"blocks/nrf24l01/blocks_typing.js",
 "blocks/null/blocks_typing.js",
 "blocks/petitbot/blocks_typing.js",
 "blocks/QTR-1RC/blocks_typing.js",

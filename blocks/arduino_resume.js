@@ -73,6 +73,7 @@ head.load(
 "blocks/MRduino/MRduino.js",
 "blocks/multi-function/multi-function.js",
 "blocks/myhumankit/myhumankit.js",
+"blocks/nrf24l01/nrf24l01.js",
 "blocks/null/null.js",
 "blocks/petitbot/petitbot.js",
 "blocks/QTR-1RC/QTR-1RC.js",
