@@ -2610,6 +2610,7 @@
 	</category>
 	<category name="CAT_ETHERNET" colour="#FFCC66">
 		<category name="CAT_ETHERNET_INIT" colour="#FFCC66">
+			<block type="ethernet_INIT_CREATION"></block>
 			<block type="ethernet_begin_dhcp_client">
 				<value name="MAC_ADDRESS">
 					<block type="ethernet_mac_address"></block>
@@ -2684,6 +2685,36 @@
 					</block>
 				</value>			
 			</block>
+			<block type="ethernet_PARSERV2_CREATION">
+				<value name="Parse">
+					<block type="text">
+						<field name="mon_parser"></field>
+					</block>
+				</value>
+			</block>
+			<block type="ethernet_PARSERV2_LECTURE"></block>
+			<block type="ethernet_PARSERV2_PARSING">
+				<value name="compte_param">
+					<block type="number">
+						<field name="compteur_de_parametre"></field>
+					</block>
+				</value>	
+			</block>
+			<block type="ethernet_PARSERV2_GETNAME">
+				<value name="Nom_de_elem">
+					<block type="text">
+						<field name="nom de l'élément"></field>
+					</block>
+				</value>	
+			</block>
+			<block type="ethernet_PARSERV2_GETVALUE">
+				<value name="value_de_elem">
+					<block type="text">
+						<field name="valeur de l'élément"></field>
+					</block>
+				</value>	
+			</block>
+			<block type="ethernet_PARSERV2_FREE"></block>
 		</category>
 		<category name="CAT_WIFI_INIT" colour="#FFCC66">
 			<block type="ethernet_wifi_begin_server"></block>

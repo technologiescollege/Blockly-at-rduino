@@ -332,6 +332,49 @@ Blockly.Arduino.ethernet_PARSER_purge = function() {
   return code;
 };
 
+// **** PARSERV2 ****
+Blockly.Arduino.ethernet_INIT_CREATION = function() {
+  var code ='EthernetClient client = server.available();\n';
+  return code;
+};
+
+Blockly.Arduino.ethernet_PARSERV2_CREATION = function() {
+	
+  Blockly.Arduino.definitions_['define_request'] = '#include <Parser.h>\n';    
+  Blockly.Arduino.definitions_['create_request_object'] = 'Parser mon_parser;\n';
+  Blockly.Arduino.definitions_['create_myreadstring']= 'char myreadstring[255];\n';
+  
+  var code ='';
+  return code;
+};
+
+Blockly.Arduino.ethernet_PARSERV2_LECTURE = function() {
+  var client = Blockly.Arduino.valueToCode(this, 'client', Blockly.Arduino.ORDER_ATOMIC);
+  var code ='mon_parser.readStream(client,monparse.myreadstring);\n';
+  return code;
+};
+
+Blockly.Arduino.ethernet_PARSERV2_PARSING = function() {
+  var code = 'mon_parser.parsing(monparse.myreadstring)' ;
+  return [code, Blockly.Arduino.ORDER_ATOMIC];
+};
+
+Blockly.Arduino.ethernet_PARSERV2_GETNAME = function() {
+  var nbNom = Blockly.Arduino.valueToCode(this, 'nbNom', Blockly.Arduino.ORDER_ATOMIC);
+  var code = 'mon_parser.getName('+nbNom+')' ;
+  return [code, Blockly.Arduino.ORDER_ATOMIC];
+};
+
+Blockly.Arduino.ethernet_PARSERV2_GETVALUE = function() {
+  var nbVal = Blockly.Arduino.valueToCode(this, 'nbVal', Blockly.Arduino.ORDER_ATOMIC);
+  var code = 'mon_parser.getValue('+nbVal+')' ;
+  return [code, Blockly.Arduino.ORDER_ATOMIC];
+};
+
+Blockly.Arduino.ethernet_PARSERV2_FREE = function() {
+  var code = '\nfree(mon_parser.myreadstring);\n' ;
+  return code;
+};
 ////// WIFI ////////////
 
 Blockly.Arduino.ethernet_wifi_begin_server = function() {
