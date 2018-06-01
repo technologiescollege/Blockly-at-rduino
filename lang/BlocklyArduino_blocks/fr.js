@@ -1965,6 +1965,23 @@ Blockly.Msg.ETHERNET_PARSER_GETMYPARAM_TITLE = "recupère le contenu du paramèt
 Blockly.Msg.ETHERNET_PARSER_GETMYPARAM_PARAM = "nom du paramètre: ";
 Blockly.Msg.ETHERNET_PARSER_PURGE_TITLE = "Fin de l'analyse";
 ////
+Blockly.Msg.ETHERNET_INIT_CREATION_TITLE = "Création d'un client ethernet";
+Blockly.Msg.ETHERNET_PARSERV2_CREATION_TITLE = "Création de l'objet : Parser mon_parser;";
+Blockly.Msg.ETHERNET_PARSERV2_CREATION_TOOLTIP = "Créer un objet Parser";
+Blockly.Msg.ETHERNET_PARSERV2_LECTURE_TITLE = "Lecture du flux";
+Blockly.Msg.ETHERNET_PARSERV2_LECTURE_FLUX = "flux à analyser";
+Blockly.Msg.ETHERNET_PARSERV2_LECTURE_TOOLTIP = "stockage du flux utile d'un POST ou d'un GET";
+Blockly.Msg.ETHERNET_PARSERV2_PARSING_TITLE = "Réalisation d'une analyse syntaxique";
+Blockly.Msg.ETHERNET_PARSERV2_PARSING_TOOLTIP = "Renvois le nombre d'éléments";
+Blockly.Msg.ETHERNET_PARSERV2_GETNAME_TITLE = "envoie le nom de l'élément :";
+Blockly.Msg.ETHERNET_PARSERV2_GETNAME_TOOLTIP = "Renvoie le nom d'un élément";
+Blockly.Msg.ETHERNET_PARSERV2_GETNAME_PARAM = "numéro du paramètre: ";
+Blockly.Msg.ETHERNET_PARSERV2_GETVALUE_TITLE = "envoie la valeur de l'élément :";
+Blockly.Msg.ETHERNET_PARSERV2_GETVALUE_TOOLTIP = "Renvoie la valeur d'un élément";
+Blockly.Msg.ETHERNET_PARSERV2_GETVALUE_PARAM = "numéro du paramètre: ";
+Blockly.Msg.ETHERNET_PARSERV2_FREE_TITLE = "RaZ du parser";
+Blockly.Msg.ETHERNET_PARSERV2_FREE_TOOLTIP = "RaZ du parser";
+////
 Blockly.Msg.ETHERNET_LOCALIP_HELPURL = "https://www.arduino.cc/en/Reference/EthernetLocalIP";
 Blockly.Msg.ETHERNET_LOCALIP_TITLE = "adresse IP locale";
 Blockly.Msg.ETHERNET_LOCALIP_TOOLTIP = "Returns the IP address of the Ethernet shield";
