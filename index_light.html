@@ -151,17 +151,6 @@
 				<label id="labelToolboxDefinition"></label>
 			</div>
 		</div>
-		<div id="div_toolboxes">
-			<select id="toolboxes">
-				<option value="toolbox_none" selected="selected">...</option>
-				<option value="toolbox_algo"></option>
-				<option value="toolbox_arduino_1"></option>
-				<option value="toolbox_arduino_2"></option>
-				<option value="toolbox_arduino_3"></option>
-				<option value="toolbox_arduino_4"></option>
-				<option value="toolbox_arduino_all"></option>
-			</select>
-		</div>
 		<div id="divTitreMenu_miniCard">
 			<a href="#" id="miniCard_Menu">
 				<img id="arduino_card_miniPicture_Menu" height="36px" border="0"/>
@@ -432,7 +421,7 @@
 		  <br />	  
 		  <b><div align="center"><a href="http://framaforms.org/blocklyrduino-utilisateurs-1490560876" target='blank'><font size="12"><span id="span_forms_about" style="font-style: bold;"> </span></font></a></div></b>
 		  <br />
-		  <br /><i>version 27-04-2018 - v2.7 "IDE compatible"</i>
+		  <br /><i>version 21-05-2018 - v2.7 "IDE compatible"</i>
 		  <br />
 		  <br />
 		  <!--div align="center" id="paypal_about">
@@ -560,67 +549,25 @@
 	<iframe frameborder="0" marginwidth="0" marginheight="0">
 	</iframe>
 </div>
-<!-- videos modal -->
-<div id="videoModal" class="modal-dialog" style="display:none;width: 700px;">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" aria-label="Close"><span aria-hidden="true">&#215;</span></button>
-        <h4 class="modal-title" id="videoModalLabelTitle"></h4>
-      </div>
-	  <div class="modal-body text-center" style=" overflow:auto;">
-		  <div style="width: 45%;float: left;">
-			<a href="https://mediacad.ac-nantes.fr/m/2018" target="_blank">
-				<span id="videoModalLabel1"> </span>
-			</a>
-			<br/>
-	        <div style="float: none; clear: both;">
-	            <embed id="videoModal1"  wmode="transparent" allowfullscreen="true" title="Adobe Flash Player"/>
-	        </div>
-			<a href="https://mediacad.ac-nantes.fr/m/2017" target="_blank">
-				<span id="videoModalLabel2"> </span>
-			</a>
-			<br/>
-			<div style="float: none; clear: both;">
-	            <embed id="videoModal2"  wmode="transparent" allowfullscreen="true" title="Adobe Flash Player"/>
-	        </div>
-	
-			<a href="https://mediacad.ac-nantes.fr/m/2016" target="_blank">
-				<span id="videoModalLabel3"> </span>
-			</a>
-			<br/>
-	        <div style="float: none; clear: both;">
-	            <embed id="videoModal3"  wmode="transparent" allowfullscreen="true" title="Adobe Flash Player"/>
-	        </div>
-	       </div>
-		  <div style="width: 45%;float: left; margin-left: 10%;">
-	
-			<a href="https://mediacad.ac-nantes.fr/m/2020" target="_blank">
-				<span id="videoModalLabel4"> </span>
-			</a>
-			<br/>
-	        <div style="float: none; clear: both;">
-	            <embed id="videoModal4"  wmode="transparent" allowfullscreen="true" title="Adobe Flash Player"/>
-	        </div>
-	        
-			<a href="https://www.youtube.com/playlist?list=PLwy0yw3Oq4-uFJl0j-efUAAlfCbqtcTMr" target="_blank">
-				<span id="videoModalLabel5"> </span>
-			</a>
-	        <div style="float: none; clear: both;">
-	            <embed id="videoModal5"  wmode="transparent" allowfullscreen="true" title="Adobe Flash Player"/>
-	        </div>
-		  </div>
-    	</div>
-    </div>
-</div>
 <!-- toolbox config modal -->
 <div class="modal fade" id="configModal" tabindex="-1" role="dialog" aria-labelledby="configModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&#215;</span></button>
-        <h4 class="modal-title" id="configModalLabel"></h4>
+        <h4 class="modal-title" id="configModalLabel"></h4>		
+		<div id="div_toolboxes">
+			<select id="toolboxes">
+				<option value="toolbox_none" selected="selected">...</option>
+				<option value="toolbox_algo"></option>
+				<option value="toolbox_arduino_1"></option>
+				<option value="toolbox_arduino_2"></option>
+				<option value="toolbox_arduino_3"></option>
+				<option value="toolbox_arduino_4"></option>
+				<option value="toolbox_arduino_all"></option>
+			</select>
+		</div>
       </div>
-	  <div id="div_toolboxes_miniMenu" style="margin-left : 15px;"></div>
       <input type="checkbox" name="select_all" id="select_all"/> <span id="span_select_all"> </span>
       <div class="modal-body" id="modal-body-config"></div>
       <div class="modal-footer">

@@ -233,7 +233,7 @@ Blockly.Msg.CAT_STORAGE_EEPROM = " - stockage de données"; //added 29 march 201
 
 Blockly.Msg.CAT_DRONE = "drone"; //added 26 april 2017
 
-Blockly.Msg.CAT_ADXL362 = "gyroscope ADXL362"; //added 2 may 2017
+Blockly.Msg.CAT_ADXL362 = "accéléromètre ADXL362"; //added 2 may 2017
 
 Blockly.Msg.CAT_ETHERNET = "ethernet"; //added 25 july 2017
 Blockly.Msg.CAT_ETHERNET_INIT = "initialisation";
@@ -277,6 +277,8 @@ Blockly.Msg.CAT_PETITBOT_IN = "capteurs";
 Blockly.Msg.CAT_PETITBOT_MOTORS = "moteurs";
 Blockly.Msg.CAT_PETITBOT_SERVO = "servomoteurs";
 Blockly.Msg.CAT_PETITBOT_LED = "diodes";
+
+Blockly.Msg.CAT_NRF24L01 = "nRF24L01"; //added 31/05/2018
 
 //**********************************Dropdown menus messages***********************************************
 

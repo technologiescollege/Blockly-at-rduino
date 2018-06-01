@@ -89,7 +89,7 @@ BlocklyDuino.uploadClick = function() {
 		request.open(method, url, async);
 		request.setRequestHeader("Content-Type", "text/plain;charset=UTF-8");
 		request.send(code);
-	}, 2000);
+	}, 1000);
 };
 
 BlocklyDuino.verify_local_Click = function() {
@@ -115,7 +115,7 @@ BlocklyDuino.verify_local_Click = function() {
 		request.open(method, url, async);
 		request.setRequestHeader("Content-Type", "text/plain;charset=UTF-8");
 		request.send(code);
-	}, 2000);
+	}, 1000);
 };
 
 
@@ -227,8 +227,7 @@ BlocklyDuino.testPluginCodeBender = function() {
 			$("#cb_cf_ports").addClass('hidden');
 			}
 			else {
-			$("#cb_cf_ports").removeClass('hidden');
-			
+				$("#cb_cf_ports").removeClass('hidden');			
 			}
 	} else {
 		// local
@@ -367,8 +366,7 @@ BlocklyDuino.validateConfigOffline = function () {
 			} else {
 				$("#pinout").val(BlocklyDuino.selectedCard);
 			}
-	}
-	
+	}	
 	//BlocklyDuino.initGlobalConfig();
 	//BlocklyDuino.toggleWeb();
 	//BlocklyDuino.toggleLocalCodeBender();

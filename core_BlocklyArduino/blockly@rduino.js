@@ -642,7 +642,7 @@ BlocklyDuino.bindFunctions = function() {
 	});
 	
 	$('#btn_inline').on("click", BlocklyDuino.inline);
-	$('#btn_wiring').on("click", BlocklyDuino.openWiringDialog);
+	//$('#btn_wiring').on("click", BlocklyDuino.openWiringDialog);
 	$('#btn_blocs_picture').on("click", BlocklyDuino.blockPicture);
 	$('#btn_blocs_picture_mini').on("click", BlocklyDuino.blockPicture_mini);
 	$('#btn_blocs_picture_maxi').on("click", BlocklyDuino.blockPicture_maxi);
@@ -1004,9 +1004,9 @@ BlocklyDuino.init = function() {
 			$("#span_about").remove();
 			$("#div_accessibility_button").addClass("btn-group-vertical");
 			$("#div_accessibility_button").css({"width" : "40px", "bottom" : "10px"});
-			if (window.localStorage.webAccess != "true") {
+			/*if (window.localStorage.webAccess != "true") {
 				$("#btn_wiring").remove();
-			}
+			}*/
 			$("#div_tools_button").addClass("btn-group-vertical");
 			$("#div_tools_button").removeClass("div_tools_button-ver");
 			$("#div_tools_button").css({"width" : "40px", "margin-bottom" : "10px"});
@@ -1030,8 +1030,6 @@ BlocklyDuino.init = function() {
 			$("#tools_blocks").css({'position' : 'absolute',
 				'z-index' : '10',
 				'right' : '0px'});
-				
-			$('#div_toolboxes_miniMenu').prepend($('#toolboxes'));
 		}
 	} else {
 		$("#menuPanel").css({"display" : ""});
@@ -1260,28 +1258,13 @@ BlocklyDuino.clearLocalStorage = function () {
  * Modal first connection -> info
  */
 BlocklyDuino.firstBlocklyArduino = function() {
-	if ((BlocklyDuino.getStringParamFromUrl('AIO', '') == 'on')||(BlocklyDuino.getStringParamFromUrl('IDE', '') == 'on')) {
-		$('#firstModal').addClass('draggable');
-		//$('#videoFirstModal').prop('src', "https://mediacad.ac-nantes.fr/m/2047/d/i"); 
-		//$('#firstModal').modal('show');
-		$('#btn_videos, #menu_51').on('click', function() {
-			window.open('http://www.libreduc.cc/wiki/doku.php/fr/arduino/blockly_rduino/tutosvideos');
-		});
-	} else {
-		$('#btn_videos, #menu_51').on('click', function() {
-			$('#videoModal').css("z-index", 1050);
-			$('#videoModal').css("display", "inline-block");
-			$('#videoModal1').prop('src', "https://mediacad.ac-nantes.fr/m/2018/d/i");
-			$('#videoModal2').prop('src', "https://mediacad.ac-nantes.fr/m/2017/d/i");
-			$('#videoModal3').prop('src', "https://mediacad.ac-nantes.fr/m/2016/d/i");
-			$('#videoModal4').prop('src', "https://mediacad.ac-nantes.fr/m/2020/d/i");
-			$('#videoModal5').prop('src', "https://www.youtube-nocookie.com/embed/vlJl28qE5vg?list=PLwy0yw3Oq4-uFJl0j-efUAAlfCbqtcTMr");
-		});
-		if (window.sessionStorage && !window.sessionStorage.msg_first_seen) {
-			$('#videoFirstModal').prop('src', "https://player.vimeo.com/video/179569437?autoplay=0&title=0&byline=0&portrait=0"); 
-			$('#firstModal').modal('show');
-			}
-	}
+	$('#btn_videos, #menu_51').on('click', function() {
+		window.open('http://wiki.libreduc.cc/doku.php/fr/arduino/blockly_rduino/tutosvideos');
+	});
+	if (window.sessionStorage && !window.sessionStorage.msg_first_seen) {
+		$('#videoFirstModal').prop('src', "https://player.vimeo.com/video/179569437?autoplay=0&title=0&byline=0&portrait=0"); 
+		$('#firstModal').modal('show');
+		}		
 };
 
 /**
@@ -1413,7 +1396,7 @@ Blockly.Variables.flyoutCategory = function(workspace) {
   }
   return xmlList;
 };
-
+/*
 BlocklyDuino.openWiringDialog = function() {
 	var iframe = $("#wiring_dialog > iframe");
 	var dialog = $("#wiring_dialog").dialog({
@@ -1438,7 +1421,7 @@ BlocklyDuino.openWiringDialog = function() {
 	if (!dialog.dialog("isOpen")) {
 		dialog.dialog("open");
 	}
-};
+};*/
 
 BlocklyDuino.DialogCode = function() {
 	var dialogCode = $("#pre_previewArduino").dialog({

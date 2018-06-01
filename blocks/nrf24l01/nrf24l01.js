@@ -39,7 +39,7 @@ Blockly.Blocks.nrf24l01_init = {
 Blockly.Blocks.nrf24l01_send = {
 	init: function() {
         this.appendValueInput("data")
-			.appendField("envoyer les données")
+			.appendField("envoyer la donnée")
 			.appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/nrf24l01/nrf24l01.jpg', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize));
 		this.setPreviousStatement(true, null);
         this.setNextStatement(true, null);
