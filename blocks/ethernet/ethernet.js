@@ -31,6 +31,7 @@ goog.provide('Blockly.Blocks.ethernet');
 goog.require('Blockly.Blocks');
 goog.require('Blockly.Types');
 
+
 Blockly.Blocks['ethernet_begin_dhcp_client'] = {
   init: function() {
     this.setHelpUrl(Blockly.Msg.ETHERNET_BEGIN_HELPURL);
@@ -480,7 +481,95 @@ Blockly.Blocks['ethernet_PARSER_purge'] = {
 	this.setHelpUrl("");
   }
 };
+//PARSER V2
 
+Blockly.Blocks['ethernet_INIT_CREATION'] = {
+  init: function() {
+	this.setColour(Blockly.Blocks.ethernet.HUE);
+    this.appendDummyInput()
+        .appendField(Blockly.Msg.ETHERNET_INIT_CREATION_TITLE);
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null); 
+	this.setTooltip("");
+	this.setHelpUrl("");
+  }
+};
+
+Blockly.Blocks['ethernet_PARSERV2_CREATION'] = {
+  init: function() {
+	this.setColour(Blockly.Blocks.ethernet.HUE);
+    this.appendDummyInput()
+        .appendField(Blockly.Msg.ETHERNET_PARSERV2_CREATION_TITLE);
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null); 
+	this.setTooltip(Blockly.Msg.ETHERNET_PARSERV2_CREATION_TOOLTIP);
+	this.setHelpUrl("");
+  }
+};
+
+Blockly.Blocks['ethernet_PARSERV2_LECTURE'] = {
+  init: function() {  
+    this.appendDummyInput()
+		.appendField(Blockly.Msg.ETHERNET_PARSERV2_LECTURE_TITLE);
+	this.setColour(Blockly.Blocks.ethernet.HUE);
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+	this.setTooltip(Blockly.Msg.ETHERNET_PARSERV2_LECTURE_TOOLTIP);
+	this.setHelpUrl("");
+  }
+};
+ 
+ Blockly.Blocks['ethernet_PARSERV2_PARSING'] = {
+  init: function() {
+    this.appendDummyInput()
+        .appendField(Blockly.Msg.ETHERNET_PARSERV2_PARSING_TITLE);
+	this.setColour(Blockly.Blocks.ethernet.HUE);
+	this.setOutput(true, null);
+	this.setTooltip(Blockly.Msg.ETHERNET_PARSERV2_PARSING_TOOLTIP);
+	this.setHelpUrl("");
+  }
+};
+
+ Blockly.Blocks['ethernet_PARSERV2_GETNAME'] = {
+  init: function() {
+    this.appendDummyInput()
+        .appendField(Blockly.Msg.ETHERNET_PARSERV2_GETNAME_TITLE);
+	this.appendValueInput("nbNom")
+        .setAlign(Blockly.ALIGN_RIGHT)
+        .appendField(Blockly.Msg.ETHERNET_PARSERV2_GETNAME_PARAM);
+	this.setColour(Blockly.Blocks.ethernet.HUE);
+	this.setOutput(true, null);
+	this.setTooltip(Blockly.Msg.ETHERNET_PARSERV2_GETNAME_TOOLTIP);
+	this.setHelpUrl("");
+  }
+};
+
+ Blockly.Blocks['ethernet_PARSERV2_GETVALUE'] = {
+  init: function() {
+    this.appendDummyInput()
+        .appendField(Blockly.Msg.ETHERNET_PARSERV2_GETVALUE_TITLE);
+	this.appendValueInput("nbVal")
+        .setAlign(Blockly.ALIGN_RIGHT)
+        .appendField(Blockly.Msg.ETHERNET_PARSERV2_GETVALUE_PARAM);
+	this.setColour(Blockly.Blocks.ethernet.HUE);
+	this.setOutput(true, null);
+	this.setTooltip(Blockly.Msg.ETHERNET_PARSERV2_GETVALUE_TOOLTIP);
+	this.setHelpUrl("");
+  }
+};
+
+Blockly.Blocks['ethernet_PARSERV2_FREE'] = {
+  init: function() {  
+    this.appendDummyInput()
+		.appendField(Blockly.Msg.ETHERNET_PARSERV2_FREE_TITLE);
+	this.setColour(Blockly.Blocks.ethernet.HUE);
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+	this.setTooltip(Blockly.Msg.ETHERNET_PARSERV2_FREE_TOOLTIP);
+	this.setHelpUrl("");
+  }
+};		
+ 
 /////WIFI ESP 8266 ////
 Blockly.Blocks['ethernet_wifi_begin_server'] = {		// by BZH
   init: function() {
