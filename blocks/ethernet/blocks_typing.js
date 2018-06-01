@@ -60,6 +60,18 @@ Blockly.Blocks.ethernet_PARSER_count.getBlockType = function() {
 Blockly.Blocks.ethernet_PARSER_getmyparam.getBlockType = function() {
    return Blockly.Types.TEXT;
 };
+//****PARSERV2****
+Blockly.Blocks.ethernet_PARSERV2_PARSING.getBlockType = function() {
+   return Blockly.Types.NUMBER;
+};
+
+Blockly.Blocks.ethernet_PARSERV2_GETNAME.getBlockType = function() {
+   return Blockly.Types.STRING;
+};
+Blockly.Blocks.ethernet_PARSERV2_GETVALUE.getBlockType = function() {
+   return Blockly.Types.STRING;
+};
+
 //****WIFI****
 Blockly.Blocks.ethernet_client_for_wifi_server.getBlockType = function() {
    return Blockly.Types.BOOLEAN;
