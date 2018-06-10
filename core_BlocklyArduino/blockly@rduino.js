@@ -516,7 +516,6 @@ BlocklyDuino.bindFunctions = function() {
 		$('#btn_CopyCode').remove();
 		$('#btn_verify_local').remove();
 		$('#btn_plugin_codebender').remove();
-		$('#local_debug').remove();
 		$('#debug_arduino').remove();
 		$('#tab_supervision').remove();
 		$('#tab_arduino').remove();
@@ -1160,16 +1159,7 @@ BlocklyDuino.init = function() {
 					} else {
 					$("#btn_create_example, menu_132").attr("href","./examples/examples.html?lang=" + Code.LANG);	
 					}
-	
-	/*debug from Codebender or from Python server*/
-	if ($('#toggle-LocalCodebender').prop('checked')) {
-		$("#debug_arduino").addClass("hidden");
-		$("#local_debug").removeClass("hidden");
-		$('#local_debug iframe').prop('src', "http://127.0.0.1:5005"); 
-	} else {
-		$("#debug_arduino").removeClass("hidden");
-		$("#local_debug").addClass("hidden");
-	}
+	$('#debug_arduino iframe').prop('src', "http://127.0.0.1:5005"); 
 };
 
 
