@@ -1,6 +1,14 @@
+blocks_typing.js
+Hier
+mar. 18:03
+
+Vous avez importé un élément
+JavaScript
+blocks_typing.js
 head.load(
 "blocks/BlocklyArduino/blocks_typing.js",
 "blocks/adafruit_motorshield/blocks_typing.js",
+"blocks/Adafruit_RGB_LCD_Shield/blocks_typing.js",
 "blocks/ADXL362_gyroscope/blocks_typing.js",
 "blocks/APDS-9960_RGB_Gesture/blocks_typing.js",
 "blocks/anemometer/blocks_typing.js",
