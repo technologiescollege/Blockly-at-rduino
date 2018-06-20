@@ -1,3 +1,10 @@
+arduino_resume.js
+Hier
+mar. 18:03
+
+Vous avez importé un élément
+JavaScript
+arduino_resume.js
 head.load(
 "blocks/Blockly/logic.js",
 "blocks/Blockly/math.js",
@@ -35,6 +42,7 @@ function() {
 head.load(
 "blocks/adafruit_motorshield/adafruit_motorshield_v1.js",
 "blocks/adafruit_motorshield/adafruit_motorshield_v2.js",
+"blocks/Adafruit_RGB_LCD_Shield/Adafruit_RGB_LCD_Shield.js",
 "blocks/ADXL362_gyroscope/ADXL362_gyroscope.js",
 "blocks/APDS-9960_RGB_Gesture/APDS-9960_RGB_Gesture.js",
 "blocks/arduino_shield/arduino_shield.js",
