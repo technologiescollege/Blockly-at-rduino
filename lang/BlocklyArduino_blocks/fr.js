@@ -1,3 +1,10 @@
+fr.js
+Hier
+mar. 18:05
+
+Vous avez importé un élément
+JavaScript
+fr.js
 'use strict';
 
 goog.provide('Blockly.Msg.fr');
@@ -138,7 +145,8 @@ Blockly.Msg.CAT_FLYCAMONE = "FlyCamOne Eco v2"; //added august 20th 2016
 Blockly.Msg.CAT_GROVE = "Grove";  //added march 9th 2015
 Blockly.Msg.CAT_GROVE_IN = " - capteurs";
 Blockly.Msg.CAT_GROVE_OUT = " - actionneurs";
-Blockly.Msg.CAT_GROVE_LCD = " - écran LCD";
+Blockly.Msg.CAT_GROVE_LCD = " - écrans LCD";
+Blockly.Msg.CAT_GROVE_LCD2 = " Ecrans LCD";
 Blockly.Msg.CAT_GROVE_COMM = " - communication";
 
 Blockly.Msg.CAT_TECHNOZONE = "TechnoZone51";  //added march 11th 2015
@@ -589,6 +597,41 @@ Blockly.Msg.GROVE_INOUT_BT_COMM4 = "code secret";
 Blockly.Msg.GROVE_INOUT_BT_COMM5 = "envoyer";
 Blockly.Msg.GROVE_INOUT_BT_COMM6 = "recevoir";
 Blockly.Msg.GROVE_INOUT_BT_TOOLTIP = "Bluetooth V2.0 + EDR esclave. Supporte un seul esclave par carte";
+
+//************************************** ajouté 15/06/2018 \lang\BlocklyArduino **********************************************************
+Blockly.Msg.GROVE_LCD_RGB_INIT_HELPURL = "http://wiki.seeed.cc/Grove-LCD_RGB_Backlight/";
+Blockly.Msg.GROVE_LCD_RGB_INIT_TEXT = "INIT Grove LCD RGB";
+Blockly.Msg.GROVE_LCD_RGB_INIT_TOOLTIP = "Initialisation du LCD";
+
+Blockly.Msg.GROVE_LCD_RGB_CLEAR_HELPURL = "http://wiki.seeed.cc/Grove-LCD_RGB_Backlight/";
+Blockly.Msg.GROVE_LCD_RGB_CLEAR_TEXT = "CLEAR Grove LCD RGB";
+Blockly.Msg.GROVE_LCD_RGB_CLEAR_TOOLTIP = "Effaçage de l'écran LCD";
+
+Blockly.Msg.GROVE_LCD_RGB_SCROLL_HELPURL = "http://wiki.seeed.cc/Grove-LCD_RGB_Backlight/";
+Blockly.Msg.GROVE_LCD_RGB_SCROLL_TEXT = "TEXT SCROLLING";
+Blockly.Msg.GROVE_LCD_RGB_SCROLL_EFFECT = "Ecrit avec un ";
+Blockly.Msg.GROVE_LCD_RGB_SCROLL_EFFECT_FIELDDROPDOWN = [["défilement à gauche", "LEFT"], ["défilement à droite", "RIGHT"], ["défilement automatique", "AUTO"]];
+Blockly.Msg.GROVE_LCD_RGB_SCROLL_TOOLTIP = "Choix du sens de défilement du texte";
+
+
+Blockly.Msg.GROVE_LCD_RGB_SET_CURSOR_TEXT = "SET CURSOR";
+Blockly.Msg.GROVE_LCD_RGB_SET_CURSOR_TOOLTIP = "Positionne le curseur aux coordonnées spécifiées";
+Blockly.Msg.GROVE_LCD_RGB_SET_CURSOR_HELPURL = "http://wiki.seeed.cc/Grove-LCD_RGB_Backlight/";
+
+Blockly.Msg.GROVE_LCD_RGB_SET_RGB_TEXT = "SET RGB Backlight";
+Blockly.Msg.GROVE_LCD_RGB_SET_RGB_TOOLTIP = "Définit la couleur du rétro-éclairage";
+Blockly.Msg.GROVE_LCD_RGB_SET_RGB_HELPURL = "http://wiki.seeed.cc/Grove-LCD_RGB_Backlight/";
+
+Blockly.Msg.GROVE_LCD_RGB_PRINT_DATA = "PRINT";
+Blockly.Msg.GROVE_LCD_RGB_PRINT_TOOLTIP = "Ecrit la valeur numérique, la valeur de la variable ou la chaine de caractères spécifiée";
+Blockly.Msg.GROVE_LCD_RGB_PRINT_HELPURL = "http://wiki.seeed.cc/Grove-LCD_RGB_Backlight/";
+Blockly.Msg.GROVE_LCD_RGB_PRINT_INPUTDATA = "DATA"
+
+Blockly.Msg.GROVE_LCD_RGB_WRITE_DATA = "WRITE";
+Blockly.Msg.GROVE_LCD_RGB_WRITE_TOOLTIP = "Ecrit le caractère correspondant au code ASCII spécifié";
+Blockly.Msg.GROVE_LCD_RGB_WRITE_HELPURL = "http://wiki.seeed.cc/Grove-LCD_RGB_Backlight/";
+Blockly.Msg.GROVE_LCD_RGB_WRITE_INPUTDATA = "DATA"
+Blockly.Msg.GROVE_LCD_RGB_WRITE_FORMAT_FIELDDROPDOWN = [["0x", "0x"], ["0b", "0b"], ["décimal", "1"],["variable", "2"]];
 
 //************************************** ajouté 20/03/2017 \lang\BlocklyArduino **********************************************************
 Blockly.Msg.GROVE_EMETTEUR_IR_TEXT = "Led Infra rouge IR";
@@ -1538,7 +1581,7 @@ Blockly.Msg.ADXL362_TEMPVALUE_TOOLTIP = "valeurs à tester, abaque obligatoire";
 //******** FRESNEL : Implementation I2CSoftwareLibrary   http://playground.arduino.cc/Main/SoftwareI2CLibrary
 //******** FRESNEL : SPI 
 
-Blockly.Msg.I2C_INIT_TEXT = "I2C_INIT";
+Blockly.Msg.I2C_INIT_TEXT = "SOFT I2C_INIT";
 Blockly.Msg.I2C_INIT_PIN_SCL = "PIN_SCL";
 Blockly.Msg.I2C_INIT_PORT_SCL = "PORT_SCL";
 Blockly.Msg.I2C_INIT_FIELDDROPDOWN_SCL = [["A", "A"], ["B", "B"], ["C", "C"], ["D", "D"], ["E", "E"]];
@@ -1548,30 +1591,30 @@ Blockly.Msg.I2C_INIT_FIELDDROPDOWN_SDA = [["A", "A"], ["B", "B"], ["C", "C"], ["
 Blockly.Msg.I2C_INIT_TOOLTIP = "configure les broches SDA et SCL";
 Blockly.Msg.I2C_INIT_HELPURL = "http://playground.arduino.cc/Main/SoftwareI2CLibrary";     
 
-Blockly.Msg.I2C_START_TEXT = "I2C_START";
+Blockly.Msg.I2C_START_TEXT = "SOFT_I2C_START";
 Blockly.Msg.I2C_START_ADRESS = "adresse";
 Blockly.Msg.I2C_START_RW = "R/W";
 Blockly.Msg.I2C_START_TOOLTIP = "envoi un Start + adresse de l'esclave + R/W";
 Blockly.Msg.I2C_START_HELPURL = "http://playground.arduino.cc/Main/SoftwareI2CLibrary";
 Blockly.Msg.I2C_START_FIELDDROPDOWN = [["W (écriture)", "I2C_WRITE"], ["R (lecture)", "I2C_READ"]];
 
-Blockly.Msg.I2C_RESTART_TEXT = "I2C_RESTART";
+Blockly.Msg.I2C_RESTART_TEXT = "SOFT_I2C_RESTART";
 Blockly.Msg.I2C_RESTART_ADRESS = "adresse";
 Blockly.Msg.I2C_RESTART_RW = "R/W";
 Blockly.Msg.I2C_RESTART_FIELDDROPDOWN = [["W (écriture)", "I2C_WRITE"], ["R (lecture)", "I2C_READ"]];
 Blockly.Msg.I2C_RESTART_TOOLTIP = "envoi un REStart + adresse de l'esclave + R/W";
 Blockly.Msg.I2C_RESTART_HELPURL = "http://playground.arduino.cc/Main/SoftwareI2CLibrary";
 
-Blockly.Msg.I2C_STOP_TEXT = "I2C_STOP";
+Blockly.Msg.I2C_STOP_TEXT = "SOFT_I2C_STOP";
 Blockly.Msg.I2C_STOP_TOOLTIP = "envoi un Stop et donc libère le bus";
 Blockly.Msg.I2C_STOP_HELPURL = "http://playground.arduino.cc/Main/SoftwareI2CLibrary";
 
-Blockly.Msg.I2C_WRITE_TEXT = "I2C_WRITE";
+Blockly.Msg.I2C_WRITE_TEXT = "SOFT_I2C_WRITE";
 Blockly.Msg.I2C_WRITE_DATA = "data";
 Blockly.Msg.I2C_WRITE_TOOLTIP = "écrit un octet de donnée";
 Blockly.Msg.I2C_WRITE_HELPURL = "http://playground.arduino.cc/Main/SoftwareI2CLibrary";
 
-Blockly.Msg.I2C_READ_TEXT = "I2C_READ";
+Blockly.Msg.I2C_READ_TEXT = "SOFT_I2C_READ";
 Blockly.Msg.I2C_READ_LAST = "Last? : ";
 Blockly.Msg.I2C_READ_FIELDDROPDOWN = [["non","false"], ["oui","true"]];
 Blockly.Msg.I2C_READ_TOOLTIP = "Reçoit un octet de donnée avec l'envoi d'un paramètre last = oui pour le dernier";
@@ -1579,6 +1622,49 @@ Blockly.Msg.I2C_READ_HELPURL = "http://playground.arduino.cc/Main/SoftwareI2CLib
 Blockly.Msg.I2C_SCAN_TEXT = "lister les périphériques I²C dans la console série";
 Blockly.Msg.I2C_SCAN_TOOLTIP = "Scanne les périphériques et retourne les adresses dans la console à régler sur 115200 bauds";
 Blockly.Msg.I2C_SCAN_HELPURL = "http://info.technologiescollege.fr/wiki/doku.php/fr/arduino/lcd-i2c";
+
+///////////////////////////
+
+Blockly.Msg.I2C_INIT_HW_TITRE = "I2C_INIT";
+Blockly.Msg.I2C_INIT_HW_TOOLTIP = "Initialisation du bus I2C par le maitre";
+Blockly.Msg.I2C_INIT_HW_HELPURL = "";
+
+Blockly.Msg.I2C_STOP_HW_TITRE = "I2C_STOP";
+Blockly.Msg.I2C_STOP_HW_TOOLTIP = "Le maitre libère le bus";
+Blockly.Msg.I2C_STOP_HW_HELPURL = "";
+
+Blockly.Msg.I2C_RESTART_HW_TITRE = "I2C_RESTART";
+Blockly.Msg.I2C_RESTART_HW_TOOLTIP = "Le maitre garde la main sur le bus";
+Blockly.Msg.I2C_RESTART_HW_HELPURL = "";
+
+Blockly.Msg.I2C_WRITE_HW_TEXT = "I2C_WRITE";
+Blockly.Msg.I2C_WRITE_HW_DATA = "Data";
+Blockly.Msg.I2C_WRITE_HW_FIELDDROPDOWN = [["0x","0x"], ["0b","0b"],["Décimal",""]];
+Blockly.Msg.I2C_WRITE_HW_TOOLTIP = "Le maitre écrit un octet de donnée";
+Blockly.Msg.I2C_WRITE_HW_HELPURL = "";
+
+Blockly.Msg.I2C_START_HW_TEXT = "I2C_START";
+Blockly.Msg.I2C_START_HW_DATA = "Slave Address";
+Blockly.Msg.I2C_START_HW_FIELDDROPDOWN = [["0x","0x"], ["0b","0b"],["Décimal",""]];
+Blockly.Msg.I2C_START_HW_TOOLTIP = "Le maitre initie une transmission avec l'esclave identifié par l'adresse";
+Blockly.Msg.I2C_START_HW_HELPURL = "";
+
+Blockly.Msg.I2C_REQUEST_HW_TEXT = "I2C_REQUEST";
+Blockly.Msg.I2C_REQUEST_HW_DATA = "Slave Address";
+Blockly.Msg.I2C_REQUEST_HW_FIELDDROPDOWN = [["0x","0x"], ["0b",,"0b"],["Décimal",""]];
+Blockly.Msg.I2C_REQUEST_HW_NB_BYTES = "Number of Bytes to read";
+Blockly.Msg.I2C_REQUEST_HW_TOOLTIP = "Le maitre enregistre dans une mémoire temporaire (buffer) le nombre d'octets demandé à l'esclave identifié par l'adresse";
+Blockly.Msg.I2C_REQUEST_HW_HELPURL = "";
+
+Blockly.Msg.I2C_AVAILABLE_HW_TITRE = "I2C_DATA_AVAILABLE";
+Blockly.Msg.I2C_AVAILABLE_HW_TOOLTIP = "Renvoie le nombre de données qui reste à lire dans le buffer";
+Blockly.Msg.I2C_AVAILABLE_HW_HELPURL = "";
+
+Blockly.Msg.I2C_DATA_HW_TITRE = "I2C_DATA";
+Blockly.Msg.I2C_DATA_HW_TOOLTIP = "Lit une donnée du buffer";
+Blockly.Msg.I2C_DATA_HW_HELPURL = "";
+
+//////////////////////////
 
 
 Blockly.Msg.icn_HelpUrl = "http://www.ebay.fr/cln/dvarrel/robot-arduino/271320303014";
@@ -2093,3 +2179,45 @@ Blockly.Msg.PETITBOT_LED_INPUT1 = "mettre la DEL 1 à l'état logique";
 Blockly.Msg.PETITBOT_LED_TOOLTIP1 = "allume/éteint la diode sur la broche D3";
 Blockly.Msg.PETITBOT_LED_INPUT2 = "mettre la DEL 2 à l'état logique";
 Blockly.Msg.PETITBOT_LED_TOOLTIP2 = "allume/éteint la diode sur la broche D4";
+
+////////////////////////////Adafruit_RGB_LCD_Shield///////////////////////////////////////////////////////////////////////////
+Blockly.Msg.Adafruit_RGB_LCD_Shield_INIT_HELPURL = "https://learn.adafruit.com/rgb-lcd-shield";
+Blockly.Msg.Adafruit_RGB_LCD_Shield_INIT_TEXT = "INIT Adafruit LCD RGB";
+Blockly.Msg.Adafruit_RGB_LCD_Shield_INIT_TOOLTIP = "Initialisation du LCD";
+
+Blockly.Msg.Adafruit_RGB_LCD_Shield_CLEAR_HELPURL = "https://learn.adafruit.com/rgb-lcd-shield";
+Blockly.Msg.Adafruit_RGB_LCD_Shield_CLEAR_TEXT = "CLEAR Adafruit LCD RGB";
+Blockly.Msg.Adafruit_RGB_LCD_Shield_CLEAR_TOOLTIP = "Effaçage de l'écran LCD";
+
+Blockly.Msg.Adafruit_RGB_LCD_Shield_SCROLL_HELPURL = "https://learn.adafruit.com/rgb-lcd-shield";
+Blockly.Msg.Adafruit_RGB_LCD_Shield_SCROLL_TEXT = "TEXT SCROLLING";
+Blockly.Msg.Adafruit_RGB_LCD_Shield_SCROLL_EFFECT = "Ecrit avec un ";
+Blockly.Msg.Adafruit_RGB_LCD_Shield_SCROLL_EFFECT_FIELDDROPDOWN = [["défilement à gauche", "LEFT"], ["défilement à droite", "RIGHT"], ["défilement automatique", "AUTO"]];
+Blockly.Msg.Adafruit_RGB_LCD_Shield_SCROLL_TOOLTIP = "Choix du sens de défilement du texte";
+
+
+Blockly.Msg.Adafruit_RGB_LCD_Shield_SET_CURSOR_TEXT = "SET CURSOR";
+Blockly.Msg.Adafruit_RGB_LCD_Shield_SET_CURSOR_TOOLTIP = "Positionne le curseur aux coordonnées spécifiées";
+Blockly.Msg.Adafruit_RGB_LCD_Shield_SET_CURSOR_HELPURL = "https://learn.adafruit.com/rgb-lcd-shield";
+
+Blockly.Msg.Adafruit_RGB_LCD_Shield_SET_RGB_TEXT = "SET RGB Backlight";
+Blockly.Msg.Adafruit_RGB_LCD_Shield_SET_RGB_COLOUR = "COLOUR"
+Blockly.Msg.Adafruit_RGB_LCD_Shield_SET_RGB_COLOUR_FIELDDROPDOWN = [["White", "0x07"],["Red", "0x01"], ["Green", "0x02"],["Yellow", "0x03"],["Teal", "0x06"], ["Blue", "0x04"],["Violet", "0x05"]];
+
+Blockly.Msg.Adafruit_RGB_LCD_Shield_SET_RGB_TOOLTIP = "Définit la couleur du rétro-éclairage";
+Blockly.Msg.Adafruit_RGB_LCD_Shield_SET_RGB_HELPURL = "https://learn.adafruit.com/rgb-lcd-shield";
+
+Blockly.Msg.Adafruit_RGB_LCD_Shield_PRINT_DATA = "PRINT";
+Blockly.Msg.Adafruit_RGB_LCD_Shield_PRINT_TOOLTIP = "Ecrit la valeur numérique, la valeur de la variable ou la chaine de caractères spécifiée";
+Blockly.Msg.Adafruit_RGB_LCD_Shield_PRINT_HELPURL = "https://learn.adafruit.com/rgb-lcd-shield";
+Blockly.Msg.Adafruit_RGB_LCD_Shield_PRINT_INPUTDATA = "DATA"
+
+Blockly.Msg.Adafruit_RGB_LCD_Shield_WRITE_DATA = "WRITE";
+Blockly.Msg.Adafruit_RGB_LCD_Shield_WRITE_TOOLTIP = "Ecrit le caractère correspondant au code ASCII spécifié";
+Blockly.Msg.Adafruit_RGB_LCD_Shield_WRITE_HELPURL = "https://learn.adafruit.com/rgb-lcd-shield";
+Blockly.Msg.Adafruit_RGB_LCD_Shield_WRITE_INPUTDATA = "DATA"
+Blockly.Msg.Adafruit_RGB_LCD_Shield_WRITE_FORMAT_FIELDDROPDOWN = [["0x", "0x"], ["0b", "0b"], ["décimal", "1"],["variable", "2"]];
+
+Blockly.Msg.Adafruit_RGB_LCD_Shield_READ_button_TEXT = "READ BUTTON";
+Blockly.Msg.Adafruit_RGB_LCD_Shield_READ_button_TOOLTIP = "UP = 0x08 - DOWN = 0x04 - LEFT = 0x10 - RIGHT = 0x02 - SELECT = 0x01";
+Blockly.Msg.Adafruit_RGB_LCD_Shield_READ_button_HELPURL = "https://learn.adafruit.com/rgb-lcd-shield";
