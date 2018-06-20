@@ -1,10 +1,3 @@
-fr.js
-Hier
-mar. 18:05
-
-Vous avez importé un élément
-JavaScript
-fr.js
 'use strict';
 
 goog.provide('Blockly.Msg.fr');

@@ -1,10 +1,3 @@
-toolbox_arduino_all.xml
-Hier
-mar. 18:05
-
-Vous avez importé un élément
-XML
-toolbox_arduino_all.xml
 <?xml version="1.0" encoding="utf-8" ?>
 <toolbox>
 	<parametre id="defaultCategories">CAT_LOGIC,CAT_LOOPS,CAT_VARIABLES,CAT_FUNCTIONS,CAT_MATH,CAT_ARDUINO

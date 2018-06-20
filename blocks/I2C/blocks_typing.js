@@ -24,7 +24,6 @@ Blockly.Blocks.I2C_scan.getBlockType = function () {
 Blockly.Blocks.I2C_available_HW.getBlockType = function () { 
 	return Blockly.Types.NUMBER;
 };
-
 Blockly.Blocks.I2C_data_HW.getBlockType = function () { 
 	return Blockly.Types.NUMBER;
 };

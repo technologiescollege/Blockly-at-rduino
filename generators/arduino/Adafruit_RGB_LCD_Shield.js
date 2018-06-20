@@ -1,10 +1,3 @@
-Adafruit_RGB_LCD_Shield.js
-Hier
-mar. 18:05
-
-Vous avez importé un élément
-JavaScript
-Adafruit_RGB_LCD_Shield.js
 /**
  * Blocks pour LCD RGB adafruit
 	

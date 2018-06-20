@@ -1,10 +1,3 @@
-arduino_resume.js
-Hier
-mar. 18:04
-
-Vous avez importé un élément
-JavaScript
-arduino_resume.js
 head.load(
 "generators/Blockly/logic.js",
 "generators/Blockly/math.js",

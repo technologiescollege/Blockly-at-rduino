@@ -1,10 +1,3 @@
-blocks_typing.js
-Hier
-mar. 18:03
-
-Vous avez importé un élément
-JavaScript
-blocks_typing.js
 head.load(
 "blocks/BlocklyArduino/blocks_typing.js",
 "blocks/adafruit_motorshield/blocks_typing.js",

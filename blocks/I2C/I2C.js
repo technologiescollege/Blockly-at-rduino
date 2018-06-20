@@ -1,15 +1,3 @@
-I2C.js
-La semaine dernière
-ven. 15:57
-
-Vous avez modifié un élément.
-JavaScript
-I2C.js
-jeu. 16:43
-
-Vous avez importé un élément
-JavaScript
-I2C.js
 /**
  * Blocks pour I2C 
 	* void i2c_init();

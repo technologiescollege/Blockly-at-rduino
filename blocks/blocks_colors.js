@@ -1,10 +1,3 @@
-blocks_colors.js
-Hier
-mar. 18:03
-
-Vous avez importé un élément
-JavaScript
-blocks_colors.js
 ﻿Blockly.Blocks.array.HUE = "#58B5DC";
 Blockly.Blocks.logic.HUE = "#E1A91A";
 Blockly.Blocks.loops.HUE = "#C88330";
