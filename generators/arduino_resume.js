@@ -1,3 +1,10 @@
+arduino_resume.js
+Hier
+mar. 18:04
+
+Vous avez importé un élément
+JavaScript
+arduino_resume.js
 head.load(
 "generators/Blockly/logic.js",
 "generators/Blockly/math.js",
@@ -27,6 +34,7 @@ head.load(
 "generators/arduino/arduino_serial.js",
 "generators/arduino/arduino_softserial.js",
 "generators/arduino/adafruit_motorshield.js",
+"generators/arduino/Adafruit_RGB_LCD_Shield.js",
 "generators/arduino/ADXL362_gyroscope.js",
 "generators/arduino/APDS-9960_RGB_Gesture.js",
 "generators/arduino/arduino_shield.js",
