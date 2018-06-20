@@ -1,3 +1,10 @@
+toolbox_arduino_4.xml
+Hier
+mar. 18:05
+
+Vous avez importé un élément
+XML
+toolbox_arduino_4.xml
 <?xml version="1.0" encoding="utf-8" ?>
 <toolbox>
 	<parametre id="defaultCategories">CAT_LOGIC,CAT_LOOPS,CAT_VARIABLES,CAT_FUNCTIONS,CAT_MATH,CAT_ARDUINO
@@ -290,7 +297,7 @@
 			<block type="conversion_tobyte"></block>
 			<block type="conversion_toint"></block>
 			<block type="conversion_tofloat"></block>
-			<block type="conversion_tofString"></block>
+			<block type="conversion_toString"></block>
 			<block type="conversion_map"></block>
 		</category>
 		<category name="CAT_ARDUINO_COMM_SERIAL" colour="#00979D">
@@ -1445,4 +1452,133 @@
 		</category>
 		<sep></sep>
 	</category>
+	<category name="CAT_I2C" colour="#CC0033">
+		<category name="SOFT_I2C" colour="#CC0033">	
+			<block type="I2C_init">
+					<value name="Pin_SCL">
+						<shadow type="math_number">
+							<field name="NUM"></field>
+						</shadow>
+					</value>
+					<value name="Pin_SDA">
+						<shadow type="math_number">
+							<field name="NUM"></field>
+						</shadow>
+					</value>
+			</block>
+			<block type="I2C_start">
+					<value name="Address">
+						<shadow type="math_number">
+							<field name="NUM"></field>
+						</shadow>
+					</value>
+			</block>
+			<block type="I2C_restart">
+					<value name="Address">
+						<shadow type="math_number">
+							<field name="NUM"></field>
+						</shadow>
+					</value>
+			</block>
+			<block type="I2C_stop"></block>
+			<block type="I2C_write">
+					<value name="Data">
+						<shadow type="math_number">
+							<field name="NUM"></field>
+						</shadow>
+					</value>
+			</block>
+			<block type="I2C_read"></block>
+			<block type="I2C_scan"></block>
+		</category>
+		<category name="Hardware_I2C" colour="#CC0033">	
+			<block type="I2C_init_HW"></block>
+			<block type="I2C_stop_HW"></block>
+			<block type="I2C_restart_HW"></block>
+			<block type="I2C_start_HW"></block>
+			<block type="I2C_write_HW"></block>
+			<block type="I2C_request_HW"></block>
+			<block type="I2C_available_HW"></block>
+			<block type="I2C_data_HW"></block>
+		</category>
+	</category>
+	<category name="CAT_SPI" colour="#9999FF">
+		<block type="SPI_init">
+			<value name="Speed">
+					<shadow type="math_number">
+						<field name="NUM">1</field>
+					</shadow>
+			</value>
+		</block>
+		<block type="SPI_send">
+			<value name="Data">
+					<shadow type="math_number">
+						<field name="NUM"></field>
+					</shadow>
+			</value>
+		</block>
+		<block type="SPI_receive"></block>		
+	</category>
+	<category name="CAT_GROVE_LCD2" colour="#8ec31f">
+			<category name="- Grove I2C LCD RGB" colour="#8ec31f">
+				<block type="grove_lcd_rgb_init"></block>
+				<block type="grove_lcd_rgb_clear"></block>
+				<block type="grove_lcd_rgb_set_cursor"></block>
+				<block type="grove_lcd_rgb_set_RGB"></block>
+				<block type="grove_lcd_rgb_print_data"></block>
+				<block type="grove_lcd_rgb_write_data"></block>
+				<block type="grove_lcd_rgb_scrolling"></block>
+				<!-- <block type="grove_lcd_rgb_power"></block> -->
+				<!-- <block type="grove_lcd_rgb_print"> -->
+					<!-- <value name="TEXT"> -->
+						<!-- <shadow type="text"> -->
+							<!-- <field name="TEXT"></field> -->
+						<!-- </shadow> -->
+					<!-- </value> -->
+					<!-- <value name="TEXT2"> -->
+						<!-- <shadow type="text"> -->
+							<!-- <field name="TEXT"></field> -->
+						<!-- </shadow> -->
+					<!-- </value> -->
+					<!-- <value name="DELAY_TIME"> -->
+						<!-- <shadow type="math_number"> -->
+							<!-- <field name="NUM">1000</field> -->
+						<!-- </shadow> -->
+					<!-- </value> -->
+				<!-- </block> -->
+				<!-- <block type="grove_lcd_rgb_clean"></block> -->
+				<!-- <block type="grove_lcd_rgb_effect"></block> -->
+			</category>
+			<category name="- Adafruit I2C LCD RGB SHIELD" colour="#8ec31f">
+				<block type="Adafruit_RGB_LCD_Shield_init"></block>
+				<block type="Adafruit_RGB_LCD_Shield_clear"></block>
+				<block type="Adafruit_RGB_LCD_Shield_set_cursor"></block>
+				<block type="Adafruit_RGB_LCD_Shield_set_RGB"></block>
+				<block type="Adafruit_RGB_LCD_Shield_print_data"></block>
+				<block type="Adafruit_RGB_LCD_Shield_write_data"></block>
+				<block type="Adafruit_RGB_LCD_Shield_scrolling"></block>
+				<block type="Adafruit_RGB_LCD_Shield_read_button"></block>
+			</category>
+			<category name="- Grove serial LCD" colour="#8ec31f">
+				<block type="grove_serial_lcd_power"></block>
+				<block type="grove_serial_lcd_print">
+					<value name="TEXT">
+						<shadow type="text">
+							<field name="TEXT"></field>
+						</shadow>
+					</value>
+					<value name="TEXT2">
+						<shadow type="text">
+							<field name="TEXT"></field>
+						</shadow>
+					</value>
+					<value name="DELAY_TIME">
+						<shadow type="math_number">
+							<field name="NUM">1000</field>
+						</shadow>
+					</value>
+				</block>
+				<block type="grove_serial_lcd_effect"></block>
+			</category>
+		</category>	
 </toolbox>
