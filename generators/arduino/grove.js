@@ -1,3 +1,4 @@
+
 //http://www.seeedstudio.com/wiki/GROVE_System
 //http://www.seeedstudio.com/depot/index.php?main_page=advanced_search_result&search_in_description=1&keyword=grovefamily
 //support starter bundle example http://www.seeedstudio.com/wiki/GROVE_-_Starter_Kit_V1.1b
@@ -661,6 +662,93 @@ Blockly.Arduino.grove_lcd_rgb_effect = function() {
   }
   return code;
 };
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+Blockly.Arduino.grove_lcd_rgb_init = function() {
+  Blockly.Arduino.includes_['define_lcd_rgb'] = '#include <rgb_lcd.h>';
+  Blockly.Arduino.includes_['define_Wire'] = '#include <Wire.h>';
+
+  Blockly.Arduino.definitions_['var_lcd_rgb'] = 'rgb_lcd LCD_RGB;';
+  
+  Blockly.Arduino.setups_['setup_lcd_rgb'] = 'LCD_RGB.begin(16, 2);\n';
+  
+  var code = '';
+  
+  return code;
+};
+
+Blockly.Arduino.grove_lcd_rgb_clear = function() {
+   
+  var code = 'LCD_RGB.clear();\n';
+  
+  return code;
+};
+
+Blockly.Arduino.grove_lcd_rgb_scrolling = function() {
+  var dropdown_stat = this.getFieldValue('EFFECT');
+
+  var code = 'LCD_RGB';
+  if(dropdown_stat==="LEFT"){
+    code += '.scrollDisplayLeft();\n';
+  } else if(dropdown_stat==="RIGHT"){
+    code += '.scrollDisplayRight();\n';
+  } else {
+    code += '.autoscroll();\n';
+  }
+  return code;
+};
+
+Blockly.Arduino.grove_lcd_rgb_set_cursor = function() {
+  
+  var ligne = this.getFieldValue('Line');
+  var colonne = this.getFieldValue('Row');
+  var code = 'LCD_RGB.setCursor('+colonne+','+ligne+');\n';
+  
+  return code;
+};
+
+Blockly.Arduino.grove_lcd_rgb_set_RGB = function() {
+  
+  var rouge = this.getFieldValue('Red');
+  var vert = this.getFieldValue('Green');
+  var bleu = this.getFieldValue('Blue');
+  var code = 'LCD_RGB.setRGB('+rouge+','+vert+','+bleu+');\n';
+  
+  return code;
+};
+
+Blockly.Arduino.grove_lcd_rgb_print_data = function() {
+  var data1 = Blockly.Arduino.valueToCode(this, 'DATA', Blockly.Arduino.ORDER_UNARY_POSTFIX) || '\'\'';
+ 
+  var code = 'LCD_RGB.print('+data1+');\n';
+  
+  return code;
+};
+
+
+Blockly.Arduino.grove_lcd_rgb_write_data = function() {
+  var data1 = this.getFieldValue('DATA');
+ 
+  var dropdown_stat = this.getFieldValue('FORMAT');
+
+  var code = 'LCD_RGB';
+  if(dropdown_stat==="0x"){
+    code += '.write(0x'+data1+');\n';
+  } else if(dropdown_stat==="0b"){
+    code += '.write(0b'+data1+');\n';
+  } else {
+    code += '.write('+data1+');\n';
+  }
+    
+  return code;
+};
+
+
+
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 //*****   Driver moteur Grove V1.3 Cdo 2017 03 19 */
 function grove_driver13_genere_inc_def(value_i2c_address) {
