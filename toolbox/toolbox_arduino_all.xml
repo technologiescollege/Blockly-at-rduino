@@ -2651,21 +2651,30 @@
 		<block type="Sharp_IR_read"></block>
 	</category>
 	<category name="CAT_ETHERNET" colour="#FFCC66">
-		<category name="CAT_ETHERNET_INIT" colour="#FFCC66">
-			<block type="ethernet_INIT_CREATION"></block>
-			<block type="ethernet_begin_dhcp_client">
-				<value name="MAC_ADDRESS">
-					<block type="ethernet_mac_address"></block>
-				</value>
-			</block>
+		<!-- <category name="CAT_ETHERNET_INIT" colour="#FFCC66"> -->
+			<!-- <block type="ethernet_INIT_CREATION"></block> -->
+			<!-- <block type="ethernet_begin_dhcp_client"> -->
+				<!-- <value name="MAC_ADDRESS"> -->
+					<!-- <block type="ethernet_mac_address"></block> -->
+				<!-- </value> -->
+			<!-- </block> -->
+			<!-- <block type="ethernet_begin_staticIP_client"> -->
+				<!-- <value name="MAC_ADDRESS"> -->
+					<!-- <block type="ethernet_mac_address"></block> -->
+				<!-- </value> -->
+			<!-- </block> -->
+		<!-- </category> -->
+		<category name="CAT_ETHERNET_CLIENT" colour="#FFCC66">
 			<block type="ethernet_begin_staticIP_client">
 				<value name="MAC_ADDRESS">
 					<block type="ethernet_mac_address"></block>
 				</value>
 			</block>
-		</category>
-		<category name="CAT_ETHERNET_CLIENT" colour="#FFCC66">
-			<block type="ethernet_client_begin"></block>
+			<block type="ethernet_begin_dhcp_client">
+				<value name="MAC_ADDRESS">
+					<block type="ethernet_mac_address"></block>
+				</value>		
+			</block>	
 			<block type="ethernet_connect">
 				<value name="SERVER">
 					<block type="text">
@@ -2674,7 +2683,6 @@
 				</value>
 			</block>
 			<block type="ethernet_stop"></block>
-			<block type="ethernet_connected"></block>
 			<block type="ethernet_available"></block>
 			<block type="ethernet_print">
 				<value name="TEXT">
@@ -2706,7 +2714,9 @@
 				</value>
 			</block>
 			<block type="ethernet_localip"></block>
-			<block type="ethernet_client_for_server"></block>
+			<block type="ethernet_ATTENTE_CLIENT"></block>
+			<block type="ethernet_connected"></block>
+			<!-- <block type="ethernet_client_for_server"></block> -->
 			<block type="ethernet_HEADER_send"></block>
 			<block type="ethernet_HTML_send">
 				<value name="html">
@@ -2715,18 +2725,19 @@
 					</block>
 				</value>			
 			</block>
-			<block type="ethernet_PARSER_parse"></block>
-			<block type="ethernet_PARSER_init"></block>
-			<block type="ethernet_PARSER_end"></block>
-			<block type="ethernet_PARSER_count"></block>
-			<block type="ethernet_PARSER_purge"></block>
-			<block type="ethernet_PARSER_getmyparam">
-				<value name="myparam">
-					<block type="text">
-						<field name="paramètre"></field>
-					</block>
-				</value>			
-			</block>
+			<!-- <block type="ethernet_PARSER_parse"></block> -->
+			<!-- <block type="ethernet_PARSER_init"></block> -->
+			<!-- <block type="ethernet_PARSER_end"></block> -->
+			<!-- <block type="ethernet_PARSER_count"></block> -->
+			<!-- <block type="ethernet_PARSER_purge"></block> -->
+			<!-- <block type="ethernet_PARSER_getmyparam"> -->
+				<!-- <value name="myparam"> -->
+					<!-- <block type="text"> -->
+						<!-- <field name="paramètre"></field> -->
+					<!-- </block> -->
+				<!-- </value>			 -->
+			<!-- </block> -->
+			<category name="Analyseur sémantique de flux" colour="#FFCC66">	
 			<block type="ethernet_PARSERV2_CREATION">
 				<value name="Parse">
 					<block type="text">
@@ -2758,13 +2769,15 @@
 			</block>
 			<block type="ethernet_PARSERV2_FREE"></block>
 		</category>
+		</category>		
+		
 		<category name="CAT_WIFI_INIT" colour="#FFCC66">
 			<block type="ethernet_wifi_begin_server"></block>
 			<block type="ethernet_client_for_wifi_server"></block>
 			<block type="ethernet_wifi_localip"></block>				
 		</category>
 		<sep></sep>
-	</category>	
+	</category>		
 	<category name="CAT_BLYNK_CC" colour="#23C890">
 		<category name="CAT_Blynk_Arduino_Connexion" colour="#23C890">
 			<block type="blynk_cc_uno_cnx_usb">
