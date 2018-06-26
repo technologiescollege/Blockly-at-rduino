@@ -289,9 +289,9 @@ BlocklyDuino.validateConfigGlobal = function () {
 			{
 			BlocklyDuino.workspace.clear();				  
 			if (search.length <= 1) {
-					search = '?card=' + $("#pinout").val();
+				search = '?card=' + $("#pinout").val();
 			} else if (search.match(/[?&]card=[^&]*/)) {
-					search = search.replace(/([?&]card=)[^&]*/, '$1' + $("#pinout").val());
+				search = search.replace(/([?&]card=)[^&]*/, '$1' + $("#pinout").val());
 				} else {
 					search = search.replace(/\?/, '?card=' + $("#pinout").val() + '&');
 				}
@@ -308,8 +308,8 @@ BlocklyDuino.validateConfigGlobal = function () {
 			} else {
                     search = search.replace(/([?&]toolbox=)[^&]*/, '$1' + 'toolbox_algo');
 				}
-			} else {
-				$("#pinout").val(BlocklyDuino.selectedCard);
+		} else {
+			$("#pinout").val(BlocklyDuino.selectedCard);
 			}
 		}	
 	  

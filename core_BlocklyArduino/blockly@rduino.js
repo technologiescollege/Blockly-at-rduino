@@ -209,7 +209,7 @@ BlocklyDuino.loadBlocks = function(defaultXml) {
 	if (defaultXml) {
 		// Load the editor with default starting blocks.
 		var xml = Blockly.Xml.textToDom(defaultXml);
-		Blockly.Xml.domToWorkspace(BlocklyDuino.workspace, xml);
+		Blockly.Xml.domToWorkspace(xml, BlocklyDuino.workspace);
 	} else {
 		var loadOnce = null;
 		try {
@@ -223,7 +223,7 @@ BlocklyDuino.loadBlocks = function(defaultXml) {
 			// Language switching stores the blocks during the reload.
 			delete window.localStorage.loadOnceBlocks;
 			var xml = Blockly.Xml.textToDom(loadOnce);
-			Blockly.Xml.domToWorkspace(BlocklyDuino.workspace, xml);
+			Blockly.Xml.domToWorkspace(xml, BlocklyDuino.workspace);
 		}
 	}
 };
@@ -402,7 +402,7 @@ BlocklyDuino.load = function (event) {
     	  BlocklyDuino.workspace.clear();
       }
       $('#tab_blocks a').tab('show');
-      Blockly.Xml.domToWorkspace(BlocklyDuino.workspace, xml);
+      Blockly.Xml.domToWorkspace(xml, BlocklyDuino.workspace);
       BlocklyDuino.selectedTab = 'blocks';
       BlocklyDuino.renderContent();
       
@@ -442,7 +442,7 @@ BlocklyDuino.load_IDE = function (event) {
 		} catch (e) {}
 	var count = BlocklyDuino.workspace.getAllBlocks().length;
 	$('#tab_blocks a').tab('show');
-	Blockly.Xml.domToWorkspace(BlocklyDuino.workspace, xml);
+	Blockly.Xml.domToWorkspace(xml, BlocklyDuino.workspace);
 	BlocklyDuino.selectedTab = 'blocks';
 	BlocklyDuino.renderContent();
 	  
@@ -866,15 +866,13 @@ BlocklyDuino.buildToolbox = function() {
 BlocklyDuino.loadToolboxDefinition = function(toolboxFile) {
 	if (!toolboxFile) {
 		toolboxFile = BlocklyDuino.getStringParamFromUrl('toolbox', '');
-	}
-	
-	if (!toolboxFile) {
-		toolboxFile = window.localStorage.toolbox;
-	}
-	
-	if (!toolboxFile) {
-		toolboxFile = BlocklyDuino.selectedToolbox;
-	}
+	}	
+		if (!toolboxFile) {
+			toolboxFile = window.localStorage.toolbox;
+		}	
+			if (!toolboxFile) {
+				toolboxFile = BlocklyDuino.selectedToolbox;
+			}
 
 	$("#toolboxes").val(toolboxFile);
 	// update buttons levels
@@ -897,14 +895,13 @@ BlocklyDuino.loadToolboxDefinition = function(toolboxFile) {
 				toolboxXml += '</xml>';
 				$("#toolbox").remove();
 				$('body').append(toolboxXml);	
-				  $("xml").find("category").each(function() {
-						// add attribute ID to keep categorie code
-						if (!$(this).attr('id')) {
-							$(this).attr('id', $(this).attr('name'));
-							$(this).attr('name', Blockly.Msg[$(this).attr('name')]);
-						}
-					  });
-
+				$("xml").find("category").each(function() {
+					// add attribute ID to keep categorie code
+					if (!$(this).attr('id')) {
+						$(this).attr('id', $(this).attr('name'));
+						$(this).attr('name', Blockly.Msg[$(this).attr('name')]);
+					}
+				});
 			}).fail(function(data) {
 				$("#toolbox").remove();
 			});
