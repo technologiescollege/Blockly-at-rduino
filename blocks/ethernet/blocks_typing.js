@@ -99,10 +99,10 @@ Blockly.Blocks.ethernet_PARSERV2_PARSING.getBlockType = function() {
    return Blockly.Types.NUMBER;
 };
 Blockly.Blocks.ethernet_PARSERV2_GETNAME.getBlockType = function() {
-   return Blockly.Types.STRING;
+   return Blockly.Types.TEXT;
 };
 Blockly.Blocks.ethernet_PARSERV2_GETVALUE.getBlockType = function() {
-   return Blockly.Types.STRING;
+   return Blockly.Types.TEXT;
 };
 Blockly.Blocks.ethernet_PARSERV2_FREE.getBlockType = function() {
    return Blockly.Types.STRING;
