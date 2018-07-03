@@ -59,6 +59,91 @@ Blockly.Arduino.I2C_read = function() {
 	return [code, Blockly.Arduino.ORDER_ATOMIC];
 };
 
+//////////////////////////////////////////////
+
+Blockly.Arduino.I2C_init_HW = function() {	
+	Blockly.Arduino.includes_['librairie']  = '#include <Wire.h> ';
+	Blockly.Arduino.setups_['setup_I2C'] = 'Wire.begin(); \n';		
+	return "";
+};
+
+Blockly.Arduino.I2C_stop_HW = function() {	
+	var code = 'Wire.endTransmission(1); \n';	
+	return code;
+};
+
+Blockly.Arduino.I2C_restart_HW = function() {	
+	var code = 'Wire.endTransmission(0); \n';	
+	return code;
+};
+
+
+Blockly.Arduino.I2C_write_HW = function() {	
+	var Format = this.getFieldValue('Format');	
+	var data = this.getFieldValue('data1'); 
+	
+	var code = 'Wire.write(';
+	
+	if (Format === "0x"){
+		code+='0x'+data+'); \n';
+	} else if  (Format === "0b"){
+		code+='0b'+data+'); \n';		
+	} else {
+	code+=+data+'); \n';
+	}
+		
+	return code;
+};
+
+Blockly.Arduino.I2C_start_HW = function() {	
+	var Format = this.getFieldValue('Format');	
+	var data = this.getFieldValue('data1'); 
+	
+	var code = 'Wire.beginTransmission(';
+	
+	if (Format === "0x"){
+		code+='0x'+data+'); \n';
+	} else if  (Format === "0b"){
+		code+='0b'+data+'); \n';		
+	} else {
+	code+=+data+'); \n';
+	}	
+	return code;
+};
+
+
+Blockly.Arduino.I2C_request_HW = function() {	
+	var Format = this.getFieldValue('Format');	
+	var Address = this.getFieldValue('address');
+	var Nb_Bytes = this.getFieldValue('nb_bytes');
+	
+	var code = 'Wire.requestFrom(';
+	
+	if (Format === "0x"){
+		code +='0x'+Address+','+Nb_Bytes+','+'1); \n';
+	} else if  (Format === "0b"){
+		code +='0b'+Address+','+Nb_Bytes+','+'1); \n';	
+	} else {
+	code += Address+','+Nb_Bytes+','+'1); \n';
+	}	
+	
+	return code;
+};
+
+Blockly.Arduino.I2C_available_HW = function() {	
+	var code = 'Wire.available()';	
+	return [code, Blockly.Arduino.ORDER_ATOMIC];
+};
+
+
+Blockly.Arduino.I2C_data_HW = function() {	
+	var code = 'Wire.read()';	
+	return [code, Blockly.Arduino.ORDER_ATOMIC];
+};
+
+
+////////////////////////////////////////
+
 Blockly.Arduino.I2C_scan = function() {	
 	Blockly.Arduino.includes_['define_I2C_scan'] = '#include <Wire.h>';
 	Blockly.Arduino.setups_['setup_I2C_scan'] = "Serial.begin (115200);\n" +
