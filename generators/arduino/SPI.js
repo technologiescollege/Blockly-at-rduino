@@ -24,9 +24,16 @@ Blockly.Arduino.SPI_init = function() {
 
 Blockly.Arduino.SPI_send = function() {
 	
-	var data = Blockly.Arduino.valueToCode(this, 'Data', Blockly.Arduino.ORDER_ATOMIC);
-	
-	var code = 'SPI.transfer('+data+'); \n';
+	var Format = this.getFieldValue('Format');	
+	var data = this.getFieldValue('data'); 	
+	var code = 'SPI.transfer(';	
+	if (Format === "0x"){
+		code+='0x'+data+'); \n';
+	} else if  (Format === "0b"){
+		code+='0b'+data+'); \n';		
+	} else {
+	code+=+data+'); \n';
+	}
 	
 	return code;
 };
