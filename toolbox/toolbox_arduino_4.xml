@@ -1380,7 +1380,7 @@
 					</block>
 				</value>
 			</block>
-			<block type="ethernet_stop"></block>
+			
 			<block type="ethernet_available"></block>
 			<block type="ethernet_print">
 				<value name="TEXT">
@@ -1413,6 +1413,7 @@
 			</block>
 			<block type="ethernet_localip"></block>
 			<block type="ethernet_ATTENTE_CLIENT"></block>
+			<block type="ethernet_stop"></block>
 			<block type="ethernet_connected"></block>
 			<!-- <block type="ethernet_client_for_server"></block> -->
 			<block type="ethernet_HEADER_send"></block>
@@ -1435,7 +1436,7 @@
 					<!-- </block> -->
 				<!-- </value>			 -->
 			<!-- </block> -->
-			<category name="Analyseur sémantique de flux" colour="#FFCC66">	
+			<category name="Analyseur de requête" colour="#FFCC66">	
 			<block type="ethernet_PARSERV2_CREATION">
 				<value name="Parse">
 					<block type="text">
