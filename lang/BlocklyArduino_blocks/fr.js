@@ -282,8 +282,9 @@ Blockly.Msg.CAT_PETITBOT_SERVO = "servomoteurs";
 Blockly.Msg.CAT_PETITBOT_LED = "diodes";
 
 Blockly.Msg.CAT_NRF24L01 = "nRF24L01"; //added 31/05/2018
-
-// Préparation Nouvelle arborescence (Bzhtitude) 04/07/2018
+ 
+ 
+// Nouvelle arborescence 
 Blockly.Msg.CAT_FONCTION_AFFICHAGE = "Affichage";
 Blockly.Msg.CAT_FONCTION_CAPTEURS = "Capteurs";
 Blockly.Msg.CAT_FONCTION_MOTEURS = "Commande Moteurs";
@@ -340,6 +341,7 @@ Blockly.Msg.CAT_FONCTION_WIRELESS_ZIGBEE = "Zigbee";
 
 Blockly.Msg.CAT_FONCTION_STOCKAGE_EEPROM = "EEPROM";
 Blockly.Msg.CAT_FONCTION_STOCKAGE_SDCARD = "Carte SD";
+ 
 
 //**********************************Dropdown menus messages***********************************************
 
@@ -2109,8 +2111,8 @@ Blockly.Msg.ETHERNET_PARSER_GETMYPARAM_PARAM = "nom du paramètre: ";
 Blockly.Msg.ETHERNET_PARSER_PURGE_TITLE = "Fin de l'analyse";
 ////
 Blockly.Msg.ETHERNET_ATTENTE_CLIENT_TITLE = "Attente requête Client";
-Blockly.Msg.ETHERNET_PARSERV2_CREATION_TITLE = "Initialisation PARSER";
-Blockly.Msg.ETHERNET_PARSERV2_CREATION_TOOLTIP = "Créer un objet Parser";
+Blockly.Msg.ETHERNET_PARSERV2_CREATION_TITLE = "Initialisation Analyseur de requête";
+Blockly.Msg.ETHERNET_PARSERV2_CREATION_TOOLTIP = "Créer un objet Analyseur";
 Blockly.Msg.ETHERNET_PARSERV2_LECTURE_TITLE = "Lecture de la requête";
 Blockly.Msg.ETHERNET_PARSERV2_LECTURE_FLUX = "flux à analyser";
 Blockly.Msg.ETHERNET_PARSERV2_LECTURE_TOOLTIP = "Lecture et stockage du flux utile d'un POST ou d'un GET";
@@ -2123,7 +2125,7 @@ Blockly.Msg.ETHERNET_PARSERV2_GETVALUE_TITLE = "Valeur du paramètre";
 Blockly.Msg.ETHERNET_PARSERV2_GETVALUE_TOOLTIP = "Renvoie la valeur d'un paramètre";
 Blockly.Msg.ETHERNET_PARSERV2_GETVALUE_PARAM = "Nom : ";
 Blockly.Msg.ETHERNET_PARSERV2_FREE_TITLE = "Fin de l'analyse de la requête (obligatoire)";
-Blockly.Msg.ETHERNET_PARSERV2_FREE_TOOLTIP = "RaZ du parser";
+Blockly.Msg.ETHERNET_PARSERV2_FREE_TOOLTIP = "RaZ du Analyseur";
 ////
 Blockly.Msg.ETHERNET_LOCALIP_HELPURL = "https://www.arduino.cc/en/Reference/EthernetLocalIP";
 Blockly.Msg.ETHERNET_LOCALIP_TITLE = "adresse IP locale";
