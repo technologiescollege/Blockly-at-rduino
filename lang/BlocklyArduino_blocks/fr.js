@@ -283,6 +283,64 @@ Blockly.Msg.CAT_PETITBOT_LED = "diodes";
 
 Blockly.Msg.CAT_NRF24L01 = "nRF24L01"; //added 31/05/2018
 
+// Préparation Nouvelle arborescence (Bzhtitude) 04/07/2018
+Blockly.Msg.CAT_FONCTION_AFFICHAGE = "Affichage";
+Blockly.Msg.CAT_FONCTION_CAPTEURS = "Capteurs";
+Blockly.Msg.CAT_FONCTION_MOTEURS = "Commande Moteurs";
+Blockly.Msg.CAT_FONCTION_ENTREES = "Entrées";
+Blockly.Msg.CAT_FONCTION_SORTIES = "Sorties";
+Blockly.Msg.CAT_FONCTION_BUS = "Bus de Communication / Liaisons";
+Blockly.Msg.CAT_FONCTION_WIRELESS = "Communication sans fils";
+Blockly.Msg.CAT_FONCTION_STOCKAGE = "Stockage Mémoire";
+
+Blockly.Msg.CAT_FONCTION_AFFICHAGE_LED = "LED";
+Blockly.Msg.CAT_FONCTION_AFFICHAGE_7SEG = "7 Segments";
+Blockly.Msg.CAT_FONCTION_AFFICHAGE_LCD = "LCD";
+Blockly.Msg.CAT_FONCTION_AFFICHAGE_LCD_SERIE = "LCD Série";
+Blockly.Msg.CAT_FONCTION_AFFICHAGE_LCD_I2C = "LCD I2C";
+Blockly.Msg.CAT_FONCTION_AFFICHAGE_LCD_4BITS = "LCD 4 Bits";
+Blockly.Msg.CAT_FONCTION_AFFICHAGE_SERIE = "Moniteur Série Arduino";
+
+Blockly.Msg.CAT_FONCTION_CAPTEURS_TEMPERATURE = "Température";
+Blockly.Msg.CAT_FONCTION_CAPTEURS_TEMPHUM = "Température / humidité";
+Blockly.Msg.CAT_FONCTION_CAPTEURS_LUX = "Lumière / Éclairement";
+Blockly.Msg.CAT_FONCTION_CAPTEURS_VOCAL = "Commande vocale";
+Blockly.Msg.CAT_FONCTION_CAPTEURS_BATTERY = "Monitoring batterie";
+Blockly.Msg.CAT_FONCTION_CAPTEURS_COLOR = "Capteur de couleur";
+
+Blockly.Msg.CAT_FONCTION_MOTEURS_MOTORCC = "Moteurs CC";
+Blockly.Msg.CAT_FONCTION_MOTEURS_PAP = "Moteurs PAP";
+Blockly.Msg.CAT_FONCTION_MOTEURS_SERVO = "Servo Moteurs";
+
+Blockly.Msg.CAT_FONCTION_SORTIES_PWM = "Sortie PWM";
+Blockly.Msg.CAT_FONCTION_SORTIES_BUZZER = "Sortie Buzzer";
+
+Blockly.Msg.CAT_FONCTION_ENTREES_CAN = "Entrée CAN";
+Blockly.Msg.CAT_FONCTION_ENTREES_KEYBOARD = "clavier";
+Blockly.Msg.CAT_FONCTION_ENTREES_BUTTON = "Bouton Poussoir";
+
+Blockly.Msg.CAT_FONCTION_BUS_RS232 = "Bluetooth";
+Blockly.Msg.CAT_FONCTION_BUS_I2C = "I2C";
+Blockly.Msg.CAT_FONCTION_BUS_I2C_SOFT = "I2C logiciel";
+Blockly.Msg.CAT_FONCTION_BUS_I2C_HARD = "I2C Hardware";
+Blockly.Msg.CAT_FONCTION_BUS_SPI = "SPI";
+Blockly.Msg.CAT_FONCTION_BUS_1WIRE = "One Wire";
+Blockly.Msg.CAT_FONCTION_BUS_Ethernet = "Ethernet";
+
+Blockly.Msg.CAT_FONCTION_WIRELESS_BLUTOOTH = "Bluetooth";
+Blockly.Msg.CAT_FONCTION_WIRELESS_WIFI ="WIFI";
+Blockly.Msg.CAT_FONCTION_WIRELESS_RFID ="RFID";
+Blockly.Msg.CAT_FONCTION_WIRELESS_NFC = "NFC";
+Blockly.Msg.CAT_FONCTION_WIRELESS_GPS = "GPS";
+Blockly.Msg.CAT_FONCTION_WIRELESS_GSM = "GSM";
+Blockly.Msg.CAT_FONCTION_WIRELESS_IR = "Infra Rouge";
+Blockly.Msg.CAT_FONCTION_WIRELESS_RC5 = "RC5";
+Blockly.Msg.CAT_FONCTION_WIRELESS_RF24 = "Radio Fréquence 2.4GHz";
+Blockly.Msg.CAT_FONCTION_WIRELESS_ZIGBEE = "Zigbee";
+
+Blockly.Msg.CAT_FONCTION_STOCKAGE_EEPROM = "EEPROM";
+Blockly.Msg.CAT_FONCTION_STOCKAGE_SDCARD = "Carte SD";
+
 //**********************************Dropdown menus messages***********************************************
 
 Blockly.Msg.FIELDDROPDOWN = [["1 (état haut)", "HIGH"], ["0 (état bas)", "LOW"]];
