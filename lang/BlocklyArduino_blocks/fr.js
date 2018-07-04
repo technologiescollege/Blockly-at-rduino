@@ -1677,6 +1677,7 @@ Blockly.Msg.SPI_INIT_HELPURL = " " ;
 
 Blockly.Msg.SPI_SEND_TEXT = "SPI_SEND";
 Blockly.Msg.SPI_SEND_DATA = "donnée";
+Blockly.Msg.SPI_SEND_FIELDDROPDOWN = [["0x","0x"], ["0b","0b"],["Décimal",""]];
 Blockly.Msg.SPI_SEND_TOOLTIP = " envoi de la donnée par bus SPI";
 Blockly.Msg.SPI_SEND_HELPURL = "";
 
