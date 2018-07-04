@@ -218,6 +218,15 @@ Blockly.Arduino.ethernet_HEADER_send = function() {
   return code;
 };
 
+Blockly.Arduino.ethernet_HTML_send_page = function() {
+	
+  var numpage = this.getFieldValue('partie');	
+  
+  var code ='Sitehtml'+numpage+'(client);  // attention include \n';		
+  code +='delay(1);\n';
+  return code;
+};
+
 
 //**** STATIC ****
 
