@@ -51,7 +51,7 @@ goog.require('Blockly.Types');
 Blockly.Blocks['ethernet_mac_address'] = {
   init: function() {
     this.setHelpUrl(Blockly.Msg.ETHERNET_BEGIN_HELPURL);
-    this.setColour(Blockly.Blocks.ethernet.HUE);
+    this.setColour("#858CE3");
     this.appendDummyInput()
       .appendField(new Blockly.FieldTextInput("DE"),"MAC_ADDRESS_1")
       .appendField('-')
@@ -91,7 +91,7 @@ Blockly.Blocks['ethernet_begin_dhcp_client'] = {
 Blockly.Blocks['ethernet_begin_dhcp_server'] = {		// by BZH
   init: function() {
     this.setHelpUrl(Blockly.Msg.ETHERNET_BEGIN_HELPURL); // a finir
-    this.setColour(Blockly.Blocks.ethernet.HUE);
+    this.setColour("#45BD49");
     this.appendDummyInput()
       .appendField(Blockly.Msg.ETHERNET_BEGIN_DHCP_SERVER_TITLE)
       .appendField(new Blockly.FieldDropdown(Blockly.Msg.ETHERNET_VERSION_FIELDDROPDOWN), 'VERSION');
@@ -122,7 +122,7 @@ Blockly.Blocks['ethernet_client_for_server'] = { // by BZH
 Blockly.Blocks['ethernet_localip'] = {
   init: function() {
     this.setHelpUrl(Blockly.Msg.ETHERNET_LOCALIP_HELPURL);
-    this.setColour(Blockly.Blocks.ethernet.HUE);
+    this.setColour("#45BD49");
     this.appendDummyInput()
       .appendField(Blockly.Msg.ETHERNET_LOCALIP_TITLE);
     this.setOutput(true, 'String');
@@ -205,7 +205,7 @@ Blockly.Blocks['ethernet_println'] = {
 Blockly.Blocks['ethernet_stop'] = {
   init: function() {
     this.setHelpUrl(Blockly.Msg.ETHERNET_STOP_HELPURL);
-    this.setColour(Blockly.Blocks.ethernet.HUE);
+    this.setColour("#45BD49");
     this.appendDummyInput()
       .appendField(Blockly.Msg.ETHERNET_STOP_TITLE);
     this.setPreviousStatement(true, null);
@@ -271,7 +271,7 @@ Blockly.Blocks['ethernet_post_request'] = {
 
 Blockly.Blocks['ethernet_HTML_send'] = {
   init: function() {
-	this.setColour(Blockly.Blocks.ethernet.HUE);
+	this.setColour("#45BD49");
     this.appendDummyInput()
         .appendField(Blockly.Msg.ETHERNET_HTML_SEND_TITLE);
     this.appendValueInput("html")
@@ -287,7 +287,7 @@ Blockly.Blocks['ethernet_HTML_send'] = {
 
 Blockly.Blocks['ethernet_HEADER_send'] = {
   init: function() {
-	this.setColour(Blockly.Blocks.ethernet.HUE);
+	this.setColour("#45BD49");
     this.appendDummyInput()
         .appendField(Blockly.Msg.ETHERNET_HEADER_SEND_TITLE);
     this.appendDummyInput()
@@ -305,13 +305,27 @@ Blockly.Blocks['ethernet_HEADER_send'] = {
   }
 };
 
+Blockly.Blocks['ethernet_HTML_send_page'] = {
+  init: function() {
+    this.appendDummyInput()
+        .appendField(Blockly.Msg.ETHERNET_HEADER_SEND_PAGE_TITLE)
+        .appendField(new Blockly.FieldNumber(0), "partie");
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setColour("#45BD49");
+	this.setTooltip(Blockly.Msg.ETHERNET_HEADER_SEND_PAGE_TOOLTIP);
+	this.setHelpUrl("");
+  }
+};
+
+
 
 // ************STATIC IP
 
 Blockly.Blocks['ethernet_begin_staticIP_server'] = {		// by BZH
   init: function() {
     this.setHelpUrl(Blockly.Msg.ETHERNET_BEGIN_HELPURL); // a finir
-    this.setColour(Blockly.Blocks.ethernet.HUE);
+    this.setColour("#45BD49");
     this.appendDummyInput()
       .appendField(Blockly.Msg.ETHERNET_BEGIN_STATICIP_SERVER_TITLE)
       .appendField(new Blockly.FieldDropdown(Blockly.Msg.ETHERNET_VERSION_FIELDDROPDOWN), 'VERSION');
@@ -383,7 +397,7 @@ Blockly.Blocks['ethernet_begin_staticIP_client'] = {		// by BZH
 Blockly.Blocks['ethernet_server_begin'] = {
   init: function() {
     this.setHelpUrl(Blockly.Msg.ETHERNET_BEGIN_HELPURL);
-    this.setColour(Blockly.Blocks.ethernet.HUE);
+    this.setColour("#45BD49");
     this.appendDummyInput()
       .appendField(new Blockly.FieldDropdown(Blockly.Msg.ETHERNET_VERSION_FIELDDROPDOWN), 'VERSION')
       .appendField(Blockly.Msg.ETHERNET_BEGIN_TITLE);
@@ -493,7 +507,7 @@ Blockly.Blocks['ethernet_ATTENTE_CLIENT'] = {
 
 Blockly.Blocks['ethernet_PARSERV2_CREATION'] = {
   init: function() {
-	this.setColour(Blockly.Blocks.ethernet.HUE);
+	this.setColour("#DB3F3F");
     this.appendDummyInput()
         .appendField(Blockly.Msg.ETHERNET_PARSERV2_CREATION_TITLE);
     this.setPreviousStatement(true, null);
@@ -507,7 +521,7 @@ Blockly.Blocks['ethernet_PARSERV2_LECTURE'] = {
   init: function() {  
     this.appendDummyInput()
 		.appendField(Blockly.Msg.ETHERNET_PARSERV2_LECTURE_TITLE);
-	this.setColour(Blockly.Blocks.ethernet.HUE);
+	this.setColour("#DB3F3F");
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
 	this.setTooltip(Blockly.Msg.ETHERNET_PARSERV2_LECTURE_TOOLTIP);
@@ -519,7 +533,7 @@ Blockly.Blocks['ethernet_PARSERV2_LECTURE'] = {
   init: function() {
     this.appendDummyInput()
         .appendField(Blockly.Msg.ETHERNET_PARSERV2_PARSING_TITLE);
-	this.setColour(Blockly.Blocks.ethernet.HUE);
+	this.setColour("#DB3F3F");
 	this.setOutput(true, null);
 	this.setTooltip(Blockly.Msg.ETHERNET_PARSERV2_PARSING_TOOLTIP);
 	this.setHelpUrl("");
@@ -533,7 +547,7 @@ Blockly.Blocks['ethernet_PARSERV2_LECTURE'] = {
 	this.appendValueInput("nbNom")
         .setAlign(Blockly.ALIGN_RIGHT)
         .appendField(Blockly.Msg.ETHERNET_PARSERV2_GETNAME_PARAM);
-	this.setColour(Blockly.Blocks.ethernet.HUE);
+	this.setColour("#DB3F3F");
 	this.setOutput(true, null);
 	this.setTooltip(Blockly.Msg.ETHERNET_PARSERV2_GETNAME_TOOLTIP);
 	this.setHelpUrl("");
@@ -547,7 +561,7 @@ Blockly.Blocks['ethernet_PARSERV2_LECTURE'] = {
 	this.appendValueInput("nbVal")
         .setAlign(Blockly.ALIGN_RIGHT)
         .appendField(Blockly.Msg.ETHERNET_PARSERV2_GETVALUE_PARAM);
-	this.setColour(Blockly.Blocks.ethernet.HUE);
+	this.setColour("#DB3F3F");
 	this.setOutput(true, null);
 	this.setTooltip(Blockly.Msg.ETHERNET_PARSERV2_GETVALUE_TOOLTIP);
 	this.setHelpUrl("");
@@ -558,7 +572,7 @@ Blockly.Blocks['ethernet_PARSERV2_FREE'] = {
   init: function() {  
     this.appendDummyInput()
 		.appendField(Blockly.Msg.ETHERNET_PARSERV2_FREE_TITLE);
-	this.setColour(Blockly.Blocks.ethernet.HUE);
+	this.setColour("#DB3F3F");
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
 	this.setTooltip(Blockly.Msg.ETHERNET_PARSERV2_FREE_TOOLTIP);
