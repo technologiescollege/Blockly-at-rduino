@@ -1,7 +1,6 @@
 head.load(
 "blocks/Blockly/logic.js",
 "blocks/Blockly/math.js",
-// "blocks/Blockly/procedures.js",
 "blocks/Blockly/text.js",
 function() {
     // Call a function when done

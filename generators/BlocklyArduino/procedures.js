@@ -28,31 +28,31 @@ goog.provide('Blockly.Arduino.procedures');
 goog.require('Blockly.Arduino');
 
 //enhanced by JP Fontaine from forum
-Blockly.Arduino.procedures_defreturn = function() {
-    var funcName = Blockly.Arduino.variableDB_.getName(this.getFieldValue('NAME'), Blockly.Procedures.NAME_TYPE);
-    var branch = Blockly.Arduino.statementToCode(this, 'STACK');
+Blockly.Arduino.procedures_defreturn = function(block){
+    var funcName = Blockly.Arduino.variableDB_.getName(block.getFieldValue('NAME'), Blockly.Procedures.NAME_TYPE);
+    var branch = Blockly.Arduino.statementToCode(block, 'STACK');
     if (Blockly.Arduino.INFINITE_LOOP_TRAP) {
-        branch = Blockly.Arduino.INFINITE_LOOP_TRAP.replace(/%1/g, '\'' + this.id + '\'') + branch;
+        branch = Blockly.Arduino.INFINITE_LOOP_TRAP.replace(/%1/g, '\'' + block.id + '\'') + branch;
     }
-    var returnValue = Blockly.Arduino.valueToCode(this, 'RETURN', Blockly.Arduino.ORDER_NONE) || '';
+    var returnValue = Blockly.Arduino.valueToCode(block, 'RETURN', Blockly.Arduino.ORDER_NONE) || '';
     if (returnValue) {
         returnValue = '  return ' + returnValue + ';\n';
     }
-    var returnType = Blockly.Arduino.getArduinoType_(Blockly.Types[this.getFieldValue('type')]) || 'void';
+    var returnType = Blockly.Arduino.getArduinoType_(Blockly.Types[block.getFieldValue('type')]) || 'void';
     var args = '';
-    for (var x = 0; x < this.arguments_.length; x++) {
+    for (var x = 0; x < block.arguments_.length; x++) {
         var arg = '';
         var argType = '';
-        if (this.argumentsTypes_[x]) {
-            argType = Blockly.Arduino.getArduinoType_(this.argumentsTypes_[x]);
+        if (block.argumentsTypes_[x]) {
+            argType = Blockly.Arduino.getArduinoType_(block.argumentsTypes_[x]);
         } else {
             argType = Blockly.Arduino.getArduinoType_(Blockly.Types.UNDEF);
         }
-        arg = Blockly.Arduino.variableDB_.getName(this.arguments_[x], Blockly.Variables.NAME_TYPE);
+        arg = Blockly.Arduino.variableDB_.getName(block.arguments_[x], Blockly.Variables.NAME_TYPE);
         args += argType + ' ' + arg + ', ';
     }
     var code = returnType + ' ' + funcName + '(' + args.slice(0, -2) + ') {\n' + branch + returnValue + '}\n';
-    code = Blockly.Arduino.scrub_(this, code);
+    code = Blockly.Arduino.scrub_(block, code);
     Blockly.Arduino.codeFunctions_[funcName] = code;
     return null;
 };
