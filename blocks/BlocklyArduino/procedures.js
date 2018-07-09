@@ -333,8 +333,15 @@ Blockly.Blocks['procedures_defreturn'] = {
     init: function() {
         var nameField = new Blockly.FieldTextInput(Blockly.Msg.PROCEDURES_DEFRETURN_PROCEDURE, Blockly.Procedures.rename);
         nameField.setSpellcheck(false);
-        this.appendDummyInput().appendField(new Blockly.FieldDropdown(Blockly.Types.getValidTypeArray()), "type").appendField(nameField, "NAME").appendField("", "PARAMS");
-        this.appendValueInput("RETURN").setAlign(Blockly.ALIGN_RIGHT).appendField(Blockly.Msg.PROCEDURES_DEFRETURN_RETURN);
+        this.appendDummyInput()
+			.appendField(Blockly.Msg.PROCEDURES_DEFRETURN_FUNCTION)
+			.appendField(nameField, "NAME")
+			.appendField("", "PARAMS")
+			.appendField(Blockly.Msg.PROCEDURES_DEFRETURN_TYPE)
+			.appendField(new Blockly.FieldDropdown(Blockly.Types.getValidTypeArray()), "type");
+        this.appendValueInput("RETURN")
+			.setAlign(Blockly.ALIGN_RIGHT)
+			.appendField(Blockly.Msg.PROCEDURES_DEFRETURN_RETURN);
         this.setMutator(new Blockly.Mutator(["procedures_mutatorarg"]));
         this.setColour(Blockly.Blocks.procedures.HUE);
         this.setTooltip(Blockly.Msg.PROCEDURES_DEFRETURN_TOOLTIP);

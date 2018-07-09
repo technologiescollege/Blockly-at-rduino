@@ -59,7 +59,32 @@ Blockly.Arduino.procedures_defreturn = function(block){
 
 // Defining a procedure without a return value uses the same generator as
 // a procedure with a return value.
-Blockly.Arduino.procedures_defnoreturn = Blockly.Arduino.procedures_defreturn;
+// Blockly.Arduino.procedures_defnoreturn = Blockly.Arduino.procedures_defreturn;
+
+Blockly.Arduino['procedures_defnoreturn'] = function(block){
+    var funcName = Blockly.Arduino.variableDB_.getName(block.getFieldValue('NAME'), Blockly.Procedures.NAME_TYPE);
+    var branch = Blockly.Arduino.statementToCode(block, 'STACK');
+    if (Blockly.Arduino.INFINITE_LOOP_TRAP) {
+        branch = Blockly.Arduino.INFINITE_LOOP_TRAP.replace(/%1/g, '\'' + block.id + '\'') + branch;
+    }
+    var args = '';
+    for (var x = 0; x < block.arguments_.length; x++) {
+        var arg = '';
+        var argType = '';
+        if (block.argumentsTypes_[x]) {
+            argType = Blockly.Arduino.getArduinoType_(block.argumentsTypes_[x]);
+        } else {
+            argType = Blockly.Arduino.getArduinoType_(Blockly.Types.UNDEF);
+        }
+        arg = Blockly.Arduino.variableDB_.getName(block.arguments_[x], Blockly.Variables.NAME_TYPE);
+        args += argType + ' ' + arg + ', ';
+    }
+    var code = 'void ' + funcName + '(' + args.slice(0, -2) + ') {\n' + branch + '}\n';
+    code = Blockly.Arduino.scrub_(block, code);
+    Blockly.Arduino.codeFunctions_[funcName] = code;
+    return null;
+};
+
 
 Blockly.Arduino.procedures_callreturn = function() {
   // Call a procedure with a return value.

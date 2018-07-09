@@ -59,6 +59,11 @@ Blockly.Msg.CONTROLS_SWITCH_DEFAULT_TOOLTIP ="Add optional default action";
 Blockly.Msg.TEXT_CHAR_TOOLTIP = "character value that takes up 1 byte of memory";
 Blockly.Msg.TEXT_CHAR_HELPURL = "https://www.arduino.cc/reference/en/language/variables/data-types/string/";
 
+
+//july 9th function from JP Fontaine workspace
+Blockly.Msg.PROCEDURES_DEFRETURN_FUNCTION = "for function";
+Blockly.Msg.PROCEDURES_DEFRETURN_TYPE = "type";
+
 Blockly.Msg.VARIABLES_AS = "as";
 Blockly.Msg.VARIABLES_SET_CONST = "constant %1 set %2";
 Blockly.Msg.ARD_TYPE_ARRAY = "Array";
