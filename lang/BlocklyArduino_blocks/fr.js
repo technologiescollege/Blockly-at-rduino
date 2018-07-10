@@ -67,16 +67,16 @@ Blockly.Msg.VARIABLES_AS = "de type";
 Blockly.Msg.VARIABLES_SET_CONST = "constante %1 fixée à %2";
 Blockly.Msg.ARD_TYPE_CHAR = "caractère";
 Blockly.Msg.ARD_TYPE_TEXT = "texte";
-Blockly.Msg.ARD_TYPE_BOOL = "booléen ToR (Tout ou Rien)";
-Blockly.Msg.ARD_TYPE_SHORT = "chiffre entier";
-Blockly.Msg.ARD_TYPE_NUMBER = "nombre entier";
-Blockly.Msg.ARD_TYPE_LONG = "nombre entier long";
+Blockly.Msg.ARD_TYPE_BOOL = "binaire (ToR)";
+Blockly.Msg.ARD_TYPE_SHORT = "octet (byte)";
+Blockly.Msg.ARD_TYPE_NUMBER = "nombre entier (int)";
+Blockly.Msg.ARD_TYPE_LONG = "nombre entier long (long)";
 Blockly.Msg.ARD_TYPE_UNS_LONG = "entier long positif";
-Blockly.Msg.ARD_TYPE_DECIMAL = "nombre à virgule";
+Blockly.Msg.ARD_TYPE_DECIMAL = "nombre à virgule (float)";
 Blockly.Msg.ARD_TYPE_ARRAY = "tableau";
 Blockly.Msg.ARD_TYPE_NULL = "vide";
 Blockly.Msg.ARD_TYPE_UNDEF = "non défini";
-Blockly.Msg.ARD_TYPE_VOLATILE = "entier volatile";
+Blockly.Msg.ARD_TYPE_VOLATILE = "entier volatile (pour interruption)";
 Blockly.Msg.ARD_TYPE_CHILDBLOCKMISSING = "typage manquant sur un bloc";
 
 //**********************************catégories***********************************************
