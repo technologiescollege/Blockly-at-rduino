@@ -252,7 +252,8 @@ Blockly.Blocks['procedures_defnoreturn'] = {
    * @this Blockly.Block
    */
   getVars: function() {
-    return this.arguments_;
+    //return this.arguments_;
+	return []
   },
   /**
    * Notification that a variable is renaming.
@@ -399,9 +400,13 @@ Blockly.Blocks['procedures_mutatorarg'] = {
    */
   init: function() {
     var field = new Blockly.FieldTextInput('x', this.validator_);
-    this.appendDummyInput()
-        .appendField(Blockly.Msg.PROCEDURES_MUTATORARG_TITLE)
-        .appendField(field, 'NAME');
+    // this.appendDummyInput()
+        // .appendField(Blockly.Msg.PROCEDURES_MUTATORARG_TITLE)
+        // .appendField(field, 'NAME');
+	this.appendDummyInput()
+		.appendField(Blockly.Msg.PROCEDURES_MUTATORARG_TYPE)
+		.appendField(new Blockly.FieldDropdown(Blockly.Types.getValidTypeArray()), "VARIABLE_SETTYPE_TYPE")
+		.appendField(Blockly.Msg.PROCEDURES_MUTATORARG_TITLE).appendField(field, "NAME");
     this.setPreviousStatement(true);
     this.setNextStatement(true);
     this.setColour(Blockly.Blocks.procedures.HUE);
@@ -412,6 +417,11 @@ Blockly.Blocks['procedures_mutatorarg'] = {
     // Have to do this after installing the field on the block.
     field.onFinishEditing_ = this.createNewVar_;
     field.onFinishEditing_('x');
+  },
+  
+  getBlockType: function() {
+        var blocklyTypeKey = this.getFieldValue("VARIABLE_SETTYPE_TYPE");
+        return Blockly.Types[blocklyTypeKey]
   },
   /**
    * Obtain a valid name for the procedure.
