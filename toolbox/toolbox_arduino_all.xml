@@ -159,6 +159,7 @@
 		<block type="base_define"></block>
 		<block type="base_define_bloc"></block>
 		<block type="biblio_include"></block>
+		<block type="include_file"></block>	
 		<block type="base_code"></block>
 		<block type="base_comment"></block>
 		<block type="base_end"></block>
