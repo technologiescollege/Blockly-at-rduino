@@ -170,15 +170,19 @@ Blockly.Arduino.inout_buildin_led = function() {
   var code = 'digitalWrite(13, ' + dropdown_stat + ');\n';
   return code;
 };
-// g�n�re #include < text_file .h>
+// génére #include < text_file .h>
 Blockly.Arduino['biblio_include'] = function() {
   var text_file = this.getFieldValue('File');
   var funcInclude = text_file+'.h';
   Blockly.Arduino.includes_[funcInclude] = '#include <'+text_file+'.h>';
   return "";
 };
-
-
+// génére #include "text_file .h"
+Blockly.Arduino.include_file = function(block) {
+  var text_file = this.getFieldValue('File2');
+  Blockly.Arduino.includes_["File_include"] = '#include "'+text_file+'.h"';
+  return "";
+};
 //@JP Fontaine 02092017
 Blockly.Arduino.base_toggle = function(block) {
     var dropdown_pin = Blockly.Arduino.valueToCode(block, "PIN", Blockly.Arduino.ORDER_ATOMIC);
