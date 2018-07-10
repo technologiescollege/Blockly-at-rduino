@@ -33,9 +33,9 @@ Blockly.Arduino.ethernet_begin_dhcp_client = function() {
   var mac = Blockly.Arduino.valueToCode(this, 'MAC_ADDRESS', Blockly.Arduino.ORDER_ATOMIC) || '0xDE, 0xAD, 0xBE, 0xEF, 0xFE, 0xED'
   mac = mac.replace(/"/g, "");
 
-  Blockly.Arduino.definitions_['define_spi'] = '#include <SPI.h>';
+  Blockly.Arduino.includes_['define_spi'] = '#include <SPI.h>';
   if (version == "PROTEUS")
-  {Blockly.Arduino.definitions_['define_ethernet'] = '#include <UIPEthernet.h>';}
+  {Blockly.Arduino.includes_['define_ethernet'] = '#include <UIPEthernet.h>';}
   else
   {Blockly.Arduino.definitions_['define_ethernet'] = '#include <Ethernet' + version + '.h>';}  
   Blockly.Arduino.definitions_['define_ethernet_client'] = 'EthernetClient client;';
@@ -53,9 +53,9 @@ Blockly.Arduino.ethernet_begin_dhcp_server = function() {
 
   Blockly.Arduino.includes_['define_spi'] = '#include <SPI.h>';
   if (version == "PROTEUS")
-  {Blockly.Arduino.definitions_['define_ethernet'] = '#include <UIPEthernet.h>';}
+  {Blockly.Arduino.includes_['define_ethernet'] = '#include <UIPEthernet.h>';}
   else
-  {Blockly.Arduino.definitions_['define_ethernet'] = '#include <Ethernet' + version + '.h>';}  
+  {Blockly.Arduino.includes_['define_ethernet'] = '#include <Ethernet' + version + '.h>';}  
   Blockly.Arduino.definitions_['define_ethernet_server'] = 'EthernetServer server('+port+');';
   Blockly.Arduino.definitions_['define_arduino_mac'] = 'byte mac[] = {' + mac + '};\n';
   Blockly.Arduino.setups_['begin'] = 'Ethernet.begin(mac);';
@@ -67,7 +67,7 @@ Blockly.Arduino.ethernet_begin_dhcp_server = function() {
 
 Blockly.Arduino.ethernet_client_for_server = function() {
 
-  Blockly.Arduino.includes_['define_ethernet_client'] = 'EthernetClient client;'; // en cas d'utilisation de procedure
+  Blockly.Arduino.definitions_['define_ethernet_client'] = 'EthernetClient client;'; // en cas d'utilisation de procedure
   
   var code = 'EthernetClient client = server.available()';   
   return [code, Blockly.Arduino.ORDER_ATOMIC];
@@ -243,9 +243,9 @@ Blockly.Arduino.ethernet_begin_staticIP_server = function() {
   
   Blockly.Arduino.includes_['define_spi'] = '#include <SPI.h>';
   if (version == "PROTEUS")
-  {Blockly.Arduino.definitions_['define_ethernet'] = '#include <UIPEthernet.h>';}
+  {Blockly.Arduino.includes_['define_ethernet'] = '#include <UIPEthernet.h>';}
   else
-  {Blockly.Arduino.definitions_['define_ethernet'] = '#include <Ethernet' + version + '.h>';}  
+  {Blockly.Arduino.includes_['define_ethernet'] = '#include <Ethernet' + version + '.h>';}  
   Blockly.Arduino.definitions_['define_ethernet_server'] = 'EthernetServer server('+port+');';
   Blockly.Arduino.definitions_['define_arduino_mac'] = 'byte mac[] = {' + mac + '};';
   Blockly.Arduino.definitions_['define_arduino_ip'] = 'IPAddress ip(' + ip + ');';
@@ -272,9 +272,9 @@ Blockly.Arduino.ethernet_begin_staticIP_client = function() {
   
   Blockly.Arduino.includes_['define_spi'] = '#include <SPI.h>';
   if (version == "PROTEUS")
-  {Blockly.Arduino.definitions_['define_ethernet'] = '#include <UIPEthernet.h>';}
+  {Blockly.Arduino.includes_['define_ethernet'] = '#include <UIPEthernet.h>';}
   else
-  {Blockly.Arduino.definitions_['define_ethernet'] = '#include <Ethernet' + version + '.h>';}  
+  {Blockly.Arduino.includes_['define_ethernet'] = '#include <Ethernet' + version + '.h>';}  
   Blockly.Arduino.definitions_['define_ethernet_client'] = 'EthernetClient client;';
   Blockly.Arduino.definitions_['define_arduino_mac'] = 'byte mac[] = {' + mac + '};';
   Blockly.Arduino.definitions_['define_arduino_ip'] = 'IPAddress ip(' + ip + ');';
@@ -295,8 +295,8 @@ Blockly.Arduino.ethernet_begin_staticIP_client = function() {
   var ip_address = this.getFieldValue('IP_ADDRESS');
   ip_address = ip_address.replace(/\./g, ",");
 
-  Blockly.Arduino.definitions_['define_spi'] = '#include <SPI.h>';
-  Blockly.Arduino.definitions_['define_ethernet'] = '#include <Ethernet' + version + '.h>';
+  Blockly.Arduino.includes_['define_spi'] = '#include <SPI.h>';
+  Blockly.Arduino.includes_['define_ethernet'] = '#include <Ethernet' + version + '.h>';
   Blockly.Arduino.definitions_['define_ethernet_client'] = 'EthernetClient client;';
   Blockly.Arduino.definitions_['define_mac_address'] = 'byte mac[] = {' + mac_address + '};';
   Blockly.Arduino.definitions_['define_ip_address'] = 'IPAddress ip(' + ip_address + ');';
@@ -308,7 +308,7 @@ Blockly.Arduino.ethernet_begin_staticIP_client = function() {
 // **** PARSER ****
 Blockly.Arduino.ethernet_PARSER_init = function() {
 	
-  Blockly.Arduino.definitions_['define_request'] = '#include <HttpRequest.h> \n';    
+  Blockly.Arduino.includes_['define_request'] = '#include <HttpRequest.h> \n';    
   Blockly.Arduino.definitions_['create_request_object'] = 'HttpRequest httpReq; \n';
   Blockly.Arduino.definitions_['variables_globales'] = 'char name[HTTP_REQ_PARAM_NAME_LENGTH], value[HTTP_REQ_PARAM_VALUE_LENGTH]; \n';
   
@@ -361,7 +361,7 @@ Blockly.Arduino.ethernet_ATTENTE_CLIENT = function() {
 
 Blockly.Arduino.ethernet_PARSERV2_CREATION = function() {
 	
-  Blockly.Arduino.definitions_['define_request'] = '#include <Parser.h>\n';    
+  Blockly.Arduino.includes_['define_request'] = '#include <Parser.h>\n';    
   Blockly.Arduino.definitions_['create_request_object'] = 'Parser mon_parser;\n';
   Blockly.Arduino.definitions_['create_myreadstring']= 'char myreadstring[255];\n';
   
