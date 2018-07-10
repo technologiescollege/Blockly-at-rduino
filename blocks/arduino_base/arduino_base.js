@@ -314,6 +314,22 @@ Blockly.Blocks['biblio_include'] = {
   }
 };
 
+// @BZH 10072018
+Blockly.Blocks.include_file = {
+  init: function() {
+    this.appendDummyInput()
+        .appendField(Blockly.Msg.ARDUINO_BASE_INCLUDE_FILE_TEXT)
+        .appendField(new Blockly.FieldTextInput(Blockly.Msg.ARDUINO_BASE_INCLUDE_FILE_NAME), "File2")
+        .appendField(".h");
+    this.setInputsInline(true);
+    this.setPreviousStatement(true);
+    this.setNextStatement(true);
+    this.setColour(Blockly.Blocks.arduino_base.HUE);
+    this.setTooltip(Blockly.Msg.ARDUINO_BASE_INCLUDE_FILE_TOOLTIP);
+    this.setHelpUrl(Blockly.Msg.ARDUINO_BASE_INCLUDE_FILE_HELPURL);
+  }
+};
+
 //@JP Fontaine 02092017
 Blockly.Blocks.tempo_no_delay = {
 	init: function() {
