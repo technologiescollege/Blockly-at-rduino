@@ -417,6 +417,10 @@ Blockly.Msg.ARDUINO_BASE_TEMPO_TOOLTIP = "Ce bloc vérifie si le temps indiqué 
 Blockly.Msg.ARDUINO_BASE_TEMPO_HELPURL = "http://www.mon-club-elec.fr/pmwiki_reference_arduino/pmwiki.php?n=Main.ExempleBlinkWithoutDelay";
 Blockly.Msg.ARDUINO_BASE_TOGGLE = "basculer l'état de la broche";
 Blockly.Msg.ARDUINO_BASE_TOGGLE_TOOLTIP = "Toggle :\nécrire un état logique 0 si auparavant il y avait un état 1 (et inversement) sur la sortie spécifiée";
+Blockly.Msg.ARDUINO_BASE_INCLUDE_FILE_TEXT = "Inclure un fichier";
+Blockly.Msg.ARDUINO_BASE_INCLUDE_FILE_NAME = "Nom du fichier";
+Blockly.Msg.ARDUINO_BASE_INCLUDE_FILE_TOOLTIP = "Permet d'inclure un fichier contenu dans le repertoire de travail";
+Blockly.Msg.ARDUINO_BASE_INCLUDE_FILE_HELPURL = "https://www.arduino.cc/reference/en/language/structure/further-syntax/include/";
 Blockly.Msg.ARDUINO_CONSTRAIN = "limiter";
 Blockly.Msg.ARDUINO_CONSTRAIN_X = " le nombre";
 Blockly.Msg.ARDUINO_CONSTRAIN_A = "entre A = ";
