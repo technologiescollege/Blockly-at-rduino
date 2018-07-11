@@ -28,10 +28,7 @@ var MSG = {
   span_convert: " convert text <-> binary",
   span_bin2txt: " binary -> text ",
   span_txt2bin: " text -> binary ",
-  span_plugin_codebender: " download plugin",
-  span_verify_codebender: " verify code",  
   span_edit_code: " edit Arduino code",
-  span_flash_codebender: " upload in Arduino",
   span_saveIno: " save code in INO format",
   span_verify_local: " test code by IDE Arduino",
   span_flash_local: " local upload in Arduino",
@@ -64,16 +61,11 @@ var MSG = {
   span_OnOffLine: "Web access? ",
   span_OnLine: "Yes",
   span_OffLine: "No",
-  span_LocalCodebender_Local: "local",
-  span_LocalCodebender_Code: "CodeBender",
   span_Upload: "Upload with: ",
   span_Upload_local: "local server ",
-  span_Upload_codebender: " codebender server",
   span_Download: "Download: ",
   span_Download_Arduino: "special Arduino IDE",
   span_Download_local: "local server",
-  span_Download_codebender: "codebender plugin",
-  btn_plugin_codebender: " plugin needed...",
   cb_cf_verify_btn: "verify code",
   btn_edit_code :"edit code",
   cb_cf_flash_btn: "upload to Arduino !",
@@ -111,7 +103,7 @@ var MSG = {
   arduino_card:"delete all and select a card",
   span_about:"about",
   aboutModalLabel:"about ...",
-  aboutBody:"<br />- development and adaptations by Sébastien Canet(<a href='mailto:sebastien.canet@ac-nantes.fr' traget=_blank>sebastien.canet@ac-nantes.fr</a>), wonderful work on CSS and JS functions by Olivier Metayer, CodeBender integration by Julien Rat, <b>thanks to all contributors (come on forum with them)!</b>"
+  aboutBody:"<br />- development and adaptations by Sébastien Canet(<a href='mailto:sebastien.canet@ac-nantes.fr' traget=_blank>sebastien.canet@ac-nantes.fr</a>), wonderful work on CSS and JS functions by Olivier Metayer, <b>thanks to all contributors (come on forum with them)!</b>"
 	+ "<br />"
 	+ "<br />Thanks to:",
   msg_ajax_ko:"AJAX requests are not supported by your browser, the following features\n"

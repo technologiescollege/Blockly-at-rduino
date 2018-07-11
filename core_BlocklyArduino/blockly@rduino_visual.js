@@ -219,7 +219,6 @@ BlocklyDuino.setOrientation = function() {
 		$("#btn_fakeload").addClass("btn_ver");
 		$("#btn_picture").addClass("btn_ver");
 		$("#btn_example").addClass("btn_ver");
-		//$("#btn_plugin_codebender").addClass("btn_ver");
 		$("#divTabpanel").addClass("divTabpanel-ver");
 		$("#div_help_button").addClass("div_help_button-ver");
 		$("#div_tools_button").addClass("div_tools_button-ver");

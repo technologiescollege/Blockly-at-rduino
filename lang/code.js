@@ -176,9 +176,6 @@ Code.initLanguage = function() {
   $('#a_term').text(MSG['a_term']);
   $('#a_xml').text(MSG['a_xml']);
   
-  $('#span_plugin_codebender').text(MSG['span_plugin_codebender']);
-  $('#span_verify_codebender').text(MSG['span_verify_codebender']);
-  $('#span_flash_codebender').text(MSG['span_flash_codebender']);
   $('#span_saveIno').text(MSG['span_saveIno']);
   $('#span_pasteIDEArduino').text(MSG['span_pasteIDEArduino']);
   $('#span_verify_local').text(MSG['span_verify_local']);
@@ -266,21 +263,11 @@ Code.initLanguage = function() {
   $('#span_colorColors').text(MSG['span_colorColors']);
   $('#span_OnOffLine').text(MSG['span_OnOffLine']);
   
-  $('#toggle-WebAccess-on').text(MSG['span_OnLine']);
-  $('#toggle-WebAccess-off').text(MSG['span_OffLine']);
-  $('#toggle-LocalCodebender-on').text(MSG['span_LocalCodebender_Local']);
-  $('#toggle-LocalCodebender-off').text(MSG['span_LocalCodebender_Code']);
-  /*$('#toggle-WebAccess').prop('data-on', MSG['span_OnLine']);
-  $('#toggle-WebAccess').prop('data-off', MSG['span_OffLine']);
-  $('#toggle-LocalCodebender').prop('data-on', MSG['span_LocalCodebender_Code']);
-  $('#toggle-LocalCodebender').prop('data-off', MSG['span_LocalCodebender_Local']);*/
   $('#span_Upload').text(MSG['span_Upload']);
   $('#span_Upload_local').text(MSG['span_Upload_local']);
-  $('#span_Upload_codebender').text(MSG['span_Upload_codebender']);
   $('#span_Download').text(MSG['span_Download']);
   $('#span_Download_Arduino').text(MSG['span_Download_Arduino']);
   $('#span_Download_local').text(MSG['span_Download_local']);
-  $('#span_Download_codebender').text(MSG['span_Download_codebender']);
   $('#span_forms_videomodal').text(MSG['span_forms']);
   $('#span_forms_about').text(MSG['span_forms']);
   

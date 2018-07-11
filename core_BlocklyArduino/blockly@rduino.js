@@ -72,9 +72,6 @@ BlocklyDuino.renderContent = function() {
 				if (typeof prettyPrintOne == 'function') {
 					$('#pre_arduino').html(prettyPrintOne($('#pre_arduino').html(), 'cpp'));
 				}
-				BlocklyDuino.toggleWeb();	
-				BlocklyDuino.toggleLocalCodeBender();
-				BlocklyDuino.testPluginCodeBender();
 			} catch (e) {
 				alert(e);
 			}
@@ -515,7 +512,6 @@ BlocklyDuino.bindFunctions = function() {
 		$('#btn_validCode').on("click", BlocklyDuino.valideEditedCode_IDE);
 		$('#btn_CopyCode').remove();
 		$('#btn_verify_local').remove();
-		$('#btn_plugin_codebender').remove();
 		$('#debug_arduino').remove();
 		$('#tab_supervision').remove();
 		$('#tab_arduino').remove();
@@ -542,8 +538,6 @@ BlocklyDuino.bindFunctions = function() {
 		}
 		
 	$('#toggle-Colors').on("change", BlocklyDuino.toggleTextColors);
-	$('#toggle-WebAccess').on("change", BlocklyDuino.toggleWeb);
-	$('#toggle-LocalCodebender').on("change", BlocklyDuino.toggleLocalCodeBender);
 
 	$('#pinout').on("focus", function() {
 		BlocklyDuino.selectedCard = $(this).val();
@@ -1094,12 +1088,7 @@ BlocklyDuino.init = function() {
 	
     // Hook a save function onto unload.
 	window.addEventListener('unload', BlocklyDuino.backupBlocks, false);
-
-	BlocklyDuino.initCompilerFlasher();
-	
-	//global config
-	BlocklyDuino.initGlobalConfig();
-	
+		
 	BlocklyDuino.OnOffLine();
 	
 	// draggable "modal" dialog containing card image & videos
@@ -1157,24 +1146,6 @@ BlocklyDuino.init = function() {
 					$("#btn_create_example, menu_132").attr("href","./examples/examples.html?lang=" + Code.LANG);	
 					}
 	$('#debug_arduino iframe').prop('src', "http://127.0.0.1:5005"); 
-};
-
-
-/**
- * Load the compilerflasher module 
- */
-BlocklyDuino.initCompilerFlasher = function() {
-	compilerflasher = new compilerflasher(BlocklyDuino.getFiles);
-
-	compilerflasher.on("pre_verify", function() {
-		$("#debug_arduino").html(MSG['pre_verify']);
-	});
-	compilerflasher.on("verification_succeed", function(binary_size) {
-		$("#debug_arduino").html(MSG['verification_succeed'] + binary_size);
-	});
-	compilerflasher.on("verification_failed", function(error_output) {
-		$("#debug_arduino").html(MSG['verification_failed'] + error_output);
-	});
 };
 
 /**

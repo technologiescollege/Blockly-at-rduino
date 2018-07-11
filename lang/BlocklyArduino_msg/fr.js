@@ -28,10 +28,7 @@ var MSG = {
   span_convert: " conversion texte <-> binaire",
   span_bin2txt: " binaire -> texte ",
   span_txt2bin: " texte -> binaire ",
-  span_plugin_codebender: " télécharger le plugin",
-  span_verify_codebender: " vérifier le code",
   span_edit_code: " éditer le code",
-  span_flash_codebender: " téléverser dans l'Arduino",
   span_saveIno: " sauver le code en INO",
   span_verify_local: " vérification par EDI Arduino",
   span_flash_local: " téléverser dans l'Arduino",
@@ -64,16 +61,11 @@ var MSG = {
   span_OnOffLine: "avez-vous accès à Internet ? ",
   span_OnLine: "accès web",
   span_OffLine: "hors ligne",
-  span_LocalCodebender_Local: "serveur local",
-  span_LocalCodebender_Code: "CodeBender",
   span_Upload: "téléversement dans la carte par : ",
   span_Upload_local: "un serveur local ",
-  span_Upload_codebender: " le serveur de codebender",
   span_Download: "télécharger : ",
   span_Download_Arduino: "notre EDI Arduino",
   span_Download_local: "notre serveur local",
-  span_Download_codebender: "le plugin de codebender",
-  btn_plugin_codebender: " plugin manquant...",
   cb_cf_verify_btn: "vérifier le code",
   btn_edit_code :"éditer le code",
   cb_cf_flash_btn: "téléverser dans l'Arduino",
@@ -111,7 +103,7 @@ var MSG = {
   arduino_card:"supprimer tout et sélectionner une carte",
   span_about:"à propos",
   aboutModalLabel:"à propos ...",
-  aboutBody:"<br />- développement et améliorations par Sébastien Canet (<a href='mailto:sebastien.canet@ac-nantes.fr' traget=_blank>sebastien.canet@ac-nantes.fr</a>), grâce à l'indispensable travail et les conseils d'Olivier Métayer, intégration de CodeBender par Julien Rat, merci à tous les contributeurs par mails ou sur le forum !" 
+  aboutBody:"<br />- développement et améliorations par Sébastien Canet (<a href='mailto:sebastien.canet@ac-nantes.fr' traget=_blank>sebastien.canet@ac-nantes.fr</a>), grâce à l'indispensable travail et les conseils d'Olivier Métayer, merci à tous les contributeurs par mails ou sur le forum !" 
 	+ "<br />"
 	+ "<br />S'appuie sur :",
   msg_ajax_ko:"Requêtes AJAX non supportées par votre navigateur, les fonctionnalités\n"

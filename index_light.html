@@ -20,8 +20,6 @@
 	<script type="text/javascript" src="core_BlocklyArduino/blockly@rduino_boards.js"></script>
 	<script type="text/javascript" src="core_BlocklyArduino/blockly@rduino_tools.js"></script>
 	<script type="text/javascript" src="core_BlocklyArduino/blockly@rduino_visual.js"></script>
-	<script type="text/javascript" src="core_BlocklyArduino/compilerflasher.js"></script>
-	<!--script type="text/javascript" src="http://codebender.cc/embed/compilerflasher.js"></script-->
 
 	<script type="text/javascript" src="core_BlocklyArduino/libs/jquery-2.1.3.min.js"></script> 
 	<script type="text/javascript" src="core_BlocklyArduino/libs/jquery-ui.js"></script>
@@ -86,7 +84,7 @@
 					<li>
 					  <a ><i class="fa fa-briefcase"></i> <span id="span_menu_2"> </span> <i class="fa fa-caret-down"></i></a>
 					   <ul class="submenu">
-						<li><a href='http://fr.robom.ru' target='_blank' id="menu_21"> <span id="span_menu_21"> </span> </a></li>
+						<li><a href='http://fritzing.org/download/' target='_blank' id="menu_21"> <span id="span_menu_21"> </span> </a></li>
 						<li id="mtab_supervision"><a href="#content_supervision" aria-controls="content_supervision" role="tab" data-toggle="tab" id="menu_22"> <span id="span_menu_22"> </span> </a></li>
 						<li id="mtab_blocks"><a href="#content_blocks" aria-controls="content_blocks" role="tab" data-toggle="tab" id="menu_23"> <span id="span_menu_23"> </span> </a></li>
 						<li id="mtab_arduino"><a href="#content_arduino" aria-controls="content_arduino" role="tab" data-toggle="tab" id="menu_24"> <span id="span_menu_24"> </span> </a></li>
@@ -236,19 +234,6 @@
 							<span id="a_arduino"></span>
 						 </a>
 					</li>
-					<!--li role="presentation" id="tab_term">
-						 <a href="#content_term" aria-controls="content_term" role="tab" data-toggle="tab">
-							 <span  class="glyphicon glyphicon-log-out"></span>
-							 <span id="a_term"> </span>
-						 </a>
-					</li-->
-					<!--only to see XML translation online -->
-					<!--li role="presentation" id="tab_xml">
-						 <a href="#content_xml" aria-controls="content_xml" role="tab" data-toggle="tab">
-							 <span  class="glyphicon glyphicon-file"></span>
-							 <span id="a_xml"></span>
-						 </a>
-					 </li-->
 				</ul>
 			</div>
 			<div id="menuPanelFiles">
@@ -324,12 +309,6 @@
 					</button>
 				</div>
 				<div id="content_arduino" class="tab-pane">
-					<select id="cb_cf_boards"></select>
-					<select id="cb_cf_ports"></select>
-					<!--a id="btn_plugin_codebender" class='btn btn-danger' href="https://codebender.cc/static/plugin" target="_blank" role='button'>
-						<span class="glyphicon glyphicon-new-window"></span>
-						<span id="span_plugin_codebender"> </span>
-					</a-->		
 					<button id="btn_edit_code" class="btn btn-primary" data-toggle="modal" data-target="#editModal">
 						<span id="icon_edit_btn" class="glyphicon glyphicon-edit"> </span>
 						<span id="span_edit_code"> </span>
@@ -338,14 +317,6 @@
 						<span class="glyphicon glyphicon-save"> </span>
 						<span id="span_saveIno"> </span>
 					</a>		
-					<button id="cb_cf_verify_btn" class="btn btn-codebender">
-						<span class="fa fa-check-square-o"> </span>
-						<span id="span_verify_codebender"> </span>
-					</button>			
-					<button id="cb_cf_flash_btn" class="btn btn-codebender">
-						<span class="glyphicon glyphicon-log-in"> </span>
-						<span id="span_flash_codebender"> </span>
-					</button>			
 					<button id="btn_verify_local" class="btn btn-arduino">
 						<span class="fa fa-check-square-o"> </span>
 						<span id="span_verify_local"> </span>
@@ -362,20 +333,11 @@
 						<span class="fa fa-folder-open"> </span>
 						<span id="span_pasteIDEArduino"> </span>
 					</button>
-					<img id="LocalCodebenderLogo" height="35"/>
 					<pre id="pre_arduino"></pre>
-					<div id="debug_arduino">
+					<div id="local_debug">
 						<iframe id="rDuino_uploader" width="100%" height="100%" frameborder="0"></iframe>
 					</div>
 				</div>
-				<!--div id="content_term" class="tab-pane">
-					<select id="cb_cf_baud_rates"></select>
-					<button id="cb_cf_serial_monitor_connect" class="btn btn-codebender">
-						<span class="glyphicon glyphicon-transfer"> </span>
-						<span id="span_connect_serial"> </span>				
-					</button>
-					<div id="cb_cf_serial_monitor"></div>
-				</div-->
 				<div id="content_supervision" class="tab-pane">
 				</div>
 				<!--div id="content_xml" class="tab-pane">
@@ -413,14 +375,13 @@
 		  <br /> - Bootstrap (<a href='http://getbootstrap.com' target='blank'>http://getbootstrap.com</a>)
 		  <br /> - Font Awesome Icons (<a href='http://fontawesome.io' target='blank'>http://fontawesome.io</a>)
 		  <br /> - Bootstrap Toggle (<a href='http://www.bootstraptoggle.com/' target='blank'>http://www.bootstraptoggle.com/</a>)
-		  <br /> - Codebender - CompilerFlasher : (<a href='https://codebender.cc' target='blank'>https://codebender.cc</a>)
 		  <br /> - JQuerry (<a href='https://jquery.com' target='blank'>https://jquery.com)</a>
 		  <br /> - HeadJS (<a href='http://headjs.com/' target='blank'>http://headjs.com/)</a>
 		  <br /> - SmoothieCharts (<a href='http://smoothiecharts.org/' target='blank'>http://smoothiecharts.org/)</a>
 		  <br />	  
 		  <b><div align="center"><a href="http://framaforms.org/blocklyrduino-utilisateurs-1490560876" target='blank'><font size="12"><span id="span_forms_about" style="font-style: bold;"> </span></font></a></div></b>
 		  <br />
-		  <br /><i>version 21-05-2018 - v2.7 "IDE compatible"</i>
+		  <br /><i>version 11-07-2018 - v2.7 "IDE compatible"</i>
 		  <br />
 		  <br />
 		  <!--div align="center" id="paypal_about">
@@ -566,6 +527,8 @@
 				<option value="toolbox_arduino_all"></option>
 			</select>
 		</div>
+		<label id="span_colorToggle"> </label>
+		<input id="toggle-Functions" data-toggle="toggle" data-off="<span id='span_colorBW'> </span>" data-on="<span id='span_colorColors'> </span>" data-onstyle="primary" data-offstyle="default" data-width="120" type="checkbox"/>
       </div>
       <input type="checkbox" name="select_all" id="select_all"/> <span id="span_select_all"> </span>
       <div class="modal-body" id="modal-body-config"></div>
@@ -632,33 +595,7 @@
 					<span class="glyphicon glyphicon-text-background"></span>  <label id="span_colorToggle"> </label>
 					<input id="toggle-Colors" data-toggle="toggle" data-off="<span id='span_colorBW'> </span>" data-on="<span id='span_colorColors'> </span>" data-onstyle="primary" data-offstyle="default" data-width="120" type="checkbox"/><br />
 					<br />				
-					<br />	        
-					<div id="arduinoCodebender_toggles" style="clear : both;">
-						<a href="http://www.libreduc.cc/wiki/doku.php/fr/arduino/blockly_rduino/configglobale"  target='blank'><img src="media/codebenderOUarduino.jpg" height="35px"/></a><br/>
-						<label id="span_OnOffLine"> </label><br/>
-						<input id="toggle-WebAccess" data-toggle="toggle" data-on="<span id='toggle-WebAccess-on'> </span>" data-off="<span id='toggle-WebAccess-off'> </span>" data-onstyle="codebender" data-offstyle="arduino" data-width="120" type="checkbox"/><br />
-						<br/>
-						<!--label id="span_Upload"> </label>
-						<br/>
-						<span id="span_Upload_local"> </span>
-						<input id="toggle-LocalCodebender" data-toggle="toggle" data-on="<span id='toggle-LocalCodebender-on'> </span>" data-off="<span id='toggle-LocalCodebender-off'> </span>" data-onstyle="arduino" data-offstyle="codebender" data-width="120" type="checkbox"/>
-						<span id="span_Upload_codebender"> </span><br/-->
-						<br/>
-						<label id="span_Download"> </label>
-						<br/>
-						<a id="btn_MyArduino" class='btn btn-primary text-left' href="https://github.com/technologiescollege/arduino" target="_blank" role='button'>
-						  <span class="glyphicon glyphicon-download"></span>
-						  <span id="span_Download_Arduino"> </span>
-						</a>
-						<a id="btn_Help_Offline" class='btn btn-arduino text-left' href="https://github.com/technologiescollege/Blockly-rduino-communication" target="_blank" role='button'>
-						  <span class="glyphicon glyphicon-download"></span>
-						  <span id="span_Download_local"> </span>
-						</a>
-						<!--a id="btn_Help_Online" class='btn btn-codebender text-left' href="https://codebender.cc/static/plugin" target="_blank" role='button'>
-						  <span class="glyphicon glyphicon-download"></span>
-						  <span id="span_Download_codebender"> </span>
-						</a-->
-					</div>
+					<br />
 				</div>
 			</div>  
 			<div class="modal-footer">
