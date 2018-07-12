@@ -353,7 +353,10 @@
     <div class="modal-content">
       <div class="modal-header">
       <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&#215;</span></button>
-        <h4 class="modal-title" id="aboutModalLabel"></h4>
+        <h4>
+			<span class="glyphicon glyphicon-user"> </span>
+			<label class="modal-title" id="aboutModalLabel"/>
+		</h4>
       </div>
       <div class="modal-body">              
 		<b> <span id="title"> </span> </b>
@@ -453,10 +456,8 @@
   </div>
 </div>
 <!-- picture modal -->
-<div id="showcardModal" class="modal-dialog modal-sm" style="display:none">
-	<div class="modal-content">
-	  <div class="modal-header">
-		<button type="button" class="close" aria-label="Close"><span aria-hidden="true">&#215;</span></button>
+<div id="pictureModalLabel" style="display:none">
+	<div id="pictureModalLabel_boutons">
 		<button id="btn_card_picture_mini" class="btn btn-default">
 			<span id="icon_btn_blocs_picture_mini" class="glyphicon glyphicon-minus"> </span>
 		</button>
@@ -466,12 +467,10 @@
 		<button id="btn_card_picture_change" class="btn btn-primary btn-sm">
 			<span id="span_card_picture_change"> </span>
 		</button>
-		<div id="pinout_AIO_on"></div>
-		<h4 class="modal-title" id="pictureModalLabel"></h4>
-	  </div>
-	  <div class="modal-body text-center">
-			<img id="arduino_card_picture" width="200"/>
-	  </div>
+	</div>
+	<div id="pinout_AIO_on"></div>
+	<div id="arduino_card_picture_inModal">
+		<img id="arduino_card_picture" width="200"/>
 	</div>
 </div>
 <!-- example modal -->
@@ -515,7 +514,10 @@
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&#215;</span></button>
-        <h4 class="modal-title" id="configModalLabel"></h4>		
+        <h4>
+			<span class="fa fa-cogs"> </span>
+			<label class="modal-title" id="configModalLabel" />
+		</h4>		
 		<div id="div_toolboxes">
 			<select id="toolboxes">
 				<option value="toolbox_none" selected="selected">...</option>
@@ -563,7 +565,10 @@
 		<div class="modal-content">
 		    <div class="modal-header">
 			<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&#215;</span></button>
-			<h4 class="modal-title" id="configModalGlobalLabel"></h4>
+			<h4>
+				<span class="glyphicon glyphicon-alert"> </span>
+				<label class="modal-title" id="configModalGlobalLabel" />
+			</h4>
 		    </div>    
 			<div class="modal-body" id="modal-body-config-global">						
 				<div class="arduino_card_mini_picture_div">

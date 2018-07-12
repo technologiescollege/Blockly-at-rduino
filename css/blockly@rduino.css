@@ -301,7 +301,14 @@ html[dir="RTL"] #languageMenu {
 	right: auto;
 }
 
-#content_area,#content_blocks,#content_term,#content_xml,#content_supervision {
+#content_area,#content_blocks {
+	height: 100%;
+	width: 100%;
+}
+
+#content_term,#content_arduino,#content_supervision {
+	position: fixed;
+	top: 40px;
 	height: 100%;
 	width: 100%;
 }
@@ -495,12 +502,6 @@ html[dir="RTL"] .colors_category {
 }
 .margin-top-5 {
 	margin-top: 5px;
-}
-
-#showcardModal .modal-content:hover {
-  cursor: move;
-}
-.draggable {
 }
 
 #convertModal .modal-content:hover {

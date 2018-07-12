@@ -252,7 +252,7 @@ BlocklyDuino.setArduinoCard =  function () {
 	$('#arduino_card_picture').attr("src", profile.defaultBoard['picture']);
 	$('#arduino_card_miniPicture').attr("src", profile.defaultBoard['miniPicture']);
 	$('#arduino_card_miniPicture_Menu').attr("src", profile.defaultBoard['miniPicture_hor']);	
-	$('#pictureModalLabel').text(profile.defaultBoard['description']);
+	$('#pictureModalLabel').attr('title',(profile.defaultBoard['description']));
 	if ($("#pinout").val().substring(0,4) == "kit_") {
 		$("#btn_config").remove();
 		$("#btn_config_kit").removeClass('hidden');
@@ -645,15 +645,29 @@ BlocklyDuino.bindFunctions = function() {
 
 	$('#btn_example, #menu_131').on("click", BlocklyDuino.buildExamples);
 
-	$('#miniCard, #btn_picture, #miniCard_Menu').on('click', function() {
-		$('#showcardModal').css("z-index", 1040);
-		$('#showcardModal').css("display", "inline-block");
-		Blockly.Arduino.cardSize = 200;
-	});
-
-	$('#showcardModal button.close').on('click', function() {
-		$('#showcardModal').css("z-index", 0);
-		$('#showcardModal').hide();
+	$('#miniCard, #miniCard_Menu').on('click', function() {
+		var dialogConvert = $("#pictureModalLabel").dialog({
+			autoOpen: false,
+			resizable: false,
+			height: $("#arduino_card_picture").offsetHeight,
+			width: $("#arduino_card_picture").offsetWidth,
+			show: {
+				effect: "drop",
+				duration: 1000
+			},
+			hide: {
+				effect: "drop",
+				duration: 1000
+			},
+			position: {
+				my: "center",
+				at: "center",
+				of: window
+			},
+		});
+		if (!dialogConvert.dialog("isOpen")) {
+			dialogConvert.dialog("open").dialog( "option", "buttons" );
+		};
 	});
 
 	$('#videoModal button.close').on('click', function() {

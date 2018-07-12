@@ -235,7 +235,6 @@ Code.initLanguage = function() {
   $('#span_menu_6').text(MSG['span_menu_6']);
 
   $('#editModalLabel').text(MSG['editModalLabel']);
-  $('#showcardLabel').text(MSG['showcardLabel']);
   $('#exampleModalLabel').text(MSG['exampleModalLabel']);  
   $('#convertModal').attr('title', MSG['convertModalLabel']);
   $('#RGB_falsemodal').attr('title', MSG['RGBModalLabel']);

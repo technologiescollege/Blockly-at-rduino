@@ -79,7 +79,7 @@ BlocklyDuino.blockPicture_mini = function() {
 
 BlocklyDuino.cardPicture_maxi = function() {
 	var img = $("#arduino_card_picture");
-	var modal = $("#showcardModal");
+	var modal = $("#pictureModalLabel");
 
     if ((img.width() < 450)||(img.height() < 650))
     {
@@ -91,7 +91,7 @@ BlocklyDuino.cardPicture_maxi = function() {
 
 BlocklyDuino.cardPicture_mini = function() {
 	var img = $("#arduino_card_picture");
-	var modal = $("#showcardModal");
+	var modal = $("#pictureModalLabel");
 
     if ((img.width() > 200)||(img.height() > 220))
     {
@@ -196,7 +196,6 @@ BlocklyDuino.setOrientation = function() {
 		$("#div_tools_button").addClass("div_tools_button-hor");
 		$("#div_miniPicture").addClass("div_miniPicture-hor");
 
-		$("#btn_picture").removeClass("btn-block");
 		$("#btn_config").removeClass("btn-block");
 		$("#btn_supervision").removeClass("btn-block");
 
@@ -217,7 +216,6 @@ BlocklyDuino.setOrientation = function() {
 		$("#btn_supervision").addClass("btn_ver");
 		$("#btn_saveXML").addClass("btn_ver");
 		$("#btn_fakeload").addClass("btn_ver");
-		$("#btn_picture").addClass("btn_ver");
 		$("#btn_example").addClass("btn_ver");
 		$("#divTabpanel").addClass("divTabpanel-ver");
 		$("#div_help_button").addClass("div_help_button-ver");
