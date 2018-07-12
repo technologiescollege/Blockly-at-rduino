@@ -43,7 +43,7 @@ var BlocklyLevel = 'none';
  * Populate the currently selected pane with content generated from the blocks.
  */
 BlocklyDuino.renderContent = function() {
-  var content = $('#content_' + BlocklyDuino.selectedTab);
+    var content = $('#content_' + BlocklyDuino.selectedTab);
   
 	if (content.prop('id') == 'content_blocks') {
 		// If the workspace was changed by the XML tab, Firefox will have
@@ -72,14 +72,14 @@ BlocklyDuino.renderContent = function() {
 				if (typeof prettyPrintOne == 'function') {
 					$('#pre_arduino').html(prettyPrintOne($('#pre_arduino').html(), 'cpp'));
 				}
+				BlocklyDuino.toggleFunctionsChoice();
 			} catch (e) {
 				alert(e);
 			}
 			break;
 
 		case 'content_supervision':
-			$("#content_supervision").load('./tools/supervision/pymata_arduino.html', BlocklyDuino.renderSupervisionContent);
-			
+			$("#content_supervision").load('./tools/supervision/pymata_arduino.html', BlocklyDuino.renderSupervisionContent);			
 		}
 	}	
 };
@@ -516,7 +516,6 @@ BlocklyDuino.bindFunctions = function() {
 		$('#tab_supervision').remove();
 		$('#tab_arduino').remove();
 		$('#pre_arduino').css({'height' : '95%'});
-		document.getElementById("arduinoCodebender_toggles").style.visibility="hidden";
 		} else {
 			$('#btn_verify_local').on("click", BlocklyDuino.verify_local_Click);
 			$('#btn_flash_local').on("click", BlocklyDuino.uploadClick);
@@ -538,6 +537,7 @@ BlocklyDuino.bindFunctions = function() {
 		}
 		
 	$('#toggle-Colors').on("change", BlocklyDuino.toggleTextColors);
+	$('#toggle-Functions').on("change", BlocklyDuino.toggleFunctionsChoice);
 
 	$('#pinout').on("focus", function() {
 		BlocklyDuino.selectedCard = $(this).val();
@@ -1102,8 +1102,6 @@ BlocklyDuino.init = function() {
 	
     // Hook a save function onto unload.
 	window.addEventListener('unload', BlocklyDuino.backupBlocks, false);
-		
-	BlocklyDuino.OnOffLine();
 	
 	// draggable "modal" dialog containing card image & videos
     $('body').on('mousedown', '#showcardModal', function() {

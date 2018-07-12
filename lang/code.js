@@ -261,13 +261,9 @@ Code.initLanguage = function() {
   $('#span_colorToggle').text(MSG['span_colorToggle']);
   $('#span_colorBW').text(MSG['span_colorBW']);
   $('#span_colorColors').text(MSG['span_colorColors']);
-  $('#span_OnOffLine').text(MSG['span_OnOffLine']);
   
   $('#span_Upload').text(MSG['span_Upload']);
   $('#span_Upload_local').text(MSG['span_Upload_local']);
-  $('#span_Download').text(MSG['span_Download']);
-  $('#span_Download_Arduino').text(MSG['span_Download_Arduino']);
-  $('#span_Download_local').text(MSG['span_Download_local']);
   $('#span_forms_videomodal').text(MSG['span_forms']);
   $('#span_forms_about').text(MSG['span_forms']);
   

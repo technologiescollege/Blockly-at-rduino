@@ -111,6 +111,37 @@ BlocklyDuino.uploadClick_IDE = function() {
     }
 };
 
+
+/**
+ * Init modal Global Configuration
+ */
+BlocklyDuino.initBlocSort = function () {
+	// set the toggle from url parameters
+	var FunctionChoice = BlocklyDuino.getStringParamFromUrl('sortby', '');
+	if (FunctionChoice === undefined || FunctionChoice === ""||FunctionChoice === "C") {
+		window.localStorage.catblocsort = "C";
+		$('#toggle-Functions').bootstrapToggle('off');
+	} else {
+		window.localStorage.catblocsort = "F";
+		$('#toggle-Functions').bootstrapToggle('on');
+	}
+}
+
+
+/**
+ * Configuration & modify buttons state inside modal config
+ */
+BlocklyDuino.toggleFunctionsChoice = function() {
+	// checked = online
+	if ($('#toggle-Functions').prop('checked')) {
+		window.localStorage.catblocsort = "F";
+		console.log("F");
+	} else {
+		window.localStorage.catblocsort = "C";
+		console.log("C");
+	}
+};
+
 /**
  * Validate global configuration
  */
@@ -119,7 +150,15 @@ BlocklyDuino.validateConfigGlobal = function () {
 	// Store the blocks for the duration of the reload.
 	BlocklyDuino.backupBlocks();
 	
-	var search = window.location.search;
+	var search = window.location.search;	
+	// remove values from url to test toggles
+	search = search.replace(/([?&]sortby=)[^&]*/, '');
+	// put values in url
+	if (search.length <= 1) {
+		search = '?sortby=' + window.localStorage.catblocsort;
+	} else {
+		search = search + '&sortby=' + window.localStorage.catblocsort;
+	}
 	
 	//change Arduino card
 	$("#pinout").blur();
@@ -169,6 +208,8 @@ BlocklyDuino.validateConfigGlobal = function () {
 				search = search.replace(/\?/, '?lang=' + newLang + '&');
 		}
 	
+	BlocklyDuino.initBlocSort();
+	
 	window.location = window.location.protocol + '//' + window.location.host + window.location.pathname + search;
 };
 
@@ -177,7 +218,15 @@ BlocklyDuino.validateConfigOffline = function () {
 	// Store the blocks for the duration of the reload.
 	BlocklyDuino.backupBlocks();
 	
-	var search = window.location.search;
+	var search = window.location.search;	
+	// remove values from url to test toggles
+	search = search.replace(/([?&]sortby=)[^&]*/, '');
+	// put values in url
+	if (search.length <= 1) {
+		search = '?sortby=' + window.localStorage.catblocsort;
+	} else {
+		search = search + '&sortby=' + window.localStorage.catblocsort;
+	}
 	
 	//change Arduino card
 	$("#pinout").blur();
@@ -197,6 +246,7 @@ BlocklyDuino.validateConfigOffline = function () {
 				$("#pinout").val(BlocklyDuino.selectedCard);
 			}
 	}	
+	BlocklyDuino.initBlocSort();
 	
 	window.location = window.location.protocol + '//' + window.location.host + window.location.pathname + search;
 };
