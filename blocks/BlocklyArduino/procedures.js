@@ -54,6 +54,7 @@ Blockly.Blocks['procedures_defnoreturn'] = {
     this.setTooltip(Blockly.Msg.PROCEDURES_DEFNORETURN_TOOLTIP);
     this.setHelpUrl(Blockly.Msg.PROCEDURES_DEFNORETURN_HELPURL);
     this.arguments_ = [];
+	this.argumentsTypes_ = [];
     this.setStatements_(true);
     this.statementConnection_ = null;
   },
@@ -200,10 +201,12 @@ Blockly.Blocks['procedures_defnoreturn'] = {
   compose: function(containerBlock) {
     // Parameter list.
     this.arguments_ = [];
+	this.argumentsTypes_ = [];
     this.paramIds_ = [];
     var paramBlock = containerBlock.getInputTargetBlock('STACK');
     while (paramBlock) {
       this.arguments_.push(paramBlock.getFieldValue('NAME'));
+	  this.argumentsTypes_.push(paramBlock.getBlockType());
       this.paramIds_.push(paramBlock.id);
       paramBlock = paramBlock.nextConnection &&
           paramBlock.nextConnection.targetBlock();
@@ -416,7 +419,7 @@ Blockly.Blocks['procedures_mutatorarg'] = {
     // Create the default variable when we drag the block in from the flyout.
     // Have to do this after installing the field on the block.
     field.onFinishEditing_ = this.createNewVar_;
-    field.onFinishEditing_('x');
+    field.onFinishEditing_('x')//;
   },
   
   getBlockType: function() {
