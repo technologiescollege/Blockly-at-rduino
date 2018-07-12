@@ -185,9 +185,10 @@ Code.initLanguage = function() {
   $('#span_edit_code').text(MSG['span_edit_code']);
 
   $('#configModalLabel').text(MSG['configModalLabel']);
+  $('#span_functionToggle').text(MSG['span_functionToggle']);
+  $('#span_functionON').text(MSG['span_functionON']);
+  $('#span_functionOFF').text(MSG['span_functionOFF']);
   $('#span_select_all').text(MSG['span_select_all']);
-  $('#span_put_in_url').text(MSG['span_put_in_url']);
-  $('#span_put_config_in_url').text(MSG['span_put_in_url']);
   $('#btn_close_config').text(MSG['btn_close']);
   $('#btn_valid_config').text(MSG['btn_valid']);
   $('#btn_close_msg').text(MSG['btn_close']);

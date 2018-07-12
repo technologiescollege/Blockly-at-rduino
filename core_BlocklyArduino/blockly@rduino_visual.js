@@ -103,12 +103,12 @@ BlocklyDuino.cardPicture_mini = function() {
 
 BlocklyDuino.cardPicture_change_AIO = function() {
 	if ($("#pinout").val()) {
-		//$('#arduino_card_miniPicture').attr("src", profile[$("#pinout").val()]['picture']);
+		$('#arduino_card_miniPicture').attr("src", profile[$("#pinout").val()]['picture']);
 		$('#arduino_card_mini_picture').attr("src", profile[$("#pinout").val()]['picture']);
 		$('#arduino_card_picture').attr("src", profile[$("#pinout").val()]['picture']);
 		$('#arduino_card_miniPicture_Menu').attr("src", profile[$("#pinout").val()]['picture']);
 	} else {
-		//$('#arduino_card_miniPicture').attr("src", "");
+		$('#arduino_card_miniPicture').attr("src", "");
 		$('#arduino_card_mini_picture').attr("src", "");
 		$('#arduino_card_picture').attr("src", "");
 		$('#arduino_card_miniPicture_Menu').attr("src", "");
@@ -221,7 +221,7 @@ BlocklyDuino.setOrientation = function() {
 		$("#div_help_button").addClass("div_help_button-ver");
 		$("#div_tools_button").addClass("div_tools_button-ver");
 		$("#div_miniPicture").addClass("div_miniPicture-ver");
-		var div_miniPicture_height = $("#div_help_button").position().top
+		var div_miniPicture_height = $("#div_tools_button").position().top
 												- ($("#menuPanelFiles").offset().top + $("#menuPanelFiles").outerHeight(true))
 												- 10;
 		$("#arduino_card_miniPicture").css({"max-width" : '180px',  "max-height" : div_miniPicture_height});
