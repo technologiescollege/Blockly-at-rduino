@@ -717,6 +717,7 @@
 					</shadow>
 			</value>
 		</block>
+		<block type="SPI_send_param"></block>
 		<block type="SPI_receive"></block>		
 	</category>
 	<category name="CAT_NRF24L01" colour="#0C0C0C">

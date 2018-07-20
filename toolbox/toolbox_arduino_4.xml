@@ -1565,6 +1565,7 @@
 					</shadow>
 			</value>
 		</block>
+		<block type="SPI_send_param"></block>
 		<block type="SPI_receive"></block>		
 	</category>
 	<category name="CAT_GROVE_LCD2" colour="#8ec31f">
