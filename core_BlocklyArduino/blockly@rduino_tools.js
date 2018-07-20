@@ -4,113 +4,6 @@
 
 'use strict';
 
-/**
- * Load Arduino code from component pre_arduino to webserver
- * and open it in IDE Arduino
- */
-
-BlocklyDuino.ArduinoIDEClick = function() {
-    var code = $('#pre_arduino').text();
-    
-    /*var url = "http://127.0.0.1:5005/openIDE";
-    var method = "POST";
-    var async = true;
-	var request = new XMLHttpRequest();*/
-	var filename = "leCodeGenere.ino";
- 
-	var element = document.createElement('a');
-	element.setAttribute('href', 'data:text/ino;charset=utf-8,' + encodeURIComponent(code)); // put INO in data type to force direct upload to arduino IDE
-	element.setAttribute('download', filename);
-	//  element.hidden = true;
-
-	element.style.display = 'none';
-	document.body.appendChild(element);
-	element.click();
-	document.body.removeChild(element);
-
-  /*request.open(method, url, async);
-	request.setRequestHeader("Content-Type", "text/plain;charset=UTF-8");
-	request.send(code);	*/
-};
-
-BlocklyDuino.uploadClick = function() {
-	//first change board
-	var board = "board=" + profile.defaultBoard['upload_arg'];
-    var url = "http://127.0.0.1:5005/set_board";
-    var method = "POST";
-    var async = true;
-    var request = new XMLHttpRequest();
-    request.open(method, url, async);
-    request.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
-	//Call a function when the state changes.
-	request.onreadystatechange = function() {
-		if(request.readyState == 4 && request.status == 200) {
-			alert(request.responseText);
-		}
-	}
-	request.send(board);
-    setTimeout( function() {		
-		//then send code after 1000ms
-		var code = $('#pre_arduino').text();
-		url = "http://127.0.0.1:5005/upload";
-		request.open(method, url, async);
-		request.setRequestHeader("Content-Type", "text/plain;charset=UTF-8");
-		request.send(code);
-	}, 1000);
-};
-
-BlocklyDuino.verify_local_Click = function() {
-	//first change board
-	var board = "board=" + profile.defaultBoard['upload_arg'];
-    var url = "http://127.0.0.1:5005/set_board";
-    var method = "POST";
-    var async = true;
-    var request = new XMLHttpRequest();
-    request.open(method, url, async);
-    request.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
-	//Call a function when the state changes.
-    request.onreadystatechange = function() {
-		if(request.readyState == 4 && request.status == 200) {
-			alert(request.responseText);
-		}
-	}
-    request.send(board);
-    setTimeout( function() {		
-		//then send code after 1000ms
-		var code = $('#pre_arduino').text();
-		url = "http://127.0.0.1:5005/compile";
-		request.open(method, url, async);
-		request.setRequestHeader("Content-Type", "text/plain;charset=UTF-8");
-		request.send(code);
-	}, 1000);
-};
-
-
-/**
- * Load Arduino code from component pre_arduino to webserver
- * communicate with Java server launched from Arduino IDE
- */
-
-BlocklyDuino.ArduinoIDEClick_IDE = function() {
-	if (!window.BlocklyArduinoServer) {
-		BlocklyArduinoServer = false;
-		}
-	var code = $('#pre_previewArduino').text();
-	if ((typeof BlocklyArduinoServer) != 'undefined' && BlocklyArduinoServer){
-        BlocklyArduinoServer.pasteCode(code);
-    }	
-};
-
-BlocklyDuino.uploadClick_IDE = function() {
-	if (!window.BlocklyArduinoServer) {
-		BlocklyArduinoServer = false;
-		}
-	var code = $('#pre_previewArduino').text();
-	if ((typeof BlocklyArduinoServer) != 'undefined' && BlocklyArduinoServer){
-        BlocklyArduinoServer.uploadCode(code);
-    }
-};
-
 
 /**
  * Init modal Global Configuration
@@ -132,13 +25,11 @@ BlocklyDuino.initBlocSort = function () {
  * Configuration & modify buttons state inside modal config
  */
 BlocklyDuino.toggleFunctionsChoice = function() {
-	// checked = online
+	// checked = sort by functions
 	if ($('#toggle-Functions').prop('checked')) {
 		window.localStorage.catblocsort = "F";
-		console.log("F");
 	} else {
 		window.localStorage.catblocsort = "C";
-		console.log("C");
 	}
 };
 
@@ -150,16 +41,7 @@ BlocklyDuino.validateConfigGlobal = function () {
 	// Store the blocks for the duration of the reload.
 	BlocklyDuino.backupBlocks();
 	
-	var search = window.location.search;	
-	// remove values from url to test toggles
-	search = search.replace(/([?&]sortby=)[^&]*/, '');
-	// put values in url
-	if (search.length <= 1) {
-		search = '?sortby=' + window.localStorage.catblocsort;
-	} else {
-		search = search + '&sortby=' + window.localStorage.catblocsort;
-	}
-	
+	var search = window.location.search;
 	//change Arduino card
 	$("#pinout").blur();
 	var kitornot = false;
@@ -208,8 +90,6 @@ BlocklyDuino.validateConfigGlobal = function () {
 				search = search.replace(/\?/, '?lang=' + newLang + '&');
 		}
 	
-	BlocklyDuino.initBlocSort();
-	
 	window.location = window.location.protocol + '//' + window.location.host + window.location.pathname + search;
 };
 
@@ -245,8 +125,7 @@ BlocklyDuino.validateConfigOffline = function () {
 			} else {
 				$("#pinout").val(BlocklyDuino.selectedCard);
 			}
-	}	
-	BlocklyDuino.initBlocSort();
+	}
 	
 	window.location = window.location.protocol + '//' + window.location.host + window.location.pathname + search;
 };

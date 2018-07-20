@@ -17,6 +17,16 @@ Blockly.Arduino.cardSize = 200; //same as width in index.html showcardModal
 
 
 /**
+ * Override Blockly.makeColour to use Hexa or HUE
+ */
+Blockly.makeColour = function(color) {
+	if (typeof color != 'string' || color.substring(0,1) != '#') {
+		color = goog.color.hsvToHex(color, Blockly.HSV_SATURATION, Blockly.HSV_VALUE * 255);
+	}
+	return color;
+};
+
+/**
  * Toggle blocks picture :
  */
 BlocklyDuino.blockPicture = function() {
@@ -79,7 +89,7 @@ BlocklyDuino.blockPicture_mini = function() {
 
 BlocklyDuino.cardPicture_maxi = function() {
 	var img = $("#arduino_card_picture");
-	var modal = $("#pictureModalLabel");
+	var modal = $("#pictureModalLabel").parent();
 
     if ((img.width() < 450)||(img.height() < 650))
     {
@@ -91,7 +101,7 @@ BlocklyDuino.cardPicture_maxi = function() {
 
 BlocklyDuino.cardPicture_mini = function() {
 	var img = $("#arduino_card_picture");
-	var modal = $("#pictureModalLabel");
+	var modal = $("#pictureModalLabel").parent();
 
     if ((img.width() > 200)||(img.height() > 220))
     {
@@ -284,25 +294,19 @@ BlocklyDuino.jsSimpleColorPickr = function(id) {
  */
 BlocklyDuino.OnOffLine = function() {
 	var AIO = BlocklyDuino.getStringParamFromUrl('AIO', '');
-	if (AIO == '') {
-	  AIO = 'off';
+	if (AIO == 'on') {
+		$("#btn_configGlobal").addClass("hidden");
+		$("#btn_MiniconfigGlobal").addClass("hidden");
+		$("#pictureModalLabel").addClass("hidden");
+		$("#btn_card_picture_change").removeClass("hidden");
+		$('#pinout_AIO_on').prepend($('#pinout'));
+	} else if ((AIO == '')||(AIO == 'off')){
+			$("#btn_configGlobal").removeClass("hidden");
+			$("#btn_MiniconfigGlobal").removeClass("hidden");
+			$("#pictureModalLabel").removeClass("hidden");
+			$("#btn_card_picture_change").addClass("hidden");
+			$('#pinout_AIO_off').prepend($('#pinout'));
 	}
-	if (AIO == 'IDE') {
-
-	
-	} else if (AIO == 'on') {
-				$("#btn_configGlobal").addClass("hidden");
-				$("#btn_MiniconfigGlobal").addClass("hidden");
-				$("#pictureModalLabel").addClass("hidden");
-				$("#btn_card_picture_change").removeClass("hidden");
-				$('#pinout_AIO_on').prepend($('#pinout'));
-			} else {
-					$("#btn_configGlobal").removeClass("hidden");
-					$("#btn_MiniconfigGlobal").removeClass("hidden");
-					$("#pictureModalLabel").removeClass("hidden");
-					$("#btn_card_picture_change").addClass("hidden");
-					$('#pinout_AIO_off').prepend($('#pinout'));
-			}
 };
 
 BlocklyDuino.toggleTextColors = function(taille) {
@@ -317,89 +321,4 @@ BlocklyDuino.toggleTextColors = function(taille) {
  
 BlocklyDuino.tailleFonte = function(taille) {
 	document.getElementsByClass("mod")[0].style.fontSize = taille + "[b]px[/b]";	
-};
-
- 
-BlocklyDuino.miniMenuPanel = function() {
-  // Store the blocks for the duration of the reload.
-  BlocklyDuino.backupBlocks();
-
-  var search = window.location.search;
-  if (search.length <= 1) {
-    search = '?size=miniMenu';
-  } else if (search.match(/[?&]size=[^&]*/)) {
-    search = search.replace(/([?&]size=)[^&]*/, '');
-    search = search.replace(/\&/, '?');
-  } else {
-    search = search.replace(/\?/, '?size=miniMenu&');
-  }
-
-  // remove url file
-  //search = search.replace(/([?&]url=)[^&]*/, '');
-  window.location = window.location.protocol + '//' + window.location.host + window.location.pathname + search;
-};
-
-/**
- * Try to take a screen capture of all blocks on workspace
- * Thanks to fontaine.jp from forum http://blockly.technologiescollege.fr/forum/index.php/topic,128.msg635.html#new
- *
- */
-BlocklyDuino.workspace_capture = function() {
-	var ws = BlocklyDuino.workspace.getCanvas().cloneNode(true);
-	ws.removeAttribute("width");
-	ws.removeAttribute("height");
-	ws.removeAttribute("transform");
-	var styleElem = document.createElementNS("http://www.w3.org/2000/svg", "style");
-	styleElem.textContent = Blockly.Css.CONTENT.join('') ;
-	ws.insertBefore(styleElem, ws.firstChild);
-	var bbox = BlocklyDuino.workspace.getCanvas().getBBox();
-	var canvas = document.createElement( "canvas" );
-	canvas.width = Math.ceil(bbox.width+10);
-	canvas.height = Math.ceil(bbox.height+10);
-	var ctx = canvas.getContext( "2d" );
-	var xml = new XMLSerializer().serializeToString(ws);
-	xml = '<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="'+bbox.width+'" height="'+bbox.height+'" viewBox="' + bbox.x + ' ' + bbox.y + ' '  + bbox.width + ' ' + bbox.height + '"><rect width="100%" height="100%" fill="white"></rect>'+xml+'</svg>';
-	var img = new Image();
-	img.setAttribute( "src", 'data:image/svg+xml;base64,' + btoa(unescape(encodeURIComponent(xml))));
-	img.onload = function() {
-		ctx.drawImage( img, 5, 5 );
-		var canvasdata = canvas.toDataURL("image/png",1);
-		var datenow = Date.now();
-		var a = document.createElement("a");
-		a.download = "capture"+datenow+".png";
-		a.href = canvasdata;
-		document.body.appendChild(a);
-		a.click();
-	} 
-};
-
-
-BlocklyDuino.workspace_capture_IDE = function() {
-	var ws = BlocklyDuino.workspace.getCanvas().cloneNode(true);
-	ws.removeAttribute("width");
-	ws.removeAttribute("height");
-	ws.removeAttribute("transform");
-	var styleElem = document.createElementNS("http://www.w3.org/2000/svg", "style");
-	styleElem.textContent = Blockly.Css.CONTENT.join('') ;
-	ws.insertBefore(styleElem, ws.firstChild);
-	var bbox = BlocklyDuino.workspace.getCanvas().getBBox();
-	var canvas = document.createElement( "canvas" );
-	canvas.width = Math.ceil(bbox.width+10);
-	canvas.height = Math.ceil(bbox.height+10);
-	var ctx = canvas.getContext( "2d" );
-	var xml = new XMLSerializer().serializeToString(ws);
-	xml = '<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="'+bbox.width+'" height="'+bbox.height+'" viewBox="' + bbox.x + ' ' + bbox.y + ' '  + bbox.width + ' ' + bbox.height + '"><rect width="100%" height="100%" fill="white"></rect>'+xml+'</svg>';
-	var img = new Image();
-	img.setAttribute( "src", 'data:image/svg+xml;base64,' + btoa(unescape(encodeURIComponent(xml))));
-	img.onload = function() {
-		ctx.drawImage( img, 5, 5 );
-		var canvasdata = canvas.toDataURL("image/png",1);
-		var datenow = Date.now();
-		var a = document.createElement("a");
-		a.download = "capture"+datenow+".png";
-		a.href = canvasdata;
-		document.body.appendChild(a);
-		a.click();
-		BlocklyArduinoServer.saveWorkspaceCapture(a);
-	} 
 };

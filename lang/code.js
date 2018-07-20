@@ -256,7 +256,6 @@ Code.initLanguage = function() {
   $('#toolboxes option[value="toolbox_arduino_3"]').text(MSG['span_toolbox_arduino_3']);
   $('#toolboxes option[value="toolbox_arduino_4"]').text(MSG['span_toolbox_arduino_4']);
   $('#toolboxes option[value="toolbox_arduino_all"]').text(MSG['span_toolbox_all']);
-  $('#toolboxes option[value="toolbox_user"]').text(MSG['span_toolbox_user']);
   $('#span_languageMenu').text(MSG['span_languageMenu']);
   $('#span_colorToggle').text(MSG['span_colorToggle']);
   $('#span_colorBW').text(MSG['span_colorBW']);
@@ -268,13 +267,22 @@ Code.initLanguage = function() {
   $('#span_forms_about').text(MSG['span_forms']);
   
   $('#btn_configGlobal').attr('title', MSG['span_configGlobal']);
-  $('#btn_font').attr('title', MSG['span_font']);
-  $('#btn_colors').attr('title', MSG['span_colors']);
-  $('#btn_reset').attr('title', MSG['span_reset']);
+  $('#btn_config').attr('title', MSG['span_config']);
+  $('#tab_supervision').attr('title', MSG['span_supervision']);
+  $('#tab_blocks').attr('title', MSG['a_blocks']);
+  $('#tab_arduino').attr('title', MSG['a_arduino']);
+  $('#btn_saveXML').attr('title', MSG['span_saveXML']);
+  $('#btn_fakeload').attr('title', MSG['span_fakeload']);
+  $('#btn_example').attr('title', MSG['span_example']);
+  $('#btn_create_example').attr('title', MSG['span_create_example']);
   $('#btn_RGB').attr('title', MSG['span_RGB']);
   $('#btn_convert').attr('title', MSG['span_convert']);
-  $('#btn_wiring').attr('title', MSG['span_wiring']);
-  $('#wiring_dialog').attr('title', MSG['span_wiring']);
+  $('#btn_font').attr('title', MSG['span_font']);
+  $('#btn_colors').attr('title', MSG['span_colors']);
+  $('#btn_miniMenuPanel').attr('title', MSG['span_miniMenuPanel']);
+  $('#btn_reset').attr('title', MSG['span_reset']);
+  $('#btn_about').attr('title', MSG['span_about']);
+  $('#arduino_card_miniPicture_Menu').attr('title', MSG['span_picture']);
   $('#pre_previewArduino').attr('title', MSG['a_arduino']);
   $('#btn_doc').attr('title', MSG['span_doc']);  
   $('#btn_tuto').attr('title', MSG['span_tuto']);

@@ -18,6 +18,7 @@
 
 	<script type="text/javascript" src="core_BlocklyArduino/blockly@rduino.js"></script>
 	<script type="text/javascript" src="core_BlocklyArduino/blockly@rduino_boards.js"></script>
+	<script type="text/javascript" src="core_BlocklyArduino/blockly@rduino_functions_buttons.js"></script>
 	<script type="text/javascript" src="core_BlocklyArduino/blockly@rduino_tools.js"></script>
 	<script type="text/javascript" src="core_BlocklyArduino/blockly@rduino_visual.js"></script>
 
@@ -255,26 +256,6 @@
 				</a>
 			</div> 
 			<input type="file" id="load" style="display: none;" />
-			<div id="div_about">
-				<button id="btn_about" type="button" class="btn btn-default btn-sm btn-success" data-toggle="modal" data-target="#aboutModal">
-					<span id="span_about"> </span>
-					<span class="glyphicon glyphicon-user"></span>		
-				</button>
-				<button id="btn_miniMenuPanel" class="btn btn-default" >
-					<span class="glyphicon glyphicon-step-backward"> </span>		
-				</button>
-			</div>
-			<div id="div_accessibility_button">
-				<a href="./index.html" id="btn_reset" class="btn btn-danger">
-					   <span class="glyphicon glyphicon-off"> </span>
-				</a>
-				<button id="btn_font" class="btn btn-warning">
-				   <span class="glyphicon glyphicon-text-height"> </span>
-				</button>
-				<button id="btn_colors" class="btn btn-warning jscolor {valueElement:null,value:'F0AD4E'}" onchange="update(this.jscolor)">
-				   <span class="glyphicon glyphicon-tint"> </span>
-				</button>
-			</div>
 			<div id="div_tools_button">
 				<!--button id="btn_wiring" class="btn btn-primary">
 					<span class="glyphicon glyphicon-blackboard"></span>
@@ -284,19 +265,24 @@
 				</button>
 				<button id="btn_convert" class="btn btn-primary">
 				   <span class="glyphicon glyphicon-superscript"> </span>
-			   </button>
-			</div>
-			<div id="div_help_button">
-			   <button id="btn_videos" class="btn btn-danger text-left">
-				   <span class="fa fa-film"> </span>
-			   </button>
-			   <a id="btn_doc" class='btn btn-success btn-info text-left' href="http://www.libreduc.cc/wiki/doku.php/fr/arduino/blockly_rduino" target="_blank" role='button'>
-				   <span class="glyphicon glyphicon-info-sign"></span>
-			   </a>
-			   <a id="btn_tuto" class='btn btn-success btn-info text-left' href="http://blockly.technologiescollege.fr/forum/" target="_blank" role='button'>
-				   <span class="glyphicon glyphicon-question-sign"></span>
-			   </a>	
-			</div>       
+			    </button>
+				<br />
+				<br />
+				<button id="btn_miniMenuPanel" class="btn btn-default" >
+					<span class="glyphicon glyphicon-step-backward"> </span>		
+				</button>
+				<a href="./index_light.html" id="btn_reset" class="btn btn-danger">
+					   <span class="glyphicon glyphicon-off"> </span>
+				</a>
+				<br />
+				<br />
+					<div id="div_about">
+						<button id="btn_about" type="button" class="btn btn-default btn-sm btn-success" data-toggle="modal" data-target="#aboutModal">
+							<span id="span_about"> </span>
+							<span class="glyphicon glyphicon-user"></span>		
+						</button>
+					</div>
+			</div>  
 		</div>
 		<!-- Nav tabs -->
 		<div id="divTabpanel" role="tabpanel">
@@ -529,8 +515,9 @@
 				<option value="toolbox_arduino_all"></option>
 			</select>
 		</div>
-		<label id="span_colorToggle"> </label>
-		<input id="toggle-Functions" data-toggle="toggle" data-off="<span id='span_colorBW'> </span>" data-on="<span id='span_colorColors'> </span>" data-onstyle="primary" data-offstyle="default" data-width="120" type="checkbox"/>
+		<label> </label>
+		<label id="span_functionToggle"> </label>
+		<input id="toggle-Functions" data-toggle="toggle" data-off="<span id='span_functionON'> </span>" data-on="<span id='span_functionOFF'> </span>" data-onstyle="primary" data-offstyle="default" data-width="120" type="checkbox"/>
       </div>
       <input type="checkbox" name="select_all" id="select_all"/> <span id="span_select_all"> </span>
       <div class="modal-body" id="modal-body-config"></div>
@@ -578,6 +565,7 @@
 	                <span class="fa fa-language"></span>  <label id="span_languageMenu"> </label>  <select id="languageMenu"></select><br/>
 					<!--label id="textSize" class="mod">tototo</label><input name="textSizeSelect" class="form-control" style="" min="0" max="30" step="1" value="12" type="number"></input-->
 					<div id="divCard">
+							<br />
 							<span class="fa fa-microchip"></span>  <label id="labelArduinoCard"></label>
 							<div id="pinout_AIO_off"></div>
 							<select id="pinout" onmousemove="BlocklyDuino.cardPicture_change_AIO();" onchange="BlocklyDuino.cardPicture_change_AIO();">
@@ -598,9 +586,30 @@
 					</div>
 					<br />
 					<span class="glyphicon glyphicon-text-background"></span>  <label id="span_colorToggle"> </label>
+					<br />
 					<input id="toggle-Colors" data-toggle="toggle" data-off="<span id='span_colorBW'> </span>" data-on="<span id='span_colorColors'> </span>" data-onstyle="primary" data-offstyle="default" data-width="120" type="checkbox"/><br />
 					<br />				
 					<br />
+					<div id="div_help_button">
+					   <button id="btn_videos" class='btn btn-success btn-info text-left'>
+						   <span class="fa fa-film"> </span>
+					   </button>
+					   <a id="btn_doc" class='btn btn-success btn-info text-left' href="http://www.libreduc.cc/wiki/doku.php/fr/arduino/blockly_rduino" target="_blank" role='button'>
+						   <span class="glyphicon glyphicon-info-sign"></span>
+					   </a>
+					   <a id="btn_tuto" class='btn btn-success btn-info text-left' href="http://blockly.technologiescollege.fr/forum/" target="_blank" role='button'>
+						   <span class="glyphicon glyphicon-question-sign"></span>
+					   </a>	
+					</div>			
+					<br />
+					<div id="div_accessibility_button">
+						<button id="btn_font" class="btn btn-warning">
+						   <span class="glyphicon glyphicon-text-height"> </span>
+						</button>
+						<button id="btn_colors" class="btn btn-warning jscolor {valueElement:null,value:'F0AD4E'}" onchange="update(this.jscolor)">
+						   <span class="glyphicon glyphicon-tint"> </span>
+						</button>
+					</div>
 				</div>
 			</div>  
 			<div class="modal-footer">

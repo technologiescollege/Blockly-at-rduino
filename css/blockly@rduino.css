@@ -161,7 +161,6 @@ html[dir="RTL"] .menuPanel-ver {
 #div_about {
     width: 200px;
     bottom: 130px;
-    /* position: absolute; */
     text-align: center;
 }
 
@@ -510,12 +509,6 @@ html[dir="RTL"] .colors_category {
 }
 
 #RGB_modal .modal-content:hover {
-  cursor: move;
-}
-.draggable {
-}
-
-#videoModal .modal-content:hover {
   cursor: move;
 }
 .draggable {
