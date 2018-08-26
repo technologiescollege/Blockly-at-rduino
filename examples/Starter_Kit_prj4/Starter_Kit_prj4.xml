@@ -1,0 +1,374 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <toolboxcategories>CAT_LOGIC,CAT_LOOPS,CAT_MATH,CAT_TEXT,CAT_VARIABLES,CAT_FUNCTIONS,CAT_ARDUINO,CAT_LCD_SCREEN,CAT_BLUETOOTH_MISC,CAT_MATRIX_LED_RGB,CAT_RFID,CAT_MBOT_1,CAT_MBOT_2,CAT_MBOT_3,CAT_MBOT_4</toolboxcategories>
+  <toolbox>toolbox_arduino_all</toolbox>
+  <block type="base_setup_loop" id="+5)V[){$ZUTt}Mx+1Z:R" x="38" y="-63">
+    <statement name="DO">
+      <block type="serial_init" id=":49ias7Tg:!eqf!J4@;;">
+        <field name="SPEED">9600</field>
+        <next>
+          <block type="variables_set" id="ld^tcqx%.}JDC6Wg_alK">
+            <field name="VAR">redSensorValue</field>
+            <value name="VALUE">
+              <block type="math_number" id="2ottei)i*Z^(M6U:fod!">
+                <field name="NUM">0</field>
+              </block>
+            </value>
+            <next>
+              <block type="variables_set" id="ijXHb81MsT9qq[5-Yb[O">
+                <field name="VAR">greenSensorValue</field>
+                <value name="VALUE">
+                  <block type="math_number" id="QGNaG?I1`tFo)16x9/|]">
+                    <field name="NUM">0</field>
+                  </block>
+                </value>
+                <next>
+                  <block type="variables_set" id="Pkesh0DV?2NgqQpXCc9j">
+                    <field name="VAR">blueSensorValue</field>
+                    <value name="VALUE">
+                      <block type="math_number" id="B?S2:H=3r%5q*Q.~ldJo">
+                        <field name="NUM">0</field>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="variables_set" id=".q_1~qFdiE)JK0NvlDOc">
+                        <field name="VAR">redValue</field>
+                        <value name="VALUE">
+                          <block type="math_number" id="[a%o=ZYx|jLDUyrxhzyR">
+                            <field name="NUM">0</field>
+                          </block>
+                        </value>
+                        <next>
+                          <block type="variables_set" id="*@6*~V9h}7L/|NKxI2q8">
+                            <field name="VAR">greenValue</field>
+                            <value name="VALUE">
+                              <block type="math_number" id="7d,6a!U`3EW%E$qU(LFk">
+                                <field name="NUM">0</field>
+                              </block>
+                            </value>
+                            <next>
+                              <block type="variables_set" id="Pbwao0peqo;qM9k-dTKu">
+                                <field name="VAR">blueValue</field>
+                                <value name="VALUE">
+                                  <block type="math_number" id="hxnSaw2v:}O=46Nn9T}y">
+                                    <field name="NUM">0</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+    <statement name="LOOP">
+      <block type="variables_set" id="~`ED2OiwA1roR.xTt_F^">
+        <field name="VAR">redSensorValue</field>
+        <value name="VALUE">
+          <block type="inout_analog_read_validator" id="!lBhCzh?No?P0r=;;YWr">
+            <field name="PIN">A0</field>
+          </block>
+        </value>
+        <next>
+          <block type="base_delay" id="76yMe=?Mj_;*P{XZZ_xb">
+            <value name="DELAY_TIME">
+              <shadow type="math_number" id="jhT7+*`@#b`vTJFgEhcN">
+                <field name="NUM">5</field>
+              </shadow>
+            </value>
+            <next>
+              <block type="variables_set" id="Q$p5om`%[X0R7gbr]=Mj">
+                <field name="VAR">greenSensorValue</field>
+                <value name="VALUE">
+                  <block type="inout_analog_read_validator" id="206HQCeVVnpK45$cXZLH">
+                    <field name="PIN">A1</field>
+                  </block>
+                </value>
+                <next>
+                  <block type="base_delay" id="XwMuhu(=GX@hn+64VHYD">
+                    <value name="DELAY_TIME">
+                      <shadow type="math_number" id="bqI=@=eM~q}44N;`2$Lq">
+                        <field name="NUM">5</field>
+                      </shadow>
+                    </value>
+                    <next>
+                      <block type="variables_set" id="%6E_MW`r^8{%SPH*Yv7s">
+                        <field name="VAR">blueSensorValue</field>
+                        <value name="VALUE">
+                          <block type="inout_analog_read_validator" id="(*5KyJc6VCkkTGgdP5;P">
+                            <field name="PIN">A2</field>
+                          </block>
+                        </value>
+                        <next>
+                          <block type="serial_print_tab" id="i9Ee`Cpk:XK__;h.E%~X">
+                            <value name="CONTENT">
+                              <shadow type="text" id="OPUWiReYTa5}l@@P.?wt">
+                                <field name="TEXT">Raw Sensor values</field>
+                              </shadow>
+                            </value>
+                            <next>
+                              <block type="serial_print" id="tyJu.9Yb9W4San.DUM|P">
+                                <value name="CONTENT">
+                                  <shadow type="text" id="JcUIZdpb6c9R[jCCQ*vt">
+                                    <field name="TEXT">Red : </field>
+                                  </shadow>
+                                </value>
+                                <next>
+                                  <block type="serial_print_tab" id="]pB82[BY0V(bs;n~b:RG">
+                                    <value name="CONTENT">
+                                      <shadow type="text" id="pmJ#r,?m.U0$WY!b`|Y6">
+                                        <field name="TEXT">Red : </field>
+                                      </shadow>
+                                      <block type="variables_get" id="/J=(2`@P8b=!l=l.8*E)">
+                                        <field name="VAR">redSensorValue</field>
+                                      </block>
+                                    </value>
+                                    <next>
+                                      <block type="serial_print" id="4nt5bC#T#/A}CScL@tjG">
+                                        <value name="CONTENT">
+                                          <shadow type="text" id="x{6FXa,Fj5bVU2#hRF?M">
+                                            <field name="TEXT">Green : </field>
+                                          </shadow>
+                                        </value>
+                                        <next>
+                                          <block type="serial_print_tab" id="I@,Dkd~^N@zlrQB(8-)D">
+                                            <value name="CONTENT">
+                                              <shadow type="text" id="ST-|YA(jnjYe@cg|3iA,">
+                                                <field name="TEXT">Green : </field>
+                                              </shadow>
+                                              <block type="variables_get" id="*?~`5r.uc?u+(dte**Y7">
+                                                <field name="VAR">greenSensorValue</field>
+                                              </block>
+                                            </value>
+                                            <next>
+                                              <block type="serial_print" id="]0ytLa$0P[u-KLn2[+Y/">
+                                                <value name="CONTENT">
+                                                  <shadow type="text" id="}D-|yt5P^Z4$yZ)%65TY">
+                                                    <field name="TEXT">Blue : </field>
+                                                  </shadow>
+                                                </value>
+                                                <next>
+                                                  <block type="serial_print" id="4ylsGtvP?Z]^abMabcnm">
+                                                    <value name="CONTENT">
+                                                      <shadow type="text" id="x{6FXa,Fj5bVU2#hRF?M">
+                                                        <field name="TEXT"></field>
+                                                      </shadow>
+                                                      <block type="variables_get" id="qR/kI7d6p$y:UFm*tUx0">
+                                                        <field name="VAR">blueSensorValue</field>
+                                                      </block>
+                                                    </value>
+                                                    <next>
+                                                      <block type="variables_set" id="_n/HK|x1$bc|E*?:Lwsx">
+                                                        <field name="VAR">redValue</field>
+                                                        <value name="VALUE">
+                                                          <block type="math_arithmetic" id="G6o0-HiZ~EsW8.Zk9~pE">
+                                                            <field name="OP">DIVIDE</field>
+                                                            <value name="A">
+                                                              <block type="variables_get" id="(f!EF1g}LP@U19*N-nv?">
+                                                                <field name="VAR">redSensorValue</field>
+                                                              </block>
+                                                            </value>
+                                                            <value name="B">
+                                                              <block type="math_number" id=")?_BnNk~S|$1EXS`H;-6">
+                                                                <field name="NUM">4</field>
+                                                              </block>
+                                                            </value>
+                                                          </block>
+                                                        </value>
+                                                        <next>
+                                                          <block type="variables_set" id="oBgC310!^=dQOjV4KTY$">
+                                                            <field name="VAR">greenValue</field>
+                                                            <value name="VALUE">
+                                                              <block type="math_arithmetic" id="E8+(Y_.j)IE$Crg/:p91">
+                                                                <field name="OP">DIVIDE</field>
+                                                                <value name="A">
+                                                                  <block type="variables_get" id="2vMO:dhdWkzs,#C2J4CE">
+                                                                    <field name="VAR">greenSensorValue</field>
+                                                                  </block>
+                                                                </value>
+                                                                <value name="B">
+                                                                  <block type="math_number" id="x*gGLLUNyeEI/CxVbiuf">
+                                                                    <field name="NUM">4</field>
+                                                                  </block>
+                                                                </value>
+                                                              </block>
+                                                            </value>
+                                                            <next>
+                                                              <block type="variables_set" id="CU2{6oCvVBW1Q?~Fn@j)">
+                                                                <field name="VAR">blueValue</field>
+                                                                <value name="VALUE">
+                                                                  <block type="math_arithmetic" id="_bs5vEq+G*YF%eG*ztmj">
+                                                                    <field name="OP">DIVIDE</field>
+                                                                    <value name="A">
+                                                                      <block type="variables_get" id="fCpT+r6C;q^AFKQ3(NPb">
+                                                                        <field name="VAR">blueSensorValue</field>
+                                                                      </block>
+                                                                    </value>
+                                                                    <value name="B">
+                                                                      <block type="math_number" id="5UIB/RM~0?TPC|sN.$/7">
+                                                                        <field name="NUM">4</field>
+                                                                      </block>
+                                                                    </value>
+                                                                  </block>
+                                                                </value>
+                                                                <next>
+                                                                  <block type="serial_print_tab" id=":3:~N(/cP,P?.qtZFp.-">
+                                                                    <value name="CONTENT">
+                                                                      <shadow type="text" id="zePVOo/L{ohY2yK-c2]T">
+                                                                        <field name="TEXT">Valeurs recalculees</field>
+                                                                      </shadow>
+                                                                    </value>
+                                                                    <next>
+                                                                      <block type="serial_print" id="$o5}lc_dY?pE(?b5)+j~">
+                                                                        <value name="CONTENT">
+                                                                          <shadow type="text" id="(YnvUA!KfqFq$j%Uuj(4">
+                                                                            <field name="TEXT">Rouge : </field>
+                                                                          </shadow>
+                                                                        </value>
+                                                                        <next>
+                                                                          <block type="serial_print_tab" id="ZCa%KcYTs!DDMI4o+m`|">
+                                                                            <value name="CONTENT">
+                                                                              <shadow type="text" id="pmJ#r,?m.U0$WY!b`|Y6">
+                                                                                <field name="TEXT">Red : </field>
+                                                                              </shadow>
+                                                                              <block type="variables_get" id="EmxT*AOPtbJNRG^,1]J5">
+                                                                                <field name="VAR">redValue</field>
+                                                                              </block>
+                                                                            </value>
+                                                                            <next>
+                                                                              <block type="serial_print" id="XGc}rV;(j~vv3D|4o(`Y">
+                                                                                <value name="CONTENT">
+                                                                                  <shadow type="text" id="Tab.;W(Y#QPCBL~DO]%4">
+                                                                                    <field name="TEXT">Vert : </field>
+                                                                                  </shadow>
+                                                                                </value>
+                                                                                <next>
+                                                                                  <block type="serial_print_tab" id=",dxOwt6*I?$KT.W}1yoI">
+                                                                                    <value name="CONTENT">
+                                                                                      <shadow type="text" id="ST-|YA(jnjYe@cg|3iA,">
+                                                                                        <field name="TEXT">Green : </field>
+                                                                                      </shadow>
+                                                                                      <block type="variables_get" id="W~4SLs|y1xx%enVVtfzK">
+                                                                                        <field name="VAR">greenValue</field>
+                                                                                      </block>
+                                                                                    </value>
+                                                                                    <next>
+                                                                                      <block type="serial_print" id="^y.Bu?lN~8K1HjC;WWRF">
+                                                                                        <value name="CONTENT">
+                                                                                          <shadow type="text" id="o$mQ0K%z/)-Dp-SviaQ)">
+                                                                                            <field name="TEXT">Bleu : </field>
+                                                                                          </shadow>
+                                                                                        </value>
+                                                                                        <next>
+                                                                                          <block type="serial_print" id="B@2ozuJm!q_9@e||7UP2">
+                                                                                            <value name="CONTENT">
+                                                                                              <shadow type="text" id="x{6FXa,Fj5bVU2#hRF?M">
+                                                                                                <field name="TEXT"></field>
+                                                                                              </shadow>
+                                                                                              <block type="variables_get" id="~}Br`!B9,1EH.co^^yHg">
+                                                                                                <field name="VAR">blueValue</field>
+                                                                                              </block>
+                                                                                            </value>
+                                                                                            <next>
+                                                                                              <block type="inout_analog_write" id="NLC2$K{y(_X2T!NA4hJb">
+                                                                                                <value name="PIN">
+                                                                                                  <block type="math_number" id="gZj+RtQ8~zI@CQv4,o.{">
+                                                                                                    <field name="NUM">11</field>
+                                                                                                  </block>
+                                                                                                </value>
+                                                                                                <value name="NUM">
+                                                                                                  <shadow type="math_number" id="JxX2LulEA}ZLFQU/92Rk">
+                                                                                                    <field name="NUM">0</field>
+                                                                                                  </shadow>
+                                                                                                  <block type="variables_get" id="jIO*A~bo0aBOM-zRM*3,">
+                                                                                                    <field name="VAR">redValue</field>
+                                                                                                  </block>
+                                                                                                </value>
+                                                                                                <next>
+                                                                                                  <block type="inout_analog_write" id="G0=X=DrNVLo?cL#FWxaq">
+                                                                                                    <value name="PIN">
+                                                                                                      <block type="math_number" id="OpX^Zh1zE-+(Z%_=G72(">
+                                                                                                        <field name="NUM">9</field>
+                                                                                                      </block>
+                                                                                                    </value>
+                                                                                                    <value name="NUM">
+                                                                                                      <shadow type="math_number" id="JxX2LulEA}ZLFQU/92Rk">
+                                                                                                        <field name="NUM">0</field>
+                                                                                                      </shadow>
+                                                                                                      <block type="variables_get" id="t=3$3fJ72zh+g{_A)A@O">
+                                                                                                        <field name="VAR">greenValue</field>
+                                                                                                      </block>
+                                                                                                    </value>
+                                                                                                    <next>
+                                                                                                      <block type="inout_analog_write" id="6Qa%6./:*GCW[Cjj3YSg">
+                                                                                                        <value name="PIN">
+                                                                                                          <block type="math_number" id="O!jXTKF#s#?bVfuCk?,-">
+                                                                                                            <field name="NUM">10</field>
+                                                                                                          </block>
+                                                                                                        </value>
+                                                                                                        <value name="NUM">
+                                                                                                          <shadow type="math_number" id="JxX2LulEA}ZLFQU/92Rk">
+                                                                                                            <field name="NUM">0</field>
+                                                                                                          </shadow>
+                                                                                                          <block type="variables_get" id="gb@u?QA%!1L^KWBZm.*7">
+                                                                                                            <field name="VAR">blueValue</field>
+                                                                                                          </block>
+                                                                                                        </value>
+                                                                                                      </block>
+                                                                                                    </next>
+                                                                                                  </block>
+                                                                                                </next>
+                                                                                              </block>
+                                                                                            </next>
+                                                                                          </block>
+                                                                                        </next>
+                                                                                      </block>
+                                                                                    </next>
+                                                                                  </block>
+                                                                                </next>
+                                                                              </block>
+                                                                            </next>
+                                                                          </block>
+                                                                        </next>
+                                                                      </block>
+                                                                    </next>
+                                                                  </block>
+                                                                </next>
+                                                              </block>
+                                                            </next>
+                                                          </block>
+                                                        </next>
+                                                      </block>
+                                                    </next>
+                                                  </block>
+                                                </next>
+                                              </block>
+                                            </next>
+                                          </block>
+                                        </next>
+                                      </block>
+                                    </next>
+                                  </block>
+                                </next>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+</xml>

@@ -1,0 +1,77 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <toolboxcategories>CAT_LOGIC,CAT_LOOPS,CAT_MATH,CAT_TEXT,CAT_VARIABLES,CAT_FUNCTIONS,CAT_ARDUINO,CAT_RFID,CAT_TECHNOZONE</toolboxcategories>
+  <toolbox>toolbox_arduino_3</toolbox>
+  <block type="RFID_module" id="j}tgk@0?9!X.QrYSsUy8" x="38" y="38">
+    <value name="SDA">
+      <shadow type="math_number" id="x$TDc-~,=V4[PHWbE6{u">
+        <field name="NUM">10</field>
+      </shadow>
+    </value>
+    <value name="SCK">
+      <shadow type="math_number" id="-TC7RO)Ytd=;kheB%w]Z">
+        <field name="NUM">13</field>
+      </shadow>
+    </value>
+    <value name="MOSI">
+      <shadow type="math_number" id=")rl,Ssx*W{CoYBqsB5];">
+        <field name="NUM">11</field>
+      </shadow>
+    </value>
+    <value name="MISO">
+      <shadow type="math_number" id=";vuzmcB9k8:Kp7?(^z6.">
+        <field name="NUM">12</field>
+      </shadow>
+    </value>
+    <value name="RST">
+      <shadow type="math_number" id="Rq$n/F;eDhkC|4sZ}S~q">
+        <field name="NUM">9</field>
+      </shadow>
+    </value>
+    <next>
+      <block type="serial_init" id="g/hEy3)b3|n]%mE^a2UL">
+        <field name="SPEED">9600</field>
+        <next>
+          <block type="controls_if" id="v|{F`4p,|:9@mHrKk$r8">
+            <value name="IF0">
+              <block type="RFID_detection" id="r[DbGmUh`|ZW2vW3.d{n"></block>
+            </value>
+            <statement name="DO0">
+              <block type="controls_if" id="#u2vhl)v{r@=~Ugo~*v9">
+                <value name="IF0">
+                  <block type="RFID_reception_cle" id="zU*k]s@Cgaw}z4@1Z5~*"></block>
+                </value>
+                <statement name="DO0">
+                  <block type="RFID_lecture_cle" id="%B-q1myt2)flU*2yk=|o">
+                    <next>
+                      <block type="serial_println" id="2W~K:I5/M#`Z.VPGPiX+">
+                        <value name="CONTENT">
+                          <shadow type="text" id="=OQRxd(~$OoL{nm-_h).">
+                            <field name="TEXT"></field>
+                          </shadow>
+                          <block type="text_join" id="bC5JuEe6WGzgH@;O^?KR">
+                            <mutation items="2"></mutation>
+                            <value name="ADD0">
+                              <block type="text" id="2v0R`!D(U)pIkBca}2*y">
+                                <field name="TEXT">L'UID est : </field>
+                              </block>
+                            </value>
+                            <value name="ADD1">
+                              <block type="RFID_valeur_cle" id="JmOjynpvtQr^A%dPlF!I"></block>
+                            </value>
+                          </block>
+                        </value>
+                      </block>
+                    </next>
+                  </block>
+                </statement>
+                <next>
+                  <block type="RFID_fermeture" id="M_pJB%L$kfzMJGq/YRzz"></block>
+                </next>
+              </block>
+            </statement>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+</xml>

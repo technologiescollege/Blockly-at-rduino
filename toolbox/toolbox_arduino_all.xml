@@ -107,6 +107,7 @@
 		</block>
 		<block type="text_length"></block>
 		<block type="text_isEmpty"></block>
+		<block type="text_compare_string"></block>
 		<!-- <block type="text_indexOf"> -->
 		<!-- <value name="VALUE"> -->
 		<!-- <block type="variables_get"> -->
@@ -261,12 +262,29 @@
 				</value>
 			</block>
 			<block type="tone">
+				<value name="PIN">
+					<shadow type="math_number">
+						<field name="NUM">2</field>
+					</shadow>
+				</value>
 				<value name="NUM">
 					<shadow type="math_number">
 						<field name="NUM">0</field>
 					</shadow>
 				</value>
 				<value name="TPS">
+					<shadow type="math_number">
+						<field name="NUM">0</field>
+					</shadow>
+				</value>
+			</block>
+			<block type="tone_notime">
+				<value name="PIN">
+					<shadow type="math_number">
+						<field name="NUM">2</field>
+					</shadow>
+				</value>
+				<value name="NUM">
 					<shadow type="math_number">
 						<field name="NUM">0</field>
 					</shadow>
@@ -651,6 +669,29 @@
 		<block type="IR_serial_decoder"></block>
 		<block type="IR_get_blink"></block>
 		<block type="IR_get"></block>
+	</category>
+	<category name="CAT_INFRA_2" colour="#00979D">
+		<block type="IR_init">
+			<value name="PIN">
+				<shadow type="math_number">
+					<field name="NUM">2</field>
+				</shadow>
+			</value>
+		</block>
+		<block type="IR_test_LED"></block>
+		<block type="IR_test_monitor"></block>
+	</category>
+	<category name="CAT_INFRA_3" colour="#00979D">
+		<block type="IR_init">
+			<value name="PIN">
+				<shadow type="math_number">
+					<field name="NUM">2</field>
+				</shadow>
+			</value>
+		</block>
+		<block type="IR_next_value"></block>
+		<block type="IR_detection"></block>
+		<block type="IR_reception_code"></block>
 	</category>
 	<category name="CAT_I2C" colour="#CC0033">
 		<category name="SOFT_I2C" colour="#CC0033">	
@@ -1679,6 +1720,66 @@
 		<block type="multifunction_segment" colour="#0152AB"></block>
 		<block type="multifunction_segment_number" colour="#0152AB"></block>
 		<block type="multifunction_PWM_write" colour="#0152AB"></block>
+	</category>
+
+	<category name="CAT_RF433" colour="#0152AB">
+		<block type="rf433_rxready" colour="#0152AB"></block>
+		<block type="rf433_rx" colour="#0152AB"></block>
+		<block type="rf433_tx" colour="#0152AB"></block>
+	</category>
+
+	<category name="CAT_RF433_2" colour="#0152AB">
+		<block type="rf433_init_receiver" colour="#0152AB">
+			<value name="PIN">
+				<shadow type="math_number">
+					<field name="NUM">11</field>
+				</shadow>
+			</value>
+		</block>
+		<block type="rf433_init_transmitter" colour="#0152AB">
+			<value name="PIN">
+				<shadow type="math_number">
+					<field name="NUM">12</field>
+				</shadow>
+			</value>
+		</block>
+		<block type="rf433_send_message_full" colour="#0152AB">
+			<value name="MESSAGE">
+				<shadow type="text">
+					<field name="TEXT"></field>
+				</shadow>
+			</value>
+		</block>
+		<block type="rf433_show_message" colour="#0152AB"></block>
+	</category>
+
+	<category name="CAT_RF433_3" colour="#0152AB">
+		<block type="rf433_init_receiver" colour="#0152AB">
+			<value name="PIN">
+				<shadow type="math_number">
+					<field name="NUM">11</field>
+				</shadow>
+			</value>
+		</block>
+		<block type="rf433_init_transmitter" colour="#0152AB">
+			<value name="PIN">
+				<shadow type="math_number">
+					<field name="NUM">12</field>
+				</shadow>
+			</value>
+		</block>
+		<block type="rf433_define_message" colour="#0152AB">
+			<value name="MESSAGE">
+				<shadow type="text">
+					<field name="TEXT"></field>
+				</shadow>
+			</value>
+		</block>
+		<block type="rf433_send_message" colour="#0152AB"></block>
+		<block type="rf433_wait_rx" colour="#0152AB"></block>
+		<block type="rf433_wait_tx" colour="#0152AB"></block>
+		<block type="rf433_reception_message" colour="#0152AB"></block>
+		<block type="rf433_receive_message" colour="#0152AB"></block>
 	</category>
 
 	<category name="CAT_RFID" colour="#9BACB4">

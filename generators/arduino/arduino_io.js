@@ -173,6 +173,14 @@ Blockly.Arduino.tone = function() {
   return code;
 };
 
+Blockly.Arduino.tone_notime = function() {
+  var value_pin = Blockly.Arduino.valueToCode(this, 'PIN', Blockly.Arduino.ORDER_ATOMIC);
+  var value_num = Blockly.Arduino.valueToCode(this, 'NUM', Blockly.Arduino.ORDER_ATOMIC);
+  Blockly.Arduino.setups_['setup_output'+value_pin] = 'pinMode('+value_pin+', OUTPUT);';
+  var code = 'tone('+value_pin+','+value_num+');\n';
+  return code;
+};
+
 Blockly.Arduino.notone = function() {
   var value_pin = Blockly.Arduino.valueToCode(this, 'PIN', Blockly.Arduino.ORDER_ATOMIC);
   Blockly.Arduino.setups_['setup_output'+value_pin] = 'pinMode('+value_pin+', OUTPUT);';

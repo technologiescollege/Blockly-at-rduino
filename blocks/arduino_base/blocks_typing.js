@@ -99,6 +99,9 @@ Blockly.Blocks.inout_analog_read.getBlockType = function() {
 Blockly.Blocks.tone.getBlockType = function() {
 	return Blockly.Types.NUMBER;
 };
+Blockly.Blocks.tone_notime.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
 Blockly.Blocks.notone.getBlockType = function() {
 	return Blockly.Types.NUMBER;
 };

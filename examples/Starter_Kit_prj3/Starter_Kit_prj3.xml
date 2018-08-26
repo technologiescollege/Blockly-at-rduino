@@ -1,0 +1,429 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <toolboxcategories>CAT_LOGIC,CAT_LOOPS,CAT_MATH,CAT_ARRAY,CAT_TEXT,CAT_VARIABLES,CAT_FUNCTIONS,CAT_ARDUINO,CAT_ESUS,CAT_ETHERNET</toolboxcategories>
+  <toolbox>toolbox_arduino_all</toolbox>
+  <block type="variables_const" id="GkvXCZRA1yIuDsfYl6{b" x="113" y="38">
+    <field name="VAR">baselineTemp</field>
+    <value name="VALUE">
+      <block type="variables_set_type" id="QU8wx*lK3jgjBwb#!HZ*">
+        <field name="VARIABLE_SETTYPE_TYPE">DECIMAL</field>
+        <value name="VARIABLE_SETTYPE_INPUT">
+          <block type="math_number" id="Q~4KzR30;j!6UnMIC^VY">
+            <field name="NUM">20</field>
+          </block>
+        </value>
+      </block>
+    </value>
+  </block>
+  <block type="base_setup_loop" id="9hpyF+Z|kcnmEf8Wqn5N" x="112" y="138">
+    <statement name="DO">
+      <block type="serial_init" id="o3+i@ySi*KR%[Xn$o.#p">
+        <field name="SPEED">9600</field>
+        <next>
+          <block type="inout_digital_write_validator" id="og.EkS}oI:;!+D2~ixT/">
+            <field name="PIN">2</field>
+            <field name="STAT">LOW</field>
+            <next>
+              <block type="inout_digital_write_validator" id="3P)=/[}:DuGn|=TALKCE">
+                <field name="PIN">3</field>
+                <field name="STAT">LOW</field>
+                <next>
+                  <block type="inout_digital_write_validator" id="KjrFcL{a?YN|k*Gw,B74">
+                    <field name="PIN">4</field>
+                    <field name="STAT">LOW</field>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+    <statement name="LOOP">
+      <block type="variables_set" id=",J{|SKc!+[6d9NvH]-S}">
+        <field name="VAR">sensorVal</field>
+        <value name="VALUE">
+          <block type="inout_analog_read_validator" id="pHz,Dv-}Zlbb)fDoZG}g">
+            <field name="PIN">A0</field>
+          </block>
+        </value>
+        <next>
+          <block type="serial_print" id="@X%sG|,q8)!k5fC:ud)6">
+            <value name="CONTENT">
+              <shadow type="text" id="?k/QZv~=/BPAY.@V)v)%">
+                <field name="TEXT">Valeur capteur :</field>
+              </shadow>
+            </value>
+            <next>
+              <block type="serial_print" id="H}[O[Dhpg`c4:)4jv?vc">
+                <value name="CONTENT">
+                  <shadow type="text" id="9.rXxm:L$7ntWeZybr3,">
+                    <field name="TEXT">Valeur capteur :</field>
+                  </shadow>
+                  <block type="variables_get" id="mB[O|(TB-~lcOgO:OPJs">
+                    <field name="VAR">sensorVal</field>
+                  </block>
+                </value>
+                <next>
+                  <block type="variables_set" id="}fFPdG(OPNSCzw5~!Z^W">
+                    <field name="VAR">voltage</field>
+                    <value name="VALUE">
+                      <block type="variables_set_type" id="m))L_#f^IlFme%sc#yj{">
+                        <field name="VARIABLE_SETTYPE_TYPE">DECIMAL</field>
+                        <value name="VARIABLE_SETTYPE_INPUT">
+                          <block type="math_arithmetic" id="xoJfeX]QIc3owN;WJl=M">
+                            <field name="OP">MULTIPLY</field>
+                            <value name="A">
+                              <block type="math_arithmetic" id="96X^?zvV5rcKtX!v+@%#">
+                                <field name="OP">DIVIDE</field>
+                                <value name="A">
+                                  <block type="variables_get" id="vr:DL^qm#/mZL-8(vgS)">
+                                    <field name="VAR">sensorVal</field>
+                                  </block>
+                                </value>
+                                <value name="B">
+                                  <block type="conversion_tofloat" id="v/%ak#^8l}|G8NOy?|9$">
+                                    <value name="NAME">
+                                      <block type="math_number" id="W$~Eez+;$7QA=xvuwqyO">
+                                        <field name="NUM">1024</field>
+                                      </block>
+                                    </value>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                            <value name="B">
+                              <block type="conversion_tofloat" id="D${JG@CVSr6-w)M9Y?iX">
+                                <value name="NAME">
+                                  <block type="math_number" id="tCP220}yAnI6Qh^incQO">
+                                    <field name="NUM">5</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="serial_print" id="kR3L-(LyY{y~zWE7.p`F">
+                        <value name="CONTENT">
+                          <shadow type="text" id="aJ5_LAJ4T`56UdKrv?Nj">
+                            <field name="TEXT">, Volts : </field>
+                          </shadow>
+                        </value>
+                        <next>
+                          <block type="serial_print" id="*l:*|8vG,Oo6i2EIQs|I">
+                            <value name="CONTENT">
+                              <shadow type="text" id="9.rXxm:L$7ntWeZybr3,">
+                                <field name="TEXT">Valeur capteur :</field>
+                              </shadow>
+                              <block type="variables_get" id="I%9uqPrLC;GMnAfUY!92">
+                                <field name="VAR">voltage</field>
+                              </block>
+                            </value>
+                            <next>
+                              <block type="serial_print" id="N4XRC!uoSWFFoi_KaC5.">
+                                <value name="CONTENT">
+                                  <shadow type="text" id="dW816ZKKH7^uA~(bG347">
+                                    <field name="TEXT">, degres C : </field>
+                                  </shadow>
+                                </value>
+                                <next>
+                                  <block type="variables_set" id="6$*^#R~[@-i1fRC7;eg*">
+                                    <field name="VAR">temperature</field>
+                                    <value name="VALUE">
+                                      <block type="variables_set_type" id="(k-|+zf=e[kN|wKwW4aK">
+                                        <field name="VARIABLE_SETTYPE_TYPE">DECIMAL</field>
+                                        <value name="VARIABLE_SETTYPE_INPUT">
+                                          <block type="math_arithmetic" id="!jn+;:Czc4X~TV?,9]}Y">
+                                            <field name="OP">MULTIPLY</field>
+                                            <value name="A">
+                                              <block type="math_arithmetic" id="ZdjNQL#EX$9u5ORP;NcP">
+                                                <field name="OP">MINUS</field>
+                                                <value name="A">
+                                                  <block type="variables_get" id="Xj?gZa^BLd9=^FA)e.!u">
+                                                    <field name="VAR">voltage</field>
+                                                  </block>
+                                                </value>
+                                                <value name="B">
+                                                  <block type="math_number" id="]2`6{D=WxOqwKGvA]T*#">
+                                                    <field name="NUM">0.5</field>
+                                                  </block>
+                                                </value>
+                                              </block>
+                                            </value>
+                                            <value name="B">
+                                              <block type="math_number" id=":s6RZ{5R=#Zp@eVu!%78">
+                                                <field name="NUM">100</field>
+                                              </block>
+                                            </value>
+                                          </block>
+                                        </value>
+                                      </block>
+                                    </value>
+                                    <next>
+                                      <block type="serial_println" id="np]eTgA{$D49(aPCb?gv">
+                                        <value name="CONTENT">
+                                          <shadow type="text" id="_#lUARg(GzfYGmD0.4tZ">
+                                            <field name="TEXT"></field>
+                                          </shadow>
+                                          <block type="variables_get" id="b=qo-^oaE0A$u-`C9[LG">
+                                            <field name="VAR">temperature</field>
+                                          </block>
+                                        </value>
+                                        <next>
+                                          <block type="controls_if" id="}1?^P8l:m2ckIcF~wx{F">
+                                            <mutation elseif="3"></mutation>
+                                            <value name="IF0">
+                                              <block type="logic_compare" id=";5|1jcOh-MMY^3Nuo:w]">
+                                                <field name="OP">LT</field>
+                                                <value name="A">
+                                                  <block type="variables_get" id="YJ+!7U9-{T^esYY:J|C#">
+                                                    <field name="VAR">temperature</field>
+                                                  </block>
+                                                </value>
+                                                <value name="B">
+                                                  <block type="variables_get" id="yDOd~Nywk:l6]xo}@0/x">
+                                                    <field name="VAR">baselineTemp</field>
+                                                  </block>
+                                                </value>
+                                              </block>
+                                            </value>
+                                            <statement name="DO0">
+                                              <block type="inout_digital_write_validator" id="CWpa72/`^K9]S@.*p@?+">
+                                                <field name="PIN">2</field>
+                                                <field name="STAT">LOW</field>
+                                                <next>
+                                                  <block type="inout_digital_write_validator" id="H.n87]U1nXkZbQYJlpAH">
+                                                    <field name="PIN">3</field>
+                                                    <field name="STAT">LOW</field>
+                                                    <next>
+                                                      <block type="inout_digital_write_validator" id="-vS_5I1T#/LuGC#]w(tD">
+                                                        <field name="PIN">4</field>
+                                                        <field name="STAT">LOW</field>
+                                                      </block>
+                                                    </next>
+                                                  </block>
+                                                </next>
+                                              </block>
+                                            </statement>
+                                            <value name="IF1">
+                                              <block type="logic_operation" id="p!F=(8P}]hmsMF:S7Nb)">
+                                                <field name="OP">AND</field>
+                                                <value name="A">
+                                                  <block type="logic_compare" id="7IbY#g7h%,9hOTd=E`b9">
+                                                    <field name="OP">GTE</field>
+                                                    <value name="A">
+                                                      <block type="variables_get" id="F@ZVEYcXV|]z22`W#bVJ">
+                                                        <field name="VAR">temperature</field>
+                                                      </block>
+                                                    </value>
+                                                    <value name="B">
+                                                      <block type="math_arithmetic" id="_l*Na1j*AFdf.OzX9Kyx">
+                                                        <field name="OP">ADD</field>
+                                                        <value name="A">
+                                                          <block type="variables_get" id="s|~s%C^Lq$SM;HHO^fb(">
+                                                            <field name="VAR">baselineTemp</field>
+                                                          </block>
+                                                        </value>
+                                                        <value name="B">
+                                                          <block type="math_number" id="k%tqng-kxL_XZm-[X]uR">
+                                                            <field name="NUM">2</field>
+                                                          </block>
+                                                        </value>
+                                                      </block>
+                                                    </value>
+                                                  </block>
+                                                </value>
+                                                <value name="B">
+                                                  <block type="logic_compare" id="-OVdbt#gdkFdhn(m}f3K">
+                                                    <field name="OP">LT</field>
+                                                    <value name="A">
+                                                      <block type="variables_get" id="6}w_O!GX!X]SG8oV,pUx">
+                                                        <field name="VAR">temperature</field>
+                                                      </block>
+                                                    </value>
+                                                    <value name="B">
+                                                      <block type="math_arithmetic" id="^sB*4A_{4yCak[r:N6]i">
+                                                        <field name="OP">ADD</field>
+                                                        <value name="A">
+                                                          <block type="variables_get" id="EA+o9*,_.py-#%AN)c3D">
+                                                            <field name="VAR">baselineTemp</field>
+                                                          </block>
+                                                        </value>
+                                                        <value name="B">
+                                                          <block type="math_number" id="`_AiuGhH~x?;*qhIS(rc">
+                                                            <field name="NUM">4</field>
+                                                          </block>
+                                                        </value>
+                                                      </block>
+                                                    </value>
+                                                  </block>
+                                                </value>
+                                              </block>
+                                            </value>
+                                            <statement name="DO1">
+                                              <block type="inout_digital_write_validator" id="*=Ph{:P@PPgBk6#OW|nd">
+                                                <field name="PIN">2</field>
+                                                <field name="STAT">HIGH</field>
+                                                <next>
+                                                  <block type="inout_digital_write_validator" id="I)KO=F7c0g9-!:b;)6@o">
+                                                    <field name="PIN">3</field>
+                                                    <field name="STAT">LOW</field>
+                                                    <next>
+                                                      <block type="inout_digital_write_validator" id="%U,uGd0OLV|u!8OW3g]P">
+                                                        <field name="PIN">4</field>
+                                                        <field name="STAT">LOW</field>
+                                                      </block>
+                                                    </next>
+                                                  </block>
+                                                </next>
+                                              </block>
+                                            </statement>
+                                            <value name="IF2">
+                                              <block type="logic_operation" id="fq)JY)NGze6~AuaLU%)]">
+                                                <field name="OP">AND</field>
+                                                <value name="A">
+                                                  <block type="logic_compare" id="++t]uYe.VGn7)rj-J~2K">
+                                                    <field name="OP">GTE</field>
+                                                    <value name="A">
+                                                      <block type="variables_get" id="{hInR^+#Zjkx8pFZskus">
+                                                        <field name="VAR">temperature</field>
+                                                      </block>
+                                                    </value>
+                                                    <value name="B">
+                                                      <block type="math_arithmetic" id="J|QlCvh1acO=7]9`|EHG">
+                                                        <field name="OP">ADD</field>
+                                                        <value name="A">
+                                                          <block type="variables_get" id="K}D$ujeNxYI:GkiM60S#">
+                                                            <field name="VAR">baselineTemp</field>
+                                                          </block>
+                                                        </value>
+                                                        <value name="B">
+                                                          <block type="math_number" id="IuMmp5/Tu2;oceV:o`81">
+                                                            <field name="NUM">4</field>
+                                                          </block>
+                                                        </value>
+                                                      </block>
+                                                    </value>
+                                                  </block>
+                                                </value>
+                                                <value name="B">
+                                                  <block type="logic_compare" id=".wyV11)HrD3d59qbB@Xe">
+                                                    <field name="OP">LT</field>
+                                                    <value name="A">
+                                                      <block type="variables_get" id="-gA-[k/pY*DslbF`jJTU">
+                                                        <field name="VAR">temperature</field>
+                                                      </block>
+                                                    </value>
+                                                    <value name="B">
+                                                      <block type="math_arithmetic" id="R%(g1nlt9ilI[)X|=)0x">
+                                                        <field name="OP">ADD</field>
+                                                        <value name="A">
+                                                          <block type="variables_get" id="{LKW06CgbC,CUFZj2@uS">
+                                                            <field name="VAR">baselineTemp</field>
+                                                          </block>
+                                                        </value>
+                                                        <value name="B">
+                                                          <block type="math_number" id="l*LTk)G6-oem:w(2t}MF">
+                                                            <field name="NUM">6</field>
+                                                          </block>
+                                                        </value>
+                                                      </block>
+                                                    </value>
+                                                  </block>
+                                                </value>
+                                              </block>
+                                            </value>
+                                            <statement name="DO2">
+                                              <block type="inout_digital_write_validator" id="}6d?%nDHm@~,#tOvuGym">
+                                                <field name="PIN">2</field>
+                                                <field name="STAT">HIGH</field>
+                                                <next>
+                                                  <block type="inout_digital_write_validator" id="~RF%nA!6NE[{wC5F[Z$d">
+                                                    <field name="PIN">3</field>
+                                                    <field name="STAT">HIGH</field>
+                                                    <next>
+                                                      <block type="inout_digital_write_validator" id="zyX`IyFQR;UYL`1,_QvK">
+                                                        <field name="PIN">4</field>
+                                                        <field name="STAT">LOW</field>
+                                                      </block>
+                                                    </next>
+                                                  </block>
+                                                </next>
+                                              </block>
+                                            </statement>
+                                            <value name="IF3">
+                                              <block type="logic_compare" id="~|{.5UJp|_iF1I})I2w!">
+                                                <field name="OP">GTE</field>
+                                                <value name="A">
+                                                  <block type="variables_get" id="]@dyf#j^P;$BHpudfX(M">
+                                                    <field name="VAR">temperature</field>
+                                                  </block>
+                                                </value>
+                                                <value name="B">
+                                                  <block type="math_arithmetic" id="]E*HZm_5n`eg~Tm-R^F9">
+                                                    <field name="OP">ADD</field>
+                                                    <value name="A">
+                                                      <block type="variables_get" id="_+IE*cFv}-tgL4UK~ESt">
+                                                        <field name="VAR">baselineTemp</field>
+                                                      </block>
+                                                    </value>
+                                                    <value name="B">
+                                                      <block type="math_number" id=";ghHcPa]/ifnk(iw4O^=">
+                                                        <field name="NUM">6</field>
+                                                      </block>
+                                                    </value>
+                                                  </block>
+                                                </value>
+                                              </block>
+                                            </value>
+                                            <statement name="DO3">
+                                              <block type="inout_digital_write_validator" id="K@?it!oH%YJB|V[XO~I6">
+                                                <field name="PIN">2</field>
+                                                <field name="STAT">HIGH</field>
+                                                <next>
+                                                  <block type="inout_digital_write_validator" id="UVj~~pX(|38ZZTmr#u?/">
+                                                    <field name="PIN">3</field>
+                                                    <field name="STAT">HIGH</field>
+                                                    <next>
+                                                      <block type="inout_digital_write_validator" id="rhxt|*%5j{oAt2reKGP;">
+                                                        <field name="PIN">4</field>
+                                                        <field name="STAT">HIGH</field>
+                                                      </block>
+                                                    </next>
+                                                  </block>
+                                                </next>
+                                              </block>
+                                            </statement>
+                                            <next>
+                                              <block type="base_delay" id=";wF6fxh^)SxfT{r8a(b7">
+                                                <value name="DELAY_TIME">
+                                                  <shadow type="math_number" id="bc`wy5*uG74EI/;X5wB-">
+                                                    <field name="NUM">1</field>
+                                                  </shadow>
+                                                </value>
+                                              </block>
+                                            </next>
+                                          </block>
+                                        </next>
+                                      </block>
+                                    </next>
+                                  </block>
+                                </next>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+</xml>

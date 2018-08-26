@@ -1,0 +1,318 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <toolboxcategories>CAT_LOGIC,CAT_LOOPS,CAT_MATH,CAT_ARRAY,CAT_TEXT,CAT_VARIABLES,CAT_FUNCTIONS,CAT_ARDUINO</toolboxcategories>
+  <toolbox>toolbox_arduino_all</toolbox>
+  <block type="base_setup_loop" id="fgiH%IC1p7G={50?ZAz8" x="13" y="13">
+    <statement name="DO">
+      <block type="serial_init" id="{hLgMa_a.r2Ve;J9q6Db">
+        <field name="SPEED">9600</field>
+      </block>
+    </statement>
+    <statement name="LOOP">
+      <block type="variables_set" id="8dQmcxtfl#l?X=-F:1Er">
+        <field name="VAR">keyVal</field>
+        <value name="VALUE">
+          <block type="inout_analog_read_validator" id="RAAOoDh$P2k:1jg/%Kxq">
+            <field name="PIN">A0</field>
+          </block>
+        </value>
+        <next>
+          <block type="serial_println" id="*LfC!)Zn|)qTiZ5#KldS">
+            <value name="CONTENT">
+              <shadow type="text" id=";UBW[3?QQm*-Z5#LHAcJ">
+                <field name="TEXT"></field>
+              </shadow>
+              <block type="variables_get" id="%e0kze8T)}Lva1){c$[]">
+                <field name="VAR">keyVal</field>
+              </block>
+            </value>
+            <next>
+              <block type="controls_if" id="Q5aUH,?s/g]b=mRn@aPp">
+                <mutation elseif="3" else="1"></mutation>
+                <value name="IF0">
+                  <block type="logic_compare" id="mNQMSjc/KAMXqXmTEQh3">
+                    <field name="OP">EQ</field>
+                    <value name="A">
+                      <block type="variables_get" id="*ASp?0V%NDGHN5436;;s">
+                        <field name="VAR">keyVal</field>
+                      </block>
+                    </value>
+                    <value name="B">
+                      <block type="math_number" id="cOc=Ikyl%C%wAPw7Ir0b">
+                        <field name="NUM">1023</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <statement name="DO0">
+                  <block type="tone_notime" id="JfsX/m%?AE+fvu%h-@a/">
+                    <value name="PIN">
+                      <shadow type="math_number" id="@/f%LPhiq*ZUKS=,E~x8">
+                        <field name="NUM">2</field>
+                      </shadow>
+                      <block type="math_number" id="@Wl;iK_:,?z$T(3^h/hr">
+                        <field name="NUM">8</field>
+                      </block>
+                    </value>
+                    <value name="NUM">
+                      <shadow type="math_number" id="Gc%C9@dZODQCh.EeA`;i">
+                        <field name="NUM">0</field>
+                      </shadow>
+                      <block type="array_getIndex" id="P?Tke/z.TE%1+Djlo9xN">
+                        <value name="AT">
+                          <block type="math_number" id="#/.ZyePQyOVxLT=(TH#8">
+                            <field name="NUM">1</field>
+                          </block>
+                        </value>
+                        <value name="VAR">
+                          <block type="variables_get" id="^?.LXuvj+nBQmvq2AW@p">
+                            <field name="VAR">notes</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                  </block>
+                </statement>
+                <value name="IF1">
+                  <block type="logic_operation" id="O1kiC#=EXYY!IwJ72V[.">
+                    <field name="OP">AND</field>
+                    <value name="A">
+                      <block type="logic_compare" id="cK/KCn(2eo#PE3$Sm0uh">
+                        <field name="OP">GTE</field>
+                        <value name="A">
+                          <block type="variables_get" id="RAOsK66o7g_KS-5,`}wU">
+                            <field name="VAR">keyVal</field>
+                          </block>
+                        </value>
+                        <value name="B">
+                          <block type="math_number" id="1g2(#xb@-8)]x1B:,V+y">
+                            <field name="NUM">990</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                    <value name="B">
+                      <block type="logic_compare" id="s,CovO~qm,;t#jfF,Yh}">
+                        <field name="OP">LTE</field>
+                        <value name="A">
+                          <block type="variables_get" id="qA)HCL6zEouR;a3nvNV0">
+                            <field name="VAR">keyVal</field>
+                          </block>
+                        </value>
+                        <value name="B">
+                          <block type="math_number" id="k^]/{$`m%ZyokqEh^]Od">
+                            <field name="NUM">1010</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <statement name="DO1">
+                  <block type="tone_notime" id=")GJR,l*H=brPiaHd8!DK">
+                    <value name="PIN">
+                      <shadow type="math_number" id="@/f%LPhiq*ZUKS=,E~x8">
+                        <field name="NUM">2</field>
+                      </shadow>
+                      <block type="math_number" id="4V0}~@A[,!fB_LLZxHap">
+                        <field name="NUM">8</field>
+                      </block>
+                    </value>
+                    <value name="NUM">
+                      <shadow type="math_number" id="Gc%C9@dZODQCh.EeA`;i">
+                        <field name="NUM">0</field>
+                      </shadow>
+                      <block type="array_getIndex" id="R3)}3ltsEc_.o586~Ziu">
+                        <value name="AT">
+                          <block type="math_number" id="y^=|6Pu@2A`dL%UPW8pY">
+                            <field name="NUM">2</field>
+                          </block>
+                        </value>
+                        <value name="VAR">
+                          <block type="variables_get" id="8QB13D8roT+[nHqa?#*_">
+                            <field name="VAR">notes</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                  </block>
+                </statement>
+                <value name="IF2">
+                  <block type="logic_operation" id="Tm4|D!w|4g_LvGq0y?`:">
+                    <field name="OP">AND</field>
+                    <value name="A">
+                      <block type="logic_compare" id="|RP6~x)U=F8lmrT?[O)A">
+                        <field name="OP">GTE</field>
+                        <value name="A">
+                          <block type="variables_get" id="^o%X7#355n@vT;mi3LW`">
+                            <field name="VAR">keyVal</field>
+                          </block>
+                        </value>
+                        <value name="B">
+                          <block type="math_number" id="2fdG[N#g0;ayouq/Gc*8">
+                            <field name="NUM">505</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                    <value name="B">
+                      <block type="logic_compare" id="5L_DAIwZU;nh4e7T%z,j">
+                        <field name="OP">LTE</field>
+                        <value name="A">
+                          <block type="variables_get" id="~/%vxMaq~@@@mlQl{Pe#">
+                            <field name="VAR">keyVal</field>
+                          </block>
+                        </value>
+                        <value name="B">
+                          <block type="math_number" id="+;85(7Ma6z$@;;a+vEnv">
+                            <field name="NUM">515</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <statement name="DO2">
+                  <block type="tone_notime" id="+~satwWQSh?:F2%U:Z5P">
+                    <value name="PIN">
+                      <shadow type="math_number" id="@/f%LPhiq*ZUKS=,E~x8">
+                        <field name="NUM">2</field>
+                      </shadow>
+                      <block type="math_number" id="##2[p?4F.[4GXL]3g#b8">
+                        <field name="NUM">8</field>
+                      </block>
+                    </value>
+                    <value name="NUM">
+                      <shadow type="math_number" id="Gc%C9@dZODQCh.EeA`;i">
+                        <field name="NUM">0</field>
+                      </shadow>
+                      <block type="array_getIndex" id="7tPPCr2%TgaZ{s]Q98:^">
+                        <value name="AT">
+                          <block type="math_number" id="+2c1s^}!Pv?J;k1g90:S">
+                            <field name="NUM">3</field>
+                          </block>
+                        </value>
+                        <value name="VAR">
+                          <block type="variables_get" id="yFlvL-kDrBgH+`zv!i%b">
+                            <field name="VAR">notes</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                  </block>
+                </statement>
+                <value name="IF3">
+                  <block type="logic_operation" id="cnD`#p3W_VUu#!K3`/5I">
+                    <field name="OP">AND</field>
+                    <value name="A">
+                      <block type="logic_compare" id=",z_Pg`-]@65dhM@td_6R">
+                        <field name="OP">GTE</field>
+                        <value name="A">
+                          <block type="variables_get" id=")8l0.uUwOvTqvl#e(NXi">
+                            <field name="VAR">keyVal</field>
+                          </block>
+                        </value>
+                        <value name="B">
+                          <block type="math_number" id="2?LUekK,(0@JDH{|#6-8">
+                            <field name="NUM">5</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                    <value name="B">
+                      <block type="logic_compare" id="+`_C:3c{Eg*?4$]rJv~o">
+                        <field name="OP">LTE</field>
+                        <value name="A">
+                          <block type="variables_get" id="xHXI)yOddY=7zmn9hku|">
+                            <field name="VAR">keyVal</field>
+                          </block>
+                        </value>
+                        <value name="B">
+                          <block type="math_number" id="(fu$i34j]71Z?N_}0bUQ">
+                            <field name="NUM">10</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <statement name="DO3">
+                  <block type="tone_notime" id="{YLH%mQI2pYo@IV{a{;R">
+                    <value name="PIN">
+                      <shadow type="math_number" id="@/f%LPhiq*ZUKS=,E~x8">
+                        <field name="NUM">2</field>
+                      </shadow>
+                      <block type="math_number" id="JDU!{2E]x;EtEBwT5;Nr">
+                        <field name="NUM">8</field>
+                      </block>
+                    </value>
+                    <value name="NUM">
+                      <shadow type="math_number" id="Gc%C9@dZODQCh.EeA`;i">
+                        <field name="NUM">0</field>
+                      </shadow>
+                      <block type="array_getIndex" id="}rhnxxTkbG#?o1HfBLX-">
+                        <value name="AT">
+                          <block type="math_number" id="rJA_,WE$qm=]H4E|Iqt7">
+                            <field name="NUM">4</field>
+                          </block>
+                        </value>
+                        <value name="VAR">
+                          <block type="variables_get" id="wG-[[ldMy#WO,#n+k)Ni">
+                            <field name="VAR">notes</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                  </block>
+                </statement>
+                <statement name="ELSE">
+                  <block type="notone" id="?8`O,txn6:-GRxIB/aDg">
+                    <value name="PIN">
+                      <block type="math_number" id="M*7Z#.${SP5-{yJ7tTsK">
+                        <field name="NUM">8</field>
+                      </block>
+                    </value>
+                  </block>
+                </statement>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+  <block type="base_define_bloc" id="CFCq+poAEI-mM#um/4Xz" x="713" y="13">
+    <statement name="DO">
+      <block type="array_declare" id="{^w~#rw=D}Jzr##v}i7t">
+        <field name="dim">d1</field>
+        <field name="VAR">notes</field>
+        <field name="type">NUMBER</field>
+        <field name="choix">c2</field>
+        <value name="contenu">
+          <block type="array_create_with" id="_weOaG3n2Z;ysImcPebA">
+            <mutation items="4"></mutation>
+            <value name="ADD0">
+              <block type="math_number" id="Rr(6w#PhlP9=AF~eD8se">
+                <field name="NUM">262</field>
+              </block>
+            </value>
+            <value name="ADD1">
+              <block type="math_number" id="bw8oN3pwHA+?@XHVjXnv">
+                <field name="NUM">294</field>
+              </block>
+            </value>
+            <value name="ADD2">
+              <block type="math_number" id="4_~YIxf.@#e6+r/uO~=f">
+                <field name="NUM">330</field>
+              </block>
+            </value>
+            <value name="ADD3">
+              <block type="math_number" id="r7:^O=`iso_4m|J/o*t]">
+                <field name="NUM">349</field>
+              </block>
+            </value>
+          </block>
+        </value>
+      </block>
+    </statement>
+  </block>
+</xml>

@@ -257,6 +257,18 @@
 					</shadow>
 				</value>
 			</block>
+			<block type="tone_notime">
+				<value name="PIN">
+					<shadow type="math_number">
+						<field name="NUM">2</field>
+					</shadow>
+				</value>
+				<value name="NUM">
+					<shadow type="math_number">
+						<field name="NUM">0</field>
+					</shadow>
+				</value>
+			</block>
 			<block type="notone"></block>
 		</category>
 		<category name="CAT_ARDUINO_TIME" colour="#00979D">
@@ -1546,5 +1558,40 @@
 		<category name="CAT_AUTODUINO_UTIL" colour="#8B0000">
 			<block type="autoduino_edge_detection"></block>
 		</category>
+	</category>
+	<category name="CAT_INFRA_2" colour="#00979D">
+		<block type="IR_init">
+			<value name="PIN">
+				<shadow type="math_number">
+					<field name="NUM">2</field>
+				</shadow>
+			</value>
+		</block>
+		<block type="IR_test_LED"></block>
+		<block type="IR_test_monitor"></block>
+	</category>
+	<category name="CAT_RF433_2" colour="#0152AB">
+		<block type="rf433_init_receiver" colour="#0152AB">
+			<value name="PIN">
+				<shadow type="math_number">
+					<field name="NUM">11</field>
+				</shadow>
+			</value>
+		</block>
+		<block type="rf433_init_transmitter" colour="#0152AB">
+			<value name="PIN">
+				<shadow type="math_number">
+					<field name="NUM">12</field>
+				</shadow>
+			</value>
+		</block>
+		<block type="rf433_send_message_full" colour="#0152AB">
+			<value name="MESSAGE">
+				<shadow type="text">
+					<field name="TEXT"></field>
+				</shadow>
+			</value>
+		</block>
+		<block type="rf433_show_message" colour="#0152AB"></block>
 	</category>        
 </toolbox>

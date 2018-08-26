@@ -1,0 +1,27 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <toolboxcategories>CAT_LOGIC,CAT_LOOPS,CAT_MATH,CAT_ARRAY,CAT_TEXT,CAT_VARIABLES,CAT_FUNCTIONS,CAT_ARDUINO,CAT_INFRA_3,CAT_RF433,CAT_RF433_3</toolboxcategories>
+  <toolbox>toolbox_arduino_all</toolbox>
+  <block type="rf433_init_transmitter" id="Kl;l$M`Hr4^MAbcA@pV`" x="88" y="38">
+    <value name="PIN">
+      <shadow type="math_number" id="J!LY/O3oJSbkMsT9h%Jr">
+        <field name="NUM">12</field>
+      </shadow>
+    </value>
+    <next>
+      <block type="rf433_define_message" id="Xj@[}?M$Q.mn!9mb;F[C">
+        <value name="MESSAGE">
+          <shadow type="text" id="aEr%{9ro^7(0:Mtj2vEV">
+            <field name="TEXT">Hello</field>
+          </shadow>
+        </value>
+        <next>
+          <block type="rf433_send_message" id="bfb+^ehPn}dJY*v*f/[c">
+            <next>
+              <block type="rf433_wait_tx" id="lo4J9XXug^xn=[9W9CBc"></block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+</xml>
