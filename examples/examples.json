@@ -78,5 +78,109 @@
         "link_url": "",
         "link_text": "",
         "visible": true
+    },
+    {
+        "source_url": "./Starter_Kit_prj2/Starter_Kit_prj2.xml",
+        "source_text": "Starter Kit Arduino : interface vaisseau spatial",
+        "image": "./Starter_Kit_prj2/Starter_Kit_prj2_fritzing.jpg",
+        "link_url": "",
+        "link_text": "",
+        "visible": true
+    },
+    {
+        "source_url": "./Starter_Kit_prj3/Starter_Kit_prj3.xml",
+        "source_text": "Starter Kit Arduino : love-o-meter",
+        "image": "./Starter_Kit_prj3/Starter_Kit_prj3_fritzing.jpg",
+        "link_url": "",
+        "link_text": "",
+        "visible": true
+    },
+    {
+        "source_url": "./Starter_Kit_prj4/Starter_Kit_prj4.xml",
+        "source_text": "Starter Kit Arduino : lampe d'ambiance",
+        "image": "./Starter_Kit_prj4/Starter_Kit_prj4_fritzing.jpg",
+        "link_url": "",
+        "link_text": "",
+        "visible": true
+    },
+    {
+        "source_url": "./Starter_Kit_prj5/Starter_Kit_prj5.xml",
+        "source_text": "Starter Kit Arduino : Indicateur d'humeur",
+        "image": "./Starter_Kit_prj5/Starter_Kit_prj5_fritzing.jpg",
+        "link_url": "",
+        "link_text": "",
+        "visible": true
+    },
+    {
+        "source_url": "./Starter_Kit_prj6/Starter_Kit_prj6.xml",
+        "source_text": "Starter Kit Arduino : Thérémine lumineux",
+        "image": "./Starter_Kit_prj6/Starter_Kit_prj6_fritzing.jpg",
+        "link_url": "",
+        "link_text": "",
+        "visible": true
+    },
+    {
+        "source_url": "./Starter_Kit_prj7/Starter_Kit_prj7.xml",
+        "source_text": "Starter Kit Arduino : Clavier musical",
+        "image": "./Starter_Kit_prj7/Starter_Kit_prj7_fritzing.jpg",
+        "link_url": "",
+        "link_text": "",
+        "visible": true
+    },
+    {
+        "source_url": "./Starter_Kit_prj8/Starter_Kit_prj8.xml",
+        "source_text": "Starter Kit Arduino : Sablier numérique",
+        "image": "./Starter_Kit_prj8/Starter_Kit_prj8_fritzing.jpg",
+        "link_url": "",
+        "link_text": "",
+        "visible": true
+    },
+    {
+        "source_url": "./RFID_lecture/RFID_lecture.xml",
+        "source_text": "Module RFID : Lecture d'un tag",
+        "image": "./RFID_lecture/RFID_lecture_fritzing.jpg",
+        "link_url": "",
+        "link_text": "",
+        "visible": true
+    },
+    {
+        "source_url": "./RFID_test/RFID_test.xml",
+        "source_text": "Module RFID : Contrôler l'accès à l'aide d'un tag",
+        "image": "./RFID_test/RFID_test_fritzing.jpg",
+        "link_url": "",
+        "link_text": "",
+        "visible": true
+    },
+    {
+        "source_url": "./HC-SR04/HC-SR04.xml",
+        "source_text": "Capteur à ultrasons HC-SR04 : exemple de détection",
+        "image": "./HC-SR04/HC-SR04_fritzing.jpg",
+        "link_url": "",
+        "link_text": "",
+        "visible": true
+    },
+    {
+        "source_url": "./infrarouge_test/infrarouge_test.xml",
+        "source_text": "Infrarouge : réception d'un code",
+        "image": "./infrarouge_test/infrarouge_test_fritzing.jpg",
+        "link_url": "",
+        "link_text": "",
+        "visible": true
+    },
+    {
+        "source_url": "./RF433_emission/RF433_emission.xml",
+        "source_text": "RF433 : envoi d'un message radio",
+        "image": "./RF433_emission/RF433_emission_fritzing.jpg",
+        "link_url": "",
+        "link_text": "",
+        "visible": true
+    },
+    {
+        "source_url": "./RF433_reception/RF433_reception.xml",
+        "source_text": "RF433 : réception d'un message radio",
+        "image": "./RF433_reception/RF433_reception_fritzing.jpg",
+        "link_url": "",
+        "link_text": "",
+        "visible": true
     }
 ]

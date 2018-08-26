@@ -1,0 +1,130 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <toolboxcategories>CAT_LOGIC,CAT_LOOPS,CAT_MATH,CAT_TEXT,CAT_VARIABLES,CAT_FUNCTIONS,CAT_ARDUINO,CAT_RFID,CAT_TECHNOZONE</toolboxcategories>
+  <toolbox>toolbox_arduino_3</toolbox>
+  <block type="RFID_module" id="j}tgk@0?9!X.QrYSsUy8" x="88" y="13">
+    <value name="SDA">
+      <shadow type="math_number" id="x$TDc-~,=V4[PHWbE6{u">
+        <field name="NUM">10</field>
+      </shadow>
+    </value>
+    <value name="SCK">
+      <shadow type="math_number" id="-TC7RO)Ytd=;kheB%w]Z">
+        <field name="NUM">13</field>
+      </shadow>
+    </value>
+    <value name="MOSI">
+      <shadow type="math_number" id=")rl,Ssx*W{CoYBqsB5];">
+        <field name="NUM">11</field>
+      </shadow>
+    </value>
+    <value name="MISO">
+      <shadow type="math_number" id=";vuzmcB9k8:Kp7?(^z6.">
+        <field name="NUM">12</field>
+      </shadow>
+    </value>
+    <value name="RST">
+      <shadow type="math_number" id="Rq$n/F;eDhkC|4sZ}S~q">
+        <field name="NUM">9</field>
+      </shadow>
+    </value>
+    <next>
+      <block type="RFID_code_acces" id="?Ox+B+AT;6-NA0kD,6O]">
+        <value name="VAL1">
+          <shadow type="math_number" id="~x8hZ|aL~?=njGlDtkqL">
+            <field name="NUM">230</field>
+          </shadow>
+        </value>
+        <value name="VAL2">
+          <shadow type="math_number" id="l-*VO]$G8KGY7sM8gf@p">
+            <field name="NUM">61</field>
+          </shadow>
+        </value>
+        <value name="VAL3">
+          <shadow type="math_number" id="Ef3A`Z^y[U2TC!4W(J`0">
+            <field name="NUM">19</field>
+          </shadow>
+        </value>
+        <value name="VAL4">
+          <shadow type="math_number" id="tC+AoD*Wm?f$vNgust1G">
+            <field name="NUM">126</field>
+          </shadow>
+        </value>
+        <value name="VAL5">
+          <shadow type="math_number" id="xbH-s_koB7W~%k/WsaV)">
+            <field name="NUM">182</field>
+          </shadow>
+        </value>
+        <next>
+          <block type="controls_if" id="v|{F`4p,|:9@mHrKk$r8">
+            <value name="IF0">
+              <block type="RFID_detection" id="r[DbGmUh`|ZW2vW3.d{n"></block>
+            </value>
+            <statement name="DO0">
+              <block type="controls_if" id="#u2vhl)v{r@=~Ugo~*v9">
+                <value name="IF0">
+                  <block type="RFID_reception_cle" id="zU*k]s@Cgaw}z4@1Z5~*"></block>
+                </value>
+                <statement name="DO0">
+                  <block type="RFID_lecture_cle" id="%B-q1myt2)flU*2yk=|o"></block>
+                </statement>
+                <next>
+                  <block type="controls_if" id="?NdbUaK$x2rXwFC1Firl">
+                    <mutation else="1"></mutation>
+                    <value name="IF0">
+                      <block type="RFID_acces_autorise" id="$)^dcaO%Q|SWkdV|dwe2"></block>
+                    </value>
+                    <statement name="DO0">
+                      <block type="inout_digital_write_validator" id="go?`aoR*MAfE6oF?jetb">
+                        <field name="PIN">2</field>
+                        <field name="STAT">HIGH</field>
+                        <next>
+                          <block type="base_delay" id="A{y*LR.*inM@L{/7Di]l">
+                            <value name="DELAY_TIME">
+                              <shadow type="math_number" id="Kk(?yLxf@!DV%KkcZ;nb">
+                                <field name="NUM">3000</field>
+                              </shadow>
+                            </value>
+                            <next>
+                              <block type="inout_digital_write_validator" id="9*.ekd;.|pjwM-L0ni3,">
+                                <field name="PIN">2</field>
+                                <field name="STAT">LOW</field>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </statement>
+                    <statement name="ELSE">
+                      <block type="inout_digital_write_validator" id="DPd`6j=uvMra0omA4Hm0">
+                        <field name="PIN">3</field>
+                        <field name="STAT">HIGH</field>
+                        <next>
+                          <block type="base_delay" id="NfU{A2:EqN_l/x}}=h;?">
+                            <value name="DELAY_TIME">
+                              <shadow type="math_number" id="..Acv;|Tw/?qv7Ctn/.A">
+                                <field name="NUM">3000</field>
+                              </shadow>
+                            </value>
+                            <next>
+                              <block type="inout_digital_write_validator" id="^=LbyBLlEn-.GjiS[a[B">
+                                <field name="PIN">3</field>
+                                <field name="STAT">LOW</field>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </statement>
+                    <next>
+                      <block type="RFID_fermeture" id="M_pJB%L$kfzMJGq/YRzz"></block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </statement>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+</xml>

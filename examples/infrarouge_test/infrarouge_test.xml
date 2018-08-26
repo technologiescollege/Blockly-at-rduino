@@ -1,0 +1,53 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <toolboxcategories>CAT_LOGIC,CAT_LOOPS,CAT_MATH,CAT_ARRAY,CAT_TEXT,CAT_VARIABLES,CAT_FUNCTIONS,CAT_ARDUINO,CAT_INFRA_3,CAT_RF433,CAT_RF433_3</toolboxcategories>
+  <toolbox>toolbox_arduino_all</toolbox>
+  <block type="IR_init" id="GkE{4Yq:!.-edTr/^~s)" x="38" y="13">
+    <value name="PIN">
+      <shadow type="math_number" id="kg3QJx}6)j^f9Htn(D85">
+        <field name="NUM">2</field>
+      </shadow>
+    </value>
+    <next>
+      <block type="serial_init" id="nNa#ecap}Gf$v{d[p(c!">
+        <field name="SPEED">9600</field>
+        <next>
+          <block type="controls_if" id="_Rk+A1@`q2?]n}8ZhqE4">
+            <value name="IF0">
+              <block type="IR_detection" id="u0eC^#vmkKfVZ-fGo(^K"></block>
+            </value>
+            <statement name="DO0">
+              <block type="serial_printfor" id="Ln@p6S/G3N/4+umvBLL7">
+                <field name="TYPE">DEC</field>
+                <value name="CONTENT">
+                  <block type="IR_reception_code" id="rTT6t-E#XdU4u/X`wr8z"></block>
+                </value>
+                <next>
+                  <block type="inout_buildin_led" id="IV?~``%6F9Q7NUJepv]I">
+                    <field name="STAT">HIGH</field>
+                    <next>
+                      <block type="base_delay" id="p57vs?20rj24yb1Rd*5x">
+                        <value name="DELAY_TIME">
+                          <shadow type="math_number" id="M?2yE*k_PWy?5~/G83gx">
+                            <field name="NUM">1000</field>
+                          </shadow>
+                        </value>
+                        <next>
+                          <block type="inout_buildin_led" id="L1?;;W4xTNv6Rp{EMV%g">
+                            <field name="STAT">LOW</field>
+                            <next>
+                              <block type="IR_next_value" id="Q#,9/_JBCrm`Y#y*rs(("></block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </statement>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+</xml>

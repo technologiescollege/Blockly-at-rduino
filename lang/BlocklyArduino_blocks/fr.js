@@ -58,6 +58,10 @@ Blockly.Msg.CONTROLS_SWITCH_DEFAULT_TOOLTIP ="Ajoute un bloc d'actions par défa
 
 Blockly.Msg.TEXT_CHAR_TOOLTIP = "caractère unique, codé sur 1 octet";
 Blockly.Msg.TEXT_CHAR_HELPURL = "https://www.arduino.cc/reference/en/language/variables/data-types/string/";
+Blockly.Msg.TEXT_COMPARE_STRING_HELPURL = "";
+Blockly.Msg.TEXT_COMPARE_STRING_TEXT = "Comparation des deux chaînes : ";
+Blockly.Msg.TEXT_COMPARE_STRING_TEXT2 = " = ";
+Blockly.Msg.TEXT_COMPARE_STRING_TOOLTIP = "Permet de savoir si deux chaînes sont identiques oui ou non.";
 
 //july 9th function from JP Fontaine workspace
 Blockly.Msg.PROCEDURES_DEFRETURN_FUNCTION = "pour la fonction";
@@ -94,9 +98,6 @@ Blockly.Msg.CAT_ARRAY = "listes - tableaux";
 Blockly.Msg.CAT_COLOR = "couleurs";
 Blockly.Msg.CAT_VARIABLES = "variables";
 Blockly.Msg.CAT_FUNCTIONS = "procédures & fonctions";
-
-Blockly.Msg.CAT_ANEMOROTATION = "anémomètre à coupelles"; //added september 16th 2017
-
 Blockly.Msg.CAT_ARDUINO = "arduino";
 Blockly.Msg.CAT_ARDUINO_IN = " - entrées (capteurs)";
 Blockly.Msg.CAT_ARDUINO_OUT = " - sorties (actionneurs)";
@@ -105,6 +106,8 @@ Blockly.Msg.CAT_ARDUINO_TIME = " - temps & durées";
 Blockly.Msg.CAT_ARDUINO_COMM_SERIAL = " - communication USB";
 Blockly.Msg.CAT_ARDUINO_COMM_SOFTSERIAL = " - communication logicielle";
 Blockly.Msg.CAT_ARDUINO_SERVO = "servo-moteur";
+
+Blockly.Msg.CAT_ANEMOROTATION = "anémomètre à coupelles"; //added september 16th 2017
 
 Blockly.Msg.CAT_ADAFRUIT_MOTORSHIELD = "Adafruit Motorshield";
 Blockly.Msg.CAT_ADAFRUIT_MOTORSHIELD_v1 = " - Adafruit Motorshield v1";
@@ -176,6 +179,13 @@ Blockly.Msg.CAT_ROBOTS = "robots & cartes diverses"; //Added April 7 2015 ESK
 Blockly.Msg.CAT_ROBOTS_MOTORS = "cartes moteurs";
 Blockly.Msg.CAT_ROBOT_MISC = "infrarouge";
 
+Blockly.Msg.CAT_INFRA_2 = "infrarouge"; //added august 22th 2018
+Blockly.Msg.CAT_INFRA_3 = "infrarouge";
+
+Blockly.Msg.CAT_RF433 = "RF433"; //added august 22th 2018
+Blockly.Msg.CAT_RF433_2 = "RF433";
+Blockly.Msg.CAT_RF433_3 = "RF433";
+
 Blockly.Msg.CAT_BQ = "bitbloq";  //added july 14th 2015
 Blockly.Msg.CAT_BQ_IN = " - capteurs";
 Blockly.Msg.CAT_BQ_OUT = " - actionneurs";
@@ -219,7 +229,7 @@ Blockly.Msg.CAT_BT_ELEC_BUTTON = "lien vers l'application";
 Blockly.Msg.CAT_ICN = "ICN";  //added 3 january 2017
 
 Blockly.Msg.CAT_LCD_SCREEN = "écrans LCD";  //added 12 february 2017
-Blockly.Msg.CAT_LCD_I2C = " - LCD I2C"; //added 18/08/2017
+Blockly.Msg.CAT_LCD_I2C = " - écran LCD I²C"; //added 18/08/2017
 Blockly.Msg.CAT_LCD_DFRobot_SHIELD_LCDKEYPAD = " - DFRobot LCD Keypad";
 Blockly.Msg.CAT_LCD_GROVE_LCD = " - écran LCD Grove";
 Blockly.Msg.CAT_LCD_TECHNOZONE_LCD = " - écran LCD TZ51";
@@ -257,7 +267,6 @@ Blockly.Msg.CAT_AUTODUINO_UTIL = " - utile";
 
 Blockly.Msg.CAT_I2C = "I2C"; //added 26/05/2017
 Blockly.Msg.CAT_SPI = "SPI"; //added 26/05/2017
-Blockly.Msg.CAT_LCD_I2C = " - écran LCD I²C"; //added 18/08/2017
 Blockly.Msg.CAT_NULL = "libre"; //added 8/10/2017
 
 Blockly.Msg.CAT_HX711 = "capteur de poids"; //added 23/10/2017
@@ -286,7 +295,6 @@ Blockly.Msg.CAT_PETITBOT_SERVO = "servomoteurs";
 Blockly.Msg.CAT_PETITBOT_LED = "diodes";
 
 Blockly.Msg.CAT_NRF24L01 = "nRF24L01"; //added 31/05/2018
- 
  
 // Nouvelle arborescence 
 Blockly.Msg.CAT_FONCTION_AFFICHAGE = "Affichage";
@@ -676,7 +684,6 @@ Blockly.Msg.GROVE_LCD_RGB_SCROLL_EFFECT = "Ecrit avec un ";
 Blockly.Msg.GROVE_LCD_RGB_SCROLL_EFFECT_FIELDDROPDOWN = [["défilement à gauche", "LEFT"], ["défilement à droite", "RIGHT"], ["défilement automatique", "AUTO"]];
 Blockly.Msg.GROVE_LCD_RGB_SCROLL_TOOLTIP = "Choix du sens de défilement du texte";
 
-
 Blockly.Msg.GROVE_LCD_RGB_SET_CURSOR_TEXT = "SET CURSOR";
 Blockly.Msg.GROVE_LCD_RGB_SET_CURSOR_TOOLTIP = "Positionne le curseur aux coordonnées spécifiées";
 Blockly.Msg.GROVE_LCD_RGB_SET_CURSOR_HELPURL = "http://wiki.seeed.cc/Grove-LCD_RGB_Backlight/";
@@ -814,13 +821,13 @@ Blockly.Msg.ROBOTS_MISC_SETUP_GEN_TOOLTIP = "1 time wait button in setup) - INPU
 Blockly.Msg.ROBOTS_MISC_SETUP_ZUMO_TITLE = "1 Time wait - Zumo";
 Blockly.Msg.ROBOTS_MISC_SETUP_ZUMO_TOOLTIP = "1 time wait button (in setup) - INPUT_PULLUP & wait for LOW)";
 Blockly.Msg.ROBOTS_MISC_IR_DECODE_TITLE = "IR moniteur série";
-Blockly.Msg.ROBOTS_MISC_IR_DECODE_TOOLTIP = "IR Decoder - users Serial Monitor (and library)";
+Blockly.Msg.ROBOTS_MISC_IR_DECODE_TOOLTIP = "Affiche sur le moniteur Arduino le code infrarouge reçu";
 Blockly.Msg.ROBOTS_MISC_IR_GET_BLINK_TITLE = "IR Decode Blink";
-Blockly.Msg.ROBOTS_MISC_IR_GET_BLINK_TOOLTIP = "IR Decode LED Tester (requires library)";
+Blockly.Msg.ROBOTS_MISC_IR_GET_BLINK_TOOLTIP = "Allume la LED si le bon code est reçu";
 Blockly.Msg.ROBOTS_MISC_IR_GET_TITLE = "IR # Get";
-Blockly.Msg.ROBOTS_MISC_IR_GET_TOOLTIP = "Produces IR code use case statement not IFs (requires library)";
+Blockly.Msg.ROBOTS_MISC_IR_GET_TOOLTIP = "Permet de stocker le code infrarouge reçu dans une variable";
 Blockly.Msg.ROBOTS_MISC_LED_PIN = "LED sur la broche";
-Blockly.Msg.ROBOTS_MISC_IR_CODE = "IR Code";
+Blockly.Msg.ROBOTS_MISC_IR_CODE = "Code IR";
 Blockly.Msg.ROBOTS_MISC_FOUR_PIN_RANGER_TITLE = "Capteurs distance à ultrasons";
 Blockly.Msg.ROBOTS_MISC_FOUR_PIN_RANGER_TOOLTIP = "renvoie la distance mesurée";
 Blockly.Msg.ROBOTS_MISC_TRIGGER_PIN = "Trigger est sur la broche";
@@ -832,6 +839,20 @@ Blockly.Msg.ROBOTS_MISC_ZUMO_BUZZER_TOOLTIP = "volume = 1-15 durée = 100-4000";
 Blockly.Msg.ROBOTS_MISC_BUZZER_DURATION = "durée";
 Blockly.Msg.ROBOTS_MISC_BUZZER_VOLUME = "volume";
 Blockly.Msg.ROBOTS_MISC_BUZZER_NOTE = "note";
+
+//infrarouge updated August 22th 2018
+Blockly.Msg.IR_init_TEXT = "Initialiser le détecteur";
+Blockly.Msg.IR_init_TOOLTIP = "Initialisition du détecteur infrarouge";
+Blockly.Msg.IR_test_LED_TEXT = "Test avec LED";
+Blockly.Msg.IR_test_LED_TOOLTIP = "Tester la réception d'un code infrarouge à l'aide d'une LED";
+Blockly.Msg.IR_test_monitor_TEXT = "Test avec moniteur";
+Blockly.Msg.IR_test_monitor_TOOLTIP = "Tester la réception d'une code infrarouge à l'aide du moniteur Arduino";
+Blockly.Msg.IR_next_value_TEXT = "Passer au prochain code";
+Blockly.Msg.IR_next_value_TOOLTIP = "Après chaque réception d'un code, on signale au récepteur qu'il peut recevoir un nouveau code";
+Blockly.Msg.IR_detection_TEXT = "Signal détecté";
+Blockly.Msg.IR_detection_TOOLTIP = "Permet de savoir un signal a été détecté par le récepteur infrarouge";
+Blockly.Msg.IR_reception_code_TEXT = "Code reçu";
+Blockly.Msg.IR_reception_code_TOOLTIP = "Valeur du code reçu par le récepteur infrarouge";
 
 //TECHNOZONE updated July 24th 2015
 Blockly.Msg.TECHNOZONE51_TEXT1 = "Le capteur ";
@@ -1006,7 +1027,6 @@ Blockly.Msg.TECHNOZONE51_TEXT168 = "(restrictions d'usage : clic droit -> aide)"
 Blockly.Msg.TECHNOZONE51_TEXT169 = "vitesse [0..1023] :";
 Blockly.Msg.TECHNOZONE51_TEXT170 = "hauteur [0..1023] :";
 Blockly.Msg.TECHNOZONE51_TEXT171 = "distortion [0..1023] :";
-
 Blockly.Msg.TECHNOZONE51_TEXT172 = "alarme piéton";
 Blockly.Msg.TECHNOZONE51_TEXT173 = "feu rouge piéton";
 Blockly.Msg.TECHNOZONE51_TEXT174 = "feu vert piéton";
@@ -1093,7 +1113,6 @@ Blockly.Msg.lp2i_ledRGB_WS2812B_init_Number_of_Pixels = "Nombre de pixels =";
 Blockly.Msg.lp2i_ledRGB_WS2812B_DEFAULT_NAME = "DEL_RVB";
 Blockly.Msg.lp2i_ledRGB_WS2812B_Brightness = "Luminosité =";
 
-
 Blockly.Msg.lp2i_ledRGB_WS2812B_setPixelColor = "Led RGB WS2812B. Envoyer couleur :";
 Blockly.Msg.lp2i_ledRGB_WS2812B_setPixelColor_Red = "Rouge (255 max) =";
 Blockly.Msg.lp2i_ledRGB_WS2812B_setPixelColor_Green = "Vert (255 max) =";
@@ -1163,6 +1182,42 @@ Blockly.Msg.multifunction_segment_INPUT2 = "2ème chiffre";
 Blockly.Msg.multifunction_segment_INPUT3 = "3ème chiffre";
 Blockly.Msg.multifunction_segment_INPUT4 = "4ème chiffre";
 Blockly.Msg.multifunction_segment_TOOLTIP = "afficher 4 chifres sur les 7 segments";
+
+// Module RF433 (Added August 23th 2018)
+Blockly.Msg.RF433_rxready_TEXT = "Message Ready";
+Blockly.Msg.RF433_rxready_INPUT = "Input Pin";
+Blockly.Msg.RF433_rxready_TOOLTIP = "Permet de savoir si oui ou non un message est reçu par le récepteur radio";
+Blockly.Msg.RF433_rx_TEXT = "Receive Char";
+Blockly.Msg.RF433_rx_INPUT = "Input Pin";
+Blockly.Msg.RF433_rx_TOOLTIP = "Permet d'obtenir le contenu du message reçu par le récepteur radio";
+Blockly.Msg.RF433_tx_TEXT = "Send Message";
+Blockly.Msg.RF433_tx_INPUT1 = "Output Pin";
+Blockly.Msg.RF433_tx_INPUT2 = "Message";
+Blockly.Msg.RF433_tx_TOOLTIP = "Permet d'envoyer un message à l'aide de l'émetteur radio";
+Blockly.Msg.RF433_init_receiver_TEXT = "initialiser le récepteur radio";
+Blockly.Msg.RF433_init_receiver_INPUT = "PIN";
+Blockly.Msg.RF433_init_receiver_TOOLTIP = "Permet d'initialiser le récepteur radio RF433";
+Blockly.Msg.RF433_init_transmitter_TEXT = "initialiser l'émetteur radio";
+Blockly.Msg.RF433_init_transmitter_INPUT = "PIN";
+Blockly.Msg.RF433_init_transmitter_TOOLTIP = "Permet d'initialiser l'émetteur radio RF433";
+Blockly.Msg.RF433_define_message_TEXT = "Définir le message à envoyer";
+Blockly.Msg.RF433_define_message_INPUT = "Message";
+Blockly.Msg.RF433_define_message_TOOLTIP = "Permet de définir le message que l'on souhaite envoyer à l'aide de l'émetteur radio";
+Blockly.Msg.RF433_send_message_full_TEXT = "Envoyer un message";
+Blockly.Msg.RF433_send_message_full_INPUT = "Message";
+Blockly.Msg.RF433_send_message_full_TOOLTIP = "Permet d'envoyer un message à l'aide de l'émetteur radio";
+Blockly.Msg.RF433_show_message_TEXT = "Afficher le message reçu";
+Blockly.Msg.RF433_show_message_TOOLTIP = "Permet d'afficher le message reçu à l'aide du récepteur radio dans le moniteur Arduino";
+Blockly.Msg.RF433_send_message_TEXT = "Envoyer le message";
+Blockly.Msg.RF433_send_message_TOOLTIP = "Permet d'envoyer le message défini auparavant à l'aide de l'émetteur radio";
+Blockly.Msg.RF433_wait_rx_TEXT = "Attendre réception message";
+Blockly.Msg.RF433_wait_rx_TOOLTIP = "Permet de mettre le récepteur radio en position d'attente d'un message";
+Blockly.Msg.RF433_wait_tx_TEXT = "Attendre fin envoi message";
+Blockly.Msg.RF433_wait_tx_TOOLTIP = "Permet d'attendre le temps nécessaire à l'émetteur radio pour envoyer le message complet";
+Blockly.Msg.RF433_reception_message_TEXT = "Réception message";
+Blockly.Msg.RF433_reception_message_TOOLTIP = "Permet de savoir si oui ou non un message est reçu par le récepteur radio";
+Blockly.Msg.RF433_receive_message_TEXT = "Message reçu";
+Blockly.Msg.RF433_receive_message_TOOLTIP = "Permet d'obtenir le contenu du message reçu par le récepteur radio";
 
 // Module RFID (Added April 13th 2017)
 Blockly.Msg.RFID_module_TEXT = "initialiser le module RFID";
@@ -1380,7 +1435,6 @@ Blockly.Msg.FLYCAM_STOP_TEXT = "arrêter la capture";
 Blockly.Msg.FLYCAM_STOP_INPUT = Blockly.Msg.FLYCAM_SWITCH_INPUT;
 Blockly.Msg.FLYCAM_STOP_TOOLTIP = "envoi d'une impulsion d'1s de type servo=0°";
 
-
 //Added august 23th 2016
 Blockly.Msg.MHK_ULTRASON_HELPURL = "http://www.gotronic.fr/art-module-de-detection-us-hc-sr04-20912.htm";
 Blockly.Msg.MHK_ULTRASON1 = "la distance mesurée en cm ";
@@ -1572,9 +1626,7 @@ Blockly.Msg.KEYPAD_TOUCHE_COLONNE1 = "Colonne 1";
 Blockly.Msg.KEYPAD_TOUCHE_COLONNE2 = "Colonne 2";
 Blockly.Msg.KEYPAD_TOUCHE_COLONNE3 = "Colonne 3";
 
-
 //******** Sharp IR https://github.com/guillaume-rico/SharpIR
-
 Blockly.Msg.SHARP_IR_DEFAULT_NAME = 'TELEM';
 Blockly.Msg.Sharp_IR_HELPURL = 'https://github.com/guillaume-rico/SharpIR';
 Blockly.Msg.Sharp_IR_MODEL = "modèle";
@@ -1585,9 +1637,7 @@ Blockly.Msg.Sharp_IR_INPUT2 = 'sur la broche Analogique';
 Blockly.Msg.Sharp_IR_TOOLTIP1 = 'uniquement sur une entrée Analogique';
 Blockly.Msg.Sharp_IR_TOOLTIP2 = 'distance mesurée en cm, penser à temporiser entre 2 mesures';
 
-
 //******** Matrix Neopixel DEL RGB 8 x 8 https://www.dfrobot.com/wiki/index.php/8x8_RGB_LED_Matrix_SKU:_DFR0459
-
 Blockly.Msg.MatrixLED_WS2812B_init = "Matrice DEL RGB : initialisation";
 Blockly.Msg.MatrixLED_WS2812B_clean = "Eteindre la matrice";
 Blockly.Msg.MatrixLED_WS2812B_init_Pin = "sur la broche =";
@@ -1603,9 +1653,7 @@ Blockly.Msg.MatrixLED_WS2812B_setPixelColor_Green = "régler le vert (255 max) =
 Blockly.Msg.MatrixLED_WS2812B_setPixelColor_Blue = "régler le bleu (255 max) =";
 Blockly.Msg.MatrixLED_WS2812B_setPixelColor_Pixel_Number = "du pixel numéro (à partir de 0) =";
 
-
 //******** Storage : SD card + EEPROM https://www.arduino.cc/en/Reference/EEPROM
-
 Blockly.Msg.STORAGE_WRITE_SD_FILE = "Carte SD, enregistrer sous ";
 Blockly.Msg.STORAGE_SD_DATA = "la donnée";
 Blockly.Msg.STORAGE_SD_NEWLINE = "avec un saut de ligne ?";
@@ -1616,18 +1664,14 @@ Blockly.Msg.STORAGE_EEPROM_WRITE_BYTE = "EEPROM écrire à l'adresse";
 Blockly.Msg.STORAGE_DATA_BYTE = "la donnée (byte)";
 Blockly.Msg.STORAGE_EEPROM_READ_BYTE = "EEPROM - donnée (byte) lue à l'adresse";
 
-
 //******** ESC controller for brushless motor
-
 Blockly.Msg.DRONE_INTRO = "Contrôleur du moteur";
 Blockly.Msg.DRONE_PIN = "sur la broche";
 Blockly.Msg.DRONE_PWM = "à la puissance [0~255]";
 Blockly.Msg.DRONE_HELPURL = "http://www.instructables.com/id/ESC-Programming-on-Arduino-Hobbyking-ESC/";
 Blockly.Msg.DRONE_TOOLTIP = "le contrôleur doit être dans le bon mode";
 
-
 //******** gyroscope + temperature ADXL362
-
 Blockly.Msg.ADXL362_MISC_HELPURL = "http://annem.github.io/ADXL362/";
 Blockly.Msg.ADXL362_INIT_TITLE = "connecter le gyroscope (/!\\ 3,3 V /!\\)";
 Blockly.Msg.ADXL362_INIT_TOOLTIP = "bus SPI de la carte Arduino, la Pro Mini est en exemple";
@@ -1640,10 +1684,8 @@ Blockly.Msg.ADXL362_ZVALUE_TOOLTIP = "regarder le repère X/Y sur la carte";
 Blockly.Msg.ADXL362_TEMPVALUE_TITLE = "valeur de la température";
 Blockly.Msg.ADXL362_TEMPVALUE_TOOLTIP = "valeurs à tester, abaque obligatoire";
 
-
 //******** FRESNEL : Implementation I2CSoftwareLibrary   http://playground.arduino.cc/Main/SoftwareI2CLibrary
 //******** FRESNEL : SPI 
-
 Blockly.Msg.I2C_INIT_TEXT = "SOFT I2C_INIT";
 Blockly.Msg.I2C_INIT_PIN_SCL = "PIN_SCL";
 Blockly.Msg.I2C_INIT_PORT_SCL = "PORT_SCL";
@@ -1729,7 +1771,6 @@ Blockly.Msg.I2C_DATA_HW_HELPURL = "";
 
 //////////////////////////
 
-
 Blockly.Msg.icn_HelpUrl = "http://www.ebay.fr/cln/dvarrel/robot-arduino/271320303014";
 Blockly.Msg.icn_ds18b20_HelpUrl = "https://www.carnetdumaker.net/articles/mesurer-une-temperature-avec-un-capteur-1-wire-ds18b20-et-une-carte-arduino-genuino";
 
@@ -1754,7 +1795,6 @@ Blockly.Msg.SPI_RECEIVE_TOOLTIP = "récupère une donnée";
 Blockly.Msg.SPI_RECEIVE_HELPURL = "" ;
 
 //******** light sensor TSL2561
-
 Blockly.Msg.TSL2561_MISC_HELPURL = "https://learn.adafruit.com/tsl2561/wiring-the-tsl2561-sensor";
 Blockly.Msg.TSL2561_READ_TITLE = "l'éclairement en lux";
 Blockly.Msg.TSL2561_READ_TOOLTIP = "Renvoie la valeur de l'éclairement en lux (max 17 000 lux)";
@@ -2062,7 +2102,6 @@ Blockly.Msg.BLYNK_EMAIL_TITLE_2  = "objet";
 Blockly.Msg.BLYNK_TEXT = "texte";
 
 //**** ETHERNET *****************************************************************************//
-
 Blockly.Msg.ETHERNET_VERSION_FIELDDROPDOWN = [["Lib_EthernetV1",""],["Lib_EthernetV2","2"],["Lib_Proteus","PROTEUS"]];
 
 Blockly.Msg.ETHERNET_AVAILABLE_HELPURL = "https://www.arduino.cc/en/Reference/ClientAvailable";
@@ -2108,7 +2147,6 @@ Blockly.Msg.ETHERNET_HEADER_SEND_TITLE = "SEND HEADER HTTP/1.1";
 Blockly.Msg.ETHERNET_HEADER_SEND_FIELDDROPDOWN = [["text/html", "text"], ["image/png", "png"]];
 Blockly.Msg.ETHERNET_HEADER_SEND_PAGE_TITLE = "Envoyer Page HTML Part :";
 Blockly.Msg.ETHERNET_HEADER_SEND_PAGE_TOOLTIP = "Envoyer une page html inclue dans un fichier HTML.h";
-
 ////
 Blockly.Msg.ETHERNET_HEADER_SEND_FIELDDROPDOWN2 = [["OK", "200"], ["Pas de contenu", "204"], ["Erreur", "404"]];
 ////
@@ -2173,7 +2211,6 @@ Blockly.Msg.ETHERNET_WIFI_LOCALIP_TOOLTIP = "Retourne l'IP locale";
 //********************null*************//
 Blockly.Msg.NULL_TOOLTIP = "texte libre pour description d'algorithmes";
 
-
 //********************HX711 Load cell*************//
 Blockly.Msg.HX711_HELPURL = "https://learn.sparkfun.com/tutorials/load-cell-amplifier-hx711-breakout-hookup-guide?_ga=2.253088841.1374984898.1508777134-607511387.1508777134";
 Blockly.Msg.HX711_INIT_TITLE = "calibrage du capteur";
@@ -2181,7 +2218,6 @@ Blockly.Msg.HX711_INIT_TOOLTIP = "point de référence pour les mesures, avec ou
 Blockly.Msg.HX711_READ_TITLE = "poids lu (kg)";
 Blockly.Msg.HX711_READ_TEXT = "avec une correction de";
 Blockly.Msg.HX711_READ_TOOLTIP = "le facteur de correction est celui renvoyé sur la console série par le bloc de calibrage";
-
 
 //********************SENSORS ACTUATORS*************//
 Blockly.Msg.lm35_1 = "température mesurée";
@@ -2191,7 +2227,6 @@ Blockly.Msg.matrice8x8_symbole_TOOLTIP = "définition d'un symbole pour la matri
 Blockly.Msg.ultrason_distance1 = "distance mesurée";
 Blockly.Msg.ultrason_distance2 = "retourne la distance mesurée (de 0 à 100 cm)";
 Blockly.Msg.lp2i_mp3_prev = "lire le fichier mp3 précédent";
-
 
 //********************Pololu QTR-1RC*************//
 Blockly.Msg.QTR_1RC_HELPURL = "https://ay128.lesusinesnouvelles.com/#!/projects/utilisation-de-capteur-qtr-1rc-avec-blockly";
@@ -2206,7 +2241,6 @@ Blockly.Msg.QTR_1RC_READ_INPUT1 = "valeur du capteur QTR-1RC";
 Blockly.Msg.QTR_1RC_READ_INPUT2 = "pour nom";
 Blockly.Msg.QTR_1RC_READ_TOOLTIP = "Lecture de la valeur du capteur QTR-1RC.";
 Blockly.Msg.QTR_1RC_COMPONENT = "QTR-1RC";
-
 
 //********************Nintendo Wiimote nunchuck*************//
 Blockly.Msg.WII_JOYSTICK = "la valeur du joystick";
@@ -2262,7 +2296,6 @@ Blockly.Msg.Adafruit_RGB_LCD_Shield_SCROLL_TEXT = "TEXT SCROLLING";
 Blockly.Msg.Adafruit_RGB_LCD_Shield_SCROLL_EFFECT = "Ecrit avec un ";
 Blockly.Msg.Adafruit_RGB_LCD_Shield_SCROLL_EFFECT_FIELDDROPDOWN = [["défilement à gauche", "LEFT"], ["défilement à droite", "RIGHT"], ["défilement automatique", "AUTO"]];
 Blockly.Msg.Adafruit_RGB_LCD_Shield_SCROLL_TOOLTIP = "Choix du sens de défilement du texte";
-
 
 Blockly.Msg.Adafruit_RGB_LCD_Shield_SET_CURSOR_TEXT = "SET CURSOR";
 Blockly.Msg.Adafruit_RGB_LCD_Shield_SET_CURSOR_TOOLTIP = "Positionne le curseur aux coordonnées spécifiées";

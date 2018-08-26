@@ -281,6 +281,25 @@ Blockly.Blocks.tone = {
   }
 };
 
+Blockly.Blocks.tone_notime = {
+  init: function() {
+    this.setColour(Blockly.Blocks.arduino_io.HUE);
+    this.setHelpUrl(Blockly.Msg.ARDUINO_TONE_HELPURL);
+  this.appendValueInput("PIN")
+    .setCheck('Number')
+        .setAlign(Blockly.ALIGN_RIGHT)
+        .appendField(Blockly.Msg.ARDUINO_TONE_INPUT1);
+    this.appendValueInput("NUM")
+        .setAlign(Blockly.ALIGN_RIGHT)
+        .appendField(Blockly.Msg.ARDUINO_TONE_INPUT2)
+        .setCheck('Number');
+    this.setInputsInline(false);
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setTooltip(Blockly.Msg.ARDUINO_TONE_TOOLTIP);
+  }
+};
+
 Blockly.Blocks.notone = {
   init: function() {
     this.setColour(Blockly.Blocks.arduino_io.HUE);

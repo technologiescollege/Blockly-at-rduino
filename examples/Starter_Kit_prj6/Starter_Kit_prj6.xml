@@ -1,0 +1,201 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <toolboxcategories>CAT_LOGIC,CAT_LOOPS,CAT_MATH,CAT_ARRAY,CAT_TEXT,CAT_VARIABLES,CAT_FUNCTIONS,CAT_ARDUINO,CAT_ANEMOROTATION,CAT_LCD_SCREEN,CAT_BLUETOOTH_MISC,CAT_ROBOT_MISC,CAT_I2C,CAT_SPI,CAT_APDS_9960_RGB_Gesture,CAT_OLED_U8G,CAT_LED_RGB_CHAIN,CAT_MATRIX_LED_RGB,CAT_DRONE,CAT_DFRobot,CAT_ICN,CAT_ROBUNO,CAT_FISCHERTECHNIK,CAT_FLYCAMONE,CAT_MHK,CAT_BQ,CAT_JEULIN,CAT_GROVE,CAT_MULTIFUNCTION,CAT_RFID,CAT_TECHNOZONE,CAT_TECHNOZONE_ROBOT,CAT_ZUMO,CAT_ROBOTS_MOTORS,CAT_MBOT_1,CAT_MBOT_2,CAT_MBOT_3,CAT_MBOT_4,CAT_STEPPER,CAT_ESUS,CAT_MRDUINO,CAT_ARDUINO_SERVO,CAT_ADXL362,CAT_BT_ELECTRONICS,CAT_jfblocks,CAT_KEYPAD,CAT_SHARP,CAT_ETHERNET,CAT_BLYNK_CC,CAT_AUTODUINO</toolboxcategories>
+  <toolbox>toolbox_arduino_all</toolbox>
+  <block type="base_define_bloc" id="YQuLFtBO}l_A#w8uA=$9" x="-87" y="-287">
+    <statement name="DO">
+      <block type="variables_set_init" id="TGukM{H}k[=5PS|cq!pi">
+        <field name="VAR">sensorLow</field>
+        <field name="VARIABLE_SETTYPE_TYPE">NUMBER</field>
+        <value name="VALUE">
+          <block type="math_number" id="4hv6oxm}W8:HP-`=Ofg]">
+            <field name="NUM">1023</field>
+          </block>
+        </value>
+        <next>
+          <block type="variables_set_init" id="$C(6YR,5pRJl#Vb/z1%%">
+            <field name="VAR">sensorHigh</field>
+            <field name="VARIABLE_SETTYPE_TYPE">NUMBER</field>
+            <value name="VALUE">
+              <block type="math_number" id="zQiHI]I+bgKL?mv(DyW)">
+                <field name="NUM">0</field>
+              </block>
+            </value>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+  <block type="base_setup_loop" id="_7Uy!1Ejxs42`aJWtQ{e" x="-87" y="-137">
+    <statement name="DO">
+      <block type="inout_buildin_led" id=";c=Z$EUqlKC[et{H2l*u">
+        <field name="STAT">HIGH</field>
+        <next>
+          <block type="controls_whileUntil" id="u:khF3scEc5lqpSM()yM">
+            <field name="MODE">WHILE</field>
+            <value name="BOOL">
+              <block type="logic_compare" id="vF/y;p(e6gT#DxM=4KHl">
+                <field name="OP">LT</field>
+                <value name="A">
+                  <block type="millis" id="|:@z*GGFGT^2M9EFC~|t"></block>
+                </value>
+                <value name="B">
+                  <block type="math_number" id="CRG,]cq`osGaL;*|Y}/Q">
+                    <field name="NUM">5000</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <statement name="DO">
+              <block type="variables_set" id="aSIw5i8,aZt#G/HQRu0P">
+                <field name="VAR">sensorValue</field>
+                <value name="VALUE">
+                  <block type="inout_analog_read_validator" id="c0zJ{!ZF!WMXitKR*+1f">
+                    <field name="PIN">A0</field>
+                  </block>
+                </value>
+                <next>
+                  <block type="controls_if" id="L@g0@3MZQk^h_R`*`YRt">
+                    <value name="IF0">
+                      <block type="logic_compare" id="]g0ow*{@@`/jq3Z2*d0X">
+                        <field name="OP">GT</field>
+                        <value name="A">
+                          <block type="variables_get" id="}A/]i)Q=}n9#52ZfQy8i">
+                            <field name="VAR">sensorValue</field>
+                          </block>
+                        </value>
+                        <value name="B">
+                          <block type="variables_get" id="}=B]M#Erlb!]NG29xj*4">
+                            <field name="VAR">sensorHigh</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                    <statement name="DO0">
+                      <block type="variables_set" id=":JgIdPWL~Mwlc$k~K-;~">
+                        <field name="VAR">sensorHigh</field>
+                        <value name="VALUE">
+                          <block type="variables_get" id="c1,8Vt(VGP+yv6;i/v0t">
+                            <field name="VAR">sensorValue</field>
+                          </block>
+                        </value>
+                      </block>
+                    </statement>
+                    <next>
+                      <block type="controls_if" id="+T@+_|oP@R!{c2gi8qvr">
+                        <value name="IF0">
+                          <block type="logic_compare" id="JzL3Xz%FDroZm`.17RhR">
+                            <field name="OP">LT</field>
+                            <value name="A">
+                              <block type="variables_get" id="pGd9JWI!m^SkB8-y?Lk-">
+                                <field name="VAR">sensorValue</field>
+                              </block>
+                            </value>
+                            <value name="B">
+                              <block type="variables_get" id="x[5]Qf[DSL?#BS:vp4BJ">
+                                <field name="VAR">sensorLow</field>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                        <statement name="DO0">
+                          <block type="variables_set" id="?4lbuGI4:l8;N=GDZHFz">
+                            <field name="VAR">sensorLow</field>
+                            <value name="VALUE">
+                              <block type="variables_get" id="d8H1,6D,PKx=H1S}XlZM">
+                                <field name="VAR">sensorValue</field>
+                              </block>
+                            </value>
+                          </block>
+                        </statement>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </statement>
+            <next>
+              <block type="inout_buildin_led" id="UQyac34BO*J*ns8QpnWi">
+                <field name="STAT">LOW</field>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+    <statement name="LOOP">
+      <block type="variables_set" id="]?HU=QN9g-DWG~Rs,ufG">
+        <field name="VAR">sensorValue</field>
+        <value name="VALUE">
+          <block type="inout_analog_read_validator" id="T^+/4_$vl*0q2:~c@Ub+">
+            <field name="PIN">A0</field>
+          </block>
+        </value>
+        <next>
+          <block type="variables_set" id="d?77u(%0n:L5Kel`ksFp">
+            <field name="VAR">pitch</field>
+            <value name="VALUE">
+              <block type="conversion_map" id="*aW]!~}/5Lmb/q]auPH.">
+                <value name="NUM">
+                  <block type="variables_get" id="#1#5=vmu)s-10A,E07Bz">
+                    <field name="VAR">sensorValue</field>
+                  </block>
+                </value>
+                <value name="IN_MIN">
+                  <block type="variables_get" id="3w.OJP9j)C*!7gh6];pW">
+                    <field name="VAR">sensorLow</field>
+                  </block>
+                </value>
+                <value name="IN_MAX">
+                  <block type="variables_get" id="0[sn*q0l3Aa0g5vfY~)S">
+                    <field name="VAR">sensorHigh</field>
+                  </block>
+                </value>
+                <value name="OUT_MIN">
+                  <block type="math_number" id="HcV#JnQaA_9Z.bE=,kyR">
+                    <field name="NUM">50</field>
+                  </block>
+                </value>
+                <value name="OUT_MAX">
+                  <block type="math_number" id="p~-:|,4*GIs@(^B+MIJ9">
+                    <field name="NUM">4000</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <next>
+              <block type="tone" id="imFl8%0HA;*Lkbi|c:$7">
+                <value name="PIN">
+                  <block type="math_number" id=".T^`DOquA+%1yATml+=3">
+                    <field name="NUM">8</field>
+                  </block>
+                </value>
+                <value name="NUM">
+                  <shadow type="math_number" id=":rh[/12P3vI=Xuo7XQ-3">
+                    <field name="NUM">0</field>
+                  </shadow>
+                  <block type="variables_get" id="Mabs(2^+FOn0`S(2!%h[">
+                    <field name="VAR">pitch</field>
+                  </block>
+                </value>
+                <value name="TPS">
+                  <shadow type="math_number" id="0HY|ZpYZ#7mBUb0W+4l)">
+                    <field name="NUM">20</field>
+                  </shadow>
+                </value>
+                <next>
+                  <block type="base_delay" id="23}){}3)3pchsYdTrCTX">
+                    <value name="DELAY_TIME">
+                      <shadow type="math_number" id=")!vD*?H9DDU6Kii9CL+u">
+                        <field name="NUM">10</field>
+                      </shadow>
+                    </value>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+</xml>

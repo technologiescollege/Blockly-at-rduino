@@ -1,0 +1,125 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <toolboxcategories>CAT_LOGIC,CAT_LOOPS,CAT_MATH,CAT_TEXT,CAT_VARIABLES,CAT_FUNCTIONS,CAT_ARDUINO,CAT_LCD_SCREEN,CAT_BLUETOOTH_MISC,CAT_MATRIX_LED_RGB,CAT_RFID,CAT_MBOT_1,CAT_MBOT_2,CAT_MBOT_3,CAT_MBOT_4,CAT_ARDUINO_SERVO</toolboxcategories>
+  <toolbox>toolbox_arduino_all</toolbox>
+  <block type="servo_attach" id="%cNqP%:EA:DFb.atIM,(" x="63" y="13">
+    <field name="SERVO_NAME">SERVO</field>
+    <value name="PIN">
+      <block type="math_number" id="lD.lLVRn3|{pJJ;sVXS1">
+        <field name="NUM">9</field>
+      </block>
+    </value>
+    <next>
+      <block type="serial_init" id="RzYpq+:K5j.SpLdQ!$mz">
+        <field name="SPEED">9600</field>
+        <next>
+          <block type="variables_set" id="e-1.Cuh8uRA(nfr/A6XL">
+            <field name="VAR">potVal</field>
+            <value name="VALUE">
+              <block type="inout_analog_read_validator" id=")Y;niNi))Wyug~6+OU#x">
+                <field name="PIN">A0</field>
+              </block>
+            </value>
+            <next>
+              <block type="serial_print" id="%lriI5,~6oUd.1Vn#a6g">
+                <value name="CONTENT">
+                  <shadow type="text" id="@YR}1HYu2_PZ?6=3rtPp">
+                    <field name="TEXT">potVal : </field>
+                  </shadow>
+                </value>
+                <next>
+                  <block type="serial_print" id="EC|/;(tZUlZp1J*7S?d~">
+                    <value name="CONTENT">
+                      <shadow type="text" id="^2g5`n?nQTw)isvsHCCP">
+                        <field name="TEXT"></field>
+                      </shadow>
+                      <block type="variables_get" id="A.y_/R.B.|g7onsi)6eC">
+                        <field name="VAR">potVal</field>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="variables_set" id="6E:_RU}f[rcy(7:,*Fn$">
+                        <field name="VAR">angle</field>
+                        <value name="VALUE">
+                          <block type="conversion_map" id="B#ievWq-+{kt~J4t]Bwo">
+                            <value name="NUM">
+                              <block type="variables_get" id="fYQhZ[G@G][c2]04{S@_">
+                                <field name="VAR">potVal</field>
+                              </block>
+                            </value>
+                            <value name="IN_MIN">
+                              <block type="math_number" id="_%#iLKf!lA,t!p^}{f|Z">
+                                <field name="NUM">0</field>
+                              </block>
+                            </value>
+                            <value name="IN_MAX">
+                              <block type="math_number" id="GiQZeIjW)eVzg90]$Nm;">
+                                <field name="NUM">1023</field>
+                              </block>
+                            </value>
+                            <value name="OUT_MIN">
+                              <block type="math_number" id="EUZ({1gy,Zq:|To5ED)$">
+                                <field name="NUM">0</field>
+                              </block>
+                            </value>
+                            <value name="OUT_MAX">
+                              <block type="math_number" id="G?x7[|6lU;t(@mHT@XMp">
+                                <field name="NUM">179</field>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                        <next>
+                          <block type="serial_print" id="b/.)=Q/NF_Y;as-TAsAV">
+                            <value name="CONTENT">
+                              <shadow type="text" id="t~J:lf$1-wb!t{iwM}Ba">
+                                <field name="TEXT">, angle : </field>
+                              </shadow>
+                            </value>
+                            <next>
+                              <block type="serial_println" id="l.GwN;U~;$s.VwK2HF(F">
+                                <value name="CONTENT">
+                                  <shadow type="text" id="(Zq{/D,@?jc7$[R1.^Uu">
+                                    <field name="TEXT"></field>
+                                  </shadow>
+                                  <block type="variables_get" id="5K}59h{F?n(iZJDc$jcE">
+                                    <field name="VAR">angle</field>
+                                  </block>
+                                </value>
+                                <next>
+                                  <block type="servo_move" id="]DtHBPC;kuW}URz1~yS0">
+                                    <field name="SERVO_NAME">SERVO</field>
+                                    <value name="DEGREE">
+                                      <shadow type="inout_angle" id="(kSWx^]f`Sn)]%nUjtO=">
+                                        <field name="ANGLE">90</field>
+                                      </shadow>
+                                      <block type="variables_get" id="sYh0m:s0D=N(r5vej|t;">
+                                        <field name="VAR">angle</field>
+                                      </block>
+                                    </value>
+                                    <next>
+                                      <block type="base_delay" id="sPV3Yq62aeXowFG=`s]u">
+                                        <value name="DELAY_TIME">
+                                          <shadow type="math_number" id="u;u(5M!pXt6i#B)85$)i">
+                                            <field name="NUM">15</field>
+                                          </shadow>
+                                        </value>
+                                      </block>
+                                    </next>
+                                  </block>
+                                </next>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+</xml>
