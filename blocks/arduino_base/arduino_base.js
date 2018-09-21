@@ -26,9 +26,6 @@
 
 goog.provide('Blockly.Blocks.arduino_base');
 
-goog.require('Blockly.Blocks');
-goog.require('Blockly.Types');
-
 //To support syntax defined in http://arduino.cc/en/Reference/HomePage
 
 Blockly.Blocks.base_begin = {
@@ -163,12 +160,24 @@ Blockly.Blocks.base_end = {
   }
 };
 
+Blockly.Blocks.current_date = {
+  init: function() {
+    this.setHelpUrl('');
+    this.setColour(Blockly.Blocks.arduino_base.HUE);
+    this.appendDummyInput()
+        .appendField('date:')
+        .appendField(new Blockly.FieldDate(), 'FIELDNAME');
+    this.setOutput(true, 'Number');
+    this.setTooltip(Blockly.Msg.ARDUINO_SINCE_PROGRAM_STARTED_TOOLTIP);
+  }
+};
+
 Blockly.Blocks.millis = {
   init: function() {
     this.setColour(Blockly.Blocks.arduino_base.HUE);
 	this.setHelpUrl(Blockly.Msg.ARDUINO_SINCE_PROGRAM_STARTED_HELPURL);
     this.appendDummyInput("")
-         .appendField(Blockly.Msg.ARDUINO_SINCE_PROGRAM_STARTED);
+        .appendField(Blockly.Msg.ARDUINO_SINCE_PROGRAM_STARTED);
     this.setOutput(true, 'Number');
     this.setTooltip(Blockly.Msg.ARDUINO_SINCE_PROGRAM_STARTED_TOOLTIP);
   }

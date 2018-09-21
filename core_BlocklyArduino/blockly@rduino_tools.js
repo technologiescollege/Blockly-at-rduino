@@ -1,9 +1,8 @@
 /**
  * BlocklyDuino
  */
-
+ 
 'use strict';
-
 
 /**
  * Init modal Global Configuration
@@ -19,7 +18,6 @@ BlocklyDuino.initBlocSort = function () {
 		$('#toggle-Functions').bootstrapToggle('on');
 	}
 }
-
 
 /**
  * Configuration & modify buttons state inside modal config

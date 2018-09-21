@@ -4,6 +4,10 @@
 
 'use strict';
 
+goog.require('Blockly.Blocks');
+goog.require('Blockly.Types');
+goog.require('Blockly.FieldDate');
+
 /**
  * Create a namespace for the application.
  */
@@ -18,7 +22,6 @@ BlocklyDuino.inlineBool = true;
 BlocklyDuino.withImage = true;
 BlocklyDuino.ajaxOK = true;
 BlocklyDuino.toolboxInIndexHtml = false;
-BlocklyDuino.pluginCodebender_found = navigator.plugins['Codebender.cc'] !== undefined || navigator.plugins['Codebendercc'] !== undefined;
 
 /**
  * Blockly's main workspace.
@@ -815,13 +818,13 @@ BlocklyDuino.init = function() {
 					length: 3,
 					colour: '#ccc',
 					snap: true},
-					sounds : true,
-					media: 'media/',
-					rtl: Code.isRtl(),
-					toolbox: BlocklyDuino.buildToolbox(),
-					zoom:
-						{controls: true,
-						wheel: true}
+				sounds : true,
+				media: 'media/',
+				rtl: Code.isRtl(),
+				toolbox: BlocklyDuino.buildToolbox(),
+				zoom:
+					{controls: true,
+					wheel: true}
 		      });
 	// bind events to html elements
 	BlocklyDuino.bindFunctions();
