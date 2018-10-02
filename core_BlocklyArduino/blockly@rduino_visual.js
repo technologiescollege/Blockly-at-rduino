@@ -112,11 +112,11 @@ BlocklyDuino.cardPicture_mini = function() {
 };
 
 BlocklyDuino.cardPicture_change_AIO = function() {
-	if ($("#pinout").val()) {
-		// $('#arduino_card_miniPicture').attr("src", profile[$("#pinout").val()]['picture']);
-		$('#arduino_card_mini_picture').attr("src", profile[$("#pinout").val()]['picture']);
-		$('#arduino_card_picture').attr("src", profile[$("#pinout").val()]['picture']);
-		$('#arduino_card_miniPicture_Menu').attr("src", profile[$("#pinout").val()]['picture']);
+	if ($("#board_select").val()) {
+		// $('#arduino_card_miniPicture').attr("src", profile[$("#board_select").val()]['picture']);
+		$('#arduino_card_mini_picture').attr("src", profile[$("#board_select").val()]['picture']);
+		$('#arduino_card_picture').attr("src", profile[$("#board_select").val()]['picture']);
+		$('#arduino_card_miniPicture_Menu').attr("src", profile[$("#board_select").val()]['picture']);
 	} else {
 		// $('#arduino_card_miniPicture').attr("src", "");
 		$('#arduino_card_mini_picture').attr("src", "");
@@ -299,13 +299,13 @@ BlocklyDuino.OnOffLine = function() {
 		$("#btn_MiniconfigGlobal").addClass("hidden");
 		$("#pictureModalLabel").addClass("hidden");
 		$("#btn_card_picture_change").removeClass("hidden");
-		$('#pinout_AIO_on').prepend($('#pinout'));
+		$('#board_select_AIO_on').prepend($('#board_select'));
 	} else if ((AIO == '')||(AIO == 'off')){
 			$("#btn_configGlobal").removeClass("hidden");
 			$("#btn_MiniconfigGlobal").removeClass("hidden");
 			$("#pictureModalLabel").removeClass("hidden");
 			$("#btn_card_picture_change").addClass("hidden");
-			$('#pinout_AIO_off').prepend($('#pinout'));
+			$('#board_select_AIO_off').prepend($('#board_select'));
 	}
 };
 

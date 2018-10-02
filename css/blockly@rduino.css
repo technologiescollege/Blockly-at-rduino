@@ -260,7 +260,13 @@ html[dir="RTL"] .divSwitch-hor {
 	position:absolute;
 	top:0;
 	right:5px;
-	width:150px;
+	max-width:250px;
+	max-height:300px;
+}
+
+#arduino_card_mini_picture {
+	max-width:250px;
+	max-height:300px;
 }
 
 html[dir="RTL"] .divCard-hor {
@@ -299,13 +305,13 @@ html[dir="RTL"] #languageMenu {
 	right: auto;
 }
 
-#content_area,#content_blocks {
+#content_area,#content_blocks,#content_factory {
 	height: 100%;
 	width: 100%;
 }
 
 #content_term,#content_arduino,#content_supervision {
-	position: fixed;
+	padding: 5px 5px 20px 0px;
 	top: 40px;
 	height: 100%;
 	width: 100%;
@@ -320,6 +326,53 @@ html[dir="RTL"] #languageMenu {
 	bottom: 100px;
 }
 
+#blockly_l{
+	float:left;
+	height:100%;
+	width:50%;
+}
+#blockly_r{
+	float:right;
+	height:100%;
+	width:50%;
+}
+#btn_group {
+	position: absolute;
+	right: 15px;
+	top: 0px;
+	z-index: 10;
+}
+#barre{
+	padding : 5px 5px 5px 10px;
+	background-color : #006468;
+}
+#barre_h{
+	padding : 5px 5px 5px 10px;
+	background-color : #00929F;
+}
+#btn_term {
+	right: 15px;
+	top: 5px;
+	z-index: 10;
+}
+#pre_arduino {
+    height: 70%;
+    width: 100%;
+}
+#local_debug{
+	height: 15%;
+	width: 100%;
+	padding : 5px;
+	background-color : black;
+	color: white;
+	overflow: auto;
+	word-break: break-all;
+	word-wrap: break-word;
+	white-space: pre-wrap;
+}
+#serial-checboxes {
+    margin-left: 20px;
+}
 html[dir="RTL"] #toggle_code {
     left: 25px;
 }
@@ -347,32 +400,6 @@ html[dir="RTL"] #btn_delete {
 #pre_arduino {
     height: 65%;
     width: 100%;
-}
-
-#serial_hud {
-    height: 100%;
-    overflow: auto;
-    width: 100%;
-    background-color: #080808;
-    color: #1D932F;
-    font-size: 20px;
-    line-height: 20px;
-    word-break: break-all;
-    word-wrap: break-word;
-    white-space: pre-wrap;
-}
-
-#cb_cf_serial_monitor {
-    width: 100%;
-    height: 100%;
-}
-
-#serial_monitor_hud_and_autoscroll {
-    display: block !important;
-}
-
-#serial-checboxes {
-    margin-left: 20px;
 }
 
 #modal-body-config {
@@ -419,6 +446,17 @@ html[dir="RTL"] #select_all {
 	overflow: auto;
 	word-break: break-all;
 	word-wrap: break-word;
+}
+
+#fenetre_term{
+	width: 630px;
+	height: 415px;
+	border: 1px solid #ccc;
+	padding:0px 5px 5px 5px;
+	margin-bottom: 5px;
+	margin-left: 5px;
+	border-radius: 5px;
+	overflow: auto;
 }
 
 .blocklyToolboxDiv {
@@ -500,6 +538,14 @@ html[dir="RTL"] .colors_category {
 }
 .margin-top-5 {
 	margin-top: 5px;
+}
+.blocklyScrollbarKnob {
+  fill: #00929F !important;
+  fill-opacity: 0.7 !important;
+}
+.blocklyScrollbarBackground {
+  stroke-width: 0px !important;
+  fill: none !important;
 }
 
 #convertModal .modal-content:hover {
