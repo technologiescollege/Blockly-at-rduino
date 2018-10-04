@@ -41,22 +41,22 @@ BlocklyDuino.validateConfigGlobal = function () {
 	
 	var search = window.location.search;
 	//change Arduino card
-	$("#board_select").blur();
+	$("#pinout").blur();
 	var kitornot = false;
-	if ($("#board_select").val().substring(0,4) == "kit_") {
+	if ($("#pinout").val().substring(0,4) == "kit_") {
 		kitornot = true;
 	}
-	if ($("#board_select").val() != "none")
+	if ($("#pinout").val() != "none")
 		{
-		if (window.confirm(MSG['arduino_card']+' '+window.profile[$("#board_select").val()].description+' ?'))
+		if (window.confirm(MSG['arduino_card']+' '+window.profile[$("#pinout").val()].description+' ?'))
 			{
 			BlocklyDuino.workspace.clear();				  
 			if (search.length <= 1) {
-				search = '?card=' + $("#board_select").val();
+				search = '?card=' + $("#pinout").val();
 			} else if (search.match(/[?&]card=[^&]*/)) {
-				search = search.replace(/([?&]card=)[^&]*/, '$1' + $("#board_select").val());
+				search = search.replace(/([?&]card=)[^&]*/, '$1' + $("#pinout").val());
 				} else {
-					search = search.replace(/\?/, '?card=' + $("#board_select").val() + '&');
+					search = search.replace(/\?/, '?card=' + $("#pinout").val() + '&');
 				}
 			
 			//recherche d'une maquette (toolbox) dans l'URL pour une maquette cablée complète, qui bloquera ensuite dans loadToolboxDefinition le bouton des configuration des catégories
@@ -64,15 +64,15 @@ BlocklyDuino.validateConfigGlobal = function () {
 				if (search.length <= 1) {
 					search = '?toolbox=' + $("#toolboxes").val();
 				} else if (search.match(/[?&]toolbox=[^&]*/)) {
-					search = search.replace(/([?&]toolbox=)[^&]*/, '$1' + $("#board_select").val());
+					search = search.replace(/([?&]toolbox=)[^&]*/, '$1' + $("#pinout").val());
 					} else {
-						search = search.replace(/\?/, '?toolbox=' + $("#board_select").val() + '&');
+						search = search.replace(/\?/, '?toolbox=' + $("#pinout").val() + '&');
 					}				
 			} else {
                     search = search.replace(/([?&]toolbox=)[^&]*/, '$1' + 'toolbox_algo');
 				}
 		} else {
-			$("#board_select").val(BlocklyDuino.selectedCard);
+			$("#pinout").val(BlocklyDuino.selectedCard);
 			}
 		}	
 	  
@@ -107,21 +107,21 @@ BlocklyDuino.validateConfigOffline = function () {
 	}
 	
 	//change Arduino card
-	$("#board_select").blur();
-	if (window.profile["defaultBoard"]!=window.profile[$("#board_select").val()])
+	$("#pinout").blur();
+	if (window.profile["defaultBoard"]!=window.profile[$("#pinout").val()])
 		{
-		if (window.confirm(MSG['arduino_card']+' '+window.profile[$("#board_select").val()].description+' ?'))
+		if (window.confirm(MSG['arduino_card']+' '+window.profile[$("#pinout").val()].description+' ?'))
 			{
 			BlocklyDuino.workspace.clear();				  
 			if (search.length <= 1) {
-					search = '?card=' + $("#board_select").val();
+					search = '?card=' + $("#pinout").val();
 				  } else if (search.match(/[?&]card=[^&]*/)) {
-					search = search.replace(/([?&]card=)[^&]*/, '$1' + $("#board_select").val());
+					search = search.replace(/([?&]card=)[^&]*/, '$1' + $("#pinout").val());
 				  } else {
-					search = search.replace(/\?/, '?card=' + $("#board_select").val() + '&');
+					search = search.replace(/\?/, '?card=' + $("#pinout").val() + '&');
 				  }
 			} else {
-				$("#board_select").val(BlocklyDuino.selectedCard);
+				$("#pinout").val(BlocklyDuino.selectedCard);
 			}
 	}
 	

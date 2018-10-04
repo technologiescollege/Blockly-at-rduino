@@ -260,9 +260,6 @@
 				<!--button id="btn_wiring" class="btn btn-primary">
 					<span class="glyphicon glyphicon-blackboard"></span>
 				</button-->
-				<button id="btn_factory" class="btn btn-primary">
-				   <span class="fa fa-industry"> </span>
-				</button>
 				<button id="btn_RGB" class="btn btn-primary">
 				   <span class="glyphicon glyphicon-th"> </span>
 				</button>
@@ -301,7 +298,7 @@
 					<button id="btn_edit_code" class="btn btn-primary" data-toggle="modal" data-target="#editModal">
 						<span id="icon_edit_btn" class="glyphicon glyphicon-edit"> </span>
 						<span id="span_edit_code"> </span>
-					</button>
+					</button>						
 					<a id="btn_saveArduino" class='btn btn-primary' href="#" role='button'>
 						<span class="glyphicon glyphicon-save"> </span>
 						<span id="span_saveIno"> </span>
@@ -457,7 +454,7 @@
 			<span id="span_card_picture_change"> </span>
 		</button>
 	</div>
-	<div id="board_select_AIO_on"></div>
+	<div id="pinout_AIO_on"></div>
 	<div id="arduino_card_picture_inModal">
 		<img id="arduino_card_picture" width="200"/>
 	</div>
@@ -570,36 +567,21 @@
 					<div id="divCard">
 							<br />
 							<span class="fa fa-microchip"></span>  <label id="labelArduinoCard"></label>
-							<div id="board_select_AIO_off"></div>
-							<select id="board_select" onmousemove="BlocklyDuino.cardPicture_change_AIO();" onchange="BlocklyDuino.cardPicture_change_AIO();">
+							<div id="pinout_AIO_off"></div>
+							<select id="pinout" onmousemove="BlocklyDuino.cardPicture_change_AIO();" onchange="BlocklyDuino.cardPicture_change_AIO();">
 								<option value="none">...</option>
-								<optgroup label="Arduino">
-									<option value="arduino_leonardo">Arduino/Genuino LEONARDO</option>
-									<option value="arduino_mega">Arduino/Genuino MEGA 2560</option>
-									<option value="arduino_micro">Arduino/Genuino MICRO</option>
-									<option value="arduino_mini">Arduino/Genuino MINI ATmega328</option>
-									<option value="arduino_nano">Arduino/Genuino NANO ATmega328</option>
-									<option value="arduino_pro8">Arduino/Genuino Pro Mini 3.3V ATmega328</option>
-									<option value="arduino_pro16">Arduino/Genuino Pro Mini 5V ATmega328</option>
-									<option value="arduino_uno">Arduino/Genuino UNO</option>
-									<option value="arduino_yun">Arduino/Genuino YUN</option>
-									<option value="lilypad">LilyPad ATmega328P</option>
-								</optgroup>
-								<optgroup label="DAGU">
-									<option value="dagu_rs027">Dagu RS027</option>
-									<option value="dagu_rs040">Dagu RS040</option>
-								</optgroup>
-								<optgroup label="Makeblok">
-									<option value="makeblock_mcore">mCore mBot</option>
-									<option value="makeblock_orion">Me Orion</option>
-								</optgroup>
-								<optgroup label="DFRobot">
-									<option value="dfrobot_romeo">DFRobot RoMeo v2</option>
-								</optgroup>
-								<optgroup label="Kits">
-									<option value="kit_microfeux">Micro-feux Jeulin</option>
-									<option value="kit_petitbot">Petit Bot</option>
-								</optgroup>
+								<option value="arduino_leonardo">Arduino/Genuino LEONARDO</option>
+								<option value="arduino_mega">Arduino/Genuino MEGA</option>
+								<option value="arduino_micro">Arduino/Genuino MICRO</option>
+								<option value="arduino_nano">Arduino/Genuino NANO</option>
+								<option value="arduino_pro_mini">Arduino/Genuino Pro Mini</option>
+								<option value="arduino_uno">Arduino/Genuino UNO</option>
+								<option value="arduino_yun">Arduino/Genuino YUN</option>
+								<option value="lilypad">LilyPad</option>>
+								<option value="dagu_rs040">Dagu RS040</option>
+								<option value="dfrobot_romeo">DFRobot RoMeo v2</option>
+								<option value="kit_microfeux">Micro-feux Jeulin</option>
+								<option value="kit_petitbot">Petit Bot</option>
 							</select>
 					</div>
 					<br />

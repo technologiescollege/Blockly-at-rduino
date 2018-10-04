@@ -1,0 +1,30 @@
+{
+    "app_name": "Blockly@rduino",
+    "main": "index.html",
+    "name": "blocklyarduino",
+    "webexe_settings": {
+        "download_dir": "C:\\Bureau\\Web2ExeWin\\download",
+        "force_download": false,
+        "linux-x32": false,
+        "linux-x64": false,
+        "mac-x64": false,
+        "nw_compression_level": 0,
+        "nw_version": "0.32.0-beta1",
+        "sdk_build": false,
+        "uncompressed_folder": true,
+        "windows-x32": true,
+        "windows-x64": false
+    },
+    "webkit": {},
+    "window": {
+        "exe_icon": "favicon.png",
+        "frame": true,
+        "icon": "favicon.png",
+        "id": "Blockly@rduino",
+        "mac_icon": "favicon.png",
+        "resizable": true,
+        "show": true,
+        "show_in_taskbar": true,
+        "title": "Blockly@rduino"
+    }
+}
