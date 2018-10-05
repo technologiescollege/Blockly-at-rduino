@@ -7,7 +7,7 @@ var MSG = {
   span_config_kit: "configure kit",
   span_picture: " show Arduino card",
   span_wiring: " wiring card",
-  span_supervision: " card supervision",
+  span_supervision: " supervision",
   span_delete: " delete ALL blocks",
   span_saveXML:" save to B@ file",
   span_fakeload:" load B@ file",

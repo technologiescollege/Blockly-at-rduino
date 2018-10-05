@@ -28,12 +28,12 @@
 	<script type="text/javascript" src="core_BlocklyArduino/libs/bootstrap-toggle.min.js"></script>
 	<script type="text/javascript" src="core_BlocklyArduino/libs/clipboard.min.js"></script>
 	<script type="text/javascript" src="core_BlocklyArduino/libs/head.load.min.js"></script>
+	<script type="text/javascript" src="core_BlocklyArduino/libs/html2canvas.min.js"></script>
 	<script type="text/javascript" src="core_BlocklyArduino/libs/jscolor.js"></script>
-	<script type="text/javascript" src="core_BlocklyArduino/libs/prettify.js"></script>
+	<script type="text/javascript" src="core_BlocklyArduino/libs/prettify.min.js"></script>
 	<script type="text/javascript" src="core_BlocklyArduino/libs/smoothie.js"></script>
 
 	<!--TechnoZone51-->
-	<script type="text/javascript" src="tools/TZ51/html2canvas.js"></script>
 	<script type="text/javascript" src="tools/TZ51/canvas2image.js"></script>
 	<!--Fin TZ51-->
 
@@ -42,9 +42,8 @@
 	<script type="text/javascript" src="generators/arduino_resume.js"></script>
 	<script type="text/javascript" src="lang/code.js"></script>
 
-	<link rel="stylesheet" type="text/css" href="css/blockly@rduino.css"/>
-	<!--link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/-->
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.BlocklyArduino.css"/>
+	<link rel="stylesheet" type="text/css" href="css/blockly@rduino.css"/>
 	<link rel="stylesheet" type="text/css" href="css/bootstrap-toggle.min.css"/>
 	<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css"/>
 	<link rel="stylesheet" type="text/css" href="css/jquery-ui.css"/>
@@ -239,11 +238,11 @@
 			</div>
 			<div id="menuPanelFiles">
 				<a id="btn_saveXML" class='btn btn-success btn-block' href="#" role='button'>
-					<span class="fa fa-cloud-download"></span>
+					<span class="fas fa-cloud-download-alt"></span>
 					<span id="span_saveXML"> </span>
 				 </a>
 				<button id="btn_fakeload" class="btn btn-success btn-block">
-					<span class="fa fa-cloud-upload"></span>
+					<span class="fas fa-cloud-upload-alt"></span>
 					<span id="span_fakeload"> </span>
 				</button>
 				<button id="btn_example" class="btn btn-info btn-block" data-toggle="modal" data-target="#exampleModal">
@@ -255,11 +254,14 @@
 					<span id="span_create_example"> </span>
 				</a>
 			</div> 
-			<input type="file" id="load" style="display: none;" />
+			<input type="file" id="load" accept=".B@,.xml" style="display: none;" />
 			<div id="div_tools_button">
 				<!--button id="btn_wiring" class="btn btn-primary">
 					<span class="glyphicon glyphicon-blackboard"></span>
 				</button-->
+				<button id="btn_factory" class="btn btn-primary">
+				   <span class="fa fa-industry"> </span>
+				</button>
 				<button id="btn_RGB" class="btn btn-primary">
 				   <span class="glyphicon glyphicon-th"> </span>
 				</button>
@@ -295,34 +297,35 @@
 					</button>
 				</div>
 				<div id="content_arduino" class="tab-pane">
-					<button id="btn_edit_code" class="btn btn-primary" data-toggle="modal" data-target="#editModal">
-						<span id="icon_edit_btn" class="glyphicon glyphicon-edit"> </span>
-						<span id="span_edit_code"> </span>
-					</button>						
-					<a id="btn_saveArduino" class='btn btn-primary' href="#" role='button'>
-						<span class="glyphicon glyphicon-save"> </span>
-						<span id="span_saveIno"> </span>
-					</a>		
-					<button id="btn_verify_local" class="btn btn-arduino">
-						<span class="fa fa-check-square-o"> </span>
-						<span id="span_verify_local"> </span>
-					</button>							
-					<a id="btn_flash_local" class='btn btn-arduino' href="#" role='button'>
-						<span class="fa fa-microchip"></span>					 
-						<span id="span_flash_local"> </span>
-					</a>
-					<!--a id="btn_getResult" class='btn btn-arduino' href="http://127.0.0.1:5005" role='button' target='_blank'>
-						<span class="glyphicon glyphicon-list-alt"> </span>
-						<span id="span_flash_local_result"> </span>
-					</a-->
-					<button id="btn_pasteIDEArduino" class="btn btn-arduino">
-						<span class="fa fa-folder-open"> </span>
-						<span id="span_pasteIDEArduino"> </span>
-					</button>
-					<pre id="pre_arduino"></pre>
-					<div id="local_debug">
-						<iframe id="rDuino_uploader" width="100%" height="100%" frameborder="0"></iframe>
+					<div id="barre">
+						<button id="btn_edit_code" class="btn btn-arduinoRect" data-toggle="modal" data-target="#editModal">
+							<span id="icon_edit_btn" class="glyphicon glyphicon-edit"> </span>
+						</button>
+						<button id="btn_saveArduino" class="btn btn-arduinoRect">
+							<span class="fas fa-file-download fa-1_5x fa-fw"> </span>
+						</button>
+						<button id="btn_verify_local" class="btn btn-arduino">
+							<span class="fas fa-check fa-1_5x fa-fw"> </span>
+						</button>
+						<select id="serialport" >
+							<option value="no_com" selected>Choisir le port</option>
+						</select>
+						<button id="btn_flash_local" class='btn btn-arduino'>
+							<span class="fas fa-arrow-right fa-1_5x fa-fw"> </span>
+						</button>
+						<button id="btn_term" class='btn btn-arduinoRect'>
+							<span class="fas fa-search fa-flip-horizontal fa-1_5x fa-fw"> </span>
+						</button>
+						<!-- <button id="btn_pasteIDEArduino" class="btn btn-arduino"> -->
+							<!-- <span class="fa fa-folder-open"> </span> -->
+							<!-- <span id="span_pasteIDEArduino"> </span> -->
+						<!-- </button> -->
+						<span id="survol" style="color:white"></span>
 					</div>
+					<pre id="pre_arduino"></pre>
+					<div id="barre_h"><br /></div>
+					<div id="local_debug"></div>
+					<div id="barre"></div>
 				</div>
 				<div id="content_supervision" class="tab-pane">
 				</div>
@@ -348,12 +351,12 @@
 		<b> <span id="title"> </span> </b>
 		  <br />
 		  <br />
-		  <b>Forum</b> : <a href='http://blockly.technologiescollege.fr/forum' target='blank'>http://blockly.technologiescollege.fr/forum</a>
+		  <b>Forum</b> : <a href='http://blockly.technologiescollege.fr/forum' target='blank'><i class="fab fa-wpforms"></i> http://blockly.technologiescollege.fr/forum</a>
 		  <br />
-		  <br /><b>Documentation :</b> <a href="http://www.libreduc.cc/wiki/doku.php" target='blank'>wiki</a>
+		  <br /><b>Documentation :</b> <a href="http://www.libreduc.cc/wiki/doku.php" target='blank'><i class="fab fa-wikipedia-w"></i> wiki</a>
 		  <br />
 		  <br />
-		  <span><b>Blockly@rduino</b></span> (<a href="https://github.com/technologiescollege/Blockly-at-rduino" target='blank'>Github</a>)
+		  <span><b>Blockly@rduino</b></span> (<a href="https://github.com/technologiescollege/Blockly-at-rduino" target='blank'><i class="fab fa-github"></i> Github</a>)
 		  <span id="aboutBody" style="font-style: italic;"> </span>
 		  <br /> - Blockly : (<a href='https://developers.google.com/blockly' target='blank'>https://developers.google.com/blockly</a>)
 		  <br /> - Fred LIN (@gasolin) - BlocklyDuino : (<a href='https://github.com/BlocklyDuino/BlocklyDuino' target='blank'>https://github.com/BlocklyDuino/BlocklyDuino</a>)
@@ -454,7 +457,7 @@
 			<span id="span_card_picture_change"> </span>
 		</button>
 	</div>
-	<div id="pinout_AIO_on"></div>
+	<div id="board_select_AIO_on"></div>
 	<div id="arduino_card_picture_inModal">
 		<img id="arduino_card_picture" width="200"/>
 	</div>
@@ -559,7 +562,7 @@
 		    </div>    
 			<div class="modal-body" id="modal-body-config-global">						
 				<div class="arduino_card_mini_picture_div">
-				    <img id="arduino_card_mini_picture" width="150px"/>
+				    <img id="arduino_card_mini_picture"/>
 				</div>
 				<div class="modal-body-config-global_left">					
 	                <span class="fa fa-language"></span>  <label id="span_languageMenu"> </label>  <select id="languageMenu"></select><br/>
@@ -567,21 +570,36 @@
 					<div id="divCard">
 							<br />
 							<span class="fa fa-microchip"></span>  <label id="labelArduinoCard"></label>
-							<div id="pinout_AIO_off"></div>
-							<select id="pinout" onmousemove="BlocklyDuino.cardPicture_change_AIO();" onchange="BlocklyDuino.cardPicture_change_AIO();">
+							<div id="board_select_AIO_off"></div>
+							<select id="board_select" onmousemove="BlocklyDuino.cardPicture_change_AIO();" onchange="BlocklyDuino.cardPicture_change_AIO();">
 								<option value="none">...</option>
-								<option value="arduino_leonardo">Arduino/Genuino LEONARDO</option>
-								<option value="arduino_mega">Arduino/Genuino MEGA</option>
-								<option value="arduino_micro">Arduino/Genuino MICRO</option>
-								<option value="arduino_nano">Arduino/Genuino NANO</option>
-								<option value="arduino_pro_mini">Arduino/Genuino Pro Mini</option>
-								<option value="arduino_uno">Arduino/Genuino UNO</option>
-								<option value="arduino_yun">Arduino/Genuino YUN</option>
-								<option value="lilypad">LilyPad</option>>
-								<option value="dagu_rs040">Dagu RS040</option>
-								<option value="dfrobot_romeo">DFRobot RoMeo v2</option>
-								<option value="kit_microfeux">Micro-feux Jeulin</option>
-								<option value="kit_petitbot">Petit Bot</option>
+								<optgroup label="Arduino">
+									<option value="arduino_leonardo">Arduino/Genuino LEONARDO</option>
+									<option value="arduino_mega">Arduino/Genuino MEGA 2560</option>
+									<option value="arduino_micro">Arduino/Genuino MICRO</option>
+									<option value="arduino_mini">Arduino/Genuino MINI ATmega328</option>
+									<option value="arduino_nano">Arduino/Genuino NANO ATmega328</option>
+									<option value="arduino_pro8">Arduino/Genuino Pro Mini 3.3V ATmega328</option>
+									<option value="arduino_pro16">Arduino/Genuino Pro Mini 5V ATmega328</option>
+									<option value="arduino_uno">Arduino/Genuino UNO</option>
+									<option value="arduino_yun">Arduino/Genuino YUN</option>
+									<option value="lilypad">LilyPad ATmega328P</option>
+								</optgroup>
+								<optgroup label="DAGU">
+									<option value="dagu_rs027">Dagu RS027</option>
+									<option value="dagu_rs040">Dagu RS040</option>
+								</optgroup>
+								<optgroup label="Makeblok">
+									<option value="makeblock_mcore">mCore mBot</option>
+									<option value="makeblock_orion">Me Orion</option>
+								</optgroup>
+								<optgroup label="DFRobot">
+									<option value="dfrobot_romeo">DFRobot RoMeo v2</option>
+								</optgroup>
+								<optgroup label="Kits">
+									<option value="kit_microfeux">Micro-feux Jeulin</option>
+									<option value="kit_petitbot">Petit Bot</option>
+								</optgroup>
 							</select>
 					</div>
 					<br />

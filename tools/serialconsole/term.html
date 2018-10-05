@@ -1,0 +1,41 @@
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.BlocklyArduino.css"/>
+	<link rel="stylesheet" type="text/css" href="../../css/Blockly@rduino.css"/>
+</head>
+<body>
+	<h4>moniteur série</h4>
+    <div class="form-group" style="padding-left:5px;padding-right:5px;">
+		<div class="input-group input-group-md icon-addon addon-md">
+			<input type="text" placeholder="Texte" name="" id="schbox" class="form-control">
+			<span class="input-group-btn">
+				<button id="btn_envoi" type="button" class="btn btn-info">envoyer</button>
+			</span>
+		</div>
+	</div>
+	<div id="fenetre_term">
+		<span class="fas fa-terminal"> </span>
+	</div>
+	<div style="padding-right:5px;text-align:right;">
+		<button id="btn_efface" type="button" class="btn btn-info">effacer la sortie</button>
+		<select id="vitesse" >
+			<option value="300">300 baud</option>
+			<option value="600">600 baud</option>
+			<option value="1200">1200 baud</option>
+			<option value="2400">2400 baud</option>
+			<option value="4800">4800 baud</option>
+			<option value="9600" selected>9600 baud</option>
+			<option value="14400">14400 baud</option>
+			<option value="19200">19200 baud</option>
+			<option value="28800">28800 baud</option>
+			<option value="31250">31250 baud</option>
+			<option value="38400">38400 baud</option>
+			<option value="57600">57600 baud</option>
+			<option value="115200">115200 baud</option>
+		</select>
+		<button id="btn_connect" type="button" class="btn btn-info">connexion</button>
+	</div>
+</body>
+<script>require('./term.js')</script>
+</html>

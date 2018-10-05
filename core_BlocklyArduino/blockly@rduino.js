@@ -228,7 +228,7 @@ BlocklyDuino.setArduinoCard =  function () {
 	if (!cardId) {
 		cardId = BlocklyDuino.selectedCard;
 	}
-	$("#pinout").val(cardId);
+	$("#board_select").val(cardId);
 	
 	// set the card from url parameters
 	profile["defaultBoard"]=profile[cardId];
@@ -236,12 +236,11 @@ BlocklyDuino.setArduinoCard =  function () {
 	$('#arduino_card_miniPicture').attr("src", profile.defaultBoard['miniPicture']);
 	$('#arduino_card_miniPicture_Menu').attr("src", profile.defaultBoard['miniPicture_hor']);	
 	$('#pictureModalLabel').attr('title',(profile.defaultBoard['description']));
-	if ($("#pinout").val().substring(0,4) == "kit_") {
+	if ($("#board_select").val().substring(0,4) == "kit_") {
 		$("#btn_config").remove();
 		$("#btn_config_kit").removeClass('hidden');
-		$('#btn_config_kit').attr("href", profile[$("#pinout").val()]['help_link']);
+		$('#btn_config_kit').attr("href", profile[$("#board_select").val()]['help_link']);
 	}
-
 	BlocklyDuino.cardPicture_change_AIO();
 };
 
@@ -276,9 +275,10 @@ BlocklyDuino.bindFunctions = function() {
 		$('#tab_arduino').remove();
 		$('#pre_arduino').css({'height' : '95%'});
 		} else {
-			$('#btn_verify_local').on("click", BlocklyDuino.verify_local_Click);
-			$('#btn_flash_local').on("click", BlocklyDuino.uploadClick);
-			$('#btn_pasteIDEArduino').on("click", BlocklyDuino.ArduinoIDEClick);
+			$('#btn_pasteIDEArduino').remove();
+			// $('#btn_verify_local').on("click", BlocklyDuino.verify_local_Click);
+			// $('#btn_flash_local').on("click", BlocklyDuino.uploadClick);
+			// $('#btn_pasteIDEArduino').on("click", BlocklyDuino.ArduinoIDEClick);
 			$('#btn_saveArduino').on("click", BlocklyDuino.saveArduinoFile);
 			$('#btn_block_capture').on("click", BlocklyDuino.workspace_capture);
 			$('#btn_saveXML, #menu_12').on("click", BlocklyDuino.saveXmlFile);
@@ -297,12 +297,37 @@ BlocklyDuino.bindFunctions = function() {
 		
 	$('#toggle-Colors').on("change", BlocklyDuino.toggleTextColors);
 
-	$('#pinout').on("focus", function() {
+	$('#board_select').on("focus", function() {
 		BlocklyDuino.selectedCard = $(this).val();
 	});
-	
+	$('#btn_edit_code').mouseover(function() {
+		document.getElementById("survol").textContent = MSG['span_edit_code'];
+	}).mouseout(function() {
+		document.getElementById("survol").textContent = "";
+	});
+	$('#btn_saveArduino').mouseover(function() {
+		document.getElementById("survol").textContent = MSG['span_saveIno'];
+	}).mouseout(function() {
+		document.getElementById("survol").textContent = "";
+	});
+	$('#btn_verify_local').mouseover(function() {
+		document.getElementById("survol").textContent = MSG['span_verify_local'];
+	}).mouseout(function() {
+		document.getElementById("survol").textContent = "";
+	});
+	$('#btn_flash_local').mouseover(function() {
+		document.getElementById("survol").textContent = MSG['span_flash_local'];
+	}).mouseout(function() {
+		document.getElementById("survol").textContent = "";
+	});
+	$('#btn_term').mouseover(function() {
+		document.getElementById("survol").textContent = MSG['span_connect_serial'];
+	}).mouseout(function() {
+		document.getElementById("survol").textContent = "";
+	});
+	$('#btn_configGlobal').on("click", BlocklyDuino.buildlibraries);
 	$('#configModalGlobal').on("hidden.bs.modal", function() {
-		$("#pinout").val(BlocklyDuino.selectedCard);
+		$("#board_select").val(BlocklyDuino.selectedCard);
 		BlocklyDuino.cardPicture_change_AIO();
 	});	
 	
@@ -312,6 +337,7 @@ BlocklyDuino.bindFunctions = function() {
 	
 	//menu déroulant
 	$('#toolboxes, #toggle-Functions').on("change", BlocklyDuino.changeToolboxDefinition);
+	// $('#toolboxes').on("change", BlocklyDuino.changeToolboxDefinition);
 	
 	//bouton de niveaux
 	$('#toolbox_algo, #menu_420').on("click", function(e) {
@@ -860,6 +886,9 @@ BlocklyDuino.init = function() {
 	
     // Hook a save function onto unload.
 	window.addEventListener('unload', BlocklyDuino.backupBlocks, false);
+	
+	//global config
+	BlocklyDuino.initBlocSort();
 	
 	/*pour changer couleur texte dans toolbox
     $("div:contains('bitbloq').blocklyTreeRow, div:contains('bitbloq').blocklyTreeRow ~ div").on("click", function() {
