@@ -2,6 +2,7 @@ var MSG = {
   title: "programmation graphique des interfaces Arduino, réécris depuis le travail de BlocklyDuino, basé sur Blockly",
   labelArduinoCard: "choix de la carte : ",
   btn_switch: " modifier orientation du menu",
+  btn_variable: "valider",
   span_card_picture_change: "changer",
   span_config: " configurer les blocs",
   span_config_kit: "configurer la maquette",

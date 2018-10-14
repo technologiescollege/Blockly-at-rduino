@@ -78,10 +78,11 @@ Blockly.Msg.ARD_TYPE_DECIMAL = "Decimal";
 Blockly.Msg.ARD_TYPE_LONG = "Large Number";
 Blockly.Msg.ARD_TYPE_NULL = "Null";
 Blockly.Msg.ARD_TYPE_NUMBER = "Number";
-Blockly.Msg.ARD_TYPE_UNS_LONG = "Unsigned Long Number";
-Blockly.Msg.ARD_TYPE_SHORT = "Short Number";
+Blockly.Msg.ARD_TYPE_SHORT = "Short Number (byte)";
 Blockly.Msg.ARD_TYPE_TEXT = "Text";
 Blockly.Msg.ARD_TYPE_UNDEF = "Undefined";
+Blockly.Msg.ARD_TYPE_UNS_NUMBER = "Unsigned number";
+Blockly.Msg.ARD_TYPE_UNS_LONG = "Unsigned Long Number";
 Blockly.Msg.ARD_TYPE_VOLATILE = "Volatile integer";
 
 //**********************************categories***********************************************

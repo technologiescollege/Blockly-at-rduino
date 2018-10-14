@@ -12,7 +12,7 @@
 	<script type="text/javascript" src="core_Ardublockly/static_typing.js"></script>
 	<script type="text/javascript" src="core_Ardublockly/instances.js"></script>
 	<script type="text/javascript" src="core_Ardublockly/field_instance.js"></script>
-	<script type="text/javascript" src="core_Ardublockly/block.js"></script>
+	<script type="text/javascript" src="core_Ardublockly/block_instance.js"></script>
 	<!--Arduino generator, must be defined NOW-->
 	<script type="text/javascript" src="generators/generator_arduino.js"></script>
 
@@ -21,6 +21,7 @@
 	<script type="text/javascript" src="core_BlocklyArduino/blockly@rduino_functions_buttons.js"></script>
 	<script type="text/javascript" src="core_BlocklyArduino/blockly@rduino_tools.js"></script>
 	<script type="text/javascript" src="core_BlocklyArduino/blockly@rduino_visual.js"></script>
+	<script type="text/javascript" src="core_BlocklyArduino/blockly@rduino_visual_buttons.js"></script>
 
 	<script type="text/javascript" src="core_BlocklyArduino/libs/jquery-2.1.3.min.js"></script> 
 	<script type="text/javascript" src="core_BlocklyArduino/libs/jquery-ui.js"></script>
@@ -366,6 +367,7 @@
 		  <br /> - Bernard REMOND - rDuino-Compiler-Uploader-Server : (<a href='https://github.com/nbremond77' target='blank'>https://github.com/nbremond77</a>)
 		  <br /> - Bootstrap (<a href='http://getbootstrap.com' target='blank'>http://getbootstrap.com</a>)
 		  <br /> - Font Awesome Icons (<a href='http://fontawesome.io' target='blank'>http://fontawesome.io</a>)
+		  <br /> - OpenDyslexic (<a href='https://www.opendyslexic.org/' target='blank'>https://www.opendyslexic.org/</a>)
 		  <br /> - Bootstrap Toggle (<a href='http://www.bootstraptoggle.com/' target='blank'>http://www.bootstraptoggle.com/</a>)
 		  <br /> - JQuerry (<a href='https://jquery.com' target='blank'>https://jquery.com)</a>
 		  <br /> - HeadJS (<a href='http://headjs.com/' target='blank'>http://headjs.com/)</a>
@@ -469,7 +471,7 @@
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&#215;</span></button>
         <h4 class="modal-title" id="exampleModalLabel"></h4>
-		<b><a href="https://github.com/technologiescollege/BlocklyArduino-example"><i class="fa fa-github-square" aria-hidden="true"></i> Github </a></b>
+		<b><a href="https://github.com/technologiescollege/BlocklyArduino-example"><i class="fab fa-github" aria-hidden="true"></i> Github </a></b>
       </div>
       <div class="modal-body">
 		<div class="table-responsive">
@@ -540,7 +542,7 @@
         <h4 class="modal-title" id="editModalLabel"></h4>
       </div>
       <div class="modal-body" id="modal-body-code">
-            <textarea id="edit_code" rows="20" cols="100"></textarea>
+            <textarea id="edit_code" rows="20" cols="85"></textarea>
       </div>
       <div class="modal-footer">
         <button id="btn_closeCode" type="button" class="btn btn-default" data-dismiss="modal" ></button>
@@ -562,11 +564,18 @@
 		    </div>    
 			<div class="modal-body" id="modal-body-config-global">						
 				<div class="arduino_card_mini_picture_div">
-				    <img id="arduino_card_mini_picture"/>
+				    <img id="arduino_card_mini_picture">
+					</img>
 				</div>
 				<div class="modal-body-config-global_left">					
 	                <span class="fa fa-language"></span>  <label id="span_languageMenu"> </label>  <select id="languageMenu"></select><br/>
-					<!--label id="textSize" class="mod">tototo</label><input name="textSizeSelect" class="form-control" style="" min="0" max="30" step="1" value="12" type="number"></input-->
+					<!-- <label id="textSize" class="mod">Text size</label> -->
+					<!-- <input name="textSizeSelect" class="form-control" style="" min="0" max="30" step="1" value="12" type="number"> -->
+					<!-- </input> -->
+					<br />
+					<input type="checkbox" id="fontChoice" value="opendys" onclick="BlocklyDuino.changeFont()" checked>
+						<label>OpenDyslexic</label>
+					</input>
 					<div id="divCard">
 							<br />
 							<span class="fa fa-microchip"></span>  <label id="labelArduinoCard"></label>
@@ -590,8 +599,9 @@
 									<option value="dagu_rs040">Dagu RS040</option>
 								</optgroup>
 								<optgroup label="Makeblok">
-									<option value="makeblock_mcore">mCore mBot</option>
-									<option value="makeblock_orion">Me Orion</option>
+									<option value="makeblock_mcore">mBot/mCore</option>
+									<option value="makeblock_megaPi">MegaPi</option>
+									<option value="makeblock_orion">Orion</option>
 								</optgroup>
 								<optgroup label="DFRobot">
 									<option value="dfrobot_romeo">DFRobot RoMeo v2</option>
@@ -636,11 +646,29 @@
 		</div>
 	</div>
 </div>
-	<!--only for IDE mode -->
-	<div id="wiring_dialog">
-		<iframe frameborder="0" marginwidth="0" marginheight="0">
-		</iframe>
+<!-- variable modal -->
+<div class="modal fade" id="variableModal" tabindex="-1" role="dialog" aria-labelledby="variableModalLabel" aria-hidden="true">
+	<div class="modal-dialog modal-sm">
+		<div class="modal-content">
+			<div class="modal-body" id="modal-body-variableModal">
+				<div class="form-group">
+					<label ><div id = "variableModalLabel" class="modal-title"></div></label>
+					<div class="input-group input-group-md icon-addon addon-md">
+						<input type="text" class="form-control" id="var_name">
+						<span class="input-group-btn">
+							<button id="btn_variable" type="button" class="btn btn-info" data-dismiss="modal"></button>
+						</span>
+					</div>
+				</div>
+			</div>  
+		</div>
 	</div>
-	<div id="arduino_IDE_code"> </div>
+</div>
+<!--only for IDE mode -->
+<div id="wiring_dialog">
+	<iframe frameborder="0" marginwidth="0" marginheight="0">
+	</iframe>
+</div>
+<div id="arduino_IDE_code"> </div>
 </body>
 </html>

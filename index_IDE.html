@@ -18,12 +18,12 @@
 
 	<script type="text/javascript" src="core_BlocklyArduino/blockly@rduino.js"></script>
 	<script type="text/javascript" src="core_BlocklyArduino/blockly@rduino_boards.js"></script>
-	<script type="text/javascript" src="core_BlocklyArduino/blockly@rduino_functions_buttons_Electron.js"></script>
+	<script type="text/javascript" src="core_BlocklyArduino/blockly@rduino_functions_buttons.js"></script>
 	<script type="text/javascript" src="core_BlocklyArduino/blockly@rduino_tools.js"></script>
 	<script type="text/javascript" src="core_BlocklyArduino/blockly@rduino_visual.js"></script>
 	<script type="text/javascript" src="core_BlocklyArduino/blockly@rduino_visual_buttons.js"></script>
 
-	<script type="text/javascript" src="core_BlocklyArduino/libs/jquery-2.1.3.min.js" onload="window.$ = window.jQuery = module.exports;"></script> 
+	<script type="text/javascript" src="core_BlocklyArduino/libs/jquery-2.1.3.min.js"></script> 
 	<script type="text/javascript" src="core_BlocklyArduino/libs/jquery-ui.js"></script>
 	<script type="text/javascript" src="core_BlocklyArduino/libs/bootstrap.min.3.3.6.js"></script>
 	<script type="text/javascript" src="core_BlocklyArduino/libs/bootstrap-toggle.min.js"></script>
@@ -61,7 +61,7 @@
 <div class="loading"></div>
 <div id="header">
 	<div id="logo_Titre">
-		<a href="./index_electron.html"><img id="clearLink" src="media/logo-mini.png" border="0" height="36px" onclick="" /></a>
+		<a href="./index_IDE.html"><img id="clearLink" src="media/logo-mini.png" border="0" height="36px" onclick="" /></a>
 	</div>
 	<div id="header_titres">
 		<div id="divTitreMenu" class="hidden">
@@ -274,7 +274,7 @@
 				<button id="btn_miniMenuPanel" class="btn btn-default" >
 					<span class="glyphicon glyphicon-step-backward"> </span>		
 				</button>
-				<a href="./index_electron.html" id="btn_reset" class="btn btn-danger">
+				<a href="./index_IDE.html" id="btn_reset" class="btn btn-danger">
 					   <span class="glyphicon glyphicon-off"> </span>
 				</a>
 				<br />
@@ -671,5 +671,4 @@
 </div>
 <div id="arduino_IDE_code"> </div>
 </body>
-<script>require('../resources/app/Electron_blockly@rduino_IDE_buttons.js')</script>
 </html>

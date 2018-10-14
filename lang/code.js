@@ -155,7 +155,7 @@ Code.initLanguage = function() {
   $('#arduino_card_miniPicture').attr('title', MSG['span_picture']);
   $('#aboutModalLabel').text(MSG['aboutModalLabel']);
   $('#aboutBody').html(MSG['aboutBody']);
-  
+  $('#btn_variable').text(MSG['btn_variable']);
   $('#btn_switch').attr('title', MSG['btn_switch']);
 
   $('#span_config').text(MSG['span_config']);

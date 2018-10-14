@@ -2,7 +2,7 @@
 
 @font-face {
 	font-family: "OpenDyslexic";
-	src: url('../fonts/OpenDyslexic3-Regular.otf');
+	src: url('../fonts/OpenDyslexic-Regular.otf');
 }
 
 html,body {
@@ -10,7 +10,6 @@ html,body {
 	background-color: #fff;
 	margin: 0;
 	font-family: "OpenDyslexic";
-    /* font-family: "Helvetica Neue",Helvetica,Arial,sans-serif; */
 }
 
 .rotate180 {
@@ -256,12 +255,10 @@ html[dir="RTL"] .divSwitch-hor {
 	position:absolute;
 	top:0;
 	right:5px;
-	max-width:250px;
-	max-height:300px;
 }
 
 #arduino_card_mini_picture {
-	max-width:250px;
+	max-width:220px;
 	max-height:300px;
 }
 
@@ -324,13 +321,13 @@ html[dir="RTL"] #languageMenu {
 
 #blockly_l{
 	float:left;
-	height:100%;
-	width:50%;
+	height:99%;
+	width:49%;
 }
 #blockly_r{
 	float:right;
-	height:100%;
-	width:50%;
+	height:99%;
+	width:49%;
 }
 #btn_group {
 	position: absolute;

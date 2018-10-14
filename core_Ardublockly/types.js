@@ -48,6 +48,15 @@ Blockly.Types.NUMBER = new Blockly.Type({
   compatibleTypes: []    // Circular dependencies, add after all declarations
 });
 
+/** Unsigned integer number. */
+Blockly.Types.UNS_NUMBER = new Blockly.Type({
+  typeId: 'Unsigned number',
+  typeMsgName: 'ARD_TYPE_UNS_NUMBER',
+  compatibleTypes: [
+                    Blockly.Types.SHORT_NUMBER,
+                    Blockly.Types.NUMBER]    // Circular dependencies, add after all declarations
+});
+
 /** Volatile integer number. */
 Blockly.Types.VOLATIL_NUMBER = new Blockly.Type({
   typeId: 'Volatil Number',
@@ -120,21 +129,28 @@ Blockly.Types.NUMBER.addCompatibleTypes([
     Blockly.Types.LARGE_NUMBER,
     Blockly.Types.DECIMAL]);
 
+Blockly.Types.UNS_NUMBER.addCompatibleTypes([
+    Blockly.Types.BOOLEAN,
+    Blockly.Types.SHORT_NUMBER,
+    Blockly.Types.NUMBER,
+    Blockly.Types.DECIMAL]);
+
 Blockly.Types.SHORT_NUMBER.addCompatibleTypes([
     Blockly.Types.BOOLEAN,
     Blockly.Types.NUMBER,
-    Blockly.Types.LARGE_NUMBER,
     Blockly.Types.DECIMAL]);
 
 Blockly.Types.LARGE_NUMBER.addCompatibleTypes([
     Blockly.Types.BOOLEAN,
     Blockly.Types.SHORT_NUMBER,
+    Blockly.Types.UNS_NUMBER,
     Blockly.Types.NUMBER,
     Blockly.Types.DECIMAL]);
 
 Blockly.Types.LARGE_UNS_NUMBER.addCompatibleTypes([
     Blockly.Types.BOOLEAN,
     Blockly.Types.SHORT_NUMBER,
+    Blockly.Types.UNS_NUMBER,
     Blockly.Types.NUMBER,
     Blockly.Types.LARGE_NUMBER,
     Blockly.Types.DECIMAL]);
@@ -142,6 +158,7 @@ Blockly.Types.LARGE_UNS_NUMBER.addCompatibleTypes([
 Blockly.Types.VOLATIL_NUMBER.addCompatibleTypes([
     Blockly.Types.SHORT_NUMBER,
     Blockly.Types.LARGE_NUMBER,
+    Blockly.Types.UNS_NUMBER,
     Blockly.Types.NUMBER]);
 
 /**
@@ -248,4 +265,3 @@ Blockly.Types.identifyNumber = function(numberString) {
     }
     return Blockly.Types.NULL;
 };
-

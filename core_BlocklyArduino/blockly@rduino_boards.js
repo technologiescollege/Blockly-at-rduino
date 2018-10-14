@@ -79,7 +79,7 @@ var profile = {
 		upload_arg: "arduino:avr:leonardo",
 	},
 	arduino_mega:{
-		description: "Arduino Mega 2560",
+		description: "Arduino Mega 2560 / ADK",
 		cpu:"atmega2560",
 		speed:"115200",
 		digital : ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "33", "34", "35", "36", "37", "38", "39", "40", "41", "42", "43", "44", "45", "46", "47", "48", "49", "50", "51", "52"],
@@ -150,10 +150,10 @@ var profile = {
                 ['31250', '31250'], ['38400', '38400'], ['57600', '57600'],
                 ['115200', '115200']],
 		serialPin: [["0 (Rx) ; 1 (Tx)", "0"]],
-		upload_arg: "arduino:avr:micro",
+		upload_arg: "arduino:avr:mini",
 	},
 	arduino_nano: {
-	    description: "Arduino Nano",
+	    description: "Arduino Nano ATmega328",
 		cpu:"atmega328p",
 		speed:"115200",
 	    digital: ["0", "1",  "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13"],
@@ -175,7 +175,7 @@ var profile = {
                 ['31250', '31250'], ['38400', '38400'], ['57600', '57600'],
                 ['115200', '115200']],
 		serialPin: [["0 (Rx) ; 1 (Tx)", "0"]],
-		upload_arg: "arduino:avr:nano:cpu=atmega328",
+		upload_arg: "arduino:avr:nano:cpu=atmega328old",
 	},
 	arduino_pro8: {
 	    description: "Arduino Pro Mini 3.3V ATmega328",
@@ -199,7 +199,7 @@ var profile = {
                 ['31250', '31250'], ['38400', '38400'], ['57600', '57600'],
                 ['115200', '115200']],
 		serialPin: [["0 (Rx) ; 1 (Tx)", "0"]],
-		upload_arg: "arduino:avr:micro",
+		upload_arg: "arduino:avr:pro:cpu=8MHzatmega328",
 	},
 	arduino_pro16: {
 	    description: "Arduino Pro Mini 5V ATmega328",
@@ -223,7 +223,7 @@ var profile = {
                 ['31250', '31250'], ['38400', '38400'], ['57600', '57600'],
                 ['115200', '115200']],
 		serialPin: [["0 (Rx) ; 1 (Tx)", "0"]],
-		upload_arg: "arduino:avr:micro",
+		upload_arg: "arduino:avr:pro:cpu=16MHzatmega328",
 	},
 	arduino_uno: {
 	    description: "Arduino Uno",
@@ -298,7 +298,7 @@ var profile = {
                 ['31250', '31250'], ['38400', '38400'], ['57600', '57600'],
                 ['115200', '115200']],
 		serialPin: [["0 (Rx) ; 1 (Tx)", "0"]],
-		upload_arg: "arduino:avr:nano:cpu=atmega328",
+		upload_arg: "arduino:avr:lilypad",
 	},
 	dagu_rs027: {
 	    description: "Dagu RS027",
@@ -322,7 +322,7 @@ var profile = {
                 ['31250', '31250'], ['38400', '38400'], ['57600', '57600'],
                 ['115200', '115200']],
 		serialPin: [["0 (Rx) ; 1 (Tx)", "0"]],
-		upload_arg: "arduino:avr:",
+		upload_arg: "arduino:avr:pro:cpu=8MHzatmega168",
 	},
 	dagu_rs040: {
 	    description: "Dagu RS040",
@@ -372,6 +372,31 @@ var profile = {
                 ['115200', '115200']],
 		serialPin: [["0 (Rx) ; 1 (Tx)", "0"]],
 		upload_arg: "arduino:avr:uno",
+	},
+	makeblock_megaPi: {
+	    description: "Makeblock MegaPi",
+		cpu:"atmega2560",
+		speed:"115200",
+		digital : ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "33", "34", "35", "36", "37", "38", "39", "40", "41", "42", "43", "44", "45", "46", "47", "48", "49", "50", "51", "52"],
+		dropdownDigital: "attention",
+		PWM : ["2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "44", "45", "46"],
+		dropdownPWM: [["2", "2"], ["3", "3"], ["4", "4"], ["5", "5"], ["6", "6"], ["7", "7"], ["8", "8"], ["9", "9"], ["10", "10"], ["11", "11"], ["12", "12"], ["13", "13"], ["44", "44"], ["45", "45"], ["46", "46"]],
+		analog : ["A0", "A1", "A2", "A3", "A4", "A5", "A6", "A7", "A8", "A9", "A10", "A11", "A12", "A13", "A14", "A15"],
+		dropdownAnalog: [["A0", "A0"], ["A1", "A1"], ["A2", "A2"], ["A3", "A3"], ["A4", "A4"], ["A5", "A5"], ["A6", "A6"], ["A7", "A7"], ["A8", "A8"], ["A9", "A9"], ["A10", "A10"], ["A11", "A11"], ["A12", "A12"], ["A13", "A13"], ["A14", "A14"], ["A15", "A15"]],
+		/*irqonchange : [["10", "10"], ["11", "11"], ["12", "12"], ["13", "13"], ["14", "14"], ["15", "15"], ["50", "50"], ["51", "51"], ["52", "52"], ["53", "53"], ["A8", "62"], ["A9", "63"], ["A10", "64"], ["A11", "65"], ["A12", "66"], ["A13", "67"], ["A14", "68"], ["A15", "69"]],*/
+		I2C: ["20", "21"],
+		SPI: [["50 (SS)", "50"], ["51 (MOSI)", "51"], ["52 (MISO)", "52"], ["53 (SCK)", "53"]],
+		interrupt: ["2", "3", "21", "20", "19", "18"],
+		picture : "media/Arduino-Mega-2560-Pinout.jpg",
+		miniPicture : "media/Arduino-Mega-2560-Pinout-mini.jpg",
+		miniPicture_hor : "media/Arduino-Leonardo-Pinout-mini_hor.jpg",
+		serial: [['300', '300'], ['600', '600'], ['1200', '1200'],
+                ['2400', '2400'], ['4800', '4800'], ['9600', '9600'],
+                ['14400', '14400'], ['19200', '19200'], ['28800', '28800'],
+                ['31250', '31250'], ['38400', '38400'], ['57600', '57600'],
+                ['115200', '115200']],
+		serialPin: [["0 (Rx) ; 1 (Tx)", "0"], ["19 (Rx1) ; 18 (Tx1)", "19"], ["17 (Rx2) ; 16 (Tx2)", "17"], ["15 (Rx3) ; 14 (Tx3)", "15"]],
+		upload_arg: "arduino:avr:mega:cpu=atmega2560",
 	},
 	makeblock_orion: {
 	    description: "Makeblock Me Orion",
@@ -484,20 +509,17 @@ profile.defaultBoard = profile["none"];
  * @return {?string} A string representing a valid PIN number, or null if invalid.
  */
 Blockly.Arduino.pinDigitalValidator = function(text) {
-	var pos = profile.defaultBoard.digital.indexOf(text);
-		
+	var pos = profile.defaultBoard.digital.indexOf(text);		
 	return (pos < 0) ? null : text;
 };
 
 Blockly.Arduino.pinInterruptValidator = function(text) {
-	var pos = profile.defaultBoard.interrupt.indexOf(text);
-		
+	var pos = profile.defaultBoard.interrupt.indexOf(text);		
 	return (pos < 0) ? null : text;
 };
 
 Blockly.Arduino.pinSoftSerialValidator = function(text) {
-	var pos = profile.defaultBoard.serialPin.indexOf(text);
-		
+	var pos = profile.defaultBoard.serialPin.indexOf(text);		
 	return (pos < 0) ? null : text;
 };
 
@@ -523,7 +545,6 @@ Blockly.Arduino.pinGroveDigitalValidator = function(text) {
  */
 Blockly.Arduino.pinPWMValidator = function(text) {
 	var pos = profile.defaultBoard.PWM.indexOf(text);
-
 	return (pos < 0) ? null : text;
 };
 
@@ -534,7 +555,6 @@ Blockly.Arduino.pinPWMValidator = function(text) {
  */
 Blockly.Arduino.pinAnalogValidator = function(text) {
 	var pos = profile.defaultBoard.analog.indexOf(text);
-
 	return (pos < 0) ? null : text;
 };
 

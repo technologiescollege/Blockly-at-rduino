@@ -26,65 +26,11 @@ Blockly.makeColour = function(color) {
 	return color;
 };
 
-/**
- * Toggle blocks picture :
- */
-BlocklyDuino.blockPicture = function() {
-	var xmlBlocks = Blockly.Xml.workspaceToDom(BlocklyDuino.workspace);
-	var blocks = xmlBlocks.getElementsByTagName("block");
-
-	Blockly.Arduino.imageBool = !Blockly.Arduino.imageBool;
-
-	if (Blockly.Arduino.imageBool) {
-		$('#icon_btn_blocs_picture').removeClass('glyphicon-eye-close');
-		$('#icon_btn_blocs_picture').addClass('glyphicon-eye-open');
-		Blockly.Arduino.imageSize = Blockly.Arduino.imageSizeOld;
-		$('#btn_blocs_picture_mini').show();
-		$('#btn_blocs_picture_maxi').show();
-	} else {
-		Blockly.Arduino.imageSizeOld = Blockly.Arduino.imageSize;
-		$('#icon_btn_blocs_picture').removeClass('glyphicon-eye-open');
-		$('#icon_btn_blocs_picture').addClass('glyphicon-eye-close');
-		Blockly.Arduino.imageSize = 0;
-		$('#btn_blocs_picture_mini').hide();
-		$('#btn_blocs_picture_maxi').hide();
-	}
-
-	BlocklyDuino.workspace.clear();
-	BlocklyDuino.loadBlocks(Blockly.Xml.domToPrettyText(xmlBlocks));
-
-};
-
-BlocklyDuino.blockPicture_maxi = function() {
-	var xmlBlocks = Blockly.Xml.workspaceToDom(BlocklyDuino.workspace);
-
-	var blocks = xmlBlocks.getElementsByTagName("block");
-
-	if (BlocklyDuino.pictSize<6) BlocklyDuino.pictSize++;
-
-	if (BlocklyDuino.pictSize > 7) BlocklyDuino.pictSize=5;
-
-	Blockly.Arduino.imageSize = 32 * BlocklyDuino.pictSize;
-
-	BlocklyDuino.workspace.clear();
-	BlocklyDuino.loadBlocks(Blockly.Xml.domToPrettyText(xmlBlocks));
-
-};
-
-BlocklyDuino.blockPicture_mini = function() {
-	var xmlBlocks = Blockly.Xml.workspaceToDom(BlocklyDuino.workspace);
-
-	var blocks = xmlBlocks.getElementsByTagName("block");
-
-	if (BlocklyDuino.pictSize>1) BlocklyDuino.pictSize--;
-
-	if (BlocklyDuino.pictSize <1) BlocklyDuino.pictSize=1;
-
-	Blockly.Arduino.imageSize = 32 * BlocklyDuino.pictSize;
-
-	BlocklyDuino.workspace.clear();
-	BlocklyDuino.loadBlocks(Blockly.Xml.domToPrettyText(xmlBlocks));
-
+BlocklyDuino.changeFont = function() {
+	var checkbox = document.getElementById('fontChoice');
+	if (checkbox.checked == true) {
+		document.body.style.fontFamily = "OpenDyslexic";
+	} else document.body.style.fontFamily = "Trebuchet MS";
 };
 
 BlocklyDuino.cardPicture_maxi = function() {
@@ -219,9 +165,7 @@ BlocklyDuino.setOrientation = function() {
 		if (Code.isRtl()) {
 			$("#ul_nav").addClass("navbar-right");
 		}
-
 		$("#menuPanel").addClass("menuPanel-ver");
-//		var menuPanelFiles = document.getElementById("menuPanelFiles");
 		$("#btn_config").addClass("btn_ver");
 		$("#btn_supervision").addClass("btn_ver");
 		$("#btn_saveXML").addClass("btn_ver");
