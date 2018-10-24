@@ -35,6 +35,7 @@ var MSG = {
   span_verify_local: " test code by IDE Arduino",
   span_flash_local: " local upload in Arduino",
   span_flash_local_result: " result of upload",
+  span_detailedCompilation: " detailed results",
   firstModalLabel: "Welcome to Blockly@rduino!",
   span_first_msg: "Don't see this message again",
   btn_valid_first_msg: "Understood, thanks",

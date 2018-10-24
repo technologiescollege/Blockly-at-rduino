@@ -27,10 +27,15 @@ Blockly.makeColour = function(color) {
 };
 
 BlocklyDuino.changeFont = function() {
-	var checkbox = document.getElementById('fontChoice');
-	if (checkbox.checked == true) {
+	var FontChoiceUrl = BlocklyDuino.getStringParamFromUrl('font', '');
+	if (($('#fontChoice').prop('checked'))||FontChoiceUrl===undefined||FontChoiceUrl==='O') {
 		document.body.style.fontFamily = "OpenDyslexic";
-	} else document.body.style.fontFamily = "Trebuchet MS";
+		var FontChoice = "O";
+	} else {
+		document.body.style.fontFamily = "Trebuchet MS";
+		var FontChoice = "T";
+	}
+	return FontChoice;
 };
 
 BlocklyDuino.cardPicture_maxi = function() {

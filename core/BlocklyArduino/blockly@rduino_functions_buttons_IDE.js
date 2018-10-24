@@ -383,7 +383,8 @@ BlocklyDuino.uploadClick_IDE = function() {
  * Thanks to fontaine.jp from forum http://blockly.technologiescollege.fr/forum/index.php/topic,128.msg635.html#new
  *
  */
-BlocklyDuino.workspace_capture = function() {
+
+BlocklyDuino.workspace_capture_IDE = function() {
 	var ws = BlocklyDuino.workspace.svgBlockCanvas_.cloneNode(true);
 	ws.removeAttribute("width");
 	ws.removeAttribute("height");
@@ -398,46 +399,5 @@ BlocklyDuino.workspace_capture = function() {
 	var ctx = canvas.getContext( "2d" );
 	var xml = new XMLSerializer().serializeToString(ws);
 	xml = '<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="'+bbox.width+'" height="'+bbox.height+'" viewBox="' + bbox.x + ' ' + bbox.y + ' '  + bbox.width + ' ' + bbox.height + '"><rect width="100%" height="100%" fill="white"></rect>'+xml+'</svg>';
-	var img = new Image();
-	img.setAttribute( "src", 'data:image/svg+xml;base64,' + btoa(unescape(encodeURIComponent(xml))));
-	img.onload = function() {
-		ctx.drawImage( img, 5, 5 );
-		var canvasdata = canvas.toDataURL("image/png",1);
-		var datenow = Date.now();
-		var a = document.createElement("a");
-		a.download = "capture"+datenow+".png";
-		a.href = canvasdata;
-		document.body.appendChild(a);
-		a.click();
-	}
-};
-
-BlocklyDuino.workspace_capture_IDE = function() {
-	var ws = BlocklyDuino.workspace.getCanvas().cloneNode(true);
-	ws.removeAttribute("width");
-	ws.removeAttribute("height");
-	ws.removeAttribute("transform");
-	var styleElem = document.createElementNS("http://www.w3.org/2000/svg", "style");
-	styleElem.textContent = Blockly.Css.CONTENT.join('') ;
-	ws.insertBefore(styleElem, ws.firstChild);
-	var bbox = BlocklyDuino.workspace.getCanvas().getBBox();
-	var canvas = document.createElement( "canvas" );
-	canvas.width = Math.ceil(bbox.width+10);
-	canvas.height = Math.ceil(bbox.height+10);
-	var ctx = canvas.getContext( "2d" );
-	var xml = new XMLSerializer().serializeToString(ws);
-	xml = '<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="'+bbox.width+'" height="'+bbox.height+'" viewBox="' + bbox.x + ' ' + bbox.y + ' '  + bbox.width + ' ' + bbox.height + '"><rect width="100%" height="100%" fill="white"></rect>'+xml+'</svg>';
-	var img = new Image();
-	img.setAttribute( "src", 'data:image/svg+xml;base64,' + btoa(unescape(encodeURIComponent(xml))));
-	img.onload = function() {
-		ctx.drawImage( img, 5, 5 );
-		var canvasdata = canvas.toDataURL("image/png",1);
-		var datenow = Date.now();
-		var a = document.createElement("a");
-		a.download = "capture"+datenow+".png";
-		a.href = canvasdata;
-		document.body.appendChild(a);
-		a.click();
-		BlocklyArduinoServer.saveWorkspaceCapture(a);
-	} 
+	BlocklyArduinoServer.saveWorkspaceCapture(xml);
 };

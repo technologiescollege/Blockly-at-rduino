@@ -5,38 +5,35 @@
 	<title>Blockly@rduino</title>
 	<!--load first for menus-->
 	<link rel="stylesheet" type="text/css" href="css/menu.css"/>
-	<script type="text/javascript" src="core_Blockly/blockly_compressed.js"></script>
+	<script type="text/javascript" src="core/Blockly/blockly_compressed.js"></script>
 	<!-- needed for type of variable -->
-	<script type="text/javascript" src="core_Ardublockly/type.js"></script>
-	<script type="text/javascript" src="core_Ardublockly/types.js"></script>
-	<script type="text/javascript" src="core_Ardublockly/static_typing.js"></script>
-	<script type="text/javascript" src="core_Ardublockly/instances.js"></script>
-	<script type="text/javascript" src="core_Ardublockly/field_instance.js"></script>
-	<script type="text/javascript" src="core_Ardublockly/block_instance.js"></script>
+	<script type="text/javascript" src="core/Ardublockly/type.js"></script>
+	<script type="text/javascript" src="core/Ardublockly/types.js"></script>
+	<script type="text/javascript" src="core/Ardublockly/static_typing.js"></script>
+	<script type="text/javascript" src="core/Ardublockly/instances.js"></script>
+	<script type="text/javascript" src="core/Ardublockly/field_instance.js"></script>
+	<script type="text/javascript" src="core/Ardublockly/block_instance.js"></script>
 	<!--Arduino generator, must be defined NOW-->
 	<script type="text/javascript" src="generators/generator_arduino.js"></script>
 
-	<script type="text/javascript" src="core_BlocklyArduino/blockly@rduino.js"></script>
-	<script type="text/javascript" src="core_BlocklyArduino/blockly@rduino_boards.js"></script>
-	<script type="text/javascript" src="core_BlocklyArduino/blockly@rduino_functions_buttons_Electron.js"></script>
-	<script type="text/javascript" src="core_BlocklyArduino/blockly@rduino_tools.js"></script>
-	<script type="text/javascript" src="core_BlocklyArduino/blockly@rduino_visual.js"></script>
-	<script type="text/javascript" src="core_BlocklyArduino/blockly@rduino_visual_buttons.js"></script>
+	<script type="text/javascript" src="core/BlocklyArduino/blockly@rduino_core_Electron.js"></script>
+	<script type="text/javascript" src="core/BlocklyArduino/blockly@rduino_boards.js"></script>
+	<script type="text/javascript" src="core/BlocklyArduino/blockly@rduino_functions_buttons_Electron.js"></script>
+	<script type="text/javascript" src="core/BlocklyArduino/blockly@rduino_tools.js"></script>
+	<script type="text/javascript" src="core/BlocklyArduino/blockly@rduino_visual.js"></script>
+	<script type="text/javascript" src="core/BlocklyArduino/blockly@rduino_visual_buttons.js"></script>
 
-	<script type="text/javascript" src="core_BlocklyArduino/libs/jquery-2.1.3.min.js" onload="window.$ = window.jQuery = module.exports;"></script> 
-	<script type="text/javascript" src="core_BlocklyArduino/libs/jquery-ui.js"></script>
-	<script type="text/javascript" src="core_BlocklyArduino/libs/bootstrap.min.3.3.6.js"></script>
-	<script type="text/javascript" src="core_BlocklyArduino/libs/bootstrap-toggle.min.js"></script>
-	<script type="text/javascript" src="core_BlocklyArduino/libs/clipboard.min.js"></script>
-	<script type="text/javascript" src="core_BlocklyArduino/libs/head.load.min.js"></script>
-	<script type="text/javascript" src="core_BlocklyArduino/libs/html2canvas.min.js"></script>
-	<script type="text/javascript" src="core_BlocklyArduino/libs/jscolor.js"></script>
-	<script type="text/javascript" src="core_BlocklyArduino/libs/prettify.min.js"></script>
-	<script type="text/javascript" src="core_BlocklyArduino/libs/smoothie.js"></script>
-
-	<!--TechnoZone51-->
-	<script type="text/javascript" src="tools/TZ51/canvas2image.js"></script>
-	<!--Fin TZ51-->
+	<script type="text/javascript" src="core/libs/jquery-2.1.3.min.js" onload="window.$ = window.jQuery = module.exports;"></script> 
+	<script type="text/javascript" src="core/libs/jquery-ui.js"></script>
+	<script type="text/javascript" src="core/libs/bootstrap.min.3.3.6.js"></script>
+	<script type="text/javascript" src="core/libs/bootstrap-toggle.min.js"></script>
+	<script type="text/javascript" src="core/libs/clipboard.min.js"></script>
+	<script type="text/javascript" src="core/libs/head.load.min.js"></script>
+	<script type="text/javascript" src="core/libs/html2canvas.min.js"></script>
+	<script type="text/javascript" src="core/libs/canvas2image.js"></script>
+	<script type="text/javascript" src="core/libs/jscolor.js"></script>
+	<script type="text/javascript" src="core/libs/prettify.min.js"></script>
+	<script type="text/javascript" src="core/libs/smoothie.js"></script>
 
 	<!-- define all additional blocks from one resumer-->
 	<script type="text/javascript" src="blocks/arduino_resume.js"></script>
@@ -61,7 +58,9 @@
 <div class="loading"></div>
 <div id="header">
 	<div id="logo_Titre">
-		<a href="./index_electron.html"><img id="clearLink" src="media/logo-mini.png" border="0" height="36px" onclick="" /></a>
+		<a href="./index_electron.html">
+			<img id="clearLink" src="media/logo-mini.png" border="0" height="36px" onclick="" />
+		</a>
 	</div>
 	<div id="header_titres">
 		<div id="divTitreMenu" class="hidden">
@@ -305,16 +304,16 @@
 						<button id="btn_saveArduino" class="btn btn-arduinoRect">
 							<span class="fas fa-file-download fa-1_5x fa-fw"> </span>
 						</button>
-						<button id="btn_verify_local" class="btn btn-arduino">
+						<button id="btn_verify_local" class="btn btn-arduino" >
 							<span class="fas fa-check fa-1_5x fa-fw"> </span>
 						</button>
 						<select id="serialport" >
 							<option value="no_com" selected>Choisir le port</option>
 						</select>
-						<button id="btn_flash_local" class='btn btn-arduino'>
+						<button id="btn_flash_local" class="btn btn-arduino" >
 							<span class="fas fa-arrow-right fa-1_5x fa-fw"> </span>
 						</button>
-						<button id="btn_term" class='btn btn-arduinoRect'>
+						<button id="btn_term" class="btn btn-arduinoRect" >
 							<span class="fas fa-search fa-flip-horizontal fa-1_5x fa-fw"> </span>
 						</button>
 						<!-- <button id="btn_pasteIDEArduino" class="btn btn-arduino"> -->
@@ -322,6 +321,9 @@
 							<!-- <span id="span_pasteIDEArduino"> </span> -->
 						<!-- </button> -->
 						<span id="survol" style="color:white"></span>
+						<div id="checkDetails">
+							<input type="checkbox" name="detailedCompilation" id="detailedCompilation"/> <span id="span_detailedCompilation"> </span>
+						</div>
 					</div>
 					<pre id="pre_arduino"></pre>
 					<div id="barre_h"><br /></div>

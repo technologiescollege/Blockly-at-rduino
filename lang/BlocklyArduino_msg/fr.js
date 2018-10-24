@@ -35,6 +35,7 @@ var MSG = {
   span_verify_local: " vérification par EDI Arduino",
   span_flash_local: " téléverser dans l'Arduino",
   span_flash_local_result: " résultat du téléversement",
+  span_detailedCompilation: " résultats détaillés",
   firstModalLabel: "Bienvenue sur Blockly@rduino !",
   span_first_msg: "Cocher pour ne plus voir ce message",
   btn_valid_first_msg: "J'ai compris, merci",

@@ -52,8 +52,7 @@ Blockly.Arduino.variables_const = function(block) {
   var varName = Blockly.Arduino.variableDB_.getName(block.getFieldValue('VAR'), Blockly.Variables.NAME_TYPE);
   var typeBlock = Blockly.Arduino.getArduinoType_(Blockly.Types.getChildBlockType(block));
   Blockly.Arduino.variables_[varName] = 'const ' + typeBlock + ' ' + varName + ' = ' + argument0 + ';';
-  var code = 'const ' + typeBlock + ' ' + varName + ' = ' + argument0 + ';';
-  return [code, Blockly.Arduino.ORDER_ATOMIC];
+  return '';
 };
 
 // Blockly.Arduino['variables_set_init'] = function(block){

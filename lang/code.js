@@ -181,6 +181,7 @@ Code.initLanguage = function() {
   $('#span_verify_local').text(MSG['span_verify_local']);
   $('#span_flash_local').text(MSG['span_flash_local']);
   $('#span_flash_local_result').text(MSG['span_flash_local_result']);
+  $('#span_detailedCompilation').text(MSG['span_detailedCompilation']);
   $('#span_connect_serial').text(MSG['span_connect_serial']);
   $('#span_edit_code').text(MSG['span_edit_code']);
 

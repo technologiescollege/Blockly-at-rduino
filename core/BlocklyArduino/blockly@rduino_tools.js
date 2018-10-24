@@ -50,14 +50,14 @@ BlocklyDuino.validateConfigGlobal = function () {
 		{
 		if (window.confirm(MSG['arduino_card']+' '+window.profile[$("#board_select").val()].description+' ?'))
 			{
-			BlocklyDuino.workspace.clear();				  
+			BlocklyDuino.workspace.clear();
 			if (search.length <= 1) {
 				search = '?card=' + $("#board_select").val();
 			} else if (search.match(/[?&]card=[^&]*/)) {
 				search = search.replace(/([?&]card=)[^&]*/, '$1' + $("#board_select").val());
-				} else {
-					search = search.replace(/\?/, '?card=' + $("#board_select").val() + '&');
-				}
+			} else {
+				search = search.replace(/\?/, '?card=' + $("#board_select").val() + '&');
+			}
 			
 			//recherche d'une maquette (toolbox) dans l'URL pour une maquette cablée complète, qui bloquera ensuite dans loadToolboxDefinition le bouton des configuration des catégories
 			if (kitornot) {
@@ -65,19 +65,18 @@ BlocklyDuino.validateConfigGlobal = function () {
 					search = '?toolbox=' + $("#toolboxes").val();
 				} else if (search.match(/[?&]toolbox=[^&]*/)) {
 					search = search.replace(/([?&]toolbox=)[^&]*/, '$1' + $("#board_select").val());
-					} else {
-						search = search.replace(/\?/, '?toolbox=' + $("#board_select").val() + '&');
-					}				
+				} else {
+					search = search.replace(/\?/, '?toolbox=' + $("#board_select").val() + '&');
+				}				
 			} else {
                     search = search.replace(/([?&]toolbox=)[^&]*/, '$1' + 'toolbox_algo');
-				}
+			}
 		} else {
 			$("#board_select").val(BlocklyDuino.selectedCard);
 			}
 		}	
 	  
 	//change language
-
 	var languageMenuSelected = $('#languageMenu option:selected').val();
 	var newLang = encodeURIComponent(languageMenuSelected);
 	if (search.length <= 1) {
@@ -88,6 +87,13 @@ BlocklyDuino.validateConfigGlobal = function () {
 				search = search.replace(/\?/, '?lang=' + newLang + '&');
 		}
 	
+	if (search.length <= 1) {
+		search = '?font=' + BlocklyDuino.changeFont();
+	} else if (search.match(/[?&]font=[^&]*/)) {
+		search = search.replace(/([?&]font=)[^&]*/, '$1' + BlocklyDuino.changeFont());
+	} else {
+		search = search.replace(/\?/, '?font=' + BlocklyDuino.changeFont() + '&');
+	}
 	window.location = window.location.protocol + '//' + window.location.host + window.location.pathname + search;
 };
 
