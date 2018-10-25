@@ -171,6 +171,7 @@ BlocklyDuino.Redo = function () {
 BlocklyDuino.clearLocalStorage = function () {
 	window.removeEventListener('unload', BlocklyDuino.backupBlocks, false);
 	localStorage.clear();
+	sessionStorage.clear();
 };
 
 
@@ -195,6 +196,7 @@ BlocklyDuino.miniMenuPanel = function() {
   //search = search.replace(/([?&]url=)[^&]*/, '');
   window.location = window.location.protocol + '//' + window.location.host + window.location.pathname + search;
 };
+
 
 /**
  * Try to take a screen capture of all blocks on workspace

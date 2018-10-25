@@ -88,18 +88,6 @@ BlocklyDuino.saveXmlFile_IDE = function () {
  * Creates an INO file containing the Arduino code from the Blockly workspace and
  * prompts the users to save it into their local file system.
  */
-BlocklyDuino.saveArduinoFile = function () {
-    var code = $('#pre_arduino').text();
-	var datenow = Date.now();
-	var filename = "arduino_" + datenow + ".ino";
- 	var element = document.createElement('a');
-	element.setAttribute('href', 'data:text/ino;charset=utf-8,' + encodeURIComponent(code));
-	element.setAttribute('download', filename);
-	element.style.display = 'none';
-	document.body.appendChild(element);
-	element.click();
-	document.body.removeChild(element);
-};
 
 BlocklyDuino.saveArduinoFile_IDE = function () {
 	var data = Blockly.Arduino.workspaceToCode();
@@ -244,6 +232,7 @@ BlocklyDuino.Redo = function () {
 BlocklyDuino.clearLocalStorage = function () {
 	window.removeEventListener('unload', BlocklyDuino.backupBlocks, false);
 	localStorage.clear();
+	sessionStorage.clear();
 };
 
 
@@ -383,7 +372,6 @@ BlocklyDuino.uploadClick_IDE = function() {
  * Thanks to fontaine.jp from forum http://blockly.technologiescollege.fr/forum/index.php/topic,128.msg635.html#new
  *
  */
-
 BlocklyDuino.workspace_capture_IDE = function() {
 	var ws = BlocklyDuino.workspace.svgBlockCanvas_.cloneNode(true);
 	ws.removeAttribute("width");

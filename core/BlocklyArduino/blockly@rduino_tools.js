@@ -86,14 +86,17 @@ BlocklyDuino.validateConfigGlobal = function () {
 			} else {
 				search = search.replace(/\?/, '?lang=' + newLang + '&');
 		}
-	
+			
+	var fontChoiced = BlocklyDuino.changeFont();
 	if (search.length <= 1) {
-		search = '?font=' + BlocklyDuino.changeFont();
+		search = '?font=' + fontChoiced;
 	} else if (search.match(/[?&]font=[^&]*/)) {
-		search = search.replace(/([?&]font=)[^&]*/, '$1' + BlocklyDuino.changeFont());
-	} else {
-		search = search.replace(/\?/, '?font=' + BlocklyDuino.changeFont() + '&');
+		search = search.replace(/([?&]font=)[^&]*/, '$1' + fontChoiced);
+		} else {
+			search = search.replace(/\?/, '?font=' + fontChoiced + '&');
 	}
+		
+	window.localStorage.ConfigGlobaleSeen = 'ok';
 	window.location = window.location.protocol + '//' + window.location.host + window.location.pathname + search;
 };
 

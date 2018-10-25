@@ -171,6 +171,7 @@ BlocklyDuino.Redo = function () {
 BlocklyDuino.clearLocalStorage = function () {
 	window.removeEventListener('unload', BlocklyDuino.backupBlocks, false);
 	localStorage.clear();
+	sessionStorage.clear();
 };
 
 

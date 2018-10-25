@@ -535,4 +535,4 @@ Examples.initLanguage = function() {
 };
 
 // Load the Code demo's language strings.
-document.write('<script src="lang/examples/' + Examples.LANG + '.js"></script>\n');
+document.write('<script src="../lang/examples/' + Examples.LANG + '.js"></script>\n');

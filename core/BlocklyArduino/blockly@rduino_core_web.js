@@ -184,7 +184,7 @@ BlocklyDuino.addReplaceParamToUrl = function(url, param, value) {
  * @param {string}
  *            defaultXml Text representation of default blocks.
  */
-BlocklyDuino.loadBlocks = function(defaultXml) {	
+BlocklyDuino.loadBlocks = function(defaultXml) {
 	if (defaultXml) {
 		// Load the editor with default starting blocks.
 		var xml = Blockly.Xml.textToDom(defaultXml);
@@ -275,7 +275,6 @@ BlocklyDuino.bindFunctions = function() {
 	$('#pre_previewArduino').on("click", function() {
 		$("#toggle_code").toggle("blind");
 	});
-		// }
 		
 	$('#toggle-Colors').on("change", BlocklyDuino.toggleTextColors);
 
@@ -712,6 +711,8 @@ BlocklyDuino.init = function() {
 	BlocklyDuino.setOrientation();
 	
 	BlocklyDuino.testAjax();
+	
+	BlocklyDuino.changeFontURL();
 					
 	BlocklyDuino.firstBlocklyArduino();
 	
@@ -795,7 +796,7 @@ BlocklyDuino.init = function() {
 			$("#logo_Titre").removeClass("hidden");
 			$("#btn_delete").css({"bottom" : "80px"});
 			$("#divTitreMenu_miniCard").css({'position' : 'fixed',
-				'top' : '480px',
+				'top' : '510px',
 				'left' : '5px',
 				'z-index' : '10'});		
 			$("#tools_blocks").css({'position' : 'absolute',
@@ -884,7 +885,7 @@ BlocklyDuino.init = function() {
 					} else {
 					$("#btn_create_example, menu_132").attr("href","./examples/examples.html?lang=" + Code.LANG);	
 					}
-	$('#debug_arduino iframe').prop('src', "http://127.0.0.1:5005");
+	// $('#debug_arduino iframe').prop('src', "http://127.0.0.1:5005");
 	
 	BlocklyDuino.OnOffLine();
 };
@@ -957,7 +958,8 @@ BlocklyDuino.firstBlocklyArduino = function() {
 	if (window.sessionStorage && !window.sessionStorage.msg_first_seen) {
 		$('#videoFirstModal').prop('src', "https://player.vimeo.com/video/179569437?autoplay=0&title=0&byline=0&portrait=0"); 
 		$('#firstModal').modal('show');
-		}		
+		}
+	if (!window.localStorage.ConfigGlobaleSeen) $('#configModalGlobal').modal('show');
 };
 
 /**

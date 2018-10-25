@@ -5,12 +5,12 @@ session_start();
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Examples Blockly@rduino</title>
-<script type="text/javascript" src="../core_BlocklyArduino/jquery-2.1.3.min.js"></script>
-<script type="text/javascript" src="../core_BlocklyArduino/bootstrap.min.3.3.6.js"></script>
-<script type="text/javascript" src="../core_BlocklyArduino/bootstrap-toggle.min.js"></script>
-<script type="text/javascript" src="../core_BlocklyArduino/examples.js"></script>
+<script type="text/javascript" src="../libs/jquery-2.1.3.min.js"></script>
+<script type="text/javascript" src="../libs/bootstrap.min.3.3.6.js"></script>
+<script type="text/javascript" src="../libs/bootstrap-toggle.min.js"></script>
+<script type="text/javascript" src="../core/BlocklyArduino/examples.js"></script>
 
-<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.BlocklyArduino.css">
 <link rel="stylesheet" type="text/css" href="../css/blockly@rduino.css">
 <link rel="stylesheet" type="text/css" href="../css/bootstrap-toggle.min.css" />
 </head>

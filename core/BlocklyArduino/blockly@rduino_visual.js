@@ -27,13 +27,27 @@ Blockly.makeColour = function(color) {
 };
 
 BlocklyDuino.changeFont = function() {
-	var FontChoiceUrl = BlocklyDuino.getStringParamFromUrl('font', '');
-	if (($('#fontChoice').prop('checked'))||FontChoiceUrl===undefined||FontChoiceUrl==='O') {
+	if ($('#fontChoice').prop('checked')) {
 		document.body.style.fontFamily = "OpenDyslexic";
 		var FontChoice = "O";
 	} else {
 		document.body.style.fontFamily = "Trebuchet MS";
 		var FontChoice = "T";
+	}
+	return FontChoice;
+};
+
+BlocklyDuino.changeFontURL = function() {
+	var FontChoiceUrl = BlocklyDuino.getStringParamFromUrl('font', '');
+	if (FontChoiceUrl===undefined||FontChoiceUrl==='O') {
+		document.body.style.fontFamily = "OpenDyslexic";
+		var FontChoice = "O";
+		$('#fontChoice').prop('checked', true);
+	}
+	if (FontChoiceUrl==='T') {
+		document.body.style.fontFamily = "Trebuchet MS";
+		var FontChoice = "T";
+		$('#fontChoice').prop('checked', false);
 	}
 	return FontChoice;
 };
