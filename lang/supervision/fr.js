@@ -4,8 +4,8 @@ goog.provide('Blockly.Msg.fr');
 
 goog.require('Blockly.Msg');
 
-Blockly.Msg.SV_tab1 = "Entrées numériques";
-Blockly.Msg.SV_tab2 = "Sorties numériques/PWM";
+Blockly.Msg.SV_tab1 = "Entrées logiques";
+Blockly.Msg.SV_tab2 = "Sorties logiques/PWM";
 Blockly.Msg.SV_tab3 = "Entrées analogiques";
 Blockly.Msg.SV_tab4 = "Scrutation";
 Blockly.Msg.SV_tab5 = "Pilotage de matériels";
@@ -18,10 +18,10 @@ Blockly.Msg.SV_alert2 = "Votre navigateur n'est pas compatible avec les websocke
 Blockly.Msg.SV_onOpen = " La supervision est connectée à la carte";
 Blockly.Msg.SV_onClose = " Le serveur semble fermé et le websocket inaccessible.";
 Blockly.Msg.SV_onMessage_analog = "Broche analogique inconnue";
-Blockly.Msg.SV_onMessage_digital = "Broche numérique inconnue";
+Blockly.Msg.SV_onMessage_digital = "Broche logique inconnue";
 Blockly.Msg.SV_onMessage_i2c = "Pas de front défini";
 Blockly.Msg.SV_NotCon = " Erreur : connexion à la carte impossible ! Le serveur est-il lancé ?";
-Blockly.Msg.SV_Con = " Connexion à la carte Arduino établie !";
+Blockly.Msg.SV_Con = " Connexion à la carte établie !";
 Blockly.Msg.SV_enabled = "Activer";
 Blockly.Msg.SV_disabled = "Désactiver";
 Blockly.Msg.SV_pin_e = "la broche";
@@ -38,7 +38,7 @@ Blockly.Msg.SV_get_protocol = "Version du protocole de communication";
 Blockly.Msg.SV_get_pymata = "Version du serveur PyMata";
 Blockly.Msg.SV_get_pin_report = "Obtenir un rapport d'état pour la broche :";
 Blockly.Msg.SV_get_pin_report_text = "(pour obtenir un rapport d'état, sélectionnez d'abord le numéro de la broche, ou bien tapez le dans le champ, puis cliquez sur le bouton)";
-Blockly.Msg.SV_digital_pin = "Broche numérique : ";
+Blockly.Msg.SV_digital_pin = "Broche logique : ";
 Blockly.Msg.SV_analog_pin = "Broche Analogique A";
 Blockly.Msg.SV_read_pin = "Lire";
 Blockly.Msg.SV_latch_digital_pin = "Digital Latch Table Data";
