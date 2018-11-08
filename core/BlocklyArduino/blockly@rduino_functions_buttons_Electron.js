@@ -90,7 +90,6 @@ BlocklyDuino.load = function (event) {
 		return;
 	}
 	// FileReader
-	files.type.match('*.B@');
 	var reader = new FileReader();
 	reader.onloadend = function(event) {    
 		var target = event.target;

@@ -44,6 +44,9 @@ BlocklyDuino.renderContent = function() {
 		$(".blocklyTreeSeparator").removeAttr("style");
 		$(".blocklyToolboxDiv").show();		
 		$("#tools_blocks").show();
+		$("#divTitre").show();
+		$("#header_code").hide();
+		$("#header_supervision").hide();
 	} else {
 		$(".blocklyToolboxDiv").hide();
 		switch (content.prop('id')) {
@@ -66,11 +69,17 @@ BlocklyDuino.renderContent = function() {
 				alert(e);
 			}
 			$("#tools_blocks").hide();
+			$("#divTitre").hide();
+			$("#header_code").show();
+			$("#header_supervision").hide();
 			break;
 
 		case 'content_supervision':
 			$("#content_supervision").load('./tools/supervision/pymata_arduino.html', BlocklyDuino.renderSupervisionContent);
 			$("#tools_blocks").hide();
+			$("#divTitre").hide();
+			$("#header_code").hide();
+			$("#header_supervision").show();
 		}
 	}	
 };

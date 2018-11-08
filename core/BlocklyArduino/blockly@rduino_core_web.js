@@ -66,11 +66,13 @@ BlocklyDuino.renderContent = function() {
 				alert(e);
 			}
 			$("#tools_blocks").hide();
+			$("#divTitre").hide();
 			break;
 
 		case 'content_supervision':
 			$("#content_supervision").load('./tools/supervision/pymata_arduino.html', BlocklyDuino.renderSupervisionContent);
 			$("#tools_blocks").hide();
+			$("#divTitre").hide();
 		}
 	}	
 };
@@ -885,7 +887,6 @@ BlocklyDuino.init = function() {
 					} else {
 					$("#btn_create_example, menu_132").attr("href","./examples/examples.html?lang=" + Code.LANG);	
 					}
-	// $('#debug_arduino iframe').prop('src', "http://127.0.0.1:5005");
 	
 	BlocklyDuino.OnOffLine();
 };

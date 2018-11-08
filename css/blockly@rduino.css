@@ -49,8 +49,24 @@ html,body {
 	position: absolute;
 }
 
+#header_code {
+	margin-left: 205px;
+	margin-bottom: 5px;
+	position: absolute;
+}
+
+#header_supervision {
+	margin-left: 205px;
+	margin-bottom: 5px;
+	position: absolute;
+}
+
 #divTitre, #divTitreMenu {
 	float: left;
+}
+
+#btn_levels {
+	padding: 0px 0px 0px 5px;
 }
 
 #divTitre p {
@@ -336,8 +352,8 @@ html[dir="RTL"] #languageMenu {
 	z-index: 10;
 }
 #barre{
-	padding : 5px 5px 5px 10px;
-	background-color : #006468;
+	padding : 2px 0px 0px 5px;
+	background-color : #00969C;
 }
 #barre_h{
 	padding : 5px 5px 5px 10px;
@@ -579,21 +595,21 @@ html[dir="RTL"] .colors_category {
 ----------------------------------*/
 
 .btn-arduino { 
-  color: #006468; 
-  width: 30px;
-  height: 30px;
-  background-color: #4DB7BB; 
-  border-color: #4DB7BB; 
-  line-height: 30px;
+  color: #00969C; 
+  width: 28px;
+  height: 28px;
+  background-color: #006468; 
+  border-color: #006468; 
+  line-height: 28px;
   padding:0;
   border-radius:50%;
 } 
 .btn-arduinoRect { 
-  color: #006468;
-  width: 30px;
-  height: 30px;
-  background-color: #4DB7BB; 
-  border-color: #4DB7BB; 
+  color: #00969C;
+  width: 28px;
+  height: 28px;
+  background-color: #006468; 
+  border-color: #006468; 
   line-height: 0px;
   padding:0;
   border-radius:0px;
