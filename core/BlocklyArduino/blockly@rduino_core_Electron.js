@@ -44,13 +44,12 @@ BlocklyDuino.renderContent = function() {
 		$(".blocklyTreeSeparator").removeAttr("style");
 		$(".blocklyToolboxDiv").show();		
 		$("#tools_blocks").show();
-		$("#divTitre").show();
-		$("#header_code").hide();
-		$("#header_supervision").hide();
-	} else {
-		$(".blocklyToolboxDiv").hide();
+		$("#btn_levels").show();
+		$("#barre").hide();
+	} else {		
 		switch (content.prop('id')) {
 		// case 'content_xml':
+			// $(".blocklyToolboxDiv").hide();
 			// $('#pre_xml').text(Blockly.Xml.domToPrettyText(Blockly.Xml.workspaceToDom(BlocklyDuino.workspace)));
 			// if (typeof prettyPrintOne == 'function') {
 				// $('#pre_xml').html(prettyPrintOne($('#pre_xml').html(), 'xml'));
@@ -59,6 +58,7 @@ BlocklyDuino.renderContent = function() {
 			// break;
 
 		case 'content_arduino':
+			$(".blocklyToolboxDiv").hide();
 			try {
 				$('#pre_arduino').text(Blockly.Arduino.workspaceToCode(BlocklyDuino.workspace));
 				if (typeof prettyPrintOne == 'function') {
@@ -69,17 +69,14 @@ BlocklyDuino.renderContent = function() {
 				alert(e);
 			}
 			$("#tools_blocks").hide();
-			$("#divTitre").hide();
-			$("#header_code").show();
-			$("#header_supervision").hide();
+			$("#btn_levels").hide();
+			$("#barre").show();
 			break;
 
-		case 'content_supervision':
-			$("#content_supervision").load('./tools/supervision/pymata_arduino.html', BlocklyDuino.renderSupervisionContent);
-			$("#tools_blocks").hide();
-			$("#divTitre").hide();
-			$("#header_code").hide();
-			$("#header_supervision").show();
+		// case 'content_supervision':
+			// $("#content_supervision").load('./tools/supervision/pymata_arduino.html', BlocklyDuino.renderSupervisionContent);
+			// $("#tools_blocks").hide();
+			// $("#divTitre").hide();
 		}
 	}	
 };
@@ -498,7 +495,9 @@ BlocklyDuino.bindFunctions = function() {
 		};
 	});
 	
-	// $('#btn_switch').on("click", BlocklyDuino.switchOrientation);
+	$('#menu_24').on('click', function() {
+		$("#barre").prependTo("#content_arduino");
+	});
 
 };
 
@@ -891,7 +890,6 @@ BlocklyDuino.init = function() {
 					} else {
 					$("#btn_create_example, menu_132").attr("href","./examples/examples.html?lang=" + Code.LANG);	
 					}
-	// $('#debug_arduino iframe').prop('src', "http://127.0.0.1:5005");
 	
 	BlocklyDuino.OnOffLine();
 };

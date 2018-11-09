@@ -622,8 +622,8 @@ html[dir="RTL"] .colors_category {
   background-color: #FFCC00; 
   border-color: #FFCC00;
 } 
-.btn-arduino.disabled,.btn-arduino[disabled],fieldset[disabled] .btn-arduino,.btn-arduino.disabled:hover,.btn-arduino[disabled]:hover,fieldset[disabled] .btn-arduino:hover, .btn-arduino.disabled:focus, .btn-arduino[disabled]:focus, fieldset[disabled] .btn-arduino:focus, .btn-arduino.disabled:active, .btn-arduino[disabled]:active, fieldset[disabled] .btn-arduino:active, .btn-arduino.disabled.active, .btn-arduino[disabled].active, fieldset[disabled] .btn-arduino.active { 
-  background-color: #00929F; 
+.btn-arduino.disabled,.btn-arduinoRect[disabled],.btn-arduino[disabled],fieldset[disabled] .btn-arduino,.btn-arduino.disabled:hover,.btn-arduino[disabled]:hover,fieldset[disabled] .btn-arduino:hover, .btn-arduino.disabled:focus, .btn-arduino[disabled]:focus, fieldset[disabled] .btn-arduino:focus, .btn-arduino.disabled:active, .btn-arduino[disabled]:active, fieldset[disabled] .btn-arduino:active, .btn-arduino.disabled.active, .btn-arduino[disabled].active, fieldset[disabled] .btn-arduino.active { 
+  background-color: #FFFFFF; 
   border-color: #130269; 
 } 
 .btn-arduino .badge { 

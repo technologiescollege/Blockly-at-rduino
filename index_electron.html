@@ -74,8 +74,8 @@
                                         <li><a href="#" id="menu_12"> <span id="span_menu_12"> </span> </a></li>
                                         <li><a id="menu_13"> <span id="span_menu_13"> </span> <i class="fa fa-caret-right"></i></a>
                                             <ul class="submenu">
-                                                <li><a href="#" id="menu_131"> <span id="span_menu_131"> </span> </a></li>
-                                                <li><a href="#" id="menu_132"> <span id="span_menu_132"> </span> </a></li>
+                                                <li><a href="#" id="menu_131" data-toggle="modal" data-target="#exampleModal"> <span id="span_menu_131"> </span> </a></li>
+                                                <li><a href="#" id="menu_132" target="_blank"> <span id="span_menu_132"> </span> </a></li>
                                                 <li><a href="https://github.com/technologiescollege/BlocklyArduino-example" id="menu_133" target="_blank"> <span id="span_menu_133"> </span> </a></li>
                                             </ul>
                                         </li>
@@ -85,7 +85,7 @@
                                     <a ><i class="fa fa-briefcase"></i> <span id="span_menu_2"> </span> <i class="fa fa-caret-down"></i></a>
                                     <ul class="submenu">
                                         <li><a href='http://fritzing.org/download/' target='_blank' id="menu_21"> <span id="span_menu_21"> </span> </a></li>
-                                        <li id="mtab_supervision"><a href="#content_supervision" aria-controls="content_supervision" role="tab" data-toggle="tab" id="menu_22"> <span id="span_menu_22"> </span> </a></li>
+                                        <li id="mtab_supervision"><a href="https://github.com/technologiescollege/BlocklyArduino_electrified" target=_blank id="menu_22"> <span id="span_menu_22"> </span> </a></li>
                                         <li id="mtab_blocks"><a href="#content_blocks" aria-controls="content_blocks" role="tab" data-toggle="tab" id="menu_23"> <span id="span_menu_23"> </span> </a></li>
                                         <li id="mtab_arduino"><a href="#content_arduino" aria-controls="content_arduino" role="tab" data-toggle="tab" id="menu_24"> <span id="span_menu_24"> </span> </a></li>
                                     </ul>
@@ -147,6 +147,31 @@
                         <a href="#" id="toolbox_arduino_all" class="btn btn-default" role='button'>TOUT</a>
                         <label id="labelToolboxDefinition"></label>
                     </div>
+					<div id="barre">
+						<button id="btn_edit_code" class="btn btn-arduinoRect" data-toggle="modal" data-target="#editModal">
+							<span id="icon_edit_btn" class="glyphicon glyphicon-edit"> </span>
+						</button>
+						<button id="btn_saveArduino" class="btn btn-arduinoRect">
+							<span class="fas fa-file-download fa-1_5x fa-fw"> </span>
+						</button>
+						<button id="btn_verify_local" class="btn btn-arduino">
+							<span class="fas fa-check fa-1_5x fa-fw"> </span>
+						</button>
+						<select id="serialport_ide">
+							<option value="no_com" selected>Choisir le port</option>
+						</select>
+						<button id="btn_flash_local" class="btn btn-arduino">
+							<span class="fas fa-arrow-right fa-1_5x fa-fw"> </span>
+						</button>
+						<button id="btn_term" class="btn btn-arduinoRect">
+							<span class="fas fa-search fa-flip-horizontal fa-1_5x fa-fw"> </span>
+						</button>
+						<!-- <button id="btn_pasteIDEArduino" class="btn btn-arduino"> -->
+						<!-- <span class="fa fa-folder-open"> </span> -->
+						<!-- <span id="span_pasteIDEArduino"> </span> -->
+						<!-- </button> -->
+						<span id="survol" style="color:white"></span>
+					</div>
                 </div>
                 <div id="divTitreMenu_miniCard">
                     <a href="#" id="miniCard_Menu">
@@ -215,7 +240,7 @@
                 <div id="menuPanelBlockly" class="margin-top-5">
                     <ul id="ul_nav" role="tablist">
                         <li role="presentation" id="tab_supervision" class="disabled">
-                            <a href="#content_supervision" aria-controls="content_supervision" role="tab" data-toggle="tab">
+                            <a href="https://github.com/technologiescollege/BlocklyArduino_electrified" target=_blank>
                                 <span class="glyphicon glyphicon-transfer"></span>
                                 <span id="a_supervision"> </span>
                             </a>
@@ -296,31 +321,6 @@
                         </button>
                     </div>
                     <div id="content_arduino" class="tab-pane">
-                        <div id="barre">
-                            <button id="btn_edit_code" class="btn btn-arduinoRect" data-toggle="modal" data-target="#editModal">
-                                <span id="icon_edit_btn" class="glyphicon glyphicon-edit"> </span>
-                            </button>
-                            <button id="btn_saveArduino" class="btn btn-arduinoRect">
-                                <span class="fas fa-file-download fa-1_5x fa-fw"> </span>
-                            </button>
-                            <button id="btn_verify_local" class="btn btn-arduino">
-                                <span class="fas fa-check fa-1_5x fa-fw"> </span>
-                            </button>
-                            <select id="serialport_ide">
-                                <option value="no_com" selected>Choisir le port</option>
-                            </select>
-                            <button id="btn_flash_local" class="btn btn-arduino">
-                                <span class="fas fa-arrow-right fa-1_5x fa-fw"> </span>
-                            </button>
-                            <button id="btn_term" class="btn btn-arduinoRect">
-                                <span class="fas fa-search fa-flip-horizontal fa-1_5x fa-fw"> </span>
-                            </button>
-                            <!-- <button id="btn_pasteIDEArduino" class="btn btn-arduino"> -->
-                            <!-- <span class="fa fa-folder-open"> </span> -->
-                            <!-- <span id="span_pasteIDEArduino"> </span> -->
-                            <!-- </button> -->
-                            <span id="survol" style="color:white"></span>
-                        </div>
                         <pre id="pre_arduino"></pre>
                         <div id="barre_h">
                             <div id="checkDetails">

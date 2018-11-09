@@ -189,6 +189,10 @@ Code.initLanguage = function() {
   $('#span_functionToggle').text(MSG['span_functionToggle']);
   $('#span_functionON').text(MSG['span_functionON']);
   $('#span_functionOFF').text(MSG['span_functionOFF']);
+  $('#span_pymata_upload_text').text(MSG['span_pymata_upload_text']);
+  $('#span_pymata_toggle_text').text(MSG['span_pymata_toggle_text']);
+  $('#span_pymataON').text(MSG['span_pymataON']);
+  $('#span_pymataOFF').text(MSG['span_pymataOFF']);
   $('#span_select_all').text(MSG['span_select_all']);
   $('#btn_close_config').text(MSG['btn_close']);
   $('#btn_valid_config').text(MSG['btn_valid']);
