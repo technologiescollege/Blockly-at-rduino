@@ -254,6 +254,7 @@ Code.initLanguage = function() {
   $('#configModalGlobalLabel').text(MSG['configModalGlobalLabel']);
   $('#configGlobalLabel').text(MSG['configGlobalLabel']);
   $('#btn_closeConfigGlobale').text(MSG['btn_close']);
+  $('#btn_saveConfigGlobale').text(MSG['btn_saveConfig']);
   $('#btn_validConfigGlobale').text(MSG['btn_valid']);
   $('#toolboxes option[value="toolbox_algo"]').text(MSG['span_toolbox_algo']);
   $('#toolboxes option[value="toolbox_arduino_1"]').text(MSG['span_toolbox_arduino_1']);

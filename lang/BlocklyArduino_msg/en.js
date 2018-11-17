@@ -1,6 +1,6 @@
 var MSG = {
   title: "graphic editor helping Arduino interfaces programming, inspired by BlocklyDuino work, based upon Blockly",
-  labelArduinoCard: "Card ",
+  labelArduinoCard: "Board ",
   btn_switch: " modify menu orientation",
   btn_variable: "validate",
   span_card_picture_change: "change",
@@ -78,6 +78,7 @@ var MSG = {
   span_select_all:"all",
   btn_close:"close",
   btn_valid:"validate",
+  btn_saveConfig:"save configuration",
   editModalLabel:"edit Arduino code",
   btn_closeCode:"cancel",
   btn_validCode:"validate",

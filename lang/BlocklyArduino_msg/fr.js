@@ -77,6 +77,7 @@ var MSG = {
   span_pymataOFF:"stoppé",
   span_select_all:"toutes les rubriques",
   btn_close:"fermer",
+  btn_saveConfig:"enregistrer la configuration",
   btn_valid:"valider",
   editModalLabel:"édition du code Arduino",
   btn_closeCode:"annuler",

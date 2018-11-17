@@ -148,31 +148,6 @@
                         <a href="#" id="toolbox_arduino_all" class="btn btn-default" role='button'>TOUT</a>
                         <label id="labelToolboxDefinition"></label>
                     </div>
-					<div id="barre">
-						<button id="btn_edit_code" class="btn btn-arduinoRect" data-toggle="modal" data-target="#editModal">
-							<span id="icon_edit_btn" class="glyphicon glyphicon-edit"> </span>
-						</button>
-						<button id="btn_saveArduino" class="btn btn-arduinoRect">
-							<span class="fas fa-file-download fa-1_5x fa-fw"> </span>
-						</button>
-						<button id="btn_verify_local" class="btn btn-arduino">
-							<span class="fas fa-check fa-1_5x fa-fw"> </span>
-						</button>
-						<select id="serialport_ide">
-							<option value="no_com" selected>Choisir le port</option>
-						</select>
-						<button id="btn_flash_local" class="btn btn-arduino">
-							<span class="fas fa-arrow-right fa-1_5x fa-fw"> </span>
-						</button>
-						<button id="btn_term" class="btn btn-arduinoRect">
-							<span class="fas fa-search fa-flip-horizontal fa-1_5x fa-fw"> </span>
-						</button>
-						<!-- <button id="btn_pasteIDEArduino" class="btn btn-arduino"> -->
-						<!-- <span class="fa fa-folder-open"> </span> -->
-						<!-- <span id="span_pasteIDEArduino"> </span> -->
-						<!-- </button> -->
-						<span id="survol" style="color:white"></span>
-					</div>
                 </div>
                 <div id="divTitreMenu_miniCard">
                     <a href="#" id="miniCard_Menu">
@@ -180,7 +155,52 @@
                     </a>
                 </div>
             </div>
-
+            <div id="header_code">
+				<div id="barre_ide">
+					<button id="btn_edit_code" class="btn btn-arduinoRect" data-toggle="modal" data-target="#editModal">
+						<span id="icon_edit_btn" class="glyphicon glyphicon-edit"> </span>
+					</button>
+					<button id="btn_saveArduino" class="btn btn-arduinoRect">
+						<span class="fas fa-file-download fa-1_5x fa-fw"> </span>
+					</button>
+					<button id="btn_verify_local" class="btn btn-arduino">
+						<span class="fas fa-check fa-1_5x fa-fw"> </span>
+					</button>
+					<select id="serialport_ide" class="synchCOMport">
+						<option value="no_com" selected>Choisir le port</option>
+					</select>
+					<button id="btn_flash_local" class="btn btn-arduino">
+						<span class="fas fa-arrow-right fa-1_5x fa-fw"> </span>
+					</button>
+					<button id="btn_term" class="btn btn-arduinoRect">
+						<span class="fas fa-search fa-flip-horizontal fa-1_5x fa-fw"> </span>
+					</button>
+					<!-- <button id="btn_pasteIDEArduino" class="btn btn-arduino"> -->
+					<!-- <span class="fa fa-folder-open"> </span> -->
+					<!-- <span id="span_pasteIDEArduino"> </span> -->
+					<!-- </button> -->
+					<span id="survol" style="color:white"></span>
+				</div>
+            </div>
+            <div id="header_supervision">
+				<div id="barre_supervision">
+					<select id="serialport_sup" class="synchCOMport">
+						<option value="no_com" selected>Choisir le port</option>
+					</select>
+					<span id="span_pymata_upload_text" style="color:white"></span>
+					<button id="btn_flash_pymata" class="btn btn-arduino">
+						<span class="fas fa-arrow-right fa-1_5x fa-fw"> </span>
+                        <span id="span_flash_pymata"> </span>
+					</button>
+					<span id="span_pymata_toggle_text" style="color:white"></span>
+					<button id="toggle-pymata" class="btn btn-arduino">
+						<span class="fas fa-arrow-right fa-1_5x fa-fw"> </span>
+                        <span id="span_flash_pymata"> </span>
+					</button>
+					<!-- <input id="toggle-pymata" data-toggle="toggle" data-off="<span id='span_pymataOFF'> </span>" data-on="<span id='span_pymataON'> </span>" data-onstyle="primary" data-offstyle="default" data-width="120" type="checkbox"/> -->
+					<span id="sup_debug" style="color:white"></span>
+				</div>
+            </div>
             <div id="tools_blocks" class="tab-pane active">
                 <button id="btn_undo" class="btn btn-default">
                     <span class="fa fa-undo"> </span>
@@ -611,7 +631,12 @@
                         </div>
                     </div>
                     <div class="modal-footer">
-                        <button id="btn_validConfigGlobale" type="button" class="btn btn-primary"  data-dismiss="modal"></button>
+						<div id="btn_saveConfigGlobale_id">
+							<button id="btn_saveConfigGlobale" type="button" class="btn btn-success" style="position: absolute;left: 15px;"></button>
+						</div>
+						<div id="btn_validConfigGlobale_id">
+							<button id="btn_validConfigGlobale" type="button" class="btn btn-primary"  data-dismiss="modal"></button>
+						</div>
                     </div>
                 </div>
             </div>
@@ -634,6 +659,16 @@
                 </div>
             </div>
         </div>
+		<!-- message modal -->
+		<div class="modal fade" id="message" tabindex="-1" role="dialog" aria-hidden="true">
+			<div class="modal-dialog modal-sm">
+				<div class="modal-content">
+					<div class="modal-body" >
+						<div id = "messageDIV"> </div>
+					</div>  
+				</div>
+			</div>
+		</div>
         <!--only for IDE mode -->
         <div id="wiring_dialog">
             <iframe frameborder="0" marginwidth="0" marginheight="0">
@@ -641,5 +676,7 @@
         </div>
         <div id="arduino_IDE_code"> </div>
     </body>
-<script>require('../resources/app/Electron_blockly@rduino_IDE_buttons_electron.js')</script>
+	<script>
+		require('../resources/app/Electron_blockly@rduino_buttons_electron.js')
+	</script>
 </html>

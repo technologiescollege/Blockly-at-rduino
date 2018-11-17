@@ -16,7 +16,7 @@
         <!--Arduino generator, must be defined NOW-->
         <script type="text/javascript" src="generators/generator_arduino.js"></script>
 
-        <script type="text/javascript" src="core/BlocklyArduino/blockly@rduino_core_Electron.js"></script>
+        <script type="text/javascript" src="core/BlocklyArduino/blockly@rduino_core_AIO.js"></script>
         <script type="text/javascript" src="core/BlocklyArduino/blockly@rduino_boards.js"></script>
         <script type="text/javascript" src="core/BlocklyArduino/blockly@rduino_functions_buttons_Electron.js"></script>
         <script type="text/javascript" src="core/BlocklyArduino/blockly@rduino_tools.js"></script>
@@ -74,8 +74,8 @@
                                         <li><a href="#" id="menu_12"> <span id="span_menu_12"> </span> </a></li>
                                         <li><a id="menu_13"> <span id="span_menu_13"> </span> <i class="fa fa-caret-right"></i></a>
                                             <ul class="submenu">
-                                                <li><a href="#" id="menu_131"> <span id="span_menu_131"> </span> </a></li>
-                                                <li><a href="#" id="menu_132"> <span id="span_menu_132"> </span> </a></li>
+                                                <li><a href="#" id="menu_131" data-toggle="modal" data-target="#exampleModal"> <span id="span_menu_131"> </span> </a></li>
+                                                <li><a href="#" id="menu_132" target="_blank"> <span id="span_menu_132"> </span> </a></li>
                                                 <li><a href="https://github.com/technologiescollege/BlocklyArduino-example" id="menu_133" target="_blank"> <span id="span_menu_133"> </span> </a></li>
                                             </ul>
                                         </li>
@@ -156,7 +156,7 @@
                 </div>
             </div>
             <div id="header_code">
-				<div id="barre">
+				<div id="barre_ide">
 					<button id="btn_edit_code" class="btn btn-arduinoRect" data-toggle="modal" data-target="#editModal">
 						<span id="icon_edit_btn" class="glyphicon glyphicon-edit"> </span>
 					</button>
@@ -183,7 +183,7 @@
 				</div>
             </div>
             <div id="header_supervision">
-				<div id="barre">
+				<div id="barre_supervision">
 					<select id="serialport_sup" class="synchCOMport">
 						<option value="no_com" selected>Choisir le port</option>
 					</select>
@@ -193,7 +193,11 @@
                         <span id="span_flash_pymata"> </span>
 					</button>
 					<span id="span_pymata_toggle_text" style="color:white"></span>
-					<input id="toggle-pymata" data-toggle="toggle" data-off="<span id='span_pymataOFF'> </span>" data-on="<span id='span_pymataON'> </span>" data-onstyle="primary" data-offstyle="default" data-width="120" type="checkbox"/>
+					<button id="toggle-pymata" class="btn btn-arduino">
+						<span class="fas fa-arrow-right fa-1_5x fa-fw"> </span>
+                        <span id="span_flash_pymata"> </span>
+					</button>
+					<!-- <input id="toggle-pymata" data-toggle="toggle" data-off="<span id='span_pymataOFF'> </span>" data-on="<span id='span_pymataON'> </span>" data-onstyle="primary" data-offstyle="default" data-width="120" type="checkbox"/> -->
 					<span id="sup_debug" style="color:white"></span>
 				</div>
             </div>
@@ -627,7 +631,12 @@
                         </div>
                     </div>
                     <div class="modal-footer">
-                        <button id="btn_validConfigGlobale" type="button" class="btn btn-primary"  data-dismiss="modal"></button>
+						<div id="btn_saveConfigGlobale_id">
+							<button id="btn_saveConfigGlobale" type="button" class="btn btn-success" style="position: absolute;left: 15px;"></button>
+						</div>
+						<div id="btn_validConfigGlobale_id">
+							<button id="btn_validConfigGlobale" type="button" class="btn btn-primary"  data-dismiss="modal"></button>
+						</div>
                     </div>
                 </div>
             </div>
@@ -650,6 +659,16 @@
                 </div>
             </div>
         </div>
+		<!-- message modal -->
+		<div class="modal fade" id="message" tabindex="-1" role="dialog" aria-hidden="true">
+			<div class="modal-dialog modal-sm">
+				<div class="modal-content">
+					<div class="modal-body" >
+						<div id = "messageDIV"> </div>
+					</div>  
+				</div>
+			</div>
+		</div>
         <!--only for IDE mode -->
         <div id="wiring_dialog">
             <iframe frameborder="0" marginwidth="0" marginheight="0">
@@ -658,6 +677,6 @@
         <div id="arduino_IDE_code"> </div>
     </body>
 	<script>
-		require('../resources/app/Electron_blockly@rduino_IDE_buttons_AIO.js')
+		require('../resources/app/Electron_blockly@rduino_buttons_AIO.js')
 	</script>
 </html>

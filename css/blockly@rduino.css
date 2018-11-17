@@ -357,7 +357,11 @@ html[dir="RTL"] #languageMenu {
 }
 #barre_h{
 	padding : 5px 5px 5px 10px;
-	background-color : #17A1A5;
+	background-color : #00969C;
+}
+#barre_ide{
+	padding : 2px 5px 5px 10px;
+	background-color : #00969C;
 }
 #btn_term {
 	right: 15px;
@@ -367,17 +371,6 @@ html[dir="RTL"] #languageMenu {
 #pre_arduino {
     height: 70%;
     width: 100%;
-}
-#local_debug{
-	height: 15%;
-	width: 100%;
-	padding : 5px;
-	background-color : black;
-	color: white;
-	overflow: auto;
-	word-break: break-all;
-	word-wrap: break-word;
-	white-space: pre-wrap;
 }
 #serial-checboxes {
     margin-left: 20px;
@@ -446,7 +439,7 @@ html[dir="RTL"] #select_all {
 }
 
 #local_debug {
-	height: 25%;
+	height: 31%;
 	width: 100%;
 	border-width: 2px;
 	border-color: black;
