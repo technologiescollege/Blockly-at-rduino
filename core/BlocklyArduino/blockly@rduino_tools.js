@@ -67,7 +67,8 @@ BlocklyDuino.validateConfigGlobal = function () {
 					search = search.replace(/([?&]toolbox=)[^&]*/, '$1' + $("#board_select").val());
 				} else {
 					search = search.replace(/\?/, '?toolbox=' + $("#board_select").val() + '&');
-				}				
+				}
+				BlocklyDuino.loadToolboxDefinition($("#board_select").val());
 			} else {
                     search = search.replace(/([?&]toolbox=)[^&]*/, '$1' + 'toolbox_algo');
 			}

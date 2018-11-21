@@ -36,6 +36,7 @@ head.load(
 "blocks/MRduino/blocks_typing.js",
 "blocks/multi-function/blocks_typing.js",
 "blocks/myhumankit/blocks_typing.js",
+"blocks/peguino/blocks_typing.js",
 "blocks/petitbot/blocks_typing.js",
 "blocks/nrf24l01/blocks_typing.js",
 "blocks/null/blocks_typing.js",

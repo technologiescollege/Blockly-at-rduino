@@ -68,6 +68,8 @@ head.load(
 "generators/arduino/myhumankit.js",
 "generators/arduino/nrf24l01.js",
 "generators/arduino/null.js",
+"generators/arduino/peguino_actuators.js",
+"generators/arduino/peguino_sensors.js",
 "generators/arduino/petitbot.js",
 "generators/arduino/QTR-1RC.js",
 "generators/arduino/RF433.js",

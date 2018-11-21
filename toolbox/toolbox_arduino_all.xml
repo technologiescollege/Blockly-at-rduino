@@ -2987,4 +2987,38 @@
         </category>
 		<sep></sep>
     </category>
+	<category name="CAT_PEGUINO" colour="#9CEEFF">
+		<category name="CAT_PEGUINO_IN" colour="#9CEEFF">
+			<block type="peguino_sensors_pir_motion_sensor"></block>
+			<block type="peguino_sensors_button"></block>
+			<block type="peguino_sensors_dht_read"></block>
+			<block type="peguino_sensors_EMETTEUR_IR"></block>
+			<block type="peguino_sensors_RECEPTEUR_IR"></block>
+			<block type="peguino_sensors_ldr"></block>
+			<block type="peguino_sensors_rotary_angle"></block>
+			<block type="peguino_sensors_ultrasonic_ranger"></block>
+			<block type="peguino_sensors_button"></block>
+		</category>
+		<category name="CAT_PEGUINO_OUT" colour="#9CEEFF">
+			<block type="peguino_actuators_buzzer"></block>
+			<block type="peguino_actuators_serial_lcd_print"></block>
+			<block type="peguino_actuators_serial_lcd_power"></block>
+			<block type="peguino_actuators_serial_lcd_effect"></block>
+			<block type="peguino_actuators_led"></block>
+			<block type="peguino_actuators_motor_sens"></block>
+			<block type="peguino_actuators_motor_PWM"></block>
+			<block type="peguino_actuators_servo_attach"></block>
+			<block type="peguino_actuators_servo_move"></block>
+			<block type="peguino_actuators_servo_read_degrees"></block>
+			<block type="peguino_actuators_servo_attached"></block>
+			<block type="peguino_actuators_servo_detach"></block>
+			<block type="peguino_actuators_servo_rot_continue"></block>
+			<block type="peguino_actuators_servo_rot_continue_param"></block>
+			<block type="peguino_actuators_u8g_draw_string"></block>
+			<block type="peguino_actuators_u8g_draw_4strings"></block>
+			<block type="peguino_actuators_u8g_print"></block>
+			<block type="peguino_actuators_u8g_4draw_print"></block>
+		</category>
+		<sep></sep>
+    </category>
 </toolbox>

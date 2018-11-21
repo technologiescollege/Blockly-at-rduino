@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <toolbox>
-	<parametre id="defaultCategories">CAT_LOGIC,CAT_LOOPS,CAT_VARIABLES,CAT_FUNCTIONS,CAT_MATH,CAT_ARDUINO,CAT_PETITBOT</parametre>
+	<parametre id="defaultCategories">CAT_LOGIC,CAT_LOOPS,CAT_VARIABLES,CAT_FUNCTIONS,CAT_MATH,CAT_ARDUINO,CAT_PETITBOT
+	</parametre>
 	<category name="CAT_LOGIC" colour="#E1A91A">
 		<block type="controls_if"></block>
 		<block type="controls_switch"></block>

@@ -266,6 +266,10 @@ Blockly.Msg.CAT_AUTODUINO_LCD = " - écran LCD";
 Blockly.Msg.CAT_AUTODUINO_COMM = " - communication";
 Blockly.Msg.CAT_AUTODUINO_UTIL = " - utile";
 
+Blockly.Msg.CAT_PEGUINO = "Peguino"; //added 21 november 2018
+Blockly.Msg.CAT_PEGUINO_IN = " - capteurs";
+Blockly.Msg.CAT_PEGUINO_OUT = " - actionneurs";
+
 Blockly.Msg.CAT_I2C = "I2C"; //added 26/05/2017
 Blockly.Msg.CAT_SPI = "SPI"; //added 26/05/2017
 Blockly.Msg.CAT_NULL = "libre"; //added 8/10/2017

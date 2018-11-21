@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <toolbox>
-	<parametre id="defaultCategories">CAT_LOGIC,CAT_LOOPS,CAT_MATH,CAT_ARRAY,CAT_TEXT,CAT_VARIABLES,CAT_FUNCTIONS,CAT_ARDUINO
+	<parametre id="defaultCategories">CAT_LOGIC,CAT_LOOPS,CAT_VARIABLES,CAT_FUNCTIONS,CAT_MATH,CAT_ARDUINO,CAT_PEGUINO
 	</parametre>
 	<category name="CAT_LOGIC" colour="#E1A91A">
 		<block type="controls_if"></block>
@@ -45,11 +45,17 @@
 		<block type="math_number"></block>
 		<block type="inout_angle_maths"></block>
 		<block type="math_arithmetic"></block>
-		<block type="math_interval"></block>
 		<block type="math_single"></block>
 		<block type="math_trig"></block>
 		<block type="math_constant"></block>
 		<block type="math_number_property"></block>
+		<block type="math_change">
+			<value name="DELTA">
+				<shadow type="math_number">
+					<field name="NUM">1</field>
+				</shadow>
+			</value>
+		</block>
 		<block type="math_round"></block>
 		<block type="math_on_list"></block>
 		<block type="math_modulo"></block>
@@ -101,35 +107,43 @@
 		<block type="text_length"></block>
 		<block type="text_isEmpty"></block>
 	</category>
-	<category name="CAT_VARIABLES" custom="VARIABLE" colour="#EE7D16">
-        <!--block type="math_change"></block>
-		<block type="variables_set"></block>
-		<block type="variables_get"></block-->
-	</category>
+	<category name="CAT_VARIABLES" custom="VARIABLE" colour="#EE7D16"></category>
 	<category name="CAT_FUNCTIONS" custom="PROCEDURE" colour="#632D99"></category>
 	<sep></sep>
-	<category name="CAT_MBOT_1" colour="#33C7F2">
-		<block type="mbot_forward"></block>
-		<block type="mbot_backward"></block>	
-		<block type="mbot_turn_left"></block>	
-		<block type="mbot_turn_right"></block>	
-	</category>
 	<category name="CAT_ARDUINO" colour="#00979D">
 		<block type="base_begin"></block>
+		<block type="base_setup"></block>
+		<block type="base_loop"></block>
 		<block type="base_setup_loop"></block>
 		<block type="base_define"></block>
 		<block type="base_define_bloc"></block>
 		<block type="biblio_include"></block>
+		<block type="base_code"></block>
+		<block type="base_comment"></block>
 		<block type="base_end"></block>
 		<category name="CAT_ARDUINO_IN" colour="#00979D">
 			<block type="inout_analog_read_validator"></block>
 			<block type="inout_digital_read_validator"></block>
+			<block type="inout_analog_read"></block>
+			<block type="inout_digital_read"></block>
 			<block type="inout_digital_read_check"></block>
 			<block type="inout_onoff"></block>
 			<block type="base_toggle"></block>
 			<block type="inout_angle"></block>
 			<block type="inout_button_wait_il"></block>
 			<block type="inout_button_wait_iph"></block>
+			<!-- @pbra 20160607 -->
+			<block type="inout_digital_mode">
+				<value name="PIN">
+					<shadow type="math_number">
+						<field name="NUM">0</field>
+					</shadow>
+				</value>
+				<value name="PINMODE">
+					<shadow type="pinmode"></shadow>
+				</value>
+			</block>
+			<!-- @pbra 20160607 END-->
 			<block type="var_random">
 				<value name="rand_min">
 					<shadow type="math_number">
@@ -217,18 +231,6 @@
 					</shadow>
 				</value>
 			</block>
-			<block type="tone_notime">
-				<value name="PIN">
-					<shadow type="math_number">
-						<field name="NUM">2</field>
-					</shadow>
-				</value>
-				<value name="NUM">
-					<shadow type="math_number">
-						<field name="NUM">0</field>
-					</shadow>
-				</value>
-			</block>
 			<block type="notone"></block>
 		</category>
 		<category name="CAT_ARDUINO_TIME" colour="#00979D">
@@ -260,36 +262,114 @@
 			<block type="conversion_toString"></block>
 			<block type="conversion_map"></block>
 		</category>
+		<category name="CAT_ARDUINO_COMM_SERIAL" colour="#00979D">
+			<block type="serial_init"></block>
+			<block type="serial_flush"></block>
+			<block type="serial_write"></block>
+			<block type="serial_printfor"></block>
+			<block type="serial_print">
+				<value name="CONTENT">
+					<shadow type="text">
+						<field name="TEXT"></field>
+					</shadow>
+				</value>
+			</block>
+			<block type="serial_print_tab">
+				<value name="CONTENT">
+					<shadow type="text">
+						<field name="TEXT"></field>
+					</shadow>
+				</value>
+			</block>
+			<block type="serial_println">
+				<value name="CONTENT">
+					<shadow type="text">
+						<field name="TEXT"></field>
+					</shadow>
+				</value>
+			</block>
+			<block type="serial_print_var">
+				<value name="Text">
+					<shadow type="text">
+						<field name="TEXT"></field>
+					</shadow>
+				</value>
+				<value name="N">
+					<shadow type="math_number">
+						<field name="Num"></field>
+					</shadow>
+				</value>
+				<value name="NEW_LINE">
+					<shadow type="logic_boolean">1
+					</shadow>
+				</value>
+			</block>
+			<block type="serial_write_out"></block>
+			<block type="serial_available"></block>
+			<block type="serial_read"></block>
+			<block type="serial_line"></block>
+			<block type="serial_print_multi">
+				<value name="N">
+					
+				</value>
+			</block>
+		</category>
+		<category name="CAT_ARDUINO_COMM_SOFTSERIAL" colour="#00979D">
+			<block type="soft_init"></block>
+			<block type="soft_flush"></block>
+			<block type="soft_print"></block>
+			<block type="soft_write"></block>
+			<block type="soft_available"></block>
+			<block type="soft_read"></block>
+			<block type="serial_line"></block>
+		</category>
+		<category name="CAT_STORAGE_EEPROM" colour="#00979D">
+			<block type="storage_sd_write">
+			</block>
+			<block type="storage_eeprom_write_long">
+			</block>
+			<block type="storage_eeprom_read_long">
+			</block>
+			<block type="storage_eeprom_write_byte">
+			</block>
+			<block type="storage_eeprom_read_byte">
+			</block>
+		</category>
 		<sep></sep>
 	</category>
-	<category name="CAT_ROMEO_1" colour="#F39800">
-		<block type="romeo_forward"></block>
-		<block type="romeo_backward"></block>	
-		<block type="romeo_turn_left"></block>	
-		<block type="romeo_turn_right"></block>		
-		<block type="romeo_switch"></block>
-	</category>
-	<category name="CAT_KIT_VELO_1" colour="#C88330">
-		<block type="kit_velo_niv1_chenillard"></block>
-		<block type="kit_velo_niv1_tone"></block>	
-		<block type="kit_velo_niv1_notone"></block>	
-		<block type="kit_velo_niv1_test_BP"></block>			
-		<block type="kit_velo_niv1_pot"></block>		
-	</category>
-	<category name="CAT_BT_ELECTRONICS" colour="#142D5E">
-		<block type="BT_ELEC_Init" disabled="true"></block>
+
+	<category name="CAT_PEGUINO" colour="#9CEEFF">
+		<category name="CAT_PEGUINO_IN" colour="#9CEEFF">
+			<block type="peguino_sensors_pir_motion_sensor"></block>
+			<block type="peguino_sensors_button"></block>
+			<block type="peguino_sensors_dht_read"></block>
+			<block type="peguino_sensors_EMETTEUR_IR"></block>
+			<block type="peguino_sensors_RECEPTEUR_IR"></block>
+			<block type="peguino_sensors_ldr"></block>
+			<block type="peguino_sensors_rotary_angle"></block>
+			<block type="peguino_sensors_ultrasonic_ranger"></block>
+			<block type="peguino_sensors_button"></block>
+		</category>
+		<category name="CAT_PEGUINO_OUT" colour="#9CEEFF">
+			<block type="peguino_actuators_buzzer"></block>
+			<block type="peguino_actuators_serial_lcd_print"></block>
+			<block type="peguino_actuators_serial_lcd_power"></block>
+			<block type="peguino_actuators_serial_lcd_effect"></block>
+			<block type="peguino_actuators_led"></block>
+			<block type="peguino_actuators_motor_sens"></block>
+			<block type="peguino_actuators_motor_PWM"></block>
+			<block type="peguino_actuators_servo_attach"></block>
+			<block type="peguino_actuators_servo_move"></block>
+			<block type="peguino_actuators_servo_read_degrees"></block>
+			<block type="peguino_actuators_servo_attached"></block>
+			<block type="peguino_actuators_servo_detach"></block>
+			<block type="peguino_actuators_servo_rot_continue"></block>
+			<block type="peguino_actuators_servo_rot_continue_param"></block>
+			<block type="peguino_actuators_u8g_draw_string"></block>
+			<block type="peguino_actuators_u8g_draw_4strings"></block>
+			<block type="peguino_actuators_u8g_print"></block>
+			<block type="peguino_actuators_u8g_4draw_print"></block>
+		</category>
 		<sep></sep>
-		<block type="BT_ELEC_LED_brightness"></block>
-		<block type="BT_ELEC_RC_car"></block>
-	</category>
-	<category name="CAT_ROBOT_MISC" colour="#00979D">
-		<block type="IR_serial_decoder"></block>
-		<block type="IR_get_blink"></block>
-		<block type="IR_get"></block>
-	</category>
-	<category name="CAT_RF433" colour="#0152AB">
-		<block type="rf433_rxready" colour="#0152AB"></block>
-		<block type="rf433_rx" colour="#0152AB"></block>
-		<block type="rf433_tx" colour="#0152AB"></block>
 	</category>
 </toolbox>
