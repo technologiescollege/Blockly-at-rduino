@@ -18,13 +18,12 @@
  */
 
 /**
- * @fileoverview Helper functions for generating seeeduino grove blocks.
- * @author gasolin@gmail.com (Fred Lin)
+ * @fileoverview Helper functions for generating peguino blocks.
  */
 
 'use strict';
  
-goog.provide('Blockly.Arduino.grove');
+goog.provide('Blockly.Arduino.peguino_sensors');
 
 goog.require('Blockly.Arduino');
 

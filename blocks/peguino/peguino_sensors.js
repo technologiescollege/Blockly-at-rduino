@@ -32,7 +32,7 @@ Blockly.Blocks['peguino_sensors_pir_motion_sensor'] = {
 	this.setHelpUrl(Blockly.Msg.GROVE_INOUT_PIR_HELPURL);
     this.appendDummyInput()
         .appendField(Blockly.Msg.GROVE_INOUT_PIR_TEXT)
-        .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/grove/400px-Twig-PIR_Motion_Sensor.jpg', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize))
+        .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/peguino/Peguino_Body_Sensor_Brick_blockly_01.png', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize))
         .appendField(Blockly.Msg.GROVE_INOUT_PIR_INPUT)
         .appendField(new Blockly.FieldTextInput('',  Blockly.Arduino.pinDigitalValidator), 'PIN');
     this.setOutput(true, 'Number');
@@ -46,7 +46,7 @@ Blockly.Blocks['peguino_sensors_button'] = {
     this.setHelpUrl(Blockly.Msg.GROVE_INOUT_BUTTON_HELPURL);
 	this.appendDummyInput()
         .appendField(Blockly.Msg.GROVE_INOUT_BUTTON_TEXT)
-        .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/grove/400px-Button1.jpg', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize))
+        .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/peguino/Peguino_Button_Brick_blockly_01.png', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize))
 		.appendField(Blockly.Msg.GROVE_INOUT_BUTTON_INPUT)
 		.appendField(new Blockly.FieldTextInput('', Blockly.Arduino.pinDigitalValidator), 'PIN');
     this.setInputsInline(true);
@@ -63,7 +63,7 @@ Blockly.Blocks['peguino_sensors_dht_read'] = {
       .appendField(Blockly.Msg.GROVE_INOUT_DHT_READ_TYPE)
       .appendField(new Blockly.FieldDropdown([[Blockly.Msg.GROVE_INOUT_DHT_READ_H,"h"],[Blockly.Msg.GROVE_INOUT_DHT_READ_C,"C"],[Blockly.Msg.GROVE_INOUT_DHT_READ_F,"F"]]), "TYPE");
     this.appendDummyInput()
-      .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/grove/dht11.jpg', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize))
+      .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/peguino/Peguino_Climate_Sesnor_Brick_blockly_01.png', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize))
       .appendField(Blockly.Msg.GROVE_INOUT_DHT_READ_SENSOR)
       .appendField(new Blockly.FieldDropdown([["DHT11","DHT11"],["DHT21","DHT21"],["DHT22","DHT22"]]), "SENSOR");
     this.appendDummyInput()
@@ -85,7 +85,7 @@ Blockly.Blocks['peguino_sensors_EMETTEUR_IR'] = {
     this.appendDummyInput()
       .appendField(Blockly.Msg.GROVE_EMETTEUR_IR)
 	  .setAlign(Blockly.ALIGN_CENTRE)
-      .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/grove/400px-LED_IR.jpg', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize))
+      .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/peguino/Peguino_IR_LED_Sender_Brick_blockly_01.png', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize))
 	this.appendValueInput("PIN")
 		.setCheck('Number')
         .setAlign(Blockly.ALIGN_RIGHT)
@@ -107,7 +107,7 @@ Blockly.Blocks['peguino_sensors_RECEPTEUR_IR'] = {
     this.setHelpUrl(Blockly.Msg.GROVE_RECEPTEUR_IR_HELPURL);
 	this.appendDummyInput()
         .appendField(Blockly.Msg.GROVE_RECEPTEUR_IR_TEXT)
-        .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/grove/400px-Infrared_Receiver.jpg', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize))
+        .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/peguino/Peguino_IR_LED_Receiver_Brick_blockly_01.png', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize))
 		.appendField(Blockly.Msg.GROVE_RECEPTEUR_IR_INPUT)
 		.appendField(new Blockly.FieldTextInput('', Blockly.Arduino.pinDigitalValidator), 'PIN');
     this.setInputsInline(true);
@@ -122,7 +122,7 @@ Blockly.Blocks['peguino_sensors_ldr'] = {
 	this.setHelpUrl(Blockly.Msg.GROVE_INOUT_LDR_HELPURL);
     this.appendDummyInput()
         .appendField(Blockly.Msg.GROVE_INOUT_LDR_TEXT)
-        .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/grove/400px-Light_Sensor.jpg', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize))
+        .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/peguino/Peguino_Lightsensor_brick_blockly_01.png', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize))
         .appendField(Blockly.Msg.GROVE_INOUT_LDR_INPUT)
         .appendField(new Blockly.FieldTextInput('',  Blockly.Arduino.pinAnalogValidator), 'PIN');
     this.setOutput(true, 'Number');
@@ -150,7 +150,7 @@ Blockly.Blocks['peguino_sensors_ultrasonic_ranger'] = {
 	this.setHelpUrl(Blockly.Msg.GROVE_INOUT_ULTRASONIC_HELPURL);
     this.appendDummyInput()
 	    .appendField(Blockly.Msg.GROVE_INOUT_ULTRASONIC_TEXT)
-        .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/grove/200px-Twig_-_Ultrasonic_Ranger2.jpg', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize))
+        .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/peguino/Peguino_Proximity_Brick_blockly_01.png', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize))
         .appendField(Blockly.Msg.GROVE_INOUT_ULTRASONIC_INPUT)
         .appendField(new Blockly.FieldTextInput('',  Blockly.Arduino.pinDigitalValidator), 'PIN')
         .appendField(Blockly.Msg.GROVE_INOUT_ULTRASONIC_UNIT)
@@ -160,17 +160,3 @@ Blockly.Blocks['peguino_sensors_ultrasonic_ranger'] = {
   }
 };
 
-Blockly.Blocks['peguino_sensors_button'] = {
-  init: function() {
-    this.setColour(Blockly.Blocks.peguino_sensors.HUE);
-    this.setHelpUrl(Blockly.Msg.GROVE_INOUT_BUTTON_HELPURL);
-	this.appendDummyInput()
-        .appendField(Blockly.Msg.GROVE_INOUT_BUTTON_TEXT)
-        .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/grove/400px-Button1.jpg', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize))
-		.appendField(Blockly.Msg.GROVE_INOUT_BUTTON_INPUT)
-		.appendField(new Blockly.FieldTextInput('', Blockly.Arduino.pinDigitalValidator), 'PIN');
-    this.setInputsInline(true);
-    this.setOutput(true, 'Boolean');
-    this.setTooltip(Blockly.Msg.GROVE_INOUT_BUTTON_TOOLTIP);
-  }
-};

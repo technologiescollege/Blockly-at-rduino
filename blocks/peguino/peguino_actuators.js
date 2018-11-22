@@ -14,7 +14,7 @@ Blockly.Blocks['peguino_actuators_buzzer'] = {
 	this.setHelpUrl(Blockly.Msg.GROVE_INOUT_BUZZER_HELPURL);
     this.appendDummyInput()
         .appendField(Blockly.Msg.GROVE_INOUT_BUZZER_TEXT1)
-        .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/grove/400px-Buzzer1.jpg', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize))
+        .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/peguino/Peguino_Buzzer_Brick_blockly_01.png', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize))
 	this.appendValueInput("PIN")
         .setCheck('Number')
         .setAlign(Blockly.ALIGN_RIGHT)	
@@ -35,7 +35,7 @@ Blockly.Blocks['peguino_actuators_serial_lcd_print'] = {
 	this.setHelpUrl(Blockly.Msg.GROVE_INOUT_LCD_PRINT_HELPURL);
     this.appendDummyInput()
         .appendField(Blockly.Msg.GROVE_INOUT_LCD_PRINT_TEXT)
-        .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/grove/400px-LCD1.jpg', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize))
+        .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/peguino/Peguino_LCD_Display_Brick_blockly_01.png', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize))
         .appendField(Blockly.Msg.GROVE_INOUT_LCD_PRINT_INPUT1)
         .appendField(new Blockly.FieldTextInput('1',  Blockly.Arduino.pinGroveDigitalValidator), 'PIN');
     this.appendValueInput("TEXT")
@@ -63,7 +63,7 @@ Blockly.Blocks['peguino_actuators_serial_lcd_power'] = {
 	this.setHelpUrl(Blockly.Msg.GROVE_INOUT_LCD_POWER_HELPURL);
     this.appendDummyInput()
         .appendField(Blockly.Msg.GROVE_INOUT_LCD_POWER_TEXT)
-        .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/grove/400px-LCD1.jpg', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize))
+        .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/peguino/Peguino_LCD_Display_Brick_blockly_01.png', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize))
         .appendField(Blockly.Msg.GROVE_INOUT_LCD_POWER_INPUT)
         .appendField(new Blockly.FieldTextInput('1',  Blockly.Arduino.pinGroveDigitalValidator), 'PIN');
     this.appendDummyInput()
@@ -83,7 +83,7 @@ Blockly.Blocks['peguino_actuators_serial_lcd_effect'] = {
 	this.setHelpUrl(Blockly.Msg.GROVE_INOUT_LCD_EFFECT_HELPURL);
     this.appendDummyInput()
         .appendField(Blockly.Msg.GROVE_INOUT_LCD_EFFECT_TEXT)
-        .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/grove/400px-LCD1.jpg', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize))
+        .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/peguino/Peguino_LCD_Display_Brick_blockly_01.png', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize))
         .appendField(Blockly.Msg.GROVE_INOUT_LCD_EFFECT_INPUT)
         .appendField(new Blockly.FieldTextInput('1',  Blockly.Arduino.pinGroveDigitalValidator), 'PIN');
     this.appendDummyInput()
@@ -102,7 +102,7 @@ Blockly.Blocks['peguino_actuators_led'] = {
 	this.setHelpUrl(Blockly.Msg.GROVE_INOUT_LED_HELPURL);
     this.appendDummyInput()
         .appendField(Blockly.Msg.GROVE_INOUT_LED_INPUT1)
-        .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/grove/400px-LED1.jpg', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize));
+        .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/peguino/Peguino_LED_Brick_blockly_01.png', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize));
 	this.appendValueInput("PIN")
         .setCheck('Number')
         .setAlign(Blockly.ALIGN_RIGHT)
