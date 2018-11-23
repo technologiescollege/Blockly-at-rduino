@@ -45,7 +45,8 @@ BlocklyDuino.renderContent = function() {
 		$(".blocklyToolboxDiv").show();		
 		$("#tools_blocks").show();
 		$("#btn_levels").show();
-		$("#barre").hide();
+		$("#header_supervision").hide();
+		$("#header_code").hide();
 	} else {		
 		switch (content.prop('id')) {
 		// case 'content_xml':
@@ -70,13 +71,16 @@ BlocklyDuino.renderContent = function() {
 			}
 			$("#tools_blocks").hide();
 			$("#btn_levels").hide();
-			$("#barre").show();
+			$("#header_supervision").hide();
+			$("#header_code").show();
 			break;
 
-		// case 'content_supervision':
-			// $("#content_supervision").load('./tools/supervision/pymata_arduino.html', BlocklyDuino.renderSupervisionContent);
-			// $("#tools_blocks").hide();
-			// $("#divTitre").hide();
+		//case 'content_supervision':
+			//$("#content_supervision").load('./tools/supervision/pymata_arduino.html', BlocklyDuino.renderSupervisionContent);
+			//$("#tools_blocks").hide();
+			//$("#btn_levels").hide();
+			//$("#header_supervision").show();
+			//$("#header_code").hide();
 		}
 	}	
 };
@@ -494,11 +498,11 @@ BlocklyDuino.bindFunctions = function() {
 			dialogRGB.dialog("open").dialog( "option", "buttons" );
 		};
 	});
-	
+	//mini menus version
 	$('#menu_24').on('click', function() {
-		$("#barre").prependTo("#content_arduino");
+		$("#barre_ide").prependTo("#content_arduino");
+		$("#barre_supervision").prependTo("#content_supervision");
 	});
-
 };
 
 /**

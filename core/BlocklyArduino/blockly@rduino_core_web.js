@@ -272,6 +272,9 @@ BlocklyDuino.bindFunctions = function() {
 	$('#btn_block_capture').on("click", BlocklyDuino.workspace_capture);
 	$('#btn_saveXML, #menu_12').on("click", BlocklyDuino.saveXmlFile);
 	$('#btn_validCode').on("click", BlocklyDuino.valideEditedCode);
+	$('#btn_factory').on("click", function() {
+		window.open("./tools/factory/block_factory.html", "_blank");
+	});
 	$('#load').on("change", BlocklyDuino.load);
 	$('#btn_fakeload, #menu_11').on("click", function() {
 		$('#load').click();
