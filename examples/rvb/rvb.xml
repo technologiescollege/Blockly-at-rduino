@@ -1,0 +1,105 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <toolbox>toolbox_arduino_all</toolbox>
+  <block type="base_loop" id=":SU[M/4fn@h}_V:(Z$M$" x="126" y="114">
+    <statement name="LOOP">
+      <block type="digital_write" id="pB:Okb$pgz|0gvDB$7hc">
+        <field name="STAT">HIGH</field>
+        <value name="PIN">
+          <block type="math_number" id="+eI~r|tmNYM!Z9@hvdW:">
+            <field name="NUM">7</field>
+          </block>
+        </value>
+        <next>
+          <block type="digital_write" id="dEp1j+jbc#qi%PpXJVqc">
+            <field name="STAT">LOW</field>
+            <value name="PIN">
+              <block type="math_number" id="[0zTfkv`NVJ}kT;e.NKj">
+                <field name="NUM">6</field>
+              </block>
+            </value>
+            <next>
+              <block type="digital_write" id="U$M?y*,.k;LabQJ1zZPg">
+                <field name="STAT">LOW</field>
+                <value name="PIN">
+                  <block type="math_number" id="ySACkfUKxC(w`i=f5%$Q">
+                    <field name="NUM">5</field>
+                  </block>
+                </value>
+                <next>
+                  <block type="base_delay" id="p9ohZnW3y6.o;KY!M|SO">
+                    <field name="unite">s</field>
+                    <value name="DELAY_TIME">
+                      <block type="math_number" id="96T~tCMINrsvQYtRByUK">
+                        <field name="NUM">1</field>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="digital_write" id="QVcKQF6`!Gu^/0JA7sNB">
+                        <field name="STAT">LOW</field>
+                        <value name="PIN">
+                          <block type="math_number" id="tOrze]D;xj~|e_t=(G%q">
+                            <field name="NUM">7</field>
+                          </block>
+                        </value>
+                        <next>
+                          <block type="digital_write" id="^x7Ex7_W{H|pW?842tPO">
+                            <field name="STAT">HIGH</field>
+                            <value name="PIN">
+                              <block type="math_number" id="]w/Z;CA.o@$}o%BO:r!X">
+                                <field name="NUM">6</field>
+                              </block>
+                            </value>
+                            <next>
+                              <block type="base_delay" id="X2Z%Pyj^y-}NU*EI]#,2">
+                                <field name="unite">s</field>
+                                <value name="DELAY_TIME">
+                                  <block type="math_number" id="bR:#oG?4D|8m=NVi`nLv">
+                                    <field name="NUM">1</field>
+                                  </block>
+                                </value>
+                                <next>
+                                  <block type="digital_write" id="J~:tH{Mbmi]G~gE^^/r|">
+                                    <field name="STAT">LOW</field>
+                                    <value name="PIN">
+                                      <block type="math_number" id="NF?Sykb-b{ZkWd+$n@7I">
+                                        <field name="NUM">6</field>
+                                      </block>
+                                    </value>
+                                    <next>
+                                      <block type="digital_write" id="uc*W|!!u(t25HYsI^H~u">
+                                        <field name="STAT">HIGH</field>
+                                        <value name="PIN">
+                                          <block type="math_number" id="zJ6r%m-{9}8[(W[jQ2L2">
+                                            <field name="NUM">5</field>
+                                          </block>
+                                        </value>
+                                        <next>
+                                          <block type="base_delay" id="Wvs;oL/Z[k}`:d/ePDUJ">
+                                            <field name="unite">s</field>
+                                            <value name="DELAY_TIME">
+                                              <block type="math_number" id="NlOm{*/P+b6n/rpt%N2i">
+                                                <field name="NUM">1</field>
+                                              </block>
+                                            </value>
+                                          </block>
+                                        </next>
+                                      </block>
+                                    </next>
+                                  </block>
+                                </next>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+</xml>

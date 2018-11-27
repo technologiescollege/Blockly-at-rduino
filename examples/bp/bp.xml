@@ -1,0 +1,79 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <toolbox>toolbox_arduino_all</toolbox>
+  <block type="base_loop" id="LHq[UW.X$:%%7/2(p[JQ" x="72" y="95">
+    <statement name="LOOP">
+      <block type="controls_if" id="7/lU6%j8My[%.Dh^TquR">
+        <mutation else="1"></mutation>
+        <value name="IF0">
+          <block type="inout_bp" id="u._ThgM:{H::EFtp%b;`">
+            <value name="PIN">
+              <block type="math_number" id="D-Zof[!d!:jU|]a=oi}J">
+                <field name="NUM">7</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO0">
+          <block type="inout_digital_write" id="@E{k_gSTi!$7#)[]IqrJ">
+            <value name="PIN">
+              <block type="math_number" id="d^J,bSO6F008m$+9%Vwc">
+                <field name="NUM">8</field>
+              </block>
+            </value>
+            <value name="STAT">
+              <block type="inout_onoff" id="B(R0b=y)~Zye^%r!x]g$">
+                <field name="BOOL">LOW</field>
+              </block>
+            </value>
+            <next>
+              <block type="base_delay" id="_KX`klif}7yeP?4LDWsE">
+                <value name="DELAY_TIME">
+                  <block type="math_number" id="$DsJYo%@Ub-^A+5e3C~$">
+                    <field name="NUM">250</field>
+                  </block>
+                </value>
+                <next>
+                  <block type="inout_digital_write" id=":HNsKsF$K3?`~N~}-UHV">
+                    <value name="PIN">
+                      <block type="math_number" id="l.(xh+I1qJ.+IOBJwJv)">
+                        <field name="NUM">8</field>
+                      </block>
+                    </value>
+                    <value name="STAT">
+                      <block type="inout_onoff" id="2/Aj7m|?bK_L9`Cwy.O4">
+                        <field name="BOOL">HIGH</field>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="base_delay" id="f/Wh1*V3h^c%qc%K+aT7">
+                        <value name="DELAY_TIME">
+                          <block type="math_number" id="HdX6H*e._:Mo6m-HYmOw">
+                            <field name="NUM">250</field>
+                          </block>
+                        </value>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </statement>
+        <statement name="ELSE">
+          <block type="inout_digital_write" id="Ak+=2#39gRh.zH!PqkTh">
+            <value name="PIN">
+              <block type="math_number" id="|XBu8{6|xmnWH^UA#`vZ">
+                <field name="NUM">8</field>
+              </block>
+            </value>
+            <value name="STAT">
+              <block type="inout_onoff" id="?e$KLgTn0eu=,:Q=Zo58">
+                <field name="BOOL">LOW</field>
+              </block>
+            </value>
+          </block>
+        </statement>
+      </block>
+    </statement>
+  </block>
+</xml>

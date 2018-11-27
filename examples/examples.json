@@ -182,5 +182,77 @@
         "link_url": "",
         "link_text": "",
         "visible": true
+    },
+    {
+        "source_url": "rvb/rvb.xml",
+        "source_text": "faire clignoter la DEL en Rouge, Vert et Bleu",
+        "image": "./rvb/rvb.png",
+        "link_url": "",
+        "link_text": "",
+        "visible": true
+    },
+	{
+        "source_url": "bp/bp.xml",
+        "source_text": "faire clignoter une DEL avec un bouton poussoir",
+        "image": "./bp/bp.png",
+        "link_url": "",
+        "link_text": "",
+        "visible": true
+    },
+	{
+        "source_url": "moteur/moteur.xml",
+        "source_text": "actionner un moteur pendant 3 secondes",
+        "image": "./moteur/moteur.png",
+        "link_url": "",
+        "link_text": "",
+        "visible": true
+    },
+	{
+        "source_url": "buzzer/buzzer.xml",
+        "source_text": "jouer 'joyeux anniversaire'",
+        "image": "./buzzer/buzzer.png",
+        "link_url": "",
+        "link_text": "",
+        "visible": true
+    },
+    {
+        "source_url": "matrice/matrice.xml",
+        "source_text": "faire un smiley avec une matrice de DEL",
+        "image": "./matrice/matrice.png",
+        "link_url": "",
+        "link_text": "",
+        "visible": true
+    },
+	{
+        "source_url": "ligne/ligne.xml",
+        "source_text": "actionner un moteur si une ligne noire est détectée",
+        "image": "./ligne/ligne.png",
+        "link_url": "",
+        "link_text": "",
+        "visible": true
+    },
+	{
+        "source_url": "analogique/analogique.xml",
+        "source_text": "afficher une grandeur analogique sur le port série",
+        "image": "./analogique/analogique.png",
+        "link_url": "",
+        "link_text": "",
+        "visible": true
+    },
+	{
+        "source_url": "hum/hum.xml",
+        "source_text": "afficher l'humidité et la température sur un écran LCD",
+        "image": "./hum/hum.png",
+        "link_url": "",
+        "link_text": "",
+        "visible": true
+    },
+	{
+        "source_url": "potar/potar.xml",
+        "source_text": "commander un servomoteur avec un potentiomètre",
+        "image": "./potar/potar.png",
+        "link_url": "",
+        "link_text": "",
+        "visible": true
     }
 ]

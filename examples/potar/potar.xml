@@ -1,0 +1,49 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <toolbox>toolbox_arduino_all</toolbox>
+  <block type="base_loop" id="_)GOllsHD0[5,7!J=(@9" x="-38" y="122">
+    <statement name="LOOP">
+      <block type="servo_move" id="!Xliy[Hc7P?)szaiTWq7">
+        <value name="PIN">
+          <block type="math_number" id="VFS7YiW.`t.G=FYkY;[d">
+            <field name="NUM">13</field>
+          </block>
+        </value>
+        <value name="DEGREE">
+          <block type="math_arithmetic" id="fdf;=9z]7OU}}$(3c_u8">
+            <field name="OP">MINUS</field>
+            <value name="A">
+              <block type="math_number" id="Y+n+#eSE;1u]%T;O`jWT">
+                <field name="NUM">180</field>
+              </block>
+            </value>
+            <value name="B">
+              <block type="math_arithmetic" id="4!!P*j%oy69Al68nvE/d">
+                <field name="OP">MULTIPLY</field>
+                <value name="A">
+                  <block type="potentiometre" id="$R-Z$pq=lAg]%/(rRn~|">
+                    <field name="broche">A0</field>
+                  </block>
+                </value>
+                <value name="B">
+                  <block type="math_number" id="xv/yONwMxv5zGpnLLVr[">
+                    <field name="NUM">0.7</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+          </block>
+        </value>
+        <next>
+          <block type="base_delay" id="{PlH}I)j9S|oW8^=/6+n">
+            <field name="unite">m</field>
+            <value name="DELAY_TIME">
+              <block type="math_number" id="/;3V[6+r,[w1LjmvQ7x}">
+                <field name="NUM">200</field>
+              </block>
+            </value>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+</xml>

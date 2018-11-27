@@ -1,0 +1,35 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <toolbox>toolbox_arduino_all</toolbox>
+  <block type="base_loop" id="{AI|sZ/DZ/vi(:GN%i7N" x="157" y="149">
+    <statement name="LOOP">
+      <block type="controls_if" id="HEQ|Co`kc*mB=Ybfsc(^">
+        <mutation else="1"></mutation>
+        <value name="IF0">
+          <block type="suiveur_ligne" id="ry4}GZSj(|UDe*/ajk5U">
+            <value name="PIN">
+              <block type="math_number" id="u!0wAoohz.P_Ve`KV|80">
+                <field name="NUM">13</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO0">
+          <block type="moteur_dc" id="ysW]5.9!PLHT4Q^Y;[Et">
+            <field name="MOTEUR">6</field>
+            <field name="ETAT">HIGH</field>
+            <value name="Vitesse">
+              <block type="math_number" id="ImEVzt25B*5=ypYFRUuR">
+                <field name="NUM">45</field>
+              </block>
+            </value>
+          </block>
+        </statement>
+        <statement name="ELSE">
+          <block type="moteur_dc_stop" id="zYrW_t+8~A7s1,i9!7_J">
+            <field name="MOTEUR">6</field>
+          </block>
+        </statement>
+      </block>
+    </statement>
+  </block>
+</xml>

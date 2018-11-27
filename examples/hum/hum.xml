@@ -1,0 +1,54 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <toolbox>toolbox_arduino_all</toolbox>
+  <block type="lcd_i2c" id="{J}#7$qtZQ*JFqx.{*?|" x="351" y="95">
+    <field name="fond">bleu</field>
+  </block>
+  <block type="base_loop" id="N;*(m%.0;P)z-]wNgW,w" x="157" y="206">
+    <statement name="LOOP">
+      <block type="LCD_Keypad_Shield_DFR_09" id="g.-kXPy_C|{zG1o-{4?,">
+        <value name="TEXT1">
+          <block type="text" id="5|Nw`HHv}MMcm.lCY9af">
+            <field name="TEXT">Temperature</field>
+          </block>
+        </value>
+        <value name="TEXT2">
+          <block type="text" id="*+gC:`]MKIo`er]bHr?E">
+            <field name="TEXT">Humidite</field>
+          </block>
+        </value>
+        <next>
+          <block type="LCD_Keypad_Shield_DFR_09_lc" id="X2!MUvb,soyW;Vv+/sX?">
+            <field name="ligne">0</field>
+            <field name="colonne">12</field>
+            <value name="TEXT4">
+              <block type="dht11" id="c/2}tck0Yr6kh+*NO.$U">
+                <field name="choix">t</field>
+                <value name="PIN">
+                  <block type="math_number" id="jo4v`6z@;+^/,dy#o`AW">
+                    <field name="NUM">2</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <next>
+              <block type="LCD_Keypad_Shield_DFR_09_lc" id="yNcZcll3HmJ4pl)AtW9U">
+                <field name="ligne">1</field>
+                <field name="colonne">12</field>
+                <value name="TEXT4">
+                  <block type="dht11" id="hj2uM^0=T,%r.@y:~Q4`">
+                    <field name="choix">h</field>
+                    <value name="PIN">
+                      <block type="math_number" id="yhqdI7[~uLlweb|3qK3T">
+                        <field name="NUM">2</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+</xml>
