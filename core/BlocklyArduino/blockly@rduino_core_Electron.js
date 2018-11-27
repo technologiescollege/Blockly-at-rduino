@@ -470,6 +470,7 @@ BlocklyDuino.bindFunctions = function() {
 	
 	$('#btn_RGB, #menu_32').on('click', function() {
 		var iframe = $("#RGB_falsemodal > iframe");
+		var $RGBlang = "./tools/RGB/RGB_" + Code.LANG + ".html";
 		var dialogRGB = $("#RGB_falsemodal").dialog({
 			autoOpen: false,
 			resizable: true,
@@ -492,7 +493,7 @@ BlocklyDuino.bindFunctions = function() {
 		iframe.attr({
 			width: "100%",
 			height: "100%",
-			src: "./tools/RGB/RGB.html"
+			src: $RGBlang
 		});
 		if (!dialogRGB.dialog("isOpen")) {
 			dialogRGB.dialog("open").dialog( "option", "buttons" );
