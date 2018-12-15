@@ -48,12 +48,12 @@ Blockly.Blocks.peguino_actuators_servo_rot_continue_param.getBlockType = functio
 };
 
 //gear motor
-Blockly.Blocks.peguino_actuators_motor_sens.getBlockType = function() {
-	return Blockly.Types.NUMBER;
-};
-Blockly.Blocks.peguino_actuators_motor_PWM.getBlockType = function() {
-	return Blockly.Types.NUMBER;
-};
+// Blockly.Blocks.peguino_actuators_motor_sens.getBlockType = function() {
+	// return Blockly.Types.NUMBER;
+// };
+// Blockly.Blocks.peguino_actuators_motor_PWM.getBlockType = function() {
+	// return Blockly.Types.NUMBER;
+// };
 
 //switch
 Blockly.Blocks.peguino_sensors_button.getBlockType = function() {
