@@ -136,7 +136,7 @@ Blockly.Blocks['peguino_sensors_rotary_angle'] = {
 	this.setHelpUrl(Blockly.Msg.GROVE_INOUT_ROT_ANGLE_HELPURL);
     this.appendDummyInput()
         .appendField(Blockly.Msg.GROVE_INOUT_ROT_ANGLE_TEXT)
-        .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/grove/400px-Potentiometer1.jpg', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize))
+        .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/peguino/Peguino_Potentiometer_Brick_01.png', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize))
         .appendField(Blockly.Msg.GROVE_INOUT_ROT_ANGLE_INPUT)
         .appendField(new Blockly.FieldTextInput('',  Blockly.Arduino.pinAnalogValidator), 'PIN');
     this.setOutput(true, 'Number');
@@ -159,4 +159,3 @@ Blockly.Blocks['peguino_sensors_ultrasonic_ranger'] = {
     this.setTooltip(Blockly.Msg.GROVE_INOUT_ULTRASONIC_TOOLTIP);
   }
 };
-

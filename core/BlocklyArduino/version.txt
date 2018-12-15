@@ -1,4 +1,4 @@
 [release]
-version=3.0.28112018
+version=3.0.15122018
 [update]
-date=28112018
+date=15122018

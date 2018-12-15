@@ -356,8 +356,6 @@
 			<block type="peguino_actuators_serial_lcd_power"></block>
 			<block type="peguino_actuators_serial_lcd_effect"></block>
 			<block type="peguino_actuators_led"></block>
-			<block type="peguino_actuators_motor_sens"></block>
-			<block type="peguino_actuators_motor_PWM"></block>
 			<block type="peguino_actuators_servo_attach"></block>
 			<block type="peguino_actuators_servo_move"></block>
 			<block type="peguino_actuators_servo_read_degrees"></block>
