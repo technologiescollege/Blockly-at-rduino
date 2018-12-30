@@ -42,40 +42,27 @@ Blockly.Arduino.peguino_sensors_button = function() {
 };
 
 Blockly.Arduino.peguino_sensors_dht_read = function() {
-  var sensor = this.getFieldValue('SENSOR');
   var pin = this.getFieldValue('PIN');
   var type = this.getFieldValue('TYPE');
 
   var code = '';
   switch(type){
       case 'h':
-//      code += 'floatToStr(dht_' + pin + '_' + sensor + '.readHumidity()) + "%"';
-        code += '(int)(dht_' + pin + '_' + sensor + '.readHumidity())';
+        code += '(int)(DHT22_' + pin + '.readHumidity())';
       break;
       case 'C':
-//        code += 'floatToStr(dht_' + pin + '_' + sensor + '.readTemperature()) + "C"';
-          code += '(int)(dht_' + pin + '_' + sensor + '.readTemperature())';
+        code += '(int)(DHT22_' + pin + '.readTemperature())';
       break;
       case 'F':
-//        code += 'floatToStr(dht_' + pin + '_' + sensor + '.readTemperature(true)) + "F"';
-          code += '(int)(dht_' + pin + '_' + sensor + '.readTemperature(true))';
+        code += '(int)(DHT22_' + pin + '.readTemperature(true))';
       break;
   }
 
+  Blockly.Arduino.includes_['define_dht22_'+ pin] = '#include <DHT.h>'
+  Blockly.Arduino.definitions_['define_dht22_'+ pin] = 'DHT DHT22_' + pin + '(' + pin + ', DHT22);';
 
-  Blockly.Arduino.includes_['define_dht_'+ pin + '_' + sensor] = '#include <DHT.h>\n'
-  Blockly.Arduino.definitions_['define_dht_'+ pin + '_' + sensor] = 'DHT dht_' + pin + '_' + sensor + '(' + pin + ',' + sensor + ');\n';
-
-  Blockly.Arduino.setups_['setup_dht_' + pin + '_' + sensor] = 'dht_' + pin + '_' + sensor + '.begin();\n'
-/*
-  Blockly.Arduino.definitions_['define_dht_floatToStr'] = 'String floatToStr(float val){\n'
-    + '  int buf = (int)val;\n'
-    + '  String str = String(buf);\n'
-    + '  str += ".";\n'
-    + '  str += String((int)(val*10)-buf*10);\n'
-    + '  return str;\n'
-    + '}\n';
-*/
+  Blockly.Arduino.setups_['setup_dht_' + pin] = 'DHT22_' + pin + '.begin();'
+	  
   return [code, Blockly.Arduino.ORDER_ATOMIC];
 };
 
