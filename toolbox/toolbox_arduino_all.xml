@@ -2444,6 +2444,52 @@
 	<category name="CAT_STEPPER" colour="80">
 		<block type="stepper_config"></block>
 		<block type="stepper_step"></block>
+		<block type="unipolar_stepper_motor_init">
+				<value name="unipolar_stepper_motor_IN1">
+					<shadow type="math_number">
+						<field name="NUM">8</field>
+					</shadow>
+				</value>
+				<value name="unipolar_stepper_motor_IN2">
+					<shadow type="math_number">
+						<field name="NUM">9</field>
+					</shadow>
+				</value>
+				<value name="unipolar_stepper_motor_IN3">
+					<shadow type="math_number">
+						<field name="NUM">10</field>
+					</shadow>
+				</value>
+				<value name="unipolar_stepper_motor_IN4">
+					<shadow type="math_number">
+						<field name="NUM">11</field>
+					</shadow>
+				</value>
+				<value name="unipolar_stepper_motor_number_of_step_by_revolution">
+					<shadow type="math_number">
+						<field name="NUM">4096</field>
+					</shadow>
+				</value>
+				<value name="unipolar_stepper_motor_initial_speed">
+					<shadow type="math_number">
+						<field name="NUM">5</field>
+					</shadow>
+				</value>
+			</block>
+		<block type="unipolar_stepper_motor_steps">
+			<value name="unipolar_stepper_motor_number_of_steps">
+					<shadow type="math_number">
+						<field name="NUM">2048</field>
+					</shadow>
+				</value>
+		</block>
+		<block type="unipolar_stepper_motor_speed_block">
+			<value name="unipolar_stepper_motor_speed">
+					<shadow type="math_number">
+						<field name="NUM">5</field>
+					</shadow>
+				</value>
+		</block>
 	</category>
 	<category name="CAT_ESUS" colour="#2475FA">
 		<block type="EsusBoard_init"></block>

@@ -94,6 +94,7 @@ head.load(
 "blocks/storage/storage.js",
 "blocks/technozone51/technozone51.js",
 "blocks/tsl2561/tsl2561.js",
+"blocks/unipolar_stepper_motor/unipolar_stepper_motor.js",
 "blocks/wii/wiichuck.js",
 "blocks/zumobot/zumo_auto.js",
 "blocks/zumobot/zumo_motors.js",
