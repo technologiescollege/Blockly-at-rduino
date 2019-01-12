@@ -169,7 +169,7 @@ Blockly.Blocks['variables_const'] = {
       "tooltip": Blockly.Msg.VARIABLES_SET_TOOLTIP,
       "helpUrl": Blockly.Msg.VARIABLES_SET_HELPURL
     });
-    this.contextMenuMsg_ = Blockly.Msg.VARIABLES_SET_CREATE_GET;
+    this.contextMenuMsg_ = Blockly.MsgVARIABLES_SET_CREATE_GET;
   },
   contextMenuType_: 'variables_get',
   customContextMenu: Blockly.Blocks['variables_get'].customContextMenu,
@@ -201,7 +201,8 @@ Blockly.Blocks['variables_set_init'] = {
     },
     contextMenuType_: 'variables_set',
     customContextMenu: Blockly.Blocks["variables_get"].customContextMenu,
-    getVarType: function(varName) {
-        return Blockly.Types.getChildBlockType(this)
-    }
+	getVarType: function(varName) {
+		var blocklyTypeKey = this.getFieldValue('VARIABLE_SETTYPE_TYPE');
+		return Blockly.Types[blocklyTypeKey];
+	}
 };

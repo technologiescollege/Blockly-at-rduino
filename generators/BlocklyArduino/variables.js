@@ -55,19 +55,10 @@ Blockly.Arduino.variables_const = function(block) {
   return '';
 };
 
-// Blockly.Arduino['variables_set_init'] = function(block){
-	// var argument0 = Blockly.Arduino.valueToCode(block, 'VALUE', Blockly.Arduino.ORDER_ASSIGNMENT || '0');
-	// var varName = Blockly.Arduino.variableDB_.getName(block.getFieldValue('VAR'), Blockly.Variables.NAME_TYPE);
-	// var typeBlock = Blockly.Arduino.getArduinoType_(Blockly.Types[block.getFieldValue('VARIABLE_SETTYPE_TYPE')]);
-	// Blockly.Arduino.variables_[varName] = typeBlock + ' ' + varName + ' = ' + argument0 + ';';
-	// return "";
-// };
-
-Blockly.Arduino.variables_set_init = function(block) {
+Blockly.Arduino['variables_set_init'] = function(block){
   var argument0 = Blockly.Arduino.valueToCode(block, 'VALUE', Blockly.Arduino.ORDER_ASSIGNMENT) || '0';
   var varName = Blockly.Arduino.variableDB_.getName(block.getFieldValue('VAR'), Blockly.Variables.NAME_TYPE);
-  var typeBlock = Blockly.Arduino.getArduinoType_(Blockly.Types.getChildBlockType(block));
-  Blockly.Arduino.variables_[varName] = typeBlock + ' ' + varName + ' = ' + argument0 + ';';
-  var code = "";
-  return [code, Blockly.Arduino.ORDER_ATOMIC];
+  var varType = Blockly.Arduino.getArduinoType_(Blockly.Types[block.getFieldValue('VARIABLE_SETTYPE_TYPE')]);
+  Blockly.Arduino.variables_[varName] = varType + ' ' + varName + ' = ' + argument0 + ';';
+  return '';
 };
