@@ -1,12 +1,5 @@
-***[Thanks for donation with Paypal to help me improve this software.](https://www.paypal.com/fr/cgi-bin/webscr?cmd=_flow&SESSION=o8z3KNFl16Tjlxhk1mBekCcRsG_3_NDe0CfWh8b1vfSYIbMxJnwa92YwM3y&dispatch=5885d80a13c0db1f8e263663d3faee8d4fe1dd75ca3bd4f11d72275b28239088)***
-
-![enter image description here](https://www.paypalobjects.com/fr_FR/FR/i/btn/btn_donateCC_LG.gif)
-
-----------
-
-**PROFS FRANCAIS & ASSOCIATIONS**
-----------------------------------
-*vous pouvez aussi me demander une facture pour que votre établissement me fasse un 'don' officiel par virement bancaire. Je ne fais pas payer de licence mais je compte sur vous pour aider du montant auquel vous estimez ce travail.*
+Version BuchiProf : adapté pour le lycée Louis Marchal de Molsheim :
+*toolbox adapté au matériel du lycée
 ----------
 
 ### WIKI !!! [http://www.libreduc.cc/wiki/doku.php/en/blockly_rduino](http://www.libreduc.cc/wiki/doku.php/en/blockly_rduino)
