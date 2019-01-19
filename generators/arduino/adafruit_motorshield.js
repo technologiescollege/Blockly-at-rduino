@@ -104,6 +104,7 @@ Blockly.Arduino.includes_['Adafruit_MotorShield.h'] = '#include <Adafruit_MotorS
 Blockly.Arduino.includes_['utility/Adafruit_MS_PWMServoDriver.h'] = '#include "utility/Adafruit_MS_PWMServoDriver.h"';
 
 //Définition des moteurs
+//correction erreur :  remplacement getMotor par getStepper
 Blockly.Arduino.definitions_['Adafruit_AFMS'] = 'Adafruit_MotorShield AFMS = Adafruit_MotorShield();';
 Blockly.Arduino.definitions_['Adafruit_StepperMotor *myMotor' +dropdown_PAP2] = 'Adafruit_StepperMotor *myMotor'+dropdown_PAP2+' = AFMS.getStepper('+value_Pas_par_tour_PAP2+','+dropdown_PAP2+');\n';
 
