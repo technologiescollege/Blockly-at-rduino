@@ -39,7 +39,7 @@ Blockly.Blocks['pap_v2'] = {
     this.appendDummyInput()
         .setAlign(Blockly.ALIGN_RIGHT)
         .appendField(Blockly.Msg.ADAFRUIT_MOTORSHIELD_CONNECT)
-        .appendField(new Blockly.FieldDropdown([["M1", "1"], ["M2", "2"]]), 'PAP2');
+        .appendField(new Blockly.FieldDropdown([["M1 et M2", "1"], ["M3 et M4", "2"]]), 'PAP2');
     this.appendValueInput('Pas_par_tour2')
         .setCheck("Number")
         .setAlign(Blockly.ALIGN_RIGHT)

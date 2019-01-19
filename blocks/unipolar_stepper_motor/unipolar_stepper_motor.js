@@ -84,7 +84,7 @@ Blockly.Blocks['unipolar_stepper_motor_steps'] = { init: function() {
     this.setNextStatement(true);
     this.setColour(180);
     this.setTooltip('Ce bloc sert à faire tourner le moteur pas à pas.');
-    this.setHelpUrl('https://www.arduino.cc/en/Reference/StepperStep');
+    this.setHelpUrl('https://www.arduino.cc/en/Reference/StepperConstructor');
   },
   /**
    * Called whenever anything on the workspace changes.
@@ -128,7 +128,7 @@ Blockly.Blocks['unipolar_stepper_motor_speed_block'] = { init: function() {
     this.setNextStatement(true);
     this.setColour(180);
     this.setTooltip('Ce bloc sert à régler la vitesse du moteur pas à pas.');
-    this.setHelpUrl('https://www.arduino.cc/en/Reference/StepperSetSpeed');
+    this.setHelpUrl('https://www.arduino.cc/en/Reference/StepperConstructor');
   },
   /**
    * Called whenever anything on the workspace changes.

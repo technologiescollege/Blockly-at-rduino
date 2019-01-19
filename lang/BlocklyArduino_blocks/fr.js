@@ -86,6 +86,10 @@ Blockly.Msg.ARD_TYPE_VOLATILE = "nombre entier volatile (pour interruption)";
 
 //**********************************catégories***********************************************
 //**********************************catégories***********************************************
+Blockly.Msg.CAT_ACQUISITION = "Acquérir";
+Blockly.Msg.CAT_COMMUNICATION = "Communiquer";
+Blockly.Msg.CAT_PREACTIONNEUR = "Préactionneur";
+
 //**********************************catégories***********************************************
 
 Blockly.Msg.CAT_LOOPS = "boucles";
@@ -100,8 +104,8 @@ Blockly.Msg.CAT_COLOR = "couleurs";
 Blockly.Msg.CAT_VARIABLES = "variables";
 Blockly.Msg.CAT_FUNCTIONS = "procédures & fonctions";
 Blockly.Msg.CAT_ARDUINO = "arduino";
-Blockly.Msg.CAT_ARDUINO_IN = " - entrées (capteurs)";
-Blockly.Msg.CAT_ARDUINO_OUT = " - sorties (actionneurs)";
+Blockly.Msg.CAT_ARDUINO_IN = " - entrées (A ou D)";
+Blockly.Msg.CAT_ARDUINO_OUT = " - sorties (D)";
 Blockly.Msg.CAT_ARDUINO_CONVERSION = " - conversions";
 Blockly.Msg.CAT_ARDUINO_TIME = " - temps & durées";
 Blockly.Msg.CAT_ARDUINO_COMM_SERIAL = " - communication USB";
@@ -1146,7 +1150,7 @@ Blockly.Msg.ADAFRUIT_MOTORSHIELD_PAP1 = "v1 - moteur Pas-à-pas";
 Blockly.Msg.ADAFRUIT_MOTORSHIELD_PAP2 = "v2 - moteur Pas-à-pas";
 Blockly.Msg.ADAFRUIT_MOTORSHIELD_CONNECT = "broche";
 Blockly.Msg.ADAFRUIT_MOTORSHIELD_MOTOR_PPT = "pas par tour";
-Blockly.Msg.ADAFRUIT_MOTORSHIELD_MOTOR_RPM = "vitesse (RPM)";
+Blockly.Msg.ADAFRUIT_MOTORSHIELD_MOTOR_RPM = "vitesse (tour par min)";
 Blockly.Msg.ADAFRUIT_MOTORSHIELD_MOTOR_NB_PAS = "nombre de pas";
 
 Blockly.Msg.ADAFRUIT_MOTORSHIELD_JOY1_MOT1 = "v1 - Joystick + moteurs";
