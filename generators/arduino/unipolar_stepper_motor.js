@@ -24,7 +24,7 @@ Blockly.Arduino['unipolar_stepper_motor_init'] = function(block) { //Attention l
 //  Blockly.Arduino.variables_[] = 'placer ici le code de mes variables' ;//placer ici le code de mes variables
   Blockly.Arduino.definitions_['declarationStepperMotor' + variable_unipolar_stepper_motor_variable] = 'Stepper '  + variable_unipolar_stepper_motor_variable + '(' + value_unipolar_stepper_motor_number_of_step_by_revolution + ', ' + value_unipolar_stepper_motor_in2 + ', ' + value_unipolar_stepper_motor_in4 + ', ' + value_unipolar_stepper_motor_in3 + ', ' + value_unipolar_stepper_motor_in1 + ');\n'; //placer ici le code de mes instances. Astuces 1) Pour le nom des variables, prendre ce qui est à gauche ci-dessus var xxxxx 2) si on met + xxx + pour mettre les variables, il faut qu'il y ait du code orange à droite aussi (ex. ');' sinon ça ne marche pas)
 //  Blockly.Arduino.userFunctions_[] = 'placer ici le code de mes fonctions' ;//placer ici le code de mes fonctions
-  Blockly.Arduino.setups_['setup_stepper_motor']= variable_unipolar_stepper_motor_variable + '.setSpeed(' + value_unipolar_stepper_motor_initial_speed + ');\n' ;//placer ici le code du setup()
+  Blockly.Arduino.setups_['setup_stepper_motor' + variable_unipolar_stepper_motor_variable]= variable_unipolar_stepper_motor_variable + '.setSpeed(' + value_unipolar_stepper_motor_initial_speed + ');\n' ;//placer ici le code du setup()
 //  var code = 'placer ici le code du loop()'; //placer ici le code du loop()'
   //return code;
 };
