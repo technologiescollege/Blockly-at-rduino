@@ -26,7 +26,8 @@ Blockly.Arduino['unipolar_stepper_motor_init'] = function(block) { //Attention l
 //  Blockly.Arduino.userFunctions_[] = 'placer ici le code de mes fonctions' ;//placer ici le code de mes fonctions
   Blockly.Arduino.setups_['setup_stepper_motor' + variable_unipolar_stepper_motor_variable]= variable_unipolar_stepper_motor_variable + '.setSpeed(' + value_unipolar_stepper_motor_initial_speed + ');\n' ;//placer ici le code du setup()
 //  var code = 'placer ici le code du loop()'; //placer ici le code du loop()'
-  //return code;
+  //return code; //commenté car ça faisait bugguer
+  return '';//Mais ne surtout pas oublier ça sinon quand on colle un autre bloc en dessous, le code arduino du bloc du dessous disparaît
 };
 
 
