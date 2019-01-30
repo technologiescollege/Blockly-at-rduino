@@ -3047,12 +3047,11 @@
 		</category>
 		<category name="CAT_PEGUINO_OUT" colour="#9CEEFF">
 			<block type="peguino_actuators_buzzer"></block>
-			<block type="peguino_actuators_serial_lcd_print"></block>
-			<block type="peguino_actuators_serial_lcd_power"></block>
-			<block type="peguino_actuators_serial_lcd_effect"></block>
+			<block type="peguino_actuators_i2c_scan"></block>
+			<block type="peguino_actuators_i2c_lcdinit"></block>
+			<block type="peguino_actuators_i2c_lcdwrite"></block>
+			<block type="peguino_actuators_i2c_lcdclear"></block>
 			<block type="peguino_actuators_led"></block>
-			<block type="peguino_actuators_motor_sens"></block>
-			<block type="peguino_actuators_motor_PWM"></block>
 			<block type="peguino_actuators_servo_attach"></block>
 			<block type="peguino_actuators_servo_move"></block>
 			<block type="peguino_actuators_servo_read_degrees"></block>
