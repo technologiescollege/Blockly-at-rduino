@@ -41,27 +41,43 @@ Blockly.Arduino.peguino_sensors_button = function() {
   return [code, Blockly.Arduino.ORDER_ATOMIC];
 };
 
-Blockly.Arduino.peguino_sensors_dht_read = function() {
+Blockly.Arduino.peguino_sensors_dht_read_UnoESP32 = function() {
   var pin = this.getFieldValue('PIN');
   var type = this.getFieldValue('TYPE');
 
+  Blockly.Arduino.includes_['include_DHTesp_'+ pin] = '#include <DHTesp.h>'
+  Blockly.Arduino.definitions_['define_DHTesp_'+ pin] = 'DHTesp DHTesp_' + pin + ';';
+
+  Blockly.Arduino.setups_['setup_DHTesp_' + pin] = 'DHTesp_' + pin + '.setup(' + pin + ', DHTesp::DHT22);'
+  
   var code = '';
   switch(type){
       case 'h':
-        code += '(int)(DHT22_' + pin + '.readHumidity())';
+        code += 'DHTesp_' + pin + '.getHumidity()';
       break;
       case 'C':
-        code += '(int)(DHT22_' + pin + '.readTemperature())';
-      break;
-      case 'F':
-        code += '(int)(DHT22_' + pin + '.readTemperature(true))';
+        code += 'DHTesp_' + pin + '.getTemperature()';
       break;
   }
+	  
+  return [code, Blockly.Arduino.ORDER_ATOMIC];
+};
 
-  Blockly.Arduino.includes_['define_dht22_'+ pin] = '#include <DHT.h>'
-  Blockly.Arduino.definitions_['define_dht22_'+ pin] = 'DHT DHT22_' + pin + '(' + pin + ', DHT22);';
+Blockly.Arduino.peguino_sensors_dht_read_UnoNano = function() {
+  var pin = this.getFieldValue('PIN');
+  var type = this.getFieldValue('TYPE');
 
-  Blockly.Arduino.setups_['setup_dht_' + pin] = 'DHT22_' + pin + '.begin();'
+  Blockly.Arduino.includes_['include_SimpleDHT22_'+ pin] = '#include <SimpleDHT.h>'
+  Blockly.Arduino.definitions_['define_dSimpleDHT22_'+ pin] = 'SimpleDHT22 DHT22_' + pin + '(' + pin + ', DHT22);'
+  Blockly.Arduino.codeFunctions_['function_SimpleDHT22_'+ pin] = 'void DHTmeasure(char CHOICE) {\n' +
+  '  float temperature = 0;\n' +
+  '  float humidity = 0;\n' +
+  '  DHT22_' + pin + '.read2(&temperature, &humidity, data);\n' +
+  '  if (CHOICE == h) return humidity;\n' +
+  '    else return temperature;\n'+
+  '  }';
+  
+  var code = 'DHTmeasure(' + type + ')';
 	  
   return [code, Blockly.Arduino.ORDER_ATOMIC];
 };

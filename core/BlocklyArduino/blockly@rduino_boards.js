@@ -498,7 +498,7 @@ var profile = {
 		upload_arg: "B:\LiberkeyLivet\MyApps\arduino\portable\packages\esp8266\tools\esptool\0.4.8/esptool.exe -vv -cd nodemcu -cb 921600 -cp COM3 -ca 0x00000 -cf B:\LiberkeyLivet\MyApps\arduino\build/petitbot_v3.ino.bin ",
 		help_link: "https://github.com/julienrat/petitbot/blob/master/manuel_tech_petitbot.pdf",
 	},
-	kit_peguino_nano: {
+	kit_peguino_uno_nano: {
 	    description: "Peguino Uno Nano",
 		cpu:"atmega328p",
 		speed:"115200",
@@ -524,7 +524,7 @@ var profile = {
 		upload_arg: "arduino:avr:nano:cpu=atmega328old",
 		help_link: "https://www.peguino.com/chat/thread-32.html",
 	},
-	kit_peguino_uno: {
+	kit_peguino_uno_esp32: {
 	    description: "Peguino Uno ESP32",
 		cpu:"esp32",
 		speed:"921600",

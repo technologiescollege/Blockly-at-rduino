@@ -165,36 +165,29 @@
 					<button id="btn_verify_local" class="btn btn-arduino">
 						<span class="fas fa-check fa-1_5x fa-fw"> </span>
 					</button>
-					<select id="serialport_ide" class="synchCOMport">
-						<option value="no_com" selected="">Choisir le port</option>
-					</select>
 					<button id="btn_flash_local" class="btn btn-arduino">
 						<span class="fas fa-arrow-right fa-1_5x fa-fw"> </span>
 					</button>
 					<button id="btn_term" class="btn btn-arduinoRect">
 						<span class="fas fa-search fa-flip-horizontal fa-1_5x fa-fw"> </span>
 					</button>
-					<!-- <button id="btn_pasteIDEArduino" class="btn btn-arduino"> -->
-					<!-- <span class="fa fa-folder-open"> </span> -->
-					<!-- <span id="span_pasteIDEArduino"> </span> -->
-					<!-- </button> -->
 					<span id="survol" style="color:white"></span>
 				</div>
             </div>
             <div id="header_supervision">
 				<div id="barre_supervision">
-					<select id="serialport_sup" class="synchCOMport">
-						<option value="no_com" selected="">Choisir le port</option>
-					</select>
+					<!-- <select id="serialport_sup" class="synchCOMport"> -->
+						<!-- <option value="no_com" selected="">Choisir le port</option> -->
+					<!-- </select> -->
 					<span id="span_pymata_upload_text" style="color:white"></span>
 					<button id="btn_flash_pymata" class="btn btn-arduino">
 						<span class="fas fa-arrow-right fa-1_5x fa-fw"> </span>
-                        <span id="span_flash_pymata"> </span>
+                        <!-- <span id="span_flash_pymata"> </span> -->
 					</button>
 					<span id="span_pymata_toggle_text" style="color:white"></span>
 					<button id="toggle-pymata" class="btn btn-arduino">
-						<span class="fas fa-arrow-right fa-1_5x fa-fw"> </span>
-                        <span id="span_flash_pymata"> </span>
+						<span class="glyphicon glyphicon-refresh"> </span>
+                        <!-- <span id="span_flash_pymata"> </span> -->
 					</button>
 					<!-- <input id="toggle-pymata" data-toggle="toggle" data-off="<span id='span_pymataOFF'> </span>" data-on="<span id='span_pymataON'> </span>" data-onstyle="primary" data-offstyle="default" data-width="120" type="checkbox"/> -->
 					<span id="sup_debug" style="color:white"></span>
@@ -397,7 +390,7 @@
                         <br />
                         <div align="center"><b><a href="http://framaforms.org/blocklyrduino-utilisateurs-1490560876" target='blank'><font size="12"><span id="span_forms_about" style="font-style: bold;"> </span></font></a></b></div>
                         <br />
-                        <br /><i>version 15-12-2018 - v3 "all compatible"</i>
+                        <br /><i>version 29-01-2018 - v3 "all compatible"</i>
                         <br />
                         <br />
                         <div align="center" id="paypal_about">
@@ -553,11 +546,11 @@
                             <img id="arduino_card_mini_picture" />
                         </div>
                         <div class="modal-body-config-global_left">
-                            <span class="fa fa-language"></span>  <label id="span_languageMenu"> </label>  <select id="languageMenu"></select><br/>
+                            <!-- <span class="fa fa-language"></span>  <label id="span_languageMenu"> </label>  <select id="languageMenu"></select><br/> -->
                             <!-- <label id="textSize" class="mod">Text size</label> -->
                             <!-- <input name="textSizeSelect" class="form-control" style="" min="0" max="30" step="1" value="12" type="number"> -->
                             <!-- </input> -->
-                            <br />
+                            <!-- <br /> -->
                             <input type="checkbox" id="fontChoice" value="opendys" onclick="BlocklyDuino.changeFont()" checked>
                             <label>OpenDyslexic</label>
                             </input>
@@ -596,8 +589,8 @@
                                         <option value="kit_petitbot">Petit Bot</option>
                                     </optgroup>
                                     <optgroup label="Peguino">
-                                        <option value="kit_peguino_nano">Peguino Nano</option>
-                                        <option value="kit_peguino_uno">Peguino Uno</option>
+                                        <option value="kit_peguino_uno_esp32">Peguino Uno ESP32</option>
+                                        <option value="kit_peguino_uno_nano">Peguino Uno Nano</option>
                                     </optgroup>
                                 </select>
                             </div>

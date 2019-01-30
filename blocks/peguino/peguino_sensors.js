@@ -55,13 +55,13 @@ Blockly.Blocks['peguino_sensors_button'] = {
   }
 };
 
-Blockly.Blocks['peguino_sensors_dht_read'] = {
+Blockly.Blocks['peguino_sensors_dht_read_UnoNano'] = {
   init: function() {
     this.setColour(Blockly.Blocks.peguino_sensors.HUE);
     this.setHelpUrl(Blockly.Msg.GROVE_INOUT_DHT_HELPURL);
     this.appendDummyInput()
       .appendField(Blockly.Msg.GROVE_INOUT_DHT_READ_TYPE)
-      .appendField(new Blockly.FieldDropdown([[Blockly.Msg.GROVE_INOUT_DHT_READ_H,"h"],[Blockly.Msg.GROVE_INOUT_DHT_READ_C,"C"],[Blockly.Msg.GROVE_INOUT_DHT_READ_F,"F"]]), "TYPE");
+      .appendField(new Blockly.FieldDropdown([[Blockly.Msg.GROVE_INOUT_DHT_READ_H,"h"],[Blockly.Msg.GROVE_INOUT_DHT_READ_C,"C"]]), "TYPE");
     this.appendDummyInput()
       .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/peguino/Peguino_Climate_Sesnor_Brick_blockly_01.png', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize))
       .appendField(Blockly.Msg.GROVE_INOUT_DHT_READ_SENSOR + Blockly.Msg.GROVE_INOUT_DHT_READ_PIN)
@@ -72,6 +72,22 @@ Blockly.Blocks['peguino_sensors_dht_read'] = {
   }
 };
 
+Blockly.Blocks['peguino_sensors_dht_read_UnoESP32'] = {
+  init: function() {
+    this.setColour(Blockly.Blocks.peguino_sensors.HUE);
+    this.setHelpUrl(Blockly.Msg.GROVE_INOUT_DHT_HELPURL);
+    this.appendDummyInput()
+      .appendField(Blockly.Msg.GROVE_INOUT_DHT_READ_TYPE)
+      .appendField(new Blockly.FieldDropdown([[Blockly.Msg.GROVE_INOUT_DHT_READ_H,"h"],[Blockly.Msg.GROVE_INOUT_DHT_READ_C,"C"]]), "TYPE");
+    this.appendDummyInput()
+      .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/peguino/Peguino_Climate_Sesnor_Brick_blockly_01.png', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize))
+      .appendField(Blockly.Msg.GROVE_INOUT_DHT_READ_SENSOR + Blockly.Msg.GROVE_INOUT_DHT_READ_PIN)
+      .appendField(new Blockly.FieldTextInput('',  Blockly.Arduino.pinDigitalValidator), 'PIN');
+    this.setInputsInline(true);
+    this.setOutput(true, 'Number');
+    this.setTooltip(Blockly.Msg.GROVE_INOUT_DHT_READ_TOOLTIP);
+  }
+};
 
 Blockly.Blocks['peguino_sensors_EMETTEUR_IR'] = {
   init: function() {

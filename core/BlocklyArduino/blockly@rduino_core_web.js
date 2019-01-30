@@ -971,9 +971,9 @@ BlocklyDuino.firstBlocklyArduino = function() {
 		$('#videoFirstModal').prop('src', "https://player.vimeo.com/video/179569437?autoplay=0&title=0&byline=0&portrait=0"); 
 		$('#firstModal').modal('show');
 		}
-	if (!window.localStorage.ConfigGlobaleSeen) $('#configModalGlobal').modal('show');
+	var BoardChoiceUrl = BlocklyDuino.getStringParamFromUrl('card', '');
+	if ((!window.localStorage.ConfigGlobaleSeen)&&(BoardChoiceUrl==='')) $('#configModalGlobal').modal('show');
 };
-
 /**
  * Override Blockly method (/Blockly/core/variable.js)
  * To add the block "variables_set_type"

@@ -342,7 +342,7 @@
 		<category name="CAT_PEGUINO_IN" colour="#9CEEFF">
 			<block type="peguino_sensors_pir_motion_sensor"></block>
 			<block type="peguino_sensors_button"></block>
-			<block type="peguino_sensors_dht_read"></block>
+			<block type="peguino_sensors_dht_read_UnoNano"></block>
 			<block type="peguino_sensors_EMETTEUR_IR"></block>
 			<block type="peguino_sensors_RECEPTEUR_IR"></block>
 			<block type="peguino_sensors_ldr"></block>

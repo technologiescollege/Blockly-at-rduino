@@ -94,8 +94,13 @@ Blockly.Blocks.peguino_sensors_pir_motion_sensor.getBlockType = function() {
 };
 
 //climate brick
-Blockly.Blocks.peguino_sensors_dht_read.getBlockType = function() {
-	return Blockly.Types.NUMBER;
+Blockly.Blocks.peguino_sensors_dht_read_UnoESP32.getBlockType = function() {
+	return Blockly.Types.DECIMAL;
+};
+
+//climate brick
+Blockly.Blocks.peguino_sensors_dht_read_UnoNano.getBlockType = function() {
+	return Blockly.Types.DECIMAL;
 };
 
 //proximity brick
