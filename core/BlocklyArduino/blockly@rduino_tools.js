@@ -83,7 +83,9 @@ BlocklyDuino.validateConfigGlobal = function () {
 	if (search.length <= 1) {
 		search = '?lang=' + newLang;
 		} else if (search.match(/[?&]lang=[^&]*/)) {
-			search = search.replace(/([?&]lang=)[^&]*/, '$1' + newLang);
+			//en mode AIO sans languageMenu on ne fait rien pour le choix des langues
+			if ((newLang == 'undefined')||(newLang == "")) search = search;
+				else search = search.replace(/([?&]lang=)[^&]*/, '$1' + newLang);
 			} else {
 				search = search.replace(/\?/, '?lang=' + newLang + '&');
 		}
