@@ -2467,7 +2467,7 @@
 				</value>
 				<value name="unipolar_stepper_motor_number_of_step_by_revolution">
 					<shadow type="math_number">
-						<field name="NUM">4096</field>
+						<field name="NUM">2048</field>
 					</shadow>
 				</value>
 				<value name="unipolar_stepper_motor_initial_speed">
@@ -2480,6 +2480,13 @@
 			<value name="unipolar_stepper_motor_number_of_steps">
 					<shadow type="math_number">
 						<field name="NUM">2048</field>
+					</shadow>
+				</value>
+		</block>
+		<block type="unipolar_stepper_motor_turns">
+			<value name="unipolar_stepper_motor_number_of_turns">
+					<shadow type="math_number">
+						<field name="NUM">1</field>
 					</shadow>
 				</value>
 		</block>
