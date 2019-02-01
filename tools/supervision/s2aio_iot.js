@@ -12,28 +12,31 @@ var outputValue = "";
 var socket = new WebSocket('ws://' + ipAddress + ':' + ipPort);
 
 function WebSocketTest() {
-  if ("WebSocket" in window)
+	if ("WebSocket" in window)
 		{
-		   alert(Blockly.Msg.SV_alert1);
-		   socket = new WebSocket('ws://' + ipAddress + ':' + ipPort);
+			alert(Blockly.Msg.SV_alert1);
+			socket = new WebSocket('ws://' + ipAddress + ':' + ipPort);
 		}            
 		else
 		{
-		   // The browser doesn't support WebSocket
-		   alert(Blockly.Msg.SV_alert2);
+			// The browser doesn't support WebSocket
+			alert(Blockly.Msg.SV_alert2);
 		}
 }; 
 
 socket.onerror = function (event) {
-	$("#connected").append(Blockly.Msg.SV_NotCon);
+	$("#sup_debug").html("<img src='media/icon_supervision_off.jpg'>");
+	//$("#connected").append(Blockly.Msg.SV_NotCon);
 };
 
 socket.onopen = function (event) {
-	$("#connected").append(Blockly.Msg.SV_onOpen);
+	$("#sup_debug").html("<img src='media/icon_supervision_on.jpg'>");
+	//$("#connected").append(Blockly.Msg.SV_onOpen);
 };
 
 socket.onclose = function (event) {
-	$("#connected").append(Blockly.Msg.SV_onClose);
+	$("#sup_debug").html("<img src='media/icon_supervision_off.jpg'>");
+	//$("#connected").append(Blockly.Msg.SV_onClose);
 };
 
 socket.onmessage = function (message) {
