@@ -24,6 +24,7 @@ Blockly.Blocks.blynk_cc.HUE = "#23C890"; //Added July 24th Mr leroy
 Blockly.Blocks.bq.HUE = "#608621";
 Blockly.Blocks.BT_ELEC.HUE = "#142D5E";
 Blockly.Blocks.dfplayer.HUE = "#F39800";
+Blockly.Blocks.dfrobot_ISD1820.HUE = "#F39800";
 Blockly.Blocks.drone.HUE = "#AFABAC";
 Blockly.Blocks.ds18b20.HUE = "#B7A700";
 Blockly.Blocks.EsusBoard.HUE = "#2475FA";

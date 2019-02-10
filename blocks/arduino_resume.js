@@ -46,6 +46,7 @@ head.load(
 "blocks/blynk_cc/blynk_cc.js",
 "blocks/keypad/keypad.js",
 "blocks/dfplayer-mini-mp3-dfrobot/dfplayer-mini-mp3-dfrobot.js",
+"blocks/dfrobot_ISD1820/dfrobot_ISD1820.js",
 "blocks/dfrobot_romeo_v2/dfrobot_romeo_v2_1.js",
 "blocks/dfrobot_romeo_v2/dfrobot_romeo_v2_2.js",
 "blocks/dfrobot_romeo_v2/dfrobot_romeo_v2_3.js",

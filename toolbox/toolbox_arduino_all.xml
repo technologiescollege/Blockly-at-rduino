@@ -1080,6 +1080,17 @@
 				</value>
 			</block>
 		</category>
+		<category name="CAT_DFRobot_ISD1820" colour="#F39800">
+			<block type="dfrobot_ISD1820_record" disabled="true">
+			</block>
+			<block type="dfrobot_ISD1820_play">
+				<value name="PIN">
+					<shadow type="math_number">
+						<field name="NUM">0</field>
+					</shadow>
+				</value>
+			</block>
+		</category>
 		<category name="CAT_DFRobot_SHIELD_LCDKEYPAD" colour="#F39800">
 			<block type="LCD_Keypad_Shield_DFR_09">
 				<value name="TEXT1">

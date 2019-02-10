@@ -12,6 +12,7 @@ head.load(
 "blocks/Bluetooth_Electronics/blocks_typing.js",
 "blocks/blynk_cc/blocks_typing.js",
 "blocks/dfplayer-mini-mp3-dfrobot/blocks_typing.js",
+"blocks/dfrobot_ISD1820/blocks_typing.js",
 "blocks/dfrobot_romeo_v2/blocks_typing.js",
 "blocks/display-oled-128x64-i2c/blocks_typing.js",
 "blocks/drone/blocks_typing.js",

@@ -129,6 +129,7 @@ Blockly.Msg.CAT_Blynk_Sensors = " - capteurs du Smartphone";
 Blockly.Msg.CAT_DFRobot = "DFRobot";
 Blockly.Msg.CAT_DFRobot_SHIELD_LCDKEYPAD = " - carte LCD keypad"; //Added february 27th 2016
 Blockly.Msg.CAT_DFPLAYER = " - DFPlayer mini MP3";
+Blockly.Msg.CAT_DFRobot_ISD1820 = " - enregisteur de sons ISD1820";
 
 Blockly.Msg.CAT_LED_RGB_CHAIN = "DEL RGB en série";
 Blockly.Msg.CAT_OLED_U8G = "afficheur OLED I2C";
@@ -2327,3 +2328,10 @@ Blockly.Msg.Adafruit_RGB_LCD_Shield_WRITE_FORMAT_FIELDDROPDOWN = [["0x", "0x"], 
 Blockly.Msg.Adafruit_RGB_LCD_Shield_READ_button_TEXT = "READ BUTTON";
 Blockly.Msg.Adafruit_RGB_LCD_Shield_READ_button_TOOLTIP = "UP = 0x08 - DOWN = 0x04 - LEFT = 0x10 - RIGHT = 0x02 - SELECT = 0x01";
 Blockly.Msg.Adafruit_RGB_LCD_Shield_READ_button_HELPURL = "https://learn.adafruit.com/rgb-lcd-shield";
+
+////////////////////////////DFROBOT Voice Recorder-ISD1820/////////////////////
+Blockly.Msg.dfrobot_ISD1820_HELPURL = "https://www.dfrobot.com/wiki/index.php/Voice_Recorder-ISD1820_SKU:_SEN0197";
+Blockly.Msg.dfrobot_ISD1820_TOOLTIP = "enregistre 10s max. de son par appui sur le bouton, lecture par bouton ou code";
+Blockly.Msg.dfrobot_ISD1820_record = "appui sur bouton pour enregistrer 10s maxi";
+Blockly.Msg.dfrobot_ISD1820_play = "jouer le son";
+Blockly.Msg.dfrobot_ISD1820_play_Input = "raccordé sur la broche";

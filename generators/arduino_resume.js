@@ -37,6 +37,7 @@ head.load(
 "generators/arduino/blynk_cc.js",
 "generators/arduino/keypad.js",
 "generators/arduino/dfplayer-mini-mp3-dfrobot.js",
+"generators/arduino/dfrobot_ISD1820.js",
 "generators/arduino/dfrobot_romeo_v2_1.js",
 "generators/arduino/dfrobot_romeo_v2_2.js",
 "generators/arduino/dfrobot_romeo_v2_3.js",
