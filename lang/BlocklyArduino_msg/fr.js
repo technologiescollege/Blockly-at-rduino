@@ -23,6 +23,7 @@ var MSG = {
   span_block_capture: "capture d'écran des blocs",
   span_copycode: "copier le code",
   span_configGlobal: " Configuration globale",
+  span_levelChoice: " choix du niveau",
   span_font: " choix de police",
   span_colors: " choix de couleur",
   span_reset: " ré initialiser",

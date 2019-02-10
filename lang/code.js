@@ -227,6 +227,7 @@ Code.initLanguage = function() {
   $('#span_colorToggle').text(MSG['span_colorToggle']);
   $('#span_colorBW').text(MSG['span_colorBW']);
   $('#span_colorColors').text(MSG['span_colorColors']);
+  $('#span_levelChoice').text(MSG['span_levelChoice']);
   
   $('#span_Upload').text(MSG['span_Upload']);
   $('#span_Upload_local').text(MSG['span_Upload_local']);

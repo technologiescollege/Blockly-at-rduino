@@ -23,6 +23,7 @@ var MSG = {
   span_block_capture: "Bildschirmfoto aufnehmen",
   span_copycode: "Quellcode kopieren",
   span_configGlobal: " Starteinstellungen",
+  span_levelChoice: " level choice",
   span_font: " Schrift auswählen",
   span_colors: " Farben Auswahl",
   span_reset: " Arbeitsfläche und Einstellungen zurücksetzen",

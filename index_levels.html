@@ -16,9 +16,9 @@
         <!--Arduino generator, must be defined NOW-->
         <script type="text/javascript" src="generators/generator_arduino.js"></script>
 
-        <script type="text/javascript" src="core/BlocklyArduino/blockly@rduino_core_IDE.js"></script>
+        <script type="text/javascript" src="core/BlocklyArduino/blockly@rduino_core_web2.js"></script>
         <script type="text/javascript" src="core/BlocklyArduino/blockly@rduino_boards.js"></script>
-        <script type="text/javascript" src="core/BlocklyArduino/blockly@rduino_functions_buttons_IDE.js"></script>
+        <script type="text/javascript" src="core/BlocklyArduino/blockly@rduino_functions_buttons_web.js"></script>
         <script type="text/javascript" src="core/BlocklyArduino/blockly@rduino_tools.js"></script>
         <script type="text/javascript" src="core/BlocklyArduino/blockly@rduino_visual.js"></script>
         <script type="text/javascript" src="core/BlocklyArduino/blockly@rduino_visual_buttons.js"></script>
@@ -58,7 +58,7 @@
         <div class="loading"></div>
         <div id="header">
             <div id="logo_Titre">
-                <a href="./index_IDE.html">
+                <a href="./index_light.html">
                     <img id="clearLink" src="media/logo-mini.png" border="0" height="36" onclick="" />
                 </a>
             </div>
@@ -138,16 +138,7 @@
                     </div>
                 </div>
                 <div id="divTitre">
-                    <div id="btn_levels">
-                        <a href="#" id="toolbox_algo" class="btn btn-default" role='button'>0</a>
-                        <a href="#" id="toolbox_arduino_1" class="btn btn-default" role='button'>1</a>
-                        <a href="#" id="toolbox_arduino_2" class="btn btn-default" role='button'>2</a>
-                        <a href="#" id="toolbox_arduino_3" class="btn btn-default" role='button'>3</a>
-                        <a href="#" id="toolbox_arduino_4" class="btn btn-default" role='button'>4</a>
-                        <a href="#" id="toolbox_arduino_all" class="btn btn-default" role='button'>TOUT</a>
-                        <label id="labelToolboxDefinition"></label>
-                    </div>
-					<div id="barre">
+					<div id="barre" class="hidden">
 						<button id="btn_edit_code" class="btn btn-arduinoRect" data-toggle="modal" data-target="#editModal">
 							<span id="icon_edit_btn" class="glyphicon glyphicon-edit"> </span>
 						</button>
@@ -283,7 +274,7 @@
                     <!--button id="btn_wiring" class="btn btn-primary">
                             <span class="glyphicon glyphicon-blackboard"></span>
                     </button-->
-                    <button id="btn_factory" class="btn btn-primary" disabled>
+                    <button id="btn_factory" class="btn btn-primary" >
                         <span class="fa fa-industry"> </span>
                     </button>
                     <button id="btn_RGB" class="btn btn-primary">
@@ -297,7 +288,7 @@
                     <button id="btn_miniMenuPanel" class="btn btn-default" >
                         <span class="glyphicon glyphicon-step-backward"> </span>
                     </button>
-                    <a href="./index_IDE.html" id="btn_reset" class="btn btn-danger">
+                    <a href="./index_light.html" id="btn_reset" class="btn btn-danger">
                         <span class="glyphicon glyphicon-off"> </span>
                     </a>
                     <br />
@@ -324,7 +315,7 @@
                         <pre id="pre_arduino"></pre>
                         <div id="barre_h">
                             <div id="checkDetails">
-                                <input type="checkbox" disabled name="detailedCompilation" id="detailedCompilation"/> <span id="span_detailedCompilation" style="color: white;"> </span>
+                                <input type="checkbox" name="detailedCompilation" id="detailedCompilation"/> <span id="span_detailedCompilation" style="color: white;"> </span>
                             </div>
 						</div>
                         <div id="local_debug"></div>
@@ -474,17 +465,27 @@
                             <span class="fa fa-cogs"> </span>
                             <label class="modal-title" id="configModalLabel" />
                         </h4>
-                        <div id="div_toolboxes">
-                            <select id="toolboxes">
-                                <option value="toolbox_none" selected="selected">...</option>
-                                <option value="toolbox_algo"></option>
-                                <option value="toolbox_arduino_1"></option>
-                                <option value="toolbox_arduino_2"></option>
-                                <option value="toolbox_arduino_3"></option>
-                                <option value="toolbox_arduino_4"></option>
-                                <option value="toolbox_arduino_all"></option>
-                            </select>
-                        </div>
+                        <!-- <div id="div_toolboxes"> -->
+                            <!-- <select id="toolboxes"> -->
+                                <!-- <option value="toolbox_none" selected="selected">...</option> -->
+                                <!-- <option value="toolbox_algo"></option> -->
+                                <!-- <option value="toolbox_arduino_1"></option> -->
+                                <!-- <option value="toolbox_arduino_2"></option> -->
+                                <!-- <option value="toolbox_arduino_3"></option> -->
+                                <!-- <option value="toolbox_arduino_4"></option> -->
+                                <!-- <option value="toolbox_arduino_all"></option> -->
+                            <!-- </select> -->
+                        <!-- </div id="div_toolboxes"> -->
+                            <!-- <select id="toolboxes"> -->
+                                <!-- <option value="toolbox_none" selected="selected">...</option> -->
+                                <!-- <option value="toolbox_algo"></option> -->
+                                <!-- <option value="toolbox_arduino_1"></option> -->
+                                <!-- <option value="toolbox_arduino_2"></option> -->
+                                <!-- <option value="toolbox_arduino_3"></option> -->
+                                <!-- <option value="toolbox_arduino_4"></option> -->
+                                <!-- <option value="toolbox_arduino_all"></option> -->
+                            <!-- </select> -->
+                        <!-- </div> -->
                         <label> </label>
                         <label id="span_functionToggle"> </label>
                         <input id="toggle-Functions" data-toggle="toggle" data-off='<span id="span_functionON"> </span>' data-on='<span id="span_functionOFF"> </span>' data-onstyle="primary" data-offstyle="default" data-width="120" type="checkbox"/>
@@ -538,13 +539,28 @@
                             <!-- </input> -->
                             <br />
                             <input type="checkbox" id="fontChoice" value="opendys" onclick="BlocklyDuino.changeFont()" checked>
-                            <label>OpenDyslexic</label>
+								<label>OpenDyslexic</label>
                             </input>
+							<br />
+							<br />
+							<span class="fa fa-graduation-cap">
+								<label id="span_levelChoice"></label>
+							</span>
+							<br />
+							<div id="btn_levels">
+								<a href="#" id="toolbox_algo" class="btn btn-default" role='button'>0</a>
+								<a href="#" id="toolbox_arduino_1" class="btn btn-default" role='button'>1</a>
+								<a href="#" id="toolbox_arduino_2" class="btn btn-default" role='button'>2</a>
+								<a href="#" id="toolbox_arduino_3" class="btn btn-default" role='button'>3</a>
+								<a href="#" id="toolbox_arduino_4" class="btn btn-default" role='button'>4</a>
+								<a href="#" id="toolbox_arduino_all" class="btn btn-default" role='button'>TOUT</a>
+								<label id="labelToolboxDefinition"></label>
+							</div>
                             <div id="divCard">
                                 <br />
                                 <span class="fa fa-microchip"></span>  <label id="labelArduinoCard"></label>
                                 <div id="board_select_AIO_off"></div>
-                                <select id="board_select" onmousemove="BlocklyDuino.cardPicture_change_AIO();" onchange="BlocklyDuino.cardPicture_change_AIO();">
+                                <select id="board_select" onmousemove="BlocklyDuino.cardPicture_change_AIO();" onchange="BlocklyDuino.cardPicture_change_AIO();" disabled="disabled">
                                     <option value="none">...</option>
                                     <optgroup label="Arduino">
                                         <option value="arduino_leonardo">Arduino/Genuino LEONARDO</option>

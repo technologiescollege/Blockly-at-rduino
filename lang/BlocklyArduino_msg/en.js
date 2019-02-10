@@ -23,6 +23,7 @@ var MSG = {
   span_block_capture: "Screenshot ",
   span_copycode: "Copy code",
   span_configGlobal: " Global configuration",
+  span_levelChoice: " level choice",
   span_font: " Font ",
   span_colors: " Colors ",
   span_reset: " Reset workspace & preferences",
