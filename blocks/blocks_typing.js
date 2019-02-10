@@ -28,7 +28,6 @@ head.load(
 "blocks/jeulin_maquette_feux/blocks_typing.js",
 "blocks/jfblocks/blocks_typing.js",
 "blocks/keypad/blocks_typing.js",
-"blocks/kit_velo/blocks_typing.js",
 "blocks/lcd_i2c/blocks_typing.js",
 "blocks/led-rgb-ws2812b/blocks_typing.js",
 "blocks/matrix-led-rgb-ws2812/blocks_typing.js",

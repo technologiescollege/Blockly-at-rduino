@@ -9,7 +9,7 @@ Blockly.Blocks['romeo_forward'] = {
   init: function() {
     this.setColour(Blockly.Blocks.RoMeo1.HUE);
 	this.appendDummyInput()
-        .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/dfrobot_romeo_v2/forward.jpg', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize));
+        .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/DFRobot/dfrobot_romeo_v2/forward.jpg', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize));
 	this.setHelpUrl(Blockly.Msg.ROMEO_HELPURL);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
@@ -21,7 +21,7 @@ Blockly.Blocks['romeo_backward'] = {
   init: function() {
     this.setColour(Blockly.Blocks.RoMeo1.HUE);
 	this.appendDummyInput()
-        .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/dfrobot_romeo_v2/backward.jpg', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize));
+        .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/DFRobot/dfrobot_romeo_v2/backward.jpg', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize));
 	this.setHelpUrl(Blockly.Msg.ROMEO_HELPURL);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
@@ -33,7 +33,7 @@ Blockly.Blocks['romeo_turn_left'] = {
   init: function() {
     this.setColour(Blockly.Blocks.RoMeo1.HUE);
 	this.appendDummyInput()
-        .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/dfrobot_romeo_v2/left.jpg', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize));
+        .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/DFRobot/dfrobot_romeo_v2/left.jpg', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize));
 	this.setHelpUrl(Blockly.Msg.ROMEO_HELPURL);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
@@ -45,7 +45,7 @@ Blockly.Blocks['romeo_turn_right'] = {
   init: function() {
     this.setColour(Blockly.Blocks.RoMeo1.HUE);
 	this.appendDummyInput()
-        .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/dfrobot_romeo_v2/right.jpg', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize));
+        .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/DFRobot/dfrobot_romeo_v2/right.jpg', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize));
 	this.setHelpUrl(Blockly.Msg.ROMEO_HELPURL);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);

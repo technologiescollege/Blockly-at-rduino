@@ -35,7 +35,7 @@ Blockly.Blocks.dfrobot_ISD1820_record = {
 		.setAlign(Blockly.ALIGN_LEFT);
     this.appendDummyInput()
 		.setAlign(Blockly.ALIGN_LEFT)
-        .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/dfrobot_ISD1820/dfrobot_ISD1820.jpg', 128, 128));
+        .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/DFRobot/dfrobot_ISD1820/dfrobot_ISD1820.jpg', 128, 128));
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setTooltip(Blockly.Msg.dfrobot_ISD1820_TOOLTIP);
@@ -49,7 +49,7 @@ Blockly.Blocks.dfrobot_ISD1820_play = {
 	this.setHelpUrl(Blockly.Msg.dfrobot_ISD1820_HELPURL);
     this.appendDummyInput()
 		.appendField(Blockly.Msg.dfrobot_ISD1820_play)
-		.appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/dfrobot_ISD1820/dfrobot_ISD1820.jpg', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize));			
+		.appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/DFRobot/dfrobot_ISD1820/dfrobot_ISD1820.jpg', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize));			
     this.appendValueInput("PIN")
 		.setCheck('Number')
         .setAlign(Blockly.ALIGN_RIGHT)
