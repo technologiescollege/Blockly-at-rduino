@@ -1018,6 +1018,21 @@
 		<block type="wiichuck_button"></block>
 		<block type="wiichuck_update"></block>
 	</category>
+	<category name="CAT_SEEED" colour="#8ec31f">
+		<category name="CAT_MUSIC_SHIELD" colour="#8ec31f">
+			<block type="seeed_music_shield_addtolist">
+				<value name="FILE_NAME">
+					<shadow type="text">
+						<field name="FILE_NAME">???</field>
+					</shadow>
+				</value>
+			</block>
+			<block type="seeed_music_shield_playlist">
+			</block>
+			<block type="seeed_music_shield_playmode">
+			</block>
+		</category>
+	</category>
 	<category name="CAT_DFRobot" colour="#F39800">
 		<category name="CAT_ROMEO_3" colour="#F39800">
 			<block type="romeo_M1_sens"></block>
@@ -2509,227 +2524,320 @@
 				</value>
 		</block>
 	</category>
-	<category name="CAT_ESUS" colour="#2475FA">
-		<block type="EsusBoard_init"></block>
-		<block type="EsusBoard_analog"></block>
-		<category name="CAT_ESUS_MOTORS" colour="#2475FA">
-			<block type="EsusBoard_motor1">
-					<value name="NEW_LINE">
-						<shadow type="logic_boolean">1
+	<category name="CAT_MACE_ROBOTICS" colour="#2475FA">		
+		<category name="CAT_ESUS" colour="#2475FA">
+			<category name="CAT_ESUS_MOTORS" colour="#2475FA">
+				<block type="EsusBoard_motor1">
+						<value name="NEW_LINE">
+							<shadow type="logic_boolean">1
+							</shadow>
+						</value>
+				</block>
+				<block type="EsusBoard_motor2">
+						<value name="NEW_LINE">
+							<shadow type="logic_boolean">1
+							</shadow>
+						</value>
+				</block>
+			</category>
+			<category name="CAT_ESUS_WIFI" colour="#4075F0">
+				<block type="EsusBoard_WifiConfigAP">
+						<value name="Text_ssid">
+							<shadow type="text">
+								<field name="TEXT"></field>
+							</shadow>
+						</value>
+						<value name="Text_password">
+							<shadow type="text">
+								<field name="TEXT">8 caractères minimum</field>
+							</shadow>
+						</value>
+						<value name="Text_ip1AP">
+							<shadow type="math_number">
+								<field name="NUM">192</field>
+							</shadow>
+						</value>
+						<value name="Text_ip2AP">
+							<shadow type="math_number">
+								<field name="NUM">168</field>
+							</shadow>
+						</value>
+						<value name="Text_ip3AP">
+							<shadow type="math_number">
+								<field name="NUM">1</field>
+							</shadow>
+						</value>
+						<value name="Text_ip4AP">
+							<shadow type="math_number">
+								<field name="NUM">22</field>
+							</shadow>
+						</value>
+				</block>
+				<block type="EsusBoard_WifiConfig">
+						<value name="Text_ssid">
+							<shadow type="text">
+								<field name="TEXT"></field>
+							</shadow>
+						</value>
+						<value name="Text_password">
+							<shadow type="text">
+								<field name="TEXT"></field>
+							</shadow>
+						</value>
+				</block>
+				<block type="EsusBoard_WifiConfigIP">
+						<value name="Text_ip1">
+							<shadow type="math_number">
+								<field name="NUM">192</field>
+							</shadow>
+						</value>
+						<value name="Text_ip2">
+							<shadow type="math_number">
+								<field name="NUM">168</field>
+							</shadow>
+						</value>
+						<value name="Text_ip3">
+							<shadow type="math_number">
+								<field name="NUM">1</field>
+							</shadow>
+						</value>
+						<value name="Text_ip4">
+							<shadow type="math_number">
+								<field name="NUM">12</field>
+							</shadow>
+						</value>
+				</block>
+				<block type="EsusBoard_ReadStream"></block>
+				<block type="EsusBoard_WifiContain"></block>
+				<block type="EsusBoard_dataWifiAvailable"></block>
+				<block type="EsusBoard_SendStream">
+					<value name="Text_send">
+						<shadow type="text">
+							<field name="TEXT"></field>
 						</shadow>
 					</value>
-			</block>
-			<block type="EsusBoard_motor2">
-					<value name="NEW_LINE">
-						<shadow type="logic_boolean">1
+				</block>
+				<block type="EsusBoard_SendFloatStream">
+					<value name="sendFloat">
+						<shadow type="math_number">
+							<field name="NUM"></field>
 						</shadow>
 					</value>
-			</block>
+				</block>
+			</category>
+			<block type="EsusBoard_init"></block>
+			<block type="EsusBoard_analog"></block>
 		</category>
-		<category name="CAT_ESUS_WIFI" colour="#4075F0">
-			<block type="EsusBoard_WifiConfigAP">
-					<value name="Text_ssid">
-						<shadow type="text">
-							<field name="TEXT"></field>
-						</shadow>
-					</value>
-					<value name="Text_password">
-						<shadow type="text">
-							<field name="TEXT">8 caractères minimum</field>
-						</shadow>
-					</value>
-					<value name="Text_ip1AP">
-						<shadow type="math_number">
-							<field name="NUM">192</field>
-						</shadow>
-					</value>
-					<value name="Text_ip2AP">
-						<shadow type="math_number">
-							<field name="NUM">168</field>
-						</shadow>
-					</value>
-					<value name="Text_ip3AP">
-						<shadow type="math_number">
-							<field name="NUM">1</field>
-						</shadow>
-					</value>
-					<value name="Text_ip4AP">
-						<shadow type="math_number">
-							<field name="NUM">22</field>
-						</shadow>
-					</value>
-			</block>
-			<block type="EsusBoard_WifiConfig">
-					<value name="Text_ssid">
-						<shadow type="text">
-							<field name="TEXT"></field>
-						</shadow>
-					</value>
-					<value name="Text_password">
-						<shadow type="text">
-							<field name="TEXT"></field>
-						</shadow>
-					</value>
-			</block>
-			<block type="EsusBoard_WifiConfigIP">
-					<value name="Text_ip1">
-						<shadow type="math_number">
-							<field name="NUM">192</field>
-						</shadow>
-					</value>
-					<value name="Text_ip2">
-						<shadow type="math_number">
-							<field name="NUM">168</field>
-						</shadow>
-					</value>
-					<value name="Text_ip3">
-						<shadow type="math_number">
-							<field name="NUM">1</field>
-						</shadow>
-					</value>
-					<value name="Text_ip4">
-						<shadow type="math_number">
-							<field name="NUM">12</field>
-						</shadow>
-					</value>
-			</block>
-			<block type="EsusBoard_ReadStream"></block>
-			<block type="EsusBoard_WifiContain"></block>
-			<block type="EsusBoard_dataWifiAvailable"></block>
-			<block type="EsusBoard_SendStream">
-				<value name="Text_send">
-					<shadow type="text">
-						<field name="TEXT"></field>
-					</shadow>
-				</value>
-			</block>
-			<block type="EsusBoard_SendFloatStream">
-				<value name="sendFloat">
+		<category name="CAT_MRDUINO" colour="#2475FA">
+			<block type="MRduino_init"></block>
+			<block type="MRduino_forward">
+				<value name="PWM">
 					<shadow type="math_number">
-						<field name="NUM"></field>
+						<field name="NUM">30</field>
+					</shadow>
+				</value>
+			</block>
+			<block type="MRduino_back">
+				<value name="PWM">
+					<shadow type="math_number">
+						<field name="NUM">30</field>
+					</shadow>
+				</value>
+			</block>
+			<block type="MRduino_stop">
+			</block>
+			<block type="MRduino_turnLeft">
+				<value name="PWM">
+					<shadow type="math_number">
+						<field name="NUM">30</field>
+					</shadow>
+				</value>
+			</block>
+			<block type="MRduino_turnRight">
+				<value name="PWM">
+					<shadow type="math_number">
+						<field name="NUM">30</field>
+					</shadow>
+				</value>
+			</block>
+			<block type="MRduino_proxSensor1">
+			</block>
+			<block type="MRduino_proxSensor2">
+			</block>
+			<block type="MRduino_proxSensor3">
+			</block>
+			<block type="MRduino_proxSensor4">
+			</block>
+			<block type="MRduino_proxSensor5">
+			</block>
+			<block type="MRduino_proxSensor6">
+			</block>
+			<block type="MRduino_ambiantLight1">
+			</block>
+			<block type="MRduino_ambiantLight2">
+			</block>
+			<block type="MRduino_ambiantLight3">
+			</block>
+			<block type="MRduino_ambiantLight4">
+			</block>
+			<block type="MRduino_ambiantLight5">
+			</block>
+			<block type="MRduino_ambiantLight6">
+			</block>
+			<block type="MRduino_groundSensor1">
+			</block>
+			<block type="MRduino_groundSensor2">
+			</block>
+			<block type="MRduino_groundSensor3">
+			</block>
+			<block type="MRduino_led1On">
+			</block>
+			<block type="MRduino_led2On">
+			</block>
+			<block type="MRduino_led3On">
+			</block>
+			<block type="MRduino_led1Off">
+			</block>
+			<block type="MRduino_led2Off">
+			</block>
+			<block type="MRduino_led3Off">
+			</block>
+			<block type="MRduino_led1Toggle">
+			</block>
+			<block type="MRduino_led2Toggle">
+			</block>
+			<block type="MRduino_led3Toggle">
+			</block>
+			<block type="MRduino_battery">
+			</block>
+			<block type="MRduino_temperature">
+			</block>
+			<block type="MRduino_controlEnable">
+			</block>
+			<block type="MRduino_controlDisable">
+			</block>
+			<block type="MRduino_forward_mm">
+				<value name="PWM">
+					<shadow type="math_number">
+						<field name="NUM">5</field>
+					</shadow>
+				</value>
+			</block>
+			<block type="MRduino_back_mm">
+				<value name="PWM">
+					<shadow type="math_number">
+						<field name="NUM">5</field>
+					</shadow>
+				</value>
+			</block>
+			<block type="MRduino_turnLeft_degree">
+				<value name="PWM">
+					<shadow type="math_number">
+						<field name="NUM">90</field>
+					</shadow>
+				</value>
+			</block>
+			<block type="MRduino_turnRight_degree">
+				<value name="PWM">
+					<shadow type="math_number">
+						<field name="NUM">90</field>
+					</shadow>
+				</value>
+			</block>
+		</category>	
+		<category name="CAT_MRDUINO2" colour="#2475FA">
+			<block type="MRduino2_init"></block>
+			<block type="MRduino2_forward">
+				<value name="PWM">
+					<shadow type="math_number">
+						<field name="NUM">30</field>
+					</shadow>
+				</value>
+			</block>
+			<block type="MRduino2_motorRight">
+				<value name="PWM">
+					<shadow type="math_number">
+						<field name="NUM">30</field>
+					</shadow>
+				</value>
+				<value name="DIR">
+					<shadow type="math_number">
+						<field name="NUM">30</field>
+					</shadow>
+				</value>
+			</block>
+			<block type="MRduino2_motorLeft">
+				<value name="PWM">
+					<shadow type="math_number">
+						<field name="NUM">30</field>
+					</shadow>
+				</value>
+				<value name="DIR">
+					<shadow type="math_number">
+						<field name="NUM">30</field>
+					</shadow>
+				</value>
+			</block>
+			<block type="MRduino2_back">
+				<value name="PWM">
+					<shadow type="math_number">
+						<field name="NUM">30</field>
+					</shadow>
+				</value>
+			</block>
+			<block type="MRduino2_stop">
+			</block>
+			<block type="MRduino2_turnLeft">
+				<value name="PWM">
+					<shadow type="math_number">
+						<field name="NUM">30</field>
+					</shadow>
+				</value>
+			</block>
+			<block type="MRduino2_turnRight">
+				<value name="PWM">
+					<shadow type="math_number">
+						<field name="NUM">30</field>
+					</shadow>
+				</value>
+			</block>
+			<block type="MRduino2_proxSensor">
+			</block>
+			<block type="MRduino2_battery">
+			</block>
+			<block type="MRduino2_ledRight">
+			</block>
+			<block type="MRduino2_ledLeft">
+			</block>
+			<block type="MRduino2_forward_mm">
+				<value name="PWM">
+					<shadow type="math_number">
+						<field name="NUM">5</field>
+					</shadow>
+				</value>
+			</block>
+			<block type="MRduino2_back_mm">
+				<value name="PWM">
+					<shadow type="math_number">
+						<field name="NUM">5</field>
+					</shadow>
+				</value>
+			</block>
+			<block type="MRduino2_turnLeft_degree">
+				<value name="PWM">
+					<shadow type="math_number">
+						<field name="NUM">90</field>
+					</shadow>
+				</value>
+			</block>
+			<block type="MRduino2_turnRight_degree">
+				<value name="PWM">
+					<shadow type="math_number">
+						<field name="NUM">90</field>
 					</shadow>
 				</value>
 			</block>
 		</category>
-		<sep></sep>
-	</category>
-	<category name="CAT_MRDUINO" colour="#2475FA">
-		<block type="MRduino_init"></block>
-		<block type="MRduino_forward">
-			<value name="PWM">
-				<shadow type="math_number">
-					<field name="NUM">30</field>
-				</shadow>
-			</value>
-		</block>
-		<block type="MRduino_back">
-			<value name="PWM">
-				<shadow type="math_number">
-					<field name="NUM">30</field>
-				</shadow>
-			</value>
-		</block>
-		<block type="MRduino_stop">
-		</block>
-		<block type="MRduino_turnLeft">
-			<value name="PWM">
-				<shadow type="math_number">
-					<field name="NUM">30</field>
-				</shadow>
-			</value>
-		</block>
-		<block type="MRduino_turnRight">
-			<value name="PWM">
-				<shadow type="math_number">
-					<field name="NUM">30</field>
-				</shadow>
-			</value>
-		</block>
-		<block type="MRduino_proxSensor1">
-		</block>
-		<block type="MRduino_proxSensor2">
-		</block>
-		<block type="MRduino_proxSensor3">
-		</block>
-		<block type="MRduino_proxSensor4">
-		</block>
-		<block type="MRduino_proxSensor5">
-		</block>
-		<block type="MRduino_proxSensor6">
-		</block>
-		<block type="MRduino_ambiantLight1">
-		</block>
-		<block type="MRduino_ambiantLight2">
-		</block>
-		<block type="MRduino_ambiantLight3">
-		</block>
-		<block type="MRduino_ambiantLight4">
-		</block>
-		<block type="MRduino_ambiantLight5">
-		</block>
-		<block type="MRduino_ambiantLight6">
-		</block>
-		<block type="MRduino_groundSensor1">
-		</block>
-		<block type="MRduino_groundSensor2">
-		</block>
-		<block type="MRduino_groundSensor3">
-		</block>
-		<block type="MRduino_led1On">
-		</block>
-		<block type="MRduino_led2On">
-		</block>
-		<block type="MRduino_led3On">
-		</block>
-		<block type="MRduino_led1Off">
-		</block>
-		<block type="MRduino_led2Off">
-		</block>
-		<block type="MRduino_led3Off">
-		</block>
-		<block type="MRduino_led1Toggle">
-		</block>
-		<block type="MRduino_led2Toggle">
-		</block>
-		<block type="MRduino_led3Toggle">
-		</block>
-		<block type="MRduino_battery">
-		</block>
-		<block type="MRduino_temperature">
-		</block>
-		<block type="MRduino_controlEnable">
-		</block>
-		<block type="MRduino_controlDisable">
-		</block>
-		<block type="MRduino_forward_mm">
-			<value name="PWM">
-				<shadow type="math_number">
-					<field name="NUM">5</field>
-				</shadow>
-			</value>
-		</block>
-		<block type="MRduino_back_mm">
-			<value name="PWM">
-				<shadow type="math_number">
-					<field name="NUM">5</field>
-				</shadow>
-			</value>
-		</block>
-		<block type="MRduino_turnLeft_degree">
-			<value name="PWM">
-				<shadow type="math_number">
-					<field name="NUM">90</field>
-				</shadow>
-			</value>
-		</block>
-		<block type="MRduino_turnRight_degree">
-			<value name="PWM">
-				<shadow type="math_number">
-					<field name="NUM">90</field>
-				</shadow>
-			</value>
-		</block>
-		<sep></sep>
 	</category>
 	<category name="CAT_ARDUINO_SERVO" colour="#191919">
 		<block type="servo_attach"></block>

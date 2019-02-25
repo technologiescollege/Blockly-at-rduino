@@ -550,14 +550,16 @@
                             <!-- <input name="textSizeSelect" class="form-control" style="" min="0" max="30" step="1" value="12" type="number"> -->
                             <!-- </input> -->
                             <!-- <br /> -->
-                            <input type="checkbox" id="fontChoice" value="opendys" onclick="BlocklyDuino.changeFont()" checked>
-                            <label>OpenDyslexic</label>
-                            </input>
+							<select id="fontChoice" onchange="BlocklyDuino.changeFontURL(this[this.selectedIndex].value)" onmousemove="BlocklyDuino.changeFont()">
+								<option value="O">OpenDyslexic</option>
+								<option value="T">Trebuchet MS</option>
+								<option value="V">Verdana</option>
+							</select>
                             <div id="divCard">
                                 <br />
                                 <span class="fa fa-microchip"></span>  <label id="labelArduinoCard"></label>
                                 <div id="board_select_AIO_off"></div>
-                                <select id="board_select" onmousemove="BlocklyDuino.cardPicture_change_AIO();" onchange="BlocklyDuino.cardPicture_change_AIO();">
+                                <select id="board_select" onmousemove="BlocklyDuino.cardPicture_change_AIO()" onchange="BlocklyDuino.cardPicture_change_AIO()">
                                     <option value="none">...</option>
                                     <optgroup label="Arduino">
                                         <option value="arduino_leonardo">Arduino/Genuino LEONARDO</option>
@@ -582,6 +584,11 @@
                                     </optgroup>
                                     <optgroup label="DFRobot">
                                         <option value="dfrobot_romeo">DFRobot RoMeo v2</option>
+                                        <option value="dfrobot_romeo_ble">DFRobot RoMeo BLE</option>
+                                    </optgroup>
+                                    <optgroup label="ESP">
+                                        <option value="esp8266">ESP8266</option>
+                                        <option value="esp32">ESP32</option>
                                     </optgroup>
                                     <optgroup label="Kits">
                                         <option value="kit_microfeux">Micro-feux Jeulin</option>
