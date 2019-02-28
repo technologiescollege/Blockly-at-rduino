@@ -27,6 +27,7 @@ var MSG = {
   span_font: " choix de police",
   span_colors: " choix de couleur",
   span_reset: " ré initialiser",
+  span_blockfactory: " usine à blocs ",
   span_RGB: " conversion couleur <-> valeurs RVB",
   span_convert: " conversion texte <-> binaire",
   span_bin2txt: " binaire -> texte ",

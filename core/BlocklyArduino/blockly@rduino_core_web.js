@@ -836,18 +836,18 @@ BlocklyDuino.init = function() {
 	
 	// build Blockly ...
 	BlocklyDuino.workspace = Blockly.inject('content_blocks',
-		      {grid:
+			{grid:
 		          {	spacing: 25,
 					length: 3,
 					colour: '#ccc',
 					snap: true},
-				sounds : true,
-				media: 'media/',
-				rtl: Code.isRtl(),
-				toolbox: BlocklyDuino.buildToolbox(),
-				zoom:
-					{controls: true,
-					wheel: true}
+			sounds : true,
+			media: 'media/',
+			rtl: Code.isRtl(),
+			toolbox: BlocklyDuino.buildToolbox(),
+			zoom:
+				{controls: true,
+				wheel: true}
 		      });
 	// bind events to html elements
 	BlocklyDuino.bindFunctions();

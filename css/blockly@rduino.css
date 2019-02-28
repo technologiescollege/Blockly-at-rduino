@@ -66,7 +66,8 @@ html,body {
 }
 
 #btn_levels {
-	padding: 0px 0px 0px 5px;
+	margin-top: 5px;
+	margin-left: 10px;
 }
 
 #divTitre p {
@@ -91,7 +92,47 @@ html,body {
     bottom: 5px;
     width: 100%;
 }
-
+/* surcharge css min pour accéssibilité
+------------------------------------------------ */
+.btn-sm, .btn {
+	font-size: 14px;
+	line-height: 0;
+	padding: 5px 10px;
+	border: 1px solid #000000;
+}
+.btn-sm:hover, .btn:hover {
+	background-color: #FFFFFF; 
+	border-color: #000000;
+	color: #000000;
+}
+.nav {
+	font-size: 14px;
+	line-height: 0;
+	padding: 0px 0px;
+	border: 1px solid #000000;
+	border-radius: 5px;
+}
+.btn-level {
+	font-size: 16px;
+	line-height: 0;
+	border: 1px solid #000000;
+	padding: 12px 6px;
+}
+#tab_supervision, #tab_blocks, #tab_arduino {
+	font-size: 14px;
+	line-height: 0;
+	padding: 0px 0px;
+	border: 1px #000000;
+}
+#tab_supervision:hover, #tab_blocks:hover, #tab_arduino:hover {
+	background-color: #FFFFFF; 
+	border-color: #000000;
+	color: #000000;
+}
+#serialport_ide{
+	top: 5px;
+}
+/*----------------------------------------------- */
 .menuPanel-ver {
 	clear: both;
 	float: left;
@@ -352,7 +393,7 @@ html[dir="RTL"] #languageMenu {
 	z-index: 10;
 }
 #barre{
-	padding : 2px 0px 0px 5px;
+	padding : 3px 0px 0px 10px;
 	background-color : #00969C;
 }
 #barre_h{
@@ -452,11 +493,11 @@ html[dir="RTL"] #select_all {
 }
 
 .blocklyToolboxDiv {
-	background-color: #EDFAFA !important;
+	background-color: #0333 !important;
 }
 
 .blocklyFlyoutBackground {
-	fill: #e9f9f9 !important;
+	fill: #0333 !important;
 }
 
 .blocklyTreeRoot {
@@ -486,11 +527,7 @@ html[dir="RTL"] .blocklyToolboxDiv .blocklyTreeRoot [role="treeitem"]   .blockly
 }
 
 /* .blocklyTreeRow:hover { */
-/* 	background-color: #90e8e8 !important; */
-/* } */
-
-/* .blocklyTreeSelected { */
-/* 	background-color: #11c6c6 !important; */
+	/* background-color: #00969C !important; */
 /* } */
 
 .blocklyTreeSeparator {
@@ -593,7 +630,7 @@ html[dir="RTL"] .colors_category {
   width: 28px;
   height: 28px;
   background-color: #006468; 
-  border-color: #006468; 
+  border-color: #000000; 
   line-height: 28px;
   padding:0;
   border-radius:50%;
@@ -603,56 +640,26 @@ html[dir="RTL"] .colors_category {
   width: 28px;
   height: 28px;
   background-color: #006468; 
-  border-color: #006468; 
-  line-height: 0px;
+  border-color: #000000; 
+  line-height: 1px;
   padding:0;
   border-radius:0px;
 } 
-.btn-arduino:hover,.btn-arduinoRect:hover,.btn-arduino:focus { 
+.btn-arduino:hover,.btn-arduinoRect:hover,.btn-arduino:focus {
   background-color: #FFFFFF; 
-  border-color: #FFFFFF;
+  border-color: #000000;
 } 
 .btn-arduino:active,.btn-arduinoRect:active,.btn-arduino.active,.open .dropdown-toggle.btn-arduino,.open .dropdown-toggle.btn-arduinoRect  { 
   background-color: #FFCC00; 
-  border-color: #FFCC00;
+  border-color: #000000;
 } 
 .btn-arduino.disabled,.btn-arduinoRect[disabled],.btn-arduino[disabled],fieldset[disabled] .btn-arduino,.btn-arduino.disabled:hover,.btn-arduino[disabled]:hover,fieldset[disabled] .btn-arduino:hover, .btn-arduino.disabled:focus, .btn-arduino[disabled]:focus, fieldset[disabled] .btn-arduino:focus, .btn-arduino.disabled:active, .btn-arduino[disabled]:active, fieldset[disabled] .btn-arduino:active, .btn-arduino.disabled.active, .btn-arduino[disabled].active, fieldset[disabled] .btn-arduino.active { 
   background-color: #FFFFFF; 
-  border-color: #130269; 
+  border-color: #000000; 
 } 
 .btn-arduino .badge { 
   color: #00929F; 
   background-color: #ffffff; 
-}
-.btn-titre {
-color:#fff;
-background-color:#606060;
-border-color:#606060;
-}
-.btn-titre.focus,.btn-titre:focus {
-color:#fff;
-background-color:#606060;
-border-color:#606060;
-}
-.btn-titre:hover {
-color:#fff;
-background-color:#606060;
-border-color:#606060;
-}
-.btn-titre.active,.btn-titre:active,.open>.dropdown-toggle.btn-titre {
-color:#fff;
-background-color:#606060;
-background-image:none;
-border-color:#606060;
-}
-.btn-titre.active.focus,.btn-titre.active:focus,.btn-titre.active:hover,.btn-titre:active.focus,.btn-titre:active:focus,.btn-titre:active:hover,.open>.dropdown-toggle.btn-titre.focus,.open>.dropdown-toggle.btn-titre:focus,.open>.dropdown-toggle.btn-titre:hover {
-color:#fff;
-background-color:#606060;
-border-color:#606060;
-}
-.btn-titre.disabled.focus,.btn-titre.disabled:focus,.btn-titre.disabled:hover,.btn-titre[disabled].focus,.btn-titre[disabled]:focus,.btn-titre[disabled]:hover,fieldset[disabled] .btn-titre.focus,fieldset[disabled] .btn-titre:focus,fieldset[disabled] .btn-titre:hover {
-background-color:#606060;
-border-color:#606060;
 }
 
 #fenetre_term{

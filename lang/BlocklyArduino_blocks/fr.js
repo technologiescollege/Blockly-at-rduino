@@ -219,9 +219,12 @@ Blockly.Msg.CAT_STEPPER = "Moteurs pas à pas"; //added august 28th 2016
 
 Blockly.Msg.CAT_MHK = "MyHumanKit"; //added august 23th 2016
 
-Blockly.Msg.CAT_ESUS = "carte Esus"; //added 8 october 2016
-Blockly.Msg.CAT_ESUS_WIFI = " - WiFi";
-Blockly.Msg.CAT_ESUS_MOTORS = " - moteurs";
+Blockly.Msg.CAT_MACE_ROBOTICS = "Macé Robotics"; //added 01/03/2019
+Blockly.Msg.CAT_ESUS = " - carte Esus"; //added 8 october 2016
+Blockly.Msg.CAT_ESUS_WIFI = " --> WiFi";
+Blockly.Msg.CAT_ESUS_MOTORS = " --> moteurs";
+Blockly.Msg.CAT_MRDUINO = " - robot MRduino";
+Blockly.Msg.CAT_MRDUINO2 = " - robot MRduino2";
 
 Blockly.Msg.CAT_APDS_9960_RGB_Gesture = "couleur + mouvement"; //added 9 october 2016
 
@@ -301,6 +304,9 @@ Blockly.Msg.CAT_PETITBOT_SERVO = "servomoteurs";
 Blockly.Msg.CAT_PETITBOT_LED = "diodes";
 
 Blockly.Msg.CAT_NRF24L01 = "nRF24L01"; //added 31/05/2018
+
+Blockly.Msg.CAT_SEEED = "Seeed studio"; //added 01/03/2018
+Blockly.Msg.CAT_MUSIC_SHIELD = "Seeed Music Shield v2.2"; //added 01/03/2018
  
 // Nouvelle arborescence 
 Blockly.Msg.CAT_FONCTION_AFFICHAGE = "Affichage";
@@ -1517,7 +1523,6 @@ Blockly.Msg.ESUS_WIFI_SEND_STREAM = "envoyer donnée WiFi (texte)";
 Blockly.Msg.ESUS_WIFI_SEND_FLOAT_STREAM = "envoyer donnée WiFi (nombre)";
 
 //******** Robot MRduino (Mace Robotics)
-Blockly.Msg.CAT_MRDUINO = "MRduino Robot";
 Blockly.Msg.MRduino_init="Initialisation robot MRduino";
 Blockly.Msg.MRduino_forward="Avancer";
 Blockly.Msg.MRduino_forward_mm="Avancer distance";

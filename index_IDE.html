@@ -85,7 +85,7 @@
                                     <a ><i class="fa fa-briefcase"></i> <span id="span_menu_2"> </span> <i class="fa fa-caret-down"></i></a>
                                     <ul class="submenu">
                                         <li><a href='http://fritzing.org/download/' target='_blank' id="menu_21"> <span id="span_menu_21"> </span> </a></li>
-                                        <li id="mtab_supervision"><a href="https://github.com/technologiescollege/BlocklyArduino_electrified" target="_blank" id="menu_22"> <span id="span_menu_22"> </span> </a></li>
+                                        <li id="mtab_supervision"><a href="https://github.com/technologiescollege/BlocklyArduino_AIO" target="_blank" id="menu_22"> <span id="span_menu_22"> </span> </a></li>
                                         <li id="mtab_blocks"><a href="#content_blocks" aria-controls="content_blocks" role="tab" data-toggle="tab" id="menu_23"> <span id="span_menu_23"> </span> </a></li>
                                         <li id="mtab_arduino"><a href="#content_arduino" aria-controls="content_arduino" role="tab" data-toggle="tab" id="menu_24"> <span id="span_menu_24"> </span> </a></li>
                                     </ul>
@@ -139,12 +139,12 @@
                 </div>
                 <div id="divTitre">
                     <div id="btn_levels">
-                        <a href="#" id="toolbox_algo" class="btn btn-default" role='button'>0</a>
-                        <a href="#" id="toolbox_arduino_1" class="btn btn-default" role='button'>1</a>
-                        <a href="#" id="toolbox_arduino_2" class="btn btn-default" role='button'>2</a>
-                        <a href="#" id="toolbox_arduino_3" class="btn btn-default" role='button'>3</a>
-                        <a href="#" id="toolbox_arduino_4" class="btn btn-default" role='button'>4</a>
-                        <a href="#" id="toolbox_arduino_all" class="btn btn-default" role='button'>TOUT</a>
+                        <a href="#" id="toolbox_algo" class="btn btn-level btn-default" role='button'>0</a>
+                        <a href="#" id="toolbox_arduino_1" class="btn btn-level btn-default" role='button'>1</a>
+                        <a href="#" id="toolbox_arduino_2" class="btn btn-level btn-default" role='button'>2</a>
+                        <a href="#" id="toolbox_arduino_3" class="btn btn-level btn-default" role='button'>3</a>
+                        <a href="#" id="toolbox_arduino_4" class="btn btn-level btn-default" role='button'>4</a>
+                        <a href="#" id="toolbox_arduino_all" class="btn btn-level btn-default" role='button'>TOUT</a>
                         <label id="labelToolboxDefinition"></label>
                     </div>
 					<div id="barre">
@@ -219,7 +219,7 @@
         <div id="divBody">
             <div id="menuPanel">
                 <div id="menuPanelConfig">
-                    <button id="btn_configGlobal" class="btn btn_ver btn-danger btn-block" data-toggle="modal" data-target="#configModalGlobal">
+                    <button id="btn_configGlobal" class="btn btn-sm btn_ver btn-danger btn-block" data-toggle="modal" data-target="#configModalGlobal">
                         <span class="glyphicon glyphicon-alert"> </span>
                         <span id="configGlobalLabel"> </span>
                     </button>
@@ -228,11 +228,11 @@
                             <img id="arduino_card_miniPicture" />
                         </a>
                     </div>
-                    <button id="btn_config" class="btn btn-warning btn-block " data-toggle="modal" data-target="#configModal">
+                    <button id="btn_config" class="btn btn-sm btn-warning btn-block " data-toggle="modal" data-target="#configModal">
                         <span class="fa fa-cogs"> </span>
                         <span id="span_config"> </span>
                     </button>
-                    <a href="#" id="btn_config_kit" target="_blank" class="btn btn-warning btn-block hidden" role='button'>
+                    <a href="#" id="btn_config_kit" target="_blank" class="btn btn-sm btn-warning btn-block hidden" role='button'>
                         <span class="glyphicon glyphicon-th-list"> </span>
                         <span id="span_config_kit"> </span>
                     </a>
@@ -240,7 +240,7 @@
                 <div id="menuPanelBlockly" class="margin-top-5">
                     <ul id="ul_nav" role="tablist">
                         <li role="presentation" id="tab_supervision" class="disabled">
-                            <a href="https://github.com/technologiescollege/BlocklyArduino_electrified" target="_blank">
+                            <a href="https://github.com/technologiescollege/BlocklyArduino_AIO" target="_blank">
                                 <span class="glyphicon glyphicon-transfer"></span>
                                 <span id="a_supervision"> </span>
                             </a>
@@ -261,19 +261,19 @@
                     </ul>
                 </div>
                 <div id="menuPanelFiles">
-                    <a id="btn_saveXML" class='btn btn-success btn-block' href="#" role='button'>
+                    <a id="btn_saveXML" class='btn btn-sm btn-success btn-block' href="#" role='button'>
                         <span class="fas fa-cloud-download-alt"></span>
                         <span id="span_saveXML"> </span>
                     </a>
-                    <button id="btn_fakeload" class="btn btn-success btn-block" accept="*.B@, *.xml">
+                    <button id="btn_fakeload" class="btn btn-sm btn-success btn-block" accept="*.B@, *.xml">
                         <span class="fas fa-cloud-upload-alt"></span>
                         <span id="span_fakeload"> </span>
                     </button>
-                    <button id="btn_example" class="btn btn-info btn-block" data-toggle="modal" data-target="#exampleModal">
+                    <button id="btn_example" class="btn btn-sm btn-info btn-block" data-toggle="modal" data-target="#exampleModal">
                         <span class="glyphicon glyphicon-list-alt"> </span>
                         <span id="span_example"> </span>
                     </button>
-                    <a id="btn_create_example" class="btn btn_ver btn-info btn-block" href="#" target="_blank" role='button'>
+                    <a id="btn_create_example" class="btn btn-sm btn_ver btn-info btn-block" href="#" target="_blank" role='button'>
                         <span class="glyphicon glyphicon-wrench"> </span>
                         <span id="span_create_example"> </span>
                     </a>
@@ -283,21 +283,21 @@
                     <!--button id="btn_wiring" class="btn btn-primary">
                             <span class="glyphicon glyphicon-blackboard"></span>
                     </button-->
-                    <button id="btn_factory" class="btn btn-primary" disabled>
+                    <button id="btn_factory" class="btn btn-sm btn-primary" disabled>
                         <span class="fa fa-industry"> </span>
                     </button>
-                    <button id="btn_RGB" class="btn btn-primary">
+                    <button id="btn_RGB" class="btn btn-sm btn-primary">
                         <span class="glyphicon glyphicon-th"> </span>
                     </button>
-                    <button id="btn_convert" class="btn btn-primary">
+                    <button id="btn_convert" class="btn btn-sm btn-primary">
                         <span class="glyphicon glyphicon-superscript"> </span>
                     </button>
                     <br />
                     <br />
-                    <button id="btn_miniMenuPanel" class="btn btn-default" >
+                    <button id="btn_miniMenuPanel" class="btn btn-sm btn-default" >
                         <span class="glyphicon glyphicon-step-backward"> </span>
                     </button>
-                    <a href="./index_IDE.html" id="btn_reset" class="btn btn-danger">
+                    <a href="./index_IDE.html" id="btn_reset" class="btn btn-sm btn-danger">
                         <span class="glyphicon glyphicon-off"> </span>
                     </a>
                     <br />
@@ -487,7 +487,7 @@
                         </div>
                         <label> </label>
                         <label id="span_functionToggle"> </label>
-                        <input id="toggle-Functions" data-toggle="toggle" data-off='<span id="span_functionON"> </span>' data-on='<span id="span_functionOFF"> </span>' data-onstyle="primary" data-offstyle="default" data-width="120" type="checkbox"/>
+                        <input id="toggle-Functions" data-toggle="toggle" data-off="<span id='span_functionON'> </span>" data-on="<span id='span_functionOFF'> </span>" data-onstyle="primary" data-offstyle="default" data-width="120" type="checkbox"/>
                     </div>
                     <input type="checkbox" name="select_all" id="select_all"/> <span id="span_select_all"> </span>
                     <div class="modal-body" id="modal-body-config"></div>

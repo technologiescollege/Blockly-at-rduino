@@ -27,6 +27,7 @@ var MSG = {
   span_font: " Font ",
   span_colors: " Colors ",
   span_reset: " Reset workspace & preferences",
+  span_blockfactory: " blocks factory ",
   span_RGB: " Convert Color <-> RGB Values",
   span_convert: " Convert Text <-> Binary",
   span_bin2txt: " Binary -> Text ",

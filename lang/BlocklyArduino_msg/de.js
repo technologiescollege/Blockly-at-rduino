@@ -27,6 +27,7 @@ var MSG = {
   span_font: " Schrift auswählen",
   span_colors: " Farben Auswahl",
   span_reset: " Arbeitsfläche und Einstellungen zurücksetzen",
+  span_blockfactory: " können Fabrik ",
   span_RGB: " Farbwert konvertieren <-> RGB Werte",
   span_convert: " Text konvertieren <-> Binärwert",
   span_bin2txt: " Binärwert -> zu Text ",
