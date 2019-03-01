@@ -96,7 +96,7 @@ html,body {
 ------------------------------------------------ */
 .btn-sm, .btn {
 	font-size: 14px;
-	line-height: 0;
+	/* line-height: 0; */
 	padding: 5px 10px;
 	border: 1px solid #000000;
 }

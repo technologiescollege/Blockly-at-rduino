@@ -25,7 +25,7 @@ function updateLanguage() {
   injectCode(code, 'languagePre');
 }
 function formatJavaScript(code, rootBlock) {
-  code.push("Blockly.Blocks['" + blockType + "'] = { init: function() {");
+  code.push("Blockly.Blocks['" + blockType + "'] = {\n  init: function() {");
   var TYPES = {'input_value': 'appendValueInput','input_statement': 'appendStatementInput','input_dummy': 'appendDummyInput'};
   var contentsBlock = rootBlock.getInputTargetBlock('INPUTS');
   while (contentsBlock) {
@@ -202,7 +202,7 @@ function updateGenerator() {
   }
   var language = 'JavaScript';
   var code = [];
-  code.push("Blockly.Arduino['" + blockType +"'] = function(block) {");
+  code.push("Blockly.Arduino['" + blockType +"'] = function(block) {\n  //IMPORTANT : supprimer ce qui n'est pas utile");
   var rootBlock = getRootBlock();
   if (rootBlock) {
     var blocks = rootBlock.getDescendants();
