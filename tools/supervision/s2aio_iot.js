@@ -10,6 +10,7 @@ var pin_mode = "";
 var pin = "";
 var outputValue = "";
 var socket = new WebSocket('ws://' + ipAddress + ':' + ipPort);
+window.parent.$("#tabs").tabs("select",1);
 
 function WebSocketTest() {
 	if ("WebSocket" in window)

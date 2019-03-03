@@ -1,14 +1,3 @@
-<ul class="nav nav-pills">
-	<li role="presentation" class="active"><a href="#tabs-1" aria-controls="tabs-1" role="tab" data-toggle="tab"><span id="span_supervision_tab1"> </span></a></li>
-	<li role="presentation"><a href="#tabs-2" aria-controls="tabs-2" role="tab" data-toggle="tab"><span id="span_supervision_tab2"> </span></a></li>
-	<li role="presentation"><a href="#tabs-3" aria-controls="tabs-3" role="tab" data-toggle="tab"><span id="span_supervision_tab3"> </span></a></li>
-	<li role="presentation"><a href="#tabs-4" aria-controls="tabs-4" role="tab" data-toggle="tab"><span id="span_supervision_tab4"> </span></a></li>
-	<li role="presentation"><a href="#tabs-5" aria-controls="tabs-5" role="tab" data-toggle="tab"><span id="span_supervision_tab5"> </span></a></li>
-	<li role="presentation"><a href="#tabs-6" aria-controls="tabs-6" role="tab" data-toggle="tab"><span id="span_supervision_tab6"> </span></a></li>
-	<li role="presentation"><a href="#tabs-7" aria-controls="tabs-7" role="tab" data-toggle="tab"><span id="span_supervision_tab7"> </span></a></li>
-	<li role="presentation"><a href="#tabs-8" aria-controls="tabs-8" role="tab" data-toggle="tab"><span id="span_supervision_tab8"> </span></a></li>
-</ul>
-
 <div class="tab-content" style="margin-top: 5px;">
 	<span id="connected"></span>
 	<!-- Digital Input -->
@@ -21,23 +10,29 @@
 						<span id="span_supervision_disabled_e#pin_number#"> </span>
 					</label>
 					<label class="radio-inline">
-						<input type="radio" name="e#pin_number#" value="1" id="out_dig_#pin_number#" onclick="clicked(this.id);">
+						<input type="radio" name="e#pin_number#" value="1" id="out_dig_#pin_number#" onclick="clicked(this.id);"/>
 						<span id="span_supervision_enabled_e#pin_number#"> </span>
 					</label>
 					<label><span id="span_supervision_pin_e#pin_number#"> </span> #pin_number# :</label>
 					<input id="ip#pin_number#" name="pin" class="form-control" type="text" value="0" size="1" disabled="disabled"/>
 				</div>
 				<div class="form-group">
-					<label>Data Latch</label>
+					<label><span id="span_supervision_data_latchL_e#pin_number#"> </span></label>
 					<select id="dlatch#pin_number#" class="form-control" onchange="digitalLatch('#pin_number#', (this.id));">
-						<option value="1">No Latch Set</option>
-						<option value="2">Latch High</option>
-						<option value="3">Latch Low</option>
+						<option value="1">
+							<span id="span_supervision_data_latchL1_e#pin_number#"> </span>
+						</option>
+						<option value="2">
+							<span id="span_supervision_data_latchL2_e#pin_number#"> </span>
+						</option>
+						<option value="3">
+							<span id="span_supervision_data_latchL3_e#pin_number#"> </span>
+						</option>
 					</select>
 				</div>
 				<div class="form-group">
-					<label>Latch Event Occurred On :</label>
-					<input id="dlevent#pin_number#" name="pin" class="form-control" type="text" maxlength="255" value="" disabled="disabled">
+					<label><span id="span_supervision_latch_event"> </span></label>
+					<input id="dlevent#pin_number#" name="pin" class="form-control" type="text" maxlength="255" value="" disabled="disabled"/>
 				</div>
 			</div>
 		</div>
@@ -49,11 +44,11 @@
 				<div class="form-group">
 					<label><span id="span_supervision_pin_s#pin_number#"> </span> #pin_number# :</label>
 					<label class="radio-inline">
-						<input type="radio" name="p#pin_number#_tab2" value="0" id="low_#pin_number#" onclick="clicked(this.id);" checked="checked">
+						<input type="radio" name="p#pin_number#_tab2" value="0" id="low_#pin_number#" onclick="clicked(this.id);" checked="checked"/>
 						<span id="span_supervision_low_s#pin_number#"> </span>
 					</label>
 					<label class="radio-inline">
-						<input type="radio" name="p#pin_number#_tab2" value="1" id="high_#pin_number#" onclick="clicked(this.id);">
+						<input type="radio" name="p#pin_number#_tab2" value="1" id="high_#pin_number#" onclick="clicked(this.id);"/>
 						<span id="span_supervision_high_s#pin_number#"> </span>
 					</label>
 					#pwm_line#
@@ -62,9 +57,9 @@
 		</div>
 		<div id="template_tabs2_pwm" style="display:none">
 			<label class="checkbox-inline">
-				<input type="checkbox" name="p#pin_number#_tab2_pwm" value="2" onclick="clicked(this.id);" id="pwm_#pin_number#"><span id="span_supervision_PWM"> </span>
+				<input type="checkbox" name="p#pin_number#_tab2_pwm" value="2" onclick="clicked(this.id);" id="pwm_#pin_number#"/><span id="span_supervision_PWM"> </span>
 			</label>
-			<input type="number" name="p#pin_number#_tab2_pwm" id="v#pin_number#" class="form-control" style="display:none" min="0" max="255" step="1" value="0" oninput="pwmChange(this.id);">
+			<input type="number" name="p#pin_number#_tab2_pwm" id="v#pin_number#" class="form-control" style="display:none" min="0" max="255" step="1" value="0" oninput="pwmChange(this.id);"/>
 		</div>
 
 	</div>
@@ -74,24 +69,24 @@
 			<div class="form-inline">
 				<div class="form-group">
 					<label class="radio-inline">
-						<input type="radio" name="p#pin_number#_tab3" value="0" id="in_ana_#pin_number#" onclick="clicked(this.id);" checked="checked">
+						<input type="radio" name="p#pin_number#_tab3" value="0" id="in_ana_#pin_number#" onclick="clicked(this.id);" checked="checked"/>
 						<span id="span_supervision_disabled_e#pin_number#"> </span>
 					</label>
 					<label class="radio-inline">
-						<input type="radio" name="p#pin_number#_tab3" value="1" id="out_ana_#pin_number#" onclick="clicked(this.id);">
+						<input type="radio" name="p#pin_number#_tab3" value="1" id="out_ana_#pin_number#" onclick="clicked(this.id);"/>
 						<span id="span_supervision_enabled_e#pin_number#"> </span>
 					</label>
 					<label><span id="span_supervision_pin_e#pin_number#"> </span> A#pin_number# :</label>
 					<input id="ia#pin_number#" name="pin" class="form-control" type="text" value="0" size="1" disabled="disabled"/>
 				</div>
 				<div class="form-group">
-					<label>Latch Threshold</label>
+					<label><span id="span_supervision_data_latchA2_e#pin_number#"> </span></label>
 					<input id="a1thr#pin_number#" name="pin" class="form-control" type="text" maxlength="255" value="0" size="1"/>
 				</div>
 				<div class="form-group">
-					<label>Data Latch</label>
+					<label><span id="span_supervision_data_latchA_e#pin_number#"> </span></label>
 					<select id="alatch#pin_number#" class="form-control" onchange="analogLatch('0', (this.id));">
-						<option value="1">No Latch Set</option>
+						<option value="1"><span id="span_supervision_data_latchA1_e#pin_number#"> </span></option>
 						<option value="2">==</option>
 						<option value="3">&lt;</option>
 						<option value="4">&lt;=</option>
@@ -100,8 +95,8 @@
 					</select>
 				</div>
 				<div class="form-group">
-					<label>Latch Event Occurred On :</label>
-					<input id="alevent#pin_number#" name="pin" class="form-control" type="text" maxlength="255" value="" disabled="disabled">
+					<label><span id="span_supervision_data_latchA3_e#pin_number#"> </span></label>
+					<input id="alevent#pin_number#" name="pin" class="form-control" type="text" maxlength="255" value="" disabled="disabled"/>
 				</div>
 			</div>
 		</div>
@@ -128,7 +123,7 @@
 		<br>
 		<br>
 		<b><span id="span_supervision_latch_digital_pin"></span></b>
-		<INPUT TYPE="NUMBER" id="dlData" MIN="2" MAX="52" STEP="1" VALUE="2" SIZE="1">
+		<INPUT TYPE="NUMBER" id="dlData" MIN="2" MAX="52" STEP="1" VALUE="2" SIZE="1"/>
 		<a href="javascript:digitalLatchRead(this.id)" class="btn btn-info">
 	       <span id="span_supervision_read_pin"></span>
 	    </a>
@@ -139,7 +134,7 @@
 		<br>
 		<br>
 		<b><span id="span_supervision_latch_analog_pin"></span></b>
-		<INPUT TYPE="NUMBER" id="alData" MIN="0" MAX="16" STEP="1" VALUE="0" SIZE="1">
+		<INPUT TYPE="NUMBER" id="alData" MIN="0" MAX="16" STEP="1" VALUE="0" SIZE="1"/>
 		<a href="javascript:analogLatchRead(this.id)" class="btn btn-info">
 	       <span id="span_supervision_read_pin"></span>
 	    </a>
@@ -235,11 +230,11 @@
 			<div class="form-inline" id="template_tabs4_pin">	
 				<div class="form-group">
 					<label class="chekbox-inline">
-						<input type="checkbox" name="scrute_p#pin_number#_tab4" id="scrute_out_ana_#pin_number#_tab4" value="1" onclick="graph(this.id)" style="display: none">
+						<input type="checkbox" name="scrute_p#pin_number#_tab4" id="scrute_out_ana_#pin_number#_tab4" value="1" onclick="graph(this.id)" style="display: none"/>
 					</label>
 					<label id="scrute_span_supervision_pin_e#pin_number#_tab4" style="display: none"> A #pin_number# :</label>
-					<input id="scrute_ia#pin_number#_tab4" name="pin" class="form-control" type="text" value="0" size="1" disabled="disabled" style="display: none">
-					<input id="Graph_pickcolor_A#pin_number#" onchange="update(this.jscolor)" type="hidden"value="00ff00"><button id="Graph_pickcolor_button_A#pin_number#" class="jscolor {valueElement: 'Graph_pickcolor_A#pin_number#'}" style="display: none"><b>?</b></button>
+					<input id="scrute_ia#pin_number#_tab4" name="pin" class="form-control" type="text" value="0" size="1" disabled="disabled" style="display: none"/>
+					<input id="Graph_pickcolor_A#pin_number#" onchange="update(this.jscolor)" type="hidden"value="00ff00"/><button id="Graph_pickcolor_button_A#pin_number#" class="jscolor {valueElement: 'Graph_pickcolor_A#pin_number#'}" style="display: none"><b>?</b></button>
 					
 					<!--label class="chekbox-inline">
 						<input type="checkbox" name="scrute_e#pin_number#_tab4" id="scrute_out_dig_#pin_number#_tab4" value="1" oncheck="graph(this.id)">
@@ -255,7 +250,7 @@
 	<div id="tabs-5" class="tab-pane">
 		<h2><span id="span_supervision_servo"></span></h2>
 		<b><span id="span_supervision_servo_pin"></span></b>
-		<INPUT TYPE="NUMBER" id="SV_servo_pin" MIN="2" MAX="52" STEP="1" VALUE="2" SIZE="1">
+		<INPUT TYPE="NUMBER" id="SV_servo_pin" MIN="2" MAX="52" STEP="1" VALUE="2" SIZE="1"/>
 		<!--select id="servoPin">
 			<option value="3">3</option>
 			<option value="5">5</option>
@@ -275,7 +270,7 @@
 
 		<h2><span id="span_supervision_tone"></span></h2>
 		<b><span id="span_supervision_tone_pin"></span></b>
-		<INPUT TYPE="NUMBER" id="SV_tone_pin" MIN="2" MAX="52" STEP="1" VALUE="2" SIZE="1">
+		<INPUT TYPE="NUMBER" id="SV_tone_pin" MIN="2" MAX="52" STEP="1" VALUE="2" SIZE="1"/>
 		<!--select id="tonePin"></select>
 		<script type="text/javascript">
 			for (var i=2; i <= 19; i++) {
@@ -296,7 +291,7 @@
 
 		<h2><span id="span_supervision_encoder"></span></h2>
 		<b><span id="span_supervision_encoder_pinA"></span></b>
-		<INPUT TYPE="NUMBER" id="SV_encoder_pin1" MIN="2" MAX="52" STEP="1" VALUE="2" SIZE="1">
+		<INPUT TYPE="NUMBER" id="SV_encoder_pin1" MIN="2" MAX="52" STEP="1" VALUE="2" SIZE="1"/>
 		<!--select id="encoderPinA"></select>
         <script type="text/javascript">
 	        for (var i=2; i <= 19; i++) {
@@ -305,7 +300,7 @@
         </script-->
 		&nbsp;&nbsp;&nbsp;&nbsp;
 		<b><span id="span_supervision_encoder_pinB"></span></b>
-		<INPUT TYPE="NUMBER" id="SV_encoder_pin2" MIN="2" MAX="52" STEP="1" VALUE="2" SIZE="1">
+		<INPUT TYPE="NUMBER" id="SV_encoder_pin2" MIN="2" MAX="52" STEP="1" VALUE="2" SIZE="1"/>
 		<!--select id="encoderPinB"></select>
         <script type="text/javascript">
             for (var i=2; i <= 19; i++) {
@@ -326,7 +321,7 @@
 		<br><br>
 		<h2><span id="span_supervision_sonar"></span></h2>
 		<b><span id="span_supervision_sonar_trig"></span></b>
-		<INPUT TYPE="NUMBER" id="SV_sonar_pin1" MIN="2" MAX="52" STEP="1" VALUE="2" SIZE="1">
+		<INPUT TYPE="NUMBER" id="SV_sonar_pin1" MIN="2" MAX="52" STEP="1" VALUE="2" SIZE="1"/>
 		<!--select id="sonarTriggerPin"></select>
         <script type="text/javascript">
             for (var i=2; i <= 19; i++) {
@@ -335,7 +330,7 @@
         </script-->
 		&nbsp;&nbsp;&nbsp;&nbsp;
 		<b><span id="span_supervision_sonar_echo"></span></b>
-		<INPUT TYPE="NUMBER" id="SV_sonar_pin2" MIN="2" MAX="52" STEP="1" VALUE="2" SIZE="1">
+		<INPUT TYPE="NUMBER" id="SV_sonar_pin2" MIN="2" MAX="52" STEP="1" VALUE="2" SIZE="1"/>
 		<!--select id="sonarEchoPin"></select>
         <script type="text/javascript">
             for (var i=2; i <= 19; i++) {
@@ -356,7 +351,7 @@
 
 		<h2><span id="span_supervision_stepper"></span></h2>
 		<b><span id="span_supervision_stepper_pin1"></span></b>
-		<INPUT TYPE="NUMBER" id="SV_stepper_pin1" MIN="2" MAX="52" STEP="1" VALUE="2" SIZE="1">
+		<INPUT TYPE="NUMBER" id="SV_stepper_pin1" MIN="2" MAX="52" STEP="1" VALUE="2" SIZE="1"/>
 		<!--select id="stepperPin1"></select>
         <script type="text/javascript">
             for (var i=2; i <= 19; i++) {
@@ -366,7 +361,7 @@
         </script-->
 		&nbsp;&nbsp;&nbsp;&nbsp;
 		<b><span id="span_supervision_stepper_pin2"></span></b>
-		<INPUT TYPE="NUMBER" id="SV_stepper_pin2" MIN="2" MAX="52" STEP="1" VALUE="2" SIZE="1">
+		<INPUT TYPE="NUMBER" id="SV_stepper_pin2" MIN="2" MAX="52" STEP="1" VALUE="2" SIZE="1"/>
 		<!--select id="stepperPin2"></select>
         <script type="text/javascript">
             for (var i=2; i <= 19; i++) {
@@ -377,7 +372,7 @@
 		&nbsp;&nbsp;&nbsp;&nbsp;
 		<b><span id="span_supervision_stepper_pin3"></span></b>
 		<select id="stepperPin3"></select>
-		<INPUT TYPE="NUMBER" id="SV_stepper_pin3" MIN="2" MAX="52" STEP="1" VALUE="2" SIZE="1">
+		<INPUT TYPE="NUMBER" id="SV_stepper_pin3" MIN="2" MAX="52" STEP="1" VALUE="2" SIZE="1"/>
         <!--script type="text/javascript">
             for (var i=2; i <= 19; i++) {
                 $("#stepperPin3").append('<option value="'+i+'">'+i+'</option>');
@@ -386,7 +381,7 @@
         </script-->
 		&nbsp;&nbsp;&nbsp;&nbsp;
 		<b><span id="span_supervision_stepper_pin4"></span></b>
-		<INPUT TYPE="NUMBER" id="SV_stepper_pin4" MIN="2" MAX="52" STEP="1" VALUE="2" SIZE="1">
+		<INPUT TYPE="NUMBER" id="SV_stepper_pin4" MIN="2" MAX="52" STEP="1" VALUE="2" SIZE="1"/>
 		<!--select id="stepperPin4"></select>
         <script type="text/javascript">
             for (var i=2; i <= 19; i++) {
@@ -510,7 +505,7 @@
 		<a href="javascript:getPinState()" class="btn btn-info">
 	       <span id="span_supervision_get_pin_report"></span>
 	    </a>
-		<INPUT id="pinSpinner" TYPE="NUMBER" MIN="0" MAX="127" STEP="1" VALUE="0" SIZE="3">
+		<INPUT id="pinSpinner" TYPE="NUMBER" MIN="0" MAX="127" STEP="1" VALUE="0" SIZE="3"/>
 		&nbsp;
 		<span id="span_supervision_get_pin_report_text"></span>
 	</div>

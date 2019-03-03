@@ -308,7 +308,15 @@ Code.initLanguageSupervision = function() {
 	  $('span[id^="span_supervision_low_s"]').text(Blockly.Msg.SV_low_s);  
 	  $('span[id^="span_supervision_high_s"]').text(Blockly.Msg.SV_high_s);
 	  $('span[id^="span_supervision_PWM"]').text(Blockly.Msg.SV_PWM);
-	  $('span[id^="span_supervision_read_pin').text(Blockly.Msg.SV_read_pin);	   
+	  $('span[id^="span_supervision_read_pin"]').text(Blockly.Msg.SV_read_pin);
+	  $('span[id^="span_supervision_data_latchL"]').text(Blockly.Msg.SV_data_latch);
+	  $('span[id^="span_supervision_data_latchL1"]').text(Blockly.Msg.SV_data_latch1);
+	  $('span[id^="span_supervision_data_latchL2"]').text(Blockly.Msg.SV_data_latch2);
+	  $('span[id^="span_supervision_data_latchL3"]').text(Blockly.Msg.SV_data_latch3);
+	  $('span[id^="span_supervision_data_latchA"]').text(Blockly.Msg.SV_data_latch);
+	  $('span[id^="span_supervision_data_latchA1"]').text(Blockly.Msg.SV_data_latch1);
+	  $('span[id^="span_supervision_data_latchA2"]').text(Blockly.Msg.SV_data_latchA); 
+	  $('span[id^="span_supervision_data_latchA3"]').text(Blockly.Msg.SV_latch_event);
 	  $('#span_supervision_visible').text(Blockly.Msg.SV_visible_tab4); 
 	  $('#span_supervision_get_analog_map').text(Blockly.Msg.SV_get_analog_map);
 	  $('#span_supervision_get_capability').text(Blockly.Msg.SV_get_capability);
@@ -319,6 +327,7 @@ Code.initLanguageSupervision = function() {
 	  $('#span_supervision_get_pin_report_text').text(Blockly.Msg.SV_get_pin_report_text);
 	  $('#span_supervision_digital_pin').text(Blockly.Msg.SV_digital_pin);
 	  $('#span_supervision_analog_pin').text(Blockly.Msg.SV_analog_pin);
+	  $('#span_supervision_latch_event').text(Blockly.Msg.SV_latch_event);
 	  $('#span_supervision_latch_digital_pin').text(Blockly.Msg.SV_latch_digital_pin);
 	  $('#span_supervision_latch_analog_pin').text(Blockly.Msg.SV_latch_analog_pin);
 	  $('#span_supervision_servo').text(Blockly.Msg.SV_servo);
