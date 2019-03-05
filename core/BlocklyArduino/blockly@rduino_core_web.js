@@ -1181,6 +1181,9 @@ BlocklyDuino.DialogCode = function() {
 
 BlocklyDuino.DialogCode_edit = function() {
 	$('#edit_code').val($('#pre_previewArduino').text());	
+	if (typeof prettyPrintOne == 'function') {
+		$('#edit_code').html(prettyPrintOne($('#edit_code').html(), 'cpp'));
+	}
 	//$('#pre_previewArduino').addClass('hidden');
 	
 }

@@ -295,10 +295,10 @@ Code.initLanguageSupervision = function() {
 	  $('#span_supervision_tab3').text(Blockly.Msg.SV_tab3);
 	  $('#span_supervision_tab4').text(Blockly.Msg.SV_tab4);
 	  $('#span_supervision_tab5').text(Blockly.Msg.SV_tab5);
-	  $('#span_supervision_tab6').text(Blockly.Msg.SV_tab6);
-	  $('#span_supervision_tab7').text(Blockly.Msg.SV_tab7);
-	  $('#span_supervision_tab8').text(Blockly.Msg.SV_tab8);
-	  $('#span_supervision_tab9').text(Blockly.Msg.SV_tab9);
+	  $('#span_supervision_tab5_1').text(Blockly.Msg.SV_tab5_1);
+	  $('#span_supervision_tab5_2').text(Blockly.Msg.SV_tab5_2);
+	  $('#span_supervision_tab5_3').text(Blockly.Msg.SV_tab5_3);
+	  $('#span_supervision_tab5_4').text(Blockly.Msg.SV_tab5_4);
 	  $('span[id^="span_supervision_enabled"]').text(Blockly.Msg.SV_enabled);
 	  $('span[id^="span_supervision_disabled"]').text(Blockly.Msg.SV_disabled);	  
 	  $('span[id^="span_supervision_pin_e"]').text(Blockly.Msg.SV_pin_e);	  	  
@@ -333,9 +333,7 @@ Code.initLanguageSupervision = function() {
 	  $('#span_supervision_servo').text(Blockly.Msg.SV_servo);
 	  $('#span_supervision_servo_pin').text(Blockly.Msg.SV_servo_pin);
 	  $('#span_supervision_servo_angle').text(Blockly.Msg.SV_servo_angle);
-	  $('#span_supervision_servo_set').text(Blockly.Msg.SV_servo_set);
-	  
-	  
+	  $('#span_supervision_servo_set').text(Blockly.Msg.SV_servo_set);	  
 	  $('#span_supervision_tone').text(Blockly.Msg.SV_tone);
 	  $('#span_supervision_tone_pin').text(Blockly.Msg.SV_tone_pin);
 	  $('#span_supervision_tone_freq').text(Blockly.Msg.SV_tone_freq);
@@ -359,9 +357,19 @@ Code.initLanguageSupervision = function() {
 	  $('#span_supervision_stepper_steps_rev').text(Blockly.Msg.SV_stepper_steps_rev);
 	  $('#span_supervision_stepper_motor').text(Blockly.Msg.SV_stepper_motor);
 	  $('#span_supervision_stepper_steps').text(Blockly.Msg.SV_stepper_steps);
-	  $('#span_supervision_stepper_run').text(Blockly.Msg.SV_stepper_run);	  
-	  
+	  $('#span_supervision_stepper_run').text(Blockly.Msg.SV_stepper_run);
 	  $('#span_supervision_HTTP_BT').text(Blockly.Msg.SV_HTTP_BT);
+	  $('#span_supervision_i2c_info').text(Blockly.Msg.SV_i2c_info);
+	  $('#span_supervision_i2c_config').text(Blockly.Msg.SV_i2c_config);
+	  $('#span_supervision_i2c_readButton').text(Blockly.Msg.SV_i2c_readButton);
+	  $('#span_supervision_i2c_readDelay').text(Blockly.Msg.SV_i2c_readDelay);
+	  $('#span_supervision_i2c_read').text(Blockly.Msg.SV_i2c_read);
+	  $('#span_supervision_i2c_read_devAddress').text(Blockly.Msg.SV_i2c_read_devAddress);
+	  $('#span_supervision_i2c_read_devRegister').text(Blockly.Msg.SV_i2c_read_devRegister);
+	  $('#span_supervision_i2c_read_bytes').text(Blockly.Msg.SV_i2c_read_bytes);
+	  $('#span_supervision_i2c_read_type').text(Blockly.Msg.SV_i2c_read_type);
+	  $('#span_supervision_i2c_readRequest').text(Blockly.Msg.SV_i2c_readRequest);
+	  $('#span_supervision_i2c_retrieveButton').text(Blockly.Msg.SV_i2c_retrieveButton);
 	  
 };
 

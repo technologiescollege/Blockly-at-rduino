@@ -128,7 +128,7 @@ header {
 nav li {
   position: relative;
   display: inline-block;
-  float: left;
+  /* float: left; */
 }
 nav a {
   position: relative;
@@ -151,8 +151,8 @@ nav a i[class*="caret"] {
   margin-left: .15em;
 }
 nav a:hover {
-  color: #456C60;
-  background: #80CBCD;
+  color: #005C5F;
+  background: #7FCBCD;
   text-decoration: none;
 }
 nav a:hover + .submenu {
@@ -163,6 +163,16 @@ nav a:hover + .submenu {
   -o-transform: rotateX(0deg);
   transform: rotateX(0deg);
   visibility: visible;
+}
+nav a:focus {
+  color: #FFFFFF;
+  background: #008184;
+  text-decoration: none;
+}
+nav li.active > a {
+  color: #008184;
+  background: #FFFFFF;
+  text-decoration: none;
 }
 nav .eiob .submenu {
   -webkit-transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55), opacity 0.2s linear;
