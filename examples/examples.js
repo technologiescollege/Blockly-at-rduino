@@ -2,6 +2,7 @@
  * Examples
  */
 
+
 'use strict';
 
 var Examples = {};
@@ -82,8 +83,7 @@ Examples.initLocal = function() {
 				dataType : "json",
 				success : function(data) {
 					for (var i = 0; i < data.length; i++) {
-						var clone = $('table').find('tr.hide').clone(true)
-								.removeClass('hide');
+						var clone = $('table').find('tr.hide').clone(true).removeClass('hide');
 						var current = $(clone).find('td:first');
 						$(current).find('input').val(data[i].source_url);
 						current = $(current).next('td');
@@ -153,7 +153,7 @@ Examples.initLocal = function() {
 	$("#download").on("click", function() {
 		var fileName = "examples.json";
 
-		var uri = 'data:application/text;charset=utf-8,'	+ encodeURIComponent($('pre').text());
+		var uri = 'data:application/text;charset=utf-8,' + encodeURIComponent($('pre').text());
 
 		var link = document.createElement("a");
 		link.href = uri;
@@ -191,7 +191,7 @@ Examples.initServer = function() {
 	});
 
 	// inject selected file to input
-	$('select').on("change",	function() {
+	$('select').on("change", function() {
 		$(this).parent().siblings().nextAll('input').first().val($(this).val());
 		$(this).parent().siblings().nextAll(".vignette").first().attr("src", $(this).val());
 	});

@@ -1023,13 +1023,69 @@
 			<block type="seeed_music_shield_addtolist">
 				<value name="FILE_NAME">
 					<shadow type="text">
-						<field name="FILE_NAME">???</field>
+						<field name="TEXT">???</field>
 					</shadow>
 				</value>
 			</block>
 			<block type="seeed_music_shield_playlist">
 			</block>
 			<block type="seeed_music_shield_playmode">
+			</block>
+			<block type="seeed_music_shield_playName">
+				<value name="FILE_NAME">
+					<shadow type="text">
+						<field name="TEXT">???</field>
+					</shadow>
+				</value>
+			</block>
+			<block type="seeed_music_shield_playAll">
+			</block>
+			<block type="seeed_music_shield_disableKeys">
+			</block>
+			<block type="seeed_music_shield_setVolume">
+				<value name="VOLUME">
+					<shadow type="math_number">
+						<field name="NUM">127</field>
+					</shadow>
+				</value>
+			</block>
+			<block type="seeed_music_shield_setVolumeFunction">
+			</block>
+			<block type="seeed_music_shield_setDigitalFunction">
+				<value name="DIGITfunc">
+					<shadow type="math_number">
+						<field name="NUM">2</field>
+					</shadow>
+				</value>
+				<value name="FUNCdigit">
+					<shadow type="text">
+						<field name="TEXT">???</field>
+					</shadow>
+				</value>
+			</block>
+			<block type="seeed_music_shield_playNextSong">
+			</block>
+			<block type="seeed_music_shield_playPreviousSong">
+			</block>
+			<block type="seeed_music_shield_playPause">
+			</block>
+			<block type="seeed_music_shield_playResume">
+			</block>
+			<block type="seeed_music_shield_playStop">
+			</block>
+			<block type="seeed_music_shield_volumeUp">
+			</block>
+			<block type="seeed_music_shield_volumeDown">
+			</block>
+			<block type="seeed_music_shield_buttonVolumeUp">
+			</block>
+			<block type="seeed_music_shield_buttonVolumeDown">
+			</block>
+			<block type="seeed_music_shield_buttonPlayStop">
+			</block>
+			<block type="seeed_music_shield_buttonNextSong">
+			</block>
+			<block type="seeed_music_shield_buttonPreviousSong">
 			</block>
 		</category>
 	</category>
