@@ -64,7 +64,7 @@ Blockly.Blocks['seeed_music_shield_playName'] = {
 Blockly.Blocks['seeed_music_shield_playAll'] = {
 	init: function() {
 		this.appendDummyInput()
-			.appendField("ajouter tous les fichiers à la liste et la lire");
+			.appendField("ajouter tous les fichiers de la carte à la liste de lecture");
 		this.setInputsInline(false);
 		this.setPreviousStatement(true);
 		this.setNextStatement(true);
