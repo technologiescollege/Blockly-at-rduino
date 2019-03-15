@@ -212,6 +212,7 @@ Blockly.Msg.CAT_MBOT_4 = "mBot"; //added february 13th 2017
 Blockly.Msg.CAT_ROMEO_1 = "RoMeo v2";
 Blockly.Msg.CAT_ROMEO_2 = "RoMeo v2";
 Blockly.Msg.CAT_ROMEO_3 = "RoMeo v2"; //added may 1st 2016
+Blockly.Msg.CAT_ROMEO_BLE_3 = "RoMeo BLE"; //added may 1st 2016
 
 Blockly.Msg.CAT_SPI_COMM = "SPI communication";
 Blockly.Msg.CAT_STEPPER = "Stepper motors"; //added august 28th 2016

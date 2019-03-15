@@ -14,6 +14,7 @@ head.load(
 "blocks/DFRobot/dfrobot_dfplayer-mini-mp3/blocks_typing.js",
 "blocks/DFRobot/dfrobot_ISD1820/blocks_typing.js",
 "blocks/DFRobot/dfrobot_romeo_v2/blocks_typing.js",
+"blocks/DFRobot/dfrobot_romeo_ble/blocks_typing.js",
 "blocks/display-oled-128x64-i2c/blocks_typing.js",
 "blocks/drone/blocks_typing.js",
 "blocks/ds18b20/blocks_typing.js",

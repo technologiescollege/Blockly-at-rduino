@@ -50,6 +50,7 @@ head.load(
 "blocks/DFRobot/dfrobot_romeo_v2/dfrobot_romeo_v2_1.js",
 "blocks/DFRobot/dfrobot_romeo_v2/dfrobot_romeo_v2_2.js",
 "blocks/DFRobot/dfrobot_romeo_v2/dfrobot_romeo_v2_3.js",
+"blocks/DFRobot/dfrobot_romeo_ble/dfrobot_romeo_ble_3.js",
 "blocks/display-oled-128x64-i2c/display-oled-128x64-i2c.js",
 "blocks/drone/drone.js",
 "blocks/ds18b20/ds18b20.js",

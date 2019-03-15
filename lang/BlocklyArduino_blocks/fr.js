@@ -213,6 +213,7 @@ Blockly.Msg.CAT_MBOT_4 = "mBot"; //added february 13th 2017
 Blockly.Msg.CAT_ROMEO_1 = " - RoMeo v2";
 Blockly.Msg.CAT_ROMEO_2 = " - RoMeo v2";
 Blockly.Msg.CAT_ROMEO_3 = " - RoMeo v2"; //added may 1st 2016
+Blockly.Msg.CAT_ROMEO_BLE_3 = "RoMeo BLE"; //added may 1st 2016
 
 Blockly.Msg.CAT_SPI_COMM = "ISP communication";
 Blockly.Msg.CAT_STEPPER = "Moteurs pas à pas"; //added august 28th 2016
@@ -1397,6 +1398,18 @@ Blockly.Msg.ROMEO3_MOTOR_TOOLTIP = "gestion individuelle des moteurs";
 Blockly.Msg.ROMEO3_SWITCH = "appui sur le bouton";
 Blockly.Msg.ROMEO_SWITCH_FIELDDROPDOWN = [["S1", "0"], ["S2", "147"], ["S3", "333"], ["S4", "510"], ["S5", "745"], ["aucun", "1023"]];
 Blockly.Msg.ROMEO3_SWITCH_TOOLTIP = "Vérifier le switch S1-S5 !!! Lire la valeur sur l'entrée Analogique A0 : 0 pour S1, 147 pour S2, 333 pour S3, 510 pour S4, 745 pour S5, 1023 si aucun";
+
+//Added March 13th 2019
+Blockly.Msg.ROMEO_HELPURL = "http://www.dfrobot.com/wiki/index.php/Romeo_V2-All_in_one_Controller_%28R3%29_%28SKU:DFR0225%29";
+Blockly.Msg.ROMEO_BLE_3_MOTOR1_SENS = "moteur M1 : sens";
+Blockly.Msg.ROMEO_BLE_3_MOTOR2_SENS = "moteur M2 : sens";
+Blockly.Msg.ROMEO_BLE_3_MOTOR_SENS = "1 : avancer | 0 : reculer";
+Blockly.Msg.ROMEO_BLE_3_MOTOR1_PWM = "moteur M1 : puissance (0~255)";
+Blockly.Msg.ROMEO_BLE_3_MOTOR2_PWM = "moteur M2 : puissance (0~255)";
+Blockly.Msg.ROMEO_BLE_3_MOTOR_TOOLTIP = "gestion individuelle des moteurs";
+Blockly.Msg.ROMEO_BLE_3_SWITCH = "appui sur le bouton";
+Blockly.Msg.ROMEO_BLE_SWITCH_FIELDDROPDOWN = [["S1", "0"], ["S2", "142"], ["S3", "331"], ["S4", "506"], ["S5", "742"], ["aucun", "1023"]];
+Blockly.Msg.ROMEO_BLE_3_SWITCH_TOOLTIP = "Vérifier le switch S1-S5 !!! Lire la valeur sur l'entrée Analogique A7 : 0 pour S1, 142 pour S2, 331 pour S3, 506 pour S4, 742 pour S5, 1023 si aucun";
 
 //Added september 16th 2017
 Blockly.Msg.VITESSE_ROTATION_HELPURL = "En cours de rédaction";

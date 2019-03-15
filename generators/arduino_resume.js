@@ -41,6 +41,7 @@ head.load(
 "generators/arduino/dfrobot_romeo_v2_1.js",
 "generators/arduino/dfrobot_romeo_v2_2.js",
 "generators/arduino/dfrobot_romeo_v2_3.js",
+"generators/arduino/dfrobot_romeo_ble_3.js",
 "generators/arduino/display-oled-128x64-i2c.js",
 "generators/arduino/drone.js",
 "generators/arduino/ds18b20.js",

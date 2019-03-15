@@ -65,6 +65,7 @@ Blockly.Blocks.robuno.HUE = "#1A1BFF";
 Blockly.Blocks.RoMeo1.HUE = "#F39800";
 Blockly.Blocks.RoMeo2.HUE = "#F39800";
 Blockly.Blocks.RoMeo3.HUE = "#F39800";
+Blockly.Blocks.RoMeoBle3.HUE = "#F39800";
 Blockly.Blocks.seeed_music_shield.HUE = "#8EC31F";
 Blockly.Blocks.sensor_actuator.HUE = "#00979D";
 Blockly.Blocks.servo.HUE = "#191919";

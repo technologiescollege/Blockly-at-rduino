@@ -683,6 +683,26 @@
 			</block>	
 			<block type="romeo_switch"></block>
 		</category>
+		<category name="CAT_ROMEO_BLE_3" colour="#F39800">
+			<block type="romeo_ble_M1_sens"></block>
+			<block type="romeo_ble_M1_PWM">
+				<value name="PWM">
+					<shadow type="math_number">
+						<field name="NUM">127</field>
+					</shadow>
+				</value>
+			</block>	
+			<block type="romeo_ble_M2_sens"></block>	
+			<block type="romeo_ble_M2_PWM">
+				<value name="PWM">
+					<shadow type="math_number">
+						<field name="NUM">127</field>
+					</shadow>
+				</value>
+			</block>	
+			<block type="romeo_ble_switch"></block>
+		</category>
+		
 		<category name="CAT_DFPLAYER" colour="#F39800">
 			<block type="lp2i_mp3_init">
 				<value name="Pin_Rx">
