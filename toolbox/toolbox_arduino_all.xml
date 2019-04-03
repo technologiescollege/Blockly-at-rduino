@@ -473,6 +473,21 @@
 			</value>
 		</block>		
 	</category>
+	<category name="CAT_CAPACITIVESENSOR" colour="#EA9576">
+		<block type="capacitiveSensor_init" disabled="true"></block>
+		<block type="capacitiveSensor_check">
+			<value name="PIN_SEND">
+				<shadow type="math_number">
+					<field name="NUM">4</field>
+				</shadow>
+			</value>
+			<value name="PIN_RECEIVE">
+				<shadow type="math_number">
+					<field name="NUM">2</field>
+				</shadow>
+			</value>
+		</block>
+	</category>
 	<category name="CAT_LCD_SCREEN" colour="#87AD34">
 		<category name="- Grove I2C LCD RGB" colour="#8ec31f">
 				<block type="grove_lcd_rgb_init"></block>

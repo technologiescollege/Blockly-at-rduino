@@ -11,6 +11,7 @@ head.load(
 "blocks/bitbloq/blocks_typing.js",
 "blocks/Bluetooth_Electronics/blocks_typing.js",
 "blocks/blynk_cc/blocks_typing.js",
+"blocks/capacitiveSensor/blocks_typing.js",
 "blocks/DFRobot/dfrobot_dfplayer-mini-mp3/blocks_typing.js",
 "blocks/DFRobot/dfrobot_ISD1820/blocks_typing.js",
 "blocks/DFRobot/dfrobot_romeo_v2/blocks_typing.js",

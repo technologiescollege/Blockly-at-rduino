@@ -365,6 +365,8 @@ Blockly.Msg.CAT_FONCTION_WIRELESS_ZIGBEE = "Zigbee";
 Blockly.Msg.CAT_FONCTION_STOCKAGE_EEPROM = "EEPROM";
 Blockly.Msg.CAT_FONCTION_STOCKAGE_SDCARD = "Carte SD";
 
+Blockly.Msg.CAT_CAPACITIVESENSOR = "Capacitive Sensor";
+
 
 //**********************************Dropdown menus messages***********************************************
 
@@ -2340,3 +2342,12 @@ Blockly.Msg.dfrobot_ISD1820_TOOLTIP = "record for 10s max with button, play with
 Blockly.Msg.dfrobot_ISD1820_record = "push record button to record 10s max";
 Blockly.Msg.dfrobot_ISD1820_play = "play recorded sound";
 Blockly.Msg.dfrobot_ISD1820_play_Input = "PIN#";
+
+
+////////////////////////////Capacitive Sensor Librarie/////////////////////
+Blockly.Msg.CAPACITIV_HELPURL = "https://github.com/PaulStoffregen/CapacitiveSensor";
+Blockly.Msg.CAPACITIV_TEXT = "capacitive value";
+Blockly.Msg.CAPACITIV_INPUT1 = "send pinn";
+Blockly.Msg.CAPACITIV_INPUT2 = "sensor pin";
+Blockly.Msg.CAPACITIV_CALIBRATION = "automatic calibration";
+Blockly.Msg.CAPACITIV_TOOLTIP = "10M resistor between pins 4 & 2, pin 2 is sensor pin, add a wire and or foil if desired";

@@ -44,6 +44,7 @@ head.load(
 "blocks/bitbloq/bitbloq.js",
 "blocks/Bluetooth_Electronics/Bluetooth_Electronics.js",
 "blocks/blynk_cc/blynk_cc.js",
+"blocks/capacitiveSensor/capacitiveSensor.js",
 "blocks/keypad/keypad.js",
 "blocks/DFRobot/dfrobot_dfplayer-mini-mp3/dfrobot_dfplayer-mini-mp3.js",
 "blocks/DFRobot/dfrobot_ISD1820/dfrobot_ISD1820.js",

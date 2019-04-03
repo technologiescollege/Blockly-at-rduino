@@ -366,6 +366,8 @@ Blockly.Msg.CAT_FONCTION_WIRELESS_ZIGBEE = "Zigbee";
 
 Blockly.Msg.CAT_FONCTION_STOCKAGE_EEPROM = "EEPROM";
 Blockly.Msg.CAT_FONCTION_STOCKAGE_SDCARD = "Carte SD";
+
+Blockly.Msg.CAT_CAPACITIVESENSOR = "détection capacitive";
  
 
 //**********************************Dropdown menus messages***********************************************
@@ -2353,3 +2355,12 @@ Blockly.Msg.dfrobot_ISD1820_TOOLTIP = "enregistre 10s max. de son par appui sur 
 Blockly.Msg.dfrobot_ISD1820_record = "appui sur bouton pour enregistrer 10s maxi";
 Blockly.Msg.dfrobot_ISD1820_play = "jouer le son";
 Blockly.Msg.dfrobot_ISD1820_play_Input = "raccordé sur la broche";
+
+
+////////////////////////////Capacitive Sensor Librarie/////////////////////
+Blockly.Msg.CAPACITIV_HELPURL = "https://github.com/PaulStoffregen/CapacitiveSensor";
+Blockly.Msg.CAPACITIV_TEXT = "valeur de détection d'une perturbation entre";
+Blockly.Msg.CAPACITIV_INPUT1 = "la broche d'émission";
+Blockly.Msg.CAPACITIV_INPUT2 = "et la broche de réception";
+Blockly.Msg.CAPACITIV_CALIBRATION = "calibrage automatique";
+Blockly.Msg.CAPACITIV_TOOLTIP = "raccorder les 2 broches par une résistance de 10M puis le conducteur à la broche de réception";

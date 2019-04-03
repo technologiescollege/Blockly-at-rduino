@@ -35,6 +35,7 @@ head.load(
 "generators/arduino/bitbloq.js",
 "generators/arduino/Bluetooth_Electronics.js",
 "generators/arduino/blynk_cc.js",
+"generators/arduino/capacitiveSensor.js",
 "generators/arduino/keypad.js",
 "generators/arduino/dfrobot_dfplayer-mini-mp3.js",
 "generators/arduino/dfrobot_ISD1820.js",
