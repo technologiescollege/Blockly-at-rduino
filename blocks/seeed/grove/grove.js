@@ -697,14 +697,6 @@ Blockly.Blocks['grove_lcd_rgb_write_data'] = {
   }
 };
 
-
-
-
-
-
-
-
-
 //@CD 20170318
 Blockly.Blocks['grove_driver13_motor'] = {
   init: function() {
@@ -714,7 +706,7 @@ Blockly.Blocks['grove_driver13_motor'] = {
 		.appendField(Blockly.Msg.GROVE_DRIVER13_MOTOR_TITLE);
 	this.appendDummyInput()
         .setAlign(Blockly.ALIGN_CENTRE)
-		.appendField(new Blockly.FieldImage("blocks/grove/I2CMotorDriver_V13.jpg", Blockly.Arduino.imageSize, Blockly.Arduino.imageSize));
+		.appendField(new Blockly.FieldImage("blocks/seeed/grove/I2CMotorDriver_V13.jpg", Blockly.Arduino.imageSize, Blockly.Arduino.imageSize));
     /*this.appendDummyInput()
         .appendField(new Blockly.FieldNumber('15', 0, 15, 1), "I2CADDRESS")*/
 	this.appendValueInput("I2CADDRESS")
@@ -762,7 +754,7 @@ Blockly.Blocks.grove_mini_driver_motor = {
 		.appendField(Blockly.Msg.GROVE_MINI_DRIVER_MOTOR_MSG);
 	this.appendDummyInput()
         .setAlign(Blockly.ALIGN_CENTRE)
-		.appendField(new Blockly.FieldImage("blocks/grove/Mini_I2C_motor_2.png", Blockly.Arduino.imageSize, Blockly.Arduino.imageSize));
+		.appendField(new Blockly.FieldImage("blocks/seeed/grove/Mini_I2C_motor_2.png", Blockly.Arduino.imageSize, Blockly.Arduino.imageSize));
     this.appendValueInput("SPEED", 'Number')
         .appendField(
 				new Blockly.FieldDropdown([
@@ -793,7 +785,7 @@ Blockly.Blocks.grove_mini_driver_stop = {
 		.appendField(Blockly.Msg.GROVE_MINI_DRIVER_STOP_MSG);
 	this.appendDummyInput()
         .setAlign(Blockly.ALIGN_CENTRE)
-		.appendField(new Blockly.FieldImage("blocks/grove/Mini_I2C_motor_2.png", Blockly.Arduino.imageSize, Blockly.Arduino.imageSize));
+		.appendField(new Blockly.FieldImage("blocks/seeed/grove/Mini_I2C_motor_2.png", Blockly.Arduino.imageSize, Blockly.Arduino.imageSize));
 	this.appendDummyInput()
         .appendField(
 				new Blockly.FieldDropdown([
@@ -822,7 +814,7 @@ Blockly.Blocks.grove_mini_driver_error = {
 		.appendField(Blockly.Msg.GROVE_MINI_DRIVER_ERROR_MSG);
 	this.appendDummyInput()
         .setAlign(Blockly.ALIGN_CENTRE)
-		.appendField(new Blockly.FieldImage("blocks/grove/Mini_I2C_motor_2.png", Blockly.Arduino.imageSize, Blockly.Arduino.imageSize));
+		.appendField(new Blockly.FieldImage("blocks/seeed/grove/Mini_I2C_motor_2.png", Blockly.Arduino.imageSize, Blockly.Arduino.imageSize));
 	this.appendDummyInput()
         .appendField(
 				new Blockly.FieldDropdown([
