@@ -546,6 +546,9 @@ Blockly.Msg.Serial_Print_ForOct="8進数";
 Blockly.Msg.Serial_read="シリアル読み込み";
 Blockly.Msg.Serial_avai="シリアル有効　?";
 Blockly.Msg.Serial_flush="送信終了を待つ";
+Blockly.Msg.ARDUINO_SERIAL_READSTRINGUNTIL_HELPURL = "https://www.arduino.cc/en/Serial/ReadStringUntil";
+Blockly.Msg.ARDUINO_SERIAL_READSTRINGUNTIL_CONTENT = "String read until";
+Blockly.Msg.ARDUINO_SERIAL_READSTRINGUNTIL_TOOLTIP = "reads characters from the serial buffer into a string";
 
 //SOFTWARE SERIAL
 Blockly.Msg.SSERIAL_DEFAULT_NAME="SoftSerial";

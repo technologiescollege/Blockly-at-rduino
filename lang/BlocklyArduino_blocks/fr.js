@@ -541,6 +541,9 @@ Blockly.Msg.Serial_Print_ForOct="octal";
 Blockly.Msg.Serial_read="donnée lue sur le port série";
 Blockly.Msg.Serial_avai="une donnée est disponible sur le port série ?";
 Blockly.Msg.Serial_flush="attente de fin de transmission par le port série";
+Blockly.Msg.ARDUINO_SERIAL_READSTRINGUNTIL_HELPURL = "https://www.arduino.cc/en/Serial/ReadStringUntil";
+Blockly.Msg.ARDUINO_SERIAL_READSTRINGUNTIL_CONTENT = "chaîne lue jusqu'au caractère";
+Blockly.Msg.ARDUINO_SERIAL_READSTRINGUNTIL_TOOLTIP = "lis les caractères un par un jusqu'à celui recherché, et renvoie toute la chaîne de caractères";
 
 //SOFTWARE SERIAL
 Blockly.Msg.SSERIAL_DEFAULT_NAME="COMserie";

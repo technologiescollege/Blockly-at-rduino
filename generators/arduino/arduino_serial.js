@@ -27,6 +27,12 @@ Blockly.Arduino['serial_read'] = function() {
   return [code, Blockly.Arduino.ORDER_ATOMIC];
 };
 
+Blockly.Arduino['serial_readStringUntil'] = function() {
+  var content = Blockly.Arduino.valueToCode(this, 'CONTENT', Blockly.Arduino.ORDER_ATOMIC) || '0';
+  var code = 'Serial.readUntilString(' + content + ')';
+  return [code, Blockly.Arduino.ORDER_ATOMIC];
+};
+
 Blockly.Arduino['serial_available'] = function() {
   // TODO: Assemble Python into code variable.
   var code = 'Serial.available()';
@@ -34,14 +40,14 @@ Blockly.Arduino['serial_available'] = function() {
   return [code, Blockly.Arduino.ORDER_ATOMIC];
 };
 
-Blockly.Arduino.serial_print = function() {
+Blockly.Arduino['serial_print'] = function() {
   var content = Blockly.Arduino.valueToCode(this, 'CONTENT', Blockly.Arduino.ORDER_ATOMIC) || '0'
   //content = content.replace('(','').replace(')','');
   var code = 'Serial.print(' + content + ');\n';
   return code;
 };
 
-Blockly.Arduino.serial_print_tab = function() {
+Blockly.Arduino['serial_print_tab'] = function() {
   var content = Blockly.Arduino.valueToCode(this, 'CONTENT', Blockly.Arduino.ORDER_ATOMIC) || '0'
   //content = content.replace('(','').replace(')','');
   var code = 'Serial.print(' + content + ');\nSerial.print("\\t");\n';

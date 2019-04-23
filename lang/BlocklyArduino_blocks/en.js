@@ -542,6 +542,9 @@ Blockly.Msg.Serial_Print_ForOct="octal";
 Blockly.Msg.Serial_read="Serial Read";
 Blockly.Msg.Serial_avai="Serial Available?";
 Blockly.Msg.Serial_flush="Serial flush";
+Blockly.Msg.ARDUINO_SERIAL_READSTRINGUNTIL_HELPURL = "https://www.arduino.cc/en/Serial/ReadStringUntil";
+Blockly.Msg.ARDUINO_SERIAL_READSTRINGUNTIL_CONTENT = "String read until";
+Blockly.Msg.ARDUINO_SERIAL_READSTRINGUNTIL_TOOLTIP = "reads characters from the serial buffer into a string";
 
 //SOFTWARE SERIAL
 Blockly.Msg.SSERIAL_DEFAULT_NAME="SoftSerial";

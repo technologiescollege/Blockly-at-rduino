@@ -366,10 +366,16 @@
 			<block type="serial_write_out"></block>
 			<block type="serial_available"></block>
 			<block type="serial_read"></block>
+			<block type="serial_readStringUntil">
+				<value name="CONTENT">
+					<shadow type="text">
+						<field name="TEXT"></field>
+					</shadow>
+				</value>
+			</block>
 			<block type="serial_line"></block>
 			<block type="serial_print_multi">
-				<value name="N">
-					
+				<value name="N">					
 				</value>
 			</block>
 		</category>
@@ -380,6 +386,13 @@
 			<block type="soft_write"></block>
 			<block type="soft_available"></block>
 			<block type="soft_read"></block>
+			<block type="soft_readStringUntil">
+				<value name="CONTENT">
+					<shadow type="text">
+						<field name="TEXT"></field>
+					</shadow>
+				</value>
+			</block>
 			<block type="serial_line"></block>
 		</category>
 		<category name="CAT_STORAGE_EEPROM" colour="#00979D">
