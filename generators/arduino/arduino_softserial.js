@@ -22,7 +22,9 @@ Blockly.Arduino['soft_read'] = function(block) {
 };
 
 Blockly.Arduino['soft_readStringUntil'] = function(block) {
-  var content = Blockly.Arduino.valueToCode(this, 'CONTENT', Blockly.Arduino.ORDER_ATOMIC) || '0';
+  var content = Blockly.Arduino.valueToCode(this, 'CONTENT', Blockly.Arduino.ORDER_NONE);
+  content = content.replace('"', '\'');
+  content = content.replace('"', '\'');
   var dropdown_name = this.getFieldValue('SOFTSERIAL_NAME');
   var code = dropdown_name+'.readStringUntil(' + content + ')';
   // TODO: Change ORDER_NONE to the correct strength.
