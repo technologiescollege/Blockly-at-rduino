@@ -12,7 +12,6 @@ BlocklyDuino.editArduinoCode = function() {
 	    $('#edit_code').val($('#pre_arduino').text());
 };
 
-
 /**
  * Creates an XML file containing the blocks from the Blockly workspace and
  * prompts the users to save it into their local file system.

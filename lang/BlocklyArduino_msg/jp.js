@@ -44,6 +44,7 @@ var MSG = {
   exampleModalLabel: "choose an example",
   convertModalLabel: "Convert Binary <-> ASCII Text",
   RGBModalLabel: "Convert Color <-> Code",
+  wiringModalLabel: "wiring",
   configModalGlobalLabel: " プロジェクトの設定",
   configGlobalLabel: " プロジェクトの設定 ",
   span_languageMenu: "言語: ",

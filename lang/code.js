@@ -205,6 +205,7 @@ Code.initLanguage = function() {
   $('#editModalLabel').text(MSG['editModalLabel']);
   $('#exampleModalLabel').text(MSG['exampleModalLabel']);  
   $('#convertModal').attr('title', MSG['convertModalLabel']);
+  $('#wiringModal').attr('title', MSG['wiringModalLabel']);
   $('#RGB_falsemodal').attr('title', MSG['RGBModalLabel']);
   $('#videoModalLabelTitle').text(MSG['videoModalLabelTitle']);
   $('#videoModalLabel1').text(MSG['videoModalLabel1']);

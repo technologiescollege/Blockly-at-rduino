@@ -44,6 +44,7 @@ var MSG = {
   exampleModalLabel: "choisir un exemple",
   convertModalLabel: "conversion binaire <-> texte ASCII",
   RGBModalLabel: "conversion couleur <-> code",
+  wiringModalLabel: "câblage",
   configModalGlobalLabel: "configuration globale",
   configGlobalLabel: "configuration globale",
   span_languageMenu: "choix de la langue : ",

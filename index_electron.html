@@ -300,9 +300,11 @@
                 </div>
                 <input type="file" id="load" accept=".B@, .xml" style="display: none;" />
                 <div id="div_tools_button">
-                    <!--button id="btn_wiring" class="btn btn-primary">
-                            <span class="glyphicon glyphicon-blackboard"></span>
-                    </button-->
+                    <button id="btn_wiring" class="btn btn-primary">
+                         <span class="fa fa-plug"></span>
+                    </button>
+                    <br />
+                    <br />
                     <button id="btn_factory" class="btn btn-sm btn-primary" >
                         <span class="fa fa-industry"> </span>
                     </button>
@@ -407,7 +409,7 @@
                         <br /> - SmoothieCharts (<a href='http://smoothiecharts.org/' target='blank'>http://smoothiecharts.org/)</a>
                         <br />
                         <br />
-                        <i>version 23-04-2018 - v3.1</i>
+                        <i>version 28-04-2018 - v3.1</i>
                     </div>
                 </div>
             </div>
@@ -468,6 +470,19 @@
                     </div>
                 </div>
             </div>
+        </div>
+        <!-- show wiring of example "modal" -->
+        <div id="wiringModal" class="modal-dialog" style="display:none;width: 100%;">
+            <div id="pictureModalLabel_boutons">
+                <button id="btn_wiring_mini" class="btn btn-default">
+                    <span id="icon_btn_blocs_picture_mini" class="glyphicon glyphicon-minus"> </span>
+                </button>
+                <button id="btn_wiring_maxi" class="btn btn-default">
+                    <span id="icon_btn_blocs_picture_maxi" class="glyphicon glyphicon-plus"> </span>
+                </button>
+            </div>
+			<div id="wiringModal_picture" class="modal-dialog" style="width: 100%;">
+			</div>
         </div>
         <!-- convert bin <-> text "modal" -->
         <div id="convertModal" class="modal-dialog" style="display:none">

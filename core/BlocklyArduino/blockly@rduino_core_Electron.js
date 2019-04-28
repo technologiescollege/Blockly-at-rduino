@@ -415,6 +415,8 @@ BlocklyDuino.bindFunctions = function() {
 	
 	$('#btn_card_picture_mini').on("click", BlocklyDuino.cardPicture_mini);
 	$('#btn_card_picture_maxi').on("click", BlocklyDuino.cardPicture_maxi);
+	$('#btn_wiring_mini').on("click", BlocklyDuino.wiring_mini);
+	$('#btn_wiring_maxi').on("click", BlocklyDuino.wiring_maxi);
 
 	$('#btn_example, #menu_131').on("click", BlocklyDuino.buildExamples);
 
@@ -426,11 +428,36 @@ BlocklyDuino.bindFunctions = function() {
 			width: $("#arduino_card_picture").offsetWidth,
 			show: {
 				effect: "drop",
-				duration: 1000
+				duration: 600
 			},
 			hide: {
 				effect: "drop",
-				duration: 1000
+				duration: 600
+			},
+			position: {
+				my: "center",
+				at: "center",
+				of: window
+			},
+		});
+		if (!dialogConvert.dialog("isOpen")) {
+			dialogConvert.dialog("open").dialog( "option", "buttons" );
+		};
+	});
+	
+	$('#btn_wiring, #menu_21').on('click', function() {
+		var dialogConvert = $("#wiringModal").dialog({
+			autoOpen: false,
+			resizable: true,
+			height: 400,
+			width: 600,
+			show: {
+				effect: "drop",
+				duration: 600
+			},
+			hide: {
+				effect: "drop",
+				duration: 600
 			},
 			position: {
 				my: "center",
@@ -451,11 +478,11 @@ BlocklyDuino.bindFunctions = function() {
 			width: 480,
 			show: {
 				effect: "drop",
-				duration: 1000
+				duration: 600
 			},
 			hide: {
 				effect: "drop",
-				duration: 1000
+				duration: 600
 			},
 			position: {
 				my: "center",
@@ -478,11 +505,11 @@ BlocklyDuino.bindFunctions = function() {
 			width: 550,
 			show: {
 				effect: "drop",
-				duration: 1000
+				duration: 600
 			},
 			hide: {
 				effect: "drop",
-				duration: 1000
+				duration: 600
 			},
 			position: {
 				my: "center",
@@ -831,18 +858,18 @@ BlocklyDuino.init = function() {
 	
 	// build Blockly ...
 	BlocklyDuino.workspace = Blockly.inject('content_blocks',
-		      {grid:
+			{grid:
 		          {	spacing: 25,
 					length: 3,
 					colour: '#ccc',
 					snap: true},
-				sounds : true,
-				media: 'media/',
-				rtl: Code.isRtl(),
-				toolbox: BlocklyDuino.buildToolbox(),
-				zoom:
-					{controls: true,
-					wheel: true}
+			sounds : true,
+			media: 'media/',
+			rtl: Code.isRtl(),
+			toolbox: BlocklyDuino.buildToolbox(),
+			zoom:
+				{controls: true,
+				wheel: true}
 		      });
 	// bind events to html elements
 	BlocklyDuino.bindFunctions();
@@ -895,7 +922,7 @@ BlocklyDuino.init = function() {
 					}
 	
 	BlocklyDuino.OnOffLine();
-					
+	BlocklyDuino.ExampleWiring();
 	BlocklyDuino.firstBlocklyArduino();
 };
 
@@ -1179,6 +1206,9 @@ BlocklyDuino.DialogCode = function() {
 
 BlocklyDuino.DialogCode_edit = function() {
 	$('#edit_code').val($('#pre_previewArduino').text());	
+	if (typeof prettyPrintOne == 'function') {
+		$('#edit_code').html(prettyPrintOne($('#edit_code').html(), 'cpp'));
+	}
 	//$('#pre_previewArduino').addClass('hidden');
 	
 }

@@ -2,7 +2,6 @@
  * Examples
  */
 
-
 'use strict';
 
 var Examples = {};
@@ -78,41 +77,41 @@ Examples.initLocal = function() {
 
 	// load './examples/examples.json' file to init table
 	$.ajax({
-				url : '../examples/examples.json',
-				type : "get",
-				dataType : "json",
-				success : function(data) {
-					for (var i = 0; i < data.length; i++) {
-						var clone = $('table').find('tr.hide').clone(true).removeClass('hide');
-						var current = $(clone).find('td:first');
-						$(current).find('input').val(data[i].source_url);
-						current = $(current).next('td');
-						$(current).find('input').val(data[i].source_text);
-						current = $(current).next('td');
-						$(current).find('input').val(data[i].image);
-						$(current).find('img').attr('src', data[i].image);
-						current = $(current).next('td');
-						$(current).find('input').val(data[i].link_url);
-						current = $(current).next('td');
-						$(current).find('input').val(data[i].link_text);
-						current = $(current).next('td');
-						if (data[i].visible) {
-							$(current)
-									.find('.checkbox-inline')
-									.append(	'<input data-toggle="toggle" type="checkbox" data-onstyle="success" checked="checked">');
-						} else {
-							$(current)
-									.find('.checkbox-inline')
-									.append(	'<input data-toggle="toggle" data-onstyle="success" type="checkbox">');
-						}
-						$('table').append(clone);
-					}
-					$('input[type=checkbox][data-toggle^=toggle]').bootstrapToggle();
-				},
-				error : function() {
-					alert("error");
+		url : '../examples/examples.json',
+		type : "get",
+		dataType : "json",
+		success : function(data) {
+			for (var i = 0; i < data.length; i++) {
+				var clone = $('table').find('tr.hide').clone(true).removeClass('hide');
+				var current = $(clone).find('td:first');
+				$(current).find('input').val(data[i].source_url);
+				current = $(current).next('td');
+				$(current).find('input').val(data[i].source_text);
+				current = $(current).next('td');
+				$(current).find('input').val(data[i].image);
+				$(current).find('img').attr('src', data[i].image);
+				current = $(current).next('td');
+				$(current).find('input').val(data[i].link_url);
+				current = $(current).next('td');
+				$(current).find('input').val(data[i].link_text);
+				current = $(current).next('td');
+				if (data[i].visible) {
+					$(current)
+							.find('.checkbox-inline')
+							.append(	'<input data-toggle="toggle" type="checkbox" data-onstyle="success" checked="checked">');
+				} else {
+					$(current)
+							.find('.checkbox-inline')
+							.append(	'<input data-toggle="toggle" data-onstyle="success" type="checkbox">');
 				}
-			});
+				$('table').append(clone);
+			}
+			$('input[type=checkbox][data-toggle^=toggle]').bootstrapToggle();
+		},
+		error : function() {
+			alert("error");
+		}
+	});
 
 	// check if file exists
 	$('.has-feedback > input').on("blur", 	function() {
@@ -120,21 +119,21 @@ Examples.initLocal = function() {
 		divInput.children('img').attr('src', $(this).val());
 		if ($(this).val() != '') {
 			$.ajax({
-						url : $(this).val(),
-						type : 'HEAD',
-						error : function() {
-							divInput.removeClass("has-success");
-							divInput.children('span').remove();
-							divInput.addClass("has-error");
-							divInput.append('<span class="glyphicon glyphicon-remove form-control-feedback" aria-hidden="true"></span>');
-						},
-						success : function() {
-							divInput.removeClass("has-error");
-							divInput.children('span').remove();
-							divInput.addClass("has-success");
-							divInput.append('<span class="glyphicon glyphicon-ok form-control-feedback" aria-hidden="true"></span>');
-						}
-					});
+				url : $(this).val(),
+				type : 'HEAD',
+				error : function() {
+					divInput.removeClass("has-success");
+					divInput.children('span').remove();
+					divInput.addClass("has-error");
+					divInput.append('<span class="glyphicon glyphicon-remove form-control-feedback" aria-hidden="true"></span>');
+				},
+				success : function() {
+					divInput.removeClass("has-error");
+					divInput.children('span').remove();
+					divInput.addClass("has-success");
+					divInput.append('<span class="glyphicon glyphicon-ok form-control-feedback" aria-hidden="true"></span>');
+				}
+			});
 		} else {
 			divInput.removeClass("has-success");
 			divInput.children('span').remove();

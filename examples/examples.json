@@ -2,23 +2,23 @@
     {
         "source_url": "./blink/blink.xml",
         "source_text": "le tout premier exercice : faire clignoter une diode",
-        "image": "./blink/blink_fritzing.jpg",
+        "image": "./blink/blink.jpg",
         "link_url": "",
         "link_text": "",
         "visible": true
     },
     {
-        "source_url": "./mbot/mbot-suiveur-ligne.xml",
+        "source_url": "./mbot_suiveur_ligne/mbot_suiveur_ligne.xml",
         "source_text": "Robot mBot suiveur de ligne",
-        "image": "./mbot/mbot-suiveur-ligne.jpg",
+        "image": "./mbot_suiveur_ligne/mbot_suiveur_ligne.jpg",
         "link_url": "",
         "link_text": "",
         "visible": true
     },
     {
-        "source_url": "./mbot/eviter obstacles.xml",
+        "source_url": "./mbot_eviter_obstacles/mbot_eviter_obstacles.xml",
         "source_text": "Robot mBot éviteur obstacles",
-        "image": "./mbot/mbot.jpg",
+        "image": "./mbot_eviter_obstacles/mbot_eviter_obstacles.jpg",
         "link_url": "",
         "link_text": "",
         "visible": true
@@ -34,7 +34,7 @@
     {
         "source_url": "./servo_potentio/servo_potentio.xml",
         "source_text": "faire varier l'angle d'un servomoteur proportionnellement au potentiomètre",
-        "image": "./servo_potentio/servo_potentio_fritzing.jpg",
+        "image": "./servo_potentio/servo_potentio.jpg",
         "link_url": "",
         "link_text": "",
         "visible": true
@@ -42,7 +42,7 @@
     {
         "source_url": "./suiveur_de_ligne/suiveur_de_ligne.xml",
         "source_text": "les détecteurs mesurent l'intensité lumineuse renvoyée par la table de chaque côté, puis stoppent ou font tourner les servomoteurs",
-        "image": "./suiveur_de_ligne/suiveur_de_ligne_fritzing.jpg",
+        "image": "./suiveur_de_ligne/suiveur_de_ligne.jpg",
         "link_url": "http://fablabo.net/wiki/FablabJunior_Automne_2015/Projet2",
         "link_text": "sur Fablabo",
         "visible": true
@@ -50,7 +50,7 @@
     {
         "source_url": "./BT_PAF_Nantes/BT_PAF_Nantes.xml",
         "source_text": "voici comment connecter une carte Bluetooth pour commencer à recueillir des informations envoyées",
-        "image": "./BT_PAF_Nantes/BT_PAF_Nantes_fritzing.jpg",
+        "image": "./BT_PAF_Nantes/BT_PAF_Nantes.jpg",
         "link_url": "",
         "link_text": "",
         "visible": true
@@ -58,7 +58,7 @@
     {
         "source_url": "./BT_piloter_DEL/BT_piloter_DEL.xml",
         "source_text": "suite à la connection Bluetooth, voici comment piloter une DEL par Android",
-        "image": "./BT_piloter_DEL/BT_piloter_DEL_fritzing.jpg",
+        "image": "./BT_piloter_DEL/BT_piloter_DEL.jpg",
         "link_url": "https://www.youtube-nocookie.com/embed/vlJl28qE5vg?list=PLwy0yw3Oq4-uFJl0j-efUAAlfCbqtcTMr",
         "link_text": "tutos vidéo",
         "visible": true
@@ -82,7 +82,7 @@
     {
         "source_url": "./Starter_Kit_prj2/Starter_Kit_prj2.xml",
         "source_text": "Starter Kit Arduino : interface vaisseau spatial",
-        "image": "./Starter_Kit_prj2/Starter_Kit_prj2_fritzing.jpg",
+        "image": "./Starter_Kit_prj2/Starter_Kit_prj2.jpg",
         "link_url": "",
         "link_text": "",
         "visible": true
@@ -90,7 +90,7 @@
     {
         "source_url": "./Starter_Kit_prj3/Starter_Kit_prj3.xml",
         "source_text": "Starter Kit Arduino : love-o-meter",
-        "image": "./Starter_Kit_prj3/Starter_Kit_prj3_fritzing.jpg",
+        "image": "./Starter_Kit_prj3/Starter_Kit_prj3.jpg",
         "link_url": "",
         "link_text": "",
         "visible": true
@@ -98,7 +98,7 @@
     {
         "source_url": "./Starter_Kit_prj4/Starter_Kit_prj4.xml",
         "source_text": "Starter Kit Arduino : lampe d'ambiance",
-        "image": "./Starter_Kit_prj4/Starter_Kit_prj4_fritzing.jpg",
+        "image": "./Starter_Kit_prj4/Starter_Kit_prj4.jpg",
         "link_url": "",
         "link_text": "",
         "visible": true
@@ -106,7 +106,7 @@
     {
         "source_url": "./Starter_Kit_prj5/Starter_Kit_prj5.xml",
         "source_text": "Starter Kit Arduino : Indicateur d'humeur",
-        "image": "./Starter_Kit_prj5/Starter_Kit_prj5_fritzing.jpg",
+        "image": "./Starter_Kit_prj5/Starter_Kit_prj5.jpg",
         "link_url": "",
         "link_text": "",
         "visible": true
@@ -114,7 +114,7 @@
     {
         "source_url": "./Starter_Kit_prj6/Starter_Kit_prj6.xml",
         "source_text": "Starter Kit Arduino : Thérémine lumineux",
-        "image": "./Starter_Kit_prj6/Starter_Kit_prj6_fritzing.jpg",
+        "image": "./Starter_Kit_prj6/Starter_Kit_prj6.jpg",
         "link_url": "",
         "link_text": "",
         "visible": true
@@ -122,7 +122,7 @@
     {
         "source_url": "./Starter_Kit_prj7/Starter_Kit_prj7.xml",
         "source_text": "Starter Kit Arduino : Clavier musical",
-        "image": "./Starter_Kit_prj7/Starter_Kit_prj7_fritzing.jpg",
+        "image": "./Starter_Kit_prj7/Starter_Kit_prj7.jpg",
         "link_url": "",
         "link_text": "",
         "visible": true
@@ -130,7 +130,7 @@
     {
         "source_url": "./Starter_Kit_prj8/Starter_Kit_prj8.xml",
         "source_text": "Starter Kit Arduino : Sablier numérique",
-        "image": "./Starter_Kit_prj8/Starter_Kit_prj8_fritzing.jpg",
+        "image": "./Starter_Kit_prj8/Starter_Kit_prj8.jpg",
         "link_url": "",
         "link_text": "",
         "visible": true
@@ -138,7 +138,7 @@
     {
         "source_url": "./RFID_lecture/RFID_lecture.xml",
         "source_text": "Module RFID : Lecture d'un tag",
-        "image": "./RFID_lecture/RFID_lecture_fritzing.jpg",
+        "image": "./RFID_lecture/RFID_lecture.jpg",
         "link_url": "",
         "link_text": "",
         "visible": true
@@ -146,7 +146,7 @@
     {
         "source_url": "./RFID_test/RFID_test.xml",
         "source_text": "Module RFID : Contrôler l'accès à l'aide d'un tag",
-        "image": "./RFID_test/RFID_test_fritzing.jpg",
+        "image": "./RFID_test/RFID_test.jpg",
         "link_url": "",
         "link_text": "",
         "visible": true
@@ -154,7 +154,7 @@
     {
         "source_url": "./HC-SR04/HC-SR04.xml",
         "source_text": "Capteur à ultrasons HC-SR04 : exemple de détection",
-        "image": "./HC-SR04/HC-SR04_fritzing.jpg",
+        "image": "./HC-SR04/HC-SR04.jpg",
         "link_url": "",
         "link_text": "",
         "visible": true
@@ -162,7 +162,7 @@
     {
         "source_url": "./infrarouge_test/infrarouge_test.xml",
         "source_text": "Infrarouge : réception d'un code",
-        "image": "./infrarouge_test/infrarouge_test_fritzing.jpg",
+        "image": "./infrarouge_test/infrarouge_test.jpg",
         "link_url": "",
         "link_text": "",
         "visible": true
@@ -170,7 +170,7 @@
     {
         "source_url": "./RF433_emission/RF433_emission.xml",
         "source_text": "RF433 : envoi d'un message radio",
-        "image": "./RF433_emission/RF433_emission_fritzing.jpg",
+        "image": "./RF433_emission/RF433_emission.jpg",
         "link_url": "",
         "link_text": "",
         "visible": true
@@ -178,7 +178,7 @@
     {
         "source_url": "./RF433_reception/RF433_reception.xml",
         "source_text": "RF433 : réception d'un message radio",
-        "image": "./RF433_reception/RF433_reception_fritzing.jpg",
+        "image": "./RF433_reception/RF433_reception.jpg",
         "link_url": "",
         "link_text": "",
         "visible": true

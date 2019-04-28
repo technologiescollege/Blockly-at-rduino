@@ -14,7 +14,7 @@ Blockly.Arduino.imageSizeOld = 32;
 Blockly.Arduino.imageSize = Blockly.Arduino.imageSizeNormal;
 Blockly.Arduino.imageBool = true;
 Blockly.Arduino.cardSize = 200; //same as width in index.html showcardModal
-
+Blockly.Arduino.wiringSize = 400;
 
 /**
  * Override Blockly.makeColour to use Hexa or HUE
@@ -275,6 +275,29 @@ BlocklyDuino.OnOffLine = function() {
 			$("#btn_card_picture_change").addClass("hidden");
 			$('#board_select_AIO_off').prepend($('#board_select'));
 	}
+};
+
+BlocklyDuino.ExampleWiring = function() {
+	var ExampleTest = BlocklyDuino.getStringParamFromUrl('url', '');
+	if (ExampleTest == '') {
+		$("#btn_wiring").addClass("hidden");
+		$("#menu_21").addClass("hidden");
+	} else {
+		$("#btn_wiring").removeClass("hidden");
+		$("#menu_21").removeClass("hidden");
+		ExampleTest = ExampleTest.slice(0, -3);
+		$('#wiringModal_picture').prepend("<img src='" + ExampleTest + "jpg' id='wiringModalImg' width=100% height=auto/>");
+	}
+};
+
+BlocklyDuino.wiring_mini = function() {
+	Blockly.Arduino.wiringSize -= 50;
+	$("#wiringModalImg").animate({width: Blockly.Arduino.wiringSize}, );
+};
+
+BlocklyDuino.wiring_maxi = function() {
+	Blockly.Arduino.wiringSize += 50;
+	$("#wiringModalImg").animate({width: Blockly.Arduino.wiringSize}, );
 };
 
 BlocklyDuino.toggleTextColors = function(taille) {
