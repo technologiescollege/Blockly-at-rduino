@@ -365,7 +365,13 @@ Blockly.Msg.CAT_FONCTION_WIRELESS_RF24 = "Radio Fréquence 2.4GHz";
 Blockly.Msg.CAT_FONCTION_WIRELESS_ZIGBEE = "Zigbee";
 
 Blockly.Msg.CAT_FONCTION_STOCKAGE_EEPROM = "EEPROM";
-Blockly.Msg.CAT_FONCTION_STOCKAGE_SDCARD = "Carte SD";
+Blockly.Msg.CAT_FONCTION_STOCKAGE_SDCARD = "SD card";
+
+Blockly.Msg.CAT_CAPACITIVESENSOR = "Capacitive Sensor";
+
+Blockly.Msg.CAT_ESP8266="ESP8266 IOT";
+Blockly.Msg.CAT_esp8266_wifi=" - WiFi";
+Blockly.Msg.CAT_html=" - HTML";
 
 
 //**********************************Dropdown menus messages***********************************************

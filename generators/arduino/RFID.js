@@ -26,14 +26,13 @@ Blockly.Arduino.RFID_module = function() {
 
   Blockly.Arduino.includes_['define_RFID_module'] = 
   '#include <SPI.h>\n' +
-  '#include <RFID.h>';
+  '#include <MFRC522.h>';
   Blockly.Arduino.definitions_['definition_RFID_module'] =
-  'RFID MFRC522_RFID(' + value_sda + ',' + value_rst + ');\n' +
-  'int UID[5];\n';
+  'MFRC522 RFID(' + value_sda + ',' + value_rst + ');\n';
 
   Blockly.Arduino.setups_['setup_RFID_module'] = 
   'SPI.begin();\n' +
-  'MFRC522_RFID.init();\n';
+  'RFID.PCD_init();\n';
 
   var code = '';
   return code;
@@ -84,7 +83,7 @@ Blockly.Arduino.RFID_code_acces = function() {
   var value_val5 = Blockly.Arduino.valueToCode(this, 'VAL5', Blockly.Arduino.ORDER_ATOMIC);
 
   Blockly.Arduino.definitions_['definition_RFID_code_' + id] =
-  'int MASTERKEY_' + id + '[5]={' + value_val1 + ',' + value_val2 + ',' + value_val3 + ',' + value_val4 + ',' + value_val5 + '}; // UID du badge ou de la carte acceptée sous forme de tableau (Array).';
+  'String TAG_' + id + '= String(' + value_val1 + ',' + value_val2 + ',' + value_val3 + ',' + value_val4 + ',' + value_val5 + '}; // UID du badge ou de la carte acceptée sous forme de tableau (Array).';
   var code = '';
   return code;
 };

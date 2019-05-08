@@ -369,6 +369,9 @@ Blockly.Msg.CAT_FONCTION_STOCKAGE_SDCARD = "Carte SD";
 
 Blockly.Msg.CAT_CAPACITIVESENSOR = "détection capacitive";
  
+Blockly.Msg.CAT_ESP8266="ESP8266 IdO";
+Blockly.Msg.CAT_esp8266_wifi=" - WiFi";
+Blockly.Msg.CAT_html=" - HTML";
 
 //**********************************Dropdown menus messages***********************************************
 
@@ -2367,3 +2370,25 @@ Blockly.Msg.CAPACITIV_INPUT1 = "la broche d'émission";
 Blockly.Msg.CAPACITIV_INPUT2 = "et la broche de réception";
 Blockly.Msg.CAPACITIV_CALIBRATION = "calibrage automatique";
 Blockly.Msg.CAPACITIV_TOOLTIP = "raccorder les 2 broches par une résistance de 10M puis le conducteur à la broche de réception";
+
+
+
+//wifi
+Blockly.Msg.esp8266_init_tooltip="initialisation du module wifi et connection avec les paramètres indiqués";
+Blockly.Msg.esp8266_1="Esp 8266";
+Blockly.Msg.esp8266_2="ssid";
+Blockly.Msg.esp8266_3="clé";
+Blockly.Msg.esp8266_4="IP";
+Blockly.Msg.esp8266_5="passerelle";
+Blockly.Msg.esp8266_6="masque";
+Blockly.Msg.esp8266_7=[["client", "client"],["serveur", "serveur"]];
+Blockly.Msg.esp8266_8="port";
+Blockly.Msg.esp8266_9=[["dynamique", "dynamic"],["statique", "static"]];
+Blockly.Msg.esp8266_10="adressage";
+Blockly.Msg.esp8266_recept_tooltip="reception";
+Blockly.Msg.esp8266_url="http://julien.coron.free.fr/?p=928";
+Blockly.Msg.esp8266_send_html_tooltip="...";
+Blockly.Msg.esp8266_send_html="";
+Blockly.Msg.esp8266_send_tooltip="...";
+Blockly.Msg.esp8266_send="";
+Blockly.Msg.esp8266_wait_tooltip="...";

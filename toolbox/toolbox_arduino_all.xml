@@ -821,6 +821,37 @@
 		</block>
 		<block type="nrf24l01_get"></block>		
 	</category>
+	<category name="CAT_ESP8266" colour="#B4AC91">
+		<category name="CAT_esp8266_wifi" colour="#B4AC91">
+			<block type="esp8266_init"></block>
+			<block type="esp8266_send"></block>
+			<block type="esp8266_wait_server"></block>
+			<block type="esp8266_send_html"></block>
+			<block type="esp8266_request_indexof"></block>
+			<block type="esp8266_wait_client"></block>
+		</category>
+		<category name="CAT_html" colour="#F16625">
+			<block type="html_title"></block>
+			<block type="html_header"></block>
+			<block type="html_paragraph"></block>
+			<block type="html_table"></block>
+			<block type="html_form"></block>
+			<block type="html_input"></block>
+			<block type="html_label"></block>
+			<block type="html_image"></block>
+			<block type="html_emptytext"></block>
+			<block type="html_textmod"></block>
+			<block type="html_link"></block>
+			<block type="html_tablerow"></block>
+			<block type="html_tableheading"></block>
+			<block type="html_tabledata"></block>
+			<block type="html_args"></block>
+			<block type="html_textalign"></block>
+			<block type="html_color"></block>
+			<block type="html_bgcolor"></block>
+			<block type="html_border"></block>
+		</category>
+	</category>
 	<category name="CAT_APDS_9960_RGB_Gesture" colour="#D9242D">
 		<block type="APDS9960_ColorSensor_init"></block>
 		<block type="APDS9960_ColorSensor_test"></block>
