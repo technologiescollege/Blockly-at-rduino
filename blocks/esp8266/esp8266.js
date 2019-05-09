@@ -12,7 +12,7 @@ Blockly.Blocks["esp8266_init"]={
 		this.setColour(Blockly.Blocks.esp8266.HUE);
 		this.setHelpUrl(Blockly.Msg.esp8266_url);
 		this.appendDummyInput()
-			.appendField(new Blockly.FieldImage("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACIAAAAiCAIAAAC1JZyVAAAACXBIWXMAAAsTAAALEwEAmpwYAAABeklEQVR42u2Uf22FQAyAkYAGHOAACVhAAg6mAQc4QAIacIADHLx92WVdae8dd2xZsuz1D0J6bb9ef1z1+BWpXpg/jDmOY13XaZrezoIGPaffwuz7TqC2basrwQZL7Msw5Nj3/WV0L13X4XuNIaMooK5rQgzDIBXjHw16b0wEf7MvzDzPxq1pmnEct21LVINTbLA0aREtgiE7AzB2l4K9gRHzhNEMEqGfJl+qRIl0FP7RoDd3xVeXREgnDDMjbkwqPibBqGCDpUw2EWQ+T5hA4kxMl2XJARgYXpIi0WzRjJg+hUoyP5Ro/RT+0fhJ06FTe2P2kQakZ4FTbLQLEa4xchU/C6Hu4TZGrzsfvVC8aBTazIJ/dcIbozuPV27RjNDV6KrrtunOP4uTwvhZCOvih/DZJcowpMxo6ZeKfzTpfhQUzeyTEb8fNzFa6EF4mPlKPzIlF2OWI6zUz2P8OOTU6k7RNKmIUYYRUimjGPP4eMRKXe5g7skL8+8x78jBnNub/YbsAAAAAElFTkSuQmCC", 34, 34))
+			.appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/esp8266/esp8266.jpg', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize))
 			.appendField(Blockly.Msg.esp8266_1);
 		this.appendDummyInput()
 			.setAlign(Blockly.ALIGN_RIGHT)
@@ -82,6 +82,8 @@ Blockly.Blocks["esp8266_send"]={
 	init:function(){
 		this.setColour(Blockly.Blocks.esp8266.HUE);
 		this.setHelpUrl(Blockly.Msg.esp8266_url);
+		this.appendDummyInput()
+			.appendField(new Blockly.FieldImage("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACIAAAAiCAIAAAC1JZyVAAAACXBIWXMAAAsTAAALEwEAmpwYAAABeklEQVR42u2Uf22FQAyAkYAGHOAACVhAAg6mAQc4QAIacIADHLx92WVdae8dd2xZsuz1D0J6bb9ef1z1+BWpXpg/jDmOY13XaZrezoIGPaffwuz7TqC2basrwQZL7Msw5Nj3/WV0L13X4XuNIaMooK5rQgzDIBXjHw16b0wEf7MvzDzPxq1pmnEct21LVINTbLA0aREtgiE7AzB2l4K9gRHzhNEMEqGfJl+qRIl0FP7RoDd3xVeXREgnDDMjbkwqPibBqGCDpUw2EWQ+T5hA4kxMl2XJARgYXpIi0WzRjJg+hUoyP5Ro/RT+0fhJ06FTe2P2kQakZ4FTbLQLEa4xchU/C6Hu4TZGrzsfvVC8aBTazIJ/dcIbozuPV27RjNDV6KrrtunOP4uTwvhZCOvih/DZJcowpMxo6ZeKfzTpfhQUzeyTEb8fNzFa6EF4mPlKPzIlF2OWI6zUz2P8OOTU6k7RNKmIUYYRUimjGPP4eMRKXe5g7skL8+8x78jBnNub/YbsAAAAAElFTkSuQmCC", 34, 34));
 		this.appendValueInput("message")
 			.appendField("envoyer");
 		this.setPreviousStatement(true);
@@ -95,6 +97,7 @@ Blockly.Blocks["esp8266_send_html"]={
 		this.setColour(Blockly.Blocks.esp8266.HUE);
 		this.setHelpUrl(Blockly.Msg.esp8266_url);
 		this.appendDummyInput()
+			.appendField(new Blockly.FieldImage("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACIAAAAiCAIAAAC1JZyVAAAACXBIWXMAAAsTAAALEwEAmpwYAAABeklEQVR42u2Uf22FQAyAkYAGHOAACVhAAg6mAQc4QAIacIADHLx92WVdae8dd2xZsuz1D0J6bb9ef1z1+BWpXpg/jDmOY13XaZrezoIGPaffwuz7TqC2basrwQZL7Msw5Nj3/WV0L13X4XuNIaMooK5rQgzDIBXjHw16b0wEf7MvzDzPxq1pmnEct21LVINTbLA0aREtgiE7AzB2l4K9gRHzhNEMEqGfJl+qRIl0FP7RoDd3xVeXREgnDDMjbkwqPibBqGCDpUw2EWQ+T5hA4kxMl2XJARgYXpIi0WzRjJg+hUoyP5Ro/RT+0fhJ06FTe2P2kQakZ4FTbLQLEa4xchU/C6Hu4TZGrzsfvVC8aBTazIJ/dcIbozuPV27RjNDV6KrrtunOP4uTwvhZCOvih/DZJcowpMxo6ZeKfzTpfhQUzeyTEb8fNzFa6EF4mPlKPzIlF2OWI6zUz2P8OOTU6k7RNKmIUYYRUimjGPP4eMRKXe5g7skL8+8x78jBnNub/YbsAAAAAElFTkSuQmCC", 34, 34))
 			.appendField("envoyer un page HTML");
 		this.appendStatementInput("HEAD")
 			.appendField("<head>");
@@ -111,6 +114,7 @@ Blockly.Blocks["esp8266_wait_server"]={
 		this.setColour(Blockly.Blocks.esp8266.HUE);
 		this.setHelpUrl(Blockly.Msg.esp8266_url);
 		this.appendDummyInput()
+			.appendField(new Blockly.FieldImage("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACIAAAAiCAIAAAC1JZyVAAAACXBIWXMAAAsTAAALEwEAmpwYAAABeklEQVR42u2Uf22FQAyAkYAGHOAACVhAAg6mAQc4QAIacIADHLx92WVdae8dd2xZsuz1D0J6bb9ef1z1+BWpXpg/jDmOY13XaZrezoIGPaffwuz7TqC2basrwQZL7Msw5Nj3/WV0L13X4XuNIaMooK5rQgzDIBXjHw16b0wEf7MvzDzPxq1pmnEct21LVINTbLA0aREtgiE7AzB2l4K9gRHzhNEMEqGfJl+qRIl0FP7RoDd3xVeXREgnDDMjbkwqPibBqGCDpUw2EWQ+T5hA4kxMl2XJARgYXpIi0WzRjJg+hUoyP5Ro/RT+0fhJ06FTe2P2kQakZ4FTbLQLEa4xchU/C6Hu4TZGrzsfvVC8aBTazIJ/dcIbozuPV27RjNDV6KrrtunOP4uTwvhZCOvih/DZJcowpMxo6ZeKfzTpfhQUzeyTEb8fNzFa6EF4mPlKPzIlF2OWI6zUz2P8OOTU6k7RNKmIUYYRUimjGPP4eMRKXe5g7skL8+8x78jBnNub/YbsAAAAAElFTkSuQmCC", 34, 34))
 			.appendField("attendre une requête d'un client");
 		this.setPreviousStatement(true);
 		this.setNextStatement(true);
@@ -122,6 +126,8 @@ Blockly.Blocks["esp8266_wait_client"]={
 	init:function(){
 		this.setColour(Blockly.Blocks.esp8266.HUE);
 		this.setHelpUrl(Blockly.Msg.esp8266_url);
+		this.appendDummyInput()
+			.appendField(new Blockly.FieldImage("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACIAAAAiCAIAAAC1JZyVAAAACXBIWXMAAAsTAAALEwEAmpwYAAABeklEQVR42u2Uf22FQAyAkYAGHOAACVhAAg6mAQc4QAIacIADHLx92WVdae8dd2xZsuz1D0J6bb9ef1z1+BWpXpg/jDmOY13XaZrezoIGPaffwuz7TqC2basrwQZL7Msw5Nj3/WV0L13X4XuNIaMooK5rQgzDIBXjHw16b0wEf7MvzDzPxq1pmnEct21LVINTbLA0aREtgiE7AzB2l4K9gRHzhNEMEqGfJl+qRIl0FP7RoDd3xVeXREgnDDMjbkwqPibBqGCDpUw2EWQ+T5hA4kxMl2XJARgYXpIi0WzRjJg+hUoyP5Ro/RT+0fhJ06FTe2P2kQakZ4FTbLQLEa4xchU/C6Hu4TZGrzsfvVC8aBTazIJ/dcIbozuPV27RjNDV6KrrtunOP4uTwvhZCOvih/DZJcowpMxo6ZeKfzTpfhQUzeyTEb8fNzFa6EF4mPlKPzIlF2OWI6zUz2P8OOTU6k7RNKmIUYYRUimjGPP4eMRKXe5g7skL8+8x78jBnNub/YbsAAAAAElFTkSuQmCC", 34, 34));
 		this.appendValueInput("host")
 			.appendField("attendre une réponse du serveur");
 		this.appendValueInput("port")
@@ -134,6 +140,8 @@ Blockly.Blocks["esp8266_wait_client"]={
 
 Blockly.Blocks["esp8266_request_indexof"]={
 	init:function(){
+		this.appendDummyInput()
+			.appendField(new Blockly.FieldImage("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACIAAAAiCAIAAAC1JZyVAAAACXBIWXMAAAsTAAALEwEAmpwYAAABeklEQVR42u2Uf22FQAyAkYAGHOAACVhAAg6mAQc4QAIacIADHLx92WVdae8dd2xZsuz1D0J6bb9ef1z1+BWpXpg/jDmOY13XaZrezoIGPaffwuz7TqC2basrwQZL7Msw5Nj3/WV0L13X4XuNIaMooK5rQgzDIBXjHw16b0wEf7MvzDzPxq1pmnEct21LVINTbLA0aREtgiE7AzB2l4K9gRHzhNEMEqGfJl+qRIl0FP7RoDd3xVeXREgnDDMjbkwqPibBqGCDpUw2EWQ+T5hA4kxMl2XJARgYXpIi0WzRjJg+hUoyP5Ro/RT+0fhJ06FTe2P2kQakZ4FTbLQLEa4xchU/C6Hu4TZGrzsfvVC8aBTazIJ/dcIbozuPV27RjNDV6KrrtunOP4uTwvhZCOvih/DZJcowpMxo6ZeKfzTpfhQUzeyTEb8fNzFa6EF4mPlKPzIlF2OWI6zUz2P8OOTU6k7RNKmIUYYRUimjGPP4eMRKXe5g7skL8+8x78jBnNub/YbsAAAAAElFTkSuQmCC", 34, 34));
         this.appendValueInput("CASE0")
 			.setAlign(Blockly.ALIGN_RIGHT)
 			.appendField("si dans la requête on trouve");
@@ -221,6 +229,7 @@ Blockly.Blocks["esp8266_create_item"]={
 	init:function(){
 		this.setColour(Blockly.Blocks.esp8266.HUE);
 		this.appendDummyInput()
+			.appendField(new Blockly.FieldImage("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACIAAAAiCAIAAAC1JZyVAAAACXBIWXMAAAsTAAALEwEAmpwYAAABeklEQVR42u2Uf22FQAyAkYAGHOAACVhAAg6mAQc4QAIacIADHLx92WVdae8dd2xZsuz1D0J6bb9ef1z1+BWpXpg/jDmOY13XaZrezoIGPaffwuz7TqC2basrwQZL7Msw5Nj3/WV0L13X4XuNIaMooK5rQgzDIBXjHw16b0wEf7MvzDzPxq1pmnEct21LVINTbLA0aREtgiE7AzB2l4K9gRHzhNEMEqGfJl+qRIl0FP7RoDd3xVeXREgnDDMjbkwqPibBqGCDpUw2EWQ+T5hA4kxMl2XJARgYXpIi0WzRjJg+hUoyP5Ro/RT+0fhJ06FTe2P2kQakZ4FTbLQLEa4xchU/C6Hu4TZGrzsfvVC8aBTazIJ/dcIbozuPV27RjNDV6KrrtunOP4uTwvhZCOvih/DZJcowpMxo6ZeKfzTpfhQUzeyTEb8fNzFa6EF4mPlKPzIlF2OWI6zUz2P8OOTU6k7RNKmIUYYRUimjGPP4eMRKXe5g7skL8+8x78jBnNub/YbsAAAAAElFTkSuQmCC", 34, 34))
 			.appendField("on trouve");
 		this.setPreviousStatement(true);
 		this.setNextStatement(true);
@@ -233,6 +242,7 @@ Blockly.Blocks["esp8266_create_container"]={
 	init:function(){
         this.setColour(Blockly.Blocks.esp8266.HUE);
         this.appendDummyInput()
+			.appendField(new Blockly.FieldImage("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACIAAAAiCAIAAAC1JZyVAAAACXBIWXMAAAsTAAALEwEAmpwYAAABeklEQVR42u2Uf22FQAyAkYAGHOAACVhAAg6mAQc4QAIacIADHLx92WVdae8dd2xZsuz1D0J6bb9ef1z1+BWpXpg/jDmOY13XaZrezoIGPaffwuz7TqC2basrwQZL7Msw5Nj3/WV0L13X4XuNIaMooK5rQgzDIBXjHw16b0wEf7MvzDzPxq1pmnEct21LVINTbLA0aREtgiE7AzB2l4K9gRHzhNEMEqGfJl+qRIl0FP7RoDd3xVeXREgnDDMjbkwqPibBqGCDpUw2EWQ+T5hA4kxMl2XJARgYXpIi0WzRjJg+hUoyP5Ro/RT+0fhJ06FTe2P2kQakZ4FTbLQLEa4xchU/C6Hu4TZGrzsfvVC8aBTazIJ/dcIbozuPV27RjNDV6KrrtunOP4uTwvhZCOvih/DZJcowpMxo6ZeKfzTpfhQUzeyTEb8fNzFa6EF4mPlKPzIlF2OWI6zUz2P8OOTU6k7RNKmIUYYRUimjGPP4eMRKXe5g7skL8+8x78jBnNub/YbsAAAAAElFTkSuQmCC", 34, 34))
 			.appendField("si dans la requête on trouve");
         this.appendStatementInput("STACK");
         this.setTooltip(".");
