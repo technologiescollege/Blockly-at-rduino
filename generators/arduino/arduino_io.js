@@ -216,7 +216,7 @@ Blockly.Arduino.inout_attachInterrupt = function() {
   
   var branch = Blockly.Arduino.statementToCode(this, 'DO' );
   var code2='void'+ ' ' + funcName + '() {\n' + branch + '}\n';
-  Blockly.Arduino.definitions_[funcName] = code2;
+  Blockly.Arduino.userFunctions_[funcName] = code2;
   return "";
 };
 
