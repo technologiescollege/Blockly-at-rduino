@@ -1,10 +1,10 @@
-﻿Blockly.Blocks.array.HUE = "#58B5DC";
-Blockly.Blocks.logic.HUE = "#E1A91A";
-Blockly.Blocks.loops.HUE = "#C88330";
-Blockly.Blocks.math.HUE = "#5CB712";
-Blockly.Blocks.procedures.HUE = "#632D99";
-Blockly.Blocks.texts.HUE = "#8A55D7";
-Blockly.Blocks.variables.HUE = "#EE7D16";
+﻿Blockly.Blocks.array.HUE = "#4CBFE6";
+Blockly.Blocks.logic.HUE = "#FFAB19";
+Blockly.Blocks.loops.HUE = "#FFD500";
+Blockly.Blocks.math.HUE = "#40BF4A";
+Blockly.Blocks.texts.HUE = "#9966FF";
+Blockly.Blocks.variables.HUE = "#FF8C1A";
+Blockly.Blocks.procedures.HUE = "#FF6680";
 
 Blockly.Blocks.adafruit_motorshield_v1.HUE = "#2D7F4F";
 Blockly.Blocks.adafruit_motorshield_v2.HUE = "#005D9D";
