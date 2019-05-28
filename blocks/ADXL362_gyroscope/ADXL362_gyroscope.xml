@@ -1,0 +1,8 @@
+<category name="CAT_ADXL362" colour="#142D5E" level=3,4>
+	<block type="ADXL362_init" disabled="true" level=3,4></block>
+	<sep></sep>
+	<block type="ADXL362_XValue" level=3></block>
+	<block type="ADXL362_YValue" level=4></block>
+	<block type="ADXL362_ZValue"></block>
+	<block type="ADXL362_TempValue"></block>
+</category>

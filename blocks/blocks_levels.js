@@ -1,0 +1,1 @@
+Blockly.Blocks.ADXL362.xml,3,4;
