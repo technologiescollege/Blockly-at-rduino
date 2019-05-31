@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<toolbox>
+	<parametre id="defaultCategories">CAT_LOGIC,CAT_LOOPS,CAT_MATH,CAT_ARRAY,CAT_TEXT,CAT_VARIABLES,CAT_FUNCTIONS,CAT_MICROBIT_ACCEL,CAT_MICROBIT_BUTTONS,CAT_MICROBIT_COMPASS,CAT_MICROBIT_DISPLAY,CAT_MICROBIT_IMAGE,CAT_MICROBIT_MICROBIT,CAT_MICROBIT_MUSIQUE,CAT_MICROBIT_NEOPIXELS,CAT_MICROBIT_PINS,CAT_MICROBIT_RADIO,CAT_MICROBIT_SPEECH
+	</parametre>
+	<category name="CAT_LOGIC" colour="#FFAB19">
+		<block type="controls_if"></block>
+		<block type="controls_switch"></block>
+		<block type="logic_compare"></block>
+		<block type="logic_operation"></block>
+		<block type="logic_negate"></block>
+		<block type="logic_boolean"></block>
+		<block type="logic_null"></block>
+	</category>
+	<category name="CAT_LOOPS" colour="#FFD500">
+		<block type="controls_repeat"></block>
+		<block type="controls_repeat_ext">
+			<value name="TIMES">
+				<shadow type="math_number">
+					<field name="NUM">10</field>
+				</shadow>
+			</value>
+		</block>
+		<block type="controls_whileUntil"></block>
+		<block type="controls_for">
+			<field name="VAR">i</field>
+			<value name="FROM">
+				<shadow type="math_number">
+					<field name="NUM">1</field>
+				</shadow>
+			</value>
+			<value name="TO">
+				<shadow type="math_number">
+					<field name="NUM">10</field>
+				</shadow>
+			</value>
+			<value name="BY">
+				<shadow type="math_number">
+					<field name="NUM">1</field>
+				</shadow>
+			</value>
+		</block>
+		<block type="controls_flow_statements"></block>
+	</category>
+	<category name="CAT_MATH" colour="#40BF4A">
+		<block type="math_number"></block>
+		<block type="inout_angle_maths"></block>
+		<block type="math_arithmetic"></block>
+		<block type="math_interval"></block>
+		<block type="math_single"></block>
+		<block type="math_trig"></block>
+		<block type="math_constant"></block>
+		<block type="math_number_property"></block>
+		<block type="math_round"></block>
+		<block type="math_on_list"></block>
+		<block type="math_modulo"></block>
+		<block type="math_constrain">
+			<value name="LOW">
+				<shadow type="math_number">
+					<field name="NUM">1</field>
+				</shadow>
+			</value>
+			<value name="HIGH">
+				<shadow type="math_number">
+					<field name="NUM">100</field>
+				</shadow>
+			</value>
+		</block>
+		<block type="math_random_int">
+			<value name="FROM">
+				<shadow type="math_number">
+					<field name="NUM">1</field>
+				</shadow>
+			</value>
+			<value name="TO">
+				<shadow type="math_number">
+					<field name="NUM">100</field>
+				</shadow>
+			</value>
+		</block>
+		<block type="math_random_float"></block>
+	</category>
+	<category name="CAT_ARRAY" colour="#4CBFE6">
+		<block type="array_create_with"></block>
+		<block type="array_getIndex">
+			<value name="AT">
+				<block type="math_number">
+					<field name="NUM">1</field>
+				</block>
+			</value>
+		</block>
+	</category>
+	<category name="CAT_TEXT" colour="#9966FF">
+		<block type="text"></block>
+		<block type="text_char"></block>
+		<block type="text_join"></block>
+		<block type="text_append">
+			<value name="TEXT">
+				<shadow type="text"></shadow>
+			</value>
+		</block>
+		<block type="text_length"></block>
+		<block type="text_isEmpty"></block>
+	</category>
+	<category name="CAT_VARIABLES" custom="VARIABLE" colour="#FF8C1A">
+        <!--block type="math_change"></block>
+		<block type="variables_set"></block>
+		<block type="variables_get"></block-->
+	</category>
+	<category name="CAT_FUNCTIONS" custom="PROCEDURE" colour="#FF6680"></category>
+	<sep></sep>
+	
+  <category name="CAT_MICROBIT_ACCEL" colour="0">
+    <block type="microbit_accelerometer_get_x"></block>
+    <block type="microbit_accelerometer_get_y"></block>
+    <block type="microbit_accelerometer_get_z"></block>
+    <block type="microbit_accelerometer_was_gesture"></block>
+    <block type="microbit_accelerometer_is_gesture"></block>
+    <block type="microbit_accelerometer_get_gestures"></block>
+    <block type="microbit_accelerometer_current_gesture"></block>
+  </category>
+  <category name="CAT_MICROBIT_BUTTONS" colour="32">
+    <block type="microbit_button_is_pressed"></block>
+    <block type="microbit_button_was_pressed"></block>
+    <block type="microbit_button_get_presses"></block>
+  </category>
+  <category name="CAT_MICROBIT_COMPASS" colour="64">
+    <block type="microbit_compass_calibrate"></block>
+    <block type="microbit_compass_is_calibrated"></block>
+    <block type="microbit_compass_heading"></block>
+    <block type="microbit_compass_get_field_strength"></block>
+  </category>
+  <category name="CAT_MICROBIT_DISPLAY" colour="96">
+    <block type="microbit_display_get_pixel"><value name="x"><shadow type="math_number"><field name="NUM">0</field></shadow></value><value name="y"><shadow type="math_number"><field name="NUM">0</field></shadow></value></block>
+    <block type="microbit_display_set_pixel"><value name="x"><shadow type="math_number"><field name="NUM">0</field></shadow></value><value name="y"><shadow type="math_number"><field name="NUM">0</field></shadow></value><value name="value"><shadow type="math_number"><field name="NUM">9</field></shadow></value></block>
+    <block type="microbit_display_clear"></block>
+    <block type="microbit_display_show_image"></block>
+    <block type="microbit_display_show_animation"></block>
+    <block type="microbit_display_scroll"><value name="message"><shadow type="text"><field name="TEXT">Hello, World!</field></shadow></value></block>
+    <block type="microbit_display_on"></block>
+    <block type="microbit_display_off"></block>
+    <block type="microbit_display_is_on"></block>
+  </category>
+  <category name="CAT_MICROBIT_IMAGE" colour="128">
+    <block type="microbit_image_builtins"></block>
+    <block type="microbit_image_copy"></block>
+    <block type="microbit_image_invert"></block>
+    <block type="microbit_image_create"></block>
+  </category>
+  <category name="CAT_MICROBIT_MICROBIT" colour="160">
+    <block type="microbit_microbit_panic"></block>
+    <block type="microbit_microbit_reset"></block>
+    <block type="microbit_microbit_sleep"><value name="duration"><shadow type="math_number"><field name="NUM">1000</field></shadow></value></block>
+    <block type="microbit_microbit_running_time"></block>
+    <block type="microbit_microbit_temperature"></block>
+  </category>
+  <category name="CAT_MICROBIT_MUSIQUE" colour="192">
+    <block type="microbit_music_play_built_in"></block>
+    <block type="microbit_music_pitch"></block>
+    <block type="microbit_music_play_list_of_notes"></block>
+    <block type="microbit_music_reset"></block>
+    <block type="microbit_music_stop"></block>
+    <block type="microbit_music_set_tempo"><value name="ticks"><shadow type="math_number"><field name="NUM">4</field></shadow></value><value name="bpm"><shadow type="math_number"><field name="NUM">120</field></shadow></value></block>
+    <block type="microbit_music_get_tempo"></block>
+  </category>
+  <category name="CAT_MICROBIT_NEOPIXELS" colour="224">
+    <block type="microbit_neopixel_initialise"></block>
+    <block type="microbit_neopixel_clear"></block>
+    <block type="microbit_neopixel_show"></block>
+    <block type="microbit_neopixel_set"><value name="pixel"><shadow type="math_number"><field name="NUM">0</field></shadow></value><value name="red"><shadow type="math_number"><field name="NUM">0</field></shadow></value><value name="green"><shadow type="math_number"><field name="NUM">0</field></shadow></value><value name="blue"><shadow type="math_number"><field name="NUM">0</field></shadow></value></block>
+  </category>
+  <category name="CAT_MICROBIT_PINS" colour="256">
+    <block type="microbit_pin_touched"></block>
+    <block type="microbit_pin_read_analog"></block>
+    <block type="microbit_pin_write_analog"><value name="output"><shadow type="math_number"><field name="NUM">0</field></shadow></value></block>
+    <block type="microbit_pin_read_digital"></block>
+    <block type="microbit_pin_write_digital"><value name="output"><shadow type="math_number"><field name="NUM">0</field></shadow></value></block>
+  </category>
+  <category name="CAT_MICROBIT_RADIO" colour="288">
+    <block type="microbit_radio_on"></block>
+    <block type="microbit_radio_off"></block>
+    <block type="microbit_radio_config"></block>
+    <block type="microbit_radio_reset"></block>
+    <block type="microbit_radio_send_string"><value name="message"><shadow type="text"><field name="TEXT">Some text</field></shadow></value></block>
+    <block type="microbit_radio_receive"></block>
+  </category>
+  <category name="CAT_MICROBIT_SPEECH" colour="320">
+    <block type="microbit_speech_say"><value name="english"><shadow type="text"><field name="TEXT">Exterminate!</field></shadow></value></block>
+    <block type="microbit_speech_pronounce"><value name="phonemes"><shadow type="text"><field name="TEXT">/HEH5EH4EH3EH2EH2EH3EH4EH5EHLP.</field></shadow></value></block>
+    <block type="microbit_speech_sing"><value name="song"><shadow type="text"><field name="TEXT">#115DOWWWW</field></shadow></value></block>
+  </category>
+</toolbox>

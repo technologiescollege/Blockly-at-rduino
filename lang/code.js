@@ -381,7 +381,7 @@ Code.initLanguageSupervision = function() {
 // Load Blockly's language strings.
 //document.write('<script src="lang/Blockly_msg/fr.js"></script>\n');
 // Load Blockly@rduino specific block's language strings.
-document.write('<script src="lang/BlocklyArduino_blocks/fr.js"></script>\n');
+// document.write('<script src="lang/BlocklyArduino_blocks/fr.js"></script>\n');
 // Load Supervision's language strings.
 //document.write('<script src="lang/supervision/fr.js"></script>\n');
 
@@ -394,3 +394,5 @@ document.write('<script src="lang/Blockly_msg/' + Code.LANG + '.js"></script>\n'
 document.write('<script src="lang/BlocklyArduino_blocks/' + Code.LANG + '.js"></script>\n');
 // Load Supervision's language strings.
 document.write('<script src="lang/supervision/' + Code.LANG + '.js"></script>\n');
+//Load the Micro:bit's language strings.
+document.write('<script src="lang/microbit_blocks/' + Code.LANG + '.js"></script>\n');

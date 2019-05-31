@@ -13,8 +13,9 @@
         <script type="text/javascript" src="core/Ardublockly/instances.js"></script>
         <script type="text/javascript" src="core/Ardublockly/field_instance.js"></script>
         <script type="text/javascript" src="core/Ardublockly/block_instance.js"></script>
-        <!--Arduino generator, must be defined NOW-->
+        <!--Generators, must be defined NOW-->
         <script type="text/javascript" src="generators/generator_arduino.js"></script>
+        <script type="text/javascript" src="generators/generator_python.js"></script>
 
         <script type="text/javascript" src="core/BlocklyArduino/blockly@rduino_core_web.js"></script>
         <script type="text/javascript" src="core/BlocklyArduino/blockly@rduino_boards.js"></script>
@@ -38,6 +39,11 @@
         <!-- define all additional blocks from one resumer-->
         <script type="text/javascript" src="blocks/arduino_resume.js"></script>
         <script type="text/javascript" src="generators/arduino_resume.js"></script>
+
+        <!-- define all python & micro:bit-->
+        <script type="text/javascript" src="blocks/microbit/microbit.js"></script>
+        <script type="text/javascript" src="generators/python_resume.js"></script>
+		
         <script type="text/javascript" src="lang/code.js"></script>
 
         <link rel="stylesheet" type="text/css" href="css/bootstrap.min.BlocklyArduino.css"/>
@@ -592,13 +598,16 @@
                                         <option value="esp8266">ESP8266</option>
                                         <option value="esp32">ESP32</option>
                                     </optgroup>
+                                    <optgroup label="Peguino">
+                                        <option value="kit_peguino_uno_esp32">Peguino Uno ESP32</option>
+                                        <option value="kit_peguino_uno_nano">Peguino Uno Nano</option>
+                                    </optgroup>
                                     <optgroup label="Kits">
                                         <option value="kit_microfeux">Micro-feux Jeulin</option>
                                         <option value="kit_petitbot">Petit Bot</option>
                                     </optgroup>
-                                    <optgroup label="Peguino">
-                                        <option value="kit_peguino_uno_esp32">Peguino Uno ESP32</option>
-                                        <option value="kit_peguino_uno_nano">Peguino Uno Nano</option>
+                                    <optgroup label="MicroBit">
+                                        <option value="kit_microbit">Micro:bit</option>
                                     </optgroup>
                                 </select>
                             </div>
