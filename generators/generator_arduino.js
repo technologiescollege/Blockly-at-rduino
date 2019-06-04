@@ -1,12 +1,27 @@
 /**
- * @license Licensed under the Apache License, Version 2.0 (the "License"):
- *          http://www.apache.org/licenses/LICENSE-2.0
+ * @license
+ * Visual Blocks Language
+ *
+ * Copyright 2012 Google Inc.
+ * https://developers.google.com/blockly/
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
  */
 
 /**
- * Based on work of Fred Lin (gasolin@gmail.com) for Blocklyduino.
- *
- * @fileoverview Helper functions for generating Arduino language (C++).
+ * @fileoverview Helper functions for generating Arduino for blocks.
+ * @author gasolin@gmail.com (Fred Lin)
+ * @reboot scanet@libreduc.cc (SebCanet)
  */
 'use strict';
 
@@ -50,7 +65,7 @@ Blockly.Arduino.ORDER_UNARY_PREFIX = 2;   // -expr !expr ~expr ++expr --expr
 Blockly.Arduino.ORDER_MULTIPLICATIVE = 3; // * / % ~/
 Blockly.Arduino.ORDER_ADDITIVE = 4;       // + -
 Blockly.Arduino.ORDER_SHIFT = 5;          // << >>
-Blockly.Arduino.ORDER_RELATIONAL = 6;     // >= > <= <
+Blockly.Arduino.ORDER_RELATIONAL = 6;     // is is! >= > <= <
 Blockly.Arduino.ORDER_EQUALITY = 7;       // == != === !==
 Blockly.Arduino.ORDER_BITWISE_AND = 8;    // &
 Blockly.Arduino.ORDER_BITWISE_XOR = 9;    // ^
@@ -78,6 +93,31 @@ Blockly.Arduino.PinTypes = {
   I2C: 'I2C/TWI',
   SPI: 'SPI'
 };
+Blockly.Arduino.ORDER_OVERRIDES = [
+  // (foo()).bar -> foo().bar
+  // (foo())[0] -> foo()[0]
+  [Blockly.Arduino.ORDER_FUNCTION_CALL, Blockly.Arduino.ORDER_MEMBER],
+  // (foo())() -> foo()()
+  [Blockly.Arduino.ORDER_FUNCTION_CALL, Blockly.Arduino.ORDER_FUNCTION_CALL],
+  // (foo.bar).baz -> foo.bar.baz
+  // (foo.bar)[0] -> foo.bar[0]
+  // (foo[0]).bar -> foo[0].bar
+  // (foo[0])[1] -> foo[0][1]
+  [Blockly.Arduino.ORDER_MEMBER, Blockly.Arduino.ORDER_MEMBER],
+  // (foo.bar)() -> foo.bar()
+  // (foo[0])() -> foo[0]()
+  [Blockly.Arduino.ORDER_MEMBER, Blockly.Arduino.ORDER_FUNCTION_CALL],
+  // !(!foo) -> !!foo
+  [Blockly.Arduino.ORDER_LOGICAL_NOT, Blockly.Arduino.ORDER_LOGICAL_NOT],
+  // a * (b * c) -> a * b * c
+  [Blockly.Arduino.ORDER_MULTIPLICATION, Blockly.Arduino.ORDER_MULTIPLICATION],
+  // a + (b + c) -> a + b + c
+  [Blockly.Arduino.ORDER_ADDITION, Blockly.Arduino.ORDER_ADDITION],
+  // a && (b && c) -> a && b && c
+  [Blockly.Arduino.ORDER_LOGICAL_AND, Blockly.Arduino.ORDER_LOGICAL_AND],
+  // a || (b || c) -> a || b || c
+  [Blockly.Arduino.ORDER_LOGICAL_OR, Blockly.Arduino.ORDER_LOGICAL_OR]
+];
 
 /**
  * Arduino generator short name for
@@ -419,18 +459,20 @@ Blockly.Arduino.quote_ = function(string) {
  * @private
  */
 Blockly.Arduino.scrub_ = function(block, code) {
-  if (code === null) { return ''; } // Block has handled code generation itself
-
+  if (code === null) {
+    // Block has handled code generation itself.
+    return '';
+  }
   var commentCode = '';
-  // Only collect comments for blocks that aren't inline
+  // Only collect comments for blocks that aren't inline.
   if (!block.outputConnection || !block.outputConnection.targetConnection) {
     // Collect comment for this block.
     var comment = block.getCommentText();
     if (comment) {
       commentCode += this.prefixLines(comment, '// ') + '\n';
     }
-    // Collect comments for all value arguments
-    // Don't collect comments for nested statements
+    // Collect comments for all value arguments.
+    // Don't collect comments for nested statements.
     for (var x = 0; x < block.inputList.length; x++) {
       if (block.inputList[x].type == Blockly.INPUT_VALUE) {
         var childBlock = block.inputList[x].connection.targetBlock();
