@@ -184,8 +184,8 @@
     <block type="microbit_radio_receive"></block>
   </category>
   <category name="CAT_MICROBIT_SPEECH" colour="320">
-    <block type="microbit_speech_say"><value name="english"><shadow type="text"><field name="TEXT">Exterminate!</field></shadow></value></block>
-    <block type="microbit_speech_pronounce"><value name="phonemes"><shadow type="text"><field name="TEXT">/HEH5EH4EH3EH2EH2EH3EH4EH5EHLP.</field></shadow></value></block>
+    <block type="microbit_speech_say"><value name="english"><shadow type="text"><field name="TEXT">Go!</field></shadow></value></block>
+    <block type="microbit_speech_pronounce"><value name="phonemes"><shadow type="text"><field name="TEXT">HELP.</field></shadow></value></block>
     <block type="microbit_speech_sing"><value name="song"><shadow type="text"><field name="TEXT">#115DOWWWW</field></shadow></value></block>
   </category>
 </toolbox>
