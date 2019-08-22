@@ -75,6 +75,19 @@ Blockly.Blocks['serial_read'] = {
   }
 };
 
+Blockly.Blocks['serial_readStringUntil'] = {
+  init: function() {
+    this.setColour(Blockly.Blocks.arduino_serial.HUE);
+	this.setHelpUrl(Blockly.Msg.ARDUINO_SERIAL_READSTRINGUNTIL_HELPURL);
+    this.appendValueInput("CONTENT")
+		.setCheck('String')
+        .appendField(Blockly.Msg.ARDUINO_SERIAL_READSTRINGUNTIL_CONTENT);
+    this.setInputsInline(true);
+    this.setOutput(true, "String");
+    this.setTooltip(Blockly.Msg.ARDUINO_SERIAL_READSTRINGUNTIL_TOOLTIP);
+  }
+};
+
 Blockly.Blocks['serial_available'] = {
   init: function() {
     this.setColour(Blockly.Blocks.arduino_serial.HUE);
@@ -187,7 +200,7 @@ Blockly.Blocks['serial_flush'] = {
   }
 };
 
-Blockly.Blocks.serial_line = {
+Blockly.Blocks['serial_line'] = {
     init: function() {
 		this.setColour(Blockly.Blocks.arduino_serial.HUE);
         this.setHelpUrl(Blockly.Msg.HELPURL);

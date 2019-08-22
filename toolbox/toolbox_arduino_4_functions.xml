@@ -2,7 +2,7 @@
 <toolbox>
 	<parametre id="defaultCategories">CAT_LOGIC,CAT_LOOPS,CAT_MATH, CAT_ARRAY, CAT_TEXT, CAT_VARIABLES,CAT_FUNCTIONS,CAT_ARDUINO
 	</parametre>
-	<category name="CAT_LOGIC" colour="#E1A91A">
+	<category name="CAT_LOGIC" colour="#FFAB19">
 		<block type="controls_if"></block>
 		<block type="controls_switch"></block>
 		<block type="logic_compare"></block>
@@ -11,7 +11,7 @@
 		<block type="logic_boolean"></block>
 		<block type="logic_null"></block>
 	</category>
-	<category name="CAT_LOOPS" colour="#C88330">
+	<category name="CAT_LOOPS" colour="#FFD500">
 		<block type="controls_repeat"></block>
 		<block type="controls_repeat_ext">
 			<value name="TIMES">
@@ -41,7 +41,7 @@
 		</block>
 		<block type="controls_flow_statements"></block>
 	</category>
-	<category name="CAT_MATH" colour="#5CB712">
+	<category name="CAT_MATH" colour="#40BF4A">
 		<block type="math_number"></block>
 		<block type="inout_angle_maths"></block>
 		<block type="math_arithmetic"></block>
@@ -85,7 +85,7 @@
 		</block>
 		<block type="math_random_float"></block>
 	</category>
-	<category name="CAT_ARRAY" colour="#58B5DC">
+	<category name="CAT_ARRAY" colour="#4CBFE6">
 		<block type="array_create_with"></block>
 		<block type="array_getIndex">
 			<value name="AT">
@@ -95,7 +95,7 @@
 			</value>
 		</block>
 	</category>
-	<category name="CAT_TEXT" colour="#8A55D7">
+	<category name="CAT_TEXT" colour="#9966FF">
 		<block type="text"></block>
 		<block type="text_char"></block>
 		<block type="text_join"></block>
@@ -107,8 +107,8 @@
 		<block type="text_length"></block>
 		<block type="text_isEmpty"></block>
 	</category>
-	<category name="CAT_VARIABLES" custom="VARIABLE" colour="#EE7D16"></category>
-	<category name="CAT_FUNCTIONS" custom="PROCEDURE" colour="#632D99"></category>
+	<category name="CAT_VARIABLES" custom="VARIABLE" colour="#FF8C1A"></category>
+	<category name="CAT_FUNCTIONS" custom="PROCEDURE" colour="#FF6680"></category>
 	<sep></sep>
 	<category name="CAT_ARDUINO" colour="#00979D">
 		<block type="base_begin"></block>
@@ -336,8 +336,7 @@
 			</block>
 		</category>
 		<sep></sep>
-	</category>
-	
+	</category>	
 	
 	<category name="CAT_FONCTION_AFFICHAGE" colour="#5CB712">
 		<category name="CAT_FONCTION_AFFICHAGE_LED" colour="#5CB712">	</category>
@@ -350,8 +349,7 @@
 		</category>
 		<category name="CAT_FONCTION_AFFICHAGE_SERIE" colour="#5CB712">		</category>
 		<sep></sep>
-	</category>
-	
+	</category>	
 	
 	<category name="CAT_FONCTION_CAPTEURS" colour="#58B5DC">
 		<category name="CAT_FONCTION_CAPTEURS_TEMPERATURE" colour="#58B5DC"> 	</category>
@@ -360,28 +358,24 @@
 		<category name="CAT_FONCTION_CAPTEURS_VOCAL" colour="#58B5DC"> 	</category>
 		<category name="CAT_FONCTION_CAPTEURS_BATTERY" colour="#58B5DC"> 	</category>
 		<category name="CAT_FONCTION_CAPTEURS_COLOR" colour="#58B5DC"> 	</category>
-	</category>
-	
+	</category>	
 	
 	<category name="CAT_FONCTION_MOTEURS" colour="#8A55D7">
 		<category name="CAT_FONCTION_MOTEURS_MOTORCC" colour="#8A55D7">			</category>
 		<category name="CAT_FONCTION_MOTEURS_PAP" colour="#8A55D7">				</category>
 		<category name="CAT_FONCTION_MOTEURS_SERVO" colour="#8A55D7">			</category>
-	</category>
-	
+	</category>	
 	
 	<category name="CAT_FONCTION_ENTREES" colour="#E1A91A">
 		<category name="CAT_FONCTION_ENTREES_CAN" colour="#E1A91A">  			</category>
 		<category name="CAT_FONCTION_ENTREES_KEYBOARD" colour="#E1A91A">  		</category>
 		<category name="CAT_FONCTION_ENTREES_BUTTON" colour="#E1A91A">  		</category>
-	</category>
-	
+	</category>	
 	
 	<category name="CAT_FONCTION_SORTIES" colour="#58B5DC">
 		<category name="CAT_FONCTION_SORTIES_PWM" colour="#58B5DC">				</category>
 		<category name="CAT_FONCTION_SORTIES_BUZZER" colour="#58B5DC">			</category>
-	</category>
-	
+	</category>	
 	
 	<category name="CAT_FONCTION_BUS" colour="#E1A91A">
 		<category name="CAT_FONCTION_BUS_RS232" colour="#E1A91A">					</category>
@@ -392,8 +386,7 @@
 		<category name="CAT_FONCTION_BUS_SPI" colour="#E1A91A">						</category>
 		<category name="CAT_FONCTION_BUS_1WIRE" colour="#E1A91A">					</category>
 		<category name="CAT_FONCTION_BUS_Ethernet" colour="#E1A91A">				</category>
-	</category>
-	
+	</category>	
 	
 	<category name="CAT_FONCTION_WIRELESS" colour="#8A55D7">
 		<category name="CAT_FONCTION_WIRELESS_BLUTOOTH" colour="#8A55D7">		</category>
@@ -408,14 +401,8 @@
 		<category name="CAT_FONCTION_WIRELESS_ZIGBEE" colour="#8A55D7">			</category>
 	</category>
 	
-	
 	<category name="CAT_FONCTION_STOCKAGE" colour="#58B5DC">
 		<category name="CAT_FONCTION_STOCKAGE_EEPROM" colour="#58B5DC">		</category>
 		<category name="CAT_FONCTION_STOCKAGE_SDCARD" colour="#58B5DC">		</category>
 	</category>
-
 </toolbox>
-
-
-
-

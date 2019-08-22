@@ -25,8 +25,8 @@ goog.require('Blockly.Arduino');
  * @return {string} Empty string as no code goes into 'loop()'.
  */
 Blockly.Arduino['stepper_config'] = function(block) {
-  var pin1 = block.getFieldValue('STEPPER_PIN1');
-  var pin2 = block.getFieldValue('STEPPER_PIN2');
+  var pin1 = Blockly.Arduino.valueToCode(block, 'STEPPER_PIN1', Blockly.Arduino.ORDER_ATOMIC);
+  var pin2 = Blockly.Arduino.valueToCode(block, 'STEPPER_PIN2', Blockly.Arduino.ORDER_ATOMIC);
   var pinType = Blockly.Arduino.PinTypes.STEPPER;
   var stepperName = block.getFieldValue('STEPPER_NAME');
   var stepperSteps = Blockly.Arduino.valueToCode(block, 'STEPPER_STEPS',
@@ -35,8 +35,7 @@ Blockly.Arduino['stepper_config'] = function(block) {
       Blockly.Arduino.ORDER_ATOMIC) || '90';
   
   //stepper is a variable containing the used pins
-  Blockly.Arduino.addVariable(stepperName,
-      'int ' + stepperName + '[2] = {' + pin1 + ', ' + pin2 + '};', true);
+  // Blockly.Arduino.addVariable(stepperName, 'int ' + stepperName + '[2] = {' + pin1 + ', ' + pin2 + '};', true);
   stepperName = 'stepper_' + stepperName
 
   Blockly.Arduino.reservePin(block, pin1, pinType, 'Stepper');
@@ -44,8 +43,7 @@ Blockly.Arduino['stepper_config'] = function(block) {
 
   Blockly.Arduino.addInclude('stepper', '#include <Stepper.h>');
 
-  var globalCode = 'Stepper ' + stepperName + '(' + stepperSteps + ', ' +
-      pin1 + ', ' + pin2 + ');';
+  var globalCode = 'Stepper ' + stepperName + '(' + stepperSteps + ', ' + pin1 + ', ' + pin2 + ');';
   Blockly.Arduino.addDeclaration(stepperName, globalCode);
 
   var setupCode = stepperName + '.setSpeed(' + stepperSpeed + ');';

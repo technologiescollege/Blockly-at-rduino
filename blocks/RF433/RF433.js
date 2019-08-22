@@ -31,7 +31,7 @@ goog.require('Blockly.Blocks');
 goog.require('Blockly.Types');
 //goog.require('Blockly.FieldInstance');
 
-Blockly.Msg.RF433_HELPURL = 'http://greich.fr';
+Blockly.Msg.RF433_HELPURL = 'http://greich.fr/v1/blog/post.php?id=14';
 
 Blockly.Blocks.rf433_rxready = {
   init: function() {

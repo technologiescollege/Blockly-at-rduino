@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <toolbox>
 	<parametre id="defaultCategories">CAT_LOGIC,CAT_LOOPS,CAT_MATH,CAT_ARRAY,CAT_TEXT,CAT_VARIABLES,CAT_FUNCTIONS,CAT_JEULIN</parametre>
-	<category name="CAT_LOGIC" colour="#E1A91A">
+	<category name="CAT_LOGIC" colour="#FFAB19">
 		<block type="controls_if"></block>
 		<block type="controls_switch"></block>
 		<block type="logic_compare"></block>
@@ -10,7 +10,7 @@
 		<block type="logic_boolean"></block>
 		<block type="logic_null"></block>
 	</category>
-	<category name="CAT_LOOPS" colour="#C88330">
+	<category name="CAT_LOOPS" colour="#FFD500">
 		<block type="controls_repeat"></block>
 		<block type="controls_repeat_ext">
 			<value name="TIMES">
@@ -40,7 +40,7 @@
 		</block>
 		<block type="controls_flow_statements"></block>
 	</category>
-	<category name="CAT_MATH" colour="#5CB712">
+	<category name="CAT_MATH" colour="#40BF4A">
 		<block type="math_number"></block>
 		<block type="inout_angle_maths"></block>
 		<block type="math_arithmetic"></block>
@@ -84,7 +84,7 @@
 		</block>
 		<block type="math_random_float"></block>
 	</category>
-	<category name="CAT_ARRAY" colour="#58B5DC">
+	<category name="CAT_ARRAY" colour="#4CBFE6">
 		<block type="array_create_with"></block>
 		<block type="array_getIndex">
 			<value name="AT">
@@ -94,7 +94,7 @@
 			</value>
 		</block>
 	</category>
-	<category name="CAT_TEXT" colour="#8A55D7">
+	<category name="CAT_TEXT" colour="#9966FF">
 		<block type="text"></block>
 		<block type="text_char"></block>
 		<block type="text_join"></block>
@@ -106,8 +106,8 @@
 		<block type="text_length"></block>
 		<block type="text_isEmpty"></block>
 	</category>
-	<category name="CAT_VARIABLES" custom="VARIABLE" colour="#EE7D16"></category>
-	<category name="CAT_FUNCTIONS" custom="PROCEDURE" colour="#632D99"></category>
+	<category name="CAT_VARIABLES" custom="VARIABLE" colour="#FF8C1A"></category>
+	<category name="CAT_FUNCTIONS" custom="PROCEDURE" colour="#FF6680"></category>
 	<sep></sep>
 	<category name="CAT_JEULIN" colour="#C12542">
 		<category name="CAT_JEULIN_IN" colour="#C12542">

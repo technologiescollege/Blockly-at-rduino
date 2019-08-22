@@ -43,7 +43,6 @@ Blockly.Blocks.SPI_send = {
         .appendField(Blockly.Msg.SPI_SEND_DATA)
         .appendField(new Blockly.FieldDropdown(Blockly.Msg.SPI_SEND_FIELDDROPDOWN), "Format")
         .appendField(new Blockly.FieldTextInput("00"), "data");
-
 	this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
 	this.setColour(Blockly.Blocks.SPI.HUE);
@@ -56,7 +55,7 @@ Blockly.Blocks.SPI_send = {
 Blockly.Blocks.SPI_send_param = {
 	init: function() {
     this.appendDummyInput()
-        .appendField(Blockly.Msg.SPI_SEND_TEXT);  
+        .appendField(Blockly.Msg.SPI_SEND_TEXT);
 	this.appendValueInput("data")
         .appendField(Blockly.Msg.SPI_SEND_DATA)
         .appendField(new Blockly.FieldDropdown(Blockly.Msg.SPI_SEND_FIELDDROPDOWN), "Format");

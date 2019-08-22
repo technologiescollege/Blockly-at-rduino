@@ -78,10 +78,11 @@ Blockly.Msg.ARD_TYPE_DECIMAL = "Decimal";
 Blockly.Msg.ARD_TYPE_LONG = "Large Number";
 Blockly.Msg.ARD_TYPE_NULL = "Null";
 Blockly.Msg.ARD_TYPE_NUMBER = "Number";
-Blockly.Msg.ARD_TYPE_UNS_LONG = "Unsigned Long Number";
-Blockly.Msg.ARD_TYPE_SHORT = "Short Number";
+Blockly.Msg.ARD_TYPE_SHORT = "Short Number (byte)";
 Blockly.Msg.ARD_TYPE_TEXT = "Text";
 Blockly.Msg.ARD_TYPE_UNDEF = "Undefined";
+Blockly.Msg.ARD_TYPE_UNS_NUMBER = "Unsigned number";
+Blockly.Msg.ARD_TYPE_UNS_LONG = "Unsigned Long Number";
 Blockly.Msg.ARD_TYPE_VOLATILE = "Volatile integer";
 
 //**********************************categories***********************************************
@@ -128,6 +129,7 @@ Blockly.Msg.CAT_Blynk_Sensors = " - Smartphone Sensors";
 Blockly.Msg.CAT_DFRobot = "DFRobot";
 Blockly.Msg.CAT_DFRobot_SHIELD_LCDKEYPAD = "Shield LCD Keypad"; //Added february 27th 2016
 Blockly.Msg.CAT_DFPLAYER = "DFPlayer mini MP3";
+Blockly.Msg.CAT_DFRobot_ISD1820 = "Voice Recorder-ISD1820";
 
 Blockly.Msg.CAT_LED_RGB_CHAIN = "chainable RGB LED";
 Blockly.Msg.CAT_OLED_U8G = "OLED screen I2C";
@@ -210,15 +212,20 @@ Blockly.Msg.CAT_MBOT_4 = "mBot"; //added february 13th 2017
 Blockly.Msg.CAT_ROMEO_1 = "RoMeo v2";
 Blockly.Msg.CAT_ROMEO_2 = "RoMeo v2";
 Blockly.Msg.CAT_ROMEO_3 = "RoMeo v2"; //added may 1st 2016
+Blockly.Msg.CAT_ROMEO_BLE_3 = "RoMeo BLE"; //added may 1st 2016
 
 Blockly.Msg.CAT_SPI_COMM = "SPI communication";
 Blockly.Msg.CAT_STEPPER = "Stepper motors"; //added august 28th 2016
 
 Blockly.Msg.CAT_MHK = "MyHumanKit"; //added august 23th 2016
 
-Blockly.Msg.CAT_ESUS = "Esus board"; //added 8 october 2016
-Blockly.Msg.CAT_ESUS_WIFI = "WiFi";
-Blockly.Msg.CAT_ESUS_MOTORS = "Motors control";
+
+Blockly.Msg.CAT_MACE_ROBOTICS = "Macé Robotics"; //added 01/03/2019
+Blockly.Msg.CAT_ESUS = " - Esus board"; //added 8 october 2016
+Blockly.Msg.CAT_ESUS_WIFI = " --> WiFi";
+Blockly.Msg.CAT_ESUS_MOTORS = " --> Motors control";
+Blockly.Msg.CAT_MRDUINO = " - MRduino robot";
+Blockly.Msg.CAT_MRDUINO2 = " - MRduino2 robot";
 
 Blockly.Msg.CAT_APDS_9960_RGB_Gesture = "color + movement"; //added 9 october 2016
 
@@ -264,6 +271,10 @@ Blockly.Msg.CAT_AUTODUINO_LCD = " - LCD screen";
 Blockly.Msg.CAT_AUTODUINO_COMM = " - communication";
 Blockly.Msg.CAT_AUTODUINO_UTIL = " - useful";
 
+Blockly.Msg.CAT_PEGUINO = "Peguino"; //added 21 november 2018
+Blockly.Msg.CAT_PEGUINO_IN = " - sensors";
+Blockly.Msg.CAT_PEGUINO_OUT = " - actuators";
+
 Blockly.Msg.CAT_I2C = "I2C"; //added 26/05/2017
 Blockly.Msg.CAT_SPI = "SPI"; //added 26/05/2017
 Blockly.Msg.CAT_NULL = "free"; //added 8/10/2017
@@ -294,6 +305,9 @@ Blockly.Msg.CAT_PETITBOT_SERVO = "servomotors";
 Blockly.Msg.CAT_PETITBOT_LED = "LED";
 
 Blockly.Msg.CAT_NRF24L01 = "nRF24L01"; //added 31/05/2018
+
+Blockly.Msg.CAT_SEEED = "Seeed studio"; //added 01/03/2018
+Blockly.Msg.CAT_MUSIC_SHIELD = "Seeed Music Shield v2.2"; //added 01/03/2018
 
 // Nouvelle arborescence 
 Blockly.Msg.CAT_FONCTION_AFFICHAGE = "Affichage";
@@ -351,9 +365,13 @@ Blockly.Msg.CAT_FONCTION_WIRELESS_RF24 = "Radio Fréquence 2.4GHz";
 Blockly.Msg.CAT_FONCTION_WIRELESS_ZIGBEE = "Zigbee";
 
 Blockly.Msg.CAT_FONCTION_STOCKAGE_EEPROM = "EEPROM";
-Blockly.Msg.CAT_FONCTION_STOCKAGE_SDCARD = "Carte SD";
+Blockly.Msg.CAT_FONCTION_STOCKAGE_SDCARD = "SD card";
 
+Blockly.Msg.CAT_CAPACITIVESENSOR = "Capacitive Sensor";
 
+Blockly.Msg.CAT_ESP8266="ESP8266 IOT";
+Blockly.Msg.CAT_esp8266_wifi=" - WiFi";
+Blockly.Msg.CAT_html=" - HTML";
 //**********************************Dropdown menus messages***********************************************
 
 Blockly.Msg.FIELDDROPDOWN = [["HIGH", "HIGH"], ["LOW", "LOW"]];
@@ -526,6 +544,9 @@ Blockly.Msg.Serial_Print_ForOct="octal";
 Blockly.Msg.Serial_read="Serial Read";
 Blockly.Msg.Serial_avai="Serial Available?";
 Blockly.Msg.Serial_flush="Serial flush";
+Blockly.Msg.ARDUINO_SERIAL_READSTRINGUNTIL_HELPURL = "https://www.arduino.cc/en/Serial/ReadStringUntil";
+Blockly.Msg.ARDUINO_SERIAL_READSTRINGUNTIL_CONTENT = "String read until";
+Blockly.Msg.ARDUINO_SERIAL_READSTRINGUNTIL_TOOLTIP = "reads characters from the serial buffer into a string";
 
 //SOFTWARE SERIAL
 Blockly.Msg.SSERIAL_DEFAULT_NAME="SoftSerial";
@@ -1511,7 +1532,6 @@ Blockly.Msg.ESUS_WIFI_SEND_STREAM="send data WiFi (text)";
 Blockly.Msg.ESUS_WIFI_SEND_FLOAT_STREAM="send data WiFi (float)";
 
 //******** MRduino Robot (Mace Robotics)
-Blockly.Msg.CAT_MRDUINO = "MRduino Robot";
 Blockly.Msg.MRduino_init="MRduino Robot Initialisation ";
 Blockly.Msg.MRduino_forward="Forward";
 Blockly.Msg.MRduino_forward_mm="Forward distance";
@@ -2322,3 +2342,19 @@ Blockly.Msg.Adafruit_RGB_LCD_Shield_WRITE_FORMAT_FIELDDROPDOWN = [["0x", "0x"], 
 Blockly.Msg.Adafruit_RGB_LCD_Shield_READ_button_TEXT = "READ BUTTON";
 Blockly.Msg.Adafruit_RGB_LCD_Shield_READ_button_TOOLTIP = "UP = 0x08 - DOWN = 0x04 - LEFT = 0x10 - RIGHT = 0x02 - SELECT = 0x01";
 Blockly.Msg.Adafruit_RGB_LCD_Shield_READ_button_HELPURL = "https://learn.adafruit.com/rgb-lcd-shield";
+
+////////////////////////////DFROBOT Voice Recorder-ISD1820/////////////////////
+Blockly.Msg.dfrobot_ISD1820_record_HELPURL = "https://www.dfrobot.com/wiki/index.php/Voice_Recorder-ISD1820_SKU:_SEN0197";
+Blockly.Msg.dfrobot_ISD1820_TOOLTIP = "record for 10s max with button, play with block or button";
+Blockly.Msg.dfrobot_ISD1820_record = "push record button to record 10s max";
+Blockly.Msg.dfrobot_ISD1820_play = "play recorded sound";
+Blockly.Msg.dfrobot_ISD1820_play_Input = "PIN#";
+
+
+////////////////////////////Capacitive Sensor Librarie/////////////////////
+Blockly.Msg.CAPACITIV_HELPURL = "https://github.com/PaulStoffregen/CapacitiveSensor";
+Blockly.Msg.CAPACITIV_TEXT = "capacitive value";
+Blockly.Msg.CAPACITIV_INPUT1 = "send pinn";
+Blockly.Msg.CAPACITIV_INPUT2 = "sensor pin";
+Blockly.Msg.CAPACITIV_CALIBRATION = "automatic calibration";
+Blockly.Msg.CAPACITIV_TOOLTIP = "10M resistor between pins 4 & 2, pin 2 is sensor pin, add a wire and or foil if desired";

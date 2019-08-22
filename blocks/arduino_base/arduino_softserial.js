@@ -116,6 +116,52 @@ Blockly.Blocks['soft_read'] = {
   }
 };
 
+Blockly.Blocks['soft_readStringUntil'] = {
+  init: function() {
+    this.setColour(Blockly.Blocks.arduino_softserial.HUE);
+	this.setHelpUrl(Blockly.Msg.ARDUINO_SERIAL_READSTRINGUNTIL_HELPURL);
+	if (window.profile.defaultBoard != window.profile["mega"]) {
+		this.appendDummyInput()
+			.appendField(
+				new Blockly.FieldInstance('SoftSerial',
+										  Blockly.Msg.SSERIAL_DEFAULT_NAME,
+										  false, true, false),
+				'SOFTSERIAL_NAME');
+	} else {
+		this.appendDummyInput()
+			.appendField(
+				new Blockly.FieldInstance('SoftSerial',
+										  Blockly.Msg.SSERIAL_DEFAULT_NAME,
+										  false, false, false),
+				'SOFTSERIAL_NAME');
+		};
+    this.appendValueInput("CONTENT")
+		.setCheck('String')
+        .appendField(Blockly.Msg.ARDUINO_SERIAL_READSTRINGUNTIL_CONTENT);
+    this.setInputsInline(true);
+    this.setOutput(true, 'String');
+    this.setTooltip(Blockly.Msg.ARDUINO_SERIAL_READSTRINGUNTIL_TOOLTIP);
+  },
+  /**
+   * Called whenever anything on the workspace changes.
+   * It checks/warns if the selected stepper instance has a config block.
+   * @this Blockly.Block
+   */
+  onchange: function() {
+    if (!this.workspace) return;  // Block has been deleted.
+
+    var instanceName = this.getFieldValue('SOFTSERIAL_NAME')
+    if (Blockly.Instances.isInstancePresent(instanceName, 'SoftSerial', this)) {
+      this.setWarningText(null);
+    } else {
+      this.setWarningText(
+        Blockly.Msg.COMPONENT_WARN.replace(
+            '%1', Blockly.Msg.SOFTSERIAL_COMPONENT).replace(
+                '%2', instanceName));
+    }
+  }
+};
+
 Blockly.Blocks['soft_print'] = {
   init: function() {
 	this.setHelpUrl('https://www.arduino.cc/en/Reference/SoftwareSerial');

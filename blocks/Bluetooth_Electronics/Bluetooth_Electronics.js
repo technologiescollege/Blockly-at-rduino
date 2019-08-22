@@ -7,7 +7,8 @@ goog.require('Blockly.Types');
 
 Blockly.Blocks['BT_ELEC_Init'] = {
   init: function() {
-    this.setColour(Blockly.Blocks.BT_ELEC.HUE);	this.setHelpUrl(Blockly.Msg.BT_ELEC_Init_HELPURL);
+    this.setColour(Blockly.Blocks.BT_ELEC.HUE);
+	this.setHelpUrl(Blockly.Msg.BT_ELEC_Init_HELPURL);
 	this.setInputsInline(true);
     /*this.appendDummyInput()
         .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/Bluetooth_Electronics/Bluetooth_Electronics_app.jpg', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize));*/
