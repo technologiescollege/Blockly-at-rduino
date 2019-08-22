@@ -112,8 +112,8 @@ var MSG = {
 	+ "- chargement de blocs via l'URL \n"
 	+ "- supervision\n"
 	+ "\n\n"
-	+ "Pour Chrome, veuillez vérifier sur la page suivante :\n"
-	+ "http://www.chrome-allow-file-access-from-file.com\n",
+	+ "Veuillez suivre les instructions sur la page suivante :\n"
+	+ "http://testingfreak.com/how-to-fix-cross-origin-request-security-cors-error-in-firefox-chrome-and-ie/\n",
   span_ajax_msg:"Ne plus afficher ce message.",
   span_forms:"UTILISATEUR, QUI ETES VOUS ???",
   span_menu_1:"Projets",

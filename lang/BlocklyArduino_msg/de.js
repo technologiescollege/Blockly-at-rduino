@@ -112,9 +112,9 @@ var MSG = {
 	+ "- load blocks through url \n"
 	+ "- supervision"
 	+ "\n\n"
-	+ "For Chrome, please check here :\n"
-	+ "http://www.chrome-allow-file-access-from-file.com\n",
-  span_ajax_msg:"Nachricht ausblenden",
+	+ "Please follow these instructions:\n"
+	+ "http://testingfreak.com/how-to-fix-cross-origin-request-security-cors-error-in-firefox-chrome-and-ie/\n",
+  span_ajax_msg:"Do not show this message again",
   span_forms:"Viel Spaß damit!",
   span_menu_1:"Projekte",
   span_menu_11:"öffnen...",
