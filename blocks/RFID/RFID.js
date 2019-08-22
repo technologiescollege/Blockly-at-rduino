@@ -22,7 +22,7 @@ Blockly.Msg.RFID_HELPURL = 'http://greich.fr'
 
 Blockly.Blocks.RFID_module = {
   init: function() {
-    this.setColour(Blockly.Blocks.RFID.HUE);
+  this.setColour(Blockly.Blocks.RFID.HUE);
 	this.setHelpUrl(Blockly.Msg.RFID_HELPURL);
 	this.appendDummyInput()
 		.setAlign(Blockly.ALIGN_LEFT)
@@ -124,24 +124,16 @@ Blockly.Blocks.RFID_code_acces = {
         .appendField(new Blockly.FieldInstance('TAG_ID', 'TAG_ID', false, false, false), 'TAG_NAME');
 	this.appendValueInput("VAL1")
         .setAlign(Blockly.ALIGN_RIGHT)
-        .appendField(Blockly.Msg.RFID_code_acces_INPUT1)
-        .setCheck('Number');
+        .appendField(Blockly.Msg.RFID_code_acces_INPUT1);
 	this.appendValueInput("VAL2")
         .setAlign(Blockly.ALIGN_RIGHT)
-        .appendField(Blockly.Msg.RFID_code_acces_INPUT2)
-        .setCheck('Number');
+        .appendField(Blockly.Msg.RFID_code_acces_INPUT2);
 	this.appendValueInput("VAL3")
         .setAlign(Blockly.ALIGN_RIGHT)
-        .appendField(Blockly.Msg.RFID_code_acces_INPUT3)
-        .setCheck('Number');
+        .appendField(Blockly.Msg.RFID_code_acces_INPUT3);
 	this.appendValueInput("VAL4")
         .setAlign(Blockly.ALIGN_RIGHT)
-        .appendField(Blockly.Msg.RFID_code_acces_INPUT4)
-        .setCheck('Number');
-    this.appendValueInput("VAL5")
-        .setAlign(Blockly.ALIGN_RIGHT)
-        .appendField(Blockly.Msg.RFID_code_acces_INPUT5)
-        .setCheck('Number');
+        .appendField(Blockly.Msg.RFID_code_acces_INPUT4);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setTooltip(Blockly.Msg.RFID_code_acces_TOOLTIP);
