@@ -1,7 +1,7 @@
 /**
  * Visual Blocks for RFID
  *
- * Copyright 2017 Guillaume Reich.
+ * Copyright 2017/2019 Guillaume Reich.
  * http://greich.fr
  *
  * This work is licensed under a Creative Commons Attribution 4.0 International.
@@ -28,49 +28,39 @@ Blockly.Arduino.RFID_module = function() {
   '#include <SPI.h>\n' +
   '#include <MFRC522.h>';
   Blockly.Arduino.definitions_['definition_RFID_module'] =
-  'MFRC522 RFID(' + value_sda + ',' + value_rst + ');\n';
+  'MFRC522 rfid(' + value_sda + ',' + value_rst + ');\n';
 
   Blockly.Arduino.setups_['setup_RFID_module'] = 
   'SPI.begin();\n' +
-  'RFID.PCD_init();\n';
+  'rfid.PCD_Init();\n';
 
   var code = '';
   return code;
 };
 
 Blockly.Arduino.RFID_detection = function() {
-  var code = 'MFRC522_RFID.isCard()';
+  var code = 'rfid.PICC_IsNewCardPresent()';
   return [code, Blockly.Arduino.ORDER_ATOMIC];
 };
 
 Blockly.Arduino.RFID_reception_cle = function() {
-  var code = 'MFRC522_RFID.readCardSerial()';
+  var code = 'rfid.PICC_ReadCardSerial()';
   return [code, Blockly.Arduino.ORDER_ATOMIC];
 };
 
 Blockly.Arduino.RFID_lecture_cle = function() {
-  var code = 'for(int i=0;i<=4;i++)\n' +
-  '{\n' +
-  '	UID[i]=MFRC522_RFID.serNum[i];\n' +
-  '}\n';
+  var code = 'String myKey=String(rfid.uid.uidByte[0],HEX) + " " + String(rfid.uid.uidByte[1],HEX) + " " + String(rfid.uid.uidByte[2],HEX) + " " + String(rfid.uid.uidByte[3],HEX);\n';
   return code;
 };
 
 Blockly.Arduino.RFID_fermeture = function() {
-  var code = 'MFRC522_RFID.halt();';
+  var code = 'rfid.PICC_HaltA();\n' +
+  'rfid.PCD_StopCrypto1();\n';
   return code;
 };
 
 Blockly.Arduino.RFID_valeur_cle = function() {
-  // déclaration d'une nouvelle fonction
-  Blockly.Arduino.definitions_['define_valeur_cle'] = 'String valeur_cle() {\n' +
-  '  String str;\n' +
-  '  for(int i=0;i<=4;i++) {\n' +
-  '    str = String(str+UID[i])+\'.\';\n' +
-  '  }\n' +
-  '  return str;\n' +
-  '}';
-  var code = 'valeur_cle()';
+  var code = 'myKey';
   return [code, Blockly.Arduino.ORDER_ATOMIC];
 };
 
@@ -80,16 +70,15 @@ Blockly.Arduino.RFID_code_acces = function() {
   var value_val2 = Blockly.Arduino.valueToCode(this, 'VAL2', Blockly.Arduino.ORDER_ATOMIC);
   var value_val3 = Blockly.Arduino.valueToCode(this, 'VAL3', Blockly.Arduino.ORDER_ATOMIC);
   var value_val4 = Blockly.Arduino.valueToCode(this, 'VAL4', Blockly.Arduino.ORDER_ATOMIC);
-  var value_val5 = Blockly.Arduino.valueToCode(this, 'VAL5', Blockly.Arduino.ORDER_ATOMIC);
 
   Blockly.Arduino.definitions_['definition_RFID_code_' + id] =
-  'String TAG_' + id + '= String(' + value_val1 + ',' + value_val2 + ',' + value_val3 + ',' + value_val4 + ',' + value_val5 + '}; // UID du badge ou de la carte acceptée sous forme de tableau (Array).';
+  'String ' + id + '=String(' + value_val1 + ')+\" \"+String(' + value_val2 + ')+\" \"+String(' + value_val3 + ')+\" \"+String(' + value_val4 + '); // UID du badge ou de la carte acceptée.';
   var code = '';
   return code;
 };
 
 Blockly.Arduino.RFID_acces_autorise = function() {
   var id = this.getFieldValue('TAG_NAME');
-  var code = '(UID[0] == MASTERKEY_' + id + '[0] && UID[1] == MASTERKEY_' + id + '[1] && UID[2] == MASTERKEY_' + id + '[2] && UID[3] == MASTERKEY_' + id + '[3] && UID[4] == MASTERKEY_' + id + '[4])';
+  var code = id + ' == myKey';
   return [code, Blockly.Arduino.ORDER_ATOMIC];
 };

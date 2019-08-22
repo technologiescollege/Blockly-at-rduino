@@ -1275,7 +1275,6 @@ Blockly.Msg.RFID_code_acces_INPUT1 = "Value 1";
 Blockly.Msg.RFID_code_acces_INPUT2 = "Value 2";
 Blockly.Msg.RFID_code_acces_INPUT3 = "Value 3";
 Blockly.Msg.RFID_code_acces_INPUT4 = "Value 4";
-Blockly.Msg.RFID_code_acces_INPUT5 = "Value 5";
 Blockly.Msg.RFID_code_acces_TOOLTIP = "Allows you to set the authorized access code";
 Blockly.Msg.RFID_acces_autorise_TEXT = "Authorized access code";
 Blockly.Msg.RFID_acces_autorise_TOOLTIP = "Whether or not the access code received by the RFID module matches the one that has been defined.";
