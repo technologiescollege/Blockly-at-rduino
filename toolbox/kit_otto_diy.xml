@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <toolbox>
-	<parametre id="defaultCategories">CAT_LOGIC,CAT_LOOPS,CAT_VARIABLES,CAT_FUNCTIONS,CAT_MATH,CAT_ARDUINO,CAT_ARDUINO_SERVO
+	<parametre id="defaultCategories">CAT_LOGIC,CAT_LOOPS,CAT_VARIABLES,CAT_FUNCTIONS,CAT_MATH,CAT_ARDUINO,CAT_OTTO
 	</parametre>
 	<category name="CAT_LOGIC" colour="#FFAB19">
 		<block type="controls_if"></block>
@@ -337,20 +337,20 @@
 		</category>
 		<sep></sep>
 	</category>
-	<category name="CAT_ARDUINO_SERVO" colour="#191919">
-		<block type="servo_attach"></block>
-		<block type="servo_move">
+	<category name="CAT_OTTO" colour="#3BD32E">
+		<block type="otto_attach"></block>
+		<block type="otto_move">
 			<value name="DEGREE">
 				<shadow type="inout_angle">
 					<field name="NUM">0</field>
 				</shadow>
 			</value>
 		</block>
-		<block type="servo_read_degrees"></block>
-		<block type="servo_attached"></block>
-		<block type="servo_detach"></block>
-		<block type="servo_rot_continue"></block>
-		<block type="servo_rot_continue_param"></block>
+		<block type="otto_read_degrees"></block>
+		<block type="otto_attached"></block>
+		<block type="otto_detach"></block>
+		<block type="otto_rot_continue"></block>
+		<block type="otto_rot_continue_param"></block>
 	</category>
-		<sep></sep>
+	<sep></sep>
 </toolbox>

@@ -3269,6 +3269,22 @@
         </category>
 		<sep></sep>
     </category>
+	<category name="CAT_OTTO" colour="#3BD32E">
+		<block type="otto_attach"></block>
+		<block type="otto_move">
+			<value name="DEGREE">
+				<shadow type="inout_angle">
+					<field name="NUM">0</field>
+				</shadow>
+			</value>
+		</block>
+		<block type="otto_read_degrees"></block>
+		<block type="otto_attached"></block>
+		<block type="otto_detach"></block>
+		<block type="otto_rot_continue"></block>
+		<block type="otto_rot_continue_param"></block>
+		<sep></sep>
+	</category>
 	<category name="CAT_PEGUINO" colour="#9CEEFF">
 		<category name="CAT_PEGUINO_IN" colour="#9CEEFF">
 			<block type="peguino_sensors_pir_motion_sensor"></block>

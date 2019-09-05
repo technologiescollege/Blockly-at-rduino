@@ -372,6 +372,9 @@ Blockly.Msg.CAT_CAPACITIVESENSOR = "Capacitive Sensor";
 Blockly.Msg.CAT_ESP8266="ESP8266 IOT";
 Blockly.Msg.CAT_esp8266_wifi=" - WiFi";
 Blockly.Msg.CAT_html=" - HTML";
+
+Blockly.Msg.CAT_OTTO = "Otto robot"; //added 06/09/2019
+
 //**********************************Dropdown menus messages***********************************************
 
 Blockly.Msg.FIELDDROPDOWN = [["HIGH", "HIGH"], ["LOW", "LOW"]];

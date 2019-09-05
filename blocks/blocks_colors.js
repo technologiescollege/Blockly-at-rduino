@@ -56,6 +56,7 @@ Blockly.Blocks.MRduino2.HUE = "#2475FA";
 Blockly.Blocks.multifunction.HUE = "#0152AB";
 Blockly.Blocks.nrf24l01.HUE = "#0C0C0C";
 Blockly.Blocks.null.HUE = "#00979D";
+Blockly.Blocks.otto.HUE = "#3BD32E";
 Blockly.Blocks.peguino_actuators.HUE = "#32b2fc";
 Blockly.Blocks.peguino_sensors.HUE = "#32b2fc";
 Blockly.Blocks.petitbot.HUE = "#F6D52C";

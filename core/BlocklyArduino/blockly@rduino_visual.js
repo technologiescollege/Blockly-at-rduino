@@ -280,19 +280,21 @@ BlocklyDuino.OnOffLine = function() {
 BlocklyDuino.ExampleWiring = function() {
 	var ExampleTest = BlocklyDuino.getStringParamFromUrl('url', '');
 	var KitTest = BlocklyDuino.getStringParamFromUrl('card', '');
-	if ((ExampleTest == '')||(KitTest == '')) {
+	var KitTestResult = KitTest.slice(0, 3);
+	if ((ExampleTest == '')&&(KitTestResult != 'kit')) {
 		$("#btn_wiring").addClass("hidden");
 		$("#menu_21").addClass("hidden");
 	} else {
 		$("#btn_wiring").removeClass("hidden");
 		$("#menu_21").removeClass("hidden");
-		if (ExampleTest != ''){
+		if ((ExampleTest != '')&&(KitTestResult != 'kit')){
 			ExampleTest = ExampleTest.slice(0, -4);
 			$('#wiringModal_picture').prepend("<img src='" + ExampleTest + ".jpg' id='wiringModalImg' width=100% height=auto/>");
 			$('#arduino_card_miniPicture').attr('src', ExampleTest + '.jpg');
 			$('#arduino_card_picture').attr('src', ExampleTest + '_wiring.jpg');
-		} else {
-			$('#wiringModal_picture').prepend("<img src='media/boards/" + KitTest + ".jpg' id='wiringModalImg' width=100% height=auto/>");
+		}
+		if ((ExampleTest == '')&&(KitTestResult == 'kit')){
+			$('#wiringModal_picture').prepend("<img src='media/boards/" + KitTest + "_wiring.jpg' id='wiringModalImg' width=100% height=auto/>");
 			$("#btn_wiring").removeClass("hidden");
 			$("#menu_21").removeClass("hidden");
 		}

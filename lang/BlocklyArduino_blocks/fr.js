@@ -373,6 +373,8 @@ Blockly.Msg.CAT_ESP8266="ESP8266 IdO";
 Blockly.Msg.CAT_esp8266_wifi=" - WiFi";
 Blockly.Msg.CAT_html=" - HTML";
 
+Blockly.Msg.CAT_OTTO = "Otto robot"; //added 06/09/2019
+
 //**********************************Dropdown menus messages***********************************************
 
 Blockly.Msg.FIELDDROPDOWN = [["1 (état haut)", "HIGH"], ["0 (état bas)", "LOW"]];
