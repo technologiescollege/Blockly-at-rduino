@@ -66,7 +66,7 @@
     {
         "source_url": "./gant_sonar/gant_sonar1.xml",
         "source_text": "simulation d'un gant sonar 1 : une détection d'un obstacle fait vibrer un moteur",
-        "image": "./gant_sonar/gant_sonar1.png",
+        "image": "./gant_sonar/gant_sonar1.jpg",
         "link_url": "",
         "link_text": "",
         "visible": true
@@ -74,7 +74,7 @@
     {
         "source_url": "./gant_sonar/gant_sonar2.xml",
         "source_text": "simulation d'un gant sonar 2 : une détection d'un obstacle à gauche ou à droite fait vibrer un moteur droit ou gauche",
-        "image": "./gant_sonar/gant_sonar2.png",
+        "image": "./gant_sonar/gant_sonar2.jpg",
         "link_url": "",
         "link_text": "",
         "visible": true

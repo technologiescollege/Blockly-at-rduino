@@ -285,8 +285,10 @@ BlocklyDuino.ExampleWiring = function() {
 	} else {
 		$("#btn_wiring").removeClass("hidden");
 		$("#menu_21").removeClass("hidden");
-		ExampleTest = ExampleTest.slice(0, -3);
-		$('#wiringModal_picture').prepend("<img src='" + ExampleTest + "jpg' id='wiringModalImg' width=100% height=auto/>");
+		ExampleTest = ExampleTest.slice(0, -4);
+		$('#wiringModal_picture').prepend("<img src='" + ExampleTest + ".jpg' id='wiringModalImg' width=100% height=auto/>");
+		$('#arduino_card_miniPicture').attr('src', ExampleTest + '.jpg');
+		$('#arduino_card_picture').attr('src', ExampleTest + '_wiring.jpg');
 	}
 };
 
