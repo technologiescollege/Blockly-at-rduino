@@ -105,9 +105,14 @@ var MSG = {
   arduino_card:"Delete all and select a Board",
   span_about:"About",
   aboutModalLabel:"About Blockly@rduino",
-  aboutBody:"<br />Development and adaptations by Sébastien Canet(<a href='mailto:sebastien.canet@ac-nantes.fr' traget=_blank>sebastien.canet@ac-nantes.fr</a>), additional work on CSS and JS functions by Olivier Metayer, <b>thanks to all contributors (meet them at the developer forum)!</b>"
+  aboutBody:"<br />Development by Sébastien Canet(<a href='mailto:sebastien.canet@ac-nantes.fr' traget=_blank>sebastien.canet@ac-nantes.fr</a>), helped by Olivier Metayer, <b>thanks to all contributors (meet them at the developer forum)!</b>"
 	+ "<br />"
 	+ "<br />Thanks to:",
+  paypalModalLabel:"Help free software!",
+  paypalBody:"Thank you for making a donation to help development and improvement of this software, WITHOUT YOU FREE SOFTWARE CANNOT SURVIVE!" 
+	+ "<br />"
+	+ "<br />TEACHERS & ASSOCIATIONS"
+	+ "<br />you can also ask me for an invoice (<a href='mailto:scanet@libreduc.cc' traget=_blank>scanet@libreduc.cc</a>) for your organization give me an official 'donation' by bank transfer. I do not charge a license but I count on you to help the amount you value this work.",
   msg_ajax_ko:"AJAX requests are not supported by your browser, the following features\n"
 	+ "will not be operational : \n"
 	+ "- Load Blocks through url \n"
@@ -116,7 +121,7 @@ var MSG = {
 	+ "Please follow these instructions:\n"
 	+ "http://testingfreak.com/how-to-fix-cross-origin-request-security-cors-error-in-firefox-chrome-and-ie/\n",
   span_ajax_msg:"Do not show this message again",
-  span_forms:"ENJOY SOFTWARE TINKERING!",
+  span_forms:"USERS, WHO ARE YOU?",
   span_menu_1:"Projects",
   span_menu_11:"Open...",
   span_menu_12:"Save as...",
