@@ -36,7 +36,7 @@ var BlocklyLevel = 'none';
  */
 BlocklyDuino.renderContent = function() {
     var content = $('#content_' + BlocklyDuino.selectedTab);
-  
+	
 	if (content.prop('id') == 'content_blocks') {
 		// If the workspace was changed by the XML tab, Firefox will have
 		// performed an incomplete rendering due to Blockly being invisible. Rerender.
@@ -85,6 +85,25 @@ BlocklyDuino.renderContent = function() {
 			//$("#header_code").hide();
 		}
 	}	
+};
+
+/**
+ * Render block factory
+ */
+BlocklyDuino.renderArduinoCodePreview = function() {
+	var cardId = BlocklyDuino.getStringParamFromUrl('card', '');
+	if (cardId != 'kit_microbit') {
+		$('#pre_previewArduino').text(Blockly.Arduino.workspaceToCode(BlocklyDuino.workspace));
+		$('#pre_arduino').text(Blockly.Arduino.workspaceToCode(BlocklyDuino.workspace));
+	}
+		else {
+			$('#pre_previewArduino').text(Blockly.Python.workspaceToCode(BlocklyDuino.workspace));
+			$('#pre_arduino').text(Blockly.Python.workspaceToCode(BlocklyDuino.workspace));
+		}
+	if (typeof prettyPrintOne == 'function') {
+		$('#pre_previewArduino').html(prettyPrintOne($('#pre_previewArduino').html(), 'cpp'));
+		$('#pre_arduino').html(prettyPrintOne($('#pre_previewArduino').html(), 'cpp'));
+	}
 };
 
 /**
@@ -284,7 +303,8 @@ BlocklyDuino.bindFunctions = function() {
 	$('#btn_saveXML, #menu_12').on("click", BlocklyDuino.saveXmlFile);
 	$('#btn_validCode').on("click", BlocklyDuino.valideEditedCode);
 	$('#btn_factory').on("click", function() {
-		window.open("./tools/factory/block_factory.html", "_blank");
+		var langChoice = BlocklyDuino.getStringParamFromUrl('lang', '');
+		window.open("./tools/factory/block_factory.html?lang=" + langChoice, "_blank");
 	});
 	$('#load').on("change", BlocklyDuino.load);
 	$('#btn_fakeload, #menu_11').on("click", function() {

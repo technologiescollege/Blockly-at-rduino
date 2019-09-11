@@ -1,6 +1,7 @@
 'use strict';
 
 var ALIGNMENT_OPTIONS = [['à gauche', 'LEFT'], ['à droite', 'RIGHT'], ['au centre', 'CENTRE']];
+
 Blockly.Blocks['factory_base'] = { init: function() {
     this.setColour("#00929f");
     this.appendDummyInput()
@@ -72,6 +73,7 @@ Blockly.Blocks['factory_base'] = { init: function() {
     }
   }
 };
+
 Blockly.Blocks['input_value'] = { init: function() {
     this.setColour("#696969");
     this.appendDummyInput()
@@ -98,6 +100,7 @@ Blockly.Blocks['input_value'] = { init: function() {
     inputNameCheck(this);
   }
 };
+
 Blockly.Blocks['input_statement'] = { init: function() {
     this.setColour("#696969");
     this.appendDummyInput()
@@ -124,6 +127,7 @@ Blockly.Blocks['input_statement'] = { init: function() {
     inputNameCheck(this);
   }
 };
+
 Blockly.Blocks['input_dummy'] = { init: function() {
     this.setColour("#696969");
     this.appendDummyInput()
@@ -140,6 +144,7 @@ Blockly.Blocks['input_dummy'] = { init: function() {
     this.setHelpUrl('https://www.youtube.com/watch?v=s2_xaEvcVI0#t=293');
   }
 };
+
 Blockly.Blocks['field_static'] = { init: function() {
     this.setColour("#00cc00");
     this.appendDummyInput()
@@ -151,6 +156,7 @@ Blockly.Blocks['field_static'] = { init: function() {
     this.setHelpUrl('https://www.youtube.com/watch?v=s2_xaEvcVI0#t=88');
   }
 };
+
 Blockly.Blocks['field_input'] = { init: function() {
     this.setColour("#00cc00");
     this.appendDummyInput()
@@ -171,6 +177,7 @@ Blockly.Blocks['field_input'] = { init: function() {
     fieldNameCheck(this);
   }
 };
+
 Blockly.Blocks['field_math'] = { init: function() {
     this.setColour("#00cc00");
     this.appendDummyInput()
@@ -191,6 +198,7 @@ Blockly.Blocks['field_math'] = { init: function() {
     fieldNameCheck(this);
   }
 };
+
 Blockly.Blocks['field_angle'] = { init: function() {
     this.setColour("#00cc00");
     this.appendDummyInput()
@@ -211,6 +219,7 @@ Blockly.Blocks['field_angle'] = { init: function() {
     fieldNameCheck(this);
   }
 };
+
 Blockly.Blocks['field_dropdown'] = { init: function() {
     this.setColour("#00cc00");
     this.appendDummyInput()
@@ -310,6 +319,7 @@ Blockly.Blocks['field_dropdown'] = { init: function() {
     }
   }
 };
+
 Blockly.Blocks['field_dropdown_container'] = {
   // Container.
   init: function() {
@@ -322,6 +332,7 @@ Blockly.Blocks['field_dropdown_container'] = {
     this.contextMenu = false;
   }
 };
+
 Blockly.Blocks['field_dropdown_option'] = {
   // Add option.
   init: function() {
@@ -335,6 +346,7 @@ Blockly.Blocks['field_dropdown_option'] = {
     this.contextMenu = false;
   }
 };
+
 Blockly.Blocks['field_checkbox'] = { init: function() {
     this.setColour("#00cc00");
     this.appendDummyInput()
@@ -355,6 +367,7 @@ Blockly.Blocks['field_checkbox'] = { init: function() {
     fieldNameCheck(this);
   }
 };
+
 Blockly.Blocks['field_colour'] = { init: function() {
     this.setColour("#00cc00");
     this.appendDummyInput()
@@ -375,6 +388,7 @@ Blockly.Blocks['field_colour'] = { init: function() {
     fieldNameCheck(this);
   }
 };
+
 Blockly.Blocks['field_variable'] = { init: function() {
     this.setColour("#00cc00");
     this.appendDummyInput()
@@ -395,6 +409,7 @@ Blockly.Blocks['field_variable'] = { init: function() {
     fieldNameCheck(this);
   }
 };
+
 Blockly.Blocks['field_image'] = { init: function() {
     this.setColour("#00cc00");
     var src = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAABA9pVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMDY3IDc5LjE1Nzc0NywgMjAxNS8wMy8zMC0yMzo0MDo0MiAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtbG5zOmRjPSJodHRwOi8vcHVybC5vcmcvZGMvZWxlbWVudHMvMS4xLyIgeG1wTU06T3JpZ2luYWxEb2N1bWVudElEPSJ1dWlkOjY1RTYzOTA2ODZDRjExREJBNkUyRDg4N0NFQUNCNDA3IiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjkzNEFBOEU3ODUyRTExRTU4RTQwRkQwODFEOUZEMEE3IiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjkzNEFBOEU2ODUyRTExRTU4RTQwRkQwODFEOUZEMEE3IiB4bXA6Q3JlYXRvclRvb2w9IkFkb2JlIFBob3Rvc2hvcCBDQyAyMDE1IChNYWNpbnRvc2gpIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6YmZlYzFmZjgtZjI0MS00MTdhLWJmYTQtMjZiOTdkYTJkZGI2IiBzdFJlZjpkb2N1bWVudElEPSJhZG9iZTpkb2NpZDpwaG90b3Nob3A6ZTJhODNmYmQtY2NkNC0xMTc4LTg4N2EtOWQ5MDZmZTFhNmQ0Ii8+IDxkYzp0aXRsZT4gPHJkZjpBbHQ+IDxyZGY6bGkgeG1sOmxhbmc9IngtZGVmYXVsdCI+Z2x5cGhpY29uc19zb2NpYWw8L3JkZjpsaT4gPC9yZGY6QWx0PiA8L2RjOnRpdGxlPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PlS4AF8AAADxSURBVHjatFbbDcMgDDRV/8sGzQjdoIySbtAROkpHyAiMwAjJBjABhcpIfBCwE0A6BSFzhx+YAACoABvgOyNyKoGTG4wZDk6ccCXaHSKeMbRDBGbv//sWiv31SGCFEDp8niTb5EYlSQbnOeGGHjwQ1SLZc+8bIGM4MCQy4B0J01q2vnBzoHOSFvAwLAHFIJ/ZVcQ8va4JXAo52Xpe5ZLAnclhWwYl1yZGiBQ3RGkTaQSRmINXamxUD1hlip6s3F7Uq1SrXVMSyGXjwapeEpNEsOd8EFNGbs62a7tDYihPbaubDrlo3QXcQH4Ho39bfgIMAMz8AJn0V4bRAAAAAElFTkSuQmCC';
@@ -416,6 +431,7 @@ Blockly.Blocks['field_image'] = { init: function() {
     this.setHelpUrl('https://www.youtube.com/watch?v=s2_xaEvcVI0#t=567');
   }
 };
+
 Blockly.Blocks['type_group'] = {
   // Group of types.
   init: function() {
@@ -498,6 +514,7 @@ Blockly.Blocks['type_group'] = {
     }
   }
 };
+
 Blockly.Blocks['type_group_container'] = {
   // Container.
   init: function() {
@@ -510,6 +527,7 @@ Blockly.Blocks['type_group_container'] = {
     this.contextMenu = false;
   }
 };
+
 Blockly.Blocks['type_group_item'] = {
   // Add type.
   init: function() {
@@ -523,6 +541,7 @@ Blockly.Blocks['type_group_item'] = {
     this.contextMenu = false;
   }
 };
+
 Blockly.Blocks['type_null'] = {
   // Null type.
   valueType: null,
@@ -535,6 +554,7 @@ Blockly.Blocks['type_null'] = {
     this.setHelpUrl('https://www.youtube.com/watch?v=s2_xaEvcVI0#t=602');
   }
 };
+
 Blockly.Blocks['type_boolean'] = {
   // Boolean type.
   valueType: 'Boolean',
@@ -547,6 +567,7 @@ Blockly.Blocks['type_boolean'] = {
     this.setHelpUrl('https://www.youtube.com/watch?v=s2_xaEvcVI0#t=602');
   }
 };
+
 Blockly.Blocks['type_number'] = {
   // Number type.
   valueType: 'Number',
@@ -559,6 +580,7 @@ Blockly.Blocks['type_number'] = {
     this.setHelpUrl('https://www.youtube.com/watch?v=s2_xaEvcVI0#t=602');
   }
 };
+
 Blockly.Blocks['type_string'] = {
   // String type.
   valueType: 'String',
@@ -571,6 +593,7 @@ Blockly.Blocks['type_string'] = {
     this.setHelpUrl('https://www.youtube.com/watch?v=s2_xaEvcVI0#t=602');
   }
 };
+
 Blockly.Blocks['type_list'] = {
   valueType: 'Array',
   init: function() {
@@ -582,6 +605,7 @@ Blockly.Blocks['type_list'] = {
     this.setHelpUrl('https://www.youtube.com/watch?v=s2_xaEvcVI0#t=602');
   }
 };
+
 Blockly.Blocks['type_other'] = {
   // Other type.
   init: function() {
@@ -594,6 +618,7 @@ Blockly.Blocks['type_other'] = {
     this.setHelpUrl('https://www.youtube.com/watch?v=s2_xaEvcVI0#t=702');
   }
 };
+
 Blockly.Blocks['colour_hue'] = { init: function() {
     this.appendDummyInput()
         .appendField(new Blockly.FieldAngle('0', this.validator), 'HUE');
@@ -614,6 +639,7 @@ Blockly.Blocks['colour_hue'] = { init: function() {
     this.setColour(container.getAttribute('colour'));
   }
 };
+
 function fieldNameCheck(referenceBlock) {
   var name = referenceBlock.getFieldValue('FIELDNAME').toLowerCase();
   var count = 0;
@@ -628,7 +654,8 @@ function fieldNameCheck(referenceBlock) {
   var msg = (count > 1) ?
       'There are ' + count + ' field blocks\n with this name.' : null;
   referenceBlock.setWarningText(msg);
-}
+};
+
 function inputNameCheck(referenceBlock) {
   var name = referenceBlock.getFieldValue('INPUTNAME').toLowerCase();
   var count = 0;
@@ -643,4 +670,4 @@ function inputNameCheck(referenceBlock) {
   var msg = (count > 1) ?
       'There are ' + count + ' input blocks\n with this name.' : null;
   referenceBlock.setWarningText(msg);
-}
+};

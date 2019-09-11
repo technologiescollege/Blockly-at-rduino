@@ -1,20 +1,20 @@
 'use strict';
 
-goog.provide('Blockly.Msg.fr');
+goog.provide('Blockly.Msg.jp');
 
 goog.require('Blockly.Msg');
 
-Blockly.Msg.CAT_MICROBIT_ACCEL = 'Accéléromètres';
-Blockly.Msg.CAT_MICROBIT_BUTTONS = 'Boutons';
-Blockly.Msg.CAT_MICROBIT_COMPASS = 'Boussole';
-Blockly.Msg.CAT_MICROBIT_DISPLAY = 'Ecran';
+Blockly.Msg.CAT_MICROBIT_ACCEL = 'Accelerometer';
+Blockly.Msg.CAT_MICROBIT_BUTTONS = 'Buttons';
+Blockly.Msg.CAT_MICROBIT_COMPASS = 'Compass';
+Blockly.Msg.CAT_MICROBIT_DISPLAY = 'Display';
 Blockly.Msg.CAT_MICROBIT_IMAGE = 'Image';
 Blockly.Msg.CAT_MICROBIT_MICROBIT = 'Micro:Bit';
-Blockly.Msg.CAT_MICROBIT_MUSIQUE = 'Musique';
-Blockly.Msg.CAT_MICROBIT_NEOPIXELS = 'Néopixels';
-Blockly.Msg.CAT_MICROBIT_PINS = 'Broches';
+Blockly.Msg.CAT_MICROBIT_MUSIQUE = 'Music';
+Blockly.Msg.CAT_MICROBIT_NEOPIXELS = 'Neopixels';
+Blockly.Msg.CAT_MICROBIT_PINS = 'Pins';
 Blockly.Msg.CAT_MICROBIT_RADIO = 'Radio';
-Blockly.Msg.CAT_MICROBIT_SPEECH = 'Voix';
+Blockly.Msg.CAT_MICROBIT_SPEECH = 'Speech';
 Blockly.Msg.MICROBIT_ACCELEROMETER_GET_X_MESSAGE0 = 'Accelerometer X axis';
 Blockly.Msg.MICROBIT_ACCELEROMETER_GET_X_TOOLTIP = 'Get the acceleration measurement in the X axis.';
 Blockly.Msg.MICROBIT_ACCELEROMETER_GET_X_HELPURL = 'https://microbit-micropython.readthedocs.io/en/latest/accelerometer.html#microbit.accelerometer.get_x';

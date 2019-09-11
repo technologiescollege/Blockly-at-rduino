@@ -1,19 +1,18 @@
-<!DOCTYPE html>
 <html>
 <head>
 	<link rel="icon" type="image/png" href="favicon.ico" />
 	<meta charset="utf-8">
 	<meta name="viewport" content="height=660, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-	<title>L'usine à blocs</title>
+	<script src="../../core/blockly_compressed.js"></script>
+	<script src="../../lang/code.js"></script>
 	<script src="factory.js"></script>
-	<script src="../../core/Blockly/blockly.min.js"></script>
-	<script src="../../lang/Blockly_msg/fr.js"></script>
 	<script src="blocks.js"></script>
 	<script src="../../core/libs/prettify.min.js"></script>
 	<link rel="stylesheet" href="../../css/bootstrap.min.BlocklyArduino.css">
 	<link rel="stylesheet" href="../../css/blockly@rduino.css">
 	<link rel="stylesheet" href="../../css/font-awesome.min.css">
 	<link rel="stylesheet" href="../../css/prettify.css">
+	<title><span id="span_factory_title"> </span></title>
 </head>
 <body>
 	<div id="blockly_l" >
@@ -21,13 +20,12 @@
 	</div>
 	<div id="blockly_r">
 		<div style="height:3%">
-			Prévisualisation :
+			<span id="span_factory_preview"> </span>
 			<select id="direction">
 				<option value="ltr">LTR</option>
 				<option value="rtl">RTL</option>
-			</select>
-			- Documentation : <a href="http://www.libreduc.cc/wiki/doku.php" target='blank'> wiki</a>
-			- Merci de partager sur le <a href="http://blockly.technologiescollege.fr/forum/" target='blank'> forum</a></b>
+			</select>			
+			<span id="span_factory_help"> </span></b>
 		</div>
 		<div style="height:20%">
 			<div id="preview" style="position:absolute"></div>
