@@ -2373,8 +2373,7 @@ Blockly.Msg.CAPACITIV_CALIBRATION = "calibrage automatique";
 Blockly.Msg.CAPACITIV_TOOLTIP = "raccorder les 2 broches par une résistance de 10M puis le conducteur à la broche de réception";
 
 
-
-//wifi
+////////////////////////////ESP8266 WiFi/////////////////////
 Blockly.Msg.esp8266_init_tooltip="initialisation du module wifi et connection avec les paramètres indiqués";
 Blockly.Msg.esp8266_1="Esp 8266";
 Blockly.Msg.esp8266_2="ssid";
@@ -2393,3 +2392,8 @@ Blockly.Msg.esp8266_send_html="";
 Blockly.Msg.esp8266_send_tooltip="...";
 Blockly.Msg.esp8266_send="";
 Blockly.Msg.esp8266_wait_tooltip="...";
+
+////////////////////////////OTTO DIY Robot/////////////////////
+Blockly.Msg.OTTO9_HOME_TEXT="home";
+Blockly.Msg.OTTO9_HOME="";
+Blockly.Msg.OTTO9_HOME_URL="https://www.ottodiy.com/";

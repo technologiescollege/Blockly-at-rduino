@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <toolbox>
-	<parametre id="defaultCategories">CAT_LOGIC,CAT_LOOPS,CAT_VARIABLES,CAT_FUNCTIONS,CAT_MATH,CAT_ARDUINO,CAT_OTTO
+	<parametre id="defaultCategories">
+		CAT_LOGIC,CAT_LOOPS,CAT_VARIABLES,CAT_FUNCTIONS,CAT_MATH,CAT_ARDUINO,CAT_OTTO
 	</parametre>
 	<category name="CAT_LOGIC" colour="#FFAB19">
 		<block type="controls_if"></block>
@@ -338,19 +339,17 @@
 		<sep></sep>
 	</category>
 	<category name="CAT_OTTO" colour="#3BD32E">
-		<block type="otto_attach"></block>
-		<block type="otto_move">
-			<value name="DEGREE">
-				<shadow type="inout_angle">
-					<field name="NUM">0</field>
-				</shadow>
-			</value>
-		</block>
-		<block type="otto_read_degrees"></block>
-		<block type="otto_attached"></block>
-		<block type="otto_detach"></block>
-		<block type="otto_rot_continue"></block>
-		<block type="otto_rot_continue_param"></block>
+		<block type="otto9_home"></block>
+		<block type="otto9_move"></block>
+		<block type="otto9_dance"></block>
+		<block type="otto9_gesture"></block>
+		<block type="otto9_sound"></block>
+		<block type="otto9_getdistance"></block>
+		<block type="otto9_getnoise"></block>
+		<block type="otto9_touchbutton"></block>
+		<block type="otto9_mouth"></block>
+		<block type="otto9_matrix"></block>
+		<block type="otto9_matrix_text"></block>
 	</category>
 	<sep></sep>
 </toolbox>
