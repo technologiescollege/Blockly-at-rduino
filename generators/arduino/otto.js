@@ -158,10 +158,40 @@ Blockly.Arduino['otto9_mouth'] = function(block) {
 	+ '#define CS_PIN A2\n'
 	+ '#define CLK_PIN A1\n'
 	+ '#define LED_DIRECTION 1';
-  Blockly.Arduino.setups_['otto9_matrix']='Otto.initMATRIX( DIN_PIN, CS_PIN, CLK_PIN, LED_DIRECTION);\n'
+  Blockly.Arduino.setups_['otto9_matrix']='Otto.initMATRIX( DIN_PIN, CS_PIN, CLK_PIN, LED_DIRECTION);\n';
   var code = '';
   if ((dropdown_otto9_mouth_choice == 'littleUuh, i')||(dropdown_otto9_mouth_choice == 'dreamMouth, 0')||(dropdown_otto9_mouth_choice == 'dreamMouth, 1')||(dropdown_otto9_mouth_choice == 'dreamMouth, 2'))
 	code = 'Otto.putAnimationMouth(' + dropdown_otto9_mouth_choice + ');\n';
 	else code = 'Otto.putMouth(' + dropdown_otto9_mouth_choice + ');\n';
+  return code;
+};
+
+Blockly.Arduino['otto9_matrix'] = function(block) {
+  Blockly.Arduino.includes_['otto9_matrix'] = '#include <Otto_Matrix9.h>';
+  Blockly.Arduino.variables_['otto9_matrix'] = 'unsigned long int otto9_matrix;';
+  Blockly.Arduino.definitions_['otto9_matrix_def'] = '#define DIN_PIN A3\n'
+	+ '#define CS_PIN A2\n'
+	+ '#define CLK_PIN A1\n'
+	+ '#define LED_DIRECTION 1';
+  Blockly.Arduino.setups_['otto9_matrix']='Otto.initMATRIX( DIN_PIN, CS_PIN, CLK_PIN, LED_DIRECTION);\n'
+  var code = 'matrix = 0b';
+  for (var i=0; i<64; i++) {
+	if (this.getFieldValue('otto9_matrix_pixel' + i) != 'rgb(255, 255, 255)')
+		code += '1';
+		else code +='0';
+  };
+  code += ';\n';
+  return code;
+};
+
+Blockly.Arduino['otto9_matrix_text'] = function(block) {
+  Blockly.Arduino.includes_['otto9_matrix'] = '#include <Otto_Matrix9.h>';
+  Blockly.Arduino.variables_['otto9_matrix'] = 'unsigned long int otto9_matrix;';
+  Blockly.Arduino.definitions_['otto9_matrix_def'] = '#define DIN_PIN A3\n'
+	+ '#define CS_PIN A2\n'
+	+ '#define CLK_PIN A1\n'
+	+ '#define LED_DIRECTION 1';
+  Blockly.Arduino.setups_['otto9_matrix']='Otto.initMATRIX( DIN_PIN, CS_PIN, CLK_PIN, LED_DIRECTION);\n';
+  var code = '';
   return code;
 };

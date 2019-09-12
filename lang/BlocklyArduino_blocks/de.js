@@ -2351,7 +2351,6 @@ Blockly.Msg.dfrobot_ISD1820_record = "push record button to record 10s max";
 Blockly.Msg.dfrobot_ISD1820_play = "play recorded sound";
 Blockly.Msg.dfrobot_ISD1820_play_Input = "PIN#";
 
-
 ////////////////////////////Capacitive Sensor Librarie/////////////////////
 Blockly.Msg.CAPACITIV_HELPURL = "https://github.com/PaulStoffregen/CapacitiveSensor";
 Blockly.Msg.CAPACITIV_TEXT = "capacitive value";
@@ -2359,3 +2358,40 @@ Blockly.Msg.CAPACITIV_INPUT1 = "send pinn";
 Blockly.Msg.CAPACITIV_INPUT2 = "sensor pin";
 Blockly.Msg.CAPACITIV_CALIBRATION = "automatic calibration";
 Blockly.Msg.CAPACITIV_TOOLTIP = "10M resistor between pins 4 & 2, pin 2 is sensor pin, add a wire and or foil if desired";
+
+////////////////////////////ESP8266 WiFi/////////////////////
+Blockly.Msg.esp8266_init_tooltip="initialisation du module wifi et connection avec les paramètres indiqués";
+Blockly.Msg.esp8266_1="Esp 8266";
+Blockly.Msg.esp8266_2="ssid";
+Blockly.Msg.esp8266_3="clé";
+Blockly.Msg.esp8266_4="IP";
+Blockly.Msg.esp8266_5="passerelle";
+Blockly.Msg.esp8266_6="masque";
+Blockly.Msg.esp8266_7=[["client", "client"],["serveur", "serveur"]];
+Blockly.Msg.esp8266_8="port";
+Blockly.Msg.esp8266_9=[["dynamique", "dynamic"],["statique", "static"]];
+Blockly.Msg.esp8266_10="adressage";
+Blockly.Msg.esp8266_recept_tooltip="reception";
+Blockly.Msg.esp8266_url="http://julien.coron.free.fr/?p=928";
+Blockly.Msg.esp8266_send_html_tooltip="...";
+Blockly.Msg.esp8266_send_html="";
+Blockly.Msg.esp8266_send_tooltip="...";
+Blockly.Msg.esp8266_send="";
+Blockly.Msg.esp8266_wait_tooltip="...";
+
+////////////////////////////OTTO DIY Robot/////////////////////
+Blockly.Msg.OTTO9_HOME_TEXT = "home";
+Blockly.Msg.OTTO9_HOME = "";
+Blockly.Msg.OTTO9_HOME_URL = "https://www.ottodiy.com/";
+Blockly.Msg.OTTO9_MOVE_TEXT = "move";
+Blockly.Msg.OTTO9_MOVE_SPEED_TEXT = "speed";
+Blockly.Msg.OTTO9_DANCE_TEXT = "dance";
+Blockly.Msg.OTTO9_DANCE_SPEED_TEXT = "speed";
+Blockly.Msg.OTTO9_DANCE_SIZE_TEXT = "size";
+Blockly.Msg.OTTO9_GESTURE_TEXT = "gesture";
+Blockly.Msg.OTTO9_GETDISTANCE_TEXT = "distance";
+Blockly.Msg.OTTO9_GETNOISE_TEXT = "noise";
+Blockly.Msg.OTTO9_GETTOUCH_TEXT = "touch";
+Blockly.Msg.OTTO9_MOUTH_TEXT = "mouth";
+Blockly.Msg.OTTO9_MATRIX_TEXT = "matrix";
+Blockly.Msg.OTTO9_MATRIXTEXT_TEXT = "matrix text";

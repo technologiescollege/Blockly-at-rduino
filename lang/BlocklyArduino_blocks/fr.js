@@ -2363,15 +2363,13 @@ Blockly.Msg.dfrobot_ISD1820_record = "appui sur bouton pour enregistrer 10s maxi
 Blockly.Msg.dfrobot_ISD1820_play = "jouer le son";
 Blockly.Msg.dfrobot_ISD1820_play_Input = "raccordé sur la broche";
 
-
 ////////////////////////////Capacitive Sensor Librarie/////////////////////
 Blockly.Msg.CAPACITIV_HELPURL = "https://github.com/PaulStoffregen/CapacitiveSensor";
-Blockly.Msg.CAPACITIV_TEXT = "valeur de détection d'une perturbation entre";
-Blockly.Msg.CAPACITIV_INPUT1 = "la broche d'émission";
-Blockly.Msg.CAPACITIV_INPUT2 = "et la broche de réception";
-Blockly.Msg.CAPACITIV_CALIBRATION = "calibrage automatique";
-Blockly.Msg.CAPACITIV_TOOLTIP = "raccorder les 2 broches par une résistance de 10M puis le conducteur à la broche de réception";
-
+Blockly.Msg.CAPACITIV_TEXT = "capacitive value";
+Blockly.Msg.CAPACITIV_INPUT1 = "send pinn";
+Blockly.Msg.CAPACITIV_INPUT2 = "sensor pin";
+Blockly.Msg.CAPACITIV_CALIBRATION = "automatic calibration";
+Blockly.Msg.CAPACITIV_TOOLTIP = "10M resistor between pins 4 & 2, pin 2 is sensor pin, add a wire and or foil if desired";
 
 ////////////////////////////ESP8266 WiFi/////////////////////
 Blockly.Msg.esp8266_init_tooltip="initialisation du module wifi et connection avec les paramètres indiqués";
@@ -2394,6 +2392,18 @@ Blockly.Msg.esp8266_send="";
 Blockly.Msg.esp8266_wait_tooltip="...";
 
 ////////////////////////////OTTO DIY Robot/////////////////////
-Blockly.Msg.OTTO9_HOME_TEXT="home";
-Blockly.Msg.OTTO9_HOME="";
-Blockly.Msg.OTTO9_HOME_URL="https://www.ottodiy.com/";
+Blockly.Msg.OTTO9_HOME_TEXT = "home";
+Blockly.Msg.OTTO9_HOME = "";
+Blockly.Msg.OTTO9_HOME_URL = "https://www.ottodiy.com/";
+Blockly.Msg.OTTO9_MOVE_TEXT = "avance";
+Blockly.Msg.OTTO9_MOVE_SPEED_TEXT = "vitesse";
+Blockly.Msg.OTTO9_DANCE_TEXT = "danse";
+Blockly.Msg.OTTO9_DANCE_SPEED_TEXT = "vitesse";
+Blockly.Msg.OTTO9_DANCE_SIZE_TEXT = "taille";
+Blockly.Msg.OTTO9_GESTURE_TEXT = "geste";
+Blockly.Msg.OTTO9_GETDISTANCE_TEXT = "distance";
+Blockly.Msg.OTTO9_GETNOISE_TEXT = "son";
+Blockly.Msg.OTTO9_GETTOUCH_TEXT = "touché";
+Blockly.Msg.OTTO9_MOUTH_TEXT = "bouche";
+Blockly.Msg.OTTO9_MATRIX_TEXT = "matrice";
+Blockly.Msg.OTTO9_MATRIXTEXT_TEXT = "matrice de texte";
