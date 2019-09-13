@@ -28,7 +28,8 @@ goog.provide('Blockly.Arduino.otto');
 goog.require('Blockly.Arduino');
 
 Blockly.Arduino['otto9_home'] = function(block) {
-  Blockly.Arduino.includes_['otto9_lib'] = '#include <Otto9.h>';
+  Blockly.Arduino.includes_['otto9_lib'] = '#include <Otto9.h>'
+	+ 'Otto9 Otto;';
   Blockly.Arduino.variables_['otto9_distance'] = 'int distance;\n'
 	+ 'bool obstacleDetected = false;';
   Blockly.Arduino.definitions_['otto9_legs'] = '#define PIN_YL 2 // left leg\n'
@@ -43,7 +44,8 @@ Blockly.Arduino['otto9_home'] = function(block) {
 Blockly.Arduino['otto9_move'] = function(block) {
   var dropdown_otto_move_sens = block.getFieldValue('otto_move_sens');
   var dropdown_otto_move_speed = block.getFieldValue('otto_move_speed');
-  Blockly.Arduino.includes_['otto9_lib'] = '#include <Otto9.h>';
+  Blockly.Arduino.includes_['otto9_lib'] = '#include <Otto9.h>'
+	+ 'Otto9 Otto;';
   Blockly.Arduino.variables_['otto9_distance'] = 'int distance;\n'
 	+ 'bool obstacleDetected = false;';
   Blockly.Arduino.definitions_['otto9_legs'] = '#define PIN_YL 2 // left leg\n'
@@ -79,7 +81,8 @@ Blockly.Arduino['otto9_dance'] = function(block) {
   var dropdown_otto_dance_movement = block.getFieldValue('otto_dance_movement');
   var dropdown_otto_dance_speed = block.getFieldValue('otto_dance_speed');
   var dropdown_otto_dance_size = block.getFieldValue('otto_dance_size');
-  Blockly.Arduino.includes_['otto9_lib'] = '#include <Otto9.h>';
+  Blockly.Arduino.includes_['otto9_lib'] = '#include <Otto9.h>'
+	+ 'Otto9 Otto;';
   Blockly.Arduino.variables_['otto9_distance'] = 'int distance;\n'
 	+ 'bool obstacleDetected = false;';
   Blockly.Arduino.definitions_['otto9_legs'] = '#define PIN_YL 2 // left leg\n'
@@ -97,7 +100,8 @@ Blockly.Arduino['otto9_dance'] = function(block) {
 
 Blockly.Arduino['otto9_gesture'] = function(block) {
   var dropdown_otto_gesture = block.getFieldValue('otto_gesture');
-  Blockly.Arduino.includes_['otto9_lib'] = '#include <Otto9.h>';
+  Blockly.Arduino.includes_['otto9_lib'] = '#include <Otto9.h>'
+	+ 'Otto9 Otto;';
   Blockly.Arduino.variables_['otto9_distance'] = 'int distance;\n'
 	+ 'bool obstacleDetected = false;';
   Blockly.Arduino.definitions_['otto9_legs'] = '#define PIN_YL 2 // left leg\n'
@@ -113,7 +117,8 @@ Blockly.Arduino['otto9_gesture'] = function(block) {
 
 Blockly.Arduino['otto9_sound'] = function(block) {
   var dropdown_otto_sound = block.getFieldValue('otto_sound');
-  Blockly.Arduino.includes_['otto9_lib'] = '#include <Otto9.h>';
+  Blockly.Arduino.includes_['otto9_lib'] = '#include <Otto9.h>'
+	+ 'Otto9 Otto;';
   Blockly.Arduino.definitions_['otto9_sound'] = '#define PIN_Buzzer  13 \n';
   Blockly.Arduino.setups_['otto9_init']='Otto.init(PIN_YL, PIN_YR, PIN_RL, PIN_RR, true, A6, PIN_Buzzer, PIN_Trigger, PIN_Echo);\n';
   var code = 'Otto.sing(' + dropdown_otto_sound + ');\n';
@@ -121,7 +126,8 @@ Blockly.Arduino['otto9_sound'] = function(block) {
 };
 
 Blockly.Arduino['otto9_getdistance'] = function(block) {
-  Blockly.Arduino.includes_['otto9_lib'] = '#include <Otto9.h>';
+  Blockly.Arduino.includes_['otto9_lib'] = '#include <Otto9.h>'
+	+ 'Otto9 Otto;';
   Blockly.Arduino.includes_['otto9_lib_dist'] = '#include <US.h>';
   Blockly.Arduino.variables_['otto9_distance'] = 'int distance;\n'
 	+ 'bool obstacleDetected = false;';
@@ -133,7 +139,8 @@ Blockly.Arduino['otto9_getdistance'] = function(block) {
 };
 
 Blockly.Arduino['otto9_getnoise'] = function(block) {
-  Blockly.Arduino.includes_['otto9_lib'] = '#include <Otto9.h>';
+  Blockly.Arduino.includes_['otto9_lib'] = '#include <Otto9.h>'
+	+ 'Otto9 Otto;';
   Blockly.Arduino.variables_['otto9_noise'] = 'bool estado = false;';
   Blockly.Arduino.definitions_['otto9_noise'] = '#define PIN_NoiseSensor A6';
   Blockly.Arduino.setups_['otto9_init']='Otto.init(PIN_YL, PIN_YR, PIN_RL, PIN_RR, true, A6, PIN_Buzzer, PIN_Trigger, PIN_Echo);\n';
@@ -142,7 +149,8 @@ Blockly.Arduino['otto9_getnoise'] = function(block) {
 };
 
 Blockly.Arduino['otto9_touchbutton'] = function(block) {
-  Blockly.Arduino.includes_['otto9_lib'] = '#include <Otto9.h>';
+  Blockly.Arduino.includes_['otto9_lib'] = '#include <Otto9.h>'
+	+ 'Otto9 Otto;';
   Blockly.Arduino.variables_['otto9_touchbutton'] = 'volatile bool buttonPushed = false;';
   Blockly.Arduino.definitions_['otto9_sound'] = '#define PIN_Button A0';
   Blockly.Arduino.setups_['otto9_init']='pinMode(PIN_Button, INPUT);\n';
@@ -152,7 +160,8 @@ Blockly.Arduino['otto9_touchbutton'] = function(block) {
 
 Blockly.Arduino['otto9_mouth'] = function(block) {
   var dropdown_otto9_mouth_choice = block.getFieldValue('otto9_mouth_choice');
-  Blockly.Arduino.includes_['otto9_matrix'] = '#include <Otto_Matrix9.h>';
+  Blockly.Arduino.includes_['otto9_lib'] = '#include <Otto9.h>'
+	+ 'Otto9 Otto;';
   Blockly.Arduino.variables_['otto9_matrix'] = 'unsigned long int otto9_matrix;';
   Blockly.Arduino.definitions_['otto9_matrix_def'] = '#define DIN_PIN A3\n'
 	+ '#define CS_PIN A2\n'
@@ -167,7 +176,8 @@ Blockly.Arduino['otto9_mouth'] = function(block) {
 };
 
 Blockly.Arduino['otto9_matrix'] = function(block) {
-  Blockly.Arduino.includes_['otto9_matrix'] = '#include <Otto_Matrix9.h>';
+  Blockly.Arduino.includes_['otto9_lib'] = '#include <Otto9.h>'
+	+ 'Otto9 Otto;';
   Blockly.Arduino.variables_['otto9_matrix'] = 'unsigned long int otto9_matrix;';
   Blockly.Arduino.definitions_['otto9_matrix_def'] = '#define DIN_PIN A3\n'
 	+ '#define CS_PIN A2\n'
@@ -185,8 +195,9 @@ Blockly.Arduino['otto9_matrix'] = function(block) {
 };
 
 Blockly.Arduino['otto9_matrix_text'] = function(block) {
-  Blockly.Arduino.includes_['otto9_matrix'] = '#include <Otto_Matrix9.h>';
-  Blockly.Arduino.variables_['otto9_matrix'] = 'unsigned long int otto9_matrix;';
+  Blockly.Arduino.includes_['otto9_lib'] = '#include <Otto9.h>'
+	+ 'Otto9 Otto;';
+  Blockly.Arduino.variables_['otto9_matrix'] = 'unsigned long int matrix;';
   Blockly.Arduino.definitions_['otto9_matrix_def'] = '#define DIN_PIN A3\n'
 	+ '#define CS_PIN A2\n'
 	+ '#define CLK_PIN A1\n'
