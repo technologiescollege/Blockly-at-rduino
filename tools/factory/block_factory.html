@@ -4,7 +4,8 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="height=660, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 	<script src="../../core/blockly_compressed.js"></script>
-	<script src="../../lang/code.js"></script>
+    <script type="text/javascript" src="../../core/libs/jquery-2.1.3.min.js"></script>
+	<script src="codeFactory.js"></script>
 	<script src="factory.js"></script>
 	<script src="blocks.js"></script>
 	<script src="../../core/libs/prettify.min.js"></script>
@@ -12,7 +13,7 @@
 	<link rel="stylesheet" href="../../css/blockly@rduino.css">
 	<link rel="stylesheet" href="../../css/font-awesome.min.css">
 	<link rel="stylesheet" href="../../css/prettify.css">
-	<title><span id="span_factory_title"> </span></title>
+	<title></title>
 </head>
 <body>
 	<div id="blockly_l" >
@@ -25,7 +26,7 @@
 				<option value="ltr">LTR</option>
 				<option value="rtl">RTL</option>
 			</select>			
-			<span id="span_factory_help"> </span></b>
+			<span id="span_factory_help"> </span>
 		</div>
 		<div style="height:20%">
 			<div id="preview" style="position:absolute"></div>

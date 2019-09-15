@@ -380,9 +380,9 @@ Code.initLanguageSupervision = function() {
  * Initialize the block factory language.
  */
 Code.initLanguageBlockFactory = function() {
-	$('#span_factory_title').text(Blockly.Msg.BF_title);
+	$(document).attr("title", Blockly.Msg.BF_title);
 	$('#span_factory_preview').text(Blockly.Msg.BF_preview);
-	$('#span_factory_help').text(Blockly.Msg.BF_help);
+	$('#span_factory_help').html(Blockly.Msg.BF_help);
 };
 
 //Load FRENCH by default... This allow to have a definition for additionnal blocks messages in case another langage is chosen

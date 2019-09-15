@@ -334,5 +334,6 @@ function init() {
   rootBlock.setDeletable(false);
   mainWorkspace.addChangeListener(onchange);
   document.getElementById('direction').addEventListener('change', updatePreview);
+  CodeFactory.initLanguageBlockFactory();
 }
 window.addEventListener('load', init);
