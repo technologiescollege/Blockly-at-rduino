@@ -36,7 +36,6 @@ var BlocklyLevel = 'none';
  */
 BlocklyDuino.renderContent = function() {
     var content = $('#content_' + BlocklyDuino.selectedTab);
-	Code.initLanguageBlockFactory();
   
 	if (content.prop('id') == 'content_blocks') {
 		// If the workspace was changed by the XML tab, Firefox will have

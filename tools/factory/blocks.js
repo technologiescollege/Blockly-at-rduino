@@ -5,11 +5,11 @@ var ALIGNMENT_OPTIONS = [['à gauche', 'LEFT'], ['à droite', 'RIGHT'], ['au cen
 Blockly.Blocks['factory_base'] = { init: function() {
     this.setColour("#00929f");
     this.appendDummyInput()
-        .appendField(new Blockly.FieldTextInput('mon_bloc'), 'NAME');
+        .appendField(new Blockly.FieldTextInput(Blockly.Msg.BF_newBlock), 'NAME');
     this.appendStatementInput('INPUTS').setCheck('Input');
     var dropdown = new Blockly.FieldDropdown([
-        ['bloc externe', 'EXT'],
-        ['bloc interne', 'INT']]);
+        [Blockly.Msg.BF_external, 'EXT'],
+        [Blockly.Msg.BF_internal, 'INT']]);
     this.appendDummyInput().setAlign(Blockly.ALIGN_RIGHT).appendField(dropdown, 'INLINE');
     dropdown = new Blockly.FieldDropdown([
         ['↕ accroches haut&bas', 'BOTH'],

@@ -376,15 +376,6 @@ Code.initLanguageSupervision = function() {
 	$('#span_supervision_i2c_retrieveButton').text(Blockly.Msg.SV_i2c_retrieveButton);
 };
 
-/**
- * Initialize the block factory language.
- */
-Code.initLanguageBlockFactory = function() {
-	$(document).attr("title", Blockly.Msg.BF_title);
-	$('#span_factory_preview').text(Blockly.Msg.BF_preview);
-	$('#span_factory_help').html(Blockly.Msg.BF_help);
-};
-
 //Load FRENCH by default... This allow to have a definition for additionnal blocks messages in case another langage is chosen
 //Load the Code demo's language strings.
 //document.write('<script src="lang/BlocklyArduino_msg/fr.js"></script>\n');
@@ -402,8 +393,6 @@ document.write('<script src="lang/BlocklyArduino_msg/' + Code.LANG + '.js"></scr
 document.write('<script src="lang/Blockly_msg/' + Code.LANG + '.js"></script>\n');
 // Load Blockly@rduino specific block's language strings.
 document.write('<script src="lang/BlocklyArduino_blocks/' + Code.LANG + '.js"></script>\n');
-// Load Factory's language strings.
-document.write('<script src="lang/factory/' + Code.LANG + '.js"></script>\n');
 // Load Supervision's language strings.
 document.write('<script src="lang/supervision/' + Code.LANG + '.js"></script>\n');
 //Load the Micro:bit's language strings.
