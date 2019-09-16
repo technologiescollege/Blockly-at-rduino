@@ -79,8 +79,8 @@ function formatJavaScript(code, rootBlock) {
   } else {
 	  code.push('    this.setColour("#00929f");');
   }
-  code.push("    this.setTooltip('ce bloc sert à...');");
-  code.push("    this.setHelpUrl('http://www.mon-club-elec.fr/pmwiki_reference_arduino/pmwiki.php?n=Main.ReferenceMaxi');");
+  code.push("    this.setTooltip(" + Blockly.Msg.BF_tooltip + ");");
+  code.push("    this.setHelpUrl('" + Blockly.Msg.BF_helpUrl + "');");
   code.push("  }");
   code.push("};");
 }
@@ -202,7 +202,7 @@ function updateGenerator() {
   }
   var language = 'JavaScript';
   var code = [];
-  code.push("Blockly.Arduino['" + blockType +"'] = function(block) {\n  //IMPORTANT : supprimer ce qui n'est pas utile");
+  code.push("Blockly.Arduino['" + blockType +"'] = function(block) {\n  //" + Blockly.Msg.BF_helpGenerator);
   var rootBlock = getRootBlock();
   if (rootBlock) {
     var blocks = rootBlock.getDescendants();
@@ -249,12 +249,12 @@ function updateGenerator() {
           break;
       }
     }
-	code.push("  Blockly.Arduino.includes_[] = 'placer ici le code de ma bibliotheque'");
-	code.push("  Blockly.Arduino.variables_[] = 'placer ici le code de mes variables'");
-	code.push("  Blockly.Arduino.definitions_[] = 'placer ici le code de mes instances'");
-	code.push("  Blockly.Arduino.userFunctions_[] = 'placer ici le code de mes fonctions'");
-    code.push("  Blockly.Arduino.setups_[]='placer ici le code du setup()'");
-	code.push("  var code = \'placer ici le code du loop()\';");
+	code.push("  Blockly.Arduino.includes_[] = '" + Blockly.Msg.BF_help_includes + "'");
+	code.push("  Blockly.Arduino.variables_[] = '" + Blockly.Msg.BF_help_variables + "'");
+	code.push("  Blockly.Arduino.definitions_[] = '" + Blockly.Msg.BF_help_definitions + "'");
+	code.push("  Blockly.Arduino.userFunctions_[] = '" + Blockly.Msg.BF_help_functions + "'");
+    code.push("  Blockly.Arduino.setups_[]='" + Blockly.Msg.BF_help_setup + "'");
+	code.push("  var code = \'" + Blockly.Msg.BF_help_loop + "'");
     if (rootBlock.getFieldValue('CONNECTIONS') == 'LEFT') {
       code.push("  return [code, Blockly.Arduino.ORDER_ATOMIC];");
     } else {
@@ -277,7 +277,7 @@ function updatePreview() {
   }
   previewWorkspace.clear();
   if (Blockly.Blocks[blockType]) {
-    throw 'Block name collides with existing property: ' + blockType;
+    throw Blockly.Msg.BF_blockType_warning + blockType;
   }
   var code = document.getElementById('languagePre').textContent.trim();
   if (!code) {
@@ -325,8 +325,23 @@ function init() {
   };
   onresize();
   window.addEventListener('resize', onresize);
-  var toolbox = document.getElementById('toolbox_factory');
-  mainWorkspace = Blockly.inject('blockly',{toolbox: toolbox, media: '../../media/'});
+	// Construct the toolbox XML, replacing translated variable names.
+	var toolboxText = document.getElementById('toolbox_factory').outerHTML;
+	toolboxText = toolboxText.replace(/(^|[^%]){(\w+)}/g, function(m, p1, p2) {return p1 + MSG[p2];});
+	var toolboxXml = Blockly.Xml.textToDom(toolboxText);
+  // var toolbox = document.getElementById('toolbox_factory');
+  mainWorkspace = Blockly.inject('blockly',
+	{grid:
+          {spacing: 25,
+           length: 3,
+           colour: '#ccc',
+           snap: true},
+	media: '../../media/',
+	toolbox: toolboxXml,
+	zoom:
+	   {controls: true,
+		wheel: true}
+	});
   var rootBlock = Blockly.Block.obtain(mainWorkspace, 'factory_base');
   rootBlock.initSvg();
   rootBlock.render();

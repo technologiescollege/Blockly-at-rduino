@@ -350,6 +350,6 @@
 		<block type="otto9_mouth"></block>
 		<block type="otto9_matrix"></block>
 		<block type="otto9_matrix_text"></block>
-	</category>
 	<sep></sep>
+	</category>
 </toolbox>
