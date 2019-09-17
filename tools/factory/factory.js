@@ -4,26 +4,13 @@ var blockType = '';
 var mainWorkspace = null;
 var previewWorkspace = null;
 
-function onchange() {
-  var name = '';
-  var rootBlock = getRootBlock();
-  if (rootBlock) {
-    name = rootBlock.getFieldValue('NAME');
-  }
-  blockType = name.replace(/\W/g, '_').replace(/^(\d)/, '_\\1').toLowerCase();
-  if (!blockType) {
-    blockType = 'unnamed';
-  }
-  updateLanguage();
-  updateGenerator();
-  updatePreview();
-}
 function updateLanguage() {
   var code = [];
   var rootBlock = getRootBlock();
   formatJavaScript(code, rootBlock);
   injectCode(code, 'languagePre');
 }
+
 function formatJavaScript(code, rootBlock) {
   code.push("Blockly.Blocks['" + blockType + "'] = {\n  init: function() {");
   var TYPES = {'input_value': 'appendValueInput','input_statement': 'appendStatementInput','input_dummy': 'appendDummyInput'};
@@ -84,6 +71,7 @@ function formatJavaScript(code, rootBlock) {
   code.push("  }");
   code.push("};");
 }
+
 function connectionLineJs_(functionName, typeName) {
   var type = getOptTypesFrom(getRootBlock(), typeName);
   if (type) {
@@ -93,6 +81,7 @@ function connectionLineJs_(functionName, typeName) {
   }
   return '    this.' + functionName + '(true' + type + ');';
 }
+
 function getFieldsJs_(block) {
   var fields = [];
   while (block) {
@@ -156,9 +145,11 @@ function getFieldsJs_(block) {
   }
   return fields;
 }
+
 function escapeString(string) {
   return JSON.stringify(string);
 }
+
 function getOptTypesFrom(block, name) {
   var types = getTypesFrom_(block, name);
   if (types.length == 0) {
@@ -171,6 +162,7 @@ function getOptTypesFrom(block, name) {
     return '[' + types.join(', ') + ']';
   }
 }
+
 function getTypesFrom_(block, name) {
   var typeBlock = block.getInputTargetBlock(name);
   var types;
@@ -195,6 +187,7 @@ function getTypesFrom_(block, name) {
   }
   return types;
 }
+
 function updateGenerator() {
   function makeVar(root, name) {
     name = name.toLowerCase().replace(/\W/g, '_');
@@ -264,7 +257,9 @@ function updateGenerator() {
   code.push("};");
   injectCode(code, 'generatorPre');
 }
+
 var oldDir = null;
+
 function updatePreview() {
   var newDir = document.getElementById('direction').value;
   if (oldDir != newDir) {
@@ -294,6 +289,7 @@ function updatePreview() {
   previewBlock.setDeletable(false);
   previewBlock.moveBy(15, 10);
 }
+
 function injectCode(code, id) {
   var pre = document.getElementById(id);
   pre.textContent = code.join('\n');
@@ -301,6 +297,7 @@ function injectCode(code, id) {
   code = prettyPrintOne(code, 'js');
   pre.innerHTML = code;
 }
+
 function getRootBlock() {
   var blocks = mainWorkspace.getTopBlocks(false);
   for (var i = 0, block; block = blocks[i]; i++) {
@@ -310,6 +307,22 @@ function getRootBlock() {
   }
   return null;
 }
+
+function onchange() {
+  var name = '';
+  var rootBlock = getRootBlock();
+  if (rootBlock) {
+    name = rootBlock.getFieldValue('NAME');
+  }
+  blockType = name.replace(/\W/g, '_').replace(/^(\d)/, '_\\1').toLowerCase();
+  if (!blockType) {
+    blockType = 'unnamed';
+  }
+  updateLanguage();
+  updateGenerator();
+  updatePreview();
+}
+
 function init() {
   var expandList = [
     document.getElementById('blockly'),
