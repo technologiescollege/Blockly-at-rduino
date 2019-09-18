@@ -349,7 +349,8 @@
 		<block type="otto9_touchbutton"></block>
 		<block type="otto9_mouth"></block>
 		<block type="otto9_matrix"></block>
-		<block type="otto9_matrix_text"></block>
+		<!-- <block type="otto9_matrix_text"></block> -->
+		<block type="otto9_arms"></block>
 	<sep></sep>
 	</category>
 </toolbox>
