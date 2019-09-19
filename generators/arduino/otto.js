@@ -192,7 +192,7 @@ Blockly.Arduino['otto9_matrix'] = function(block) {
   Blockly.Arduino.setups_['otto9_matrix']='Otto.initMATRIX( DIN_PIN, CS_PIN, CLK_PIN, LED_DIRECTION);\n'
   var code = 'matrix = 0b';
   for (var i=0; i<64; i++) {
-	if (this.getFieldValue('otto9_matrix_pixel' + i) != 'rgb(255, 255, 255)')
+	if (this.getFieldValue('otto9_matrix_pixel' + i) == 'TRUE')
 		code += '1';
 		else code +='0';
   };
