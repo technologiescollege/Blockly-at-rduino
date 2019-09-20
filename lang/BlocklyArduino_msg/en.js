@@ -69,7 +69,7 @@ var MSG = {
   span_pasteIDEArduino: "Copy to the Arduino IDE",
   span_connect_serial: " Connect to Serial Console",
   a_blocks:" Blocks",
-  a_arduino:" View source code",
+  a_arduino:" Source code",
   a_term:" Serial Console",
   configModalLabel:"Blocks category selector",
   span_functionToggle:" Sort Block categories by ",

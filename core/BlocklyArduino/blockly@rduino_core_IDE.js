@@ -390,19 +390,6 @@ BlocklyDuino.bindFunctions = function() {
 		$('#ajaxModal').modal('hide');
 	});	
 	
-	$('#btn_valid_first_msg').on("click", function() {
-		$('#firstModal').modal('hide');
-		$('#videoFirstModal').remove();
-		if ($('#first_msg').prop("checked")) {
-			window.sessionStorage.msg_first_seen = true;
-			$('#firstModal iframe').remove();
-		}
-	});
-
-	$('#firstModal').on('hidden.bs.modal', function (e) {
-		$('#firstModal iframe').remove();
-	});
-	
 	$('#btn_inline').on("click", BlocklyDuino.inline);
 	//$('#btn_wiring').on("click", BlocklyDuino.openWiringDialog);
 	$('#btn_blocs_picture_mini').on("click", BlocklyDuino.blockPicture_mini);
@@ -745,8 +732,6 @@ BlocklyDuino.init = function() {
 	BlocklyDuino.testAjax();
 	
 	BlocklyDuino.changeFontURL();
-					
-	BlocklyDuino.firstBlocklyArduino();
 	
 	if ($('#toolbox').length) {
 		BlocklyDuino.toolboxInIndexHtml = true;		
@@ -977,22 +962,6 @@ BlocklyDuino.testAjax = function() {
 			BlocklyDuino.ajaxOK = false;
 	    }
 	});
-};
-
-
-/**
- * Modal first connection -> info
- */
-BlocklyDuino.firstBlocklyArduino = function() {
-	$('#btn_videos, #menu_51').on('click', function() {
-		window.open('http://wiki.libreduc.cc/doku.php/fr/arduino/blockly_rduino/tutosvideos');
-	});
-	if (window.sessionStorage && !window.sessionStorage.msg_first_seen) {
-		$('#videoFirstModal').prop('src', "https://player.vimeo.com/video/179569437?autoplay=0&title=0&byline=0&portrait=0"); 
-		$('#firstModal').modal('show');
-		}
-	var BoardChoiceUrl = BlocklyDuino.getStringParamFromUrl('card', '');
-	if ((!window.localStorage.ConfigGlobaleSeen)&&(BoardChoiceUrl==='')) $('#configModalGlobal').modal('show');
 };
 
 /**
