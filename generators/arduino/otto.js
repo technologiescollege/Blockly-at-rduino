@@ -35,7 +35,10 @@ Blockly.Arduino['otto9_home'] = function(block) {
   Blockly.Arduino.definitions_['otto9_legs'] = '#define PIN_YL 2 // left leg, servo[0]\n'
 	+ '#define PIN_YR 3 // right leg, servo[1]\n'
 	+ '#define PIN_RL 4 // left foot, servo[2]\n'
-	+ '#define PIN_RR 5 // right foot, servo[3]';
+  + '#define PIN_RR 5 // right foot, servo[3]\n'
+  + '#define PIN_Trigger 8 // ultrasound \n'
+  + '#define PIN_Echo 9 // ultrasound \n'
+  + '#define PIN_Buzzer  13 //buzzer';
   Blockly.Arduino.setups_['otto9_init']='Otto.init(PIN_YL, PIN_YR, PIN_RL, PIN_RR, true, A6, PIN_Buzzer, PIN_Trigger, PIN_Echo);';
   var code = 'Otto.home();\n';
   return code;
@@ -51,7 +54,10 @@ Blockly.Arduino['otto9_move'] = function(block) {
   Blockly.Arduino.definitions_['otto9_legs'] = '#define PIN_YL 2 // left leg, servo[0]\n'
 	+ '#define PIN_YR 3 // right leg, servo[1]\n'
 	+ '#define PIN_RL 4 // left foot, servo[2]\n'
-	+ '#define PIN_RR 5 // right foot, servo[3]';
+	+ '#define PIN_RR 5 // right foot, servo[3]\n'
+  + '#define PIN_Trigger 8 // ultrasound \n'
+  + '#define PIN_Echo 9 // ultrasound \n'
+  + '#define PIN_Buzzer  13 //buzzer';
   Blockly.Arduino.setups_['otto9_init']='Otto.init(PIN_YL, PIN_YR, PIN_RL, PIN_RR, true, A6, PIN_Buzzer, PIN_Trigger, PIN_Echo);\n';
   var code = '';
   switch(dropdown_otto_move_sens) {
@@ -94,7 +100,10 @@ Blockly.Arduino['otto9_dance'] = function(block) {
   Blockly.Arduino.definitions_['otto9_legs'] = '#define PIN_YL 2 // left leg, servo[0]\n'
 	+ '#define PIN_YR 3 // right leg, servo[1]\n'
 	+ '#define PIN_RL 4 // left foot, servo[2]\n'
-	+ '#define PIN_RR 5 // right foot, servo[3]';
+	+ '#define PIN_RR 5 // right foot, servo[3]\n'
+  + '#define PIN_Trigger 8 // ultrasound \n'
+  + '#define PIN_Echo 9 // ultrasound \n'
+  + '#define PIN_Buzzer  13 //buzzer';
   Blockly.Arduino.setups_['otto9_init']='Otto.init(PIN_YL, PIN_YR, PIN_RL, PIN_RR, true, A6, PIN_Buzzer, PIN_Trigger, PIN_Echo);\n';
   var code = '';
   if(dropdown_otto_dance_movement == ('moonwalker')||('crusaito')||('flapping'))
@@ -113,7 +122,10 @@ Blockly.Arduino['otto9_gesture'] = function(block) {
   Blockly.Arduino.definitions_['otto9_legs'] = '#define PIN_YL 2 // left leg, servo[0]\n'
 	+ '#define PIN_YR 3 // right leg, servo[1]\n'
 	+ '#define PIN_RL 4 // left foot, servo[2]\n'
-	+ '#define PIN_RR 5 // right foot, servo[3]';
+	+ '#define PIN_RR 5 // right foot, servo[3]\n'
+  + '#define PIN_Trigger 8 // ultrasound \n'
+  + '#define PIN_Echo 9 // ultrasound \n'
+  + '#define PIN_Buzzer  13 //buzzer';
   Blockly.Arduino.definitions_['otto9_distance'] = '#define PIN_Trigger 8\n'
 	+ '#define PIN_Echo 9';
   Blockly.Arduino.setups_['otto9_init']='Otto.init(PIN_YL, PIN_YR, PIN_RL, PIN_RR, true, A6, PIN_Buzzer, PIN_Trigger, PIN_Echo);\n';
