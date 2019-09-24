@@ -59,7 +59,7 @@ Blockly.Msg.BF_field_name_warning1 = "Il y a ";
 Blockly.Msg.BF_field_name_warning2 = "blocs\navec ce nom.";
 Blockly.Msg.BF_blockType = "nom";
 Blockly.Msg.BF_blockType_warning = "Le nom du bloc fait doublon avec le type : ";
-Blockly.Msg.BF_tooltip = "ce bloc sert à...";
+Blockly.Msg.BF_tooltip = "'ce bloc sert à...'";
 Blockly.Msg.BF_helpUrl = "http://www.mon-club-elec.fr/pmwiki_reference_arduino/pmwiki.php?n=Main.ReferenceMaxi";
 Blockly.Msg.BF_helpGenerator = "IMPORTANT : supprimer ce qui n'est pas utile";
 Blockly.Msg.BF_help_includes = "placer ici le code des bibliothèques";
