@@ -280,7 +280,7 @@ function updatePreview() {
     return;
   }
   var format = 'JavaScript';
-  eval(code);
+  // eval(code);
   var previewBlock = Blockly.Block.obtain(previewWorkspace, blockType);
   delete Blockly.Blocks[blockType];
   previewBlock.initSvg();

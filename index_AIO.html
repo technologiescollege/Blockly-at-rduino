@@ -145,12 +145,12 @@
                 </div>
                 <div id="divTitre">
                     <div id="btn_levels">
-                        <a href="#" id="toolbox_algo" class="btn btn-default" role='button'>0</a>
-                        <a href="#" id="toolbox_arduino_1" class="btn btn-default" role='button'>1</a>
-                        <a href="#" id="toolbox_arduino_2" class="btn btn-default" role='button'>2</a>
-                        <a href="#" id="toolbox_arduino_3" class="btn btn-default" role='button'>3</a>
-                        <a href="#" id="toolbox_arduino_4" class="btn btn-default" role='button'>4</a>
-                        <a href="#" id="toolbox_arduino_all" class="btn btn-default" role='button'>TOUT</a>
+                        <a href="#" id="toolbox_algo" class="btn btn-level btn-default" role='button'>0</a>
+                        <a href="#" id="toolbox_arduino_1" class="btn btn-level btn-default" role='button'>1</a>
+                        <a href="#" id="toolbox_arduino_2" class="btn btn-level btn-default" role='button'>2</a>
+                        <a href="#" id="toolbox_arduino_3" class="btn btn-level btn-default" role='button'>3</a>
+                        <a href="#" id="toolbox_arduino_4" class="btn btn-level btn-default" role='button'>4</a>
+                        <a href="#" id="toolbox_arduino_all" class="btn btn-level btn-default" role='button'>TOUT</a>
                         <label id="labelToolboxDefinition"></label>
                     </div>
                 </div>
@@ -233,7 +233,7 @@
         <div id="divBody">
             <div id="menuPanel">
                 <div id="menuPanelConfig">
-                    <button id="btn_configGlobal" class="btn btn_ver btn-danger btn-block" data-toggle="modal" data-target="#configModalGlobal">
+                    <button id="btn_configGlobal" class="btn btn-sm btn_ver btn-danger btn-block" data-toggle="modal" data-target="#configModalGlobal">
                         <span class="glyphicon glyphicon-alert"> </span>
                         <span id="configGlobalLabel"> </span>
                     </button>
@@ -242,11 +242,11 @@
                             <img id="arduino_card_miniPicture" />
                         </a>
                     </div>
-                    <button id="btn_config" class="btn btn-warning btn-block " data-toggle="modal" data-target="#configModal">
+                    <button id="btn_config" class="btn btn-sm btn-warning btn-block " data-toggle="modal" data-target="#configModal">
                         <span class="fa fa-cogs"> </span>
                         <span id="span_config"> </span>
                     </button>
-                    <a href="#" id="btn_config_kit" target="_blank" class="btn btn-warning btn-block hidden" role='button'>
+                    <a href="#" id="btn_config_kit" target="_blank" class="btn btn-sm btn-warning btn-block hidden" role='button'>
                         <span class="glyphicon glyphicon-th-list"> </span>
                         <span id="span_config_kit"> </span>
                     </a>
@@ -275,19 +275,19 @@
                     </ul>
                 </div>
                 <div id="menuPanelFiles">
-                    <a id="btn_saveXML" class='btn btn-success btn-block' href="#" role='button'>
+                    <a id="btn_saveXML" class='btn btn-sm btn-success btn-block' href="#" role='button'>
                         <span class="fas fa-cloud-download-alt"></span>
                         <span id="span_saveXML"> </span>
                     </a>
-                    <button id="btn_fakeload" class="btn btn-success btn-block" accept="*.B@, *.xml">
+                    <button id="btn_fakeload" class="btn btn-sm btn-success btn-block" accept="*.B@, *.xml">
                         <span class="fas fa-cloud-upload-alt"></span>
                         <span id="span_fakeload"> </span>
                     </button>
-                    <button id="btn_example" class="btn btn-info btn-block" data-toggle="modal" data-target="#exampleModal">
+                    <button id="btn_example" class="btn btn-sm btn-info btn-block" data-toggle="modal" data-target="#exampleModal">
                         <span class="glyphicon glyphicon-list-alt"> </span>
                         <span id="span_example"> </span>
                     </button>
-                    <a id="btn_create_example" class="btn btn_ver btn-info btn-block" href="#" target="_blank" role='button'>
+                    <a id="btn_create_example" class="btn btn-sm btn_ver btn-info btn-block" href="#" target="_blank" role='button'>
                         <span class="glyphicon glyphicon-wrench"> </span>
                         <span id="span_create_example"> </span>
                     </a>
@@ -299,18 +299,18 @@
                     </button>
                     <br />
                     <br />
-                    <button id="btn_factory" class="btn btn-primary" >
+                    <button id="btn_factory" class="btn btn-sm btn-primary" >
                         <span class="fa fa-industry"> </span>
                     </button>
-                    <button id="btn_RGB" class="btn btn-primary">
+                    <button id="btn_RGB" class="btn btn-sm btn-primary">
                         <span class="glyphicon glyphicon-th"> </span>
                     </button>
-                    <button id="btn_convert" class="btn btn-primary">
+                    <button id="btn_convert" class="btn btn-sm btn-primary">
                         <span class="glyphicon glyphicon-superscript"> </span>
                     </button>
                     <br />
                     <br />
-                    <button id="btn_miniMenuPanel" class="btn btn-default" >
+                    <button id="btn_miniMenuPanel" class="btn btn-sm btn-default" >
                         <span class="glyphicon glyphicon-step-backward"> </span>
                     </button>
                     <a href="./index_electron.html" id="btn_reset" class="btn btn-danger">
@@ -322,6 +322,13 @@
                         <button id="btn_about" type="button" class="btn btn-default btn-sm btn-success" data-toggle="modal" data-target="#aboutModal">
                             <span id="span_about"> </span>
                             <span class="glyphicon glyphicon-user"></span>
+                        </button>
+                    </div>
+                    <br />
+                    <div id="div_paypal">
+                        <button id="btn_about" type="button" class="btn btn-default btn-sm btn-danger" data-toggle="modal" data-target="#paypalModal">
+                            <span id="span_about"> </span>
+                            <span class="glyphicon glyphicon-euro"></span>
                         </button>
                     </div>
                 </div>
@@ -379,7 +386,7 @@
                                 <img alt="" border="0" src=".\media\pixel.gif" width="1" height="1"/>
                             </form>
                         </div>
-                        <div align="center"><b><a href="http://framaforms.org/blocklyrduino-utilisateurs-1490560876" target='blank'><font size="6"><span id="span_forms_about" style="font-style: bold;"> </span></font></a></b></div>
+                        <div align="center"><b><a href="http://framaforms.org/blocklyrduino-utilisateurs-1490560876" target='blank'><font size="5"><span id="span_forms_about" style="font-style: bold;"> </span></font></a></b></div>
 						<br />
                         <b>Forum</b> : <a href='http://blockly.technologiescollege.fr/forum' target='blank'><i class="fab fa-wpforms"></i> http://blockly.technologiescollege.fr/forum</a>
                         <br />
@@ -546,7 +553,7 @@
                         </div>
                         <label> </label>
                         <label id="span_functionToggle"> </label>
-                        <input id="toggle-Functions" data-toggle="toggle" data-off='<span id="span_functionON"> </span>' data-on='<span id="span_functionOFF"> </span>' data-onstyle="primary" data-offstyle="default" data-width="120" type="checkbox"/>
+                        <input id="toggle-Functions" data-toggle="toggle" data-off="<span id='span_functionON'> </span>" data-on="<span id='span_functionOFF'> </span>" data-onstyle="primary" data-offstyle="default" data-width="120" type="checkbox"/>
                     </div>
                     <input type="checkbox" name="select_all" id="select_all"/> <span id="span_select_all"> </span>
                     <div class="modal-body" id="modal-body-config"></div>
@@ -659,9 +666,6 @@
                                 </select>
                             </div>
                             <br />
-                            <br />
-                            <br />
-                            <input id="toggle-Colors" data-toggle="toggle" data-off="<span id='span_colorBW'> </span>" data-on="<span id='span_colorColors'> </span>" data-onstyle="primary" data-offstyle="default" data-width="120" type="checkbox"/><br />
                             <br />
                             <br />
                             <div id="div_help_button">
