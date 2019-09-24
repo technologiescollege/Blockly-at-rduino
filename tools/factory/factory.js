@@ -337,6 +337,9 @@ function init() {
     }
   };
   onresize();
+
+  CodeFactory.initLanguageBlockFactory();
+
   window.addEventListener('resize', onresize);
 	// Construct the toolbox XML, replacing translated variable names.
 	var toolboxText = document.getElementById('toolbox_factory').outerHTML;
@@ -362,6 +365,5 @@ function init() {
   rootBlock.setDeletable(false);
   mainWorkspace.addChangeListener(onchange);
   document.getElementById('direction').addEventListener('change', updatePreview);
-  CodeFactory.initLanguageBlockFactory();
 }
 window.addEventListener('load', init);

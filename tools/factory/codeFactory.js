@@ -83,6 +83,13 @@ CodeFactory.initLanguageBlockFactory = function() {
 	$('#span_factory_help').html(Blockly.Msg.BF_help);
 	$('#span_BF_divBlocks').text(Blockly.Msg.BF_divBlocks);
 	$('#span_BF_divGenerators').text(Blockly.Msg.BF_divGenerators);
+
+	$("xml").find("category").each(function() {
+		// add attribute ID to keep categorie code
+		$(this).attr('id', $(this).attr('name'));
+		$(this).attr('name', Blockly.Msg[$(this).attr('name')]);
+	});
+
 };
 
 // Load Factory's language strings.
