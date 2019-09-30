@@ -35,7 +35,7 @@ html,body {
 }
 
 #header {
-	background: #00969C;
+	background: #018790;
 	height: 36px;
 }
 
@@ -404,15 +404,15 @@ html[dir="RTL"] #languageMenu {
 }
 #barre{
 	padding : 3px 0px 0px 10px;
-	background-color : #00969C;
+	background-color : #018790;
 }
 #barre_h{
 	padding : 5px 5px 5px 10px;
-	background-color : #00969C;
+	background-color : #018790;
 }
 #barre_ide{
 	padding : 2px 5px 5px 10px;
-	background-color : #00969C;
+	background-color : #018790;
 }
 #btn_term {
 	right: 15px;
@@ -537,7 +537,7 @@ html[dir="RTL"] .blocklyToolboxDiv .blocklyTreeRoot [role="treeitem"]   .blockly
 }
 
 /* .blocklyTreeRow:hover { */
-	/* background-color: #00969C !important; */
+	/* background-color: #018790 !important; */
 /* } */
 
 .blocklyTreeSeparator {
@@ -636,7 +636,7 @@ html[dir="RTL"] .colors_category {
 ----------------------------------*/
 
 .btn-arduino { 
-  color: #00969C; 
+  color: #018790; 
   width: 28px;
   height: 28px;
   background-color: #006468; 
@@ -646,7 +646,7 @@ html[dir="RTL"] .colors_category {
   border-radius:50%;
 } 
 .btn-arduinoRect { 
-  color: #00969C;
+  color: #018790;
   width: 28px;
   height: 28px;
   background-color: #006468; 
