@@ -13,18 +13,18 @@
         <script type="text/javascript" src="core/Ardublockly/instances.js"></script>
         <script type="text/javascript" src="core/Ardublockly/field_instance.js"></script>
         <script type="text/javascript" src="core/Ardublockly/block_instance.js"></script>
-        <!--Generators, must be defined NOW-->
+        <!--Arduino generator, must be defined NOW-->
         <script type="text/javascript" src="generators/generator_arduino.js"></script>
         <script type="text/javascript" src="generators/generator_python.js"></script>
 
-        <script type="text/javascript" src="core/BlocklyArduino/blockly@rduino_core_Electron.js"></script>
+        <script type="text/javascript" src="core/BlocklyArduino/blockly@rduino_core_web.js"></script>
         <script type="text/javascript" src="core/BlocklyArduino/blockly@rduino_boards.js"></script>
-        <script type="text/javascript" src="core/BlocklyArduino/blockly@rduino_functions_buttons_Electron.js"></script>
+        <script type="text/javascript" src="core/BlocklyArduino/blockly@rduino_functions_buttons_web.js"></script>
         <script type="text/javascript" src="core/BlocklyArduino/blockly@rduino_tools.js"></script>
         <script type="text/javascript" src="core/BlocklyArduino/blockly@rduino_visual.js"></script>
         <script type="text/javascript" src="core/BlocklyArduino/blockly@rduino_visual_buttons.js"></script>
 
-        <script type="text/javascript" src="core/libs/jquery-2.1.3.min.js" onload="window.$ = window.jQuery = module.exports;"></script>
+        <script type="text/javascript" src="core/libs/jquery-2.1.3.min.js"></script>
         <script type="text/javascript" src="core/libs/jquery-ui.js"></script>
         <script type="text/javascript" src="core/libs/bootstrap.min.3.3.6.js"></script>
         <script type="text/javascript" src="core/libs/bootstrap-toggle.min.js"></script>
@@ -47,7 +47,7 @@
         <script type="text/javascript" src="lang/code.js"></script>
 
         <link rel="stylesheet" type="text/css" href="css/bootstrap.min.BlocklyArduino.css"/>
-        <link rel="stylesheet" type="text/css" href="css/blockly@rduino.css"/>
+        <link rel="stylesheet" type="text/css" href="css/blockly@rduino_1.css"/>
         <link rel="stylesheet" type="text/css" href="css/bootstrap-toggle.min.css"/>
         <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css"/>
         <link rel="stylesheet" type="text/css" href="css/jquery-ui.css"/>
@@ -63,11 +63,11 @@
     <body onload="BlocklyDuino.init()">
         <div class="loading"></div>
         <div id="header">
-            <!-- <div id="logo_Titre"> -->
-                <!-- <a href="./index_electron.html"> -->
-                    <!-- <img id="clearLink" src="media/logo-mini.png" border="0" height="36" onclick="" /> -->
-                <!-- </a> -->
-            <!-- </div> -->
+            <div id="logo_Titre">
+                <a href="./index.html">
+                    <img id="clearLink" src="media/logo.png" border="0" height="36" onclick="" />
+                </a>
+            </div>
             <div id="header_titres">
                 <div id="divTitreMenu" class="hidden">
                     <div id="divTitreMenu_menu">
@@ -143,69 +143,49 @@
                         </nav>
                     </div>
                 </div>
-                <!-- <div id="divTitre"> -->
-                    <!-- <div id="btn_levels"> -->
-                        <!-- <a href="#" id="toolbox_algo" class="btn btn-level btn-default" role='button'>0</a> -->
-                        <!-- <a href="#" id="toolbox_arduino_1" class="btn btn-level btn-default" role='button'>1</a> -->
-                        <!-- <a href="#" id="toolbox_arduino_2" class="btn btn-level btn-default" role='button'>2</a> -->
-                        <!-- <a href="#" id="toolbox_arduino_3" class="btn btn-level btn-default" role='button'>3</a> -->
-                        <!-- <a href="#" id="toolbox_arduino_4" class="btn btn-level btn-default" role='button'>4</a> -->
-                        <!-- <a href="#" id="toolbox_arduino_all" class="btn btn-level btn-default" role='button'>TOUT</a> -->
-                        <!-- <label id="labelToolboxDefinition"></label> -->
-                    <!-- </div> -->
-                <!-- </div> -->
+                <div id="divTitre">
+                    <div id="btn_levels">
+                        <a href="#" id="toolbox_algo" class="btn btn-level btn-default" role='button'>0</a>
+                        <a href="#" id="toolbox_arduino_1" class="btn btn-level btn-default" role='button'>1</a>
+                        <a href="#" id="toolbox_arduino_2" class="btn btn-level btn-default" role='button'>2</a>
+                        <a href="#" id="toolbox_arduino_3" class="btn btn-level btn-default" role='button'>3</a>
+                        <a href="#" id="toolbox_arduino_4" class="btn btn-level btn-default" role='button'>4</a>
+                        <a href="#" id="toolbox_arduino_all" class="btn btn-level btn-default" role='button'>TOUT</a>
+                        <label id="labelToolboxDefinition"></label>
+                    </div>
+					<div id="barre">
+						<button id="btn_edit_code" class="btn btn-arduinoRect" data-toggle="modal" data-target="#editModal">
+							<span id="icon_edit_btn" class="glyphicon glyphicon-edit"> </span>
+						</button>
+						<button id="btn_saveArduino" class="btn btn-arduinoRect">
+							<span class="fas fa-file-download fa-1_5x fa-fw"> </span>
+						</button>
+						<button id="btn_verify_local" class="btn btn-arduino" disabled="">
+							<span class="fas fa-check fa-1_5x fa-fw"> </span>
+						</button>
+						<select id="serialport_ide" disabled="">
+							<option value="no_com" selected="">Choisir le port</option>
+						</select>
+						<button id="btn_flash_local" class="btn btn-arduino" disabled="">
+							<span class="fas fa-arrow-right fa-1_5x fa-fw"> </span>
+						</button>
+						<button id="btn_term" class="btn btn-arduinoRect" disabled="">
+							<span class="fas fa-search fa-flip-horizontal fa-1_5x fa-fw"> </span>
+						</button>
+						<!-- <button id="btn_pasteIDEArduino" class="btn btn-arduino"> -->
+						<!-- <span class="fa fa-folder-open"> </span> -->
+						<!-- <span id="span_pasteIDEArduino"> </span> -->
+						<!-- </button> -->
+						<span id="survol" style="color:white"></span>
+					</div>
+                </div>
                 <div id="divTitreMenu_miniCard">
                     <a href="#" id="miniCard_Menu">
                         <img id="arduino_card_miniPicture_Menu" height="36" border="0"/>
                     </a>
                 </div>
             </div>
-            <div id="header_code">
-				<div id="barre_ide">
-					<button id="btn_edit_code" class="btn btn-arduinoRect" data-toggle="modal" data-target="#editModal">
-						<span id="icon_edit_btn" class="glyphicon glyphicon-edit"> </span>
-					</button>
-					<button id="btn_saveArduino" class="btn btn-arduinoRect">
-						<span class="fas fa-file-download fa-1_5x fa-fw"> </span>
-					</button>
-					<button id="btn_verify_local" class="btn btn-arduino">
-						<span class="fas fa-check fa-1_5x fa-fw"> </span>
-					</button>
-					<select id="serialport_ide" class="synchCOMport">
-						<option value="no_com" selected="">Choisir le port</option>
-					</select>
-					<button id="btn_flash_local" class="btn btn-arduino">
-						<span class="fas fa-arrow-right fa-1_5x fa-fw"> </span>
-					</button>
-					<button id="btn_term" class="btn btn-arduinoRect">
-						<span class="fas fa-search fa-flip-horizontal fa-1_5x fa-fw"> </span>
-					</button>
-					<!-- <button id="btn_pasteIDEArduino" class="btn btn-arduino"> -->
-					<!-- <span class="fa fa-folder-open"> </span> -->
-					<!-- <span id="span_pasteIDEArduino"> </span> -->
-					<!-- </button> -->
-					<span id="survol" style="color:white"></span>
-				</div>
-            </div>
-            <div id="header_supervision">
-				<div id="barre_supervision">
-					<select id="serialport_sup" class="synchCOMport">
-						<option value="no_com" selected>Choisir le port</option>
-					</select>
-					<span id="span_pymata_upload_text" style="color:white"></span>
-					<button id="btn_flash_pymata" class="btn btn-arduino">
-						<span class="fas fa-arrow-right fa-1_5x fa-fw"> </span>
-                        <span id="span_flash_pymata"> </span>
-					</button>
-					<span id="span_pymata_toggle_text" style="color:white"></span>
-					<button id="toggle-pymata" class="btn btn-arduino">
-						<span class="fas fa-arrow-right fa-1_5x fa-fw"> </span>
-                        <span id="span_flash_pymata"> </span>
-					</button>
-					<!-- <input id="toggle-pymata" data-toggle="toggle" data-off="<span id='span_pymataOFF'> </span>" data-on="<span id='span_pymataON'> </span>" data-onstyle="primary" data-offstyle="default" data-width="120" type="checkbox"/> -->
-					<span id="sup_debug" style="color:white"></span>
-				</div>
-            </div>
+
             <div id="tools_blocks" class="tab-pane active">
                 <button id="btn_undo" class="btn btn-default">
                     <span class="fa fa-undo"> </span>
@@ -245,104 +225,104 @@
         <div id="divBody">
             <div id="menuPanel">
                 <div id="menuPanelConfig">
-                    <!-- <button id="btn_configGlobal" class="btn btn-sm btn_ver btn-danger btn-block" data-toggle="modal" data-target="#configModalGlobal"> -->
-                        <!-- <span class="glyphicon glyphicon-alert"> </span> -->
-                        <!-- <span id="configGlobalLabel"> </span> -->
-                    <!-- </button> -->
-                    <!-- <div id="div_miniPicture"> -->
-                        <!-- <a id="miniCard"> -->
-                            <!-- <img id="arduino_card_miniPicture" /> -->
-                        <!-- </a> -->
-                    <!-- </div> -->
-                    <!-- <button id="btn_config" class="btn btn-sm btn-warning btn-block " data-toggle="modal" data-target="#configModal"> -->
-                        <!-- <span class="fa fa-cogs"> </span> -->
-                        <!-- <span id="span_config"> </span> -->
-                    <!-- </button> -->
-                    <!-- <a href="#" id="btn_config_kit" target="_blank" class="btn btn-sm btn-warning btn-block hidden" role='button'> -->
-                        <!-- <span class="glyphicon glyphicon-th-list"> </span> -->
-                        <!-- <span id="span_config_kit"> </span> -->
-                    <!-- </a> -->
+                    <button id="btn_configGlobal" class="btn btn-sm btn_ver btn-danger btn-block" data-toggle="modal" data-target="#configModalGlobal">
+                        <span class="glyphicon glyphicon-alert"> </span>
+                        <span id="configGlobalLabel"> </span>
+                    </button>
+                    <div id="div_miniPicture">
+                        <a id="miniCard">
+                            <img id="arduino_card_miniPicture" />
+                        </a>
+                    </div>
+                    <button id="btn_config" class="btn btn-sm btn-warning btn-block " data-toggle="modal" data-target="#configModal">
+                        <span class="fa fa-cogs"> </span>
+                        <span id="span_config"> </span>
+                    </button>
+                    <a href="#" id="btn_config_kit" target="_blank" class="btn btn-sm btn-warning btn-block hidden" role='button'>
+                        <span class="glyphicon glyphicon-th-list"> </span>
+                        <span id="span_config_kit"> </span>
+                    </a>
                 </div>
                 <div id="menuPanelBlockly" class="margin-top-5">
-                    <!-- <ul id="ul_nav" role="tablist"> -->
-                        <!-- <li role="presentation" id="tab_supervision" class="disabled"> -->
-                            <!-- <a href="https://github.com/technologiescollege/BlocklyArduino_AIO" target="_blank"> -->
-                                <!-- <span class="glyphicon glyphicon-transfer"></span> -->
-                                <!-- <span id="a_supervision"> </span> -->
-                            <!-- </a> -->
-                        <!-- </li> -->
-                        <!-- <li role="presentation" id="tab_blocks" class="active"> -->
-                            <!-- <a href="#content_blocks" aria-controls="content_blocks" role="tab" data-toggle="tab"> -->
-                                <!-- <span class="fa fa-puzzle-piece"></span> -->
-                                <!-- <span id="a_blocks"> </span> -->
-                            <!-- </a> -->
-                        <!-- </li> -->
-                        <!-- <li role="presentation" id="tab_arduino"> -->
-                            <!-- <a href="#content_arduino" aria-controls="content_arduino" role="tab" data-toggle="tab"> -->
-                                <!-- <span class="fa fa-code"></span> -->
-                                <!-- span class="glyphicon glyphicon-education"></span -->
-                                <!-- <span id="a_arduino"></span> -->
-                            <!-- </a> -->
-                        <!-- </li> -->
-                    <!-- </ul> -->
+                    <ul id="ul_nav" role="tablist">
+                        <li role="presentation" id="tab_supervision" class="disabled">
+                            <a href="https://github.com/technologiescollege/BlocklyArduino_AIO" target="_blank">
+                                <span class="glyphicon glyphicon-transfer"></span>
+                                <span id="a_supervision"> </span>
+                            </a>
+                        </li>
+                        <li role="presentation" id="tab_blocks" class="active">
+                            <a href="#content_blocks" aria-controls="content_blocks" role="tab" data-toggle="tab">
+                                <span class="fa fa-puzzle-piece"></span>
+                                <span id="a_blocks"> </span>
+                            </a>
+                        </li>
+                        <li role="presentation" id="tab_arduino">
+                            <a href="#content_arduino" aria-controls="content_arduino" role="tab" data-toggle="tab">
+                                <span class="fa fa-code"></span>
+                                <!--span class="glyphicon glyphicon-education"></span-->
+                                <span id="a_arduino"></span>
+                            </a>
+                        </li>
+                    </ul>
                 </div>
                 <div id="menuPanelFiles">
-                    <!-- <a id="btn_saveXML" class='btn btn-sm btn-success btn-block' href="#" role='button'> -->
-                        <!-- <span class="fas fa-cloud-download-alt"></span> -->
-                        <!-- <span id="span_saveXML"> </span> -->
-                    <!-- </a> -->
-                    <!-- <button id="btn_fakeload" class="btn btn-sm btn-success btn-block" accept="*.B@, *.xml"> -->
-                        <!-- <span class="fas fa-cloud-upload-alt"></span> -->
-                        <!-- <span id="span_fakeload"> </span> -->
-                    <!-- </button> -->
-                    <!-- <button id="btn_example" class="btn btn-sm btn-info btn-block" data-toggle="modal" data-target="#exampleModal"> -->
-                        <!-- <span class="glyphicon glyphicon-list-alt"> </span> -->
-                        <!-- <span id="span_example"> </span> -->
-                    <!-- </button> -->
-                    <!-- <a id="btn_create_example" class="btn btn-sm btn_ver btn-info btn-block" href="#" target="_blank" role='button'> -->
-                        <!-- <span class="glyphicon glyphicon-wrench"> </span> -->
-                        <!-- <span id="span_create_example"> </span> -->
-                    <!-- </a> -->
+                    <a id="btn_saveXML" class='btn btn-sm btn-success btn-block' href="#" role='button'>
+                        <span class="fas fa-cloud-download-alt"></span>
+                        <span id="span_saveXML"> </span>
+                    </a>
+                    <button id="btn_fakeload" class="btn btn-sm btn-success btn-block" accept="*.B@, *.xml">
+                        <span class="fas fa-cloud-upload-alt"></span>
+                        <span id="span_fakeload"> </span>
+                    </button>
+                    <button id="btn_example" class="btn btn-sm btn-info btn-block" data-toggle="modal" data-target="#exampleModal">
+                        <span class="glyphicon glyphicon-list-alt"> </span>
+                        <span id="span_example"> </span>
+                    </button>
+                    <a id="btn_create_example" class="btn btn-sm btn_ver btn-info btn-block" href="#" target="_blank" role='button'>
+                        <span class="glyphicon glyphicon-wrench"> </span>
+                        <span id="span_create_example"> </span>
+                    </a>
                 </div>
                 <input type="file" id="load" accept=".B@, .xml" style="display: none;" />
                 <div id="div_tools_button">
-                    <!-- <button id="btn_wiring" class="btn btn-primary"> -->
-                         <!-- <span class="fa fa-plug"></span> -->
-                    <!-- </button> -->
-                    <!-- <br /> -->
-                    <!-- <br /> -->
-                    <!-- <button id="btn_factory" class="btn btn-sm btn-primary" > -->
-                        <!-- <span class="fa fa-industry"> </span> -->
-                    <!-- </button> -->
-                    <!-- <button id="btn_RGB" class="btn btn-sm btn-primary"> -->
-                        <!-- <span class="glyphicon glyphicon-th"> </span> -->
-                    <!-- </button> -->
-                    <!-- <button id="btn_convert" class="btn btn-sm btn-primary"> -->
-                        <!-- <span class="glyphicon glyphicon-superscript"> </span> -->
-                    <!-- </button> -->
-                    <!-- <br /> -->
-                    <!-- <br /> -->
-                    <!-- <button id="btn_miniMenuPanel" class="btn btn-sm btn-default" > -->
-                        <!-- <span class="glyphicon glyphicon-step-backward"> </span> -->
-                    <!-- </button> -->
-                    <!-- <a href="./index_electron.html" id="btn_reset" class="btn btn-sm btn-danger"> -->
-                        <!-- <span class="glyphicon glyphicon-off"> </span> -->
-                    <!-- </a> -->
-                    <!-- <br /> -->
-                    <!-- <br /> -->
-                    <!-- <div id="div_about"> -->
-                        <!-- <button id="btn_about" type="button" class="btn btn-default btn-sm btn-success" data-toggle="modal" data-target="#aboutModal"> -->
-                            <!-- <span id="span_about"> </span> -->
-                            <!-- <span class="glyphicon glyphicon-user"></span> -->
-                        <!-- </button> -->
-                    <!-- </div> -->
-                    <!-- <br /> -->
-                    <!-- <div id="div_paypal"> -->
-                        <!-- <button id="btn_about" type="button" class="btn btn-default btn-sm btn-danger" data-toggle="modal" data-target="#paypalModal"> -->
-                            <!-- <span id="span_about"> </span> -->
-                            <!-- <span class="glyphicon glyphicon-euro"></span> -->
-                        <!-- </button> -->
-                    <!-- </div> -->
+                    <button id="btn_wiring" class="btn btn-primary">
+                         <span class="fa fa-plug"></span>
+                    </button>
+                    <br />
+                    <br />
+                    <button id="btn_factory" class="btn btn-sm btn-primary" >
+                        <span class="fa fa-industry"> </span>
+                    </button>
+                    <button id="btn_RGB" class="btn btn-sm btn-primary">
+                        <span class="glyphicon glyphicon-th"> </span>
+                    </button>
+                    <button id="btn_convert" class="btn btn-sm btn-primary">
+                        <span class="glyphicon glyphicon-superscript"> </span>
+                    </button>
+                    <br />
+                    <br />
+                    <button id="btn_miniMenuPanel" class="btn btn-sm btn-default" >
+                        <span class="glyphicon glyphicon-step-backward"> </span>
+                    </button>
+                    <a href="./index.html" id="btn_reset" class="btn btn-sm btn-danger">
+                        <span class="glyphicon glyphicon-off"> </span>
+                    </a>
+                    <br />
+                    <br />
+                    <div id="div_about">
+                        <button id="btn_about" type="button" class="btn btn-default btn-sm btn-success" data-toggle="modal" data-target="#aboutModal">
+                            <span id="span_about"> </span>
+                            <span class="glyphicon glyphicon-user"></span>
+                        </button>
+                    </div>
+                    <br />
+                    <div id="div_paypal">
+                        <button id="btn_about" type="button" class="btn btn-default btn-sm btn-danger" data-toggle="modal" data-target="#paypalModal">
+                            <span id="span_about"> </span>
+                            <span class="glyphicon glyphicon-euro"></span>
+                        </button>
+                    </div>
                 </div>
             </div>
             <!-- Nav tabs -->
@@ -424,7 +404,7 @@
                         <br /> - SmoothieCharts (<a href='http://smoothiecharts.org/' target='blank'>http://smoothiecharts.org/)</a>
                         <br />
                         <br />
-                        <i>version 09-05-2019 - v3.2.0</i>
+						<span id="span_version"> </span>
                     </div>
                 </div>
             </div>
@@ -703,12 +683,7 @@
                         </div>
                     </div>
                     <div class="modal-footer">
-						<div id="btn_saveConfigGlobale_id">
-							<button id="btn_saveConfigGlobale" type="button" class="btn btn-success" style="position: absolute;left: 15px;"></button>
-						</div>
-						<div id="btn_validConfigGlobale_id">
-							<button id="btn_validConfigGlobale" type="button" class="btn btn-primary"  data-dismiss="modal"></button>
-						</div>
+                        <button id="btn_validConfigGlobale" type="button" class="btn btn-primary"  data-dismiss="modal"></button>
                     </div>
                 </div>
             </div>
@@ -731,16 +706,6 @@
                 </div>
             </div>
         </div>
-		<!-- message modal -->
-		<div class="modal fade" id="message" tabindex="-1" role="dialog" aria-hidden="true">
-			<div class="modal-dialog modal-sm">
-				<div class="modal-content">
-					<div class="modal-body" >
-						<div id = "messageDIV"> </div>
-					</div>  
-				</div>
-			</div>
-		</div>
         <!--only for IDE mode -->
         <div id="wiring_dialog">
             <iframe frameborder="0" marginwidth="0" marginheight="0">
@@ -748,7 +713,4 @@
         </div>
         <div id="arduino_IDE_code"> </div>
     </body>
-	<script>
-		require('../resources/app.asar/Electron_Blockly@rduino_buttons_electron.js')
-	</script>
 </html>

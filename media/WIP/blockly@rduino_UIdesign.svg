@@ -15,7 +15,7 @@
    viewBox="0 0 297 210"
    version="1.1"
    id="svg8"
-   inkscape:version="0.92.1 r15371"
+   inkscape:version="0.48.4 r9939"
    sodipodi:docname="blockly@rduino_UIdesign.svg">
   <defs
      id="defs2">
@@ -43,16 +43,16 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.54876546"
-     inkscape:cx="431.91335"
-     inkscape:cy="531.93175"
+     inkscape:zoom="4.3901237"
+     inkscape:cx="136.90754"
+     inkscape:cy="637.87039"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
      inkscape:window-width="1920"
-     inkscape:window-height="1001"
-     inkscape:window-x="-9"
-     inkscape:window-y="-9"
+     inkscape:window-height="1027"
+     inkscape:window-x="1916"
+     inkscape:window-y="-4"
      inkscape:window-maximized="1"
      inkscape:snap-intersection-paths="true"
      inkscape:snap-bbox="true"
@@ -73,7 +73,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -188,11 +188,16 @@
        cy="83.478683"
        cx="1.506651"
        id="ellipse4604"
-       style="opacity:1;fill:#00878f;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.76962417;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers" />
+       style="opacity:1;fill:#00878f;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.76962417;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+       d="m 2.9792922,83.478683 c 0,0.69114 -0.6593239,1.25142 -1.4726412,1.25142 -0.81331718,0 -1.47264107,-0.56028 -1.47264107,-1.25142 0,-0.691139 0.65932389,-1.251419 1.47264107,-1.251419 0.8133173,0 1.4726412,0.56028 1.4726412,1.251419 z" />
     <g
-       id="g4783">
+       id="g4783"
+       inkscape:export-xdpi="279.84"
+       inkscape:export-ydpi="279.84">
       <g
-         id="g4759">
+         id="g4759"
+         inkscape:export-xdpi="462.76248"
+         inkscape:export-ydpi="462.76248">
         <path
            id="path4614"
            d="m 4.2332281,116.36342 c -0.6476888,0 -1.1692152,0.5214 -1.1692152,1.16909 v 4.81872 c 0,0.64769 0.5215264,1.16909 1.1692152,1.16909 h 0.1594546 a 1.4723863,1.2512027 0 0 0 1.3476092,0.75073 1.4723863,1.2512027 0 0 0 1.3485864,-0.75073 h 9.9413197 c 0.647688,0 1.169092,-0.5214 1.169092,-1.16909 v -4.81872 c 0,-0.64769 -0.521404,-1.16909 -1.169092,-1.16909 H 7.0890003 a 1.4723863,1.2512027 0 0 1 -1.3487084,0.75072 1.4723863,1.2512027 0 0 1 -1.3476092,-0.75072 z"
@@ -200,26 +205,29 @@
            inkscape:connector-curvature="0" />
         <path
            id="path4616"
-           d="m 8.4515164,116.36342 v 2.60077 c -0.6067796,-0.35463 -1.2731958,-0.62817 -1.4706519,-0.51417 -0.3875989,0.22378 -0.3875989,2.75992 0,2.9837 0.1974561,0.11401 0.8638723,-0.15954 1.4706519,-0.51416 v 2.60076 h 8.5786816 c 0.647688,0 1.169092,-0.5214 1.169092,-1.16909 v -4.81872 c 0,-0.64769 -0.521404,-1.16909 -1.169092,-1.16909 z"
-           style="opacity:1;fill:#c7d0da;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.1571693;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
-           inkscape:connector-curvature="0" />
+           d="m 7.6987702,116.69688 0,2.35537 c -0.6357857,-0.32117 -1.3340588,-0.5689 -1.5409539,-0.46565 -0.4061274,0.20265 -0.4061274,2.49949 0,2.70216 0.2068951,0.10321 0.9051682,-0.1445 1.5409539,-0.46567 l 0,2.35536 9.3021638,0 c 0.678649,0 0.911585,-0.4722 0.911585,-1.05877 l 0,-4.36401 c 0,-0.58659 -0.20769,-1.07258 -0.886339,-1.07164 z"
+           style="fill:#c7d0da;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           inkscape:connector-curvature="0"
+           inkscape:transform-center-x="1.434521"
+           sodipodi:nodetypes="ccccccssssc" />
         <g
            style="fill:#00878f;fill-opacity:1"
-           transform="matrix(0.28019944,0,0,0.28019944,-16.776226,100.90821)"
+           transform="matrix(0.28019944,0,0,0.28019944,-19.861433,100.85743)"
            id="g4620">
           <path
              inkscape:connector-curvature="0"
              id="path4618"
-             d="m 99.157219,74.097558 c -1.365791,-0.1389 -2.503433,-0.57866 -3.508485,-1.35623 -0.501301,-0.38784 -1.081773,-1.03857 -1.460849,-1.63769 -0.166896,-0.26377 -0.46445,-0.87434 -0.583134,-1.19658 -0.296852,-0.80596 -0.435459,-1.60562 -0.435025,-2.50975 4.42e-4,-0.92027 0.125629,-1.6708 0.409972,-2.45789 0.340275,-0.94193 0.8301,-1.724332 1.5012,-2.397883 0.462692,-0.464381 0.829863,-0.750003 1.346034,-1.047078 1.758057,-1.011824 4.252328,-1.161812 6.287088,-0.378063 1.56835,0.604098 2.96971,1.813798 4.36438,3.767504 0.16284,0.2281 0.31387,0.41476 0.33563,0.4148 0.0218,6e-5 0.1286,-0.12676 0.23742,-0.2818 1.47615,-2.103135 2.94465,-3.355953 4.65021,-3.967201 1.53702,-0.55085 3.40486,-0.57586 4.95294,-0.06632 1.62473,0.53477 2.97478,1.732812 3.71999,3.301138 0.31648,0.666063 0.4919,1.244883 0.62276,2.054943 0.0535,0.33134 0.076,1.35025 0.0383,1.73599 -0.25455,2.60394 -1.77037,4.6835 -4.06686,5.57934 -1.33166,0.51947 -3.0161,0.62634 -4.46995,0.28361 -1.45334,-0.34261 -2.6448,-1.03206 -3.82575,-2.21383 -0.58895,-0.58935 -0.95374,-1.02829 -1.68347,-2.02564 -0.0823,-0.11245 -0.16433,-0.20399 -0.18237,-0.20344 -0.018,5.5e-4 -0.0794,0.0688 -0.13642,0.15168 -0.87011,1.26513 -1.8812,2.35202 -2.82894,3.041 -1.53169,1.11349 -3.37098,1.60402 -5.284664,1.40939 z m 1.727861,-2.27985 c 0.68602,-0.11902 1.26868,-0.33373 1.83863,-0.67754 0.7822,-0.47185 1.72974,-1.43008 2.54614,-2.57486 0.38667,-0.5422 0.77244,-1.12304 0.77244,-1.16302 0,-0.0448 -0.49234,-0.78493 -0.84987,-1.27766 -1.01161,-1.39416 -1.86821,-2.209439 -2.85023,-2.712741 -1.21109,-0.6207 -2.725727,-0.727584 -4.077469,-0.287738 -1.728141,0.562325 -2.850469,2.233649 -2.85292,4.248459 -0.0019,1.55538 0.64188,2.90688 1.766949,3.70945 0.613982,0.43798 1.371409,0.70248 2.281835,0.79684 0.272918,0.0283 1.117995,-0.008 1.424495,-0.0612 z m -3.277661,-3.47502 c -0.02553,-0.0103 -0.03298,-0.23011 -0.03298,-0.97396 v -0.96065 h 2.374163 2.374158 v 0.96003 c 0,0.85109 -0.005,0.96185 -0.0417,0.97604 -0.0499,0.0191 -4.626096,0.0177 -4.673619,-0.001 z m 17.829801,3.52485 c 1.44732,-0.14562 2.55662,-0.79502 3.28023,-1.92029 0.26987,-0.41967 0.48201,-0.96583 0.61133,-1.57389 0.0684,-0.32135 0.0729,-0.38362 0.0729,-0.98924 0,-0.6051 -0.005,-0.66816 -0.0728,-0.98923 -0.23051,-1.08618 -0.74358,-1.967611 -1.50097,-2.578599 -0.57844,-0.466636 -1.21419,-0.74364 -2.01139,-0.876396 -1.18781,-0.197804 -2.34332,-0.03406 -3.3307,0.471994 -0.92494,0.474041 -1.73149,1.219743 -2.67005,2.468591 -0.40964,0.54507 -1.03006,1.4618 -1.03006,1.52201 0,0.0636 0.64162,1.00025 1.0792,1.57553 1.31305,1.72625 2.56258,2.59581 4.07801,2.83791 0.1741,0.0278 0.36404,0.055 0.42207,0.0604 0.23434,0.0218 0.81519,0.0171 1.07218,-0.009 z m -1.37085,-2.13056 c -0.0617,-0.005 -0.11417,-0.0104 -0.11668,-0.0132 -0.002,-0.003 -0.0114,-0.30778 -0.0198,-0.67776 l -0.0152,-0.67267 -0.47484,-0.0147 c -0.26116,-0.008 -0.92434,-0.017 -0.92796,-0.0198 -0.004,-0.003 -0.007,-0.43834 -0.007,-0.96791 v -0.96285 l 0.45504,-4.1e-4 c 0.25028,-2.1e-4 0.91757,-0.0105 0.93709,-0.0229 0.0283,-0.0179 0.0349,-0.15132 0.0325,-0.65566 -0.002,-0.34824 0.004,-0.65251 0.0135,-0.67615 0.0149,-0.039 -0.30266,-0.043 0.93072,-0.043 1.05986,0 0.91886,0.007 0.93517,0.033 0.0115,0.0181 0.0211,0.3255 0.0213,0.68304 3.5e-4,0.56821 0.006,0.65209 0.0421,0.66609 0.0229,0.009 0.24256,0.016 0.48802,0.016 h 0.89283 v 0.96285 c 0,0.52957 -0.003,0.96513 -0.007,0.9679 -0.004,0.003 -0.66681,0.0117 -0.92796,0.0198 l -0.47484,0.0147 -0.007,0.66709 c -0.005,0.49986 -0.0152,0.66988 -0.0396,0.67822 -0.0385,0.0132 -1.56835,0.0301 -1.73123,0.0183 z"
+             d="m 107.85162,74.767518 c -1.36579,-0.1389 -2.50343,-0.57866 -3.50849,-1.35623 -0.5013,-0.38784 -1.08177,-1.03857 -1.46085,-1.63769 -0.16689,-0.26377 -0.46445,-0.87434 -0.58313,-1.19658 -0.29685,-0.80596 -0.43546,-1.60562 -0.43502,-2.50975 4.4e-4,-0.92027 0.12562,-1.6708 0.40997,-2.45789 0.34027,-0.94193 0.8301,-1.724332 1.5012,-2.397883 0.46269,-0.464381 0.82986,-0.750003 1.34603,-1.047078 1.75806,-1.011824 4.25233,-1.161812 6.28709,-0.378063 1.56835,0.604098 2.96971,1.813798 4.36438,3.767504 0.16284,0.2281 0.31387,0.41476 0.33563,0.4148 0.0218,6e-5 0.1286,-0.12676 0.23742,-0.2818 1.47615,-2.103135 2.94465,-3.355953 4.65021,-3.967201 1.53702,-0.55085 3.40486,-0.57586 4.95294,-0.06632 1.62473,0.53477 2.97478,1.732812 3.71999,3.301138 0.31648,0.666063 0.4919,1.244883 0.62276,2.054943 0.0535,0.33134 0.076,1.35025 0.0383,1.73599 -0.25455,2.60394 -1.77037,4.6835 -4.06686,5.57934 -1.33166,0.51947 -3.0161,0.62634 -4.46995,0.28361 -1.45334,-0.34261 -2.6448,-1.03206 -3.82575,-2.21383 -0.58895,-0.58935 -0.95374,-1.02829 -1.68347,-2.02564 -0.0823,-0.11245 -0.16433,-0.20399 -0.18237,-0.20344 -0.018,5.5e-4 -0.0794,0.0688 -0.13642,0.15168 -0.87011,1.26513 -1.8812,2.35202 -2.82894,3.041 -1.53169,1.11349 -3.37098,1.60402 -5.28466,1.40939 z m 1.72786,-2.27985 c 0.68602,-0.11902 1.26868,-0.33373 1.83863,-0.67754 0.7822,-0.47185 1.72974,-1.43008 2.54614,-2.57486 0.38667,-0.5422 0.77244,-1.12304 0.77244,-1.16302 0,-0.0448 -0.49234,-0.78493 -0.84987,-1.27766 -1.01161,-1.39416 -1.86821,-2.209439 -2.85023,-2.712741 -1.21109,-0.6207 -2.72573,-0.727584 -4.07747,-0.287738 -1.72814,0.562325 -2.85047,2.233649 -2.85292,4.248459 -0.002,1.55538 0.64188,2.90688 1.76695,3.70945 0.61398,0.43798 1.37141,0.70248 2.28183,0.79684 0.27292,0.0283 1.118,-0.008 1.4245,-0.0612 z m -3.27766,-3.47502 c -0.0255,-0.0103 -0.033,-0.23011 -0.033,-0.97396 v -0.96065 h 2.37416 2.37416 v 0.96003 c 0,0.85109 -0.005,0.96185 -0.0417,0.97604 -0.0499,0.0191 -4.6261,0.0177 -4.67362,-10e-4 z m 17.8298,3.52485 c 1.44732,-0.14562 2.55662,-0.79502 3.28023,-1.92029 0.26987,-0.41967 0.48201,-0.96583 0.61133,-1.57389 0.0684,-0.32135 0.0729,-0.38362 0.0729,-0.98924 0,-0.6051 -0.005,-0.66816 -0.0728,-0.98923 -0.23051,-1.08618 -0.74358,-1.967611 -1.50097,-2.578599 -0.57844,-0.466636 -1.21419,-0.74364 -2.01139,-0.876396 -1.18781,-0.197804 -2.34332,-0.03406 -3.3307,0.471994 -0.92494,0.474041 -1.73149,1.219743 -2.67005,2.468591 -0.40964,0.54507 -1.03006,1.4618 -1.03006,1.52201 0,0.0636 0.64162,1.00025 1.0792,1.57553 1.31305,1.72625 2.56258,2.59581 4.07801,2.83791 0.1741,0.0278 0.36404,0.055 0.42207,0.0604 0.23434,0.0218 0.81519,0.0171 1.07218,-0.009 z m -1.37085,-2.13056 c -0.0617,-0.005 -0.11417,-0.0104 -0.11668,-0.0132 -0.002,-0.003 -0.0114,-0.30778 -0.0198,-0.67776 l -0.0152,-0.67267 -0.47484,-0.0147 c -0.26116,-0.008 -0.92434,-0.017 -0.92796,-0.0198 -0.004,-0.003 -0.007,-0.43834 -0.007,-0.96791 v -0.96285 l 0.45504,-4.1e-4 c 0.25028,-2.1e-4 0.91757,-0.0105 0.93709,-0.0229 0.0283,-0.0179 0.0349,-0.15132 0.0325,-0.65566 -0.002,-0.34824 0.004,-0.65251 0.0135,-0.67615 0.0149,-0.039 -0.30266,-0.043 0.93072,-0.043 1.05986,0 0.91886,0.007 0.93517,0.033 0.0115,0.0181 0.0211,0.3255 0.0213,0.68304 3.5e-4,0.56821 0.006,0.65209 0.0421,0.66609 0.0229,0.009 0.24256,0.016 0.48802,0.016 h 0.89283 v 0.96285 c 0,0.52957 -0.003,0.96513 -0.007,0.9679 -0.004,0.003 -0.66681,0.0117 -0.92796,0.0198 l -0.47484,0.0147 -0.007,0.66709 c -0.005,0.49986 -0.0152,0.66988 -0.0396,0.67822 -0.0385,0.0132 -1.56835,0.0301 -1.73123,0.0183 z"
              style="fill:#00878f;fill-opacity:1;stroke-width:0.02637959"
              sodipodi:nodetypes="ccccscssscccsccccssccccccccccscssccccccscccsccccscscssccscccccccccccscccccscccscsccccccc" />
         </g>
       </g>
       <g
-         inkscape:export-ydpi="89.977486"
-         inkscape:export-xdpi="89.977486"
+         inkscape:export-ydpi="462.76248"
+         inkscape:export-xdpi="462.76248"
          transform="translate(0.52916667,-0.97822543)"
-         id="g5567">
+         id="g5567"
+         inkscape:export-filename="F:\Logiciels\Arduino_graphique\Blockly-at-rduino\media\WIP\g4759.png">
         <g
            aria-label="blockly@rduino"
            style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:9.99902344px;line-height:1.25;font-family:'Brandon Grotesque';-inkscape-font-specification:'Brandon Grotesque, Medium';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.18714015"
@@ -681,7 +689,8 @@
            id="path5326"
            cx="148.46196"
            cy="120.1066"
-           r="0.8622582" />
+           r="0.8622582"
+           d="m 149.32422,120.1066 c 0,0.47621 -0.38605,0.86226 -0.86226,0.86226 -0.47621,0 -0.86226,-0.38605 -0.86226,-0.86226 0,-0.47621 0.38605,-0.86226 0.86226,-0.86226 0.47621,0 0.86226,0.38605 0.86226,0.86226 z" />
       </g>
     </g>
     <g
@@ -693,7 +702,8 @@
          cy="119.78806"
          cx="195.42079"
          id="path5330"
-         style="opacity:1;fill:#005358;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.52913386;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers" />
+         style="opacity:1;fill:#005358;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.52913386;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+         d="m 198.92079,119.78806 c 0,1.933 -1.567,3.5 -3.5,3.5 -1.93299,0 -3.5,-1.567 -3.5,-3.5 0,-1.93299 1.56701,-3.5 3.5,-3.5 1.933,0 3.5,1.56701 3.5,3.5 z" />
       <path
          inkscape:export-ydpi="89.977486"
          inkscape:export-xdpi="89.977486"
@@ -711,7 +721,8 @@
          id="circle5332"
          cx="242.85083"
          cy="119.78806"
-         r="3.5" />
+         r="3.5"
+         d="m 246.35083,119.78806 c 0,1.933 -1.567,3.5 -3.5,3.5 -1.933,0 -3.5,-1.567 -3.5,-3.5 0,-1.93299 1.567,-3.5 3.5,-3.5 1.933,0 3.5,1.56701 3.5,3.5 z" />
       <g
          inkscape:export-ydpi="89.977486"
          inkscape:export-xdpi="89.977486"
@@ -787,7 +798,8 @@
          cy="119.78806"
          cx="280.56961"
          id="circle5436"
-         style="opacity:1;fill:#005358;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.52913386;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers" />
+         style="opacity:1;fill:#005358;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.52913386;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+         d="m 284.06961,119.78806 c 0,1.933 -1.567,3.5 -3.5,3.5 -1.933,0 -3.5,-1.567 -3.5,-3.5 0,-1.93299 1.567,-3.5 3.5,-3.5 1.933,0 3.5,1.56701 3.5,3.5 z" />
       <path
          inkscape:export-ydpi="89.977486"
          inkscape:export-xdpi="89.977486"
@@ -805,7 +817,8 @@
          id="circle5438"
          cx="290.68884"
          cy="119.78806"
-         r="3.5" />
+         r="3.5"
+         d="m 294.18884,119.78806 c 0,1.933 -1.567,3.5 -3.5,3.5 -1.93299,0 -3.5,-1.567 -3.5,-3.5 0,-1.93299 1.56701,-3.5 3.5,-3.5 1.933,0 3.5,1.56701 3.5,3.5 z" />
       <g
          inkscape:export-ydpi="89.977486"
          inkscape:export-xdpi="89.977486"
@@ -935,16 +948,16 @@
        inkscape:export-xdpi="89.977486"
        inkscape:export-ydpi="89.977486" />
     <image
-       sodipodi:absref="C:\Users\Camilo\Desktop\Servo-01-512.png"
+       sodipodi:absref="F:\Logiciels\Arduino_graphique\Blockly-at-rduino\media\WIP\Servo-01-512.png"
        xlink:href="Servo-01-512.png"
-       inkscape:export-ydpi="89.977486"
-       inkscape:export-xdpi="89.977486"
-       width="12.131184"
-       height="12.131184"
-       preserveAspectRatio="none"
-       id="image5490"
+       y="150.56613"
        x="176.49234"
-       y="150.56613" />
+       id="image5490"
+       preserveAspectRatio="none"
+       height="12.131184"
+       width="12.131184"
+       inkscape:export-xdpi="89.977486"
+       inkscape:export-ydpi="89.977486" />
     <rect
        y="181.01094"
        x="180.56825"
@@ -955,16 +968,16 @@
        inkscape:export-xdpi="89.977486"
        inkscape:export-ydpi="89.977486" />
     <image
-       sodipodi:absref="C:\Users\Camilo\Desktop\Servo-01-512.png"
+       sodipodi:absref="F:\Logiciels\Arduino_graphique\Blockly-at-rduino\media\WIP\Servo-01-512.png"
        xlink:href="Servo-01-512.png"
-       inkscape:export-ydpi="89.977486"
-       inkscape:export-xdpi="89.977486"
-       y="180.82336"
-       x="181.86194"
-       id="image5497"
-       preserveAspectRatio="none"
+       width="12.131184"
        height="12.131184"
-       width="12.131184" />
+       preserveAspectRatio="none"
+       id="image5497"
+       x="181.86194"
+       y="180.82336"
+       inkscape:export-xdpi="89.977486"
+       inkscape:export-ydpi="89.977486" />
     <g
        id="g5516" />
     <g
@@ -997,7 +1010,8 @@
          id="circle5569"
          cx="175.44707"
          cy="119.78806"
-         r="3.5" />
+         r="3.5"
+         d="m 178.94707,119.78806 c 0,1.933 -1.56701,3.5 -3.5,3.5 -1.933,0 -3.5,-1.567 -3.5,-3.5 0,-1.93299 1.567,-3.5 3.5,-3.5 1.93299,0 3.5,1.56701 3.5,3.5 z" />
       <g
          inkscape:export-ydpi="89.977486"
          inkscape:export-xdpi="89.977486"
@@ -1070,7 +1084,8 @@
          cy="119.78806"
          cx="-167.21678"
          id="circle5571"
-         style="opacity:1;fill:#005358;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.52913386;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers" />
+         style="opacity:1;fill:#005358;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.52913386;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+         d="m -163.71678,119.78806 c 0,1.933 -1.567,3.5 -3.5,3.5 -1.933,0 -3.5,-1.567 -3.5,-3.5 0,-1.93299 1.567,-3.5 3.5,-3.5 1.933,0 3.5,1.56701 3.5,3.5 z" />
       <g
          inkscape:export-ydpi="89.977486"
          inkscape:export-xdpi="89.977486"
@@ -1253,7 +1268,8 @@
          id="circle5661"
          cx="272.53922"
          cy="274.34613"
-         r="3.5" />
+         r="3.5"
+         d="m 276.03922,274.34613 c 0,1.933 -1.56701,3.5 -3.5,3.5 -1.933,0 -3.5,-1.567 -3.5,-3.5 0,-1.933 1.567,-3.5 3.5,-3.5 1.93299,0 3.5,1.567 3.5,3.5 z" />
       <path
          inkscape:export-ydpi="89.977486"
          inkscape:export-xdpi="89.977486"
@@ -1271,7 +1287,8 @@
          id="circle5665"
          cx="285.15631"
          cy="252.13123"
-         r="3.5" />
+         r="3.5"
+         d="m 288.65631,252.13123 c 0,1.93299 -1.567,3.5 -3.5,3.5 -1.933,0 -3.5,-1.56701 -3.5,-3.5 0,-1.933 1.567,-3.5 3.5,-3.5 1.933,0 3.5,1.567 3.5,3.5 z" />
       <text
          inkscape:export-ydpi="89.977486"
          inkscape:export-xdpi="89.977486"
@@ -1295,7 +1312,8 @@
          cy="259.84311"
          cx="285.15631"
          id="circle5663"
-         style="opacity:1;fill:#ff6600;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.52794617;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers" />
+         style="opacity:1;fill:#ff6600;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.52794617;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+         d="m 288.65631,259.84311 c 0,1.933 -1.567,3.5 -3.5,3.5 -1.933,0 -3.5,-1.567 -3.5,-3.5 0,-1.933 1.567,-3.5 3.5,-3.5 1.933,0 3.5,1.567 3.5,3.5 z" />
       <g
          inkscape:export-ydpi="89.977486"
          inkscape:export-xdpi="89.977486"
@@ -1320,7 +1338,8 @@
          cy="243.70457"
          cx="285.15631"
          id="circle5667"
-         style="opacity:1;fill:#ff6600;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.52794617;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers" />
+         style="opacity:1;fill:#ff6600;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.52794617;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+         d="m 288.65631,243.70457 c 0,1.933 -1.567,3.5 -3.5,3.5 -1.933,0 -3.5,-1.567 -3.5,-3.5 0,-1.93299 1.567,-3.5 3.5,-3.5 1.933,0 3.5,1.56701 3.5,3.5 z" />
       <g
          inkscape:export-ydpi="89.977486"
          inkscape:export-xdpi="89.977486"

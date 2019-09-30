@@ -116,6 +116,7 @@ Code.initLanguage = function() {
   //$('#span_picture').text(MSG['span_picture']);
   $('#arduino_card_miniPicture').attr('title', MSG['span_picture']);
   $('#aboutModalLabel').text(MSG['aboutModalLabel']);
+  $('#span_version').html(BlocklyArduinoMSG['span_version']);
   $('#aboutBody').html(MSG['aboutBody']);
   $('#paypalModalLabel').text(MSG['paypalModalLabel']);
   $('#paypalBody').html(MSG['paypalBody']);
@@ -388,6 +389,7 @@ Code.initLanguageSupervision = function() {
 
 // And then load the choose langage
 //Load the Code demo's language strings.
+document.write('<script src="lang/BlocklyArduino_msg/UI.js"></script>\n');
 document.write('<script src="lang/BlocklyArduino_msg/' + Code.LANG + '.js"></script>\n');
 // Load Blockly's language strings.
 document.write('<script src="lang/Blockly_msg/' + Code.LANG + '.js"></script>\n');
