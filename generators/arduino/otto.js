@@ -126,8 +126,8 @@ Blockly.Arduino['otto9_gesture'] = function(block) {
   + '#define PIN_Trigger 8 // ultrasound \n'
   + '#define PIN_Echo 9 // ultrasound \n'
   + '#define PIN_Buzzer  13 //buzzer';
-  Blockly.Arduino.definitions_['otto9_distance'] = '#define PIN_Trigger 8\n'
-	+ '#define PIN_Echo 9';
+  Blockly.Arduino.definitions_['otto9_distance'] = '#define PIN_Trigger 8 // ultrasound \n'
+	+ '#define PIN_Echo 9 // ultrasound';
   Blockly.Arduino.setups_['otto9_init']='Otto.init(PIN_YL, PIN_YR, PIN_RL, PIN_RR, true, A6, PIN_Buzzer, PIN_Trigger, PIN_Echo);\n';
   var code = 'Otto.playGesture(' + dropdown_otto_gesture + ');\n';
   return code;
@@ -149,8 +149,8 @@ Blockly.Arduino['otto9_getdistance'] = function(block) {
   Blockly.Arduino.includes_['otto9_lib_dist'] = '#include <US.h>';
   Blockly.Arduino.variables_['otto9_distance'] = 'int distance;\n'
 	+ 'bool obstacleDetected = false;';
-  Blockly.Arduino.definitions_['otto9_distance'] = '#define PIN_Trigger 8\n'
-	+ '#define PIN_Echo 9';
+  Blockly.Arduino.definitions_['otto9_distance'] = '#define PIN_Trigger 8 // ultrasound \n'
+	+ '#define PIN_Echo 9 // ultrasound';
   Blockly.Arduino.setups_['otto9_init']='Otto.init(PIN_YL, PIN_YR, PIN_RL, PIN_RR, true, A6, PIN_Buzzer, PIN_Trigger, PIN_Echo);\n';
   var code = 'Otto.getDistance()';
   return [code, Blockly.Arduino.ORDER_ATOMIC];
@@ -172,13 +172,13 @@ Blockly.Arduino['otto9_touchbutton'] = function(block) {
   Blockly.Arduino.variables_['otto9_touchbutton'] = 'volatile bool buttonPushed = false;';
   Blockly.Arduino.definitions_['otto9_sound'] = '#define PIN_Button A0';
   Blockly.Arduino.setups_['otto9_init']='pinMode(PIN_Button, INPUT);\n';
-  var code = 'digital.Read(PIN_Button)';
+  var code = 'digitalRead(PIN_Button)';
   return [code, Blockly.Arduino.ORDER_ATOMIC];
 };
 
 Blockly.Arduino['otto9_mouth'] = function(block) {
   var dropdown_otto9_mouth_choice = block.getFieldValue('otto9_mouth_choice');
-  Blockly.Arduino.includes_['otto9_lib'] = '#include <Otto9.h>'
+  Blockly.Arduino.includes_['otto9_lib'] = '#include <Otto9.h>\n'
 	+ 'Otto9 Otto;';
   Blockly.Arduino.variables_['otto9_matrix'] = 'unsigned long int matrix;';
   Blockly.Arduino.definitions_['otto9_matrix_def'] = '#define DIN_PIN A3\n'
