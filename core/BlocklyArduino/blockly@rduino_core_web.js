@@ -930,12 +930,13 @@ BlocklyDuino.init = function() {
 	//global config
 	BlocklyDuino.initBlocSort();
 	
-	/*pour changer couleur texte dans toolbox
+	/*pour changer couleur texte dans toolbox */
     $("div:contains('bitbloq').blocklyTreeRow, div:contains('bitbloq').blocklyTreeRow ~ div").on("click", function() {
-        $(this).removeClass("blocklyTreeSelected")
-        $(this).find("div.blocklyTreeSelected").removeClass("blocklyTreeSelected")
-        $(this).find("span").css("color", "#000000");
-    });*/
+        // $(this).removeClass("blocklyTreeSelected")
+        $(this).find("span").removeClass("blocklyTreeIconNone")
+        $(this).find("span").addClass('blocklyTreeIcon fa fa-cloud');
+    });
+	
 	if (window.location.protocol == 'http:') {
 					$("#btn_create_example, menu_132").attr("href","./examples/examples.php?lang=" + Code.LANG);
 					} else {

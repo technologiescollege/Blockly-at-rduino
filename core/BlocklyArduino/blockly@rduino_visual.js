@@ -209,52 +209,6 @@ BlocklyDuino.setOrientation = function() {
 	}
 };
 
-BlocklyDuino.jsSimpleColorPickr = function(id) {
-	var me = this; // lien objet
-	me.id = id; // identifiant de l'élément html
-	me.lineNb = 5; // nombre de ligne
-	me.colNb = 25; // nombre de colonne
-	me.tdNb = 0; // compteur de colonne
-	me.pas = 0; // pas de calcul des couleurs
-	me.classTable = ''; // class pour le tableau
-	me.funcColorChoose = ''; // fonction de rappel utilisé en cliquant sur une couleur
-	me.show = function(){
-		var h = '', r, g, b;
-		me.colNb = Math.pow(me.lineNb, 2);
-		me.tdNb = 0;
-		me.pas = Math.round(Math.pow(Math.pow(256, 3)/(me.colNb*(me.lineNb-1)), 1/3));
-		h = '<table class="'+me.classTable+'">';
-		for(r=255; r>=0; r-=me.pas){
-			for(g=255; g>=0; g-=me.pas){
-				for(b=255; b>=0; b-=me.pas){
-					h += me.tdBuild(r, g, b);
-				}
-			}
-		}
-		r = 255/(me.colNb-1);
-		for(g=me.colNb-1; g>=0; g--){
-			b = parseInt(r*g);
-			h += me.tdBuild(b, b, b);
-		}
-		h += '</tr></table>';
-		document.getElementById(me.id).innerHTML = h;
-	}
-	me.tdBuild = function(r, g, b){
-		var h = '', c;
-		me.tdNb++;
-		if(me.tdNb>me.colNb){
-			me.tdNb = 1;
-			h = '</tr><tr>';
-		}
-		c = me.rgb2hex(r, g, b);
-		h += '<td style="background-color: '+c+';"><a href="#"'+(me.funcColorChoose!='' ? ' onclick="'+me.funcColorChoose+'(\''+c+'\');return false;"':'')+'></a></td>';
-		return h;
-	}
-	me.rgb2hex = function(r, g, b){
-		return '#'+('0'+r.toString(16)).slice(-2)+('0'+g.toString(16)).slice(-2)+('0'+b.toString(16)).slice(-2);
-	}
-};
-
 /**
  * Get the function from URL : offline for AIO version or normal in webbrowser
  *
@@ -311,16 +265,15 @@ BlocklyDuino.wiring_maxi = function() {
 	$("#wiringModalImg").animate({width: Blockly.Arduino.wiringSize}, );
 };
 
-BlocklyDuino.toggleTextColors = function(taille) {
-	// checked = colors
-	if ($('#toggle-Colors').prop('checked')) {
-		$(".btn").css({"color" : "#000000", "background-color" : "#FFFFFF"});
-		$(".nav-pills").css({"color" : "#000000", "background-color" : "#FFFFFF"});	
-		$("#header").css({"color" : "#000000", "background-color" : "#FFFFFF"});
-		$(".submenu").css({"color" : "#000000", "background-color" : "#FFFFFF"});
-	}
-}
+// BlocklyDuino.toggleTextColors = function(taille) {
+	// if ($('#toggle-Colors').prop('checked')) {
+		// $(".btn").css({"color" : "#000000", "background-color" : "#FFFFFF"});
+		// $(".nav-pills").css({"color" : "#000000", "background-color" : "#FFFFFF"});	
+		// $("#header").css({"color" : "#000000", "background-color" : "#FFFFFF"});
+		// $(".submenu").css({"color" : "#000000", "background-color" : "#FFFFFF"});
+	// }
+// }
  
-BlocklyDuino.tailleFonte = function(taille) {
-	document.getElementsByClass("mod")[0].style.fontSize = taille + "[b]px[/b]";	
-};
+// BlocklyDuino.tailleFonte = function(taille) {
+	// document.getElementsByClass("mod")[0].style.fontSize = taille + "[b]px[/b]";	
+// };
