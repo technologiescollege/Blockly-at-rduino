@@ -353,13 +353,13 @@ Blockly.Blocks.inout_onoff = {
 
 Blockly.Blocks.inout_angle = {
   init: function() {
-    this.setColour(Blockly.Blocks.arduino_io.HUE);
-	this.setHelpUrl('https://developers.google.com/blockly/custom-blocks/defining-blocks#appendfield');
     this.appendDummyInput("")
-        .appendField("angle")
+        .appendField(Blockly.Msg.ARDUINO_INOUT_ANGLE)
         .appendField(new Blockly.FieldAngle("90"), "ANGLE");
     this.setOutput(true, "Number");
-    this.setTooltip('angle °');
+    this.setColour(Blockly.Blocks.arduino_io.HUE);
+    this.setTooltip(Blockly.Msg.ARDUINO_INOUT_ANGLE_TOOLTIP);
+	this.setHelpUrl(Blockly.Msg.ARDUINO_INOUT_ANGLE_HELPURL);
   }
 };
 

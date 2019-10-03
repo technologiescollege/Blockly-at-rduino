@@ -104,22 +104,17 @@ Blockly.Blocks.base_define_bloc = {
 
 Blockly.Blocks.base_define = {
   init: function() {
-    //this.setHelpUrl(Blockly.Msg.ARDUINO_BASE_DEFINE_CONST_HELPURL); A faire
-	this.setHelpUrl('https://www.arduino.cc/en/Reference/Define');
+    this.setHelpUrl(Blockly.Msg.ARDUINO_BASE_DEFINE_CONST_HELPURL);
     this.setColour(Blockly.Blocks.arduino_base.HUE);
 	this.appendValueInput("TEXT1", 'Null')
         .setAlign(Blockly.ALIGN_RIGHT)
-    //  	.appendField(Blockly.Msg.ARDUINO_BASE_DEFINE_CONST_INPUT1); A faire
-		.appendField('définir');
+     	.appendField(Blockly.Msg.ARDUINO_BASE_DEFINE_CONST_INPUT1);
     this.appendDummyInput()
-    //   .appendField(Blockly.Msg.ARDUINO_BASE_DEFINE_CONST_INPUT2) A faire
-		.appendField('comme étant')
+		.appendField(Blockly.Msg.ARDUINO_BASE_DEFINE_CONST_INPUT2)
         .appendField(new Blockly.FieldTextInput(''), 'TEXT2');
-
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    //this.setTooltip(Blockly.Msg.ARDUINO_BASE_DEFINE_CONST_TOOLTIP); A faire
-	this.setTooltip('');
+    this.setTooltip(Blockly.Msg.ARDUINO_BASE_DEFINE_CONST_TOOLTIP);
   }
 };
 
@@ -311,15 +306,15 @@ Blockly.Blocks['pinmode'] = {
 Blockly.Blocks['biblio_include'] = {
   init: function() {
     this.appendDummyInput()
-        .appendField("inclure une bibliothèque")
-        .appendField(new Blockly.FieldTextInput("nom du fichier bibliothèque"), "File")
+        .appendField(Blockly.Msg.ARDUINO_BASE_INCLUDE_LIB_TEXT)
+        .appendField(new Blockly.FieldTextInput(Blockly.Msg.ARDUINO_BASE_INCLUDE_FILE_NAME), "File")
         .appendField(".h");
     this.setInputsInline(true);
     this.setPreviousStatement(true);
     this.setNextStatement(true);
     this.setColour(Blockly.Blocks.arduino_base.HUE);
-    this.setTooltip('');
-    this.setHelpUrl('https://www.arduino.cc/en/Reference/Libraries');
+    this.setTooltip(Blockly.Msg.ARDUINO_BASE_INCLUDE_LIB_TOOLTIP);
+    this.setHelpUrl(Blockly.Msg.ARDUINO_BASE_INCLUDE_FILE_HELPURL);
   }
 };
 
