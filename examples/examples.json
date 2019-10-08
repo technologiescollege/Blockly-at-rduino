@@ -64,6 +64,38 @@
         "visible": true
     },
     {
+        "source_url": "./Otto/OttodanceALL.xml",
+        "source_text": "Otto dance",
+        "image": "./Otto/OttodanceALL.jpg",
+        "link_url": "",
+        "link_text": "",
+        "visible": true
+    },
+    {
+        "source_url": "./Otto/OttogestureALL.xml",
+        "source_text": "Otto gestes",
+        "image": "./Otto/OttogestureALL.jpg",
+        "link_url": "",
+        "link_text": "",
+        "visible": true
+    },
+    {
+        "source_url": "./Otto/OttomoveALL.xml",
+        "source_text": "Otto bouge",
+        "image": "./Otto/OttomoveALL.jpg",
+        "link_url": "",
+        "link_text": "",
+        "visible": true
+    },
+    {
+        "source_url": "./Otto/OttosoundALL.xml",
+        "source_text": "Otto sons",
+        "image": "./Otto/OttosoundALL.jpg",
+        "link_url": "",
+        "link_text": "",
+        "visible": true
+    },
+    {
         "source_url": "./gant_sonar/gant_sonar1.xml",
         "source_text": "simulation d'un gant sonar 1 : une détection d'un obstacle fait vibrer un moteur",
         "image": "./gant_sonar/gant_sonar1.jpg",

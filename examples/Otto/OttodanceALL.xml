@@ -1,0 +1,73 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <toolboxcategories>CAT_LOGIC,CAT_LOOPS,CAT_MATH,CAT_ARRAY,CAT_TEXT,CAT_VARIABLES,CAT_FUNCTIONS,CAT_ARDUINO,CAT_OLED_U8G,CAT_GROVE,CAT_MULTIFUNCTION,CAT_STEPPER,CAT_ARDUINO_SERVO,CAT_ADXL362,CAT_OTTO</toolboxcategories>
+  <toolbox>toolbox_arduino_all</toolbox>
+  <block type="base_loop" id="bG75A}5.=v!c#-@1t_DP" x="-88" y="-62">
+    <statement name="LOOP">
+      <block type="otto9_home" id="T|tV@Triw}$uDVfO$bU#">
+        <next>
+          <block type="otto9_dance" id="etXuuid`Euajr=hWlej7">
+            <field name="otto_dance_movement">moonwalker</field>
+            <field name="otto_dance_speed">1000</field>
+            <field name="otto_dance_size">20</field>
+            <next>
+              <block type="otto9_dance" id="NG|Ozh%MfUH08N5;9cRg">
+                <field name="otto_dance_movement">moonwalker</field>
+                <field name="otto_dance_speed">1000</field>
+                <field name="otto_dance_size">40</field>
+                <next>
+                  <block type="otto9_dance" id="PI9V2D6M;1+*Tg=6M+rW">
+                    <field name="otto_dance_movement">moonwalker</field>
+                    <field name="otto_dance_speed">750</field>
+                    <field name="otto_dance_size">40</field>
+                    <next>
+                      <block type="otto9_dance" id="Oej6}+wnD/Z8SR2`4JSb">
+                        <field name="otto_dance_movement">crusaito</field>
+                        <field name="otto_dance_speed">1000</field>
+                        <field name="otto_dance_size">20</field>
+                        <next>
+                          <block type="otto9_dance" id=";-SXwi#j$TJ`)!v(guKf">
+                            <field name="otto_dance_movement">crusaito</field>
+                            <field name="otto_dance_speed">1000</field>
+                            <field name="otto_dance_size">40</field>
+                            <next>
+                              <block type="otto9_dance" id="E2wEAAX/@h,)X}C8P(j4">
+                                <field name="otto_dance_movement">crusaito</field>
+                                <field name="otto_dance_speed">750</field>
+                                <field name="otto_dance_size">40</field>
+                                <next>
+                                  <block type="otto9_dance" id="j_xWt-ga8Mb}Q%(*wn-H">
+                                    <field name="otto_dance_movement">flapping</field>
+                                    <field name="otto_dance_speed">1000</field>
+                                    <field name="otto_dance_size">20</field>
+                                    <next>
+                                      <block type="otto9_dance" id="QE.Kw~LRN`;x.IJ5gH@B">
+                                        <field name="otto_dance_movement">flapping</field>
+                                        <field name="otto_dance_speed">1000</field>
+                                        <field name="otto_dance_size">40</field>
+                                        <next>
+                                          <block type="otto9_dance" id="eU0_JEmU*Rpv+j=!Au=w">
+                                            <field name="otto_dance_movement">flapping</field>
+                                            <field name="otto_dance_speed">750</field>
+                                            <field name="otto_dance_size">40</field>
+                                          </block>
+                                        </next>
+                                      </block>
+                                    </next>
+                                  </block>
+                                </next>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+</xml>
