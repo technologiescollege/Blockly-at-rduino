@@ -374,6 +374,7 @@ Blockly.Msg.CAT_esp8266_wifi=" - WiFi";
 Blockly.Msg.CAT_html=" - HTML";
 
 Blockly.Msg.CAT_OTTO = "Otto robot"; //added 06/09/2019
+Blockly.Msg.CAT_OTTOH = "humanoïde"; //added 06/10/2019
 
 //**********************************Dropdown menus messages***********************************************
 
@@ -2409,11 +2410,17 @@ Blockly.Msg.OTTO9_MOVE_CHOICE = [["en avant", "FORWARD"], ["en arrière", "BACKW
 Blockly.Msg.OTTO9_MOVE_SPEED_TEXT = "vitesse";
 Blockly.Msg.OTTO9_MOVE_SPEED_CHOICE = [["lente", "600"], ["normale", "800"], ["vite", "1000"], ["très vite", "1200"], ["lumière", "1400"]];
 Blockly.Msg.OTTO9_DANCE_TEXT = "danse";
-Blockly.Msg.OTTO9_DANCE_CHOICE = [["moonwalk", "moonwalker"], ["crusaito", "crusaito"], ["battement", "flapping"], ["swing", "swing"], ["updown", "updown"], ["tiptoeSwing", "tiptoeSwing"], ["jitter", "jitter"], ["ascendingTurn", "ascendingTurn"]];
+Blockly.Msg.OTTO9_DANCE_CHOICE = [["moonwalker left", "moonwalkerLEFT"],  ["moonwalker right", "moonwalkerRIGHT"],["crusaito left", "crusaitoLEFT"],["crusaito right", "crusaitoRIGHT"], ["flapping front", "flappingFRONT"], ["flapping back", "flappingBACK"]];
 Blockly.Msg.OTTO9_DANCE_SPEED_TEXT = "vitesse";
-Blockly.Msg.OTTO9_DANCE_SPEED_CHOICE = [["lente", "600"], ["normale", "800"], ["vite", "1000"], ["très vite", "1200"], ["lumière", "1400"]];
+Blockly.Msg.OTTO9_DANCE_SPEED_CHOICE = [["normale", "1000"], ["lente", "2000"], ["très lente", "3000"],  ["vite", "750"], ["très vite", "500"], ["luminique", "250"]];
 Blockly.Msg.OTTO9_DANCE_SIZE_TEXT = "taille";
-Blockly.Msg.OTTO9_DANCE_SIZE_CHOICE = [["normale", "15"], ["petite", "5"], ["grande", "30"]];
+Blockly.Msg.OTTO9_DANCE_SIZE_CHOICE = [["normale", "25"], ["petite", "10"], ["grande", "40"]];
+Blockly.Msg.OTTO9_DO_TEXT = "faire";
+Blockly.Msg.OTTO9_DO_CHOICE = [ ["swing", "swing"], ["updown", "updown"], ["tiptoeSwing", "tiptoeSwing"], ["jitter", "jitter"], ["ascendingTurn", "ascendingTurn"]];
+Blockly.Msg.OTTO9_DO_SPEED_TEXT = "vitesse";
+Blockly.Msg.OTTO9_DO_SPEED_CHOICE = [["normale", "1000"],["lente", "2000"],["très lente", "3000"] , ["rapide", "750"], ["très rapide", "500"], ["luminique", "250"]];
+Blockly.Msg.OTTO9_DO_SIZE_TEXT = "size";
+Blockly.Msg.OTTO9_DO_SIZE_CHOICE = [["normal", "20"], ["little", "5"], ["big", "45"]];
 Blockly.Msg.OTTO9_GESTURE_TEXT = "geste";
 Blockly.Msg.OTTO9_GESTURE_CHOICE = [["joyeux", "OttoHappy"], ["très joyeux", "OttoSuperHappy"], ["triste", "OttoSad"], ["dort", "OttoSleeping"], ["élan", "OttoFart"], ["confus", "OttoConfused"], ["agité", "OttoFretful"], ["amoureux", "OttoLove"], ["en colère", "OttoAngry"], ["magique", "OttoMagic"], ["vagues", "OttoWave"], ["victoire", "OttoVictory"], ["chute", "OttoFail"]];
 Blockly.Msg.OTTO9_SOUND_TEXT = "son";
@@ -2422,7 +2429,7 @@ Blockly.Msg.OTTO9_GETDISTANCE_TEXT = "distance";
 Blockly.Msg.OTTO9_GETNOISE_TEXT = "son";
 Blockly.Msg.OTTO9_GETTOUCH_TEXT = "touché";
 Blockly.Msg.OTTO9_MOUTH_TEXT = "bouche";
-Blockly.Msg.OTTO9_MOUTH_CHOICE = [["joie", "happyOpen"], ["sourire", "smile"], ["coeur", "heart"], ["petite surprise", "smallSurprise"], ["grande surprise", "bigSurprise"], ["confus", "confused"], ["zero", "zero"], ["un", "one"], ["deux", "two"], ["trois", "three"], ["quatre", "four"], ["x", "xMouth"], ["ok", "okMouth"], ["éclair", "thunder"], ["ligne", "lineMouth"], ["petit Uuh", "littleUuh, i"], ["bouche 0", "dreamMouth, 0"], ["bouche 1", "dreamMouth, 1"], ["bouche 2", "dreamMouth, 2"]];
+Blockly.Msg.OTTO9_MOUTH_CHOICE = [["happyOpen", "happyOpen"],["happyClosed", "happyClosed"],["sadOpen", "23"], ["sadClosed", "24"],["vampire1", "vamp1"], ["vampire2", "vamp2"],   ["smile", "smile"], ["heart", "heart"], ["small surprise", "smallSurprise"], ["big surprise", "bigSurprise"], ["confused", "confused"], ["0", "zero"], ["1", "one"], ["2", "two"], ["3", "three"], ["4", "four"],["5", "five"],["6", "six"],["7", "seven"],["8", "eight"],["9", "nine"], ["x", "xMouth"], ["ok", "okMouth"],["interrogation", "27"],["tongue", "tongueOut"],["culito", "culito"],  ["thunder", "thunder"], ["line", "lineMouth"], ["diagonal", "21"], ["little Uuh", "littleUuh, i"], ["dreamMouth0", "dreamMouth, 0"], ["dreamMouth1", "dreamMouth, 1"], ["dreamMouth2", "dreamMouth, 2"]];
 Blockly.Msg.OTTO9_MATRIX_TEXT = "matrice";
 Blockly.Msg.OTTO9_MATRIXTEXT_TEXT = "matrice de texte";
 Blockly.Msg.OTTO9_ARMS_TEXT = "bras";

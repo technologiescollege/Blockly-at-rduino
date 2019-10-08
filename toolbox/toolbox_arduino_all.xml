@@ -3280,10 +3280,10 @@
 		<block type="otto9_getnoise"></block>
 		<block type="otto9_touchbutton"></block>
 		<category name="CAT_OTTOH" colour="#747F8A">
-		<block type="otto9_mouth"></block>
-		<block type="otto9_matrix"></block>
-		<block type="otto9_matrix_text"></block>
-		<block type="otto9_arms"></block>
+			<block type="otto9_mouth"></block>
+			<block type="otto9_matrix"></block>
+			<block type="otto9_matrix_text"></block>
+			<block type="otto9_arms"></block>
 		</category>
 	</category>
 	<sep></sep>

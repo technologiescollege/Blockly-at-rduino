@@ -290,3 +290,4 @@ Blockly.Msg.CAT_esp8266_wifi=" - WiFi";
 Blockly.Msg.CAT_html=" - HTML";
 
 Blockly.Msg.CAT_OTTO = "Otto robot"; //added 06/09/
+Blockly.Msg.CAT_OTTOH = "humanoïde"; //added 06/10/2019
