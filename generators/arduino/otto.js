@@ -84,6 +84,9 @@ Blockly.Arduino['otto9_move'] = function(block) {
 		break;
 	case 'SHAKERIGHT':
 		code = 'Otto.shakeLeg(1,' + dropdown_otto_move_speed + ',-1);\n';
+    break;
+    case 'jump':
+		code = 'Otto.jump(1,' + dropdown_otto_move_speed + ');\n';
 		break;
   }
   return code;
@@ -106,10 +109,45 @@ Blockly.Arduino['otto9_dance'] = function(block) {
   + '#define PIN_Buzzer  13 //buzzer';
   Blockly.Arduino.setups_['otto9_init']='Otto.init(PIN_YL, PIN_YR, PIN_RL, PIN_RR, true, A6, PIN_Buzzer, PIN_Trigger, PIN_Echo);\n';
   var code = '';
-  if(dropdown_otto_dance_movement == ('moonwalker')||('crusaito')||('flapping'))
-		code = 'Otto.' + dropdown_otto_dance_movement + '(1, ' + dropdown_otto_dance_speed + ', ' + dropdown_otto_dance_size + ', 1);\n';
-  else
-		code = 'Otto.' + dropdown_otto_dance_movement + '(1, ' + dropdown_otto_dance_speed + ', ' + dropdown_otto_dance_size + ');\n';
+  switch(dropdown_otto_dance_movement) {
+    case 'moonwalkerLEFT':
+      code = 'Otto.moonwalker(1, ' + dropdown_otto_dance_speed + ', ' + dropdown_otto_dance_size + ', 1);\n';
+      break;
+    case 'moonwalkerRIGHT':
+      code = 'Otto.moonwalker(1, ' + dropdown_otto_dance_speed + ', ' + dropdown_otto_dance_size + ', -1);\n';
+      break;
+    case 'crusaitoLEFT':
+      code = 'Otto.crusaito(1, ' + dropdown_otto_dance_speed + ', ' + dropdown_otto_dance_size + ', 1);\n';
+      break;
+    case 'crusaitoRIGHT':
+      code = 'Otto.crusaito(1, ' + dropdown_otto_dance_speed + ', ' + dropdown_otto_dance_size + ', -1);\n';
+      break;
+    case 'flappingFRONT':
+      code = 'Otto.flapping(1, ' + dropdown_otto_dance_speed + ', ' + dropdown_otto_dance_size + ', 1);\n';
+      break;
+    case 'flappingBACK':
+      code = 'Otto.flapping(1, ' + dropdown_otto_dance_speed + ', ' + dropdown_otto_dance_size + ', -1);\n';
+      break;
+    }
+  return code;
+};
+Blockly.Arduino['otto9_do'] = function(block) {
+  var dropdown_otto_do_movement = block.getFieldValue('otto_do_movement');
+  var dropdown_otto_do_speed = block.getFieldValue('otto_do_speed');
+  var dropdown_otto_do_size = block.getFieldValue('otto_do_size');
+  Blockly.Arduino.includes_['otto9_lib'] = '#include <Otto9.h>\n'
+	+ 'Otto9 Otto;';
+  Blockly.Arduino.variables_['otto9_distance'] = 'int distance;\n'
+	+ 'bool obstacleDetected = false;';
+  Blockly.Arduino.definitions_['otto9_legs'] = '#define PIN_YL 2 // left leg, servo[0]\n'
+	+ '#define PIN_YR 3 // right leg, servo[1]\n'
+	+ '#define PIN_RL 4 // left foot, servo[2]\n'
+	+ '#define PIN_RR 5 // right foot, servo[3]\n'
+  + '#define PIN_Trigger 8 // ultrasound \n'
+  + '#define PIN_Echo 9 // ultrasound \n'
+  + '#define PIN_Buzzer  13 //buzzer';
+  Blockly.Arduino.setups_['otto9_init']='Otto.init(PIN_YL, PIN_YR, PIN_RL, PIN_RR, true, A6, PIN_Buzzer, PIN_Trigger, PIN_Echo);\n';
+  var code = 'Otto.' + dropdown_otto_do_movement + '(1, ' + dropdown_otto_do_speed + ', ' + dropdown_otto_do_size + ');\n';
   return code;
 };
 
@@ -178,8 +216,8 @@ Blockly.Arduino['otto9_touchbutton'] = function(block) {
 
 Blockly.Arduino['otto9_mouth'] = function(block) {
   var dropdown_otto9_mouth_choice = block.getFieldValue('otto9_mouth_choice');
-  Blockly.Arduino.includes_['otto9_lib'] = '#include <Otto9.h>\n'
-	+ 'Otto9 Otto;';
+  Blockly.Arduino.includes_['otto9_humanoid'] = '#include <Otto9Humanoid.h>\n'
+	+ 'Otto9Humanoid Otto;';
   Blockly.Arduino.variables_['otto9_matrix'] = 'unsigned long int matrix;';
   Blockly.Arduino.definitions_['otto9_matrix_def'] = '#define DIN_PIN A3\n'
 	+ '#define CS_PIN A2\n'
@@ -194,34 +232,51 @@ Blockly.Arduino['otto9_mouth'] = function(block) {
 };
 
 Blockly.Arduino['otto9_matrix'] = function(block) {
-  Blockly.Arduino.includes_['otto9_lib'] = '#include <Otto9.h>\n'
-	+ 'Otto9 Otto;';
+  Blockly.Arduino.includes_['otto9_humanoid'] = '#include <Otto9Humanoid.h>\n'
+	+ 'Otto9Humanoid Otto;';
   Blockly.Arduino.variables_['otto9_matrix'] = 'unsigned long int matrix;';
   Blockly.Arduino.definitions_['otto9_matrix_def'] = '#define DIN_PIN A3\n'
 	+ '#define CS_PIN A2\n'
 	+ '#define CLK_PIN A1\n'
 	+ '#define LED_DIRECTION 1';
   Blockly.Arduino.setups_['otto9_matrix']='Otto.initMATRIX( DIN_PIN, CS_PIN, CLK_PIN, LED_DIRECTION);\n'
-  var code = 'matrix = 0b';
-  for (var i=0; i<64; i++) {
-	if (this.getFieldValue('otto9_matrix_pixel' + i) == 'TRUE')
-		code += '1';
-		else code +='0';
-  };
-  code += ';\n';
+  var code = 'Otto.setLed(0, 2, 1);
+  Otto.setLed(0, 0, 1);
+  Otto.setLed(1, 0, 1);
+  Otto.setLed(2, 0, 1);
+  Otto.setLed(3, 0, 1);
+  Otto.setLed(4, 0, 1);
+  Otto.setLed(5, 0, 1);
+  Otto.setLed(6, 0, 1);
+  Otto.setLed(7, 0, 1);
+  Otto.setLed(1, 2, 1);
+  Otto.setLed(2, 2, 1);
+  Otto.setLed(3, 2, 1);
+  Otto.setLed(4, 2, 1);
+  Otto.setLed(5, 2, 1);
+  Otto.setLed(6, 2, 1);
+  Otto.setLed(7, 2, 1);
+  Otto.setLed(0, 7, 1);
+  Otto.setLed(1, 7, 1);
+  Otto.setLed(2, 7, 1);
+  Otto.setLed(3, 7, 1);
+  Otto.setLed(4, 7, 1);
+  Otto.setLed(5, 7, 1);
+  Otto.setLed(6, 7, 1);
+  Otto.setLed(7, 7, 1);
   return code;
 };
 
 Blockly.Arduino['otto9_matrix_text'] = function(block) {
-  Blockly.Arduino.includes_['otto9_lib'] = '#include <Otto9.h>\n'
-	+ 'Otto9 Otto;';
-  Blockly.Arduino.variables_['otto9_matrix'] = 'unsigned long int matrix;';
-  Blockly.Arduino.definitions_['otto9_matrix_def'] = '#define DIN_PIN A3\n'
+  Blockly.Arduino.includes_['otto9_humanoid'] = '#include <Otto9Humanoid.h>\n'
+	+ 'Otto9Humanoid Otto;';
+  Blockly.Arduino.definitions_['otto9_matrix__textdef'] = '#define DIN_PIN A3\n'
 	+ '#define CS_PIN A2\n'
 	+ '#define CLK_PIN A1\n'
 	+ '#define LED_DIRECTION 1';
-  Blockly.Arduino.setups_['otto9_matrix']='Otto.initMATRIX( DIN_PIN, CS_PIN, CLK_PIN, LED_DIRECTION);\n';
-  var code = '';
+  Blockly.Arduino.setups_['otto9_matrix_text']='Otto.initMATRIX( DIN_PIN, CS_PIN, CLK_PIN, LED_DIRECTION);\n';
+  var code = 'Otto.writeText ("ME OTTO",100);// limited to CAPITALS A to Z NUMBERS 0 to 9 : ; < >  = @, max.9 characters, scroll speed between 50 to 150 \n';
+ 
   return code;
 };
 
@@ -233,7 +288,13 @@ Blockly.Arduino['otto9_arms'] = function(block) {
   Blockly.Arduino.definitions_['otto9_legs'] = '#define PIN_YL 2 // left leg, servo[0]\n'
 	+ '#define PIN_YR 3 // right leg, servo[1]\n'
 	+ '#define PIN_RL 4 // left foot, servo[2]\n'
-	+ '#define PIN_RR 5 // right foot, servo[3]';
+  + '#define PIN_RR 5 // right foot, servo[3]\n'
+  + '#define PIN_LA 6 //servo[4]  Left arm\n'
+  + '#define PIN_RA 7 //servo[5]  Right arm\n'
+  + '#define PIN_Trigger 8 // ultrasound \n'
+  + '#define PIN_Echo 9 // ultrasound \n'
+  + '#define PIN_NoiseSensor A6  \n'
+  + '#define PIN_Buzzer  13 ';
   Blockly.Arduino.definitions_['otto9_arms'] = '#define PIN_LA 6 //servo[4]  Left arm\n'
 	+ '#define PIN_RA 7 //servo[5]  Right arm\n';
   Blockly.Arduino.setups_['otto9_matrix']='Otto.initHUMANOID(PIN_YL, PIN_YR, PIN_RL, PIN_RR, PIN_LA, PIN_RA, true, PIN_NoiseSensor, PIN_Buzzer, PIN_Trigger, PIN_Echo);\n';

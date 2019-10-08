@@ -7,6 +7,9 @@ Blockly.Blocks.otto9_move.getBlockType = function() {
 Blockly.Blocks.otto9_dance.getBlockType = function() {
 	return Blockly.Types.NUMBER;
 };
+Blockly.Blocks.otto9_do.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
 Blockly.Blocks.otto9_gesture.getBlockType = function() {
 	return Blockly.Types.NUMBER;
 };

@@ -1,0 +1,103 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <toolboxcategories>CAT_LOGIC,CAT_LOOPS,CAT_MATH,CAT_ARRAY,CAT_TEXT,CAT_VARIABLES,CAT_FUNCTIONS,CAT_ARDUINO,CAT_OLED_U8G,CAT_GROVE,CAT_MULTIFUNCTION,CAT_STEPPER,CAT_ARDUINO_SERVO,CAT_ADXL362,CAT_OTTO</toolboxcategories>
+  <toolbox>toolbox_arduino_all</toolbox>
+  <block type="base_loop" id="bG75A}5.=v!c#-@1t_DP" x="-437" y="-87">
+    <statement name="LOOP">
+      <block type="otto9_home" id="KwZt5G.@=$N5uqp~-$vC">
+        <next>
+          <block type="otto9_sound" id="db)be%xLJdX5ZeK2}fK_">
+            <field name="otto_sound">S_cuddly</field>
+            <next>
+              <block type="otto9_sound" id="Xjt;vxs$TKj.us,O8sHb">
+                <field name="otto_sound">S_OhOoh</field>
+                <next>
+                  <block type="otto9_sound" id=";4L.3/RK;e:I|;%*KH~0">
+                    <field name="otto_sound">S_OhOoh2</field>
+                    <next>
+                      <block type="otto9_sound" id="aCV/B/df`{^qLRGxy/aF">
+                        <field name="otto_sound">S_surprise</field>
+                        <next>
+                          <block type="otto9_sound" id="=Yn)BF:$5qL,z9AO^o7.">
+                            <field name="otto_sound">S_buttonPushed</field>
+                            <next>
+                              <block type="otto9_sound" id="!TZQ3MOip}I6J.%T$z%Q">
+                                <field name="otto_sound">S_mode1</field>
+                                <next>
+                                  <block type="otto9_sound" id="tkl#V~fS97_ha2H(BzlB">
+                                    <field name="otto_sound">S_mode2</field>
+                                    <next>
+                                      <block type="otto9_sound" id="FGl`2e~Hv`U+Kiyy/f*6">
+                                        <field name="otto_sound">S_mode3</field>
+                                        <next>
+                                          <block type="otto9_sound" id="aG4e$wxyYCN7QI+Jvi%Z">
+                                            <field name="otto_sound">S_sleeping</field>
+                                            <next>
+                                              <block type="otto9_sound" id="S`h!582Vyw{V)?8!_@}V">
+                                                <field name="otto_sound">S_fart1</field>
+                                                <next>
+                                                  <block type="otto9_sound" id="iDAl;fO]?8Nau(#Y#+aO">
+                                                    <field name="otto_sound">S_fart2</field>
+                                                    <next>
+                                                      <block type="otto9_sound" id="env_?w0$;6A:Ha6c%ud0">
+                                                        <field name="otto_sound">S_fart3</field>
+                                                        <next>
+                                                          <block type="otto9_sound" id="BF)9U$O`Z;wrLb#ujc]!">
+                                                            <field name="otto_sound">S_happy</field>
+                                                          </block>
+                                                        </next>
+                                                      </block>
+                                                    </next>
+                                                  </block>
+                                                </next>
+                                              </block>
+                                            </next>
+                                          </block>
+                                        </next>
+                                      </block>
+                                    </next>
+                                  </block>
+                                </next>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+  <block type="otto9_sound" id="+H6ZS/eEl;T7pW)CY~cK" x="-113" y="62">
+    <field name="otto_sound">S_happy_short</field>
+    <next>
+      <block type="otto9_sound" id="0iZWqnUsv`hQ@bJ1a7f-">
+        <field name="otto_sound">S_superHappy</field>
+        <next>
+          <block type="otto9_sound" id="$eae#?5O:SmalUp|)L(h">
+            <field name="otto_sound">S_sad</field>
+            <next>
+              <block type="otto9_sound" id="B.0%Of1K^:GR!B%20Cqg">
+                <field name="otto_sound">S_confused</field>
+                <next>
+                  <block type="otto9_sound" id="6gl_E3NLPX)-kR608Ot^">
+                    <field name="otto_sound">S_connection</field>
+                    <next>
+                      <block type="otto9_sound" id="q!0}xe(~pC_U;TJ`B%`@">
+                        <field name="otto_sound">S_disconnection</field>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+</xml>

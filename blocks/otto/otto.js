@@ -35,6 +35,7 @@ goog.require('Blockly.FieldInstance');
 Blockly.Blocks['otto9_home'] = {
   init: function() {
     this.appendDummyInput("")
+    .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/otto/otto_plus.png', 48, 48, "*"))
         .appendField(Blockly.Msg.OTTO9_HOME_TEXT);
     this.setInputsInline(false);
     this.setPreviousStatement(true);
@@ -77,6 +78,27 @@ Blockly.Blocks['otto9_dance'] = {
     this.appendDummyInput()
         .appendField(Blockly.Msg.OTTO9_DANCE_SIZE_TEXT)
         .appendField(new Blockly.FieldDropdown(Blockly.Msg.OTTO9_DANCE_SIZE_CHOICE), "otto_dance_size");
+    this.setInputsInline(true);
+    this.setPreviousStatement(true);
+    this.setNextStatement(true);
+    this.setColour("#32D900");
+    // this.setColour(Blockly.Blocks.otto_1.HUE);
+    this.setTooltip(Blockly.Msg.OTTO9_HOME_TOOLTIP);
+    this.setHelpUrl(Blockly.Msg.OTTO9_HOME_URL);
+  }
+};
+Blockly.Blocks['otto9_do'] = {
+  init: function() {
+    this.appendDummyInput()
+        .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/otto/otto_do.png', 48, 48, "*"))
+        .appendField(Blockly.Msg.OTTO9_DO_TEXT)
+        .appendField(new Blockly.FieldDropdown(Blockly.Msg.OTTO9_DO_CHOICE), "otto_do_movement");
+    this.appendDummyInput()
+        .appendField(Blockly.Msg.OTTO9_DO_SPEED_TEXT)
+        .appendField(new Blockly.FieldDropdown(Blockly.Msg.OTTO9_DO_SPEED_CHOICE), "otto_do_speed");
+    this.appendDummyInput()
+        .appendField(Blockly.Msg.OTTO9_DO_SIZE_TEXT)
+        .appendField(new Blockly.FieldDropdown(Blockly.Msg.OTTO9_DO_SIZE_CHOICE), "otto_do_size");
     this.setInputsInline(true);
     this.setPreviousStatement(true);
     this.setNextStatement(true);
@@ -182,19 +204,17 @@ Blockly.Blocks['otto9_matrix'] = {
         .appendField(Blockly.Msg.OTTO9_MATRIX_TEXT);
     this.appendDummyInput()
         .appendField('  ')
-        .appendField('0')
-        .appendField('  1')
-        .appendField(' 2')
+        .appendField('1')
+        .appendField('  2')
         .appendField('  3')
-        .appendField(' 4')
-        .appendField('  5')
-        .appendField(' 6')
-        .appendField('  7');
-	// var field = new Blockly.FieldColour('#000000');
-	// field.setColours(['#ff4040', '#000000'],['dark pink', 'white']);
-	// field.setColumns(1);
+        .appendField('  4')
+        .appendField(' 5')
+        .appendField('  6')
+        .appendField(' 7')
+        .appendField('  8');
+   Blockly.FieldCheckbox.CHECK_CHAR= '▉'
     this.appendDummyInput()
-        .appendField('0 ')
+        .appendField('1 ')
         .appendField(new Blockly.FieldCheckbox("FALSE"), 'otto9_matrix_pixel0')
         .appendField(new Blockly.FieldCheckbox("FALSE"), 'otto9_matrix_pixel1')
         .appendField(new Blockly.FieldCheckbox("FALSE"), 'otto9_matrix_pixel2')
@@ -204,7 +224,7 @@ Blockly.Blocks['otto9_matrix'] = {
         .appendField(new Blockly.FieldCheckbox("FALSE"), 'otto9_matrix_pixel6')
         .appendField(new Blockly.FieldCheckbox("FALSE"), 'otto9_matrix_pixel7');
     this.appendDummyInput()
-        .appendField('1 ')
+        .appendField('2 ')
         .appendField(new Blockly.FieldCheckbox("FALSE"), 'otto9_matrix_pixel8')
         .appendField(new Blockly.FieldCheckbox("FALSE"), 'otto9_matrix_pixel9')
         .appendField(new Blockly.FieldCheckbox("FALSE"), 'otto9_matrix_pixel10')
@@ -214,7 +234,7 @@ Blockly.Blocks['otto9_matrix'] = {
         .appendField(new Blockly.FieldCheckbox("FALSE"), 'otto9_matrix_pixel14')
         .appendField(new Blockly.FieldCheckbox("FALSE"), 'otto9_matrix_pixel15');
     this.appendDummyInput()
-        .appendField('2 ')
+        .appendField('3 ')
         .appendField(new Blockly.FieldCheckbox("FALSE"), 'otto9_matrix_pixel16')
         .appendField(new Blockly.FieldCheckbox("FALSE"), 'otto9_matrix_pixel17')
         .appendField(new Blockly.FieldCheckbox("FALSE"), 'otto9_matrix_pixel18')
@@ -224,7 +244,7 @@ Blockly.Blocks['otto9_matrix'] = {
         .appendField(new Blockly.FieldCheckbox("FALSE"), 'otto9_matrix_pixel22')
         .appendField(new Blockly.FieldCheckbox("FALSE"), 'otto9_matrix_pixel23');
     this.appendDummyInput()
-        .appendField('3 ')
+        .appendField('4 ')
         .appendField(new Blockly.FieldCheckbox("FALSE"), 'otto9_matrix_pixel24')
         .appendField(new Blockly.FieldCheckbox("FALSE"), 'otto9_matrix_pixel25')
         .appendField(new Blockly.FieldCheckbox("FALSE"), 'otto9_matrix_pixel26')
@@ -234,7 +254,7 @@ Blockly.Blocks['otto9_matrix'] = {
         .appendField(new Blockly.FieldCheckbox("FALSE"), 'otto9_matrix_pixel30')
         .appendField(new Blockly.FieldCheckbox("FALSE"), 'otto9_matrix_pixel31');
     this.appendDummyInput()
-        .appendField('4 ')
+        .appendField('5 ')
         .appendField(new Blockly.FieldCheckbox("FALSE"), 'otto9_matrix_pixel32')
         .appendField(new Blockly.FieldCheckbox("FALSE"), 'otto9_matrix_pixel33')
         .appendField(new Blockly.FieldCheckbox("FALSE"), 'otto9_matrix_pixel34')
@@ -244,7 +264,7 @@ Blockly.Blocks['otto9_matrix'] = {
         .appendField(new Blockly.FieldCheckbox("FALSE"), 'otto9_matrix_pixel38')
         .appendField(new Blockly.FieldCheckbox("FALSE"), 'otto9_matrix_pixel39');
     this.appendDummyInput()
-        .appendField('5 ')
+        .appendField('6 ')
         .appendField(new Blockly.FieldCheckbox("FALSE"), 'otto9_matrix_pixel40')
         .appendField(new Blockly.FieldCheckbox("FALSE"), 'otto9_matrix_pixel41')
         .appendField(new Blockly.FieldCheckbox("FALSE"), 'otto9_matrix_pixel42')
@@ -254,7 +274,7 @@ Blockly.Blocks['otto9_matrix'] = {
         .appendField(new Blockly.FieldCheckbox("FALSE"), 'otto9_matrix_pixel46')
         .appendField(new Blockly.FieldCheckbox("FALSE"), 'otto9_matrix_pixel47');
     this.appendDummyInput()
-        .appendField('6 ')
+        .appendField('7 ')
         .appendField(new Blockly.FieldCheckbox("FALSE"), 'otto9_matrix_pixel48')
         .appendField(new Blockly.FieldCheckbox("FALSE"), 'otto9_matrix_pixel49')
         .appendField(new Blockly.FieldCheckbox("FALSE"), 'otto9_matrix_pixel50')
@@ -264,7 +284,7 @@ Blockly.Blocks['otto9_matrix'] = {
         .appendField(new Blockly.FieldCheckbox("FALSE"), 'otto9_matrix_pixel54')
         .appendField(new Blockly.FieldCheckbox("FALSE"), 'otto9_matrix_pixel55');
     this.appendDummyInput()
-        .appendField('7 ')
+        .appendField('8 ')
         .appendField(new Blockly.FieldCheckbox("FALSE"), 'otto9_matrix_pixel56')
         .appendField(new Blockly.FieldCheckbox("FALSE"), 'otto9_matrix_pixel57')
         .appendField(new Blockly.FieldCheckbox("FALSE"), 'otto9_matrix_pixel58')
