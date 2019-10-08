@@ -342,15 +342,18 @@
 		<block type="otto9_home"></block>
 		<block type="otto9_move"></block>
 		<block type="otto9_dance"></block>
+		<block type="otto9_do"></block>
 		<block type="otto9_gesture"></block>
 		<block type="otto9_sound"></block>
 		<block type="otto9_getdistance"></block>
 		<block type="otto9_getnoise"></block>
 		<block type="otto9_touchbutton"></block>
+		<category name="CAT_OTTOH" colour="#747F8A">
 		<block type="otto9_mouth"></block>
 		<block type="otto9_matrix"></block>
-		<!-- <block type="otto9_matrix_text"></block> -->
+		<block type="otto9_matrix_text"></block>
 		<block type="otto9_arms"></block>
+		</category>
 	<sep></sep>
 	</category>
 </toolbox>
