@@ -306,7 +306,8 @@ Blockly.Blocks['otto9_matrix'] = {
 Blockly.Blocks['otto9_matrix_text'] = {
   init: function() {
     this.appendDummyInput()
-        .appendField(Blockly.Msg.OTTO9_MATRIXTEXT_TEXT);
+        .appendField(Blockly.Msg.OTTO9_MATRIXTEXT_TEXT)
+        .appendField(new Blockly.FieldTextInput("HI OTTO"), "input");
     this.setInputsInline(true);
     this.setPreviousStatement(true);
     this.setNextStatement(true);
