@@ -240,34 +240,43 @@ Blockly.Arduino['otto9_matrix'] = function(block) {
 	+ '#define CLK_PIN A1\n'
 	+ '#define LED_DIRECTION 1';
   Blockly.Arduino.setups_['otto9_matrix']='Otto.initMATRIX( DIN_PIN, CS_PIN, CLK_PIN, LED_DIRECTION);\n'
-  var code = 'Otto.setLed(0, 2, 1);
-  Otto.setLed(0, 0, 1);
-  Otto.setLed(1, 0, 1);
-  Otto.setLed(2, 0, 1);
-  Otto.setLed(3, 0, 1);
-  Otto.setLed(4, 0, 1);
-  Otto.setLed(5, 0, 1);
-  Otto.setLed(6, 0, 1);
-  Otto.setLed(7, 0, 1);
-  Otto.setLed(1, 2, 1);
-  Otto.setLed(2, 2, 1);
-  Otto.setLed(3, 2, 1);
-  Otto.setLed(4, 2, 1);
-  Otto.setLed(5, 2, 1);
-  Otto.setLed(6, 2, 1);
-  Otto.setLed(7, 2, 1);
-  Otto.setLed(0, 7, 1);
-  Otto.setLed(1, 7, 1);
-  Otto.setLed(2, 7, 1);
-  Otto.setLed(3, 7, 1);
-  Otto.setLed(4, 7, 1);
-  Otto.setLed(5, 7, 1);
-  Otto.setLed(6, 7, 1);
-  Otto.setLed(7, 7, 1);
-  return code;
+  var code = 'Otto.setLed(0,0,1);\n'
+    +'Otto.setLed(1,0,1);\n'
+    +'Otto.setLed(2,0,1);\n'
+    +'Otto.setLed(3,0,1);\n'
+    +'Otto.setLed(4,0,1);\n'
+    +'Otto.setLed(5,0,1);\n'
+    +'Otto.setLed(6,0,1);\n'
+    +'Otto.setLed(7,0,1);\n'
+    +'Otto.setLed(1,1,1);\n'
+    +'Otto.setLed(2,1,1);\n'
+    +'Otto.setLed(3,1,1);\n'
+    +'Otto.setLed(4,1,1);\n'
+    +'Otto.setLed(5,1,1);\n'
+    +'Otto.setLed(6,1,1);\n'
+    +'Otto.setLed(7,1,1);\n'
+    +'Otto.setLed(0,1,1);\n'
+    +'Otto.setLed(1,1,1);\n'
+    +'Otto.setLed(2,1,1);\n'
+    +'Otto.setLed(3,1,1);\n'
+    +'Otto.setLed(4,1,1);\n'
+    +'Otto.setLed(5,1,1);\n'
+    +'Otto.setLed(6,1,1);\n'
+    +'Otto.setLed(7,1,1);\n'
+    +'Otto.setLed(0,7,1);\n'
+    +'Otto.setLed(1,7,1);\n'
+    +'Otto.setLed(2,7,1);\n'
+    +'Otto.setLed(3,7,1);\n'
+    +'Otto.setLed(4,7,1);\n'
+    +'Otto.setLed(5,7,1);\n'
+    +'Otto.setLed(6,7,1);\n'
+    +'Otto.setLed(7,7,1);';
+    return code;
+  
 };
 
 Blockly.Arduino['otto9_matrix_text'] = function(block) {
+  var text_input = block.getFieldValue('input');
   Blockly.Arduino.includes_['otto9_humanoid'] = '#include <Otto9Humanoid.h>\n'
 	+ 'Otto9Humanoid Otto;';
   Blockly.Arduino.definitions_['otto9_matrix__textdef'] = '#define DIN_PIN A3\n'
@@ -275,7 +284,7 @@ Blockly.Arduino['otto9_matrix_text'] = function(block) {
 	+ '#define CLK_PIN A1\n'
 	+ '#define LED_DIRECTION 1';
   Blockly.Arduino.setups_['otto9_matrix_text']='Otto.initMATRIX( DIN_PIN, CS_PIN, CLK_PIN, LED_DIRECTION);\n';
-  var code = 'Otto.writeText ("ME OTTO",100);// limited to CAPITALS A to Z NUMBERS 0 to 9 : ; < >  = @, max.9 characters, scroll speed between 50 to 150 \n';
+  var code = 'Otto.writeText ( '+ '"' + this.getFieldValue('input') +'"' +',100); // limited to CAPITALS A to Z NUMBERS 0 to 9 : ; < >  = @, max.9 characters \n';
  
   return code;
 };
