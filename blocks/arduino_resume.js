@@ -74,6 +74,10 @@ head.load(
 "blocks/mbot/mbot_2.js",
 "blocks/mbot/mbot_3.js",
 "blocks/mbot/mbot_4.js",
+//20191010
+"blocks/meuse_robotics/micromachine/micromachine.js",
+"blocks/meuse_robotics/microsaurus/microsaurus.js",
+//20191010
 "blocks/MRduino/MRduino.js",
 "blocks/MRduino2/MRduino2.js",
 "blocks/multi-function/multi-function.js",

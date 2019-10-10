@@ -3320,4 +3320,41 @@
 		</category>
 		<sep></sep>
     </category>
+	<!--20191010-->
+	<category name="CAT_COG" colour="#0084ad">
+		<category name="CAT_MICROSAURUS" colour="#0084ad">
+			<block type="ms_init_wav"></block>
+			<block type="ms_play_wav"></block>
+			<block type="ms_IR_receiver"></block>
+			<block type="ms_IR_checker"></block>
+			<!--<block type="ms_IR_recv_flag"></block>-->
+			<block type="ms_IR_get_code"></block>
+			<!--<block type="ms_IR_reset_flag"></block>-->
+			<block type="ms_action_stop"></block>
+			<block type="ms_action_fwrd"></block>
+			<block type="ms_action_bwrd"></block>
+			<block type="ms_action_ltrn"></block>
+			<block type="ms_action_rtrn"></block>
+		</category>
+		<category name="CAT_MICROMACHINE" colour="#0084ad">
+			<block type="mm_init_wav"></block>
+			<block type="mm_play_wav"></block>
+			<block type="ms_IR_receiver"></block>
+			<block type="ms_IR_checker"></block>
+			<block type="ms_IR_get_code"></block>
+			<block type="mm_action_init"></block>
+			<block type="mm_servo_drive"></block>
+			<block type="mm_action_stop"></block>
+			<block type="mm_action_fwrd"></block>
+			<block type="mm_action_bwrd"></block>
+			<block type="mm_action_ltrn"></block>
+			<block type="mm_action_rtrn"></block>
+			<block type="mm_action_left"></block>
+			<block type="mm_action_rght"></block>
+			<block type="mm_action_free"></block>
+			<block type="mm_array_declare"></block>
+			<block type="mm_array_create_with"></block>
+		</category>
+	</category>
+	<!--20191010-->
 </toolbox>

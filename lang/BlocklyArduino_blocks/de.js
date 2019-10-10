@@ -2422,3 +2422,60 @@ Blockly.Msg.OTTO9_MATRIX_TEXT = "matrix";
 Blockly.Msg.OTTO9_MATRIXTEXT_TEXT = "matrix text";
 Blockly.Msg.OTTO9_ARMS_TEXT = "arms";
 Blockly.Msg.OTTO9_ARMS_CHOICE = [["hands up", "HANDSUP"], ["handwave left", "HANDWAVE1"], ["handwave right", "HANDWAVE2"]];
+
+
+
+
+//20191010
+Blockly.Msg.CAT_COG = "COG";
+Blockly.Msg.CAT_MICROSAURUS = "MicroSaurus";
+Blockly.Msg.CAT_MICROMACHINE = "MicroMachine";
+//
+Blockly.Msg.ms_IR_init_TEXT = "Initialise IR";
+Blockly.Msg.ms_IR_check_TEXT = "Check IR Receive";
+Blockly.Msg.ms_IR_flag_TEXT = "Receive Flag";
+Blockly.Msg.ms_IR_reset_TEXT = "Reset Flag";
+Blockly.Msg.ms_IR_reception_code_TEXT = "Received Code";
+Blockly.Msg.ms_INIT_WAV = "Init WAV Play Sound1";
+Blockly.Msg.ms_INIT_WAV_SOUND2 = "Sound2";
+Blockly.Msg.ms_INIT_WAV_SOUND3 = "Sound3";
+Blockly.Msg.ms_INIT_WAV_AUDPIN = "Out Pin";
+Blockly.Msg.ms_INIT_WAV_ENBLPIN = "EN Pin";
+Blockly.Msg.ms_PLAY_WAV = "Play WAV Sound：";
+Blockly.Msg.ms_ACTION_STOP = "STOP";
+Blockly.Msg.ms_ACTION_FRONT = "Front Leg";
+Blockly.Msg.ms_ACTION_REAR = "Rear Leg";
+Blockly.Msg.ms_ACTION_OFFSET = "Offset";
+Blockly.Msg.ms_ACTION_FWRD = "FORWARD";
+Blockly.Msg.ms_ACTION_BWRD = "BACKWARD";
+Blockly.Msg.ms_ACTION_LTRN = "LEFT TURN";
+Blockly.Msg.ms_ACTION_RTRN = "RIGHT TURN";
+//
+Blockly.Msg.mm_IR_init_TEXT = "Initialise IR";
+Blockly.Msg.mm_IR_check_TEXT = "Check IR Receive";
+Blockly.Msg.mm_IR_flag_TEXT = "Receive Flag";
+Blockly.Msg.mm_IR_reset_TEXT = "Reset Flag";
+Blockly.Msg.mm_IR_reception_code_TEXT = "Received Code";
+Blockly.Msg.mm_INIT_WAV = "Init WAV Play Sound1";
+Blockly.Msg.mm_INIT_WAV_SOUND2 = "Sound2";
+Blockly.Msg.mm_INIT_WAV_SOUND3 = "Sound3";
+Blockly.Msg.mm_INIT_WAV_AUDPIN = "Out Pin";
+Blockly.Msg.mm_INIT_WAV_ENBLPIN = "EN Pin";
+Blockly.Msg.mm_PLAY_WAV = "Play WAV Sound：";
+Blockly.Msg.mm_ACTION_INIT = "Init Action";
+Blockly.Msg.mm_ACTION_STOP = "STOP";
+Blockly.Msg.mm_ACTION_FRONT = "Front Leg";
+Blockly.Msg.mm_ACTION_REAR = "Rear Leg";
+Blockly.Msg.mm_ACTION_OFFSET = "Offset";
+Blockly.Msg.mm_ACTION_FWRD = "FORWARD";
+Blockly.Msg.mm_ACTION_BWRD = "BACKWARD";
+Blockly.Msg.mm_ACTION_LTRN = "LEFT TURN";
+Blockly.Msg.mm_ACTION_RTRN = "RIGHT TURN";
+Blockly.Msg.mm_ACTION_LEFT = "LEFT SIDE";
+Blockly.Msg.mm_ACTION_RGHT = "RIGHT SIDE";
+Blockly.Msg.mm_SERVO_DRIVE = "SERVO DRIVE";
+Blockly.Msg.mm_SERVO_CON = "CONNECTOR#";
+Blockly.Msg.mm_SERVO_ANGLE = "ANGLE";
+Blockly.Msg.mm_ACTION_FREE = "FREE ACTION";
+Blockly.Msg.mm_ARRAY_CREATE_WITH = "item";
+//20191010

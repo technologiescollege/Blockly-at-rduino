@@ -2434,3 +2434,61 @@ Blockly.Msg.OTTO9_MATRIX_TEXT = "matrice";
 Blockly.Msg.OTTO9_MATRIXTEXT_TEXT = "matrice de texte";
 Blockly.Msg.OTTO9_ARMS_TEXT = "bras";
 Blockly.Msg.OTTO9_ARMS_CHOICE = [["en l'air", "HANDSUP"], ["gauche saluer", "HANDWAVE1"], ["droit saluer", "HANDWAVE2"]];
+
+
+
+
+
+//20191010
+Blockly.Msg.CAT_COG = "COG";
+Blockly.Msg.CAT_MICROSAURUS = "MicroSaurus";
+Blockly.Msg.CAT_MICROMACHINE = "MicroMachine";
+//
+Blockly.Msg.ms_IR_init_TEXT = "initialiser infrarouge";
+Blockly.Msg.ms_IR_check_TEXT = "vérifier si IR reçoit";
+Blockly.Msg.ms_IR_flag_TEXT = "recevoir un message";
+Blockly.Msg.ms_IR_reset_TEXT = "réinitialiser message";
+Blockly.Msg.ms_IR_reception_code_TEXT = "code reçu";
+Blockly.Msg.ms_INIT_WAV = "initialiser lecture, son 1";
+Blockly.Msg.ms_INIT_WAV_SOUND2 = "son 2";
+Blockly.Msg.ms_INIT_WAV_SOUND3 = "son 3";
+Blockly.Msg.ms_INIT_WAV_AUDPIN = "broche OUT";
+Blockly.Msg.ms_INIT_WAV_ENBLPIN = "broche EN";
+Blockly.Msg.ms_PLAY_WAV = "lire le son ";
+Blockly.Msg.ms_ACTION_STOP = "STOP";
+Blockly.Msg.ms_ACTION_FRONT = "patte avant";
+Blockly.Msg.ms_ACTION_REAR = "patte arrière";
+Blockly.Msg.ms_ACTION_OFFSET = "réglage";
+Blockly.Msg.ms_ACTION_FWRD = "avancer";
+Blockly.Msg.ms_ACTION_BWRD = "reculer";
+Blockly.Msg.ms_ACTION_LTRN = "tourner à gauche";
+Blockly.Msg.ms_ACTION_RTRN = "tourner à droite";
+//
+Blockly.Msg.mm_IR_init_TEXT = "initialiser infrarouge";
+Blockly.Msg.mm_IR_check_TEXT = "vérifier si IR reçoit";
+Blockly.Msg.mm_IR_flag_TEXT = "recevoir un message";
+Blockly.Msg.mm_IR_reset_TEXT = "réinitialiser message";
+Blockly.Msg.mm_IR_reception_code_TEXT = "code reçu";
+Blockly.Msg.mm_INIT_WAV = "initialiser lecture, son 1";
+Blockly.Msg.mm_INIT_WAV_SOUND2 = "son 2";
+Blockly.Msg.mm_INIT_WAV_SOUND3 = "son 3";
+Blockly.Msg.mm_INIT_WAV_AUDPIN = "broche OUT";
+Blockly.Msg.mm_INIT_WAV_ENBLPIN = "broche EN";
+Blockly.Msg.mm_PLAY_WAV = "lire le son ";
+Blockly.Msg.mm_ACTION_INIT = "initialiser action";
+Blockly.Msg.mm_ACTION_STOP = "STOP";
+Blockly.Msg.mm_ACTION_FRONT = "jambe avant";
+Blockly.Msg.mm_ACTION_REAR = "jambe arrière";
+Blockly.Msg.mm_ACTION_OFFSET = "réglage";
+Blockly.Msg.mm_ACTION_FWRD = "avancer";
+Blockly.Msg.mm_ACTION_BWRD = "reculer";
+Blockly.Msg.mm_ACTION_LTRN = "tourner à gauche";
+Blockly.Msg.mm_ACTION_RTRN = "tourner à droite";
+Blockly.Msg.mm_ACTION_LEFT = "pas de côté à gauche";
+Blockly.Msg.mm_ACTION_RGHT = "pas de côté à droite";
+Blockly.Msg.mm_SERVO_DRIVE = "servomoteur";
+Blockly.Msg.mm_SERVO_CON = "broche";
+Blockly.Msg.mm_SERVO_ANGLE = "angle";
+Blockly.Msg.mm_ACTION_FREE = "action libre";
+Blockly.Msg.mm_ARRAY_CREATE_WITH = "objet";
+//20191010

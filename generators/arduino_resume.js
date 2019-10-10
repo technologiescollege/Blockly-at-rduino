@@ -67,6 +67,10 @@ head.load(
 "generators/arduino/mbot_niv2.js",
 "generators/arduino/mbot_niv3.js",
 "generators/arduino/mbot_niv4.js",
+//20191010
+"generators/arduino/micromachine.js",
+"generators/arduino/microsaurus.js",
+//20191010
 "generators/arduino/MRduino.js",
 "generators/arduino/MRduino2.js",
 "generators/arduino/multi-function.js",
