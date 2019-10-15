@@ -1,22 +1,11 @@
-/**
- * @license
- * Visual Blocks Editor
- *
- * Copyright 2012 Fred Lin.
- * https://github.com/gasolin/BlocklyDuino
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *   http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
+/*
+Peguino Sensors 2019
+more at www.peguino.com
+
+*/
+ 
+// Peguino Nano Board default wiring:
+// Port C1 = Pin 23 = D5; C2 = Pin 20 = D2; C3 = Pin 6 = A2; D1 = Pin 10 = A6; D2 = Pin 7 = A3; D3 = Pin 24 = D6;
  
 'use strict';
 
@@ -25,7 +14,7 @@ goog.provide('Blockly.Blocks.peguino_sensors');
 goog.require('Blockly.Blocks');
 goog.require('Blockly.Types');
 
-
+/*
 Blockly.Blocks['peguino_sensors_pir_motion_sensor'] = {
   init: function() {
     this.setColour(Blockly.Blocks.peguino_sensors.HUE);
@@ -38,20 +27,36 @@ Blockly.Blocks['peguino_sensors_pir_motion_sensor'] = {
     this.setOutput(true, 'Number');
     this.setTooltip(Blockly.Msg.GROVE_INOUT_PIR_TOOLTIP);
   }
+};*/
+
+Blockly.Blocks['peguino_sensors_pir_motion_sensor'] = {
+  init: function() {
+    this.setColour(Blockly.Blocks.peguino_sensors.HUE);
+	this.setHelpUrl(Blockly.Msg.Peguino_Bodysensor_HELPURL);
+    this.appendDummyInput()
+        .appendField(Blockly.Msg.Peguino_Bodysensor_TEXT)
+        .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/peguino/Peguino_Body_Sensor_Brick_blockly_01.png', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize))
+		.appendField(Blockly.Msg.Peguino_Bodysensor_PLUG)
+		.appendField(new Blockly.FieldDropdown(Blockly.Msg.Peguino_Bodysensor_UNIT_CHOICE), Blockly.Msg.Peguino_Bodysensor_UNIT);
+		//.appendField(new Blockly.FieldTextInput('',  Blockly.Arduino.pinDigitalValidator), 'PIN');
+    this.setOutput(true, 'Number');
+    this.setTooltip(Blockly.Msg.Peguino_Bodysensor_TOOLTIP);
+  }
 };
 
 Blockly.Blocks['peguino_sensors_button'] = {
   init: function() {
     this.setColour(Blockly.Blocks.peguino_sensors.HUE);
-    this.setHelpUrl(Blockly.Msg.GROVE_INOUT_BUTTON_HELPURL);
+    this.setHelpUrl(Blockly.Msg.Peguino_ButtonBrick_HELPURL);
 	this.appendDummyInput()
-        .appendField(Blockly.Msg.GROVE_INOUT_BUTTON_TEXT)
+        .appendField(Blockly.Msg.Peguino_ButtonBrick_TEXT)
         .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/peguino/Peguino_Button_Brick_blockly_01.png', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize))
-		.appendField(Blockly.Msg.GROVE_INOUT_BUTTON_INPUT)
-		.appendField(new Blockly.FieldTextInput('', Blockly.Arduino.pinDigitalValidator), 'PIN');
+		.appendField(Blockly.Msg.Peguino_ButtonBrick_INPUT)
+		//.appendField(new Blockly.FieldTextInput('', Blockly.Arduino.pinDigitalValidator), 'PIN');
+		.appendField(new Blockly.FieldDropdown(Blockly.Msg.Peguino_ButtonBrick_UNIT_CHOICE), Blockly.Msg.Peguino_ButtonBrick_UNIT);
     this.setInputsInline(true);
     this.setOutput(true, 'Boolean');
-    this.setTooltip(Blockly.Msg.GROVE_INOUT_BUTTON_TOOLTIP);
+    this.setTooltip(Blockly.Msg.Peguino_ButtonBrick_TOOLTIP);
   }
 };
 
@@ -59,16 +64,25 @@ Blockly.Blocks['peguino_sensors_dht_read_UnoNano'] = {
   init: function() {
     this.setColour(Blockly.Blocks.peguino_sensors.HUE);
     this.setHelpUrl(Blockly.Msg.GROVE_INOUT_DHT_HELPURL);
+
     this.appendDummyInput()
-      .appendField(Blockly.Msg.GROVE_INOUT_DHT_READ_TYPE)
-      .appendField(new Blockly.FieldDropdown([[Blockly.Msg.GROVE_INOUT_DHT_READ_H,"h"],[Blockly.Msg.GROVE_INOUT_DHT_READ_C,"C"]]), "TYPE");
-    this.appendDummyInput()
-      .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/peguino/Peguino_Climate_Sesnor_Brick_blockly_01.png', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize))
-      .appendField(Blockly.Msg.GROVE_INOUT_DHT_READ_SENSOR + Blockly.Msg.GROVE_INOUT_DHT_READ_PIN)
-      .appendField(new Blockly.FieldTextInput('',  Blockly.Arduino.pinDigitalValidator), 'PIN');
+	//	.setAlign(Blockly.ALIGN_RIGHT)
+	.appendField(Blockly.Msg.Peguino_ClimateBrick_TEXT)
+    .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/peguino/Peguino_Climate_Sesnor_Brick_blockly_01.png', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize))
+    .appendField(Blockly.Msg.GROVE_INOUT_DHT_READ_SENSOR + Blockly.Msg.Peguino_ClimateBrick_PLUG)
+	.appendField(new Blockly.FieldDropdown(Blockly.Msg.Peguino_ClimateBrick_CHOICENANO), Blockly.Msg.Peguino_ClimateBrick_PLUG);
+	this.appendDummyInput("")
+	.setAlign(Blockly.ALIGN_LEFT)
+	.appendField("  ");
+    this.appendDummyInput("")
+    .setAlign(Blockly.ALIGN_RIGHT)
+	.appendField("  ")
+    //.appendField(Blockly.Msg.GROVE_INOUT_DHT_READ_TYPE)
+    .appendField(new Blockly.FieldDropdown([[Blockly.Msg.Peguino_ClimateBrick_DHT_READ_H,"h"],[Blockly.Msg.Peguino_ClimateBrick_DHT_READ_C,"C"]]), "TYPE");
+    //.appendField(new Blockly.FieldTextInput('',  Blockly.Arduino.pinDigitalValidator), 'PIN');
     this.setInputsInline(true);
     this.setOutput(true, 'Number');
-    this.setTooltip(Blockly.Msg.GROVE_INOUT_DHT_READ_TOOLTIP);
+    this.setTooltip(Blockly.Msg.Peguino_ClimateBrick_TOOLTIP);
   }
 };
 
@@ -77,24 +91,28 @@ Blockly.Blocks['peguino_sensors_dht_read_UnoESP32'] = {
     this.setColour(Blockly.Blocks.peguino_sensors.HUE);
     this.setHelpUrl(Blockly.Msg.GROVE_INOUT_DHT_HELPURL);
     this.appendDummyInput()
-      .appendField(Blockly.Msg.GROVE_INOUT_DHT_READ_TYPE)
-      .appendField(new Blockly.FieldDropdown([[Blockly.Msg.GROVE_INOUT_DHT_READ_H,"h"],[Blockly.Msg.GROVE_INOUT_DHT_READ_C,"C"]]), "TYPE");
+	  .appendField(Blockly.Msg.Peguino_ClimateBrick_TEXT)
+      //.appendField(Blockly.Msg.GROVE_INOUT_DHT_READ_TYPE)
+      .appendField(new Blockly.FieldDropdown([[Blockly.Msg.Peguino_ClimateBrick_DHT_READ_H,"h"],[Blockly.Msg.Peguino_ClimateBrick_DHT_READ_C,"C"]]), "TYPE");
     this.appendDummyInput()
       .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/peguino/Peguino_Climate_Sesnor_Brick_blockly_01.png', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize))
-      .appendField(Blockly.Msg.GROVE_INOUT_DHT_READ_SENSOR + Blockly.Msg.GROVE_INOUT_DHT_READ_PIN)
-      .appendField(new Blockly.FieldTextInput('',  Blockly.Arduino.pinDigitalValidator), 'PIN');
+      //.appendField(Blockly.Msg.GROVE_INOUT_DHT_READ_SENSOR + Blockly.Msg.GROVE_INOUT_DHT_READ_PIN)
+	  .appendField(Blockly.Msg.GROVE_INOUT_DHT_READ_SENSOR + Blockly.Msg.Peguino_ClimateBrick_PLUG)
+	  .appendField(new Blockly.FieldDropdown(Blockly.Msg.Peguino_ClimateBrick_CHOICENANO), Blockly.Msg.Peguino_ClimateBrick_PLUG);
+      //.appendField(new Blockly.FieldTextInput('',  Blockly.Arduino.pinDigitalValidator), 'PIN');
     this.setInputsInline(true);
     this.setOutput(true, 'Number');
-    this.setTooltip(Blockly.Msg.GROVE_INOUT_DHT_READ_TOOLTIP);
+    this.setTooltip(Blockly.Msg.Peguino_ClimateBrick_TOOLTIP);
   }
 };
 
+/*
 Blockly.Blocks['peguino_sensors_EMETTEUR_IR'] = {
   init: function() {
     this.setColour(Blockly.Blocks.peguino_sensors.HUE);
     this.setHelpUrl(Blockly.Msg.GROVE_EMETTEUR_IR_HELPURL);
 	this.appendDummyInput()
-      .appendField(Blockly.Msg.GROVE_EMETTEUR_IR_TEXT);
+      .appendField(Blockly.Msg.PeguinoIRsender_TEXT);
     this.appendDummyInput()
       .appendField(Blockly.Msg.GROVE_EMETTEUR_IR)
 	  .setAlign(Blockly.ALIGN_CENTRE)
@@ -113,7 +131,6 @@ Blockly.Blocks['peguino_sensors_EMETTEUR_IR'] = {
     this.setTooltip(Blockly.Msg.GROVE_EMETTEUR_IR_TOOLTIP);
   }
 };
-
 Blockly.Blocks['peguino_sensors_RECEPTEUR_IR'] = {
   init: function() {
     this.setColour(Blockly.Blocks.peguino_sensors.HUE);
@@ -127,48 +144,66 @@ Blockly.Blocks['peguino_sensors_RECEPTEUR_IR'] = {
     this.setOutput(true, 'Boolean');
     this.setTooltip(Blockly.Msg.GROVE_RECEPTEUR_IR_TOOLTIP);
   }
-};
+}; */
+
 
 Blockly.Blocks['peguino_sensors_ldr'] = {
   init: function() {
     this.setColour(Blockly.Blocks.peguino_sensors.HUE);
-	this.setHelpUrl(Blockly.Msg.GROVE_INOUT_LDR_HELPURL);
+	this.setHelpUrl(Blockly.Msg.Peguino_Lightsensor_HELPURL);
     this.appendDummyInput()
-        .appendField(Blockly.Msg.GROVE_INOUT_LDR_TEXT)
+        .appendField(Blockly.Msg.Peguino_Lightsensor_TEXT)
         .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/peguino/Peguino_Lightsensor_brick_blockly_01.png', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize))
-        .appendField(Blockly.Msg.GROVE_INOUT_LDR_INPUT)
-        .appendField(new Blockly.FieldTextInput('',  Blockly.Arduino.pinAnalogValidator), 'PIN');
+        .appendField(Blockly.Msg.Peguino_Lightsensor_PLUG)
+        //.appendField(new Blockly.FieldTextInput('',  Blockly.Arduino.pinAnalogValidator), 'PIN');
+		.appendField(new Blockly.FieldDropdown(Blockly.Msg.Peguino_Lightsensor_UNIT_CHOICE), Blockly.Msg.Peguino_Lightsensor_UNIT);
     this.setOutput(true, 'Number');
-    this.setTooltip(Blockly.Msg.GROVE_INOUT_LDR_TOOLTIP);
+    this.setTooltip(Blockly.Msg.Peguino_Lightsensor_TOOLTIP);
   }
 };
 
 Blockly.Blocks['peguino_sensors_rotary_angle'] = {
   init: function() {
     this.setColour(Blockly.Blocks.peguino_sensors.HUE);
-	this.setHelpUrl(Blockly.Msg.GROVE_INOUT_ROT_ANGLE_HELPURL);
+	this.setHelpUrl(Blockly.Msg.Peguino_PotiBrick_HELPURL);
     this.appendDummyInput()
-        .appendField(Blockly.Msg.GROVE_INOUT_ROT_ANGLE_TEXT)
+        .appendField(Blockly.Msg.Peguino_PotiBrick_TEXT)
         .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/peguino/Peguino_Potentiometer_Brick_01.png', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize))
-        .appendField(Blockly.Msg.GROVE_INOUT_ROT_ANGLE_INPUT)
-        .appendField(new Blockly.FieldTextInput('',  Blockly.Arduino.pinAnalogValidator), 'PIN');
+        .appendField(Blockly.Msg.Peguino_PotiBrick_PLUG)
+        //.appendField(new Blockly.FieldTextInput('',  Blockly.Arduino.pinAnalogValidator), 'PIN');
+		.appendField(new Blockly.FieldDropdown(Blockly.Msg.Peguino_PotiBrick_UNIT_CHOICE), Blockly.Msg.Peguino_PotiBrick_UNIT);
     this.setOutput(true, 'Number');
-    this.setTooltip(Blockly.Msg.GROVE_INOUT_ROT_ANGLE_TOOLTIP);
+    this.setTooltip(Blockly.Msg.Peguino_PotiBrick_TOOLTIP);
+  }
+};
+
+Blockly.Blocks['peguino_sensors_microprox'] = {
+  init: function() {
+    this.setColour(Blockly.Blocks.peguino_sensors.HUE);
+	this.setHelpUrl(Blockly.Msg.Peguino_Microprox_HELPURL);
+    this.appendDummyInput()
+        .appendField(Blockly.Msg.Peguino_Microprox_TEXT)
+        .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/peguino/Peguino_Microprox_Brick_blockly_01.png', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize))
+        .appendField(Blockly.Msg.Peguino_Microprox_PLUG)
+		.appendField(new Blockly.FieldDropdown(Blockly.Msg.Peguino_Microprox_UNIT_CHOICE), Blockly.Msg.Peguino_Microprox_UNIT);
+    this.setOutput(true, 'Number');
+    this.setTooltip(Blockly.Msg.Peguino_Microprox_TOOLTIP);
   }
 };
 
 Blockly.Blocks['peguino_sensors_ultrasonic_ranger'] = {
-	init: function() {
-    this.setColour(Blockly.Blocks.peguino_sensors.HUE);
-	this.setHelpUrl(Blockly.Msg.GROVE_INOUT_ULTRASONIC_HELPURL);
+  init: function() {
+    this.setHelpUrl(Blockly.Msg.Peguino_ProximityBrick_HELPURL);
+	this.setColour(Blockly.Blocks.peguino_sensors.HUE);
     this.appendDummyInput()
-	    .appendField(Blockly.Msg.GROVE_INOUT_ULTRASONIC_TEXT)
-        .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/peguino/Peguino_Proximity_Brick_blockly_01.png', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize))
-        .appendField(Blockly.Msg.GROVE_INOUT_ULTRASONIC_INPUT)
-        .appendField(new Blockly.FieldTextInput('',  Blockly.Arduino.pinDigitalValidator), 'PIN')
-        .appendField(Blockly.Msg.GROVE_INOUT_ULTRASONIC_UNIT)
-        .appendField(new Blockly.FieldDropdown(Blockly.Msg.GROVE_INOUT_ULTRASONIC_UNIT_CHOICE), "UNIT");
-    this.setOutput(true, 'Number');
-    this.setTooltip(Blockly.Msg.GROVE_INOUT_ULTRASONIC_TOOLTIP);
+	    .appendField(Blockly.Msg.Peguino_ProximityBrick_TEXT)
+    	.setAlign(Blockly.ALIGN_LEFT)
+        //.appendField(Blockly.Msg.PETITBOT_HCSR04);
+    this.appendDummyInput()
+        .setAlign(Blockly.ALIGN_RIGHT)
+        //.appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/icn/hc-sr04.svg', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize));
+		.appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/peguino/Peguino_Proximity_Brick_blockly_01.png', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize))
+	this.setOutput(true, 'Number');
+	this.setTooltip(Blockly.Msg.Peguino_ProximityBrick_TOOLTIP);
   }
 };

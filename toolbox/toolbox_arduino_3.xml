@@ -1283,23 +1283,28 @@
 		</block>
 		<block type="RFID_code_acces" colour="#9BACB4">
 			<value name="VAL1">
-				<shadow type="text">
-					<field name="TEXT">1</field>
+				<shadow type="math_number">
+					<field name="NUM">1</field>
 				</shadow>
 			</value>
 			<value name="VAL2">
-				<shadow type="text">
-					<field name="TEXT">1</field>
+				<shadow type="math_number">
+					<field name="NUM">1</field>
 				</shadow>
 			</value>
 			<value name="VAL3">
-				<shadow type="text">
-					<field name="TEXT">1</field>
+				<shadow type="math_number">
+					<field name="NUM">1</field>
 				</shadow>
 			</value>
 			<value name="VAL4">
-				<shadow type="text">
-					<field name="TEXT">1</field>
+				<shadow type="math_number">
+					<field name="NUM">1</field>
+				</shadow>
+			</value>
+			<value name="VAL5">
+				<shadow type="math_number">
+					<field name="NUM">1</field>
 				</shadow>
 			</value>
 		</block>

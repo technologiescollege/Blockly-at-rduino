@@ -29,11 +29,50 @@ goog.require('Blockly.Arduino');
 
 
 Blockly.Arduino.peguino_actuators_buzzer = function() {
-  var dropdown_pin = Blockly.Arduino.valueToCode(this, 'PIN', Blockly.Arduino.ORDER_ATOMIC);
-  var dropdown_stat = this.getFieldValue('STAT');
-  Blockly.Arduino.setups_['setup_piezo_buzzer_'+dropdown_pin] = 'pinMode('+dropdown_pin+', OUTPUT);';
-  var code = 'digitalWrite('+dropdown_pin+','+dropdown_stat+');\n';
+  var dropdown_pin = this.getFieldValue(Blockly.Msg.Peguino_BuzzerBrick_UNIT);
+  var in_frequency = this.getFieldValue(Blockly.Msg.Peguino_BuzzerBrick_FREQUENCY_UNIT);
+  var in_playtime = this.getFieldValue(Blockly.Msg.Peguino_BuzzerBrick_PLAYTIME_UNIT);
+  var code = 'tone('+dropdown_pin+','+in_frequency+','+in_playtime+')';
   return code;
+};
+
+Blockly.Arduino.peguino_actuators_buzzer2 = function() {
+  var dropdown_pin = this.getFieldValue(Blockly.Msg.Peguino_BuzzerBrick_UNIT);
+  var in_frequency = this.getFieldValue('Number'); //this.getFieldValue(Blockly.Msg.Peguino_BuzzerBrick_FREQUENCY_VALUE);
+  var in_playtime = this.getFieldValue(Blockly.Msg.Peguino_BuzzerBrick_PLAYTIME_UNIT);
+  var code = 'tone('+dropdown_pin+','+in_frequency+','+in_playtime+')';
+  return code;
+};
+
+
+Blockly.Arduino.peguino_actuators_led = function() {
+  var dropdown_pin = this.getFieldValue(Blockly.Msg.Peguino_LED_UNIT); 
+  var led_status = this.getFieldValue(Blockly.Msg.Peguino_LED_STATUS);
+  Blockly.Arduino.setups_['setup_button_'+dropdown_pin] = 'pinMode('+dropdown_pin+', OUTPUT);';
+  var code = 'digitalWrite('+dropdown_pin+','+led_status+');\n';
+  return code;
+};
+
+// Peguino Nano RGB LED Red = Pin D12, Green = Pin D11, Blue = Pin D13 
+Blockly.Arduino.peguino_actuators_rgbled = function() {
+	var dropdown_pin = this.getFieldValue(Blockly.Msg.Peguino_RGBLED_STATUS);
+	var red_value = '255';	// The Peguino RGB LED Brick contains a common anode. To switch if off, all values have to be set to 255. 0 = maximum light
+	var green_value = '255';
+	var blue_value = '255';
+	var color_value = this.getFieldValue(Blockly.Msg.Peguino_RGBLED_RGBCOLORVALUE);
+    var hex = color_value.replace('#','');
+    var redinput = parseInt(hex.substring(0,2), 16);
+    var greeninput = parseInt(hex.substring(2,4), 16);
+    var blueinput = parseInt(hex.substring(4,6), 16);
+	var redvalue = redinput - 255; 
+	var red_value = Math.abs(redvalue);
+	var greenvalue = greeninput - 255; 
+	var green_value = Math.abs(greenvalue);
+	var bluevalue = blueinput - 255; 
+	var blue_value = Math.abs(bluevalue);
+	var returncode = ' analogWrite(12,'+red_value+');\n analogWrite(11,'+green_value+');\n analogWrite(13,'+blue_value+');\n ';
+	Blockly.Arduino.setups_['setup_RGBLED'] = "pinMode(12, OUTPUT);\n pinMode(11, OUTPUT);\n pinMode(13, OUTPUT);\n "
+	return returncode;
 };
 
 Blockly.Arduino.peguino_actuators_i2c_scan = function() {	
@@ -121,14 +160,6 @@ Blockly.Arduino.peguino_actuators_i2c_lcdwrite = function() {
 
 Blockly.Arduino.peguino_actuators_i2c_lcdclear = function() {
   var code = 'lcd.clear();\n';
-  return code;
-};
-
-Blockly.Arduino.peguino_actuators_led = function() {
-  var dropdown_pin = Blockly.Arduino.valueToCode(this, 'PIN', Blockly.Arduino.ORDER_ATOMIC);
-  var dropdown_stat = this.getFieldValue('STAT');
-  Blockly.Arduino.setups_['setup_grove_led_'+dropdown_pin] = 'pinMode('+dropdown_pin+', OUTPUT);';
-  var code = 'digitalWrite('+dropdown_pin+','+dropdown_stat+');\n';
   return code;
 };
 
