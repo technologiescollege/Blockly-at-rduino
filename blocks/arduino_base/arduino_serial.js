@@ -203,11 +203,12 @@ Blockly.Blocks['serial_flush'] = {
 Blockly.Blocks['serial_line'] = {
     init: function() {
 		this.setColour(Blockly.Blocks.arduino_serial.HUE);
-        this.setHelpUrl(Blockly.Msg.HELPURL);
-        this.appendDummyInput("").appendField("un saut de ligne");
+        this.setHelpUrl('http://arduino.cc/en/Serial/');
+        this.appendDummyInput("")
+			.appendField(Blockly.Msg.Serial_line);
         this.setInputsInline(true);
         this.setOutput(true, "String");
-        this.setTooltip("permet d'aller à ligne sur le moniteur série")
+        this.setTooltip(Blockly.Msg.Serial_line_tooltip)
     }
 };
 

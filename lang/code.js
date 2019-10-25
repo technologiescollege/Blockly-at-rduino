@@ -38,6 +38,7 @@ Code.LANGUAGE_NAME = {
 		  'en': 'English',
 		  'fr': 'Français',
 		  'jp': 'Japanese',
+		  'es': 'Español'
 		};
 
 /**
