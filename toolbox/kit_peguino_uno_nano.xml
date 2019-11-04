@@ -340,17 +340,15 @@
 
 	<category name="CAT_PEGUINO" colour="#32b2fc">
 		<category name="CAT_PEGUINO_IN" colour="#32b2fc">
-		<!-- category name="CAT_PEGUINO_IN" colour="#9CEEFF" -->
 			<block type="peguino_sensors_pir_motion_sensor"></block>
-			<block type="peguino_sensors_button"></block>
 			<block type="peguino_sensors_dht_read_UnoNano"></block>
-			<!-- block type="peguino_sensors_EMETTEUR_IR"></block>
-			<block type="peguino_sensors_RECEPTEUR_IR"></block -->
+			<!-- <block type="peguino_sensors_EMETTEUR_IR"></block> -->
+			<!-- <block type="peguino_sensors_RECEPTEUR_IR"></block> -->
 			<block type="peguino_sensors_ldr"></block>
 			<block type="peguino_sensors_rotary_angle"></block>
 			<block type="peguino_sensors_microprox"></block>
 			<block type="peguino_sensors_ultrasonic_ranger"></block>
-			<!-- block type="peguino_sensors_button"></block -->
+			<block type="peguino_sensors_button"></block>
 		</category>
 		<category name="CAT_PEGUINO_OUT" colour="#32b2fc">
 			<block type="peguino_actuators_buzzer"></block>

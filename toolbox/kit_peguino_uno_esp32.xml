@@ -341,12 +341,12 @@
 	<category name="CAT_PEGUINO" colour="#9CEEFF">
 		<category name="CAT_PEGUINO_IN" colour="#9CEEFF">
 			<block type="peguino_sensors_pir_motion_sensor"></block>
-			<block type="peguino_sensors_button"></block>
 			<block type="peguino_sensors_dht_read_UnoESP32"></block>
-			<block type="peguino_sensors_EMETTEUR_IR"></block>
-			<block type="peguino_sensors_RECEPTEUR_IR"></block>
+			<!-- <block type="peguino_sensors_EMETTEUR_IR"></block> -->
+			<!-- <block type="peguino_sensors_RECEPTEUR_IR"></block> -->
 			<block type="peguino_sensors_ldr"></block>
 			<block type="peguino_sensors_rotary_angle"></block>
+			<block type="peguino_sensors_microprox"></block>
 			<block type="peguino_sensors_ultrasonic_ranger"></block>
 			<block type="peguino_sensors_button"></block>
 		</category>
@@ -357,6 +357,7 @@
 			<block type="peguino_actuators_i2c_lcdwrite"></block>
 			<block type="peguino_actuators_i2c_lcdclear"></block>
 			<block type="peguino_actuators_led"></block>
+			<block type="peguino_actuators_rgbled"></block>
 			<block type="peguino_actuators_servo_attach"></block>
 			<block type="peguino_actuators_servo_move"></block>
 			<block type="peguino_actuators_servo_read_degrees"></block>

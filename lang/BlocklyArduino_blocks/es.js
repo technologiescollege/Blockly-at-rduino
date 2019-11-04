@@ -407,10 +407,10 @@ Blockly.Msg.SHARP_IR_COMPONENT = 'Sharp IR';
 //**********************************blocks***********************************************
 
 // Ardublockly instances
-Blockly.Msg.NEW_INSTANCE = 'nouvelle instance';
+Blockly.Msg.NEW_INSTANCE = 'Nueva instancia';
 Blockly.Msg.RENAME_INSTANCE = 'renommer cette instance';
-Blockly.Msg.NEW_INSTANCE_TITLE = 'New instance name:';
-Blockly.Msg.RENAME_INSTANCE_TITLE = 'Rename all "%1" instances to:';
+Blockly.Msg.NEW_INSTANCE_TITLE = 'Nuevo nombre de instancia:';
+Blockly.Msg.RENAME_INSTANCE_TITLE = 'Cambiar el nombre de todos "%1" instancias para:';
 
 Blockly.Msg.ARDUINO_BASE_DELAY_HELPURL = "http://arduino.cc/en/Reference/delay";
 Blockly.Msg.ARDUINO_BASE_DELAY_DELAY_TIME = "delay (in ms)";
@@ -502,10 +502,10 @@ Blockly.Msg.ARDUINO_INOUT_ANGLE_HELPURL = "https://developers.google.com/blockly
 Blockly.Msg.ARDUINO_PULSEIN="PulseIn (µs) pin#";
 Blockly.Msg.ARDUINO_PULSEIN_TIMEOUT="timeout (µs) ";
 Blockly.Msg.ARDUINO_SERVO_MOVE_HELPURL = "http://www.arduino.cc/playground/ComponentLib/servo";
-Blockly.Msg.ARDUINO_SERVO_MOVE_INPUT1 = "rotate the servo-motor";
+Blockly.Msg.ARDUINO_SERVO_MOVE_INPUT1 = "Girar el servomotor";
 Blockly.Msg.ARDUINO_SERVO_MOVE_IMAGE = "images/a991.jpg";
 Blockly.Msg.ARDUINO_SERVO_MOVE_INPUT2 = "on the pin";
-Blockly.Msg.ARDUINO_SERVO_MOVE_DEGREE = "an angle (0~180°) of";
+Blockly.Msg.ARDUINO_SERVO_MOVE_DEGREE = "en ángulo (0 ~ 180 °) de";
 Blockly.Msg.ARDUINO_SERVO_MOVE_DELAY_TIME = "during a period (ms)";
 Blockly.Msg.ARDUINO_SERVO_MOVE_TOOLTIP = "rotation possible between 0 ~ 180 degrees";
 Blockly.Msg.ARDUINO_SERVO_READ_DEGREES_HELPURL = "http://www.arduino.cc/playground/ComponentLib/servo";
@@ -521,10 +521,10 @@ Blockly.Msg.ARDUINO_SERVO_ROT_CONTINUE_INPUT3 = "speed [0~90]";
 Blockly.Msg.ARDUINO_SERVO_ROT_CONTINUE_INPUT4 = "direction";
 Blockly.Msg.ARDUINO_SERVO_ROT_CONTINUE_TOOLTIP = "degrees for power : 0° -> max on left | 90° -> stop | 180° -> max on right";
 Blockly.Msg.ARDUINO_SERVO_PIN = "PIN#";
-Blockly.Msg.ARDUINO_SERVO_ATTACH1 = "attach servomotor";
-Blockly.Msg.ARDUINO_SERVO_ATTACH2 = "id#";
-Blockly.Msg.ARDUINO_SERVO_ATTACHED = "servo attached ?";
-Blockly.Msg.ARDUINO_SERVO_DETACH = "detach servo on PIN#";
+Blockly.Msg.ARDUINO_SERVO_ATTACH1 = "Adjuntar Servomotor";
+Blockly.Msg.ARDUINO_SERVO_ATTACH2 = "Asignar nombre";
+Blockly.Msg.ARDUINO_SERVO_ATTACHED = "Servomotos adjunto?";
+Blockly.Msg.ARDUINO_SERVO_DETACH = "Separar Servomotor";
 Blockly.Msg.ARDUINO_SERIAL_PRINT_HELPURL = "http://www.arduino.cc/en/Serial/Print";
 Blockly.Msg.ARDUINO_SERIAL_PRINT_CONTENT = "send the data to the serial port:";
 Blockly.Msg.ARDUINO_SERIAL_PRINTLN_CONTENT = "print new line data on serial port:";
@@ -1169,8 +1169,8 @@ Blockly.Msg.ADAFRUIT_MOTORSHIELD_MOTOR1 = "v1 - Motor DC";
 Blockly.Msg.ADAFRUIT_MOTORSHIELD_MOTOR2 = "v2 - Motor DC";
 Blockly.Msg.ADAFRUIT_MOTORSHIELD_MOTOR_DIRECTION = "Direction";
 Blockly.Msg.ADAFRUIT_MOTORSHIELD_MOTOR_VITESSE = "Speed [0-255]";
-Blockly.Msg.ADAFRUIT_MOTORSHIELD_AVANT = "Forward";
-Blockly.Msg.ADAFRUIT_MOTORSHIELD_ARRIERE = "Backward";
+Blockly.Msg.ADAFRUIT_MOTORSHIELD_AVANT = "adelante";
+Blockly.Msg.ADAFRUIT_MOTORSHIELD_ARRIERE = "al revés";
 Blockly.Msg.ADAFRUIT_MOTORSHIELD_STOP = "Stop";
 
 Blockly.Msg.ADAFRUIT_MOTORSHIELD_PAP1 = "v1 - Stepper Motor";
@@ -2488,34 +2488,34 @@ Blockly.Msg.mm_ARRAY_CREATE_WITH = "item";
 // Peguino ESP Board default wiring:
 // Port C1 = Pin 25 = GPIO27; C2 = Pin 15 = GPIO23; C3 = Pin 17 = GPIO36; D1 = Pin 21 = GPIO32; D2 = Pin 23 = GPIO25; D3 = Pin 22 = GPIO33;
 
-Blockly.Msg.Peguino_Bodysensor_TEXT = "Sensor de cuerpo";
-Blockly.Msg.Peguino_Bodysensor_TOOLTIP = "Con este brique de Peguino, p. Se detectan personas y animales (más grandes) cerca.";
+Blockly.Msg.Peguino_Bodysensor_TEXT = "Sensor de cuerpo brique";
+Blockly.Msg.Peguino_Bodysensor_TOOLTIP = "Con este Brique de Peguino, p. Se detectan personas y animales (más grandes) cerca.";
 Blockly.Msg.Peguino_Bodysensor_PLUG = "conexión";
 Blockly.Msg.Peguino_Bodysensor_UNIT = "port";
 Blockly.Msg.Peguino_Bodysensor_UNIT_CHOICE = [["?", "0"],["C1", "23"],  ["C2", "20"], ["C3", "6"],  ["D1", "10"], ["D2", "7"],  ["D3", "24"]];
 Blockly.Msg.Peguino_Bodysensor_HELPURL = "https://www.peguino.com/chat/thread-25.html";
 
-Blockly.Msg.Peguino_ProximityBrick_TEXT = "Sensor de proximidad / cm";
+Blockly.Msg.Peguino_ProximityBrick_TEXT = "Sensor de proximidad: Conexión A";
 Blockly.Msg.Peguino_ProximityBrick = "cm o pulgada";
-Blockly.Msg.Peguino_ProximityBrick_TOOLTIP = "El ladrillo de proximidad mide la proximidad a obstáculos y objetos y debe conectarse al conector A.";
+Blockly.Msg.Peguino_ProximityBrick_TOOLTIP = "Este ladrillo de Peguino mide la distancia a obstáculos / objetos en centímetros. Siempre conéctelo a la conexión 'A'";
 Blockly.Msg.Peguino_ProximityBrick_HELPURL = "https://www.peguino.com/chat/thread-18.html";
 
 Blockly.Msg.Peguino_ButtonBrick_TEXT = "Interruptor de botón (Button Brique)";
-Blockly.Msg.Peguino_ButtonBrick_TOOLTIP = "Este ladrillo de Peguino es un interruptor de presión: mientras se presiona, el circuito está cerrado.";
+Blockly.Msg.Peguino_ButtonBrick_TOOLTIP = "Este Brique de Peguino es un interruptor de presión: mientras se presiona, el circuito está cerrado.";
 Blockly.Msg.Peguino_ButtonBrick_INPUT = "conexión";
 Blockly.Msg.Peguino_ButtonBrick_UNIT = "port";
 Blockly.Msg.Peguino_ButtonBrick_UNIT_CHOICE = [["?", "0"],["C1", "23"],  ["C2", "20"], ["C3", "6"],  ["D1", "10"], ["D2", "7"],  ["D3", "24"]];
 Blockly.Msg.Peguino_ButtonBrick_HELPURL = "https://www.peguino.com/chat/thread-21.html";
 
 Blockly.Msg.Peguino_PotiBrick_TEXT = "Perilla (Brique potenciómetro)";
-Blockly.Msg.Peguino_PotiBrick_TOOLTIP = "Este ladrillo de Peguino es un potenciómetro: al girar la resistencia eléctrica cambia y por lo tanto genera diferentes valores numéricos.";
+Blockly.Msg.Peguino_PotiBrick_TOOLTIP = "Este Brique de Peguino es un potenciómetro: al girar la resistencia eléctrica cambia y por lo tanto genera diferentes valores numéricos.";
 Blockly.Msg.Peguino_PotiBrick_PLUG = "conexión";
 Blockly.Msg.Peguino_PotiBrick_UNIT = "port";
 Blockly.Msg.Peguino_PotiBrick_UNIT_CHOICE = [["?", "0"], ["C3", "6"],  ["D1", "10"], ["D2", "7"]];
 Blockly.Msg.Peguino_PotiBrick_HELPURL = "https://www.peguino.com/chat/thread-14.html";
 
-Blockly.Msg.Peguino_Microprox_TEXT = "Microprox ";
-Blockly.Msg.Peguino_Microprox_TOOLTIP = "Dieser Baustein kann zum Bau eines Roboters eingesetzt werden, der z.B. einer schwarzen Linie auf weißem Grund folgen soll. Es können aber auch kurze Distanzen erkannt werden und Helligkeitsunterschiede registriert werden.";
+Blockly.Msg.Peguino_Microprox_TEXT = "Microprox Brique";
+Blockly.Msg.Peguino_Microprox_TOOLTIP = "Este ladrillo de Peguino detecta las diferencias de brillo en las superficies y registra distancias cortas a través del reflejo de la luz infrarroja.";
 Blockly.Msg.Peguino_Microprox_PLUG = "conexión";
 Blockly.Msg.Peguino_Microprox_UNIT = "port";
 Blockly.Msg.Peguino_Microprox_UNIT_CHOICE = [["?", "0"], ["C3", "6"],  ["D1", "10"], ["D2", "7"]];
@@ -2550,16 +2550,16 @@ Blockly.Msg.Peguino_Lightsensor_UNIT_CHOICE = [["?", "0"], ["C3", "6"],  ["D1", 
 Blockly.Msg.Peguino_Lightsensor_HELPURL = "https://www.peguino.com/chat/thread-13.html";
 
 // ------------------------ Peguino output bricks ------------------------
-Blockly.Msg.Peguino_BuzzerBrick_TEXT = "Zumbador Brique";
+Blockly.Msg.Peguino_BuzzerBrick_TEXT = "Zumbador Brique (Buzzer)";
 Blockly.Msg.Peguino_BuzzerBrick_TOOLTIP = "Este Brique de Peguino emite un sonido";
 Blockly.Msg.Peguino_BuzzerBrick_PLUG = "conexión";
 Blockly.Msg.Peguino_BuzzerBrick_UNIT = "port";
-Blockly.Msg.Peguino_BuzzerBrick_FREQUENCY = "Ton";
+Blockly.Msg.Peguino_BuzzerBrick_FREQUENCY = "Sonar";
 Blockly.Msg.Peguino_BuzzerBrick_FREQUENCY_CHOICE = [["?", "0"],["Nota A", "440"],  ["2250 Hz", "2250"], ["3500 Hz", "3500"]];
-Blockly.Msg.Peguino_BuzzerBrick_FREQUENCY_UNIT  = "Sonar";
+Blockly.Msg.Peguino_BuzzerBrick_FREQUENCY_UNIT  = "Ton";
 Blockly.Msg.Peguino_BuzzerBrick_FREQUENCY_VALUE = "Audiofrecuencia";
 Blockly.Msg.Peguino_BuzzerBrick_PLAYTIME = "Duración";
-Blockly.Msg.Peguino_BuzzerBrick_PLAYTIME_CHOICE = [["?", "0"], ["0,2 Sekunden", "200"], ["Halbe Sekunde", "500"],  ["1 Sekunde", "1000"]];
+Blockly.Msg.Peguino_BuzzerBrick_PLAYTIME_CHOICE = [["?", "0"], ["0,2 segundo", "200"], ["0,5 segundo", "500"],  ["1 segundo", "1000"]];
 Blockly.Msg.Peguino_BuzzerBrick_PLAYTIME_UNIT  = "tondauer";
 Blockly.Msg.Peguino_BuzzerBrick_UNIT_CHOICE = [["?", "0"],["C1", "23"],  ["C2", "20"], ["C3", "6"],  ["D1", "10"], ["D2", "7"],  ["D3", "24"]];
 Blockly.Msg.Peguino_BuzzerBrick_HELPURL = "https://www.peguino.com/chat/thread-16.html";
@@ -2572,11 +2572,11 @@ Blockly.Msg.Peguino_LED_UNIT_CHOICE = [["?", "0"],["C1", "23"],  ["C2", "20"], [
 Blockly.Msg.Peguino_LED_TOOLTIP = "Este dispositivo genera luz: según el tipo de LED, p. en blanco, naranja, rosa, azul u otro color.";
 Blockly.Msg.Peguino_LED_HELPURL = "https://www.peguino.com/chat/";
 
-Blockly.Msg.Peguino_RGBLED_TEXT = "RGB-LED / multicolor Brique de luz";
+Blockly.Msg.Peguino_RGBLED_TEXT = "RGB-LED / Brique de luz multicolor";
 Blockly.Msg.Peguino_RGBLED_UNIT = "port";
 Blockly.Msg.Peguino_RGBLED_STATUS = "status";
 Blockly.Msg.Peguino_RGBLED_INPUT = "Pin";
-Blockly.Msg.Peguino_RGBLED_RGBCOLOR = "Farbe auswählen:";
+Blockly.Msg.Peguino_RGBLED_RGBCOLOR = "Seleccionar color:";
 Blockly.Msg.Peguino_RGBLED_RGBCOLORVALUE = "colorvalue";
 Blockly.Msg.Peguino_RGBLED_RGBRED = "Rot";
 Blockly.Msg.Peguino_RGBLED_RGBGREEN = "Grün";
@@ -2584,13 +2584,14 @@ Blockly.Msg.Peguino_RGBLED_RGBBLUE = "Blau";
 Blockly.Msg.Peguino_RGBLED_TOOLTIP = "Este bloque genera luz (en el conexión F) en diferentes colores. El color se puede mezclar con los tres colores básicos: rojo, verde y azul. Ilumina los tres, el color mixto da luz blanca.";
 Blockly.Msg.Peguino_RGBLED_HELPURL = "https://www.peguino.com/chat/thread-19.html";
 
-Blockly.Msg.Peguino_I2CScan_TEXT = "I2C Escáner";
+Blockly.Msg.Peguino_I2CScan_TEXT = "I2C Escáner: Conexión B";
 Blockly.Msg.Peguino_I2CScan_TOOLTIP = "Este elemento permite escanear el bus de datos I2C en el conexión B en busca de direcciones de dispositivos conectados. Las direcciones encontradas se envían a la interfaz serial.";
 Blockly.Msg.Peguino_I2CScan_HELPURL = "https://www.peguino.com/chat/thread-20.html";
 
-Blockly.Msg.Peguino_AttachServo_TEXT = "Servo Motor verbinden";
-Blockly.Msg.Peguino_AttachServo_TOOLTIP = "Mit diesem Baustein wird ein Servo Motor verbunden.";
-Blockly.Msg.Peguino_AttachServo_PLUG = "Buchse";
+Blockly.Msg.Peguino_AttachServo_TEXT = "Conecte el servomotor";
+Blockly.Msg.Peguino_AttachServo_TOOLTIP = "Este módulo se utiliza para conectar un servomotor.";
+Blockly.Msg.Peguino_AttachServo_PLUG = "conexión";
 Blockly.Msg.Peguino_AttachServo_UNIT = "port";
 Blockly.Msg.Peguino_AttachServo_UNIT_CHOICE = [["?", "0"], ["C3", "6"],  ["D1", "10"], ["D2", "7"]];
 Blockly.Msg.Peguino_AttachServo_HELPURL = "https://www.peguino.com/chat/";
+Blockly.Msg.Peguino_SERVO_DEFAULT_NAME = "Servo1";
