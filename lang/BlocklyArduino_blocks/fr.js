@@ -1308,8 +1308,8 @@ Blockly.Msg.ROBUNO_TEXT10 = "du shield Moteurs CC";
 Blockly.Msg.ROBUNO_TEXT11 = "sur les broches";
 Blockly.Msg.ROBUNO_TEXT12 = "broche de commande de Direction (DIR)";
 Blockly.Msg.ROBUNO_TEXT13 = "broche de commande de la Vitesse (PWM~)";
-Blockly.Msg.ROBUNO_TEXT14 = "sens horaire (255) ou antihoraire (0)?";
-Blockly.Msg.ROBUNO_TEXT15 = "vitesse MAX (VRAI) ou nulle (FAUX)";
+Blockly.Msg.ROBUNO_TEXT14 = "sens horaire (VRAI) ou antihoraire (FAUX)?";
+Blockly.Msg.ROBUNO_TEXT15 = "vitesse MAX (255) ou nulle (0)";
 Blockly.Msg.ROBUNO_TEXT16 = "Carte de commande de deux moteurs CC";
 
 Blockly.Msg.ROBUNO_LUX_TITLE1 = "la luminosité lue sur la LDR Gauche";

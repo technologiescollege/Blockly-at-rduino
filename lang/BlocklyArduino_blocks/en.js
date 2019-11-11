@@ -1304,13 +1304,13 @@ Blockly.Msg.ROBUNO_TEXT5 = "sur la broche ";
 Blockly.Msg.ROBUNO_TEXT6 = " est appuyé ?";
 Blockly.Msg.ROBUNO_TEXT7 = "Entrée Capteur de collision (réf : Gauche ou Droite)";
 Blockly.Msg.ROBUNO_TEXT8 = "le capteur de collision Droite";
-Blockly.Msg.ROBUNO_TEXT9 = "commande le moteur";
-Blockly.Msg.ROBUNO_TEXT10 = "du shield Moteurs CC";
+Blockly.Msg.ROBUNO_TEXT9 = "control motor #";
+Blockly.Msg.ROBUNO_TEXT10 = "on shield";
 Blockly.Msg.ROBUNO_TEXT11 = "sur les broches";
 Blockly.Msg.ROBUNO_TEXT12 = "broche de commande de Direction (DIR)";
 Blockly.Msg.ROBUNO_TEXT13 = "broche de commande de la Vitesse (PWM~)";
-Blockly.Msg.ROBUNO_TEXT14 = "sens horaire (255) ou antihoraire (0)?";
-Blockly.Msg.ROBUNO_TEXT15 = "vitesse MAX (VRAI) ou nulle (FAUX)";
+Blockly.Msg.ROBUNO_TEXT14 = "sens?";
+Blockly.Msg.ROBUNO_TEXT15 = "speed MAX (255) or stop (0)";
 Blockly.Msg.ROBUNO_TEXT16 = "Carte de commande de deux moteurs CC";
 
 Blockly.Msg.ROBUNO_LUX_TITLE1 = "la luminosité lue sur la LDR Gauche";

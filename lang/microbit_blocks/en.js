@@ -186,3 +186,6 @@ Blockly.Msg.MICROBIT_SPEECH_PRONOUNCE_HELPURL = 'https://microbit-micropython.re
 Blockly.Msg.MICROBIT_SPEECH_SING_MESSAGE0 = 'Sing %1';
 Blockly.Msg.MICROBIT_SPEECH_SING_TOOLTIP = 'Sing phonemes like a ROBOT.';
 Blockly.Msg.MICROBIT_SPEECH_SING_HELPURL = 'https://microbit-micropython.readthedocs.io/en/latest/speech.html#singing';
+
+//adding tooltip & helpurl
+
