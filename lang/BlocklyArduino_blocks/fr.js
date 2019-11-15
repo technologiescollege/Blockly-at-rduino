@@ -2606,3 +2606,47 @@ Blockly.Msg.Peguino_AttachServo_UNIT = "port";
 Blockly.Msg.Peguino_AttachServo_UNIT_CHOICE = [["?", "0"], ["C3", "6"],  ["D1", "10"], ["D2", "7"]];
 Blockly.Msg.Peguino_AttachServo_HELPURL = "https://www.peguino.com/chat/";
 Blockly.Msg.Peguino_SERVO_DEFAULT_NAME = "Servo1";
+
+
+//////////////////////////// Robobox Blocks Text 2019 ////////////////////////////
+
+Blockly.Msg.CAT_ROBOBOX = "Robobox";
+Blockly.Msg.ROBOBOX_ANGLE180 = "Angle [0~180°] :";
+Blockly.Msg.ROBOBOX_PIN = "Broche :";
+Blockly.Msg.ROBOBOX_TRIGGER_PIN = "Envoyer sur la broche :";
+Blockly.Msg.ROBOBOX_LISTEN_PIN = "Ecouter sur la broche :";
+Blockly.Msg.ROBOBOX_ARRAY = "Tableau :";
+Blockly.Msg.ROBOBOX_LEN = "Taille :";
+
+Blockly.Msg.CAT_ROBOBOX_SERVO = "- Servo-moteurs";
+Blockly.Msg.ROBOBOX_SERVO_SETANGLE = "changer l'angle";
+Blockly.Msg.ROBOBOX_SERVO_GETANGLE = "Lire l'angle";
+Blockly.Msg.ROBOBOX_SERVO_TOOLTIP = "Aide";
+
+Blockly.Msg.CAT_ROBOBOX_SENSORS = "- Capteurs";
+Blockly.Msg.ROBOBOX_SENSORS_ULTRASOUND = "Distance mesurée en cm";
+
+Blockly.Msg.CAT_ROBOBOX_IRREMOTE = "- IRremote";
+Blockly.Msg.ROBOBOX_IRREMOTE_DECODE = "Decode un signalIR";
+Blockly.Msg.ROBOBOX_IRREMOTE_SIGNALLEN = "Recuperer la taille du signal";
+Blockly.Msg.ROBOBOX_IRREMOTE_SIGNALARRAY = "Recuperer le signal";
+Blockly.Msg.ROBOBOX_IRREMOTE_SIGNALCODE = "Recuperer le code du signal";
+Blockly.Msg.ROBOBOX_IRREMOTE_RESUME = "Reprendre";
+Blockly.Msg.ROBOBOX_IRREMOTE_SEND = "Envoyer un signalIR";
+Blockly.Msg.ROBOBOX_IRREMOTE_SENDARRAY = "Envoyer un signalIR";
+
+Blockly.Msg.CAT_ROBOBOX_MONTH4 = "- Voiture Robobox";
+Blockly.Msg.ROBOBOX_MONTH4_INIT = "Connection des moteurs";
+Blockly.Msg.ROBOBOX_MONTH4_MOVE = "Avancer";
+Blockly.Msg.ROBOBOX_MONTH4_MOVEBACKWARD = "Reculer";
+Blockly.Msg.ROBOBOX_MONTH4_TURNRIGHT = "Tourner à droite";
+Blockly.Msg.ROBOBOX_MONTH4_TURNLEFT = "Tourner à gauche";
+
+Blockly.Msg.CAT_ROBOBOX_MONTH6 = "- La lumiere";
+Blockly.Msg.ROBOBOX_MONTH6_LINEC = "Recuperer la ligne centrale";
+Blockly.Msg.ROBOBOX_MONTH6_LINED = "Recuperer la ligne de droite";
+Blockly.Msg.ROBOBOX_MONTH6_LINEG = "Recuperer la ligne de gauche";
+Blockly.Msg.ROBOBOX_MONTH6_CALCANGLE = "Calculer l'angle";
+
+Blockly.Msg.CAT_ROBOBOX_MONTH8 = "- La moto";
+Blockly.Msg.ROBOBOX_MONTH8_ANALYZE = "Analyser un signal";

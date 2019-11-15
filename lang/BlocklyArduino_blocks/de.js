@@ -2601,3 +2601,46 @@ Blockly.Msg.Peguino_AttachServo_UNIT = "port";
 Blockly.Msg.Peguino_AttachServo_UNIT_CHOICE = [["?", "0"], ["C3", "6"],  ["D1", "10"], ["D2", "7"]];
 Blockly.Msg.Peguino_AttachServo_HELPURL = "https://www.peguino.com/chat/";
 Blockly.Msg.Peguino_SERVO_DEFAULT_NAME = "Servo1";
+
+
+//////////////////////////// Robobox Blocks Text 2019 ////////////////////////////
+Blockly.Msg.CAT_ROBOBOX = "Robobox";
+Blockly.Msg.ROBOBOX_ANGLE180 = "Angle [0~180°]:";
+Blockly.Msg.ROBOBOX_PIN = "Pin:";
+Blockly.Msg.ROBOBOX_TRIGGER_PIN = "Trigger on pin:";
+Blockly.Msg.ROBOBOX_LISTEN_PIN = "Listen on pin:";
+Blockly.Msg.ROBOBOX_ARRAY = "Array:";
+Blockly.Msg.ROBOBOX_LEN = "Length:";
+
+Blockly.Msg.CAT_ROBOBOX_SERVO = "- Servo-motors";
+Blockly.Msg.ROBOBOX_SERVO_SETANGLE = "Set angle";
+Blockly.Msg.ROBOBOX_SERVO_GETANGLE = "Get angle";
+Blockly.Msg.ROBOBOX_SERVO_TOOLTIP = "Help";
+
+Blockly.Msg.CAT_ROBOBOX_SENSORS = "- Sensors";
+Blockly.Msg.ROBOBOX_SENSORS_ULTRASOUND = "Distance measured in cm";
+
+Blockly.Msg.CAT_ROBOBOX_IRREMOTE = "- IRremote";
+Blockly.Msg.ROBOBOX_IRREMOTE_DECODE = "Decode IRsignal";
+Blockly.Msg.ROBOBOX_IRREMOTE_SIGNALLEN = "Get signal length";
+Blockly.Msg.ROBOBOX_IRREMOTE_SIGNALARRAY = "Get signal array";
+Blockly.Msg.ROBOBOX_IRREMOTE_SIGNALCODE = "Get signal code";
+Blockly.Msg.ROBOBOX_IRREMOTE_RESUME = "Resume";
+Blockly.Msg.ROBOBOX_IRREMOTE_SEND = "Send IRsignal";
+Blockly.Msg.ROBOBOX_IRREMOTE_SENDARRAY = "Send IRsignal";
+
+Blockly.Msg.CAT_ROBOBOX_MONTH4 = "- Robobox car";
+Blockly.Msg.ROBOBOX_MONTH4_INIT = "Connect motors";
+Blockly.Msg.ROBOBOX_MONTH4_MOVE = "Move forward";
+Blockly.Msg.ROBOBOX_MONTH4_MOVEBACKWARD = "Move backward";
+Blockly.Msg.ROBOBOX_MONTH4_TURNRIGHT = "Turn right";
+Blockly.Msg.ROBOBOX_MONTH4_TURNLEFT = "Turn left";
+
+Blockly.Msg.CAT_ROBOBOX_MONTH6 = "- Light";
+Blockly.Msg.ROBOBOX_MONTH6_LINEC = "Get central line";
+Blockly.Msg.ROBOBOX_MONTH6_LINED = "Get right line";
+Blockly.Msg.ROBOBOX_MONTH6_LINEG = "Get left line";
+Blockly.Msg.ROBOBOX_MONTH6_CALCANGLE = "Compile angle";
+
+Blockly.Msg.CAT_ROBOBOX_MONTH8 = "- Motorbike";
+Blockly.Msg.ROBOBOX_MONTH8_ANALYZE = "Analyze";

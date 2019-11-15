@@ -49,6 +49,7 @@ head.load(
 "blocks/QTR-1RC/blocks_typing.js",
 "blocks/RF433/blocks_typing.js",
 "blocks/RFID/blocks_typing.js",
+"blocks/robobox/blocks_typing.js",
 "blocks/robots/blocks_typing.js",
 "blocks/robuno/blocks_typing.js",
 "blocks/seeed/grove/blocks_typing.js",

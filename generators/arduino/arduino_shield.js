@@ -76,7 +76,7 @@ Blockly.Arduino.Bluetooth_Shield_duinoFun = function() {
   var value_RX_pin = Blockly.Arduino.valueToCode(this, 'BT_TX', Blockly.Arduino.ORDER_ATOMIC);
   var value_TX_pin = Blockly.Arduino.valueToCode(this, 'BT_RX', Blockly.Arduino.ORDER_ATOMIC);   
   //dans include définition    
-  Blockly.Arduino.includes_['define_SoftwareSerial'] = '#include <SoftwareSerial.h>\n'; 
+  Blockly.Arduino.includes_['define_SoftwareSerial'] = '#include <LiquidCrystal.h>\n'; 
   Blockly.Arduino.definitions_['define_RxTx'] = 
   '#define RxD '+ value_RX_pin +'\n' + 
   '#define TxD '+ value_TX_pin +'\n'; 
