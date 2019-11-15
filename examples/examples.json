@@ -8,20 +8,108 @@
         "visible": true
     },
     {
-        "source_url": "./mbot_suiveur_ligne/mbot_suiveur_ligne.xml",
+        "source_url": "./mBot/mbot_suiveur_ligne/mbot_suiveur_ligne.xml",
         "source_text": "Robot mBot suiveur de ligne",
-        "image": "./mbot_suiveur_ligne/mbot_suiveur_ligne.jpg",
+        "image": "./mBot/mbot_suiveur_ligne/mbot_suiveur_ligne.jpg",
         "link_url": "",
         "link_text": "",
         "visible": true
     },
     {
-        "source_url": "./mbot_eviter_obstacles/mbot_eviter_obstacles.xml",
+        "source_url": "./mBot/mbot_eviter_obstacles/mbot_eviter_obstacles.xml",
         "source_text": "Robot mBot éviteur obstacles",
-        "image": "./mbot_eviter_obstacles/mbot_eviter_obstacles.jpg",
+        "image": "./mBot/mbot_eviter_obstacles/mbot_eviter_obstacles.jpg",
         "link_url": "",
         "link_text": "",
         "visible": true
+    },
+    {
+		"source_url": "./robobox/mois1.xml",
+		"source_text": "Mini alarme",
+		"image": "./robobox/robobox.png",
+		"link_url": "",
+		"link_text": "",
+		"visible": true
+    },
+    {
+		"source_url": "./robobox/mois2.xml",
+		"source_text": "Bras articulé",
+		"image": "./robobox/robobox.png",
+		"link_url": "",
+		"link_text": "",
+		"visible": true
+    },
+    {
+		"source_url": "./robobox/mois3.xml",
+		"source_text": "Robot chien",
+		"image": "./robobox/robobox.png",
+		"link_url": "",
+		"link_text": "",
+		"visible": true
+    },
+    {
+		"source_url": "./robobox/mois4-simple.xml",
+		"source_text": "Voiture robobox (easy)",
+		"image": "./robobox/robobox.png",
+		"link_url": "",
+		"link_text": "",
+		"visible": true
+    },
+    {
+		"source_url": "./robobox/mois4-complexe.xml",
+		"source_text": "Voiture Robobox (Difficile)",
+		"image": "./robobox/robobox.png",
+		"link_url": "",
+		"link_text": "",
+		"visible": true
+    },
+    {
+		"source_url": "./robobox/mois5-test_led.xml",
+		"source_text": "Infrarouge - test avec une led",
+		"image": "./robobox/robobox.png",
+		"link_url": "",
+		"link_text": "",
+		"visible": true
+    },
+    {
+		"source_url": "./robobox/mois5-transmitter.xml",
+		"source_text": "Transmission infrarouge",
+		"image": "./robobox/robobox.png",
+		"link_url": "",
+		"link_text": "",
+		"visible": true
+    },
+    {
+		"source_url": "./robobox/mois6-test_led.xml",
+		"source_text": "Lumiere - test avec une led",
+		"image": "./robobox/robobox.png",
+		"link_url": "",
+		"link_text": "",
+		"visible": true
+    },
+    {
+		"source_url": "./robobox/mois6-phare.xml",
+		"source_text": "Voiture avec des phares",
+		"image": "./robobox/robobox.png",
+		"link_url": "",
+		"link_text": "",
+		"visible": true
+    },
+    {
+		"source_url": "./robobox/mois6-ligne.xml",
+		"source_text": "Voiture ligne",
+		"image": "./robobox/robobox.png",
+		"link_url": "",
+		"link_text": "",
+		"visible": true
+    },
+    {
+		"source_url": "./robobox/mois6-tournesol.xml",
+		"source_text": "Voiture ligne",
+		"image": "./robobox/robobox.png",
+		"link_url": "",
+		"link_text": "",
+		"visible": true
     },
     {
         "source_url": "./grenouille/grenouille.xml",
@@ -112,57 +200,57 @@
         "visible": true
     },
     {
-        "source_url": "./Starter_Kit_prj2/Starter_Kit_prj2.xml",
+        "source_url": "./Starter_Kit/Starter_Kit_prj2/Starter_Kit_prj2.xml",
         "source_text": "Starter Kit Arduino : interface vaisseau spatial",
-        "image": "./Starter_Kit_prj2/Starter_Kit_prj2.jpg",
+        "image": "./Starter_Kit/Starter_Kit_prj2/Starter_Kit_prj2.jpg",
         "link_url": "",
         "link_text": "",
         "visible": true
     },
     {
-        "source_url": "./Starter_Kit_prj3/Starter_Kit_prj3.xml",
+        "source_url": "./Starter_Kit/Starter_Kit/Starter_Kit_prj3/Starter_Kit_prj3.xml",
         "source_text": "Starter Kit Arduino : love-o-meter",
-        "image": "./Starter_Kit_prj3/Starter_Kit_prj3.jpg",
+        "image": "./Starter_Kit/Starter_Kit_prj3/Starter_Kit_prj3.jpg",
         "link_url": "",
         "link_text": "",
         "visible": true
     },
     {
-        "source_url": "./Starter_Kit_prj4/Starter_Kit_prj4.xml",
+        "source_url": "./Starter_Kit/Starter_Kit_prj4/Starter_Kit_prj4.xml",
         "source_text": "Starter Kit Arduino : lampe d'ambiance",
-        "image": "./Starter_Kit_prj4/Starter_Kit_prj4.jpg",
+        "image": "./Starter_Kit/Starter_Kit_prj4/Starter_Kit_prj4.jpg",
         "link_url": "",
         "link_text": "",
         "visible": true
     },
     {
-        "source_url": "./Starter_Kit_prj5/Starter_Kit_prj5.xml",
+        "source_url": "./Starter_Kit/Starter_Kit_prj5/Starter_Kit_prj5.xml",
         "source_text": "Starter Kit Arduino : Indicateur d'humeur",
-        "image": "./Starter_Kit_prj5/Starter_Kit_prj5.jpg",
+        "image": "./Starter_Kit/Starter_Kit_prj5/Starter_Kit_prj5.jpg",
         "link_url": "",
         "link_text": "",
         "visible": true
     },
     {
-        "source_url": "./Starter_Kit_prj6/Starter_Kit_prj6.xml",
+        "source_url": "./Starter_Kit/Starter_Kit_prj6/Starter_Kit_prj6.xml",
         "source_text": "Starter Kit Arduino : Thérémine lumineux",
-        "image": "./Starter_Kit_prj6/Starter_Kit_prj6.jpg",
+        "image": "./Starter_Kit/Starter_Kit_prj6/Starter_Kit_prj6.jpg",
         "link_url": "",
         "link_text": "",
         "visible": true
     },
     {
-        "source_url": "./Starter_Kit_prj7/Starter_Kit_prj7.xml",
+        "source_url": "./Starter_Kit/Starter_Kit_prj7/Starter_Kit_prj7.xml",
         "source_text": "Starter Kit Arduino : Clavier musical",
-        "image": "./Starter_Kit_prj7/Starter_Kit_prj7.jpg",
+        "image": "./Starter_Kit/Starter_Kit_prj7/Starter_Kit_prj7.jpg",
         "link_url": "",
         "link_text": "",
         "visible": true
     },
     {
-        "source_url": "./Starter_Kit_prj8/Starter_Kit_prj8.xml",
+        "source_url": "./Starter_Kit/Starter_Kit_prj8/Starter_Kit_prj8.xml",
         "source_text": "Starter Kit Arduino : Sablier numérique",
-        "image": "./Starter_Kit_prj8/Starter_Kit_prj8.jpg",
+        "image": "./Starter_Kit/Starter_Kit_prj8/Starter_Kit_prj8.jpg",
         "link_url": "",
         "link_text": "",
         "visible": true
@@ -225,7 +313,7 @@
     },
 	{
         "source_url": "bp/bp.xml",
-        "source_text": "faire clignoter une DEL avec un bouton poussoir",
+        "source_text": "faire clignoter une DEL pilotée par un bouton poussoir",
         "image": "./bp/bp.png",
         "link_url": "",
         "link_text": "",

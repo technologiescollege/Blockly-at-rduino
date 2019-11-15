@@ -1,0 +1,143 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <toolboxcategories>CAT_LOGIC,CAT_LOOPS,CAT_MATH,CAT_VARIABLES,CAT_FUNCTIONS,CAT_ARDUINO,CAT_ROBOBOX,CAT_BQ,CAT_TECHNOZONE</toolboxcategories>
+  <toolbox>toolbox_arduino_all</toolbox>
+  <block type="base_setup_loop" id="NOY:ez79vJ-S6{;KS!/O" x="12" y="113">
+    <statement name="LOOP">
+      <block type="variables_set" id="R#-@1%J+#ejQ5vrPaJaG">
+        <field name="VAR">distance</field>
+        <value name="VALUE">
+          <block type="robobox_sensors_ultrasound" id="U!UWsQlka0E~hZIN-(Uh">
+            <value name="TRIGER">
+              <shadow type="math_number" id="]DX^fdx5DG*(z*a_gw`:">
+                <field name="NUM">10</field>
+              </shadow>
+            </value>
+            <value name="DIST">
+              <shadow type="math_number" id="*5w4U?2j)S1()3qsT`(c">
+                <field name="NUM">9</field>
+              </shadow>
+            </value>
+          </block>
+        </value>
+        <next>
+          <block type="procedures_callnoreturn" id="L=G.|7@^kk3Ry6dDQ_}m">
+            <mutation name="allumePhare"></mutation>
+            <next>
+              <block type="controls_if" id="k78gT=euEHdS*C|,y%K,">
+                <mutation else="1"></mutation>
+                <value name="IF0">
+                  <block type="logic_compare" id="SzEV6C$-RuSrV).BIey#">
+                    <field name="OP">GTE</field>
+                    <value name="A">
+                      <block type="variables_get" id="~0sP(##piu`xUE#A~59,">
+                        <field name="VAR">distance</field>
+                      </block>
+                    </value>
+                    <value name="B">
+                      <block type="math_number" id="H3eyQ^!^[$|bNueN}:O|">
+                        <field name="NUM">20</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <statement name="DO0">
+                  <block type="robobox_month4_move" id="1lK}*08D28S:z@IlB~C%"></block>
+                </statement>
+                <statement name="ELSE">
+                  <block type="robobox_month4_moveBackward" id="_P8.CQOfM#|wx;SOylpt">
+                    <next>
+                      <block type="robobox_month4_turn" id="uhb_fHR93^(ddvtjQrtR"></block>
+                    </next>
+                  </block>
+                </statement>
+                <next>
+                  <block type="base_delay" id="Ml*YCg7sEAl/i9MB)xI`">
+                    <value name="DELAY_TIME">
+                      <shadow type="math_number" id="u]nE-.L^+PBOSL6vc6EC">
+                        <field name="NUM">300</field>
+                      </shadow>
+                    </value>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+  <block type="procedures_defnoreturn" id="8Wu`k~VG|t3NPT,4%B4z" x="588" y="188">
+    <field name="NAME">allumePhare</field>
+    <comment pinned="false" h="80" w="160">Describe this function...</comment>
+    <statement name="STACK">
+      <block type="variables_set" id="57i=ohkF2,Kkz1%,-=tW">
+        <field name="VAR">valeurPhoto</field>
+        <value name="VALUE">
+          <block type="inout_analog_read_validator" id="y~[V|L!E2c*L4wEzOn%h">
+            <field name="PIN">A0</field>
+          </block>
+        </value>
+        <next>
+          <block type="variables_set" id=".[5SExVDxv6I3?oqs2}y">
+            <field name="VAR">luminositeLed</field>
+            <value name="VALUE">
+              <block type="conversion_map" id="|r!!oRCR#It}(l}yC0]#">
+                <value name="NUM">
+                  <block type="variables_get" id="w2qUz2Q}vkh82U?g`eFL">
+                    <field name="VAR">valeurPhoto</field>
+                  </block>
+                </value>
+                <value name="IN_MIN">
+                  <block type="math_number" id="P.C2o1tUon}@/%`OFf1/">
+                    <field name="NUM">0</field>
+                  </block>
+                </value>
+                <value name="IN_MAX">
+                  <block type="math_number" id="gPcWO*u4EJ|.x7h7F,4j">
+                    <field name="NUM">300</field>
+                  </block>
+                </value>
+                <value name="OUT_MIN">
+                  <block type="math_number" id=",/Hox1O9[J:M5S$N0+G,">
+                    <field name="NUM">255</field>
+                  </block>
+                </value>
+                <value name="OUT_MAX">
+                  <block type="math_number" id="Eo4Q]|aWB[~ZD;2!V%3q">
+                    <field name="NUM">0</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <next>
+              <block type="inout_analog_write" id="~LAkAlHaDwRz#/yPbS|,">
+                <value name="PIN">
+                  <block type="math_number" id="wFVOYCk/EpG0Chaeki9u">
+                    <field name="NUM">3</field>
+                  </block>
+                </value>
+                <value name="NUM">
+                  <shadow type="math_number" id=")M3c;7]~I$0a^rBVM5o#">
+                    <field name="NUM">0</field>
+                  </shadow>
+                  <block type="variables_get" id="Kk%mo[}y1E43@/_qYn:6">
+                    <field name="VAR">luminositeLed</field>
+                  </block>
+                </value>
+                <next>
+                  <block type="base_delay" id="EbF7DLJcTPW2OD?-pq#o">
+                    <value name="DELAY_TIME">
+                      <shadow type="math_number" id="0nuN]Yq-h+6lFbC7E6e|">
+                        <field name="NUM">100</field>
+                      </shadow>
+                    </value>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+</xml>
