@@ -31,16 +31,11 @@ goog.provide('Blockly.Blocks.colour');
 goog.require('Blockly.Blocks');
 goog.require('Blockly.constants');
 
-Blockly.FieldColour.COLOURS = ['#f00', '#e00', '#d00', '#c00', '#b00', '#a00','#800', '#600', '#400', '#000'];
-Blockly.FieldColour.COLUMNS = 5;
-
-
 Blockly.Blocks['microbit_accelerometer_get_x'] = {
   init: function() {
     this.jsonInit({"colour": 0, "output": "Number", "helpUrl": "https://microbit-micropython.readthedocs.io/en/latest/accelerometer.html#microbit.accelerometer.get_x", "tooltip": "Get the acceleration measurement in the X axis.", "message0": "Accelerometer X axis"});
   }
 };
-
 
 Blockly.Blocks['microbit_accelerometer_get_y'] = {
   init: function() {
@@ -48,13 +43,11 @@ Blockly.Blocks['microbit_accelerometer_get_y'] = {
   }
 };
 
-
 Blockly.Blocks['microbit_accelerometer_get_z'] = {
   init: function() {
     this.jsonInit({"colour": 0, "output": "Number", "helpUrl": "https://microbit-micropython.readthedocs.io/en/latest/accelerometer.html#microbit.accelerometer.get_z", "tooltip": "Get the acceleration measurement in the Z axis.", "message0": "Accelerometer Z axis"});
   }
 };
-
 
 Blockly.Blocks['microbit_accelerometer_was_gesture'] = {
   init: function() {
@@ -62,13 +55,11 @@ Blockly.Blocks['microbit_accelerometer_was_gesture'] = {
   }
 };
 
-
 Blockly.Blocks['microbit_accelerometer_is_gesture'] = {
   init: function() {
     this.jsonInit({"colour": 0, "args0": [{"name": "gesture", "options": [["shake", "shake"], ["up", "up"], ["down", "down"], ["left", "left"], ["right", "right"], ["face up", "face up"], ["face down", "face down"], ["freefall", "freefall"], ["3g", "3g"], ["6g", "6g"], ["8g", "8g"]], "type": "field_dropdown"}], "output": "Boolean", "helpUrl": "https://microbit-micropython.readthedocs.io/en/latest/accelerometer.html#microbit.accelerometer.is_gesture", "tooltip": "Return True or False to indicate if the named gesture is currently active.", "message0": "Is gesture %1"});
   }
 };
-
 
 Blockly.Blocks['microbit_accelerometer_get_gestures'] = {
   init: function() {
@@ -76,13 +67,11 @@ Blockly.Blocks['microbit_accelerometer_get_gestures'] = {
   }
 };
 
-
 Blockly.Blocks['microbit_accelerometer_current_gesture'] = {
   init: function() {
     this.jsonInit({"colour": 0, "output": "String", "helpUrl": "https://microbit-micropython.readthedocs.io/en/latest/accelerometer.html#microbit.accelerometer.current_gesture", "tooltip": "Return the name of the current gesture.", "message0": "Current gesture"});
   }
 };
-
 
 Blockly.Blocks['microbit_button_is_pressed'] = {
   init: function() {
@@ -90,13 +79,11 @@ Blockly.Blocks['microbit_button_is_pressed'] = {
   }
 };
 
-
 Blockly.Blocks['microbit_button_was_pressed'] = {
   init: function() {
     this.jsonInit({"colour": 32, "args0": [{"name": "button", "options": [["A", "a"], ["B", "b"]], "type": "field_dropdown"}], "output": "Boolean", "helpUrl": "https://microbit-micropython.readthedocs.io/en/latest/button.html#Button.was_pressed", "tooltip": "Return True if the specified button was pressed since the device started or the last time this was checked.", "message0": "Button %1 was pressed"});
   }
 };
-
 
 Blockly.Blocks['microbit_button_get_presses'] = {
   init: function() {
@@ -104,13 +91,11 @@ Blockly.Blocks['microbit_button_get_presses'] = {
   }
 };
 
-
 Blockly.Blocks['microbit_compass_calibrate'] = {
   init: function() {
     this.jsonInit({"colour": 64, "nextStatement": null, "previousStatement": null, "helpUrl": "https://microbit-micropython.readthedocs.io/en/latest/compass.html#microbit.compass.calibrate", "tooltip": "Start the callibration process to improve the accuracy of the compass.", "message0": "Calibrate compass"});
   }
 };
-
 
 Blockly.Blocks['microbit_compass_is_calibrated'] = {
   init: function() {
@@ -118,20 +103,17 @@ Blockly.Blocks['microbit_compass_is_calibrated'] = {
   }
 };
 
-
 Blockly.Blocks['microbit_compass_heading'] = {
   init: function() {
     this.jsonInit({"colour": 64, "output": "Number", "helpUrl": "https://microbit-micropython.readthedocs.io/en/latest/compass.html#microbit.compass.heading", "tooltip": "Return the compass heading as a number between 0 to 360, representing the angle in degrees, clockwise, with north as 0.", "message0": "Compass heading"});
   }
 };
 
-
 Blockly.Blocks['microbit_compass_get_field_strength'] = {
   init: function() {
     this.jsonInit({"colour": 64, "output": "Number", "helpUrl": "https://microbit-micropython.readthedocs.io/en/latest/compass.html#microbit.compass.get_field_strength", "tooltip": "Return a number indicating the magnitude of the magnetic field around the device.", "message0": "Compass field strength"});
   }
 };
-
 
 Blockly.Blocks['microbit_display_get_pixel'] = {
   init: function() {
@@ -145,7 +127,6 @@ Blockly.Blocks['microbit_display_set_pixel'] = {
     this.jsonInit({"inputsInline": true, "nextStatement": null, "previousStatement": null, "helpUrl": "https://microbit-micropython.readthedocs.io/en/latest/display.html#microbit.display.set_pixel", "colour": 96, "tooltip": "Set the brightness of the LED at column X and row Y to a value which has to be a number between 0 (off) and 9 (brightest).", "message0": "Set pixel at X %1 Y %2 to brightness %3", "args0": [{"check": "Number", "type": "input_value", "name": "x"}, {"check": "Number", "type": "input_value", "name": "y"}, {"check": "Number", "type": "input_value", "name": "value"}]});
   }
 };
-
 
 Blockly.Blocks['microbit_display_clear'] = {
   init: function() {
@@ -216,13 +197,97 @@ Blockly.Blocks['microbit_image_invert'] = {
   }
 };
 
-
 Blockly.Blocks['microbit_image_create'] = {
   init: function() {
-    this.jsonInit({"colour": 128, "args0": [{"type": "input_dummy"}, {"colour": "#000000", "type": "field_colour", "name": "00"}, {"colour": "#000000", "type": "field_colour", "name": "01"}, {"colour": "#000000", "type": "field_colour", "name": "02"}, {"colour": "#000000", "type": "field_colour", "name": "03"}, {"colour": "#000000", "type": "field_colour", "name": "04"}, {"type": "input_dummy"}, {"colour": "#000000", "type": "field_colour", "name": "10"}, {"colour": "#000000", "type": "field_colour", "name": "11"}, {"colour": "#000000", "type": "field_colour", "name": "12"}, {"colour": "#000000", "type": "field_colour", "name": "13"}, {"colour": "#000000", "type": "field_colour", "name": "14"}, {"type": "input_dummy"}, {"colour": "#000000", "type": "field_colour", "name": "20"}, {"colour": "#000000", "type": "field_colour", "name": "21"}, {"colour": "#000000", "type": "field_colour", "name": "22"}, {"colour": "#000000", "type": "field_colour", "name": "23"}, {"colour": "#000000", "type": "field_colour", "name": "24"}, {"type": "input_dummy"}, {"colour": "#000000", "type": "field_colour", "name": "30"}, {"colour": "#000000", "type": "field_colour", "name": "31"}, {"colour": "#000000", "type": "field_colour", "name": "32"}, {"colour": "#000000", "type": "field_colour", "name": "33"}, {"colour": "#000000", "type": "field_colour", "name": "34"}, {"type": "input_dummy"}, {"colour": "#000000", "type": "field_colour", "name": "40"}, {"colour": "#000000", "type": "field_colour", "name": "41"}, {"colour": "#000000", "type": "field_colour", "name": "42"}, {"colour": "#000000", "type": "field_colour", "name": "43"}, {"colour": "#000000", "type": "field_colour", "name": "44"}], "output": "microbit_image", "helpUrl": "https://microbit-micropython.readthedocs.io/en/latest/image.html#microbit.Image", "tooltip": "Create a new image.", "message0": "Create image %1 %2 %3 %4 %5 %6 %7 %8 %9 %10 %11 %12 %13 %14 %15 %16 %17 %18 %19 %20 %21 %22 %23 %24 %25 %26 %27 %28 %29 %30"});
+    this.appendDummyInput()
+        .appendField("Create image");
+    this.appendDummyInput()
+        .appendField(new Blockly.FieldColour('rgb(0, 0, 0)')
+			.setColours(['#f00', '#e00', '#d00', '#c00', '#b00', '#a00','#800', '#600', '#400', '#000'])
+			.setColumns(5), '00')
+        .appendField(new Blockly.FieldColour('rgb(0, 0, 0)')
+			.setColours(['#f00', '#e00', '#d00', '#c00', '#b00', '#a00','#800', '#600', '#400', '#000'])
+			.setColumns(5), '01')
+        .appendField(new Blockly.FieldColour('rgb(0, 0, 0)')
+			.setColours(['#f00', '#e00', '#d00', '#c00', '#b00', '#a00','#800', '#600', '#400', '#000'])
+			.setColumns(5), '02')
+        .appendField(new Blockly.FieldColour('rgb(0, 0, 0)')
+			.setColours(['#f00', '#e00', '#d00', '#c00', '#b00', '#a00','#800', '#600', '#400', '#000'])
+			.setColumns(5), '03')
+        .appendField(new Blockly.FieldColour('rgb(0, 0, 0)')
+			.setColours(['#f00', '#e00', '#d00', '#c00', '#b00', '#a00','#800', '#600', '#400', '#000'])
+			.setColumns(5), '04');
+    this.appendDummyInput()
+        .appendField(new Blockly.FieldColour('rgb(0, 0, 0)')
+			.setColours(['#f00', '#e00', '#d00', '#c00', '#b00', '#a00','#800', '#600', '#400', '#000'])
+			.setColumns(5), '10')
+        .appendField(new Blockly.FieldColour('rgb(0, 0, 0)')
+			.setColours(['#f00', '#e00', '#d00', '#c00', '#b00', '#a00','#800', '#600', '#400', '#000'])
+			.setColumns(5), '11')
+        .appendField(new Blockly.FieldColour('rgb(0, 0, 0)')
+			.setColours(['#f00', '#e00', '#d00', '#c00', '#b00', '#a00','#800', '#600', '#400', '#000'])
+			.setColumns(5), '12')
+        .appendField(new Blockly.FieldColour('rgb(0, 0, 0)')
+			.setColours(['#f00', '#e00', '#d00', '#c00', '#b00', '#a00','#800', '#600', '#400', '#000'])
+			.setColumns(5), '13')
+        .appendField(new Blockly.FieldColour('rgb(0, 0, 0)')
+			.setColours(['#f00', '#e00', '#d00', '#c00', '#b00', '#a00','#800', '#600', '#400', '#000'])
+			.setColumns(5), '14');
+    this.appendDummyInput()
+        .appendField(new Blockly.FieldColour('rgb(0, 0, 0)')
+			.setColours(['#f00', '#e00', '#d00', '#c00', '#b00', '#a00','#800', '#600', '#400', '#000'])
+			.setColumns(5), '20')
+        .appendField(new Blockly.FieldColour('rgb(0, 0, 0)')
+			.setColours(['#f00', '#e00', '#d00', '#c00', '#b00', '#a00','#800', '#600', '#400', '#000'])
+			.setColumns(5), '21')
+        .appendField(new Blockly.FieldColour('rgb(0, 0, 0)')
+			.setColours(['#f00', '#e00', '#d00', '#c00', '#b00', '#a00','#800', '#600', '#400', '#000'])
+			.setColumns(5), '22')
+        .appendField(new Blockly.FieldColour('rgb(0, 0, 0)')
+			.setColours(['#f00', '#e00', '#d00', '#c00', '#b00', '#a00','#800', '#600', '#400', '#000'])
+			.setColumns(5), '23')
+        .appendField(new Blockly.FieldColour('rgb(0, 0, 0)')
+			.setColours(['#f00', '#e00', '#d00', '#c00', '#b00', '#a00','#800', '#600', '#400', '#000'])
+			.setColumns(5), '24');
+    this.appendDummyInput()
+        .appendField(new Blockly.FieldColour('rgb(0, 0, 0)')
+			.setColours(['#f00', '#e00', '#d00', '#c00', '#b00', '#a00','#800', '#600', '#400', '#000'])
+			.setColumns(5), '30')
+        .appendField(new Blockly.FieldColour('rgb(0, 0, 0)')
+			.setColours(['#f00', '#e00', '#d00', '#c00', '#b00', '#a00','#800', '#600', '#400', '#000'])
+			.setColumns(5), '31')
+        .appendField(new Blockly.FieldColour('rgb(0, 0, 0)')
+			.setColours(['#f00', '#e00', '#d00', '#c00', '#b00', '#a00','#800', '#600', '#400', '#000'])
+			.setColumns(5), '32')
+        .appendField(new Blockly.FieldColour('rgb(0, 0, 0)')
+			.setColours(['#f00', '#e00', '#d00', '#c00', '#b00', '#a00','#800', '#600', '#400', '#000'])
+			.setColumns(5), '33')
+        .appendField(new Blockly.FieldColour('rgb(0, 0, 0)')
+			.setColours(['#f00', '#e00', '#d00', '#c00', '#b00', '#a00','#800', '#600', '#400', '#000'])
+			.setColumns(5), '34');
+    this.appendDummyInput()
+        .appendField(new Blockly.FieldColour('rgb(0, 0, 0)')
+			.setColours(['#f00', '#e00', '#d00', '#c00', '#b00', '#a00','#800', '#600', '#400', '#000'])
+			.setColumns(5), '40')
+        .appendField(new Blockly.FieldColour('rgb(0, 0, 0)')
+			.setColours(['#f00', '#e00', '#d00', '#c00', '#b00', '#a00','#800', '#600', '#400', '#000'])
+			.setColumns(5), '41')
+        .appendField(new Blockly.FieldColour('rgb(0, 0, 0)')
+			.setColours(['#f00', '#e00', '#d00', '#c00', '#b00', '#a00','#800', '#600', '#400', '#000'])
+			.setColumns(5), '42')
+        .appendField(new Blockly.FieldColour('rgb(0, 0, 0)')
+			.setColours(['#f00', '#e00', '#d00', '#c00', '#b00', '#a00','#800', '#600', '#400', '#000'])
+			.setColumns(5), '43')
+        .appendField(new Blockly.FieldColour('rgb(0, 0, 0)')
+			.setColours(['#f00', '#e00', '#d00', '#c00', '#b00', '#a00','#800', '#600', '#400', '#000'])
+			.setColumns(5), '44');
+    this.setInputsInline(false);
+    this.setOutput(true, 'microbit_image');
+    this.setColour(128);
+    this.setTooltip('Create a new image.');
+    this.setHelpUrl('https://microbit-micropython.readthedocs.io/en/latest/image.html#microbit.Image');
   }
 };
-
 
 Blockly.Blocks['microbit_microbit_panic'] = {
   init: function() {
