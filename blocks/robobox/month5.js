@@ -9,7 +9,8 @@ Blockly.Blocks['connecteMoteurs'] = {
     init: function() {
 	this.setColour(Blockly.Blocks.bq.HUE);
 	this.setHelpUrl(Blockly.Msg.BQ_HELPURL);
-	this.appendDummyInput().appendField('Connections des moteurs');
+	this.appendDummyInput()
+		.appendField('Connections des moteurs');
 	this.setPreviousStatement(true, null);
 	this.setNextStatement(true, null);
     }
