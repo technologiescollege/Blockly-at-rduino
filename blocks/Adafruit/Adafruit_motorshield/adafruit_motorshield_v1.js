@@ -31,7 +31,7 @@ Blockly.Blocks['dcmotor_v1'] = {
 };
 
 
-//Moteur Pas-à-pas - V1
+//Moteur Pas-Ã -pas - V1
 Blockly.Blocks['pap_v1'] = {
   init: function() {
     this.appendDummyInput()

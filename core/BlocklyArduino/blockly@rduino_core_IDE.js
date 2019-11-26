@@ -228,7 +228,7 @@ BlocklyDuino.backupBlocks = function () {
 /**
  * Sets Arduino card
  */
-BlocklyDuino.setArduinoCard =  function () {
+BlocklyDuino.setArduinoBoard =  function () {
 	var cardId = BlocklyDuino.getStringParamFromUrl('card', '');
 	if (!cardId) {
 		cardId = BlocklyDuino.selectedCard;
@@ -836,7 +836,7 @@ BlocklyDuino.init = function() {
 		$("#btn_miniMenuPanel > span").removeClass("glyphicon-step-forward");
 		}
 		
-	BlocklyDuino.setArduinoCard();
+	BlocklyDuino.setArduinoBoard();
 	
 	// build Blockly ...
 	BlocklyDuino.workspace = Blockly.inject('content_blocks',

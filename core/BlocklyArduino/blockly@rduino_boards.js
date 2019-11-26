@@ -52,7 +52,7 @@ var profile = {
         serial: [],
         serialPin: [],
         upload_arg: "none",
-        help_link: "",
+        help_link: ""
     },
     arduino_leonardo: {
         description: "Arduino Leonardo",
@@ -78,7 +78,7 @@ var profile = {
             ['115200', '115200']],
         serialPin: [["0 (Rx) ; 1 (Tx)", "0"]],
         upload_arg: "arduino:avr:leonardo",
-        help_link: "https://www.arduino.cc/en/Main/Arduino_BoardLeonardo",
+        help_link: "https://www.arduino.cc/en/Main/Arduino_BoardLeonardo"
     },
     arduino_mega: {
         description: "Arduino Mega 2560 / ADK",
@@ -104,7 +104,7 @@ var profile = {
             ['115200', '115200']],
         serialPin: [["0 (Rx) ; 1 (Tx)", "0"], ["19 (Rx1) ; 18 (Tx1)", "19"], ["17 (Rx2) ; 16 (Tx2)", "17"], ["15 (Rx3) ; 14 (Tx3)", "15"]],
         upload_arg: "arduino:avr:mega:cpu=atmega2560",
-        help_link: "https://store.arduino.cc/mega-2560-r3",
+        help_link: "https://store.arduino.cc/mega-2560-r3"
     },
     arduino_micro: {
         description: "Arduino Micro",
@@ -130,7 +130,7 @@ var profile = {
             ['115200', '115200']],
         serialPin: [["0 (Rx) ; 1 (Tx)", "0"]],
         upload_arg: "arduino:avr:micro",
-        help_link: "https://store.arduino.cc/arduino-micro",
+        help_link: "https://store.arduino.cc/arduino-micro"
     },
     arduino_mini: {
         description: "Arduino Mini ATmega328",
@@ -155,7 +155,7 @@ var profile = {
             ['115200', '115200']],
         serialPin: [["0 (Rx) ; 1 (Tx)", "0"]],
         upload_arg: "arduino:avr:mini",
-        help_link: "https://store.arduino.cc/arduino-mini-05",
+        help_link: "https://store.arduino.cc/arduino-mini-05"
     },
     arduino_nano: {
         description: "Arduino Nano ATmega328",
@@ -181,7 +181,7 @@ var profile = {
             ['115200', '115200']],
         serialPin: [["0 (Rx) ; 1 (Tx)", "0"]],
         upload_arg: "arduino:avr:nano:cpu=atmega328old",
-        help_link: "https://www.arduino.cc/en/Main/ArduinoBoardNano",
+        help_link: "https://www.arduino.cc/en/Main/ArduinoBoardNano"
     },
     arduino_pro8: {
         description: "Arduino Pro Mini 3.3V ATmega328",
@@ -206,7 +206,7 @@ var profile = {
             ['115200', '115200']],
         serialPin: [["0 (Rx) ; 1 (Tx)", "0"]],
         upload_arg: "arduino:avr:pro:cpu=8MHzatmega328",
-        help_link: "https://www.arduino.cc/en/Main/ArduinoBoardProMini",
+        help_link: "https://www.arduino.cc/en/Main/ArduinoBoardProMini"
     },
     arduino_pro16: {
         description: "Arduino Pro Mini 5V ATmega328",
@@ -231,7 +231,7 @@ var profile = {
             ['115200', '115200']],
         serialPin: [["0 (Rx) ; 1 (Tx)", "0"]],
         upload_arg: "arduino:avr:pro:cpu=16MHzatmega328",
-        help_link: "https://www.arduino.cc/en/Main/ArduinoBoardProMini",
+        help_link: "https://www.arduino.cc/en/Main/ArduinoBoardProMini"
     },
     arduino_uno: {
         description: "Arduino Uno",
@@ -257,7 +257,7 @@ var profile = {
             ['115200', '115200']],
         serialPin: [["0 (Rx) ; 1 (Tx)", "0"]],
         upload_arg: "arduino:avr:uno",
-        help_link: "https://www.arduino.cc/en/Main/ArduinoBoardUno",
+        help_link: "https://www.arduino.cc/en/Main/ArduinoBoardUno"
     },
     arduino_yun: {
         description: "Arduino Yùn",
@@ -283,7 +283,7 @@ var profile = {
             ['115200', '115200']],
         serialPin: [["0 (Rx) ; 1 (Tx)", "0"]],
         upload_arg: "arduino:avr:yun",
-        help_link: "https://www.arduino.cc/en/Main/ArduinoBoardYun",
+        help_link: "https://www.arduino.cc/en/Main/ArduinoBoardYun"
     },
     lilypad: {
         description: "LilyPad Arduino ATmega328P",
@@ -309,7 +309,7 @@ var profile = {
             ['115200', '115200']],
         serialPin: [["0 (Rx) ; 1 (Tx)", "0"]],
         upload_arg: "arduino:avr:lilypad",
-        help_link: "https://www.arduino.cc/en/Main/ArduinoBoardLilyPad/",
+        help_link: "https://www.arduino.cc/en/Main/ArduinoBoardLilyPad/"
     },
     dagu_rs027: {
         description: "Dagu RS027",
@@ -334,7 +334,7 @@ var profile = {
             ['115200', '115200']],
         serialPin: [["0 (Rx) ; 1 (Tx)", "0"]],
         upload_arg: "arduino:avr:pro:cpu=8MHzatmega168",
-        help_link: "https://www.gotronic.fr/art-carte-de-controle-rs027-18765.htm",
+        help_link: "https://www.gotronic.fr/art-carte-de-controle-rs027-18765.htm"
     },
     dagu_rs040: {
         description: "Dagu RS040",
@@ -359,7 +359,7 @@ var profile = {
             ['115200', '115200']],
         serialPin: [["0 (Rx) ; 1 (Tx)", "0"]],
         upload_arg: "arduino:avr:nano:cpu=atmega328",
-        help_link: "https://www.gotronic.fr/art-carte-mini-driver-mkii-24795.htm",
+        help_link: "https://www.gotronic.fr/art-carte-mini-driver-mkii-24795.htm"
     },
     makeblock_mcore: {
         description: "Makeblock mCore for mBot",
@@ -385,7 +385,7 @@ var profile = {
             ['115200', '115200']],
         serialPin: [["0 (Rx) ; 1 (Tx)", "0"]],
         upload_arg: "arduino:avr:uno",
-        help_link: "https://www.makeblock.com/project/mcore",
+        help_link: "https://www.makeblock.com/project/mcore"
     },
     makeblock_megaPi: {
         description: "Makeblock MegaPi",
@@ -411,7 +411,7 @@ var profile = {
             ['115200', '115200']],
         serialPin: [["0 (Rx) ; 1 (Tx)", "0"], ["19 (Rx1) ; 18 (Tx1)", "19"], ["17 (Rx2) ; 16 (Tx2)", "17"], ["15 (Rx3) ; 14 (Tx3)", "15"]],
         upload_arg: "arduino:avr:mega:cpu=atmega2560",
-        help_link: "https://www.makeblock.com/project/megapi",
+        help_link: "https://www.makeblock.com/project/megapi"
     },
     makeblock_orion: {
         description: "Makeblock Me Orion",
@@ -437,7 +437,7 @@ var profile = {
             ['115200', '115200']],
         serialPin: [["0 (Rx) ; 1 (Tx)", "0"]],
         upload_arg: "arduino:avr:uno",
-        help_link: "https://www.makeblock.com/project/makeblock-orion",
+        help_link: "https://www.makeblock.com/project/makeblock-orion"
     },
     dfrobot_romeo: {
         description: "RoMeo v2",
@@ -462,7 +462,7 @@ var profile = {
             ['115200', '115200']],
         serialPin: [["0 (Rx) ; 1 (Tx)", "0"]],
         upload_arg: "arduino:avr:leonardo",
-        help_link: "https://www.dfrobot.com/product-844.html",
+        help_link: "https://www.dfrobot.com/product-844.html"
     },
     dfrobot_romeo_ble: {
         description: "RoMeo BLE",
@@ -488,7 +488,7 @@ var profile = {
             ['115200', '115200']],
         serialPin: [["0 (Rx) ; 1 (Tx)", "0"]],
         upload_arg: "arduino:avr:uno",
-        help_link: "https://www.dfrobot.com/product-1176.html",
+        help_link: "https://www.dfrobot.com/product-1176.html"
     },
     esp8266: {
         description: "ESP8266",
@@ -513,7 +513,7 @@ var profile = {
             ['115200', '115200']],
         serialPin: [["Rx0 ; Tx0", "3 ; 1"], ["Rx1 ; Tx1", "28 ; 29"], ["Rx2 ; Tx2", "16 ; 17"]],
         upload_arg: "esp8266:esp8266",
-        help_link: "https://fr.wikipedia.org/wiki/ESP8266",
+        help_link: "https://fr.wikipedia.org/wiki/ESP8266"
     },
     esp32: {
         description: "ESP32",
@@ -538,7 +538,7 @@ var profile = {
             ['115200', '115200']],
         serialPin: [["Rx0 ; Tx0", "3 ; 1"], ["Rx1 ; Tx1", "28 ; 29"], ["Rx2 ; Tx2", "16 ; 17"]],
         upload_arg: "esp32:esp32:esp32",
-        help_link: "https://en.wikipedia.org/wiki/ESP32",
+        help_link: "https://en.wikipedia.org/wiki/ESP32"
     },
     peguino_uno_nano: {
         description: "Peguino Uno Nano",
@@ -564,7 +564,7 @@ var profile = {
             ['115200', '115200']],
         serialPin: [["0 (Rx) ; 1 (Tx)", "0"]],
         upload_arg: "arduino:avr:nano:cpu=atmega328old",
-        help_link: "https://www.peguino.com/chat/thread-40.html",
+        help_link: "https://www.peguino.com/chat/thread-40.html"
     },
     peguino_uno_esp32: {
         description: "Peguino Uno ESP32",
@@ -589,7 +589,7 @@ var profile = {
             ['115200', '115200']],
         serialPin: [["Rx0 ; Tx0", "3 ; 1"], ["Rx1 ; Tx1", "28 ; 29"], ["Rx2 ; Tx2", "16 ; 17"]],
         upload_arg: "esp32:esp32:esp32",
-        help_link: "https://www.peguino.com/chat/thread-39.html",
+        help_link: "https://www.peguino.com/chat/thread-39.html"
     },
     kit_microbit: {
         description: "Micro:bit",
@@ -615,7 +615,7 @@ var profile = {
             ['115200', '115200']],
         serialPin: [["0 (Rx) ; 1 (Tx)", "0"]],
         upload_arg: "arduino:avr:uno",
-        help_link: "https://microbit.org/fr/guide/features/",
+        help_link: "https://microbit.org/fr/guide/features/"
     },
     kit_microfeux: {
         description: "Micro-feux Jeulin",
@@ -641,7 +641,7 @@ var profile = {
             ['115200', '115200']],
         serialPin: [["0 (Rx) ; 1 (Tx)", "0"]],
         upload_arg: "arduino:avr:uno",
-        help_link: "https://www.qwant.com/?q=microfeux%20jeulin&t=all",
+        help_link: "https://www.qwant.com/?q=microfeux%20jeulin&t=all"
     },
     //20191010
     kit_microsaurus: {
@@ -668,7 +668,7 @@ var profile = {
             ['115200', '115200']],
         serialPin: [["Rx ; Tx", "0"]],
         upload_arg: "arduino:avr:uno",
-        help_link: " https://meuse.co.jp/eshop/cog/cog_tutorial_index/",
+        help_link: " https://meuse.co.jp/eshop/cog/cog_tutorial_index/"
     },
     kit_micromachine: {
         description: "MicroMachine",
@@ -693,7 +693,7 @@ var profile = {
             ['115200', '115200']],
         serialPin: [["Rx0 ; Tx0", "3 ; 1"], ["Rx1 ; Tx1", "28 ; 29"], ["Rx2 ; Tx2", "16 ; 17"]],
         upload_arg: "esp32:esp32:esp32",
-        help_link: "https://meuse.co.jp/eshop/cog/cog_tutorial_index/",
+        help_link: "https://meuse.co.jp/eshop/cog/cog_tutorial_index/"
     },
     //20191010,
     kit_otto_diy: {
@@ -720,7 +720,7 @@ var profile = {
             ['115200', '115200']],
         serialPin: [["0 (Rx) ; 1 (Tx)", "0"]],
         upload_arg: "arduino:avr:nano:cpu=atmega328old",
-        help_link: "https://wikifactory.com/+OttoDIY/otto-diy/file/Instruction%20manual/OttoDIY_Manual_V9.pdf",
+        help_link: "https://wikifactory.com/+OttoDIY/otto-diy/file/Instruction%20manual/OttoDIY_Manual_V9.pdf"
     },
     kit_peguino_bot1: {
         description: "Peguino Bot 1",
@@ -745,7 +745,7 @@ var profile = {
             ['115200', '115200']],
         serialPin: [["Rx0 ; Tx0", "3 ; 1"], ["Rx1 ; Tx1", "28 ; 29"], ["Rx2 ; Tx2", "16 ; 17"]],
         upload_arg: "esp32:esp32:esp32",
-        help_link: "https://www.peguino.com/chat/thread-65.html",
+        help_link: "https://www.peguino.com/chat/thread-65.html"
     },
     kit_petitbot: {
         description: "Petit Bot",
@@ -770,7 +770,7 @@ var profile = {
             ['115200', '115200']],
         serialPin: [["Rx ; Tx", "0"]],
         upload_arg: "B:\LiberkeyLivet\MyApps\arduino\portable\packages\esp8266\tools\esptool\0.4.8/esptool.exe -vv -cd nodemcu -cb 921600 -cp COM3 -ca 0x00000 -cf B:\LiberkeyLivet\MyApps\arduino\build/petitbot_v3.ino.bin ",
-        help_link: "https://github.com/julienrat/petitbot/blob/master/manuel_tech_petitbot.pdf",
+        help_link: "https://github.com/julienrat/petitbot/blob/master/manuel_tech_petitbot.pdf"
     },
     kit_robobox_1_1: {
         description: "mini-alarme v1",
@@ -796,7 +796,7 @@ var profile = {
             ['115200', '115200']],
         serialPin: [["0 (Rx) ; 1 (Tx)", "0"]],
         upload_arg: "arduino:avr:uno",
-        help_link: "https://www.arduino.cc/en/Main/ArduinoBoardUno",
+        help_link: "https://www.arduino.cc/en/Main/ArduinoBoardUno"
     },
     kit_robobox_2_1: {
         description: "bras articulé v1",
@@ -822,7 +822,7 @@ var profile = {
             ['115200', '115200']],
         serialPin: [["0 (Rx) ; 1 (Tx)", "0"]],
         upload_arg: "arduino:avr:uno",
-        help_link: "https://www.arduino.cc/en/Main/ArduinoBoardUno",
+        help_link: "https://www.arduino.cc/en/Main/ArduinoBoardUno"
     },
     kit_robobox_3_1: {
         description: "robot chien v1",
@@ -848,7 +848,7 @@ var profile = {
             ['115200', '115200']],
         serialPin: [["0 (Rx) ; 1 (Tx)", "0"]],
         upload_arg: "arduino:avr:uno",
-        help_link: "https://www.arduino.cc/en/Main/ArduinoBoardUno",
+        help_link: "https://www.arduino.cc/en/Main/ArduinoBoardUno"
     },
     kit_robobox_4_1: {
         description: "robot voiture v1",
@@ -874,7 +874,7 @@ var profile = {
             ['115200', '115200']],
         serialPin: [["0 (Rx) ; 1 (Tx)", "0"]],
         upload_arg: "arduino:avr:uno",
-        help_link: "https://www.arduino.cc/en/Main/ArduinoBoardUno",
+        help_link: "https://www.arduino.cc/en/Main/ArduinoBoardUno"
     },
     kit_robobox_1_2: {
         description: "mini alarme v2",
@@ -900,7 +900,7 @@ var profile = {
             ['115200', '115200']],
         serialPin: [["0 (Rx) ; 1 (Tx)", "0"]],
         upload_arg: "arduino:avr:nano:cpu=atmega328old",
-        help_link: "https://www.arduino.cc/en/Main/ArduinoBoardNano",
+        help_link: "https://www.arduino.cc/en/Main/ArduinoBoardNano"
     },
     kit_robobox_2_2: {
         description: "bras articulé v2",
@@ -926,7 +926,7 @@ var profile = {
             ['115200', '115200']],
         serialPin: [["0 (Rx) ; 1 (Tx)", "0"]],
         upload_arg: "arduino:avr:nano:cpu=atmega328old",
-        help_link: "https://www.arduino.cc/en/Main/ArduinoBoardNano",
+        help_link: "https://www.arduino.cc/en/Main/ArduinoBoardNano"
     },
     kit_robobox_3_2: {
         description: "Arduino Nano ATmega328",
@@ -952,7 +952,7 @@ var profile = {
             ['115200', '115200']],
         serialPin: [["0 (Rx) ; 1 (Tx)", "0"]],
         upload_arg: "arduino:avr:nano:cpu=atmega328old",
-        help_link: "https://www.arduino.cc/en/Main/ArduinoBoardNano",
+        help_link: "https://www.arduino.cc/en/Main/ArduinoBoardNano"
     },
     kit_robobox_4_2: {
         description: "Arduino Nano ATmega328",
@@ -978,7 +978,7 @@ var profile = {
             ['115200', '115200']],
         serialPin: [["0 (Rx) ; 1 (Tx)", "0"]],
         upload_arg: "arduino:avr:nano:cpu=atmega328old",
-        help_link: "https://www.arduino.cc/en/Main/ArduinoBoardNano",
+        help_link: "https://www.arduino.cc/en/Main/ArduinoBoardNano"
     },
     kit_robobox_5_2: {
         description: "Arduino Nano ATmega328",
@@ -1004,7 +1004,7 @@ var profile = {
             ['115200', '115200']],
         serialPin: [["0 (Rx) ; 1 (Tx)", "0"]],
         upload_arg: "arduino:avr:nano:cpu=atmega328old",
-        help_link: "https://www.arduino.cc/en/Main/ArduinoBoardNano",
+        help_link: "https://www.arduino.cc/en/Main/ArduinoBoardNano"
     }
 };
 
@@ -1089,6 +1089,6 @@ Blockly.Arduino.pinGroveAnalogValidator = function (text) {
 Blockly.Arduino.pinDualValidator = function (text) {
     var posa = profile.defaultBoard.analog.indexOf(text);
     var posd = profile.defaultBoard.digital.indexOf(text);
-    var pos = posa + posd
+    var pos = posa + posd;
     return (pos < 0) ? null : text;
 };
