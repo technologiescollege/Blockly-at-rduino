@@ -929,7 +929,7 @@ var profile = {
         help_link: "https://www.arduino.cc/en/Main/ArduinoBoardNano"
     },
     kit_robobox_3_2: {
-        description: "Arduino Nano ATmega328",
+        description: "robot chien v2",
         cpu: "atmega328p",
         speed: "115200",
         digital: ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13"],
@@ -955,7 +955,7 @@ var profile = {
         help_link: "https://www.arduino.cc/en/Main/ArduinoBoardNano"
     },
     kit_robobox_4_2: {
-        description: "Arduino Nano ATmega328",
+        description: "voiture v2",
         cpu: "atmega328p",
         speed: "115200",
         digital: ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13"],
@@ -981,7 +981,7 @@ var profile = {
         help_link: "https://www.arduino.cc/en/Main/ArduinoBoardNano"
     },
     kit_robobox_5_2: {
-        description: "Arduino Nano ATmega328",
+        description: "voiture v2 et ",
         cpu: "atmega328p",
         speed: "115200",
         digital: ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13"],
