@@ -180,7 +180,7 @@ var profile = {
             ['31250', '31250'], ['38400', '38400'], ['57600', '57600'],
             ['115200', '115200']],
         serialPin: [["0 (Rx) ; 1 (Tx)", "0"]],
-        upload_arg: "arduino:avr:nano:cpu=atmega328old",
+        upload_arg: "arduino:avr:nano:cpu=atmega328",
         help_link: "https://www.arduino.cc/en/Main/ArduinoBoardNano"
     },
     arduino_pro8: {
@@ -719,7 +719,7 @@ var profile = {
             ['31250', '31250'], ['38400', '38400'], ['57600', '57600'],
             ['115200', '115200']],
         serialPin: [["0 (Rx) ; 1 (Tx)", "0"]],
-        upload_arg: "arduino:avr:nano:cpu=atmega328old",
+        upload_arg: "arduino:avr:nano:cpu=atmega328",
         help_link: "https://wikifactory.com/+OttoDIY/otto-diy/file/Instruction%20manual/OttoDIY_Manual_V9.pdf"
     },
     kit_peguino_bot1: {
@@ -899,7 +899,7 @@ var profile = {
             ['31250', '31250'], ['38400', '38400'], ['57600', '57600'],
             ['115200', '115200']],
         serialPin: [["0 (Rx) ; 1 (Tx)", "0"]],
-        upload_arg: "arduino:avr:nano:cpu=atmega328old",
+        upload_arg: "arduino:avr:nano:cpu=atmega328",
         help_link: "https://www.arduino.cc/en/Main/ArduinoBoardNano"
     },
     kit_robobox_2_2: {
@@ -925,7 +925,7 @@ var profile = {
             ['31250', '31250'], ['38400', '38400'], ['57600', '57600'],
             ['115200', '115200']],
         serialPin: [["0 (Rx) ; 1 (Tx)", "0"]],
-        upload_arg: "arduino:avr:nano:cpu=atmega328old",
+        upload_arg: "arduino:avr:nano:cpu=atmega328",
         help_link: "https://www.arduino.cc/en/Main/ArduinoBoardNano"
     },
     kit_robobox_3_2: {
@@ -951,7 +951,7 @@ var profile = {
             ['31250', '31250'], ['38400', '38400'], ['57600', '57600'],
             ['115200', '115200']],
         serialPin: [["0 (Rx) ; 1 (Tx)", "0"]],
-        upload_arg: "arduino:avr:nano:cpu=atmega328old",
+        upload_arg: "arduino:avr:nano:cpu=atmega328",
         help_link: "https://www.arduino.cc/en/Main/ArduinoBoardNano"
     },
     kit_robobox_4_2: {
@@ -977,7 +977,7 @@ var profile = {
             ['31250', '31250'], ['38400', '38400'], ['57600', '57600'],
             ['115200', '115200']],
         serialPin: [["0 (Rx) ; 1 (Tx)", "0"]],
-        upload_arg: "arduino:avr:nano:cpu=atmega328old",
+        upload_arg: "arduino:avr:nano:cpu=atmega328",
         help_link: "https://www.arduino.cc/en/Main/ArduinoBoardNano"
     },
     kit_robobox_5_2: {
@@ -1003,7 +1003,7 @@ var profile = {
             ['31250', '31250'], ['38400', '38400'], ['57600', '57600'],
             ['115200', '115200']],
         serialPin: [["0 (Rx) ; 1 (Tx)", "0"]],
-        upload_arg: "arduino:avr:nano:cpu=atmega328old",
+        upload_arg: "arduino:avr:nano:cpu=atmega328",
         help_link: "https://www.arduino.cc/en/Main/ArduinoBoardNano"
     }
 };
