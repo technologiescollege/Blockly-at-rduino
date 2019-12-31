@@ -155,4 +155,9 @@ var MSG = {
   span_menu_52:"Wiki",
   span_menu_53:"Foro",
   span_menu_6:"Acerca ",
+  varText1:"The variable ",
+  varText2:" has been first assigned to the '",
+  varText3:"' type\n",
+  varText4:"and this block tries to assign the type '",
+  varText5:"'!",
 };

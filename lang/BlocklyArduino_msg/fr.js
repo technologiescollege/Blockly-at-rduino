@@ -163,4 +163,9 @@ var MSG = {
   span_menu_52:"wiki",
   span_menu_53:"forum",
   span_menu_6:"à propos",
+  varText1:"La variable ",
+  varText2:"a été typée comme '",
+  varText3:"'\n",
+  varText4:"et ce bloc essaie de changer le type en '",
+  varText5:"'!",
 };
