@@ -1,3 +1,4 @@
+
 ***[Thanks for donation with Paypal to help me improve this software.](https://www.paypal.com/fr/cgi-bin/webscr?cmd=_flow&SESSION=o8z3KNFl16Tjlxhk1mBekCcRsG_3_NDe0CfWh8b1vfSYIbMxJnwa92YwM3y&dispatch=5885d80a13c0db1f8e263663d3faee8d4fe1dd75ca3bd4f11d72275b28239088)***
 
 ![enter image description here](https://www.paypalobjects.com/fr_FR/FR/i/btn/btn_donateCC_LG.gif)
@@ -13,52 +14,76 @@
 
 ### FORUM !!! [http://blockly.technologiescollege.fr/forum](http://blockly.technologiescollege.fr/forum)
 
-### Off-line upload & supervision [https://github.com/technologiescollege/Blockly-rduino-communication](https://github.com/technologiescollege/Blockly-rduino-communication)
+### Off-line upload [https://github.com/technologiescollege/BlocklyArduino_electrified](https://github.com/technologiescollege/BlocklyArduino_electrified)
 
-### Internet Explorer banni ! Attention à la compatibilité de votre navigateur avec le plugin Codebender.
+### Off-line upload & supervision [https://github.com/technologiescollege/BlocklyArduino_AIO](https://github.com/technologiescollege/BlocklyArduino_AIO)
+
+### Internet Explorer banni ! Internet Explorer banned!
 
 **Multilingual version of Blockly@rduino**
 =====
 
 Blockly@rduino est un programme web, un **webware graphique permettant la programmation graphique pour [Arduino](http://www.arduino.cc/) et sa _traduction en code_**.
 
-![](https://github.com/technologiescollege/Blockly-at-rduino/blob/master/documentation/CaptureEN.JPG)
+*Blockly@rduino is a web program, a graphic **webware allowing graphic programming for [Arduino](http://www.arduino.cc/) and its _translation into code_**.*
 
-Blockly@rduino est basé sur [Blockly](https://developers.google.com/blockly/), un éditeur de programme graphique par une interface web. Il fournit un seul type de traduction de la programmation graphique _(contrairement à Blockly qui traduit en Python, en JavaScript, etc et permet de le simuler en ligne : [exemple](http://www.technologiescollege.fr/blockly/code/demos/code/index.html?lang=fr))_, pour générer du code à copier coller dans l'IDE Arduino.
+![](https://raw.githubusercontent.com/technologiescollege/Blockly-at-rduino/gh-pages/documentation/CaptureEN.JPG)
 
-Blockly@rduino ne possèdait à l'origine qu'une bibliothèque de blocs pour les modules [Grove](http://wiki.seeed.cc/Grove_System/), particulièrement adaptée à la découverte des micro-contrôleurs et aux expérimentations de systèmes mécatroniques.
+Blockly@rduino est basé sur [Blockly](https://developers.google.com/blockly/), un éditeur de programme graphique par une interface web. Il fournit un seul type de traduction de la programmation graphique _(contrairement à Blockly qui traduit en Python, en JavaScript, etc et permet de le simuler en ligne : [exemple](https://blockly-demo.appspot.com/static/demos/code/index.html))_, pour générer du code à copier coller dans l'EDI Arduino.
 
-Libre à vous d'en rajouter autant que voulu grâce à cette notice explicative : [http://www.libreduc.cc/wiki/doku.php/fr/arduino/blockly_rduino/creerblocsmultiling](http://www.libreduc.cc/wiki/doku.php/fr/arduino/blockly_rduino/creerblocsmultiling)
+*Blockly@rduino is based on [Blockly](https://developers.google.com/blockly/), a web-based graphical program editor. It provides a single type of graphical programming translation _(unlike Blockly, which translates to Python, JavaScript, etc. and allows you to simulate it online : [example](https://blockly-demo.appspot.com/static/demos/code/index.html))_, to generate code to be copied and pasted into the Arduino IDE.*
+
+Libre à vous de rajouter autant de bibliothèques que voulu grâce à cette notice explicative : [http://www.libreduc.cc/wiki/doku.php/fr/arduino/blockly_rduino/creerblocsmultiling](http://www.libreduc.cc/wiki/doku.php/fr/arduino/blockly_rduino/creerblocsmultiling)
+
+*Feel free to add as many libraries as you want thanks to this explanatory note: [http://www.libreduc.cc/wiki/doku.php/fr/arduino/blockly_rduino/creerblocsmultiling](http://www.libreduc.cc/wiki/doku.php/fr/arduino/blockly_rduino/creerblocsmultiling)*
 
 Cette version a été réorganisée et améliorée pour la faire utiliser au mieux par des élèves débutants dans le code.
 
 **_Toutes les remarques sont les bienvenues pour améliorer la syntaxe !_**
+
+This version has been organized and improved to make it best used by students who are new to the code.
+
+**_All remarks are welcome to improve the syntax !_**
 
 ## Fonctions
 
 * programmation pour Arduino en drag'n'drop graphique,
 * génère un code totalement compatible avec le code Arduino,
 * interaction des cartes Arduino grâce aux modules rajoutés : plus de 10 blocs spécifiques à des capteurs/actionneurs Grove, ainsi que ceux de TechnoZone51, Bitbloq, et ...
-* possibilité de charger automatiquement des fichiers sur le site grâce aux paramètres de l'adresse URL _(voir les démos ci-dessous)._
+* possibilité de charger automatiquement des fichiers sur le site grâce aux paramètres de l'adresse URL _(voir les démos ci-dessous).
 * téléversement et console série depuis l'interface web,
 * sauvegarde/lecture de fichiers INO et XML
 * création d'exemples
 * supervision de la carte en temps réel grâce au serveur PyMata-AIO (accessible depuis le [panneau de contrôle](https://github.com/technologiescollege/Blockly-rduino-communication)
 
-## IMPORTANT Arduino
+## Functions
 
-Pour le téléversement dans la carte Arduino directement depuis le navigateur, il faut installer le plugin Codebender : [https://codebender.cc/static/plugin](https://codebender.cc/static/plugin)
-
-_For uploading in Arduino card directly from your Internet browser, you must install codebender plugin : [https://codebender.cc/static/plugin](https://codebender.cc/static/plugin)_
+* programming for Arduino in drag'n'drop graphic
+* generates a code fully compatible with the Arduino code
+* interaction of Arduino boards thanks to the added modules: more than 10 blocks specific to Grove sensors/actuators, as well as those of TechnoZone51, Bitbloq, and ...
+* ability to automatically upload files to the site thanks to the parameters of the URL address _(see the demos below)
+* upload and serial console from the web interface
+* backup/reading of INO and XML files
+* creation of examples
+* real-time supervision of the map thanks to the PyMata-AIO server (accessible from the [control panel](https://github.com/technologiescollege/BlocklyArduino_AIO)
 
 ## Démos
 
 Blockly@rduino est un outil web, un webware par référence aux software, hardware, etc. Vous pouvez le tester/utiliser à l'adresse suivante :
-[http://blocklyarduino.technologiescollege.fr/](http://blocklyarduino.technologiescollege.fr/) 
+[http://technologiescollege.github.io/Blockly-at-rduino/](http://technologiescollege.github.io/Blockly-at-rduino/) 
 
 Vous pouvez donc aussi lier directement l'ouverture de la page à l'ouverture d'un fichier XML hébergé (_ou tout en local_) :
-* [démo 1 : faire clignoter une diode](http://technologiescollege.github.io/Blockly-at-rduino/?lang=fr&card=arduino_uno&url=./examples/./blink/blink.xml)
-* [démo 2 : faire varier un servo-moteur proportionnellement à une consigne de potentiomètre](http://technologiescollege.github.io/Blockly-at-rduino/?lang=fr&card=arduino_uno&url=./examples/./servo_potentio/servo_potentio.xml)
+* [démo 1 : faire clignoter une diode](http://technologiescollege.github.io/Blockly-at-rduino/?font=O&lang=fr&card=arduino_uno&url=./examples/./blink/blink.xml)
+* [démo 2 : faire varier un servo-moteur proportionnellement à une consigne de potentiomètre](http://technologiescollege.github.io/Blockly-at-rduino/?font=O&lang=fr&card=arduino_uno&url=./examples/./servo_potentio/servo_potentio.xml)
+
+## Demos
+
+Blockly@rduino is a web tool, a webware by reference to software, hardware, etc.. You can test/use it at the following address :
+[http://technologiescollege.github.io/Blockly-at-rduino/](http://technologiescollege.github.io/Blockly-at-rduino/) 
+
+So you can also link directly the opening of the page to the opening of a hosted XML file (_or all locally_) :
+* [demo 1: flashing a diode](http://technologiescollege.github.io/Blockly-at-rduino/?font=O&lang=en&card=arduino_uno&url=./examples/./blink/blink.xml)
+* [demo 2: vary a servo-motor proportionally to a potentiometer setpoint](http://technologiescollege.github.io/Blockly-at-rduino/?font=O&lang=en&card=arduino_uno&url=./examples/./servo_potentio/servo_potentio.xml)
 
 
 ## Utiliser en local dans son navigateur web
@@ -67,14 +92,15 @@ Si vous préfréez l'utiliser en local, il vous suffit de télécharger le code 
 
 Vous pouvez l'héberger sur un serveur, et ainsi y faire accéder de nombreux postes en pointant vers ce fichier 'index.html'.
 
-**Pour le téléversement et la console série**, vous devez disposer d'un accès web et de filtres ne bloquant pas CodeBender.
+**Pour le téléversement et la console série**, vous devez télécharger la version 'Electron' :  https://github.com/technologiescollege/BlocklyArduino_electrified.
 
-## Utilisation en 4 temps
+## Use locally in your web browser
 
-1. utiliser votre navigateur pour ouvrir Blockly@rduino grâce au fichier 'index.html'
-2. créer son programme Arduino par drag'n'drop (_cliqué-déplacé_) des blocs
-3. sélectionner l'onglet 'Arduino' pour en vérifier le code grâce à CodeBender
-4. presser le bouton 'Téléverser' pour transférer le code dans la mémoire de la carte Arduino
+If you want to use it locally, just download the code from Github (_[Download Zip](https://github.com/technologiescollege/Blockly-at-rduino/archive/gh-pages.zip)_) and open the file `index.html` in your browser.
+
+You can host it on a server, and thus make many computers access it by pointing to this file `index.html'.
+
+**For the upload and the serial console**, you have to download the 'Electron' version : https://github.com/technologiescollege/BlocklyArduino_electrified.
 
 
 ## Auteurs et contributeurs
