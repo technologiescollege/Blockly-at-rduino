@@ -8,13 +8,13 @@ function() {
 });
 
 head.load(
+"blocks/BlocklyArduino/variables.js",
 "blocks/BlocklyArduino/array.js",
 "blocks/BlocklyArduino/logic.js",
 "blocks/BlocklyArduino/loops.js",
 "blocks/BlocklyArduino/math.js",
 "blocks/BlocklyArduino/procedures.js",
 "blocks/BlocklyArduino/text.js",
-"blocks/BlocklyArduino/variables.js",
 function() {
     // Call a function when done
     console.log("Done loading Blockly@rduino Blocks");

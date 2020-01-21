@@ -258,3 +258,130 @@ Blockly.Blocks["array_declare"]={
         if (Blockly.Names.equals(oldName, this.getFieldValue("VAR"))) this.setFieldValue(newName, "VAR")*/
     }
 };
+
+//from JPFontaine
+
+Blockly.Blocks["creer_tableau"] = {
+    init: function() {
+		var prog = window.localStorage.prog;
+		if (prog != "python") {
+			this.appendDummyInput().appendField(Blockly.Msg.ARRAY_CREATE + Blockly.Msg.ARRAY_ARRAY).appendField(new Blockly.FieldVariable(Blockly.Msg.VARIABLES_GET_ITEM), 'VAR').appendField(Blockly.Msg.VARIABLES_AS).appendField(new Blockly.FieldDropdown(Blockly.Types.getValidTypeArray()), "type");
+		} else {
+			this.appendDummyInput().appendField(Blockly.Msg.ARRAY_CREATE + Blockly.Msg.ARRAY_ARRAY).appendField(new Blockly.FieldVariable(Blockly.Msg.VARIABLES_GET_ITEM), 'VAR');
+		}
+		this.appendDummyInput()
+            .setAlign(Blockly.ALIGN_RIGHT)
+            .appendField(Blockly.Msg.ARRAY_dim)
+			.appendField(new Blockly.FieldDropdown([["1", "1"],["2", "2"],["3", "3"],["4", "4"],["5", "5"]],function(option){this.sourceBlock_.updateShape_(option)}),"dim");
+        this.appendValueInput("D0")
+            .setAlign(Blockly.ALIGN_RIGHT)
+            .appendField(new Blockly.FieldDropdown([[Blockly.Msg.ARRAY_taille, "c1"],[Blockly.Msg.ARRAY_contenu, "c2"]]), "choix");
+        this.setInputsInline(false);
+        this.setPreviousStatement(true, null);
+        this.setNextStatement(true, null);
+        this.setColour(Blockly.Blocks.array.HUE);
+        this.setTooltip(Blockly.Msg.ARRAY_GETINDEX_TOOLTIP2);
+        this.setHelpUrl(Blockly.Msg.HELPURL)
+    },
+    getVarType: function(varName) {
+        return Blockly.Types.getChildBlockType(this)
+    },
+    renameVar: function(oldName, newName) {
+        if (Blockly.Names.equals(oldName, this.getFieldValue("VAR"))) this.setFieldValue(newName, "VAR")
+    },
+    mutationToDom: function() {
+        var container = document.createElement("mutation");
+        container.setAttribute("dim", this.getFieldValue("dim"));
+        return container
+    },
+    domToMutation: function(xmlElement) {
+        this.updateShape_(xmlElement.getAttribute("dim"))
+    },
+    updateShape_: function(option) {
+		for (var i = 1; i < 7; i++) {
+			var inputExists = this.getInput("D"+i);
+			if (inputExists) {
+				this.removeInput("D"+i)
+			}
+		}
+		switch (option) {
+		case "2":
+            this.appendValueInput("D1");
+			break;
+		case "3":
+            this.appendValueInput("D1");
+            this.appendValueInput("D2");
+			break;
+		case "4":
+            this.appendValueInput("D1");
+            this.appendValueInput("D2");
+			this.appendValueInput("D3");
+			break;
+		case "5":
+            this.appendValueInput("D1");
+            this.appendValueInput("D2");
+			this.appendValueInput("D3");
+            this.appendValueInput("D4");
+			break;
+		}
+    }
+};
+Blockly.Blocks["fixer_tableau"] = {
+    init: function() {
+		this.appendDummyInput()
+			.appendField(Blockly.Msg.ARRAY_fixe)
+			.appendField(new Blockly.FieldVariable(Blockly.Msg.VARIABLES_GET_ITEM), 'VAR')
+			.appendField(Blockly.Msg.ARRAY_dim)
+			.appendField(new Blockly.FieldDropdown([["1", "1"],["2", "2"],["3", "3"],["4", "4"],["5", "5"]],function(option){this.sourceBlock_.updateShape_(option)}),"dim");
+        this.appendValueInput("value").setAlign(Blockly.ALIGN_RIGHT).appendField(Blockly.Msg._AT);
+        this.appendValueInput("D0").setCheck("Number").setAlign(Blockly.ALIGN_RIGHT).appendField(Blockly.Msg.ARRAY_index);
+        this.setInputsInline(false);
+        this.setPreviousStatement(true, null);
+        this.setNextStatement(true, null);
+        this.setColour(Blockly.Blocks.array.HUE);
+        this.setTooltip(Blockly.Msg.ARRAY_GETINDEX_TOOLTIP3);
+        this.setHelpUrl(Blockly.Msg.HELPURL)
+        this.contextMenuMsg_ = Blockly.Msg.tab_create
+    },
+    contextMenuType_: "array_getIndex",
+    customContextMenu: Blockly.Blocks["variables_get"].customContextMenu,
+    getVarType: function(varName) {
+        return Blockly.Types.getChildBlockType(this)
+    },
+    mutationToDom: function() {
+        var container = document.createElement("mutation");
+        container.setAttribute("dim", this.getFieldValue("dim"));
+        return container
+    },
+    domToMutation: function(xmlElement) {
+        this.updateShape_(xmlElement.getAttribute("dim"))
+    },
+    updateShape_: function(option) {
+		for (var i = 1; i < 7; i++) {
+			var inputExists = this.getInput("D"+i);
+			if (inputExists) {
+				this.removeInput("D"+i)
+			}
+		}
+		switch (option) {
+		case "2":
+            this.appendValueInput("D1");
+			break;
+		case "3":
+            this.appendValueInput("D1");
+            this.appendValueInput("D2");
+			break;
+		case "4":
+            this.appendValueInput("D1");
+            this.appendValueInput("D2");
+			this.appendValueInput("D3");
+			break;
+		case "5":
+            this.appendValueInput("D1");
+            this.appendValueInput("D2");
+			this.appendValueInput("D3");
+            this.appendValueInput("D4");
+			break;
+		}
+    }
+};

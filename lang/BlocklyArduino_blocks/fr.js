@@ -5,7 +5,14 @@ goog.provide('Blockly.Msg.fr');
 goog.require('Blockly.Msg');
 
 Blockly.Msg.ARRAY_CREATE_EMPTY_TITLE = 'vide !';
-Blockly.Msg.ARRAY_CREATE_WITH = "constituée de";
+Blockly.Msg.tab_create="Créer le bloc 'élément du tableau %1'";
+Blockly.Msg.tab_create_fix="Créer le bloc 'mettre un élément du tableau %1 à'";
+Blockly.Msg.ARRAY_CREATE_WITH="constituée de";
+Blockly.Msg.ARRAY_taille="taille";
+Blockly.Msg.ARRAY_contenu="qui contient";
+Blockly.Msg.ARRAY_dim="taille de ";
+Blockly.Msg.ARRAY_index="index";
+Blockly.Msg._AT= "à";
 Blockly.Msg.ARRAY_CREATE_WITH_CONTAINER_TITLE_ADD = "liste ou tableau";
 Blockly.Msg.ARRAY_CREATE_WITH_CONTAINER_TOOLTIP = "ajoute, enlève, ou réordonne les éléments dans le bloc Tableau.";
 Blockly.Msg.ARRAY_CREATE_WITH_HELPURL = "";

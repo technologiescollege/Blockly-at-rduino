@@ -97,3 +97,52 @@ Blockly.Arduino['array_declare'] = function(block) {
   return '';
 };
 */
+
+//from JPFontaine
+Blockly.Arduino['creer_tableau']=function(block){
+	var varName = Blockly.Arduino.variableDB_.getName(block.getFieldValue('VAR'), Blockly.Variables.NAME_TYPE);
+	var typeBlock = Blockly.Arduino.getArduinoType_(Blockly.Types[block.getFieldValue('type')]);
+	var menu = block.getFieldValue("choix");
+	var dimension = block.getFieldValue("dim");
+	var l = "" ;
+	var k = "" ;
+	switch (menu) {
+        case "c1":
+            for (var i = 0; i < dimension; i++) {
+				var j = Blockly.Arduino.valueToCode(block, "D" + i, Blockly.Arduino.ORDER_ASSIGNMENT);
+				k += "[" + j + "]"
+			}
+			Blockly.Arduino.variables_[varName] = typeBlock + ' ' + varName + k + ';';
+			break;
+        case "c2":
+			if (dimension == "1"){
+				var j = Blockly.Arduino.valueToCode(block, "D0", Blockly.Arduino.ORDER_ASSIGNMENT);
+				Blockly.Arduino.variables_[varName] = typeBlock + ' ' + varName + '[] =' + j + ';';
+				break
+			} else {
+				k += "{" ;
+				for (var i = 0; i < dimension; i++) {
+					var j = Blockly.Arduino.valueToCode(block, "D" + i, Blockly.Arduino.ORDER_ASSIGNMENT);
+					var nb = j.split(',');
+					k += j + ",";
+					l += "[" + nb.length + "]";
+				}
+				k=k.substr(0,k.length-1);
+				k+="}";
+				Blockly.Arduino.variables_[varName] = typeBlock + ' ' + varName + l + '=' + k + ';';
+				break
+			}
+		}
+	return '';
+};
+Blockly.Arduino['fixer_tableau']=function(block){
+    var value_value = Blockly.Arduino.valueToCode(block, 'value', Blockly.Arduino.ORDER_ATOMIC);
+	var code = Blockly.Arduino.variableDB_.getName(block.getFieldValue('VAR'), Blockly.Variables.NAME_TYPE);
+	var dimension = block.getFieldValue("dim");
+	for (var i = 0; i < dimension; i++) {
+		var j = Blockly.Arduino.valueToCode(block, "D" + i, Blockly.Arduino.ORDER_ASSIGNMENT);
+		code += "[" + j + "]"
+	}
+	code += '='+value_value+';\n';
+    return code;
+};

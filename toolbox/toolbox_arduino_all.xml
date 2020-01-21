@@ -88,6 +88,8 @@
 		<block type="array_declare"></block>
 		<block type="array_modify"></block>
 		<block type="array_create_with"></block>
+		<block type="creer_tableau"></block>
+		<block type="fixer_tableau"></block>
 		<block type="array_getIndex">
 			<value name="AT">
 				<block type="math_number">
@@ -1289,12 +1291,12 @@
 		<block type="ds18b20_search"></block>
 		<block type="ds18b20_temp"></block>
 	</category>
-	<category name="CAT_ROBOBOX" colour="#1C8A43">
-	  <category name="CAT_ROBOBOX_SERVO" colour="#1C8A43">
+	<category name="CAT_ROBOBOX" colour="#004281">
+	  <category name="CAT_ROBOBOX_SERVO" colour="#004281">
 	    <block type="robobox_servo_setAngle"></block>
 	    <block type="robobox_servo_getAngle"></block>
 	  </category>
-	  <category name="CAT_ROBOBOX_SENSORS" colour="#1C8A43">
+	  <category name="CAT_ROBOBOX_SENSORS" colour="#004281">
 	    <block type="robobox_sensors_ultrasound">
 	      <value name="TRIGER">
 		<shadow type="math_number">
@@ -1308,7 +1310,7 @@
 	      </value>
 	    </block>
 	  </category>
-	  <category name="CAT_ROBOBOX_IRREMOTE" colour="#1C8A43">
+	  <category name="CAT_ROBOBOX_IRREMOTE" colour="#004281">
 	    <block type="robobox_IRremote_decode">
 	      <value name="PIN">
 		<shadow type="math_number">
@@ -1347,19 +1349,19 @@
 	    <block type="robobox_IRremote_send"></block>
 	    <block type="robobox_IRremote_sendArray"></block>
 	  </category>
-	  <category name="CAT_ROBOBOX_MONTH4" colour="#1C8A43">
+	  <category name="CAT_ROBOBOX_MONTH4" colour="#004281">
 	    <block type="robobox_month4_move"></block>
 	    <block type="robobox_month4_moveBackward"></block>
 	    <block type="robobox_month4_turn"></block>
 	    <block type="robobox_month4_turnLeft"></block>
 	  </category>
-	  <category name="CAT_ROBOBOX_MONTH6" colour="#1C8A43">
+	  <category name="CAT_ROBOBOX_MONTH6" colour="#004281">
 	    <block type="robobox_month6_lineC"></block>
 	    <block type="robobox_month6_lineD"></block>
 	    <block type="robobox_month6_lineG"></block>
 	    <block type="robobox_month6_calcAngle"></block>
 	  </category>
-	  <category name="CAT_ROBOBOX_MONTH8" colour="#1C8A43">
+	  <category name="CAT_ROBOBOX_MONTH8" colour="#004281">
 	    <block type="robobox_month8_analyze"></block>
 	  </category>
 	</category>

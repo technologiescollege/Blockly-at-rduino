@@ -5,6 +5,14 @@ goog.provide('Blockly.Msg.en');
 goog.require('Blockly.Msg');
 
 Blockly.Msg.ARRAY_CREATE_EMPTY_TITLE = 'empty!';
+Blockly.Msg.tab_create="create element block for array %1'";
+Blockly.Msg.tab_create_fix="create block 'set element in array %1 to'";
+Blockly.Msg.ARRAY_CREATE_WITH="set with";
+Blockly.Msg.ARRAY_taille="size";
+Blockly.Msg.ARRAY_contenu="contain";
+Blockly.Msg.ARRAY_dim="size of ";
+Blockly.Msg.ARRAY_index="index";
+Blockly.Msg._AT= "to";
 Blockly.Msg.ARRAY_CREATE_WITH = "created with";
 Blockly.Msg.ARRAY_CREATE_WITH_CONTAINER_TITLE_ADD = "array";
 Blockly.Msg.ARRAY_CREATE_WITH_CONTAINER_TOOLTIP = "Add, remove, or reorder sections to reconfigure this array block.";

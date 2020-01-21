@@ -88,6 +88,8 @@
 		<block type="array_declare"></block>
 		<block type="array_modify"></block>
 		<block type="array_create_with"></block>
+		<block type="creer_tableau"></block>
+		<block type="fixer_tableau"></block>
 		<block type="array_getIndex">
 			<value name="AT">
 				<block type="math_number">
