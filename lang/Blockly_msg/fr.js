@@ -355,6 +355,7 @@ Blockly.Msg.TEXT_PROMPT_TYPE_TEXT = "invite pour un texte avec un message";
 Blockly.Msg.TEXT_TEXT_HELPURL = "https://en.wikipedia.org/wiki/String_(computer_science)";
 Blockly.Msg.TEXT_TEXT_TOOLTIP = "Une lettre, un mot ou une ligne de texte.";
 Blockly.Msg.TEXT_TRIM_HELPURL = "https://github.com/google/blockly/wiki/Text#trimming-removing-spaces";  // untranslated
+Blockly.Msg.TEXT_TRIM = "Supprimer les espaces de ";
 Blockly.Msg.TEXT_TRIM_OPERATOR_BOTH = "supprimer les espaces des deux côtés";
 Blockly.Msg.TEXT_TRIM_OPERATOR_LEFT = "supprimer les espaces du côté gauche";
 Blockly.Msg.TEXT_TRIM_OPERATOR_RIGHT = "supprimer les espaces du côté droit";
