@@ -385,3 +385,61 @@ Blockly.Blocks["fixer_tableau"] = {
 		}
     }
 };
+
+Blockly.Blocks["tableau_getIndex"] = {
+    init: function() {
+        this.appendDummyInput()
+			.appendField(Blockly.Msg.ARRAY_GETINDEX_ITEM)
+			.appendField(new Blockly.FieldVariable(Blockly.Msg.VARIABLES_GET_ITEM), 'VAR')
+			.appendField(Blockly.Msg.ARRAY_dim)
+			.appendField(new Blockly.FieldDropdown([["1", "1"],["2", "2"],["3", "3"],["4", "4"],["5", "5"]],function(option){this.sourceBlock_.updateShape_(option)}),"dim");
+        this.appendValueInput("D0").setCheck("Number").setAlign(Blockly.ALIGN_RIGHT).appendField(Blockly.Msg.ARRAY_index);
+        this.setOutput(true);
+        this.setInputsInline(false);
+        this.setColour(Blockly.Blocks.array.HUE);
+        this.setTooltip(Blockly.Msg.ARRAY_GETINDEX_TOOLTIP1);
+        this.setHelpUrl(Blockly.Msg.HELPURL)
+		this.contextMenuMsg_ = Blockly.Msg.tab_create_fix
+    },
+    contextMenuType_: "fixer_tableau",
+    customContextMenu: Blockly.Blocks["variables_get"].customContextMenu,
+    getVarType: function(varName) {
+        return Blockly.Types.getChildBlockType(this)
+    },
+    mutationToDom: function() {
+        var container = document.createElement("mutation");
+        container.setAttribute("dim", this.getFieldValue("dim"));
+        return container
+    },
+    domToMutation: function(xmlElement) {
+        this.updateShape_(xmlElement.getAttribute("dim"))
+    },
+    updateShape_: function(option) {
+		for (var i = 1; i < 7; i++) {
+			var inputExists = this.getInput("D"+i);
+			if (inputExists) {
+				this.removeInput("D"+i)
+			}
+		}
+		switch (option) {
+		case "2":
+            this.appendValueInput("D1");
+			break;
+		case "3":
+            this.appendValueInput("D1");
+            this.appendValueInput("D2");
+			break;
+		case "4":
+            this.appendValueInput("D1");
+            this.appendValueInput("D2");
+			this.appendValueInput("D3");
+			break;
+		case "5":
+            this.appendValueInput("D1");
+            this.appendValueInput("D2");
+			this.appendValueInput("D3");
+            this.appendValueInput("D4");
+			break;
+		}
+    }
+};

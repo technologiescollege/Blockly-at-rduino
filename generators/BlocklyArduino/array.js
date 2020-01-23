@@ -146,3 +146,13 @@ Blockly.Arduino['fixer_tableau']=function(block){
 	code += '='+value_value+';\n';
     return code;
 };
+
+Blockly.Arduino["tableau_getIndex"]=function(block){
+    var code = Blockly.Arduino.variableDB_.getName(block.getFieldValue('VAR'), Blockly.Variables.NAME_TYPE);
+	var dimension = block.getFieldValue("dim");
+	for (var i = 0; i < dimension; i++) {
+		var j = Blockly.Arduino.valueToCode(block, "D" + i, Blockly.Arduino.ORDER_ASSIGNMENT);
+		code += "[" + j + "]"
+	}
+	return [code, Blockly.Arduino.ORDER_ATOMIC] ;
+};
