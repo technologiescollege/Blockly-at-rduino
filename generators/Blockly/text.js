@@ -102,7 +102,7 @@ Blockly.Arduino['text_append'] = function(block) {
 Blockly.Arduino['text_length'] = function(block) {
   var argument0 = Blockly.Arduino.valueToCode(block, 'VALUE',
       Blockly.Arduino.ORDER_UNARY_POSTFIX) || '""';
-  var code = 'String(' + argument0 + ').length()';
+  var code = argument0 + '.length()';
   return [code, Blockly.Arduino.ORDER_UNARY_POSTFIX];
 };
 
@@ -153,21 +153,19 @@ Blockly.Arduino['text_isEmpty'] = function(block) {
  */
 Blockly.Arduino['text_trim'] = function(block) {
   // Trim spaces.
-  Blockly.Arduino.text_trim.OPERATORS = {
-    LEFT: '.trim()',
-    RIGHT: '.trim()',
-    BOTH: '.trim()'
-  };
-  var mode = block.getFieldValue('MODE');
-  var operator = Blockly.Arduino.text_trim.OPERATORS[mode];
-  var argument0 = Blockly.Arduino.valueToCode(block, 'TEXT',
-      Blockly.Arduino.ORDER_UNARY_POSTFIX);
+  var func = [];
+  func.push('String ' + Blockly.Arduino.DEF_FUNC_NAME + '(String Source) {');
+  func.push('  Source.trim();');
+  func.push('  return(Source);');
+  func.push('}');
+  var funcName = Blockly.Arduino.addFunction('TrimString', func.join('\n'));
+  var argument0 = Blockly.Arduino.valueToCode(block, 'TEXT', Blockly.Arduino.ORDER_UNARY_POSTFIX);
   if (argument0 == '') {
     argument0 = '""';
   } else {
     argument0 = 'String(' + argument0 + ')';
   }
-  return [argument0 + operator, Blockly.Arduino.ORDER_UNARY_POSTFIX];
+  return ['TrimString(' + argument0 + ')', Blockly.Arduino.ORDER_UNARY_POSTFIX];
 };
 
 /**

@@ -341,8 +341,7 @@ Blockly.Blocks['text_charAt'] = {
         [[Blockly.Msg.TEXT_CHARAT_FROM_START, 'FROM_START'],
          [Blockly.Msg.TEXT_CHARAT_FROM_END, 'FROM_END'],
          [Blockly.Msg.TEXT_CHARAT_FIRST, 'FIRST'],
-         [Blockly.Msg.TEXT_CHARAT_LAST, 'LAST'],
-         [Blockly.Msg.TEXT_CHARAT_RANDOM, 'RANDOM']];
+         [Blockly.Msg.TEXT_CHARAT_LAST, 'LAST']];
     this.setHelpUrl(Blockly.Msg.TEXT_CHARAT_HELPURL);
     this.setColour(Blockly.Blocks.texts.HUE);
     this.setOutput(true, 'String');
@@ -502,8 +501,7 @@ Blockly.Blocks['text_getSubstring'] = {
     if (isAt) {
       this.appendValueInput('AT' + n).setCheck('Number');
       if (Blockly.Msg.ORDINAL_NUMBER_SUFFIX) {
-        this.appendDummyInput('ORDINAL' + n)
-            .appendField(Blockly.Msg.ORDINAL_NUMBER_SUFFIX);
+        this.appendDummyInput('ORDINAL' + n).appendField(Blockly.Msg.ORDINAL_NUMBER_SUFFIX);
       }
     } else {
       this.appendDummyInput('AT' + n);
@@ -546,14 +544,15 @@ Blockly.Blocks['text_changeCase'] = {
   init: function() {
     var OPERATORS =
         [[Blockly.Msg.TEXT_CHANGECASE_OPERATOR_UPPERCASE, 'UPPERCASE'],
-         [Blockly.Msg.TEXT_CHANGECASE_OPERATOR_LOWERCASE, 'LOWERCASE'],
-         [Blockly.Msg.TEXT_CHANGECASE_OPERATOR_TITLECASE, 'TITLECASE']];
+         [Blockly.Msg.TEXT_CHANGECASE_OPERATOR_LOWERCASE, 'LOWERCASE']];
     this.setHelpUrl(Blockly.Msg.TEXT_CHANGECASE_HELPURL);
     this.setColour(Blockly.Blocks.texts.HUE);
     this.appendValueInput('TEXT')
         .setCheck('String')
         .appendField(new Blockly.FieldDropdown(OPERATORS), 'CASE');
-    this.setOutput(true, 'String');
+    //this.setPreviousStatement(true);
+    //this.setNextStatement(true);
+	this.setOutput(true, 'String');
     this.setTooltip(Blockly.Msg.TEXT_CHANGECASE_TOOLTIP);
   }
 };
@@ -564,16 +563,19 @@ Blockly.Blocks['text_trim'] = {
    * @this Blockly.Block
    */
   init: function() {
-    var OPERATORS =
-        [[Blockly.Msg.TEXT_TRIM_OPERATOR_BOTH, 'BOTH'],
-         [Blockly.Msg.TEXT_TRIM_OPERATOR_LEFT, 'LEFT'],
-         [Blockly.Msg.TEXT_TRIM_OPERATOR_RIGHT, 'RIGHT']];
+ //   var OPERATORS =
+ //       [[Blockly.Msg.TEXT_TRIM_OPERATOR_BOTH, 'BOTH'],
+ //        [Blockly.Msg.TEXT_TRIM_OPERATOR_LEFT, 'LEFT'],
+ //        [Blockly.Msg.TEXT_TRIM_OPERATOR_RIGHT, 'RIGHT']];
     this.setHelpUrl(Blockly.Msg.TEXT_TRIM_HELPURL);
     this.setColour(Blockly.Blocks.texts.HUE);
     this.appendValueInput('TEXT')
-        .setCheck('String')
-        .appendField(new Blockly.FieldDropdown(OPERATORS), 'MODE');
-    this.setOutput(true, 'String');
+		.appendField(Blockly.Msg.TEXT_TRIM)
+        .setCheck('String');
+ //       .appendField(new Blockly.FieldDropdown(OPERATORS), 'MODE');
+	this.setOutput(true, 'String');
+    //this.setPreviousStatement(true);
+    //this.setNextStatement(true);this.setOutput(false);
     this.setTooltip(Blockly.Msg.TEXT_TRIM_TOOLTIP);
   }
 };

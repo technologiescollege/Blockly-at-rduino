@@ -113,25 +113,25 @@
 		<block type="text_compare_string"></block>
 		<block type="text_indexOf">
 			<value name="VALUE">
-				<block type="variables_get">
-					<field name="VAR" class="textVar">...</field>
-				</block>
+				<!-- <block type="variables_get"> -->
+					<!-- <field name="VAR" class="textVar">...</field> -->
+				<!-- </block> -->
 			</value>
 		</block>
 		<block type="text_charAt">
 			<value name="VALUE">
-				<block type="variables_get">
-					<field name="VAR" class="textVar">...</field>
-				</block>
+<!-- 				<block type="variables_get"> -->
+<!-- 					<field name="VAR" class="textVar">...</field> -->
+<!-- 				</block> -->
 			</value>
 		</block>
 		<block type="text_getSubstring">
 			<value name="STRING">
-				<block type="variables_get">
-					<field name="VAR" class="textVar">...</field>
-				</block>
-				</value>
-			</block>
+<!--				<block type="variables_get"> -->
+<!--					<field name="VAR" class="textVar">...</field> -->
+<!--				</block> -->
+			</value>
+		</block>
 		<block type="text_changeCase"></block>
 		<block type="text_trim"></block>
 		<block type="text_print"></block>
