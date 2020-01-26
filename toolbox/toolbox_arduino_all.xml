@@ -110,7 +110,6 @@
 		</block>
 		<block type="text_length"></block>
 		<block type="text_isEmpty"></block>
-		<block type="text_compare_string"></block>
 		<block type="text_indexOf">
 			<value name="VALUE">
 				<!-- <block type="variables_get"> -->

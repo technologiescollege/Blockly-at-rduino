@@ -253,14 +253,6 @@ Blockly.Arduino['text_prompt_ext'] = function(block) {
   return [code, Blockly.Arduino.ORDER_UNARY_POSTFIX];
 };
 
-Blockly.Arduino.text_compare_string = function() {
-  var string1 = Blockly.Arduino.valueToCode(this, 'STRING1', Blockly.Arduino.ORDER_ATOMIC);
-  var string2 = Blockly.Arduino.valueToCode(this, 'STRING2', Blockly.Arduino.ORDER_ATOMIC);
-
-  var code = 'strcmp(' + string1 + ', ' + string2 + ')  == 0';
-  return [code, Blockly.Arduino.ORDER_ATOMIC];
-};
-
 Blockly.Arduino['text_endString'] = function(block) {
   return ['', Blockly.Arduino.ORDER_UNARY_POSTFIX];
 };

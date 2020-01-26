@@ -27,23 +27,3 @@ Blockly.Blocks['text_char'] = {
     return new Blockly.FieldImage(Blockly.pathToMedia + file, 7, 12, '"');
   }
 };
-
-Blockly.Blocks['text_compare_string'] = {
-    /**
-   * Block for compare two strings.
-   * @this Blockly.Block
-   */
-  init: function() {
-    this.setHelpUrl(Blockly.Msg.TEXT_COMPARE_STRING_HELPURL);
-    this.setColour(Blockly.Blocks.texts.HUE);
-    this.appendValueInput('STRING1')
-        .setCheck('String')
-        .appendField(Blockly.Msg.TEXT_COMPARE_STRING_TEXT);
-    this.appendValueInput('STRING2')
-        .setCheck('String')
-        .appendField(Blockly.Msg.TEXT_COMPARE_STRING_TEXT2);
-    this.setInputsInline(true);
-    this.setOutput(true, 'Boolean');
-    this.setTooltip(Blockly.Msg.TEXT_COMPARE_STRING_TOOLTIP);
-  }
-};
