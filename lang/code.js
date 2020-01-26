@@ -1,6 +1,6 @@
 /**
- * Based on 
- * 
+ * Based on
+ *
  * Blockly Demos: Code
  *
  * Copyright 2012 Google Inc.
@@ -39,7 +39,8 @@ Code.LANGUAGE_NAME = {
 		  'fr': 'Français',
 		  'jp': 'Japanese',
 		  'ca': 'Català',
-		  'es': 'Español'
+		  'es': 'Español',
+		  'bg': 'Български'
 		};
 
 /**
@@ -142,7 +143,7 @@ Code.initLanguage = function() {
   $('#a_arduino').text(MSG['a_arduino']);
   $('#a_term').text(MSG['a_term']);
   $('#a_xml').text(MSG['a_xml']);
-  
+
   $('#span_saveIno').text(MSG['span_saveIno']);
   $('#span_pasteIDEArduino').text(MSG['span_pasteIDEArduino']);
   $('#span_verify_local').text(MSG['span_verify_local']);
@@ -164,14 +165,14 @@ Code.initLanguage = function() {
   $('#btn_close_config').text(MSG['btn_close']);
   $('#btn_valid_config').text(MSG['btn_valid']);
   $('#btn_close_msg').text(MSG['btn_close']);
-  $('#btn_valid_msg').text(MSG['btn_valid']);  
-  
+  $('#btn_valid_msg').text(MSG['btn_valid']);
+
   $('#toolbox_algo').attr('title', MSG['span_toolbox_algo']);
   $('#toolbox_arduino_1').attr('title', MSG['span_toolbox_arduino_1']);
   $('#toolbox_arduino_2').attr('title', MSG['span_toolbox_arduino_2']);
   $('#toolbox_arduino_3').attr('title', MSG['span_toolbox_arduino_3']);
-  $('#toolbox_arduino_4').attr('title', MSG['span_toolbox_arduino_4']);  
-  
+  $('#toolbox_arduino_4').attr('title', MSG['span_toolbox_arduino_4']);
+
   $('#span_menu_1').text(MSG['span_menu_1']);
   $('#span_menu_11').text(MSG['span_menu_11']);
   $('#span_menu_12').text(MSG['span_menu_12']);
@@ -208,7 +209,7 @@ Code.initLanguage = function() {
   $('#span_menu_6').text(MSG['span_menu_6']);
 
   $('#editModalLabel').text(MSG['editModalLabel']);
-  $('#exampleModalLabel').text(MSG['exampleModalLabel']);  
+  $('#exampleModalLabel').text(MSG['exampleModalLabel']);
   $('#convertModal').attr('title', MSG['convertModalLabel']);
   $('#wiringModal').attr('title', MSG['wiringModalLabel']);
   $('#RGB_falsemodal').attr('title', MSG['RGBModalLabel']);
@@ -218,7 +219,7 @@ Code.initLanguage = function() {
   $('#videoModalLabel3').text(MSG['videoModalLabel3']);
   $('#videoModalLabel4').text(MSG['videoModalLabel4']);
   $('#videoModalLabel5').text(MSG['videoModalLabel5']);
-  
+
   $('#configModalGlobalLabel').text(MSG['configModalGlobalLabel']);
   $('#configGlobalLabel').text(MSG['configGlobalLabel']);
   $('#btn_closeConfigGlobale').text(MSG['btn_close']);
@@ -235,12 +236,12 @@ Code.initLanguage = function() {
   $('#span_colorBW').text(MSG['span_colorBW']);
   $('#span_colorColors').text(MSG['span_colorColors']);
   $('#span_levelChoice').text(MSG['span_levelChoice']);
-  
+
   $('#span_Upload').text(MSG['span_Upload']);
   $('#span_Upload_local').text(MSG['span_Upload_local']);
   $('#span_forms_videomodal').text(MSG['span_forms']);
   $('#span_forms_about').text(MSG['span_forms']);
-  
+
   $('#btn_configGlobal').attr('title', MSG['span_configGlobal']);
   $('#btn_config').attr('title', MSG['span_config']);
   $('#tab_supervision').attr('title', MSG['span_supervision']);
@@ -260,7 +261,7 @@ Code.initLanguage = function() {
   $('#btn_about').attr('title', MSG['span_about']);
   $('#arduino_card_miniPicture_Menu').attr('title', MSG['span_picture']);
   $('#pre_previewArduino').attr('title', MSG['a_arduino']);
-  $('#btn_doc').attr('title', MSG['span_doc']);  
+  $('#btn_doc').attr('title', MSG['span_doc']);
   $('#btn_tuto').attr('title', MSG['span_tuto']);
   $('#btn_videos').attr('title', MSG['span_videos']);
   $('#btn_undo').attr('title', MSG['span_undo']);
@@ -269,19 +270,19 @@ Code.initLanguage = function() {
   $('#btn_CopyCode').attr('title', MSG['span_copycode']);
   $('#span_txt2bin').text(MSG['span_txt2bin']);
   $('#span_bin2txt').text(MSG['span_bin2txt']);
-  
+
   $('#btn_closeCode').text(MSG['btn_closeCode']);
   $('#btn_validCode').text(MSG['btn_validCode']);
 
   $('#msg_ajax_ko').text(MSG['msg_ajax_ko']);
-  $('#span_ajax_msg').text(MSG['span_ajax_msg']);  
-  
+  $('#span_ajax_msg').text(MSG['span_ajax_msg']);
+
   $('#firstModalLabel').text(MSG['firstModalLabel']);
   $('#span_first_msg').text(MSG['span_first_msg']);
   $('#btn_valid_first_msg').text(MSG['btn_valid_first_msg']);
-  
-  $('#BT_ELEC_BUTTON').text(MSG['CAT_BT_ELEC_BUTTON']);  
-  
+
+  $('#BT_ELEC_BUTTON').text(MSG['CAT_BT_ELEC_BUTTON']);
+
   $("xml").find("category").each(function() {
 	// add attribute ID to keep categorie code
 		if (!$(this).attr('id')) {
@@ -307,12 +308,12 @@ Code.initLanguageSupervision = function() {
 	$('#span_supervision_tab5_3').text(Blockly.Msg.SV_tab5_3);
 	$('#span_supervision_tab5_4').text(Blockly.Msg.SV_tab5_4);
 	$('span[id^="span_supervision_enabled"]').text(Blockly.Msg.SV_enabled);
-	$('span[id^="span_supervision_disabled"]').text(Blockly.Msg.SV_disabled);	  
-	$('span[id^="span_supervision_pin_e"]').text(Blockly.Msg.SV_pin_e);	  	  
-	$('span[id^="span_supervision_pin_s"]').text(Blockly.Msg.SV_pin_s);  
-	$('span[id^="span_supervision_low_e"]').text(Blockly.Msg.SV_low_e);  
-	$('span[id^="span_supervision_high_e"]').text(Blockly.Msg.SV_high_e);  
-	$('span[id^="span_supervision_low_s"]').text(Blockly.Msg.SV_low_s);  
+	$('span[id^="span_supervision_disabled"]').text(Blockly.Msg.SV_disabled);
+	$('span[id^="span_supervision_pin_e"]').text(Blockly.Msg.SV_pin_e);
+	$('span[id^="span_supervision_pin_s"]').text(Blockly.Msg.SV_pin_s);
+	$('span[id^="span_supervision_low_e"]').text(Blockly.Msg.SV_low_e);
+	$('span[id^="span_supervision_high_e"]').text(Blockly.Msg.SV_high_e);
+	$('span[id^="span_supervision_low_s"]').text(Blockly.Msg.SV_low_s);
 	$('span[id^="span_supervision_high_s"]').text(Blockly.Msg.SV_high_s);
 	$('span[id^="span_supervision_PWM"]').text(Blockly.Msg.SV_PWM);
 	$('span[id^="span_supervision_read_pin"]').text(Blockly.Msg.SV_read_pin);
@@ -322,9 +323,9 @@ Code.initLanguageSupervision = function() {
 	$('span[id^="span_supervision_data_latchL3"]').text(Blockly.Msg.SV_data_latch3);
 	$('span[id^="span_supervision_data_latchA"]').text(Blockly.Msg.SV_data_latch);
 	$('span[id^="span_supervision_data_latchA1"]').text(Blockly.Msg.SV_data_latch1);
-	$('span[id^="span_supervision_data_latchA2"]').text(Blockly.Msg.SV_data_latchA); 
+	$('span[id^="span_supervision_data_latchA2"]').text(Blockly.Msg.SV_data_latchA);
 	$('span[id^="span_supervision_data_latchA3"]').text(Blockly.Msg.SV_latch_event);
-	$('#span_supervision_visible').text(Blockly.Msg.SV_visible_tab4); 
+	$('#span_supervision_visible').text(Blockly.Msg.SV_visible_tab4);
 	$('#span_supervision_get_analog_map').text(Blockly.Msg.SV_get_analog_map);
 	$('#span_supervision_get_capability').text(Blockly.Msg.SV_get_capability);
 	$('#span_supervision_get_firmware').text(Blockly.Msg.SV_get_firmware);
@@ -340,7 +341,7 @@ Code.initLanguageSupervision = function() {
 	$('#span_supervision_servo').text(Blockly.Msg.SV_servo);
 	$('#span_supervision_servo_pin').text(Blockly.Msg.SV_servo_pin);
 	$('#span_supervision_servo_angle').text(Blockly.Msg.SV_servo_angle);
-	$('#span_supervision_servo_set').text(Blockly.Msg.SV_servo_set);	  
+	$('#span_supervision_servo_set').text(Blockly.Msg.SV_servo_set);
 	$('#span_supervision_tone').text(Blockly.Msg.SV_tone);
 	$('#span_supervision_tone_pin').text(Blockly.Msg.SV_tone_pin);
 	$('#span_supervision_tone_freq').text(Blockly.Msg.SV_tone_freq);
