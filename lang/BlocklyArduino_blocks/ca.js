@@ -265,7 +265,7 @@ Blockly.Msg.CAT_ETHERNET_SERVER = "servidor";
 Blockly.Msg.CAT_WIFI_INIT = "wifi esp8266"; // 30/01/2018
 
 Blockly.Msg.CAT_AUTODUINO = "Autoduino";
-Blockly.Msg.CAT_AUTODUINO_IN = " - senors";
+Blockly.Msg.CAT_AUTODUINO_IN = " - sensors";
 Blockly.Msg.CAT_AUTODUINO_OUT = " - actuadors";
 Blockly.Msg.CAT_AUTODUINO_LCD = " - pantalla LCD";
 Blockly.Msg.CAT_AUTODUINO_COMM = " - comunicació";

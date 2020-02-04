@@ -79,7 +79,7 @@ var MSG = {
   span_pymata_toggle_text:"Servidor de comunicació : ",
   span_pymataON:"En cours",
   span_pymataOFF:"Aturat",
-  span_select_all:"Totes les rúbriques",
+  span_select_all:"Selecciona-ho TOT",
   btn_close:"Tanca",
   btn_saveConfig:"enregistrer la configuration",
   btn_valid:"Valida",
