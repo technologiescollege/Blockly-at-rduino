@@ -151,6 +151,3 @@ Blockly.Blocks.text_length.getBlockType = function() {
 Blockly.Blocks.text_isEmpty.getBlockType = function() {
 	return Blockly.Types.BOOLEAN;
 };
-Blockly.Blocks.text_compare_string.getBlockType = function() {
-	return Blockly.Types.BOOLEAN;
-};
