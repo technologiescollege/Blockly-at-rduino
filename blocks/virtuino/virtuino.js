@@ -43,7 +43,7 @@ Blockly.Blocks['virtuino_read_state_dv']={
 			.setAlign(Blockly.ALIGN_RIGHT)
 			.appendField(Blockly.Msg.VIRTUINO_DV_INPUT);
 		this.setInputsInline(false);
-		this.setOutput(true, "Number");
+		this.setOutput(true, "Boolean");
 		this.setColour("#DD3C23");
 		this.setTooltip('ce bloc sert à...');
 		this.setHelpUrl('http://virtuino.com/index.php/virtuino/video-tutorials');
