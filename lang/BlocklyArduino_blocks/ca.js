@@ -384,6 +384,8 @@ Blockly.Msg.CAT_html=" - HTML";
 Blockly.Msg.CAT_OTTO = "Otto robot"; //added 06/09/2019
 Blockly.Msg.CAT_OTTOH = "humanoide"; //added 06/10/2019
 
+Blockly.Msg.CAT_VIRTUINO = "Virtuino"; //added 08/05/2020
+
 //**********************************Dropdown menus messages***********************************************
 
 Blockly.Msg.FIELDDROPDOWN = [["1 (activat)", "HIGH"], ["0 (desativat)", "LOW"]];
@@ -2657,3 +2659,11 @@ Blockly.Msg.ROBOBOX_MONTH6_CALCANGLE = "Calcula l'angle";
 
 Blockly.Msg.CAT_ROBOBOX_MONTH8 = "- La moto";
 Blockly.Msg.ROBOBOX_MONTH8_ANALYZE = "Analitza una senyal";
+
+//////////////////////////// Virtuino 08/05/2020 ////////////////////////////
+Blockly.Msg.VIRTUINO_INIT_TEXT = "initi connection :";
+Blockly.Msg.VIRTUINO_INIT_RX = "RX";
+Blockly.Msg.VIRTUINO_INIT_TX = "TX";
+Blockly.Msg.VIRTUINO_INIT_SPEED = "speed";
+Blockly.Msg.VIRTUINO_DV_TEXT = "receive state";
+Blockly.Msg.VIRTUINO_DV_INPUT = "on virtual canal (DV)";

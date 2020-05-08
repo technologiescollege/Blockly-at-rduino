@@ -103,6 +103,7 @@ head.load(
 "generators/arduino/technozone51.js",
 "generators/arduino/tsl2561.js",
 "generators/arduino/unipolar_stepper_motor.js",
+"generators/arduino/virtuino.js",
 "generators/arduino/wiichuck.js",
 "generators/arduino/zumo_auto.js",
 "generators/arduino/zumo_motors.js",

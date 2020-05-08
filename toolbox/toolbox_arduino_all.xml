@@ -3244,7 +3244,34 @@
 			<block type="ethernet_wifi_localip"></block>				
 		</category>
 		<sep></sep>
-	</category>		
+	</category>			
+	<category name="CAT_VIRTUINO" colour="#DD3C23">
+		<block type="virtuino_init">
+			<value name="RX">
+				<block type="number">
+					<field name="RX"></field>
+				</block>
+			</value>
+			<value name="TX">
+				<block type="number">
+					<field name="TX"></field>
+				</block>
+			</value>
+			<value name="speed">
+				<block type="number">
+					<field name="speed"></field>
+				</block>
+			</value>
+		</block>		
+		<block type="virtuino_read_state_dv">
+			<value name="DV">
+				<block type="number">
+					<field name="DV"></field>
+				</block>
+			</value>
+		</block>
+		<sep></sep>
+	</category>
 	<category name="CAT_BLYNK_CC" colour="#23C890">
 		<category name="CAT_Blynk_Arduino_Connexion" colour="#23C890">
 			<block type="blynk_cc_uno_cnx_usb">
