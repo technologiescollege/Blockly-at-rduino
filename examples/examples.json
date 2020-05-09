@@ -8,108 +8,12 @@
         "visible": true
     },
     {
-        "source_url": "./robobox/Mini_alarme_V2.xml",
-        "source_text": "Mini alarme V2",
-        "image": "./robobox/robobox_box1.2.png",
-        "link_url": "",
-        "link_text": "",
-        "visible": true
-    },
-    {
-        "source_url": "./robobox/mois1.xml",
-        "source_text": "Mini alarme",
-        "image": "./robobox/robobox_box1.1.jpg",
-        "link_url": "",
-        "link_text": "",
-        "visible": false
-    },
-    {
-        "source_url": "./robobox/mois2.xml",
-        "source_text": "Bras articulé",
-        "image": "./robobox/robobox_box2.2.png",
-        "link_url": "",
-        "link_text": "",
-        "visible": true
-    },
-    {
-        "source_url": "./robobox/mois3.xml",
-        "source_text": "Robot chien",
-        "image": "./robobox/robobox_box3.2.png",
-        "link_url": "",
-        "link_text": "",
-        "visible": true
-    },
-    {
-        "source_url": "./robobox/mois4-simple.xml",
-        "source_text": "Voiture robobox (easy)",
-        "image": "./robobox/robobox_box4.2.png",
-        "link_url": "",
-        "link_text": "",
-        "visible": true
-    },
-    {
-        "source_url": "./robobox/mois4-complexe.xml",
-        "source_text": "Voiture Robobox (Difficile)",
-        "image": "./robobox/robobox_box4.2.png",
-        "link_url": "",
-        "link_text": "",
-        "visible": true
-    },
-    {
-        "source_url": "./robobox/mois5-test_led.xml",
-        "source_text": "Infrarouge - test avec une led",
-        "image": "./robobox/robobox_box5.2.png",
-        "link_url": "",
-        "link_text": "",
-        "visible": true
-    },
-    {
-        "source_url": "./robobox/mois5-transmitter.xml",
-        "source_text": "Transmission infrarouge",
-        "image": "./robobox/robobox_box5.2.png",
-        "link_url": "",
-        "link_text": "",
-        "visible": true
-    },
-    {
-        "source_url": "./robobox/mois6-test_led.xml",
-        "source_text": "Lumiere - test avec une led",
-        "image": "./robobox/robobox_box5.2.png",
-        "link_url": "",
-        "link_text": "",
-        "visible": true
-    },
-    {
-        "source_url": "./robobox/mois6-phare.xml",
-        "source_text": "Voiture avec des phares",
-        "image": "./robobox/robobox_box5.2.png",
-        "link_url": "",
-        "link_text": "",
-        "visible": true
-    },
-    {
-        "source_url": "./robobox/mois6-ligne.xml",
-        "source_text": "Voiture ligne",
-        "image": "./robobox/robobox_box5.2.png",
-        "link_url": "",
-        "link_text": "",
-        "visible": true
-    },
-    {
-        "source_url": "./robobox/mois6-tournesol.xml",
-        "source_text": "Voiture ligne",
-        "image": "./robobox/robobox_box5.2.png",
-        "link_url": "",
-        "link_text": "",
-        "visible": true
-    },
-    {
         "source_url": "./mBot/mbot_eviter_obstacles/mbot_eviter_obstacles.xml",
         "source_text": "Robot mBot éviteur obstacles",
         "image": "./mBot/mbot_eviter_obstacles/mbot_eviter_obstacles.jpg",
         "link_url": "",
         "link_text": "",
-        "visible": false
+        "visible": true
     },
     {
         "source_url": "./mBot/mbot_suiveur_ligne/mbot_suiveur_ligne.xml",
@@ -117,7 +21,7 @@
         "image": "./mBot/mbot_suiveur_ligne/mbot_suiveur_ligne.jpg",
         "link_url": "",
         "link_text": "",
-        "visible": false
+        "visible": true
     },
     {
         "source_url": "./grenouille/grenouille.xml",
@@ -125,7 +29,7 @@
         "image": "./grenouille/grenouille.jpg",
         "link_url": "http://fablabo.net/wiki/FablabJunior_Automne_2015/Projet4",
         "link_text": "sur Fablabo",
-        "visible": false
+        "visible": true
     },
     {
         "source_url": "./servo_potentio/servo_potentio.xml",
@@ -133,7 +37,7 @@
         "image": "./servo_potentio/servo_potentio.jpg",
         "link_url": "",
         "link_text": "",
-        "visible": false
+        "visible": true
     },
     {
         "source_url": "./suiveur_de_ligne/suiveur_de_ligne.xml",
@@ -141,7 +45,7 @@
         "image": "./suiveur_de_ligne/suiveur_de_ligne.jpg",
         "link_url": "http://fablabo.net/wiki/FablabJunior_Automne_2015/Projet2",
         "link_text": "sur Fablabo",
-        "visible": false
+        "visible": true
     },
     {
         "source_url": "./BT_PAF_Nantes/BT_PAF_Nantes.xml",
@@ -149,7 +53,7 @@
         "image": "./BT_PAF_Nantes/BT_PAF_Nantes.jpg",
         "link_url": "",
         "link_text": "",
-        "visible": false
+        "visible": true
     },
     {
         "source_url": "./BT_piloter_DEL/BT_piloter_DEL.xml",
@@ -157,7 +61,7 @@
         "image": "./BT_piloter_DEL/BT_piloter_DEL.jpg",
         "link_url": "https://www.youtube-nocookie.com/embed/vlJl28qE5vg?list=PLwy0yw3Oq4-uFJl0j-efUAAlfCbqtcTMr",
         "link_text": "tutos vidéo",
-        "visible": false
+        "visible": true
     },
     {
         "source_url": "./Otto/OttodanceALL.xml",
@@ -165,7 +69,7 @@
         "image": "./Otto/OttodanceALL.jpg",
         "link_url": "",
         "link_text": "",
-        "visible": false
+        "visible": true
     },
     {
         "source_url": "./Otto/OttogestureALL.xml",
@@ -173,7 +77,7 @@
         "image": "./Otto/OttogestureALL.jpg",
         "link_url": "",
         "link_text": "",
-        "visible": false
+        "visible": true
     },
     {
         "source_url": "./Otto/OttomoveALL.xml",
@@ -181,7 +85,7 @@
         "image": "./Otto/OttomoveALL.jpg",
         "link_url": "",
         "link_text": "",
-        "visible": false
+        "visible": true
     },
     {
         "source_url": "./Otto/OttosoundALL.xml",
@@ -189,7 +93,7 @@
         "image": "./Otto/OttosoundALL.jpg",
         "link_url": "",
         "link_text": "",
-        "visible": false
+        "visible": true
     },
     {
         "source_url": "./gant_sonar/gant_sonar1.xml",
@@ -197,7 +101,7 @@
         "image": "./gant_sonar/gant_sonar1.jpg",
         "link_url": "",
         "link_text": "",
-        "visible": false
+        "visible": true
     },
     {
         "source_url": "./gant_sonar/gant_sonar2.xml",
@@ -205,7 +109,7 @@
         "image": "./gant_sonar/gant_sonar2.jpg",
         "link_url": "",
         "link_text": "",
-        "visible": false
+        "visible": true
     },
     {
         "source_url": "./Starter_Kit/Starter_Kit_prj2/Starter_Kit_prj2.xml",
@@ -213,7 +117,7 @@
         "image": "./Starter_Kit/Starter_Kit_prj2/Starter_Kit_prj2.jpg",
         "link_url": "",
         "link_text": "",
-        "visible": false
+        "visible": true
     },
     {
         "source_url": "./Starter_Kit/Starter_Kit/Starter_Kit_prj3/Starter_Kit_prj3.xml",
@@ -221,7 +125,7 @@
         "image": "./Starter_Kit/Starter_Kit_prj3/Starter_Kit_prj3.jpg",
         "link_url": "",
         "link_text": "",
-        "visible": false
+        "visible": true
     },
     {
         "source_url": "./Starter_Kit/Starter_Kit_prj4/Starter_Kit_prj4.xml",
@@ -229,7 +133,7 @@
         "image": "./Starter_Kit/Starter_Kit_prj4/Starter_Kit_prj4.jpg",
         "link_url": "",
         "link_text": "",
-        "visible": false
+        "visible": true
     },
     {
         "source_url": "./Starter_Kit/Starter_Kit_prj5/Starter_Kit_prj5.xml",
@@ -237,7 +141,7 @@
         "image": "./Starter_Kit/Starter_Kit_prj5/Starter_Kit_prj5.jpg",
         "link_url": "",
         "link_text": "",
-        "visible": false
+        "visible": true
     },
     {
         "source_url": "./Starter_Kit/Starter_Kit_prj6/Starter_Kit_prj6.xml",
@@ -245,7 +149,7 @@
         "image": "./Starter_Kit/Starter_Kit_prj6/Starter_Kit_prj6.jpg",
         "link_url": "",
         "link_text": "",
-        "visible": false
+        "visible": true
     },
     {
         "source_url": "./Starter_Kit/Starter_Kit_prj7/Starter_Kit_prj7.xml",
@@ -253,7 +157,7 @@
         "image": "./Starter_Kit/Starter_Kit_prj7/Starter_Kit_prj7.jpg",
         "link_url": "",
         "link_text": "",
-        "visible": false
+        "visible": true
     },
     {
         "source_url": "./Starter_Kit/Starter_Kit_prj8/Starter_Kit_prj8.xml",
@@ -261,7 +165,7 @@
         "image": "./Starter_Kit/Starter_Kit_prj8/Starter_Kit_prj8.jpg",
         "link_url": "",
         "link_text": "",
-        "visible": false
+        "visible": true
     },
     {
         "source_url": "./RFID_lecture/RFID_lecture.xml",
@@ -269,7 +173,7 @@
         "image": "./RFID_lecture/RFID_lecture.jpg",
         "link_url": "",
         "link_text": "",
-        "visible": false
+        "visible": true
     },
     {
         "source_url": "./RFID_test/RFID_test.xml",
@@ -277,7 +181,7 @@
         "image": "./RFID_test/RFID_test.jpg",
         "link_url": "",
         "link_text": "",
-        "visible": false
+        "visible": true
     },
     {
         "source_url": "./HC-SR04/HC-SR04.xml",
@@ -285,7 +189,7 @@
         "image": "./HC-SR04/HC-SR04.jpg",
         "link_url": "",
         "link_text": "",
-        "visible": false
+        "visible": true
     },
     {
         "source_url": "./infrarouge_test/infrarouge_test.xml",
@@ -293,7 +197,7 @@
         "image": "./infrarouge_test/infrarouge_test.jpg",
         "link_url": "",
         "link_text": "",
-        "visible": false
+        "visible": true
     },
     {
         "source_url": "./RF433_emission/RF433_emission.xml",
@@ -301,7 +205,7 @@
         "image": "./RF433_emission/RF433_emission.jpg",
         "link_url": "",
         "link_text": "",
-        "visible": false
+        "visible": true
     },
     {
         "source_url": "./RF433_reception/RF433_reception.xml",
@@ -309,7 +213,7 @@
         "image": "./RF433_reception/RF433_reception.jpg",
         "link_url": "",
         "link_text": "",
-        "visible": false
+        "visible": true
     },
     {
         "source_url": "rvb/rvb.xml",
@@ -317,7 +221,7 @@
         "image": "./rvb/rvb.png",
         "link_url": "",
         "link_text": "",
-        "visible": false
+        "visible": true
     },
     {
         "source_url": "bp/bp.xml",
@@ -325,7 +229,7 @@
         "image": "./bp/bp.png",
         "link_url": "",
         "link_text": "",
-        "visible": false
+        "visible": true
     },
     {
         "source_url": "moteur/moteur.xml",
@@ -333,7 +237,7 @@
         "image": "./moteur/moteur.png",
         "link_url": "",
         "link_text": "",
-        "visible": false
+        "visible": true
     },
     {
         "source_url": "buzzer/buzzer.xml",
@@ -341,7 +245,7 @@
         "image": "./buzzer/buzzer.png",
         "link_url": "",
         "link_text": "",
-        "visible": false
+        "visible": true
     },
     {
         "source_url": "matrice/matrice.xml",
@@ -349,7 +253,7 @@
         "image": "./matrice/matrice.png",
         "link_url": "",
         "link_text": "",
-        "visible": false
+        "visible": true
     },
     {
         "source_url": "ligne/ligne.xml",
@@ -357,7 +261,7 @@
         "image": "./ligne/ligne.png",
         "link_url": "",
         "link_text": "",
-        "visible": false
+        "visible": true
     },
     {
         "source_url": "analogique/analogique.xml",
@@ -365,7 +269,7 @@
         "image": "./analogique/analogique.png",
         "link_url": "",
         "link_text": "",
-        "visible": false
+        "visible": true
     },
     {
         "source_url": "hum/hum.xml",
@@ -373,7 +277,7 @@
         "image": "./hum/hum.png",
         "link_url": "",
         "link_text": "",
-        "visible": false
+        "visible": true
     },
     {
         "source_url": "potar/potar.xml",
@@ -381,6 +285,6 @@
         "image": "./potar/potar.png",
         "link_url": "",
         "link_text": "",
-        "visible": false
+        "visible": true
     }
 ]
