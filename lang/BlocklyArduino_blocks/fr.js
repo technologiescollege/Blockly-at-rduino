@@ -2667,3 +2667,5 @@ Blockly.Msg.VIRTUINO_INIT_TX = "Broche TX";
 Blockly.Msg.VIRTUINO_INIT_SPEED = "Vitesse";
 Blockly.Msg.VIRTUINO_DV_TEXT = "recevoir un état";
 Blockly.Msg.VIRTUINO_DV_INPUT = "sur le canal virtuel (DV)";
+Blockly.Msg.VIRTUINO_TOOLTIP = "utilisation de Virtuino, voir l'aide";
+Blockly.Msg.VIRTUINO_HELP = "https://youtu.be/v1mQ0VC6szw";

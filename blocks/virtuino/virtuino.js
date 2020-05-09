@@ -28,8 +28,8 @@ Blockly.Blocks['virtuino_init']={
 		this.setPreviousStatement(true);
 		this.setNextStatement(true);
 		this.setColour("#DD3C23");
-		this.setTooltip('ce bloc sert à...');
-		this.setHelpUrl('http://virtuino.com/index.php/virtuino/video-tutorials');
+		this.setTooltip(Blockly.Msg.VIRTUINO_TOOLTIP);
+		this.setHelpUrl(Blockly.Msg.VIRTUINO_HELP);
 	}
 };
 
@@ -45,7 +45,7 @@ Blockly.Blocks['virtuino_read_state_dv']={
 		this.setInputsInline(false);
 		this.setOutput(true, "Boolean");
 		this.setColour("#DD3C23");
-		this.setTooltip('ce bloc sert à...');
-		this.setHelpUrl('http://virtuino.com/index.php/virtuino/video-tutorials');
+		this.setTooltip(Blockly.Msg.VIRTUINO_TOOLTIP);
+		this.setHelpUrl(Blockly.Msg.VIRTUINO_HELP);
 	}
 };

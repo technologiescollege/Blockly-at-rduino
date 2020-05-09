@@ -23,8 +23,9 @@
         <script type="text/javascript" src="core/BlocklyArduino/blockly@rduino_tools.js"></script>
         <script type="text/javascript" src="core/BlocklyArduino/blockly@rduino_visual.js"></script>
         <script type="text/javascript" src="core/BlocklyArduino/blockly@rduino_visual_buttons.js"></script>
-
-        <script type="text/javascript" src="core/libs/jquery-2.1.3.min.js" onload="window.$ = window.jQuery = module.exports;"></script>
+        
+        <script>if (typeof module === 'object') {window.module = module; module = undefined;}</script>
+        <script type="text/javascript" src="core/libs/jquery-2.1.3.min.js"></script>
         <script type="text/javascript" src="core/libs/jquery-ui.js"></script>
         <script type="text/javascript" src="core/libs/bootstrap.min.3.3.6.js"></script>
         <script type="text/javascript" src="core/libs/bootstrap-toggle.min.js"></script>
@@ -34,7 +35,7 @@
         <script type="text/javascript" src="core/libs/canvas2image.js"></script>
         <script type="text/javascript" src="core/libs/prettify.min.js"></script>
         <script type="text/javascript" src="core/libs/smoothie.js"></script>
-
+        <script>if (window.module) module = window.module;</script>
         <!-- define all additional blocks from one resumer-->
         <script type="text/javascript" src="blocks/arduino_resume.js"></script>
         <script type="text/javascript" src="generators/arduino_resume.js"></script>

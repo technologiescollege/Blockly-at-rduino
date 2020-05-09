@@ -2662,3 +2662,5 @@ Blockly.Msg.VIRTUINO_INIT_TX = "TX";
 Blockly.Msg.VIRTUINO_INIT_SPEED = "speed";
 Blockly.Msg.VIRTUINO_DV_TEXT = "receive state";
 Blockly.Msg.VIRTUINO_DV_INPUT = "on virtual canal (DV)";
+Blockly.Msg.VIRTUINO_TOOLTIP = "Virtuino use, see help or go website https://virtuino.com/";
+Blockly.Msg.VIRTUINO_HELP = "https://youtu.be/v1mQ0VC6szw";
