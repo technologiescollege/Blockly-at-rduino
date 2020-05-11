@@ -1,4 +1,4 @@
 [release]
-version=3.1.03042019
+version=3.1.09052020
 [update]
-date=03042019
+date=09052020

@@ -60,7 +60,7 @@ BlocklyDuino.validateConfigGlobal = function () {
 			}
 			
 			//recherche d'une maquette (toolbox) dans l'URL pour une maquette cablée complète, qui bloquera ensuite dans loadToolboxDefinition le bouton des configuration des catégories
-			if (kitornot) {
+			if (kitornot === true) {
 				if (search.length <= 1) {
 					search = '?toolbox=' + $("#toolboxes").val();
 				} else if (search.match(/[?&]toolbox=[^&]*/)) {
