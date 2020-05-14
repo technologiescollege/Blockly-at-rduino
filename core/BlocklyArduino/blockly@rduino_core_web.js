@@ -617,7 +617,7 @@ BlocklyDuino.openConfigToolbox = function () {
 };
 
 /**
- * Change the ToolBox following the chosen configuration
+ * Change the ToolBox following the chosen configuration in the modal
  */
 BlocklyDuino.changeToolbox = function () {
 	// Store the blocks for the duration of the reload.
@@ -664,6 +664,7 @@ BlocklyDuino.changeToolbox = function () {
 BlocklyDuino.buildToolbox = function() {
 	// set the toolbox from url parameters
 	var loadIds = BlocklyDuino.getStringParamFromUrl('toolboxids', '');
+	var kitURL = BlocklyDuino.getStringParamFromUrl('card', '');
 	
 	// set the toolbox from local storage
 	if (loadIds === undefined || loadIds === "") {
@@ -671,7 +672,7 @@ BlocklyDuino.buildToolbox = function() {
 	}
 
 	// set the default toolbox if none
-	if (loadIds === undefined || loadIds === "") {
+	if (loadIds === undefined || loadIds === "" || kitURL.startsWith('kit')) {
 		if ($('#defaultCategories').length) {
 			loadIds = $('#defaultCategories').html();
 		} else {
