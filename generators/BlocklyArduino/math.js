@@ -41,6 +41,6 @@ Blockly.Arduino.math_interval = function (block) {
 	var value_valeur = Blockly.Arduino.valueToCode(block, 'valeur', Blockly.Arduino.ORDER_ATOMIC);
 	var dropdown_comp_sup = OPERATORS[block.getFieldValue('comp_sup')];
 	var value_sup = Blockly.Arduino.valueToCode(block, 'sup', Blockly.Arduino.ORDER_ATOMIC);
-	var code = '((' + value_valeur + ' ' + dropdown_comp_inf + ' ' + value_inf + ') && (' + value_valeur + ' ' + dropdown_comp_sup + ' ' + value_sup + '))';
+	var code = '(( ' + value_inf + ' ' + dropdown_comp_inf + ' ' + value_valeur + ') && (' + value_valeur + ' ' + dropdown_comp_sup + ' ' + value_sup + '))';
 	return [code, Blockly.Arduino.ORDER_NONE];
 };
