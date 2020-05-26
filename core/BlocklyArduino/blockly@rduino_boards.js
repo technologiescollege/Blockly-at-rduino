@@ -81,7 +81,7 @@ var profile = {
         help_link: "https://www.arduino.cc/en/Main/Arduino_BoardLeonardo"
     },
     arduino_mega: {
-        description: "Arduino Mega 2560 / ADK",
+        description: "Arduino Mega",
         cpu: "atmega2560",
         speed: "115200",
         digital: ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "33", "34", "35", "36", "37", "38", "39", "40", "41", "42", "43", "44", "45", "46", "47", "48", "49", "50", "51", "52"],
@@ -133,7 +133,7 @@ var profile = {
         help_link: "https://store.arduino.cc/arduino-micro"
     },
     arduino_mini: {
-        description: "Arduino Mini ATmega328",
+        description: "Arduino Mini",
         cpu: "atmega328p",
         speed: "115200",
         digital: ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13"],
@@ -158,7 +158,7 @@ var profile = {
         help_link: "https://store.arduino.cc/arduino-mini-05"
     },
     arduino_nano: {
-        description: "Arduino Nano ATmega328",
+        description: "Arduino Nano",
         cpu: "atmega328p",
         speed: "115200",
         digital: ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13"],
@@ -184,7 +184,7 @@ var profile = {
         help_link: "https://www.arduino.cc/en/Main/ArduinoBoardNano"
     },
     arduino_pro8: {
-        description: "Arduino Pro Mini 3.3V ATmega328",
+        description: "Arduino Pro Mini 3.3V",
         cpu: "atmega328p",
         speed: "57600",
         digital: ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13"],
@@ -209,7 +209,7 @@ var profile = {
         help_link: "https://www.arduino.cc/en/Main/ArduinoBoardProMini"
     },
     arduino_pro16: {
-        description: "Arduino Pro Mini 5V ATmega328",
+        description: "Arduino Pro Mini 5V",
         cpu: "atmega328p",
         speed: "57600",
         digital: ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13"],
@@ -286,7 +286,7 @@ var profile = {
         help_link: "https://www.arduino.cc/en/Main/ArduinoBoardYun"
     },
     lilypad: {
-        description: "LilyPad Arduino ATmega328P",
+        description: "LilyPad Arduino",
         cpu: "atmega328p",
         speed: "57600",
         digital: ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13"],
