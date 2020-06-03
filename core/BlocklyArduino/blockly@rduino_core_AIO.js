@@ -130,7 +130,7 @@ BlocklyDuino.renderSupervisionContent = function() {
 		$("#tabs-4").append(pinLine);
 	}
 
-	Code.initLanguageSupervision();	
+	Code.initLanguageSupervision();
 	$.getScript("./tools/supervision/s2aio_iot.js" );
 };
 

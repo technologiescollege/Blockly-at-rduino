@@ -151,8 +151,7 @@ BlocklyDuino.renderSupervisionContent = function() {
 		$("#tabs-4").append(pinLine);
 	}
 
-	Code.initLanguageSupervision();	
-	jscolor.installByClassName("jscolor");
+	Code.initLanguageSupervision();
 	$.getScript("./tools/supervision/s2aio_iot.js" );
 };
 
