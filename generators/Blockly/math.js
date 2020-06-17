@@ -343,7 +343,7 @@ Blockly.Arduino['math_modulo'] = function() {
       Blockly.Arduino.ORDER_MODULUS) || '0';
   var argument1 = Blockly.Arduino.valueToCode(this, 'DIVISOR',
       Blockly.Arduino.ORDER_MODULUS) || '0';
-  var code = argument0 + ' % ' + argument1;
+  var code = '(' + argument0 + ') % ' + argument1;
   return [code, Blockly.Arduino.ORDER_MODULUS];
 };
 
