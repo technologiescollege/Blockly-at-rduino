@@ -316,6 +316,7 @@ html[dir="RTL"] .divSwitch-hor {
 
 .modal-body-config-global_left {
     position: relative;
+	height: 280px
 }
 
 .arduino_card_mini_picture_div {
