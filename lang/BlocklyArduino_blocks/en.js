@@ -77,7 +77,8 @@ Blockly.Msg.PROCEDURES_DEFRETURN_FUNCTION = "for function";
 Blockly.Msg.PROCEDURES_DEFRETURN_TYPE = "type";
 
 Blockly.Msg.VARIABLES_AS = "as";
-Blockly.Msg.VARIABLES_SET_CONST = "constant %1 set %2";
+Blockly.Msg.VARIABLES_SET_CONST = "constant";
+Blockly.Msg.VARIABLES_SET_CONST_AT = "set";
 Blockly.Msg.ARD_TYPE_ARRAY = "Array";
 Blockly.Msg.ARD_TYPE_BOOL = "Boolean";
 Blockly.Msg.ARD_TYPE_CHAR = "Character";

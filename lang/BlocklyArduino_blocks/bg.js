@@ -77,7 +77,8 @@ Blockly.Msg.PROCEDURES_DEFRETURN_FUNCTION = "за функция";
 Blockly.Msg.PROCEDURES_DEFRETURN_TYPE = "тип";
 
 Blockly.Msg.VARIABLES_AS = "като";
-Blockly.Msg.VARIABLES_SET_CONST = "константа %1 задай %2";
+Blockly.Msg.VARIABLES_SET_CONST = "константа";
+Blockly.Msg.VARIABLES_SET_CONST_AT = "задай";
 Blockly.Msg.ARD_TYPE_ARRAY = "Масив (Array)";
 Blockly.Msg.ARD_TYPE_BOOL = "Булева (Boolean)";
 Blockly.Msg.ARD_TYPE_CHAR = "Буква (Character)";

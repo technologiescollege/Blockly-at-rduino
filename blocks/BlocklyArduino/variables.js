@@ -141,11 +141,11 @@ Blockly.Blocks['variables_set_type'] = {
 Blockly.Blocks['variables_const'] = {
   init: function() {
         this.appendValueInput("VAL_CONST")
-            .appendField(Blockly.Msg.ARDUINO_VAR_CONST)
+            .appendField(Blockly.Msg.VARIABLES_SET_CONST)
             .appendField(new Blockly.FieldVariable(Blockly.Msg.VARIABLES_DEFAULT_NAME), 'VAR')
             .appendField(Blockly.Msg.VARIABLES_AS)
             .appendField(new Blockly.FieldDropdown(Blockly.Types.getValidTypeArray()), 'VARIABLE_SETTYPE_TYPE')
-            .appendField(Blockly.Msg._AT);
+            .appendField(Blockly.Msg.VARIABLES_SET_CONST_AT);
         this.setColour(Blockly.Blocks.variables.HUE);
         this.setPreviousStatement(true, null);
         this.setNextStatement(true, null);
@@ -179,12 +179,17 @@ Blockly.Blocks['variables_set_init'] = {
         this.setColour(Blockly.Blocks.variables.HUE);
         this.setHelpUrl(Blockly.Msg.var_set_init_helpurl);
         this.setTooltip(Blockly.Msg.var_set_init_tooltip);
-        this.contextMenuMsg_ = Blockly.Msg.VARIABLES_GET_CREATE_SET
+        this.contextMenuMsg_ = Blockly.Msg.VARIABLES_SET_CREATE_GET;
     },
-    contextMenuType_: 'variables_set',
-    customContextMenu: Blockly.Blocks["variables_get"].customContextMenu,
-	getVarType: function(varName) {
-		var blocklyTypeKey = this.getFieldValue('VARIABLE_SETTYPE_TYPE');
-		return Blockly.Types[blocklyTypeKey];
-	}
+    contextMenuType_: 'variables_get',
+    customContextMenu: Blockly.Blocks['variables_get'].customContextMenu,
+    /**
+     * Searches through the nested blocks to find a variable type.
+     * @this Blockly.Block
+     * @param {!string} varName Name of this block variable to check type.
+     * @return {string} String to indicate the type of this block.
+     */
+    getVarType: function(varName) {
+      return Blockly.Types.getChildBlockType(this);
+    }
 };

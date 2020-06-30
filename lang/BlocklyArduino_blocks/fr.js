@@ -75,7 +75,8 @@ Blockly.Msg.PROCEDURES_DEFRETURN_FUNCTION = "pour la fonction";
 Blockly.Msg.PROCEDURES_DEFRETURN_TYPE = "de type";
 
 Blockly.Msg.VARIABLES_AS = "de type";
-Blockly.Msg.VARIABLES_SET_CONST = "constante %1 fixée à %2";
+Blockly.Msg.VARIABLES_SET_CONST = "constante";
+Blockly.Msg.VARIABLES_SET_CONST_AT = "fixée à";
 Blockly.Msg.ARD_TYPE_ARRAY = "tableau";
 Blockly.Msg.ARD_TYPE_BOOL = "binaire (ToR)";
 Blockly.Msg.ARD_TYPE_CHAR = "caractère";

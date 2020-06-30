@@ -69,7 +69,8 @@ Blockly.Msg.PROCEDURES_DEFRETURN_FUNCTION = "関数";
 Blockly.Msg.PROCEDURES_DEFRETURN_TYPE = "型";
 
 Blockly.Msg.VARIABLES_AS = "型";
-Blockly.Msg.VARIABLES_SET_CONST = " %1 を定数に %2";
+Blockly.Msg.VARIABLES_SET_CONST = " を定数に ";
+Blockly.Msg.VARIABLES_SET_CONST_AT = " ";
 Blockly.Msg.ARD_TYPE_ARRAY = "配列";
 Blockly.Msg.ARD_TYPE_BOOL = "Boolean(真偽値)";
 Blockly.Msg.ARD_TYPE_CHAR = "Char(文字)";

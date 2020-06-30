@@ -73,6 +73,7 @@ Blockly.Msg.PROCEDURES_DEFRETURN_TYPE =  "من النوع" ;
 
 Blockly.Msg.VARIABLES_AS =  "من النوع" ;
 Blockly.Msg.VARIABLES_SET_CONST =  "الثابت %1 مثبت على %2";
+Blockly.Msg.VARIABLES_SET_CONST_AT =  "الثابت %1 مثبت على %2";
 Blockly.Msg.ARD_TYPE_ARRAY =  "الجدول (الصفيف)";
 Blockly.Msg.ARD_TYPE_BOOL =  "ثنائي (ToR)";
 Blockly.Msg.ARD_TYPE_CHAR =  "حرف";

@@ -77,7 +77,8 @@ Blockly.Msg.PROCEDURES_DEFRETURN_FUNCTION = "Solange folgende Funktion wahr (tru
 Blockly.Msg.PROCEDURES_DEFRETURN_TYPE = "Typ:";
 
 Blockly.Msg.VARIABLES_AS = "Als";
-Blockly.Msg.VARIABLES_SET_CONST = "Setze Wert %1 auf %2";
+Blockly.Msg.VARIABLES_SET_CONST = "Setze Wert";
+Blockly.Msg.VARIABLES_SET_CONST_AT = "auf";
 Blockly.Msg.ARD_TYPE_ARRAY = "Array / Anordnung";
 Blockly.Msg.ARD_TYPE_BOOL = "Schaltwert (Boole)";
 Blockly.Msg.ARD_TYPE_CHAR = "Zeichen";

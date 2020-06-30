@@ -76,7 +76,8 @@ Blockly.Msg.PROCEDURES_DEFRETURN_FUNCTION = "per la funció";
 Blockly.Msg.PROCEDURES_DEFRETURN_TYPE = "tipus";
 
 Blockly.Msg.VARIABLES_AS = "tipus";
-Blockly.Msg.VARIABLES_SET_CONST = "constant %1 fixada a %2";
+Blockly.Msg.VARIABLES_SET_CONST = "constant";
+Blockly.Msg.VARIABLES_SET_CONST_AT = "fixada a";
 Blockly.Msg.ARD_TYPE_ARRAY = "matriu";
 Blockly.Msg.ARD_TYPE_BOOL = "booleà";
 Blockly.Msg.ARD_TYPE_CHAR = "caràcter";
