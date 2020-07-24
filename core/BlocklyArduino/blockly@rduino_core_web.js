@@ -965,16 +965,16 @@ BlocklyDuino.buildExamples = function() {
 				$.each(data, function(i, example){
 					if (example.visible) {
 						var line = "<tr>"
-								   + "<td><a href='" + search + "&url=./examples/"+example.source_url+"'>"
+								   + "<td><a href='" + search + "&url=./examples/" + example.source_url+"'>"
 								   + example.source_text
 								   + "</a></td>"
 								   + "<td>"
-								   + "<a href='./examples/"+example.image+"' target=_blank>"
-								   + "<img class='vignette' src='./examples/"+example.image+"'>"
+								   + "<a href='./examples/" + example.image + "' target=_blank>"
+								   + "<img class='vignette' src='./examples/" + example.image + "'>"
 								   + "</a>"
 								   + "</td>"
 								   + "<td>"
-								   + "<a href='./examples/"+example.link_url+"' target=_blank>"
+								   + "<a href='./examples/" + example.link_url + "' target=_blank>"
 								   + example.link_text
 								   + "</a>"
 								   + "</td>"

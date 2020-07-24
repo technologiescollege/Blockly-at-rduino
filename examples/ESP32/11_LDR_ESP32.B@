@@ -1,0 +1,78 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <toolboxcategories>CAT_LOGIC,CAT_LOOPS,CAT_MATH,CAT_ARRAY,CAT_TEXT,CAT_VARIABLES,CAT_FUNCTIONS,CAT_ARDUINO,CAT_ANEMOROTATION,CAT_CAPACITIVESENSOR,CAT_LCD_SCREEN,CAT_BLUETOOTH_MISC,CAT_ROBOT_MISC,CAT_I2C,CAT_SPI,CAT_ESP8266,CAT_OLED_U8G,CAT_LED_RGB_CHAIN,CAT_MATRIX_LED_RGB,CAT_GROVE,CAT_POLOLU,CAT_ROBOTS_MOTORS,CAT_STEPPER,CAT_ARDUINO_SERVO,CAT_BT_ELECTRONICS,CAT_KEYPAD</toolboxcategories>
+  <toolbox>toolbox_arduino_all</toolbox>
+  <block type="base_setup_loop" id="W}lF(*@_RCHTt5ibpE|Q" x="38" y="113">
+    <statement name="DO">
+      <block type="serial_init" id="pfOR7{iquHz?p0@MB?pq">
+        <field name="SPEED">9600</field>
+        <next>
+          <block type="serial_println" id="C]`fCCm-`A7M_:0:4#qc">
+            <value name="CONTENT">
+              <shadow type="text" id="MOkm$50Hi-v==/;Pg%U;">
+                <field name="TEXT">El valor de LDR varia entre 0 i 4095</field>
+              </shadow>
+            </value>
+            <next>
+              <block type="serial_println" id="sCVVwX8O]{(vOd8c%brw">
+                <value name="CONTENT">
+                  <shadow type="text" id="%jO4*}e~=:|_=:ww1N#-">
+                    <field name="TEXT">Un valor alta equival a molt llum</field>
+                  </shadow>
+                </value>
+                <next>
+                  <block type="serial_println" id="MZh{X4x1HnxCAaas1A#]">
+                    <value name="CONTENT">
+                      <shadow type="text" id="|$xo7%B`,*qI}0qqtYjZ">
+                        <field name="TEXT">Un valor baix equival a poca llum</field>
+                      </shadow>
+                    </value>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+    <statement name="LOOP">
+      <block type="variables_set" id=":0xp8U!crI.xzQO+Z[@a">
+        <field name="VAR">Valor_LDR</field>
+        <value name="VALUE">
+          <block type="grove_ldr" id="+9JLwDO=]!:[5P4rC.!#">
+            <field name="PIN">36</field>
+          </block>
+        </value>
+        <next>
+          <block type="serial_print" id="h$T?9(*bh=k-Gk1{A?pN">
+            <value name="CONTENT">
+              <shadow type="text" id="|)|]?5#w9[Wx)}Lvi_1K">
+                <field name="TEXT">Lectura LDR = </field>
+              </shadow>
+            </value>
+            <next>
+              <block type="serial_println" id="y^IVKimvooe!i?ljgk~Z">
+                <value name="CONTENT">
+                  <shadow type="text" id="ov=cw}p]kR$c:d^}]1:.">
+                    <field name="TEXT">Temperatura = </field>
+                  </shadow>
+                  <block type="variables_get" id="]Y!([zy]d8|M#R94nHE:">
+                    <field name="VAR">Valor_LDR</field>
+                  </block>
+                </value>
+                <next>
+                  <block type="base_delay" id="+[Z,I1GnyJx3`A{DLsHX">
+                    <value name="DELAY_TIME">
+                      <shadow type="math_number" id="y;D3FtLv,^*~(;}QdVc2">
+                        <field name="NUM">1000</field>
+                      </shadow>
+                    </value>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+</xml>

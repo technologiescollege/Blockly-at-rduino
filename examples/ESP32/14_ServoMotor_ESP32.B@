@@ -1,0 +1,72 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <toolboxcategories>CAT_LOGIC,CAT_LOOPS,CAT_MATH,CAT_ARRAY,CAT_TEXT,CAT_VARIABLES,CAT_FUNCTIONS,CAT_ARDUINO,CAT_ANEMOROTATION,CAT_CAPACITIVESENSOR,CAT_LCD_SCREEN,CAT_BLUETOOTH_MISC,CAT_ROBOT_MISC,CAT_INFRA_2,CAT_INFRA_3,CAT_I2C,CAT_SPI,CAT_NRF24L01,CAT_ESP8266,CAT_APDS_9960_RGB_Gesture,CAT_HX711,CAT_OLED_U8G,CAT_LED_RGB_CHAIN,CAT_MATRIX_LED_RGB,CAT_DRONE,CAT_WII,CAT_SEEED,CAT_DFRobot,CAT_ICN,CAT_ROBOBOX,CAT_ROBUNO,CAT_FISCHERTECHNIK,CAT_FLYCAMONE,CAT_MHK,CAT_BQ,CAT_JEULIN,CAT_PETITBOT,CAT_GROVE,CAT_MULTIFUNCTION,CAT_RF433,CAT_RF433_2,CAT_RF433_3,CAT_RFID,CAT_TECHNOZONE,CAT_MESURE,CAT_TECHNOZONE_ROBOT,CAT_POLOLU,CAT_ZUMO,CAT_ROBOTS_MOTORS,CAT_MBOT_1,CAT_MBOT_2,CAT_MBOT_3,CAT_MBOT_4,CAT_STEPPER,CAT_MACE_ROBOTICS,CAT_ARDUINO_SERVO,CAT_ADXL362,CAT_BT_ELECTRONICS,CAT_jfblocks,CAT_KEYPAD,CAT_SHARP,CAT_ETHERNET,CAT_BLYNK_CC,CAT_AUTODUINO,CAT_OTTO,CAT_PEGUINO,CAT_COG</toolboxcategories>
+  <toolbox>toolbox_arduino_all</toolbox>
+  <block type="base_setup_loop" id="*3,_JKt%)JQSN:no/eda" x="112" y="37">
+    <statement name="DO">
+      <block type="serial_init" id="[!o%8~.@oDw][nmy6ex8">
+        <field name="SPEED">115200</field>
+        <next>
+          <block type="servomotor_attach" id="~e0GbnNR!UxDq@5xCpN_">
+            <field name="servo_pin">19</field>
+          </block>
+        </next>
+      </block>
+    </statement>
+    <statement name="LOOP">
+      <block type="serial_println" id="lHTDA3IQcG=7]B~YW%l9">
+        <value name="CONTENT">
+          <shadow type="text" id="0~2)7c;M?S0vpQ|A@oM4">
+            <field name="TEXT">Estic a 0º</field>
+          </shadow>
+        </value>
+        <next>
+          <block type="servomotor_angle" id=";Cy:=r#?FV0I/7DsF6cn">
+            <field name="servo_pin">19</field>
+            <value name="servo_angle">
+              <shadow type="math_number" id="*:ETM0*OU8Ud$DiDlH]6">
+                <field name="NUM">0</field>
+              </shadow>
+            </value>
+            <next>
+              <block type="base_delay_sec" id="Y_K8{mS_h6NAy*o(IzmT">
+                <value name="DELAY_TIME">
+                  <shadow type="math_number" id="|Y+_b`bb$c36_p9GxQ4=">
+                    <field name="NUM">2</field>
+                  </shadow>
+                </value>
+                <next>
+                  <block type="serial_println" id="K~vUaJbxpeXhz$r)~gS=">
+                    <value name="CONTENT">
+                      <shadow type="text" id="NW?gFPz-E}yY{/$M~f}~">
+                        <field name="TEXT">Estic a 90º</field>
+                      </shadow>
+                    </value>
+                    <next>
+                      <block type="servomotor_angle" id="QRI$Z)[zq!bo]37+V`Js">
+                        <field name="servo_pin">19</field>
+                        <value name="servo_angle">
+                          <shadow type="math_number" id="iK=$RIIi0dh7(]]C]l-z">
+                            <field name="NUM">90</field>
+                          </shadow>
+                        </value>
+                        <next>
+                          <block type="base_delay_sec" id="JhlG{a%F;_ZrW7Gft!dz">
+                            <value name="DELAY_TIME">
+                              <shadow type="math_number" id="1|6)6-8Aph4[4%@G44mp">
+                                <field name="NUM">2</field>
+                              </shadow>
+                            </value>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+</xml>

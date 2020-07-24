@@ -1,0 +1,71 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <toolboxcategories>CAT_LOGIC,CAT_LOOPS,CAT_MATH,CAT_ARRAY,CAT_TEXT,CAT_VARIABLES,CAT_FUNCTIONS,CAT_ARDUINO,CAT_ANEMOROTATION,CAT_CAPACITIVESENSOR,CAT_LCD_SCREEN,CAT_BLUETOOTH_MISC,CAT_ROBOT_MISC,CAT_INFRA_2,CAT_INFRA_3,CAT_I2C,CAT_SPI,CAT_NRF24L01,CAT_ESP8266,CAT_APDS_9960_RGB_Gesture,CAT_HX711,CAT_OLED_U8G,CAT_LED_RGB_CHAIN,CAT_MATRIX_LED_RGB,CAT_DRONE,CAT_WII,CAT_SEEED,CAT_DFRobot,CAT_ICN,CAT_ROBOBOX,CAT_ROBUNO,CAT_FISCHERTECHNIK,CAT_FLYCAMONE,CAT_MHK,CAT_BQ,CAT_JEULIN,CAT_PETITBOT,CAT_GROVE,CAT_MULTIFUNCTION,CAT_RF433,CAT_RF433_2,CAT_RF433_3,CAT_RFID,CAT_TECHNOZONE,CAT_MESURE,CAT_TECHNOZONE_ROBOT,CAT_POLOLU,CAT_ZUMO,CAT_ROBOTS_MOTORS,CAT_MBOT_1,CAT_MBOT_2,CAT_MBOT_3,CAT_MBOT_4,CAT_STEPPER,CAT_MACE_ROBOTICS,CAT_ARDUINO_SERVO,CAT_ADXL362,CAT_BT_ELECTRONICS,CAT_jfblocks,CAT_KEYPAD,CAT_SHARP,CAT_ETHERNET,CAT_VIRTUINO,CAT_BLYNK_CC,CAT_AUTODUINO,CAT_OTTO,CAT_PEGUINO,CAT_COG</toolboxcategories>
+  <toolbox>toolbox_arduino_all</toolbox>
+  <block type="base_setup_loop" id="Ql0j3,9eaq9h$@?sjQA}" x="113" y="138">
+    <statement name="DO">
+      <block type="serial_init" id="=L)6n4B]wB^W2$hgqhVE">
+        <field name="SPEED">115200</field>
+        <next>
+          <block type="variables_set_init" id="1M,ta1r(@95mHI.!]yB0">
+            <field name="VAR">Deteccio_RatllaNegra</field>
+            <field name="VARIABLE_SETTYPE_TYPE">BOOLEAN</field>
+            <value name="VALUE">
+              <block type="math_number" id="_9A)r1Lt5I**(-;OwPP$">
+                <field name="NUM">0</field>
+              </block>
+            </value>
+          </block>
+        </next>
+      </block>
+    </statement>
+    <statement name="LOOP">
+      <block type="variables_set" id="H1bXos[jV?$s9=HXF:(f">
+        <field name="VAR">Deteccio_RatllaNegra</field>
+        <value name="VALUE">
+          <block type="grove_line_finder" id=":6JSu~hG3+IalRdOr,S,">
+            <field name="PIN">19</field>
+          </block>
+        </value>
+        <next>
+          <block type="serial_println" id="xb)P+/.2d9odSn]}`.4p">
+            <value name="CONTENT">
+              <shadow type="text" id="l8|vS=xrIXq.D_Epn=g.">
+                <field name="TEXT">Engeguem el relé</field>
+              </shadow>
+              <block type="variables_get" id="vx7-!k$cWp,s1WG{GYG-">
+                <field name="VAR">Deteccio_RatllaNegra</field>
+              </block>
+            </value>
+            <next>
+              <block type="serial_println" id="aWwK1-Spv9mYtLB(y0+T">
+                <value name="CONTENT">
+                  <shadow type="text" id="Bym!v1_ECRncHseXXokZ">
+                    <field name="TEXT">Si és 0 vol dir que detecta full blanc</field>
+                  </shadow>
+                </value>
+                <next>
+                  <block type="serial_println" id="LUrkH#WkWzATSp$QI.s/">
+                    <value name="CONTENT">
+                      <shadow type="text" id="i~0wst|PT(()jIZTfzP?">
+                        <field name="TEXT">Si és 1 vol dir que detecta ratllaNegra</field>
+                      </shadow>
+                    </value>
+                    <next>
+                      <block type="base_delay" id="`OH?D/UD6QM!w68_XHC!">
+                        <value name="DELAY_TIME">
+                          <shadow type="math_number" id="b6Z3*wp^/~_BkAVR-jB_">
+                            <field name="NUM">1000</field>
+                          </shadow>
+                        </value>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+</xml>

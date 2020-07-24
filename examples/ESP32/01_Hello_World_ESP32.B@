@@ -1,0 +1,99 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <toolboxcategories>CAT_LOGIC,CAT_LOOPS,CAT_MATH,CAT_ARRAY,CAT_TEXT,CAT_VARIABLES,CAT_FUNCTIONS,CAT_ARDUINO,CAT_ANEMOROTATION,CAT_CAPACITIVESENSOR,CAT_LCD_SCREEN,CAT_BLUETOOTH_MISC,CAT_ROBOT_MISC,CAT_INFRA_2,CAT_INFRA_3,CAT_I2C,CAT_SPI,CAT_NRF24L01,CAT_ESP8266,CAT_APDS_9960_RGB_Gesture,CAT_HX711,CAT_OLED_U8G,CAT_LED_RGB_CHAIN,CAT_MATRIX_LED_RGB,CAT_DRONE,CAT_WII,CAT_SEEED,CAT_DFRobot,CAT_ICN,CAT_ROBOBOX,CAT_ROBUNO,CAT_FISCHERTECHNIK,CAT_FLYCAMONE,CAT_MHK,CAT_BQ,CAT_JEULIN,CAT_PETITBOT,CAT_GROVE,CAT_MULTIFUNCTION,CAT_RF433,CAT_RF433_2,CAT_RF433_3,CAT_RFID,CAT_TECHNOZONE,CAT_MESURE,CAT_TECHNOZONE_ROBOT,CAT_POLOLU,CAT_ZUMO,CAT_ROBOTS_MOTORS,CAT_MBOT_1,CAT_MBOT_2,CAT_MBOT_3,CAT_MBOT_4,CAT_STEPPER,CAT_MACE_ROBOTICS,CAT_ARDUINO_SERVO,CAT_ADXL362,CAT_BT_ELECTRONICS,CAT_jfblocks,CAT_KEYPAD,CAT_SHARP,CAT_ETHERNET,CAT_VIRTUINO,CAT_BLYNK_CC,CAT_AUTODUINO,CAT_OTTO,CAT_PEGUINO,CAT_COG</toolboxcategories>
+  <toolbox>toolbox_arduino_all</toolbox>
+  <block type="base_setup_loop" id="U{}q3L[lucsWUlF5N[|?" x="-213" y="112">
+    <statement name="DO">
+      <block type="serial_println" id="@yf0S*^2#?l$:I-a+3xX">
+        <value name="CONTENT">
+          <shadow type="text" id="JFXOmqIs2-V[mF_LHuGH">
+            <field name="TEXT">El programa més senzill serveix de Hello World</field>
+          </shadow>
+        </value>
+        <next>
+          <block type="serial_println" id="CalNz=mVU8jH!iEAVTpz">
+            <value name="CONTENT">
+              <shadow type="text" id="PS/K7)l`-W|noiEKBXHb">
+                <field name="TEXT">El led del pin 19 és una eixida</field>
+              </shadow>
+            </value>
+            <next>
+              <block type="variables_set_init" id="h)L`wO$jJ-Bea28+YyKm">
+                <field name="VAR">pinLed</field>
+                <field name="VARIABLE_SETTYPE_TYPE">NUMBER</field>
+                <value name="VALUE">
+                  <block type="math_number" id="TUkiXSjiJEA6xm,:x7;y">
+                    <field name="NUM">19</field>
+                  </block>
+                </value>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+    <statement name="LOOP">
+      <block type="serial_println" id="4pJ8W#6A9bN_)c!@k:l$">
+        <value name="CONTENT">
+          <shadow type="text" id="io~N2k850*tT{y!z@-s)">
+            <field name="TEXT">Engeguem el led del pin 19</field>
+          </shadow>
+        </value>
+        <next>
+          <block type="inout_digital_write" id="($zH($2yy]{/KcB8svvj">
+            <value name="PIN">
+              <block type="variables_get" id="|O/]@%=kOp`lKVz}@m#Q">
+                <field name="VAR">pinLed</field>
+              </block>
+            </value>
+            <value name="STAT">
+              <shadow type="inout_onoff" id="BB^iO`I*m*O]b)ni=)Eh">
+                <field name="BOOL">HIGH</field>
+              </shadow>
+            </value>
+            <next>
+              <block type="base_delay_sec" id="vt;=(||%rWQ`0T{V6{Jm">
+                <value name="DELAY_TIME">
+                  <shadow type="math_number" id="GgzqGbt#|VF(/{MZvhDI">
+                    <field name="NUM">1</field>
+                  </shadow>
+                </value>
+                <next>
+                  <block type="serial_println" id="brHn$}KfgS+N`:~%p5,g">
+                    <value name="CONTENT">
+                      <shadow type="text" id="vk0tnf1)`KvaygupBbnD">
+                        <field name="TEXT">Aturem el led del pin 19</field>
+                      </shadow>
+                    </value>
+                    <next>
+                      <block type="inout_digital_write" id="hbdWtJFlU/9Fmttr2(vS">
+                        <value name="PIN">
+                          <block type="variables_get" id="YZ,Tug+k4iVF4T@3RF5n">
+                            <field name="VAR">pinLed</field>
+                          </block>
+                        </value>
+                        <value name="STAT">
+                          <shadow type="inout_onoff" id="Dt4biT,DyR]ps@p}A#q]">
+                            <field name="BOOL">LOW</field>
+                          </shadow>
+                        </value>
+                        <next>
+                          <block type="base_delay_sec" id="GoCwxq/]0lw+nv;Xfny8">
+                            <value name="DELAY_TIME">
+                              <shadow type="math_number" id="v7z}vx4cm93|)^Bm@kjT">
+                                <field name="NUM">1</field>
+                              </shadow>
+                            </value>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+</xml>

@@ -242,16 +242,20 @@ BlocklyDuino.ExampleWiring = function() {
 		$("#btn_wiring").removeClass("hidden");
 		$("#menu_21").removeClass("hidden");
 		if ((ExampleTest != '')&&(KitTestResult != 'kit')){
-			ExampleTest = ExampleTest.slice(0, -4);
+			ExampleTest = ExampleTest.replace('.xml', '');
+			ExampleTest = ExampleTest.replace('.B@', '');
 			$('#wiringModal_picture').prepend("<img src='" + ExampleTest + ".jpg' id='wiringModalImg' width=100% height=auto/>");
+			if (!$('#wiringModalImg').complete) $('#wiringModal_picture').prepend("<img src='" + ExampleTest + ".gif' id='wiringModalImg' width=100% height=auto/>");
 			$('#arduino_card_miniPicture').attr('src', ExampleTest + '.jpg');
+			if (!$('#arduino_card_miniPicture').complete) $('#arduino_card_miniPicture').attr('src', ExampleTest + '.gif');
 			$('#arduino_card_picture').attr('src', ExampleTest + '_wiring.jpg');
-		}
-		if ((ExampleTest == '')&&(KitTestResult == 'kit')){
-			$('#wiringModal_picture').prepend("<img src='media/boards/" + KitTest + "_wiring.jpg' id='wiringModalImg' width=100% height=auto/>");
-			$("#btn_wiring").removeClass("hidden");
-			$("#menu_21").removeClass("hidden");
-		}
+			if (!$('#arduino_card_picture').complete) $('#arduino_card_picture').attr('src', ExampleTest + '_wiring.gif');
+		} else if ((ExampleTest == '')&&(KitTestResult == 'kit')){
+				$('#wiringModal_picture').prepend("<img src='media/boards/" + KitTest + "_wiring.jpg' id='wiringModalImg' width=100% height=auto/>");
+				if (!$('#wiringModalImg').complete) $('#wiringModal_picture').prepend("<img src='media/boards/" + KitTest + "_wiring.gif' id='wiringModalImg' width=100% height=auto/>");
+				$("#btn_wiring").removeClass("hidden");
+				$("#menu_21").removeClass("hidden");
+			}
 	}
 };
 

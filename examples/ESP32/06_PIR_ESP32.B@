@@ -1,0 +1,71 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <toolboxcategories>CAT_LOGIC,CAT_LOOPS,CAT_MATH,CAT_ARRAY,CAT_TEXT,CAT_VARIABLES,CAT_FUNCTIONS,CAT_ARDUINO,CAT_ANEMOROTATION,CAT_CAPACITIVESENSOR,CAT_LCD_SCREEN,CAT_BLUETOOTH_MISC,CAT_ROBOT_MISC,CAT_INFRA_2,CAT_INFRA_3,CAT_I2C,CAT_SPI,CAT_NRF24L01,CAT_ESP8266,CAT_APDS_9960_RGB_Gesture,CAT_HX711,CAT_OLED_U8G,CAT_LED_RGB_CHAIN,CAT_MATRIX_LED_RGB,CAT_DRONE,CAT_WII,CAT_SEEED,CAT_DFRobot,CAT_ICN,CAT_ROBOBOX,CAT_ROBUNO,CAT_FISCHERTECHNIK,CAT_FLYCAMONE,CAT_MHK,CAT_BQ,CAT_JEULIN,CAT_PETITBOT,CAT_GROVE,CAT_MULTIFUNCTION,CAT_RF433,CAT_RF433_2,CAT_RF433_3,CAT_RFID,CAT_TECHNOZONE,CAT_MESURE,CAT_TECHNOZONE_ROBOT,CAT_POLOLU,CAT_ZUMO,CAT_ROBOTS_MOTORS,CAT_MBOT_1,CAT_MBOT_2,CAT_MBOT_3,CAT_MBOT_4,CAT_STEPPER,CAT_MACE_ROBOTICS,CAT_ARDUINO_SERVO,CAT_ADXL362,CAT_BT_ELECTRONICS,CAT_jfblocks,CAT_KEYPAD,CAT_SHARP,CAT_ETHERNET,CAT_VIRTUINO,CAT_BLYNK_CC,CAT_AUTODUINO,CAT_OTTO,CAT_PEGUINO,CAT_COG</toolboxcategories>
+  <toolbox>toolbox_arduino_all</toolbox>
+  <block type="base_setup_loop" id="d%-Ap7~[*FfXiZFv]Rcu" x="-137" y="88">
+    <statement name="DO">
+      <block type="serial_init" id="{~1;AQ}Ey=0I$VC^G#JH">
+        <field name="SPEED">115200</field>
+        <next>
+          <block type="variables_set_init" id="~Bw0*qxtn,5FP*474b8e">
+            <field name="VAR">Deteccio_Moviment</field>
+            <field name="VARIABLE_SETTYPE_TYPE">BOOLEAN</field>
+            <value name="VALUE">
+              <block type="math_number" id="i*qQ8~ps=Sp+.UP}Xg:.">
+                <field name="NUM">0</field>
+              </block>
+            </value>
+          </block>
+        </next>
+      </block>
+    </statement>
+    <statement name="LOOP">
+      <block type="variables_set" id="7jfdHc(Nd.ExCD=,U:K_">
+        <field name="VAR">Deteccio_Moviment</field>
+        <value name="VALUE">
+          <block type="grove_pir_motion_sensor" id="7*_!1c+}W/Ow)P3~BSA}">
+            <field name="PIN">18</field>
+          </block>
+        </value>
+        <next>
+          <block type="serial_println" id="a!23xWV[=Rpil@B7yHGV">
+            <value name="CONTENT">
+              <shadow type="text" id="ix[q,mjl+/mG#7(Y{AeO">
+                <field name="TEXT"></field>
+              </shadow>
+              <block type="variables_get" id="R%v:A:9bx^L(i0+)auhe">
+                <field name="VAR">Deteccio_Moviment</field>
+              </block>
+            </value>
+            <next>
+              <block type="serial_println" id="A0mU=p`E%IiM@7y{7XA9">
+                <value name="CONTENT">
+                  <shadow type="text" id="ix[q,mjl+/mG#7(Y{AeO">
+                    <field name="TEXT">Si és 1 vol dir que detecta moviment</field>
+                  </shadow>
+                </value>
+                <next>
+                  <block type="serial_println" id="j.S2MvGKfzOcX]v3Z,6M">
+                    <value name="CONTENT">
+                      <shadow type="text" id="rR?5NSv.G{dDIXZk?)W;">
+                        <field name="TEXT">Si és 0 vol dir que no detecta moviment</field>
+                      </shadow>
+                    </value>
+                    <next>
+                      <block type="base_delay" id="p8TsEy|?m6i)SzvZh,Cg">
+                        <value name="DELAY_TIME">
+                          <shadow type="math_number" id="r6k-o;);6o4WTZJJs~ej">
+                            <field name="NUM">1000</field>
+                          </shadow>
+                        </value>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+</xml>

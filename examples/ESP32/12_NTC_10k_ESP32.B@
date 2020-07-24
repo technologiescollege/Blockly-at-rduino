@@ -1,0 +1,62 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <toolboxcategories>CAT_LOGIC,CAT_LOOPS,CAT_MATH,CAT_ARRAY,CAT_TEXT,CAT_VARIABLES,CAT_FUNCTIONS,CAT_ARDUINO,CAT_ANEMOROTATION,CAT_CAPACITIVESENSOR,CAT_LCD_SCREEN,CAT_BLUETOOTH_MISC,CAT_ROBOT_MISC,CAT_I2C,CAT_SPI,CAT_ESP8266,CAT_OLED_U8G,CAT_LED_RGB_CHAIN,CAT_MATRIX_LED_RGB,CAT_GROVE,CAT_POLOLU,CAT_ROBOTS_MOTORS,CAT_STEPPER,CAT_ARDUINO_SERVO,CAT_BT_ELECTRONICS,CAT_KEYPAD</toolboxcategories>
+  <toolbox>toolbox_arduino_all</toolbox>
+  <block type="base_setup_loop" id="W}lF(*@_RCHTt5ibpE|Q" x="13" y="13">
+    <statement name="DO">
+      <block type="serial_init" id="pfOR7{iquHz?p0@MB?pq">
+        <field name="SPEED">9600</field>
+        <next>
+          <block type="variables_set_init" id="l(4TO~;J|kqB.4(k*BEd">
+            <field name="VAR">Temperatura_NTC_10k</field>
+            <field name="VARIABLE_SETTYPE_TYPE">DECIMAL</field>
+            <value name="VALUE">
+              <block type="math_number" id="DH559Rj0=5t`$)rp3klK">
+                <field name="NUM">0</field>
+              </block>
+            </value>
+          </block>
+        </next>
+      </block>
+    </statement>
+    <statement name="LOOP">
+      <block type="variables_set" id=":0xp8U!crI.xzQO+Z[@a">
+        <field name="VAR">Temperatura_NTC_10k</field>
+        <value name="VALUE">
+          <block type="grove_temporature_sensor" id="8j0oz@i~8_Rm,}aaW4j;">
+            <field name="PIN">36</field>
+          </block>
+        </value>
+        <next>
+          <block type="serial_println" id="C]`fCCm-`A7M_:0:4#qc">
+            <value name="CONTENT">
+              <shadow type="text" id="MOkm$50Hi-v==/;Pg%U;">
+                <field name="TEXT">Temperatura = </field>
+              </shadow>
+            </value>
+            <next>
+              <block type="serial_println" id="y^IVKimvooe!i?ljgk~Z">
+                <value name="CONTENT">
+                  <shadow type="text" id="ov=cw}p]kR$c:d^}]1:.">
+                    <field name="TEXT">Temperatura = </field>
+                  </shadow>
+                  <block type="variables_get" id="]Y!([zy]d8|M#R94nHE:">
+                    <field name="VAR">Temperatura_NTC_10k</field>
+                  </block>
+                </value>
+                <next>
+                  <block type="base_delay" id="+[Z,I1GnyJx3`A{DLsHX">
+                    <value name="DELAY_TIME">
+                      <shadow type="math_number" id="y;D3FtLv,^*~(;}QdVc2">
+                        <field name="NUM">1000</field>
+                      </shadow>
+                    </value>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+</xml>

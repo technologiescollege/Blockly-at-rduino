@@ -1,0 +1,57 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <toolboxcategories>CAT_LOGIC,CAT_LOOPS,CAT_MATH,CAT_ARRAY,CAT_TEXT,CAT_VARIABLES,CAT_FUNCTIONS,CAT_ARDUINO,CAT_ANEMOROTATION,CAT_CAPACITIVESENSOR,CAT_LCD_SCREEN,CAT_BLUETOOTH_MISC,CAT_ROBOT_MISC,CAT_I2C,CAT_SPI,CAT_ESP8266,CAT_OLED_U8G,CAT_LED_RGB_CHAIN,CAT_MATRIX_LED_RGB,CAT_GROVE,CAT_POLOLU,CAT_ROBOTS_MOTORS,CAT_STEPPER,CAT_ARDUINO_SERVO,CAT_BT_ELECTRONICS,CAT_KEYPAD</toolboxcategories>
+  <toolbox>toolbox_arduino_all</toolbox>
+  <block type="base_setup_loop" id="p@1v_a+zk}8bI~[@9DSk" x="-88" y="-112">
+    <statement name="DO">
+      <block type="lcd_i2c_lcdinit" id="Q-I0I@]p~H10xUN;JC]K">
+        <field name="I2C_adress">0x27</field>
+        <field name="nbcol">16</field>
+        <field name="nblig">2</field>
+        <field name="backlight">FALSE</field>
+        <field name="cursor">FALSE</field>
+        <field name="blink">FALSE</field>
+      </block>
+    </statement>
+    <statement name="LOOP">
+      <block type="lcd_i2c_lcdwrite" id="CrH^DK7jPirNEzOO^-7a">
+        <value name="TEXT">
+          <shadow type="text" id="KoJ=IpDf]R@$Ef,c]%bl">
+            <field name="TEXT">Hola</field>
+          </shadow>
+        </value>
+        <value name="COL">
+          <shadow type="math_number" id="1d:i?fdmZzx:P+Xc.%Nc">
+            <field name="NUM">0</field>
+          </shadow>
+        </value>
+        <value name="LIG">
+          <shadow type="math_number" id="r=3ANve+JB@yPyB}Hly0">
+            <field name="NUM">0</field>
+          </shadow>
+        </value>
+        <next>
+          <block type="base_delay_sec" id="Q}]po/HqiL3Eg#4v$q1T">
+            <value name="DELAY_TIME">
+              <shadow type="math_number" id="4i1vcLiPpnSS/J~-S~zH">
+                <field name="NUM">5</field>
+              </shadow>
+            </value>
+            <next>
+              <block type="lcd_i2c_lcdclear" id="QTj:8g@u.q5Hx7t7:-Qp">
+                <next>
+                  <block type="base_delay_sec" id="taDQ{r_+FkZaK[su=d#s">
+                    <value name="DELAY_TIME">
+                      <shadow type="math_number" id="cPiA4,gA4Bed[cO+vBx8">
+                        <field name="NUM">5</field>
+                      </shadow>
+                    </value>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+</xml>

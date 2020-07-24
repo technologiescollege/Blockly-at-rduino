@@ -1,0 +1,344 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <toolboxcategories>CAT_LOGIC,CAT_LOOPS,CAT_MATH,CAT_ARRAY,CAT_TEXT,CAT_VARIABLES,CAT_FUNCTIONS,CAT_ARDUINO,CAT_ANEMOROTATION,CAT_CAPACITIVESENSOR,CAT_LCD_SCREEN,CAT_BLUETOOTH_MISC,CAT_ROBOT_MISC,CAT_INFRA_2,CAT_INFRA_3,CAT_I2C,CAT_SPI,CAT_NRF24L01,CAT_ESP8266,CAT_APDS_9960_RGB_Gesture,CAT_HX711,CAT_OLED_U8G,CAT_LED_RGB_CHAIN,CAT_MATRIX_LED_RGB,CAT_DRONE,CAT_WII,CAT_SEEED,CAT_DFRobot,CAT_ICN,CAT_ROBOBOX,CAT_ROBUNO,CAT_FISCHERTECHNIK,CAT_FLYCAMONE,CAT_MHK,CAT_BQ,CAT_JEULIN,CAT_PETITBOT,CAT_GROVE,CAT_MULTIFUNCTION,CAT_RF433,CAT_RF433_2,CAT_RF433_3,CAT_RFID,CAT_TECHNOZONE,CAT_MESURE,CAT_TECHNOZONE_ROBOT,CAT_POLOLU,CAT_ZUMO,CAT_ROBOTS_MOTORS,CAT_MBOT_1,CAT_MBOT_2,CAT_MBOT_3,CAT_MBOT_4,CAT_STEPPER,CAT_MACE_ROBOTICS,CAT_ARDUINO_SERVO,CAT_ADXL362,CAT_BT_ELECTRONICS,CAT_jfblocks,CAT_KEYPAD,CAT_SHARP,CAT_ETHERNET,CAT_VIRTUINO,CAT_BLYNK_CC,CAT_AUTODUINO,CAT_OTTO,CAT_PEGUINO,CAT_COG</toolboxcategories>
+  <toolbox>toolbox_arduino_all</toolbox>
+  <block type="procedures_defnoreturn" id="l]]kLziYzd=#ThYGA4I[" x="13" y="13">
+    <field name="NAME">Motor_A_Horari</field>
+    <comment pinned="false" h="80" w="160">Motor A Horari</comment>
+    <statement name="STACK">
+      <block type="serial_println" id="QLQ*9%QYD]f30GpPC7@c">
+        <value name="CONTENT">
+          <shadow type="text" id="{)CN:.ggkJ}N~/:${pK#">
+            <field name="TEXT">Escut L298 motor A Horari</field>
+          </shadow>
+        </value>
+        <next>
+          <block type="serial_println" id="mgsUwa5=n3K:G%6yDj/@">
+            <value name="CONTENT">
+              <shadow type="text" id="XxiE,E14a+4.tJt+.AK6">
+                <field name="TEXT">Activem IN1=21</field>
+              </shadow>
+            </value>
+            <next>
+              <block type="inout_digital_write_validator" id="#/,I-WlEo7PQ3FAQ?^D[">
+                <field name="PIN">21</field>
+                <field name="STAT">HIGH</field>
+                <next>
+                  <block type="serial_println" id="uv~BALX(*{-eA+M/SZmH">
+                    <value name="CONTENT">
+                      <shadow type="text" id="}n-6I=?1v83pp=.CP}|n">
+                        <field name="TEXT">Desactivem IN2=22</field>
+                      </shadow>
+                    </value>
+                    <next>
+                      <block type="inout_digital_write_validator" id="M^2Z}][t^aQD,;!E.f1Z">
+                        <field name="PIN">22</field>
+                        <field name="STAT">LOW</field>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+  <block type="procedures_defnoreturn" id="`RH.[6!THPr5$J:TOGWn" x="738" y="13">
+    <field name="NAME">Motor_B_Horari</field>
+    <comment pinned="false" h="80" w="160">Motor B Horari</comment>
+    <statement name="STACK">
+      <block type="serial_println" id="fHI9|OW^n2D%#])OBznt">
+        <value name="CONTENT">
+          <shadow type="text" id="G9,42r}GUXlJ+tGRny[P">
+            <field name="TEXT">Escut L298 motor B Horari</field>
+          </shadow>
+        </value>
+        <next>
+          <block type="serial_println" id="/|QedeV:;.^MV{3s^?!8">
+            <value name="CONTENT">
+              <shadow type="text" id="BOX}uWmoUsas;aP+(wE-">
+                <field name="TEXT">Activem IN4=18</field>
+              </shadow>
+            </value>
+            <next>
+              <block type="inout_digital_write_validator" id="VJ0#JnqR1nF:L#n(VqC)">
+                <field name="PIN">18</field>
+                <field name="STAT">HIGH</field>
+                <next>
+                  <block type="serial_println" id="kJ)4h{XD%aiZtKYgK@1?">
+                    <value name="CONTENT">
+                      <shadow type="text" id="!_B2FdoapJqXmd#voR|!">
+                        <field name="TEXT">Desactivem IN3=19</field>
+                      </shadow>
+                    </value>
+                    <next>
+                      <block type="inout_digital_write_validator" id="L)#46@A^-HHVN!|/qc:n">
+                        <field name="PIN">19</field>
+                        <field name="STAT">LOW</field>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+  <block type="procedures_defnoreturn" id="][{4vgvsx!z^+{HndY!K" x="13" y="213">
+    <field name="NAME">Motor_A_antiHorari</field>
+    <comment pinned="false" h="80" w="160">Motor A antiHorari</comment>
+    <statement name="STACK">
+      <block type="serial_println" id="U]SOy.@`{ijZK`W@S.Tn">
+        <value name="CONTENT">
+          <shadow type="text" id=".gT==!vVn(||YBS:mjXW">
+            <field name="TEXT">Escut L298 motor A antiHorari</field>
+          </shadow>
+        </value>
+        <next>
+          <block type="serial_println" id="$XR(2h[*:%zI8w~.#~QW">
+            <value name="CONTENT">
+              <shadow type="text" id="q)46MbJTCo_D-T@`fufH">
+                <field name="TEXT">Desactivem IN1=21 </field>
+              </shadow>
+            </value>
+            <next>
+              <block type="inout_digital_write_validator" id=":K7NKHt`SfRuR7J(tF1:">
+                <field name="PIN">21</field>
+                <field name="STAT">LOW</field>
+                <next>
+                  <block type="serial_println" id="vdyS|IH119I9e4Ag.yfy">
+                    <value name="CONTENT">
+                      <shadow type="text" id="ngbUgk+st4hu*j}m%N$M">
+                        <field name="TEXT">Activem IN2=22</field>
+                      </shadow>
+                    </value>
+                    <next>
+                      <block type="inout_digital_write_validator" id="SAlK_GaFGV}{y5=CZ$0,">
+                        <field name="PIN">22</field>
+                        <field name="STAT">HIGH</field>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+  <block type="procedures_defnoreturn" id="ZDN%;Vxjd^jy:zDPVjA6" x="738" y="188">
+    <field name="NAME">Motor_B_antiHorari</field>
+    <comment pinned="false" h="80" w="160">Motor B antiHorari</comment>
+    <statement name="STACK">
+      <block type="serial_println" id="`rLZE.FaR={.sckWUC;]">
+        <value name="CONTENT">
+          <shadow type="text" id=":)zGbpemObd-|bt}.VDC">
+            <field name="TEXT">Escut L298 motor B Horari</field>
+          </shadow>
+        </value>
+        <next>
+          <block type="serial_println" id="Hl89VZ1hacofzE{|Dp2N">
+            <value name="CONTENT">
+              <shadow type="text" id="`r-J(sK5b[;AL.eo(V;f">
+                <field name="TEXT">Desactivem IN4=18</field>
+              </shadow>
+            </value>
+            <next>
+              <block type="inout_digital_write_validator" id="QvT$@/mgRoD.1To$.:dL">
+                <field name="PIN">18</field>
+                <field name="STAT">LOW</field>
+                <next>
+                  <block type="serial_println" id="s!jROIwCTSWuzGvd4JA_">
+                    <value name="CONTENT">
+                      <shadow type="text" id="XN-Kv!}ww:aip-Y^n3-?">
+                        <field name="TEXT">Activem IN3=19</field>
+                      </shadow>
+                    </value>
+                    <next>
+                      <block type="inout_digital_write_validator" id="Ph{BB?U/o_z}1JwPbnb.">
+                        <field name="PIN">19</field>
+                        <field name="STAT">HIGH</field>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+  <block type="procedures_defnoreturn" id="$412+fgyn?I.v_5Zo1#c" x="13" y="388">
+    <field name="NAME">Atura_Motor_A</field>
+    <comment pinned="false" h="80" w="160">Atura motor A</comment>
+    <statement name="STACK">
+      <block type="serial_println" id="{b$G$}h4t-9$q%bG3SXz">
+        <value name="CONTENT">
+          <shadow type="text" id="n_L).4inwir-P-XT{@W,">
+            <field name="TEXT">Escut L298 motor A aturat</field>
+          </shadow>
+        </value>
+        <next>
+          <block type="serial_println" id="g-9OF5O*-d0J5_-yIGJE">
+            <value name="CONTENT">
+              <shadow type="text" id="KxO,/g+=Bm.Pllr1wick">
+                <field name="TEXT">Desactivem IN1=21</field>
+              </shadow>
+            </value>
+            <next>
+              <block type="inout_digital_write_validator" id="mGFp.fVf2{WTR`K73~6u">
+                <field name="PIN">21</field>
+                <field name="STAT">LOW</field>
+                <next>
+                  <block type="serial_println" id="Yffr~qe;Yb):Y[}_8~^N">
+                    <value name="CONTENT">
+                      <shadow type="text" id="@7#7N4jA$jfQQ!kmrq6E">
+                        <field name="TEXT">Desactivem IN2=22</field>
+                      </shadow>
+                    </value>
+                    <next>
+                      <block type="inout_digital_write_validator" id="dA/Jd8}]w`ugTV/]3m@A">
+                        <field name="PIN">22</field>
+                        <field name="STAT">LOW</field>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+  <block type="base_setup_loop" id="HU4(C`6XeWYT:TO56Acs" x="738" y="388">
+    <statement name="DO">
+      <block type="serial_init" id="jTbpNn.L|5b,9Q.D~1Uc">
+        <field name="SPEED">115200</field>
+      </block>
+    </statement>
+    <statement name="LOOP">
+      <block type="procedures_callnoreturn" id="yY85|WeFz`%px}/|-DJ=">
+        <mutation name="Motor_A_Horari"></mutation>
+        <next>
+          <block type="base_delay_sec" id="u)-Xgu3@PX$n`Ra|xnKR">
+            <value name="DELAY_TIME">
+              <shadow type="math_number" id="^lA[|{v^?A{z5{ngqc7J">
+                <field name="NUM">5</field>
+              </shadow>
+            </value>
+            <next>
+              <block type="procedures_callnoreturn" id="C=%mOO~P2M)dc@HlznMx">
+                <mutation name="Motor_A_antiHorari"></mutation>
+                <next>
+                  <block type="base_delay_sec" id="?t?m4:/{VFsjS+l6ehrC">
+                    <value name="DELAY_TIME">
+                      <shadow type="math_number" id="|.(%F;]7%Do:3^Eh8RWx">
+                        <field name="NUM">5</field>
+                      </shadow>
+                    </value>
+                    <next>
+                      <block type="procedures_callnoreturn" id=")yf*JRT@bOc6|SlC4}Ge">
+                        <mutation name="Atura_Motor_A"></mutation>
+                        <next>
+                          <block type="base_delay_sec" id="{0a8|ydbF9aJzWn1eJrA">
+                            <value name="DELAY_TIME">
+                              <shadow type="math_number" id="+/o!-h#w0~LIr8Cd^m!P">
+                                <field name="NUM">5</field>
+                              </shadow>
+                            </value>
+                            <next>
+                              <block type="procedures_callnoreturn" id="/+LkbfP]dyJ0(!g)`g38">
+                                <mutation name="Motor_B_Horari"></mutation>
+                                <next>
+                                  <block type="base_delay_sec" id="fdk]|U5i^r%cVL/f](Lu">
+                                    <value name="DELAY_TIME">
+                                      <shadow type="math_number" id="ZNqE^+.EmXWq1Ph,sfg{">
+                                        <field name="NUM">5</field>
+                                      </shadow>
+                                    </value>
+                                    <next>
+                                      <block type="procedures_callnoreturn" id="[{W#5Bz@yh`24ed@yYar">
+                                        <mutation name="Motor_B_antiHorari"></mutation>
+                                        <next>
+                                          <block type="base_delay_sec" id="2cprAtRRUgx68K]lU*7N">
+                                            <value name="DELAY_TIME">
+                                              <shadow type="math_number" id="FIdx)A]b%Hg)0U6L,^WH">
+                                                <field name="NUM">5</field>
+                                              </shadow>
+                                            </value>
+                                            <next>
+                                              <block type="procedures_callnoreturn" id="Y:cxyP4NJBMrM1(!|iz@">
+                                                <mutation name="Atura_Motor_B"></mutation>
+                                              </block>
+                                            </next>
+                                          </block>
+                                        </next>
+                                      </block>
+                                    </next>
+                                  </block>
+                                </next>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+  <block type="procedures_defnoreturn" id="!m1}:Y/]Jxl!Xp(3_G6p" x="13" y="563">
+    <field name="NAME">Atura_Motor_B</field>
+    <comment pinned="false" h="80" w="160">Motor B antiHorari</comment>
+    <statement name="STACK">
+      <block type="serial_println" id="8{M~hOvZA6lh2x9ltOSA">
+        <value name="CONTENT">
+          <shadow type="text" id="RU_5a*9AF6Yf8}/xA)tJ">
+            <field name="TEXT">Escut L298 motor B aturat</field>
+          </shadow>
+        </value>
+        <next>
+          <block type="serial_println" id="jl5}uQi/jWr7[!2K{[5L">
+            <value name="CONTENT">
+              <shadow type="text" id=":%4n`~p,(|Ge,zcj}EXE">
+                <field name="TEXT">Desactivem IN4=18</field>
+              </shadow>
+            </value>
+            <next>
+              <block type="inout_digital_write_validator" id="WF^^A0XT2+PJg30itM=!">
+                <field name="PIN">18</field>
+                <field name="STAT">LOW</field>
+                <next>
+                  <block type="serial_println" id="UrrHR~r]Nb+[C/qdz/(q">
+                    <value name="CONTENT">
+                      <shadow type="text" id="W17[?^gU;f5NS.5ae6M0">
+                        <field name="TEXT">Desactivem IN3=19</field>
+                      </shadow>
+                    </value>
+                    <next>
+                      <block type="inout_digital_write_validator" id="V/(^x;*yE=41b%A%;Y,$">
+                        <field name="PIN">19</field>
+                        <field name="STAT">LOW</field>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+</xml>

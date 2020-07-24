@@ -1,0 +1,86 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <toolboxcategories>CAT_LOGIC,CAT_LOOPS,CAT_MATH,CAT_ARRAY,CAT_TEXT,CAT_VARIABLES,CAT_FUNCTIONS,CAT_ARDUINO,CAT_ANEMOROTATION,CAT_CAPACITIVESENSOR,CAT_LCD_SCREEN,CAT_BLUETOOTH_MISC,CAT_ROBOT_MISC,CAT_INFRA_2,CAT_INFRA_3,CAT_I2C,CAT_SPI,CAT_NRF24L01,CAT_ESP8266,CAT_APDS_9960_RGB_Gesture,CAT_HX711,CAT_OLED_U8G,CAT_LED_RGB_CHAIN,CAT_MATRIX_LED_RGB,CAT_DRONE,CAT_WII,CAT_SEEED,CAT_DFRobot,CAT_ICN,CAT_ROBOBOX,CAT_ROBUNO,CAT_FISCHERTECHNIK,CAT_FLYCAMONE,CAT_MHK,CAT_BQ,CAT_JEULIN,CAT_PETITBOT,CAT_GROVE,CAT_MULTIFUNCTION,CAT_RF433,CAT_RF433_2,CAT_RF433_3,CAT_RFID,CAT_TECHNOZONE,CAT_MESURE,CAT_TECHNOZONE_ROBOT,CAT_POLOLU,CAT_ZUMO,CAT_ROBOTS_MOTORS,CAT_MBOT_1,CAT_MBOT_2,CAT_MBOT_3,CAT_MBOT_4,CAT_STEPPER,CAT_MACE_ROBOTICS,CAT_ARDUINO_SERVO,CAT_ADXL362,CAT_BT_ELECTRONICS,CAT_jfblocks,CAT_KEYPAD,CAT_SHARP,CAT_ETHERNET,CAT_BLYNK_CC,CAT_AUTODUINO,CAT_OTTO,CAT_PEGUINO,CAT_COG</toolboxcategories>
+  <toolbox>toolbox_arduino_all</toolbox>
+  <block type="base_setup_loop" id="!;Wm%@9x#n$G8$$avy)c" x="38" y="63">
+    <statement name="DO">
+      <block type="serial_init" id="z(j+kDj?tZ-y[%;HpWh$">
+        <field name="SPEED">115200</field>
+      </block>
+    </statement>
+    <statement name="LOOP">
+      <block type="variables_set" id="L1P;+k=i(Q_ch,j=y6nC">
+        <field name="VAR">TempC</field>
+        <value name="VALUE">
+          <block type="grove_dht_read" id="#*?m%b:}F:$$mlL#3kcB">
+            <field name="TYPE">C</field>
+            <field name="SENSOR">DHT22</field>
+            <field name="PIN">19</field>
+          </block>
+        </value>
+        <next>
+          <block type="serial_print_tab" id="^FKYf97P%6ys9wgFZjQY">
+            <value name="CONTENT">
+              <shadow type="text" id="VQ-a6H}B2/8I@$B!$vJ:">
+                <field name="TEXT">T ºC =</field>
+              </shadow>
+            </value>
+            <next>
+              <block type="serial_print_tab" id="g7I]`p*OT8)22mA=1nO5">
+                <value name="CONTENT">
+                  <shadow type="text" id="DN5%1P:H4MfKZd;@[wIW">
+                    <field name="TEXT">T ºC =</field>
+                  </shadow>
+                  <block type="variables_get" id="i=aQ{oU/ZA(=o14PL?rn">
+                    <field name="VAR">TempC</field>
+                  </block>
+                </value>
+                <next>
+                  <block type="variables_set" id="%*Fjlu]t5z[SRg|m`kP~">
+                    <field name="VAR">Humitat</field>
+                    <value name="VALUE">
+                      <block type="grove_dht_read" id="^hXLC*w|7XQz)TZV4f$z">
+                        <field name="TYPE">h</field>
+                        <field name="SENSOR">DHT22</field>
+                        <field name="PIN">19</field>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="serial_print_tab" id="LZ0fW;{LKGJ{k6cg*:n,">
+                        <value name="CONTENT">
+                          <shadow type="text" id="|j-GJVfM[_8Vhd-}fOWS">
+                            <field name="TEXT">H % =</field>
+                          </shadow>
+                        </value>
+                        <next>
+                          <block type="serial_println" id="x25_=kOm#%|?gS?%{z,y">
+                            <value name="CONTENT">
+                              <shadow type="text" id=",hcl@RE#]Rc(?.jQV}j6">
+                                <field name="TEXT"></field>
+                              </shadow>
+                              <block type="variables_get" id="789aO3sSauqph.nm!S_`">
+                                <field name="VAR">Humitat</field>
+                              </block>
+                            </value>
+                            <next>
+                              <block type="base_delay_sec" id="iC!*E%9^fo;}q=o+v)Nk">
+                                <value name="DELAY_TIME">
+                                  <shadow type="math_number" id="X6WEB3VWDv/(p.n!)vLH">
+                                    <field name="NUM">2</field>
+                                  </shadow>
+                                </value>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+</xml>

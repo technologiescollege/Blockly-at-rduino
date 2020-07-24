@@ -286,5 +286,117 @@
         "link_url": "",
         "link_text": "",
         "visible": true
+    },
+    {
+        "source_url": "ESP32/01_Hello_World_ESP32.B@",
+        "source_text": "Blink sur broche 19",
+        "image": "./ESP32/01_Hello_World_ESP32.jpg",
+        "link_url": "./ESP32/01_Hello_World_ESP32.png",
+        "link_text": "correction",
+        "visible": true
+    },
+    {
+        "source_url": "ESP32/02_3Leds_ESP32.B@",
+        "source_text": "chenillard sur 3 diodes",
+        "image": "./ESP32/02_3Leds_ESP32.jpg",
+        "link_url": "./ESP32/02_3Leds_ESP32.png",
+        "link_text": "correction",
+        "visible": true
+    },
+    {
+        "source_url": "ESP32/03_2Motors_CC_L298_tot_res_ESP32.B@",
+        "source_text": "L298 test 2 moteurs dans les 2 sens",
+        "image": "./ESP32/03_2Motors_CC_L298_tot_res_ESP32.jpg",
+        "link_url": "./ESP32/03_2Motors_CC_L298_tot_res_ESP32.png",
+        "link_text": "correction",
+        "visible": true
+    },
+    {
+        "source_url": "ESP32/04_LCD_I2C_ESP32.B@",
+        "source_text": "\"Bonjour\" sur écran LCD",
+        "image": "./ESP32/04_LCD_I2C_ESP32.jpg",
+        "link_url": "./ESP32/04_LCD_I2C_ESP32.png",
+        "link_text": "correction",
+        "visible": true
+    },
+    {
+        "source_url": "ESP32/05_2Relay_Module_ESP32.B@",
+        "source_text": "faire clignoter une lampe 220V sur relais",
+        "image": "./ESP32/05_2Relay_Module_ESP32.jpg",
+        "link_url": "./ESP32/05_2Relay_Module_ESP32.png",
+        "link_text": "correction",
+        "visible": true
+    },
+    {
+        "source_url": "ESP32/06_PIR_ESP32.B@",
+        "source_text": "détection de mouvement PIR",
+        "image": "./ESP32/06_PIR_ESP32.jpg",
+        "link_url": "./ESP32/06_PIR_ESP32.png",
+        "link_text": "correction",
+        "visible": true
+    },
+    {
+        "source_url": "ESP32/07_Polsador_Led_ESP32.B@",
+        "source_text": "mettre une diode à l'état logique du BP",
+        "image": "./ESP32/07_Polsador_Led_ESP32.jpg",
+        "link_url": "./ESP32/07_Polsador_Led_ESP32.png",
+        "link_text": "correction",
+        "visible": true
+    },
+    {
+        "source_url": "ESP32/08_Seguidor_ratlla_ESP32.B@",
+        "source_text": "détecteur de ligne, test blanc ou noir",
+        "image": "./ESP32/08_Seguidor_ratlla_ESP32.jpg",
+        "link_url": "./ESP32/08_Seguidor_ratlla_ESP32.png",
+        "link_text": "correction",
+        "visible": true
+    },
+    {
+        "source_url": "ESP32/09_DHT22_ESP32.B@",
+        "source_text": "afficher la T° et le % humidité grâce à un DHT22",
+        "image": "./ESP32/09_DHT22_ESP32.jpg",
+        "link_url": "./ESP32/09_DHT22_ESP32.png",
+        "link_text": "correction",
+        "visible": true
+    },
+    {
+        "source_url": "ESP32/10_UltraSo_4pins_ESP32.B@",
+        "source_text": "retourne la distance mesurée par le HC-SR04",
+        "image": "./ESP32/10_UltraSo_4pins_ESP32.gif",
+        "link_url": "./ESP32/10_UltraSo_4pins_ESP32.png",
+        "link_text": "correction",
+        "visible": true
+    },
+    {
+        "source_url": "ESP32/11_LDR_ESP32.B@",
+        "source_text": "retourne la valeur de la luminosité",
+        "image": "./ESP32/11_LDR_ESP32.jpg",
+        "link_url": "./ESP32/11_LDR_ESP32.png",
+        "link_text": "correction",
+        "visible": true
+    },
+    {
+        "source_url": "ESP32/12_NTC_10k_ESP32.B@",
+        "source_text": "retourne la T° d'un capteur NTC",
+        "image": "./ESP32/12_NTC_10k_ESP32.jpg",
+        "link_url": "./ESP32/12_NTC_10k_ESP32.png",
+        "link_text": "correction",
+        "visible": true
+    },
+    {
+        "source_url": "ESP32/13_NeoPixels_8x8_ESP32.B@",
+        "source_text": "utilisation de matrice LED RGB",
+        "image": "./ESP32/13_NeoPixels_8x8_ESP32.jpg",
+        "link_url": "./ESP32/13_NeoPixels_8x8_ESP32.png",
+        "link_text": "correction",
+        "visible": true
+    },
+    {
+        "source_url": "ESP32/14_ServoMotor_ESP32.B@",
+        "source_text": "pilotage de servomoteur",
+        "image": "./ESP32/14_ServoMotor_ESP32.jpg",
+        "link_url": "./ESP32/14_ServoMotor_ESP32.png",
+        "link_text": "correction",
+        "visible": true
     }
 ]

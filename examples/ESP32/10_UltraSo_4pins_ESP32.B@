@@ -1,0 +1,51 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <toolboxcategories>CAT_LOGIC,CAT_LOOPS,CAT_MATH,CAT_ARRAY,CAT_TEXT,CAT_VARIABLES,CAT_FUNCTIONS,CAT_ARDUINO,CAT_ANEMOROTATION,CAT_CAPACITIVESENSOR,CAT_LCD_SCREEN,CAT_BLUETOOTH_MISC,CAT_ROBOT_MISC,CAT_I2C,CAT_SPI,CAT_ESP8266,CAT_OLED_U8G,CAT_LED_RGB_CHAIN,CAT_MATRIX_LED_RGB,CAT_GROVE,CAT_POLOLU,CAT_ROBOTS_MOTORS,CAT_STEPPER,CAT_ARDUINO_SERVO,CAT_BT_ELECTRONICS,CAT_KEYPAD</toolboxcategories>
+  <toolbox>toolbox_arduino_all</toolbox>
+  <block type="base_setup_loop" id="?tW:Inb/?_o}5_RU0!Pr" x="88" y="88">
+    <statement name="DO">
+      <block type="serial_init" id="C8c}%+/i,37G^v(G*9Ph">
+        <field name="SPEED">115200</field>
+      </block>
+    </statement>
+    <statement name="LOOP">
+      <block type="variables_set" id="|[uhhLNKUgyR;YSm4YQ|">
+        <field name="VAR">Distancia</field>
+        <value name="VALUE">
+          <block type="hcsr04" id="y/#70%n@d+E}1e{iEt;:">
+            <field name="hcsr04_pin">19</field>
+          </block>
+        </value>
+        <next>
+          <block type="serial_println" id="F9#_6oSH.1S7}~*ix})W">
+            <value name="CONTENT">
+              <shadow type="text" id="x]){7]@#:[Y,S4CM8@RV">
+                <field name="TEXT">La distancia mesurada en cm és </field>
+              </shadow>
+            </value>
+            <next>
+              <block type="serial_println" id="bkL-Wr.XliZAhFowVK-,">
+                <value name="CONTENT">
+                  <shadow type="text" id="+*As*}0lP:tmua;CdH`}">
+                    <field name="TEXT"></field>
+                  </shadow>
+                  <block type="variables_get" id="/B4LwGl|7_e`Ht;Y;J|z">
+                    <field name="VAR">Distancia</field>
+                  </block>
+                </value>
+                <next>
+                  <block type="base_delay_sec" id=",F]gNb6N7i3N4D~|$c}5">
+                    <value name="DELAY_TIME">
+                      <shadow type="math_number" id="F7aFD-o6U?{][pV;6h1!">
+                        <field name="NUM">3</field>
+                      </shadow>
+                    </value>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+</xml>

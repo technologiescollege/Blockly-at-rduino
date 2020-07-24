@@ -1,0 +1,16 @@
+El BlocklyAduino no té programat cap NTC de 10k posat amb una resistencia de 10K en forma de divisor de tensió per ESP32. La equació del divisor de tensió resolta pel métode de Steinhart–Hart preparada per llegir Temperatures es troba ací:
+
+https://gnuéscultura.eu/ESP32/temperatura_amb_ntc.html
+
+El BlocklyAduino no tiene programado ningún NTC de 10k puesto con una resistencia de 10K en forma de divisor de tensión para ESP32. La ecuación del divisor de tensión resuelta por el método de Steinhart-Hart preparada para leer Temperaturas se encuentra aquí:
+
+https://gnuéscultura.eu/ESP32/temperatura_amb_ntc.html
+
+
+Le BlocklyAduino n'est pas programmé avec un ensemble NTC 10k avec une résistance 10K sous la forme d'un diviseur de tension pour ESP32. L'équation du diviseur de tension résolue par la méthode de Steinhart-Hart préparée pour lire les températures peut être trouvée ici:
+
+https://gnuéscultura.eu/ESP32/temperatura_amb_ntc.html
+
+The BlocklyAduino is not programmed with any 10k NTC set with a 10K resistor in the form of a voltage divider to ESP32. The equation of the voltage divider solved by the Steinhart – Hart method prepared to read Temperatures can be found here:
+
+https://gnuéscultura.eu/ESP32/temperatura_amb_ntc.html
