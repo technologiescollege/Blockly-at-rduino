@@ -387,7 +387,7 @@ Blockly.Msg.CAT_VIRTUINO = "Virtuino"; //added 08/05/2020
 
 //**********************************Dropdown menus messages***********************************************
 
-Blockly.Msg.FIELDDROPDOWN = [["1 (activado)", "HIGH"], ["0 (desativado)", "LOW"]];
+Blockly.Msg.FIELDDROPDOWN = [["1 (activado)", "HIGH"], ["0 (desactivado)", "LOW"]];
 Blockly.Msg.FIELDDROPDOWN_ONOFF = [["activa", "ON"], ["desactiva", "OFF"]];
 Blockly.Msg.FIELDDROPDOWN_0_1 = [["ACTIVA", "HIGH"], ["DESACTIVA", "LOW"]];
 Blockly.Msg.ligne = [["1", "1"], ["2", "2"]];
@@ -2664,5 +2664,5 @@ Blockly.Msg.VIRTUINO_INIT_TX = "TX";
 Blockly.Msg.VIRTUINO_INIT_SPEED = "velocidad";
 Blockly.Msg.VIRTUINO_DV_TEXT = "recibe estado";
 Blockly.Msg.VIRTUINO_DV_INPUT = "en el canal virtual (DV)";
-Blockly.Msg.VIRTUINO_TOOLTIP = "Usa Virtuino, lee la ayuda o ve al sitio web https://virtuino.com/";
+Blockly.Msg.VIRTUINO_TOOLTIP = "Virtuino usa, lee ayuda o ve al sitio web https://virtuino.com/";
 Blockly.Msg.VIRTUINO_HELP = "https://youtu.be/v1mQ0VC6szw";
