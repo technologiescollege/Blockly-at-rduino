@@ -3560,4 +3560,285 @@
 		</category>
 	</category>
 	<!--20191010-->
+	<category name="CAT_RTC" colour="#0084ad">
+		<block type="Init_RTC_ds3231"></block>
+		<block type="DateTime_RTC_ds3231"></block>
+		<block type="order_read_rtc_ds3231"></block>
+		<block type="values_ds3231"></block>
+		<block type="values_text_ds3231"></block>
+	</category>
+	<category name="CAT_SSD1306" colour="160">
+		<category name="CAT_SSD1306_MAIN" colour="160">
+			<block type="SSD1306_init"></block>
+			<block type="SSD1306_display"></block>
+			<block type="SSD1306_clearDisplay"></block>
+			<block type="SSD1306_invertDisplay">
+				<value name="ENABLE">
+					<block type="logic_boolean">
+						<field name="BOOL">true</field>
+					</block>
+				</value>
+			</block>
+			<block type="SSD1306_width"></block>
+                	<block type="SSD1306_height"></block>
+			<block type="SSD1306_startscroll">
+				<value name="START_ROW">
+					<block type="math_number">
+                                                <field name="NUM">0</field>
+					</block>
+				</value>
+				<value name="END_ROW">
+                                        <block type="math_number">
+                                                <field name="NUM">7</field>
+                                        </block>
+				</value>
+			</block>
+                	<block type="SSD1306_stopscroll"></block>
+		</category>
+		<category name="CAT_SSD1306_DRAW" colour="160">
+			<block type="SSD1306_drawPixel">
+				<value name="XPOS">
+					<block type="math_number">
+						<field name="NUM">0</field>
+					</block>
+				</value>
+				<value name="YPOS">
+                	                <block type="math_number">
+                	                        <field name="NUM">0</field>
+                	                </block>
+                	        </value>
+			</block>
+			<block type="SSD1306_drawLine">
+				<value name="XPOS_1">
+                	                <block type="math_number">
+                	                        <field name="NUM">0</field>
+                	                </block>
+                	        </value>
+                	        <value name="YPOS_1">
+                	                <block type="math_number">
+                	                        <field name="NUM">0</field>
+                	                </block>
+				</value>
+				<value name="XPOS_2">
+                	                <block type="math_number">
+                	                        <field name="NUM">0</field>
+                	                </block>
+                	        </value>
+                	        <value name="YPOS_2">
+                	                <block type="math_number">
+                	                        <field name="NUM">0</field>
+                	                </block>
+                	        </value>
+			</block>
+			<block type="SSD1306_drawRect">
+				<value name="XPOS_1">
+                	                <block type="math_number">
+                	                        <field name="NUM">0</field>
+                	                </block>
+                	        </value>
+                	        <value name="YPOS_1">
+                	                <block type="math_number">
+                	                        <field name="NUM">0</field>
+                	                </block>
+                	        </value>
+                	        <value name="XPOS_2">
+                	                <block type="math_number">
+                	                        <field name="NUM">0</field>
+                	                </block>
+                	        </value>
+                	        <value name="YPOS_2">
+                	                <block type="math_number">
+                	                        <field name="NUM">0</field>
+                	                </block>
+				</value>
+				<value name="FILL">
+					<block type="logic_boolean">
+						<field name="BOOL">true</field>
+					</block>
+				</value>
+			</block>
+			<block type="SSD1306_drawCircle">
+				<value name="XPOS">
+                	                <block type="math_number">
+                	                        <field name="NUM">0</field>
+                	                </block>
+                	        </value>
+                	        <value name="YPOS">
+                	                <block type="math_number">
+                	                        <field name="NUM">0</field>
+                	                </block>
+                	        </value>
+                	        <value name="RADIUS">
+                	                <block type="math_number">
+                	                        <field name="NUM">0</field>
+                	                </block>
+                	        </value>
+                	        <value name="FILL">
+                	                <block type="logic_boolean">
+                	                        <field name="BOOL">true</field>
+                	                </block>
+                	        </value>
+			</block>
+			<block type="SSD1306_drawRoundRect">
+				<value name="XPOS_1">
+                	                <block type="math_number">
+                	                        <field name="NUM">0</field>
+                	                </block>
+                	        </value>
+                	        <value name="YPOS_1">
+                	                <block type="math_number">
+                	                        <field name="NUM">0</field>
+                	                </block>
+                	        </value>
+                	        <value name="XPOS_2">
+                	                <block type="math_number">
+                	                        <field name="NUM">0</field>
+                	                </block>
+                	        </value>
+                	        <value name="YPOS_2">
+                	                <block type="math_number">
+                	                        <field name="NUM">0</field>
+                	                </block>
+				</value>
+				<value name="RADIUS">
+					<block type="math_number">
+						<field name="NUM">0</field>
+					</block>
+				</value>
+                	        <value name="FILL">
+                	                <block type="logic_boolean">
+                	                        <field name="BOOL">true</field>
+                	                </block>
+                	        </value>
+			</block>
+			<block type="SSD1306_drawTriangle">
+				<value name="XPOS_1">
+                	                <block type="math_number">
+                	                        <field name="NUM">0</field>
+                	                </block>
+                	        </value>
+                	        <value name="YPOS_1">
+                	                <block type="math_number">
+                	                        <field name="NUM">0</field>
+                	                </block>
+                	        </value>
+                	        <value name="XPOS_2">
+                	                <block type="math_number">
+                	                        <field name="NUM">0</field>
+                	                </block>
+                	        </value>
+                	        <value name="YPOS_2">
+                	                <block type="math_number">
+                	                        <field name="NUM">0</field>
+                	                </block>
+				</value>
+				<value name="XPOS_3">
+                	                <block type="math_number">
+                	                        <field name="NUM">0</field>
+                	                </block>
+                	        </value>
+                	        <value name="YPOS_3">
+                	                <block type="math_number">
+                	                        <field name="NUM">0</field>
+                	                </block>
+                	        </value>
+                	        <value name="FILL">
+                	                <block type="logic_boolean">
+                	                        <field name="BOOL">true</field>
+                	                </block>
+				</value>
+			</block>
+		</category>
+		<category name="CAT_SSD1306_TEXT" colour="160">>
+			<block type="SSD1306_setTextSize">
+				<value name="SIZE">
+					<block type="math_number">
+						<field name="NUM">1</field>
+					</block>
+				</value>
+			</block>
+			<block type="SSD1306_setTextColour"></block>
+			<block type="SSD1306_setCursor">
+				<value name="XPOS">
+                	                <block type="math_number">
+                	                        <field name="NUM">0</field>
+                	                </block>
+                	        </value>
+                	        <value name="YPOS">
+                	                <block type="math_number">
+                	                        <field name="NUM">0</field>
+                	                </block>
+                	        </value>
+			</block>
+			<block type="SSD1306_cp437">
+				<value name="ENABLE">
+					<block type="logic_boolean">
+						<field name="BOOL">true</field>
+					</block>
+				</value>
+			</block>
+			<block type="SSD1306_write">
+				<value name="CHAR">
+					<block type="text_char">
+						<field name="TEXT">x</field>
+					</block>
+				</value>
+			</block>
+			<block type="SSD1306_println">
+				<value name="STRING">
+					<block type="text">
+						<field name="TEXT">example</field>
+					</block>
+				</value>
+			</block>
+			<block type="SSD1306_print">
+                	        <value name="STRING">
+                	                <block type="text">
+                	                        <field name="TEXT">example</field>
+                	                </block>
+                	        </value>
+			</block>
+		</category>
+	</category>
+	<category name="CAT_LORA" colour="160">
+		<block type="LoRa_init"></block>
+		<block type="LoRa_end"></block>
+		<block type="LoRa_beginPacket">
+			<value name="IMPLICIT_HEADER">
+				<block type="math_number">
+                                                <field name="NUM">0</field>
+				</block>
+			</value>
+		</block>
+		<block type="LoRa_endPacket">
+			<value name="ASYNC">
+                       		<block type="logic_boolean">
+                                	<field name="BOOL">false</field>
+                                </block>
+                	</value>
+		</block>
+		<block type="LoRa_parsePacket"></block>
+		<block type="LoRa_parsePacket"></block>
+		<block type="LoRa_receive"></block>
+		<block type="LoRa_packetRssi"></block>
+		<block type="LoRa_packetSnr"></block>
+		<block type="LoRa_packetFrequencyError"></block>
+		<block type="LoRa_available"></block>
+		<block type="LoRa_peek"></block>
+		<block type="LoRa_read"></block>
+		<block type="LoRa_idle"></block>
+		<block type="LoRa_sleep"></block>
+		<block type="LoRa_setTxPower"></block>
+		<block type="LoRa_setSpreadingFactor"></block>
+		<block type="LoRa_setSignalBandwidth"></block>
+		<block type="LoRa_setCodingRate4"></block>
+		<block type="LoRa_setPreambleLength"></block>
+		<block type="LoRa_setSyncWord"></block>
+		<block type="LoRa_enableCrc"></block>
+		<block type="LoRa_disableCrc"></block>
+		<block type="LoRa_enableInvertIq"></block>
+		<block type="LoRa_disableInvertIq"></block>
+		<block type="LoRa_random"></block>
+	</category>
 </toolbox>
+

@@ -108,6 +108,10 @@ head.load(
 "generators/arduino/zumo_auto.js",
 "generators/arduino/zumo_motors.js",
 "generators/arduino/zumo_sensors.js",
+"generators/arduino/RTC_DS3231.js",
+"generators/arduino/Adafruit_SSD1306.js",
+"generators/arduino/LoRa.js",
+
 function() {
     // Call a function when done
     console.log("Done loading Various Arduino Generators");

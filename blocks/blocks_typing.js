@@ -65,6 +65,9 @@ head.load(
 "blocks/virtuino/blocks_typing.js",
 "blocks/wii/blocks_typing.js",
 "blocks/zumobot/blocks_typing.js",
+"blocks/RTC_DS3231/blocks_typing.js",
+"blocks/Adafruit/Adafruit_SSD1306/blocks_typing.js",
+"blocks/LoRa/blocks_typing.js",
 function() {
     // Call a function when done
     console.log("Done loading Blocks typing");

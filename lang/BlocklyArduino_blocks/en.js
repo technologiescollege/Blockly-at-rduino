@@ -2659,3 +2659,14 @@ Blockly.Msg.VIRTUINO_DV_TEXT = "receive state";
 Blockly.Msg.VIRTUINO_DV_INPUT = "on virtual canal (DV)";
 Blockly.Msg.VIRTUINO_TOOLTIP = "Virtuino use, see help or go website https://virtuino.com/";
 Blockly.Msg.VIRTUINO_HELP = "https://youtu.be/v1mQ0VC6szw";
+
+
+//
+Blockly.Msg.CAT_RTC = "RTC DS3231";
+Blockly.Msg.CAT_SSD1306 = "Adafruit SSD1306";
+Blockly.Msg.CAT_SSD1306_MAIN = "main";
+Blockly.Msg.CAT_SSD1306_DRAW = "draw";
+Blockly.Msg.CAT_SSD1306_TEXT = "text";
+Blockly.Msg.CAT_LORA = "LoRa";
+
+
