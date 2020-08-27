@@ -6,6 +6,10 @@ Blockly.Blocks.LoRa_end.getBlockType = function() {
         return Blockly.Types.NUMBER;
 };
 
+Blockly.Blocks.LoRa_onReceive.getBlockType = function() {
+        return Blockly.Types.NUMBER;
+};
+
 Blockly.Blocks.LoRa_beginPacket.getBlockType = function() {
         return Blockly.Types.NUMBER;
 };

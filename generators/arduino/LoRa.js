@@ -35,6 +35,26 @@ Blockly.Arduino['LoRa_end'] = function() {
         return code;
 };
 
+Blockly.Arduino['LoRa_onReceive'] = function() {
+	var branch = Blockly.Arduino.statementToCode(this, 'NAME');
+	var func_onReceive = 'void onReceive(int packetSize) {\n' + branch + '}';
+
+	Blockly.Arduino.userFunctions_['userFunc_LoRa_onReceive'] = func_onReceive;
+	Blockly.Arduino.setups_['setup_LoRa_onReceive'] = 'LoRa.onReceive(onReceive);';
+        var code = '';
+        return code;
+};
+
+Blockly.Arduino['LoRa_onTxDone'] = function() {
+        var branch = Blockly.Arduino.statementToCode(this, 'NAME');
+        var func_onTxDone = 'void onTxDone() {\n' + branch + '}';
+
+        Blockly.Arduino.userFunctions_['userFunc_LoRa_onTxDone'] = func_onTxDone;
+        Blockly.Arduino.setups_['setup_LoRa_onTxDone'] = 'LoRa.onTxDone(onTxDone);';
+        var code = '';
+        return code;
+};
+
 Blockly.Arduino['LoRa_beginPacket'] = function() {
 	var value_implicit_header = Blockly.Arduino.valueToCode(this, 'IMPLICIT_HEADER', Blockly.Arduino.ORDER_ATOMIC);
 	var code = 'LoRa.beginPacket(' + value_implicit_header + ')';
@@ -160,6 +180,4 @@ Blockly.Arduino['LoRa_random'] = function() {
         var code = 'LoRa.random()';
         return [code, Blockly.Arduino.ORDER_ATOMIC];
 };
-
-
 

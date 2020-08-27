@@ -9,23 +9,10 @@ goog.require('Blockly.Types');
 
 Blockly.Blocks.LORA_HUE = "190";
 
-Blockly.Msg.LORA_INIT = 'Initialise LoRa';
-
-Blockly.Msg.LORA_FREQ = 'frequency';
-Blockly.Msg.LORA_FREQ_DROPDOWN = [["915 MHz","915E6"],["868 MHz","868E6"],["433 MHz","433E6"]];
-Blockly.Msg.LORA_RESET_PIN = 'reset pin';
-Blockly.Msg.LORA_RESET_PIN_DROPDOWN = [["9 (default)","10"],["-1 (not used)","-1"]];
-Blockly.Msg.LORA_SS_PIN = 'SPI select pin';
-Blockly.Msg.LORA_SS_PIN_DROPDOWN = [["10 (default)","10"]];
-Blockly.Msg.LORA_DIO0_PIN = 'DIO0 pin';
-Blockly.Msg.LORA_DIO0_PIN_DROPDOWN = [["2 (default)","2"]];
-Blockly.Msg.LORA_SPI_FREQ = 'SPI frequency';
-Blockly.Msg.LORA_SPI_FREQ_DROPDOWN = [["8 MHz (default)","8E6"]];
-
 Blockly.Blocks['LoRa_init'] = {
   init: function() {
 	this.setColour(Blockly.Blocks.LORA_HUE);
-//        this.setHelpUrl(Blockly.Msg.LORA_HELPURL);
+        this.setHelpUrl(Blockly.Msg.LORA_HELPURL);
 	this.appendDummyInput("")
 		.appendField(Blockly.Msg.LORA_INIT);
 	this.appendDummyInput("")
@@ -51,7 +38,7 @@ Blockly.Blocks['LoRa_init'] = {
 	this.setOutput(true, 'Boolean');
 	this.setPreviousStatement(true, null);
 	this.setNextStatement(true, null);
-//	  this.setTooltip(Blockly.Msg.LORA_INIT_TOOLTIP);
+	this.setTooltip(Blockly.Msg.LORA_INIT_TOOLTIP);
 	}
 };
 
@@ -60,24 +47,28 @@ Blockly.Msg.LORA_END = 'end';
 Blockly.Blocks['LoRa_end'] = {
         init: function() {
         this.setColour(Blockly.Blocks.LORA_HUE);
+	this.setHelpUrl(Blockly.Msg.LORA_HELPURL);
         this.appendDummyInput("")
                 .appendField(Blockly.Msg.LORA_END);
         this.setPreviousStatement(true, null);
         this.setNextStatement(true, null);
+	this.setTooltip(Blockly.Msg.LORA_END_TOOLTIP);
         }
 };
 
-/*
 Blockly.Msg.LORA_ONRECEIVE = 'on receive';
 
 Blockly.Blocks['LoRa_onReceive'] = {
         init: function() {
         this.setColour(Blockly.Blocks.LORA_HUE);
+	this.setHelpUrl(Blockly.Msg.LORA_HELPURL);
         this.appendDummyInput("")
                 .appendField(Blockly.Msg.LORA_ONRECEIVE);
+	this.appendStatementInput("NAME");
         this.setInputsInline(false);
         this.setPreviousStatement(true, null);
         this.setNextStatement(true, null);
+	this.setTooltip(Blockly.Msg.LORA_ONRECEIVE_TOOLTIP);
         }
 };
 
@@ -86,14 +77,17 @@ Blockly.Msg.LORA_ONTXDONE = 'on transmit done';
 Blockly.Blocks['LoRa_onTxDone'] = {
         init: function() {
         this.setColour(Blockly.Blocks.LORA_HUE);
+	this.setHelpUrl(Blockly.Msg.LORA_HELPURL);
         this.appendDummyInput("")
                 .appendField(Blockly.Msg.LORA_ONTXDONE);
+	this.appendStatementInput("NAME");
         this.setInputsInline(false);
         this.setPreviousStatement(true, null);
         this.setNextStatement(true, null);
+	this.setTooltip(Blockly.Msg.LORA_ONTXDONE_TOOLTIP);
         }
 };
-*/
+
 
 Blockly.Msg.LORA_BEGINPACKET = 'begin packet';
 Blockly.Msg.LORA_IMPLICIT_HEADER = 'implicit header';
@@ -101,6 +95,7 @@ Blockly.Msg.LORA_IMPLICIT_HEADER = 'implicit header';
 Blockly.Blocks['LoRa_beginPacket'] = {
         init: function() {
         this.setColour(Blockly.Blocks.LORA_HUE);
+	this.setHelpUrl(Blockly.Msg.LORA_HELPURL);
         this.appendDummyInput("")
                 .appendField(Blockly.Msg.LORA_BEGINPACKET);
         this.appendValueInput("IMPLICIT_HEADER")
@@ -111,7 +106,8 @@ Blockly.Blocks['LoRa_beginPacket'] = {
 	this.setOutput(true, 'Number');
         this.setPreviousStatement(true, null);
         this.setNextStatement(true, null);
-        }
+	this.setTooltip(Blockly.Msg.LORA_BEGINPACKET_TOOLTIP);
+	}
 };
 
 Blockly.Msg.LORA_ENDPACKET = 'end packet';
@@ -120,6 +116,7 @@ Blockly.Msg.LORA_ASYNC = 'async';
 Blockly.Blocks['LoRa_endPacket'] = {
         init: function() {
         this.setColour(Blockly.Blocks.LORA_HUE);
+	this.setHelpUrl(Blockly.Msg.LORA_HELPURL);
         this.appendDummyInput("")
                 .appendField(Blockly.Msg.LORA_ENDPACKET);
 	this.appendValueInput("ASYNC")
@@ -130,6 +127,7 @@ Blockly.Blocks['LoRa_endPacket'] = {
 	this.setOutput(true, 'Number');
         this.setPreviousStatement(true, null);
         this.setNextStatement(true, null);
+	this.setTooltip(Blockly.Msg.LORA_ENDPACKET_TOOLTIP);
         }
 };
 /*
@@ -155,6 +153,7 @@ Blockly.Msg.LORA_CHARACTER = 'character';
 Blockly.Blocks['LoRa_write_byte'] = {
         init: function() {
         this.setColour(Blockly.Blocks.LORA_HUE);
+	this.setHelpUrl(Blockly.Msg.LORA_HELPURL);
         this.appendDummyInput("")
                 .appendField(Blockly.Msg.LORA_WRITE_BYTE);
         this.appendValueInput("CHAR")
@@ -164,6 +163,7 @@ Blockly.Blocks['LoRa_write_byte'] = {
         this.setOutput(true, 'Number');
         this.setPreviousStatement(true, null);
         this.setNextStatement(true, null);
+	this.setTooltip(Blockly.Msg.LORA_WRITE_BYTE_TOOLTIP);
         }
 };
 
@@ -188,12 +188,14 @@ Blockly.Msg.LORA_AVAILABLE = 'available';
 Blockly.Blocks['LoRa_available'] = {
         init: function() {
         this.setColour(Blockly.Blocks.LORA_HUE);
+	this.setHelpUrl(Blockly.Msg.LORA_HELPURL);
         this.appendDummyInput("")
                 .appendField(Blockly.Msg.LORA_AVAILABLE);
         this.setInputsInline(false);
 	this.setOutput(true, 'Number');
-        this.setPreviousStatement(true, null);
-        this.setNextStatement(true, null);
+        this.setPreviousStatement(false, null);
+        this.setNextStatement(false, null);
+	this.setTooltip(Blockly.Msg.LORA_AVAILABLE_TOOLTIP);
         }
 };
 
@@ -203,6 +205,7 @@ Blockly.Msg.LORA_SIZE = 'size';
 Blockly.Blocks['LoRa_parsePacket'] = {
         init: function() {
         this.setColour(Blockly.Blocks.LORA_HUE);
+	this.setHelpUrl(Blockly.Msg.LORA_HELPURL);
         this.appendDummyInput("")
                 .appendField(Blockly.Msg.LORA_PARSE_PACKET);
 	this.appendValueInput("SIZE")
@@ -213,6 +216,7 @@ Blockly.Blocks['LoRa_parsePacket'] = {
 	this.setOutput(true, 'Number');
         this.setPreviousStatement(true, null);
         this.setNextStatement(true, null);
+	this.setTooltip(Blockly.Msg.LORA_PARSE_PACKET_TOOLTIP);
         }
 };
 
@@ -222,6 +226,7 @@ Blockly.Msg.LORA_SIZE = 'size';
 Blockly.Blocks['LoRa_receive'] = {
         init: function() {
         this.setColour(Blockly.Blocks.LORA_HUE);
+	this.setHelpUrl(Blockly.Msg.LORA_HELPURL);
         this.appendDummyInput("")
                 .appendField(Blockly.Msg.LORA_RECEIVE);
         this.appendValueInput("SIZE")
@@ -231,6 +236,7 @@ Blockly.Blocks['LoRa_receive'] = {
         this.setInputsInline(false);
         this.setPreviousStatement(true, null);
         this.setNextStatement(true, null);
+	this.setTooltip(Blockly.Msg.LORA_RECEIVE_TOOLTIP);
         }
 };
 
@@ -239,12 +245,14 @@ Blockly.Msg.LORA_PACKET_RSSI = 'packet RSSI';
 Blockly.Blocks['LoRa_packetRssi'] = {
         init: function() {
         this.setColour(Blockly.Blocks.LORA_HUE);
+	this.setHelpUrl(Blockly.Msg.LORA_HELPURL);
         this.appendDummyInput("")
                 .appendField(Blockly.Msg.LORA_PACKET_RSSI);
         this.setInputsInline(false);
 	this.setOutput(true, 'Number');
-        this.setPreviousStatement(true, null);
-        this.setNextStatement(true, null);
+        this.setPreviousStatement(false, null);
+        this.setNextStatement(false, null);
+	this.setTooltip(Blockly.Msg.LORA_PACKET_RSSI_TOOLTIP);
         }
 };
 
@@ -253,12 +261,14 @@ Blockly.Msg.LORA_PACKET_SNR = 'packet SNR';
 Blockly.Blocks['LoRa_packetSnr'] = {
         init: function() {
         this.setColour(Blockly.Blocks.LORA_HUE);
+        this.setHelpUrl(Blockly.Msg.LORA_HELPURL);
         this.appendDummyInput("")
                 .appendField(Blockly.Msg.LORA_PACKET_SNR);
         this.setInputsInline(false);
         this.setOutput(true, 'Number');
-        this.setPreviousStatement(true, null);
-        this.setNextStatement(true, null);
+        this.setPreviousStatement(false, null);
+        this.setNextStatement(false, null);
+	this.setTooltip(Blockly.Msg.LORA_PACKET_SNR_TOOLTIP);
         }
 };
 
@@ -267,12 +277,14 @@ Blockly.Msg.LORA_PACKET_FREQUENCY_ERROR = 'packet frequency error';
 Blockly.Blocks['LoRa_packetFrequencyError'] = {
         init: function() {
         this.setColour(Blockly.Blocks.LORA_HUE);
+        this.setHelpUrl(Blockly.Msg.LORA_HELPURL);
         this.appendDummyInput("")
                 .appendField(Blockly.Msg.LORA_PACKET_FREQUENCY_ERROR);
         this.setInputsInline(false);
         this.setOutput(true, 'Number');
-        this.setPreviousStatement(true, null);
-        this.setNextStatement(true, null);
+        this.setPreviousStatement(false, null);
+        this.setNextStatement(false, null);
+	this.setTooltip(Blockly.Msg.LORA_PACKET_FREQUENCY_ERROR_TOOLTIP);
         }
 };
 
@@ -281,12 +293,14 @@ Blockly.Msg.LORA_PEEK = 'peek';
 Blockly.Blocks['LoRa_peek'] = {
         init: function() {
         this.setColour(Blockly.Blocks.LORA_HUE);
+        this.setHelpUrl(Blockly.Msg.LORA_HELPURL);
         this.appendDummyInput("")
                 .appendField(Blockly.Msg.LORA_PEEK);
         this.setInputsInline(false);
         this.setOutput(true, 'Number');
-        this.setPreviousStatement(true, null);
-        this.setNextStatement(true, null);
+        this.setPreviousStatement(false, null);
+        this.setNextStatement(false, null);
+	this.setTooltip(Blockly.Msg.LORA_PEEK_TOOLTIP);
         }
 };
 
@@ -295,12 +309,14 @@ Blockly.Msg.LORA_READ = 'read';
 Blockly.Blocks['LoRa_read'] = {
         init: function() {
         this.setColour(Blockly.Blocks.LORA_HUE);
+        this.setHelpUrl(Blockly.Msg.LORA_HELPURL);
         this.appendDummyInput("")
                 .appendField(Blockly.Msg.LORA_READ);
         this.setInputsInline(false);
         this.setOutput(true, 'Number');
-        this.setPreviousStatement(true, null);
-        this.setNextStatement(true, null);
+        this.setPreviousStatement(false, null);
+        this.setNextStatement(false, null);
+	this.setTooltip(Blockly.Msg.LORA_READ_TOOLTIP);
         }
 };
 
@@ -309,11 +325,13 @@ Blockly.Msg.LORA_IDLE = 'idle';
 Blockly.Blocks['LoRa_idle'] = {
         init: function() {
         this.setColour(Blockly.Blocks.LORA_HUE);
+        this.setHelpUrl(Blockly.Msg.LORA_HELPURL);
         this.appendDummyInput("")
                 .appendField(Blockly.Msg.LORA_IDLE);
         this.setInputsInline(false);
         this.setPreviousStatement(true, null);
         this.setNextStatement(true, null);
+	this.setTooltip(Blockly.Msg.LORA_IDLE_TOOLTIP);
         }
 };
 
@@ -322,11 +340,13 @@ Blockly.Msg.LORA_SLEEP = 'sleep';
 Blockly.Blocks['LoRa_sleep'] = {
         init: function() {
         this.setColour(Blockly.Blocks.LORA_HUE);
+        this.setHelpUrl(Blockly.Msg.LORA_HELPURL);
         this.appendDummyInput("")
                 .appendField(Blockly.Msg.LORA_SLEEP);
         this.setInputsInline(false);
         this.setPreviousStatement(true, null);
         this.setNextStatement(true, null);
+	this.setTooltip(Blockly.Msg.LORA_SLEEP_TOOLTIP);
         }
 };
 
@@ -338,6 +358,7 @@ Blockly.Msg.LORA_OUTPUT_PIN = 'output pin';
 Blockly.Blocks['LoRa_setTxPower'] = {
         init: function() {
         this.setColour(Blockly.Blocks.LORA_HUE);
+        this.setHelpUrl(Blockly.Msg.LORA_HELPURL);
         this.appendDummyInput("")
                 .appendField(Blockly.Msg.LORA_SET_TX_POWER);
         this.appendValueInput("LEVEL")
@@ -351,6 +372,7 @@ Blockly.Blocks['LoRa_setTxPower'] = {
         this.setInputsInline(false);
         this.setPreviousStatement(true, null);
         this.setNextStatement(true, null);
+	this.setTooltip(Blockly.Msg.LORA_SET_TX_POWER_TOOLTIP);
         }
 };
 
@@ -361,6 +383,7 @@ Blockly.Msg.LORA_SPREAD = 'spread';
 Blockly.Blocks['LoRa_setSpreadingFactor'] = {
         init: function() {
         this.setColour(Blockly.Blocks.LORA_HUE);
+        this.setHelpUrl(Blockly.Msg.LORA_HELPURL);
         this.appendDummyInput("")
                 .appendField(Blockly.Msg.LORA_SET_SPREAD_FACTOR);
         this.appendDummyInput("")
@@ -370,6 +393,7 @@ Blockly.Blocks['LoRa_setSpreadingFactor'] = {
         this.setInputsInline(false);
         this.setPreviousStatement(true, null);
         this.setNextStatement(true, null);
+	this.setTooltip(Blockly.Msg.LORA_SET_SPREAD_FACTOR_TOOLTIP);
         }
 };
 
@@ -380,6 +404,7 @@ Blockly.Msg.LORA_BANDWIDTH = 'bandwidth';
 Blockly.Blocks['LoRa_setSignalBandwidth'] = {
         init: function() {
         this.setColour(Blockly.Blocks.LORA_HUE);
+        this.setHelpUrl(Blockly.Msg.LORA_HELPURL);
         this.appendDummyInput("")
                 .appendField(Blockly.Msg.LORA_SET_SIGNAL_BANDWIDTH);
         this.appendDummyInput("")
@@ -389,6 +414,7 @@ Blockly.Blocks['LoRa_setSignalBandwidth'] = {
         this.setInputsInline(false);
         this.setPreviousStatement(true, null);
         this.setNextStatement(true, null);
+	this.setTooltip(Blockly.Msg.LORA_SET_SIGNAL_BANDWIDTH_TOOLTIP);
         }
 };
 
@@ -399,6 +425,7 @@ Blockly.Msg.LORA_CODING_RATE = 'coding rate';
 Blockly.Blocks['LoRa_setCodingRate4'] = {
         init: function() {
         this.setColour(Blockly.Blocks.LORA_HUE);
+        this.setHelpUrl(Blockly.Msg.LORA_HELPURL);
         this.appendDummyInput("")
                 .appendField(Blockly.Msg.LORA_SET_CODING_RATE);
 	this.appendDummyInput("")
@@ -408,6 +435,7 @@ Blockly.Blocks['LoRa_setCodingRate4'] = {
 	this.setInputsInline(false);
         this.setPreviousStatement(true, null);
         this.setNextStatement(true, null);
+	this.setTooltip(Blockly.Msg.LORA_SET_CODING_RATE_TOOLTIP);
         }
 };
 
@@ -417,6 +445,7 @@ Blockly.Msg.LORA_LENGTH = "length";
 Blockly.Blocks['LoRa_setPreambleLength'] = {
         init: function() {
         this.setColour(Blockly.Blocks.LORA_HUE);
+        this.setHelpUrl(Blockly.Msg.LORA_HELPURL);
         this.appendDummyInput("")
                 .appendField(Blockly.Msg.LORA_SET_PREAMBLE);
 	this.appendValueInput("LENGTH")
@@ -426,6 +455,7 @@ Blockly.Blocks['LoRa_setPreambleLength'] = {
         this.setInputsInline(false);
         this.setPreviousStatement(true, null);
         this.setNextStatement(true, null);
+	this.setTooltip(Blockly.Msg.LORA_SET_PREAMBLE_TOOLTIP);
         }
 };
 
@@ -435,6 +465,7 @@ Blockly.Msg.LORA_WORD = "word";
 Blockly.Blocks['LoRa_setSyncWord'] = {
         init: function() {
         this.setColour(Blockly.Blocks.LORA_HUE);
+        this.setHelpUrl(Blockly.Msg.LORA_HELPURL);
         this.appendDummyInput("")
                 .appendField(Blockly.Msg.LORA_SET_SYNC_WORD);
         this.appendValueInput("WORD")
@@ -444,6 +475,7 @@ Blockly.Blocks['LoRa_setSyncWord'] = {
         this.setInputsInline(false);
         this.setPreviousStatement(true, null);
         this.setNextStatement(true, null);
+	this.setTooltip(Blockly.Msg.LORA_SET_SYNC_WORD_TOOLTIP);
         }
 };
 
@@ -452,11 +484,13 @@ Blockly.Msg.LORA_ENABLE_CRC = 'enable CRC';
 Blockly.Blocks['LoRa_enableCrc'] = {
         init: function() {
         this.setColour(Blockly.Blocks.LORA_HUE);
+        this.setHelpUrl(Blockly.Msg.LORA_HELPURL);
         this.appendDummyInput("")
                 .appendField(Blockly.Msg.LORA_ENABLE_CRC);
         this.setInputsInline(false);
         this.setPreviousStatement(true, null);
         this.setNextStatement(true, null);
+	this.setTooltip(Blockly.Msg.LORA_ENABLE_CRC_TOOLTIP);
         }
 };
 
@@ -465,11 +499,13 @@ Blockly.Msg.LORA_DISABLE_CRC = 'disable CRC';
 Blockly.Blocks['LoRa_disableCrc'] = {
         init: function() {
         this.setColour(Blockly.Blocks.LORA_HUE);
+        this.setHelpUrl(Blockly.Msg.LORA_HELPURL);
         this.appendDummyInput("")
                 .appendField(Blockly.Msg.LORA_DISABLE_CRC);
         this.setInputsInline(false);
         this.setPreviousStatement(true, null);
         this.setNextStatement(true, null);
+	this.setTooltip(Blockly.Msg.LORA_DISABLE_CRC_TOOLTIP);
         }
 };
 
@@ -478,11 +514,13 @@ Blockly.Msg.LORA_ENABLE_INVERT_IQ = 'enable invert IQ';
 Blockly.Blocks['LoRa_enableInvertIq'] = {
         init: function() {
         this.setColour(Blockly.Blocks.LORA_HUE);
+        this.setHelpUrl(Blockly.Msg.LORA_HELPURL);
         this.appendDummyInput("")
                 .appendField(Blockly.Msg.LORA_ENABLE_INVERT_IQ);
         this.setInputsInline(false);
         this.setPreviousStatement(true, null);
         this.setNextStatement(true, null);
+	this.setTooltip(Blockly.Msg.LORA_ENABLE_INVERT_IQ_TOOLTIP);
         }
 };
 
@@ -491,11 +529,13 @@ Blockly.Msg.LORA_DISABLE_INVERT_IQ = 'disable invert IQ';
 Blockly.Blocks['LoRa_disableInvertIq'] = {
         init: function() {
         this.setColour(Blockly.Blocks.LORA_HUE);
+        this.setHelpUrl(Blockly.Msg.LORA_HELPURL);
         this.appendDummyInput("")
                 .appendField(Blockly.Msg.LORA_DISABLE_INVERT_IQ);
         this.setInputsInline(false);
         this.setPreviousStatement(true, null);
         this.setNextStatement(true, null);
+	this.setTooltip(Blockly.Msg.LORA_DISABLE_INVERT_IQ_TOOLTIP);
         }
 };
 
@@ -504,13 +544,14 @@ Blockly.Msg.LORA_RANDOM = 'random';
 Blockly.Blocks['LoRa_random'] = {
         init: function() {
         this.setColour(Blockly.Blocks.LORA_HUE);
+        this.setHelpUrl(Blockly.Msg.LORA_HELPURL);
         this.appendDummyInput("")
                 .appendField(Blockly.Msg.LORA_RANDOM);
         this.setInputsInline(false);
         this.setOutput(true, 'Number');
-        this.setPreviousStatement(true, null);
-        this.setNextStatement(true, null);
+        this.setPreviousStatement(false, null);
+        this.setNextStatement(false, null);
+	this.setTooltip(Blockly.Msg.LORA_RANDOM_TOOLTIP);
         }
 };
-
 

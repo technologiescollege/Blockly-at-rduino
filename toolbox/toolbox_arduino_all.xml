@@ -3803,6 +3803,8 @@
 	<category name="CAT_LORA" colour="160">
 		<block type="LoRa_init"></block>
 		<block type="LoRa_end"></block>
+		<block type="LoRa_onReceive"></block>
+		<block type="LoRa_onTxDone"></block>
 		<block type="LoRa_beginPacket">
 			<value name="IMPLICIT_HEADER">
 				<block type="math_number">
