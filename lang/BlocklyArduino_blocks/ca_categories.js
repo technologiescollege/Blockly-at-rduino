@@ -68,6 +68,7 @@ Blockly.Msg.CAT_GROVE_OUT = " - actuadors";
 Blockly.Msg.CAT_GROVE_LCD = " - pantalles LCD";
 Blockly.Msg.CAT_GROVE_LCD2 = " Pantalles LCD";
 Blockly.Msg.CAT_GROVE_COMM = " - communicació";
+Blockly.Msg.CAT_GROVE_BEGINNER_KIT = "Grove Beginner Kit";  //added september 10th 2020
 
 Blockly.Msg.CAT_TECHNOZONE = "TechnoZone51";  //added march 11th 2015
 Blockly.Msg.CAT_TECHNOZONE_IN = " - sensors";

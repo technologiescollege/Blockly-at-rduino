@@ -641,6 +641,33 @@ var profile = {
         upload_arg: "",
         help_link: "https://www.pjrc.com/teensy/pinout.html"
     },
+	//20200912
+    kit_grove_beginner: {
+        description: "Grove Beginner Kit",
+        cpu: "atmega328p",
+        speed: "115200",
+        digital: ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13"],
+        dropdownDigital: [["1", "1"], ["2", "2"], ["3", "3"], ["4", "4"], ["5", "5"], ["6", "6"], ["7", "7"], ["8", "8"], ["9", "9"], ["10", "10"], ["11", "11"], ["12", "12"], ["13", "13"]],
+        PWM: ["3", "5", "6", "9", "10", "11"],
+        dropdownPWM: [["3", "3"], ["5", "5"], ["6", "6"], ["9", "9"], ["10", "10"], ["11", "11"]],
+        analog: ["A0", "A1", "A2", "A3", "A4", "A5", "A6", "A7"],
+        dropdownAnalog: [["A0", "A0"], ["A1", "A1"], ["A2", "A2"], ["A3", "A3"], ["A4", "A4"], ["A5", "A5"]],
+        /*irqonchange: [["1", "1"], ["2", "2"], ["3", "3"], ["4", "4"], ["5", "5"], ["6", "6"], ["7", "7"], ["8", "8"], ["9", "9"], ["10", "10"], ["11", "11"], ["12", "12"], ["13", "13"],["A0", "14"], ["A1", "15"], ["A2", "16"], ["A3", "17"], ["A4", "18"], ["A5", "19"]],*/
+        I2C: ["A4", "A5"],
+        SPI: [["10 (SS)", "10"], ["11 (MOSI)", "11"], ["12 (MISO)", "12"], ["13 (SCK)", "13"]],
+        interrupt: ["2", "3"],
+        picture: "media/boards/kit_grove_beginner.jpg",
+        miniPicture: "media/boards/kit_grove_beginner_mini.jpg",
+        miniPicture_hor: "media/boards/kit_grove_beginner_mini_hor.jpg",
+        serial: [['300', '300'], ['600', '600'], ['1200', '1200'],
+            ['2400', '2400'], ['4800', '4800'], ['9600', '9600'],
+            ['14400', '14400'], ['19200', '19200'], ['28800', '28800'],
+            ['31250', '31250'], ['38400', '38400'], ['57600', '57600'],
+            ['115200', '115200']],
+        serialPin: [["0 (Rx) ; 1 (Tx)", "0"]],
+        upload_arg: "arduino:avr:uno",
+        help_link: "https://wiki.seeedstudio.com/Grove-Beginner-Kit-For-Arduino/"
+    },
     kit_microbit: {
         description: "Micro:bit",
         cpu: "atmega328p",

@@ -53,6 +53,7 @@ head.load(
 "blocks/robots/blocks_typing.js",
 "blocks/robuno/blocks_typing.js",
 "blocks/seeed/grove/blocks_typing.js",
+"blocks/seeed/grove_beginner_kit/blocks_typing.js",
 "blocks/seeed/seeed_music_shield_2.2/blocks_typing.js",
 "blocks/sensor_actuator/blocks_typing.js",
 "blocks/servo/blocks_typing.js",
