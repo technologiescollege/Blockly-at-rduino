@@ -70,7 +70,62 @@ Blockly.Blocks['grove_piezo_buzzer'] = {
   }
 };
 
+Blockly.Blocks['grove_gbk_piezo_buzzer'] = {
+  init: function() {
+    this.appendDummyInput()
+        .appendField(Blockly.Msg.GROVE_BK_OUT_BUZZER_TEXT1)
+        .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/seeed/grove/400px-Buzzer1.jpg', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize));
+    this.appendDummyInput()
+        .setAlign(Blockly.ALIGN_RIGHT)
+        .appendField(Blockly.Msg.GROVE_BK_OUT_BUZZER_TEXT2)
+        .appendField(new Blockly.FieldDropdown([["C", "262"], ["C#", "277"], ["D", "294"], ["D#", "311"],
+                                                ["E", "330"], ["F", "349"], ["F#", "370"], ["G", "392"],
+                                                ["G#", "415"], ["A", "440"], ["A#", "466"], ["B", "494"]]), "tone")
+        .appendField(Blockly.Msg.GROVE_BK_OUT_BUZZER_TEXT3)
+        .appendField(new Blockly.FieldDropdown([["C4", "1"], ["C5", "2"], ["C6", "3"], ["C7", "4"]]), "scale")
+        .appendField(Blockly.Msg.GROVE_BK_OUT_BUZZER_TEXT4)
+        .appendField(new Blockly.FieldDropdown([["1/16", "62.5"], ["1/8", "125"], ["1/4", "250"], ["1/2", "500"],["1/1", "1000"]]), "dur");    
+    this.setInputsInline(false);
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);    
+    this.setTooltip(Blockly.Msg.GROVE_BK_INOUT_BUZZER_TOOLTIP);
+    this.setColour(Blockly.Blocks.grove.HUE);
+	this.setHelpUrl(Blockly.Msg.GROVE_BK_HELPURL);
+  }
+};
+
+
 //3.Grove - OLED Display 0.96": 128×64 dot resolution High brightness,self-emission and high contrast ratio Big screen on a compact design Low power consumption.
+
+Blockly.Blocks['grove_gbk_oled'] = {
+ init: function() {
+    this.appendDummyInput()
+        .appendField(Blockly.Msg.GROVE_BK_OLED_TEXT1)
+		.appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/seeed/grove_beginner_kit/OLED_Display_0.96_SSD1315.jpg', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize));
+    this.appendValueInput("input")
+        //.setCheck('String')
+        .setAlign(Blockly.ALIGN_RIGHT)
+		.appendField(Blockly.Msg.GROVE_BK_OLED_TEXT2);	  
+    this.appendValueInput("col")
+		.setCheck('Number')
+        .setAlign(Blockly.ALIGN_RIGHT)
+		.appendField(Blockly.Msg.GROVE_BK_OLED_TEXT3);		
+    this.appendValueInput("line")
+		.setCheck('Number')
+        .setAlign(Blockly.ALIGN_RIGHT)
+		.appendField(Blockly.Msg.GROVE_BK_OLED_TEXT4);
+    this.appendDummyInput("")
+        .setAlign(Blockly.ALIGN_RIGHT)
+        .appendField(Blockly.Msg.GROVE_BK_OLED_TEXT5)     
+        .appendField(new Blockly.FieldCheckbox('TRUE'), 'ref'); 
+    this.setInputsInline(false);
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setColour(Blockly.Blocks.grove.HUE);
+    this.setTooltip(Blockly.Msg.GROVE_BK_OLED_TOOLTIP);
+    this.setHelpUrl(Blockly.Msg.GROVE_BK_HELPURL);
+  }
+};
 
 Blockly.Blocks['grove_oled_draw_string'] = {
  init: function() {

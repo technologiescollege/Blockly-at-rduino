@@ -42,6 +42,16 @@ Blockly.Arduino.grove_led = function() {
 };
 
 //2.Grove - Buzzer: Piezo Buzzer
+Blockly.Arduino.grove_gbk_piezo_buzzer = function() {
+  var pitch = this.getFieldValue('tone');
+  var oct = this.getFieldValue('scale');
+  var del = this.getFieldValue('dur');
+  
+  var code = 'tone(5, ' + pitch*oct + ', ' + del+ ');\n'
+    + 'delay(' + del*2 + ');\n';
+  return code; 
+};
+
 Blockly.Arduino.grove_piezo_buzzer = function() {
   var dropdown_pin = '5';
   var dropdown_stat = this.getFieldValue('STAT');
@@ -51,16 +61,39 @@ Blockly.Arduino.grove_piezo_buzzer = function() {
 };
 
 //3.Grove - OLED Display 0.96": 128×64 dot resolution High brightness,self-emission and high contrast ratio Big screen on a compact design Low power consumption.
+Blockly.Arduino.grove_gbk_oled = function() {  
+  Blockly.Arduino.includes_["include_u8g"] = '#include <U8x8lib.h>';
+  Blockly.Arduino.definitions_["define_u8g"] = 'U8X8_SSD1306_128X64_ALT0_HW_I2C u8x8(/* reset=*/ U8X8_PIN_NONE);';
+  Blockly.Arduino.setups_["setup_u8g"] = 'u8x8.begin();\n'
+	+ '  u8x8.setFlipMode(1);\n'
+    + '  u8x8.setFont(u8x8_font_chroma48medium8_r);\n';
+  var refresh = this.getFieldValue('ref');                                 
+  var text = Blockly.Arduino.valueToCode(this, 'input', Blockly.Arduino.ORDER_UNARY_POSTFIX) || '\'\'';
+  var col = Blockly.Arduino.valueToCode(this, 'col', Blockly.Arduino.ORDER_UNARY_POSTFIX) || '0';
+  var line = Blockly.Arduino.valueToCode(this, 'line', Blockly.Arduino.ORDER_UNARY_POSTFIX) || '0'; 
+  
+  var base = 'u8x8.setCursor(' + line + ', ' + col + ');\n'
+    + 'u8x8.print(' + text + ');\n';
+  if (refresh =="FALSE")
+    {
+      var code = base;
+    } else
+       code = 'u8x8.setCursor(' + line + ', ' + col + ');\n'
+          + 'u8x8.print(' + text + ');\n'
+          + 'u8x8.print("                ");\n';
+  return code;
+};
+
 Blockly.Arduino.grove_oled_draw_string = function() {
   var value_text = Blockly.Arduino.valueToCode(this, 'Text', Blockly.Arduino.ORDER_ATOMIC) || '\'\'';
   var x = Blockly.Arduino.valueToCode(this, 'X', Blockly.Arduino.ORDER_ATOMIC);
   var y = Blockly.Arduino.valueToCode(this, 'Y', Blockly.Arduino.ORDER_ATOMIC);    
-  Blockly.Arduino.definitions_["define_u8g"] = '#include <U8x8lib.h>;\n'
-  + 'U8X8_SSD1306_128X64_ALT0_HW_I2C u8x8(/* reset=*/ U8X8_PIN_NONE);\n';
+  Blockly.Arduino.includes_["include_u8g"] = '#include <U8x8lib.h>';
+  Blockly.Arduino.definitions_["define_u8g"] = 'U8X8_SSD1306_128X64_ALT0_HW_I2C u8x8(/* reset=*/ U8X8_PIN_NONE);';
   Blockly.Arduino.setups_["setup_u8g"] = 'u8x8.begin();\n'
-	+ '  u8x8.setFlipMode(1);\n';
-  var code = 'u8x8.setFont(u8x8_font_chroma48medium8_r);\n'
-	+ 'u8x8.setCursor(' + x + ', ' + y + ');\n'
+	+ '  u8x8.setFlipMode(1);\n'
+    + '  u8x8.setFont(u8x8_font_chroma48medium8_r);\n';
+  var code = 'u8x8.setCursor(' + x + ', ' + y + ');\n'
 	+ 'u8x8.print(' + value_text + ');\n';
   return code;
 };
@@ -69,13 +102,13 @@ Blockly.Arduino.grove_oled_draw_4strings = function() {
   var value_text_line1 = Blockly.Arduino.valueToCode(this, 'Text_line1', Blockly.Arduino.ORDER_ATOMIC) || '\'\'';
   var value_text_line2 = Blockly.Arduino.valueToCode(this, 'Text_line2', Blockly.Arduino.ORDER_ATOMIC) || '\'\'';
   var value_text_line3 = Blockly.Arduino.valueToCode(this, 'Text_line3', Blockly.Arduino.ORDER_ATOMIC) || '\'\'';
-  var value_text_line4 = Blockly.Arduino.valueToCode(this, 'Text_line4', Blockly.Arduino.ORDER_ATOMIC) || '\'\'';   
-  Blockly.Arduino.definitions_["define_u8g"] = '#include <U8x8lib.h>;\n'
-  + 'U8X8_SSD1306_128X64_ALT0_HW_I2C u8x8(/* reset=*/ U8X8_PIN_NONE);\n';
+  var value_text_line4 = Blockly.Arduino.valueToCode(this, 'Text_line4', Blockly.Arduino.ORDER_ATOMIC) || '\'\'';    
+  Blockly.Arduino.includes_["include_u8g"] = '#include <U8x8lib.h>';
+  Blockly.Arduino.definitions_["define_u8g"] = 'U8X8_SSD1306_128X64_ALT0_HW_I2C u8x8(/* reset=*/ U8X8_PIN_NONE);';
   Blockly.Arduino.setups_["setup_u8g"] = 'u8x8.begin();\n'
-	+ '  u8x8.setFlipMode(1);\n';
-  var code = 'u8x8.setFont(u8x8_font_chroma48medium8_r);\n'
-	+ 'u8x8.setCursor(0, 12);\n'
+	+ '  u8x8.setFlipMode(1);\n'
+    + '  u8x8.setFont(u8x8_font_chroma48medium8_r);\n';
+  var code = 'u8x8.setCursor(0, 12);\n'
 	+ 'u8x8.print(' + value_text_line1 + ');\n'
 	+ 'u8x8.setCursor(0, 28);\n'
 	+ 'u8x8.print(' + value_text_line2 + ');\n'
@@ -89,13 +122,13 @@ Blockly.Arduino.grove_oled_draw_4strings = function() {
 Blockly.Arduino.grove_oled_print = function() {
   var value_n = Blockly.Arduino.valueToCode(this, 'N', Blockly.Arduino.ORDER_ATOMIC);
   var x = Blockly.Arduino.valueToCode(this, 'X', Blockly.Arduino.ORDER_ATOMIC);
-  var y = Blockly.Arduino.valueToCode(this, 'Y', Blockly.Arduino.ORDER_ATOMIC); 
-  Blockly.Arduino.definitions_["define_u8g"] = '#include <U8x8lib.h>;\n'
-  + 'U8X8_SSD1306_128X64_ALT0_HW_I2C u8x8(/* reset=*/ U8X8_PIN_NONE);\n';
+  var y = Blockly.Arduino.valueToCode(this, 'Y', Blockly.Arduino.ORDER_ATOMIC);   
+  Blockly.Arduino.includes_["include_u8g"] = '#include <U8x8lib.h>';
+  Blockly.Arduino.definitions_["define_u8g"] = 'U8X8_SSD1306_128X64_ALT0_HW_I2C u8x8(/* reset=*/ U8X8_PIN_NONE);';
   Blockly.Arduino.setups_["setup_u8g"] = 'u8x8.begin();\n'
-	+ '  u8x8.setFlipMode(1);\n';
-  var code = 'u8x8.setFont(u8x8_font_chroma48medium8_r);\n'
-	+ 'u8x8.setCursor(' + x + ', ' + y + ');\n'
+	+ '  u8x8.setFlipMode(1);\n'
+    + '  u8x8.setFont(u8x8_font_chroma48medium8_r);\n';
+  var code = 'u8x8.setCursor(' + x + ', ' + y + ');\n'
 	+ 'u8x8.print(' + value_n + ');\n';
   return code;
 };
@@ -108,13 +141,13 @@ Blockly.Arduino.grove_oled_4draw_print = function() {
   var value_n1 = Blockly.Arduino.valueToCode(this, 'N1', Blockly.Arduino.ORDER_ATOMIC);
   var value_n2 = Blockly.Arduino.valueToCode(this, 'N2', Blockly.Arduino.ORDER_ATOMIC);
   var value_n3 = Blockly.Arduino.valueToCode(this, 'N3', Blockly.Arduino.ORDER_ATOMIC);
-  var value_n4 = Blockly.Arduino.valueToCode(this, 'N4', Blockly.Arduino.ORDER_ATOMIC); 
-  Blockly.Arduino.definitions_["define_u8g"] = '#include <U8x8lib.h>;\n'
-  + 'U8X8_SSD1306_128X64_ALT0_HW_I2C u8x8(/* reset=*/ U8X8_PIN_NONE);\n';
+  var value_n4 = Blockly.Arduino.valueToCode(this, 'N4', Blockly.Arduino.ORDER_ATOMIC);   
+  Blockly.Arduino.includes_["include_u8g"] = '#include <U8x8lib.h>';
+  Blockly.Arduino.definitions_["define_u8g"] = 'U8X8_SSD1306_128X64_ALT0_HW_I2C u8x8(/* reset=*/ U8X8_PIN_NONE);';
   Blockly.Arduino.setups_["setup_u8g"] = 'u8x8.begin();\n'
-	+ '  u8x8.setFlipMode(1);\n';
-  var code = 'u8x8.setFont(u8x8_font_chroma48medium8_r);\n'
-	+ 'u8x8.setCursor(0, 12);\n'
+	+ '  u8x8.setFlipMode(1);\n'
+    + '  u8x8.setFont(u8x8_font_chroma48medium8_r);\n';
+  var code = 'u8x8.setCursor(0, 12);\n'
 	+ 'u8x8.print(' + value_text_line1 + ');\n'
 	+ 'u8x8.setCursor(100, 12);\n'
 	+ 'u8x8.print(' + value_n1 + ');\n'

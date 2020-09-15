@@ -4,6 +4,12 @@ Blockly.Blocks.grove_led.getBlockType = function() {
 Blockly.Blocks.grove_piezo_buzzer.getBlockType = function() {
 	return Blockly.Types.NUMBER;
 };
+Blockly.Blocks.grove_gbk_piezo_buzzer.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.grove_gbk_oled.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
 Blockly.Blocks.grove_oled_draw_string.getBlockType = function() {
 	return Blockly.Types.BOOLEAN;
 };
