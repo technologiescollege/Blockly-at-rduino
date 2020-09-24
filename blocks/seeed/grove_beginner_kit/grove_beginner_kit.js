@@ -34,7 +34,7 @@ goog.require('Blockly.Blocks');
 goog.require('Blockly.Types');
 
 //1.Grove - LED: Simple LED module
-Blockly.Blocks['grove_led'] = {
+Blockly.Blocks['grove_gbk_led'] = {
   init: function() {
     this.appendDummyInput()
         .appendField(Blockly.Msg.GROVE_INOUT_LED_INPUT1)
@@ -53,23 +53,6 @@ Blockly.Blocks['grove_led'] = {
 };
 
 //2.Grove - Buzzer: Piezo Buzzer
-Blockly.Blocks['grove_piezo_buzzer'] = {
-  init: function() {
-    this.appendDummyInput()
-        .appendField(Blockly.Msg.GROVE_BK_INOUT_BUZZER_TEXT1)
-        .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/seeed/grove/400px-Buzzer1.jpg', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize));
-	this.appendDummyInput("")
-		.setAlign(Blockly.ALIGN_RIGHT)
-        .appendField(Blockly.Msg.GROVE_BK_INOUT_BUZZER_TEXT2)
-        .appendField(new Blockly.FieldDropdown(Blockly.Msg.FIELDDROPDOWN), "STAT");
-    this.setPreviousStatement(true, null);
-    this.setNextStatement(true, null);
-    this.setTooltip(Blockly.Msg.GROVE_BK_INOUT_BUZZER_TOOLTIP);
-    this.setColour(Blockly.Blocks.grove.HUE);
-	this.setHelpUrl(Blockly.Msg.GROVE_BK_HELPURL);
-  }
-};
-
 Blockly.Blocks['grove_gbk_piezo_buzzer'] = {
   init: function() {
     this.appendDummyInput()
@@ -127,7 +110,7 @@ Blockly.Blocks['grove_gbk_oled'] = {
   }
 };
 
-Blockly.Blocks['grove_oled_draw_string'] = {
+Blockly.Blocks['grove_gbk_oled_draw_string'] = {
  init: function() {
     this.appendDummyInput()
         .appendField(Blockly.Msg.lp2i_u8g_draw_string)
@@ -152,7 +135,7 @@ Blockly.Blocks['grove_oled_draw_string'] = {
     this.setHelpUrl(Blockly.Msg.GROVE_BK_HELPURL);
   }
 };
-Blockly.Blocks['grove_oled_draw_4strings'] = {
+Blockly.Blocks['grove_gbk_oled_draw_4strings'] = {
  init: function() {
     this.appendDummyInput()
         .appendField(Blockly.Msg.lp2i_u8g_draw_4strings)
@@ -183,7 +166,7 @@ Blockly.Blocks['grove_oled_draw_4strings'] = {
     this.setHelpUrl(Blockly.Msg.GROVE_BK_HELPURL);
   }
 };
-Blockly.Blocks['grove_oled_print'] = {
+Blockly.Blocks['grove_gbk_oled_print'] = {
  init: function() {
     this.appendDummyInput()
         .appendField(Blockly.Msg.lp2i_u8g_print)
@@ -209,7 +192,7 @@ Blockly.Blocks['grove_oled_print'] = {
   }
 };
 
-Blockly.Blocks['grove_oled_4draw_print'] = {
+Blockly.Blocks['grove_gbkoled_4draw_print'] = {
  init: function() {
     this.appendDummyInput()
         .appendField(Blockly.Msg.lp2i_u8g_4draw_print)
@@ -258,7 +241,7 @@ Blockly.Blocks['grove_oled_4draw_print'] = {
 };
 
 //4.Grove - Button: Momentary Push Button
-Blockly.Blocks['grove_button'] = {
+Blockly.Blocks['grove_gbk_button'] = {
   init: function() {
 	this.appendDummyInput()
         .appendField(Blockly.Msg.GROVE_BK_INOUT_BUTTON_TEXT)
@@ -272,7 +255,7 @@ Blockly.Blocks['grove_button'] = {
 };
 
 //5.Grove - Rotary Potentiometer: Adjustable Potentiometer
-Blockly.Blocks['grove_rotary_angle'] = {
+Blockly.Blocks['grove_gbk_rotary_angle'] = {
   init: function() {
     this.appendDummyInput()
         .appendField(Blockly.Msg.GROVE_BK_INOUT_ROT_ANGLE_TEXT)
@@ -285,7 +268,7 @@ Blockly.Blocks['grove_rotary_angle'] = {
 };
 
 //6.Grove - Light: Detects surrounding light intensity
-Blockly.Blocks['grove_ldr'] = {
+Blockly.Blocks['grove_gbk_ldr'] = {
   init: function() {
     this.appendDummyInput()
         .appendField(Blockly.Msg.GROVE_BK_INOUT_LDR_TEXT)
@@ -298,7 +281,7 @@ Blockly.Blocks['grove_ldr'] = {
 };
 
 //7.Grove - Sound: Detects surrounding sound intensity
-Blockly.Blocks['grove_sound_sensor'] = {
+Blockly.Blocks['grove_gbk_sound_sensor'] = {
   init: function() {
     this.appendDummyInput()
         .appendField(Blockly.Msg.GROVE_BK_INOUT_SOUND_TEXT)
@@ -311,7 +294,7 @@ Blockly.Blocks['grove_sound_sensor'] = {
 };
 
 //8.Grove - Temperature & Humidity Sensor: Detects surrounding temperature and humidity values
-Blockly.Blocks['grove_dht_read'] = {
+Blockly.Blocks['grove_gbk_dht_read'] = {
   init: function() {
     this.appendDummyInput()
       .appendField(Blockly.Msg.GROVE_BK_INOUT_DHT_READ_TYPE)
@@ -328,7 +311,7 @@ Blockly.Blocks['grove_dht_read'] = {
 };
 
 //9.Grove - Air Pressure Sensor: Detects surrounding atmospheric pressure
-Blockly.Blocks['grove_pressure_read'] = {
+Blockly.Blocks['grove_gbk_pressure_read'] = {
   init: function() {
     this.appendDummyInput()
       .appendField(Blockly.Msg.GROVE_BK_INOUT_PRESSURE_TEXT)
@@ -343,7 +326,7 @@ Blockly.Blocks['grove_pressure_read'] = {
 };
 
 //10.Grove - 3-Axis Accelerator: Detects object acceleration
-Blockly.Blocks['grove_gyro_read'] = {
+Blockly.Blocks['grove_gbk_gyro_read'] = {
   init: function() {
     this.appendDummyInput()
       .appendField(Blockly.Msg.GROVE_BK_INOUT_GYRO_TEXT1)

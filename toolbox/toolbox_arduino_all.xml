@@ -1928,18 +1928,17 @@
 	</category>
 	<category name="CAT_GROVE_BEGINNER_KIT" colour="#8ec31f">
 		<category name="CAT_GROVE_BEGINNER_KIT_IN" colour="#8ec31f">
-			<block type="grove_button"></block>
-			<block type="grove_rotary_angle"></block>
-			<block type="grove_ldr"></block>	
-			<block type="grove_sound_sensor"></block>
-			<block type="grove_dht_read"></block>
-			<block type="grove_pressure_read"></block>
-			<block type="grove_gyro_read"></block>
+			<block type="grove_gbk_button"></block>
+			<block type="grove_gbk_rotary_angle"></block>
+			<block type="grove_gbk_ldr"></block>	
+			<block type="grove_gbk_sound_sensor"></block>
+			<block type="grove_gbk_dht_read"></block>
+			<block type="grove_gbk_pressure_read"></block>
+			<block type="grove_gbk_gyro_read"></block>
 		</category>
 		<category name="CAT_GROVE_BEGINNER_KIT_OUT" colour="#8ec31f">
-			<block type="grove_led"></block>
+			<block type="grove_gbk_led"></block>
 			<block type="grove_gbk_piezo_buzzer"></block>
-			<block type="grove_piezo_buzzer"></block>
             <block type="grove_gbk_oled">
             	<value name="input">
 					<shadow type="text">
@@ -1957,10 +1956,10 @@
 					</shadow>
 				</value>
 			</block>
-			<block type="grove_oled_draw_string"></block>
-			<block type="grove_oled_draw_4strings"></block>
-			<block type="grove_oled_print"></block>
-			<block type="grove_oled_4draw_print"></block>
+			<block type="grove_gbk_oled_draw_string"></block>
+			<block type="grove_gbk_oled_draw_4strings"></block>
+			<block type="grove_gbk_oled_print"></block>
+			<block type="grove_gbkoled_4draw_print"></block>
 		</category>
 	</category>
 	<category name="CAT_MULTIFUNCTION" colour="#0152AB">
