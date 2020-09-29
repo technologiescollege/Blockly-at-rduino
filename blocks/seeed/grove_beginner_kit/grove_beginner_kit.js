@@ -110,135 +110,135 @@ Blockly.Blocks['grove_gbk_oled'] = {
   }
 };
 
-Blockly.Blocks['grove_gbk_oled_draw_string'] = {
- init: function() {
-    this.appendDummyInput()
-        .appendField(Blockly.Msg.lp2i_u8g_draw_string)
-		.appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/seeed/grove_beginner_kit/OLED_Display_0.96_SSD1315.jpg', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize));
-    this.appendValueInput("Text")
-		.setCheck('String')
-        .setAlign(Blockly.ALIGN_RIGHT)
-		.appendField(Blockly.Msg.GROVE_BK_OLED_TEXT);	  
-    this.appendValueInput("X")
-		.setCheck('Number')
-        .setAlign(Blockly.ALIGN_RIGHT)
-		.appendField(Blockly.Msg.GROVE_BK_OLED_DRAW_STRING_X);		
-    this.appendValueInput("Y")
-		.setCheck('Number')
-        .setAlign(Blockly.ALIGN_RIGHT)
-		.appendField(Blockly.Msg.GROVE_BK_OLED_DRAW_STRING_Y);
-    this.setInputsInline(false);
-    this.setPreviousStatement(true, null);
-    this.setNextStatement(true, null);
-    this.setColour(Blockly.Blocks.grove.HUE);
-    this.setTooltip(Blockly.Msg.GROVE_BK_OLED_TOOLTIP);
-    this.setHelpUrl(Blockly.Msg.GROVE_BK_HELPURL);
-  }
-};
-Blockly.Blocks['grove_gbk_oled_draw_4strings'] = {
- init: function() {
-    this.appendDummyInput()
-        .appendField(Blockly.Msg.lp2i_u8g_draw_4strings)
-		.appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/seeed/grove_beginner_kit/OLED_Display_0.96_SSD1315.jpg', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize));
-    this.appendDummyInput()
-        .appendField(Blockly.Msg.GROVE_BK_OLED_DRAW_4STRINGS_TEXT);		
-    this.appendValueInput("Text_line1")
-		.setCheck('String')
-        .setAlign(Blockly.ALIGN_RIGHT)
-		.appendField(Blockly.Msg.GROVE_BK_OLED_DRAW_4STRINGS_TEXT_LINE1);		
-    this.appendValueInput("Text_line2")
-		.setCheck('String')
-        .setAlign(Blockly.ALIGN_RIGHT)
-		.appendField(Blockly.Msg.GROVE_BK_OLED_DRAW_4STRINGS_TEXT_LINE2);			
-    this.appendValueInput("Text_line3")
-		.setCheck('String')
-        .setAlign(Blockly.ALIGN_RIGHT)
-		.appendField(Blockly.Msg.GROVE_BK_OLED_DRAW_4STRINGS_TEXT_LINE3);			
-    this.appendValueInput("Text_line4")
-		.setCheck('String')
-        .setAlign(Blockly.ALIGN_RIGHT)
-		.appendField(Blockly.Msg.GROVE_BK_OLED_DRAW_4STRINGS_TEXT_LINE4);			
-    this.setInputsInline(false);
-    this.setPreviousStatement(true, null);
-    this.setNextStatement(true, null);
-    this.setColour(Blockly.Blocks.grove.HUE);
-    this.setTooltip(Blockly.Msg.GROVE_BK_OLED_TOOLTIP);
-    this.setHelpUrl(Blockly.Msg.GROVE_BK_HELPURL);
-  }
-};
-Blockly.Blocks['grove_gbk_oled_print'] = {
- init: function() {
-    this.appendDummyInput()
-        .appendField(Blockly.Msg.lp2i_u8g_print)
-		.appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/seeed/grove_beginner_kit/OLED_Display_0.96_SSD1315.jpg', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize));		
-	this.appendValueInput("N")
-		.setCheck('Number')
-        .setAlign(Blockly.ALIGN_RIGHT)
-        .appendField(Blockly.Msg.GROVE_BK_OLED_PRINT_N);		
-    this.appendValueInput("X")
-		.setCheck('Number')
-        .setAlign(Blockly.ALIGN_RIGHT)
-        .appendField(Blockly.Msg.GROVE_BK_OLED_PRINT_X);		
-    this.appendValueInput("Y")
-		.setCheck('Number')
-        .setAlign(Blockly.ALIGN_RIGHT)
-        .appendField(Blockly.Msg.GROVE_BK_OLED_PRINT_Y);		
-    this.setInputsInline(false);
-    this.setPreviousStatement(true, null);
-    this.setNextStatement(true, null);
-    this.setColour(Blockly.Blocks.grove.HUE);
-    this.setTooltip(Blockly.Msg.GROVE_BK_OLED_TOOLTIP);
-    this.setHelpUrl(Blockly.Msg.GROVE_BK_HELPURL);
-  }
-};
+// Blockly.Blocks['grove_gbk_oled_draw_string'] = {
+ // init: function() {
+    // this.appendDummyInput()
+        // .appendField(Blockly.Msg.lp2i_u8g_draw_string)
+		// .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/seeed/grove_beginner_kit/OLED_Display_0.96_SSD1315.jpg', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize));
+    // this.appendValueInput("Text")
+		// .setCheck('String')
+        // .setAlign(Blockly.ALIGN_RIGHT)
+		// .appendField(Blockly.Msg.GROVE_BK_OLED_TEXT);	  
+    // this.appendValueInput("X")
+		// .setCheck('Number')
+        // .setAlign(Blockly.ALIGN_RIGHT)
+		// .appendField(Blockly.Msg.GROVE_BK_OLED_DRAW_STRING_X);		
+    // this.appendValueInput("Y")
+		// .setCheck('Number')
+        // .setAlign(Blockly.ALIGN_RIGHT)
+		// .appendField(Blockly.Msg.GROVE_BK_OLED_DRAW_STRING_Y);
+    // this.setInputsInline(false);
+    // this.setPreviousStatement(true, null);
+    // this.setNextStatement(true, null);
+    // this.setColour(Blockly.Blocks.grove.HUE);
+    // this.setTooltip(Blockly.Msg.GROVE_BK_OLED_TOOLTIP);
+    // this.setHelpUrl(Blockly.Msg.GROVE_BK_HELPURL);
+  // }
+// };
+// Blockly.Blocks['grove_gbk_oled_draw_4strings'] = {
+ // init: function() {
+    // this.appendDummyInput()
+        // .appendField(Blockly.Msg.lp2i_u8g_draw_4strings)
+		// .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/seeed/grove_beginner_kit/OLED_Display_0.96_SSD1315.jpg', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize));
+    // this.appendDummyInput()
+        // .appendField(Blockly.Msg.GROVE_BK_OLED_DRAW_4STRINGS_TEXT);		
+    // this.appendValueInput("Text_line1")
+		// .setCheck('String')
+        // .setAlign(Blockly.ALIGN_RIGHT)
+		// .appendField(Blockly.Msg.GROVE_BK_OLED_DRAW_4STRINGS_TEXT_LINE1);		
+    // this.appendValueInput("Text_line2")
+		// .setCheck('String')
+        // .setAlign(Blockly.ALIGN_RIGHT)
+		// .appendField(Blockly.Msg.GROVE_BK_OLED_DRAW_4STRINGS_TEXT_LINE2);			
+    // this.appendValueInput("Text_line3")
+		// .setCheck('String')
+        // .setAlign(Blockly.ALIGN_RIGHT)
+		// .appendField(Blockly.Msg.GROVE_BK_OLED_DRAW_4STRINGS_TEXT_LINE3);			
+    // this.appendValueInput("Text_line4")
+		// .setCheck('String')
+        // .setAlign(Blockly.ALIGN_RIGHT)
+		// .appendField(Blockly.Msg.GROVE_BK_OLED_DRAW_4STRINGS_TEXT_LINE4);			
+    // this.setInputsInline(false);
+    // this.setPreviousStatement(true, null);
+    // this.setNextStatement(true, null);
+    // this.setColour(Blockly.Blocks.grove.HUE);
+    // this.setTooltip(Blockly.Msg.GROVE_BK_OLED_TOOLTIP);
+    // this.setHelpUrl(Blockly.Msg.GROVE_BK_HELPURL);
+  // }
+// };
+// Blockly.Blocks['grove_gbk_oled_print'] = {
+ // init: function() {
+    // this.appendDummyInput()
+        // .appendField(Blockly.Msg.lp2i_u8g_print)
+		// .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/seeed/grove_beginner_kit/OLED_Display_0.96_SSD1315.jpg', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize));		
+	// this.appendValueInput("N")
+		// .setCheck('Number')
+        // .setAlign(Blockly.ALIGN_RIGHT)
+        // .appendField(Blockly.Msg.GROVE_BK_OLED_PRINT_N);		
+    // this.appendValueInput("X")
+		// .setCheck('Number')
+        // .setAlign(Blockly.ALIGN_RIGHT)
+        // .appendField(Blockly.Msg.GROVE_BK_OLED_PRINT_X);		
+    // this.appendValueInput("Y")
+		// .setCheck('Number')
+        // .setAlign(Blockly.ALIGN_RIGHT)
+        // .appendField(Blockly.Msg.GROVE_BK_OLED_PRINT_Y);		
+    // this.setInputsInline(false);
+    // this.setPreviousStatement(true, null);
+    // this.setNextStatement(true, null);
+    // this.setColour(Blockly.Blocks.grove.HUE);
+    // this.setTooltip(Blockly.Msg.GROVE_BK_OLED_TOOLTIP);
+    // this.setHelpUrl(Blockly.Msg.GROVE_BK_HELPURL);
+  // }
+// };
 
-Blockly.Blocks['grove_gbkoled_4draw_print'] = {
- init: function() {
-    this.appendDummyInput()
-        .appendField(Blockly.Msg.lp2i_u8g_4draw_print)
-		.appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/seeed/grove_beginner_kit/OLED_Display_0.96_SSD1315.jpg', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize));		
-    this.appendDummyInput()
-        .appendField(Blockly.Msg.GROVE_BK_OLED_DRAW_4DRAW_TEXT);			
-    this.appendValueInput("Text_line1")
-		.setCheck('String')
-        .setAlign(Blockly.ALIGN_RIGHT)
-		.appendField(Blockly.Msg.GROVE_BK_OLED_DRAW_4DRAW_TEXT_LINE1);		
-	this.appendValueInput("N1")
-		.setCheck('Number')
-        .setAlign(Blockly.ALIGN_RIGHT)
-        .appendField(Blockly.Msg.GROVE_BK_OLED_DRAW_4DRAW_PRINT_N1);			
-    this.appendValueInput("Text_line2")
-		.setCheck('String')
-        .setAlign(Blockly.ALIGN_RIGHT)
-		.appendField(Blockly.Msg.GROVE_BK_OLED_DRAW_4DRAW_TEXT_LINE2);			
-	this.appendValueInput("N2")
-		.setCheck('Number')
-        .setAlign(Blockly.ALIGN_RIGHT)
-        .appendField(Blockly.Msg.GROVE_BK_OLED_DRAW_4DRAW_PRINT_N2);		
-	this.appendValueInput("Text_line3")
-		.setCheck('String')
-        .setAlign(Blockly.ALIGN_RIGHT)
-		.appendField(Blockly.Msg.GROVE_BK_OLED_DRAW_4DRAW_TEXT_LINE3);			
-	this.appendValueInput("N3")
-		.setCheck('Number')
-        .setAlign(Blockly.ALIGN_RIGHT)
-        .appendField(Blockly.Msg.GROVE_BK_OLED_DRAW_4DRAW_PRINT_N3);		
-    this.appendValueInput("Text_line4")
-		.setCheck('String')
-        .setAlign(Blockly.ALIGN_RIGHT)
-		.appendField(Blockly.Msg.GROVE_BK_OLED_DRAW_4DRAW_TEXT_LINE4);			
-	this.appendValueInput("N4")
-		.setCheck('Number')
-        .setAlign(Blockly.ALIGN_RIGHT)
-        .appendField(Blockly.Msg.GROVE_BK_OLED_DRAW_4DRAW_PRINT_N4);		
-    this.setInputsInline(false);
-    this.setPreviousStatement(true, null);
-    this.setNextStatement(true, null);
-    this.setColour(Blockly.Blocks.grove.HUE);
-    this.setTooltip(Blockly.Msg.GROVE_BK_OLED_TOOLTIP);
-    this.setHelpUrl(Blockly.Msg.GROVE_BK_HELPURL);
-  }
-};
+// Blockly.Blocks['grove_gbkoled_4draw_print'] = {
+ // init: function() {
+    // this.appendDummyInput()
+        // .appendField(Blockly.Msg.lp2i_u8g_4draw_print)
+		// .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/seeed/grove_beginner_kit/OLED_Display_0.96_SSD1315.jpg', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize));		
+    // this.appendDummyInput()
+        // .appendField(Blockly.Msg.GROVE_BK_OLED_DRAW_4DRAW_TEXT);			
+    // this.appendValueInput("Text_line1")
+		// .setCheck('String')
+        // .setAlign(Blockly.ALIGN_RIGHT)
+		// .appendField(Blockly.Msg.GROVE_BK_OLED_DRAW_4DRAW_TEXT_LINE1);		
+	// this.appendValueInput("N1")
+		// .setCheck('Number')
+        // .setAlign(Blockly.ALIGN_RIGHT)
+        // .appendField(Blockly.Msg.GROVE_BK_OLED_DRAW_4DRAW_PRINT_N1);			
+    // this.appendValueInput("Text_line2")
+		// .setCheck('String')
+        // .setAlign(Blockly.ALIGN_RIGHT)
+		// .appendField(Blockly.Msg.GROVE_BK_OLED_DRAW_4DRAW_TEXT_LINE2);			
+	// this.appendValueInput("N2")
+		// .setCheck('Number')
+        // .setAlign(Blockly.ALIGN_RIGHT)
+        // .appendField(Blockly.Msg.GROVE_BK_OLED_DRAW_4DRAW_PRINT_N2);		
+	// this.appendValueInput("Text_line3")
+		// .setCheck('String')
+        // .setAlign(Blockly.ALIGN_RIGHT)
+		// .appendField(Blockly.Msg.GROVE_BK_OLED_DRAW_4DRAW_TEXT_LINE3);			
+	// this.appendValueInput("N3")
+		// .setCheck('Number')
+        // .setAlign(Blockly.ALIGN_RIGHT)
+        // .appendField(Blockly.Msg.GROVE_BK_OLED_DRAW_4DRAW_PRINT_N3);		
+    // this.appendValueInput("Text_line4")
+		// .setCheck('String')
+        // .setAlign(Blockly.ALIGN_RIGHT)
+		// .appendField(Blockly.Msg.GROVE_BK_OLED_DRAW_4DRAW_TEXT_LINE4);			
+	// this.appendValueInput("N4")
+		// .setCheck('Number')
+        // .setAlign(Blockly.ALIGN_RIGHT)
+        // .appendField(Blockly.Msg.GROVE_BK_OLED_DRAW_4DRAW_PRINT_N4);		
+    // this.setInputsInline(false);
+    // this.setPreviousStatement(true, null);
+    // this.setNextStatement(true, null);
+    // this.setColour(Blockly.Blocks.grove.HUE);
+    // this.setTooltip(Blockly.Msg.GROVE_BK_OLED_TOOLTIP);
+    // this.setHelpUrl(Blockly.Msg.GROVE_BK_HELPURL);
+  // }
+// };
 
 //4.Grove - Button: Momentary Push Button
 Blockly.Blocks['grove_gbk_button'] = {

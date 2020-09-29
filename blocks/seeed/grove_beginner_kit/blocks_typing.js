@@ -7,18 +7,18 @@ Blockly.Blocks.grove_gbk_piezo_buzzer.getBlockType = function() {
 Blockly.Blocks.grove_gbk_oled.getBlockType = function() {
 	return Blockly.Types.NUMBER;
 };
-Blockly.Blocks.grove_gbk_oled_draw_string.getBlockType = function() {
-	return Blockly.Types.BOOLEAN;
-};
-Blockly.Blocks.grove_gbk_oled_draw_4strings.getBlockType = function() {
-	return Blockly.Types.BOOLEAN;
-};
-Blockly.Blocks.grove_gbk_oled_print.getBlockType = function() {
-	return Blockly.Types.BOOLEAN;
-};
-Blockly.Blocks.grove_gbkoled_4draw_print.getBlockType = function() {
-	return Blockly.Types.BOOLEAN;
-};
+// Blockly.Blocks.grove_gbk_oled_draw_string.getBlockType = function() {
+	// return Blockly.Types.BOOLEAN;
+// };
+// Blockly.Blocks.grove_gbk_oled_draw_4strings.getBlockType = function() {
+	// return Blockly.Types.BOOLEAN;
+// };
+// Blockly.Blocks.grove_gbk_oled_print.getBlockType = function() {
+	// return Blockly.Types.BOOLEAN;
+// };
+// Blockly.Blocks.grove_gbkoled_4draw_print.getBlockType = function() {
+	// return Blockly.Types.BOOLEAN;
+// };
 Blockly.Blocks.grove_gbk_button.getBlockType = function() {
 	return Blockly.Types.BOOLEAN;
 };

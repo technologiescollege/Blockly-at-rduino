@@ -1956,10 +1956,10 @@
 					</shadow>
 				</value>
 			</block>
-			<block type="grove_gbk_oled_draw_string"></block>
-			<block type="grove_gbk_oled_draw_4strings"></block>
-			<block type="grove_gbk_oled_print"></block>
-			<block type="grove_gbkoled_4draw_print"></block>
+			<!-- <block type="grove_gbk_oled_draw_string"></block> -->
+			<!-- <block type="grove_gbk_oled_draw_4strings"></block> -->
+			<!-- <block type="grove_gbk_oled_print"></block> -->
+			<!-- <block type="grove_gbkoled_4draw_print"></block> -->
 		</category>
 	</category>
 	<category name="CAT_MULTIFUNCTION" colour="#0152AB">

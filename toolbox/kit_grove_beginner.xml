@@ -399,10 +399,10 @@
 					</shadow>
 				</value>
 			</block>
-			<block type="grove_oled_draw_string"></block>
-			<block type="grove_oled_draw_4strings"></block>
-			<block type="grove_oled_print"></block>
-			<block type="grove_oled_4draw_print"></block>
+			<!-- <block type="grove_oled_draw_string"></block> -->
+			<!-- <block type="grove_oled_draw_4strings"></block> -->
+			<!-- <block type="grove_oled_print"></block> -->
+			<!-- <block type="grove_oled_4draw_print"></block> -->
 		</category>
 	</category>
 </toolbox>
