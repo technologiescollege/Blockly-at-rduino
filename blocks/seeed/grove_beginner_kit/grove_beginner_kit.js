@@ -39,11 +39,11 @@ Blockly.Blocks['grove_gbk_led'] = {
     this.appendDummyInput()
         .appendField(Blockly.Msg.GROVE_INOUT_LED_INPUT1)
         .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/seeed/grove/400px-LED1.jpg', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize));
-    this.setInputsInline(true);
 	this.appendDummyInput()
 		.setAlign(Blockly.ALIGN_RIGHT)
         .appendField(Blockly.Msg.GROVE_BK_INOUT_LED_INPUT3)
         .appendField(new Blockly.FieldDropdown(Blockly.Msg.FIELDDROPDOWN), "STAT");
+    this.setInputsInline(true);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setTooltip(Blockly.Msg.GROVE_BK_INOUT_LED_TOOLTIP);
