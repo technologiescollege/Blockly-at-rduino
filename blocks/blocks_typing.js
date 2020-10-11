@@ -59,6 +59,7 @@ head.load(
 "blocks/servo/blocks_typing.js",
 "blocks/Sharp_IR/blocks_typing.js",
 "blocks/SPI/blocks_typing.js",
+"blocks/stendhal/blocks_typing.js",
 "blocks/stepper_motor/blocks_typing.js",
 "blocks/storage/blocks_typing.js",
 "blocks/technozone51/blocks_typing.js",

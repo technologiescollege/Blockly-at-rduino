@@ -79,6 +79,7 @@ Blockly.Blocks.sensor_actuator.HUE = "#00979D";
 Blockly.Blocks.servo.HUE = "#191919";
 Blockly.Blocks.Sharp_IR.HUE = "#000000";
 Blockly.Blocks.SPI.HUE = "#9999FF";
+Blockly.Blocks.stendhal.HUE = "#9999CC";
 Blockly.Blocks.stepper_motor.HUE = "#8CA55B";
 Blockly.Blocks.storage.HUE = "#00979D";
 Blockly.Blocks.technozone51.HUE = "#646464";

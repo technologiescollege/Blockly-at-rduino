@@ -1291,6 +1291,192 @@
 		<block type="ds18b20_search"></block>
 		<block type="ds18b20_temp"></block>
 	</category>
+    <category name="CAT_STENDHAL" colour="#9999CC">
+		<block type="base_setup"></block>
+		<block type="base_loop"></block>
+		<category name="CAT_STENDHAL_IN" colour="#9999CC">
+			<category name="CAT_STENDHAL_DIGITAL2" colour="#9999CC">
+				<block type="stendhal_button"></block>
+				<block type="stendhal_magnetsensor"></block>
+				<block type="stendhal_tactile"></block>
+				<block type="stendhal_tiltsensor"></block>
+				<block type="stendhal_pir_motion_sensor"></block>
+				<block type="stendhal_BARRIERE_IR"></block>
+				<block type="stendhal_OBSTACLE_IR"></block>
+				<block type="stendhal_logic_water_sensor"></block>
+			</category>
+			<category name="CAT_STENDHAL_ANALOG2" colour="#9999CC">
+				<block type="stendhal_rotary_angle"></block>
+				<block type="stendhal_temperature_sensor"></block>
+				<block type="stendhal_light_sensor"></block>
+				<block type="stendhal_sound_sensor"></block>
+				<block type="ds18b20_search1"></block>
+				<block type="ds18b20_temp1"></block>
+				<block type="tsl2561_init"></block>
+				<block type="tsl2561_read"></block>
+				<block type="stendhal_moisture_sensor"></block>
+				<block type="stendhal_dht_read"></block>
+				<block type="stendhal_ultrasonic_ranger"></block>
+			</category>
+		</category>
+		
+		<category name="CAT_STENDHAL_OUT" colour="#9999CC">
+			<category name="CAT_STENDHAL_OUT_LIGHT" colour="#9999CC">
+				<category name="CAT_STENDHAL_DIGITAL3" colour="#9999CC">
+					<block type="stendhal_led"></block>
+					<block type="stendhal_rgb_led"></block>
+				</category>	
+				<category name="CAT_STENDHAL_ANALOG3" colour="#9999CC">	
+					<block type="stendhal_LED_PWM_validator"></block>
+					<block type="stendhal_rgb_led_PWM"></block>
+					<block type="stendhal_EMETTEUR_IR"></block>
+				</category>	
+			</category>
+			<category name="CAT_STENDHAL_OUT_MOTOR" colour="#9999CC">	
+				<category name="CAT_STENDHAL_OUT_MOTOR_CLASSIC" colour="#9999CC">
+					<block type="stendhal_dcmotor_v1"></block>
+					<block type="stendhal_pap_v1"></block>
+				</category>
+				<category name="CAT_STENDHAL_OUT_MOTOR_SERVO" colour="#9999CC">
+					<block type="servo_attach"></block>
+					<block type="servo_move">
+						<value name="DEGREE">
+							<shadow type="inout_angle">
+								<field name="NUM">0</field>
+							</shadow>
+						</value>
+					</block>
+					<block type="servo_read_degrees"></block>
+					<block type="servo_attached"></block>
+					<block type="servo_detach"></block>
+					<block type="servo_rot_continue"></block>
+					<block type="servo_rot_continue_param"></block>
+				</category>
+				<category name="CAT_STENDHAL_OUT_MOTOR_PAP" colour="#9999CC">	
+					<block type="stendhal_stepper_config"></block>
+					<block type="stendhal_stepper_step">
+						<value name="STEP">
+							<shadow type="math_number">
+								<field name="NUM">0</field>
+							</shadow>
+						</value>
+					</block>
+				</category>
+			</category>
+			<category name="CAT_STENDHAL_OUT_SOUND" colour="#9999CC">
+				<block type="stendhal_piezo_buzzer"></block>
+				<block type="tone">
+					<value name="NUM">
+						<shadow type="math_number">
+							<field name="NUM">0</field>
+						</shadow>
+					</value>
+					<value name="TPS">
+						<shadow type="math_number">
+							<field name="NUM">0</field>
+						</shadow>
+					</value>
+				</block>
+				<block type="notone"></block>
+			</category>	
+			<category name="CAT_STENDHAL_DEAL" colour="#9999CC">
+				<category name="CAT_STENDHAL_DIGITAL3" colour="#9999CC">
+					<block type="stendhal_relay"></block>
+				</category>	
+				<category name="CAT_STENDHAL_ANALOG3" colour="#9999CC">
+					<block type="stendhal_mosfet"></block>
+				</category>	
+			</category>
+		</category>
+		<category name="CAT_STENDHAL_COMM" colour="#9999CC">
+			<category name="CAT_STENDHAL_COMM_LCD" colour="#9999CC">
+				<block type="lcd_i2c_lcdinit"></block>
+				<block type="lcd_i2c_lcdclear"></block>
+				<block type="lcd_i2c_lcdwrite">
+				<value name="COL">
+					<shadow type="math_number">
+						<field name="NUM">0</field>
+					</shadow>
+				</value>
+				<value name="LIG">
+					<shadow type="math_number">
+						<field name="NUM">0</field>
+					</shadow>
+				</value>
+				<value name="TEXT">
+					<shadow type="text">
+						<field name="TEXT"></field>
+					</shadow>
+				</value>
+			</block>
+				<block type="lcd_i2c_lcdscan"></block>
+			</category>
+			<category name="CAT_STENDHAL_COMM_USB" colour="#9999CC">	
+				<block type="serial_init"></block>
+				<block type="serial_print_var">
+					<value name="Text">
+						<shadow type="text">
+							<field name="TEXT"></field>
+						</shadow>
+					</value>
+					<value name="N">
+						<shadow type="math_number">
+							<field name="Num"></field>
+						</shadow>
+					</value>
+					<value name="NEW_LINE">
+						<shadow type="logic_boolean">1
+						</shadow>
+					</value>
+				</block>				
+			</category>
+			<category name="CAT_STENDHAL_COMM_LED" colour="#9999CC">
+				<block type="stendhal_rgb_led"></block>
+				<block type="stendhal_rgb_led_PWM"></block>
+			</category>
+			<category name="CAT_STENDHAL_COMM_BLUETOOTH" colour="#9999CC">
+				<block type="stendhal_bluetooth_slave"></block>
+				<block type="stendhal_bluetooth_slave_AT"></block>
+				<block type="Bluetooth_Shield_duinoFun">
+				<value name="BT_RX">
+					<shadow type="math_number">
+						<field name="NUM">7</field>
+					</shadow>
+				</value>
+				<value name="BT_TX">
+					<shadow type="math_number">
+						<field name="NUM">6</field>
+					</shadow>
+				</value>
+			</block>
+				<block type="ArduiLed"></block>
+			</category>	
+		</category>
+		<category name="CAT_STENDHAL_BOARD" colour="#9999CC">
+			<category name="CAT_STENDHAL_TIME" colour="#9999CC">
+				<block type="base_delay">
+				<value name="DELAY_TIME">
+					<shadow type="math_number">
+						<field name="NUM">1000</field>
+					</shadow>
+				</value>
+				<block type="base_delay_sec"></block>
+				<value name="DELAY_TIME">
+					<shadow type="math_number">
+						<field name="NUM">5</field>
+					</shadow>
+				</value>
+			</block>
+				<block type="millis"></block>
+				<block type="millis_sec"></block>
+			</category>
+			<category name="CAT_STENDHAL_MEMORY" colour="#9999CC">
+				<block type="storage_sd_write">
+				</block>
+			</category>
+		</category>
+		<sep></sep>
+	</category>
 	<category name="CAT_ROBOBOX" colour="#004281">
 	  <category name="CAT_ROBOBOX_SERVO" colour="#004281">
 	    <block type="robobox_servo_setAngle"></block>
@@ -1679,31 +1865,13 @@
 				</value>
 			</block>
 			<block type="bq_servo">
-				<value name="PIN">
-					<shadow type="math_number">
-						<field name="NUM">3</field>
-					</shadow>
-				</value>
-				<value name="DEGREE">
-					<shadow type="inout_angle">
-						<field name="NUM">90</field>
-					</shadow>
-				</value>
+				<value name="PIN"></value>
+				<value name="DEGREE"></value>
 			</block>
 			<block type="bq_servo_rotation_continue">
-				<value name="PIN">
-					<shadow type="math_number">
-						<field name="NUM">3</field>
-					</shadow>
-				</value>
-				<value name="SENS">
-					<shadow type="logic_boolean"></shadow>
-				</value>
-				<value name="VITESSE">
-					<shadow type="inout_angle">
-						<field name="NUM">127</field>
-					</shadow>
-				</value>
+				<value name="PIN"></value>
+				<value name="SENS"></value>
+				<value name="VITESSE"></value>
 			</block>
 		</category>
 		<category name="CAT_BQ_COMM" colour="#608621">

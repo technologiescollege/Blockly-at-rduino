@@ -108,6 +108,7 @@ head.load(
 "blocks/servo/servo.js",
 "blocks/Sharp_IR/Sharp_IR.js",
 "blocks/SPI/SPI.js",
+"blocks/stendhal/stendhal.js",
 "blocks/stepper_motor/stepper_motor.js",
 "blocks/storage/storage.js",
 "blocks/technozone51/technozone51.js",

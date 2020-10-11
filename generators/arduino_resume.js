@@ -99,6 +99,7 @@ head.load(
 "generators/arduino/servo.js",
 "generators/arduino/Sharp_IR.js",
 "generators/arduino/SPI.js",
+"generators/arduino/stendhal.js",
 "generators/arduino/stepper_motor.js",
 "generators/arduino/storage.js",
 "generators/arduino/technozone51.js",
