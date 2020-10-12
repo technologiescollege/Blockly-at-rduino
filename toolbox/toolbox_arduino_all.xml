@@ -685,7 +685,6 @@
 					</shadow>
 				</value>
 			</block>
-			<block type="ArduiLed"></block>
 		</category>
 		<category name="CAT_BT_TECHNOZONE_BT" colour="#646464">
 			<block type="technozone_bt_init"></block>
@@ -1335,15 +1334,12 @@
 			<category name="CAT_STENDHAL_OUT_MOTOR" colour="#9999CC">	
 				<category name="CAT_STENDHAL_OUT_MOTOR_CLASSIC" colour="#9999CC">
 					<block type="stendhal_dcmotor_v1"></block>
-					<block type="stendhal_pap_v1"></block>
 				</category>
 				<category name="CAT_STENDHAL_OUT_MOTOR_SERVO" colour="#9999CC">
 					<block type="servo_attach"></block>
 					<block type="servo_move">
 						<value name="DEGREE">
-							<shadow type="inout_angle">
-								<field name="NUM">0</field>
-							</shadow>
+							<shadow type="inout_angle"></shadow>
 						</value>
 					</block>
 					<block type="servo_read_degrees"></block>
@@ -1354,13 +1350,7 @@
 				</category>
 				<category name="CAT_STENDHAL_OUT_MOTOR_PAP" colour="#9999CC">	
 					<block type="stendhal_stepper_config"></block>
-					<block type="stendhal_stepper_step">
-						<value name="STEP">
-							<shadow type="math_number">
-								<field name="NUM">0</field>
-							</shadow>
-						</value>
-					</block>
+					<block type="stendhal_stepper_step"></block>
 				</category>
 			</category>
 			<category name="CAT_STENDHAL_OUT_SOUND" colour="#9999CC">
@@ -1421,11 +1411,12 @@
 					</value>
 					<value name="N">
 						<shadow type="math_number">
-							<field name="Num"></field>
+							<field name="NUM">0</field>
 						</shadow>
 					</value>
 					<value name="NEW_LINE">
-						<shadow type="logic_boolean">1
+						<shadow type="logic_boolean">
+							<field name="BOOL"></field>
 						</shadow>
 					</value>
 				</block>				
@@ -1438,18 +1429,17 @@
 				<block type="stendhal_bluetooth_slave"></block>
 				<block type="stendhal_bluetooth_slave_AT"></block>
 				<block type="Bluetooth_Shield_duinoFun">
-				<value name="BT_RX">
-					<shadow type="math_number">
-						<field name="NUM">7</field>
-					</shadow>
-				</value>
-				<value name="BT_TX">
-					<shadow type="math_number">
-						<field name="NUM">6</field>
-					</shadow>
-				</value>
-			</block>
-				<block type="ArduiLed"></block>
+					<value name="BT_RX">
+						<shadow type="math_number">
+							<field name="NUM">7</field>
+						</shadow>
+					</value>
+					<value name="BT_TX">
+						<shadow type="math_number">
+							<field name="NUM">6</field>
+						</shadow>
+					</value>
+				</block>
 			</category>	
 		</category>
 		<category name="CAT_STENDHAL_BOARD" colour="#9999CC">
@@ -2090,7 +2080,6 @@
 					</shadow>
 				</value>
 			</block>
-			<block type="ArduiLed"></block>
 		</category>
 		<sep></sep>
 	</category>

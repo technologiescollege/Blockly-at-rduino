@@ -1199,7 +1199,6 @@
 					</shadow>
 				</value>
 			</block>
-			<block type="ArduiLed"></block>
 		</category>
 		<sep></sep>
 	</category>

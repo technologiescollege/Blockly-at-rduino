@@ -107,34 +107,3 @@ Blockly.Arduino.Bluetooth_Shield_duinoFun = function() {
  var code = '';
  return code;
 };
-
-Blockly.Arduino.ArduiLed = function(block) {
-  // Ce programme permet d'allumer la led 13 en utilisant l'application Android ArduiLed
-  Blockly.Arduino.includes_['define_LedPin'] = '#define LedPin 13 \n';  
-  Blockly.Arduino.definitions_['define_RecvDonnees'] = 'byte RecvDonnees; \n';    
-  Blockly.Arduino.setups_['setup_LedPin'] = '  pinMode(LedPin, OUTPUT);'; 
-  
-  var code = 
-  'while(1){ \n'+
-  '  if(blueToothSerial.available()){          // Vérifie que toutes les données ont été envoyées \n'+
-  '    RecvDonnees = blueToothSerial.read();   // Lecture des données\n'+  
-  '    Serial.print("RecvDonnees = ");\n'+  
-  '    Serial.println(RecvDonnees);\n'+  
-  '// l application ArduiLed envoie un nombre pour modifie l état de la Led\n'+  
-  '// Normallement 1 ou 0, mais une autre valeur est reçue dans RecvDonnees ! A debugger \n'+  
-  '    if (RecvDonnees == 128){               // 128 correspond à la valeur envoyée par l application Android (2)\n'+
-  '       digitalWrite(LedPin,LOW);\n'+
-  '    } else if (RecvDonnees == 120) {       // 120 correspond à la valeur envoyée par l application Android (1)\n'+  
-  '       digitalWrite(LedPin,HIGH);\n'+  
-  '    }\n'+
-  '  }\n'+  
-  '  if(Serial.available()){                 //Vérifie s il y a des données envoyées\n'+  
-  '    RecvDonnees  = Serial.read();\n'+
-  '    Serial.print("RecvDonnees = ");\n'+ 
-  '    Serial.println(RecvDonnees);\n'+ 
-  '    blueToothSerial.print(RecvDonnees);\n'+ 
-  '  }\n'+ 
-  '}\n'+ 
-  '\n'; 
-  return code;
-};

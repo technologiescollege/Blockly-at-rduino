@@ -365,10 +365,10 @@ Blockly.Blocks['stendhal_temperature_sensor'] = {
     this.setColour(Blockly.Blocks.stendhal.HUE);
 	this.setHelpUrl(Blockly.Msg.STENDHAL_INOUT_TEMP_HELPURL);
     this.appendDummyInput()
-        .appendField(Blockly.Msg.STENDHAL_INOUT_TEMP_TEXT)
+        .appendField(Blockly.Msg.STENDHAL_INOUT_TEMP_TEXT);
 	this.appendDummyInput()
 		.setAlign(Blockly.ALIGN_CENTRE)
-        .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/stendhal/400px-Temperature1.jpg', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize))
+        .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/stendhal/400px-Temperature1.jpg', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize));
 	this.appendDummyInput()
         .appendField(Blockly.Msg.STENDHAL_INOUT_TEMP_INPUT)
         .appendField(new Blockly.FieldTextInput('',  Blockly.Arduino.pinAnalogValidator), 'PIN');

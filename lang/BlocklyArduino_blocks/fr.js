@@ -416,6 +416,8 @@ Blockly.Msg.CAT_STENDHAL_MEMORY = "  * *  Mémoire"
 
 Blockly.Msg.FIELDDROPDOWN = [["1 (état haut)", "HIGH"], ["0 (état bas)", "LOW"]];
 Blockly.Msg.FIELDDROPDOWN_ONOFF = [["allumer", "ON"], ["éteindre", "OFF"]];
+Blockly.Msg.FIELDDROPDOWN_ONOFF2 = [["Allumer", "HIGH"], ["Eteindre", "LOW"]];
+Blockly.Msg.FIELDDROPDOWN_ONOFF3 = [["Fermer", "HIGH"], ["Ouvrir", "LOW"]];
 Blockly.Msg.FIELDDROPDOWN_0_1 = [["HAUT", "HIGH"], ["BAS", "LOW"]];
 Blockly.Msg.ligne = [["1", "1"], ["2", "2"]];
 Blockly.Msg.colonne = [["1", "1"],["2", "2"],["3", "3"],["4", "4"],["5", "5"],["6", "6"],["7", "7"],["8", "8"],["9", "9"],["10", "10"],["11", "11"],["12", "12"],["14", "14"],["14", "14"],["15", "15"],["16", "16"]];
@@ -2913,7 +2915,7 @@ Blockly.Msg.STENDHAL_INOUT_MOSFET_TOOLTIP = "Le transistor MOSFET est un télér
 Blockly.Msg.STENDHAL_INOUT_TEMP_HELPURL = "http://www.adafruit.com/";
 Blockly.Msg.STENDHAL_INOUT_TEMP_TEXT = "la valeur analogique du capteur de température";
 Blockly.Msg.STENDHAL_INOUT_TEMP_INPUT = "connecté sur la broche N°";
-Blockly.Msg.STENDHAL_INOUT_LIGHT_TOOLTIP = "capteur analogique, le bloc renvoie une valeur comprise entre 0 et 1023";
+Blockly.Msg.STENDHAL_INOUT_TEMP_TOOLTIP = "capteur analogique, le bloc renvoie une valeur comprise entre 0 et 1023";
 Blockly.Msg.STENDHAL_INOUT_LIGHT_HELPURL = "";
 Blockly.Msg.STENDHAL_INOUT_LIGHT_TEXT = "la valeur analogique du capteur de lumière";
 Blockly.Msg.STENDHAL_INOUT_LIGHT_INPUT = "connecté sur la broche N°";

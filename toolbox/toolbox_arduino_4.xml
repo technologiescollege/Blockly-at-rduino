@@ -1193,7 +1193,6 @@
 					</shadow>
 				</value>
 			</block>
-			<block type="ArduiLed"></block>
 		</category>
 		<category name="CAT_BT_TECHNOZONE_BT" colour="#646464">
 			<block type="technozone_bt_init"></block>

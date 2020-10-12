@@ -444,29 +444,3 @@ Blockly.Arduino.definitions_[' AF_DCMotor motor_dc_'+dropdown_moteur] = 'AF_DCMo
  
   return code;
 };
-
-
-// Moteur Pas-à-pas - VERSION 1
-Blockly.stendhal_pap_v1 = function() {
-
-//Définition variables
-  var dropdown_PAP1 = this.getFieldValue('PAP1');
-  var dropdown_direction_PAP1 = this.getFieldValue('direction_PAP1');
-  var value_Pas_par_tour_PAP1 = Blockly.Arduino.valueToCode(this, 'Pas_par_tour1');
-  var value_RPM_PAP1 = Blockly.Arduino.valueToCode(this, 'RPM1');
-  var value_Nb_de_pas_PAP1 = Blockly.Arduino.valueToCode(this, 'Nb_de_pas1');
-
-//librairie
-Blockly.Arduino.definitions_['AFMotor.h'] = '#include <AFMotor.h>';
-
-
-//Définition des moteurs
-Blockly.Arduino.definitions_['AF_Stepper motor' +dropdown_PAP1] = 'AF_Stepper motor'+dropdown_PAP1+'('+value_Pas_par_tour_PAP1+','+dropdown_PAP1+');\n';
-
-
-//Code moteur : direction et vitesse
-  var code = 'motor'+dropdown_PAP1+'.setSpeed('+value_RPM_PAP1+');\n';
-    code +=  'motor'+dropdown_PAP1+'motor.step('+value_Nb_de_pas_PAP1+','+dropdown_direction_PAP1+', SINGLE);\n';
-
- return code;
-};
