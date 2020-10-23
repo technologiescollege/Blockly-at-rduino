@@ -78,9 +78,13 @@ Blockly.Msg.PROCEDURES_DEFRETURN_TYPE = "tipo";
 
 Blockly.Msg.VARIABLES_AS = "tipo";
 Blockly.Msg.VARIABLES_SET_CONST = "constante %1 fixada a %2";
+Blockly.Msg.VARIABLES_SET_CONST_AT = "";
+Blockly.Msg.VARIABLES_SET_CONST_TOOLTIP = "set a variable to non modifiable value";
+Blockly.Msg.VARIABLES_SET_CONST_HELPURL = "https://www.arduino.cc/reference/en/language/variables/variable-scope-qualifiers/const/";
 Blockly.Msg.ARD_TYPE_ARRAY = "matriz";
 Blockly.Msg.ARD_TYPE_BOOL = "booleano";
 Blockly.Msg.ARD_TYPE_CHAR = "carácter";
+Blockly.Msg.ARD_TYPE_ARRAY_CHAR = "matriz de carácter";
 Blockly.Msg.ARD_TYPE_CHILDBLOCKMISSING = "bloque hijo perdido";
 Blockly.Msg.ARD_TYPE_DECIMAL = "decimal (float)";
 Blockly.Msg.ARD_TYPE_LONG = "número entero largo (long)";

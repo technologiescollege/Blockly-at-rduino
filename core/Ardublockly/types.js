@@ -97,6 +97,12 @@ Blockly.Types.ARRAY = new Blockly.Type({
   typeMsgName: 'ARD_TYPE_ARRAY',
   compatibleTypes: []
 });
+/** Array/List of character. */
+Blockly.Types.ARRAY_CHAR = new Blockly.Type({
+  typeId: 'ArrayChar',
+  typeMsgName: 'ARD_TYPE_ARRAY_CHAR',
+  compatibleTypes: []
+});
 
 /** Null indicate there is no type. */
 Blockly.Types.NULL = new Blockly.Type({
@@ -160,6 +166,10 @@ Blockly.Types.VOLATIL_NUMBER.addCompatibleTypes([
     Blockly.Types.LARGE_NUMBER,
     Blockly.Types.UNS_NUMBER,
     Blockly.Types.NUMBER]);
+    
+Blockly.Types.ARRAY_CHAR.addCompatibleTypes([
+    Blockly.Types.CHARACTER,
+    Blockly.Types.TEXT]);
 
 /**
  * Adds another type to the Blockly.Types collection.

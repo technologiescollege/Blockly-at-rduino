@@ -517,12 +517,14 @@ Blockly.Arduino.getArduinoType_ = function(typeBlockly) {
       return 'String';
     case Blockly.Types.CHARACTER.typeId:
       return 'char';
+    case Blockly.Types.ARRAY_CHAR.typeId:
+      return 'char*';
     case Blockly.Types.BOOLEAN.typeId:
       return 'boolean';
     case Blockly.Types.NULL.typeId:
       return 'void';
     case Blockly.Types.ARRAY.typeId:
-    	return Blockly.Arduino.getArduinoType_(typeBlockly.arrayType);
+      return Blockly.Arduino.getArduinoType_(typeBlockly.arrayType);
     case Blockly.Types.UNDEF.typeId:
       return 'undefined';
     case Blockly.Types.CHILD_BLOCK_MISSING.typeId:
