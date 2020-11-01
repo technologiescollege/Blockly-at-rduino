@@ -166,6 +166,42 @@ Blockly.Arduino.stendhal_sound_sensor = function() {
   return [code, Blockly.Arduino.ORDER_ATOMIC];
 };
 
+Blockly.Arduino['stendhal_ds18b20_search'] = function() {
+  var ds18b20_pin = this.getFieldValue('ds18b20_pin');
+  var addr = this.getFieldValue('address');
+  Blockly.Arduino.includes_['ds18b20_include'] = '#include <OneWire.h>';
+  Blockly.Arduino.definitions_['ds18b20_def'] = 'OneWire ds18b20('+ds18b20_pin+'); // on pin'+ds18b20_pin+' (a 4.7K resistor is necessary)\n'
+  Blockly.Arduino.definitions_['ds18b20_def_'+addr] = 'byte addr_ds18b20_' + addr + '['+addr+'];\n';
+  var code = 'ds18b20.search(addr_ds18b20_' + addr + ')';
+  return [code, Blockly.Arduino.ORDER_ATOMIC];
+};
+
+Blockly.Arduino['stendhal_ds18b20_temp'] = function() {
+  var addr = this.getFieldValue('address');
+  Blockly.Arduino.definitions_['ds_temp'] =
+	'float dstemp(byte addr[]) {\n'
+	+ '  byte data[12],i;\n'
+	+ '   ds18b20.reset();\n'
+    + '   ds18b20.select(addr);\n'
+    + '   ds18b20.write(0x44,0);//start conversion\n'
+    + '   delay(1000);     // maybe 750ms is enough, maybe not  \n'
+    + '   ds18b20.reset();\n'
+    + '   ds18b20.select(addr);    \n'
+    + '   ds18b20.write(0xBE);         // Read Scratchpad\n'
+    + '   for ( i = 0; i < 9; i++) {           // we need 9 bytes\n'
+    + '    data[i] = ds18b20.read();\n'
+    + '   }\n'
+    + '   int16_t raw = (data[1] << 8) | data[0];\n'
+    + '   byte cfg = (data[4] & 0x60);\n'
+    + '   if (cfg == 0x00) raw = raw & ~7;  // 9 bit resolution, 93.75 ms\n'
+    + '   else if (cfg == 0x20) raw = raw & ~3; // 10 bit res, 187.5 ms\n'
+    + '   else if (cfg == 0x40) raw = raw & ~1; // 11 bit res, 375 ms\n'
+    + '   return (float)raw / 16.0;\n'
+	+ '}';
+  var code = 'dstemp('+addr+')';
+  return [code, Blockly.Arduino.ORDER_ATOMIC];
+};
+
 Blockly.Arduino.stendhal_pir_motion_sensor = function() {
   var dropdown_pin = this.getFieldValue('PIN');
   Blockly.Arduino.setups_['setup_input_'+dropdown_pin] = 'pinMode('+dropdown_pin+', INPUT);';

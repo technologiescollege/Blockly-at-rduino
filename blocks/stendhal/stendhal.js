@@ -198,7 +198,7 @@ Blockly.Blocks['stendhal_rgb_led'] = {
   }
 };
 
-Blockly.Blocks.stendhal_LED_PWM_validator = {
+Blockly.Blocks['stendhal_LED_PWM_validator'] = {
   init: function() {
     this.setColour(Blockly.Blocks.stendhal.HUE);
     this.setHelpUrl(Blockly.Msg.STENDHAL_LED_PWM_HELPURL);
@@ -426,6 +426,39 @@ Blockly.Blocks['stendhal_sound_sensor'] = {
         .appendField(new Blockly.FieldTextInput('',  Blockly.Arduino.pinAnalogValidator), 'PIN');
     this.setOutput(true, 'Number');
     this.setTooltip(Blockly.Msg.STENDHAL_INOUT_SOUND_TOOLTIP);
+  }
+};
+
+
+Blockly.Blocks['stendhal_ds18b20_search'] = {
+  init: function() {
+    this.appendDummyInput()
+    	.setAlign(Blockly.ALIGN_LEFT)
+		.appendField(Blockly.Msg.STENDHAL_INOUT_DS18B20_TEXT1)
+        .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/stendhal/ds18b20.svg', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize))
+	    .appendField(Blockly.Msg.STENDHAL_INOUT_DS18B20_INPUT1)
+		.appendField(new Blockly.FieldTextInput('11',  Blockly.Arduino.pinDualValidator), 'ds18b20_pin')
+	    .appendField(Blockly.Msg.STENDHAL_INOUT_DS18B20_INPUT2)
+		.appendField(new Blockly.FieldTextInput('1',  Blockly.Arduino.pinDualValidator), 'address');
+	this.setOutput(true, 'Boolean');
+	this.setTooltip(Blockly.Msg.STENDHAL_INOUT_DS18B20_TOOLTIP1);
+    this.setColour(Blockly.Blocks.stendhal.HUE);
+    this.setHelpUrl(Blockly.Msg.STENDHAL_INOUT_DS18B20_HELPURL);
+  }
+};
+
+Blockly.Blocks['stendhal_ds18b20_temp'] = {
+  init: function() {
+    this.appendDummyInput()
+    	.setAlign(Blockly.ALIGN_LEFT)
+		.appendField(Blockly.Msg.STENDHAL_INOUT_DS18B20_TEXT2)
+        .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/stendhal/ds18b20.svg', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize))
+		.appendField(Blockly.Msg.STENDHAL_INOUT_DS18B20_INPUT2)
+		.appendField(new Blockly.FieldTextInput('1',  Blockly.Arduino.pinDualValidator), 'address');
+	this.setOutput(true, 'Number');
+	this.setTooltip(Blockly.Msg.STENDHAL_INOUT_DS18B20_TOOLTIP2);
+    this.setColour(Blockly.Blocks.stendhal.HUE);
+    this.setHelpUrl(Blockly.Msg.STENDHAL_INOUT_DS18B20_HELPURL);
   }
 };
 

@@ -49,6 +49,12 @@ Blockly.Blocks.stendhal_light_sensor.getBlockType = function() {
 Blockly.Blocks.stendhal_sound_sensor.getBlockType = function() {
 	return Blockly.Types.NUMBER;
 };
+Blockly.Blocks.stendhal_ds18b20_search.getBlockType = function() {
+	return Blockly.Types.BOOLEAN;
+};
+Blockly.Blocks.stendhal_ds18b20_temp.getBlockType = function() {
+	return Blockly.Types.DECIMAL;
+};
 Blockly.Blocks.stendhal_pir_motion_sensor.getBlockType = function() {
 	return Blockly.Types.BOOLEAN;
 };

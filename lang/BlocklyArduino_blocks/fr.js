@@ -296,7 +296,7 @@ Blockly.Msg.CAT_NULL = "libre"; //added 8/10/2017
 Blockly.Msg.CAT_HX711 = "capteur de poids"; //added 23/10/2017
 
 Blockly.Msg.CAT_MESURE = "Appareils de mesure"; //added 22/11/2017
-Blockly.Msg.CAT_DS18B20 = "Thermomètre DS18B20"; //added 15/09/2017
+Blockly.Msg.CAT_DS18B20 = "Thermistance DS18B20"; //added 15/09/2017
 Blockly.Msg.CAT_TSL2561 = "Luxmètre"; //added november 21th 2017
 
 Blockly.Msg.CAT_ACTIONNEURS = "actionneurs"; //added 03/11/2017
@@ -411,9 +411,9 @@ Blockly.Msg.CAT_STENDHAL_COMM_LCD = "  * * Ecran LCD";
 Blockly.Msg.CAT_STENDHAL_COMM_LED = "  * * LED";
 Blockly.Msg.CAT_STENDHAL_COMM_BLUETOOTH = "  * * Bluetooth";
 Blockly.Msg.CAT_STENDHAL_COMM_USB = "  * * USB";
-Blockly.Msg.CAT_STENDHAL_BOARD = " - GERER CARTE MERE"
-Blockly.Msg.CAT_STENDHAL_TIME = "  * *  Horloge"
-Blockly.Msg.CAT_STENDHAL_MEMORY = "  * *  Mémoire"
+Blockly.Msg.CAT_STENDHAL_BOARD = " - GERER CARTE MERE";
+Blockly.Msg.CAT_STENDHAL_TIME = "  * *  Horloge";
+Blockly.Msg.CAT_STENDHAL_MEMORY = "  * *  Mémoire";
 
 //**********************************Dropdown menus messages***********************************************
 
@@ -2931,6 +2931,13 @@ Blockly.Msg.STENDHAL_INOUT_SOUND_HELPURL = "http://www.adafruit.com/";
 Blockly.Msg.STENDHAL_INOUT_SOUND_TEXT = "la valeur analogique du  capteur de son";
 Blockly.Msg.STENDHAL_INOUT_SOUND_INPUT = "connecté sur la broche N°";
 Blockly.Msg.STENDHAL_INOUT_SOUND_TOOLTIP = "capteur analogique, le bloc renvoie une valeur comprise entre 0 et 1023";
+Blockly.Msg.STENDHAL_INOUT_DS18B20_TEXT1 = "un capteur DS18B20";
+Blockly.Msg.STENDHAL_INOUT_DS18B20_INPUT1 = "est présent sur la broche";
+Blockly.Msg.STENDHAL_INOUT_DS18B20_INPUT2 = "à l'adresse";
+Blockly.Msg.STENDHAL_INOUT_DS18B20_TOOLTIP1 = "test si un capteur de température est présent, renvoie 'vrai' si présent";
+Blockly.Msg.STENDHAL_INOUT_DS18B20_HELPURL = "https://www.carnetdumaker.net/articles/mesurer-une-temperature-avec-un-capteur-1-wire-ds18b20-et-une-carte-arduino-genuino/";
+Blockly.Msg.STENDHAL_INOUT_DS18B20_TEXT2 = "la valeur du capteur DS18B20";
+Blockly.Msg.STENDHAL_INOUT_DS18B20_TOOLTIP2 = "renvoie la valeur du capteur de température, en nombre flottant";
 Blockly.Msg.STENDHAL_INOUT_PIR_HELPURL = "http://www.adafruit.com/";
 Blockly.Msg.STENDHAL_INOUT_PIR_TEXT = "l'état du détecteur de mouvement";
 Blockly.Msg.STENDHAL_INOUT_PIR_INPUT = "connecté sur la broche N°";

@@ -504,11 +504,14 @@ html[dir="RTL"] #select_all {
 }
 
 .blocklyToolboxDiv {
-	background-color: #0333 !important;
+	background-color: #FFFFFF !important;
+	box-shadow: 5px 5px 5px grey !important;
 }
 
 .blocklyFlyoutBackground {
-	fill: #0333 !important;
+	fill: #FFFFFF !important;
+	fill-opacity: 1;
+	box-shadow: 5px 5px 5px grey !important;
 }
 
 .blocklyTreeRoot {

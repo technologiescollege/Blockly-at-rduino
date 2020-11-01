@@ -1309,8 +1309,8 @@
 				<block type="stendhal_temperature_sensor"></block>
 				<block type="stendhal_light_sensor"></block>
 				<block type="stendhal_sound_sensor"></block>
-				<block type="ds18b20_search1"></block>
-				<block type="ds18b20_temp1"></block>
+				<block type="stendhal_ds18b20_search"></block>
+				<block type="stendhal_ds18b20_temp"></block>
 				<block type="tsl2561_init"></block>
 				<block type="tsl2561_read"></block>
 				<block type="stendhal_moisture_sensor"></block>
