@@ -241,8 +241,9 @@ BlocklyDuino.ExampleWiring = function () {
             // ExampleTest = ExampleTest.replace('.xml', '');
             // ExampleTest = ExampleTest.replace('.B@', '');
             ExampleTest = ExampleTest.slice(0, -4);
-            $('#wiringModal_picture').prepend("<img src='" + ExampleTest + ".jpg' id='wiringModalImg' width=100% height=auto>");
-            $('#arduino_card_miniPicture').attr('src', ExampleTest + '.jpg width="36px"');
+            $('#wiringModal_picture').prepend("<img src='" + ExampleTest + ".jpg' id='wiringModalImg' width=100% height=auto/>");
+            $('#arduino_card_miniPicture').attr('src', ExampleTest + '.jpg');
+            $('#arduino_card_miniPicture').attr('style', "max-width: 100%; height: auto;");
             $('#arduino_card_picture').attr('src', ExampleTest + '_wiring.jpg');
         } else if ((ExampleTest === '') && (KitTestResult === 'kit')) {
             //c'est donc un kit

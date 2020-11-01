@@ -35,8 +35,7 @@ var BlocklyLevel = 'none';
  * Populate the currently selected pane with content generated from the blocks.
  */
 BlocklyDuino.renderContent = function() {
-    var content = $('#content_' + BlocklyDuino.selectedTab);
-	
+    var content = $('#content_' + BlocklyDuino.selectedTab);	
 	if (content.prop('id') == 'content_blocks') {
 		// If the workspace was changed by the XML tab, Firefox will have
 		// performed an incomplete rendering due to Blockly being invisible. Rerender.
