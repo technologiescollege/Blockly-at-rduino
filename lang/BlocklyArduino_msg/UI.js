@@ -1,3 +1,3 @@
 var BlocklyArduinoMSG = {
-  span_version: "<i>version 23-10-2020 - v3.2.8</i>",
+  span_version: "<i>version 01-11-2020 - v3.2.9</i>",
 };
