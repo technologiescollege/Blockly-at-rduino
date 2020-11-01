@@ -228,6 +228,7 @@ BlocklyDuino.ExampleWiring = function () {
     var ExampleTest = BlocklyDuino.getStringParamFromUrl('url', '');
     var KitTest = BlocklyDuino.getStringParamFromUrl('card', '');
     var KitTestResult = KitTest.slice(0, 3);
+    // ni exemple ni kit
     if ((ExampleTest === '') && (KitTestResult !== 'kit')) {
         $("#btn_wiring").addClass("hidden");
         $("#menu_21").addClass("hidden");
@@ -235,13 +236,16 @@ BlocklyDuino.ExampleWiring = function () {
     } else {
         $("#btn_wiring").removeClass("hidden");
         $("#menu_21").removeClass("hidden");
+        // exemple mais pas kit
         if ((ExampleTest !== '') && (KitTestResult !== 'kit')) {
-            ExampleTest = ExampleTest.replace('.xml', '');
-            ExampleTest = ExampleTest.replace('.B@', '');
-            $('#wiringModal_picture').prepend("<img src='" + ExampleTest + ".jpg' id='wiringModalImg'/>");
-            $('#arduino_card_miniPicture').attr('src', ExampleTest + '.jpg width=36px');
-            $('#arduino_card_picture').attr('src', ExampleTest + '_wiring.jpg width=100% height=auto');
+            // ExampleTest = ExampleTest.replace('.xml', '');
+            // ExampleTest = ExampleTest.replace('.B@', '');
+            ExampleTest = ExampleTest.slice(0, -4);
+            $('#wiringModal_picture').prepend("<img src='" + ExampleTest + ".jpg' id='wiringModalImg' width=100% height=auto>");
+            $('#arduino_card_miniPicture').attr('src', ExampleTest + '.jpg width="36px"');
+            $('#arduino_card_picture').attr('src', ExampleTest + '_wiring.jpg');
         } else if ((ExampleTest === '') && (KitTestResult === 'kit')) {
+            //c'est donc un kit
             $('#wiringModal_picture').prepend("<img src='media/boards/" + KitTest + "_wiring.jpg' id='wiringModalImg' width=100% height=auto/>");
             $("#btn_wiring").removeClass("hidden");
             $("#menu_21").removeClass("hidden");
