@@ -41,7 +41,8 @@ Code.LANGUAGE_NAME = {
 		'ca': 'Català - Valencià',
 		'es': 'Español',
 		'bg': 'Български',
-		'ar': 'العربية'
+		'ar': 'العربية',
+    'pt-br': 'Português do Brasil'
 		};
 
 /**
@@ -57,7 +58,7 @@ Code.getLang = function() {
   var lang = BlocklyDuino.getStringParamFromUrl('lang', '');
   if (Code.LANGUAGE_NAME[lang] === undefined) {
     // Default to English.
-    lang = 'en';
+    lang = 'pt-br';
   }
   return lang;
 };
