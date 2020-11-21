@@ -151,7 +151,7 @@ var MSG = {
   span_menu_44:"Acessibilidade",
   span_menu_441:"Cores",
   span_menu_442:"Fonte",
-  span_menu_5:"Socorro",
+  span_menu_5:"Ajuda",
   span_menu_51:"Vídeos",
   span_menu_52:"Wiki",
   span_menu_53:"Fórum",
