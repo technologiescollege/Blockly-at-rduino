@@ -41,7 +41,8 @@ Code.LANGUAGE_NAME = {
 		'ca': 'Català - Valencià',
 		'es': 'Español',
 		'bg': 'Български',
-		'ar': 'العربية'
+		'ar': 'العربية',
+    'pt-br': 'Português do Brasil'
 		};
 
 /**
