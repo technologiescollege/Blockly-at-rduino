@@ -55,7 +55,7 @@ Blockly.Arduino.grove_gbk_piezo_buzzer = function() {
 //3.Grove - OLED Display 0.96": 128×64 dot resolution High brightness,self-emission and high contrast ratio Big screen on a compact design Low power consumption.
 Blockly.Arduino.grove_gbk_oled = function() {  
   Blockly.Arduino.includes_["include_u8g"] = '#include <U8x8lib.h>';
-  Blockly.Arduino.definitions_["define_u8g"] = 'U8X8_SSD1306_128X64_ALT0_HW_I2C u8x8(/* reset=*/ U8X8_PIN_NONE);';
+  Blockly.Arduino.definitions_["define_u8g"] = 'U8X8_SSD1306_128X64_NONAME_SW_I2C u8x8(SCL,SDA, U8X8_PIN_NONE);';
   Blockly.Arduino.setups_["setup_u8g"] = 'u8x8.begin();\n'
 	+ '  u8x8.setFlipMode(1);\n'
     + '  u8x8.setFont(u8x8_font_chroma48medium8_r);\n';
