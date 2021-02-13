@@ -1978,6 +1978,11 @@
 				<block type="grove_TF_Mini_LiDAR_strength"></block>
 				<block type="grove_TF_Mini_LiDAR_chip_temp"></block>
 			</category>
+			<category name="CAT_GROVE_VL53L0X" colour="#8ec31f">
+				<block type="grove_VL53L0X_test"></block>
+				<block type="grove_VL53L0X_start_and_report"></block>
+				<!-- <block type="grove_VL53L0X_stop_measure"></block> -->
+			</category>
 		</category>
 		<category name="CAT_GROVE_OUT" colour="#8ec31f">
 			<block type="grove_led"></block>

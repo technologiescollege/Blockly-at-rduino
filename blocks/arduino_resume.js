@@ -104,6 +104,7 @@ head.load(
 "blocks/seeed/grove/grove.js",
 "blocks/seeed/grove_beginner_kit/grove_beginner_kit.js",
 "blocks/seeed/grove_TF_Mini_LiDAR/grove_TF_Mini_LiDAR.js",
+"blocks/seeed/grove_VL53L0X/grove_VL53L0X.js",
 "blocks/seeed/seeed_music_shield_2.2/seeed_music_shield_2.2.js",
 "blocks/sensor_actuator/sensor_actuator.js",
 "blocks/servo/servo.js",

@@ -39,7 +39,7 @@ Blockly.Blocks.Sharp_IR_attach = {
     this.appendDummyInput("")
         .setAlign(Blockly.ALIGN_RIGHT)
         .appendField(Blockly.Msg.Sharp_IR_MODEL)
-        .appendField(new Blockly.FieldDropdown([["GP2Y0A02YK0F", "20150"], ["GP2Y0A21YK", "1080"], ["GP2Y0A710K0F", "100500"], ["GP2YA41SK0F" , "430"]]), "SHARP_IR_MODEL");
+        .appendField(new Blockly.FieldDropdown([["GP2Y0A41SK0F"], ["GP2Y0A21YK0F"], ["GP2Y0A02YK0F"]]), "SHARP_IR_MODEL");
     this.appendDummyInput("")
         .setAlign(Blockly.ALIGN_RIGHT)
         .appendField(Blockly.Msg.Sharp_IR_ATTACH2)

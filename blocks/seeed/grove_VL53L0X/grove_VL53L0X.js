@@ -7,39 +7,43 @@ goog.require('Blockly.Types');
 
 Blockly.Blocks['grove_VL53L0X_test'] = {
   init: function() {
-	this.setHelpUrl(Blockly.Msg.grove_TF_Mini_LiDAR_MISC_HELPURL);
-    this.setColour(Blockly.Blocks.grove_TF_Mini_LiDAR.HUE);
+    this.setColour(Blockly.Blocks.grove_VL53L0X.HUE);
     this.appendDummyInput("")
-        .appendField(Blockly.Msg.grove_TF_Mini_LiDAR_distance_TITLE);
+        .appendField(Blockly.Msg.grove_VL53L0X_test_TITLE);
     this.appendDummyInput()
         .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/seeed/grove_VL53L0X/grove_VL53L0X.jpg', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize));
-    this.setOutput(true, 'Boolean');
-    this.setTooltip(Blockly.Msg.grove_TF_Mini_LiDAR_distance_TOOLTIP);
+    this.setInputsInline(true);
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setTooltip(Blockly.Msg.grove_VL53L0X_test_TOOLTIP);
+	this.setHelpUrl(Blockly.Msg.grove_VL53L0X_MISC_HELPURL);
   }
 };
 
-Blockly.Blocks['grove_VL53L0X_start_measure'] = {
+Blockly.Blocks['grove_VL53L0X_start_and_report'] = {
   init: function() {
-	this.setHelpUrl(Blockly.Msg.grove_TF_Mini_LiDAR_MISC_HELPURL);
-    this.setColour(Blockly.Blocks.grove_TF_Mini_LiDAR.HUE);
+    this.setColour(Blockly.Blocks.grove_VL53L0X.HUE);
     this.appendDummyInput("")
-        .appendField(Blockly.Msg.grove_TF_Mini_LiDAR_strength_TITLE);
+        .appendField(Blockly.Msg.grove_VL53L0X_start_and_report_TITLE);
     this.appendDummyInput()
         .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/seeed/grove_VL53L0X/grove_VL53L0X.jpg', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize));
     this.setOutput(true, 'Number');
-    this.setTooltip(Blockly.Msg.grove_TF_Mini_LiDAR_strength_TOOLTIP);
+    this.setTooltip(Blockly.Msg.grove_VL53L0X_start_and_report_TOOLTIP);
+	this.setHelpUrl(Blockly.Msg.grove_VL53L0X_MISC_HELPURL);
   }
 };
 
-Blockly.Blocks['grove_VL53L0X_stop_measure'] = {
-  init: function() {
-	this.setHelpUrl(Blockly.Msg.grove_TF_Mini_LiDAR_MISC_HELPURL);
-    this.setColour(Blockly.Blocks.grove_TF_Mini_LiDAR.HUE);
-    this.appendDummyInput("")
-        .appendField(Blockly.Msg.grove_TF_Mini_LiDAR_chip_temp_TITLE);
-    this.appendDummyInput()
-        .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/seeed/grove_VL53L0X/grove_VL53L0X.jpg', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize));
-    this.setOutput(true, 'Number');
-    this.setTooltip(Blockly.Msg.grove_TF_Mini_LiDAR_chip_temp_TOOLTIP);
-  }
-};
+// Blockly.Blocks['grove_VL53L0X_stop_measure'] = {
+  // init: function() {
+    // this.setColour(Blockly.Blocks.grove_VL53L0X.HUE);
+    // this.appendDummyInput("")
+        // .appendField(Blockly.Msg.grove_VL53L0X_stop_measure_TITLE);
+    // this.appendDummyInput()
+        // .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/seeed/grove_VL53L0X/grove_VL53L0X.jpg', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize));
+    // this.setInputsInline(true);
+    // this.setPreviousStatement(true, null);
+    // this.setNextStatement(true, null);
+    // this.setTooltip(Blockly.Msg.grove_VL53L0X_stop_measure_TOOLTIP);
+	// this.setHelpUrl(Blockly.Msg.grove_VL53L0X_MISC_HELPURL);
+  // }
+// };

@@ -55,6 +55,7 @@ head.load(
 "generators/arduino/grove.js",
 "generators/arduino/grove_beginner_kit.js",
 "generators/arduino/grove_TF_Mini_LiDAR.js",
+"generators/arduino/grove_VL53L0X.js",
 "generators/arduino/html.js",
 "generators/arduino/HX711.js",
 "generators/arduino/I2C.js",

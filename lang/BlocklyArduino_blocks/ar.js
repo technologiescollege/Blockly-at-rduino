@@ -163,6 +163,7 @@ Blockly.Msg.CAT_GROVE_BEGINNER_KIT = "Grove Beginner Kit";  //added september 10
 Blockly.Msg.CAT_GROVE_BEGINNER_KIT_IN = Blockly.Msg.CAT_GROVE_IN;  //added september 10th 2020
 Blockly.Msg.CAT_GROVE_BEGINNER_KIT_OUT = Blockly.Msg.CAT_GROVE_OUT;  //added september 10th 2020
 Blockly.Msg.CAT_GROVE_MINI_LiDAR = "> mini LIDAR";  //added february 11th 2021
+Blockly.Msg.CAT_GROVE_VL53L0X = "> distance 'Time of Flight' VL53L0X";  //added february 13th 2021
 
 Blockly.Msg.CAT_TECHNOZONE =  "TechnoZone51";
 Blockly.Msg.CAT_TECHNOZONE_IN =  "- أجهزة الاستشعار";
@@ -2773,3 +2774,12 @@ Blockly.Msg.grove_TF_Mini_LiDAR_strength_TITLE = "signal strenght";
 Blockly.Msg.grove_TF_Mini_LiDAR_strength_TOOLTIP = "send back signal strenght to qualify quality";
 Blockly.Msg.grove_TF_Mini_LiDAR_chip_temp_TITLE = "sensor internal temperature";
 Blockly.Msg.grove_TF_Mini_LiDAR_chip_temp_TOOLTIP = "send back signal internal temperature of the microcontroller on sensor";
+
+//******** Grove Time of Flight Distance Sensor VL53L0X 13/02/2021
+Blockly.Msg.grove_VL53L0X_MISC_HELPURL = "https://wiki.seeedstudio.com/Grove-Time_of_Flight_Distance_Sensor-VL53L0X/";
+Blockly.Msg.grove_VL53L0X_test_TITLE = "sensor test";
+Blockly.Msg.grove_VL53L0X_test_TOOLTIP = "use serial connection to send back message";
+Blockly.Msg.grove_VL53L0X_start_and_report_TITLE = "distance mesured (in mm)";
+Blockly.Msg.grove_VL53L0X_start_and_report_TOOLTIP = "send back distance value, in mm. /!\ Recommed measure distance 30mm-1000mm /!\ ";
+Blockly.Msg.grove_VL53L0X_stop_measure_TITLE = "stop continuous mesure mode";
+Blockly.Msg.grove_VL53L0X_stop_measure_TOOLTIP = "if the stop request occurs during a range measurement, then the measurement is completed before stopping.";

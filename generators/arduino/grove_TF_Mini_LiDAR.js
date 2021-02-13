@@ -10,27 +10,11 @@ Blockly.Arduino.grove_TF_Mini_LiDAR_distance = function() {
   "#include <TFLidar.h>";
   
    Blockly.Arduino.definitions_["defines_grove_TF_Mini_LiDAR"] =
-  "#define USETFMIN\n" +
-  "#define SERIAL Serial\n" +
-  "#if defined(SEEED_XIAO_M0)\n" +
-  "  #define uart  Serial1\n" +
-  "#elif defined(SEEED_WIO_TERMINAL)\n" +
-  "    #define uart  Serial1\n" +
-  "#else\n" +
-  "    SoftwareSerial uart(2, 3);\n" +
-  "#endif\n" +
-  "#ifdef USETFLUNA\n" +
-  "TFLuna SeeedTFLuna;\n" +
-  "TFLidar SeeedTFLidar(&SeeedTFLuna);\n" +
-  "#endif\n" +
-  "#ifdef USETFMINI\n" +
+  "SoftwareSerial uart(2, 3);\n" +
   "TFMini SeeedTFMini;\n" +
-  "TFLidar SeeedTFLidar(&SeeedTFMini);\n" +
-  "#endif\n";
+  "TFLidar SeeedTFLidar(&SeeedTFMini);\n";
   
   Blockly.Arduino.setups_['setup_grove_TF_Mini_LiDAR'] = 
-  "SERIAL.begin(9600);\n" +
-  "while(!Serial);\n" +
   "SeeedTFLidar.begin(&uart,115200);\n";
   
   var code = "SeeedTFLidar.get_distance()";    
@@ -42,27 +26,11 @@ Blockly.Arduino.grove_TF_Mini_LiDAR_strength = function() {
   "#include <TFLidar.h>";
   
    Blockly.Arduino.definitions_["defines_grove_TF_Mini_LiDAR"] =
-  "#define USETFMIN\n" +
-  "#define SERIAL Serial\n" +
-  "#if defined(SEEED_XIAO_M0)\n" +
-  "  #define uart  Serial1\n" +
-  "#elif defined(SEEED_WIO_TERMINAL)\n" +
-  "    #define uart  Serial1\n" +
-  "#else\n" +
-  "    SoftwareSerial uart(2, 3);\n" +
-  "#endif\n" +
-  "#ifdef USETFLUNA\n" +
-  "TFLuna SeeedTFLuna;\n" +
-  "TFLidar SeeedTFLidar(&SeeedTFLuna);\n" +
-  "#endif\n" +
-  "#ifdef USETFMINI\n" +
+  "SoftwareSerial uart(2, 3);\n" +
   "TFMini SeeedTFMini;\n" +
-  "TFLidar SeeedTFLidar(&SeeedTFMini);\n" +
-  "#endif\n";
+  "TFLidar SeeedTFLidar(&SeeedTFMini);\n";
   
   Blockly.Arduino.setups_['setup_grove_TF_Mini_LiDAR'] = 
-  "SERIAL.begin(9600);\n" +
-  "while(!Serial);\n" +
   "SeeedTFLidar.begin(&uart,115200);\n";
   
   var code = "SeeedTFLidar.get_strength()";
@@ -74,27 +42,11 @@ Blockly.Arduino.grove_TF_Mini_LiDAR_chip_temp = function() {
   "#include <TFLidar.h>";
   
    Blockly.Arduino.definitions_["defines_grove_TF_Mini_LiDAR"] =
-  "#define USETFMIN\n" +
-  "#define SERIAL Serial\n" +
-  "#if defined(SEEED_XIAO_M0)\n" +
-  "  #define uart  Serial1\n" +
-  "#elif defined(SEEED_WIO_TERMINAL)\n" +
-  "    #define uart  Serial1\n" +
-  "#else\n" +
-  "    SoftwareSerial uart(2, 3);\n" +
-  "#endif\n" +
-  "#ifdef USETFLUNA\n" +
-  "TFLuna SeeedTFLuna;\n" +
-  "TFLidar SeeedTFLidar(&SeeedTFLuna);\n" +
-  "#endif\n" +
-  "#ifdef USETFMINI\n" +
+  "SoftwareSerial uart(2, 3);\n" +
   "TFMini SeeedTFMini;\n" +
-  "TFLidar SeeedTFLidar(&SeeedTFMini);\n" +
-  "#endif\n";
+  "TFLidar SeeedTFLidar(&SeeedTFMini);\n";
   
   Blockly.Arduino.setups_['setup_grove_TF_Mini_LiDAR'] = 
-  "SERIAL.begin(9600);\n" +
-  "while(!Serial);\n" +
   "SeeedTFLidar.begin(&uart,115200);\n";
   
   var code = "SeeedTFLidar.get_chip_temperature()";
