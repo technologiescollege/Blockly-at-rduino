@@ -1,0 +1,1 @@
+﻿Blockly.Blocks.ADXL362.HUE = "#184EA4";

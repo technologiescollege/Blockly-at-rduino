@@ -164,8 +164,9 @@ Blockly.Msg.CAT_GROVE_LCD = " - écrans LCD";
 Blockly.Msg.CAT_GROVE_LCD2 = " Ecrans LCD";
 Blockly.Msg.CAT_GROVE_COMM = " - communication";
 Blockly.Msg.CAT_GROVE_BEGINNER_KIT = "Grove Beginner Kit";  //added september 10th 2020
-Blockly.Msg.CAT_GROVE_BEGINNER_KIT_IN = Blockly.Msg.CAT_GROVE_IN;  //added september 10th 2020
+Blockly.Msg.CAT_GROVE_BEGINNER_KIT_IN = Blockly.Msg.CAT_GROVE_IN;  //added september 10th 
 Blockly.Msg.CAT_GROVE_BEGINNER_KIT_OUT = Blockly.Msg.CAT_GROVE_OUT;  //added september 10th 2020
+Blockly.Msg.CAT_GROVE_MINI_LiDAR = "> mini LIDAR";  //added february 11th 2021
 
 Blockly.Msg.CAT_TECHNOZONE = "TechnoZone51";  //added march 11th 2015
 Blockly.Msg.CAT_TECHNOZONE_IN = " - capteurs";
@@ -3034,3 +3035,13 @@ Blockly.Msg.STENDHAL_STEPPER_STEP2 = "de";
 Blockly.Msg.STENDHAL_STEPPER_STEP3 = "pas dans le sens horaire.";
 Blockly.Msg.STENDHAL_STEPPER_TOOLTIP = "Réglage par défaut pour le modèle 24BYJ48. La vitesse est réglable de 1 à 9 tr/min. Le nombre de pas par tour est 3072";
 Blockly.Msg.STENDHAL_STEPPER_HELPURL = "http://www.arduino.cc/en/Reference/StepperConstructor";
+
+
+//******** min LiDAR Grove 11/02/2021
+Blockly.Msg.grove_TF_Mini_LiDAR_MISC_HELPURL = "https://wiki.seeedstudio.com/Grove-TF_Mini_LiDAR/";
+Blockly.Msg.grove_TF_Mini_LiDAR_distance_TITLE = "valeur de la distance";
+Blockly.Msg.grove_TF_Mini_LiDAR_distance_TOOLTIP = "la distance doit être comprise entre 30cm et 2 m";
+Blockly.Msg.grove_TF_Mini_LiDAR_strength_TITLE = "force du signal";
+Blockly.Msg.grove_TF_Mini_LiDAR_strength_TOOLTIP = "renvoie une valeur déterminant la qualité de l'information";
+Blockly.Msg.grove_TF_Mini_LiDAR_chip_temp_TITLE = "température interne du capteur";
+Blockly.Msg.grove_TF_Mini_LiDAR_chip_temp_TOOLTIP = "renvoie la température interne du micrcontrôleur du capteur";

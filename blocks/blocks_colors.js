@@ -34,6 +34,7 @@ Blockly.Blocks.ethernet.HUE = "#FFCC66";
 Blockly.Blocks.fischertechnik.HUE = "#778E9A";
 Blockly.Blocks.flycam.HUE = "#46C286";
 Blockly.Blocks.grove.HUE = "#8EC31F";
+Blockly.Blocks.grove_TF_Mini_LiDAR.HUE = "#8EC31F";
 Blockly.Blocks.html.HUE = "#F16625";
 Blockly.Blocks.HX711.HUE = "#D9242D";
 Blockly.Blocks.I2C.HUE = "#CC0033";

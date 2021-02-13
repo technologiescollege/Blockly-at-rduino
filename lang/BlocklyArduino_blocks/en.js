@@ -166,6 +166,7 @@ Blockly.Msg.CAT_GROVE_COMM = "Communication";
 Blockly.Msg.CAT_GROVE_BEGINNER_KIT = "Grove Beginner Kit";  //added september 10th 2020
 Blockly.Msg.CAT_GROVE_BEGINNER_KIT_IN = Blockly.Msg.CAT_GROVE_IN;  //added september 10th 2020
 Blockly.Msg.CAT_GROVE_BEGINNER_KIT_OUT = Blockly.Msg.CAT_GROVE_OUT;  //added september 10th 2020
+Blockly.Msg.CAT_GROVE_MINI_LiDAR = "> mini LIDAR";  //added february 11th 2021
 
 Blockly.Msg.CAT_TECHNOZONE = "TechnoZone51";  //added march 11th 2015
 Blockly.Msg.CAT_TECHNOZONE_IN = "sensors";
@@ -2825,3 +2826,12 @@ Blockly.Msg.GROVE_BK_INOUT_PRESSURE_TOOLTIP = 'get back value of temperature and
 Blockly.Msg.GROVE_BK_INOUT_GYRO_TEXT1 = 'acceleration';
 Blockly.Msg.GROVE_BK_INOUT_GYRO_TEXT2 = 'axis';
 Blockly.Msg.GROVE_BK_INOUT_GYRO_TOOLTIP = "get back acceleration value from sensor, in 3 dimensions";
+
+//******** mini LiDAR Grove 11/02/2021
+Blockly.Msg.grove_TF_Mini_LiDAR_MISC_HELPURL = "https://wiki.seeedstudio.com/Grove-TF_Mini_LiDAR/";
+Blockly.Msg.grove_TF_Mini_LiDAR_distance_TITLE = "distance value";
+Blockly.Msg.grove_TF_Mini_LiDAR_distance_TOOLTIP = "send back distance value, must be between 30cm and 2 m";
+Blockly.Msg.grove_TF_Mini_LiDAR_strength_TITLE = "signal strenght";
+Blockly.Msg.grove_TF_Mini_LiDAR_strength_TOOLTIP = "send back signal strenght to qualify quality";
+Blockly.Msg.grove_TF_Mini_LiDAR_chip_temp_TITLE = "sensor internal temperature";
+Blockly.Msg.grove_TF_Mini_LiDAR_chip_temp_TOOLTIP = "send back signal internal temperature of the microcontroller on sensor";
