@@ -65,6 +65,7 @@ Blockly.Blocks.null.HUE = "#00979D";
 Blockly.Blocks.peguino_actuators.HUE = "#32b2fc";
 Blockly.Blocks.peguino_sensors.HUE = "#32b2fc";
 Blockly.Blocks.petitbot.HUE = "#F6D52C";
+Blockly.Blocks.pulseSensor.HUE = "#B395CC";
 Blockly.Blocks.QTR_1RC.HUE = "#00138B";
 Blockly.Blocks.RF433.HUE = "#0152AB";
 Blockly.Blocks.RFID.HUE = "#9BACB4";

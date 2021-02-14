@@ -46,6 +46,7 @@ head.load(
 "blocks/null/blocks_typing.js",
 "blocks/otto/blocks_typing.js",
 "blocks/petitbot/blocks_typing.js",
+"blocks/pulseSensor/blocks_typing.js",
 "blocks/QTR-1RC/blocks_typing.js",
 "blocks/RF433/blocks_typing.js",
 "blocks/RFID/blocks_typing.js",

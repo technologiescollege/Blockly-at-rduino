@@ -503,6 +503,15 @@
 			</value>
 		</block>
 	</category>
+	<category name="CAT_PULSESENSOR" colour="#B395CC">
+		<block type="pulseSensor_check">
+			<value name="PIN">
+				<shadow type="math_number">
+					<field name="NUM">0</field>
+				</shadow>
+			</value>
+		</block>
+	</category>
 	<category name="CAT_LCD_SCREEN" colour="#87AD34">
 		<category name="- Grove I2C LCD RGB" colour="#8ec31f">
 				<block type="grove_lcd_rgb_init"></block>
@@ -1974,6 +1983,18 @@
 			<block type="grove_RECEPTEUR_IR"></block>
 			<block type="grove_FIN_COURSE"></block>
 			<category name="CAT_GROVE_MINI_LiDAR" colour="#8ec31f">
+				<block type="grove_TF_Mini_LiDAR_attach">
+					<value name="PIN1">
+						<shadow type="math_number">
+							<field name="NUM">2</field>
+						</shadow>
+					</value>
+					<value name="PIN2">
+						<shadow type="math_number">
+							<field name="NUM">3</field>
+						</shadow>
+					</value>
+				</block>
 				<block type="grove_TF_Mini_LiDAR_distance"></block>
 				<block type="grove_TF_Mini_LiDAR_strength"></block>
 				<block type="grove_TF_Mini_LiDAR_chip_temp"></block>

@@ -384,6 +384,7 @@ Blockly.Msg.CAT_FONCTION_STOCKAGE_EEPROM = "EEPROM";
 Blockly.Msg.CAT_FONCTION_STOCKAGE_SDCARD = "Carte SD";
 
 Blockly.Msg.CAT_CAPACITIVESENSOR = "détection capacitive";
+Blockly.Msg.CAT_PULSESENSOR = "pulsations cardiaques"; //added 14/02/2021
  
 Blockly.Msg.CAT_ESP8266="ESP8266 IdO";
 Blockly.Msg.CAT_esp8266_wifi=" - WiFi";
@@ -442,6 +443,7 @@ Blockly.Msg.STEPPER_COMPONENT = 'stepper';
 Blockly.Msg.NEOPIXEL_COMPONENT = 'Neopixel';
 Blockly.Msg.SERVO_COMPONENT = 'servomoteur';
 Blockly.Msg.SERVO_DEFAULT_NAME = "SERVO";
+Blockly.Msg.LIDAR_DEFAULT_NAME = 'LiDAR';
 Blockly.Msg.SHARP_IR_COMPONENT = 'télémètre';
 
 //**********************************blocks***********************************************
@@ -3039,6 +3041,11 @@ Blockly.Msg.STENDHAL_STEPPER_HELPURL = "http://www.arduino.cc/en/Reference/Stepp
 
 //******** mini LiDAR Grove 11/02/2021
 Blockly.Msg.grove_TF_Mini_LiDAR_MISC_HELPURL = "https://wiki.seeedstudio.com/Grove-TF_Mini_LiDAR/";
+Blockly.Msg.grove_TF_Mini_LiDAR_ATTACH1 = "attacher un télémètre laser";
+Blockly.Msg.grove_TF_Mini_LiDAR_ATTACH2 = "avec l'identifiant";
+Blockly.Msg.grove_TF_Mini_LiDAR_INPUT1 = "sur la broche (fil jaune)";
+Blockly.Msg.grove_TF_Mini_LiDAR_INPUT2 = "sur la broche (fil blanc)";
+Blockly.Msg.grove_TF_Mini_LiDAR_attach_TOOLTIP = "definir les broches du LiDAR pour utiliser le nom de l'objet";
 Blockly.Msg.grove_TF_Mini_LiDAR_distance_TITLE = "valeur de la distance";
 Blockly.Msg.grove_TF_Mini_LiDAR_distance_TOOLTIP = "la distance doit être comprise entre 30cm et 2 m";
 Blockly.Msg.grove_TF_Mini_LiDAR_strength_TITLE = "force du signal";
@@ -3054,3 +3061,9 @@ Blockly.Msg.grove_VL53L0X_start_and_report_TITLE = "distance mesurée (en mm)";
 Blockly.Msg.grove_VL53L0X_start_and_report_TOOLTIP = "renvoie la valeur mesurée par le capteur, en mm.\n /!\\ ne pas dépasser 2m, préférer un intervalle entre 30 & 10000 mm /!\\ ";
 Blockly.Msg.grove_VL53L0X_stop_measure_TITLE = "stoppe les mesures en continu";
 Blockly.Msg.grove_VL53L0X_stop_measure_TOOLTIP = "stoppe le mode continu de mesure";
+
+//******** Pulse Sensor 14/02/2021
+Blockly.Msg.pulseSensor_HELPURL = "https://github.com/WorldFamousElectronics/PulseSensorPlayground";
+Blockly.Msg.pulseSensor_TEXT1 = "valeur image";
+Blockly.Msg.pulseSensor_TEXT2 = "des pulsations captées sur la broche analogique A";
+Blockly.Msg.pulseSensor_TOOLTIP = "valeur analogique [0~1024] mesurée, penser à définir\nun seuil en dessous duquel ce n'est pas un battement";

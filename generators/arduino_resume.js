@@ -84,6 +84,7 @@ head.load(
 "generators/arduino/peguino_actuators.js",
 "generators/arduino/peguino_sensors.js",
 "generators/arduino/petitbot.js",
+"generators/arduino/pulseSensor.js",
 "generators/arduino/QTR-1RC.js",
 "generators/arduino/RF433.js",
 "generators/arduino/RFID.js",

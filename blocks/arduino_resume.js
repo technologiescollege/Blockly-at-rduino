@@ -88,6 +88,7 @@ head.load(
 "blocks/peguino/peguino_actuators.js",
 "blocks/peguino/peguino_sensors.js",
 "blocks/petitbot/petitbot.js",
+"blocks/pulseSensor/pulseSensor.js",
 "blocks/QTR-1RC/QTR-1RC.js",
 "blocks/RF433/RF433.js",
 "blocks/RFID/RFID.js",
