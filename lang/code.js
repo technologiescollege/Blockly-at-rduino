@@ -255,6 +255,7 @@ Code.initLanguage = function() {
   $('#btn_create_example').attr('title', MSG['span_create_example']);
   $('#btn_factory').attr('title', MSG['span_blockfactory']);
   $('#btn_RGB').attr('title', MSG['span_RGB']);
+  $('#btn_screenduino').attr('title', MSG['span_screenduino']);
   $('#btn_convert').attr('title', MSG['span_convert']);
   $('#btn_font').attr('title', MSG['span_font']);
   $('#btn_colors').attr('title', MSG['span_colors']);

@@ -19,7 +19,7 @@ session_start();
 <div class="container-fluid">
 <!--cryptage MD5 : defaut : admin_Blockly@rduino -->
 <?php
-$password = 'd958f5cd72248c04ffbb271bf8dd5f14';
+$password = '2a95736f769ebba8323a30fe467d6da8';
 
 if (!isset($_SESSION['connected']) 
 	&& isset($_POST['password']) 

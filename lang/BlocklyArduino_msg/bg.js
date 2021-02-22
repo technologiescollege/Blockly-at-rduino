@@ -29,6 +29,7 @@ var MSG = {
   span_reset: " Нулиране на работното пространство & предпочитанията",
   span_wiring: " окабеляване ",
   span_blockfactory: " фабрика за блокчета ",
+  span_screenduino: " make LCD custom characters",
   span_RGB: " Конвертиране на цвят <-> RGB Стойности",
   span_convert: " Конвертиране на текст <-> Двоичен код",
   span_bin2txt: " Двоичен код -> Текс ",

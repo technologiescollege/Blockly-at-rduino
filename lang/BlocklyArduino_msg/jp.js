@@ -29,6 +29,7 @@ var MSG = {
   span_reset: " ワークスペースと環境設定をリセット",
   span_wiring: " 配線 ",
   span_blockfactory: " ブロックファクトリー ",
+  span_screenduino: " make LCD custom characters",
   span_RGB: " 変更 色 <-> RGB 値",
   span_convert: " 変換 テキスト <-> バイナリ",
   span_bin2txt: " バイナリ -> テキスト ",

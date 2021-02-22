@@ -1,0 +1,68 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>Custom Glyph Generator</title>
+    <meta name="description"
+        content="Make LCD custom characters using the createChar() function from the LiquidCrystal library.">
+    <link rel="stylesheet" href="styles.css">
+    <script src="main.js"></script>
+    <link
+        href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAATklEQVQ4jWNgoAL4j0aToge3AFQMGWOTw2k6PgNJcxopaigKA2yC/4mUo50LKDIAVyyQ5AJC6YB4pxGjBt15JCUkQhrweYGUgMdqAeUAADmCM80nYJooAAAAAElFTkSuQmCC"
+        rel="icon" type="image/x-icon" />
+
+</head>
+<textarea style="opacity: 0; position: fixed; z-index: -99999;" id="dummy"></textarea>
+
+<body>
+    <h1>
+        ~`* custom glyph generator *`~
+    </h1>
+    <h2>
+        make LCD custom characters using the <a href="https://www.arduino.cc/en/Reference/LiquidCrystalCreateChar">
+            createChar() </a> function
+        from the <a href=" https://www.arduino.cc/en/Reference/LiquidCrystal">LiquidCrystal</a> library
+    </h2>
+    <div id="canvas">
+    </div>
+    <div id="lowerPanel">
+        <div id="options">
+            <div style="font-size: 90%;width: 100%; text-align: center;">📌 up to 8 sections can be used at once</div>
+            <hr>
+            <button id="x82" onclick="updateCanvasSize(8, 2)">8x2</button>
+            <button id="x162" onclick="updateCanvasSize(16, 2)">16x2</button>
+            <button id="x204" onclick="updateCanvasSize(20, 4)">20x4</button>
+            <span id="eraseAlert" style="font-size: 90%; opacity: 0.3;">⚠️ erases the screen</span>
+            <hr>
+            <button id="green" style="background-color: var(--panelBgGreen);"
+                onclick="updateColors('Green')">green</button>
+            <button id="blue" style="background-color: var(--panelBgBlue);" onclick="updateColors('Blue')">blue</button>
+            <button id="red" style="background-color: var(--panelBgRed);" onclick="updateColors('Red')">red</button>
+            <button id="grayscale" style="background-color: var(--panelBgGrayscale);"
+                onclick="updateColors('Grayscale')">grayscale</button>
+            <hr>
+            <input type="checkbox" id="codeStyle" name="just-the-function" checked>
+            <label for="just-the-function">just the function</label>
+
+            <button id="copy" onclick="copyCode()">copy the code</button>
+            <span id="copyAlert" style="font-size: 90%; opacity: 0;">📋 copied</span>
+
+        </div>
+        <div id="bitmap">
+            <span id="setup"></span>
+            <span>void image() {</span><br />
+            <span id="clear">lcd.clear();</span><br /><br />
+            <div id="bytes"></div>
+            <br />
+            <div id="createChar"></div><br />
+            <div id="setCursor"></div>
+            <span>}</span>
+        </div>
+    </div>
+    <span id="credit">by <a href="https://github.com/tusindfryd/">tusindfryd</a></span>
+</body>
+
+</html>

@@ -293,8 +293,11 @@
                     <button id="btn_factory" class="btn btn-sm btn-primary" disabled>
                         <span class="fa fa-industry"> </span>
                     </button>
-                    <button id="btn_RGB" class="btn btn-sm btn-primary">
+                    <button id="btn_screenduino" class="btn btn-sm btn-primary">
                         <span class="glyphicon glyphicon-th"> </span>
+                    </button>
+                    <button id="btn_RGB" class="btn btn-sm btn-primary">
+                        <span class="fas fa-palette"> </span>
                     </button>
                     <button id="btn_convert" class="btn btn-sm btn-primary">
                         <span class="glyphicon glyphicon-superscript"> </span>
@@ -516,6 +519,11 @@
             <input id="ti3" value="01010101" />
             <button onclick="BlocklyDuino.bin2text();"><span id="span_bin2txt"> </span></button>
             <input id="ti4" />
+        </div>
+        <!-- create char for LCD code "modal" -->
+        <div id="screen_falsemodal" style="display:none">
+            <iframe frameborder="0" marginwidth="0" marginheight="0">
+            </iframe>
         </div>
         <!-- convert RGB color code "modal" -->
         <div id="RGB_falsemodal" style="display:none">

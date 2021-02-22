@@ -1,0 +1,155 @@
+@font-face {
+    font-family: 'inconsolata';
+    src: url('inconsolata.ttf');
+}
+
+:root {
+    --panelBgGreen: #D9EA95;
+    --activePixelGreen: #133700;
+    --inactivePixelGreen: #D1E195;
+    --panelBgBlue: #95baea;
+    --activePixelBlue: #001837;
+    --inactivePixelBlue: #8faddb;
+    --panelBgRed: #ebbdbd;
+    --activePixelRed: #370800;
+    --inactivePixelRed: #e4b3b3;
+    --panelBgGrayscale: #eeeeee;
+    --activePixelGrayscale: #2c2c2c;
+    --inactivePixelGrayscale: #e0e0e0;
+    --panelBg: var(--panelBgGreen);
+    --activePixel: var(--activePixelGreen);
+    --inactivePixel: var(--inactivePixelGreen);
+    --wrapCode: no-wrap;
+}
+
+::selection {
+    background-color: var(--inactivePixel);
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-track {
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+}
+
+#x82:hover~#eraseAlert, #x162:hover~#eraseAlert, #x204:hover~#eraseAlert {
+    opacity: 1 !important;
+}
+
+hr {
+    border: 0px;
+    background-color: var(--inactivePixel);
+    height: 1px;
+}
+
+h1 {
+    font-weight: normal;
+    color: var(--activePixel);
+    font-size: 120%;
+}
+
+h2 {
+    font-weight: normal;
+    color: #222222;
+    font-size: 100%;
+    text-align: center;
+    margin: 5px 0px 0px 0px;
+}
+
+a {
+    color: var(--activePixel)!important
+}
+
+body {
+    background-color: #fafafa;
+    font-family: 'inconsolata';
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    justify-content: center;
+    overflow: visible;
+}
+
+#credit {
+    position: fixed;
+    right: 25px;
+    bottom: 15px;
+    z-index: 9999;
+    font-size: 85%;
+}
+
+body>div {
+    margin-top: 20px;
+}
+
+button:active {
+    background-color: #f0e6d0;
+}
+
+button {
+    margin: 10px;
+    font-family: 'inconsolata';
+    border: none;
+    background-color: #FDF6E3;
+    padding: 10px 20px 10px 20px;
+    border-radius: 5px;
+}
+
+#panel {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#lowerPanel {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-around;
+}
+
+#canvas {
+    background-color: var(--panelBg);
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 5px;
+}
+
+#pixel {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    overflow: hidden;
+    border: 1px solid var(--panelBg);
+    background-color: var(--inactivePixel);
+}
+
+#bitmap {
+    box-sizing: border-box;
+    font-family: 'inconsolata';
+    background-color: #fdf6e3;
+    padding: 20px;
+    font-size: 85%;
+    color: #222;
+    min-width: 35vw;
+    border-radius: 5px;
+    overflow-y: scroll;
+    scrollbar-width: thin;
+    white-space: var(--wrapCode);
+    height: 100%;
+}
+
+label {
+    font-size: 85%;
+}
+
+#clear, #bytes, #createChar, #setCursor {
+    margin-left: 20px;
+}

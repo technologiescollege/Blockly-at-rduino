@@ -515,7 +515,38 @@ BlocklyDuino.bindFunctions = function() {
 		};
 	});
 	
-	$('#btn_RGB, #menu_32').on('click', function() {
+	$('#btn_screenduino, #menu_32').on('click', function() {
+		var iframe = $("#screen_falsemodal > iframe");
+		var $screenlang = "./tools/screenduino/index.html";
+		var dialogScreen = $("#screen_falsemodal").dialog({
+			autoOpen: false,
+			resizable: true,
+			height: 600,
+			width: 650,
+			show: {
+				effect: "drop",
+				duration: 600
+			},
+			hide: {
+				effect: "drop",
+				duration: 600
+			},
+			position: {
+				my: "center",
+				at: "center",
+				of: window
+			},
+		});
+		iframe.attr({
+			width: "100%",
+			height: "100%",
+			src: $screenlang
+		});
+		if (!dialogScreen.dialog("isOpen")) {
+			dialogScreen.dialog("open").dialog( "option", "buttons" );
+		};
+	});
+	$('#btn_RGB, #menu_33').on('click', function() {
 		var iframe = $("#RGB_falsemodal > iframe");
 		var $RGBlang = "./tools/RGB/RGB_" + Code.LANG + ".html";
 		var dialogRGB = $("#RGB_falsemodal").dialog({

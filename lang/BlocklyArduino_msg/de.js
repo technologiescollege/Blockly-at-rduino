@@ -29,6 +29,7 @@ var MSG = {
   span_reset: " Arbeitsfläche und Einstellungen zurücksetzen",
   span_wiring: " wiring ",
   span_blockfactory: " können Fabrik ",
+  span_screenduino: " make LCD custom characters",
   span_RGB: " Farbwert konvertieren <-> RGB Werte",
   span_convert: " Text konvertieren <-> Binärwert",
   span_bin2txt: " Binärwert -> zu Text ",

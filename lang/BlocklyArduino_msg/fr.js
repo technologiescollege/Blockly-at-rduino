@@ -29,6 +29,7 @@ var MSG = {
   span_reset: " ré initialiser",
   span_wiring: " câblage à suivre ",
   span_blockfactory: " usine à blocs ",
+  span_screenduino: " générateur de forme pour écran LCD",
   span_RGB: " conversion couleur <-> valeurs RVB",
   span_convert: " conversion texte <-> binaire",
   span_bin2txt: " binaire -> texte ",

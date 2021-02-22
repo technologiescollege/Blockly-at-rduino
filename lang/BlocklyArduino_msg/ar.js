@@ -28,6 +28,7 @@ var MSG =  {
   span_colors: "اختيار اللون",
   span_reset: "إعادة التهيئة",
   span_blockfactory: "مصنع الكتل",
+  span_screenduino: " make LCD custom characters",
   span_RGB: "تحويل اللون <-> قيم RGB",
   span_convert: "تحويل النص <-> الثنائي",
   span_bin2txt: "ثنائي -> نص",
