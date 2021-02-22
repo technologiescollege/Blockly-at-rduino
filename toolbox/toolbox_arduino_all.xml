@@ -780,6 +780,33 @@
 			<block type="I2C_available_HW"></block>
 			<block type="I2C_data_HW"></block>
 		</category>
+		<category name="CAT_I2C_to_GPIO_Module" colour="#CC0033">
+			<block type="I2C_to_GPIO_Module_scan"></block>
+			<block type="I2C_to_GPIO_Module_attach">
+				<value name="ADDRESS">
+					<shadow type="math_number">
+						<field name="NUM">20</field>
+					</shadow>
+				</value>
+			</block>
+			<block type="I2C_to_GPIO_Module_read">
+				<value name="PIN">
+					<shadow type="math_number">
+						<field name="NUM">0</field>
+					</shadow>
+				</value>
+			</block>
+			<block type="I2C_to_GPIO_Module_write">
+				<value name="PIN">
+					<shadow type="math_number">
+						<field name="NUM">0</field>
+					</shadow>
+				</value>
+				<value name="STATE">
+					<shadow type="inout_onoff"></shadow>
+				</value>
+			</block>
+		</category>
 	</category>
 	<category name="CAT_SPI" colour="#9999FF">
 		<block type="SPI_init">
@@ -1159,6 +1186,33 @@
 		</category>
 	</category>
 	<category name="CAT_DFRobot" colour="#F39800">
+		<category name="CAT_IIC_to_GPIO_Shield_V2" colour="#F39800">
+			<block type="dfrobot_IIC_to_GPIO_Shield_V2_scan"></block>
+			<block type="dfrobot_IIC_to_GPIO_Shield_V2_attach">
+				<value name="ADDRESS">
+					<shadow type="math_number">
+						<field name="NUM">20</field>
+					</shadow>
+				</value>
+			</block>
+			<block type="dfrobot_IIC_to_GPIO_Shield_V2_read">
+				<value name="PIN">
+					<shadow type="math_number">
+						<field name="NUM">0</field>
+					</shadow>
+				</value>
+			</block>
+			<block type="dfrobot_IIC_to_GPIO_Shield_V2_write">
+				<value name="PIN">
+					<shadow type="math_number">
+						<field name="NUM">0</field>
+					</shadow>
+				</value>
+				<value name="STATE">
+					<shadow type="inout_onoff"></shadow>
+				</value>
+			</block>
+		</category>
 		<category name="CAT_ROMEO_3" colour="#F39800">
 			<block type="romeo_M1_sens"></block>
 			<block type="romeo_M1_PWM">
@@ -1175,7 +1229,7 @@
 						<field name="NUM">127</field>
 					</shadow>
 				</value>
-			</block>			
+			</block>
 			<block type="romeo_switch"></block>
 		</category>
 		<category name="CAT_DFPLAYER" colour="#F39800">

@@ -142,6 +142,7 @@ Blockly.Msg.CAT_DFRobot = "DFRobot";
 Blockly.Msg.CAT_DFRobot_SHIELD_LCDKEYPAD = " - targeta de teclat númeric LCD"; //Added february 27th 2016
 Blockly.Msg.CAT_DFPLAYER = " - DFPlayer mini MP3";
 Blockly.Msg.CAT_DFRobot_ISD1820 = " - micròfon ISD1820";
+Blockly.Msg.CAT_IIC_to_GPIO_Shield_V2 = "I2C extension shield";
 
 Blockly.Msg.CAT_LED_RGB_CHAIN = "LED RGB connectable";
 Blockly.Msg.CAT_OLED_U8G = "Pantalla OLED I2C";
@@ -295,6 +296,7 @@ Blockly.Msg.CAT_PEGUINO_OUT = " - actuadors";
 Blockly.Msg.CAT_I2C = "I2C"; //added 26/05/2017
 Blockly.Msg.CAT_SPI = "SPI"; //added 26/05/2017
 Blockly.Msg.CAT_NULL = "lliure"; //added 8/10/2017
+Blockly.Msg.CAT_I2C_to_GPIO_Module = "I2C extension module"; //added 21/02/2021
 
 Blockly.Msg.CAT_HX711 = "Sensor de pes"; //added 23/10/2017
 
@@ -421,6 +423,7 @@ Blockly.Msg.SERVO_COMPONENT = 'servomotor';
 Blockly.Msg.SERVO_DEFAULT_NAME = "SERVO";
 Blockly.Msg.LIDAR_DEFAULT_NAME = 'LiDAR';
 Blockly.Msg.SHARP_IR_COMPONENT = 'telèmetre IR';
+Blockly.Msg.I2C_DEFAULT_NAME = 'I2C';
 
 //**********************************blocks***********************************************
 //**********************************blocks***********************************************
@@ -2769,3 +2772,39 @@ Blockly.Msg.pulseSensor_HELPURL = "https://github.com/WorldFamousElectronics/Pul
 Blockly.Msg.pulseSensor_TEXT1 = "value image";
 Blockly.Msg.pulseSensor_TEXT2 = "of pulse detected on port A";
 Blockly.Msg.pulseSensor_TOOLTIP = "analog value [0~1024] measured, set a threshold to define when there is a pulse";
+
+//******** IIC to GPIO Shield V2.0 SKU DFR0013 21/02/2021
+Blockly.Msg.dfrobot_IIC_to_GPIO_Shield_V2_SCAN_TEXT = "scan all I²C devices and report in serial monitor";
+Blockly.Msg.dfrobot_IIC_to_GPIO_Shield_V2_SCAN_TOOLTIP = "list all I2C components addresses in serial monitor, by default at 115200 bauds";
+Blockly.Msg.dfrobot_IIC_to_GPIO_Shield_V2_SCAN_HELPURL = "https://playground.arduino.cc/Main/I2cScanner/";
+Blockly.Msg.dfrobot_IIC_to_GPIO_Shield_V2_HELPURL = "https://wiki.dfrobot.com/IIC_to_GPIO_Shield_V2.0_SKU__DFR0013";
+Blockly.Msg.dfrobot_IIC_to_GPIO_Shield_V2_ATTACH1 = "attach I2C shield";
+Blockly.Msg.dfrobot_IIC_to_GPIO_Shield_V2_ATTACH2 = "with id";
+Blockly.Msg.dfrobot_IIC_to_GPIO_Shield_V2_ATTACH3 = "on component";
+Blockly.Msg.dfrobot_IIC_to_GPIO_Shield_V2_INPUT2 = "at address 0x";
+Blockly.Msg.dfrobot_IIC_to_GPIO_Shield_V2_attach_TOOLTIP = "fixe l'adresse de la carte d'extension I2C et lui attribue un identifiant";
+Blockly.Msg.dfrobot_IIC_to_GPIO_Shield_V2_INPUT1 = "logic state";
+Blockly.Msg.dfrobot_IIC_to_GPIO_Shield_V2_INPUT2 = "pin";
+Blockly.Msg.dfrobot_IIC_to_GPIO_Shield_V2_read_TOOLTIP = "pin numbers from 0 to 7 are 0.0 to 0.7, and 8 to 15 are 1.0 to 1.7";
+Blockly.Msg.dfrobot_IIC_to_GPIO_Shield_V2_OUTPUT1 = "set digital state";
+Blockly.Msg.dfrobot_IIC_to_GPIO_Shield_V2_OUTPUT2 = "on component";
+Blockly.Msg.dfrobot_IIC_to_GPIO_Shield_V2_OUTPUT3 = "to";
+Blockly.Msg.dfrobot_IIC_to_GPIO_Shield_V2_write_TOOLTIP = "pin numbers from 0 to 7 are 0.0 to 0.7, and 8 to 15 are 1.0 to 1.7";
+
+//********IIC to GPIO Module 21/02/2021
+Blockly.Msg.I2C_to_GPIO_Module_SCAN_TEXT = "scan all I²C devices and report in serial monitor";
+Blockly.Msg.I2C_to_GPIO_Module_SCAN_TOOLTIP = "list all I2C components addresses in serial monitor, by default at 115200 bauds";
+Blockly.Msg.I2C_to_GPIO_Module_SCAN_HELPURL = "https://playground.arduino.cc/Main/I2cScanner/";
+Blockly.Msg.I2C_to_GPIO_Module_HELPURL = "https://github.com/nicoverduin/PCA9555";
+Blockly.Msg.I2C_to_GPIO_Module_ATTACH1 = "attach I2C shield";
+Blockly.Msg.I2C_to_GPIO_Module_ATTACH2 = "with id";
+Blockly.Msg.I2C_to_GPIO_Module_ATTACH3 = "on component";
+Blockly.Msg.I2C_to_GPIO_Module_INPUT1 = "at address 0x";
+Blockly.Msg.I2C_to_GPIO_Module_attach_TOOLTIP = "set extension I2C shield at its address and set an instance name";
+Blockly.Msg.I2C_to_GPIO_Module_INPUT2 = "logic state";
+Blockly.Msg.I2C_to_GPIO_Module_INPUT3 = "of pin";
+Blockly.Msg.I2C_to_GPIO_Module_read_TOOLTIP = "pin numbers from 0 to 7 are 0.0 to 0.7, and 8 to 15 are 1.0 to 1.7";
+Blockly.Msg.I2C_to_GPIO_Module_OUTPUT1 = "set pin";
+Blockly.Msg.I2C_to_GPIO_Module_OUTPUT2 = "on component";
+Blockly.Msg.I2C_to_GPIO_Module_OUTPUT3 = "to";
+Blockly.Msg.I2C_to_GPIO_Module_write_TOOLTIP = "pin numbers from 0 to 7 are 0.0 to 0.7, and 8 to 15 are 1.0 to 1.7";

@@ -141,6 +141,7 @@ Blockly.Msg.CAT_DFRobot = "DFRobot";
 Blockly.Msg.CAT_DFRobot_SHIELD_LCDKEYPAD = " - carte LCD keypad"; //Added february 27th 2016
 Blockly.Msg.CAT_DFPLAYER = " - DFPlayer mini MP3";
 Blockly.Msg.CAT_DFRobot_ISD1820 = " - enregisteur de sons ISD1820";
+Blockly.Msg.CAT_IIC_to_GPIO_Shield_V2 = " - carte d'extension I2C";
 
 Blockly.Msg.CAT_LED_RGB_CHAIN = "DEL RGB en série";
 Blockly.Msg.CAT_OLED_U8G = "afficheur OLED I2C";
@@ -294,6 +295,7 @@ Blockly.Msg.CAT_PEGUINO_OUT = " - actionneurs";
 Blockly.Msg.CAT_I2C = "I2C"; //added 26/05/2017
 Blockly.Msg.CAT_SPI = "SPI"; //added 26/05/2017
 Blockly.Msg.CAT_NULL = "libre"; //added 8/10/2017
+Blockly.Msg.CAT_I2C_to_GPIO_Module = "carte d'extension I2C"; //added 21/02/2021
 
 Blockly.Msg.CAT_HX711 = "capteur de poids"; //added 23/10/2017
 
@@ -445,6 +447,7 @@ Blockly.Msg.SERVO_COMPONENT = 'servomoteur';
 Blockly.Msg.SERVO_DEFAULT_NAME = "SERVO";
 Blockly.Msg.LIDAR_DEFAULT_NAME = 'LiDAR';
 Blockly.Msg.SHARP_IR_COMPONENT = 'télémètre';
+Blockly.Msg.I2C_DEFAULT_NAME = 'I2C';
 
 //**********************************blocks***********************************************
 //**********************************blocks***********************************************
@@ -3067,3 +3070,39 @@ Blockly.Msg.pulseSensor_HELPURL = "https://github.com/WorldFamousElectronics/Pul
 Blockly.Msg.pulseSensor_TEXT1 = "valeur image";
 Blockly.Msg.pulseSensor_TEXT2 = "des pulsations captées sur la broche analogique A";
 Blockly.Msg.pulseSensor_TOOLTIP = "valeur analogique [0~1024] mesurée, penser à définir\nun seuil en dessous duquel ce n'est pas un battement";
+
+//******** IIC to GPIO Shield V2.0 SKU DFR0013 21/02/2021
+Blockly.Msg.dfrobot_IIC_to_GPIO_Shield_V2_SCAN_TEXT = "lister les périphériques I²C dans la console série";
+Blockly.Msg.dfrobot_IIC_to_GPIO_Shield_V2_SCAN_TOOLTIP = "Scanne les périphériques et retourne les adresses dans la console, à régler sur 115200 bauds";
+Blockly.Msg.dfrobot_IIC_to_GPIO_Shield_V2_SCAN_HELPURL = "https://playground.arduino.cc/Main/I2cScanner/";
+Blockly.Msg.dfrobot_IIC_to_GPIO_Shield_V2_HELPURL = "https://wiki.dfrobot.com/IIC_to_GPIO_Shield_V2.0_SKU__DFR0013";
+Blockly.Msg.dfrobot_IIC_to_GPIO_Shield_V2_ATTACH1 = "attacher un composant I2C";
+Blockly.Msg.dfrobot_IIC_to_GPIO_Shield_V2_ATTACH2 = "avec l'identifiant";
+Blockly.Msg.dfrobot_IIC_to_GPIO_Shield_V2_ATTACH3 = "sur le composant";
+Blockly.Msg.dfrobot_IIC_to_GPIO_Shield_V2_INPUT1 = "à l'adresse 0x";
+Blockly.Msg.dfrobot_IIC_to_GPIO_Shield_V2_attach_TOOLTIP = "fixe l'adresse de la carte d'extension I2C et lui attribue un identifiant";
+Blockly.Msg.dfrobot_IIC_to_GPIO_Shield_V2_INPUT2 = "état logique";
+Blockly.Msg.dfrobot_IIC_to_GPIO_Shield_V2_INPUT3 = "de la broche";
+Blockly.Msg.dfrobot_IIC_to_GPIO_Shield_V2_read_TOOLTIP = "les broches du shield sont repérées de 0 à 7 pour le 0.0 à 0.7, puis de 8 à 15 pour les 1.0 à 1.7";
+Blockly.Msg.dfrobot_IIC_to_GPIO_Shield_V2_OUTPUT1 = "mettre la broche";
+Blockly.Msg.dfrobot_IIC_to_GPIO_Shield_V2_OUTPUT2 = "du composant";
+Blockly.Msg.dfrobot_IIC_to_GPIO_Shield_V2_OUTPUT3 = "à l'état logique";
+Blockly.Msg.dfrobot_IIC_to_GPIO_Shield_V2_write_TOOLTIP = "les broches du shield sont repérées de 0 à 7 pour le 0.0 à 0.7, puis de 8 à 15 pour les 1.0 à 1.7";
+
+//******** IIC to GPIO Module 21/02/2021
+Blockly.Msg.I2C_to_GPIO_Module_SCAN_TEXT = "lister les périphériques I²C dans la console série";
+Blockly.Msg.I2C_to_GPIO_Module_SCAN_TOOLTIP = "Scanne les périphériques et retourne les adresses dans la console, à régler sur 115200 bauds";
+Blockly.Msg.I2C_to_GPIO_Module_SCAN_HELPURL = "https://playground.arduino.cc/Main/I2cScanner/";
+Blockly.Msg.I2C_to_GPIO_Module_HELPURL = "https://github.com/nicoverduin/PCA9555";
+Blockly.Msg.I2C_to_GPIO_Module_ATTACH1 = "attacher un composant I2C";
+Blockly.Msg.I2C_to_GPIO_Module_ATTACH2 = "avec l'identifiant";
+Blockly.Msg.I2C_to_GPIO_Module_ATTACH3 = "sur le composant";
+Blockly.Msg.I2C_to_GPIO_Module_INPUT1 = "à l'adresse 0x";
+Blockly.Msg.I2C_to_GPIO_Module_attach_TOOLTIP = "fixe l'adresse de la carte d'extension I2C et lui attribue un identifiant";
+Blockly.Msg.I2C_to_GPIO_Module_INPUT2 = "état logique";
+Blockly.Msg.I2C_to_GPIO_Module_INPUT3 = "de la broche";
+Blockly.Msg.I2C_to_GPIO_Module_read_TOOLTIP = "les broches du shield sont repérées de 0 à 7 pour le 0.0 à 0.7, puis de 8 à 15 pour les 1.0 à 1.7";
+Blockly.Msg.I2C_to_GPIO_Module_OUTPUT1 = "mettre la broche";
+Blockly.Msg.I2C_to_GPIO_Module_OUTPUT2 = "du composant";
+Blockly.Msg.I2C_to_GPIO_Module_OUTPUT3 = "à l'état logique";
+Blockly.Msg.I2C_to_GPIO_Module_write_TOOLTIP = "les broches du shield sont repérées de 0 à 7 pour le 0.0 à 0.7, puis de 8 à 15 pour les 1.0 à 1.7";
