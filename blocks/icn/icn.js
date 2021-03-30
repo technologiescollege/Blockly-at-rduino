@@ -141,15 +141,26 @@ Blockly.Blocks['servomotor_attached'] = {
 
 Blockly.Blocks['ds18b20_search'] = {
   init: function() {
-    this.appendDummyInput()
-    	.setAlign(Blockly.ALIGN_LEFT)
+	this.appendValueInput("ds18b20_pin")
+        .setCheck('Number')
+        .setAlign(Blockly.ALIGN_RIGHT)
         .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/icn/ds18b20.svg', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize))
-	    .appendField('DS18B20 DATA#')
-		.appendField(new Blockly.FieldTextInput('11',  Blockly.Arduino.pinDualValidator), 'ds18b20_pin')
-	    .appendField('address')
-		.appendField(new Blockly.FieldTextInput('1',  Blockly.Arduino.pinDualValidator), 'address');
-	this.setOutput(true, 'Boolean');
-	this.setTooltip('temperature sensor - return true if found');
+	    .appendField('DS18B20 DATA#');
+	this.appendValueInput("ds18b20_array")
+        .setCheck('Number')
+        .setAlign(Blockly.ALIGN_RIGHT)
+	    .appendField('ADRESS ARRAY#');
+    this.appendDummyInput("")
+        .setAlign(Blockly.ALIGN_RIGHT)
+        .appendField(Blockly.Msg.ARDUINO_SERVO_ATTACH2)
+        .appendField(
+            new Blockly.FieldInstance('ds18b20',
+                                      Blockly.Msg.SERVO_DEFAULT_NAME,
+                                      false, false, false),
+            'DS18B20_NAME');
+	this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+	this.setTooltip('temperature sensor - return integer array with adress if found');
     this.setColour(Blockly.Blocks.icn.HUE);
     this.setHelpUrl(Blockly.Msg.icn_ds18b20_HelpUrl);
   }
@@ -157,11 +168,14 @@ Blockly.Blocks['ds18b20_search'] = {
 
 Blockly.Blocks['ds18b20_temp'] = {
   init: function() {
-    this.appendDummyInput()
+	this.appendDummyInput("address")
     	.setAlign(Blockly.ALIGN_LEFT)
         .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/icn/ds18b20.svg', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize))
-		.appendField('address')
-		.appendField(new Blockly.FieldTextInput('1',  Blockly.Arduino.pinDualValidator), 'address');
+        .appendField(
+            new Blockly.FieldInstance('ds18b20',
+                                      Blockly.Msg.SERVO_DEFAULT_NAME,
+                                      false, false, false),
+            'DS18B20_NAME');
 	this.setOutput(true, 'Number');
 	this.setTooltip('temperature sensor - return float temp');
     this.setColour(Blockly.Blocks.icn.HUE);
