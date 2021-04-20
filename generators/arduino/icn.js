@@ -122,7 +122,7 @@ Blockly.Arduino['ds18b20_search'] = function() {
   var ds18b20_array = Blockly.Arduino.valueToCode(this, 'ds18b20_array', Blockly.Arduino.ORDER_ATOMIC);
   Blockly.Arduino.includes_['ds18b20_include'] = '#include <DS18B20.h>';
   Blockly.Arduino.definitions_['ds18b20_def_' + dropdown_name] = 'DS18B20 ' + dropdown_name + '(' + ds18b20_pin + '); // temp sensor on pin ' + ds18b20_pin;
-  var code = 'int addr_' + dropdown_name + '[8];\n' +
+  var code = 'uint8_t addr_' + dropdown_name + '[8];\n' +
   dropdown_name + '.getAddress(addr_' + dropdown_name + ');\n';
   return code;
 };
