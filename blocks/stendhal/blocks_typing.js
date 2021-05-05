@@ -50,7 +50,7 @@ Blockly.Blocks.stendhal_sound_sensor.getBlockType = function() {
 	return Blockly.Types.NUMBER;
 };
 Blockly.Blocks.stendhal_ds18b20_search.getBlockType = function() {
-	return Blockly.Types.BOOLEAN;
+	return Blockly.Types.DECIMAL;
 };
 Blockly.Blocks.stendhal_ds18b20_temp.getBlockType = function() {
 	return Blockly.Types.DECIMAL;

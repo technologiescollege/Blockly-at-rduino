@@ -38,7 +38,7 @@ Blockly.Blocks['variables_get'] = {
         this.setHelpUrl(Blockly.Msg.VARIABLES_GET_HELPURL);
         this.setColour(Blockly.Blocks.variables.HUE);
         this.appendDummyInput()
-        .appendField(new Blockly.FieldVariable(Blockly.Msg.VARIABLES_DEFAULT_NAME), 'VAR');
+            .appendField(new Blockly.FieldVariable(Blockly.Msg.VARIABLES_DEFAULT_NAME), 'VAR');
         this.setOutput(true);
         this.setTooltip(Blockly.Msg.VARIABLES_GET_TOOLTIP);
         this.contextMenuMsg_ = Blockly.Msg.VARIABLES_GET_CREATE_SET;
@@ -89,9 +89,9 @@ Blockly.Blocks['variables_set'] = {
      */
     init: function () {
         this.appendValueInput("VALUE")
-        .appendField(Blockly.Msg.VARIABLES_SET)
-        .appendField(new Blockly.FieldVariable(Blockly.Msg.VARIABLES_DEFAULT_NAME), 'VAR')
-        .appendField(Blockly.Msg._AT);
+            .appendField(Blockly.Msg.VARIABLES_SET)
+            .appendField(new Blockly.FieldVariable(Blockly.Msg.VARIABLES_DEFAULT_NAME), 'VAR')
+            .appendField(Blockly.Msg._AT);
         this.setHelpUrl(Blockly.Msg.HELPURL);
         this.setTooltip(Blockly.Msg.VARIABLES_SET_TOOLTIP);
         this.setColour(Blockly.Blocks.variables.HUE);
@@ -122,8 +122,8 @@ Blockly.Blocks['variables_set_type'] = {
         this.setColour(Blockly.Blocks.variables.HUE);
         this.appendValueInput('VARIABLE_SETTYPE_INPUT');
         this.appendDummyInput()
-        .appendField(Blockly.Msg.VARIABLES_AS)
-        .appendField(new Blockly.FieldDropdown(
+            .appendField(Blockly.Msg.VARIABLES_AS)
+            .appendField(new Blockly.FieldDropdown(
                 Blockly.Types.getValidTypeArray()), 'VARIABLE_SETTYPE_TYPE');
         this.setInputsInline(true);
         this.setOutput(true);
@@ -143,9 +143,9 @@ Blockly.Blocks['variables_set_type'] = {
 Blockly.Blocks['variables_const'] = {
     init: function () {
         this.appendValueInput("VAL_CONST")
-        .appendField(Blockly.Msg.VARIABLES_SET_CONST)
-        .appendField(new Blockly.FieldVariable(Blockly.Msg.VARIABLES_DEFAULT_NAME), 'VAR')
-        .appendField(Blockly.Msg.VARIABLES_SET_CONST_AT);
+            .appendField(Blockly.Msg.VARIABLES_SET_CONST)
+            .appendField(new Blockly.FieldVariable(Blockly.Msg.VARIABLES_DEFAULT_NAME), 'VAR')
+            .appendField(Blockly.Msg.VARIABLES_SET_CONST_AT);
         this.setColour(Blockly.Blocks.variables.HUE);
         this.setPreviousStatement(true, null);
         this.setNextStatement(true, null);
@@ -169,11 +169,11 @@ Blockly.Blocks['variables_const'] = {
 Blockly.Blocks['variables_set_init'] = {
     init: function () {
         this.appendValueInput("VALUE")
-        .appendField(Blockly.Msg.VARIABLES_SET_INIT)
-        .appendField(new Blockly.FieldVariable(Blockly.Msg.VARIABLES_DEFAULT_NAME), 'VAR')
-        .appendField(Blockly.Msg.VARIABLES_AS)
-        .appendField(new Blockly.FieldDropdown(Blockly.Types.getValidTypeArray()), 'VARIABLE_SETTYPE_TYPE')
-        .appendField(Blockly.Msg._AT);
+            .appendField(Blockly.Msg.VARIABLES_SET_INIT)
+            .appendField(new Blockly.FieldVariable(Blockly.Msg.VARIABLES_DEFAULT_NAME), 'VAR')
+            .appendField(Blockly.Msg.VARIABLES_AS)
+            .appendField(new Blockly.FieldDropdown(Blockly.Types.getValidTypeArray()), 'VARIABLE_SETTYPE_TYPE')
+            .appendField(Blockly.Msg._AT);
         this.setPreviousStatement(true, null);
         this.setNextStatement(true, null);
         this.setColour(Blockly.Blocks.variables.HUE);

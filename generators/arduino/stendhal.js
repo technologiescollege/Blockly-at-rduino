@@ -7,6 +7,7 @@
  
 goog.provide('Blockly.Arduino.stendhal');
 goog.require('Blockly.Arduino');
+goog.require('Blockly.StaticTyping');
 
 Blockly.Arduino.stendhal_button = function() {
   var dropdown_pin = this.getFieldValue('PIN');
@@ -167,39 +168,35 @@ Blockly.Arduino.stendhal_sound_sensor = function() {
 };
 
 Blockly.Arduino['stendhal_ds18b20_search'] = function() {
-  var ds18b20_pin = this.getFieldValue('ds18b20_pin');
-  var addr = this.getFieldValue('address');
-  Blockly.Arduino.includes_['ds18b20_include'] = '#include <OneWire.h>';
-  Blockly.Arduino.definitions_['ds18b20_def'] = 'OneWire ds18b20('+ds18b20_pin+'); // on pin'+ds18b20_pin+' (a 4.7K resistor is necessary)\n'
-  Blockly.Arduino.definitions_['ds18b20_def_'+addr] = 'byte addr_ds18b20_' + addr + '['+addr+'];\n';
-  var code = 'ds18b20.search(addr_ds18b20_' + addr + ')';
-  return [code, Blockly.Arduino.ORDER_ATOMIC];
+  var ds18b20_pin = Blockly.Arduino.valueToCode(this, 'PIN', Blockly.Arduino.ORDER_ATOMIC);
+  var ds18b20_nb = Blockly.Arduino.valueToCode(this, 'NB', Blockly.Arduino.ORDER_ATOMIC);
+  var ds18b20_nb0 = ds18b20_nb - 1;
+  Blockly.Arduino.includes_['ds18b20_include'] = '#include <DS18B20.h>';
+  Blockly.Arduino.definitions_['ds18b20_def_' + ds18b20_pin] = 'DS18B20 ds18b20_' + ds18b20_pin + '(' + ds18b20_pin + ');\n'
+  + 'uint8_t addrTempSensor_' + ds18b20_pin + '[' + ds18b20_nb + '][8] = {};';
+  Blockly.Arduino.setups_['ds18b20_def_' + ds18b20_pin] = 'for (int i = 0; i < ' + ds18b20_nb0 + '; i++) {\n'
+    + '    uint8_t address[8];\n'
+    + '    ds18b20_' + ds18b20_pin + '.getAddress(address);\n'
+    + '    for (uint8_t j = 0; j < 8; j++)\n'
+    + '        addrTempSensor_' + ds18b20_pin + '[i][j] = address[j];\n'
+    + '    ds18b20_' + ds18b20_pin + '.selectNext();\n'
+    + '  }';
+  var code = '';
+  return code;
 };
 
 Blockly.Arduino['stendhal_ds18b20_temp'] = function() {
-  var addr = this.getFieldValue('address');
-  Blockly.Arduino.definitions_['ds_temp'] =
-	'float dstemp(byte addr[]) {\n'
-	+ '  byte data[12],i;\n'
-	+ '   ds18b20.reset();\n'
-    + '   ds18b20.select(addr);\n'
-    + '   ds18b20.write(0x44,0);//start conversion\n'
-    + '   delay(1000);     // maybe 750ms is enough, maybe not  \n'
-    + '   ds18b20.reset();\n'
-    + '   ds18b20.select(addr);    \n'
-    + '   ds18b20.write(0xBE);         // Read Scratchpad\n'
-    + '   for ( i = 0; i < 9; i++) {           // we need 9 bytes\n'
-    + '    data[i] = ds18b20.read();\n'
-    + '   }\n'
-    + '   int16_t raw = (data[1] << 8) | data[0];\n'
-    + '   byte cfg = (data[4] & 0x60);\n'
-    + '   if (cfg == 0x00) raw = raw & ~7;  // 9 bit resolution, 93.75 ms\n'
-    + '   else if (cfg == 0x20) raw = raw & ~3; // 10 bit res, 187.5 ms\n'
-    + '   else if (cfg == 0x40) raw = raw & ~1; // 11 bit res, 375 ms\n'
-    + '   return (float)raw / 16.0;\n'
-	+ '}';
-  var code = 'dstemp('+addr+')';
-  return [code, Blockly.Arduino.ORDER_ATOMIC];
+  var ds18b20_pin = Blockly.Arduino.valueToCode(this, 'PIN', Blockly.Arduino.ORDER_ATOMIC);
+  var ds18b20_nb = Blockly.Arduino.valueToCode(this, 'NB', Blockly.Arduino.ORDER_ATOMIC);
+  var ds18b20_nb0 = ds18b20_nb - 1;
+  var ds18b20_var = Blockly.Arduino.variableDB_.getName(this.getFieldValue('tempSensorField'), Blockly.Variables.NAME_TYPE);
+  // Blockly.Arduino.addVariable(ds18b20_var, 'int' + ' ' + ds18b20_var + ';');
+  // Blockly.Block.assignTypeToVars(ds18b20_var, 'Number');
+  // this.assignTypeToVars[ds18b20_var] = 'Number';
+  Blockly.Arduino.variables_[ds18b20_var] = 'int' + ' ' + ds18b20_var + ';';
+  var code = 'ds18b20_' + ds18b20_pin + '.select(addrTempSensor_' + ds18b20_pin + '[' + ds18b20_nb0 +']);\n'
+  + ds18b20_var + ' = ds18b20_' + ds18b20_pin + '.getTempC();\n';
+  return code;
 };
 
 Blockly.Arduino.stendhal_pir_motion_sensor = function() {

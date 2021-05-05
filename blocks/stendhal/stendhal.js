@@ -435,12 +435,18 @@ Blockly.Blocks['stendhal_ds18b20_search'] = {
     this.appendDummyInput()
     	.setAlign(Blockly.ALIGN_LEFT)
 		.appendField(Blockly.Msg.STENDHAL_INOUT_DS18B20_TEXT1)
-        .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/stendhal/ds18b20.svg', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize))
-	    .appendField(Blockly.Msg.STENDHAL_INOUT_DS18B20_INPUT1)
-		.appendField(new Blockly.FieldTextInput('11',  Blockly.Arduino.pinDualValidator), 'ds18b20_pin')
-	    .appendField(Blockly.Msg.STENDHAL_INOUT_DS18B20_INPUT2)
-		.appendField(new Blockly.FieldTextInput('1',  Blockly.Arduino.pinDualValidator), 'address');
-	this.setOutput(true, 'Boolean');
+        .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/stendhal/ds18b20.svg', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize));
+    this.appendValueInput("PIN")
+        .setCheck("Number")
+        .setAlign(Blockly.ALIGN_RIGHT)
+	    .appendField(Blockly.Msg.STENDHAL_INOUT_DS18B20_INPUT1);
+    this.appendValueInput("NB")
+        .setCheck("Number")
+        .setAlign(Blockly.ALIGN_RIGHT)
+	    .appendField(Blockly.Msg.STENDHAL_INOUT_DS18B20_INPUT2);
+    this.setPreviousStatement(true);
+    this.setNextStatement(true);
+    this.setInputsInline(false);
 	this.setTooltip(Blockly.Msg.STENDHAL_INOUT_DS18B20_TOOLTIP1);
     this.setColour(Blockly.Blocks.stendhal.HUE);
     this.setHelpUrl(Blockly.Msg.STENDHAL_INOUT_DS18B20_HELPURL);
@@ -450,17 +456,47 @@ Blockly.Blocks['stendhal_ds18b20_search'] = {
 Blockly.Blocks['stendhal_ds18b20_temp'] = {
   init: function() {
     this.appendDummyInput()
-    	.setAlign(Blockly.ALIGN_LEFT)
-		.appendField(Blockly.Msg.STENDHAL_INOUT_DS18B20_TEXT2)
+        .appendField(Blockly.Msg.STENDHAL_INOUT_DS18B20_TEXT2)
+        .appendField(new Blockly.FieldVariable("tempSensorVarName"), "tempSensorField")
+        .appendField(Blockly.Msg.STENDHAL_INOUT_DS18B20_TEXT3);
+    this.appendValueInput("PIN")
+        .setCheck("Number")
+        .setAlign(Blockly.ALIGN_RIGHT)
         .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/stendhal/ds18b20.svg', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize))
-		.appendField(Blockly.Msg.STENDHAL_INOUT_DS18B20_INPUT2)
-		.appendField(new Blockly.FieldTextInput('1',  Blockly.Arduino.pinDualValidator), 'address');
-	this.setOutput(true, 'Number');
+        .appendField(Blockly.Msg.STENDHAL_INOUT_DS18B20_INPUT3);
+    this.appendValueInput("NB")
+        .setCheck("Number")
+        .setAlign(Blockly.ALIGN_RIGHT)
+        .appendField(Blockly.Msg.STENDHAL_INOUT_DS18B20_INPUT4);
+    this.setInputsInline(false);
+    this.setPreviousStatement(true);
+    this.setNextStatement(true);
 	this.setTooltip(Blockly.Msg.STENDHAL_INOUT_DS18B20_TOOLTIP2);
     this.setColour(Blockly.Blocks.stendhal.HUE);
     this.setHelpUrl(Blockly.Msg.STENDHAL_INOUT_DS18B20_HELPURL);
   }
 };
+
+// Blockly.Blocks['stendhal_ds18b20_temp'] = {
+  // init: function() {
+    // this.appendDummyInput()
+    	// .setAlign(Blockly.ALIGN_LEFT)
+		// .appendField(Blockly.Msg.STENDHAL_INOUT_DS18B20_TEXT2)
+        // .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/stendhal/ds18b20.svg', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize));
+    // this.appendValueInput("PIN")
+        // .setCheck("Number")
+        // .setAlign(Blockly.ALIGN_RIGHT)
+	    // .appendField(Blockly.Msg.STENDHAL_INOUT_DS18B20_INPUT3);
+    // this.appendValueInput("NB")
+        // .setCheck("Number")
+        // .setAlign(Blockly.ALIGN_RIGHT)
+	    // .appendField(Blockly.Msg.STENDHAL_INOUT_DS18B20_INPUT4);
+	// this.setOutput(true, 'Number');
+	// this.setTooltip(Blockly.Msg.STENDHAL_INOUT_DS18B20_TOOLTIP2);
+    // this.setColour(Blockly.Blocks.stendhal.HUE);
+    // this.setHelpUrl(Blockly.Msg.STENDHAL_INOUT_DS18B20_HELPURL);
+  // }
+// };
 
 Blockly.Blocks['stendhal_pir_motion_sensor'] = {
   init: function() {
