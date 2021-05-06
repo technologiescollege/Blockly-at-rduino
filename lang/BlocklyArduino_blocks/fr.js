@@ -2928,6 +2928,7 @@ Blockly.Msg.STENDHAL_INOUT_TEMP_INPUT = "connecté sur la broche N°";
 Blockly.Msg.STENDHAL_INOUT_TEMP_TOOLTIP = "capteur analogique, le bloc renvoie une valeur comprise entre 0 et 1023";
 Blockly.Msg.STENDHAL_INOUT_LIGHT_HELPURL = "";
 Blockly.Msg.STENDHAL_INOUT_LIGHT_TEXT = "la valeur analogique du capteur de lumière";
+Blockly.Msg.STENDHAL_INOUT_LIGHT_DIGITAL_TEXT = "l'état du capteur de lumière";
 Blockly.Msg.STENDHAL_INOUT_LIGHT_INPUT = "connecté sur la broche N°";
 Blockly.Msg.STENDHAL_INOUT_LIGHT_TOOLTIP = "capteur analogique, le bloc renvoie une valeur comprise entre 0 et 1023";
 Blockly.Msg.STENDHAL_INOUT_MOISTURE_HELPURL = "http://www.adafruit.com/";

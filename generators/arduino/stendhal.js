@@ -16,6 +16,13 @@ Blockly.Arduino.stendhal_button = function() {
   return [code, Blockly.Arduino.ORDER_ATOMIC];
 };
 
+Blockly.Arduino.stendhal_digital_light_sensor = function() {
+  var dropdown_pin = this.getFieldValue('PIN');
+  Blockly.Arduino.setups_['setup_digital_light_sensor_'+dropdown_pin] = 'pinMode('+dropdown_pin+', INPUT);';
+  var code = 'digitalRead('+dropdown_pin+')';
+  return [code, Blockly.Arduino.ORDER_ATOMIC];
+};
+
 Blockly.Arduino.stendhal_tactile = function() {
   var dropdown_pin = this.getFieldValue('PIN');
   Blockly.Arduino.setups_['setup_tactile_'+dropdown_pin] = 'pinMode('+dropdown_pin+', INPUT);';

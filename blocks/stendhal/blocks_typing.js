@@ -10,6 +10,9 @@ Blockly.Blocks.stendhal_LED_PWM_validator.getBlockType = function() {
 Blockly.Blocks.stendhal_button.getBlockType = function() {
 	return Blockly.Types.BOOLEAN;
 };
+Blockly.Blocks.stendhal_digital_light_sensor.getBlockType = function() {
+	return Blockly.Types.BOOLEAN;
+};
 Blockly.Blocks.stendhal_magnetsensor.getBlockType = function() {
 	return Blockly.Types.BOOLEAN;
 };

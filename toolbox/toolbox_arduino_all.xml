@@ -1360,6 +1360,7 @@
 			<category name="CAT_STENDHAL_DIGITAL2" colour="#9999CC">
 				<block type="stendhal_button"></block>
 				<block type="stendhal_magnetsensor"></block>
+				<block type="stendhal_digital_light_sensor"></block>
 				<block type="stendhal_tactile"></block>
 				<block type="stendhal_tiltsensor"></block>
 				<block type="stendhal_pir_motion_sensor"></block>
