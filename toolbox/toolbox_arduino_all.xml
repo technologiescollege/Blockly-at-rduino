@@ -2037,6 +2037,7 @@
 			<block type="grove_thumb_joystick"></block>
 			<block type="grove_RECEPTEUR_IR"></block>
 			<block type="grove_FIN_COURSE"></block>
+			<block type="grove_12_Channel_Capacitive_Touch_Keypad"></block>
 			<category name="CAT_GROVE_MINI_LiDAR" colour="#8ec31f">
 				<block type="grove_TF_Mini_LiDAR_attach">
 					<value name="PIN1">

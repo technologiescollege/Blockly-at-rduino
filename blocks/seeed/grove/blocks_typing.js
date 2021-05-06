@@ -67,6 +67,9 @@ Blockly.Blocks.grove_bluetooth_slave_AT.getBlockType = function() {
 Blockly.Blocks.grove_FIN_COURSE.getBlockType = function() {
    return Blockly.Types.BOOLEAN;
 };
+Blockly.Blocks.grove_12_Channel_Capacitive_Touch_Keypad.getBlockType = function() {
+   return Blockly.Types.TEXT;
+};
 Blockly.Blocks.grove_EMETTEUR_IR.getBlockType = function() {
    return Blockly.Types.NUMBER;
 };

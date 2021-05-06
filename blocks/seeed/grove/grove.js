@@ -484,6 +484,23 @@ Blockly.Blocks['grove_FIN_COURSE'] = {
   }
 };
 
+Blockly.Blocks['grove_12_Channel_Capacitive_Touch_Keypad'] = {
+  init: function() {
+    this.setColour(Blockly.Blocks.grove.HUE);
+    this.setHelpUrl(Blockly.Msg.GROVE_Capacitive_Touch_Keypad_HELPURL);
+	this.appendDummyInput()
+        .appendField(Blockly.Msg.GROVE_Capacitive_Touch_Keypad_TEXT)
+        .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/seeed/grove/400px-12_Channel_Capacitive_Touch_Keypad.jpg', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize))
+		.appendField(Blockly.Msg.GROVE_Capacitive_Touch_Keypad_INPUT1)
+		.appendField(new Blockly.FieldTextInput('', Blockly.Arduino.pinDigitalValidator), 'RxPIN')
+		.appendField(Blockly.Msg.GROVE_Capacitive_Touch_Keypad_INPUT2)
+		.appendField(new Blockly.FieldTextInput('', Blockly.Arduino.pinDigitalValidator), 'TxPIN');
+    this.setInputsInline(false);
+    this.setOutput(true, 'Boolean');
+    this.setTooltip(Blockly.Msg.GROVE_Capacitive_Touch_Keypad_TOOLTIP);
+  }
+};
+
 Blockly.Blocks['grove_dht_read'] = {
   init: function() {
     this.setColour(Blockly.Blocks.grove.HUE);

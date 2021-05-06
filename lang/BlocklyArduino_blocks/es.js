@@ -781,6 +781,13 @@ Blockly.Msg.GROVE_FIN_COURSE_TEXT = "sensor final de carrera";
 Blockly.Msg.GROVE_FIN_COURSE_INPUT = "en el pin";
 Blockly.Msg.GROVE_FIN_COURSE_TOOLTIP = "entrada numérica";
 
+//************************************** ajouté 05/05/2021 \lang\BlocklyArduino **********************************************************
+Blockly.Msg.GROVE_Capacitive_Touch_Keypad_HELPURL = "https://wiki.seeedstudio.com/Grove-12-Channel-Capacitive-Touch-Keypad-ATtiny1616-/#applications";
+Blockly.Msg.GROVE_Capacitive_Touch_Keypad_TEXT = "key pressed on keypad";
+Blockly.Msg.GROVE_Capacitive_Touch_Keypad_INPUT1 = "connected on pin (Rx)";
+Blockly.Msg.GROVE_Capacitive_Touch_Keypad_INPUT2 = "and pin (Tx)";
+Blockly.Msg.GROVE_Capacitive_Touch_Keypad_TOOLTIP = "send back, via softserial, valule of key pressed on keypad";
+
 //************************************** ajoute 16/03/2017 \lang\BlocklyArduino **********************************************************
 Blockly.Msg.GROVE_INOUT_BT_AT_HELPURL = "http://wiki.seeed.cc/Grove-Serial_Bluetooth_v3.0/";
 Blockly.Msg.GROVE_INOUT_BT_AT_COMM1 = "Bluetooth";

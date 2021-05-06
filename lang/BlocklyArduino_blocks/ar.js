@@ -780,6 +780,13 @@ Blockly.Msg.GROVE_FIN_COURSE_TEXT =  "حالة مستشعر نهاية المس�
 Blockly.Msg.GROVE_FIN_COURSE_INPUT = "على الدبوس";
 Blockly.Msg.GROVE_FIN_COURSE_TOOLTIP =  "مدخل رقمي كلاسيكي للقراءة" ;
 
+//************************************** ajouté 05/05/2021 \lang\BlocklyArduino **********************************************************
+Blockly.Msg.GROVE_Capacitive_Touch_Keypad_HELPURL = "https://wiki.seeedstudio.com/Grove-12-Channel-Capacitive-Touch-Keypad-ATtiny1616-/#applications";
+Blockly.Msg.GROVE_Capacitive_Touch_Keypad_TEXT = "key pressed on keypad";
+Blockly.Msg.GROVE_Capacitive_Touch_Keypad_INPUT1 = "connected on pin (Rx)";
+Blockly.Msg.GROVE_Capacitive_Touch_Keypad_INPUT2 = "and pin (Tx)";
+Blockly.Msg.GROVE_Capacitive_Touch_Keypad_TOOLTIP = "send back, via softserial, valule of key pressed on keypad";
+
 //************************************** ajoute 16/03/2017 \lang\BlocklyArduino **********************************************************
 Blockly.Msg.GROVE_INOUT_BT_AT_HELPURL =  "http://wiki.seeed.cc/Grove-Serial_Bluetooth_v3.0/" ;
 Blockly.Msg.GROVE_INOUT_BT_AT_COMM1 =  "وصلة بلوتوث";
