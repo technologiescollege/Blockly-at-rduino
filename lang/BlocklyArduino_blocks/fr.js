@@ -812,6 +812,13 @@ Blockly.Msg.GROVE_Capacitive_Touch_Keypad_INPUT1 = "connecté sur la broche (Rx)
 Blockly.Msg.GROVE_Capacitive_Touch_Keypad_INPUT2 = "et sur la broche (Tx)";
 Blockly.Msg.GROVE_Capacitive_Touch_Keypad_TOOLTIP = "renvoie, par une communication série, la valeur tapée sur le clavier";
 
+//************************************** ajouté 30/06/2021 \lang\BlocklyArduino **********************************************************
+Blockly.Msg.GROVE_SGP30_HELPURL = "https://wiki.seeedstudio.com/Grove-VOC_and_eCO2_Gas_Sensor-SGP30/";
+Blockly.Msg.GROVE_SGP30_TEXT = "concentration de ";
+Blockly.Msg.GROVE_SGP30_INPUT1 = "dioxyde de carbone (CO2) en ppm";
+Blockly.Msg.GROVE_SGP30_INPUT2 = "composés organiques volatiles (TVOC) en ppb";
+Blockly.Msg.GROVE_SGP30_TOOLTIP = "Le capteur de gaz SGP30 renvoie la concentration de CO2 (en ppm) ou de TVOC (en ppb) dans l'air, il se connecte sur bus I2C.";
+
 //************************************** ajoute 16/03/2017 \lang\BlocklyArduino **********************************************************
 Blockly.Msg.GROVE_INOUT_BT_AT_HELPURL = "http://wiki.seeed.cc/Grove-Serial_Bluetooth_v3.0/";
 Blockly.Msg.GROVE_INOUT_BT_AT_COMM1 = "liaison Bluetooth";

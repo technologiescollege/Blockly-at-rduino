@@ -70,6 +70,9 @@ Blockly.Blocks.grove_FIN_COURSE.getBlockType = function() {
 Blockly.Blocks.grove_12_Channel_Capacitive_Touch_Keypad.getBlockType = function() {
    return Blockly.Types.TEXT;
 };
+Blockly.Blocks.grove_gas_sensor_SGP30.getBlockType = function() {
+   return Blockly.Types.NUMBER;
+};
 Blockly.Blocks.grove_EMETTEUR_IR.getBlockType = function() {
    return Blockly.Types.NUMBER;
 };

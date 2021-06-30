@@ -501,6 +501,20 @@ Blockly.Blocks['grove_12_Channel_Capacitive_Touch_Keypad'] = {
   }
 };
 
+Blockly.Blocks['grove_gas_sensor_SGP30'] = {
+  init: function() {
+    this.setColour(Blockly.Blocks.grove.HUE);
+    this.setHelpUrl(Blockly.Msg.GROVE_SGP30_HELPURL);
+    this.appendDummyInput()
+      .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/seeed/grove/SGP30.jpg', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize))
+      .appendField(Blockly.Msg.GROVE_SGP30_TEXT)
+      .appendField(new Blockly.FieldDropdown([[Blockly.Msg.GROVE_SGP30_INPUT1, "CO2"], [Blockly.Msg.GROVE_SGP30_INPUT2, "TVOC"]]), "TYPE");
+    this.setInputsInline(true);
+    this.setOutput(true, 'Number');
+    this.setTooltip(Blockly.Msg.GROVE_SGP30_TOOLTIP);
+  }
+};
+
 Blockly.Blocks['grove_dht_read'] = {
   init: function() {
     this.setColour(Blockly.Blocks.grove.HUE);

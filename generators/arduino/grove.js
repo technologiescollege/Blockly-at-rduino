@@ -575,6 +575,35 @@ Blockly.Arduino.grove_12_Channel_Capacitive_Touch_Keypad = function() {
   return [code, Blockly.Arduino.ORDER_ATOMIC];
 };
 
+Blockly.Arduino.grove_gas_sensor_SGP30 = function() {
+  var type = this.getFieldValue('TYPE');
+
+  Blockly.Arduino.includes_['include_Wire'] = '#include <Wire.h>'
+  Blockly.Arduino.includes_['include_SGP30'] = '#include <Adafruit_SGP30.h>'
+  Blockly.Arduino.definitions_['define_SGP30'] = 'Adafruit_SGP30 sgp30;';
+  switch(type){
+      case 'CO2':
+        var code = 'sgp30_readCO2()';        
+        Blockly.Arduino.userFunctions_['sgp30_readCO2'] = 'uint16_t sgp30_readCO2() {\n'
+          +'  if (!sgp30.IAQmeasure())\n'
+          +'    return 0;\n'
+          +'  else return sgp30.eCO2;\n'
+          +'}';
+      break;
+      case 'TVOC':
+        var code = 'sgp30_readTVOC()';        
+        Blockly.Arduino.userFunctions_['sgp30_readTVOC'] = 'uint16_t sgp30_readTVOC() {\n'
+          +'  if (!sgp30.IAQmeasure())\n'
+          +'    return 0;\n'
+          +'  else return sgp30.TVOC;\n'
+          +'}';
+      break;
+  }
+
+  Blockly.Arduino.setups_['setup_SGP30'] = 'sgp30.begin();\n'
+  return [code, Blockly.Arduino.ORDER_ATOMIC];
+};
+
 Blockly.Arduino.grove_dht_read = function() {
   var sensor = this.getFieldValue('SENSOR');
   var pin = this.getFieldValue('PIN');

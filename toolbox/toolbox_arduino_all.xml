@@ -2030,6 +2030,7 @@
 			<block type="grove_temporature_sensor"></block>
 			<block type="grove_moisture_sensor"></block>
 			<block type="grove_dht_read"></block>
+			<block type="grove_gas_sensor_SGP30"></block>
 			<block type="grove_sound_sensor"></block>
 			<block type="grove_pir_motion_sensor"></block>
 			<block type="grove_line_finder"></block>
