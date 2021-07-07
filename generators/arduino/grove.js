@@ -552,10 +552,10 @@ Blockly.Arduino.grove_12_Channel_Capacitive_Touch_Keypad = function() {
   Blockly.Arduino.includes_['include_SoftwareSerial'] = '#include "SoftwareSerial.h"';
   Blockly.Arduino.definitions_['definition_Capacitive_Touch_Keypad_' + dropdown_RxPIN] = 'SoftwareSerial keyPad_' + dropdown_RxPIN + '(' + dropdown_TxPIN + ', ' + dropdown_RxPIN + ');';
   Blockly.Arduino.setups_['setup_Capacitive_Touch_Keypad_' + dropdown_RxPIN] = 'keyPad_' + dropdown_RxPIN + '.begin(9600);\n';
-  Blockly.Arduino.userFunctions_['getDataKeypad_' + dropdown_RxPIN] = 'String getKeypadTouched(padToScan) {\n'
+  Blockly.Arduino.userFunctions_['getDataKeypad_' + dropdown_RxPIN] = 'String getKeypadTouched() {\n'
     +'  uint8_t data;\n'
-    +'  while(padToScan.available()) {\n'
-    +'     data = padToScan.read() - 224;\n'
+    +'  while(keyPad_' + dropdown_RxPIN + '.available()) {\n'
+    +'     data = keyPad_' + dropdown_RxPIN + '.read() - 224;\n'
     +'  }\n'
     +'  if (data > 0 && data < 13) {\n'
     +'      if (data == 10) {\n'
@@ -571,7 +571,7 @@ Blockly.Arduino.grove_12_Channel_Capacitive_Touch_Keypad = function() {
     +'    return "";\n'
     +'  }\n'
     +'}';
-  var code = 'getKeypadTouched(keyPad_' + dropdown_RxPIN + ')';
+  var code = 'getKeypadTouched()';
   return [code, Blockly.Arduino.ORDER_ATOMIC];
 };
 
