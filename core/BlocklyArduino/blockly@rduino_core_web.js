@@ -732,7 +732,7 @@ BlocklyDuino.loadToolboxDefinition = function(toolboxFile) {
 	if (!toolboxFile) {
 		toolboxFile = BlocklyDuino.getStringParamFromUrl('toolbox', '');
 	}	
-		if (!toolboxFile) {
+		if (!toolboxFile && window.localStorage.toolbox) {
 			toolboxFile = window.localStorage.toolbox;
 		}	
 			if (!toolboxFile) {
