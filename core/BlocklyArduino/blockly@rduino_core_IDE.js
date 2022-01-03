@@ -225,7 +225,7 @@ BlocklyDuino.loadBlocks = function(defaultXml) {
     } else {
         var loadOnce = null;
         try {
-            loadOnce = window.localStorage.loadOnceBlocks;
+            loadOnce = sessionStorage.getItem('loadOnceBlocks');
         } catch (e) {
             // Firefox sometimes throws a SecurityError when accessing
             // localStorage.
@@ -233,7 +233,7 @@ BlocklyDuino.loadBlocks = function(defaultXml) {
         }
         if (loadOnce != null) {
             // Language switching stores the blocks during the reload.
-            delete window.localStorage.loadOnceBlocks;
+            sessionStorage.removeItem('loadOnceBlocks');
             var xml = Blockly.Xml.textToDom(loadOnce);
             Blockly.Xml.domToWorkspace(xml, BlocklyDuino.workspace);
         }
@@ -244,10 +244,10 @@ BlocklyDuino.loadBlocks = function(defaultXml) {
  *  Store the blocks for the duration of the reload.
  */
 BlocklyDuino.backupBlocks = function() {
-    if (typeof Blockly != 'undefined' && window.localStorage) {
+    if (typeof Blockly != 'undefined' && sessionStorage) {
         var xml = Blockly.Xml.workspaceToDom(BlocklyDuino.workspace);
         var text = Blockly.Xml.domToText(xml);
-        window.localStorage.loadOnceBlocks = text;
+        sessionStorage.setItem('loadOnceBlocks', text);
     }
 };
 
@@ -412,7 +412,7 @@ BlocklyDuino.bindFunctions = function() {
 
     $('#btn_valid_msg').on("click", function() {
         if ($('#ajax_msg').prop("checked")) {
-            window.sessionStorage.msg_ajax_seen = true;
+            sessionStorage.setItem('msg_ajax_seen', true);
         }
         $('#ajaxModal').modal('hide');
     });
@@ -597,7 +597,7 @@ BlocklyDuino.openConfigToolbox = function() {
     var modalbody = $("#modal-body-config");
 
     // load the toolboxes id's stored in session
-    var loadIds = window.localStorage.toolboxids;
+    var loadIds = sessionStorage.getItem('toolboxids');
 
     // set the default toolbox if none
     if (loadIds === undefined || loadIds === "") {
@@ -652,14 +652,14 @@ BlocklyDuino.changeToolbox = function() {
     });
 
     // store id's in session
-    window.localStorage.toolboxids = toolboxIds;
+    sessionStorage.setItem('toolboxids', toolboxIds);
 
     var search = window.location.search;
     // put id's in url
     search = BlocklyDuino.addReplaceParamToUrl(search, 'toolboxids', toolboxIds);
 
     // store toolboxe id in session
-    window.localStorage.toolbox = $("#toolboxes").val();
+    sessionStorage.setItem('toolbox', $("#toolboxes").val());
 
     search = BlocklyDuino.addReplaceParamToUrl(search, 'toolbox', $("#toolboxes").val());
 
@@ -669,9 +669,9 @@ BlocklyDuino.changeToolbox = function() {
     search = search.replace(/([?&]sortby=)[^&]*/, '');
     // put values in url
     if (search.length <= 1) {
-        search = '?sortby=' + window.localStorage.catblocsort;
+        search = '?sortby=' + sessionStorage.getItem('catblocsort');
     } else {
-        search = search + '&sortby=' + window.localStorage.catblocsort;
+        search = search + '&sortby=' + sessionStorage.getItem('catblocsort');
     }
 
     window.location = window.location.protocol + '//' + window.location.host + window.location.pathname + search;
@@ -687,7 +687,7 @@ BlocklyDuino.buildToolbox = function() {
 
     // set the toolbox from local storage
     if (loadIds === undefined || loadIds === "") {
-        loadIds = window.localStorage.toolboxids;
+        loadIds = sessionStorage.getItem('toolboxids');
     }
 
     // set the default toolbox if none
@@ -699,7 +699,7 @@ BlocklyDuino.buildToolbox = function() {
         }
     }
 
-    window.localStorage.toolboxids = loadIds;
+    sessionStorage.setItem('toolboxids', loadIds);
 
     var xmlValue = '<xml id="toolbox">';
     var xmlids = loadIds.split(",");
@@ -722,7 +722,7 @@ BlocklyDuino.loadToolboxDefinition = function(toolboxFile) {
         toolboxFile = BlocklyDuino.getStringParamFromUrl('toolbox', '');
     }
     if (!toolboxFile) {
-        toolboxFile = window.localStorage.toolbox;
+        toolboxFile = sessionStorage.getItem('toolbox');
     }
     if (!toolboxFile) {
         toolboxFile = BlocklyDuino.selectedToolbox;
@@ -739,7 +739,7 @@ BlocklyDuino.loadToolboxDefinition = function(toolboxFile) {
     $('#' + toolboxFile).addClass("active");
 
     BlocklyDuino.toggleFunctionsChoice();
-    if (window.localStorage.catblocsort == "F") {
+    if (sessionStorage.getItem('catblocsort') == "F") {
         toolboxFile += '_functions';
     }
 
@@ -931,7 +931,7 @@ BlocklyDuino.init = function() {
     var urlFile = BlocklyDuino.getStringParamFromUrl('url', '');
     var loadOnce = null;
     try {
-        loadOnce = window.localStorage.loadOnceBlocks;
+        loadOnce = sessionStorage.getItem('loadOnceBlocks');
     } catch (e) {
         // Firefox sometimes throws a SecurityError when accessing
         // localStorage.
@@ -1022,7 +1022,7 @@ BlocklyDuino.testAjax = function() {
         url: "./index.html",
         dataType: 'text',
         error: function() {
-            if (window.sessionStorage && !window.sessionStorage.msg_ajax_seen) {
+            if (window.sessionStorage && !sessionStorage.getItem('msg_ajax_seen')) {
                 $('#ajaxModal').modal('show');
             }
             BlocklyDuino.ajaxOK = false;

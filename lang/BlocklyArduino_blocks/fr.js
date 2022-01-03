@@ -2723,8 +2723,6 @@ Blockly.Msg.VIRTUINO_DV_INPUT = "sur le canal virtuel (DV)";
 Blockly.Msg.VIRTUINO_TOOLTIP = "utilisation de Virtuino, voir l'aide";
 Blockly.Msg.VIRTUINO_HELP = "https://youtu.be/v1mQ0VC6szw";
 
-
-
 //
 Blockly.Msg.CAT_RTC = "RTC DS3231";
 Blockly.Msg.CAT_SSD1306 = "Adafruit SSD1306";
