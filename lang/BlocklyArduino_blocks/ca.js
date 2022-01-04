@@ -398,6 +398,29 @@ Blockly.Msg.CAT_OTTOH = "humanoide"; //added 06/10/2019
 
 Blockly.Msg.CAT_VIRTUINO = "Virtuino"; //added 08/05/2020
 
+Blockly.Msg.CAT_STENDHAL = "Collège Stendhal";  //added 10/09/2020
+Blockly.Msg.CAT_STENDHAL_IN = " - CAPTER";
+Blockly.Msg.CAT_STENDHAL_DIGITAL2 = "  * * Logique";
+Blockly.Msg.CAT_STENDHAL_ANALOG2 = "  * * Analogique";
+Blockly.Msg.CAT_STENDHAL_DIGITAL3 = "  . . . Logique";
+Blockly.Msg.CAT_STENDHAL_ANALOG3 = "  . . . Analogique";
+Blockly.Msg.CAT_STENDHAL_DEAL = "  * * Télérupteurs";
+Blockly.Msg.CAT_STENDHAL_OUT = " - ACTIONNER";
+Blockly.Msg.CAT_STENDHAL_OUT_MOTOR = "  * * Mouvement";
+Blockly.Msg.CAT_STENDHAL_OUT_MOTOR_SERVO = "  . . . Servomoteurs";
+Blockly.Msg.CAT_STENDHAL_OUT_MOTOR_CLASSIC = "  . . . Moteurs à courant continu";
+Blockly.Msg.CAT_STENDHAL_OUT_MOTOR_PAP = "  . . . Moteurs pas à pas";
+Blockly.Msg.CAT_STENDHAL_OUT_LIGHT = "  * * Lumière";
+Blockly.Msg.CAT_STENDHAL_OUT_SOUND = "  * * Son";
+Blockly.Msg.CAT_STENDHAL_COMM = " - COMMUNIQUER";
+Blockly.Msg.CAT_STENDHAL_COMM_LCD = "  * * Ecran LCD";
+Blockly.Msg.CAT_STENDHAL_COMM_LED = "  * * LED";
+Blockly.Msg.CAT_STENDHAL_COMM_BLUETOOTH = "  * * Bluetooth";
+Blockly.Msg.CAT_STENDHAL_COMM_USB = "  * * USB";
+Blockly.Msg.CAT_STENDHAL_BOARD = " - GERER CARTE MERE";
+Blockly.Msg.CAT_STENDHAL_TIME = "  * *  Horloge";
+Blockly.Msg.CAT_STENDHAL_MEMORY = "  * *  Mémoire";
+
 //**********************************Dropdown menus messages***********************************************
 
 Blockly.Msg.FIELDDROPDOWN = [["1 (activat)", "HIGH"], ["0 (desactivat)", "LOW"]];
@@ -2538,7 +2561,7 @@ Blockly.Msg.mm_ARRAY_CREATE_WITH = "objecte";
 
 Blockly.Msg.Peguino_Bodysensor_TEXT = "sensor de moviment";
 Blockly.Msg.Peguino_Bodysensor_TOOLTIP = "Amb aquesta taulell Peguino, els moviments són detectats en la proximitat.";
-Blockly.Msg.Peguino_Bodysensor_PLUG = "connectorr";
+Blockly.Msg.Peguino_Bodysensor_PLUG = "Connector";
 Blockly.Msg.Peguino_Bodysensor_UNIT = "port";
 Blockly.Msg.Peguino_Bodysensor_UNIT_CHOICE = [["?", "0"],["C1", "23"],  ["C2", "20"], ["C3", "6"],  ["D1", "10"], ["D2", "7"],  ["D3", "24"]];
 Blockly.Msg.Peguino_Bodysensor_HELPURL = "https://www.peguino.com/chat/thread-25.html";
@@ -2550,28 +2573,28 @@ Blockly.Msg.Peguino_ProximityBrick_HELPURL = "https://www.peguino.com/chat/threa
 
 Blockly.Msg.Peguino_ButtonBrick_TEXT = "polsador";
 Blockly.Msg.Peguino_ButtonBrick_TOOLTIP = "Aquest taulell Peguino és un interruptor simple : mentre està enfonçat, el circuit està tancat.";
-Blockly.Msg.Peguino_ButtonBrick_INPUT = "connector";
+Blockly.Msg.Peguino_ButtonBrick_INPUT = "Connector";
 Blockly.Msg.Peguino_ButtonBrick_UNIT = "port";
 Blockly.Msg.Peguino_ButtonBrick_UNIT_CHOICE = [["?", "0"],["C1", "23"],  ["C2", "20"], ["C3", "6"],  ["D1", "10"], ["D2", "7"],  ["D3", "24"]];
 Blockly.Msg.Peguino_ButtonBrick_HELPURL = "https://www.peguino.com/chat/thread-21.html";
 
 Blockly.Msg.Peguino_PotiBrick_TEXT = "sensor angular (potenciòmetre)";
 Blockly.Msg.Peguino_PotiBrick_TOOLTIP = "Aquest taulell és un potentiomètre : quan gireu la resistència elèctrica canvia, i genera diferents valors numèrics.";
-Blockly.Msg.Peguino_PotiBrick_PLUG = "connector";
+Blockly.Msg.Peguino_PotiBrick_PLUG = "Connector";
 Blockly.Msg.Peguino_PotiBrick_UNIT = "port";
 Blockly.Msg.Peguino_PotiBrick_UNIT_CHOICE = [["?", "0"], ["C3", "6"],  ["D1", "10"], ["D2", "7"]];
 Blockly.Msg.Peguino_PotiBrick_HELPURL = "https://www.peguino.com/chat/thread-14.html";
 
 Blockly.Msg.Peguino_Microprox_TEXT = "sensor de proximitat";
 Blockly.Msg.Peguino_Microprox_TOOLTIP = "Aquest taulell Peguino detecta les diferencies de lluminositat a les superficíes i registra curtes distancies per reflexió de la llum infraroja.";
-Blockly.Msg.Peguino_Microprox_PLUG = "connector";
+Blockly.Msg.Peguino_Microprox_PLUG = "Connector";
 Blockly.Msg.Peguino_Microprox_UNIT = "port";
 Blockly.Msg.Peguino_Microprox_UNIT_CHOICE = [["?", "0"], ["C3", "6"],  ["D1", "10"], ["D2", "7"]];
 Blockly.Msg.Peguino_Microprox_HELPURL = "https://www.peguino.com/chat/thread-15.html";
 
 Blockly.Msg.Peguino_ClimateBrick_TEXT = "temperatura + humitat";
 Blockly.Msg.Peguino_ClimateBrick_TOOLTIP = "Aquest taulell Peguino proporciona les dades sobre temperatura mesurada (en ° Celsius) i de la humitat (en %).";
-Blockly.Msg.Peguino_ClimateBrick_PLUG = "connector";
+Blockly.Msg.Peguino_ClimateBrick_PLUG = "Connector";
 Blockly.Msg.Peguino_ClimateBrick_UNIT = "port";
 Blockly.Msg.Peguino_ClimateBrick_CHOICENANO = [["?", "0"], ["C1", "23"], ["C2", "20"], ["D3", "24"]];
 Blockly.Msg.Peguino_ClimateBrick_CHOICEESP32 = [["?", "0"],["C1", "25"],  ["C2", "15"], ["C3", "17"],  ["D1", "21"], ["D2", "23"],  ["D3", "22"]];
@@ -2580,9 +2603,9 @@ Blockly.Msg.Peguino_ClimateBrick_DHT_READ_C = "Temperatura °C";
 Blockly.Msg.Peguino_ClimateBrick_DHT_READ_H = "Humitat %";
 
 Blockly.Msg.PeguinoIRsender_TEXT = "emissor infraroig IR";
-Blockly.Msg.PeguinoIRsender_INPUT1 = "connector";
+Blockly.Msg.PeguinoIRsender_INPUT1 = "Pin";
 Blockly.Msg.PeguinoIRsender_INPUT2 = "freqüència (Hz) 38000 ";
-Blockly.Msg.PeguinoIRsender_TOOLTIP = "Envia la llum infraroja en la freqüència donada.";
+Blockly.Msg.PeguinoIRsender_TOOLTIP = "Envia la llum infraroja en la freqüència donada..";
 Blockly.Msg.PeguinoIRsender_HELPURL = "https://www.peguino.com/chat/";
 
 Blockly.Msg.PeguinoIRreceiver_TEXT = "receptor infraroig IR";
@@ -2592,7 +2615,7 @@ Blockly.Msg.PeguinoIRreceiver_HELPURL = "https://www.peguino.com/chat/";
 
 Blockly.Msg.Peguino_Lightsensor_TEXT = "sensor de lluminositat";
 Blockly.Msg.Peguino_Lightsensor_TOOLTIP = "Aquest taulell  Peguino detecta les diferències de lluminositat.";
-Blockly.Msg.Peguino_Lightsensor_PLUG = "connector";
+Blockly.Msg.Peguino_Lightsensor_PLUG = "Connector";
 Blockly.Msg.Peguino_Lightsensor_UNIT = "port";
 Blockly.Msg.Peguino_Lightsensor_UNIT_CHOICE = [["?", "0"], ["C3", "6"],  ["D1", "10"], ["D2", "7"]];
 Blockly.Msg.Peguino_Lightsensor_HELPURL = "https://www.peguino.com/chat/thread-13.html";
@@ -2600,11 +2623,11 @@ Blockly.Msg.Peguino_Lightsensor_HELPURL = "https://www.peguino.com/chat/thread-1
 // ------------------------ Peguino output bricks ------------------------
 Blockly.Msg.Peguino_BuzzerBrick_TEXT = "avisador sonor (Brunzidor)";
 Blockly.Msg.Peguino_BuzzerBrick_TOOLTIP = "aquest taulell Peguino fa soroll simples.";
-Blockly.Msg.Peguino_BuzzerBrick_PLUG = "connector";
+Blockly.Msg.Peguino_BuzzerBrick_PLUG = "Connector";
 Blockly.Msg.Peguino_BuzzerBrick_UNIT = "port";
 Blockly.Msg.Peguino_BuzzerBrick_FREQUENCY = "só";
-Blockly.Msg.Peguino_BuzzerBrick_FREQUENCY_CHOICE = [["?", "0"],["Ton A", "440"],  ["2250 Hz", "2250"], ["3500 Hz", "3500"]];
-Blockly.Msg.Peguino_BuzzerBrick_FREQUENCY_UNIT  = "tó";
+Blockly.Msg.Peguino_BuzzerBrick_FREQUENCY_CHOICE = [["?", "0"],["Tó A", "440"],  ["2250 Hz", "2250"], ["3500 Hz", "3500"]];
+Blockly.Msg.Peguino_BuzzerBrick_FREQUENCY_UNIT  = "só";
 Blockly.Msg.Peguino_BuzzerBrick_FREQUENCY_VALUE = "freqüència";
 Blockly.Msg.Peguino_BuzzerBrick_PLAYTIME = "duració";
 Blockly.Msg.Peguino_BuzzerBrick_PLAYTIME_CHOICE = [["?", "0"], ["0,2 segons", "200"], ["0,5 segons", "500"],  ["1 segon", "1000"]];
@@ -2613,32 +2636,32 @@ Blockly.Msg.Peguino_BuzzerBrick_UNIT_CHOICE = [["?", "0"],["C1", "23"],  ["C2", 
 Blockly.Msg.Peguino_BuzzerBrick_HELPURL = "https://www.peguino.com/chat/thread-16.html";
 
 Blockly.Msg.Peguino_LED_TEXT = "LED";
-Blockly.Msg.Peguino_LED_INPUT = "connector";
+Blockly.Msg.Peguino_LED_INPUT = "Connector";
 Blockly.Msg.Peguino_LED_UNIT = "port";
 Blockly.Msg.Peguino_LED_STATUS = "estat";
 Blockly.Msg.Peguino_LED_UNIT_CHOICE = [["?", "0"],["C1", "23"],  ["C2", "20"], ["C3", "6"],  ["D1", "10"], ["D2", "7"],  ["D3", "24"]];
 Blockly.Msg.Peguino_LED_TOOLTIP = "Aquest dispositiu genera llum : en funció del tipus de LED, par ex. en blanc, taronja, rosa, blau o un altre color.";
 Blockly.Msg.Peguino_LED_HELPURL = "https://www.peguino.com/chat/";
 
-Blockly.Msg.Peguino_RGBLED_TEXT = "LED multicolor";
+Blockly.Msg.Peguino_RGBLED_TEXT = "LED RGB";
 Blockly.Msg.Peguino_RGBLED_UNIT = "port";
 Blockly.Msg.Peguino_RGBLED_STATUS = "estat";
-Blockly.Msg.Peguino_RGBLED_INPUT = "broche";
+Blockly.Msg.Peguino_RGBLED_INPUT = "Pin";
 Blockly.Msg.Peguino_RGBLED_RGBCOLOR = "tria un color:";
-Blockly.Msg.Peguino_RGBLED_RGBCOLORVALUE = "valors";
+Blockly.Msg.Peguino_RGBLED_RGBCOLORVALUE = "valor color";
 Blockly.Msg.Peguino_RGBLED_RGBRED = "roig";
 Blockly.Msg.Peguino_RGBLED_RGBGREEN = "verd";
 Blockly.Msg.Peguino_RGBLED_RGBBLUE = "blau";
-Blockly.Msg.Peguino_RGBLED_TOOLTIP = "Aquest bloc genera llum (al le port F) de diferents colors. El color pot obtindre's gràcies a 3 colors de base : roig, verd i blau.";
+Blockly.Msg.Peguino_RGBLED_TOOLTIP = "Aquest bloc genera llum (al port F) de diferents colors. El color pot obtindre's gràcies a 3 colors de base : roig, verd i blau.";
 Blockly.Msg.Peguino_RGBLED_HELPURL = "https://www.peguino.com/chat/thread-19.html";
 
-Blockly.Msg.Peguino_I2CScan_TEXT = "I2C escaner d'adreça : connector B";
-Blockly.Msg.Peguino_I2CScan_TOOLTIP = "Aquest element permet al bus da dades I2C al connector B ser analisat per cercar les adreces dels perifèrics connectats. Les adreces trobades són enviades a la interfície sèrie.";
+Blockly.Msg.Peguino_I2CScan_TEXT = "I2C escàner d'adreça : connector B";
+Blockly.Msg.Peguino_I2CScan_TOOLTIP = "Aquest element permet al bus de dades I2C del connector B ser analitzat per cercar les adreces dels perifèrics connectats. Les adreces trobades són enviades a la interfície sèrie.";
 Blockly.Msg.Peguino_I2CScan_HELPURL = "https://www.peguino.com/chat/thread-20.html";
 
 Blockly.Msg.Peguino_AttachServo_TEXT = "afegeix un servomotor";
 Blockly.Msg.Peguino_AttachServo_TOOLTIP = "Aquest mòdul és utilitzat per connectar un servomotor.";
-Blockly.Msg.Peguino_AttachServo_PLUG = "al connector";
+Blockly.Msg.Peguino_AttachServo_PLUG = "Connector";
 Blockly.Msg.Peguino_AttachServo_UNIT = "port";
 Blockly.Msg.Peguino_AttachServo_UNIT_CHOICE = [["?", "0"], ["C3", "6"],  ["D1", "10"], ["D2", "7"]];
 Blockly.Msg.Peguino_AttachServo_HELPURL = "https://www.peguino.com/chat/";
@@ -2646,18 +2669,17 @@ Blockly.Msg.Peguino_SERVO_DEFAULT_NAME = "Servo1";
 
 
 //////////////////////////// Robobox Blocks Text 2019 ////////////////////////////
-
 Blockly.Msg.CAT_ROBOBOX = "Robobox";
-Blockly.Msg.ROBOBOX_ANGLE180 = "Angle [0~180°] :";
-Blockly.Msg.ROBOBOX_PIN = "pin :";
-Blockly.Msg.ROBOBOX_TRIGGER_PIN = "Envia al pin :";
-Blockly.Msg.ROBOBOX_LISTEN_PIN = "Escolta al pin :";
-Blockly.Msg.ROBOBOX_ARRAY = "Matriu :";
-Blockly.Msg.ROBOBOX_LEN = "Mida :";
+Blockly.Msg.ROBOBOX_ANGLE180 = "Angle [0~180°]:";
+Blockly.Msg.ROBOBOX_PIN = "Pin:";
+Blockly.Msg.ROBOBOX_TRIGGER_PIN = "envia al pin:";
+Blockly.Msg.ROBOBOX_LISTEN_PIN = "escolta al pin:";
+Blockly.Msg.ROBOBOX_ARRAY = "matriu:";
+Blockly.Msg.ROBOBOX_LEN = "mida:";
 
-Blockly.Msg.CAT_ROBOBOX_SERVO = "- Servomotors";
-Blockly.Msg.ROBOBOX_SERVO_SETANGLE = "canvia l'angle";
-Blockly.Msg.ROBOBOX_SERVO_GETANGLE = "Llegeix l'angle";
+Blockly.Msg.CAT_ROBOBOX_SERVO = "- Servo-motors";
+Blockly.Msg.ROBOBOX_SERVO_SETANGLE = "estableix l'angle";
+Blockly.Msg.ROBOBOX_SERVO_GETANGLE = "llegeix l'angle";
 Blockly.Msg.ROBOBOX_SERVO_TOOLTIP = "Ajuda";
 
 Blockly.Msg.CAT_ROBOBOX_SENSORS = "- Sensors";
@@ -2698,104 +2720,104 @@ Blockly.Msg.VIRTUINO_DV_INPUT = "al canal virtual (DV)";
 Blockly.Msg.VIRTUINO_TOOLTIP = "Usa Virtuino, cerca ajuda o ves a la web https://virtuino.com/";
 Blockly.Msg.VIRTUINO_HELP = "https://youtu.be/v1mQ0VC6szw";
 
+
 //
 Blockly.Msg.CAT_RTC = "RTC DS3231";
 Blockly.Msg.CAT_SSD1306 = "Adafruit SSD1306";
 Blockly.Msg.CAT_SSD1306_MAIN = "principal";
-Blockly.Msg.CAT_SSD1306_DRAW = "dessin";
-Blockly.Msg.CAT_SSD1306_TEXT = "texte";
+Blockly.Msg.CAT_SSD1306_DRAW = "dibuix";
+Blockly.Msg.CAT_SSD1306_TEXT = "text";
 Blockly.Msg.CAT_LORA = "LoRa";
 
-Blockly.Msg.LORA_INIT = 'LoRa - initialisation';
-Blockly.Msg.LORA_FREQ = 'fréquence';
+Blockly.Msg.LORA_INIT = 'Inicialitza LoRa';
+Blockly.Msg.LORA_FREQ = 'freqüència';
 Blockly.Msg.LORA_FREQ_DROPDOWN = [["915 MHz","915E6"],["868 MHz","868E6"],["433 MHz","433E6"]];
-Blockly.Msg.LORA_RESET_PIN = 'broche de réinitialisation';
-Blockly.Msg.LORA_RESET_PIN_DROPDOWN = [["9 (défaut)","10"],["-1 (pas utilisé)","-1"]];
-Blockly.Msg.LORA_SS_PIN = 'broche de sélection de puce SPI';
-Blockly.Msg.LORA_SS_PIN_DROPDOWN = [["10 (défaut)","10"]];
-Blockly.Msg.LORA_DIO0_PIN = 'broche DIO0';
-Blockly.Msg.LORA_DIO0_PIN_DROPDOWN = [["2 (défaut)","2"]];
-Blockly.Msg.LORA_SPI_FREQ = 'fréquence SPI';
-Blockly.Msg.LORA_SPI_FREQ_DROPDOWN = [["8 MHz (défaut)","8E6"]];
-
-Blockly.Msg.LORA_END = 'fin';
-Blockly.Msg.LORA_ONRECEIVE = 'dès réception';
-Blockly.Msg.LORA_ONTXDONE = 'après transmission';
-Blockly.Msg.LORA_BEGINPACKET = 'paquet commence';
-Blockly.Msg.LORA_IMPLICIT_HEADER = 'en-tête implicite';
-Blockly.Msg.LORA_ENDPACKET = 'fin de paquet';
-Blockly.Msg.LORA_ASYNC = 'asynchrone';
-Blockly.Msg.LORA_PRINT = 'imprime';
-Blockly.Msg.LORA_WRITE_BYTE = 'écrire octet';
-Blockly.Msg.LORA_CHARACTER = 'charactère';
-Blockly.Msg.LORA_WRITE_BUFFER = 'écrire dans le buffer';
+Blockly.Msg.LORA_RESET_PIN = 'restableix pin';
+Blockly.Msg.LORA_RESET_PIN_DROPDOWN = [["9 (per defecte)","10"],["-1 (no usat)","-1"]];
+Blockly.Msg.LORA_SS_PIN = 'selecciona pin SPI';
+Blockly.Msg.LORA_SS_PIN_DROPDOWN = [["10 (per defecte)","10"]];
+Blockly.Msg.LORA_DIO0_PIN = 'pin DIO0';
+Blockly.Msg.LORA_DIO0_PIN_DROPDOWN = [["2 (per defecte)","2"]];
+Blockly.Msg.LORA_SPI_FREQ = 'freqüència SPI';
+Blockly.Msg.LORA_SPI_FREQ_DROPDOWN = [["8 MHz (per defecte)","8E6"]];
+Blockly.Msg.LORA_END = 'final';
+Blockly.Msg.LORA_ONRECEIVE = 'en rebre';
+Blockly.Msg.LORA_ONTXDONE = 'a la transmissió feta';
+Blockly.Msg.LORA_BEGINPACKET = 'començament de paquet';
+Blockly.Msg.LORA_IMPLICIT_HEADER = 'capçalera implícita';
+Blockly.Msg.LORA_ENDPACKET = 'final de paquet';
+Blockly.Msg.LORA_ASYNC = 'asíncron';
+Blockly.Msg.LORA_PRINT = 'imprimeix';
+Blockly.Msg.LORA_WRITE_BYTE = 'escriu byte';
+Blockly.Msg.LORA_CHARACTER = 'caràcter';
+Blockly.Msg.LORA_WRITE_BUFFER = 'escriu la memòria intermèdia';
 Blockly.Msg.LORA_AVAILABLE = 'disponible';
-Blockly.Msg.LORA_PARSE_PACKET = 'parcourir le paquet';
-Blockly.Msg.LORA_SIZE = 'taille';
-Blockly.Msg.LORA_RECEIVE = 'recevoir';
-Blockly.Msg.LORA_PACKET_RSSI = 'intensité de signal reçu (RSSI) du paquet ';
-Blockly.Msg.LORA_PACKET_SNR = 'rapport signal-bruit (SNR) de paquets';
-Blockly.Msg.LORA_PACKET_FREQUENCY_ERROR = 'erreur de fréquence du paquet';
-Blockly.Msg.LORA_PEEK = 'aperçu';
-Blockly.Msg.LORA_READ = 'lire';
-Blockly.Msg.LORA_IDLE = 'inoccupé';
-Blockly.Msg.LORA_SLEEP = 'veille';
-Blockly.Msg.LORA_SET_TX_POWER = 'puissance de transmission';
-Blockly.Msg.LORA_TX_POWER_LEVEL = 'niveau';
-Blockly.Msg.LORA_OUTPUT_PIN_DROPDOWN = [["PA boost","PA_OUTPUT_PA_BOOST_PIN"],["RF0","PA_OUTPUT_RFO_PIN"]];
-Blockly.Msg.LORA_OUTPUT_PIN = 'broche de sortie';
-Blockly.Msg.LORA_SET_SPREAD_FACTOR = 'facteur d\'étalement';
+Blockly.Msg.LORA_PARSE_PACKET = 'analitza paquet';
+Blockly.Msg.LORA_SIZE = 'mida';
+Blockly.Msg.LORA_RECEIVE = 'rep';
+Blockly.Msg.LORA_SIZE = 'mida';
+Blockly.Msg.LORA_PACKET_RSSI = 'paquet RSSI';
+Blockly.Msg.LORA_PACKET_SNR = 'paquet SNR';
+Blockly.Msg.LORA_PACKET_FREQUENCY_ERROR = 'error de freqüència del paquet';
+Blockly.Msg.LORA_PEEK = 'fes una ullada';
+Blockly.Msg.LORA_READ = 'llegeix';
+Blockly.Msg.LORA_IDLE = 'inactiva';
+Blockly.Msg.LORA_SLEEP = 'atura temporalment';
+Blockly.Msg.LORA_SET_TX_POWER = 'estableix la potència de transmissió ';
+Blockly.Msg.LORA_TX_POWER_LEVEL = 'nivell';
+Blockly.Msg.LORA_OUTPUT_PIN_DROPDOWN = [["augmenta PA","PA_OUTPUT_PA_BOOST_PIN"],["RF0","PA_OUTPUT_RFO_PIN"]];
+Blockly.Msg.LORA_OUTPUT_PIN = 'pin de sortida';
+Blockly.Msg.LORA_SET_SPREAD_FACTOR = 'estableix el factor de dispersió ';
 Blockly.Msg.LORA_SPREAD_DROPDOWN = [["6","6"],["7","7"],["8","8"],["9","9"],["10","10"],["11","11"],["12","12"]];
-Blockly.Msg.LORA_SPREAD = 'valeur d\'étalement';
-Blockly.Msg.LORA_SET_SIGNAL_BANDWIDTH = 'définir la bande passante';
-Blockly.Msg.LORA_BANDWIDTH_DROPDOWN = [["7.8 kHz","7.8E3"],["10.4 kHz","10.4E3"],["15.6 kHz","15.6E3"],["20.8 kHz","20.8E3"],["31.25 kHz","31.25E3"],["41.7 kHz","41.7E3"],["62.5 kHz","62.5E3"],["125 kHz","125E3"],["250 kHz","250E3"],["500 kHz","500E36"]];
-Blockly.Msg.LORA_BANDWIDTH = 'bande passante';
-Blockly.Msg.LORA_SET_CODING_RATE = 'vitesse d\'encodage';
+Blockly.Msg.LORA_SPREAD = 'dispersió';
+Blockly.Msg.LORA_SET_SIGNAL_BANDWIDTH = "estableix l'amplada de banda del senyal ";
+Blockly.Msg.LORA_BANDWIDTH_DROPDOWN = [["7.8 kHz","7.8E3"],["10.4 kHz","10.4E3"],["15.6 kHz","15.6E3"],["20.8 kHz","20.8E3"],["31.25 kHz","31.25E3"],["41.7 kHz","41.7E3"],["62.5 kHz","62.5E3"],["125 kHz","125E3"],["250 kHz","250E3"],["500 kHz","500E36"]]
+Blockly.Msg.LORA_BANDWIDTH = 'amplada de banda del senyal';
+Blockly.Msg.LORA_SET_CODING_RATE = 'estableix la taxa de codificació ';
 Blockly.Msg.LORA_CODING_RATE_DROPDOWN = [["4/5","5"],["4/6","6"],["4/7","7"],["4/8","8"]];
-Blockly.Msg.LORA_CODING_RATE = 'vitesse d\'encodage';
-Blockly.Msg.LORA_SET_PREAMBLE = 'préambule';
-Blockly.Msg.LORA_LENGTH = "longueur";
-Blockly.Msg.LORA_SET_SYNC_WORD = 'mot de synchronisation';
-Blockly.Msg.LORA_WORD = "mot";
-Blockly.Msg.LORA_ENABLE_CRC = 'activer contrôle de redondance cyclique hiérarchique (CRC)';
-Blockly.Msg.LORA_DISABLE_CRC = 'désactiver contrôle de redondance cyclique hiérarchique (CRC)';
-Blockly.Msg.LORA_ENABLE_INVERT_IQ = 'activer inversion IQ';
-Blockly.Msg.LORA_DISABLE_INVERT_IQ = 'désactiver inversion IQ';
-Blockly.Msg.LORA_RANDOM = 'aléatoire';
+Blockly.Msg.LORA_CODING_RATE = 'taxa de codificació';
+Blockly.Msg.LORA_SET_PREAMBLE = 'estableix preamble';
+Blockly.Msg.LORA_LENGTH = "llargada";
+Blockly.Msg.LORA_SET_SYNC_WORD = 'estableix la sincronització ';
+Blockly.Msg.LORA_WORD = "paraula";
+Blockly.Msg.LORA_ENABLE_CRC = 'habilita CRC';
+Blockly.Msg.LORA_DISABLE_CRC = 'deshabilita CRC';
+Blockly.Msg.LORA_ENABLE_INVERT_IQ = 'habilita invert IQ';
+Blockly.Msg.LORA_DISABLE_INVERT_IQ = 'deshabilita invert IQ';
+Blockly.Msg.LORA_RANDOM = 'aleatori';
 
-Blockly.Msg.LORA_INIT_TOOLTIP = 'Initialise LoRa';
-Blockly.Msg.LORA_END_TOOLTIP = 'fin';
-Blockly.Msg.LORA_ONRECEIVE_TOOLTIP = 'on receive';
-Blockly.Msg.LORA_ONTXDONE_TOOLTIP = 'on transmit done';
-Blockly.Msg.LORA_BEGINPACKET_TOOLTIP = 'begin packet';
-Blockly.Msg.LORA_IMPLICIT_HEADER_TOOLTIP = 'implicit header';
-Blockly.Msg.LORA_ENDPACKET_TOOLTIP = 'end packet';
-Blockly.Msg.LORA_ASYNC_TOOLTIP = 'async';
-Blockly.Msg.LORA_PRINT_TOOLTIP = 'print';
-Blockly.Msg.LORA_WRITE_BYTE_TOOLTIP = 'write byte';
-Blockly.Msg.LORA_WRITE_BUFFER_TOOLTIP = 'write buffer';
-Blockly.Msg.LORA_AVAILABLE_TOOLTIP = 'available';
-Blockly.Msg.LORA_PARSE_PACKET_TOOLTIP = 'parse packet';
-Blockly.Msg.LORA_RECEIVE_TOOLTIP = 'receive';
-Blockly.Msg.LORA_PACKET_RSSI_TOOLTIP = 'packet RSSI';
-Blockly.Msg.LORA_PACKET_SNR_TOOLTIP = 'packet SNR';
-Blockly.Msg.LORA_PACKET_FREQUENCY_ERROR_TOOLTIP = 'packet frequency error';
-Blockly.Msg.LORA_PEEK_TOOLTIP = 'peek';
-Blockly.Msg.LORA_READ_TOOLTIP = 'read';
-Blockly.Msg.LORA_IDLE_TOOLTIP = 'idle';
-Blockly.Msg.LORA_SLEEP_TOOLTIP = 'sleep';
-Blockly.Msg.LORA_SET_TX_POWER_TOOLTIP = 'set transmit power';
-Blockly.Msg.LORA_TX_POWER_LEVEL_TOOLTIP = 'level';
-Blockly.Msg.LORA_SET_SPREAD_FACTOR_TOOLTIP = 'set spread factor';
-Blockly.Msg.LORA_SET_SIGNAL_BANDWIDTH_TOOLTIP = 'set signal bandwidth';
-Blockly.Msg.LORA_SET_CODING_RATE_TOOLTIP = 'set coding rate';
-Blockly.Msg.LORA_SET_PREAMBLE_TOOLTIP = 'set preamble';
-Blockly.Msg.LORA_SET_SYNC_WORD_TOOLTIP = 'set sync';
-Blockly.Msg.LORA_ENABLE_CRC_TOOLTIP = 'enable CRC';
-Blockly.Msg.LORA_DISABLE_CRC_TOOLTIP = 'disable CRC';
-Blockly.Msg.LORA_ENABLE_INVERT_IQ_TOOLTIP = 'enable invert IQ';
-Blockly.Msg.LORA_DISABLE_INVERT_IQ_TOOLTIP = 'disable invert IQ';
-Blockly.Msg.LORA_RANDOM_TOOLTIP = 'random';
+Blockly.Msg.LORA_INIT_TOOLTIP = 'inicialitza LoRa';
+Blockly.Msg.LORA_END_TOOLTIP = 'final';
+Blockly.Msg.LORA_ONRECEIVE_TOOLTIP = 'en rebre';
+Blockly.Msg.LORA_ONTXDONE_TOOLTIP = 'a la transmissió feta';
+Blockly.Msg.LORA_BEGINPACKET_TOOLTIP = 'començament de paquet';
+Blockly.Msg.LORA_IMPLICIT_HEADER_TOOLTIP = 'capçalera implícita';
+Blockly.Msg.LORA_ENDPACKET_TOOLTIP = 'final de paquet';
+Blockly.Msg.LORA_ASYNC_TOOLTIP = 'asíncron';
+Blockly.Msg.LORA_PRINT_TOOLTIP = 'imprimeix';
+Blockly.Msg.LORA_WRITE_BYTE_TOOLTIP = 'escriu byte';
+Blockly.Msg.LORA_WRITE_BUFFER_TOOLTIP = 'escriu la memòria intermèdia';
+Blockly.Msg.LORA_AVAILABLE_TOOLTIP = 'disponible';
+Blockly.Msg.LORA_PARSE_PACKET_TOOLTIP = 'analitza paquet';
+Blockly.Msg.LORA_RECEIVE_TOOLTIP = 'rep';
+Blockly.Msg.LORA_PACKET_RSSI_TOOLTIP = 'paquet RSSI';
+Blockly.Msg.LORA_PACKET_SNR_TOOLTIP = 'paquet SNR';
+Blockly.Msg.LORA_PACKET_FREQUENCY_ERROR_TOOLTIP = 'error de freqüència del paquet ';
+Blockly.Msg.LORA_PEEK_TOOLTIP = 'fes una ullada';
+Blockly.Msg.LORA_READ_TOOLTIP = 'llegeix';
+Blockly.Msg.LORA_IDLE_TOOLTIP = 'inactiva';
+Blockly.Msg.LORA_SLEEP_TOOLTIP = 'atura temporalment';
+Blockly.Msg.LORA_SET_TX_POWER_TOOLTIP = 'estableix la potencia de transmissió';
+Blockly.Msg.LORA_SET_SPREAD_FACTOR_TOOLTIP = 'estableix el factor de dispersió ';
+Blockly.Msg.LORA_SET_SIGNAL_BANDWIDTH_TOOLTIP = "estableix l'amplada de banda del senyal ";
+Blockly.Msg.LORA_SET_CODING_RATE_TOOLTIP = 'estableix la taxa de codificació';
+Blockly.Msg.LORA_SET_PREAMBLE_TOOLTIP = 'estableix preamble';
+Blockly.Msg.LORA_SET_SYNC_WORD_TOOLTIP = 'estableix sincronització';
+Blockly.Msg.LORA_ENABLE_CRC_TOOLTIP = 'habilita CRC';
+Blockly.Msg.LORA_DISABLE_CRC_TOOLTIP = 'deshabilita CRC';
+Blockly.Msg.LORA_ENABLE_INVERT_IQ_TOOLTIP = 'habilita invert IQ';
+Blockly.Msg.LORA_DISABLE_INVERT_IQ_TOOLTIP = 'deshabilita invert IQ';
+Blockly.Msg.LORA_RANDOM_TOOLTIP = 'aleatori';
 Blockly.Msg.LORA_HELPURL = 'https://github.com/sandeepmistry/arduino-LoRa/blob/master/API.md';
 
 //////////////////////////// Grove Beginner Kit 12/09//2020 ////////////////////////////
@@ -2852,11 +2874,12 @@ Blockly.Msg.GROVE_BK_INOUT_DHT_READ_TOOLTIP = Blockly.Msg.GROVE_INOUT_DHT_READ_T
 Blockly.Msg.GROVE_BK_INOUT_PRESSURE_TEXT = 'valor';
 Blockly.Msg.GROVE_BK_INOUT_PRESSURE_TEXT_T = 'de temperatura (°C)';
 Blockly.Msg.GROVE_BK_INOUT_PRESSURE_TEXT_P = 'de pressió (Pa)';
-Blockly.Msg.GROVE_BK_INOUT_PRESSURE_TEXT_A = 'd\'altitud (m)';
-Blockly.Msg.GROVE_BK_INOUT_PRESSURE_TOOLTIP = 'recupera els valors dels sensors de temperatura i pressió i calcula l\'altitud';
+Blockly.Msg.GROVE_BK_INOUT_PRESSURE_TEXT_A = "d'altitud (m)";
+Blockly.Msg.GROVE_BK_INOUT_PRESSURE_TOOLTIP = "recupera els valors dels sensors de temperatura i pressió i calcula l'altitud";
 Blockly.Msg.GROVE_BK_INOUT_GYRO_TEXT1 = 'acceleració';
 Blockly.Msg.GROVE_BK_INOUT_GYRO_TEXT2 = 'eix';
 Blockly.Msg.GROVE_BK_INOUT_GYRO_TOOLTIP = "recupera els valor de l'acceleració del sensor, en 3 dimensions";
+
 
 //******** mini LiDAR Grove 11/02/2021
 Blockly.Msg.grove_TF_Mini_LiDAR_MISC_HELPURL = "https://wiki.seeedstudio.com/Grove-TF_Mini_LiDAR/";
@@ -2874,18 +2897,19 @@ Blockly.Msg.grove_TF_Mini_LiDAR_chip_temp_TOOLTIP = "recupera la senyal de la te
 
 //******** Grove Time of Flight Distance Sensor VL53L0X 13/02/2021
 Blockly.Msg.grove_VL53L0X_MISC_HELPURL = "https://wiki.seeedstudio.com/Grove-Time_of_Flight_Distance_Sensor-VL53L0X/";
-Blockly.Msg.grove_VL53L0X_test_TITLE = "prova de sensor";
-Blockly.Msg.grove_VL53L0X_test_TOOLTIP = "usa la connexió sèrie per enviar un missatge de tornada";
-Blockly.Msg.grove_VL53L0X_start_and_report_TITLE = "distancia mesurada (en mm)";
-Blockly.Msg.grove_VL53L0X_start_and_report_TOOLTIP = "recupera el valor de la distancia, en mm. /!\ Distancia mesurada recomanada 30mm-1000mm /!\ ";
-Blockly.Msg.grove_VL53L0X_stop_measure_TITLE = "atura el mode de mesura continua";
-Blockly.Msg.grove_VL53L0X_stop_measure_TOOLTIP = "si la petició d'aturada es produeix durant una mesura de rang, la mesura es completa abans d'aturar-se.";
+Blockly.Msg.grove_VL53L0X_test_TITLE = "sensor test";
+Blockly.Msg.grove_VL53L0X_test_TOOLTIP = "use serial connection to send back message";
+Blockly.Msg.grove_VL53L0X_start_and_report_TITLE = "distance mesured (in mm)";
+Blockly.Msg.grove_VL53L0X_start_and_report_TOOLTIP = "send back distance value, in mm. /!\ Recommed measure distance 30mm-1000mm /!\ ";
+Blockly.Msg.grove_VL53L0X_stop_measure_TITLE = "stop continuous mesure mode";
+Blockly.Msg.grove_VL53L0X_stop_measure_TOOLTIP = "if the stop request occurs during a range measurement, then the measurement is completed before stopping.";
 
 //******** Pulse Sensor 14/02/2021
 Blockly.Msg.pulseSensor_HELPURL = "https://github.com/WorldFamousElectronics/PulseSensorPlayground";
 Blockly.Msg.pulseSensor_TEXT1 = "valor";
 Blockly.Msg.pulseSensor_TEXT2 = "del pols detectat al port A";
 Blockly.Msg.pulseSensor_TOOLTIP = "valor analògic [0~1024] mesurat, estableix un llindar per definir quan hi ha pols";
+
 
 //******** IIC to GPIO Shield V2.0 SKU DFR0013 21/02/2021
 Blockly.Msg.dfrobot_IIC_to_GPIO_Shield_V2_SCAN_TEXT = "escaneja tots els dispositius I²C i informa pel monitor sèrie";

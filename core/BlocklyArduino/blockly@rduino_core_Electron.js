@@ -700,7 +700,7 @@ BlocklyDuino.buildToolbox = function() {
     }
 
     // set the default toolbox if none
-    if (loadIds === undefined || loadIds === "" || kitURL.startsWith('kit')) {
+    if (loadIds === undefined || loadIds === "" || loadIds === null || kitURL.startsWith('kit')) {
         if ($('#defaultCategories').length) {
             loadIds = $('#defaultCategories').html();
         } else {

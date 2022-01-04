@@ -398,6 +398,29 @@ Blockly.Msg.CAT_OTTOH = "humanoid"; //added 06/10/2019
 
 Blockly.Msg.CAT_VIRTUINO = "Virtuino"; //added 08/05/2020
 
+Blockly.Msg.CAT_STENDHAL = "Collège Stendhal";  //added 10/09/2020
+Blockly.Msg.CAT_STENDHAL_IN = " - CAPTER";
+Blockly.Msg.CAT_STENDHAL_DIGITAL2 = "  * * Logique";
+Blockly.Msg.CAT_STENDHAL_ANALOG2 = "  * * Analogique";
+Blockly.Msg.CAT_STENDHAL_DIGITAL3 = "  . . . Logique";
+Blockly.Msg.CAT_STENDHAL_ANALOG3 = "  . . . Analogique";
+Blockly.Msg.CAT_STENDHAL_DEAL = "  * * Télérupteurs";
+Blockly.Msg.CAT_STENDHAL_OUT = " - ACTIONNER";
+Blockly.Msg.CAT_STENDHAL_OUT_MOTOR = "  * * Mouvement";
+Blockly.Msg.CAT_STENDHAL_OUT_MOTOR_SERVO = "  . . . Servomoteurs";
+Blockly.Msg.CAT_STENDHAL_OUT_MOTOR_CLASSIC = "  . . . Moteurs à courant continu";
+Blockly.Msg.CAT_STENDHAL_OUT_MOTOR_PAP = "  . . . Moteurs pas à pas";
+Blockly.Msg.CAT_STENDHAL_OUT_LIGHT = "  * * Lumière";
+Blockly.Msg.CAT_STENDHAL_OUT_SOUND = "  * * Son";
+Blockly.Msg.CAT_STENDHAL_COMM = " - COMMUNIQUER";
+Blockly.Msg.CAT_STENDHAL_COMM_LCD = "  * * Ecran LCD";
+Blockly.Msg.CAT_STENDHAL_COMM_LED = "  * * LED";
+Blockly.Msg.CAT_STENDHAL_COMM_BLUETOOTH = "  * * Bluetooth";
+Blockly.Msg.CAT_STENDHAL_COMM_USB = "  * * USB";
+Blockly.Msg.CAT_STENDHAL_BOARD = " - GERER CARTE MERE";
+Blockly.Msg.CAT_STENDHAL_TIME = "  * *  Horloge";
+Blockly.Msg.CAT_STENDHAL_MEMORY = "  * *  Mémoire";
+
 //**********************************Dropdown menus messages***********************************************
 
 Blockly.Msg.FIELDDROPDOWN = [["HIGH", "HIGH"], ["LOW", "LOW"]];
