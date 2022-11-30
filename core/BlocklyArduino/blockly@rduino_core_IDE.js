@@ -1206,18 +1206,21 @@ BlocklyDuino.DialogCode = function() {
             of: "#content_blocks"
         },
         buttons: [{
-                text: "copy",
+                text: MSG['span_copyIDEArduino'],
+                id: "IDE_copy",
                 icon: "ui-icon-copy",
                 click: BlocklyDuino.ArduinoIDEClick_IDE,
                 showText: false
             },
             {
-                text: 'save',
+                text: MSG['span_saveIDEArduino'],
+                id: "IDE_save",
                 icons: "ui-icon-cancel",
                 click: BlocklyDuino.saveArduinoFile_IDE,
             },
             {
-                text: 'upload',
+                text: MSG['span_uploadIDEArduino'],
+                id: "IDE_upload",
                 icons: "ui-icon-extlink",
                 click: BlocklyDuino.uploadClick_IDE,
             }
