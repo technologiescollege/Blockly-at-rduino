@@ -491,8 +491,8 @@ Blockly.Msg.ARDUINO_BASE_DEFINE_CONST_TOOLTIP = "permet de créer et fixer une v
 Blockly.Msg.ARDUINO_BASE_END = 'attente infinie (FIN de programme)';
 Blockly.Msg.ARDUINO_BASE_BEGIN_TOOLTIP = "ce bloc permet de définir l'ordre dans lequel le programme doit s'exécuter";
 Blockly.Msg.ARDUINO_BASE_BEGIN = "DÉBUT du programme";
-Blockly.Msg.ARDUINO_BASE_TEMPO1 = "quand";
-Blockly.Msg.ARDUINO_BASE_TEMPO2 = "se sont écoulées";
+Blockly.Msg.ARDUINO_BASE_TEMPO1 = "si";
+Blockly.Msg.ARDUINO_BASE_TEMPO2 = "se sont écoulées, alors faire :";
 Blockly.Msg.ARDUINO_BASE_TEMPO_TIME = [["microsecondes", "us"],["millisecondes", "ms"],["secondes", "s"]];
 Blockly.Msg.ARDUINO_BASE_TEMPO_TOOLTIP = "Ce bloc vérifie si le temps indiqué est arrivé, si c'est le cas alors il éxécute les blocs placés à l'intérieur. Contrairement au bloc 'attendre' celui-ci n'est pas bloquant.";
 Blockly.Msg.ARDUINO_BASE_TEMPO_HELPURL = "http://www.mon-club-elec.fr/pmwiki_reference_arduino/pmwiki.php?n=Main.ExempleBlinkWithoutDelay";
