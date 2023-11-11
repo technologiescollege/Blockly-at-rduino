@@ -328,6 +328,10 @@ Blockly.Msg.CAT_NRF24L01 = "nRF24L01"; //added 31/05/2018
 Blockly.Msg.CAT_SEEED = "Seeed studio"; //added 01/03/2018
 Blockly.Msg.CAT_MUSIC_SHIELD = "Seeed Music Shield v2.2"; //added 01/03/2018
 
+Blockly.Msg.CAT_CROWTAIL_KIT = "Crowtail Starter Kit";  //added 2023/11/11
+Blockly.Msg.CAT_CROWTAIL_KIT_IN = Blockly.Msg.CAT_GROVE_IN;  //added 2023/11/11
+Blockly.Msg.CAT_CROWTAIL_KIT_OUT = Blockly.Msg.CAT_GROVE_OUT;  //added s2023/11/11
+
 // Nouvelle arborescence 
 Blockly.Msg.CAT_FONCTION_AFFICHAGE = "Affichage";
 Blockly.Msg.CAT_FONCTION_CAPTEURS = "Capteurs";
