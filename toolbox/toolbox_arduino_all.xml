@@ -4122,5 +4122,25 @@
 		<block type="LoRa_disableInvertIq"></block>
 		<block type="LoRa_random"></block>
 	</category>
+	<category name="CAT_CROWTAIL_KIT" colour="#62A542">
+		<category name="CAT_CROWTAIL_KIT_IN" colour="#62A542">
+			<block type="crowtail_arduino_starter_kit_button"></block>
+			<block type="crowtail_arduino_starter_kit_switch"></block>
+			<block type="crowtail_arduino_starter_kit_touchsensor"></block>
+			<block type="crowtail_arduino_starter_kit_tilt_switch"></block>
+			<block type="crowtail_arduino_starter_kit_flame"></block>
+			<block type="crowtail_arduino_starter_kit_potentiometer"></block>
+			<block type="crowtail_arduino_starter_kit_moisture_sensor"></block>
+			<block type="crowtail_arduino_starter_kit_sound_sensor"></block>
+			<block type="crowtail_arduino_starter_kit_ldr"></block>
+			<block type="crowtail_arduino_starter_kit_thermistor"></block>
+		</category>
+		<category name="CAT_CROWTAIL_KIT_OUT" colour="#62A542">
+			<block type="crowtail_arduino_starter_kit_led"></block>
+			<block type="crowtail_arduino_starter_kit_vibration"></block>
+			<block type="crowtail_arduino_starter_kit_buzzer"></block>
+			<block type="crowtail_arduino_starter_kit_relay"></block>
+		</category>
+	</category>
 </toolbox>
 

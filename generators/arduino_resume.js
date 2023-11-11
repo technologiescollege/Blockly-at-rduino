@@ -29,6 +29,7 @@ head.load(
 "generators/arduino/Adafruit_motorshield_v1.js",
 "generators/arduino/Adafruit_motorshield_v2.js",
 "generators/arduino/Adafruit_RGB_LCD_Shield.js",
+"generators/arduino/Adafruit_SSD1306.js",
 "generators/arduino/ADXL362_gyroscope.js",
 "generators/arduino/APDS-9960_RGB_Gesture.js",
 "generators/arduino/arduino_shield.js",
@@ -37,6 +38,7 @@ head.load(
 "generators/arduino/Bluetooth_Electronics.js",
 "generators/arduino/blynk_cc.js",
 "generators/arduino/capacitiveSensor.js",
+"generators/arduino/crowtail_arduino_starter_kit.js",
 "generators/arduino/keypad.js",
 "generators/arduino/dfrobot_dfplayer-mini-mp3.js",
 "generators/arduino/dfrobot_IIC_to_GPIO_Shield_V2.js",
@@ -67,6 +69,7 @@ head.load(
 "generators/arduino/jeulin_maquette_feux.js",
 "generators/arduino/lcd_i2c.js",
 "generators/arduino/led-rgb-ws2812b.js",
+"generators/arduino/LoRa.js",
 "generators/arduino/matrix-led-rgb-ws2812.js",
 "generators/arduino/mbot_niv1.js",
 "generators/arduino/mbot_niv2.js",
@@ -99,6 +102,7 @@ head.load(
 "generators/arduino/robot_motors.js",
 "generators/arduino/robot_misc.js",
 "generators/arduino/robuno.js",
+"generators/arduino/RTC_DS3231.js",
 "generators/arduino/seeed_music_shield_2.2.js",
 "generators/arduino/sensor_actuator.js",
 "generators/arduino/servo.js",
@@ -115,9 +119,6 @@ head.load(
 "generators/arduino/zumo_auto.js",
 "generators/arduino/zumo_motors.js",
 "generators/arduino/zumo_sensors.js",
-"generators/arduino/RTC_DS3231.js",
-"generators/arduino/Adafruit_SSD1306.js",
-"generators/arduino/LoRa.js",
 
 function() {
     // Call a function when done

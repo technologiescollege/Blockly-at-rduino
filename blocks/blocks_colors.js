@@ -24,6 +24,7 @@ Blockly.Blocks.blynk_cc.HUE = "#23C890"; //Added July 24th Mr leroy
 Blockly.Blocks.bq.HUE = "#608621";
 Blockly.Blocks.BT_ELEC.HUE = "#142D5E";
 Blockly.Blocks.capacitiveSensor.HUE = "#EA9576";
+Blockly.Blocks.crowtail_arduino_starter_kit.HUE = "#62A542";
 Blockly.Blocks.dfplayer.HUE = "#F39800";
 Blockly.Blocks.dfrobot_IIC_to_GPIO_Shield_V2.HUE = "#F39800";
 Blockly.Blocks.dfrobot_ISD1820.HUE = "#F39800";

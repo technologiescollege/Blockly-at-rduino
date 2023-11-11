@@ -2,6 +2,7 @@ head.load(
 "blocks/BlocklyArduino/blocks_typing.js",
 "blocks/Adafruit/Adafruit_motorshield/blocks_typing.js",
 "blocks/Adafruit/Adafruit_RGB_LCD_Shield/blocks_typing.js",
+"blocks/Adafruit/Adafruit_SSD1306/blocks_typing.js",
 "blocks/ADXL362_gyroscope/blocks_typing.js",
 "blocks/APDS-9960_RGB_Gesture/blocks_typing.js",
 "blocks/anemometer/blocks_typing.js",
@@ -20,6 +21,7 @@ head.load(
 "blocks/display-oled-128x64-i2c/blocks_typing.js",
 "blocks/drone/blocks_typing.js",
 "blocks/ds18b20/blocks_typing.js",
+"blocks/elecrow/crowtail_arduino_starter_kit/blocks_typing.js",
 "blocks/esp8266/blocks_typing.js",
 "blocks/EsusBoard/blocks_typing.js",
 "blocks/ethernet/blocks_typing.js",
@@ -36,6 +38,7 @@ head.load(
 "blocks/keypad/blocks_typing.js",
 "blocks/lcd_i2c/blocks_typing.js",
 "blocks/led-rgb-ws2812b/blocks_typing.js",
+"blocks/LoRa/blocks_typing.js",
 "blocks/matrix-led-rgb-ws2812/blocks_typing.js",
 "blocks/mbot/blocks_typing.js",
 "blocks/MRduino/blocks_typing.js",
@@ -55,6 +58,7 @@ head.load(
 "blocks/robobox/blocks_typing.js",
 "blocks/robots/blocks_typing.js",
 "blocks/robuno/blocks_typing.js",
+"blocks/RTC_DS3231/blocks_typing.js",
 "blocks/seeed/grove/blocks_typing.js",
 "blocks/seeed/grove_beginner_kit/blocks_typing.js",
 "blocks/seeed/grove_TF_Mini_LiDAR/blocks_typing.js",
@@ -72,9 +76,6 @@ head.load(
 "blocks/virtuino/blocks_typing.js",
 "blocks/wii/blocks_typing.js",
 "blocks/zumobot/blocks_typing.js",
-"blocks/RTC_DS3231/blocks_typing.js",
-"blocks/Adafruit/Adafruit_SSD1306/blocks_typing.js",
-"blocks/LoRa/blocks_typing.js",
 function() {
     // Call a function when done
     console.log("Done loading Blocks typing");
