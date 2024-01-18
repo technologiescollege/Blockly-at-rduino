@@ -178,6 +178,7 @@ Blockly.Arduino['stendhal_ds18b20_search'] = function() {
   var ds18b20_pin = Blockly.Arduino.valueToCode(this, 'PIN', Blockly.Arduino.ORDER_ATOMIC);
   var ds18b20_nb = Blockly.Arduino.valueToCode(this, 'NB', Blockly.Arduino.ORDER_ATOMIC);
   var ds18b20_nb0 = ds18b20_nb - 1;
+  Blockly.Arduino.includes_['onewire_include'] = '#include <OneWire.h>';
   Blockly.Arduino.includes_['ds18b20_include'] = '#include <DS18B20.h>';
   Blockly.Arduino.definitions_['ds18b20_def_' + ds18b20_pin] = 'DS18B20 ds18b20_' + ds18b20_pin + '(' + ds18b20_pin + ');\n'
   + 'uint8_t addrTempSensor_' + ds18b20_pin + '[' + ds18b20_nb + '][8] = {};';
