@@ -232,11 +232,38 @@ Blockly.Arduino.stendhal_logic_water_sensor = function() {
 };
 
 Blockly.Arduino.stendhal_ultrasonic_ranger = function() {
-  var dropdown_pin = this.getFieldValue('PIN');
-  var dropdown_unit = this.getFieldValue('UNIT');
-  Blockly.Arduino.includes_['define_ultrasonic'] = '#include <Ultrasonic.h>\n';
-  Blockly.Arduino.definitions_['var_ultrasonic'+dropdown_pin] = 'Ultrasonic ultrasonic_'+dropdown_pin+'('+dropdown_pin+');\n';
-  var code = 'ultrasonic_'+dropdown_pin+'.MeasureInCentimeters()';
+  var trig_pin = this.getFieldValue('TRIG');
+  var echo_pin = this.getFieldValue('ECHO');
+  var speed = this.getFieldValue('SPEED');
+  Blockly.Arduino.definitions_['define_mesure_distance_cm'] = "int distance_cm(byte trig_pin,byte echo_pin)\n"+
+    "{\n"+
+    "  // état haut de 10 µs sur la broche 'Trig'\n"+
+    "  digitalWrite(trig_pin, HIGH);\n"+
+    "  // puis on attend 10 µs\n"+
+    "  delayMicroseconds(10);\n"+
+    "  // on remet la broche 'Trig' à l’état bas\n"+
+    "  digitalWrite(trig_pin, LOW);\n"+
+    "  // lit la durée de l’état haut de la broche 'Echo'\n"+
+    "  unsigned long duree = pulseIn(echo_pin, HIGH);\n"+
+    "  float distance = 0;\n"+
+    "  // si la durée est supérieure à 30ms,\n"+
+    "  // l'onde est perdue, sinon\n"+
+    "  if (duree < 30000) {\n"+
+    "    // on divise la durée par deux pour n'avoir qu'un trajet\n"+
+    "    duree = duree / 2;\n"+
+    "    int vitesse = " + speed + ";  // vitesse du son en m/s\n"+
+    "    // on passe en secondes\n"+
+    "    float temps = duree / 1000000.0;\n"+
+    "    // on multiplie par la vitesse, d=v*t\n"+
+    "    distance = vitesse * temps;\n"+
+    "    // on passe en centimètres\n"+
+    "    distance = distance / 100;\n"+
+    "  };\n"+
+    "  return distance;\n"+
+    "}";
+  Blockly.Arduino.setups_['setup_sonar_' + trig_pin] = 'pinMode('+trig_pin+',OUTPUT); //Sonar triger pin\n'
+  + '  pinMode('+echo_pin+',INPUT); //Sonar echo pin';
+  var code = 'distance_cm('+trig_pin+','+echo_pin+')';
   return [code, Blockly.Arduino.ORDER_ATOMIC];
 };
 

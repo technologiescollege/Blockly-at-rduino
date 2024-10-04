@@ -534,8 +534,14 @@ Blockly.Blocks['stendhal_ultrasonic_ranger'] = {
 		.setAlign(Blockly.ALIGN_CENTRE)
         .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/stendhal/200px-Twig_-_Ultrasonic_Ranger2.jpg', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize))
 	this.appendDummyInput()
-        .appendField(Blockly.Msg.STENDHAL_INOUT_ULTRASONIC_INPUT)
-        .appendField(new Blockly.FieldTextInput('',  Blockly.Arduino.pinDigitalValidator), 'PIN');
+        .appendField(Blockly.Msg.STENDHAL_INOUT_ULTRASONIC_INPUT1)
+        .appendField(new Blockly.FieldTextInput('',  Blockly.Arduino.pinDigitalValidator), 'TRIG');
+  this.appendDummyInput()
+        .appendField(Blockly.Msg.STENDHAL_INOUT_ULTRASONIC_INPUT2)
+        .appendField(new Blockly.FieldTextInput('',  Blockly.Arduino.pinDigitalValidator), 'ECHO');
+  this.appendDummyInput()
+        .appendField(Blockly.Msg.STENDHAL_INOUT_ULTRASONIC_INPUT3)
+        .appendField(new Blockly.FieldTextInput('0',Blockly.Blocks.math_number.validator), 'SPEED');
     this.setOutput(true, 'Number');
     this.setTooltip(Blockly.Msg.STENDHAL_INOUT_ULTRASONIC_TOOLTIP);
   }
