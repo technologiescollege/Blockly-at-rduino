@@ -1398,6 +1398,8 @@
 			<category name="CAT_STENDHAL_OUT_MOTOR" colour="#9999CC">	
 				<category name="CAT_STENDHAL_OUT_MOTOR_CLASSIC" colour="#9999CC">
 					<block type="stendhal_dcmotor_v1"></block>
+					<block type="stendhal_l298n_motor_init"></block>
+					<block type="stendhal_l298n_motor"></block>
 				</category>
 				<category name="CAT_STENDHAL_OUT_MOTOR_SERVO" colour="#9999CC">
 					<block type="servo_attach"></block>
@@ -4143,4 +4145,3 @@
 		</category>
 	</category>
 </toolbox>
-
