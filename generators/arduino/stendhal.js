@@ -257,7 +257,7 @@ Blockly.Arduino.stendhal_ultrasonic_ranger = function() {
     "    // on multiplie par la vitesse, d=v*t\n"+
     "    distance = vitesse * temps;\n"+
     "    // on passe en centimètres\n"+
-    "    distance = distance / 100;\n"+
+    "    distance = distance * 100;\n"+
     "  };\n"+
     "  return distance;\n"+
     "}";
