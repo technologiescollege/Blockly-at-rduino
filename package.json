@@ -1,0 +1,5 @@
+{
+  "name": "Blockly@rduino",
+  "version": "3.3.0",
+  "description": "Arduino and ESP32 blocks programming",
+}
