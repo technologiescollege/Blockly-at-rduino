@@ -1,0 +1,20 @@
+{
+  "name": "Blcokly@rduino",
+  "version": "3.3.0",
+  "description": "Arduino and ESP32 blocks programming",
+  "main": "index.html",
+  "files": [
+    "."
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/technologiescollege/Blockly-at-rduino.git"
+  },
+  "author": "Sébastien Canet",
+  "license": "GNU GENERAL PUBLIC LICENSE - Version 2",
+  "keywords": [],
+  "devDependencies": {
+  },
+  "dependencies": {
+  }
+}
