@@ -1167,7 +1167,7 @@
 			<block type="grove_button"></block>
 			<block type="grove_rotary_angle"></block>
 			<block type="grove_tilt_switch"></block>
-			<block type="grove_temporature_sensor"></block>
+			<block type="grove_temperature_sensor"></block>
 			<block type="grove_moisture_sensor"></block>
 			<block type="grove_dht_read"></block>
 			<block type="grove_sound_sensor"></block>

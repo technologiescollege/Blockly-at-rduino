@@ -37,7 +37,7 @@ CodeFactory.LANGUAGE_NAME = {
 		  'de': 'Deutsch',
 		  'en': 'English',
 		  'fr': 'Français',
-		  'jp': 'Japanese',
+		  'ja': 'Japanese',
 		};
 
 /**

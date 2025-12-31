@@ -13,7 +13,7 @@ Blockly.Arduino.imageSizeBig = 96; //pictSize = 3
 Blockly.Arduino.imageSizeOld = 32;
 Blockly.Arduino.imageSize = Blockly.Arduino.imageSizeNormal;
 Blockly.Arduino.imageBool = true;
-Blockly.Arduino.cardSize = 200; //same as width in index.html showcardModal
+Blockly.Arduino.boardSize = 200; //same as width in index.html showboardModal
 Blockly.Arduino.wiringSize = 400;
 
 /**
@@ -57,41 +57,41 @@ BlocklyDuino.changeFontURL = function () {
     return FontChoice;
 };
 
-BlocklyDuino.cardPicture_maxi = function () {
-    var img = $("#arduino_card_picture");
+BlocklyDuino.boardPicture_maxi = function () {
+    var img = $("#arduino_board_picture");
     var modal = $("#pictureModalLabel").parent();
 
     if ((img.width() < 450)||(img.height() < 650))
     {
-        Blockly.Arduino.cardSize += 50;
-        img.animate({width: Blockly.Arduino.cardSize}, 500);
-        modal.animate({width: Blockly.Arduino.cardSize + 50}, 500);
+        Blockly.Arduino.boardSize += 50;
+        img.animate({width: Blockly.Arduino.boardSize}, 500);
+        modal.animate({width: Blockly.Arduino.boardSize + 50}, 500);
     }
 };
 
-BlocklyDuino.cardPicture_mini = function () {
-    var img = $("#arduino_card_picture");
+BlocklyDuino.boardPicture_mini = function () {
+    var img = $("#arduino_board_picture");
     var modal = $("#pictureModalLabel").parent();
 
     if ((img.width() > 200)||(img.height() > 220))
     {
-        Blockly.Arduino.cardSize -= 50;
-        img.animate({width: Blockly.Arduino.cardSize}, 500);
-        modal.animate({width: Blockly.Arduino.cardSize + 50}, 500);
+        Blockly.Arduino.boardSize -= 50;
+        img.animate({width: Blockly.Arduino.boardSize}, 500);
+        modal.animate({width: Blockly.Arduino.boardSize + 50}, 500);
     }
 };
 
-BlocklyDuino.cardPicture_change_AIO = function () {
+BlocklyDuino.boardPicture_change_AIO = function () {
     if ($("#board_select").val()) {
-        // $('#arduino_card_miniPicture').attr("src", profile[$("#board_select").val()]['picture']);
-        $('#arduino_card_mini_picture').attr("src", profile[$("#board_select").val()]['picture']);
-        $('#arduino_card_picture').attr("src", profile[$("#board_select").val()]['picture']);
-        $('#arduino_card_miniPicture_Menu').attr("src", profile[$("#board_select").val()]['picture']);
+        // $('#arduino_board_miniPicture').attr("src", profile[$("#board_select").val()]['picture']);
+        $('#arduino_board_mini_picture').attr("src", profile[$("#board_select").val()]['picture']);
+        $('#arduino_board_picture').attr("src", profile[$("#board_select").val()]['picture']);
+        $('#arduino_board_miniPicture_Menu').attr("src", profile[$("#board_select").val()]['picture']);
     } else {
-        // $('#arduino_card_miniPicture').attr("src", "");
-        $('#arduino_card_mini_picture').attr("src", "");
-        $('#arduino_card_picture').attr("src", "");
-        $('#arduino_card_miniPicture_Menu').attr("src", "");
+        // $('#arduino_board_miniPicture').attr("src", "");
+        $('#arduino_board_mini_picture').attr("src", "");
+        $('#arduino_board_picture').attr("src", "");
+        $('#arduino_board_miniPicture_Menu').attr("src", "");
     }
 };
 
@@ -213,20 +213,20 @@ BlocklyDuino.OnOffLine = function () {
         $("#btn_configGlobal").addClass("hidden");
         $("#btn_MiniconfigGlobal").addClass("hidden");
         $("#pictureModalLabel").addClass("hidden");
-        $("#btn_card_picture_change").removeClass("hidden");
+        $("#btn_board_picture_change").removeClass("hidden");
         $('#board_select_AIO_on').prepend($('#board_select'));
     } else if ((AIO == '') || (AIO == 'off')) {
         $("#btn_configGlobal").removeClass("hidden");
         $("#btn_MiniconfigGlobal").removeClass("hidden");
         $("#pictureModalLabel").removeClass("hidden");
-        $("#btn_card_picture_change").addClass("hidden");
+        $("#btn_board_picture_change").addClass("hidden");
         $('#board_select_AIO_off').prepend($('#board_select'));
     }
 };
 
 BlocklyDuino.ExampleWiring = function () {
     var ExampleTest = BlocklyDuino.getStringParamFromUrl('url', '');
-    var KitTest = BlocklyDuino.getStringParamFromUrl('card', '');
+    var KitTest = BlocklyDuino.getStringParamFromUrl('board', '');
     var KitTestResult = KitTest.slice(0, 3);
     // ni exemple ni kit
     if ((ExampleTest === '') && (KitTestResult !== 'kit')) {
@@ -242,9 +242,9 @@ BlocklyDuino.ExampleWiring = function () {
             // ExampleTest = ExampleTest.replace('.B@', '');
             ExampleTest = ExampleTest.slice(0, -4);
             $('#wiringModal_picture').prepend("<img src='" + ExampleTest + ".jpg' id='wiringModalImg' width=100% height=auto/>");
-            $('#arduino_card_miniPicture').attr('src', ExampleTest + '.jpg');
-            $('#arduino_card_miniPicture').attr('style', "max-width: 100%; height: auto;");
-            $('#arduino_card_picture').attr('src', ExampleTest + '_wiring.jpg');
+            $('#arduino_board_miniPicture').attr('src', ExampleTest + '.jpg');
+            $('#arduino_board_miniPicture').attr('style', "max-width: 100%; height: auto;");
+            $('#arduino_board_picture').attr('src', ExampleTest + '_wiring.jpg');
         } else if ((ExampleTest === '') && (KitTestResult === 'kit')) {
             //c'est donc un kit
             $('#wiringModal_picture').prepend("<img src='media/boards/" + KitTest + "_wiring.jpg' id='wiringModalImg' width=100% height=auto/>");
@@ -256,12 +256,12 @@ BlocklyDuino.ExampleWiring = function () {
 
 BlocklyDuino.wiring_mini = function () {
     Blockly.Arduino.wiringSize -= 50;
-    $("#arduino_card_picture").animate({width: Blockly.Arduino.wiringSize}, );
+    $("#arduino_board_picture").animate({width: Blockly.Arduino.wiringSize}, );
 };
 
 BlocklyDuino.wiring_maxi = function () {
     Blockly.Arduino.wiringSize += 50;
-    $("#arduino_card_picture").animate({width: Blockly.Arduino.wiringSize}, );
+    $("#arduino_board_picture").animate({width: Blockly.Arduino.wiringSize}, );
 };
 
 // BlocklyDuino.toggleTextColors = function(taille) {

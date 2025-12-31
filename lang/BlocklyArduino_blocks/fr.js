@@ -390,7 +390,7 @@ Blockly.Msg.CAT_FONCTION_STOCKAGE_EEPROM = "EEPROM";
 Blockly.Msg.CAT_FONCTION_STOCKAGE_SDCARD = "Carte SD";
 
 Blockly.Msg.CAT_CAPACITIVESENSOR = "détection capacitive";
-Blockly.Msg.CAT_PULSESENSOR = "pulsations cardiaques"; //added 14/02/2021
+Blockly.Msg.CAT_PULSESENSOR = "pulsations boardiaques"; //added 14/02/2021
  
 Blockly.Msg.CAT_ESP8266="ESP8266 IdO";
 Blockly.Msg.CAT_esp8266_wifi=" - WiFi";
@@ -1765,7 +1765,7 @@ Blockly.Msg.MatrixLED_WS2812B_setPixelColor_Green = "régler le vert (255 max) =
 Blockly.Msg.MatrixLED_WS2812B_setPixelColor_Blue = "régler le bleu (255 max) =";
 Blockly.Msg.MatrixLED_WS2812B_setPixelColor_Pixel_Number = "du pixel numéro (à partir de 0) =";
 
-//******** Storage : SD card + EEPROM https://www.arduino.cc/en/Reference/EEPROM
+//******** Storage : SD board + EEPROM https://www.arduino.cc/en/Reference/EEPROM
 Blockly.Msg.STORAGE_WRITE_SD_FILE = "Carte SD, enregistrer sous ";
 Blockly.Msg.STORAGE_SD_DATA = "la donnée";
 Blockly.Msg.STORAGE_SD_NEWLINE = "avec un saut de ligne ?";

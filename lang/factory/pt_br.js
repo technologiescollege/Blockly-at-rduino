@@ -1,12 +1,12 @@
 'use strict';
 
-goog.provide('Blockly.Msg.en');
+goog.provide('Blockly.Msg.pt_br');
 
 goog.require('Blockly.Msg');
 
 Blockly.Msg.BF_title = "Fábrica de blocos";
 Blockly.Msg.BF_preview = "Pré-visualizar sentido:";
-Blockly.Msg.BF_help = "- Documentação : <a href='http://www.libreduc.cc/wiki/doku.php' target='blank'> wiki</a> - Thanks to share on <a href='http://blockly.technologiescollege.fr/forum/' target='blank'> forum</a>";
+Blockly.Msg.BF_help = "- Documentação : <a href='https://wiki.libreduc.cc' target='blank'> wiki</a>";
 Blockly.Msg.BF_divBlocks = "Código para desenhar o bloco (\\blocs\\):";
 Blockly.Msg.BF_divGenerators = "Código para o gerador Arduino (\\generators\\arduino\\):";
 Blockly.Msg.BF_CAT_INPUT = "entrada";

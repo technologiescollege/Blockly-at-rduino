@@ -1,12 +1,12 @@
 'use strict';
 
-goog.provide('Blockly.Msg.jp');
+goog.provide('Blockly.Msg.ja');
 
 goog.require('Blockly.Msg');
 
 Blockly.Msg.BF_title = "ブロック ファクトリー";
 Blockly.Msg.BF_preview = "プレビュー :";
-Blockly.Msg.BF_help = "- ドキュメント : <a href='http://www.libreduc.cc/wiki/doku.php' target='blank'> wiki</a> - 情報共有 :  <a href='http://blockly.technologiescollege.fr/forum/' target='blank'> forum</a>";
+Blockly.Msg.BF_help = "- ドキュメント : <a href='https://wiki.libreduc.cc' target='blank'> wiki</a>";
 Blockly.Msg.BF_divBlocks = "ブロック定義 (\\blocs\\):";
 Blockly.Msg.BF_divGenerators = "生成コード (\\generators\\arduino\\):";
 Blockly.Msg.BF_CAT_INPUT = "入力";

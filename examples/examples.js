@@ -399,7 +399,7 @@ Examples.LANGUAGE_NAME = {
 	'oc' : 'Lenga d\'òc',
 	'pl' : 'Polski',
 	'pms' : 'Piemontèis',
-	'pt-br' : 'Português Brasileiro',
+	'pt_br' : 'Português Brasileiro',
 	'ro' : 'Română',
 	'ru' : 'Русский',
 	'sc' : 'Sardu',

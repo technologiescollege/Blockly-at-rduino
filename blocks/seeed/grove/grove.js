@@ -183,7 +183,7 @@ Blockly.Blocks['grove_relay'] = {
   }
 };
 
-Blockly.Blocks['grove_temporature_sensor'] = {
+Blockly.Blocks['grove_temperature_sensor'] = {
   init: function() {
     this.setColour(Blockly.Blocks.grove.HUE);
 	this.setHelpUrl(Blockly.Msg.GROVE_INOUT_TEMP_HELPURL);

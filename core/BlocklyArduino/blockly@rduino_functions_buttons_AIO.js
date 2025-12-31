@@ -138,11 +138,11 @@ BlocklyDuino.load = function(event) {
 };
 
 /**
- * Discard all blocks from the workspace.
+ * Disboard all blocks from the workspace.
  */
-BlocklyDuino.discard = function() {
+BlocklyDuino.disboard = function() {
     var count = BlocklyDuino.workspace.getAllBlocks().length;
-    if (count < 2 || window.confirm(MSG['discard'].replace('%1', count))) {
+    if (count < 2 || window.confirm(MSG['disboard'].replace('%1', count))) {
         BlocklyDuino.workspace.clear();
         //clean URL from example if opened
         var search = window.location.search;
@@ -198,7 +198,6 @@ BlocklyDuino.miniMenuPanel = function() {
 
 /**
  * Try to take a screen capture of all blocks on workspace
- * Thanks to fontaine.jp from forum http://blockly.technologiescollege.fr/forum/index.php/topic,128.msg635.html#new
  *
  */
 BlocklyDuino.workspace_capture = function() {

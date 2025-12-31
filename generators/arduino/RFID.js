@@ -39,12 +39,12 @@ Blockly.Arduino.RFID_module = function() {
 };
 
 Blockly.Arduino.RFID_detection = function() {
-  var code = 'rfid.PICC_IsNewCardPresent()';
+  var code = 'rfid.PICC_IsNewBoardPresent()';
   return [code, Blockly.Arduino.ORDER_ATOMIC];
 };
 
 Blockly.Arduino.RFID_reception_cle = function() {
-  var code = 'rfid.PICC_ReadCardSerial()';
+  var code = 'rfid.PICC_ReadBoardSerial()';
   return [code, Blockly.Arduino.ORDER_ATOMIC];
 };
 

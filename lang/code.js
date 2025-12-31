@@ -37,12 +37,12 @@ Code.LANGUAGE_NAME = {
 		'de': 'Deutsch',
 		'en': 'English',
 		'fr': 'Français',
-		'jp': 'Japanese',
+		'ja': 'Japanese',
 		'ca': 'Català - Valencià',
 		'es': 'Español',
 		'bg': 'Български',
 		'ar': 'العربية',
-    'pt-br': 'Português do Brasil'
+    'pt_br': 'Português do Brasil'
 		};
 
 /**
@@ -115,11 +115,11 @@ Code.initLanguage = function() {
   // Inject language strings.
   $('#title').text(MSG['title']);
   $('#span_about').text(MSG['span_about']);
-  $('#span_card_picture_change').text(MSG['span_card_picture_change']);
+  $('#span_board_picture_change').text(MSG['span_board_picture_change']);
   $('#span_example').text(MSG['span_example']);
   $('#span_create_example').text(MSG['span_create_example']);
   //$('#span_picture').text(MSG['span_picture']);
-  $('#arduino_card_miniPicture').attr('title', MSG['span_picture']);
+  $('#arduino_board_miniPicture').attr('title', MSG['span_picture']);
   $('#aboutModalLabel').text(MSG['aboutModalLabel']);
   $('#span_version').html(BlocklyArduinoMSG['span_version']);
   $('#aboutBody').html(MSG['aboutBody']);
@@ -130,7 +130,7 @@ Code.initLanguage = function() {
 
   $('#span_config').text(MSG['span_config']);
   $('#span_config_kit').text(MSG['span_config_kit']);
-  $('#labelArduinoCard').text(MSG['labelArduinoCard']);
+  $('#labelArduinoBoard').text(MSG['labelArduinoBoard']);
 
   $('#btn_preview').attr('title', MSG['btn_preview']);
 
@@ -262,7 +262,7 @@ Code.initLanguage = function() {
   $('#btn_miniMenuPanel').attr('title', MSG['span_miniMenuPanel']);
   $('#btn_reset').attr('title', MSG['span_reset']);
   $('#btn_about').attr('title', MSG['span_about']);
-  $('#arduino_card_miniPicture_Menu').attr('title', MSG['span_picture']);
+  $('#arduino_board_miniPicture_Menu').attr('title', MSG['span_picture']);
   $('#pre_previewArduino').attr('title', MSG['a_arduino']);
   $('#btn_doc').attr('title', MSG['span_doc']);
   $('#btn_tuto').attr('title', MSG['span_tuto']);

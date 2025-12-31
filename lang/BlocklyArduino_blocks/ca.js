@@ -1763,7 +1763,7 @@ Blockly.Msg.MatrixLED_WS2812B_setPixelColor_Green = "regula el verd (255 max) ="
 Blockly.Msg.MatrixLED_WS2812B_setPixelColor_Blue = "regula el blau (255 max) =";
 Blockly.Msg.MatrixLED_WS2812B_setPixelColor_Pixel_Number = "del píxel número (a partir de 0) =";
 
-//******** Storage : SD card + EEPROM https://www.arduino.cc/en/Reference/EEPROM
+//******** Storage : SD board + EEPROM https://www.arduino.cc/en/Reference/EEPROM
 Blockly.Msg.STORAGE_WRITE_SD_FILE = "Targeta SD, anomena i desa ";
 Blockly.Msg.STORAGE_SD_DATA = "la dada";
 Blockly.Msg.STORAGE_SD_NEWLINE = "amb un salt de línia ?";

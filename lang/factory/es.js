@@ -6,7 +6,7 @@ goog.require('Blockly.Msg');
 
 Blockly.Msg.BF_title = "Creación de bloques";
 Blockly.Msg.BF_preview = "Previsualización - sentido :";
-Blockly.Msg.BF_help = "- Documentación : <a href='http://www.libreduc.cc/wiki/doku.php' target='blank'> wiki</a> - Gracias por compartir en el <a href='http://blockly.technologiescollege.fr/forum/' target='blank'> foro</a>";
+Blockly.Msg.BF_help = "- Documentación : <a href='https://wiki.libreduc.cc' target='blank'> wiki</a>";
 Blockly.Msg.BF_divBlocks = "Código por dibujar el bloque (\\blocs\\) :";
 Blockly.Msg.BF_divGenerators = "Código para el generador Arduino (\\generators\\arduino\\) :";
 Blockly.Msg.BF_CAT_INPUT = "Conexiones";

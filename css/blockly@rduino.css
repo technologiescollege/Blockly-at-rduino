@@ -176,13 +176,13 @@ html[dir="RTL"] .menuPanel-ver {
 	right: 5px;
 }
 
-#btn_card_picture_mini {
+#btn_board_picture_mini {
 	padding-right: 10px;	
 	float: left;
 	text-align: center;
 }
 
-#btn_card_picture_maxi {
+#btn_board_picture_maxi {
 	padding-right: 10px;	
 	float: left;
 	text-align: center;
@@ -309,7 +309,7 @@ html[dir="RTL"] .divSwitch-hor {
     padding-right: 10px;
 }
 
-.divCard-hor {
+.divBoard-hor {
     float: left;
     padding-left: 10px;
 }
@@ -319,18 +319,18 @@ html[dir="RTL"] .divSwitch-hor {
 	height: 280px
 }
 
-.arduino_card_mini_picture_div {
+.arduino_board_mini_picture_div {
 	position:absolute;
 	top:0;
 	right:5px;
 }
 
-#arduino_card_mini_picture {
+#arduino_board_mini_picture {
 	max-width:220px;
 	max-height:300px;
 }
 
-html[dir="RTL"] .divCard-hor {
+html[dir="RTL"] .divBoard-hor {
     float: right;
     padding-right: 10px;
 }

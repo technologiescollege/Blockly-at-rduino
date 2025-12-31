@@ -6,7 +6,7 @@ goog.require('Blockly.Msg');
 
 Blockly.Msg.BF_title =  "مصنع اللبنات" ;
 Blockly.Msg.BF_preview =  "معاينة - الإتجاه:";
-Blockly.Msg.BF_help = "- مستندات : <a href='http://www.libreduc.cc/wiki/doku.php' target='blank'> wiki</a> - Merci de partager sur le <a href='http://blockly.technologiescollege.fr/forum/' target='blank'> forum</a>";
+Blockly.Msg.BF_help = "- مستندات : <a href='https://wiki.libreduc.cc' target='blank'> wiki</a>";
 Blockly.Msg.BF_divBlocks =  "رمز (كود) لرسم الكتلة (\\blocs\\):";
 Blockly.Msg.BF_divGenerators =  "كود لمولد (منشئ) Arduino (\\generators\\arduino\\):";
 Blockly.Msg.BF_CAT_INPUT = "اتصالات";

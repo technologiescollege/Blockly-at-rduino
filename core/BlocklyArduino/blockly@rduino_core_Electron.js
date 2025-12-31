@@ -16,7 +16,7 @@ Blockly.pathToBlockly = './';
 Blockly.pathToMedia = './media/';
 
 BlocklyDuino.selectedToolbox = "toolbox_none";
-BlocklyDuino.selectedCard = 'none';
+BlocklyDuino.selectedBoard = 'none';
 BlocklyDuino.selectedTab = 'blocks';
 BlocklyDuino.inlineBool = true;
 BlocklyDuino.withImage = true;
@@ -60,8 +60,8 @@ BlocklyDuino.renderContent = function() {
             case 'content_arduino':
                 $(".blocklyToolboxDiv").hide();
                 try {
-                    var cardId = BlocklyDuino.getStringParamFromUrl('card', '');
-                    if (cardId != 'kit_microbit') $('#pre_Arduino').text(Blockly.Arduino.workspaceToCode(BlocklyDuino.workspace));
+                    var boardId = BlocklyDuino.getStringParamFromUrl('board', '');
+                    if (boardId != 'kit_microbit') $('#pre_Arduino').text(Blockly.Arduino.workspaceToCode(BlocklyDuino.workspace));
                     else $('#pre_Arduino').text(Blockly.Python.workspaceToCode(BlocklyDuino.workspace));
                     if (typeof prettyPrintOne == 'function') {
                         $('#pre_arduino').html(prettyPrintOne($('#pre_arduino').html(), 'cpp'));
@@ -90,8 +90,8 @@ BlocklyDuino.renderContent = function() {
  * Render block factory
  */
 BlocklyDuino.renderArduinoCodePreview = function() {
-    var cardId = BlocklyDuino.getStringParamFromUrl('card', '');
-    if (cardId != 'kit_microbit') {
+    var boardId = BlocklyDuino.getStringParamFromUrl('board', '');
+    if (boardId != 'kit_microbit') {
         $('#pre_previewArduino').text(Blockly.Arduino.workspaceToCode(BlocklyDuino.workspace));
         $('#pre_arduino').text(Blockly.Arduino.workspaceToCode(BlocklyDuino.workspace));
     } else {
@@ -105,7 +105,7 @@ BlocklyDuino.renderArduinoCodePreview = function() {
 };
 
 /**
- * Populate the supervision tabs with selected card
+ * Populate the supervision tabs with selected board
  */
 BlocklyDuino.renderSupervisionContent = function() {
     // tabs-1
@@ -172,8 +172,8 @@ BlocklyDuino.valideEditedCode = function() {
  * Render Arduino code in preview box
  */
 BlocklyDuino.renderArduinoCodePreview = function() {
-    var cardId = BlocklyDuino.getStringParamFromUrl('card', '');
-    if (cardId != 'kit_microbit') {
+    var boardId = BlocklyDuino.getStringParamFromUrl('board', '');
+    if (boardId != 'kit_microbit') {
         $('#pre_previewArduino').text(Blockly.Arduino.workspaceToCode(BlocklyDuino.workspace));
         $('#pre_arduino').text(Blockly.Arduino.workspaceToCode(BlocklyDuino.workspace));
     } else {
@@ -257,27 +257,28 @@ BlocklyDuino.backupBlocks = function() {
 
 
 /**
- * Sets Arduino card
+ * Sets Arduino board
  */
 BlocklyDuino.setArduinoBoard = function() {
-    var cardId = BlocklyDuino.getStringParamFromUrl('card', '');
-    if (!cardId) {
-        cardId = BlocklyDuino.selectedCard;
+    var boardId = BlocklyDuino.getStringParamFromUrl('board', '');
+    // Vérifier si boardId existe et s'il est présent dans l'optgroup "Arduino"
+    if (!boardId || !$("#board_select optgroup[label='Arduino'] option[value='" + boardId + "']").length) {
+        boardId = BlocklyDuino.selectedBoard;
     }
-    $("#board_select").val(cardId);
+    $("#board_select").val(boardId);
 
-    // set the card from url parameters
-    profile["defaultBoard"] = profile[cardId];
-    $('#arduino_card_picture').attr("src", profile.defaultBoard['picture']);
-    $('#arduino_card_miniPicture').attr("src", profile.defaultBoard['miniPicture']);
-    $('#arduino_card_miniPicture_Menu').attr("src", profile.defaultBoard['miniPicture_hor']);
+    // set the board from url parameters
+    profile["defaultBoard"] = profile[boardId];
+    $('#arduino_board_picture').attr("src", profile.defaultBoard['picture']);
+    $('#arduino_board_miniPicture').attr("src", profile.defaultBoard['miniPicture']);
+    $('#arduino_board_miniPicture_Menu').attr("src", profile.defaultBoard['miniPicture_hor']);
     $('#pictureModalLabel').attr('title', (profile.defaultBoard['description']));
     if ($("#board_select").val().substring(0, 4) == "kit_") {
         $("#btn_config").remove();
         $("#btn_config_kit").removeClass('hidden');
         $('#btn_config_kit').attr("href", profile[$("#board_select").val()]['help_link']);
     }
-    BlocklyDuino.cardPicture_change_AIO();
+    BlocklyDuino.boardPicture_change_AIO();
 };
 
 
@@ -291,7 +292,7 @@ BlocklyDuino.bindFunctions = function() {
     var clipboard = new Clipboard('#btn_CopyCode');
 
     // Navigation buttons
-    $('#btn_delete').on("click", BlocklyDuino.discard);
+    $('#btn_delete').on("click", BlocklyDuino.disboard);
     $('#btn_undo').on("click", BlocklyDuino.Undo);
     $('#btn_redo').on("click", BlocklyDuino.Redo);
     $('#btn_pasteIDEArduino').remove();
@@ -317,7 +318,7 @@ BlocklyDuino.bindFunctions = function() {
     $('#toggle-Colors').on("change", BlocklyDuino.toggleTextColors);
 
     $('#board_select').on("focus", function() {
-        BlocklyDuino.selectedCard = $(this).val();
+        BlocklyDuino.selectedBoard = $(this).val();
     });
     $('#btn_edit_code').mouseover(function() {
         document.getElementById("survol").textContent = MSG['span_edit_code'];
@@ -346,8 +347,8 @@ BlocklyDuino.bindFunctions = function() {
     });
     $('#btn_configGlobal').on("click", BlocklyDuino.buildlibraries);
     $('#configModalGlobal').on("hidden.bs.modal", function() {
-        $("#board_select").val(BlocklyDuino.selectedCard);
-        BlocklyDuino.cardPicture_change_AIO();
+        $("#board_select").val(BlocklyDuino.selectedBoard);
+        BlocklyDuino.boardPicture_change_AIO();
     });
 
     $('#toolboxes').on("focus", function() {
@@ -415,7 +416,7 @@ BlocklyDuino.bindFunctions = function() {
     $('#select_all').on("click", BlocklyDuino.checkAll);
     $('#btn_valid_config').on("click", BlocklyDuino.changeToolbox);
     $('#btn_validConfigGlobale').on("click", BlocklyDuino.validateConfigGlobal);
-    $('#btn_card_picture_change').on("click", BlocklyDuino.validateConfigOffline);
+    $('#btn_board_picture_change').on("click", BlocklyDuino.validateConfigOffline);
     $('#textSize').on("click", BlocklyDuino.tailleFonte);
 
     $('#btn_valid_msg').on("click", function() {
@@ -431,19 +432,19 @@ BlocklyDuino.bindFunctions = function() {
     $('#btn_blocs_picture_maxi').on("click", BlocklyDuino.blockPicture_maxi);
     $('#btn_blocs_picture').on("click", BlocklyDuino.blockPicture);
 
-    $('#btn_card_picture_mini').on("click", BlocklyDuino.cardPicture_mini);
-    $('#btn_card_picture_maxi').on("click", BlocklyDuino.cardPicture_maxi);
+    $('#btn_board_picture_mini').on("click", BlocklyDuino.boardPicture_mini);
+    $('#btn_board_picture_maxi').on("click", BlocklyDuino.boardPicture_maxi);
     $('#btn_wiring_mini').on("click", BlocklyDuino.wiring_mini);
     $('#btn_wiring_maxi').on("click", BlocklyDuino.wiring_maxi);
 
     $('#btn_example, #menu_131').on("click", BlocklyDuino.buildExamples);
 
-    $('#miniCard, #miniCard_Menu').on('click', function() {
+    $('#miniBoard, #miniBoard_Menu').on('click', function() {
         var dialogConvert = $("#pictureModalLabel").dialog({
             autoOpen: false,
             resizable: false,
-            height: $("#arduino_card_picture").offsetHeight,
-            width: $("#arduino_card_picture").offsetWidth,
+            height: $("#arduino_board_picture").offsetHeight,
+            width: $("#arduino_board_picture").offsetWidth,
             show: {
                 effect: "drop",
                 duration: 600
@@ -692,7 +693,7 @@ BlocklyDuino.changeToolbox = function() {
 BlocklyDuino.buildToolbox = function() {
     // set the toolbox from url parameters
     var loadIds = BlocklyDuino.getStringParamFromUrl('toolboxids', '');
-    var kitURL = BlocklyDuino.getStringParamFromUrl('card', '');
+    var kitURL = BlocklyDuino.getStringParamFromUrl('board', '');
 
     // set the toolbox from local storage
     if (loadIds === undefined || loadIds === "") {
@@ -832,7 +833,7 @@ BlocklyDuino.init = function() {
             $(".blocklyWorkspace").css({ "margin-left": "205px" });
             $("#configGlobalLabel").remove();
             $("#btn_configGlobal").removeClass("btn-block");
-            $("#divTitreMenu_miniCard").removeClass("hidden");
+            $("#divTitreMenu_miniBoard").removeClass("hidden");
             $('#icon_btn_size').addClass('glyphicon-resize-full');
             $('#icon_btn_size').removeClass('glyphicon-resize-small');
             $("#div_miniPicture").remove();
@@ -882,7 +883,7 @@ BlocklyDuino.init = function() {
             $("#divBody").css({ "top": "0px" });
             $("#logo_Titre").removeClass("hidden");
             $("#btn_delete").css({ "bottom": "80px" });
-            $("#divTitreMenu_miniCard").css({
+            $("#divTitreMenu_miniBoard").css({
                 'position': 'fixed',
                 'top': '510px',
                 'left': '5px',
@@ -902,7 +903,7 @@ BlocklyDuino.init = function() {
         $('#divTitre').removeClass("hidden");
         $('#div_toolboxes').removeClass("hidden");
         $('#divTitreMenu').addClass("hidden");
-        $("#divTitreMenu_miniCard").addClass("hidden");
+        $("#divTitreMenu_miniBoard").addClass("hidden");
         $("#div_miniPicture").removeClass("hidden");
         $('#icon_btn_size').addClass('glyphicon-resize-full');
         $('#icon_btn_size').removeClass('glyphicon-resize-small');

@@ -386,7 +386,7 @@ Blockly.Msg.CAT_FONCTION_WIRELESS_RF24 = "Radio Fréquence 2.4GHz";
 Blockly.Msg.CAT_FONCTION_WIRELESS_ZIGBEE = "Zigbee";
 
 Blockly.Msg.CAT_FONCTION_STOCKAGE_EEPROM = "EEPROM";
-Blockly.Msg.CAT_FONCTION_STOCKAGE_SDCARD = "SD card";
+Blockly.Msg.CAT_FONCTION_STOCKAGE_SDCARD = "SD board";
 
 Blockly.Msg.CAT_CAPACITIVESENSOR = "Capacitive Sensor";
 Blockly.Msg.CAT_PULSESENSOR = "Pulse Sensor"; //added 14/02/2021
@@ -849,7 +849,7 @@ Blockly.Msg.GROVE_DRIVER13_HELPURL = "http://wiki.seeed.cc/Grove-I2C_Motor_Drive
 Blockly.Msg.GROVE_DRIVER13_MOTOR_TITLE = "Motor Driver V1.3";
 Blockly.Msg.GROVE_DRIVER13_MOTOR_I2C_ADDRESS = "I2C Address";
 Blockly.Msg.GROVE_DRIVER13_TOOLTIP = "Motor Driver - " + 
-                            "I2C Address in range 0, 15 (0x0F) depending on the card configuration, " + 
+                            "I2C Address in range 0, 15 (0x0F) depending on the board configuration, " + 
                             "Motor speed in range -100, 100; 0 eq stop";
 //******** KEYPAD Grove minimoto */
 Blockly.Msg.GROVE_MINI_DRIVER_TITLE = "Motor Mini Driver";
@@ -1013,25 +1013,25 @@ Blockly.Msg.TECHNOZONE51_TEXT48 = "on the angle [0~180°]";
 Blockly.Msg.TECHNOZONE51_TEXT49 = "Servo-motor (réf : SERVO1 + SERVO-MOT1)";
 Blockly.Msg.TECHNOZONE51_TEXT50 = "The angle of the servo-motor ";
 Blockly.Msg.TECHNOZONE51_TEXT51 = "drive the motor ";
-Blockly.Msg.TECHNOZONE51_TEXT52 = "on the EASYCON1 card";
+Blockly.Msg.TECHNOZONE51_TEXT52 = "on the EASYCON1 board";
 Blockly.Msg.TECHNOZONE51_TEXT53 = "clockwise (TRUE or FALSE ?)";
 Blockly.Msg.TECHNOZONE51_TEXT54 = "speed [0~255]";
-Blockly.Msg.TECHNOZONE51_TEXT55 = "DC motor driver on the EASYCON1 card (réf : EASYCON1 + KIT-MOT1)";
-Blockly.Msg.TECHNOZONE51_TEXT56 = "on the EASYBOT1 card";
-Blockly.Msg.TECHNOZONE51_TEXT57 = "DC motor driver on the EASYBOT1 card (réf : EASYBOT1 + KIT-MOT1)";
-Blockly.Msg.TECHNOZONE51_TEXT58 = "on the MOT2 card";
+Blockly.Msg.TECHNOZONE51_TEXT55 = "DC motor driver on the EASYCON1 board (réf : EASYCON1 + KIT-MOT1)";
+Blockly.Msg.TECHNOZONE51_TEXT56 = "on the EASYBOT1 board";
+Blockly.Msg.TECHNOZONE51_TEXT57 = "DC motor driver on the EASYBOT1 board (réf : EASYBOT1 + KIT-MOT1)";
+Blockly.Msg.TECHNOZONE51_TEXT58 = "on the MOT2 board";
 Blockly.Msg.TECHNOZONE51_TEXT59 = " on the pins";
 Blockly.Msg.TECHNOZONE51_TEXT60 = "direction pin (DIR)";
 Blockly.Msg.TECHNOZONE51_TEXT61 = "speed pin (PWM~)";
-Blockly.Msg.TECHNOZONE51_TEXT62 = "DC motor driver for EASYCON1,EASYCON2,EASYBOT1 cards (réf : MOT2)";
-Blockly.Msg.TECHNOZONE51_TEXT63 = "initialize the PAP1 card ";
+Blockly.Msg.TECHNOZONE51_TEXT62 = "DC motor driver for EASYCON1,EASYCON2,EASYBOT1 boards (réf : MOT2)";
+Blockly.Msg.TECHNOZONE51_TEXT63 = "initialize the PAP1 board ";
 Blockly.Msg.TECHNOZONE51_TEXT64 = "on the I2C bus";
 Blockly.Msg.TECHNOZONE51_TEXT65 = "on the address";
 Blockly.Msg.TECHNOZONE51_TEXT66 = "the motor driving mode is ";
 Blockly.Msg.TECHNOZONE51_TEXT67 = "the motor relax mode is ";
-Blockly.Msg.TECHNOZONE51_TEXT68 = "stepping motor driver for EASYCON2,EASYBOT1 cards on the I2C bus (réf : PAP1)";
+Blockly.Msg.TECHNOZONE51_TEXT68 = "stepping motor driver for EASYCON2,EASYBOT1 boards on the I2C bus (réf : PAP1)";
 Blockly.Msg.TECHNOZONE51_TEXT69 = "continious movement of the motor ";
-Blockly.Msg.TECHNOZONE51_TEXT70 = "on the PAP1 card";
+Blockly.Msg.TECHNOZONE51_TEXT70 = "on the PAP1 board";
 Blockly.Msg.TECHNOZONE51_TEXT71 = "relative movement of the motor ";
 Blockly.Msg.TECHNOZONE51_TEXT72 = "number of steps";
 Blockly.Msg.TECHNOZONE51_TEXT73 = "is a stepper motor running ?";
@@ -1333,14 +1333,14 @@ Blockly.Msg.RFID_module_INPUT3 = "MOSI";
 Blockly.Msg.RFID_module_INPUT4 = "MISO";
 Blockly.Msg.RFID_module_INPUT5 = "RST";
 Blockly.Msg.RFID_module_TOOLTIP = "Used to initialize the connection between the RFID module and the arduino board";
-Blockly.Msg.RFID_detection_TEXT = "Detecting a card or badge";
-Blockly.Msg.RFID_detection_TOOLTIP = "Whether or not a card (or badge) is presented in front of our RFID module. If so, a connection is opened between the 2.";
-Blockly.Msg.RFID_reception_cle_TEXT = "Information sent by card or badge";
+Blockly.Msg.RFID_detection_TEXT = "Detecting a board or badge";
+Blockly.Msg.RFID_detection_TOOLTIP = "Whether or not a board (or badge) is presented in front of our RFID module. If so, a connection is opened between the 2.";
+Blockly.Msg.RFID_reception_cle_TEXT = "Information sent by board or badge";
 Blockly.Msg.RFID_reception_cle_TOOLTIP = "Tell if information is sent to RFID, or not";
 Blockly.Msg.RFID_lecture_cle_TEXT = "information send by RFID tag";
 Blockly.Msg.RFID_lecture_cle_TOOLTIP = "Whether or not information is sent to our RFID module";
 Blockly.Msg.RFID_fermeture_TEXT = "Closing the Open RFID Connection";
-Blockly.Msg.RFID_fermeture_TOOLTIP = "Allows you to close the open connection between the RFID module and the card (or badge).";
+Blockly.Msg.RFID_fermeture_TOOLTIP = "Allows you to close the open connection between the RFID module and the board (or badge).";
 Blockly.Msg.RFID_valeur_cle_TEXT = "Value of the information sent by the RFID tag";
 Blockly.Msg.RFID_valeur_cle_TOOLTIP = "Enables us to know the value of the information sent to our RFID module";
 Blockly.Msg.RFID_code_acces_TEXT = "Initialize the access code";
@@ -1758,7 +1758,7 @@ Blockly.Msg.MatrixLED_WS2812B_setPixelColor_Green = "set green (255 max) =";
 Blockly.Msg.MatrixLED_WS2812B_setPixelColor_Blue = "set blue (255 max) =";
 Blockly.Msg.MatrixLED_WS2812B_setPixelColor_Pixel_Number = "for pixel number (0 first) =";
 
-//******** Storage : SD card + EEPROM https://www.arduino.cc/en/Reference/EEPROM
+//******** Storage : SD board + EEPROM https://www.arduino.cc/en/Reference/EEPROM
 Blockly.Msg.STORAGE_WRITE_SD_FILE = "SD Karte: Datei speichern";
 Blockly.Msg.STORAGE_SD_DATA = "mit Daten";
 Blockly.Msg.STORAGE_SD_NEWLINE = "neue Zeile?";
@@ -1779,13 +1779,13 @@ Blockly.Msg.DRONE_TOOLTIP = "controller must be in good mode";
 //******** gyroscope + temperature ADXL362
 Blockly.Msg.ADXL362_MISC_HELPURL = "http://annem.github.io/ADXL362/";
 Blockly.Msg.ADXL362_INIT_TITLE = "connect gyroscop (/!\\ 3,3 V /!\\)";
-Blockly.Msg.ADXL362_INIT_TOOLTIP = "bus SPI Arduino card, this Pro Mini is just an exAmple";
+Blockly.Msg.ADXL362_INIT_TOOLTIP = "bus SPI Arduino board, this Pro Mini is just an exAmple";
 Blockly.Msg.ADXL362_XVALUE_TITLE = "X orientation";
-Blockly.Msg.ADXL362_XVALUE_TOOLTIP = "look at X/Y on ADXL362 card";
+Blockly.Msg.ADXL362_XVALUE_TOOLTIP = "look at X/Y on ADXL362 board";
 Blockly.Msg.ADXL362_YVALUE_TITLE = "Y orientation";
-Blockly.Msg.ADXL362_YVALUE_TOOLTIP = "look at X/Y on ADXL362 card";
+Blockly.Msg.ADXL362_YVALUE_TOOLTIP = "look at X/Y on ADXL362 board";
 Blockly.Msg.ADXL362_ZVALUE_TITLE = "Z orientation";
-Blockly.Msg.ADXL362_ZVALUE_TOOLTIP = "look at X/Y on ADXL362 card";
+Blockly.Msg.ADXL362_ZVALUE_TOOLTIP = "look at X/Y on ADXL362 board";
 Blockly.Msg.ADXL362_TEMPVALUE_TITLE = "temperature";
 Blockly.Msg.ADXL362_TEMPVALUE_TOOLTIP = "test";
 

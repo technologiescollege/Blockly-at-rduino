@@ -2,7 +2,7 @@
 
 'use strict';
 
-goog.provide('Blockly.Msg.jp');
+goog.provide('Blockly.Msg.ja');
 
 goog.require('Blockly.Msg');
 

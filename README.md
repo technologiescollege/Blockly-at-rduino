@@ -10,9 +10,7 @@
 *vous pouvez aussi me demander une facture pour que votre établissement me fasse un 'don' officiel par virement bancaire. Je ne fais pas payer de licence mais je compte sur vous pour aider du montant auquel vous estimez ce travail.*
 ----------
 
-### WIKI !!! [http://www.libreduc.cc/wiki/doku.php/en/blockly_rduino](http://www.libreduc.cc/wiki/doku.php/en/blockly_rduino)
-
-### FORUM !!! [http://blockly.technologiescollege.fr/forum](http://blockly.technologiescollege.fr/forum)
+### WIKI !!! [https://wiki.libreduc.cc/en/blockly_rduino](https://wiki.libreduc.cc/en/blockly_rduino)
 
 ### Off-line upload [https://github.com/technologiescollege/BlocklyArduino_electrified](https://github.com/technologiescollege/BlocklyArduino_electrified)
 
@@ -33,9 +31,9 @@ Blockly@rduino est basé sur [Blockly](https://developers.google.com/blockly/), 
 
 *Blockly@rduino is based on [Blockly](https://developers.google.com/blockly/), a web-based graphical program editor. It provides a single type of graphical programming translation _(unlike Blockly, which translates to Python, JavaScript, etc. and allows you to simulate it online : [example](https://blockly-demo.appspot.com/static/demos/code/index.html))_, to generate code to be copied and pasted into the Arduino IDE.*
 
-Libre à vous de rajouter autant de bibliothèques que voulu grâce à cette notice explicative : [http://www.libreduc.cc/wiki/doku.php/fr/arduino/blockly_rduino/creerblocsmultiling](http://www.libreduc.cc/wiki/doku.php/fr/arduino/blockly_rduino/creerblocsmultiling)
+Libre à vous de rajouter autant de bibliothèques que voulu grâce à cette notice explicative : [https://wiki.libreduc.cc/fr/arduino/blockly_rduino/creerblocsmultiling](https://wiki.libreduc.cc/fr/arduino/blockly_rduino/creerblocsmultiling)
 
-*Feel free to add as many libraries as you want thanks to this explanatory note: [http://www.libreduc.cc/wiki/doku.php/fr/arduino/blockly_rduino/creerblocsmultiling](http://www.libreduc.cc/wiki/doku.php/fr/arduino/blockly_rduino/creerblocsmultiling)*
+*Feel free to add as many libraries as you want thanks to this explanatory note: [https://wiki.libreduc.cc/fr/arduino/blockly_rduino/creerblocsmultiling](https://wiki.libreduc.cc/fr/arduino/blockly_rduino/creerblocsmultiling)*
 
 Cette version a été réorganisée et améliorée pour la faire utiliser au mieux par des élèves débutants dans le code.
 
@@ -73,8 +71,8 @@ Blockly@rduino est un outil web, un webware par référence aux software, hardwa
 [http://technologiescollege.github.io/Blockly-at-rduino/](http://technologiescollege.github.io/Blockly-at-rduino/) 
 
 Vous pouvez donc aussi lier directement l'ouverture de la page à l'ouverture d'un fichier XML hébergé (_ou tout en local_) :
-* [démo 1 : faire clignoter une diode](http://technologiescollege.github.io/Blockly-at-rduino/?font=O&lang=fr&card=arduino_uno&url=./examples/./blink/blink.xml)
-* [démo 2 : faire varier un servo-moteur proportionnellement à une consigne de potentiomètre](http://technologiescollege.github.io/Blockly-at-rduino/?font=O&lang=fr&card=arduino_uno&url=./examples/./servo_potentio/servo_potentio.xml)
+* [démo 1 : faire clignoter une diode](http://technologiescollege.github.io/Blockly-at-rduino/?font=O&lang=fr&board=arduino_uno&url=./examples/./blink/blink.xml)
+* [démo 2 : faire varier un servo-moteur proportionnellement à une consigne de potentiomètre](http://technologiescollege.github.io/Blockly-at-rduino/?font=O&lang=fr&board=arduino_uno&url=./examples/./servo_potentio/servo_potentio.xml)
 
 ## Demos
 
@@ -82,8 +80,8 @@ Blockly@rduino is a web tool, a webware by reference to software, hardware, etc.
 [http://technologiescollege.github.io/Blockly-at-rduino/](http://technologiescollege.github.io/Blockly-at-rduino/) 
 
 So you can also link directly the opening of the page to the opening of a hosted XML file (_or all locally_) :
-* [demo 1: flashing a diode](http://technologiescollege.github.io/Blockly-at-rduino/?font=O&lang=en&card=arduino_uno&url=./examples/./blink/blink.xml)
-* [demo 2: vary a servo-motor proportionally to a potentiometer setpoint](http://technologiescollege.github.io/Blockly-at-rduino/?font=O&lang=en&card=arduino_uno&url=./examples/./servo_potentio/servo_potentio.xml)
+* [demo 1: flashing a diode](http://technologiescollege.github.io/Blockly-at-rduino/?font=O&lang=en&board=arduino_uno&url=./examples/./blink/blink.xml)
+* [demo 2: vary a servo-motor proportionally to a potentiometer setpoint](http://technologiescollege.github.io/Blockly-at-rduino/?font=O&lang=en&board=arduino_uno&url=./examples/./servo_potentio/servo_potentio.xml)
 
 
 ## Utiliser en local dans son navigateur web

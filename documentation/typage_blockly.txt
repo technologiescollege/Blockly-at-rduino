@@ -10,6 +10,6 @@ Blockly.Types.SHORT_NUMBER			// Short integer number
 Blockly.Types.LARGE_NUMBER			// Number in a large range
 Blockly.Types.DECIMAL				// Number type for numbers with a fractional part
 Blockly.Types.ARRAY					// Array of any type of items
-Blockly.Types.NULL					// Used as a "no type" wild card natively
+Blockly.Types.NULL					// Used as a "no type" wild board natively
 Blockly.Types.UNDEF					// Can be used to delegate type assignment
 Blockly.Types.CHILD_BLOCK_MISSING	// Set when no child block (meant to define the variable type) is connected

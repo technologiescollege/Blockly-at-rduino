@@ -19,7 +19,10 @@ Blockly.Blocks.grove_piezo_buzzer.getBlockType = function() {
 Blockly.Blocks.grove_relay.getBlockType = function() {
 	return Blockly.Types.BOOLEAN;
 };
-Blockly.Blocks.grove_temporature_sensor.getBlockType = function() {
+Blockly.Blocks.grove_temperature_sensor.getBlockType = function() {
+	return Blockly.Types.DECIMAL;
+};
+Blockly.Blocks.grove_moisture_sensor.getBlockType = function() {
 	return Blockly.Types.DECIMAL;
 };
 Blockly.Blocks.grove_serial_lcd_print.getBlockType = function() {

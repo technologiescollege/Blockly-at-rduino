@@ -186,7 +186,7 @@
                                         <a href="#" id="menu_51"> <span id="span_menu_51"> </span> </a>
                                     </li>
                                     <li>
-                                        <a href="http://www.libreduc.cc/wiki/doku.php/fr/arduino/blockly_rduino" target="_blank" id="menu_52"> <span id="span_menu_52"> </span> </a>
+                                        <a href="https://wiki.libreduc.cc/fr/arduino/blockly_rduino" target="_blank" id="menu_52"> <span id="span_menu_52"> </span> </a>
                                     </li>
                                     <li>
                                         <a href="http://blockly.technologiescollege.fr/forum/" target="_blank" id="menu_53"> <span id="span_menu_53"> </span> </a>
@@ -213,9 +213,9 @@
                     <label id="labelToolboxDefinition"></label>
                 </div>
             </div>
-            <div id="divTitreMenu_miniCard">
-                <a href="#" id="miniCard_Menu">
-                    <img id="arduino_card_miniPicture_Menu" height="36" border="0" />
+            <div id="divTitreMenu_miniBoard">
+                <a href="#" id="miniBoard_Menu">
+                    <img id="arduino_board_miniPicture_Menu" height="36" border="0" />
                 </a>
             </div>
         </div>
@@ -309,8 +309,8 @@
                         <span id="configGlobalLabel"> </span>
                     </button>
                 <div id="div_miniPicture">
-                    <a id="miniCard">
-                        <img id="arduino_card_miniPicture" />
+                    <a id="miniBoard">
+                        <img id="arduino_board_miniPicture" />
                     </a>
                 </div>
                 <button id="btn_config" class="btn btn-sm btn-warning btn-block " data-toggle="modal" data-target="#configModal">
@@ -462,9 +462,7 @@
                     </div>
                     <div align="center"><b><a href="http://framaforms.org/blocklyrduino-utilisateurs-1490560876" target='blank'><font size="5"><span id="span_forms_about" style="font-style: bold;"> </span></font></a></b></div>
                     <br />
-                    <b>Forum</b> : <a href='http://blockly.technologiescollege.fr/forum' target='blank'><i class="fab fa-wpforms"></i> http://blockly.technologiescollege.fr/forum</a>
-                    <br />
-                    <br /><b>Documentation :</b> <a href="http://www.libreduc.cc/wiki/doku.php" target='blank'><i class="fab fa-wikipedia-w"></i> wiki</a>
+                    <br /><b>Documentation :</b> <a href="https://wiki.libreduc.cc" target='blank'><i class="fab fa-wikipedia-w"></i> wiki</a>
                     <br />
                     <br />
                     <span><b>Blockly@rduino</b></span> (<a href="https://github.com/technologiescollege/Blockly-at-rduino" target='blank'><i class="fab fa-github"></i> Github</a>)
@@ -542,19 +540,19 @@
     <!-- picture modal -->
     <div id="pictureModalLabel" style="display:none">
         <div id="pictureModalLabel_boutons">
-            <button id="btn_card_picture_mini" class="btn btn-default">
+            <button id="btn_board_picture_mini" class="btn btn-default">
                     <span id="icon_btn_blocs_picture_mini" class="glyphicon glyphicon-minus"> </span>
                 </button>
-            <button id="btn_card_picture_maxi" class="btn btn-default">
+            <button id="btn_board_picture_maxi" class="btn btn-default">
                     <span id="icon_btn_blocs_picture_maxi" class="glyphicon glyphicon-plus"> </span>
                 </button>
-            <button id="btn_card_picture_change" class="btn btn-primary btn-sm">
-                    <span id="span_card_picture_change"> </span>
+            <button id="btn_board_picture_change" class="btn btn-primary btn-sm">
+                    <span id="span_board_picture_change"> </span>
                 </button>
         </div>
         <div id="board_select_AIO_on"></div>
-        <div id="arduino_card_picture_inModal">
-            <img id="arduino_card_picture" width="200" />
+        <div id="arduino_board_picture_inModal">
+            <img id="arduino_board_picture" width="200" />
         </div>
     </div>
     <!-- example modal -->
@@ -675,8 +673,8 @@
                     </h4>
                 </div>
                 <div class="modal-body" id="modal-body-config-global">
-                    <div class="arduino_card_mini_picture_div">
-                        <img id="arduino_card_mini_picture" />
+                    <div class="arduino_board_mini_picture_div">
+                        <img id="arduino_board_mini_picture" />
                     </div>
                     <div class="modal-body-config-global_left">
                         <span class="fa fa-language"></span> <label id="span_languageMenu"> </label> <select id="languageMenu"></select><br/>
@@ -689,23 +687,36 @@
                                 <option value="T">Trebuchet MS</option>
                                 <option value="V">Verdana</option>
                             </select>
-                        <div id="divCard">
+                        <div id="divBoard">
                             <br />
-                            <span class="fa fa-microchip"></span> <label id="labelArduinoCard"></label>
+                            <span class="fa fa-microchip"></span> <label id="labelArduinoBoard"></label>
                             <div id="board_select_AIO_off"></div>
-                            <select id="board_select" onmousemove="BlocklyDuino.cardPicture_change_AIO()" onchange="BlocklyDuino.cardPicture_change_AIO()">
+                            <select id="board_select" onmousemove="BlocklyDuino.boardPicture_change_AIO()" onchange="BlocklyDuino.boardPicture_change_AIO()">
                                     <option value="none">...</option>
                                     <optgroup label="Arduino">
-                                        <option value="arduino_leonardo">Arduino/Genuino LEONARDO</option>
-                                        <option value="arduino_mega">Arduino/Genuino MEGA 2560</option>
-                                        <option value="arduino_micro">Arduino/Genuino MICRO</option>
-                                        <option value="arduino_mini">Arduino/Genuino MINI ATmega328</option>
-                                        <option value="arduino_nano">Arduino/Genuino NANO ATmega328</option>
-                                        <option value="arduino_pro8">Arduino/Genuino Pro Mini 3.3V ATmega328</option>
-                                        <option value="arduino_pro16">Arduino/Genuino Pro Mini 5V ATmega328</option>
-                                        <option value="arduino_uno">Arduino/Genuino UNO</option>
-                                        <option value="arduino_yun">Arduino/Genuino YUN</option>
+                                        <option value="arduino_bt">Arduino BT</option>
+                                        <option value="arduino_diecimila">Arduino Duemilanove/Diecemila</option>
+                                        <option value="arduino_esplora">Arduino Esplora</option>
+                                        <option value="arduino_ethernet">Arduino Ethernet</option>
+                                        <option value="arduino_fio">Arduino Fio</option>
+                                        <option value="arduino_gemma">Arduino Gemma</option>
+                                        <option value="arduino_leonardo">Arduino LEONARDO</option>
+                                        <option value="arduino_mega">Arduino MEGA 2560</option>
+                                        <option value="arduino_megaADK">Arduino MEGA ADK</option>
+                                        <option value="arduino_micro">Arduino MICRO</option>
+                                        <option value="arduino_mini">Arduino MINI ATmega328</option>
+                                        <option value="arduino_nano">Arduino NANO ATmega328</option>
+                                        <option value="arduino_atmegang">Arduino NG</option>
+                                        <option value="arduino_pro8">Arduino Pro Mini 3.3V ATmega328</option>
+                                        <option value="arduino_pro16">Arduino Pro Mini 5V ATmega328</option>
+                                        <option value="arduino_robotControl">Arduino Robot Control</option>
+                                        <option value="arduino_robotMotor">Arduino Robot Motor</option>
+                                        <option value="arduino_uno">Arduino UNO</option>
+                                        <option value="arduino_unomini">Arduino UNO Mini</option>
+                                        <option value="arduino_unowifi">Arduino UNO WiFi</option>
+                                        <option value="arduino_yun">Arduino YUN</option>
                                         <option value="lilypad">LilyPad ATmega328P</option>
+                                        <option value="LilyPadUSB">LilyPad USB</option>
                                     </optgroup>
                                     <optgroup label="DAGU">
                                         <option value="dagu_rs027">Dagu RS027</option>
@@ -769,7 +780,7 @@
                             <button id="btn_videos" class='btn btn-success btn-info text-left'>
                                     <span class="fa fa-film"> </span>
                                 </button>
-                            <a id="btn_doc" class='btn btn-success btn-info text-left' href="http://www.libreduc.cc/wiki/doku.php/fr/arduino/blockly_rduino" target="_blank" role='button'>
+                            <a id="btn_doc" class='btn btn-success btn-info text-left' href="https://wiki.libreduc.cc/fr/arduino/blockly_rduino" target="_blank" role='button'>
                                 <span class="glyphicon glyphicon-info-sign"></span>
                             </a>
                             <a id="btn_tuto" class='btn btn-success btn-info text-left' href="http://blockly.technologiescollege.fr/forum/" target="_blank" role='button'>

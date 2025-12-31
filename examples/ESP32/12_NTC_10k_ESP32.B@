@@ -22,7 +22,7 @@
       <block type="variables_set" id=":0xp8U!crI.xzQO+Z[@a">
         <field name="VAR">Temperatura_NTC_10k</field>
         <value name="VALUE">
-          <block type="grove_temporature_sensor" id="8j0oz@i~8_Rm,}aaW4j;">
+          <block type="grove_temperature_sensor" id="8j0oz@i~8_Rm,}aaW4j;">
             <field name="PIN">36</field>
           </block>
         </value>

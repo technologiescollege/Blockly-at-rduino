@@ -1,6 +1,6 @@
 'use strict';
 
-goog.provide('Blockly.Msg.pt-br');
+goog.provide('Blockly.Msg.pt_br');
 
 goog.require('Blockly.Msg');
 

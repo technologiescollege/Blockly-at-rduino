@@ -114,14 +114,14 @@ header {
   width: 100%;
   background: #00969D;  
 }*/
-#divTitreMenu_miniCard, #divTitreMenu_menu {
+#divTitreMenu_miniBoard, #divTitreMenu_menu {
     display: inline-block;
 }
 #divTitreMenu_menu {
 	float: left;
 }
  
-#divTitreMenu_miniCard {   overflow:auto;
+#divTitreMenu_miniBoard {   overflow:auto;
     margin-left: 0px;
 }
   
