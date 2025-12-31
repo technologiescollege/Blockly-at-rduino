@@ -2031,6 +2031,9 @@
 			<block type="grove_tilt_switch"></block>
 			<block type="grove_temperature_sensor"></block>
 			<block type="grove_moisture_sensor"></block>
+			<block type="grove_i2c_color_sensor_2_test"></block>
+			<block type="grove_i2c_color_sensor_2_led"></block>
+			<block type="grove_i2c_color_sensor_2_read_colors"></block>
 			<block type="grove_dht_read"></block>
 			<block type="grove_gas_sensor_SGP30"></block>
 			<block type="grove_sound_sensor"></block>

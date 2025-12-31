@@ -25,6 +25,15 @@ Blockly.Blocks.grove_temperature_sensor.getBlockType = function() {
 Blockly.Blocks.grove_moisture_sensor.getBlockType = function() {
 	return Blockly.Types.DECIMAL;
 };
+Blockly.Blocks.grove_i2c_color_sensor_2_test.getBlockType = function() {
+	return Blockly.Types.BOOLEAN;
+};
+Blockly.Blocks.grove_i2c_color_sensor_2_led.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
+Blockly.Blocks.grove_i2c_color_sensor_2_read_colors.getBlockType = function() {
+	return Blockly.Types.NUMBER;
+};
 Blockly.Blocks.grove_serial_lcd_print.getBlockType = function() {
 	return Blockly.Types.NUMBER;
 };

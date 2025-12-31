@@ -199,7 +199,7 @@ Blockly.Blocks['grove_temperature_sensor'] = {
 
 Blockly.Blocks['grove_moisture_sensor'] = {
   init: function() {
-    this.setColour(Blockly.Blocks.grove.HUE);
+  this.setColour(Blockly.Blocks.grove.HUE);
 	this.setHelpUrl(Blockly.Msg.GROVE_INOUT_MOISTURE_HELPURL);
     this.appendDummyInput()
         .appendField(Blockly.Msg.GROVE_INOUT_MOISTURE_TEXT)
@@ -208,6 +208,48 @@ Blockly.Blocks['grove_moisture_sensor'] = {
         .appendField(new Blockly.FieldTextInput('0',  Blockly.Arduino.pinAnalogValidator), 'PIN');
     this.setOutput(true, 'Number');
     this.setTooltip(Blockly.Msg.GROVE_INOUT_MOISTURE_TOOLTIP);
+  }
+};
+
+Blockly.Blocks['grove_i2c_color_sensor_2_test'] = {
+  init: function() {
+    this.setColour(Blockly.Blocks.grove.HUE);
+    this.setHelpUrl('https://wiki.seeedstudio.com/Grove-I2C_Color_Sensor/');
+    this.appendDummyInput()
+        .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/seeed/grove/I2C_color_sensor_v2.jpg', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize))
+        .appendField("a color sensor is connected ?");
+    this.setInputsInline(false);
+    this.setOutput(true, "Boolean");
+    this.setTooltip('this blocks helps to verify if an I2C sensor is connected to the I2C bus');
+  }
+};
+
+Blockly.Blocks['grove_i2c_color_sensor_2_led'] = {
+  init: function() {
+    this.setColour(Blockly.Blocks.grove.HUE);
+    this.setHelpUrl('https://wiki.seeedstudio.com/Grove-I2C_Color_Sensor/');
+    this.appendDummyInput()
+        .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/seeed/grove/I2C_color_sensor_v2.jpg', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize))
+        .appendField("turn led on/off")
+        .appendField(new Blockly.FieldDropdown([["on", "true"], ["off", "false"]]), "LED");
+    this.setInputsInline(true);
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setTooltip('this blocks turns embed LED on/off');
+  }
+};
+
+Blockly.Blocks['grove_i2c_color_sensor_2_read_colors'] = {
+  init: function() {
+    this.setColour(Blockly.Blocks.grove.HUE);
+    this.setHelpUrl('https://wiki.seeedstudio.com/Grove-I2C_Color_Sensor/');
+    this.appendDummyInput()
+        .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/seeed/grove/I2C_color_sensor_v2.jpg', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize))
+        .appendField("color value for color")
+        .appendField(new Blockly.FieldDropdown([["red", "data_red"], ["green", "data_green"], ["blue", "data_blue"]]), "color_choice");
+    this.setOutput(true, "Number");
+    this.setInputsInline(true);
+    this.setTooltip('this blocks returns value for color');
   }
 };
 

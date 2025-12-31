@@ -101,6 +101,39 @@ Blockly.Arduino.grove_moisture_sensor = function() {
   return [code, Blockly.Arduino.ORDER_ATOMIC];
 };
 
+Blockly.Arduino.grove_i2c_color_sensor_2_test = function() {
+  Blockly.Arduino.includes_['Wire'] = '#include <Wire.h>'
+  Blockly.Arduino.includes_['Adafruit_TCS34725'] = '#include "Adafruit_TCS34725.h"'
+  Blockly.Arduino.definitions_['Adafruit_TCS34725'] = 'Adafruit_TCS34725 tcs = Adafruit_TCS34725(TCS34725_INTEGRATIONTIME_50MS, TCS34725_GAIN_4X);'
+  var code = 'tcs.begin()'
+  return [code, Blockly.Arduino.ORDER_ATOMIC];
+};
+
+Blockly.Arduino.grove_i2c_color_sensor_2_led = function() {
+  var dropdown_led = this.getFieldValue('LED');
+  var code = 'tcs.setInterrupt(' + dropdown_led + ');';
+  return code;
+};
+
+Blockly.Arduino.grove_i2c_color_sensor_2_read_colors = function() {
+  Blockly.Arduino.userFunctions_['grove_i2c_color_sensor_2_read_colors'] = 'int getColorValue(String color_choice) {\n'
+    +'  uint16_t clear, red, green, blue;\n'
+    +'  tcs.getRawData(&red, &green, &blue, &clear);\n'
+    +'  if (color_choice == "data_red") {\n'
+    +'    return red;\n'
+    +'  } else if (color_choice == "data_green") {\n'
+    +'    return green;\n'
+    +'  } else if (color_choice == "data_blue") {\n'
+    +'    return blue;\n'
+    +'  } else {\n'
+    +'    return 0;\n'
+    +'  }\n'
+    +'}';
+  var dropdown_color_choice = this.getFieldValue('color_choice');
+  var code = 'getColorValue("' + dropdown_color_choice + '")';
+  return [code, Blockly.Arduino.ORDER_ATOMIC];
+};
+
 /*
 #include <SerialLCD.h>
 #include <SoftwareSerial.h> //this is a must
