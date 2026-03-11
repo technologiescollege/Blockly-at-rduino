@@ -1,6 +1,6 @@
 {
   "name": "Blcokly@rduino",
-  "version": "3.3.1",
+  "version": "3.3.3",
   "description": "Arduino and ESP32 blocks programming",
   "main": "index.html",
   "files": [
