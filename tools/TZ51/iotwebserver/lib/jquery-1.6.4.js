@@ -2629,7 +2629,7 @@ jQuery.event = {
 
 		if ( !eventHandle ) {
 			elemData.handle = eventHandle = function( e ) {
-				// Disboard the second event of a jQuery.event.trigger() and
+				// Discard the second event of a jQuery.event.trigger() and
 				// when an event is called after a page has unloaded
 				return typeof jQuery !== "undefined" && (!e || jQuery.event.triggered !== e.type) ?
 					jQuery.event.handle.apply( eventHandle.elem, arguments ) :
@@ -3785,7 +3785,7 @@ var chunker = /((?:\((?:\([^()]+\)|[^()]+)+\)|\[(?:\[[^\[\]]*\]|['"][^'"]*['"]|[
 
 // Here we check if the JavaScript engine is using some sort of
 // optimization where it does not always call our comparision
-// function. If that is the case, disboard the hasDuplicate value.
+// function. If that is the case, discard the hasDuplicate value.
 //   Thus far that includes Google Chrome.
 [0, 0].sort(function() {
 	baseHasDuplicate = false;
@@ -5847,7 +5847,7 @@ jQuery.fn.extend({
 						table ?
 							root(this[i], first) :
 							this[i],
-						// Make sure that we do not leak memory by inadvertently disboarding
+						// Make sure that we do not leak memory by inadvertently discarding
 						// the original fragment (which might have attached data) instead of
 						// using it; in addition, use the original fragment object for the last
 						// item instead of first because it can end up being emptied incorrectly
