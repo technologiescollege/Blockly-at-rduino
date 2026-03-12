@@ -83,12 +83,10 @@ BlocklyDuino.boardPicture_mini = function () {
 
 BlocklyDuino.boardPicture_change_AIO = function () {
     if ($("#board_select").val()) {
-        // $('#arduino_board_miniPicture').attr("src", profile[$("#board_select").val()]['picture']);
         $('#arduino_board_mini_picture').attr("src", profile[$("#board_select").val()]['picture']);
         $('#arduino_board_picture').attr("src", profile[$("#board_select").val()]['picture']);
         $('#arduino_board_miniPicture_Menu').attr("src", profile[$("#board_select").val()]['picture']);
     } else {
-        // $('#arduino_board_miniPicture').attr("src", "");
         $('#arduino_board_mini_picture').attr("src", "");
         $('#arduino_board_picture').attr("src", "");
         $('#arduino_board_miniPicture_Menu').attr("src", "");

@@ -292,7 +292,7 @@ BlocklyDuino.bindFunctions = function() {
     var clipboard = new Clipboard('#btn_CopyCode');
 
     // Navigation buttons
-    $('#btn_delete').on("click", BlocklyDuino.disboard);
+    $('#btn_delete').on("click", BlocklyDuino.discard);
     $('#btn_undo').on("click", BlocklyDuino.Undo);
     $('#btn_redo').on("click", BlocklyDuino.Redo);
     $('#btn_pasteIDEArduino').remove();

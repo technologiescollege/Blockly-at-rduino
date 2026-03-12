@@ -256,6 +256,7 @@ BlocklyDuino.backupBlocks = function() {
  * Sets Arduino board
  */
 BlocklyDuino.setArduinoBoard = function() {
+    var boardId = BlocklyDuino.getStringParamFromUrl('board', '');
     // Vérifier si boardId existe et s'il est présent dans l'optgroup "Arduino"
     if (!boardId || !$("#board_select optgroup[label='Arduino'] option[value='" + boardId + "']").length) {
         boardId = BlocklyDuino.selectedBoard;
@@ -287,7 +288,7 @@ BlocklyDuino.bindFunctions = function() {
     var clipboard = new Clipboard('#btn_CopyCode');
 
     // Navigation buttons
-    $('#btn_delete').on("click", BlocklyDuino.disboard);
+    $('#btn_delete').on("click", BlocklyDuino.discard);
     $('#btn_undo').on("click", BlocklyDuino.Undo);
     $('#btn_redo').on("click", BlocklyDuino.Redo);
     $('#btn_verify_local').on("click", BlocklyDuino.verify_local_Click_IDE);

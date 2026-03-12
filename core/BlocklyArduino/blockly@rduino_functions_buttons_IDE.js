@@ -202,7 +202,7 @@ BlocklyDuino.load_IDE = function(event) {
 /**
  * Disboard all blocks from the workspace.
  */
-BlocklyDuino.disboard = function() {
+BlocklyDuino.discard = function() {
     var count = BlocklyDuino.workspace.getAllBlocks().length;
     if (count < 2 || window.confirm(MSG['disboard'].replace('%1', count))) {
         BlocklyDuino.workspace.clear();
