@@ -14,6 +14,6 @@ jobs:
         fetch-depth: 0
     - uses: wangchucheng/git-repo-sync@v0.1.0
       with:
-        target-url: https://forge.apps.education.fr/canetsebastien/BlocklyArduino
+        target-url: https://forge.apps.education.fr/canetsebastien/BlockWi-QHL
         target-username: canetsebastien
         target-token: ${{ secrets.GITLAB_TOKEN }}
