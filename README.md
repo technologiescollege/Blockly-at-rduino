@@ -10,6 +10,32 @@
 *vous pouvez aussi me demander une facture pour que votre établissement me fasse un 'don' officiel par virement bancaire. Je ne fais pas payer de licence mais je compte sur vous pour aider du montant auquel vous estimez ce travail.*
 ----------
 
+### Version 3.4.0 (07-10-2026)
+
+Compatibilité navigateurs récents (Chrome / Edge 144+) et usage hors ligne renforcé.
+
+**Nouveautés / corrections :**
+* correctif glisser-déposer Blockly sur Chromium 144+ ;
+* bundles offline (toolbox, exemples, XML) pour `file://` sans CORS, mais nécessite un scripts de build : `npm run build:offline` ;
+* ouverture des exemples corrigée (liens + chargement XML) ;
+* compatibilité des exemples anciens (blocs legacy / migration XML) ;
+* avertissement si une toolbox `*_functions` est absente, avec retour du switch « fonctions ».
+
+Voir le détail dans [CHANGELOG.md](CHANGELOG.md).
+
+### Version 3.4.0 (2026-10-07)
+
+Recent browser compatibility (Chrome / Edge 144+) and stronger offline support.
+
+**What's new / fixed :**
+* Blockly drag-and-drop fix for Chromium 144+ ;
+* offline bundles (toolbox, examples, XML) for `file://` without CORS, but needs build scripts : `npm run build:offline` ;
+* fixed example opening (links + XML loading) ;
+* legacy examples compatibility (legacy blocks / XML migration) ;
+* warning when a `*_functions` toolbox is missing, with functions switch reset.
+
+See details in [CHANGELOG.md](CHANGELOG.md).
+
 ### WIKI !!! [https://wiki.libreduc.cc/en/blockly_rduino](https://wiki.libreduc.cc/en/blockly_rduino)
 
 ### Off-line upload [https://github.com/technologiescollege/BlocklyArduino_electrified](https://github.com/technologiescollege/BlocklyArduino_electrified)
@@ -88,6 +114,12 @@ So you can also link directly the opening of the page to the opening of a hosted
 
 Si vous préfréez l'utiliser en local, il vous suffit de télécharger le code depuis Github (_[Download Zip](https://github.com/technologiescollege/Blockly-at-rduino/archive/gh-pages.zip)_) et d'ouvrir le fichier `index.html` dans votre navigateur.
 
+À partir de la **v3.4.0**, l’usage local en `file://` est nettement plus fiable grâce aux bundles offline (toolbox + exemples). Après modification des toolboxes ou exemples, régénérer avec :
+
+```bash
+npm run build:offline
+```
+
 Vous pouvez l'héberger sur un serveur, et ainsi y faire accéder de nombreux postes en pointant vers ce fichier 'index.html'.
 
 **Pour le téléversement et la console série**, vous devez télécharger la version 'Electron' :  https://github.com/technologiescollege/BlocklyArduino_electrified.
@@ -95,6 +127,12 @@ Vous pouvez l'héberger sur un serveur, et ainsi y faire accéder de nombreux po
 ## Use locally in your web browser
 
 If you want to use it locally, just download the code from Github (_[Download Zip](https://github.com/technologiescollege/Blockly-at-rduino/archive/gh-pages.zip)_) and open the file `index.html` in your browser.
+
+From **v3.4.0**, local `file://` usage is much more reliable thanks to offline bundles (toolbox + examples). After editing toolboxes or examples, regenerate with :
+
+```bash
+npm run build:offline
+```
 
 You can host it on a server, and thus make many computers access it by pointing to this file `index.html'.
 
@@ -123,4 +161,3 @@ _Spanish translation : José Manuel Ruiz Gutteriez ([blog](http://josemanuelruiz
 _Daniel PERS ([site](http://blogpeda.ac-poitiers.fr/techno-jean-mace/)) : FDPlayer, OLED, RGB LED_
 
 _Bernard REMOND [site](https://online.nbremond.net/) : téléversement local_
-

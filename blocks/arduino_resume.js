@@ -27,6 +27,7 @@ head.load(
 "blocks/arduino_base/arduino_conversion.js",
 "blocks/arduino_base/arduino_serial.js",
 "blocks/arduino_base/arduino_softserial.js",
+"blocks/arduino_base/legacy_example_blocks.js",
 function() {
     // Call a function when done
     console.log("Done loading Arduino Base Blocks");

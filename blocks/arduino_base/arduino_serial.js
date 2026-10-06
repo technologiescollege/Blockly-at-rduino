@@ -41,7 +41,11 @@ goog.require('Blockly.Types');
 	this.setInputsInline(true);
     this.appendDummyInput("")
 	    .appendField(Blockly.Msg.Serial_Init)
-     	.appendField(new Blockly.FieldDropdown(profile.defaultBoard.serial), "SPEED");
+     	.appendField(new Blockly.FieldDropdown(
+            (profile.defaultBoard && profile.defaultBoard.serial && profile.defaultBoard.serial.length)
+                ? profile.defaultBoard.serial
+                : [['9600', '9600'], ['115200', '115200']]
+        ), "SPEED");
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setTooltip('Serial communication init speed.');

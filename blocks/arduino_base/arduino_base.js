@@ -118,6 +118,25 @@ Blockly.Blocks.base_define = {
   }
 };
 
+/**
+ * Legacy constant block used by older examples (field VAR + value TEXT2).
+ */
+Blockly.Blocks.base_define_const = {
+  init: function() {
+    this.setHelpUrl(Blockly.Msg.ARDUINO_BASE_DEFINE_CONST_HELPURL);
+    this.setColour(Blockly.Blocks.arduino_base.HUE);
+    this.appendDummyInput()
+        .appendField(Blockly.Msg.ARDUINO_BASE_DEFINE_CONST_INPUT1 || 'Définir')
+        .appendField(new Blockly.FieldTextInput('const'), 'VAR');
+    this.appendValueInput('TEXT2')
+        .setAlign(Blockly.ALIGN_RIGHT)
+        .appendField(Blockly.Msg.ARDUINO_BASE_DEFINE_CONST_INPUT2 || 'comme');
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setTooltip(Blockly.Msg.ARDUINO_BASE_DEFINE_CONST_TOOLTIP);
+  }
+};
+
 Blockly.Blocks.base_code = {
   init: function() {
     this.setHelpUrl(Blockly.Msg.TEXT_TEXT_HELPURL);

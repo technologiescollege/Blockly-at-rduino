@@ -7,6 +7,10 @@
     <!--load first for menus-->
     <link rel="stylesheet" type="text/css" href="css/menu.css" />
     <script type="text/javascript" src="core/blockly_compressed.js"></script>
+    <script type="text/javascript" src="core/BlocklyArduino/toolbox_bundle.js"></script>
+    <script type="text/javascript" src="core/BlocklyArduino/examples_bundle.js"></script>
+    <script type="text/javascript" src="core/BlocklyArduino/examples_xml_bundle.js"></script>
+    <script type="text/javascript" src="core/BlocklyArduino/blockly@rduino_fix_chromium.js"></script>
     <!-- needed for type of variable -->
     <script type="text/javascript" src="core/Ardublockly/type.js"></script>
     <script type="text/javascript" src="core/Ardublockly/types.js"></script>
@@ -537,6 +541,23 @@
             </div>
         </div>
     </div>
+    <!-- toolbox functions warning modal -->
+    <div class="modal fade" id="toolboxWarnModal" tabindex="-1" role="dialog" aria-labelledby="toolboxWarnModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&#215;</span></button>
+                    <h4 class="modal-title" id="toolboxWarnModalLabel"></h4>
+                </div>
+                <div class="modal-body">
+                    <pre id="toolboxWarnModalBody" style="white-space:pre-wrap;"></pre>
+                </div>
+                <div class="modal-footer">
+                    <button id="btn_close_toolbox_warn" type="button" class="btn btn-primary" data-dismiss="modal"></button>
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- picture modal -->
     <div id="pictureModalLabel" style="display:none">
         <div id="pictureModalLabel_boutons">
@@ -600,12 +621,12 @@
     </div>
     <!-- create char for LCD code "modal" -->
     <div id="screen_falsemodal" style="display:none">
-        <iframe frameborder="0" marginwidth="0" marginheight="0">
+        <iframe src="about:blank" frameborder="0" marginwidth="0" marginheight="0">
             </iframe>
     </div>
     <!-- convert RGB color code "modal" -->
     <div id="RGB_falsemodal" style="display:none">
-        <iframe frameborder="0" marginwidth="0" marginheight="0">
+        <iframe src="about:blank" frameborder="0" marginwidth="0" marginheight="0">
             </iframe>
     </div>
     <!-- toolbox config modal -->
@@ -840,7 +861,7 @@
     </div>
     <!--only for IDE mode -->
     <div id="wiring_dialog">
-        <iframe frameborder="0" marginwidth="0" marginheight="0">
+        <iframe src="about:blank" frameborder="0" marginwidth="0" marginheight="0">
             </iframe>
     </div>
     <div id="arduino_IDE_code"> </div>

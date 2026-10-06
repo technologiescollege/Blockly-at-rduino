@@ -541,3 +541,54 @@ Blockly.Blocks['SENSOR_ACTUATOR_lcd_i2c'] = {
         this.setHelpUrl("http://wiki.seeed.cc/Grove-LCD_RGB_Backlight/");
     }
 };
+
+/**
+ * Legacy short names used by older example XML files.
+ */
+(function() {
+    var aliases = [
+        'digital_write',
+        'inout_bp',
+        'dht11',
+        'suiveur_ligne',
+        'potentiometre',
+        'moteur_dc',
+        'matrice8x8_symbole',
+        'matrice8x8_init',
+        'matrice8x8_aff',
+        'inout_buildin_led',
+        'tone',
+        'notone',
+        'lcd_i2c',
+        'LCD_Keypad_Shield_DFR_09',
+        'LCD_Keypad_Shield_DFR_09_lc',
+        'LCD_Keypad_Shield_DFR_09_RAZ'
+    ];
+    for (var i = 0; i < aliases.length; i++) {
+        var shortName = aliases[i];
+        var fullName = 'SENSOR_ACTUATOR_' + shortName;
+        if (Blockly.Blocks[fullName] && !Blockly.Blocks[shortName]) {
+            Blockly.Blocks[shortName] = Blockly.Blocks[fullName];
+        }
+    }
+
+    // moteur_dc_stop is present in old examples but was never renamed with prefix.
+    if (!Blockly.Blocks.moteur_dc_stop) {
+        Blockly.Blocks.moteur_dc_stop = {
+            init: function() {
+                this.appendDummyInput()
+                    .appendField(new Blockly.FieldImage("blocks/sensor_actuator/dagurs040.png", 75, 50))
+                    .appendField("arrêter le moteur")
+                    .appendField(new Blockly.FieldDropdown([
+                        ["droit", "6"],
+                        ["gauche", "5"]
+                    ]), "MOTEUR");
+                this.setPreviousStatement(true, null);
+                this.setNextStatement(true, null);
+                this.setColour(Blockly.Blocks.sensor_actuator.HUE);
+                this.setTooltip("arrête le moteur sélectionné");
+                this.setHelpUrl(Blockly.Msg.HELPURL);
+            }
+        };
+    }
+})();

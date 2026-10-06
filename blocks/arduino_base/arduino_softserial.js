@@ -63,7 +63,11 @@ Blockly.Blocks['soft_init'] = {
         .appendField(Blockly.Msg.SSERIAL_TX);
     this.appendDummyInput()
 	    .appendField(Blockly.Msg.SSERIAL_SPEED)
-     	.appendField(new Blockly.FieldDropdown(profile.defaultBoard.serial), "SPEED");
+     	.appendField(new Blockly.FieldDropdown(
+            (profile.defaultBoard && profile.defaultBoard.serial && profile.defaultBoard.serial.length)
+                ? profile.defaultBoard.serial
+                : [['9600', '9600'], ['115200', '115200']]
+        ), "SPEED");
     this.setInputsInline(false);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);

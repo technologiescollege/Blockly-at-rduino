@@ -275,3 +275,44 @@ Blockly.Arduino["SENSOR_ACTUATOR_lcd_i2c"] = function(block) {
     };
     return code;
 };
+
+/**
+ * Legacy short names used by older example XML files.
+ */
+(function() {
+    var aliases = [
+        'digital_write',
+        'inout_bp',
+        'dht11',
+        'suiveur_ligne',
+        'potentiometre',
+        'moteur_dc',
+        'matrice8x8_symbole',
+        'matrice8x8_init',
+        'matrice8x8_aff',
+        'inout_buildin_led',
+        'tone',
+        'notone',
+        'lcd_i2c',
+        'LCD_Keypad_Shield_DFR_09',
+        'LCD_Keypad_Shield_DFR_09_lc',
+        'LCD_Keypad_Shield_DFR_09_RAZ'
+    ];
+    for (var i = 0; i < aliases.length; i++) {
+        var shortName = aliases[i];
+        var fullName = 'SENSOR_ACTUATOR_' + shortName;
+        if (Blockly.Arduino[fullName] && !Blockly.Arduino[shortName]) {
+            Blockly.Arduino[shortName] = Blockly.Arduino[fullName];
+        }
+    }
+
+    if (!Blockly.Arduino.moteur_dc_stop) {
+        Blockly.Arduino.moteur_dc_stop = function(block) {
+            var dropdown_moteur = block.getFieldValue("MOTEUR");
+            var dropdown_mot = parseInt(dropdown_moteur, 10) + 5;
+            Blockly.Arduino.setups_["setup_output_" + dropdown_moteur] = "pinMode(" + dropdown_moteur + ", OUTPUT);";
+            Blockly.Arduino.setups_["setup_output_" + dropdown_mot] = "pinMode(" + dropdown_mot + ", OUTPUT);";
+            return "analogWrite(" + dropdown_moteur + ",0);\ndigitalWrite(" + dropdown_mot + ",LOW);\n";
+        };
+    }
+})();

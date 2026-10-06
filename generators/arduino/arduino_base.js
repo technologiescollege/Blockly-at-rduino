@@ -86,6 +86,15 @@ Blockly.Arduino.base_define = function () {
   return "";
 };
 
+Blockly.Arduino.base_define_const = function () {
+  var name = this.getFieldValue('VAR') || '';
+  var value = Blockly.Arduino.valueToCode(this, 'TEXT2', Blockly.Arduino.ORDER_ATOMIC) || '0';
+  if (name) {
+    Blockly.Arduino.includes_[name] = '#define ' + name + ' ' + value;
+  }
+  return "";
+};
+
 Blockly.Arduino.base_code = function () {
   // Text value.
   var code = this.getFieldValue('TEXT') + '\n';

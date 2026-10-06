@@ -1,8 +1,13 @@
 {
   "name": "Blcokly@rduino",
-  "version": "3.3.3",
+  "version": "3.4.0",
   "description": "Arduino and ESP32 blocks programming",
   "main": "index.html",
+  "scripts": {
+    "build:toolbox": "node scripts/build-toolbox-bundle.js",
+    "build:examples": "node scripts/build-examples-bundle.js",
+    "build:offline": "npm run build:toolbox && npm run build:examples"
+  },
   "files": [
     "."
   ],

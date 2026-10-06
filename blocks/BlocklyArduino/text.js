@@ -27,3 +27,17 @@ Blockly.Blocks['text_char'] = {
     return new Blockly.FieldImage(Blockly.pathToMedia + file, 7, 12, '"');
   }
 };
+
+Blockly.Blocks['text_compare_string'] = {
+  init: function() {
+    this.setColour(Blockly.Blocks.texts.HUE);
+    this.appendValueInput('STRING1')
+        .setCheck('String');
+    this.appendValueInput('STRING2')
+        .setCheck('String')
+        .appendField('=');
+    this.setInputsInline(true);
+    this.setOutput(true, 'Boolean');
+    this.setTooltip('Compare deux chaînes de caractères');
+  }
+};

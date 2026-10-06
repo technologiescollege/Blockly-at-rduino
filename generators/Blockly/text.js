@@ -350,3 +350,10 @@ Blockly.Arduino['text_changeCase'] = function(block) {
 Blockly.Arduino['text_prompt'] = function(block) {
   return ['', Blockly.Arduino.ORDER_UNARY_POSTFIX];
 };
+
+Blockly.Arduino['text_compare_string'] = function(block) {
+  var string1 = Blockly.Arduino.valueToCode(block, 'STRING1', Blockly.Arduino.ORDER_UNARY_POSTFIX) || '""';
+  var string2 = Blockly.Arduino.valueToCode(block, 'STRING2', Blockly.Arduino.ORDER_UNARY_POSTFIX) || '""';
+  var code = 'String(' + string1 + ').equals(String(' + string2 + '))';
+  return [code, Blockly.Arduino.ORDER_UNARY_POSTFIX];
+};

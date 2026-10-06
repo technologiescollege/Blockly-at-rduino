@@ -22,13 +22,21 @@
 		return [this.getFieldValue('SWVAR')];
 	};
 	Blockly.Blocks.controls_switch.getVarType = function() {
-		return this.inputList[1].connection.targetBlock().getBlockType();
+		var target = this.inputList[1] &&
+			this.inputList[1].connection &&
+			this.inputList[1].connection.targetBlock();
+		return target && target.getBlockType ?
+			target.getBlockType() : Blockly.Types.UNDEF;
 	};
 	
 //---------------------------------loops--------------------------------------------
 
 	Blockly.Blocks.controls_for.getVarType = function() {
-		return this.inputList[1].connection.targetBlock().getBlockType();
+		var target = this.inputList[1] &&
+			this.inputList[1].connection &&
+			this.inputList[1].connection.targetBlock();
+		return target && target.getBlockType ?
+			target.getBlockType() : Blockly.Types.UNDEF;
 	};
 	
 //---------------------------------array--------------------------------------------

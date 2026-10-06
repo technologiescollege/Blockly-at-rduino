@@ -122,6 +122,8 @@ var MSG = {
 	+ "For Chrome, please check here :\n"
 	+ "http://testingfreak.com/how-to-fix-cross-origin-request-security-cors-error-in-firefox-chrome-and-ie/\n",
   span_ajax_msg:"Nachricht ausblenden",
+  toolboxWarnModalLabel:"Warnung",
+  msg_toolbox_functions_ko:"Die Toolbox \"%1\" existiert nicht.\nEs wird die Standardversion verwendet.",
   span_forms:"Viel Spaß damit!",
   span_menu_1:"Projekte",
   span_menu_11:"öffnen...",

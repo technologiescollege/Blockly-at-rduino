@@ -125,6 +125,8 @@ var MSG = {
 	+ "Please follow these instructions:\n"
 	+ "http://testingfreak.com/how-to-fix-cross-origin-request-security-cors-error-in-firefox-chrome-and-ie/\n",
   span_ajax_msg:"このメッセージを次回から表示しない",
+  toolboxWarnModalLabel:"警告",
+  msg_toolbox_functions_ko:"ツールボックス \"%1\" は存在しません。\n標準版を使用します。",
   span_forms:"USERS, WHO ARE YOU?",
   span_menu_1:"プロジェクト",
   span_menu_11:"開く...",

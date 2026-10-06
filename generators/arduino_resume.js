@@ -26,6 +26,7 @@ head.load(
 "generators/arduino/arduino_conversion.js",
 "generators/arduino/arduino_serial.js",
 "generators/arduino/arduino_softserial.js",
+"generators/arduino/legacy_example_blocks.js",
 "generators/arduino/Adafruit_motorshield_v1.js",
 "generators/arduino/Adafruit_motorshield_v2.js",
 "generators/arduino/Adafruit_RGB_LCD_Shield.js",
